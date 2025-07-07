@@ -9,9 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor Spreadsheet component
 
-The context menu is used to improve user interaction with the Spreadsheet component using the built-in popup menu. It opens when right-clicking on a cell, column header, row header, or sheet tab in the Spreadsheet. The [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property can be used to enable/disable the context menu.
-
-> The default value for the `EnableContextMenu` property is **true**.
+The context menu is used to improve user interaction with the Spreadsheet component using the built-in popup menu. It opens when right-clicking on a cell, column header, row header, or sheet tab in the Spreadsheet. The [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property can be used to enable/disable the context menu. The default value for the `EnableContextMenu` property is **true**.
 
 ## Cell context menu options
 

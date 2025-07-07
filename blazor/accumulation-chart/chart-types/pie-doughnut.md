@@ -306,7 +306,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ## Border radius
 
-The corners of all the slices in the pie/donut chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+The corners of all the slices in the pie/donut chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -337,6 +337,7 @@ The corners of all the slices in the pie/donut chart series can be rounded using
 }
 ```
 ![Blazor Pie Chart with border radius applied.](../images/pie-dough-nut/blazor-pie-chart-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreZdhRKPiaFxIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Hide pie or doughnut border
 

@@ -559,7 +559,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 The stack labels display cumulative total values for stack segments directly using data labels. If all the values in a stack segment are negative, the stack label is displayed below the point.
 
-The `Visible` property of the `ChartStackLabelSettings` is used to enable stack labels. Setting it to **true** will display the stack labels.
+The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Visible) property of the [ChartStackLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html) is used to enable stack labels. Setting it to **true** will display the stack labels.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -569,15 +569,15 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
@@ -611,38 +611,38 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
 }
 ```
 
-![Blazor Stacked Area 100 Chart with stack labels](../images/chart-types-images/blazor-stacked-area-100-stack-labels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXByDxrngYpMFkxd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization
 
 The stack labels can be customized using the `ChartStackLabelSettings` properties as given below.
 
-* `Fill` - Specifies the background color of the stack labels when border is set. The default value is **transparent**.
-* `Format` - Specifies the format of the stack labels. It supports a placeholder `{value}` which will be replaced by the stack label value.
-* `Rx` - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is **5**.
-* `Ry` - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
-* `Angle` - Specifies the rotation angle for stack labels in degrees. The default value is **0**.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Fill) - Specifies the background color of the stack labels when border is set. The default value is **transparent**.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Format) - Specifies the format of the stack labels. It supports a placeholder `{value}` which will be replaced by the stack label value.
+* [Rx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Rx) - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is **5**.
+* [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Ry) - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
+* [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Angle) - Specifies the rotation angle for stack labels in degrees. The default value is **0**.
 
-We can customize the font of the stack labels using the `ChartStackLabelFont` properties as given below:
+We can customize the font of the stack labels using the [ChartStackLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html) properties as given below:
 
-* `TextAlignment` - Customizes the alignment of the text within the stack label.
-* `FontFamily` - Customizes the font family for the stack label text.
-* `Size` - Customizes the font size of the stack label text.
-* `FontStyle` - Customizes the font style of the stack label text.
-* `FontWeight` - Customizes the font weight of the stack label text.
-* `Color` - Customizes the color of the stack label text.
+* [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_TextAlignment) - Customizes the alignment of the text within the stack label.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontFamily) - Customizes the font family for the stack label text.
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Size) - Customizes the font size of the stack label text.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultFont.html#Syncfusion_Blazor_Charts_ChartDefaultFont_FontStyle) - Customizes the font style of the stack label text.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontWeight) - Customizes the font weight of the stack label text.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Color) - Customizes the color of the stack label text.
 
-We can customize the border of the stack labels using the `ChartStackLabelBorder` properties as given below:
+We can customize the border of the stack labels using the [ChartStackLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html) properties as given below:
 
-* `Width` - Specifies the width of the border around the stack label.
-* `Color` - Specifies the color of the border around the stack label.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html#Syncfusion_Blazor_Charts_ChartStackLabelBorder_Width) - Specifies the width of the border around the stack label.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultBorder.html#Syncfusion_Blazor_Charts_ChartDefaultBorder_Color) - Specifies the color of the border around the stack label.
 
- To customize the margin, we can use the `ChartStackLabelMargin` properties as given below:
+ To customize the margin, we can use the [ChartStackLabelMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html) properties as given below:
 
-* `Bottom` - Specifies the bottom margin of the stack label.
-* `Top` - Specifies the top margin of the stack label.
-* `Right` - Specifies the right margin of the stack label.
-* `Left` - Specifies the left margin of the stack label.
+* [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Bottom) - Specifies the bottom margin of the stack label.
+* [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Top) - Specifies the top margin of the stack label.
+* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Right) - Specifies the right margin of the stack label.
+* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Left) - Specifies the left margin of the stack label.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -652,22 +652,22 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 
     <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
-        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
+        <ChartStackLabelFont TextAlignment="Syncfusion.Blazor.Charts.Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
         <ChartStackLabelBorder Width="2" Color="#000000" />
         <ChartStackLabelMargin Bottom="10" Top="10" Right="10" Left="10" />
     </ChartStackLabelSettings>
@@ -697,7 +697,7 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
     };
 }
 ```
-![Blazor Stacked Area Chart with stack label customization](../images/chart-types-images/blazor-stacked-area-100-stack-labels-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSZxVnqOcrRgBw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
