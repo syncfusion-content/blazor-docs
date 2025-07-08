@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Adding Blazor component to the toolbox - Syncfusion
-description: Check out the documentation for adding Syncfusion Blazor component to toobox in Blazor
+description: Checkout and learn here all about the documentation for adding Syncfusion Blazor component to the toolbox in Blazor
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to Add Blazor Component to the toolbox in Blazor Application
+# How to add Syncfusion Component to the toolbox in Blazor Application
 
 This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component to the toolbox. To customize the Visual Studio Toolbox for Blazor, which by default shows HTML components and Bootstrap snippets, you can open the Toolbox by pressing `Ctrl+Alt+X` or navigating to **View → Toolbox** in the menu.
 
