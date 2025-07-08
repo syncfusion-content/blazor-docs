@@ -243,7 +243,7 @@ The zoom toolbar in the chart can be repositioned using the [ChartZoomToolbarPos
 }
 ```
 ![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable pan
 
@@ -418,11 +418,11 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 }
 ```
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto interval on zooming
 
-The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableAutoIntervalOnZooming) property is set to **true**.
+The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) property is set to **true**.
 
 ```cshtml
 
