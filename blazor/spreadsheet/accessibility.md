@@ -36,6 +36,24 @@ The accessibility compliance for the Spreadsheet is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## WAI-ARIA attributes
+The Syncfusion Blazor Spreadsheet followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet:
+
+| Attributes | Purpose |
+|---------------|-------------|
+| `role=textbox` | Identifies an element as an input field that allows text entry.|
+| `role=button` | To represent the element that acts as a button in the component. |
+| `role=combobox` | Identifies a component that combines a text input with a popup listbox or tree. |
+| `role=menu` | Defines a container for a collection of choices or commands presented in a contextual or dropdown format. |
+| `role=alert` | Designates an element that displays im  portant, time-sensitive information. |
+| `aria-label`| This attribute describes the accessible name for the interactive elements. |
+| `aria-expanded` | This attribute describes the control (for example, dropdown) is expanded or collapsed. |
+| `aria-live` | Defines a region as "live", meaning its content updates dynamically. Values include "off", "polite" (waits until idle), or "assertive" (announces immediately). |
+| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the Spreadsheet. |
+| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the Spreadsheet. |
+| `aria-multiline` | Indicates whether a textbox accepts multiple lines of input or only a single line. |
+
+
 ## Keyboard shortcuts
 
 The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, making it accessible for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
