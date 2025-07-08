@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor DataGrid and much more details.
+description: Check out and learn here everthing about filtering in Syncfusion Blazor DataGrid and many more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
