@@ -1,7 +1,7 @@
 ---
 title: "MongoDB Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a MongoDB in the Syncfusion Blazor Pivot Table and more."
+description: "Check out and learn how to bind data from a MongoDB in the Syncfusion Blazor Pivot Table and much more."
 ---
 
 # MongoDB Data Binding
