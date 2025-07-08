@@ -13,7 +13,7 @@ This section provides information about how to refer fallback [scripts](https://
 
 ## Blazor Web App
 
-For Blazor Web app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
+For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
 ### Script fallback
 
@@ -56,35 +56,9 @@ You can refer the theme stylesheet inside the `<head>` of **~/Components/App.raz
 {% endhighlight %}
 {% endtabs %}
 
-## Blazor Server App
+## Blazor WebAssembly Standalone App
 
-CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application.
-
-If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-7.0). Syncfusion<sup style="font-size:70%">&reg;</sup> theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
-
-* **~/Pages/_Host.cshtml** file for **.NET 7**.
-* **~/Pages/_Layout.cshtml** for **.NET 6**.
-
-{% tabs %}
-{% highlight cshtml %}
-
-<head>
-    ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css"
-    asp-fallback-href="_content/Syncfusion.Blazor.Themes/bootstrap5.css"
-    asp-fallback-test-class="e-control"
-    asp-fallback-test-property="font-size"
-    asp-fallback-test-value="12px" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Alternately, fallback links can be provided using [script fallback](#script-fallback) and [style sheet fallback](#style-sheet-fallback) in blazor server app.
-
-## Blazor WebAssembly App
-
-For Blazor WebAssembly app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
+For Blazor WebAssembly Standalone app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
 ### Script fallback
 
