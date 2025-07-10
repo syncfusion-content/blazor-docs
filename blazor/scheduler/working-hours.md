@@ -69,24 +69,22 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific days. In the following code example, you can set the different working days for scheduler cells based on the day of the week by using the `SetWorkDaysAsync` method. Before setting up the custom working days we need to reset the default working days by using the `ResetWorkDaysAsync` method.
 
-```
-
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <div style="margin-top:12px;">
     <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="750px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
         <ScheduleTimeScale Enable="false" Interval="@IntervalInMinutes" SlotCount="4"></ScheduleTimeScale>
+        <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+        <ScheduleResources>
+            <ScheduleResource TItem="DoctorData" TValue="int" DataSource="@DoctorsData" Field="DoctorID" Title="Doctor" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        </ScheduleResources>
         <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted" DataBound="OnDataBound"></ScheduleEvents>
         <ScheduleViews>
-            <ScheduleView Option="View.Day"></ScheduleView>
             <ScheduleView Option="View.Week"></ScheduleView>
-            <ScheduleView Option="View.WorkWeek"></ScheduleView>
             <ScheduleView Option="View.Month"></ScheduleView>
-            <ScheduleView Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" Option="View.TimelineYear"></ScheduleView>
-            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
-            <ScheduleView Option="View.TimelineDay"></ScheduleView>
             <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-            <ScheduleView Option="View.TimelineWorkWeek"></ScheduleView>
+            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
         </ScheduleViews>
     </SfSchedule>
 </div>
@@ -100,6 +98,12 @@ In Blazor, you can set the required working days on Scheduler, thus visually hig
     DateTime CurrentDate = new DateTime(2020, 1, 31);
     View CurrentView = View.Month;
     public int IntervalInMinutes { get; set; } = 60;
+
+    public string[] Resources { get; set; } = { "Doctors" };
+    public List<DoctorData> DoctorsData { get; set; } = new List<DoctorData> {
+        new DoctorData{ Text = "Nancy", Id= 1, Color = "#df5286" },
+        new DoctorData{ Text = "Steven", Id= 2, Color = "#7fa900" }
+    };
 
     private async Task OnCreated()
     {
@@ -144,21 +148,30 @@ In Blazor, you can set the required working days on Scheduler, thus visually hig
             new DateTime (2020, 1, 15, 0, 0, 0, DateTimeKind.Utc),
             new DateTime (2020, 1, 16, 0, 0, 0, DateTimeKind.Utc),
         };
-        await ScheduleRef.SetWorkDaysAsync(customDates);
+        await ScheduleRef.SetWorkDaysAsync(customDates, 0);
+        await ScheduleRef.SetWorkDaysAsync(customDates.Take(3).ToList(), 1);
     }
 
     public class AppointmentData
     {
         public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
+        public string? Subject { get; set; }
+        public string? Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
+        public bool IsBlock { get; set; }
+        public string? RecurrenceRule { get; set; }
+        public string? RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
+        public int DoctorID { get; set; }
+    }
+    public class DoctorData
+    {
+        public int Id { get; set; }
+        public string? Text { get; set; }
+        public string? Color { get; set; }
     }
 }
 ```
