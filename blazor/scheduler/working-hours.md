@@ -75,11 +75,12 @@ The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
+    <ScheduleTimeScale Enable="false" Interval="@IntervalInMinutes" SlotCount="4"></ScheduleTimeScale>
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
         <ScheduleResource TItem="DoctorData" TValue="int" DataSource="@DoctorsData" Field="DoctorID" Title="Doctor" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
-    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted" DataBound="OnDataBound"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
@@ -91,10 +92,10 @@ The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also
 
 @code {
     public SfSchedule<AppointmentData> ScheduleRef;
-    public bool IsLayoutChanged = false;
 
     DateTime CurrentDate = new DateTime(2025, 1, 31);
     View CurrentView = View.Month;
+    public int IntervalInMinutes { get; set; } = 60;
 
     public string[] Resources { get; set; } = { "Doctors" };
     public List<DoctorData> DoctorsData { get; set; } = new List<DoctorData> {
@@ -106,20 +107,10 @@ The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also
     {
         await SetWorkDays();
     }
-    private async void OnActionCompleted(ActionEventArgs<AppointmentData> args)
-    {
-        if (args.ActionType == ActionType.ViewNavigate || args.ActionType == ActionType.DateNavigate)
-        {
-            await SetWorkDays();
-            IsLayoutChanged = true;
-        }
-    }
+
     private async Task OnDataBound(Syncfusion.Blazor.Schedule.DataBoundEventArgs<AppointmentData> args)
     {
-        if (IsLayoutChanged)
-        {
-            await SetWorkDays();
-        }
+        await SetWorkDays();
     }
     private async Task SetWorkDays()
     {
