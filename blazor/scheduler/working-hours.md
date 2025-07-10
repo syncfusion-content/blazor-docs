@@ -65,6 +65,105 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
 
+## Dynamically setting work days
+
+In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific days. In the following code example, you can set the different working days for scheduler cells based on the day of the week by using the `SetWorkDaysAsync` method. Before setting up the custom working days we need to reset the default working days by using the `ResetWorkDaysAsync` method.
+
+```
+
+@using Syncfusion.Blazor.Schedule
+
+<div style="margin-top:12px;">
+    <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="750px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
+        <ScheduleTimeScale Enable="false" Interval="@IntervalInMinutes" SlotCount="4"></ScheduleTimeScale>
+        <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted" DataBound="OnDataBound"></ScheduleEvents>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" Option="View.TimelineYear"></ScheduleView>
+            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+            <ScheduleView Option="View.TimelineDay"></ScheduleView>
+            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+            <ScheduleView Option="View.TimelineWorkWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code {
+    public SfSchedule<AppointmentData> ScheduleRef;
+    public bool IsLayoutChanged = false;
+    public bool IsResourcesEnabled = false;
+    private bool hasRefreshed = false;
+
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    View CurrentView = View.Month;
+    public int IntervalInMinutes { get; set; } = 60;
+
+    private async Task OnCreated()
+    {
+        await SetWorkDays();
+    }
+    private async void OnActionCompleted(ActionEventArgs<AppointmentData> args)
+    {
+        if (args.ActionType == ActionType.ViewNavigate || args.ActionType == ActionType.DateNavigate)
+        {
+            await SetWorkDays();
+            IsLayoutChanged = true;
+        }
+    }
+    private async Task OnDataBound(Syncfusion.Blazor.Schedule.DataBoundEventArgs<AppointmentData> args)
+    {
+        if (IsLayoutChanged)
+        {
+            await SetWorkDays();
+        }
+    }
+    private async Task SetWorkDays()
+    {
+        List<DateTime> CurrentViewDates = ScheduleRef.GetCurrentViewDates();
+
+        for (int i = 0; i < CurrentViewDates.Count; i++)
+        {
+            var date = CurrentViewDates[i];
+            if (date.Kind != DateTimeKind.Utc)
+            {
+                CurrentViewDates[i] = DateTime.SpecifyKind(date, DateTimeKind.Utc);
+            }
+        }
+
+        await ScheduleRef.ResetWorkDaysAsync(CurrentViewDates);
+
+        List<DateTime> customDates = new List<DateTime>
+        {
+            new DateTime (2020, 1, 7, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 8, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 9, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 14, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 15, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 16, 0, 0, 0, DateTimeKind.Utc),
+        };
+        await ScheduleRef.SetWorkDaysAsync(customDates);
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.png)
+
 ## Hiding weekend days
 
 The [`ShowWeekend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowWeekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
