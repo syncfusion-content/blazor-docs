@@ -67,79 +67,93 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ## Dynamically setting work days
 
-In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific dates. By default, weekends (Saturday and Sunday) appear in gray while weekdays display in white. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days.
+The `SetWorkDaysAsync` and `ResetWorkDaysAsync` can be used to visually differentiate the work days and non-working days in the Scheduler. By default, weekends (Saturday and Sunday) appear in gray while weekdays display in white. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days, while `ResetWorkDaysAsync` resets the workdays for specified dates or all working days in the current view when called without arguments.
 
-The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also accepts empty arguments; by providing this, it resets all working days in current view dates. Both `SetWorkDaysAsync` and `ResetWorkDaysAsync` do not accept unspecified kind dates. Before setting up the custom working days, we need to reset the default working days by using the `ResetWorkDaysAsync` method.
+Before setting up custom working days, you need to reset the default working days using the `ResetWorkDaysAsync` method. Note that both methods do not accept unspecified kind dates.
+
+In this example, we get current view dates when the Scheduler is rendered, remove common holiday dates from them, reset all days to non-working days using `ResetWorkDaysAsync`, and then loop through each resource. For each resource, we exclude their specific leave dates from the working dates and set only their available days as working days using `SetWorkDaysAsync`.
+
+This approach enables proper visualization of both organization-wide holidays and individual resource time-off in a resource-based scheduling scenario.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
-    <ScheduleTimeScale Enable="false" Interval="@IntervalInMinutes" SlotCount="4"></ScheduleTimeScale>
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowWeekend="false" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TItem="DoctorData" TValue="int" DataSource="@DoctorsData" Field="DoctorID" Title="Doctor" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int"
+        DataSource="@Employees" Field="EmployeeID" Title="Employee"
+        Name="Employees" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
-    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" DataBound="OnDataBound"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted"></ScheduleEvents>
     <ScheduleViews>
-        <ScheduleView Option="View.Week"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
         <ScheduleView Option="View.TimelineMonth"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
-
 @code {
     public SfSchedule<AppointmentData> ScheduleRef;
-
     DateTime CurrentDate = new DateTime(2025, 1, 31);
-    View CurrentView = View.Month;
-    public int IntervalInMinutes { get; set; } = 60;
-
-    public string[] Resources { get; set; } = { "Doctors" };
-    public List<DoctorData> DoctorsData { get; set; } = new List<DoctorData> {
-        new DoctorData{ Text = "Nancy", Id= 1, Color = "#df5286" },
-        new DoctorData{ Text = "Steven", Id= 2, Color = "#7fa900" }
+    public string[] Resources { get; set; } = { "Employees" };
+    public List<ResourceData> Employees { get; set; } = new List<ResourceData> {
+        new ResourceData{ Text = "John Doe", Id= 1, Color = "#df5286" },
+        new ResourceData{ Text = "Jane Smith", Id= 2, Color = "#7fa900" }
     };
-
+    private List<DateTime> Holidays { get; set; } = new List<DateTime>
+    {
+            new DateTime(2025, 1, 1),
+            new DateTime(2025, 1, 26),
+            new DateTime(2025, 4, 18),
+            new DateTime(2025, 5, 1),
+            new DateTime(2025, 8, 15),
+            new DateTime(2025, 11, 12),
+            new DateTime(2025, 12, 25)
+    };
+    private Dictionary<int, List<DateTime>> EmployeeLeaves { get; set; } = new Dictionary<int, List<DateTime>>
+    {
+        { 1, new List<DateTime> {
+            new DateTime(2025, 1, 15),
+            new DateTime(2025, 1, 16),
+            new DateTime(2025, 1, 17)
+        }},
+        { 2, new List<DateTime> {
+            new DateTime(2025, 1, 6),
+            new DateTime(2025, 1, 7),
+            new DateTime(2025, 1, 8)
+        }}
+    };
     private async Task OnCreated()
     {
         await SetWorkDays();
     }
-
-    private async Task OnDataBound(Syncfusion.Blazor.Schedule.DataBoundEventArgs<AppointmentData> args)
+    private async void OnActionCompleted(ActionEventArgs<AppointmentData> args)
     {
-        await SetWorkDays();
+        if (args.ActionType == ActionType.ViewNavigate || args.ActionType == ActionType.DateNavigate)
+        {
+            await SetWorkDays();
+        }
     }
     private async Task SetWorkDays()
     {
-        List<DateTime> CurrentViewDates = ScheduleRef.GetCurrentViewDates();
-
-        for (int i = 0; i < CurrentViewDates.Count; i++)
-        {
-            var date = CurrentViewDates[i];
-            if (date.Kind != DateTimeKind.Utc)
-            {
-                CurrentViewDates[i] = DateTime.SpecifyKind(date, DateTimeKind.Utc);
-            }
-        }
-
         await ScheduleRef.ResetWorkDaysAsync();
 
-        List<DateTime> customDates = new List<DateTime>
-        {
-            new DateTime (2025, 1, 7, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2025, 1, 8, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2025, 1, 9, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2025, 1, 14, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2025, 1, 15, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2025, 1, 16, 0, 0, 0, DateTimeKind.Utc),
-        };
-        await ScheduleRef.SetWorkDaysAsync(customDates, 0);
-        await ScheduleRef.SetWorkDaysAsync(customDates.Take(3).ToList(), 1);
-    }
+        List<DateTime> currentViewDates = ScheduleRef.GetCurrentViewDates();
+        List<DateTime> workDates = currentViewDates.Except(Holidays).ToList();
 
+        foreach (var employee in Employees)
+        {
+            if (EmployeeLeaves.TryGetValue(employee.Id, out var leaveDates))
+            {
+                List<DateTime> resourceWorkDays = workDates
+                    .Except(leaveDates)
+                    .Select(d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+                    .ToList();
+                int employeeIndex = ScheduleRef.GetGroupIndex(employee.Id, Resources[Resources.Length - 1]);
+                await ScheduleRef.SetWorkDaysAsync(resourceWorkDays, employeeIndex);
+            }
+        }
+    }
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -152,9 +166,9 @@ The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also
         public string? RecurrenceRule { get; set; }
         public string? RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
-        public int DoctorID { get; set; }
+        public int EmployeeID { get; set; }
     }
-    public class DoctorData
+    public class ResourceData
     {
         public int Id { get; set; }
         public string? Text { get; set; }
