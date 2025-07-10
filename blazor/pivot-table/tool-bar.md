@@ -1990,65 +1990,68 @@ In the below sample, toolbar UI actions such as add new report and save current 
 @using Syncfusion.Blazor.PivotView;
 
 <div class="Pivot">
-<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
-    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
-    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
-    <PivotChartSettings Title="Sales Analysis" >       
-        <PivotChartPrimaryYAxis>
-            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
-        </PivotChartPrimaryYAxis>
-    </PivotChartSettings>
-    <PivotViewEvents TValue="ProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
-</SfPivotView>
+	<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%" ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true" AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+		<PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+		<PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+			<PivotViewColumns>
+				<PivotViewColumn Name="Year"></PivotViewColumn>
+				<PivotViewColumn Name="Quarter"></PivotViewColumn>
+			</PivotViewColumns>
+			<PivotViewRows>
+				<PivotViewRow Name="Country"></PivotViewRow>
+				<PivotViewRow Name="Products"></PivotViewRow>
+			</PivotViewRows>
+			<PivotViewValues>
+				<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+				<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+			</PivotViewValues>
+			<PivotViewFormatSettings>
+				<PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+			</PivotViewFormatSettings>
+		</PivotViewDataSourceSettings>
+		<PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+		<PivotChartSettings Title="Sales Analysis">
+			<PivotChartPrimaryYAxis>
+				<PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+			</PivotChartPrimaryYAxis>
+		</PivotChartSettings>
+		<PivotViewEvents TValue="ProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
+	</SfPivotView>
+</div>
+@code {
 
-@code{
+	private SfPivotFieldList<ProductDetails> fieldList;
+	private SfPivotView<ProductDetails> pivot;
+	private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+		ToolbarItems.New,
+		ToolbarItems.Save,
+		ToolbarItems.Grid,
+		ToolbarItems.Chart,
+		ToolbarItems.Export,
+		ToolbarItems.SubTotal,
+		ToolbarItems.GrandTotal,
+		ToolbarItems.ConditionalFormatting,
+		ToolbarItems.NumberFormatting,
+		ToolbarItems.FieldList
+	};
+	private List<ProductDetails> data { get; set; }
 
-    private SfPivotFieldList<ProductDetails> fieldList;
-    private SfPivotView<ProductDetails> pivot;
-    private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
-        ToolbarItems.New,
-        ToolbarItems.Save,
-        ToolbarItems.Grid,
-        ToolbarItems.Chart,
-        ToolbarItems.Export,
-        ToolbarItems.SubTotal,
-        ToolbarItems.GrandTotal,
-        ToolbarItems.ConditionalFormatting,
-        ToolbarItems.NumberFormatting,
-        ToolbarItems.FieldList            
-    };
-    private List<PivotProductDetails> data { get; set; }
-   
-    protected override void OnInitialized()
-    {
-        data = ProductDetails.GetProductData();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.  
-    }    
-    // Triggers when the UI action begins.
-    public void ActionBegin(PivotActionBeginEventArgs args)
-    {
-        if(args.ActionName == "Add new report" || args.ActionName == "Save current report")
-        {
-          args.Cancel = true;
-        }       
-    }
+	protected override void OnInitialized()
+	{
+		data = ProductDetails.GetProductData();
+		// Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
+	// Triggers when the UI action begins.
+	public void ActionBegin(PivotActionBeginEventArgs args)
+	{
+		if (args.ActionName == "Add new report" || args.ActionName == "Save current report")
+		{
+			args.Cancel = true;
+		}
+	}
+}
+
+
 ```
 
 ### OnActionComplete
@@ -2082,34 +2085,34 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @using Syncfusion.Blazor.PivotView;
 
 <div class="Pivot">
-<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
-    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
-    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
-    <PivotChartSettings Title="Sales Analysis" >       
-        <PivotChartPrimaryYAxis>
-            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
-        </PivotChartPrimaryYAxis>
-    </PivotChartSettings>
-    <PivotViewEvents TValue="ProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
-</SfPivotView>
-
+	<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%" ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true" AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+		<PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+		<PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+			<PivotViewColumns>
+				<PivotViewColumn Name="Year"></PivotViewColumn>
+				<PivotViewColumn Name="Quarter"></PivotViewColumn>
+			</PivotViewColumns>
+			<PivotViewRows>
+				<PivotViewRow Name="Country"></PivotViewRow>
+				<PivotViewRow Name="Products"></PivotViewRow>
+			</PivotViewRows>
+			<PivotViewValues>
+				<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+				<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+			</PivotViewValues>
+			<PivotViewFormatSettings>
+				<PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+			</PivotViewFormatSettings>
+		</PivotViewDataSourceSettings>
+		<PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+		<PivotChartSettings Title="Sales Analysis">
+			<PivotChartPrimaryYAxis>
+				<PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+			</PivotChartPrimaryYAxis>
+		</PivotChartSettings>
+		<PivotViewEvents TValue="ProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
+	</SfPivotView>
+</div>
 @code{
 
     private SfPivotFieldList<ProductDetails> fieldList;
@@ -2126,7 +2129,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         ToolbarItems.NumberFormatting,
         ToolbarItems.FieldList            
     };
-    private List<PivotProductDetails> data { get; set; }   
+    private List<ProductDetails> data { get; set; }   
     protected override void OnInitialized()
     {
         data = ProductDetails.GetProductData();
@@ -2139,6 +2142,8 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
             // Triggers when the toolbar UI actions such as add new report and save current report icon are completed.
         }
     }
+}
+
 ```
 
 ### OnActionFailure
@@ -2172,38 +2177,38 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.PivotView;
 
 <div class="Pivot">
-<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
-    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
-    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
-    <PivotChartSettings Title="Sales Analysis" >       
-        <PivotChartPrimaryYAxis>
-            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
-        </PivotChartPrimaryYAxis>
-    </PivotChartSettings>
-    <PivotViewEvents TValue="ProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
-</SfPivotView>
-
+	<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+		<PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+		<PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+			<PivotViewColumns>
+				<PivotViewColumn Name="Year"></PivotViewColumn>
+				<PivotViewColumn Name="Quarter"></PivotViewColumn>
+			</PivotViewColumns>
+			<PivotViewRows>
+				<PivotViewRow Name="Country"></PivotViewRow>
+				<PivotViewRow Name="Products"></PivotViewRow>
+			</PivotViewRows>
+			<PivotViewValues>
+				<PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
+				<PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
+			</PivotViewValues>
+			<PivotViewFormatSettings>
+				<PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+			</PivotViewFormatSettings>
+		</PivotViewDataSourceSettings>
+		<PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+		<PivotChartSettings Title="Sales Analysis" >       
+			<PivotChartPrimaryYAxis>
+				<PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+			</PivotChartPrimaryYAxis>
+		</PivotChartSettings>
+		<PivotViewEvents TValue="ProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
+	</SfPivotView>
+</div>
 @code{
 
     private SfPivotFieldList<ProductDetails> fieldList;
-    private SfPivotView<ProductDetails> Pivot;
+    private SfPivotView<ProductDetails> pivot;
     public List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
         ToolbarItems.New,
         ToolbarItems.Save,
@@ -2216,7 +2221,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         ToolbarItems.NumberFormatting,
         ToolbarItems.FieldList            
     };
-    private List<PivotProductDetails> data { get; set; }   
+    private List<ProductDetails> data { get; set; }   
     protected override void OnInitialized()
     {
         data = ProductDetails.GetProductData();
@@ -2229,6 +2234,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             // Triggers when the current UI action fails to achieve the desired result. 
         }       
     }
+}
 
 ```
 

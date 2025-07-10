@@ -158,6 +158,7 @@ To configure the AI service, add the following settings to the **~/Program.cs** 
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.SmartComponents;
+using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
 
 ....
@@ -200,6 +201,7 @@ Add the following settings to the **~/Program.cs** file in your Blazor Server ap
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.SmartComponents;
+using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
 
 ....

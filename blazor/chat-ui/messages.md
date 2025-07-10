@@ -159,6 +159,42 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Blazor Chat UI CssClass](./images/avatarcss.png)
 
+#### Setting status icon css
+
+You can use the [StatusIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_StatusIconCss) property to identify the user's presence, including online, offline, busy, and away status in the Chat UI.
+
+The following are the predefined status styles that can be defined using the `StatusIconCss` property.
+
+| Status | Icon class |
+| ------------ | -------------- |
+| `Available` | `e-user-online` |
+| `Away` | `e-user-away` |
+| `Busy` | `e-user-busy` |
+| `Offline` | `e-user-offline` |
+
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert", StatusIconCss = "e-icons e-user-online" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama", StatusIconCss = "e-icons e-user-away" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI StatusIconCss](./images/message-statusicon.png)
+
 ### Define timestamp
 
 You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
@@ -320,6 +356,100 @@ You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
+### Setting pinned
+
+You can use the [IsPinned](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsPinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel, IsPinned = true }
+    };
+}
+
+```
+
+![Blazor Chat UI IsPinned](./images/isPinned.png)
+
+### Setting reply to
+
+You can use the [RepliedTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_RepliedTo) property to respond to the original message preserving context and creating a threaded conversation.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel, ID = "msg1" },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel, ID = "msg2" },
+        new ChatMessage() {
+            Text = "I’ll review it and send feedback by today.",
+            Author = CurrentUserModel,
+            ID = "msg3",
+            RepliedTo = new MessageReplyModel()
+            {
+                Text = "Yes, the design phase is complete.",
+                User = MichaleUserModel,
+                MessageID = "msg2"
+            }
+        }
+    };
+}
+
+```
+
+![Blazor Chat UI RepliedTo](./images/repliedTo.png)
+
+### Setting forward
+
+You can use the [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsForwarded) property to specify the user when the message is forwarded.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel, IsForwarded = true }
+    };
+}
+
+```
+
+![Blazor Chat UI IsForwarded](./images/isForwarded.png)
+
 ### Setting auto scroll
 
 You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AutoScrollToBottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view. 
@@ -380,3 +510,168 @@ You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion
 ```
 
 ![Blazor Chat UI Suggestions](./images/suggestions.png)
+
+## Setting compact mode
+
+You can use the `EnableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces. By default, the value is `false`.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" EnableCompactMode="true"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI EnableCompactMode](./images/enableCompactMode.png)
+
+## Configure message options
+
+You can customize the message toolbar items by using the `MessageToolbar`, `MessageToolbarItem` tag directives for richer chat experience in the Chat UI. By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
+
+### Copying a message
+
+You can copy the message item to quickly duplicate the message, by using the toolbar copy icon in the message options.
+
+### Deleting a message
+
+You can delete a message item to remove it from the chat conversation, by using the toolbar trash icon in the message options.
+
+### Setting width
+
+You can use the `Width` property to set width of the `MessageToolbar` tag directive of Chat UI. By default, the value is `100%`.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages">
+        <ChildContent>
+            <MessageToolbar Width="50%">
+            </MessageToolbar>
+        </ChildContent>
+    </SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel }
+    };
+}
+
+```
+
+### Setting items
+
+You can use the `MessageToolbarItem` tag directive to specify the toolbar item in the `MessageToolbar` of Chat UI.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages">
+        <ChildContent>
+            <MessageToolbar>
+                <MessageToolbarItem IconCss="e-icons e-chat-forward" Tooltip="Forward"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-copy" Tooltip="Copy"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-reply" Tooltip="Reply"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-pin" Tooltip="Pin"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-trash" Tooltip="Delete"></MessageToolbarItem>
+            </MessageToolbar>
+        </ChildContent>
+    </SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI MessageToolbarItem](./images/messageToolbarItems.png)
+
+### Setting itemClick
+
+You can use the `itemClicked` event when the toolbar item is clicked in the `MessageToolbar` of Chat UI.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI @ref="ChatUIInstance" ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages">
+        <ChildContent>
+            <MessageToolbar ItemClicked="MessageToolbarClicked">
+                <MessageToolbarItem IconCss="e-icons e-chat-forward" Tooltip="Forward"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-copy" Tooltip="Copy"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-reply" Tooltip="Reply"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-pin" Tooltip="Pin"></MessageToolbarItem>
+                <MessageToolbarItem IconCss="e-icons e-chat-trash" Tooltip="Delete"></MessageToolbarItem>
+            </MessageToolbar>
+        </ChildContent>
+    </SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    private SfChatUI ChatUIInstance { get; set; }
+
+    private void MessageToolbarClicked(MessageToolbarItemClickedEventArgs args)
+    {
+        if (args.Item.IconCss == "e-icons e-chat-forward")
+        {
+            var newMessageObj = new ChatMessage()
+            {
+                Text = args.Message.Text,
+                ID = "chat-message-" + (ChatUIInstance.Messages.Count + 1).ToString(),
+                Author = args.Message.Author,
+                IsForwarded = true,
+                Status = args.Message.Status,
+                Timestamp = args.Message.Timestamp,
+                TimestampFormat = args.Message.TimestampFormat,
+                IsPinned = args.Message.IsPinned,
+                RepliedTo = args.Message.RepliedTo
+            };
+            ChatUIInstance.Messages.Add(newMessageObj);
+        }
+    }
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi Michale, are we on track for the deadline?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Yes, the design phase is complete.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "I’ll review it and send feedback by today.", Author = CurrentUserModel }
+    };
+}
+
+```

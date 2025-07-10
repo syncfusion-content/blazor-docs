@@ -315,6 +315,7 @@ In the following sample, the detail template feature of the Grid is used to disp
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
 
 <SfGrid DataSource="@Employees" Height="315px" TValue="EmployeeData">
     <GridTemplates>
@@ -469,7 +470,7 @@ public class CustomerDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrIjIXVTIJFmFjd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoDoUtUlcPEWyj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, the Syncfusion Blazor DataGrid does not have built-in hierarchical support. However, you can customize the Grid using the detail template feature to display multiple levels of a hierarchical Grid, as shown in the example above.
 
@@ -625,8 +626,8 @@ By default, detail rows render in collapsed state. You can expand a detail rows 
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
 <SfButton style="margin:5px" Content="Expand" OnClick="BtnClick"></SfButton>
 <SfGrid @ref="Grid" DataSource="@Employees">
@@ -849,9 +850,9 @@ In the below code, the **Expand** method is defined to expand or collapse the de
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Inputs
+@using BlazorApp1.Data
 
 <div style="display: inline-block; padding: 0px 30px 0px 0px; margin:5px">
    <p style="color: red">@message</p>
@@ -930,11 +931,9 @@ In the below code, the **Expand** method is defined to expand or collapse the de
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
 public class OrderData
 {
-public static List<OrderData> Orders = new List<OrderData>();
+    public static List<OrderData> Orders = new List<OrderData>();
 
         public OrderData() { }
 
@@ -981,12 +980,9 @@ public static List<OrderData> Orders = new List<OrderData>();
         public int EmployeeID { get; set; }
     }
 
-}
-
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
 public static List<EmployeeData> Employees = new List<EmployeeData>();
@@ -1039,8 +1035,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; }
         public DateTime HireDate { get; set; }
     }
-
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1235,7 +1229,6 @@ In the following sample, you can get the instance of that particular child Gr
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
-@using BlazorApp1.Data
 
 <h5 style="text-align:center;color:green">@SelectedRecordsMessage</h5> 
 
@@ -1313,8 +1306,7 @@ In the following sample, you can get the instance of that particular child Gr
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class OrderData
 {
 public static List<OrderData> Orders = new List<OrderData>();
@@ -1368,8 +1360,7 @@ public static List<OrderData> Orders = new List<OrderData>();
 
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
 public static List<EmployeeData> Employees = new List<EmployeeData>();
@@ -1422,7 +1413,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}

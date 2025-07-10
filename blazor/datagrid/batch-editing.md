@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Batch Editing in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Batch Editing in Syncfusion Blazor DataGrid component and much more details.
+title: Batch Editing in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Batch Editing in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Batch editing in Blazor DataGrid component
+# Batch editing in Blazor DataGrid
 
-Batch editing is a powerful feature in the Grid component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
+Batch editing is a powerful feature in the Syncfusion Blazor DataGrid that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to several cells and save them in a single request to the data source. This feature is particularly useful when working with large datasets or when you need to update multiple cells at once.
 
-In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method.
+In batch edit mode, when you double-click a Grid cell, the target cell becomes editable. You can perform bulk updates of added, changed, and deleted data by either clicking the toolbar's **Update** button or by externally invoking the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method.
 
-To enable batch editing mode, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
+To enable batch editing mode, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
 
-Here's an example how to enable batch editing in the blazor grid component:
+Here's an example of how to enable batch editing in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -84,13 +84,13 @@ public class OrderDetails
 
 ## Automatically update the column based on another column edited value
 
-You can automatically update the value of a column based on the edited value of another column in batch mode. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on the changes made in another related column. 
+You can automatically update the value of a column based on the edited value of another column in batch mode. This feature is useful when you want to dynamically calculate and update a column's value in real time based on changes made in another related column.
 
-To implement this feature, you can define a calculative column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. By leveraging events and methods such as [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) and [UpdateCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateCellAsync_System_Int32_System_String_System_Object_), you can efficiently update the column value whenever another column's value is edited.
+To implement this feature, define a calculated column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. By leveraging events and methods such as [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) and [UpdateCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateCellAsync_System_Int32_System_String_System_Object_), you can efficiently update the column value whenever another column's value is edited.
 
-Additionally, for batch editing, the add operation can be managed using a boolean variable with the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) and [OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) events. These events ensure that calculations and updates are applied even when new rows are added during batch editing.
+Additionally, for batch editing, you can manage the add operation using a boolean variable along with the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) and [OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) events. These events ensure that calculations and updates are applied even when new rows are added during batch editing.
 
-In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitInStock** columns during batch editing.
+In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitsInStock** columns during batch editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -197,15 +197,15 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Grid component provides to cancel the CRUD operations (Edit, Add, Delete) for particular row or cell in batch edit mode based on specific conditions. This feature allows you to control over whether editing should be allowed or prevented for certain rows or cells in the grid.
+The Syncfusion Blazor DataGrid allows you to cancel CRUD operations (Edit, Add, and Delete) for specific rows or cells in batch edit mode based on custom conditions. This feature gives you control over whether editing should be permitted or prevented for certain rows or cells in the Grid.
 
-To cancel the edit action, you need to handle the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event. This event is triggered when a cell enters the edit mode. Within the event handler, you can add a condition to check whether the edit operation should be allowed or canceled. If the condition is met, set the `args.Cancel` property to **true** to cancel the edit operation.
+To cancel the edit action, handle the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event. This event is triggered when a cell enters edit mode. In the event handler, add a condition to determine if the edit operation should be allowed. If the condition is met, set the `args.Cancel` property to **true** to cancel the edit operation.
 
-To cancel the add action, you need to handle the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) event. This event is triggered before a new record is added to the batch changes. Within the event handler, you can add a condition to determine whether the add operation should proceed or be canceled. If the condition is met, set the `args.Cancel` property to **true** to cancel the add operation.
+To cancel the add action, handle the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) event. This event is triggered before a new record is added to the batch changes. In the event handler, add a condition to determine if the add operation should proceed. If the condition is met, set the `args.Cancel` property to **true** to cancel the add operation.
 
-To cancel the delete action, you need to handle the [OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) event. This event is triggered before a record is deleted from the batch changes. Within the event handler, you can add a condition to control whether the delete operation should take place or be canceled. If the condition is met, set the `args.Cancel` property to **true** to cancel the delete operation.
+To cancel the delete action, handle the [OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) event. This event is triggered before a record is deleted from the batch changes. In the event handler, add a condition to control whether the delete operation should take place. If the condition is met, set the `args.Cancel` property to **true** to cancel the delete operation.
 
-In the below demo, prevent the CRUD operation based on the **Role** column value. If the Role Column is **Admin**, then edit/delete action is prevented for that row.
+In the example below, CRUD operations are prevented based on the **Role** column value. If the Role column is **Admin**, edit and delete actions are prevented for that row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -302,17 +302,17 @@ public class EmployeeDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBytMVNBCJUWjzh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Adding a new row at the bottom of the grid
+## Adding a new row at the bottom of the Blazor DataGrid
 
-The grid component allows you to add a new row at the bottom of the grid, allowing you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without the need to scroll up or manually reposition the newly added row. To achieve this, you can make use of the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property in the `GridEditSettings` configuration and set it to **Bottom**.
+The Syncfusion Blazor DataGrid allows you to add a new row at the bottom of the Grid, enabling you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without scrolling up or manually repositioning the newly added row. To achieve this, use the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property in the `GridEditSettings` configuration and set it to **Bottom**.
 
->* If you set `NewRowPosition` as **Bottom**, you can use the **TAB** key to easily move between cells or rows in edit mode. As you enter data in each cell and press **TAB**, the grid will automatically create new rows below the current row, allowing you to conveniently add data for multiple rows without having to leave the edit mode.
->* If you set `NewRowPosition` as **Top**, the grid will display a blank row form at the top by default, allowing you to enter data for the new record. However, when the data is saved or updated, it will be inserted at the bottom of the grid ,ensuring the new record appears at the end of the existing data set. 
->* If the paging feature is enabled, updating the row will automatically move it to the last page based on the page size.This behavior applies to both local and remote data binding.
->* If scrolling is enabled, you can use the **TAB** key to add a new row, even if the new row is added beyond the currently visible area of the grid.
->* Add `NewRowPosition` is supported for **Normal** and **Batch** editing modes.
+>* If you set `NewRowPosition` to **Bottom**, you can use the **TAB** key to easily move between cells or rows in edit mode. As you enter data in each cell and press **TAB**, the Grid will automatically create new rows below the current row, allowing you to conveniently add data for multiple rows without leaving edit mode.
+>* If you set `NewRowPosition` to **Top**, the Grid will display a blank row form at the top by default, allowing you to enter data for the new record. However, when the data is saved or updated, it will be inserted at the bottom of the Grid, ensuring the new record appears at the end of the existing data set.
+>* If the paging feature is enabled, updating the row will automatically move it to the last page based on the page size. This behavior applies to both local and remote data binding.
+>* If scrolling is enabled, you can use the **TAB** key to add a new row, even if the new row is added beyond the currently visible area of the Grid.
+>* The `NewRowPosition` property is supported for both **Normal** and **Batch** editing modes.
 
-Here's an example that demonstrates how to enable adding new rows at the bottom of the grid using `NewRowPosition` property:
+Here's an example that demonstrates how to enable adding new rows at the bottom of the Grid using the `NewRowPosition` property:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -406,15 +406,15 @@ public class OrderDetails
 
 ## Confirmation dialog
 
-Displaying a confirmation dialog provides an additional layer of confirmation when performing actions like saving a record or canceling changes in the grid. This dialog prompts for confirmation before proceeding with the action, ensuring that accidental or undesired changes are avoided. The grid component offers a built-in confirmation dialog that can be used to confirm save, cancel, and other actions.
+Displaying a confirmation dialog provides an extra layer of safety when performing actions such as saving a record or canceling changes in the Syncfusion Blazor DataGrid. This dialog prompts users for confirmation before proceeding, helping to prevent accidental or undesired changes. The Grid includes a built-in confirmation dialog that can be used to confirm save, cancel, and other actions.
 
-To enable the confirmation dialog, you can set the [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) property of the `GridEditSettings` configuration to **true**. The default value is **true**.
+To enable the confirmation dialog, set the [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) property of the `GridEditSettings` configuration to **true**. The default value is **true**.
 
 > * `GridEditSettings.ShowConfirmDialog` requires the [`GridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to be **Batch**.
-> * If `GridEditSettings.ShowConfirmDialog` set to **false**, then confirmation dialog does not display in batch editing.
-> * While performing both update and delete operations, a separate delete confirmation dialog is shown at the time of clicking the delete button or pressing the delete key itself.
+> * If `GridEditSettings.ShowConfirmDialog` is set to **false**, the confirmation dialog will not appear in batch editing.
+> * When performing update or delete operations, a separate delete confirmation dialog is shown when clicking the delete button or pressing the delete key.
 
-Here's an example that demonstrates how to enable/disable the confirmation dialog using the `ShowConfirmDialog` property:
+The following example demonstrates how to enable or disable the confirmation dialog using the `ShowConfirmDialog` property:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -504,13 +504,13 @@ public class OrderDetails
 
 ## How to make editing in single click and arrow keys
 
-You can enable editing in a single click and navigate between cells or rows using arrow keys without having to double-click or use the mouse for navigation. By default, in batch mode, the **TAB** key can be used to edit or move to the next cell or row and the **Enter** key is used to move to the next row cell. However, you can customize this behavior to enable editing with a single click or using arrow keys.
+You can enable editing with a single click and navigate between cells or rows using arrow keys, without needing to double-click or use the mouse for navigation. By default, in batch mode, the **TAB** key allows you to move to the next cell or row, and the **Enter** key moves to the next cell in the row. However, you can customize this behavior to start editing with a single click or by using arrow keys.
 
-To enable editing in a single click, you can handle the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event of the Grid. Within the event handler, call the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCellAsync_System_Int32_System_String_) method to make the clicked cell editable.
+To enable editing with a single click, handle the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event of the Grid. In the event handler, call the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCellAsync_System_Int32_System_String_) method to make the selected cell editable.
 
 > Ensure that the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property of [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) is set to **Both**.
 
-Here's an example that demonstrates how to achieve both single-click editing and arrow key navigation using the `CellSelected` event in conjunction with the `EditCellAsync` method:
+The following example demonstrates how to enable single-click editing and arrow key navigation using the `CellSelected` event together with the `EditCellAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -596,9 +596,9 @@ public class OrderDetails
 
 ## Disable editing for a particular cell
 
-You can prevent editing of specific cells based on certain conditions in the Grid component. This feature is useful when you want to restrict editing for certain cells, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
+You can prevent editing of specific cells based on certain conditions in the Syncfusion Blazor DataGrid. This feature is useful when you want to restrict editing for certain cells, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the Grid.
 
-To disable editing for a particular cell in batch mode, use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event of the grid. You can then use the **args.Cancel** property and set it to **true**  to prevent editing for that cell.
+To disable editing for a particular cell in batch mode, use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event of the Grid. In the event handler, set the **args.Cancel** property to **true** to prevent editing for that cell.
 
 Here's an example demonstrating how you can disable editing for cells containing the value **France** using the `OnCellEdit` event:
 
@@ -676,13 +676,13 @@ public class OrderDetails
 
 ## Save or update the changes immediately
 
-The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when you want to allow you to edit data efficiently without having to manually trigger a save action. You can achieve this by utilizing the [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event and the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method. 
+The Syncfusion Blazor DataGrid provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when you want to allow you to edit data efficiently without having to manually trigger a save action. You can achieve this by utilizing the [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event and the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method.
 
-By default, when you use the `EndEditAsync` method to save or update data, a confirmation dialog is displayed. This dialog prompts for confirmation before proceeding with the save or cancel action, ensuring that accidental or undesired changes are avoided.
+By default, when you use the `EndEditAsync` method to save or update data, a confirmation dialog is displayed. This dialog prompts for confirmation before proceeding with the save or cancel action, helping to prevent accidental or undesired changes.
 
 The `CellSaved` event is triggered when a cell is saved in the Grid. It provides a way to perform custom logic when a cell is saved or updated.
 
-> * To avoid the confirmation dialog when using the `EndEditAsync` method, you can set [GridEditSettings.ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) to **false**. However, please note that to use this property, the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) must be set to **Batch**. This combination of properties allows you to save or update changes immediately without the need for a confirmation dialog.
+> * To avoid the confirmation dialog when using the `EndEditAsync` method, you can set [GridEditSettings.ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) to **false**. However, note that to use this property, the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) must be set to **Batch**. This combination allows you to save or update changes immediately without the need for a confirmation dialog.
 
 Here's an example that demonstrates how to achieve immediate saving or updating of changes using the `CellSaved` event and the `EndEditAsync` method:
 
@@ -758,15 +758,16 @@ public class OrderDetails
 
 ## Edit next row or previous row from the current row
 
-In batch mode, you can seamlessly edit the next or previous row directly from the current row by enabling the [GridEditSettings.AllowNextRowEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) property and setting it to **true**. This feature enhances individual experience by streamlining row-to-row editing in an efficient and intuitive manner.
+In batch mode, you can seamlessly edit the next or previous row directly from the current row by enabling the [GridEditSettings.AllowNextRowEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) property and setting it to **true**. This feature enhances the user experience by streamlining row-to-row editing in an efficient and intuitive manner.
 
 * **Navigate to the Next Row**: Press the `TAB` key from the last cell of the current row to move to and begin editing the first cell of the next row.
 * **Navigate to the Previous Row**: Press `SHIFT + TAB` from the first cell of the current row to move to and begin editing the last cell of the previous row.
 
-Here's an example that demonstrates how to enable/disable the `GridEditSettings.AllowNextRowEdit` property:
+The following example demonstrates how to enable or disable the `GridEditSettings.AllowNextRowEdit` property:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -799,7 +800,9 @@ Here's an example that demonstrates how to enable/disable the `GridEditSettings.
     }
 }
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderDetails.cs" %}
+
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -839,6 +842,7 @@ public class OrderDetails
     public string ShipCountry { get; set; }
     public DateTime OrderDate { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -846,25 +850,25 @@ public class OrderDetails
 
 ## Provide new item or edited item using events
 
-Grid uses `Activator.CreateInstance<TValue>()` to create or clone new record instance during add and edit operations, so it must have parameterless constructors defined for the model class and any referenced complex type classes.
+The Syncfusion Blazor DataGrid uses `Activator.CreateInstance<TValue>()` to create or clone new record instances during add and edit operations. Therefore, the model class and any referenced complex type classes must have parameterless constructors defined.
 
-There are cases where custom logic is required for creating new object or new object instance cannot be created using  `Activator.CreateInstance<TValue>()`. In such cases, you can provide model object instance manually using events.
+However, there are scenarios where custom logic is required to create a new object, or a new object instance cannot be created using `Activator.CreateInstance<TValue>()`. In such cases, you can manually provide the model object instance using events.
 
-You can use the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) and [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) events to provide new object instance during add and cell edit operations respectively.
+You can use the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) and [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) events to provide a new object instance during add and cell edit operations, respectively.
 
-For add operation, assign new object to the [OnBatchAdd.DefaultData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BeforeBatchAddArgs-1.html#Syncfusion_Blazor_Grids_BeforeBatchAddArgs_1_DefaultData) property. For cell edit, assign cloned object in the [OnCellEdit.Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellEditArgs-1.html#Syncfusion_Blazor_Grids_CellEditArgs_1_Data) property.
+For the add operation, assign the new object to the [OnBatchAdd.DefaultData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BeforeBatchAddArgs-1.html#Syncfusion_Blazor_Grids_BeforeBatchAddArgs_1_DefaultData) property. For cell editing, assign the cloned object to the [OnCellEdit.Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellEditArgs-1.html#Syncfusion_Blazor_Grids_CellEditArgs_1_Data) property.
 
 In the following example:
 
-* A model class with no parameter-less constructor is bound with grid.
-* Enabled batch editing feature in grid.
-* `OnBatchAdd` event callback is assigned in which `DefaultData` property is assigned with custom object for add operation.
-* `OnCellEdit` event callback is assigned in which the `Data` property is assigned with a custom object for handling edit operation.
+* A model class without a parameterless constructor is bound to the Grid.
+* Batch editing is enabled in the Grid.
+* The `OnBatchAdd` event callback assigns a custom object to the `DefaultData` property for the add operation.
+* The `OnCellEdit` event callback assigns a custom object to the `Data` property for the edit operation.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
 
+@using Syncfusion.Blazor.Grids
 <SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
     <GridEvents TValue="OrderDetails" OnBatchAdd="BeforeAdd" OnCellEdit="CellEdit"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
@@ -894,8 +898,11 @@ In the following example:
         args.Data = args.Data ?? new OrderDetails(args.RowData.OrderID, args.RowData.CustomerID, args.RowData.Freight, args.RowData.ShipCountry, args.RowData.OrderDate);
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderDetails.cs" %}
+
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -935,6 +942,7 @@ public class OrderDetails
     public string ShipCountry { get; set; }
     public DateTime OrderDate { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -942,13 +950,15 @@ public class OrderDetails
 
 ## How to perform bulk changes using a method
 
-To perform bulk changes, including adding, editing, and deleting records, you can utilize the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method. This method streamlines the process of updating new, edited, and deleted records within the current page of the Grid. It is primarily designed to efficiently apply bulk changes all at once.
+To perform bulk changes—including adding, editing, and deleting records—you can use the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method. This method streamlines the process of updating new, edited, and deleted records within the current page of the Grid, allowing you to efficiently apply all changes at once.
 
-When you make edits or add new records, these changes will be visually highlighted with green highlighting within the current view page. This visual cue provides you with the choice to either save or cancel the changes, allowing for a seamless and efficient management of bulk modifications.
+When you make edits or add new records, these changes are visually highlighted in green within the current view. This visual cue allows you to easily identify modified records and choose whether to save or cancel the changes, enabling seamless and efficient management of bulk modifications.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <div style="margin-bottom:5px"><SfButton OnClick="BulkDataUpdate">Apply Batch Changes</SfButton></div>
 <SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
@@ -981,7 +991,9 @@ When you make edits or add new records, these changes will be visually highlight
     }
 }
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderDetails.cs" %}
+
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -1021,7 +1033,21 @@ public class OrderDetails
     public string ShipCountry { get; set; }
     public DateTime OrderDate { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjryjWLMJUjxvGNs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrStoqXKmIboOTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Supported events for batch editing
+
+Batch editing in the Syncfusion Blazor DataGrid offers a powerful way to edit multiple records simultaneously. Understanding the sequence and purpose of events triggered during this process enables users to customize or extend the data Grid's functionality. This section outlines the key events associated with batch editing, providing essential information to harness the full potential of this feature.
+
+| Event | Description |
+|-------|-------------|
+| [OnBatchAdd](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchadd) | Triggers before new records are added to the UI when the user clicks the add toolbar item or presses the insert key. |
+| [OnBatchSave](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchsave) | Triggers before batch changes (added, edited, deleted data) are saved to the data source. A confirmation popup is displayed when the Update button is clicked. |
+| [OnBatchDelete](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchdelete) | Triggers before records are deleted in the Grid. If no rows are selected, a popup prompts the user to select rows for deletion. |
+| [OnCellEdit](https://blazor.syncfusion.com/documentation/datagrid/events#oncelledit) | Triggers before a cell enters edit mode in the UI, such as on double-click or pressing F2. |
+| [OnCellSave](https://blazor.syncfusion.com/documentation/datagrid/events#oncellsave) | Triggers before cell changes are updated in the UI, such as on pressing Enter key or navigating to another cell. |
+| [CellSaved](https://blazor.syncfusion.com/documentation/datagrid/events#cellsaved) | Triggers after cell changes are updated in the UI and the edited values are highlighted in the Grid. |
