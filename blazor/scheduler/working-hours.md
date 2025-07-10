@@ -67,11 +67,11 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ## Dynamically setting work days
 
-The `SetWorkDaysAsync` and `ResetWorkDaysAsync` can be used to visually differentiate the work days and non-working days in the Scheduler. By default, weekends (Saturday and Sunday) appear in gray while weekdays display in white. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days, while `ResetWorkDaysAsync` resets the workdays for specified dates or all working days in the current view when called without arguments.
+The `SetWorkDaysAsync` and `ResetWorkDaysAsync` methods can be used to visually differentiate workdays and non-working days in the Scheduler. By default, weekends (Saturday and Sunday) appear in gray, while weekdays are displayed in white. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days, whereas `ResetWorkDaysAsync` resets the workdays for specified dates—or all working days in the current view when called without arguments.
 
-Before setting up custom working days, you need to reset the default working days using the `ResetWorkDaysAsync` method. Note that both methods do not accept unspecified kind dates.
+Before setting up custom working days, you need to reset the default workdays using the `ResetWorkDaysAsync` method. Note that both methods do not accept dates with an unspecified kind.
 
-In this example, we get current view dates when the Scheduler is rendered, remove common holiday dates from them, reset all days to non-working days using `ResetWorkDaysAsync`, and then loop through each resource. For each resource, we exclude their specific leave dates from the working dates and set only their available days as working days using `SetWorkDaysAsync`.
+In this example, we retrieve the current view dates when the Scheduler is rendered, remove common holiday dates from them, reset all days to non-working days using `ResetWorkDaysAsync`, and then loop through each resource. For each resource, we exclude their specific leave dates from the working dates and set only their available days as working days using `SetWorkDaysAsync`.
 
 This approach enables proper visualization of both organization-wide holidays and individual resource time-off in a resource-based scheduling scenario.
 
