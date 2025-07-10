@@ -67,37 +67,34 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ## Dynamically setting work days
 
-In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific days. In the following code example, you can set the different working days for scheduler cells based on the day of the week by using the `SetWorkDaysAsync` method. Before setting up the custom working days we need to reset the default working days by using the `ResetWorkDaysAsync` method.
+In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific dates. By default, weekends (Saturday and Sunday) appear in gray while weekdays display in white. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days.
+
+The `ResetWorkDaysAsync` method resets the workdays for specified dates. It also accepts empty arguments; by providing this, it resets all working days in current view dates. Both `SetWorkDaysAsync` and `ResetWorkDaysAsync` do not accept unspecified kind dates. Before setting up the custom working days, we need to reset the default working days by using the `ResetWorkDaysAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<div style="margin-top:12px;">
-    <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="750px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
-        <ScheduleTimeScale Enable="false" Interval="@IntervalInMinutes" SlotCount="4"></ScheduleTimeScale>
-        <ScheduleGroup Resources="@Resources"></ScheduleGroup>
-        <ScheduleResources>
-            <ScheduleResource TItem="DoctorData" TValue="int" DataSource="@DoctorsData" Field="DoctorID" Title="Doctor" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
-        </ScheduleResources>
-        <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted" DataBound="OnDataBound"></ScheduleEvents>
-        <ScheduleViews>
-            <ScheduleView Option="View.Week"></ScheduleView>
-            <ScheduleView Option="View.Month"></ScheduleView>
-            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
-        </ScheduleViews>
-    </SfSchedule>
-</div>
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="DoctorData" TValue="int" DataSource="@DoctorsData" Field="DoctorID" Title="Doctor" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted" DataBound="OnDataBound"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
 
 @code {
     public SfSchedule<AppointmentData> ScheduleRef;
     public bool IsLayoutChanged = false;
-    public bool IsResourcesEnabled = false;
-    private bool hasRefreshed = false;
 
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2025, 1, 31);
     View CurrentView = View.Month;
-    public int IntervalInMinutes { get; set; } = 60;
 
     public string[] Resources { get; set; } = { "Doctors" };
     public List<DoctorData> DoctorsData { get; set; } = new List<DoctorData> {
@@ -137,16 +134,16 @@ In Blazor, you can set the required working days on Scheduler, thus visually hig
             }
         }
 
-        await ScheduleRef.ResetWorkDaysAsync(CurrentViewDates);
+        await ScheduleRef.ResetWorkDaysAsync();
 
         List<DateTime> customDates = new List<DateTime>
         {
-            new DateTime (2020, 1, 7, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 8, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 9, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 14, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 15, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 16, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 7, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 8, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 9, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 14, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 15, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2025, 1, 16, 0, 0, 0, DateTimeKind.Utc),
         };
         await ScheduleRef.SetWorkDaysAsync(customDates, 0);
         await ScheduleRef.SetWorkDaysAsync(customDates.Take(3).ToList(), 1);
@@ -161,7 +158,6 @@ In Blazor, you can set the required working days on Scheduler, thus visually hig
         public DateTime EndTime { get; set; }
         public string? Description { get; set; }
         public bool IsAllDay { get; set; }
-        public bool IsBlock { get; set; }
         public string? RecurrenceRule { get; set; }
         public string? RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
