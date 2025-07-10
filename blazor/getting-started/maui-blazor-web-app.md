@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Blazor Hybrid and Web App in Visual Studio | Syncfusion
+title: Getting Started with .NET MAUI Blazor Hybrid and Web App | Syncfusion
 description: Check out the documentation for getting started with .NET MAUI Blazor Hybrid and Web App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
