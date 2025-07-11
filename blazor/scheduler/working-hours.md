@@ -71,7 +71,7 @@ The `SetWorkDaysAsync` and `ResetWorkDaysAsync` methods can be used to visually 
 
 Before setting up custom working days, you need to reset the default workdays using the `ResetWorkDaysAsync` method. Note that both methods do not accept dates with an unspecified kind.
 
-In this example, we retrieve the current view dates when the Scheduler is rendered, remove common holiday dates from them, reset all days to non-working days using `ResetWorkDaysAsync`, and then loop through each resource. For each resource, we exclude their specific leave dates from the working dates and set only their available days as working days using `SetWorkDaysAsync`.
+In this example, we retrieve the current view dates when the Scheduler, reset all days to non-working days using `ResetWorkDaysAsync`, remove common holiday dates from them, and then loop through each resource. For each resource, we exclude their specific leave dates from the working dates and set only their available days as working days using `SetWorkDaysAsync`.
 
 This approach enables proper visualization of both organization-wide holidays and individual resource time-off in a resource-based scheduling scenario.
 
