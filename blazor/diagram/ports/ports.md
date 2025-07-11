@@ -154,7 +154,7 @@ The following code example demonstrates how to connect connectors to ports on no
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/NodePortConnection).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/NodePortConnection).
 
 ## How to Create a Connector Port
 
