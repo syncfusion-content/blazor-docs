@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Edit Types in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Edit Types in Syncfusion Blazor DataGrid and much more details.
+description: Check out and learn here everything about Edit Types in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
