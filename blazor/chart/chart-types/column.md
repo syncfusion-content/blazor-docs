@@ -557,7 +557,7 @@ The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 ```
 ![Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grouped column
 
