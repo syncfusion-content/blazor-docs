@@ -75,6 +75,87 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
+### How to Connect a Connector to a Node Port
+
+Node ports are used to establish connections between node ports, connector ports and nodes. To create such a connection, set the [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceID) or [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetID) property to the ID of the node and the [SourcePortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePortID) or [TargetPortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPortID) property to the ID of the corresponding port on the node.
+
+The following code example demonstrates how to connect connectors to ports on nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    // Initialize node and connector collections
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 200,
+                OffsetY = 200,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+                Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Circle,
+                }
+            }
+            };
+
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 400,
+                OffsetY = 200,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+                Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Circle,
+                }
+            }
+            };
+
+        // Connector connecting node1's port1 to node2's port1
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                SourcePortID = "port1",
+                TargetID = "node2",
+                TargetPortID = "port1",
+                Type = ConnectorSegmentType.Straight,
+                Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 }
+            };
+
+        nodes.Add(node1);
+        nodes.Add(node2);
+        connectors.Add(connector1);
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/NodePortConnection).
+
 ## How to Create a Connector Port
 
 Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `ConnectorPort` and assign it to the connector’s `Ports` property.
@@ -122,7 +203,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
-### How to Connect a Connector to a Port
+### How to Connect a Connector to a Connector Port
 
 Connector ports are used to establish connections between node ports, connector ports and nodes. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
