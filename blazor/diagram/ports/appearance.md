@@ -75,14 +75,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Control the Port Visibility
 
-The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of Connect, Hidden, Hover, and Visible. By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
+The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect), [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden), [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover), and [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible). By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
 
 | Property | Definition |
 |---|---|
-| Hover | Port is visible when mousehover the DiagramElement. |
-| Hidden | Port is not visible for the DiagramElement. |
-| Connect | Specifies to visible the port when mousehover the DiagramElement and enable the PortConstraints as InConnect and OutConnect. |
-| Visible | Port is always visible for the DiagramElement. |
+| [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover) | Port is visible when mousehover the DiagramElement. |
+| [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden) | Port is not visible for the DiagramElement. |
+| [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect) | Specifies to visible the port when mousehover the DiagramElement and enable the PortConstraints as InConnect and OutConnect. |
+| [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible) | Port is always visible for the DiagramElement. |
 
 ## How to Use Different Port Shapes 
 
@@ -154,14 +154,59 @@ The PortConstraints may have multiple behaviors like listed below:
 
 | Constraints | Usages |
 |---|---|
-| None |Disables all behaviors of Port. |
-| Draw |Enables or disables to draw a connector. |
-| InConnect |Enables or disables connecting to the incoming Connector.  |
-| OutConnect | Enables or disables connecting the outgoing Connector. |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None) |Disables all behaviors of Port. |
+| [Draw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_Draw) |Enables or disables to draw a connector. |
+| [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect) |Enables or disables connecting to the incoming Connector.  |
+| [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect) | Enables or disables connecting the outgoing Connector. |
 
 ## How to Add Additional Information for Port
 
 The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information for the port.
+
+The following code shows how to set the AdditionalInfo value for a port.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // Create a dictionary to hold additional information for the port.
+        Dictionary<string, object> PortInfo = new Dictionary<string, object>();
+        PortInfo.Add("portInfo", "Port A");
+        // Create a port with additional info.
+        PointPort port = new PointPort()
+            {
+                Offset = new DiagramPoint { X = 0.5, Y = 0.5 },
+                Visibility=PortVisibility.Visible,
+                AdditionalInfo = PortInfo
+            };
+        // A node is created and stored in nodes collection.
+        Node node = new Node()
+            {
+                OffsetX = 250,
+                OffsetY = 250,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6BA5D7",
+                    StrokeColor = "white"
+                },
+                Ports = new DiagramObjectCollection<PointPort>  { port }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
+
+
+**Note:** Like AdditionalInfo for nodes, you can set any type of value for the AdditionalInfo property of a port.
 
 ## See also
 

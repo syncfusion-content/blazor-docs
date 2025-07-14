@@ -186,9 +186,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
-| No Wrap | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.png) |
-| Wrap | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
-| WrapWithOverflow (Default) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
+| [No Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_NoWrap) | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.png) |
+| [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_Wrap) | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
+| [WrapWithOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_WrapWithOverflow) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
 
 ### How to Control Text Overflow
 
@@ -530,9 +530,9 @@ AnnotationConstraints may have multiple behaviors as follows:
 
 | Constraints | Usages |
 |---|---|
-| ReadOnly | Enables or disables whether the annotation to be read only or not. |
-| None | Disables all behaviors of Annotation. |
-|InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
+| [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) | Enables or disables whether the annotation to be read only or not. |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None) | Disables all behaviors of Annotation. |
+|[InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) |Enables or disables to inherit the ReadOnly option from the parent object.|
 
 N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
 
@@ -638,6 +638,56 @@ The following code illustrates how to define a template for a node's annotation.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/TemplateSupportforAnnotation)
 ![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 
+## How to Add Additional Information for an Annotation
+
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_AdditionalInfo) property of an annotation allows you to store extra information associated with the annotation in a flexible way. This can be useful for maintaining metadata or additional details that you may need to access programmatically.
+
+The following code shows how to set the AdditionalInfo value.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // Create a dictionary to store additional information for the annotation.
+        Dictionary<string, object> AnnotationInfo = new Dictionary<string, object>();
+        AnnotationInfo.Add("author", "John Doe");
+        AnnotationInfo.Add("modifiedDate", DateTime.Now);
+        // A node with an annotation containing additional information.
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Content = "Annotated Node",
+                    AdditionalInfo = AnnotationInfo
+                }
+            }
+        };
+        // Add the node to the collection.
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
+
+**Note:** You can set any type of value for the AdditionalInfo property.
+
+
 ## See also
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
@@ -645,3 +695,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add annotation for Node](./node-annotation)
 
 * [How to add annotation for Connector](./connector-annotation)
+
+* [How to Prevent Text Overflow and Display Excess Content on Hover in a Diagram](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
