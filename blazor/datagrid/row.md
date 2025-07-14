@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row in Blazor DataGrid | Syncfusion
-description: Check out this page to learn all about setting row styles, heights, hovering, pinning, and more in the Syncfusion® Blazor DataGrid component.
+description: Check out this page to learn all about setting row styles, heights, hovering, pinning, and more in the Syncfusion Blazor DataGrid component.
 platform: Blazor
 control: DataGrid
 documentation: ug
