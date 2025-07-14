@@ -754,7 +754,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLeNxrxptwavgKW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLeNxrxptwavgKW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization
 
@@ -786,6 +786,7 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
 * [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Top) - Specifies the top margin of the stack label.
 * [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Right) - Specifies the right margin of the stack label.
 * [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Left) - Specifies the left margin of the stack label.
+
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
@@ -854,7 +855,8 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDByZdBHfjFPhexI?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDByZdBHfjFPhexI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
