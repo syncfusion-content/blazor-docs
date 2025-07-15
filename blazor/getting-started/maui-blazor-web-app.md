@@ -28,9 +28,11 @@ Visual Studio provides **.NET MAUI Blazor Hybrid and Web App** template to creat
    * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
    * ASP.NET and web development
 
-## Create a new .NET MAUI Blazor App in Visual Studio
+## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
-You can create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)
+You can create a **.NET MAUI Blazor Hybrid and Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)
+
+![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
