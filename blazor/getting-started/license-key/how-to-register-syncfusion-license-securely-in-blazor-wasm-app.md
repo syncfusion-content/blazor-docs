@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Register Syncfusion License Key Securely in Blazor WASM App?
-description: Learn here about how to register Syncfusion license key securely in Blazor WASM application.
+description: Learn how to securely register a Syncfusion license key in your Blazor WebAssembly (WASM) application.
 platform: Blazor
 component: Common
 documentation: ug
