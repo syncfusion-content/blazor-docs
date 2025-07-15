@@ -2063,6 +2063,48 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 </tr>
 </table>
 
+## Syncfusion.Blazor.Spreadsheet
+
+The Blazor Spreadsheet supports drag selection simplifies data manipulation and essential operations like cut, copy, and paste, complemented by an intelligent autofill function for quick data entry.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet">Syncfusion.Blazor.Spreadsheet</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/spreadsheet/getting-started-webapp">Spreadsheet</a></td>
+<td>SfSpreadsheet</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/">Syncfusion.Blazor.Ribbon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/">Syncfusion.XlsIO.Net.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.StockChart
 
 The Blazor Stock Chart is an easy-to-use financial charting package to track and visualize the stock price of any company over a specific period using charting and range tools. It also comes with a lot of features such as zooming, panning, tooltip, crosshair, trackball, period selector, range selector, and events to make the stock charts more interactive.

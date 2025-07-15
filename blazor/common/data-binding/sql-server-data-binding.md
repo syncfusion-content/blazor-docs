@@ -19,7 +19,7 @@ The following software are needed:
 
 * Microsoft.EntityFrameworkCore.SqlServer
 * Visual Studio 2022
-* .NET 6.0 or later.
+* .NET 8.0 or later.
 
 ## Create the database
 
@@ -413,12 +413,9 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 
 In this demo application, the latest theme will be used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8 and .NET 9.
+  * For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto),  refer stylesheet inside the `<head>` of **~/Components/App.razor** .
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
-  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
 {% highlight cshtml %}
 
