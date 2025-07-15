@@ -844,7 +844,7 @@ Property | Description
 [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) | References the parent folder's ID, creating the hierarchical structure. 
 [DateModified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_DateModified) | Indicates when the file or folder was last modified.
 [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Type) |  File extension (for files) `File` or  (for folders) `folder`.
-[FiltePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) | Relative path to the file or folder.
+[FiltePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) | Path relative to the root, used for navigation
 [FilterId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterId) | Similar to the FilterPath,  FilterPath-like structure using IDs, used for hierarchical operations.
 [HasChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_HasChild) | Determines if a directory contains nested items (`true` for has children, `false` otherwise)
 [DateCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_DateCreated) | Creation date of the file/folder.
@@ -855,7 +855,7 @@ Property | Description
 Property | Description
  ---  | ---
 [CaseSensitive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_CaseSensitive) | Flag for case-sensitive operations.
-[ShowHiddenItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ShowHiddenItems) | Flag for displaying hidden items.
+[ShowHiddenItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ShowHiddenItems) | Flag for displaying hidden items.<br/><span style="color:gray"><i>Note: This is handled from the service side.</i></span>
 [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Path) | Used in specific operations but not required for basic representation.
 [Action](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Action) | Defines actions like renaming or deleting the file or folder.
 [NewName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_NewName) | Specifies a new name for the item, used in rename operations.
@@ -863,13 +863,17 @@ Property | Description
 
 **Understanding FilterPath vs Path in FileManagerDirectoryContent**
 
+The `FileManagerDirectoryContent` class in the Syncfusion Blazor File Manager includes both FilterPath and Path properties. Although both involve directory paths, they serve distinct purposes within the File Manager component. Understanding how and when to use each is essential for proper data binding and operational logic.
 
-Property | Purpose
- ---  | ---
-[FilterPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) | A persistent property that acts like an address, telling where an item is located within the file system hierarchy. It's used for navigation within the component and helps display the path in breadcrumb-like features.
-[Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Path) | A temporary property used exclusively during file operations like move, delete, or copy. It specifies the target location for where the operation should occur but is not stored permanently with the item.
+**FilterPath**
 
-Below is an example demonstrating how to use `FilterPath` and `Path` in practical scenarios:
+[FilterPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) is a persistent property that describes the item's location in the file system hierarchy, relative to the root folder. It is primarily used for navigation, hierarchical representation, and breadcrumb UIs.
+
+**Usage**
+
+Set this property when you define or build your file and folder data structure. For example, all documents inside the "Documents" folder should have `FilterPath = "/Documents/"`.
+
+Below is an example demonstrating how to use `FilterPath` in practical scenarios:
 
 {% tabs %}
 {% highlight razor %}
@@ -895,6 +899,24 @@ Below is an example demonstrating how to use `FilterPath` and `Path` in practica
         ParentId = "1",
         FilterPath = "/Documents/",  // Shows that the 'Report.pdf' file is inside 'Documents'
     };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Path**
+
+[Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Path) is a temporary, operation-specific property that identifies the target location for file operations (e.g., read, move, delete, copy). It specifies where an action should be performed, rather than an item's structural location.
+
+**Usage**
+Use this property with service methods or event arguments representing an operation. For example, when moving a file, Path specifies the destination folder.
+
+Below is an example demonstrating how to use `Path` in practical scenarios:
+
+{% tabs %}
+{% highlight razor %}
+
+@code{
 
     // Moving the file
     var moveOperation = new FileManagerDirectoryContent()
