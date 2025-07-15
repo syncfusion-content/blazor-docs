@@ -25,7 +25,7 @@ This guide demonstrates how to build a Blazor Web App with authentication in .NE
 
 * Select the **Blazor Web App** template using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and click **Next**.
 
-![Create-blazor-web-app-template](images/blazor-web-template.png)
+![Create-blazor-web-app-template](images/blazor-web-template.jpeg)
 
 ## Configure Project Settings
 
@@ -43,13 +43,13 @@ Click the **Create** button to generate the Blazor Web App. Once created, run th
 
 * Fill in the required authentication details (e.g., email and password) in the registration form and click **Register**.
 
-![Enter-register-details](images/register-details.png)
+![Enter-register-details](images/register-details.jpg)
 
 ## Apply Database Migrations
 
 After registering, select **Apply Migrations** to configure the database with the account details.
 
-![Apply-migration](images/apply-migration.png)
+![Apply-migration](images/apply-migration.jpg)
 
 ## Verify Login
 
@@ -140,7 +140,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in your default web browser.
 
 
-![Blazor Calendar Component](images/sync-components-auth.png)
+![Blazor Calendar Component](images/sync-components-auth.jpg)
 
 N> Download demo from [GitHub](https://github.com/SyncfusionExamples/blazor-authentication)
 
