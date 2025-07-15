@@ -142,6 +142,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 
 ![Blazor Calendar Component](images/sync-components-auth.png)
 
+N> Download demo from [GitHub](https://github.com/SyncfusionExamples/blazor-authentication)
+
 ## See Also
 
 * [Getting Started with Blazor WASM App with Authentication Library](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-authentication)
