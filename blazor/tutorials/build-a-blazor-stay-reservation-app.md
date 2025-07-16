@@ -143,7 +143,7 @@ public class AppointmentData
 
 Now, create the `AppointmentService.cs` in the `Data` folder. This service will hold the appointment list and references to our components.
 
-The complete code for `AppointmentService.cs` is available in the GitHub repository at the following link: [`AppointmentService.cs`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Data/AppointmentService.cs). You may reuse the full code as needed. Please refer to the provided GitHub link for further details.
+The complete code for `AppointmentService.cs` is available in the GitHub repository at the following link: [`AppointmentService.cs`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Data/AppointmentService.cs). You may reuse the full code as needed.
 
 ```csharp
 public class AppointmentService
@@ -252,7 +252,7 @@ The Scheduler needs two main pieces of data:
 
 The appointment and resource data will come from `AppointmentService`.
 
-The complete code for `Schedule.razor` is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed. Please refer to the provided GitHub link for further details.
+The complete code for `Schedule.razor` is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
 
 ```html
 @inject AppointmentService Service
@@ -352,7 +352,7 @@ We need to connect the checkboxes in the sidebar to the data displayed in the sc
 
 Refer the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
 
-The complete code for `Sidebar.razor` is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed. Please refer to the provided GitHub link for further details.
+The complete code for `Sidebar.razor` is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
 
 ```csharp
 @code {
