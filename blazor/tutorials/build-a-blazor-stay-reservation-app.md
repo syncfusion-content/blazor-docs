@@ -53,7 +53,7 @@ Now, let's configure the app to recognize and style the Syncfusion components.
 
     In your `Program.cs` file, register the Syncfusion Blazor service.
 
-    ```csharp Program.cs
+    ```csharp
     // Add the following line before builder.Build()
     builder.Services.AddSyncfusionBlazor();
     ```
@@ -111,15 +111,39 @@ First, define your data model in `Data/AppointmentData.cs`:
 public class AppointmentData
 {
     public int Id { get; set; }
+    [Required]
     public string Subject { get; set; }
     public DateTime StartTime { get; set; }
     public DateTime EndTime { get; set; }
-    public int? FloorId { get; set; } // Represents the resource
-    // Add other relevant properties like notes, guest name, etc.
+    public bool IsAllDay { get; set; } = false;
+    public string RecurrenceRule { get; set; }
+    public string RecurrenceException { get; set; }
+    public Nullable<int> RecurrenceID { get; set; }
+    public int FloorId { get; set; } // Represents the resource
+    public int RoomId { get; set; }
+    public string Price { get; set; }
+    public int Nights { get; set; }
+    public int Adults { get; set; }
+    public int Children { get; set; }
+    [Required]
+    public string Purpose { get; set; }
+    [Required]
+    public int Proof { get; set; }
+    [Required]
+    public string ProofNumber { get; set; }
+    [Required]
+    [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Invalid email address")]
+    public string Email { get; set; }
+    [Required]
+    [RegularExpression("^[0-9]{10}$", ErrorMessage = "Invalid Phone Number")]
+    public string Phone { get; set; }
+    public string BorderColor { get; set; }
 }
 ```
 
 Now, create the `AppointmentService.cs` in the `Data` folder. This service will hold the appointment list and references to our components.
+
+The complete code for `AppointmentService.cs` is available in the GitHub repository at the following link: [`AppointmentService.cs`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Data/AppointmentService.cs). You may reuse the full code as needed.
 
 ```csharp
 public class AppointmentService
@@ -228,6 +252,8 @@ The Scheduler needs two main pieces of data:
 
 The appointment and resource data will come from `AppointmentService`.
 
+The complete code for `Schedule.razor` is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
+
 ```html
 @inject AppointmentService Service
 
@@ -325,6 +351,9 @@ Update `Components/Pages/Index.razor` with the following code:
 We need to connect the checkboxes in the sidebar to the data displayed in the scheduler. Since we're using our `AppointmentService` to hold the state, we can detect changes to the checkbox values and re-filter the scheduler's resource data. Can bind the change event to checkbox and sliders to form the filter query and update the resource data.
 
 Refer the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
+
+The complete code for `Sidebar.razor` is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
+
 ```csharp
 @code {
     // ... existing code ...
