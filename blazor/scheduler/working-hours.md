@@ -73,8 +73,6 @@ Before setting up custom working days, you need to reset the default work days u
 
 In this example, we retrieve the current view dates during initial rendering, date and view navigations and reset all days to non-working days using `ResetWorkDaysAsync`. Then we remove common holiday dates from the current view dates. Then we loop through each resource and for each resource we exclude resource specific leave dates from the working dates and set their available days as working days using `SetWorkDaysAsync` method.
 
-This approach enables proper visualization of both organization-wide holidays and individual resource time-off in a resource-based scheduling scenario.
-
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
