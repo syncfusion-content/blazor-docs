@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header customization in Blazor DataGrid | Syncfusion
-description: Learn here all about header in Syncfusion Blazor DataGrid and more.
+description: Check out and learn here all about the header in the style and appearance of the Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
