@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about the Cell in the Syncfusion Blazor DataGrid and much more.
+description: Check out this page to learn how to set gridlines, tooltips, styles, and more in cells in the Syncfusion Blazor DataGrid component.
 platform: Blazor
 control: DataGrid
 documentation: ug

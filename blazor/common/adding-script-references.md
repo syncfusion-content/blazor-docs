@@ -17,9 +17,8 @@ N> The javascript interop files needs to be added to support the features that c
 
 You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the CDN resources.
 
-* For **Blazor Web App**, reference scripts in `~/Components/App.razor` file.
-* For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file.
-* For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 7` project.
+* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference scripts in `~/Components/App.razor` file.
+* For **Blazor WASM Standalone App**, reference scripts in `~/wwwroot/index.html` file.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using .
 
@@ -448,7 +447,7 @@ The following table lists components and its script reference.
 
 ## Custom Resource Generator
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 
