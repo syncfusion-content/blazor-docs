@@ -27,11 +27,11 @@ To add or insert a new sheet using the UI, follow these steps:
 
 ### Insert sheet programmatically
 
-The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. These methods enable inserting sheets at specific positions with or without custom names, or in bulk. Two methods are available to insert sheets with different options.
+The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a custom name. Below are the details for each scenario, including code examples and parameter information.
 
 ### Add one or more sheets at a specific index
 
-Adds one or more sheets starting at the specified position with a default name (e.g., Sheet1, Sheet2). If no position is given, sheets are added at the end of the workbook. This method is useful for adding multiple sheets to organize large amounts of data, such as separate sheets for each department's information.
+This method inserts one or more sheets at a specified position in the workbook with default names (e.g., Sheet1, Sheet2). If no position is provided, the sheets are added at the end of the workbook. This is ideal for scenarios requiring multiple sheets, such as organizing large datasets or creating templates for repetitive tasks.
 
 {% tabs %}
 {% highlight razor %}
@@ -70,12 +70,20 @@ Adds one or more sheets starting at the specified position with a default name (
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| index | int(optional) | The zero-based index where sheets will be inserted. If not provided, defaults to the last position in the workbook. |
+| index | int(optional) | The zero-based index where the sheets will be inserted. If not specified, sheets are added at the end of the workbook. |
 | count | int(optional) | The number of sheets to add. Defaults to 1 if not specified. |
+
+**Functionality**
+
+* If index is not provided, the new sheets are appended to the workbook.
+
+* If count is greater than 1, multiple sheets are added with sequential default names (e.g., Sheet3, Sheet4).
+
+* If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), the method may not execute as expected.
 
 ### Add a sheet with a custom name
 
-Adds one sheet at the specified position with a custom name. If the index is greater than the number of existing sheets, no action is taken. This is ideal for creating sheets with meaningful names, like "Sales" or "Inventory".
+This method inserts a single sheet at a specified position with a user-defined name. It is useful for creating sheets with meaningful names, such as "Budget" or "Inventory," to improve workbook clarity.
 
 {% tabs %}
 {% highlight razor %}
@@ -113,6 +121,14 @@ Adds one sheet at the specified position with a custom name. If the index is gre
 | -- | -- | -- |
 | index | int | The zero-based index where the sheet will be inserted. |
 | sheetName | string | The name for the new sheet. If the name is already used, a unique name is created (e.g., "Sheet1_1"). |
+
+**Functionality**
+
+* The index must be valid (between 0 and the number of existing sheets). If the index exceeds the sheet count, no action is taken.
+
+* If the provided sheetName is already in use, the component automatically appends a suffix to create a unique name.
+
+* Only one sheet is added per method call in this scenario.
 
 ## Delete sheet
 
