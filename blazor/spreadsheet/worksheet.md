@@ -9,21 +9,29 @@ documentation: ug
 
 # Worksheet in Blazor Spreadsheet component
 
-A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data.
+A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data. This feature supports data organization across multiple sheets, making it suitable for scenarios like managing department-wise records, financial reports, or project data in separate sheets.
 
 ## Insert sheet
 
-The Spreadsheet component provides support for inserting new sheets. New sheets can be dynamically inserted through the following methods:
+The InsertSheet feature in the Syncfusion Blazor Spreadsheet component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through the user interface (UI) or programmatically, offering flexibility based on the application's requirements.
+
+### InsertSheet via the UI
+
+To add or insert a new sheet using the UI, follow these steps:
 
 * Click the `+` icon button in the **Sheet** tab. This will insert a new empty sheet next to current active sheet.
+![Add sheet option](images/addsheet.png)
 
 * Right click on a **Sheet** tab, and then select **Insert** option from the context menu to insert a new empty sheet after the current active sheet.
-
-* Using [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method.
+![Insert sheet context menu](images/insert-sheet-option.png)
 
 ### Insert sheet programmatically
 
-The `InsertSheetAsync()` method enables programmatic insertion of multiple sheets at the desired index. The following code example illustrates how to insert a sheet programmatically.
+The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. These methods enable inserting sheets at specific positions with or without custom names, or in bulk. Two methods are available to insert sheets with different options.
+
+### Add one or more sheets at a specific index
+
+Adds one or more sheets starting at the specified position with a default name (e.g., Sheet1, Sheet2). If no position is given, sheets are added at the end of the workbook. This method is useful for adding multiple sheets to organize large amounts of data, such as separate sheets for each department's information.
 
 {% tabs %}
 {% highlight razor %}
@@ -49,19 +57,62 @@ The `InsertSheetAsync()` method enables programmatic insertion of multiple sheet
 
     public async Task InsertSheetHandler()
     {
-        // Inserts new sheets from index 1 to 3.
-        await SpreadsheetRef.InsertSheetAsync(1,3);
+        // // Insert 2 sheets at index 1
+        await SpreadsheetRef.InsertSheetAsync(1,2);
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the insert sheet options in the Spreadsheet.
+{% endhighlight %}
+{% endtabs %}
 
-![Add sheet option](images/addsheet.png)
+| Parameter | Type | Description |
+| -- | -- | -- |
+| index | int(optional) | The zero-based index where sheets will be inserted. If not provided, defaults to the last position in the workbook. |
+| count | int(optional) | The number of sheets to add. Defaults to 1 if not specified. |
 
-![Insert sheet context menu](images/insert-sheet-option.png)
+### Add a sheet with a custom name
+
+Adds one sheet at the specified position with a custom name. If the index is greater than the number of existing sheets, no action is taken. This is ideal for creating sheets with meaningful names, like "Sales" or "Inventory".
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="InsertSheetHandler">Insert Sheet</button>
+
+<SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetRef;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task InsertSheetHandler()
+    {
+        // Insert a sheet at index 1 with a custom name
+        await SpreadsheetRef.InsertSheetAsync(1,"Sales");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| index | int | The zero-based index where the sheet will be inserted. |
+| sheetName | string | The name for the new sheet. If the name is already used, a unique name is created (e.g., "Sheet1_1"). |
 
 ## Delete sheet
 
