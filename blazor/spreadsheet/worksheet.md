@@ -65,9 +65,6 @@ This method inserts one or more sheets at a specified position in the workbook w
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
-{% endtabs %}
-
 | Parameter | Type | Description |
 | -- | -- | -- |
 | index | int(optional) | The zero-based index where the sheets will be inserted. If not specified, sheets are added at the end of the workbook. |
