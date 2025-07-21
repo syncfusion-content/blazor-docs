@@ -167,7 +167,7 @@ Sheets can be deleted at a specific index using the [DeleteSheetAsync()](https:/
 
 ## Rename sheet
 
-Renaming worksheets in the Spreadsheet component enables clear and customized naming to suit specific needs. This feature enhances workbook organization, making it easier to identify and navigate sheets, particularly in workbooks with multiple tabs. To rename a sheet, right-click a **Sheet** tab and select the **Rename** option from the context menu. 
+Renaming sheets in the Spreadsheet component allows clear and customized names for specific needs. This feature enhances workbook organization, making it easier to identify and navigate sheets, particularly in workbooks with multiple tabs. To rename a sheet, right-click a **Sheet** tab and select the **Rename** option from the context menu. 
 
 **Notes**
 
