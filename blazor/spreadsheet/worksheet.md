@@ -15,6 +15,8 @@ A worksheet is a collection of cells organized in the form of rows and columns t
 
 The InsertSheet feature in the Syncfusion Blazor Spreadsheet component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through the user interface (UI) or programmatically, offering flexibility based on the application's requirements.
 
+N> If the workbook is protected, inserting a sheet through the interface or code is not possible. To know more about workbook protection, refer here(./protection#protect-workbook).
+
 ### Insert sheet via the UI
 
 To add or insert a new sheet using the UI, follow these steps:
@@ -108,22 +110,24 @@ This method inserts a single sheet at a specified position with a user-defined n
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| index | int | The zero-based index where the sheet will be inserted. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action is taken. |
+| index | int | The zero-based index where the sheet will be inserted. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action occurs. |
 | sheetName | string | The name for the new sheet. |
-
-N> If the workbook is protected, inserting a sheet through the interface or code is not possible. To know more about workbook protection, refer here(./protection#protect-workbook).
 
 ## Delete sheet
 
-The Spreadsheet component provides support for removing existing worksheets. The existing worksheet can be dynamically deleted through the following methods:
+The Spreadsheet component supports removing sheets from a spreadsheet. When the workbook contains only one sheet, the delete option is disabled in the interface, and no action occurs during programmatic deletion attempts. Sheets can be deleted using the interface or programmatically, based on application requirements.
 
-* Right click on a **Sheet** tab, and then select **Delete** option from context menu.
+### Delete sheet via the UI
 
-* Using [DeleteSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_Nullable_System_Int32__) method.
+To remove a sheet using the interface, follow these steps:
+
+* Right click on a **Sheet** tab, and then select **Delete** option from context menu. This removes the selected sheet from the workbook. 
+
+![Delete sheet option](images/delete-sheet-option.png)
 
 ### Delete sheet programmatically
 
-The sheets can be programmatically deleted at the desired index using the `DeleteSheetAsync()` method. The following code example illustrates how to delete a sheet programmatically.
+Sheets can be deleted at a specific index using the [DeleteSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_Nullable_System_Int32__) method. The following code example illustrates how to delete a sheet programmatically.
 
 {% tabs %}
 {% highlight razor %}
@@ -149,7 +153,7 @@ The sheets can be programmatically deleted at the desired index using the `Delet
 
     public async Task DeleteSheetHandler()
     {
-        // To delete the first sheet.
+        // Remove the sheet at position 0
         await SpreadsheetRef.DeleteSheetAsync(0);
     }
 }
@@ -157,47 +161,62 @@ The sheets can be programmatically deleted at the desired index using the `Delet
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the delete sheet option in the Spreadsheet. 
-
-![Delete sheet option](images/delete-sheet-option.png)
+| Parameter | Type | Description |
+| -- | -- | -- |
+| index | int(optional) | The zero-based index of the sheet to delete. If no index is provided, the active sheet is deleted. If the index is invalid (e.g., negative or beyond the workbook's sheet count) or the workbook has only one sheet, no action occurs. |
 
 ## Rename sheet
 
-The Spreadsheet component provides support for renaming worksheets. Existing worksheets can be dynamically renamed by right-clicking on a **Sheet** tab, and then selecting the **Rename** option from the context menu. 
+Renaming worksheets in the Spreadsheet component enables clear and customized naming to suit specific needs. This feature enhances workbook organization, making it easier to identify and navigate sheets, particularly in workbooks with multiple tabs. To rename a sheet, right-click a **Sheet** tab and select the **Rename** option from the context menu. 
 
-The following image illustrates the rename sheet option in the Spreadsheet.
+**Notes**
+
+* Sheet names must be unique within the workbook.
+
+* Renaming does not impact the sheet’s data or formulas.
 
 ![Rename sheet option](images/rename-sheet-option.png)
 
 ## Hide sheet
 
-The Spreadsheet component provides support for hiding worksheets. Hiding worksheets helps prevent unauthorized or accidental changes to the file. Existing worksheets can be dynamically hidden by right-clicking on a **Sheet** tab that should be hidden, then selecting the **Hide** option from the context menu. The selected sheet will be hidden from view but will remain in the workbook.
+Hiding sheets in the Spreadsheet component prevents unauthorized access or accidental changes. Hidden sheets remain in the workbook, retaining all data, formulas, and functionality, but are not visible in the interface.To hide a sheet, right-click a **Sheet** tab and select the **Hide** option from the context menu. 
 
-The following image illustrates the hide sheet option in the Spreadsheet.
+**Notes**
+
+* The **Hide** option is available only if the workbook has more than one visible sheet, ensuring at least one sheet remains visible.
+
+* Hidden sheets can still be referenced in formulas and calculations.
+
+* Access the sheet selection menu to view all sheets, including hidden ones.
 
 ![Hide sheet option](images/hide-sheet-option.png)
 
 ## Unhide sheet
 
-The Spreadsheet component also provides functionality to restore hidden worksheets to view. Hidden worksheets appear in a disabled state within the sheet selection menu. To make a hidden sheet visible again, click on the **Sheet** tab list icon and then click the hidden sheet. The previously hidden sheet will reappear in the sheet tab collection and become available for editing.
-
-The following image illustrates the sheet selection menu showing a visible sheet (Sheet1) and a disabled hidden sheet (Sheet2).
+The Spreadsheet component allows restoring hidden sheets to view. Hidden sheets appear in a disabled state within the sheet selection menu. To make a hidden sheet visible again, click on the **Sheet** tab list icon and then click the hidden sheet. The sheet will reappear in the sheet tab collection and become available for editing.
 
 ![Unhide sheet option](images/unhide-sheet-option.png)
 
 ## Move sheet
 
-The Spreadsheet component allows for rearranging the order of worksheets by moving them to different positions. Sheets can be moved in the following methods:
+The Spreadsheet component allows reordering sheets by moving them to different positions within the workbook. This feature helps organize sheets in a preferred sequence for better navigation and workflow efficiency. Sheets can be moved using the interface or programmatically, based on application needs.
+
+### Move sheet via the UI
+
+To move a sheet using the interface, follow these steps:
 
 * Click and hold on a **Sheet** tab, then drag it to the desired position.
 
 * Right click on a **Sheet** tab and select **Move Left** or **Move Right** options from the context menu to reposition the sheet accordingly.
 
-* Using [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method.
+**Move Right** is enabled only if a sheet exists to the right, and **Move Left** is enabled only if a sheet exists to the left.
+
+![Move Left sheet option](images/move-left-option.png)
+![Move Right sheet option](images/move-right-option.png)
 
 ### Move sheet programmatically
 
-The `MoveSheetAsync()` method can be used to move a sheet from one index position to another programmatically.
+The [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method moves a sheet from one index to another programmatically.
 
 {% tabs %}
 {% highlight razor %}
@@ -231,22 +250,26 @@ The `MoveSheetAsync()` method can be used to move a sheet from one index positio
 {% endhighlight %}
 {% endtabs %}
 
-The following images illustrates the move sheet options in the Spreadsheet.
-
-![Move Left sheet option](images/move-left-option.png)
-![Move Right sheet option](images/move-right-option.png)
+| Parameter | Type | Description |
+| -- | -- | -- |
+| sourceIndex | int | The zero-based index of the sheet to move. If invalid (e.g., negative or beyond sheet count), no action occurs. |
+| destinationIndex | int | The zero-based index where the sheet will be moved. If invalid, no action occurs. |
 
 ## Duplicate sheet
 
-The Spreadsheet component provides functionality to create an exact copy of an existing worksheet. Duplicating a worksheet is helpful when creating multiple sheets with similar content or structure. Sheets can be duplicated using the following methods:
+The Spreadsheet component allows creating an exact copy of a sheet. Duplicating a sheet helps when making multiple sheets with similar content or structure. The duplicate sheet gets a unique name, typically appending a number (e.g., "Sheet1" becomes "Sheet1 (2)"). Sheets can be duplicate using the interface or programmatically, based on application needs.
+
+### Duplicate sheet via the UI
+
+To duplicate a sheet using the interface, follow these steps:
 
 * Right click on a **Sheet** tab that needs to be duplicated and select **Duplicate** option from the context menu.
 
-* Using [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method.
+![Duplicate sheet option](images/duplicate-sheet-option.png)
 
 ### Duplicate sheet programmatically
 
-The `DuplicateSheetAsync()` method can be used to create a copy of a sheet programmatically. The duplicate sheet will be inserted after the source sheet by default.
+The [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method can be used to create a copy of a sheet programmatically. The duplicate sheet will be inserted after the source sheet by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -280,6 +303,6 @@ The `DuplicateSheetAsync()` method can be used to create a copy of a sheet progr
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the duplicate sheet option in the Spreadsheet.
-
-![Duplicate sheet option](images/duplicate-sheet-option.png)
+| Parameter | Type | Description |
+| -- | -- | -- |
+| index | int(optional) | The zero-based index of the sheet to duplicate. If no index is provided, the active sheet is duplicated. If the index is invalid (e.g., negative or beyond sheet count), no action occurs. |
