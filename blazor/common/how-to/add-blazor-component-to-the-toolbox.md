@@ -17,7 +17,7 @@ To include Syncfusion components for Blazor in the Toolbox, follow these steps:
 
 ![Add new tab in toolbox](images/new-tab-toolbox.png)
 
-2. In the code editor, write or paste a Blazor component snippet, such as the Syncfusion SfCalendar. Once the code is in place, select the entire code snippet, then drag and drop it into the newly created tab in the Visual Studio Toolbox.
+2. In the code editor, write or paste a Blazor component snippet, such as the **Syncfusion SfCalendar**. Once the code is in place, select the entire code snippet, then drag and drop it into the newly created tab in the Visual Studio Toolbox.
 
 ![Add code snippet to toolbox](images/add-snippet.gif)
 
