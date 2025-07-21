@@ -159,3 +159,5 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
+
+N> You can refer to our [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Spreadsheet Example](https://blazor.syncfusion.com/demos/spreadsheet/overview?theme=bootstrap5) that shows you how to render the Spreadsheet in Blazor.

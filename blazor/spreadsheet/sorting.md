@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Spreadsheet component
 
-Sorting in the Spreadsheet component enables organizing data in a meaningful order, allowing for better data analysis and presentation. The Blazor Spreadsheet component provides comprehensive sorting capabilities for worksheet data in ascending or descending order.
+Sorting in the [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component enables organizing data in a meaningful order, allowing for better data analysis and presentation. The Blazor Spreadsheet component provides comprehensive sorting capabilities for worksheet data in ascending or descending order.
 
 To control the sorting functionality, the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property can be used to enable or disable sorting operations in the Spreadsheet. The default value of the `AllowSorting` property is **true**.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor Spreadsheet component
 
-Filtering in the Spreadsheet component enables the display of only relevant rows based on specified criteria, facilitating focused data analysis. To control this functionality, the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property can be used to enable or disable filtering operations in the Spreadsheet. The default value of the `AllowFiltering` property is **true**.
+Filtering in the [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component enables the display of only relevant rows based on specified criteria, facilitating focused data analysis. To control this functionality, the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property can be used to enable or disable filtering operations in the Spreadsheet. The default value of the `AllowFiltering` property is **true**.
 
 ## Filter operations
 
