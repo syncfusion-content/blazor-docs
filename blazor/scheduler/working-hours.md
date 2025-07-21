@@ -65,6 +65,117 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
 
+## Dynamically setting work days
+
+The `SetWorkDaysAsync` and `ResetWorkDaysAsync` methods can be used to dynamically set and reset work days in the Scheduler. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days, whereas `ResetWorkDaysAsync` resets specified work days when dates are passed and resets all the days in the current view to non-working days when called without passing any dates.
+
+Before setting up custom working days, you need to reset the default work days using the `ResetWorkDaysAsync` method. Note that both methods do not accept dates with an unspecified kind.
+
+In this example, we retrieve the current view dates during initial rendering, date and view navigations and reset all days to non-working days using `ResetWorkDaysAsync`. Then we remove common holiday dates from the current view dates. Then we loop through each resource and for each resource we exclude resource specific leave dates from the working dates and set their available days as working days using `SetWorkDaysAsync` method.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowWeekend="false" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int"
+        DataSource="@Employees" Field="EmployeeID" Title="Employee"
+        Name="Employees" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEvents TValue="AppointmentData" Created="OnCreated" ActionCompleted="OnActionCompleted"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    public SfSchedule<AppointmentData> ScheduleRef;
+    DateTime CurrentDate = new DateTime(2025, 1, 31);
+    public string[] Resources { get; set; } = { "Employees" };
+    public List<ResourceData> Employees { get; set; } = new List<ResourceData> {
+        new ResourceData{ Text = "John Doe", Id= 1, Color = "#df5286" },
+        new ResourceData{ Text = "Jane Smith", Id= 2, Color = "#7fa900" }
+    };
+    private List<DateTime> Holidays { get; set; } = new List<DateTime>
+    {
+            new DateTime(2025, 1, 1),
+            new DateTime(2025, 1, 26),
+            new DateTime(2025, 4, 18),
+            new DateTime(2025, 5, 1),
+            new DateTime(2025, 8, 15),
+            new DateTime(2025, 11, 12),
+            new DateTime(2025, 12, 25)
+    };
+    private Dictionary<int, List<DateTime>> EmployeeLeaves { get; set; } = new Dictionary<int, List<DateTime>>
+    {
+        { 1, new List<DateTime> {
+            new DateTime(2025, 1, 15),
+            new DateTime(2025, 1, 16),
+            new DateTime(2025, 1, 17)
+        }},
+        { 2, new List<DateTime> {
+            new DateTime(2025, 1, 6),
+            new DateTime(2025, 1, 7),
+            new DateTime(2025, 1, 8)
+        }}
+    };
+    private async Task OnCreated()
+    {
+        await SetWorkDays();
+    }
+    private async void OnActionCompleted(ActionEventArgs<AppointmentData> args)
+    {
+        if (args.ActionType == ActionType.ViewNavigate || args.ActionType == ActionType.DateNavigate)
+        {
+            await SetWorkDays();
+        }
+    }
+    private async Task SetWorkDays()
+    {
+        await ScheduleRef.ResetWorkDaysAsync();
+
+        List<DateTime> currentViewDates = ScheduleRef.GetCurrentViewDates();
+        List<DateTime> workDates = currentViewDates.Except(Holidays).ToList();
+
+        foreach (var employee in Employees)
+        {
+            if (EmployeeLeaves.TryGetValue(employee.Id, out var leaveDates))
+            {
+                List<DateTime> resourceWorkDays = workDates
+                    .Except(leaveDates)
+                    .Select(d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+                    .ToList();
+                int employeeIndex = ScheduleRef.GetGroupIndex(employee.Id, Resources[Resources.Length - 1]);
+                await ScheduleRef.SetWorkDaysAsync(resourceWorkDays, employeeIndex);
+            }
+        }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? Subject { get; set; }
+        public string? Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string? Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string? RecurrenceRule { get; set; }
+        public string? RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int EmployeeID { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string? Text { get; set; }
+        public string? Color { get; set; }
+    }
+}
+```
+![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.png)
+
 ## Hiding weekend days
 
 The [`ShowWeekend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowWeekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
