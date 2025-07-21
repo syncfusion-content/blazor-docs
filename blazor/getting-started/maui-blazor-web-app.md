@@ -14,15 +14,15 @@ This section explains how to create and run the first .NET Multi-platform Blazor
 
 ## What is .NET MAUI Blazor Hybrid and Web App?
 
-.NET MAUI Blazor Web App is a hybrid application that leverages a Razor Class Library (RCL) to define reusable Blazor components. These components are shared between a Blazor WebAssembly or Server app and a .NET MAUI Blazor app. This setup allows developers to create a unified web-based UI and reuse it across mobile, desktop, and browser platforms.
+[.NET MAUI Blazor Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0) is a hybrid application that leverages a Razor Class Library (RCL) to define reusable Blazor components. These components are shared between a Blazor WebAssembly or Server app and a .NET MAUI Blazor app. This setup allows developers to create a unified web-based UI and **reuse it across mobile, desktop, and browser platforms**.
 
 By sharing UI components between native and web apps, this approach ensures consistent user experiences, promotes maximum code reuse, and simplifies maintenance for applications that target multiple environments.
 
-Visual Studio provides **.NET MAUI Blazor Hybrid and Web App** template to create .NET MAUI Blazor Hybrid app with a Blazor Web App.
+Visual Studio provides **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** template to create .NET MAUI Blazor Hybrid app with a Blazor Web App.
 
 ## Prerequisites
 
-* .NET SDK 9.0 (Latest .NET SDK 9.0.101 or above)
+* .NET SDK 9.0 and later.
 
 * The latest preview of Visual Studio 2022 17.3 or above, with required workloads:
    * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
@@ -36,7 +36,7 @@ You can create a **.NET MAUI Blazor Hybrid and Blazor Web App** using Visual Stu
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
-Here's an example of how to add **Blazor Calendar** component in the app's shared folder, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+Here's an example of how to add **Blazor Calendar component in the app's shared folder**, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -95,9 +95,15 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+
 ```
+
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
