@@ -9,22 +9,23 @@ documentation: ug
 
 # How to add Syncfusion Component to the toolbox in Blazor Application
 
-This section guides you through adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to the Visual Studio Toolbox. By default, the Toolbox displays HTML elements and Bootstrap snippets. To customize it for Blazor development, open the Toolbox by pressing `Ctrl + Alt + X` or by navigating to **View → Toolbox** from the top menu.
+This section provides step-by-step guidance on how to add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to the Visual Studio Toolbox. By default, the Toolbox displays HTML elements and Bootstrap snippets. To customize it for Blazor development, open the Toolbox by pressing `Ctrl + Alt + X` or by navigating to **View → Toolbox** from the top menu.
 
 To include Syncfusion components for Blazor in the Toolbox, follow these steps:
 
-1. Right-click anywhere within the Visual Studio Toolbox window, select **Add Tab** from the context menu, name the new tab (e.g., Syncfusion Blazor Components), and press Enter to create it.
+1. Right-click anywhere within the Visual Studio Toolbox window, select **Add Tab** from the context menu. Enter a name for the new tab such as Syncfusion Blazor Components and press Enter to create it.
 
 ![Add new tab in toolbox](images/new-tab-toolbox.png)
 
-2. In a code editor, create or paste a Blazor component code snippet, such as a Syncfusion Calendar, highlight it, and drag it into the newly created tab in the Visual Studio Toolbox.
+2. In the code editor, write or paste a Blazor component snippet, such as the Syncfusion SfCalendar. Once the code is in place, select the entire code snippet, then drag and drop it into the newly created tab in the Visual Studio Toolbox.
 
 ![Add code snippet to toolbox](images/add-snippet.gif)
 
-3. The Visual Studio Toolbox will automatically generate a name for the item based on the code snippet; rename it to a more descriptive title, like **SfCalendar**, for improved clarity.
+3. Once the code snippet is added, the Toolbox will automatically assign it a default name based on the snippet content.
+To improve clarity, right-click the item, select **Rename**, and enter a more descriptive name—such as **SfCalendar**.
 
 ![Update name](images/update-name.png)
 
-4. After adding, simply drag the component from the Toolbox into your code editor to seamlessly use it into your Blazor project.
+4. After adding the component to the Toolbox, simply drag the component from the Toolbox into your code editor to seamlessly use it into your Blazor project.
 
 ![Drag component to editor](images/drag-component.gif)
