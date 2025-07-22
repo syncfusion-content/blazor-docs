@@ -11,11 +11,11 @@ documentation: ug
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data. This feature supports data organization across multiple sheets, making it suitable for scenarios like managing department-wise records, financial reports, or project data in separate sheets.
 
+N> If the workbook is protected, inserting, deleting, renaming, hiding, unhiding, moving, or duplicating a sheet through the interface or code is not allowed. To know more about workbook protection, refer here(./protection#protect-workbook).
+
 ## Insert sheet
 
-The InsertSheet feature in the Syncfusion Blazor Spreadsheet component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through the user interface (UI) or programmatically, offering flexibility based on the application's requirements.
-
-N> If the workbook is protected, inserting a sheet through the interface or code is not possible. To know more about workbook protection, refer here(./protection#protect-workbook).
+The Insert sheet feature in the Syncfusion Blazor Spreadsheet component allows adding new sheets to a workbook, enabling better organization of data across multiple sheets. This feature can be accessed through the user interface (UI) or programmatically, offering flexibility based on the application's requirements.
 
 ### Insert sheet via the UI
 
