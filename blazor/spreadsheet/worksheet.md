@@ -123,9 +123,11 @@ To remove a sheet using the interface, follow these steps:
 
 * Right click on a **Sheet** tab, and then select **Delete** option from context menu.
 
-* Click **OK** on the dialog to remove the sheet.
-
 ![Delete sheet option](images/delete-sheet-option.png)
+
+* Click **OK** in the confirmation dialog to delete the sheet.
+
+![Delete confirm dialog](images/delete-confirm-dialog.png)
 
 ### Delete sheet programmatically
 
@@ -217,9 +219,13 @@ The Rename Sheet feature allows assigning user-defined names to sheets for bette
 
 To rename a sheet:
 
-* Right-click a **Sheet** tab and select **Rename** from the context menu. Enter a new name and press **Enter** or click **update** to confirm.
+* Right-click a **Sheet** tab and select **Rename** from the context menu.
 
 ![Rename sheet option](images/rename-sheet-option.png)
+
+*  Enter a new name and click **update** to confirm.
+
+![Rename dialog](images/rename-dialog.png)
 
 ## Hide sheet
 
