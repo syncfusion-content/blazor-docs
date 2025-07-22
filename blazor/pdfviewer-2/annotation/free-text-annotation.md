@@ -324,6 +324,30 @@ The following example demonstrates how to load, edit, and save custom fonts in F
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Custom%20Font%20Support%20For%20FreeText%20Annotation).
 
+To ensure proper and seamless execution when using Google API fonts in the PDF Viewer component, it's essential to load these fonts into the sample application as well. This is particularly important because FreeText annotations are rendered directly onto the canvas, making it mandatory to have the fonts available in the sample for accurate rendering.
+
+The following example illustrates how to load custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
+
+```cshtml
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        var fontFamily = ["Allura, Tangerine, Sacramento, Inspiration"];
+        for (var fontIndex=0; fontIndex<fontFamily.length; fontIndex++)
+        {
+            document.fonts.load(`16px ${fontFamily[fontIndex]}`).then(() => {
+                console.log(`Font "${fontFamily[fontIndex]}" loaded successfully.`);
+            }).catch(err => {
+                console.error(`Failed to load font "${font}":`, err);
+            });
+        }
+    });
+</script>
+```
+
+>**Note:** If external fonts are not properly loaded in the environment, it may lead to slight inconsistencies when importing and rendering free text annotations using those custom fonts. This issue typically occurs only with fonts that are referenced externally, such as those loaded from web-based sources.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Load%20Custom%20Font%20From%20External%20Links).
+
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
