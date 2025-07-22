@@ -31,7 +31,7 @@ To add or insert a new sheet using the UI, follow these steps:
 
 The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a custom name. Below are the details for each scenario, including code examples and parameter information.
 
-**Add one or more sheets at a specific index**
+**Insert multiple sheets at a specific index**
 
 This method inserts one or more sheets at a specified position in the workbook with default names (e.g., Sheet1, Sheet2). For example, if the spreadsheet has three sheets named Sheet1, Sheet2, and Sheet3, adding two sheets at position 1 results in: Sheet1, Sheet4, Sheet5, Sheet2, Sheet3. If no position is provided, the sheets are added at the end of the workbook. This is ideal for scenarios requiring multiple sheets, such as organizing large datasets or creating templates for repetitive tasks.
 
@@ -72,7 +72,7 @@ This method inserts one or more sheets at a specified position in the workbook w
 | index | int(optional) | The zero-based index where the sheets will be inserted. If not specified, sheets are added at the end of the workbook. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action occurs. |
 | count | int(optional) | The number of sheets to add. Defaults to 1 if not specified. |
 
-**Add a sheet with a custom name**
+**Insert a single sheet with a custom name**
 
 This method inserts a single sheet at a specified position with a user-defined name. Only one sheet is added per method call. It is useful for creating sheets with meaningful names, such as "Budget" or "Inventory," to improve workbook clarity.
 
