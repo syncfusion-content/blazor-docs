@@ -427,7 +427,7 @@ The action type that can be checked within the [`ActionCompleted`](https://help.
     DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnNavigating(NavigatingEventArgs args)
     {
-        if (args.Action == "date") {
+        if (args.ActionType == ActionType.DateNavigate) {
             args.Cancel = true;   //To prevent date navigation
         }
     }
