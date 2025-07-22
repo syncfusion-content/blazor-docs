@@ -29,7 +29,7 @@ To add or insert a new sheet using the UI, follow these steps:
 
 ### Insert sheet programmatically
 
-The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a custom name. Below are the details for each scenario, including code examples and parameter information.
+The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertSheetAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__) method allows adding one or more sheets to a workbook using code. It supports two main scenarios: adding multiple sheets with default names or adding a single sheet with a user-defined name. Below are the details for each scenario, including code examples and parameter information.
 
 **Insert multiple sheets at a specific index**
 
@@ -121,7 +121,9 @@ The Spreadsheet component supports removing sheets from a spreadsheet. When the 
 
 To remove a sheet using the interface, follow these steps:
 
-* Right click on a **Sheet** tab, and then select **Delete** option from context menu. This removes the selected sheet from the workbook. 
+* Right click on a **Sheet** tab, and then select **Delete** option from context menu.
+
+* Click **OK** on the dialog to remove the sheet.
 
 ![Delete sheet option](images/delete-sheet-option.png)
 
