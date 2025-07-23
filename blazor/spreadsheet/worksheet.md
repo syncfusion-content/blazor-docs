@@ -11,7 +11,7 @@ documentation: ug
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data. This feature supports data organization across multiple sheets, making it suitable for scenarios like managing department-wise records, financial reports, or project data in separate sheets.
 
-N> If the workbook is protected, operations like inserting, deleting, renaming, hiding, unhiding, moving, or duplicating sheets are disabled through both user interface (UI) and code. To know more about workbook protection, refer [here](./protection#protect-workbook).
+N> If the workbook is protected, operations like inserting, deleting, renaming, hiding, unhiding, moving, or duplicating sheets are disabled through both user interface (UI) and code. To know more about workbook protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-workbook).
 
 ## Insert sheet
 
