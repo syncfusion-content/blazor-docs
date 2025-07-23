@@ -148,7 +148,7 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 
 ### Start and Stop Methods
 
-You can pause and resume the progress using the [StopAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StopAsync) and [StartAync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StartAsync_System_Double_) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
+You can pause and resume the progress using the [StopAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StopAsync) and [StartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StartAsync_System_Double_) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
 
 ```cshtml
 
