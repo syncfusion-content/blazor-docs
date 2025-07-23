@@ -55,9 +55,9 @@ N> Keyboard shortcut `Ctrl + K` can be used to quickly open the insert **Hyperli
 
 ### Insert hyperlink programmatically
 
-Hyperlink can be added programmatically using the [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows adding hyperlinks to cells or ranges without using the UI.
+Hyperlink can be added programmatically using the [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows adding hyperlinks to cells or ranges without using the UI.
 
-The available parameters in the `AddHyperlinkAsync()` method are:
+The available parameters in the `AddHyperlinkAsync` method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -88,16 +88,16 @@ The available parameters in the `AddHyperlinkAsync()` method are:
 
     public async Task AddHyperlinkHandler()
     {
-	    await spreadsheetInstance.AddHyperlinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet","A2:A5");
+	    await spreadsheetInstance.AddHyperlinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet", "A2:A5");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Advanced Usage of AddHyperlinkAsync()**
+**Advanced Usage of AddHyperlinkAsync**
 
-The [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method is flexible and handles various scenarios beyond basic usage. Below are some special cases and behaviors to be aware of:
+The [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method is flexible and handles various scenarios beyond basic usage. Below are some special cases and behaviors to be aware of:
 
 {% tabs %}
 {% highlight razor%}
@@ -129,7 +129,7 @@ await spreadsheetInstance.AddHyperlinkAsync("https://www.syncfusion.com", "D1", 
 {% endtabs %}
 
 
-N> The [AddHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method won't work if the `AllowHyperlink` property is set to **false**.
+N> The [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method won't work if the `AllowHyperlink` property is set to **false**.
 
 ## Edit hyperlink
 
@@ -189,33 +189,14 @@ N> Select multiple cells with hyperlinks at once (like `A1:D5`) to remove all hy
 
 ### Remove hyperlink programmatically
 
-Hyperlinks can be removed programmatically using the [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method removes hyperlink functionality from specified cells or ranges.
+Hyperlinks can be removed programmatically using the [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method removes hyperlink functionality from specified cells or ranges.
 
-The available parameters in the `RemoveHyperlinkAsync()` method are:
+The available parameters in the `RemoveHyperlinkAsync` method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
 | cellAddress | string | The cell or range from which to remove hyperlinks. |
 
-**Advanced Usage of RemoveHyperlinkAsync()**
-
-{% tabs %}
-{% highlight razor%}
-
-// Remove hyperlink from a single cell
-await spreadsheetInstance.RemoveHyperlinkAsync("A1");
-
-// Remove hyperlinks from a range of cells
-await spreadsheetInstance.RemoveHyperlinkAsync("A1:C5");
-
-// Remove hyperlink from a cell in a specific sheet
-await spreadsheetInstance.RemoveHyperlinkAsync("Sheet2!D10");
-
-// Remove hyperlinks from a range in a specific sheet
-await spreadsheetInstance.RemoveHyperlinkAsync("Sheet3!A1:A20");
-
-{% endhighlight %}
-{% endtabs %}
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -246,7 +227,28 @@ await spreadsheetInstance.RemoveHyperlinkAsync("Sheet3!A1:A20");
 {% endhighlight %}
 {% endtabs %}
 
-N> The [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_)  is safe for any cell selection. Cells without hyperlinks are simply skipped with no errors.
+**Advanced Usage of RemoveHyperlinkAsync**
+
+{% tabs %}
+{% highlight razor%}
+
+// Remove hyperlink from a single cell
+await spreadsheetInstance.RemoveHyperlinkAsync("A1");
+
+// Remove hyperlinks from a range of cells
+await spreadsheetInstance.RemoveHyperlinkAsync("A1:C5");
+
+// Remove hyperlink from a cell in a specific sheet
+await spreadsheetInstance.RemoveHyperlinkAsync("Sheet2!D10");
+
+// Remove hyperlinks from a range in a specific sheet
+await spreadsheetInstance.RemoveHyperlinkAsync("Sheet3!A1:A20");
+
+{% endhighlight %}
+{% endtabs %}
+
+
+N> The [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_)  is safe for any cell selection. Cells without hyperlinks are simply skipped with no errors.
 
 ## Hyperlink Events
 
@@ -264,7 +266,7 @@ The `HyperlinkCreating` event is triggered before a hyperlink is created. This e
 
 **Event Arguments**
 
-The `HyperlinkCreatingEventArgs` includes the following properties:
+The [HyperlinkCreatingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) includes the following properties:
 
 | Event Arguments | Description |
 |----------------|-------------|
