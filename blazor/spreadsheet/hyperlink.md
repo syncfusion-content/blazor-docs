@@ -248,33 +248,44 @@ await spreadsheetInstance.RemoveHyperlinkAsync("Sheet3!A1:A20");
 
 N> The [RemoveHyperlinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_)  is safe for any cell selection. Cells without hyperlinks are simply skipped with no errors.
 
-## Hyperlink events
+## Hyperlink Events
 
-The Blazor Spreadsheet provides events that trigger during hyperlink operations. These events allow custom actions before and after hyperlink creation and interaction.
+The Blazor Spreadsheet provides events that are triggered during hyperlink operations such as [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html), [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html), and [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html). These events can be used to perform any custom actions before and after hyperlink operations.
 
-**Available hyperlink events**
+* **HyperlinkCreating** - The [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) event is triggered before a hyperlink is created. It provides ways to modify or validate the hyperlink before creation.
 
-1. **HyperlinkCreating**: Triggers before a hyperlink is created. Allows modifying the link destination, cell address, display text, or canceling the creation.
+* **HyperlinkCreated** - The [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) event is triggered after a hyperlink has been successfully created. It provides information about the newly added hyperlink.
 
-2. **HyperlinkCreated**: Triggers after a hyperlink has been successfully created. Provides information about the new hyperlink including destination, cell address, and display text.
+* **HyperlinkClick** - The [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html)  event is triggered when a hyperlink is clicked. It enables custom navigation or other actions when hyperlinks are interacted with.
 
-3. **HyperlinkClick**: Triggers when a hyperlink is clicked. Enables custom actions when hyperlinks are clicked, such as custom navigation or validation.
+**HyperlinkCreating Event**
 
-The following example demonstrates how hyperlink events work. 
-The [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) event validates hyperlink addresses and prevents invalid links. The [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) event displays information about new hyperlinks. The [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) event customizes navigation behavior.
+The `HyperlinkCreating` event is triggered before a hyperlink is created. This event provides details about the hyperlink and allows for modification or cancellation if required.
 
-{% tabs %} {% highlight razor tabtitle="Index.razor" %}
+**Event Arguments**
+
+The `HyperlinkCreatingEventArgs` includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| Hyperlink | The URL or cell reference that will be used for the hyperlink. This can be modified to change the destination. |
+| CellAddress | The address of the cell where the hyperlink will be added. This can be modified to change the target cell. |
+| DisplayText | The text that will be displayed in the cell. This can be modified to customize the visible text. |
+| Cancel | Set to true to prevent the hyperlink from being created. Default is false. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet @ref="spreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents HyperlinkCreating="OnHyperlinkCreating" ></SpreadsheetEvents>
+</SfSpreadsheet>
 
-@code { 
-    
-    public byte[] DataSourceBytes { get; set; } 
-    public SfSpreadsheet spreadsheetInstance; 
-    private string message = ""; 
-    private string messageColor = "black";
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet spreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -282,37 +293,123 @@ The [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    private async Task OnHyperlinkCreating (HyperlinkCreatingEventArgs args)
+    public void OnHyperlinkCreating(HyperlinkCreatingEventArgs args)
     {
-        // Validate hyperlinks - prevent creation of links to specific domains.
+        // Prevent creation of hyperlinks to specific domains
         if (args.Hyperlink?.StartsWith("http://example.com") == true)
         {
-            // Cancel the hyperlink creation.
             args.Cancel = true;
-            message = "Hyperlinks to example.com are not allowed";
-            messageColor = "red";
         }
-        
-        // Customize hyperlink text if it's empty.
+
+        // Customize display text if empty
         if (string.IsNullOrEmpty(args.DisplayText))
         {
             args.DisplayText = "Click here";
         }
-    }
 
-    private async Task OnHyperlinkCreated(HyperlinkCreatedEventArgs args)
-    {
-        message = $"Hyperlink created at {args.CellAddress} pointing to {args.Hyperlink}";
-        messageColor = "green";
-    }
-
-    private async Task OnHyperlinkClick(HyperlinkClickEventArgs args)
-    {
-        message = $"Hyperlink clicked: {args.Hyperlink}";
-        messageColor = "blue";
+        // Convert simple domain names to full URLs
+        if (args.Hyperlink?.StartsWith("www.") == true)
+        {
+            args.Hyperlink = "https://" + args.Hyperlink;
+        }
     }
 }
 
-{% endhighlight %} {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-These events enable complete control over hyperlink behaviors in the spreadsheet, allowing for validation, customization, and additional functionality beyond default hyperlink operations.
+**HyperlinkCreated Event**
+
+The `HyperlinkCreated` event is triggered after a hyperlink has been successfully created. It provides information about the newly added hyperlink.
+
+**Event Arguments**
+
+The [HyperlinkCreatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| Hyperlink | The URL or cell reference of the created hyperlink (read-only). |
+| CellAddress | The address of the cell where the hyperlink was added (read-only). |
+| DisplayText | The text displayed in the cell for the hyperlink (read-only). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet @ref="spreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents HyperlinkCreated="OnHyperlinkCreated" ></SpreadsheetEvents>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet spreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnHyperlinkCreated(HyperlinkCreatedEventArgs args)
+    {
+        // Log information about the newly created hyperlink.
+        Console.WriteLine($"Hyperlink created at {args.CellAddress} pointing to {args.Hyperlink}");
+        Console.WriteLine($"Display text: {args.DisplayText}");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**HyperlinkClick Event**
+
+The `HyperlinkClick` event is triggered when a hyperlink is clicked. It enables custom navigation or other actions when hyperlinks are interacted with.
+
+**Event Arguments**
+
+The [HyperlinkClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| Hyperlink | The URL or cell reference of the clicked hyperlink (read-only). |
+| CellAddress | The address of the cell containing the clicked hyperlink (read-only). |
+| DisplayText | The displayed text of the clicked hyperlink (read-only). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet @ref="spreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents HyperlinkClick="OnHyperlinkClick" ></SpreadsheetEvents>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet spreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnHyperlinkClick(HyperlinkClickEventArgs args)
+    {
+        // Track hyperlink usage.
+        Console.WriteLine($"Hyperlink clicked at {args.CellAddress}: {args.Hyperlink}");
+        
+        // Handle special URLs or sheet references differently.
+        if (args.Hyperlink.StartsWith("https://restricted"))
+        {
+            // Implement custom handling for restricted sites.
+            // For example, showing a warning or redirecting elsewhere.
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
