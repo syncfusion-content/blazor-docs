@@ -11,7 +11,7 @@ documentation: ug
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data. This feature supports data organization across multiple sheets, making it suitable for scenarios like managing department-wise records, financial reports, or project data in separate sheets.
 
-N> If the workbook is protected, operations like **inserting**, **deleting**, **renaming**, **hiding**, **unhiding**, **moving**, or **duplicating** sheets are disabled through both the user interface (UI) and code. To know more about workbook protection, refer [here](./protection#protect-workbook).
+N> If the workbook is protected, operations like inserting, deleting, renaming, hiding, unhiding, moving, or duplicating sheets are disabled through both the user interface (UI) and code. To know more about workbook protection, refer [here](./protection#protect-workbook).
 
 ## Insert sheet
 
@@ -33,11 +33,11 @@ The [InsertSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 **Insert multiple sheets at a specific index**
 
-This method inserts one or more sheets at a specified position in the workbook with default names (e.g., Sheet1, Sheet2). For example, if the spreadsheet has three sheets named Sheet1, Sheet2, and Sheet3, adding two sheets at position 1 results in: Sheet1, Sheet4, Sheet5, Sheet2, Sheet3. If no position is provided, the sheets are added at the end of the workbook. This is ideal for scenarios requiring multiple sheets, such as organizing large datasets or creating templates for repetitive tasks.
+This method inserts one or more sheets at a specified position in the workbook with default names (e.g., Sheet1, Sheet2). For example, if the spreadsheet has three sheets named Sheet1, Sheet2, and Sheet3, adding two sheets at position 1 results in: Sheet1, Sheet4, Sheet5, Sheet2, Sheet3. If no position is provided, the sheets are added based on active sheet index. This is ideal for scenarios requiring multiple sheets, such as organizing large datasets or creating templates for repetitive tasks.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| index | int (optional) | The zero-based index where the sheets will be inserted. If not specified, sheets are added at the end of the workbook. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action occurs. |
+| index | int (optional) | The zero-based index where the sheets will be inserted. If not specified, sheets are added based on active sheet index. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action occurs. |
 | count | int (optional) | The number of sheets to add. Defaults to 1 if not specified. |
 
 {% tabs %}
@@ -74,7 +74,7 @@ This method inserts one or more sheets at a specified position in the workbook w
 
 **Insert a single sheet with a user-defined name**
 
-This method inserts a single sheet at a specified position with a user-defined name. Only one sheet is added per method call. It is useful for creating sheets with meaningful names, such as "Budget" or "Inventory," to improve workbook clarity.
+This method adds one sheet at a specific position with a user-defined name. Each call to this method adds only one sheet. Using meaningful names like "Budget" or "Inventory" makes the workbook easier to understand. If a negative index value is provided, the method will exit without adding any sheet.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -106,7 +106,7 @@ This method inserts a single sheet at a specified position with a user-defined n
     public async Task InsertSheetHandler()
     {
         // Insert a sheet at index 1 with a user-defined name.
-        await SpreadsheetRef.InsertSheetAsync(1,"Sales");
+        await SpreadsheetRef.InsertSheetAsync(1, "Sales");
     }
 }
 
@@ -135,7 +135,7 @@ Sheets can be deleted at a specific index using the [DeleteSheetAsync()](https:/
 
 **Delete sheet by index**
 
-This method deletes the sheet at the specified index. This is ideal for scenarios where the sheet's position in the workbook is known, such as removing the first or last sheet programmatically.
+This method removes a sheet from a specific position. It works best when the sheet location in the workbook is known, such as when removing the first or last sheet through code. If no position is specified, the current active sheet gets deleted.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -175,7 +175,7 @@ This method deletes the sheet at the specified index. This is ideal for scenario
 
 **Delete sheet by name**
 
-This method deletes the sheet with the specified name. This is useful when the sheet's name is known, such as removing a sheet named "Budget" or "Sales".
+This method removes a sheet that matches the given name. It helps when the exact sheet name is known, like when deleting sheets called "Budget" or "Sales". No sheets will be deleted if only one sheet exists in the workbook. The method also won't delete any sheets if the provided name is invalid.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -276,7 +276,7 @@ To move a sheet using the interface, follow these steps:
 
 ### Move sheet programmatically
 
-The [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method moves a sheet from one index to another programmatically.
+The [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_MoveSheetAsync_System_Nullable_System_Int32__System_Int32_) method moves a sheet from one index to another programmatically. This method requires two parameters: the current zero-based index of the sheet to move and the destination zero-based index where the sheet will be placed. If either index is invalid (negative or beyond the sheet count), the method will not perform any action.
 
 | Parameter | Type | Description |
 | -- | -- | -- |

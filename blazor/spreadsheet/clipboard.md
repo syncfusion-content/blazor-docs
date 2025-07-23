@@ -402,6 +402,7 @@ When this method is called without any parameters, it automatically pastes the c
 **Paste to specific range in the current active sheet**
 
 Pass the cell address as a parameter to paste to a specific cell. For pasting to cells in the current active sheet, use just the cell reference.
+
 | Parameter | Type | Description |
 | -- | -- | -- |
 | cellAddress | string (optional) | Specifies which cell(s) to paste the clipboard content. The parameter accepts two formats such as a single cell from active sheet like "A1" or a cell range from active sheet like  "A1:B5". When copying a larger range and pasting to a smaller target range, all data from the source range will be pasted, extending beyond the specified target range. If not provided, the currently selected cell or range will be used as the paste destination.|
@@ -513,11 +514,12 @@ Pass the cell address as a parameter to paste to a specific cell. For pasting to
 
 >* Paste operation will not execute if invalid cell references or out-of-boundary ranges are provided. Ensure all cell addresses are within the valid worksheet boundaries.
 
-### Clipboard Events
+## Clipboard Events
 
 The Syncfusion Blazor Spreadsheet provides two events that are triggered during the clipboard action such as [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) and  [`Pasting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html). These events can be used to perform any custom actions before the clipboard action starts.
 
-* **CutCopyActionBegin** - [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) event is triggered before a cut or copy operation begins.
+* **CutCopyActionBegin** - [CutCopyActionBegin](https://help.### Clipboard Events
+zor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) event is triggered before a cut or copy operation begins.
 * **Pasting** - [`Pasting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event is triggered before a paste operation begins.
 
 **CutCopyActionBegin Event**
