@@ -229,6 +229,9 @@ The available parameters in the `RemoveHyperlinkAsync` method are:
 
 **Advanced Usage of RemoveHyperlinkAsync**
 
+The [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method is flexible and handles various scenarios beyond basic usage. Below are some special cases and behaviors to be aware of:
+
+
 {% tabs %}
 {% highlight razor%}
 
