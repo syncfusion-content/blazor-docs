@@ -79,7 +79,7 @@ This method adds one sheet at a specific position with a user-defined name. Each
 | Parameter | Type | Description |
 | -- | -- | -- |
 | index | int | The zero-based index where the sheet will be inserted. If the specified index is invalid (e.g., negative or beyond the workbook's sheet count), no action occurs. |
-| sheetName | string | The name for the new sheet. |
+| sheetName | string | The name for the new sheet. If the name already exist in workbook, no action occurs. |
 
 {% tabs %}
 {% highlight razor %}
@@ -179,7 +179,7 @@ This method removes a sheet that matches the given name. It helps when the exact
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| sheetName | string | The name of the sheet to delete. If the name does not exist or the workbook has only one sheet, The name of the sheet to delete. If the name does not exist or the workbook has only one sheet, no action occurs. |
+| sheetName | string | The name of the sheet to delete. If the name does not exist or the workbook has only one sheet, no action occurs. |
 
 {% tabs %}
 {% highlight razor %}
@@ -317,7 +317,7 @@ The [MoveSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.S
 
 ## Duplicate sheet
 
-The Spreadsheet component allows creating an exact copy of a sheet. Duplicating a sheet helps when making multiple sheets with similar content or structure. The duplicate sheet gets a unique name, typically appending a number (e.g., "Sheet1" becomes "Sheet1 (2)"). Sheets can be duplicate using the interface or programmatically, based on application needs.
+The Spreadsheet component allows creating an exact copy of a sheet, including all data, formatting, formulas, and styling. Duplicating a sheet is useful for creating multiple sheets with similar content or structure. The duplicated sheet is inserted immediately after the original sheet and is assigned a unique name, typically appending a number (e.g., "Sheet1" becomes "Sheet1 (2)"). Sheet duplication can be performed through the user interface (UI) or programmatically, depending on application needs.
 
 ### Duplicate sheet via UI
 
@@ -329,7 +329,11 @@ To duplicate a sheet using the interface, follow these steps:
 
 ### Duplicate sheet programmatically
 
-The [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method can be used to create a copy of a sheet programmatically. The duplicate sheet will be inserted after the source sheet by default.
+The [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method allows duplicating a sheet programmatically by specifying its index or name. The duplicated sheet is inserted immediately after the original sheet. Below are details for duplicating a sheet by index or by name, including parameter information and code examples.
+
+**Duplicate sheet by index**
+
+This method creates a copy of the sheet at the specified index. If no index is provided, the active sheet is duplicated. This is useful when the position of the sheet in the workbook is known.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -361,6 +365,46 @@ The [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     {
         // Duplicate the sheet at index 0.
         await SpreadsheetRef.DuplicateSheetAsync(0);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Duplicate sheet by name**
+
+This method creates a copy of the sheet with the specified name. The sheet name matching is case-insensitive. This is useful when the exact sheet name is known, such as duplicating a sheet named "Budget" or "Sales".
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| sheetName | string | The name of the sheet to duplicate. If the name does not exist, no action occurs. |
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="DuplicateSheetHandler">Duplicate Sheet</button>
+
+<SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetRef;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task DuplicateSheetHandler()
+    {
+        // Duplicate the sheet named "Sheet1".
+        await SpreadsheetRef.DuplicateSheetAsync("Sheet1");
     }
 }
 
