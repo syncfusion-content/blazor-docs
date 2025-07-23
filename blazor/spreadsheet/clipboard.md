@@ -11,7 +11,7 @@ documentation: ug
 
 The Spreadsheet provides support for clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be enabled or disabled by setting the [`EnableClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property in the Spreadsheet component. By default, the `EnableClipboard` property is set to **true**.
 
-N> When `EnableClipboard` is set to **false**, the **Cut** and **Copy** options are removed from the interface (ribbon and context menu)
+N> When `EnableClipboard` is set to **false**, the **Cut** and **Copy** options are removed from the interface (Ribbon and context menu). Also, shortcut keys (**Ctrl+C, Ctrl+X, Ctrl+V**) and Clipboard API methods will not work.
 
 ## Cut
 
@@ -524,16 +524,18 @@ zor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) event is tri
 
 **CutCopyActionBegin Event**
 
-The `CutCopyActionBegin` event is triggered before a cut or copy operation begins. It provides information about the operation and allows you to cancel it if needed.
+The `CutCopyActionBegin` event is triggered before a cut or copy operation begins. This event provides details about the operation and allows for cancellation if required.
 
 
 **Event Arguments**
 
 The `CutCopyActionBeginEventArgs` includes the following properties:
 
-* **Action** - A string that indicates whether the operation is "Cut" or "Copy"
-* **CopiedRange** - A string representing the range being copied, including the sheet name (e.g., "Sheet1!A1:B5")
-* **Cancel** - A boolean value that can be set to `true` to prevent the operation
+| Event Arguments | Description |
+|----------------|-------------|
+| Action | An enum value from the ClipboardAction class that indicates whether the operation is `ClipboardAction.Cut` or `ClipboardAction.Copy`. |
+| CopiedRange | A string representing the range being copied, including the sheet name (e.g., "Sheet1!A1:B5"). |
+| Cancel | A boolean value that can be set to true to prevent the operation. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -574,11 +576,12 @@ The `Pasting` event is triggered before a paste operation begins. It provides in
 
 The `PastingEventArgs` includes the following properties:
 
-* **ClipboardTextValue** - An array of strings representing external content being pasted (null for internal clipboard operations)
-* **CopiedRange** - The range that was copied (null when pasting external content)
-* **PasteRange** - The target range where content will be pasted
-* **PasteSheetName** - The name of the sheet where content will be pasted
-* **Cancel** - A boolean value that can be set to `true` to prevent the operation
+| Event Arguments | Description |
+|----------------|-------------|
+| ExternalClipboardData | An array of strings containing raw text data from external sources (like Excel or Google Sheets), with each element representing a row of data. Set to null when copying from within the workbook. |
+| CopiedRange | A string in the format "SheetName!Range" (e.g., "Sheet1!A1:A10") representing the source location of the copied or cut content. Set to null when pasting external content. |
+| PasteRange | A string in the format "SheetName!Range" specifying the target cell range where content will be pasted. |
+| Cancel | A boolean value that can be set to true to prevent the paste operation, allowing event handlers to control the paste behavior. The default value is <c>false</c>. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -610,9 +613,9 @@ The `PastingEventArgs` includes the following properties:
         }
 
         // Validate external content
-        if (args.ClipboardTextValue != null)
+        if (args.ExternalClipboardData != null)
         {
-            foreach (var line in args.ClipboardTextValue)
+            foreach (var line in args.ExternalClipboardData)
             {
                 if (line.Contains("Confidential"))
                 {
