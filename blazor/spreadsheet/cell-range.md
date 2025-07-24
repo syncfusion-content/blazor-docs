@@ -152,13 +152,13 @@ The Spreadsheet component provides functionality to clear cell contents, formats
 
 Four distinct clear options are available in the Spreadsheet component. Each option targets specific elements within the selected cells or range, as described below:
 
-**Clear All**: Removes all contents (formulas and data), formats (including number formats), and hyperlinks from the selected range.
+* **Clear All**: Removes all contents (formulas and data), formats (including number formats), and hyperlinks from the selected range.
 
-**Clear Formats**: Removes only the formats, such as number formats, fonts, and cell styles, while preserving contents and hyperlinks.
+* **Clear Formats**: Removes only the formats, such as number formats, fonts, and cell styles, while preserving contents and hyperlinks.
 
-**Clear Contents**: Removes only the contents, including formulas and data, while retaining formats and hyperlinks.
+* **Clear Contents**: Removes only the contents, including formulas and data, while retaining formats and hyperlinks.
 
-**Clear Hyperlinks**: Removes only the hyperlinks, leaving contents and formats intact.
+* **Clear Hyperlinks**: Removes only the hyperlinks, leaving contents and formats intact.
 
 ### Applying clear functionality
 
