@@ -9,18 +9,18 @@ documentation: ug
 
 # Editing in Blazor Spreadsheet component
 
-The contents of a cell can be edited directly within the cell or by typing in the formula bar. By default, the editing feature is enabled in the Spreadsheet. Use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable the editing feature.
+Cell editing in the Spreadsheet component allows modification of cell contents directly within the spreadsheet or via the formula bar. The editing feature is enabled by default and can be controlled using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable it.
 
-## Edit cell via UI
+## Edit cells via UI
 
-Editing can be started in one of the following ways,
+Cell editing can be initiated through several methods,
 
 * Double-click a cell to start edit mode.
 * Press the `F2` key to edit the active cell.
 * Use the formula bar to perform editing.
 * Press `BACKSPACE` or `SPACE` key to clear the cell content and start edit mode.
 
-N> For more details on keyboard shortcuts for editing, refer [here](./accessibility#keyboard-shortcuts). 
+N> For additional keyboard shortcuts related to editing, refer [here](./accessibility#keyboard-shortcuts). 
 
 ### Save cell
 
@@ -48,8 +48,8 @@ The `UpdateCellAsync` method updates the value of a specific cell. It is ideal f
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| cellAddress | string | The address of the cell to update, including the sheet name in the format SheetName!CellAddress (e.g., Sheet1!A1). This parameter is required and must follow the correct format. Invalid addresses are skipped. |
-| cellValue | object | The new value for the cell. This can be a string, number, boolean, or formula (e.g., =SUM(A1:B1)). |
+| cellAddress | string | Specifies the cell address to update, including the sheet name (e.g., Sheet1!A1). Invalid addresses are skipped. |
+| cellValue | object | Defines the new value for the cell, such as a string, number, boolean, or formula (e.g., =SUM(A1:B1)). |
 
 {% tabs %}
 {% highlight razor %}
@@ -89,7 +89,7 @@ The `UpdateCellAsync` method updates the value of a specific cell. It is ideal f
 
 ### Update multiple cells
 
-The `UpdateCellsAsync` method updates multiple cells in a single operation, improving performance for bulk updates. It is suitable for scenarios requiring updates to multiple cells, such as populating a table or applying batch calculations. The method accepts a dictionary where keys are cell addresses and values are the new content. Invalid addresses are skipped.
+The `UpdateCellsAsync` method updates multiple cells in a single operation, improving performance for bulk updates. It is suitable for scenarios requiring updates to multiple cells, such as populating a table or applying batch calculations.  A dictionary specifies cell addresses and their corresponding values. Invalid addresses are ignored, and an empty or null dictionary results in no action.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
