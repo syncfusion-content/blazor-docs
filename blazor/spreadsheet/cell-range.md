@@ -13,60 +13,100 @@ A cell range refers to a group of selected cells in a Spreadsheet that can be ma
 
 ## Cell formatting
 
-Cell formatting enhances the visual presentation of data in a Spreadsheet by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps in organizing and emphasizing important information effectively.
+Cell formatting enhances the visual presentation of data within the Spreadsheet component by applying styles to individual cells or cell ranges. Styles include font modifications, colors, borders, and alignment, which help organize and emphasize critical information effectively. Formatting options improve readability, create visual hierarchies, and highlight key data points.
 
-Cell formatting options include:
+### Available formatting options
 
-* **Bold** - Applies a heavier font weight to make the text stand out in the Spreadsheet.
+Formatting options in the Spreadsheet component include several stylistic and positional attributes, each serving a specific purpose in data presentation. These options are accessible through the Ribbon toolbar under the **Home** tab.
 
-* **Italic** - Slants the text to give it a distinct look, often used for emphasis or to highlight differences.
+**Bold**
 
-* **Underline** - Adds a line below the text, commonly used for emphasis or to indicate hyperlinks.
+Bold formatting applies a heavier font weight to text within selected cells. This style makes text stand out, often used to emphasize headers or critical values in the Spreadsheet.
 
-* **Strikethrough** - Draws a line through the text, often used to show completed tasks or outdated information.
+**Italic**
 
-* **Font Family** - Changes the typeface of the text (e.g., Arial, Calibri, Times New Roman, and more) to enhance readability or visual appeal.
+Italic formatting slants text to create a distinct appearance. This style is commonly applied to highlight differences or provide emphasis within a cell range.
 
-* **Font Size** - Adjusts the size of the text to create visual hierarchy or improve readability in the Spreadsheet.
+**Underline**
 
-* **Font Color** - Changes the color of the text to improve visual hierarchy or to organize information using color codes.
+Underline formatting adds a line beneath the text. This style is typically used to indicate hyperlinks or to emphasize specific content within the Spreadsheet.
 
-* **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
+**Strikethrough**
 
-* **Horizontal Alignment** - Controls the position of text from left to right within a cell. Options include:
-    * **Left** - Default for text
-    * **Center** - Useful for headings
-    * **Right** - Default for numbers
+Strikethrough formatting draws a horizontal line through the text. This style is often used to mark completed tasks or indicate outdated information in a cell range.
 
-* **Vertical Alignment** - Controls the position of text from top to bottom within a cell. Options include:
-    * **Top** – Aligns content to the top of the cell
-    * **Middle** – Centers content vertically
-    * **Bottom** – Default alignment
+**Font Family**
 
-* **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells.
+Font family changes the typeface of text, such as Arial, Calibri, or Times New Roman. Different typefaces enhance readability or align with specific visual design requirements in the Spreadsheet.
 
-Cell formatting can be applied to or removed from a cell or range of cells by using the formatting options available in the Ribbon toolbar under the **Home** tab.
+**Font Size**
+
+Font size adjustments modify the text size to create a visual hierarchy or improve readability. Larger sizes are often used for headers, while smaller sizes suit detailed data entries.
+
+**Font Color**
+
+Font color changes the text color to improve visual organization or apply color-coded categorization. This formatting option helps differentiate data types or highlight specific values.
+
+**Fill Color**
+
+Fill color applies a background color to cells. This formatting option visually organizes data or highlights critical information, making it easier to identify key areas in the Spreadsheet.
+
+**Horizontal Alignment**
+
+Horizontal alignment controls the left-to-right positioning of content within a cell. Available options include:
+
+* **Left** - Aligns content to the left side, typically used for text data.
+
+* **Center** - Positions content in the middle, often applied to headings.
+
+* **Right** - Aligns content to the right, commonly used for numerical data.
+
+**Vertical Alignment**
+
+Vertical alignment adjusts the top-to-bottom positioning of content within a cell. Available options include:
+
+* **Top** – Aligns content to the top of the cell, useful for multiline text.
+    
+* **Middle** – Centers content vertically, often used for balanced presentation.
+
+* **Bottom** – Aligns content to the bottom, serving as the default alignment.
+
+**Wrap Text**
+
+Wrap text formatting displays long content across multiple lines within a single cell. This prevents content from overflowing into adjacent cells, maintaining a clean layout.
 
 ## Autofill
 
-Autofill is used to fill cells with data based on adjacent cells. It follows patterns from adjacent cells when available, eliminating the need to enter repeated data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable the autofill support.
+Autofill functionality in the Spreadsheet component enables filling cells with data based on patterns derived from adjacent cells. This feature eliminates the need for manual entry of repetitive data, improving efficiency. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property controls whether autofill is enabled. By default, this property is set to **true**.
 
-> * The default value of the `AllowAutofill` property is **true**.
+> * If the `AllowAutofill` property is set to **false**, the autofill fill handle is not displayed in the UI, and programmatic autofill operations using the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_System_String_) method will not execute.
+> * If the sheet is protected, autofill is only applicable to unlocked ranges when performed through the UI or programmatically. To know more about worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
 
-Autofill can be performed in one of the following ways:
+Autofill can be performed in two ways: through the user interface (UI) by dragging the fill handle or programmatically using the `AutofillAsync` method.
 
-* Drag and drop the cell using the fill handle element.
-* Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_System_String_) method programmatically.
+### Autofill via UI
 
-The available parameters in the `AutofillAsync()` method are:
+Autofill can be performed in the UI by dragging the fill handle, a small square at the bottom-right corner of a selected cell or range. The following steps outline the process:
+
+* Select a cell or range containing the data to be used as the source for autofill.
+
+* Hover over the fill handle until the cursor changes to a crosshair.
+
+* Drag the fill handle in the desired direction (up, down, left, or right) to fill the target range with data based on the source pattern.
+
+This method automatically detects patterns, such as numerical sequences or text repetitions, and applies them to the filled range.
+
+![Autofill Illustration](images/autofill.gif)
+
+### Autofill programmatically
+
+Autofill can be implemented programmatically using the `AutofillAsync` method. This method supports specifying the fill range, data source range, and direction of the fill operation. The operation is skipped if the invalid range addresses are provided.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| fillRange | string | Specifies the fill range. |
-| dataRange | string | Specifies the data range. |
-| direction | string | Specifies the direction ("Up", "Right", "Down", and "Left") to be filled. |
-
-### Implementing autofill programmatically
+| fillRange | string | Specifies the range to fill (e.g., "A1:A10"). Must be a valid cell range address. |
+| dataRange | string (optional) | Specifies the source data range (e.g., "A1"). If not provided, the active cell is used. |
+| direction | string (optional)| An enum value from the `AutofillDirection` class that indicates the direction of the fill operation. Valid values are `Up`, `Right`, `Down`, or `Left`. Default is `Down`. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -74,13 +114,13 @@ The available parameters in the `AutofillAsync()` method are:
 @using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="AutofillRangeHandler">Autofill</button>
-<SfSpreadsheet @ref="spreadsheetObj" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet spreadsheetObj;
+    public SfSpreadsheet SpreadsheetRef;
 
     protected override void OnInitialized()
     {
@@ -90,35 +130,48 @@ The available parameters in the `AutofillAsync()` method are:
 
     public async Task AutofillRangeHandler()
     {
-	    // Basic usage with only the fill range parameter.
-        await spreadsheetObj.AutofillAsync("B7:B8");
+	    // Basic autofill on range B7:B8 using the active cell with default direction (Down).
+        await SpreadsheetRef.AutofillAsync("B7:B8");
+
+        // Autofill range B1:E1 using B1 as the data source, filling rightward.
+        await SpreadsheetRef.AutofillAsync("B1:E1", "B1", AutofillDirection.Right);
+
+        // Autofill range A1:A10 using A1 as the data source, filling downward.
+        await SpreadsheetRef.AutofillAsync("A1:A10", "A1", AutofillDirection.Down);
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-The following illustration demonstrates the use of autofill in the Spreadsheet component.
-
-![Autofill Illustration](images/autofill.gif)
-
 ## Clear
 
-Clear support helps clear the cell contents (formulas and data) and formats (including number formats) in a Spreadsheet. When **Clear All** is applied, both the contents and the formats will be cleared simultaneously.
+The Spreadsheet component provides functionality to clear cell contents, formats, and hyperlinks. This functionality allows precise control over the removal of data, formatting, or links within selected cells or ranges. The **Clear All** option removes all contents, formats, and hyperlinks simultaneously from the specified range.
 
-### Applying the clear functionality
+### Clear options
 
-The clear support can be applied using the following way:
+Four distinct clear options are available in the Spreadsheet component. Each option targets specific elements within the selected cells or range, as described below:
 
-* Select the **Clear** icon in the Ribbon toolbar under the **Home** tab.
+**Clear All**: Removes all contents (formulas and data), formats (including number formats), and hyperlinks from the selected range.
 
-| Options | Uses |
-| -- | -- |
-| **Clear All** | Used to clear all contents, formats, and hyperlinks. |
-| **Clear Formats** | Used to clear the formats (including number formats) in a cell. |
-| **Clear Contents** | Used to clear the contents (formulas and data) in a cell. |
-| **Clear Hyperlinks** | Used to clear the hyperlink in a cell. |
+**Clear Formats**: Removes only the formats, such as number formats, fonts, and cell styles, while preserving contents and hyperlinks.
 
-The following image displays the clear options available in the Ribbon toolbar under the **Home** tab of the Blazor Spreadsheet.
+**Clear Contents**: Removes only the contents, including formulas and data, while retaining formats and hyperlinks.
+
+**Clear Hyperlinks**: Removes only the hyperlinks, leaving contents and formats intact.
+
+### Applying clear functionality
+
+To apply clear functionality via the UI, the following steps are performed:
+
+* Select the cell or range of cells to clear.
+
+* Click the **Clear** icon in the **Home** tab of the Ribbon toolbar and choose the desired option (**Clear All**, **Clear Formats**, **Clear Contents**, or **Clear Hyperlinks**).
 
 ![Clear options in the Blazor Spreadsheet](images/clear-feature.png)
+
+### Clear functionality in protected sheets
+
+When a sheet is protected, restrictions apply to the clear functionality. The **Clear All** and **Clear Contents** options are enabled only for unlocked ranges. To enable **Clear Formats** for unlocked ranges, the **Format cells** checkbox must be selected in the protection dialog sheet options. Similarly, to enable **Clear Hyperlinks** for unlocked ranges, the **Insert hyperlinks** checkbox must be selected in the protection dialog sheet options.
+
+N> To know more about worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
