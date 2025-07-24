@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Blazor Themes in Blazor components? | Syncfusion
+title: Use Blazor Themes: Bootstrap, Fluent, Tailwind, Material | Syncfusion
 description: Check out the documentation for built-in-themes in Blazor and learn here about how to use it in Blazor
 platform: Blazor
 component: Appearance
