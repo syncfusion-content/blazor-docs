@@ -44,7 +44,7 @@ The [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
 
 **Cut active range**
 
-When this method is called without any parameters, it automatically cuts the content from the last selected range if an active selection exists. If no range is currently selected, it cuts the active cell.
+When [CutCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CutCellAsync_System_String_) method is called without any parameters, it automatically cuts the content from the last selected range if an active selection exists. If no range is currently selected, it cuts the active cell.
 
 {% tabs %}
 {% highlight razor %}
@@ -79,7 +79,9 @@ When this method is called without any parameters, it automatically cuts the con
 
 **Cut specific range in active sheet**
 
-To cut content from specific cells in the current active sheet, provide cell address as a parameter to the `CutCellAsync` method. When you specify a cell or range, the Spreadsheet component will cut that content and place it on the clipboard, ready for pasting elsewhere.
+To cut content from specific cells in the active sheet, provide cell address as a parameter to the `CutCellAsync` method. When you specify a cell or range, the Spreadsheet component will cut that content and place it on the clipboard, ready for pasting elsewhere.
+
+The available parameters in the `CutCellAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
@@ -125,7 +127,9 @@ To cut content from specific cells in the current active sheet, provide cell add
 
 **Cut specific range in different sheet**
 
-To cut content from a specific sheet, include the source sheet name along with the cell reference in the parameter to the `CutCellAsync()` method. When specifying a sheet name, use an exclamation mark (`!`) to separate it from the cell reference, and the Spreadsheet component will cut that content and place it on the clipboard, ready for pasting elsewhere.
+To cut content from a specific sheet, include the source sheet name along with the cell reference in the parameter to the `CutCellAsync` method. When specifying a sheet name, use an exclamation mark (`!`) to separate it from the cell reference, and the Spreadsheet component will cut that content and place it on the clipboard, ready for pasting elsewhere.
+
+The available parameters in the `CutCellAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
@@ -200,7 +204,7 @@ The [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spre
 
 **Copy active range**
 
-When this method is called without any parameters, the method automatically copies the content from the last selected range if an active selection exists. If no range is selected, it copies the active cell.
+When [CopyCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CopyCellAsync_System_String_) method is called without any parameters, the method automatically copies the content from the last selected range if an active selection exists. If no range is selected, it copies the active cell.
 
 {% tabs %}
 {% highlight razor %}
@@ -235,7 +239,9 @@ When this method is called without any parameters, the method automatically copi
 
 **Copy specific range in active sheet**
 
-To copy content from specific cells in the current active sheet, provide cell address as a parameter to the `CopyCellAsync` method. When you specify a cell or range, the Spreadsheet component will copy that content and place it on the clipboard, ready for pasting elsewhere.
+To copy content from specific cells in the active sheet, provide cell address as a parameter to the `CopyCellAsync` method. When you specify a cell or range, the Spreadsheet component will copy that content and place it on the clipboard, ready for pasting elsewhere.
+
+The available parameters in the `CopyCellAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
@@ -282,6 +288,8 @@ To copy content from specific cells in the current active sheet, provide cell ad
 **Copy specific range in different sheet**
 
 To copy content from a specific sheet, include the source sheet name along with the cell reference in the parameter to the `CopyCellAsync` method. When specifying a sheet name, use an exclamation mark (`!`) to separate it from the cell reference, and the Spreadsheet component will copy that content and place it on the clipboard, ready for pasting elsewhere.
+
+The available parameters in the `CopyCellAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
@@ -357,7 +365,7 @@ The [PasteCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spr
 
 **Paste to active range**
 
-When this method is called without any parameters, it automatically pastes the content to the last selected range if an active selection exists. If no range is selected, it pastes to the active cell.
+When [PasteCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_PasteCellAsync_System_String_) method is called without any parameters, it automatically pastes the content to the last selected range if an active selection exists. If no range is selected, it pastes to the active cell.
 
 {% tabs %}
 {% highlight razor %}
@@ -393,6 +401,8 @@ When this method is called without any parameters, it automatically pastes the c
 **Paste to specific range in active sheet**
 
 To paste content into specific range in the current active sheet, provide the target cell address as a parameter to the `PasteCellAsync` method. You can specify either a single cell or a range of cells as the destination. When the source range (copied content) is larger than the specified target range, all data from the source will still be pasted, automatically extending beyond the specified target boundaries to accommodate all content.
+
+The available parameters in the `PasteCellAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
@@ -451,6 +461,8 @@ To paste content into specific range in the current active sheet, provide the ta
 
 To paste content into a specific sheet, include the target sheet name along with the cell reference as a parameter to the `PasteCellAsync` method. When specifying a sheet name, use an exclamation mark (!) to separate it from the cell reference. When the source range (copied content) is larger than the specified target range, all data will still be pasted completely, extending beyond the specified target boundaries to accommodate all content.
 
+The available parameters in the `PasteCellAsync` method are:
+
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
 | cellAddress | string (optional) | Specifies the target cell(s) for pasting clipboard content. Accepts either a single cell from a specific sheet (e.g., `"Sheet1!A1"`) or a cell range (e.g., `"Sheet2!A1:C5"`). If not provided, the currently selected cell or range will be used as the paste destination. |
@@ -499,14 +511,23 @@ To paste content into a specific sheet, include the target sheet name along with
 
 ## Events
 
-The Syncfusion Blazor Spreadsheet provides two events that are triggered during the clipboard action such as [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) and  [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html). These events can be used to perform any custom actions before the clipboard action starts.
+The Blazor Spreadsheet provides events that are triggered during the clipboard action such as [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) and  [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html). These events can be used to perform any custom actions before the clipboard action starts or interacted with, allowing for validation, customization, and response handling.
 
 * **CutCopyActionBegin** - [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) event is triggered before a cut or copy operation begins.
 * **Pasting** - [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event is triggered before a paste operation begins.
 
-**CutCopyActionBegin Event**
+**CutCopyActionBegin**
 
-The `CutCopyActionBegin` event is triggered before a cut or copy operation begins. This event provides details about the operation and allows for cancellation if required.
+The `CutCopyActionBegin` event is triggered before a copy or cut operation is performed in the spreadsheet. This event provides an opportunity to inspect, validate, or cancel the operation based on custom business logic
+
+**Purpose**
+
+This event serves various scenarios where clipboard operations need monitoring or restriction:
+
+* Preventing sensitive data from being copied
+* Logging clipboard operations for audit purposes
+* Implementing custom validation rules for specific cells or ranges
+* Restricting cut operations while allowing copy operations
 
 
 **Event Arguments**
@@ -549,9 +570,18 @@ The `CutCopyActionBeginEventArgs` includes the following properties:
 {% endhighlight %}
 {% endtabs %}
 
-**Pasting Event**
+**Pasting**
 
-The `Pasting` event is triggered before a paste operation begins. It provides information about the paste operation and allows you to validate or cancel it.
+The `Pasting` event is triggered before data is pasted into the spreadsheet. This event allows inspection and validation of the paste operation before it is completed, with options to modify or cancel the operation entirely.
+
+**Purpose**
+
+This event is valuable for scenarios requiring paste operation control:
+
+* Validating data before allowing it to be pasted
+* Restricting paste operations to specific sheets or ranges
+* Implementing data transformation rules during paste operations
+* Maintaining data integrity through paste operation oversight
 
 **Event Arguments**
 
