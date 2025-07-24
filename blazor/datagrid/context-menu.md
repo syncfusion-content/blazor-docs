@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Context Menu in Syncfusion Blazor DataGrid and much more.
+description: Checkout and learn here all about Context Menu in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
