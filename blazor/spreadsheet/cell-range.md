@@ -15,7 +15,7 @@ A cell range in the Spreadsheet component refers to a group of selected cells th
 
 Cell formatting enhances the visual presentation of data within the Spreadsheet component by applying styles to individual cells or cell ranges. Styles include font modifications, colors, borders, and alignment, which help organize and emphasize critical information effectively. Formatting options improve readability, create visual hierarchies, and highlight key data points.
 
-N> To enable formatting options in a protected sheet, the **Format cells** checkbox must be selected in the protection dialog sheet options. To know more about worksheet protection settings, refere [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protection-settings-in-a-protected-sheet) 
+N> To enable formatting options in a protected sheet, the **Format cells** checkbox must be selected in the protection dialog sheet options. To know more about worksheet protection settings, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protection-settings-in-a-protected-sheet) 
 
 ### Available formatting options
 
@@ -176,4 +176,4 @@ To apply clear functionality via the UI, the following steps are performed:
 
 When a sheet is protected, restrictions apply to the clear functionality. The **Clear All** and **Clear Contents** options are enabled only for unlocked ranges. To enable **Clear Formats** for unlocked ranges, the **Format cells** checkbox must be selected in the protection dialog sheet options. Similarly, to enable **Clear Hyperlinks** for unlocked ranges, the **Insert hyperlinks** checkbox must be selected in the protection dialog sheet options.
 
-N> To know more about worksheet protection settings, refere [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protection-settings-in-a-protected-sheet) 
+N> To know more about worksheet protection settings, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protection-settings-in-a-protected-sheet) 
