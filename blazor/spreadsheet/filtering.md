@@ -68,7 +68,7 @@ The Blazor Spreadsheet includes a comprehensive Excel-style filter dialog that a
 
 ### Checkbox filters
 
-The checkbox-based filter dialog appears when you click on a column's filter icon and provides the following features:
+The checkbox-based filter dialog appears when clicking on a column's filter icon and provides the following features:
 
 * **Sort options** - Provides commands for sorting data in ascending or descending order.
 * **Clear filter** - Removes any filtering applied to the selected column.
@@ -147,7 +147,7 @@ The Spreadsheet organizes date values into a structured, expandable hierarchy to
 * **Year Level** - Dates are first grouped by year. For example, all dates from 2023 are grouped under **2023**.
 * **Month Level** - Within each year, dates are further grouped by month. For instance, under **2023**, months like **January**, **February**, etc., are listed.
 * **Day Level** - Expanding a month reveals individual day entries. For example, under **2023 → January**, dates like **10**, **15**, and **28** are shown.
-* **Expand/collapse controls** - Each year and month group includes a toggle control to expand or collapse its contents. This helps reduce clutter and allows to focus on specific time periods.
+* **Expand/collapse controls** - Each year and month group includes a toggle control to expand or collapse its contents. This helps reduce clutter and allows for focused viewing of specific time periods.
 * **Group selection** - Entire groups—such as a full year or a specific month—can be selected or deselected with a single click. This enables quick filtering without manually selecting each date.
 
 This hierarchical approach makes it easier to browse, locate, and filter date-based data efficiently.
@@ -190,7 +190,7 @@ By default, applying a new filter to a column replaces any existing selections. 
 
 **How it works**
 - Open the filter dialog for a column.
-- Use the search box to find specific values.
+- The search box enables quick identification of specific values within the filter list.
 - Check the Add current selection to filter box.
 - Select additional values to include in the filter.
 - Apply the filter. 
@@ -217,7 +217,7 @@ The Spreadsheet filter dialog intelligently handles columns containing mixed dat
 
 * **Special handling for empty values** 
     - Empty cells are shown as **(Blank)** in the filter list, making them easy to identify and select.
-    - **Example:** If a column has some missing values, they appear as **(Blank)** in the filter, allowing users to include or exclude them.
+    - **Example:** If a column has some missing values, these cells appear as **(Blank)** in the filter, allowing users to include or exclude them.
 
 * **Search across types** 
     - The search box works across all data types in the column.
@@ -235,7 +235,7 @@ The Filter by Cell Value feature enables filtering worksheet data based on a sel
 
 ### Filter by cell value via UI
 
-Cell value filtering can be applied through the user interface (UI), Click on the cell that contains the value to filter by, Right-click on the selected cell to open the context menu, From the menu select **Filter**, Click **Filter by Value of Selected Cell**. 
+Cell value filtering can be applied through the user interface (UI). The process involves selecting the cell containing the target value, right-clicking to open the context menu, selecting the **Filter** option, and clicking **Filter by Value of Selected Cell**. 
 
 ![Cell value filtering interface](./images/contextmenu-filter.png)
 
@@ -273,7 +273,7 @@ The [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
     public async Task ApplyFilter()
     {
-        // Apply filter to column A using the value "New York".
+        // This method applies a filter to column A showing only rows containing "New York".
         await SpreadsheetInstance.FilterByCellValueAsync("A1", "New York"); 
     }
 }
@@ -352,7 +352,7 @@ The [ClearFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.S
 
     public async Task ClearColumnFilter()
     {
-        // Clear the filter applied to column A (index 0).
+        // This command removes all filtering from column A (represented by index 0).
         await SpreadsheetInstance.ClearFilterAsync(0);
     }
 }
@@ -389,7 +389,7 @@ The [ClearAllFiltersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
     public async Task ClearAllFilters()
     {
-        // Clear all filters applied in the spreadsheet and show all rows.
+        // This method removes all active filters from the spreadsheet, restoring visibility to all rows.
         await SpreadsheetInstance.ClearAllFiltersAsync();
     }
 }
@@ -455,10 +455,10 @@ The [ReapplyFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     public async Task UpdateAndReapply()
     {
         
-        // Update a cell value in the spreadsheet.
+        // This operation updates the cell A1 on Sheet1 with a new value.
         await SpreadsheetInstance.UpdateCellAsync("Sheet1!A1", "New Value");
         
-        // Reapply filters to reflect the updated data.
+        // This command refreshes all active filters to include the updated data.
         await SpreadsheetInstance.ReapplyFiltersAsync();
     }
 }
