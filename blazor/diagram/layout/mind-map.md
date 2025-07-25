@@ -408,7 +408,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to Change the Mind Map Orientation
 An [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) of a MindMap Layout is used to arrange the layout according to a specific direction. By default, the orientation is set to Horizontal.
 
-The following code example illustrates how to create an mindmap layout.
+The following code example illustrates how to create an mind map layout. 
 
 ```csharp
 
