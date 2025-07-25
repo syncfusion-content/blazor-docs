@@ -81,10 +81,9 @@ The `Prompts` collection stores all the prompts and responses generated.
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -168,10 +167,9 @@ You can customize the appearance of the prompter avatar by using the [PromptIcon
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -199,10 +197,9 @@ You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusi
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
