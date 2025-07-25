@@ -9,7 +9,7 @@ documentation: ug
 
 # Managing Cell Ranges in Blazor Spreadsheet component
 
-A cell range refers to a group of selected cells in a Spreadsheet that can be manipulated or processed collectively.
+A cell range in the Spreadsheet component refers to a group of selected cells that can be manipulated or processed collectively. Cell ranges are used for applying formatting, performing autofill operations, or clearing content, enabling efficient data management and presentation.
 
 ## Cell formatting
 
@@ -21,7 +21,7 @@ Formatting options in the Spreadsheet component include several stylistic and po
 
 **Bold**
 
-Bold formatting applies a heavier font weight to text within selected cells. This style makes text stand out, often used to emphasize headers or critical values in the Spreadsheet.
+Bold formatting applies a heavier font weight to text within selected cells. This style makes text stand out, often used to emphasize headers or critical values in the Spreadsheet component.
 
 **Italic**
 
@@ -29,7 +29,7 @@ Italic formatting slants text to create a distinct appearance. This style is com
 
 **Underline**
 
-Underline formatting adds a line beneath the text. This style is typically used to indicate hyperlinks or to emphasize specific content within the Spreadsheet.
+Underline formatting adds a line beneath the text. This style is typically used to indicate hyperlinks or to emphasize specific content within the Spreadsheet component.
 
 **Strikethrough**
 
@@ -86,11 +86,11 @@ Autofill can be performed in two ways: through the user interface (UI) by draggi
 
 ### Autofill via UI
 
-Autofill can be performed in the UI by dragging the fill handle, a small square at the bottom-right corner of a selected cell or range. The following steps outline the process:
+Autofill can be performed in the UI by dragging the fill handle, a small square at the bottom-right corner of a selected cell or range, serves as the control point for initiating autofill operations. The following steps outline the process:
 
 * Select a cell or range containing the data to be used as the source for autofill.
 
-* Hover over the fill handle until the cursor changes to a crosshair.
+* Hover over the fill handle until the cursor changes to a crosshair, a plus-shaped pointer, indicating that the fill handle is ready to be dragged.
 
 * Drag the fill handle in the desired direction (up, down, left, or right) to fill the target range with data based on the source pattern.
 
