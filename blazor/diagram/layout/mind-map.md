@@ -11,7 +11,7 @@ documentation: ug
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
 
-To create a Mindmap Layout using the Blazor Diagram, refer to the below video link,
+To create a Mind map Layout using the Blazor Diagram, refer to the below video link,
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_EHmKNok4GQ" %}
 
