@@ -13,7 +13,7 @@ Protection features in the Blazor Spreadsheet component safeguard data by restri
 
 ## Protect sheet
 
-Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Specific actions, like cell selection or formatting, can be permitted through configuration settings. Protection can be applied with or without a password, depending on the desired security level.
+Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Specific actions, like cell selection, filtering, sorting or formatting, can be permitted through configuration settings. Protection can be applied with or without a password, depending on the desired security level.
 
 ### Protecting sheets via UI
 
@@ -118,6 +118,6 @@ To unprotect the workbook, follow these steps:
 
 * Select **Unprotect Workbook** from the **Review** tab in the Ribbon toolbar.
 
-* Enter the correct password in the dialog box, then click **OK**.
+* Enter the correct password in the dialog box, then click **OK** to unprotect the workbook.
 
 ![Unprotected Workbook Dialog](./images/unprotect-workbook.png)
