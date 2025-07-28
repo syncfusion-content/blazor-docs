@@ -93,3 +93,6 @@ The Spreadsheet component supports saving files in the MS Excel (.xlsx) format.
 Integration of sheet or workbook protection with save operations ensures data security. Protection settings restrict unauthorized modifications while preserving the configured settings in the saved Excel file.
 
 N> To know more about protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
+
+## New
+Creation of a new Excel file is possible through the interface by selecting the `File > New` option from the ribbon menu. This action initializes a blank Spreadsheet component for new data entry.
