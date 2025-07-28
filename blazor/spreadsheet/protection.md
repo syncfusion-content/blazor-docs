@@ -9,75 +9,86 @@ documentation: ug
 
 # Protect Sheet in Blazor Spreadsheet component
 
-Sheet protection is used to prevent unauthorized modification of data within the sheet.
+## Protect sheet
 
-## Protect Sheet
-
-The **Protect Sheet** support helps prevent accidental changes such as editing, moving, or deleting data. Protection can be applied with or without a password, depending on the level of security required.
+Sheet protection in the Blazor Spreadsheet component restricts unauthorized modifications to data within a sheet, safeguarding content by preventing accidental changes, such as editing, moving, or deleting data. Protection can be applied to an entire sheet, with options to allow specific actions, such as cell selection or formatting, based on the configuration. Protection can be configured with or without a password, depending on the required security level.
 
 ### Protecting sheets via the UI
 
-In the active sheet, the sheet protection can be done by any of the following ways:
+Sheet protection can be enabled through the user interface in the active sheet using one of the following methods:
 
 * Select **Protect Sheet** from the **Review** tab in the Ribbon toolbar and choose the desired options.
 
-* Right-click the sheet tab context menu option, select **Protect Sheet** from the context menu, and choose the desired options.
-
 ![Protected Sheet Dialog](./images/protect-sheet.gif)
 
-### Unlock particular cell or ranges in the protected sheet via the UI
+* Right-click the sheet tab context menu option, select **Protect Sheet** from the context menu, and choose the desired options.
 
-To allow editing of specific cells or ranges in a protected sheet:
+![Protected Sheet - Context menu](./images/protect-sheet-contextmenu.png)
 
-* Open the **Protect Sheet** dialog.
+The dialog allows setting an optional password and selecting permitted actions.
 
-* Navigate to the **Unlock Range** tab.
+### Unlock specific cells or ranges in a protected sheet
 
-* Select the desired cell(s) or range(s) that should remain editable, even when the sheet is protected. These cells will not be locked and can be modified while other parts of the sheet remain restricted.
+Specific cells or ranges in a protected sheet can be unlocked to allow editing while keeping the rest of the sheet restricted. This feature ensures flexibility in scenarios where certain data needs to remain editable.
+
+To unlock specific cells or ranges in a protected sheet, follow these steps:
+
+* Open the **Protect Sheet** dialog from the **Review** tab or the sheet tab context menu.
+
+* Navigate to the **Unlock Range** tab in the dialog.
+
+* Select the desired cells or ranges that should remain editable.
+
+* Confirm the settings and apply protection to the sheet.
+
+The selected cells or ranges remain editable, while the rest of the sheet remains protected.
 
 ![Unlocked Ranges - Protected Sheet UI](./images/unlocked-range.gif)
 
 ### Protection settings in a protected sheet
 
-By default, when a sheet is protected, most actions such as formatting, inserting, sorting, and filtering are restricted, while selecting cells remains allowed.
+When a sheet is protected, most actions, such as formatting, inserting, sorting, and filtering, are restricted by default. However, specific actions can be enabled through the protection settings to allow controlled interaction with the sheet.
 
 To enable specific functionalities while the sheet is protected:
 
 * Open the **Protect Sheet** dialog from the **Review** tab.
 
-* In the dialog, navigate to the **Sheet Options** tab to view available protection settings.
+* Go to the **Sheet Options** tab to view available protection settings.
 
 * Select or deselect the desired options to allow or restrict specific actions.
 
 * Click **OK** to apply the protection settings.
 
-The available protection settings in Spreadsheet are:
+The available protection settings in Spreadsheet component include:
 
 | Options | Description |
 |------------------------|---------|
-| Select Cells | Allows cell selection. |
-| Format Cells | Allows cell formatting. |
-| Format Rows | Allows row formatting. |
-| Format Columns | Allows column formatting. |
-| Insert Columns | Allows inserting new columns. |
-| Insert Rows | Allows inserting new rows. |
-| Insert Hyperlinks | Allows adding hyperlinks. |
-| Sort | Allows sorting data. |
-| Filter | Allows filtering data. |
+| Select Locked Cells | Permits selection of locked cells in the protected sheet. This option cannot be enabled alone. Enabling it automatically enables the option to select unlocked cells. |
+| Select UnLocked Cells | Permits selection of unlocked cells in the protected sheet. |
+| Format Cells | Permits formatting of cells, such as changing fonts or colors. |
+| Format Rows | Permits formatting of rows, such as adjusting row height. |
+| Format Columns | Permits formatting of columns, such as adjusting column width. |
+| Insert Columns | Permits inserting new columns in the protected sheet. |
+| Insert Rows | Permits inserting new rows in the protected sheet. |
+| Insert Hyperlinks | Permits adding hyperlinks to cells in the protected sheet. |
+| Sort | Permits sorting data in the protected sheet. |
+| Filter | Permits applying filters to data in the protected sheet. |
 
 ![Protection Settings Dialog](./images/sheet-options.png)
 
 ## Unprotect Sheet
 
-The **Unprotect Sheet** support restores access to all actions that were previously restricted by sheet protection. Once unprotected, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
+Unprotecting a sheet removes restrictions on actions previously limited by protection. After unprotecting, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
 
 ### Unprotecting sheets via the UI
 
-In the active sheet, the sheet unprotection can be done by any of the following ways:
+To unprotect a sheet, follow one of these methods:
 
 * Select **Unprotect Sheet** from the **Review** tab in the Ribbon toolbar.
 
-* Right-click the sheet tab context menu option and select **Unprotect Sheet** from the context menu.
+* Right-click the sheet tab context menu option and select **Unprotect Sheet** from the context menu, and enter the password if prompted.
+
+If a password was set during protection, the correct password must be entered to unprotect the sheet.
 
 ![Unprotected Sheet Dialog](./images/unprotect-sheet.png)
 
@@ -87,7 +98,7 @@ The **Protect Workbook** support restricts structural modifications within a wor
 
 ### Protecting workbooks via the UI
 
-To protect the workbook:
+To protect the workbook, follow these steps:
 
 * Go to the **Review** tab in the Ribbon toolbar.
 
@@ -97,11 +108,11 @@ To protect the workbook:
 
 ## Unprotect Workbook
 
-The **Unprotect Workbook** support enables structural modifications within a workbook. Once unprotected, actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets become available.
+Unprotecting a workbook removes restrictions on structural modifications, enabling actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets.
 
 ### Unprotecting workbooks via the UI
 
-To unprotect the workbook:
+To unprotect the workbook, follow these steps:
 
 * Select **Unprotect Workbook** from the **Review** tab in the Ribbon toolbar.
 
