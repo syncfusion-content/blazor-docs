@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Protect Sheet in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about protect sheet in Syncfusion Blazor Spreadsheet component and more.
+title: Protect Sheet and Workbook in Blazor Spreadsheet Component | Syncfusion
+description: Checkout and learn here all about protect sheet and workbook in Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
 ---
 
-# Protect Sheet in Blazor Spreadsheet component
+# Protect Sheet and Workbook in Blazor Spreadsheet component
+
+Protection features in the Blazor Spreadsheet component safeguard data by restricting unauthorized modifications to sheets and workbooks. Sheet protection prevents accidental changes to cell content, while workbook protection limits structural modifications, such as inserting or renaming sheets. Both features support optional password protection and customizable permissions for specific actions, ensuring flexibility and security based on application requirements.
 
 ## Protect sheet
 
-Sheet protection in the Blazor Spreadsheet component restricts unauthorized modifications to data within a sheet, safeguarding content by preventing accidental changes, such as editing, moving, or deleting data. Protection can be applied to an entire sheet, with options to allow specific actions, such as cell selection or formatting, based on the configuration. Protection can be configured with or without a password, depending on the required security level.
+Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Specific actions, like cell selection or formatting, can be permitted through configuration settings. Protection can be applied with or without a password, depending on the desired security level.
 
-### Protecting sheets via the UI
+### Protecting sheets via UI
 
 Sheet protection can be enabled through the user interface in the active sheet using one of the following methods:
 
@@ -27,9 +29,9 @@ Sheet protection can be enabled through the user interface in the active sheet u
 
 The dialog allows setting an optional password and selecting permitted actions.
 
-### Unlock specific cells or ranges in a protected sheet
+### Unlock specific cells or ranges
 
-Specific cells or ranges in a protected sheet can be unlocked to allow editing while keeping the rest of the sheet restricted. This feature ensures flexibility in scenarios where certain data needs to remain editable.
+Specific cells or ranges in a protected sheet can be unlocked to allow editing while maintaining restrictions on the rest of the sheet. This feature supports scenarios where selective data editing is required.
 
 To unlock specific cells or ranges in a protected sheet, follow these steps:
 
@@ -41,7 +43,7 @@ To unlock specific cells or ranges in a protected sheet, follow these steps:
 
 * Confirm the settings and apply protection to the sheet.
 
-The selected cells or ranges remain editable, while the rest of the sheet remains protected.
+The selected cells or ranges remain editable, while the rest of the sheet remains protected. Copying a locked cell is permitted. However, cutting and pasting are only allowed for unlocked cells.
 
 ![Unlocked Ranges - Protected Sheet UI](./images/unlocked-range.gif)
 
@@ -80,7 +82,7 @@ The available protection settings in Spreadsheet component include:
 
 Unprotecting a sheet removes restrictions on actions previously limited by protection. After unprotecting, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
 
-### Unprotecting sheets via the UI
+### Unprotecting sheets via UI
 
 To unprotect a sheet, follow one of these methods:
 
@@ -96,7 +98,7 @@ If a password was set during protection, the correct password must be entered to
 
 The **Protect Workbook** support restricts structural modifications within a workbook. Actions such as inserting, deleting, renaming, or hiding sheets are disabled when this protection is enabled. Protection can be configured with or without a password, depending on the desired level of security.
 
-### Protecting workbooks via the UI
+### Protecting workbooks via UI
 
 To protect the workbook, follow these steps:
 
@@ -110,7 +112,7 @@ To protect the workbook, follow these steps:
 
 Unprotecting a workbook removes restrictions on structural modifications, enabling actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets.
 
-### Unprotecting workbooks via the UI
+### Unprotecting workbooks via UI
 
 To unprotect the workbook, follow these steps:
 
