@@ -96,3 +96,5 @@ N> To know more about protection, refer [here](https://blazor.syncfusion.com/doc
 
 ## New
 Creation of a new Excel file is possible through the interface by selecting the `File > New` option from the ribbon menu. This action initializes a blank Spreadsheet component for new data entry.
+
+![UI showing file menu with new option](./images/file-new-feature.png)
