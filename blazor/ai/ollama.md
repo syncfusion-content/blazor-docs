@@ -294,10 +294,3 @@ The example above demonstrates how to use Ollama with Syncfusion Blazor componen
 - **GenerateResponseAsync**: Sends the request to Ollama and retrieves the response asynchronously.
 - **UI Components**: Syncfusion TreeGrid and Button components work together with the AI service.
 
-## See Also
-- [Overview](https://blazor.syncfusion.com/documentation/ai/overview)
-- [OpenAI Integration](https://blazor.syncfusion.com/documentation/ai/openai)
-- [Azure OpenAI Integration](https://blazor.syncfusion.com/documentation/ai/azure-openai)
-- [Custom AI Service](https://blazor.syncfusion.com/documentation/ai/custom-ai-service)
-- [Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-- [Smart Paste Button](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)

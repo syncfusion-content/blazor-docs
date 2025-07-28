@@ -94,13 +94,5 @@ builder.Services.AddSingleton(new AIServiceCredentials
 builder.Services.AddSingleton<IChatInferenceService, DeepSeekAIService>();
 ```
 
-## See Also
 
-- [Overview](https://blazor.syncfusion.com/documentation/ai/overview)
-- [OpenAI Integration](https://blazor.syncfusion.com/documentation/ai/openai)
-- [Azure OpenAI Integration](https://blazor.syncfusion.com/documentation/ai/azure-openai)
-- [Ollama Integration](https://blazor.syncfusion.com/documentation/ai/ollama)
-- [Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-- [Smart Paste Button](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
-
-
+The `GenerateResponseAsync` method in the DeepSeekAIService class is the core method that makes an AI call to the DeepSeek API endpoint.
