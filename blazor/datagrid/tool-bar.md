@@ -207,7 +207,7 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 
 You can enable or disable toolbar items based on the selected row data in a Syncfusion Blazor DataGrid. This is particularly useful when certain toolbar actions should only be available under specific row conditions.
 
-This can be achieved by using the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event along with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method of the Grid instance.
+This can be achieved by using the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event along with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method of the Grid instance. This method allows you to programmatically enable or disable specific toolbar items based on the selected row's data.
 
 The following code example demonstrates how to enable or disable the toolbar items based on the selected row data:
 
