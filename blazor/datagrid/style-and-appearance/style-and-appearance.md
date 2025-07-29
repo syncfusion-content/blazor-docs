@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
