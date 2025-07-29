@@ -266,21 +266,11 @@ The Syncfusion Blazor DataGrid allows you to personalize the appearance of Grid 
 To customize the color of Grid lines, you can apply CSS styles directly to the Grid’s structural elements such as header cells and row cells. This approach gives you full control over the color, thickness, and style of the borders between cells.
 
 ```css
-   /* Style the entire Grid */
-    .e-grid {
-        border: 2px solid yellow;
-    }
-
-    /* Style each header cell */
-    .e-grid .e-gridheader .e-headercell {
-        border-right: 2px solid yellow;
-        border-bottom: 2px solid yellow;
-    }
-
-    /* Style each row cell */
-    .e-grid .e-rowcell {
-        border-right: 2px solid yellow;
-        border-bottom: 2px solid yellow;
+    /* Customize the color of Grid lines */
+    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+        border-color: yellow;
+        border-style: solid;
+        border-width: 2px;
     }
 
 ```
@@ -294,7 +284,7 @@ The following example demonstrates how to apply a yellow border to the Grid, inc
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315">
+<SfGrid DataSource="@Orders" Height="315" GridLines="Syncfusion.Blazor.Grids.GridLine.Both">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -304,21 +294,12 @@ The following example demonstrates how to apply a yellow border to the Grid, inc
 </SfGrid>
 
 <style>
-    /* Style the entire Grid */
-    .e-grid {
-        border: 2px solid yellow;
-    }
-
-    /* Style each header cell */
-    .e-grid .e-gridheader .e-headercell {
-        border-right: 2px solid yellow;
-        border-bottom: 2px solid yellow;
-    }
-
-    /* Style each row cell */
-    .e-grid .e-rowcell {
-        border-right: 2px solid yellow;
-        border-bottom: 2px solid yellow;
+    /* Customize the color of Grid lines */
+    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+        border-color: yellow;
+        border-style: solid;
+        border-width: 2px;
+        
     }
 </style>
 
@@ -380,4 +361,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBoZwByVyWRlPjH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVeXGhOqfxsRDrR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

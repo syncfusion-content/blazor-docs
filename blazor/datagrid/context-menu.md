@@ -779,13 +779,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIZfXYKSwAiUpU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Get specific row details in the contextmenu click event
+### Access specific row details on context menu click
 
 The Syncfusion Blazor DataGrid allows you to interact with specific row data when a context menu item is clicked. This feature is useful when you want to perform actions like viewing, editing, or processing data from the selected row.
 
 You can achieve this by handling the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event. This event provides access to the clicked menu item and the associated row data, enabling you to fetch and display specific details dynamically.
 
-Steps to Access Row Data on ContextMenuClick:
+Steps to access row data on context menu click:
 
 1. Define a custom context menu item using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
 2. Handle the `ContextMenuItemClicked` event to capture the selected row's data.

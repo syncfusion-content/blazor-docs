@@ -1038,6 +1038,8 @@ The following example demonstrates how to filter the **CustomerID** column progr
 
 To hide the operator dropdown in the menu filter of the Syncfusion Blazor DataGrid, the following CSS can be used to override the styling of the **.e-flm_optrdiv** class.
 
+This customization supports consistent filtering logic. By removing the operator dropdown from the menu filter, the interface becomes cleaner and more focused, allowing a default filter behavior to be applied automatically. This reduces complexity and ensures a streamlined user experience in data-driven applications.
+
 ```css
     .e-flm_optrdiv {
         display: none;
