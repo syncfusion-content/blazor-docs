@@ -1814,6 +1814,165 @@ This approach ensures that all CRUD actions performed in the Grid are synchroniz
 
 > You can find the sample in the following [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) repository.
 
+## Hiding the specific columns while editing a record
+
+You can hide specific columns during the editing process in a Blazor DataGrid. This helps simplify the interface and ensures that fields remain unchanged.
+
+This can be achieved using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick), [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin), and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) events. When the **Edit** button is clicked , the `OnToolbarClick` event is triggered. Within this event, if `Args.Item.Text` equals **Edit**, the default edit action is canceled by setting the `Args.Cancel` property to **true**, and the selected row index is retrieved using the [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync) method. The **HideAndEdit** method is then called, where the **IsEditing** flag is set to **true**, and the specified columns are hidden using the [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method. The grid is then refreshed using [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) to apply the changes. If editing is triggered directly (not through the toolbar), the same logic is applied in the `OnActionBegin` event. Specifically, the condition checks if **Args.RequestType** is **Action.BeginEdit** and **IsEditing** flag is **false**.
+
+Once the grid is refreshed, the `OnActionComplete` event is triggered. If the request type is **Refresh** and the **IsEditing** flag is **true**, the row is selected using [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method, and editing is initiated with [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) method. When the editing operation is completed or canceled (i.e., the request type is **Save** or **Cancel**), the **IsEditing** flag is reset to **false**, and the previously hidden columns are made visible again using the [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) method. This approach ensures a clean and focused editing experience by dynamically managing column visibility based on the editing state.
+
+The following example demonstrates how to hide specific columns such as **Order ID** and **Order Date** during editing using the `OnToolbarClick` and `OnActionBegin` events:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompletedHandler" TValue="OrderData"></GridEvents>
+     <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+   </GridColumns>
+</SfGrid>
+@code {
+    public SfGrid<OrderData> Grid { get; set; }
+    public List<OrderData> Orders { get; set; }
+    public string[] cols = new string[] { "Order ID", "Order Date" };
+    public bool IsEditing = false;
+    public int SelectedRowIndex { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
+    {
+        if (Args.Item.Text == "Edit")
+        {
+            // Cancel the default action.
+            Args.Cancel = true;
+            var val = await Grid.GetSelectedRowIndexesAsync();
+
+
+            if (val != null && val.Count > 0)
+            {
+                // Store the selected record index.
+                SelectedRowIndex = val[0];
+
+                // Hide the columns and refresh the Grid.
+                await HideAndEdit();
+            }
+        }
+    }
+
+    public async Task HideAndEdit()
+    {
+        //Boolean to indicate that hiding is initiate for editing operation.
+        IsEditing = true;
+        //Hide the columns.
+        await Grid.HideColumnsAsync(cols, "HeaderText");
+        //Refreshing the Grid after hiding the column.
+        await Grid.Refresh();
+
+    }
+
+    public async Task ActionBeginHandler(Syncfusion.Blazor.Grids.ActionEventArgs<OrderData> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
+        {
+            if (!IsEditing)
+            {
+                //Preventing the default edit operation.
+                Args.Cancel = true;
+                //Storing the selecting record index.
+                SelectedRowIndex = Args.RowIndex;
+                //Hiding the column
+                await HideAndEdit();
+            }
+        }
+    }
+
+    public async Task ActionCompletedHandler(Syncfusion.Blazor.Grids.ActionEventArgs<OrderData> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Refresh && IsEditing)
+        {
+            //While refreshing this RequestType will trigger and based on boolean StartEdit, we select the record.
+            await Grid.SelectRowAsync(SelectedRowIndex);
+            //Editing the selected record.
+            await Grid.StartEditAsync();
+        }
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save || Args.RequestType == Syncfusion.Blazor.Grids.Action.Cancel)
+        {
+            //Updating the boolean variable.
+            IsEditing = false;
+            //Displaying the columns again after editing.
+            await Grid.ShowColumnsAsync(cols, "HeaderText");
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+     public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID; 
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}      
+
+{% previewsample "https://blazorplayground.syncfusion.com/hDLIXcrbVUQrMlLN" %}
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
