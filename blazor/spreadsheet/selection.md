@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Spreadsheet component
 
-The selection feature in the Syncfusion Blazor Spreadsheet component provides essential functionality for interactive highlighting and manipulation of cells, rows, and columns. Selection serves as the foundation for most spreadsheet operations, including data entry, editing, formatting, and analysis. The feature supports multiple selection methods through intuitive mouse and keyboard interactions, enabling efficient data management across various workflow requirements. Selection capability in the Spreadsheet component accommodates diverse user preferences with support for single cells, contiguous ranges, and non-adjacent selections.
+The selection feature in the Syncfusion Blazor Spreadsheet component delivers essential functionality for interactive highlighting and manipulation of cells, rows, and columns. Selection functionality establishes the foundation for most spreadsheet operations, including data entry, editing, formatting, and analysis. The Spreadsheet component implements multiple selection methods through mouse and keyboard interactions, facilitating efficient data management across various workflow scenarios. The selection capabilities accommodate diverse operational requirements with support for single cells, contiguous ranges, and non-adjacent selections, providing comprehensive data manipulation options for different use cases.
 
 ## Selection Types
 
@@ -35,22 +35,22 @@ The component supports four cell selection modes:
 The Syncfusion Blazor Spreadsheet component provides three primary methods for selecting cells through the user interface:
 
 * **Mouse Interactions**: The most intuitive and visual approach to selection, allowing direct clicking, dragging, and multi-selecting with modifier keys. This method provides immediate visual feedback and requires minimal technical knowledge.
-* **Keyboard Shortcuts**: Efficient navigation and selection within spreadsheets, optimizing workflows for users who prefer keyboard-centric operation. These shortcuts significantly enhance productivity by minimizing hand movement between keyboard and mouse.
+* **Keyboard Shortcuts**: Efficient navigation and selection within spreadsheets, optimizing workflows for keyboard-centric operation. These shortcuts significantly enhance productivity by minimizing hand movement between keyboard and mouse.
 * **Name Box**: Precise targeting of specific cells or ranges by direct reference input. This method excels at navigating to and selecting distant or specifically named areas within large spreadsheets.
 
 
 | Selection   | Mouse             | Keyboard | Name Box |
 |-------------|-------------------|-------------|-------|
-| Single Cell | Clicking on a cell | Navigating to a cell using arrow keys, Tab, Shift + Tab, Enter, Shift + Enter  | Entering a cell reference in the Name Box and press Enter |
-| Multiple Cells | Selecting the first cell, then holding Ctrl while clicking additional cells | - | - |
+| Single Cell | Clicking on a cell | Navigating to a cell using **arrow keys**, **Tab**, **Shift + Tab**, **Enter**, **Shift + Enter**  | Entering a cell reference in the Name Box and press Enter |
+| Multiple Cells | Selecting the first cell, then holding **Ctrl** key and click additional cells | - | - |
 
 ![single-cell-selection](./images/singlecell-selection.gif)
 
 
 | Selection   | Mouse             | Keyboard | Name Box |
 |-------------|-------------------|-------------|-------|
-| Range | Clicking and dragging across cells . Clicking a starting cell, then holding Shift and clicking an ending cell | Holding Shift and using arrow keys to extend selection from active cell | Entering a cell range in the Name Box and pressing Enter |
-| Multiple Range | Selecting the first range, then holding Ctrl while selecting additional ranges. Each selected range is highlighted independently | - | - |
+| Range | Clicking and dragging across cells . Clicking a starting cell, then holding **Shift** key and clicking an ending cell | Holding Shift and using **Arrow** keys to extend selection from active cell | Entering a cell range in the Name Box and pressing Enter |
+| Multiple Range | Selecting the first range, then holding **Ctrl** key while selecting additional ranges. Each selected range is highlighted independently | - | - |
 
 ![range-cell-selection](./images/rangecell-selection.gif)
 
@@ -67,11 +67,10 @@ The Syncfusion Blazor Spreadsheet component provides the ability to select cells
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Spreadsheet
-@using Syncfusion.Blazor.Buttons
 
 <button @onclick="SelectCell">Select Cell</button>
-<button @onClick="SelectRange" >Select Range</button>
-<button @onClick="SelectMultipleRange" >Select Range</button>
+<button @onclick="SelectRange" >Select Range</button>
+<button @onclick="SelectMultipleRange" >Select Multiple Range</button>
 
 <SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
@@ -91,8 +90,8 @@ The Syncfusion Blazor Spreadsheet component provides the ability to select cells
 
     public async Task SelectCell()
     {
-        // Select a single cell "A1" using SelectRangeAsync
-        await SpreadsheetInstance.SelectRangeAsync("A1");
+        // Select a single cell "D5" using SelectRangeAsync
+        await SpreadsheetInstance.SelectRangeAsync("D5");
     }
 
     public async Task SelectRange()
@@ -104,7 +103,7 @@ The Syncfusion Blazor Spreadsheet component provides the ability to select cells
     public async Task SelectMultipleRange()
     {
         // Select multiple non-adjacent ranges simultaneously
-        await SpreadsheetInstance.SelectRangeAsync("A1:A10 B1:B10 C1:C10");
+        await SpreadsheetInstance.SelectRangeAsync("A1:A10 F1:F10 C1:C10");
     }
 }
 
@@ -138,10 +137,9 @@ The Syncfusion Blazor Spreadsheet component enables programmatic row selection t
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Spreadsheet
-@using Syncfusion.Blazor.Buttons
 
 <button @onclick="SelectRow">Select Row</button>
-<button @onClick="SelectMultipleRow" >Select Multiple Row</button>
+<button @onclick="SelectMultipleRow" >Select Multiple Row</button>
 
 <SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
@@ -204,10 +202,9 @@ The Syncfusion Blazor Spreadsheet component facilitates programmatic column sele
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Spreadsheet
-@using Syncfusion.Blazor.Buttons
 
 <button @onclick="SelectColumn">Select Column</button>
-<button @onClick="SelectMultipleColumn" >Select Multiple Column</button>
+<button @onclick="SelectMultipleColumn" >Select Multiple Column</button>
 
 <SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
