@@ -9,7 +9,7 @@ documentation: ug
 
 # Secure Registration of Syncfusion License Keys in Blazor WebAssembly Applications
 
-Registering a license key in the Client project of a Blazor WebAssembly application`Program.cs` file exposes it in the browser through DLLs, creating security risks.
+Registering a license key directly in the Program.cs file of a Blazor WebAssembly Client project can expose it through the compiled DLLs, making it accessible in the browser, creating security risks.
 
 ## Recommended Solution: Use Licensed NuGet Packages
 
