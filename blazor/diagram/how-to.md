@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Diagram Methods and Properties
+title: How to Use Diagram Methods and Properties | Syncfusion
 description: Checkout and learn here all about how to achieve common use cases in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
