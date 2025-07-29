@@ -241,4 +241,60 @@ The Syncfusion Blazor Spreadsheet component facilitates programmatic column sele
 
 ![range-cell-selection](./images/column-selection.gif)
 
+## Events
+
+The Syncfusion Blazor Spreadsheet component provides an event to handle selection operations programmatically. This event allows tracking changes in selection and implementing custom logic when cells, rows, or columns are selected.
+
+* **Selected** - The `Selected` event is triggered automatically after a selection operation completes.
+
+### Selected
+
+The `Selected` event occurs after a selection operation is completed in the spreadsheet. This event triggers when cells, rows, or columns are selected through user interface or programmatic selection using the 
+[SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_)
+ method. The event handler receives a 
+[SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html)
+ object that contains information about the selection.
+
+ **Puropse**
+ This event serves various functionalities such as tracking selection patterns, implementing validation rules, updating external UI elements with selection data, triggering analysis on selected content, and enabling integration with other systems. By handling these events, applications can create responsive spreadsheet experiences that adapt to selections with appropriate context-sensitive functions and feedback.
+
+**Event Arguments**
+
+The 
+[SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html)
+ class provides details about the selection through the following property:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| Range | Gets the range of cells that have been selected. The format includes the sheet name and the selected range address (e.g., "Sheet1!A1:B5"). For multiple non-contiguous selections, the ranges are separated by spaces. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+ 
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents Selected="AfterSelection" ></SpreadsheetEvents>
+</SfSpreadsheet>
+ 
+@code {
+    public byte[] DataSourceBytes { get; set; }   
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void AfterSelection(SelectedEventArgs args)
+    {
+        // prints the selected range.
+        Console.WriteLine($"Selected range: {args.Range}");
+    }
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
 N> The Select All operation highlights every cell in the active worksheet. This operation can be performed using the keyboard shortcut **Ctrl + A** or by clicking the Select All button located at the intersection of row and column headers in the top-left corner of the spreadsheet.
