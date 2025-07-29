@@ -968,7 +968,7 @@ The following example demonstrates how to clear the searched records using an ex
 
 A search textbox can be made more clear and useful by adding a small search icon inside it. This shows that the textbox is meant for searching.
 
-To achive this, you can use the [Created](https://blazor.syncfusion.com/documentation/textbox/events#created) event of the [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) along with the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method to render the search icon when the textbox is created.
+To achieve this, you can use the [Created](https://blazor.syncfusion.com/documentation/textbox/events#created) event of the [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) along with the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method to render the search icon when the textbox is created.
 
 The following example demonstrates how to render icon within custom search Textbox:
 
