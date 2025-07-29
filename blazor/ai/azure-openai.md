@@ -349,7 +349,6 @@ The example above demonstrates how to use Azure OpenAI with Syncfusion Blazor co
 2. **Component Integration**: Using the `IChatInferenceService` to process natural language queries.
 3. **Prompt Engineering**: Creating appropriate prompts for the AI model to convert natural language to SQL.
 4. **Response Processing**: Parsing the SQL response and applying it to the QueryBuilder component.
-5. **Visual Feedback**: Displaying filtered results in the Grid component based on the AI-processed query.
 
 ### Key Components
 

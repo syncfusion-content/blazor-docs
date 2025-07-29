@@ -285,7 +285,6 @@ The example above demonstrates how to use Ollama with Syncfusion Blazor componen
 2. **Component Integration**: Using the `IChatInferenceService` to process TreeGrid data.
 3. **Prompt Engineering**: Creating detailed prompts for the AI model to understand hierarchical relationships.
 4. **Response Processing**: Parsing the JSON response and applying it to update the TreeGrid structure.
-5. **Visual Feedback**: Displaying the reorganized hierarchical data with proper parent-child relationships.
 
 ### Key Components
 
