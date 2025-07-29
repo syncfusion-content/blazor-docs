@@ -358,8 +358,8 @@ The example above demonstrates how to use OpenAI with Syncfusion Blazor componen
 
 ### Key Components
 
-- **IChatInferenceService**: Injected to interact with the OpenAI service.
-- **ChatParameters**: Configures the AI request, including system and user messages.
+- **IChatInferenceService**: Injected to interact with the OpenAI models.
+- **ChatParameters**: Configures the AI request, including system prompt and user messages.
 - **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
 - **UI Components**: Syncfusion Grid and Button components work together with the AI service.
 

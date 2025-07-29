@@ -288,8 +288,8 @@ The example above demonstrates how to use Ollama with Syncfusion Blazor componen
 
 ### Key Components
 
-- **IChatInferenceService**: Injected to interact with the Ollama service.
-- **ChatParameters**: Configures the AI request, including system and user messages.
+- **IChatInferenceService**: Injected to interact with the Ollama models.
+- **ChatParameters**: Configures the AI request, including system prompt and user messages.
 - **GenerateResponseAsync**: Sends the request to Ollama and retrieves the response asynchronously.
 - **UI Components**: Syncfusion TreeGrid and Button components work together with the AI service.
 
