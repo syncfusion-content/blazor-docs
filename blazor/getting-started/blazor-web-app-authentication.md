@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App with Authentication
 
-**Blazor Web App with authentication** using **.NET 9**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
+This guide demonstrates how to build a **Blazor Web App with authentication** using **.NET 9**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
 
 ## Prerequisites
 
