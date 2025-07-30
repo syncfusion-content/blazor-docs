@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
 
-> Before adding column template to the Grid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the Grid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates#templates) section topic to configure the template.
 
 To know about **Column Template** in Grid, you can check this video.
 
