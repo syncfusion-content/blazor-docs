@@ -277,7 +277,7 @@ To customize the color of Grid lines, you can apply CSS styles directly to the G
 
 ![Grid Line](../images/style-and-appearance/grid-line.png)
 
-The following example demonstrates how to apply a yellow border to the Grid, including header and row cells:
+The following example demonstrates how to customize the color of Grid lines while using [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -803,7 +803,7 @@ The following example demonstrates how to fetch specific row details when a cont
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
        <GridColumn Field="OrderID" HeaderText="Order ID" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
-        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100" />
+       <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100" />
        <GridColumn Field="ShipCity" HeaderText="ShipCity" Width="100" />
        <GridColumn Field="ShipName" HeaderText="ShipName" Width="100" />
     </GridColumns>
