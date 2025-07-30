@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Diagram Methods and Properties for Common Scenarios | Syncfusion
+title: How to Use Diagram Methods and Properties | Syncfusion
 description: Checkout and learn here all about how to achieve common use cases in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
@@ -1378,7 +1378,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
             {
                 Name = "changeCursor",
                 Offset = 0.5,
-                Source = "https://www.w3schools.com/images/w3schools_green.jpg",
+                ImageUrl = "https://www.w3schools.com/images/w3schools_green.jpg",
                 Visible = true,
                 Side = Direction.Bottom,
                 Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
