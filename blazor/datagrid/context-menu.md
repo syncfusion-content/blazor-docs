@@ -791,7 +791,7 @@ Steps to access row data on context menu click:
 2. Handle the `ContextMenuItemClicked` event to capture the selected row's data.
 3. Use the `RowInfo.RowData` property from the event arguments to access the full row details.
 
-The following example demonstrates how to fetch specific row details when a context menu item is clicked in the Grid using the `ContextMenuItemClicked` event. The fetch data item retrieves the row information and displays it below the Grid.
+The following example demonstrates how to fetch specific row details when a context menu item is clicked in the Grid using the `ContextMenuItemClicked` event. The fetch data item retrieves the row information and displays it below the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
