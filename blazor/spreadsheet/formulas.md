@@ -13,9 +13,9 @@ The Syncfusion Blazor Spreadsheet component offers robust formula support, enabl
 
 ## Formula bar
 
-The formula bar is a key interface element in the Syncfusion Blazor Spreadsheet, designed to make it easier to view, edit, and enter cell data and formulas. Formula bar is positioned above the sheet grid, it provides a centralized space for working with formulas. Formula bar can also be expanded or collapsed to suit your needs. When expanded, it offers more vertical space, making it easier to read and edit long or complex formulas with greater accuracy.
+The formula bar is a key interface element in the Syncfusion Blazor Spreadsheet, designed to make it easier to view, edit, and enter cell data and formulas. Formula bar is positioned above the sheet grid, it provides a centralized space for working with formulas. Formula bar can also be expanded or collapsed to suit your needs. When expanded, it offers more vertical space, making it easier to read and edit long or complex formulas with greater accuracy. Formula Bar can be enable/disable by using the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property, which is set to true by default.
 
-Formula Bar can be enable/disable by using the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property, which is set to true by default.
+N> When `ShowFormulaBar` is set to **false**, Formula Bar is removed from the interface.
 
 ![Formula bar](./images/formulabar.png)
 
@@ -38,6 +38,24 @@ The Syncfusion Blazor Spreadsheet component provides multiple methods for insert
 Formulas can be entered directly into cells or the **Formula Bar** by typing an equals sign **(=)** followed by the formula expression. This method initiates the formula intellisense feature, which displays a dropdown list of relevant formulas. The intellisense feature accelerates formula creation by reducing typing and helping avoid syntax errors.
 
 ![Formulas Intellisense](./images/formula-intellisence.gif)
+
+### Adding cell references to formulas
+
+When working with formulas that require cell references as arguments, the Spreadsheet component supports two primary interaction methods for streamlined formula creation.
+
+**Direct keyboard entry**
+
+The most straightforward approach involves typing cell references directly using the keyboard. After beginning a formula with an equals sign and entering a function name with an opening parenthesis, specific cell addresses can be manually entered in standard notation (e.g., A1, B5, C10). For example, to create a SUM formula, type **"=SUM("** followed by the cell reference **"A1"** and closing parenthesis **")"** to form the complete expression **"=SUM(A1)"**. This method provides precise control when constructing formulas with exact cell references already known.
+
+For formulas requiring multiple arguments, commas serve as argument separators. For instance, typing **"=SUM(A1,B1,C1)"** creates a formula that adds values from three individual cells. Range references use the colon notation between start and end cells, such as **"A1:A10"** to indicate a contiguous range.
+
+**Interactive cell selection**
+
+The Spreadsheet component also supports a more interactive approach for adding cell references. After initiating a formula and typing a function name with an opening parenthesis, clicking directly on cells in the worksheet to automatically insert their references into the formula. The component automatically appends the selected cell's address to the current formula being edited.
+
+For formulas with multiple arguments, the process follows an intuitive pattern: click the first cell to insert its reference, type a comma to indicate a new argument, then click another cell to add its reference. This sequence can be repeated for functions accepting multiple arguments. To complete the formula, add the closing parenthesis or press Enter. For example, when creating **"=AVERAGE()"**, clicking cells B2, C3, and D4 in sequence (with commas added between selections) generates **"=AVERAGE(B2,C3,D4)"**.
+
+N> When a sheet is protected, **Insert Function** option is disabled. For more information on worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
 
 ## Calculation Mode
 
