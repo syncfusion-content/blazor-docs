@@ -755,7 +755,7 @@ In the example below, a new column called **FinalCost** is created to display th
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ManfCost) HeaderText="Manufacturing Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.LabCost) HeaderText="Labor Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" Format="C2" TextAlign="TextAlign.Center" Width="120">
+        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
                     var value = (context as Order);
@@ -793,7 +793,7 @@ In the example below, a new column called **FinalCost** is created to display th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyXGUNgnsGFJXl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to get the row object by clicking on the template element
 
