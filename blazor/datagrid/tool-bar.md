@@ -203,6 +203,111 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrAXEVuUjkraxax?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Enable or disable toolbar items based on selected row data
+
+You can enable or disable toolbar items based on the selected row data in a Syncfusion Blazor DataGrid. This allows you to dynamically control which toolbar actions are available, ensuring they are only active when relevant to the selected row. 
+
+This can be achieved by using the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event along with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This method allows you to programmatically enable or disable specific toolbar items based on the selected row's data.
+
+The following code example demonstrates how to enable or disable the toolbar items based on the selected row data:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Width="700" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowEditOnDblClick="false" Mode="Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
+    <GridEvents RowSelecting="RowSelectingHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData> grid { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }   
+
+    public async Task RowSelectingHandler(RowSelectingEventArgs<OrderData> args)
+    {
+        if (args.Data.OrderID == 10249 || args.Data.OrderID == 10252 || args.Data.OrderID == 10256)
+        {
+            await this.grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, false);
+        }
+        else
+        {
+            await this.grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, true);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+     public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID; 
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; } 
+}
+
+{% endhighlight %}
+{% endtabs %}      
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIXGVkiYUtauxh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customize Toolbar buttons using CSS
 
 Customizing Toolbar buttons in Syncfusion Blazor DataGrid using CSS involves modifying the appearance of built-in toolbar buttons by applying CSS styles. This provides a flexible and customizable way to enhance the visual presentation of the toolbar and create a cohesive interface.
