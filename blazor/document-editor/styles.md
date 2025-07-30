@@ -145,4 +145,15 @@ await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked");
 await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked", true);
 ```
 
+## Get Styles
+
+You can get the styles in the document using the below code snippet.
+
+```ts
+//Get paragraph styles
+object paragraphStyles = await container.DocumentEditor.GetStylesAsync(StyleType.Paragraph);
+//Get character styles
+object characterStyles = await container.DocumentEditor.GetStylesAsync(StyleType.Character);
+```
+
 You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.
