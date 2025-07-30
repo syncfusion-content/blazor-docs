@@ -1385,3 +1385,98 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBSDoDzHHtCzbSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Selecting a maximum of two rows in the Blazor DataGrid
+
+The Syncfusion Blazor DataGrid allows you to control how many rows can be selected at once. In some cases, you may want to limit the selection to a specific number of rows. For example, allowing users to select only up to two rows at a time.
+
+This is useful when performing actions that should only apply to a limited number of records, such as comparing two entries or processing a pair of selected items.
+
+You can achieve this by handling the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event and cancelling the selection if the number of selected rows exceeds your limit.
+
+The following example demonstrates how to restrict the selection to a maximum of two rows:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridEvents RowSelecting="RowSelectingHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="OrderData ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" OrderData Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    SfGrid<OrderData> Grid { get; set; }
+    public List<OrderData> Orders { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    } 
+
+    public async Task RowSelectingHandler(RowSelectingEventArgs<OrderData> Args)
+    {
+        var SelectedRecord = await Grid.GetSelectedRecordsAsync();
+        if (SelectedRecord != null && SelectedRecord.Count > 1)
+        {
+            Args.Cancel = true;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;   
+        this.Freight = Freight;  
+        this.OrderDate = OrderDate;           
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", 32.38,new DateTime(1996,7,4)));
+                Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5)));
+                Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 7, 6)));
+                Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 7, 7)));
+                Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 7, 8)));
+                Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 7, 9)));
+                Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 7, 10)));
+                Orders.Add(new OrderData(10255, "VINET", 148.33, new DateTime(1996, 7, 11)));
+                Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 7, 12)));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }       
+}  
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZryDcqDTIoybdNq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
