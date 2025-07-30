@@ -741,7 +741,7 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 ### Hide the filter operator dropdownlist in the filter menu dialog
 
-To hide the operator dropdown in the menu filter dialog of the Syncfusion Blazor DataGrid, the following CSS can be used to override the styling of the **.e-flm_optrdiv** class. Using this customization logic, the interface becomes more focuses, allowing a default filter behavior to be applied automatically.
+To hide the operator dropdown in the menu filter dialog of the Syncfusion Blazor DataGrid, the following CSS can be used to override the styling of the **.e-flm_optrdiv** class. Using this customization logic, the interface becomes more focused, allowing a default filter behavior to be applied automatically.
 
 ```css
     .e-flm_optrdiv {
