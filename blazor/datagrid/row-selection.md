@@ -1392,7 +1392,7 @@ The Syncfusion Blazor DataGrid allows you to control how many rows can be select
 
 This is useful when performing actions that should only apply to a limited number of records, such as comparing two entries or processing a pair of selected items.
 
-You can achieve this by handling the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event and cancelling the selection if the number of selected rows exceeds your limit.
+You can achieve this by handling the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event and canceling the selection if the number of selected rows exceeds your limit.
 
 The following example demonstrates how to restrict the selection to a maximum of two rows:
 

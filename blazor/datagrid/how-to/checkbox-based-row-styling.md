@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change row background color based on checkbox state in Blazor DataGrid | Syncfusion
+title: Checkbox based row styling in Blazor DataGrid| Syncfusion
 description: Checkout and learn here all about Change row background color based on checkbox state in Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
