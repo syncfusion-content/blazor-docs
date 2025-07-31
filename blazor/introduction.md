@@ -162,7 +162,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></div>
 		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/data-form/getting-started">Data Form</a></div>
         <div><p class="controlcategory">Interactive Chat</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI Assistview</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started">Chat UI</a></div>
     </td>
     <td>
