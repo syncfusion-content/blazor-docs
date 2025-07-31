@@ -758,9 +758,11 @@ In the example below, a new column called **FinalCost** is created to display th
         <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
-                    var value = (context as Order);
-                    var finalAmount = value.ManfCost + value.LabCost;
-                    <div>$@finalAmount</div>
+                  var value = (context as Order);
+                  var  finalAmount = value.ManfCost + value.LabCost;
+                  decimal finalAmountDouble = Convert.ToDecimal(finalAmount);
+                  var finalAmountString = finalAmountDouble.ToString("C2");
+                  <div>@finalAmountString</div>
                 }
             </Template>
         </GridColumn>
@@ -793,7 +795,7 @@ In the example below, a new column called **FinalCost** is created to display th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyXGUNgnsGFJXl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhejQUiCwvnURGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to get the row object by clicking on the template element
 
