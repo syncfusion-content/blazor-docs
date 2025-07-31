@@ -779,5 +779,169 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIZfXYKSwAiUpU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Customizing context menu in specific sections of the DataGrid
+
+The Syncfusion Blazor DataGrid provides the flexibility to display custom context menus in specific sections of the Grid, such as the Header, Content, and Pager. This helps create a more focused and intuitive experience by showing only the actions that make sense in each area.
+
+**Steps to customize context menu by section:**
+
+* Use the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property to define a list of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
+
+* Set the Target property of each context menu item to scope it to a specific section:
+
+    * `.e-header` for the header
+    * `.e-content` for the Grid body
+    * `.e-pager` for the pager
+
+* Define sub-items using the Items property to group related actions under a parent menu.
+
+* Handle actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+
+The following example shows how to display sorting options when right-clicking on a column header, editing or deleting options when right-clicking on a row, and page navigation options when right-clicking on the pager:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowSorting="true" ContextMenuItems="@ContextMenuItems">
+    <GridEvents TValue="OrderData" ContextMenuItemClicked="OnContextMenuClick"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    public List<ContextMenuItemModel> ContextMenuItems = new()
+    {
+        new ContextMenuItemModel
+        {
+            Text = "Header Actions",
+            Target = ".e-header",
+            Id = "header",
+            Items = new List<MenuItem>
+            {
+                new MenuItem { Text = "Sort by Order ID", Id = "sortOrderId" }
+            }
+        },
+        new ContextMenuItemModel
+        {
+            Text = "Row Actions",
+            Target = ".e-content",
+            Id = "content",
+            Items = new List<MenuItem>
+            {
+                new MenuItem { Text = "Edit Row", Id = "editRow" },
+                new MenuItem { Text = "Delete Row", Id = "deleteRow" }
+            }
+        },
+        new ContextMenuItemModel
+        {
+            Text = "Pager Actions",
+            Target = ".e-pager",
+            Id = "pager",
+            Items = new List<MenuItem>
+            {
+                new MenuItem { Text = "Go to First Page", Id = "firstPage" },
+                new MenuItem { Text = "Go to Last Page", Id = "lastPage" }
+            }
+        }
+    };
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
+    {
+        switch (args.Item.Id)
+        {
+            case "sortOrderId":
+                await Grid.SortColumnAsync(nameof(OrderData.OrderID), Syncfusion.Blazor.Grids.SortDirection.Ascending);
+                break;
+
+            case "editRow":
+                await Grid.StartEditAsync();
+                break;
+
+            case "deleteRow":
+                var selected = Grid.SelectedRecords.FirstOrDefault() as OrderData;
+                if (selected != null)
+                {
+                    await Grid.DeleteRecordAsync(nameof(OrderData.OrderID), selected);
+                }
+                break;
+
+            case "firstPage":
+                await Grid.GoToPageAsync(1);
+                break;
+
+            case "lastPage":
+                int lastPage = (int)Math.Ceiling((double)Grid.TotalItemCount / Grid.PageSettings.PageSize);
+                await Grid.GoToPageAsync(lastPage);
+                break;
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotQqCLSyqiwfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
