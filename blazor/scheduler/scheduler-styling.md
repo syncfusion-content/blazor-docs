@@ -801,3 +801,273 @@ This CSS selector targets the work day cells in the timeline year view of the Sy
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLytSsaTviyMXFM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work day cells in timeline year view](images/blazor-scheduler-work-day-cells-timeline-yearview.png)" %}
+
+# Appointment in vertical views of scheduler
+
+This CSS selector targets the regular appointments that appear in these vertical views. Customizing this selector can significantly improving appointment visibility, readability, and overall visual appearance.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment 
+    {
+        border-radius: 8px;
+        border: 3px solid #ce40b7;
+        color: white;
+        font-weight: 500;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLSXlXiqeOnoBFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Appointments in vertical view](images/blazor-scheduler-appointments-vertical-view.png)" %}
+
+# All day Appointment in vertical views of scheduler
+
+This CSS selector targets the all-day appointments that appear in the vertical views (Day, Week, and WorkWeek) of the Syncfusion Blazor Scheduler component. All-day appointments are events that span an entire day or multiple days without specific start and end times within those days.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 11, 10, 0, 0) , EndTime = new DateTime(2020, 2, 12, 12, 0, 0), IsAllDay = true },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0), IsAllDay = true }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    .e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment
+    {
+        background-color: #ff824d;
+        border-radius: 3px;
+        color: white;
+        font-weight: 500;
+        border: 3px solid #6aff4d;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhINvDCqxEWFfUp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[All day appointments in vertical view](images/blazor-scheduler-allday-appointments-vertical-view.png)" %}
+
+# Appointment in month view of scheduler
+
+This CSS selector targets appointment elements in the month view of the Syncfusion Blazor Scheduler component. This selector is crucial for customizing how appointments appear in the calendar-style month view, which presents unique visualization challenges due to the compact nature of displaying an entire month at once.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 10, 10, 0, 0) , EndTime = new DateTime(2020, 2, 11, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    .e-schedule .e-month-view .e-appointment 
+    {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 4px;
+        padding: 4px; 
+        font-size: 14px; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyjbDigwxldZQH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Appointments in month view](images/blazor-scheduler-appointments-month-view.png)" %}
+
+# Appointment in timeline views of scheduler
+
+This CSS selector targets appointment elements in the timeline views of the Syncfusion Blazor Scheduler component. Timeline views (TimelineDay, TimelineWeek, TimelineWorkWeek) present a unique horizontal orientation of appointments that differs significantly from the traditional vertical or month views.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineDay"></ScheduleView>
+            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 13);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 13, 12, 30, 0) , EndTime = new DateTime(2020, 2, 13, 14, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    .e-schedule .e-timeline-view .e-appointment 
+    {
+        background-color: #ef3707;
+        height: 50px !important;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSNbjiqlpgpavw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Appointments in Timeline view](images/blazor-scheduler-appointments-Timeline-view.png)" %}
+
+# Appointment in timeline month view of scheduler
+
+This CSS selector targets appointment elements specifically in the timeline month view of the Syncfusion Blazor Scheduler component. This specialized view combines the horizontal time-based layout of timeline views with the monthly calendar perspective, creating a unique visualization for planning and scheduling.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 11);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+
+<style>
+    .e-schedule .e-timeline-month-view .e-appointment
+    {
+        background-color:#ef07ca;
+        border: 2px solid #3d30cb;
+        height: 50px !important;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSDFZMJTeCySrl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Appointments in Timeline Month view](images/blazor-scheduler-appointments-TimelineMonth-view.png)" %}
