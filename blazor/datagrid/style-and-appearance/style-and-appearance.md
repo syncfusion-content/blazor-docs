@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -258,3 +258,107 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSNetLzivgmRSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize the color of Grid lines
+
+The Syncfusion Blazor DataGrid allows you to personalize the appearance of Grid lines to match your application's design.
+
+To customize the color of Grid lines, you can apply CSS styles directly to the Grid’s structural elements such as header cells and row cells. This approach gives you full control over the color, thickness, and style of the borders between cells.
+
+```css
+    /* Customize the color of Grid lines */
+    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+        border-color: yellow;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+```
+
+![Grid Line](../images/style-and-appearance/grid-line.png)
+
+The following example demonstrates how to customize the color of Grid lines while using [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315" GridLines="Syncfusion.Blazor.Grids.GridLine.Both">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    /* Customize the color of Grid lines */
+    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+        border-color: yellow;
+        border-style: solid;
+        border-width: 2px;
+        
+    }
+</style>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }    
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;   
+        this.Freight = Freight;  
+        this.OrderDate = OrderDate;           
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", 32.38,new DateTime(1996,7,4)));
+                Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5)));
+                Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 7, 6)));
+                Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 7, 7)));
+                Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 7, 8)));
+                Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 7, 9)));
+                Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 7, 10)));
+                Orders.Add(new OrderData(10255, "VINET", 148.33, new DateTime(1996, 7, 11)));
+                Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 7, 12)));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }       
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVeXGhOqfxsRDrR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
