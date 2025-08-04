@@ -21,7 +21,7 @@ To customize the visual appearance of the connector endpoint handle in a diagram
     }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/ConnectorendPointHandle)
 
 ![Connector Endpoint Handle in Blazor Diagram](images/connector-endpoint.png)
 
@@ -54,7 +54,7 @@ To customize the visual appearance of the connector endpoint handle when it is i
    }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/ConnectorendPointHandleConnected)
 
 ![Connector Endpoint Disable in Blazor Diagram](images/Connector-Endpoint-Disable.png)
 
@@ -70,7 +70,7 @@ To customize the appearance of the Bezier connector handle, apply the following 
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/BezierConnector)
 
 ![Bezier Connector in Blazor Diagram](images/BezierConnector.png)
 
@@ -85,7 +85,7 @@ To customize the appearance of the Bezier connector line, apply the following CS
 }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/BezierConnectorLine)
 
 ![Bezier Connector Line in  Blazor Diagram](images/Connector-Bezier-Line.png)
 
@@ -102,7 +102,7 @@ To customize the appearance of the resize handle, apply the following CSS code t
     }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/ResizeHandle)
 
 ![Resize Handle Blazor Diagram](images/ResizeHandle.png)
 
@@ -117,7 +117,7 @@ To customize the appearance of the selector pivot line, apply the following CSS 
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SelectorPivotLine)
 
 ![Selector Pivot Line Blazor Diagram](images/SelectorPivotLine.png)
 
@@ -132,7 +132,7 @@ To customize the appearance of the selector border, apply the following CSS styl
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SelectorBorder)
 
 ![Selector Border Blazor Diagram](images/SelectorBorder.png)
 
@@ -166,7 +166,7 @@ To customize the appearance of the rotation handle, apply the following CSS code
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/RotateHandle)
 
 ![Rotate Handle Blazor Diagram](images/RotateHandle.png)
 
@@ -181,7 +181,7 @@ To customize the visual appearance of symbols in the symbol palette during mouse
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SymbolPaletteHover)
 
 ![SymbolPalette Hover in Blazor Diagram](images/SymbolPaletteHover.gif)
 
@@ -196,7 +196,7 @@ To customize the visual appearance of the symbol palette when a symbol is select
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SymbolPaletteSelect)
 
 ![SymbolPalette Selected in Blazor Diagram](images/SymbolPaletteSelect.gif)
 
@@ -212,7 +212,7 @@ To customize the visual appearance of the ruler properties, apply the following 
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/RulerCustomize)
 
 ![Ruler in Blazor Diagram](images/RulerCustomize.png)
 
@@ -227,7 +227,7 @@ To customize the visual appearance of the ruler overlap properties, apply the fo
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/RulerOverlap)
 
 ![Ruler Overlap in Blazor Diagram](images/RulerOverlap.png)
 
@@ -248,7 +248,7 @@ To customize the appearance of the text edit properties, apply the following CSS
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/TextEdit)
 
 ![Text Edit in Blazor Diagram](images/TextEdit.png)
 
@@ -264,7 +264,7 @@ To customize the appearance of the text edit control when selected, apply the fo
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/TextEditSelection)
 
 ![Text Edit on Selection in Blazor Diagram](images/TextEditSelection.png)
 
@@ -280,7 +280,7 @@ To customize the appearance of the highlighter, you can use the following CSS co
 }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/Highlighter)
 
 ![Highlighter in Blazor Diagram](images/Highlighter.gif)
 
@@ -295,7 +295,7 @@ To customize the background color of the diagram, apply the following CSS rule:
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/DiagramBackground)
 
 ![Diagram Background color in Blazor Diagram](images/Diagram-Background.png)
 
@@ -311,7 +311,7 @@ To customize the appearance of the overview resize handle, apply the following C
     }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/OverviewResizer)
 
 ![Overview Resize Handle in Blazor Diagram](images/OverviewResizer.png)
 
@@ -328,7 +328,7 @@ To customize the appearance of the helper element, apply the following CSS rules
 
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/HelperCustomization)
 
 ![Helper in Blazor Diagram](images/Helper.png)
 
@@ -344,7 +344,7 @@ To customize the visual appearance of the diagram grid, apply the following CSS 
 
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/ThinGrid)
 
 ![Thin grid in Blazor Diagram](images/ThinGrid.png)
 
@@ -358,7 +358,7 @@ To customize the appearance of the thick grid lines in your diagram, apply the f
 
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/ThickGrid)
 
 ![Thick grid in Blazor Diagram](images/ThickGrid.png)
 
@@ -374,7 +374,7 @@ To customize the background color of symbols in the symbol palette, apply the fo
 
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SymbolPalette)
 
 ![SymbolPalette in Blazor Diagram](images/SymbolPaletteSymbolContainer.png)
 
