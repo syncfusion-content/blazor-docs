@@ -790,6 +790,163 @@ public class OrderData
 
 > For performing row drag and drop action on the Grid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
+## Drag and drop between two Grids with different TValues
+
+The Syncfusion Blazor DataGrid supports row drag and drop functionality between two Grids, even when they are bound to different data models (**TValue**). This is particularly useful when you need to transfer data between Grids that represent different views or formats of the same underlying data.
+
+To implement this functionality, handle the `RowDropped` event. This event provides access to the dropped records, allowing you to transform and insert them into the target Grid’s datasource according to its specific TValue.
+
+The following example demonstrates how to implement drag and drop between two Grid with different TValue types:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="OriginGrid" DataSource="@OriginDataSource" ID="OriginGrid" AllowSelection="true" Width="700" AllowRowDragAndDrop="true">
+    <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
+    <GridEvents RowDropped="OrderDropped" TValue="OrderData"></GridEvents>
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<br>
+<SfGrid @ref="DestGrid" DataSource="@DestDataSource" ID="DestGrid" AllowRowDragAndDrop="true" Width="700" AllowSelection="true">
+    <GridRowDropSettings TargetID="OriginGrid"></GridRowDropSettings>
+    <GridEvents RowDropped="EmployeeDropped" TValue="OrdersDetails"></GridEvents>
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.ID) HeaderText="ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="110" IsPrimaryKey="true"> </GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Name) HeaderText="Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Shipment" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.ShippedDate) HeaderText="ShipedDate" Format="d" Width="110" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.City) HeaderText="City" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Country) HeaderText="Country" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    SfGrid<OrderData> OriginGrid { get; set; }
+    SfGrid<OrdersDetails> DestGrid { get; set; }
+    public List<OrderData> OriginDataSource { get; set; }
+    public List<OrdersDetails> DestDataSource { get; set; } = new List<OrdersDetails>();
+
+    protected override void OnInitialized()
+    {
+        OriginDataSource = OrderData.GetAllRecords();
+    }
+
+    public async Task OrderDropped(RowDroppedEventArgs<OrderData> Args)
+    {
+        foreach (var val in Args.Data)
+        {
+            DestDataSource.Add(new OrdersDetails() { ID = val.OrderID, Name = val.CustomerID, Freight = val.Freight, OrderDate = val.OrderDate, City = val.ShipCity, ShippedDate = val.ShippedDate, Country = val.ShipCountry });
+        }
+        await DestGrid.Refresh();
+    }
+    public async Task EmployeeDropped(RowDroppedEventArgs<OrdersDetails> Args)
+    {
+        foreach (var val in Args.Data)
+        {
+            OriginDataSource.Add(new OrderData() { OrderID = val.ID, CustomerID = val.Name, Freight = val.Freight, OrderDate = val.OrderDate, ShipCity = val.City, ShipCountry = val.Country, ShippedDate = val.ShippedDate });
+        }
+        await OriginGrid.Refresh();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData(int? OrderID, string CustomerID, string ShipCountry, double Freight, DateTime OrderDate, DateTime ShippedDate, string ShipCity)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipCountry = ShipCountry;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.ShipCity = ShipCity;
+    }
+     public static List<OrderData> GetAllRecords()
+     {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "ALFKI", "France", 33.33, new DateTime(1996, 07, 07), new DateTime(1996, 08, 07), "Reims"));
+                Orders.Add(new OrderData(10249, "ANANTR", "Germany", 89.76, new DateTime(1996, 07, 12), new DateTime(1996, 08, 08), "Münster"));
+                Orders.Add(new OrderData(10250, "ANTON", "Brazil", 78.67, new DateTime(1996, 07, 13), new DateTime(1996, 08, 09), "Rio de Janeiro"));
+                Orders.Add(new OrderData(10251, "BLONP", "Belgium", 55.65, new DateTime(1996, 07, 14), new DateTime(1996, 08, 10), "Lyon"));
+                Orders.Add(new OrderData(10252, "BOLID", "Venezuela", 11.09, new DateTime(1996, 07, 15), new DateTime(1996, 08, 11), "Charleroi"));
+                Orders.Add(new OrderData(10253, "BLONP", "Venezuela", 98.98, new DateTime(1996, 07, 16), new DateTime(1996, 08, 12), "Lyon"));
+                Orders.Add(new OrderData(10254, "ANTON", "Belgium", 78.75, new DateTime(1996, 07, 17), new DateTime(1996, 08, 13), "Rio de Janeiro"));
+                Orders.Add(new OrderData(10255, "ANANTR", "Germany", 44.07, new DateTime(1996, 07, 18), new DateTime(1996, 08, 14), "Münster"));
+                Orders.Add(new OrderData(10256, "ALFKI", "France", 67.74, new DateTime(1996, 07, 19), new DateTime(1996, 08, 15), "Reims"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public string ShipCountry { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrdersDetails.cs" %}
+
+public class OrdersDetails
+{
+    public OrdersDetails()
+    {
+
+    }
+    public OrdersDetails(int? ID, string Name, double Freight, DateTime OrderDate, DateTime ShippedDate, string City, string Country)
+    {
+        this.ID = ID;
+        this.Name = Name;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.City = City;
+        this.Country = Country;
+    }
+    public int? ID { get; set; }
+    public string Name { get; set; }
+    public double Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public string City { get; set; }
+    public string Country { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIZcrYpCnuChMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Limitations
 
 * Multiple rows can be drag and drop in the row selections basis.
