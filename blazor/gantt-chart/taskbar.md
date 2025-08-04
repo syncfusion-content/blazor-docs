@@ -8,6 +8,11 @@ documentation: ug
 ---
 # Taskbar in Blazor Gantt Chart Component
 
+To learn more about the template feature in the Blazor Gantt Chart component, you can check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=LUkjOe-bVYo"%}
+
 ## Taskbar template
 
 You can design your taskbars to view the tasks in Gantt Chart Chart by using `GanttTemplates.TaskbarTemplate` property. It is also possible to customize the parent taskbars and milestones with custom templates by using `GanttTemplates.ParentTaskbarTemplate` and `GanttTemplates.MilestoneTemplate` properties.
@@ -369,6 +374,11 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 * Connector line
 * Baseline
 * Event marker
+
+To learn more about the tooltip feature in the Blazor Gantt Chart component, check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=xCpqtActie4"%}
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
