@@ -765,6 +765,8 @@ The following shows the importing theme path for the overall theme.
 @import 'blazor-themes/SCSS-Themes/{THEME-NAME}.scss'
 ```
 
+N> For compiling Sass files in **Visual Studio 2019**, the WebCompiler extension will only support the **node-sass** package. However, our **Syncfusion Blazor-themes** packages have been updated to be compatible with the **Sass** package. As a result of this changes, might encounter issues when using WebCompiler in visual studio 2019.
+
 Below table lists the importing theme path for the individual components.
 
 <table style="width:100%">
