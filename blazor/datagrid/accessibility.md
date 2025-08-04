@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor DataGrid and much more.
+description: Checkout and learn here all about accessibility features in Syncfusion Blazor DataGrid, including keyboard navigation, screen reader support, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -169,7 +169,7 @@ The Syncfusion Blazor DataGrid followed the [keyboard interaction](https://www.w
 |-----|----- | -----|
 | <kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected row if Mode is Normal/Dialog or Starts editing of selected cell if Mode is Batch. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current form it the Mode is Normal or Dialog / Saves the current cell and starts editing the next row cell if Mode is Batch. |
-| <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Creates a new add form depending on the NewRowPosition. |
+| <kbd>Insert</kbd> | <kbd>⌥</kbd> + <kbd>Enter</kbd> | Creates a new add form depending on the NewRowPosition. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the next cell is Mode is Batch. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigates to the previous editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the previous cell is Mode is Batch. |
