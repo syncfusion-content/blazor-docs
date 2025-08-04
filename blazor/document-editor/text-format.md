@@ -143,7 +143,6 @@ The color of selected text can be get or set using the following code.
 
 ```csharp
 await documentEditor.Selection.CharacterFormat.SetFontColorAsync("Pink");
-await documentEditor.Selection.CharacterFormat.SetFontColorAsync("FFC0CB");
 ```
 
 ## Font
