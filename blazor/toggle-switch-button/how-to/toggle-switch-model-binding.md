@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Model binding in Blazor Toggle Switch Button Component | Syncfusion
+title: Data annotation support in Blazor Toggle Switch Button | Syncfusion
 description: Learn here all about model binding in Syncfusion Blazor Toggle Switch Button component and much more.
 platform: Blazor
 control: Toggle Switch Button 
