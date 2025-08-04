@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Empty Record Template in the Blazor DataGrid | Syncfusion
-description: Learn here all about customize the empty record template in Syncfusion Blazor DataGrid.
+description: Checkout and Learn here all about customize the empty record template in Syncfusion Blazor DataGrid Component.
 platform: Blazor
 control: DataGrid
 documentation: ug
