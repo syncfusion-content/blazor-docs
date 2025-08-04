@@ -239,6 +239,54 @@ In the bellow example, the `Target` property of the Mention component is set to 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrfXCADhtJlNdUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention target](images/blazor-mention-target.png)" %}
 
+## Mention target
+
+The `Target` property of the Mention component can be used to specify the element that the mention element should be appended to, and this can be useful in cases where you want to display the mention element in a specific location on the page.
+
+In the bellow example, the `Target` property of the Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
+
+{% highlight razor %}
+
+<textarea id="mentionTarget" placeHolder="Type @@ and tag user"></textarea>
+
+<SfMention TItem="PersonData" Target="#mentionTarget" DataSource="@EmailData">
+    <ChildContent>
+        <MentionFieldSettings Text="Name" Value="EmailId"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+<style>
+    #mentionTarget {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+
+    div#mentionTarget[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+@code {
+    public class PersonData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
+    }
+    List<PersonData> EmailData = new List<PersonData> {
+    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
+    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
+    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
+  };
+}
+
+{% endhighlight %}
+
+![Blazor Mention target](images/blazor-mention-target.png)
+
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
