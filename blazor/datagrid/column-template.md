@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
 
-> Before adding column template to the Grid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the Grid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates#templates) section topic to configure the template.
 
 To know about **Column Template** in Grid, you can check this video.
 
@@ -755,12 +755,14 @@ In the example below, a new column called **FinalCost** is created to display th
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ManfCost) HeaderText="Manufacturing Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.LabCost) HeaderText="Labor Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" Format="C2" TextAlign="TextAlign.Center" Width="120">
+        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
-                    var value = (context as Order);
-                    var finalAmount = value.ManfCost + value.LabCost;
-                    <div>$@finalAmount</div>
+                  var value = (context as Order);
+                  var  finalAmount = value.ManfCost + value.LabCost;
+                  decimal finalAmountDouble = Convert.ToDecimal(finalAmount);
+                  var finalAmountString = finalAmountDouble.ToString("C2");
+                  <div>@finalAmountString</div>
                 }
             </Template>
         </GridColumn>
@@ -793,7 +795,7 @@ In the example below, a new column called **FinalCost** is created to display th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhejQUiCwvnURGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to get the row object by clicking on the template element
 
