@@ -25,21 +25,14 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
     <DialogTemplates>
         <Header>
             Dialog
-            @if (!IsMaximized)
+            @if (!IsMaximized )
             {
                 <span class="e-icons sf-icon-Maximize" title="Maximize" @onclick="@maximize"></span>
             }
-            else
-            {
-                <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@maximize"></span>
-            }
-            @if (!IsMinimized)
+
+            @if (IsMaximized)
             {
                 <span class="e-icons sf-icon-Minimize" title="Minimize" @onclick="@minimize"></span>
-            }
-            else
-            {
-                <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@minimize"></span>
             }
         </Header>
         <Content>
@@ -152,7 +145,6 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
 
 @code {
     public bool IsMaximized { get; set; } = false;
-    public bool IsMinimized { get; set; } = false;
     private SfDialog DialogObj;
     private bool IsVisible { get; set; } = false;
     public string dialogClass = "";
@@ -165,17 +157,17 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
         IsMaximized = !IsMaximized;
         if (IsMaximized)
         {
-            await JsRuntime.InvokeVoidAsync("Dialog.maximize");
+            await jsRuntime.InvokeVoidAsync("Dialog.maximize");
         }
 
     }
 
     private async Task minimize()
     {
-        IsMinimized = !IsMinimized;
-        if (IsMinimized)
+        IsMaximized = !IsMaximized;
+        if (!IsMaximized)
         {
-            await JsRuntime.InvokeVoidAsync("Dialog.minimize");
+            await jsRuntime.InvokeVoidAsync("Dialog.minimize");
         }
     }
 }
