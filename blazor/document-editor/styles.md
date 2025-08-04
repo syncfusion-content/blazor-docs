@@ -144,5 +144,34 @@ await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked");
 //Clear direct formatting and apply the specified style.
 await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked", true);
 ```
+## Modify an existing style
+
+You can modify a existing style with the specified style properties using [`CreateStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_CreateStyleAsync_System_String_) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+
+The following illustrate to modify an existing style.
+
+```cshtml
+@using Syncfusion.Blazor.DocumentEditor;
+
+<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+    <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
+</SfDocumentEditor>
+
+@code {
+    SfDocumentEditor documentEditor;
+    protected void OnLoad(object args)
+    {
+        string styleJson = "{ \"type\": \"Paragraph\",\"name\": \"Heading 1\",\"characterFormat\": {\"fontSize\": 32,
+        \ "fontFamily\": \"Calibri\"}}";
+        documentEditor.Editor.CreateStyleAsync(styleName, true);
+    }
+}
+
+```
+
+> If modifyExistingStyle parameter is set to true and a style already exists with same name, it modifies the specified properties in the existing style.
+> If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
+> If no style exists with same name, it creates a new style.
+
 
 You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.
