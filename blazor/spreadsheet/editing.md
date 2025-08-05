@@ -88,6 +88,6 @@ To exit edit mode without saving changes, press the **ESCAPE** key. This action 
 
 In a protected sheet, only the unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
 
-![Protection: Error Dialog](./images/protection-error-dialog.png)
+![Protection Error Dialog](./images/protection-error-dialog.png)
 
 N> For more information on worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection).
