@@ -18,7 +18,7 @@ The following code illustrates how to perform print action once SfPdfViewer is l
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div id="target" style="width:800px;height:100%">
+<div id="target" style="width:800px;height:500px">
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
        <SfDialog @ref="@dialog" 
                  Target="#target" 

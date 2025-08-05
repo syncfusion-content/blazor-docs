@@ -200,6 +200,53 @@ N> Value fields are set to the column axis by default. In such cases, the value 
 
 ![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.png)
 
+### Multiple Axis Sorting
+
+Users can apply value sorting to both row and column axes simultaneously for more dynamic and precise data analysis. The following settings are used to configure sorting:
+
+* [ColumnHeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_ColumnHeaderText): Specifies the column header hierarchy for value sorting. Header levels are defined from Level 1 to N using a delimiter for clarity.
+* [HeaderDelimiter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_HeaderDelimiter): It allows to set the delimiters string to separate the header text between levels.
+* [ColumnSortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_ColumnSortOrder): Sets the delimiter string used to separate levels in the column header text.
+* [RowHeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_RowHeaderText): Defines the specific row header for which the value sorting should be applied.
+* [RowSortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_RowSortOrder): Determines the sorting direction for the specified row header.
+
+N> This feature is applicable only to relational data sources.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" EnableValueSorting="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewValueSortSettings ColumnHeaderText="FY 2015##Unit Sold" HeaderDelimiter="##" ColumnSortOrder="Sorting.Descending" RowHeaderText="France" RowSortOrder="Sorting.Ascending"></PivotViewValueSortSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
 ## Events
 ### OnActionBegin
 
