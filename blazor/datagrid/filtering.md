@@ -509,7 +509,7 @@ The Like filter can process single search patterns using the “%” symbol, ret
 
 Operator |Description
 -----|-----
-%ab% | Returns all the value that are contains ab" character.
+%ab% | Returns all the value that are contains "ab" character.
 ab% | Returns all the value that are ends with "ab" character.
 %ab | Returns all the value that are starts with "ab" character.
 
