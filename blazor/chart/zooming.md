@@ -203,7 +203,7 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
 ### Toolbar positioning
 
-The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPosition`, allowing for flexible alignment and placement. It supports horizontal alignments (Near, Center, and Far) using the `HorizontalAlign` property, and vertical alignments (Top, Middle, and Bottom) using the `VerticalAlign` property. By default, `HorizontalAlign` and `VerticalAlign` are set to **Far** and **Top** respectively. Additionally, for more precise positioning, you can specify custom coordinates using the `X` and `Y` properties.
+The zoom toolbar in the chart can be repositioned using the [ChartZoomToolbarPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html), allowing for flexible alignment and placement. It supports horizontal alignments (Near, Center, and Far) using the [HorizontalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_HorizontalAlign) property, and vertical alignments (Top, Middle, and Bottom) using the [VerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_VerticalAlign) property. By default, `HorizontalAlign` and `VerticalAlign` are set to **Far** and **Top** respectively. Additionally, for more precise positioning, you can specify custom coordinates using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_Y) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -243,6 +243,7 @@ The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPos
 }
 ```
 ![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable pan
 
@@ -357,7 +358,7 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Scrollbar positioning
 
-The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html) allows users to specify their preferred scrollbar location. By default, both vertical and horizontal scrollbars are rendered near their respective axes, with the `Position` property value set to `PlaceNextToAxisLine`. Users can set `Left` or `Right` to position the vertical scrollbar and `Top` or `Bottom` to position the horizontal scrollbar.
+The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_Position) property in [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html) allows users to specify their preferred scrollbar location. By default, both vertical and horizontal scrollbars are rendered near their respective axes, with the `Position` property value set to [PlaceNextToAxisLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_PlaceNextToAxisLine). Users can set [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Left) or [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Right) to position the vertical scrollbar and [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Top) or [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Bottom) to position the horizontal scrollbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -377,7 +378,7 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" Name="Warmest" XName="XValue" Width="2" Opacity="1"
-                     YName="YValue" Type="ChartSeriesType.Area">
+                     YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Area">
         </ChartSeries>
     </ChartSeriesCollection>
 
@@ -417,10 +418,11 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
 }
 ```
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto interval on zooming
 
-The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableAutoIntervalOnZooming) property is set to **true**.
+The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) property is set to **true**.
 
 ```cshtml
 

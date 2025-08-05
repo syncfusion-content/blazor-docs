@@ -28,7 +28,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 | -------- | -------- |
 |[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_None)|Disable all diagram functionalities.|
 |[Bridging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_Bridging)|Enables or disables Bridging support for connector in diagram.|
-|[Undo/redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_UndoRedo)|Enables or disables the Undo/Redo support for the diagram.|
+|[UndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_UndoRedo)|Enables or disables the Undo/Redo support for the diagram.|
 |[UserInteraction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_UserInteraction)|Enables or disables user interaction support for the diagram.|
 |[ApiUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_ApiUpdate)|Enables or disables update API support for the diagram.|
 |[PageEditable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_PageEditable)|Enables or disables Page Editable support for the diagram.|
@@ -138,6 +138,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |[InheritTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InheritTooltip)|Enables or disables inherit tooltip option from the parent object.|
 |[Resize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Resize)|Enables or Disables the expansion or compression of a node.|
 |[Inherit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Inherit)|Enables the node to inherit the interaction option from the parent object.|
+|[RoutingObstacle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_RoutingObstacle)|Enables or disables the node to be treated as obstacle while in routing.|
 |[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default)|Enables all default constraints for the node.|
 
 The following example shows how to disable rotate constraint from the default node constraints.
