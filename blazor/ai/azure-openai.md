@@ -7,25 +7,39 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Azure OpenAI with Syncfusion Blazor AI package
+# Azure OpenAI Integration with Syncfusion Blazor AI
 
-This section helps to configuring and using the **Syncfusion.Blazor.AI** package with **Azure OpenAI** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Azure OpenAI's API, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+This section explains how to configure and use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to enable AI functionalities in your Blazor applications. The package provides seamless integration with Azure OpenAI's API, allowing you to enhance any Syncfusion Blazor component with intelligent features.
 
 ## Prerequisites
-- Install the following NuGet packages:
-  - `Syncfusion.Blazor.AI`
-  - `Azure.AI.OpenAI`
-- For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
-- Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
-## Configuration
-To use Azure OpenAI, configure the AI service in your `Program.cs` file by registering the `AIServiceCredentials` and `IChatInferenceService`.
+Before you begin integrating Azure OpenAI with your Blazor application, ensure you have:
 
-### Steps
-1. Open your Blazor application's `Program.cs`.
-2. Add the following code to configure Azure OpenAI credentials:
+* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+* To use Azure OpenAI, please install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/2.2.0-beta.5) package separately in your Blazor application.
+* [Deployed an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to obtain values for `apiKey`, `deploymentName` and `endpoint`
+* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components
+
+## Configuration Steps
+
+Follow these steps to configure Azure OpenAI as your AI provider:
+
+### Register AI Services in Program.cs
+
+Open your Blazor application's `Program.cs` file and add the following configuration:
 
 ```csharp
+// Add required namespaces
+using Syncfusion.Blazor.AI;
+
+// Register Azure OpenAI credentials
 builder.Services.AddSingleton(new AIServiceCredentials
 {
     ApiKey = "your-azure-openai-key", // Replace with your Azure OpenAI API key
@@ -33,26 +47,27 @@ builder.Services.AddSingleton(new AIServiceCredentials
     Endpoint = new Uri("https://your-openai.azure.com/") // Replace with your Azure OpenAI endpoint
 });
 
-// Register the inference backend
+// Register the inference service
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 ```
 
-3. Ensure the required Syncfusion Blazor namespaces are included in your `Program.cs`:
-```csharp
-using Syncfusion.Blazor.AI;
-```
-
-## Example: Syncfusion Query Builder with Azure OpenAI in a Blazor Application
+## Natural Language Querying with Azure OpenAI
 
 This example demonstrates using the **Syncfusion.Blazor.AI** package with **Azure OpenAI** to enable natural language querying in a Blazor application. The application features a Syncfusion Tab component with a textarea for entering natural language queries, a QueryBuilder component to visualize the generated query rules, and a Grid component to display filtered results based on the query processed by Azure OpenAI.
 
 ### Prerequisites
 - Install the following NuGet packages:
-  - `Syncfusion.Blazor.Grid`
-  - `Syncfusion.Blazor.Themes`
-  - `Syncfusion.Blazor.AI`
-  - `Syncfusion.Blazor.QueryBuilder`
-  - `Azure.AI.OpenAI`
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.QueryBuilder -Version {{ site.releaseversion }}
+Install-Package Azure.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -68,23 +83,60 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with **Azur
 </body>
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+### Register Syncfusion Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+...
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
+
+...
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
 builder.Services.AddSyncfusionBlazor();
+
 await builder.Build().RunAsync();
+
+{% endhighlight %}
+{% endtabs %}
+
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -289,9 +341,18 @@ namespace AzureOpenAIExample.Components.Pages
 
 ![Natural Query Language - Output](images/natural-languagequery.gif)
 
-### Explanation
-- **IChatInferenceService**: Injected to interact with the OpenAI service.
-- **ChatParameters**: Configures the AI request, including system and user messages, temperature, and token limits.
-- **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
-- **Response**: Displays the AI-generated text.
+## How It Works
 
+The example above demonstrates how to use Azure OpenAI with Syncfusion Blazor components for natural language query processing:
+
+1. **Setup**: Configuring the Azure OpenAI service in `Program.cs` with appropriate credentials.
+2. **Component Integration**: Using the `IChatInferenceService` to process natural language queries.
+3. **Prompt Engineering**: Creating appropriate prompts for the AI model to convert natural language to SQL.
+4. **Response Processing**: Parsing the SQL response and applying it to the QueryBuilder component.
+
+### Key Components
+
+- **IChatInferenceService**: Injected to interact with the Azure OpenAI models.
+- **ChatParameters**: Configures the AI request, including system prompt and user messages.
+- **GenerateResponseAsync**: Sends the request to Azure OpenAI and retrieves the response asynchronously.
+- **UI Components**: Syncfusion Tab, QueryBuilder, and Grid components work together with the AI service.

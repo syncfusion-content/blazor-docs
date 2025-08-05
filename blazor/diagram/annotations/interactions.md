@@ -77,6 +77,45 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Interactions/RotationReference)
 
+## How to rotate a Annotation using the RotationAngle property
+
+The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_RotationAngle)  property for an annotation gets or sets the rotation angle in degrees. This determines how much the annotation text is tilted from its normal position. The default value is 0.
+
+The following code examples illustrate how to configure RotationAngle for an annotation.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            Height = 100,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+    { 
+        new ShapeAnnotation 
+        { 
+            Content = "Node",
+            ID = "Annotation",
+            RotationAngle = 30,    
+        }
+    },
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RotationAngleProperty)
+
+![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
+
 ## See also
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)

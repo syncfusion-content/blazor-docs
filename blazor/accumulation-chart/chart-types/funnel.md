@@ -269,7 +269,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 
 ## Border radius
 
-The corners of the first data point and last data point in the funnel chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+The corners of the first data point and last data point in the funnel chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -306,6 +306,7 @@ The corners of the first data point and last data point in the funnel chart seri
 }
 ```
 ![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheDHBnqcxEcNgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

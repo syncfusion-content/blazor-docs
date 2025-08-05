@@ -9,7 +9,7 @@ documentation: ug
 
 # Secure Registration of Syncfusion License Keys in Blazor WebAssembly Applications
 
-Securely managing license keys in Blazor WebAssembly (WASM) applications is essential to prevent unauthorized access and ensure compliance. Registering a license key in the `Program.cs` file exposes it in the browser through DLLs, creating security risks.
+Registering a license key directly in the Program.cs file of a Blazor WebAssembly Client project can expose it through the compiled DLLs, making it accessible in the browser, creating security risks.
 
 ## Recommended Solution: Use Licensed NuGet Packages
 
@@ -34,7 +34,59 @@ These steps ensure secure and compliant Blazor WASM applications, preventing lic
 Build your Blazor WASM application using licensed NuGet packages from these sources:
 
 - **Local Folder:** Store packages locally and configure your project for restoration.
-- **Private Repository Manager:** Host and manage packages using a private NuGet repository manager like Nexus.
+- **Private Repository Manager:** Host and manage packages using a private NuGet repository manager like Nexus, Azure DevOps artifact feed.
+
+
+>**Important Note:**  
+> When referencing both a local folder or private repository and `nuget.org` in your `NuGet.config`, and if both sources contain the same version of Syncfusion packages, the build may default to restoring from `nuget.org` (trial versions). This fallback can result in **license popup issues**.
+
+### Use Package Source Mapping
+To ensure your project always restores Syncfusion packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in your `NuGet.config`:
+
+```xml
+<configuration>
+  <packageSources>
+    <add key="licensed-nuget" value="path/to/your/nuget-source" />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+  <packageSourceMapping>
+    <packageSource key="licensed-nuget">
+      <package pattern="Syncfusion.*" />
+    </packageSource>
+  </packageSourceMapping>
+</configuration>
+```
+
+### Verifying Assembly Licensing:
+
+To confirm whether your application is referencing licensed or trial assemblies:
+
+* Navigate to your build output directory and Locate the Syncfusion DLLs.
+
+* Right-click on each DLL → Select Properties → Go to the Details tab.
+
+* Check the File Description:
+
+    * If it includes “LR”, it’s a trial version.
+
+        ![trail dll preview](images/trial.png)
+
+    * If it does not include “LR”, it’s a licensed version.
+
+        ![licensed dll](images/licensed.png)
+
+
+If trial assemblies are detected in your application, follow these steps to ensure a clean and licensed setup:
+
+Clear the NuGet cache to remove any previously downloaded trial packages:
+```bash
+dotnet nuget locals all --clear
+```
+
+
+Delete the **bin and obj**  folders from your project directories to remove any cached build artifacts.
+
+Uninstall and reinstall the Syncfusion packages, making sure they are restored only from your licensed NuGet source.
 
 ## Securely manage Syncfusion license keys using Azure Key Vault
 

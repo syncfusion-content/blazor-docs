@@ -7,29 +7,41 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Ollama with Syncfusion Blazor AI package
+# Ollama Integration with Syncfusion Blazor AI
 
-This section helps to configuring and using the **Syncfusion.Blazor.AI** package with **Ollama** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+This section explains how to configure and use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
 
 ## Prerequisites
-- Install the following NuGet package:
-  - `Syncfusion.Blazor.AI`
-- Install **Ollama** on your local system (no virtual machines) following the instructions at [Ollama's official site](https://ollama.com/).
-- Download an Ollama model (e.g., `llama2`) using the command:
+
+Before you begin integrating Ollama with your Blazor application, ensure you have:
+
+* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+* Installed **Ollama** on your local system (no virtual machines) following the instructions at [Ollama's official site](https://ollama.com/)
+* Downloaded an Ollama model (e.g., `llama2`) using the command:
   ```bash
   ollama run llama2
   ```
+* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
 
-- Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
+## Configuration Steps
 
-## Configuration
-To use Ollama, configure the AI service in your `Program.cs` file by registering the `AIServiceCredentials` and `IChatInferenceService`.
+Follow these steps to configure Azure OpenAI as your AI provider:
 
-### Steps
-1. Open your Blazor application's `Program.cs`.
-2. Add the following code to configure Ollama credentials:
+### Register AI Services in Program.cs
+
+Open your Blazor application's `Program.cs` file and add the following configuration:
 
 ```csharp
+// Add required namespaces
+using Syncfusion.Blazor.AI;
+
 builder.Services.AddSingleton(new AIServiceCredentials
 {
     DeploymentName = "llama2", // Specify the Ollama model (e.g., "llama2", "mistral", "codellama")
@@ -41,22 +53,23 @@ builder.Services.AddSingleton(new AIServiceCredentials
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 ```
 
-3. Ensure the required Syncfusion Blazor namespaces are included in your `Program.cs`:
-```csharp
-using Syncfusion.Blazor.AI;
-```
-
-## Example: Syncfusion Tree Grid with Azure OpenAI in a Blazor Application
+##  Smart Data Restructuring with Ollama and TreeGrid
 
 This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform smart data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, updating the TreeGrid to reflect the corrected structure.
 
 ### Prerequisites
 - Install the following NuGet packages:
-  - `Syncfusion.Blazor.Grid`
-  - `Syncfusion.Blazor.Themes`
-  - `Syncfusion.Blazor.AI`
-  - `Syncfusion.Blazor.QueryBuilder`
-  - `Azure.AI.OpenAI`
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -72,23 +85,60 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with **Olla
 </body>
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+### Register Syncfusion Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+...
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
+
+...
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
 builder.Services.AddSyncfusionBlazor();
+
 await builder.Build().RunAsync();
+
+{% endhighlight %}
+{% endtabs %}
+
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -227,8 +277,19 @@ namespace OllamaExample.Components.Pages
 
 ![Smart Structuring - Output](images/adaptive-datastructuring.gif)
 
-### Explanation
-- **IChatInferenceService**: Injected to interact with the OpenAI service.
-- **ChatParameters**: Configures the AI request, including system and user messages, temperature, and token limits.
-- **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
-- **Response**: Displays the AI-generated text.
+## How It Works
+
+The example above demonstrates how to use Ollama with Syncfusion Blazor components for intelligent data organization:
+
+1. **Setup**: Configuring the Ollama service in `Program.cs` with appropriate credentials and endpoint.
+2. **Component Integration**: Using the `IChatInferenceService` to process TreeGrid data.
+3. **Prompt Engineering**: Creating detailed prompts for the AI model to understand hierarchical relationships.
+4. **Response Processing**: Parsing the JSON response and applying it to update the TreeGrid structure.
+
+### Key Components
+
+- **IChatInferenceService**: Injected to interact with the Ollama models.
+- **ChatParameters**: Configures the AI request, including system prompt and user messages.
+- **GenerateResponseAsync**: Sends the request to Ollama and retrieves the response asynchronously.
+- **UI Components**: Syncfusion TreeGrid and Button components work together with the AI service.
+

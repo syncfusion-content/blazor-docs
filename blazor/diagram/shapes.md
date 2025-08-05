@@ -18,6 +18,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 * Flow shape
 * SVG shape
 * HTML template 
+* BPMN shape
 
 ## How to Create and Customize a Text Node
 
@@ -496,6 +497,53 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
 N> Like the HTML node, the SVG node cannot be exported to image format. The fill color of the SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+
+## Node with BPMN shapes
+
+The [BPMN](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Bpmn) shapes are used to visually represent Business Process Model and Notation elements such as events, tasks, gateways, and more. To create BPMN shapes, the Type of the shape should be set as Bpmn.
+
+Its Shape property can then be configured with any one of the available built-in BPMN subtypes, such as events, activities, or gateways. You can also further customize each BPMN shape by specifying its category and characteristics (like Event, Trigger, Loop, etc.).
+
+
+The following code example illustrates how to create a BPMN shape.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@* Initialize Diagram *@
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            // Position of the node.
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the shape to activity.
+            Shape = new BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Task 
+            },
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
+
+For more information about node constraints, refer to the [BPMN Shapes](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BPMNShape).
+
+
+![BPMN Node in Blazor Diagram](images/BPMNShape.png)
 
 ## See also
 

@@ -518,7 +518,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ### Column width in pixel
 
-The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the column and rectangle-based series types in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
+The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidthInPixel) property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the column and rectangle-based series types in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -557,6 +557,7 @@ The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/c
 }
 ```
 ![Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grouped column
 

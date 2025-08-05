@@ -7,20 +7,29 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Custom AI Services with Syncfusion Blazor AI package (DeepSeek Example)
+# Custom AI Service Integration with Syncfusion Blazor AI
 
-This section helps to configuring and using the **Syncfusion.Blazor.AI** package with a **custom AI service** by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility allows you to integrate DeepSeek or any custom AI provider into your Blazor applications, enhancing Syncfusion Blazor components with tailored AI functionalities.
+This section explains how to configure and use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with a **custom AI service** by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility allows you to integrate DeepSeek or any custom AI provider into your Blazor applications, enhancing Syncfusion Blazor components with tailored AI functionalities.
 
 ## Prerequisites
-- Install the **Syncfusion.Blazor.AI** NuGet package.
-- Obtain a DeepSeek API key from the [DeepSeek platform](https://platform.deepseek.com).
-- Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
-## Configuration
+Before you begin integrating a custom AI service with your Blazor application, ensure you have:
+
+* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+* Obtained a DeepSeek API key from the [DeepSeek platform](https://platform.deepseek.com) (or your preferred AI provider)
+* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components
+
+## Configuration Steps
 To use DeepSeek as a custom AI service, implement the `IChatInferenceService` interface and configure it in your `Program.cs` file using `AIServiceCredentials` to provide the API key, deployment name, and endpoint.
 
-### Steps
-1. **Implement the Custom AI Service**:
+### Implement the Custom AI Service
    Create a class that implements the `IChatInferenceService` interface for DeepSeek. The implementation below uses the provided DeepSeek code, modified to utilize `AIServiceCredentials` from `Program.cs`.
 
 ```csharp
@@ -68,10 +77,13 @@ public class DeepSeekAIService : IChatInferenceService
 }
 ```
 
-2. **Register the Custom AI Service**:
+### Register the Custom AI Service
+
    Open your Blazor application's `Program.cs` and configure the DeepSeek AI service with `AIServiceCredentials`.
 
 ```csharp
+using Syncfusion.Blazor.AI;
+
 builder.Services.AddSingleton(new AIServiceCredentials
 {
     ApiKey = "your-deepseek-api-key", // Replace with your DeepSeek API key
@@ -82,12 +94,5 @@ builder.Services.AddSingleton(new AIServiceCredentials
 builder.Services.AddSingleton<IChatInferenceService, DeepSeekAIService>();
 ```
 
-3. **Include Required Namespaces**:
-   Ensure the required Syncfusion Blazor namespaces are included in your `Program.cs`:
 
-```csharp
-using Syncfusion.Blazor.AI;
-```
-
-
-
+The `GenerateResponseAsync` method in the DeepSeekAIService class is the core method that makes an AI call to the DeepSeek API endpoint.

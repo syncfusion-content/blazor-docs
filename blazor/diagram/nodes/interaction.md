@@ -234,6 +234,37 @@ Also, rotate the node during the interaction.
 
 ![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
+## How to rotate a node using the RotationAngle property
+
+The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle)  property gets or sets the rotation angle of a node in degrees. This defines the fixed angle at which the node is displayed. The default value is 0.
+
+Use this property when you want to specify the node’s rotation at the time of creation or update it programmatically.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            Height = 100,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            RotationAngle = 50, // Rotates node by 50 degrees
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
+
+![Node Resizing in Blazor Diagram](../images/NodeRotation.png)
+
 ## How to Flip a Node
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
