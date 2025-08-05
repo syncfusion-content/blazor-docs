@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor Spreadsheet Component
 
-Filtering in the Blazor Spreadsheet component enables focused data analysis by displaying only the rows that meet specific criteria. This functionality helps create interactive views by hiding rows that do not match the filtering conditions. Filtering behavior is controlled using the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property, which is set to **true** by default.
+Filtering in the Blazor Spreadsheet component enables focused data analysis by displaying only the rows that meet specific criteria. This functionality helps create interactive views by hiding rows that do not match the filtering conditions. Filtering behavior is controlled using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property, which is set to **true** by default.
 
 N> When `AllowFiltering` is set to **false**, filtering options are disabled in the ribbon and removed from the context menu. API methods related to filtering will also be inactive. Additionally, if the worksheet is protected, the filtering feature is disabled. For more information on worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
 
@@ -31,7 +31,7 @@ The filter dialog appears when clicking on a column's filter icon and provides t
 
 * **Sort options** - Provides commands for sorting data in **Ascending** or **Descending** order.
 * **Clear filter** - Removes any filtering applied to the selected column.
-* **Data type-specific filters** - Displays submenus tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
+* **Data type-specific filters** - Displays sub menus tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
 * **Search box** - Enables quick lookup of values within the filter list.
 * **Select All** checkbox - Toggles the selection of all available values in the column.
 * **Value** checkboxes - Lists individual checkboxes for each unique value found in the column.
@@ -206,7 +206,7 @@ This action filters the column to display only the rows that match the selected 
 
 ### Filter by cell value programmatically
 
-The [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_Object_System_String_) method allows filtering based on a specified value and cell address without using the UI. The available parameters in the `FilterByCellValueAsync` method are:
+The [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_String_System_Object_) method allows filtering based on a specified value and cell address without using the UI. The available parameters in the `FilterByCellValueAsync` method are:
 
 | Parameter     | Type   | Description |
 |---------------|--------|-------------|
