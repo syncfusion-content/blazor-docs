@@ -808,7 +808,7 @@ The following example demonstrates how to fetch specific row details when a cont
        <GridColumn Field="ShipName" HeaderText="ShipName" Width="100" />
     </GridColumns>
 </SfGrid>
-
+ 
 @if (rowData != null)
 {
     <div class="mt-3 p-3 border rounded bg-light">
@@ -823,7 +823,7 @@ The following example demonstrates how to fetch specific row details when a cont
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-
+ 
     private OrderData rowData { get; set; }
 
     protected override void OnInitialized()
