@@ -8,7 +8,7 @@ control: DataGrid
 documentation: ug
 ---
 
-## Blinking animation for Grid cells using CSS
+# Blinking animation for Grid cells using CSS
 
 The Syncfusion Blazor DataGrid allows you to enhance the visual feedback of your data by adding a blinking animation effect to Grid cells.
 
