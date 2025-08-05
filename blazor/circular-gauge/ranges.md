@@ -25,11 +25,15 @@ The start and end values of a range in an axis can be customized using the [Star
                 <CircularGaugeRange Start="40" End="80">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgiLLQgiOiCXDt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthotPZeVwXMSltN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
@@ -50,11 +54,15 @@ Using [StartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Circu
                                     EndWidth="20">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKMVLmAMOAiUsW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBSNFDSrwUWvnam?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Start and End Width of Range in Blazor Circular Gauge](./images/blazor-circulargauge-width-customization.png)
 
@@ -77,11 +85,15 @@ The color of a range can be customized using the [Color](https://help.syncfusion
                                     Opacity="0.2">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhKiLLcqWkShlmD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeDbZoBQzJrmNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Range with Custom Color](./images/blazor-circulargauge-range-color-customization.png)
 
@@ -99,11 +111,15 @@ The ranges can be placed either inside, outside or center of the axis using the 
                 <CircularGaugeRange Start="40" End="80" StartWidth="15" EndWidth="15" Color="#ff5985" Position="PointerRangePosition.Cross">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLqMLrcKMummhZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBIXFZSBworOGse?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Range Position](./images/blazor-circulargauge-range-position.png)
 
@@ -121,11 +137,15 @@ You can customize the corner radius using the [RoundedCornerRadius](https://help
                 <CircularGaugeRange Start="40" End="80" RoundedCornerRadius="5">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUsrLQKVDjNwmB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoNvtSBlNaXQly?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Range with Rounded Corner](./images/blazor-circulargauge-rounded-corner-range.png)
 
@@ -147,11 +167,15 @@ You can set a radius of the range in pixel as demonstrated below.
                 <CircularGaugeRange Start="40" End="80" Radius="100px">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqCBBGKrtreVuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVotFNyVbrFXTHt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Range with Custom Radius in Pixel](./images/blazor-circulargauge-radius-in-pixel.png)
 
@@ -169,11 +193,15 @@ By setting value in percentage, a range gets its dimension with respect to its a
                 <CircularGaugeRange Start="40" End="80" Radius="50%">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBACVLwKVXIyNlD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXheZFZSBPGsJAvr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Range with Custom Radius in Percentage](./images/blazor-circulargauge-radius-in-percentage.png)
 
@@ -228,11 +256,15 @@ You can set the range color to ticks and labels of an axis by enabling the [UseR
             <CircularGaugeAxisLabelStyle UseRangeColor="true">
             </CircularGaugeAxisLabelStyle>
             <CircularGaugeAxisMinorTicks UseRangeColor="true"></CircularGaugeAxisMinorTicks>
+            <CircularGaugePointers>
+                <CircularGaugePointer>
+                </CircularGaugePointer>
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBqChVmAViGyLES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLoDPtyBPkDvIUn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Multiple Ranges](./images/blazor-circulargauge-multiple-ranges.png)
 
@@ -263,58 +295,58 @@ To apply linear gradient to the range, follow the below code sample.
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
                 <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                       <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                      <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/golf-ball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="900" />
                </CircularGaugePointer>
                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
                    <CircularGaugePointerAnimation Enable="true" Duration="0" />
                </CircularGaugePointer>
                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                </CircularGaugePointer>
                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
-                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25">
-                    <LinearGradient StartValue="1%" EndValue="99%">
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </LinearGradient>
+                    <Syncfusion.Blazor.CircularGauge.LinearGradient StartValue="1%" EndValue="99%">
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.LinearGradient>
                     </CircularGaugeRange>
                 <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25">
-                    <LinearGradient StartValue="1%" EndValue="99%">
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </LinearGradient>
+                    <Syncfusion.Blazor.CircularGauge.LinearGradient StartValue="1%" EndValue="99%">
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.LinearGradient>
                 </CircularGaugeRange>
                 <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25">
-                    <LinearGradient StartValue="1%" EndValue="99%">
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </LinearGradient>
+                    <Syncfusion.Blazor.CircularGauge.LinearGradient StartValue="1%" EndValue="99%">
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.LinearGradient>
                 </CircularGaugeRange>
               </CircularGaugeRanges>
             <CircularGaugeAnnotations>
@@ -353,7 +385,7 @@ To apply linear gradient to the range, follow the below code sample.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgWrrmqhBbMMDq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytlDIAFMFugvK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Radial gradient
 
@@ -374,58 +406,58 @@ To apply radial gradient to the range, follow the below code sample.
                 <CircularGaugeAxisLabelFont Size="0px" />
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="900" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
+                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
                     <CircularGaugePointerAnimation Enable="true" Duration="0" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://ej2.syncfusion.com/demos/src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25">
-                    <RadialGradient Radius="65%">
-                        <InnerPosition X="60%" Y="60%"></InnerPosition>
-                        <OuterPosition X="50%" Y="70%"></OuterPosition>
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </RadialGradient>
+                    <Syncfusion.Blazor.CircularGauge.RadialGradient Radius="65%">
+                        <Syncfusion.Blazor.CircularGauge.InnerPosition X="60%" Y="60%"></Syncfusion.Blazor.CircularGauge.InnerPosition>
+                        <Syncfusion.Blazor.CircularGauge.OuterPosition X="50%" Y="70%"></Syncfusion.Blazor.CircularGauge.OuterPosition>
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.RadialGradient>
                     </CircularGaugeRange>
                 <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25">
-                    <RadialGradient Radius="65%">
-                        <InnerPosition X="60%" Y="60%"></InnerPosition>
-                        <OuterPosition X="50%" Y="70%"></OuterPosition>
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </RadialGradient>
+                    <Syncfusion.Blazor.CircularGauge.RadialGradient Radius="65%">
+                        <Syncfusion.Blazor.CircularGauge.InnerPosition X="60%" Y="60%"></Syncfusion.Blazor.CircularGauge.InnerPosition>
+                        <Syncfusion.Blazor.CircularGauge.OuterPosition X="50%" Y="70%"></Syncfusion.Blazor.CircularGauge.OuterPosition>
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.RadialGradient>
                 </CircularGaugeRange>
                 <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25">
-                    <RadialGradient Radius="65%">
-                        <InnerPosition X="60%" Y="60%"></InnerPosition>
-                        <OuterPosition X="50%" Y="70%"></OuterPosition>
-                        <ColorStops>
-                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
-                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
-                        </ColorStops>
-                    </RadialGradient>
+                    <Syncfusion.Blazor.CircularGauge.RadialGradient Radius="65%">
+                        <Syncfusion.Blazor.CircularGauge.InnerPosition X="60%" Y="60%"></Syncfusion.Blazor.CircularGauge.InnerPosition>
+                        <Syncfusion.Blazor.CircularGauge.OuterPosition X="50%" Y="70%"></Syncfusion.Blazor.CircularGauge.OuterPosition>
+                        <Syncfusion.Blazor.CircularGauge.ColorStops>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                            <Syncfusion.Blazor.CircularGauge.ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></Syncfusion.Blazor.CircularGauge.ColorStop>
+                        </Syncfusion.Blazor.CircularGauge.ColorStops>
+                    </Syncfusion.Blazor.CircularGauge.RadialGradient>
                 </CircularGaugeRange>
             </CircularGaugeRanges>
             <CircularGaugeAnnotations>
@@ -464,7 +496,7 @@ To apply radial gradient to the range, follow the below code sample.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqiLLcAhUizuIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjreNFDeKEtKrfOB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
