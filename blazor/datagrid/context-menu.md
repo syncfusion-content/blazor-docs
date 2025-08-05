@@ -779,6 +779,115 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIZfXYKSwAiUpU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Access specific row details on context menu click
+
+The Syncfusion Blazor DataGrid allows you to interact with specific row data when a context menu item is clicked. This feature is useful when you want to perform actions like viewing, editing, or processing data from the selected row.
+
+You can achieve this by handling the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event. This event provides access to the clicked menu item and the associated row data, enabling you to fetch and display specific details dynamically.
+
+Steps to access row data on context menu click:
+
+1. Define a custom context menu item using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
+2. Handle the `ContextMenuItemClicked` event to capture the selected row's data.
+3. Use the `RowInfo.RowData` property from the event arguments to access the full row details.
+
+The following example demonstrates how to fetch specific row details when a context menu item is clicked in the Grid using the `ContextMenuItemClicked` event. The fetch data item retrieves the row information and displays it below the Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "fetch data", Id = "fetch data" } })">
+    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="OrderData"></GridEvents>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+       <GridColumn Field="OrderID" HeaderText="Order ID" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
+       <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100" />
+       <GridColumn Field="ShipCity" HeaderText="ShipCity" Width="100" />
+       <GridColumn Field="ShipName" HeaderText="ShipName" Width="100" />
+    </GridColumns>
+</SfGrid>
+ 
+@if (rowData != null)
+{
+    <div class="mt-3 p-3 border rounded bg-light">
+        <h5>Selected Row Details:</h5>
+        <p><strong>Order ID:</strong> @rowData.OrderID</p>
+        <p><strong>Customer ID:</strong> @rowData.CustomerID</p>
+        <p><strong>ShipCity:</strong> @rowData.ShipCity</p>
+        <p><strong>ShipName:</strong> @rowData.ShipName</p>
+    </div>
+}
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+ 
+    private OrderData rowData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public void OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
+    {
+        if (args.Item.Id == "fetch data")
+        {
+            rowData = args.RowInfo.RowData;
+        }
+    }
+
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> order = new List<OrderData>();
+    public OrderData(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderData(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLetwrTrwitHdvW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customizing context menu in specific sections of the DataGrid
 
 The Syncfusion Blazor DataGrid provides the flexibility to display custom context menus in specific sections of the Grid, such as the Header, Content, and Pager. This helps create a more focused and intuitive experience by showing only the actions that make sense in each area.
@@ -943,5 +1052,5 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotQqCLSyqiwfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
+  
 N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
