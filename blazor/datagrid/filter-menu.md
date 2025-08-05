@@ -775,7 +775,7 @@ The following example demonstrates how to enable menu filtering and hide the ope
 
 @code {
     public List<OrderData> Orders { get; set; }
-
+   
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();

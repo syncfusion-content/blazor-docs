@@ -299,13 +299,13 @@ The following example demonstrates how to customize the color of Grid lines whil
         border-color: yellow;
         border-style: solid;
         border-width: 2px;
-
+        
     }
 </style>
 
 @code {
     public List<OrderData> Orders { get; set; }
-
+   
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -357,7 +357,7 @@ public class OrderData
     public double? Freight { get; set; }
     public DateTime? OrderDate { get; set; }       
 }
-
+ 
 {% endhighlight %}
 {% endtabs %}
 
