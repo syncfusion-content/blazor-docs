@@ -1,62 +1,51 @@
 ---
 layout: post
-title: Cell Editing in Blazor Spreadsheet component | Syncfusion
+title: Cell Editing in the Blazor Spreadsheet component | Syncfusion
 description: Checkout and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
 ---
 
-# Editing in Blazor Spreadsheet component
+# Cell editing in the Blazor Spreadsheet component
 
-Cell editing in the Spreadsheet component allows modification of cell contents directly within the spreadsheet or via the formula bar. The editing feature is enabled by default and can be controlled using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable it.
+Cell editing in the Blazor Spreadsheet component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default and can be controlled using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
 
-## Edit cells via UI
+## Edit cell
 
-Cell editing can be initiated through several methods,
+Cell editing can be initiated directly through the UI using any of the following options:
 
-* Double-click a cell to start edit mode.
-* Press the `F2` key to edit the active cell.
-* Use the formula bar to perform editing.
-* Press `BACKSPACE` or `SPACE` key to clear the cell content and start edit mode.
+- **Double-click** a cell to enter edit mode.  
+- Press **F2** to activate editing for the selected cell.  
+- Use the **formula bar** to modify the cell's contents.  
+- Press **BACKSPACE** or **SPACE** to clear the cell and begin editing.
 
-N> For additional keyboard shortcuts related to editing, refer [here](./accessibility#keyboard-shortcuts). 
+> For additional keyboard shortcuts related to cell editing, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/accessibility#keyboard-shortcuts).
 
-### Save cell
+## Update cell
 
-If the cell is in an editable state, the edited cell can be saved in one of the following ways,
+When a cell is in an editable state, the updated content can be saved using one of the following methods:
 
-* Click any other cell except the one currently being edited.
+* **Click** any cell other than the one currently being edited.
+* Press **Enter** or **Tab** to save changes and move the selection.
 
-* Press the `Enter` or `Tab` key to save the edited cell.
+### Update cell programmatically
 
-### Cancel editing
+Cell updates can be performed programmatically using the `UpdateCellAsync` method, which supports values such as strings, numbers, booleans, and formulas. This method modifies the content of a designated cell and is suitable for tasks requiring precise changes, such as updating statuses or values in specific locations. The cell address must include the sheet name—for example, **Sheet1!A1**—to enable updates across different sheets within the same workbook.
 
-To cancel editing without saving changes, press the `ESCAPE` key. This exits the editable state and restores the original cell content.
+If a cell address is incorrectly formatted, refers to a non-existent sheet, or lies outside the valid range, the update is skipped without triggering an error. When a range is specified, such as **A1:B5**, the method automatically assigns the provided value to each cell within that range, allowing efficient batch updates.
 
-The following animation illustrates basic cell editing operations in the Spreadsheet component, including double-clicking a cell to enter edit mode, editing values directly, saving changes by pressing `ENTER` key, and canceling edits with the `ESCAPE` key.
-
-![UI showing cell editing](./images/cell-editing.gif)
-
-## Edit cell programmatically
-
-Cells can be updated programmatically using the `UpdateCellAsync` and `UpdateCellsAsync` methods. These methods support updating cells with values like strings, numbers, booleans, or formulas.
-
-### Update a single cell
-
-The `UpdateCellAsync` method updates the value of a specific cell. It is ideal for scenarios requiring precise updates to individual cells, such as updating a status or value in a specific cell. The cell address must include the sheet name (e.g., Sheet1!A1). Invalid addresses are skipped, and ranges (e.g., A1:B5) are handled automatically.
-
-| Parameter | Type | Description |
-| -- | -- | -- |
-| cellAddress | string | Specifies the cell address to update, including the sheet name (e.g., Sheet1!A1). Invalid addresses are skipped. |
-| cellValue | object | Defines the new value for the cell, such as a string, number, boolean, or formula (e.g., =SUM(A1:B1)). |
+| Parameter     | Type   | Description |
+|---------------|--------|-------------|
+| cellAddress | string | Specifies the address of the cell to update, including the sheet name (e.g., **Sheet1!A1**). Updates can be performed across different sheets. Invalid addresses—such as those referencing non-existent sheets or using improperly formatted cell references—are skipped without error. |
+| cellValue | object | Defines the new value to assign to the cell. Supported types include strings, numbers, booleans, and formulas (e.g., `=SUM(A1:B1)`). When a range is specified (e.g., **A1:B5**), the value is automatically applied to all cells within the range. |
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<button @onclick="UpdateCellHandler">Update Cell</button>
+<button @onclick="UpdateCell">Update Cell</button>
 
 <SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
@@ -73,13 +62,15 @@ The `UpdateCellAsync` method updates the value of a specific cell. It is ideal f
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    private async Task UpdateCellHandler()
+    private async Task UpdateCell()
     {
-        // Update cell A3 with a product name.
+        // Updates cell A3 with a product name.
         await SpreadsheetRef.UpdateCellAsync("Sheet1!A3", "Tablet");
-        // Update cell B3 with a numeric value.
+
+        // Updates cell B3 with a numeric value.
         await SpreadsheetRef.UpdateCellAsync("Sheet1!B3", 799);
-        // Update cell C3 with a formula.
+
+        // Updates cell C3 with a formula.
         await SpreadsheetRef.UpdateCellAsync("Sheet1!C3", "=SUM(A3:B3)");
     }
 }
@@ -87,57 +78,16 @@ The `UpdateCellAsync` method updates the value of a specific cell. It is ideal f
 {% endhighlight %}
 {% endtabs %}
 
-### Update multiple cells
+## Cancel editing
 
-The `UpdateCellsAsync` method updates multiple cells in a single operation, improving performance for bulk updates. It is suitable for scenarios requiring updates to multiple cells, such as populating a table or applying batch calculations.  A dictionary specifies cell addresses and their corresponding values. Invalid addresses are ignored, and an empty or null dictionary results in no action.
+To exit edit mode without saving changes, press the **ESCAPE** key. This action restores the original content of the cell and cancels any modifications made during editing.
 
-| Parameter | Type | Description |
-| -- | -- | -- |
-| cellValuesCollection | Dictionary<string, object> | A dictionary where the key is the cell address (e.g., Sheet1!A1) and the value is the new cell content (string, number, boolean, or formula). Invalid addresses are skipped. If the dictionary is null or empty, no action occurs. |
+![Cancel Editing](./images/cell-editing.gif)
 
-{% tabs %}
-{% highlight razor %}
+## Cell editing in protected sheet
 
-@using Syncfusion.Blazor.Spreadsheet
+In a protected sheet, only the unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
 
-<button @onclick="UpdateCellHandler">Update Cell</button>
+![Protection: Error Dialog](./images/protection-error-dialog.png)
 
-<SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
-
-@code {
-
-    public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    private async Task UpdateCellHandler()
-    {
-        // Define a dictionary with cell addresses and values.
-        var updates = new Dictionary<string, object>
-        {
-            { "Sheet1!A1", "Item" },
-            { "Sheet1!B1", 200 },
-            { "Sheet1!C1", "=SUM(A1:B1)" }
-        };
-        // Update multiple cells efficiently.
-        await SpreadsheetRef.UpdateCellsAsync(updates);
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Editing in a protected sheet
-
-In a protected sheet, only unlocked ranges can be edited, based on the sheet’s protection settings. Attempting to edit a locked range results in an error message, as shown below.
-
-![Protection-error-dialog](./images/protection-error-dialog.png)
-
-N> To know more about worksheet protection, refer [here](./protection#protect-sheet).
+N> For more information on worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection).
