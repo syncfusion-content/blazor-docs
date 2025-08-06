@@ -78,7 +78,7 @@ When a sheet is protected, the following operations are permitted only for unloc
 
 * **Cell editing**: Editing a cell content, such as typing new values or modifying existing data, is permitted only in unlocked cells.
 
-* **Formula bar editing**:  Editing cell content through the formula bar, including entering or modifying formulas, text, or values, is permitted only in unlocked cells.
+* **Formula bar editing**:  Editing cell content via the formula bar, including entering or modifying formulas, inserting formulas using the insert function, or editing text or values, is allowed only in unlocked cells.
 
 * **Clear actions**: **Clear All** and **Clear Contents** are allowed only for unlocked cells, preserving protected data.
 
