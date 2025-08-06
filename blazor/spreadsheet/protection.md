@@ -43,9 +43,41 @@ To unlock specific cells or ranges in a protected sheet, follow these steps:
 
 * Confirm the settings and apply protection to the sheet.
 
-The selected cells or ranges remain editable, while the rest of the sheet remains protected. Copying a locked cell is permitted. However, cutting and pasting are only allowed for unlocked cells.
-
 ![Unlocked Ranges - Protected Sheet UI](./images/unlocked-range.gif)
+
+To edit existing unlocked ranges:
+
+* Locate the **Unlocked Ranges** list, which displays all currently unlocked ranges in the sheet.
+
+* Hover over the desired range in the list to reveal the edit and delete icons.
+
+* Click the **edit** icon to modify the range.
+
+* Update the range name and value in the respective fields (e.g., changing "Range_1" with "A1:A10" to a new range such as "A1:A100").
+
+* Click the **Update Range** button to save the changes, which applies the new range settings to the sheet.
+
+To delete an existing unlocked range:
+
+* Hover over the range in the **Unlocked Ranges** list to display the delete icon.
+
+* Click the **delete** icon next to the range in the **Unlocked Ranges** list to remove it. Once deleted, the range is no longer considered unlocked and falls under the sheet's protection restrictions, preventing further editing.
+
+![Edit-Delete-Unlocked Ranges - Protected Sheet UI](./images/edit-delete-unlocked-range.png)
+
+When a sheet is protected, the following operations are permitted only for unlocked cells or ranges:
+
+**Clipboard actions**: **Cut** operations are not permitted for either locked or unlocked cells in a protected sheet to prevent unintended data removal. **Copy** operations are permitted for both locked and unlocked cells, allowing duplication of content. **Paste** operations are permitted only in unlocked cells to prevent unintended modifications to protected areas. For example, copying a value from a locked cell and pasting it into an unlocked cell is supported, but pasting into a locked cell is prohibited.
+
+**Autofill actions**: **Autofill**, which enables dragging cell content to fill adjacent cells with a pattern or sequence, is permitted only for unlocked cells. This ensures that protected data remains unchanged while allowing extension of data in designated editable areas.
+
+**Cell editing**: Direct editing of cell content, such as typing new values or modifying existing data, is permitted only in unlocked cells. This maintains the integrity of protected cells.
+
+**Formula bar editing**:  Editing cell content through the formula bar, including entering or modifying formulas, text, or values, is permitted only in unlocked cells. This prevents changes to protected cells.
+
+**Clear actions**: **Clear All** and **Clear Contents**, which remove cell content, formatting, or both, are permitted only for unlocked cells. Clearing locked cells is prohibited to ensure protected data remains intact. 
+
+These restrictions ensure that only designated unlocked areas can be modified, providing precise control over editable content in a protected sheet.
 
 ### Protection settings in a protected sheet
 
@@ -72,9 +104,9 @@ The available protection settings in Spreadsheet component include:
 | Format Columns | Permits formatting of columns, such as adjusting column width. |
 | Insert Columns | Permits inserting new columns in the protected sheet. |
 | Insert Rows | Permits inserting new rows in the protected sheet. |
-| Insert Hyperlinks | Permits adding hyperlinks to cells in the protected sheet. |
-| Sort | Permits sorting data in the protected sheet. |
-| Filter | Permits applying filters to data in the protected sheet. |
+| Insert Hyperlinks | Permits adding hyperlinks to unlocked cells in the protected sheet. |
+| Sort | Permits sorting data in unlocked ranges within the protected sheet. |
+| Filter | Permits applying filters to data in unlocked ranges within the protected sheet. |
 
 ![Protection Settings Dialog](./images/sheet-options.png)
 
@@ -90,7 +122,7 @@ To unprotect a sheet, follow one of these methods:
 
 * Right-click the sheet tab context menu option and select **Unprotect Sheet** from the context menu, and enter the password if prompted.
 
-If a password was set during protection, the correct password must be entered to unprotect the sheet.
+If a password was set during protection, the correct password must be entered to unprotect the sheet. If no password was set, the sheet can be unprotected directly without entering a password.
 
 ![Unprotected Sheet Dialog](./images/unprotect-sheet.png)
 
@@ -118,6 +150,6 @@ To unprotect the workbook, follow these steps:
 
 * Select **Unprotect Workbook** from the **Review** tab in the Ribbon toolbar.
 
-* Enter the correct password in the dialog box, then click **OK** to unprotect the workbook.
+* If a password was set during protection, enter the correct password in the dialog box, then click **OK** to unprotect the workbook. If no password was set, the workbook can be unprotected directly without entering a password.
 
 ![Unprotected Workbook Dialog](./images/unprotect-workbook.png)
