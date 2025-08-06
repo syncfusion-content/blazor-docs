@@ -45,42 +45,30 @@ The example code below demonstrates how to set a custom shading color and how to
 @page "/"
 @using Syncfusion.Blazor.DocumentEditor
 @inject IJSRuntime JS
-<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px"
-    ServiceUrl="https://services.syncfusion.com/react/production/api/documenteditor/">
-    <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px">
 </SfDocumentEditorContainer>
 
 @code {
-    private SfDocumentEditorContainer? container;
+    private SfDocumentEditorContainer container;
     private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
     {
         FormFieldSettings = new FormFieldSettingsModel() { ShadingColor = "#ffffff" }
     };
-    protected async Task OnLoad(object args)
-    {
-        // Initialization logic here
-    }
 }
 
 // Disable form field shading entirely 
 @page "/"
 @using Syncfusion.Blazor.DocumentEditor
 @inject IJSRuntime JS
-<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px"
-    ServiceUrl="https://services.syncfusion.com/react/production/api/documenteditor/">
-    <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px">
 </SfDocumentEditorContainer>
 
 @code {
-    private SfDocumentEditorContainer? container;
+    private SfDocumentEditorContainer container;
     private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
     {
         FormFieldSettings = new FormFieldSettingsModel() { ApplyShading = false }
     };
-    protected async Task OnLoad(object args)
-    {
-        // Initialization logic here
-    }
 }
 
 ```
