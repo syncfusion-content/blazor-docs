@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview: Essential UI Kit for Blazor
 
-The Essential UI Kit for Blazor comprises over 230 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML (Razor), CSS, C#, and Syncfusion Blazor components, delivering robust functionality and ease of use. They are compatible with both Tailwind CSS and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
+The Essential UI Kit for Blazor comprises over 260 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML (Razor), CSS, C#, and Syncfusion Blazor components, delivering robust functionality and ease of use. They are compatible with both Tailwind CSS and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
 
 <table>
   <tr>
@@ -22,8 +22,8 @@ The Essential UI Kit for Blazor comprises over 230 responsive, ready-to-use, eas
       <ul>
         <li>Sign In</li>
         <li>Sign Up</li>
-        <li>Mobile - Sign In</li>
-        <li>OTP - Sign In</li>
+        <li>Sign In - Mobile</li>
+        <li>Sign In - OTP</li>
         <li>Forgot Password</li>
         <li>Sign Out</li>
         <li>Unlock Session</li>
@@ -59,8 +59,11 @@ The Essential UI Kit for Blazor comprises over 230 responsive, ready-to-use, eas
     <td>
       <ul>
         <li>Line Chart</li>
+        <li>Area Chart</li>
         <li>Bar Chart</li>
-        <li>Accumulation Chart</li>
+        <li>Scatter Chart</li>
+        <li>Bubble Chart</li>
+        <li>Distribution Chart</li>
       </ul>
     </td>
   </tr>
@@ -68,18 +71,18 @@ The Essential UI Kit for Blazor comprises over 230 responsive, ready-to-use, eas
     <td>AI</td>
     <td>
       <ul>
-          <li>Al Login</li>
-          <li>Al Sidebar</li>
-          <li>Al Setting</li>
-          <li>Al Search</li>
-          <li>Al Card</li>
-          <li>Al Prompt Card</li>
-          <li>Al Chat</li>
-          <li>Al Dialog</li>
-          <li>Al Floating Menu</li>
-          <li>Al Notification</li>
-          <li>Al FAQ</li>
-          <li>Al Pricing Table</li>
+        <li>AI Login</li>
+        <li>AI Sidebar</li>
+        <li>AI Setting</li>
+        <li>AI Search</li>
+        <li>AI Card</li>
+        <li>AI Prompt Card</li>
+        <li>AI Chat</li>
+        <li>AI Dialog</li>
+        <li>AI Floating Widget</li>
+        <li>AI Notification</li>
+        <li>AI FAQ</li>
+        <li>AI Pricing Table</li>
       </ul>
     </td>
   </tr>
