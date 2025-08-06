@@ -15,7 +15,7 @@ The Syncfusion Blazor Spreadsheet component offers protection features to secure
 
 Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Protection can be applied with or without a password, depending on the desired security level.
 
-### Enable Sheet Protection
+### Enable sheet protection
 
 Sheet protection can be enabled through the user interface in the active sheet using one of the following methods:
 
