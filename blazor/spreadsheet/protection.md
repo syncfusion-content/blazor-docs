@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Protect Sheet and Workbook in Blazor Spreadsheet Component | Syncfusion
+title: Protect Sheet and Workbook in Blazor Spreadsheet Component
 description: Checkout and learn here all about protect sheet and workbook in Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
