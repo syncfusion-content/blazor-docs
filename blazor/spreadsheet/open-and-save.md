@@ -73,8 +73,8 @@ To load Excel files encoded as Base64 strings into the component, this option pr
 
 ### Supported file formats
 The Spreadsheet component supports the following file formats for opening:
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 
 ## Save
 The Spreadsheet component allows saving data, styles, formatting, and additional content as an Excel file. This functionality ensures that all modifications are retained in a compatible format.
@@ -90,7 +90,7 @@ To save the Spreadsheet content through the user interface, select the **File > 
 When a protected sheet or workbook is saved or downloaded, all associated settings - such as the protection password, unlocked cell ranges, and sheet options - are preserved in the Excel file. These settings remain active and are consistently maintained when the file is opened in other viewers like **Microsoft Excel** or **Google Sheets**, ensuring seamless protection across viewers. To know more about protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
 
 ### Supported file formats
-The Spreadsheet component supports saving files in the MS Excel (.xlsx) format.
+The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
 
 ## New
 To create a new workbook through the user interface, select **File > New** from the **Ribbon**. This action initializes a blank Spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
