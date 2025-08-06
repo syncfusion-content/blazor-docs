@@ -13,7 +13,7 @@ The Syncfusion Blazor Spreadsheet component offers protection features to secure
 
 ## Protect sheet
 
-Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Protection can be applied with or without a password, depending on the desired security level.
+The **Protect Sheet** support restricts modifications to a sheet’s content, such as editing or deleting data. Protection can be applied with or without a password, based on the desired security level.
 
 ### Enable sheet protection
 
@@ -117,7 +117,7 @@ The available protection settings include:
 
 ## Unprotect Sheet
 
-Unprotecting a sheet removes restrictions on actions previously limited by protection, allowing full interaction, including editing, formatting, inserting, and deleting content.
+The **Unprotect Sheet** support removes restrictions on actions previously limited by sheet protection, enabling full interaction, including editing, formatting, inserting, and deleting content.
 
 ### Unprotecting sheets via UI
 
@@ -133,7 +133,7 @@ If a password was set during protection, the correct password must be entered to
 
 ## Protect Workbook
 
-Workbook protection restricts structural modifications, such as inserting, deleting, renaming, duplicating, hiding, moving, or copying sheets. Protection can be applied with or without a password, depending on the desired security level.
+The **Protect Workbook** support prevents structural modifications within a workbook, such as inserting, deleting, renaming, duplicating, hiding, moving, or copying sheets. Protection can be applied with or without a password, depending on the required security level.
 
 ### Protecting workbooks via UI
 
@@ -147,7 +147,7 @@ To protect the workbook, follow these steps:
 
 ## Unprotect Workbook
 
-Unprotecting a workbook removes restrictions on structural modifications, enabling actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets.
+The **Unprotect Workbook** support restores the ability to perform structural modifications, enabling actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets.
 
 ### Unprotecting workbooks via UI
 
