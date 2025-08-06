@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Protect Sheet and Workbook in Blazor Spreadsheet Component
+title: Protect Sheet in Blazor Spreadsheet Component | Syncfusion
 description: Checkout and learn here all about protect sheet and workbook in Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
@@ -9,13 +9,13 @@ documentation: ug
 
 # Protect Sheet and Workbook in Blazor Spreadsheet component
 
-Protection features in the Blazor Spreadsheet component safeguard data by restricting unauthorized modifications to sheets and workbooks. Sheet protection prevents accidental changes to cell content, while workbook protection limits structural modifications, such as inserting or renaming sheets. Both features support optional password protection and customizable permissions for specific actions, ensuring flexibility and security based on application requirements.
+The Syncfusion Blazor Spreadsheet component offers protection features to secure data by restricting unauthorized modifications. Sheet protection prevents changes to cell content, while workbook protection safeguards the workbook's structure, such as preventing the addition, deletion, duplication, hiding, moving, or renaming of sheets.
 
 ## Protect sheet
 
-Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Specific actions, like cell selection, filtering, sorting or formatting, can be permitted through configuration settings. Protection can be applied with or without a password, depending on the desired security level.
+Sheet protection restricts modifications to a sheet’s content, such as editing or deleting data. Protection can be applied with or without a password, depending on the desired security level.
 
-### Protecting sheets via UI
+### Enable Sheet Protection
 
 Sheet protection can be enabled through the user interface in the active sheet using one of the following methods:
 
@@ -27,7 +27,7 @@ Sheet protection can be enabled through the user interface in the active sheet u
 
 ![Protected Sheet - Context menu](./images/protect-sheet-contextmenu.png)
 
-The dialog allows setting an optional password and selecting permitted actions.
+The dialog allows setting an optional password and selecting permitted actions for the protected sheet.
 
 ### Unlock specific cells or ranges
 
@@ -47,53 +47,58 @@ To unlock specific cells or ranges in a protected sheet, follow these steps:
 
 To edit existing unlocked ranges:
 
-* Locate the **Unlocked Ranges** list, which displays all currently unlocked ranges in the sheet.
+* In the **Protect Sheet** dialog, under the **Unlock Range** tab, view the unlocked ranges list, which shows all ranges currently set as editable in the protected sheet.
 
-* Hover over the desired range in the list to reveal the edit and delete icons.
+* Hover over a range to reveal the **edit** icon.
 
-* Click the **edit** icon to modify the range.
+* Click the **edit** icon, modify the range name or cells (e.g., change "A1:A10" to "A1:A100").
 
-* Update the range name and value in the respective fields (e.g., changing "Range_1" with "A1:A10" to a new range such as "A1:A100").
+* Click **Update Range** button to save the changes.
 
-* Click the **Update Range** button to save the changes, which applies the new range settings to the sheet.
+![Edit Unlocked Ranges - Protected Sheet UI](./images/edit-unlocked-range.png)
 
 To delete an existing unlocked range:
 
-* Hover over the range in the **Unlocked Ranges** list to display the delete icon.
+* In the unlocked ranges list, hover over the range to reveal the **delete** icon.
 
-* Click the **delete** icon next to the range in the **Unlocked Ranges** list to remove it. Once deleted, the range is no longer considered unlocked and falls under the sheet's protection restrictions, preventing further editing.
+* Click the **delete** icon to remove the range. Once removed, the range becomes protected and cannot be edited, aligning with the sheet’s protection restrictions.
 
-![Edit-Delete-Unlocked Ranges - Protected Sheet UI](./images/edit-delete-unlocked-range.png)
+![Delete Unlocked Ranges - Protected Sheet UI](./images/delete-unlocked-range.png)
+
+**Allowed actions in protected sheets**
 
 When a sheet is protected, the following operations are permitted only for unlocked cells or ranges:
 
-**Clipboard actions**: **Cut** operations are not permitted for either locked or unlocked cells in a protected sheet to prevent unintended data removal. **Copy** operations are permitted for both locked and unlocked cells, allowing duplication of content. **Paste** operations are permitted only in unlocked cells to prevent unintended modifications to protected areas. For example, copying a value from a locked cell and pasting it into an unlocked cell is supported, but pasting into a locked cell is prohibited.
+* **Clipboard actions** :
+  * **Cut** operations are not permitted for either locked or unlocked cells in a protected sheet to prevent unintended data removal. 
+  * **Copy** operations are permitted for both locked and unlocked cells. 
+  * **Paste** operations are permitted only in unlocked cells to prevent unintended modifications to protected areas. For example, copying a value from a locked cell and pasting it into an unlocked cell is supported, but pasting into a locked cell is prohibited.
 
-**Autofill actions**: **Autofill**, which enables dragging cell content to fill adjacent cells with a pattern or sequence, is permitted only for unlocked cells. This ensures that protected data remains unchanged while allowing extension of data in designated editable areas.
+* **Autofill actions**: **Autofill** is permitted only for unlocked cells, ensuring protected data remains unchanged.
 
-**Cell editing**: Direct editing of cell content, such as typing new values or modifying existing data, is permitted only in unlocked cells. This maintains the integrity of protected cells.
+* **Cell editing**: Editing a cell content, such as typing new values or modifying existing data, is permitted only in unlocked cells.
 
-**Formula bar editing**:  Editing cell content through the formula bar, including entering or modifying formulas, text, or values, is permitted only in unlocked cells. This prevents changes to protected cells.
+* **Formula bar editing**:  Editing cell content through the formula bar, including entering or modifying formulas, text, or values, is permitted only in unlocked cells.
 
-**Clear actions**: **Clear All** and **Clear Contents**, which remove cell content, formatting, or both, are permitted only for unlocked cells. Clearing locked cells is prohibited to ensure protected data remains intact. 
+* **Clear actions**: **Clear All** and **Clear Contents** are allowed only for unlocked cells, preserving protected data.
 
 These restrictions ensure that only designated unlocked areas can be modified, providing precise control over editable content in a protected sheet.
 
 ### Protection settings in a protected sheet
 
-When a sheet is protected, most actions, such as formatting, inserting, sorting, and filtering, are restricted by default. However, specific actions can be enabled through the protection settings to allow controlled interaction with the sheet.
+By default, a protected sheet restricts actions like formatting, inserting, sorting, and filtering. Specific actions can be enabled through protection settings.
 
 To enable specific functionalities while the sheet is protected:
 
 * Open the **Protect Sheet** dialog from the **Review** tab.
 
-* Go to the **Sheet Options** tab to view available protection settings.
+* Navigate to the **Sheet Options** tab to view available protection settings.
 
 * Select or deselect the desired options to allow or restrict specific actions.
 
 * Click **OK** to apply the protection settings.
 
-The available protection settings in Spreadsheet component include:
+The available protection settings include:
 
 | Options | Description |
 |------------------------|---------|
@@ -112,7 +117,7 @@ The available protection settings in Spreadsheet component include:
 
 ## Unprotect Sheet
 
-Unprotecting a sheet removes restrictions on actions previously limited by protection. After unprotecting, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
+Unprotecting a sheet removes restrictions on actions previously limited by protection, allowing full interaction, including editing, formatting, inserting, and deleting content.
 
 ### Unprotecting sheets via UI
 
@@ -128,13 +133,13 @@ If a password was set during protection, the correct password must be entered to
 
 ## Protect Workbook
 
-The **Protect Workbook** support restricts structural modifications within a workbook. Actions such as inserting, deleting, renaming, or hiding sheets are disabled when this protection is enabled. Protection can be configured with or without a password, depending on the desired level of security.
+Workbook protection restricts structural modifications, such as inserting, deleting, renaming, duplicating, hiding, moving, or copying sheets. Protection can be applied with or without a password, depending on the desired security level.
 
 ### Protecting workbooks via UI
 
 To protect the workbook, follow these steps:
 
-* Go to the **Review** tab in the Ribbon toolbar.
+* Navigate to the **Review** tab in the Ribbon toolbar.
 
 * Select **Protect Workbook**, enter and confirm the desired password, and then click **OK** to apply the protection.
 
