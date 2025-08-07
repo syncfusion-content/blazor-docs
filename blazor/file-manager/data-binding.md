@@ -800,9 +800,9 @@ To load image in File Manager component with injected service, utilize the [Befo
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data).
 
 
-## Understanding FileManagerDirectoryContent Class in Blazor File Manager
+## Overview of FileManagerDirectoryContent in Blazor File Manager
 
-The `FileManagerDirectoryContent` class is integral to the Blazor FileManager component, serving as the primary data model for representing files and folders. It is essential to correctly populate its fields to ensure accurate functionality and data representation.
+The [FileManagerDirectoryContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html) class is integral to the Blazor FileManager component, serving as the primary data model for representing files and folders. It is essential to correctly populate its fields to ensure accurate functionality and data representation.
 
 {% tabs %}
 {% highlight razor %}
@@ -861,9 +861,9 @@ Property | Description
 [NewName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_NewName) | Specifies a new name for the item, used in rename operations.
 
 
-**Understanding FilterPath vs Path in FileManagerDirectoryContent**
+**How FilterPath and Path Differ in FileManagerDirectoryContent**
 
-The `FileManagerDirectoryContent` class in the Syncfusion Blazor File Manager includes both FilterPath and Path properties. Although both involve directory paths, they serve distinct purposes within the File Manager component. Understanding how and when to use each is essential for proper data binding and operational logic.
+The [FileManagerDirectoryContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html) class in the Syncfusion Blazor File Manager includes both FilterPath and Path properties. Although both involve directory paths, they serve distinct purposes within the File Manager component. Understanding how and when to use each is essential for proper data binding and operational logic.
 
 **FilterPath**
 
