@@ -11,152 +11,219 @@ documentation: ug
 
 The Syncfusion Blazor Spreadsheet component offers robust formula support, enabling to perform complex calculations and data analysis with ease. These formulas operate on cell values by referencing data from the current sheet or across multiple sheets within the workbook.
 
-## Formula bar
+## Formula Bar
 
-The formula bar is a key interface element in the Syncfusion Blazor Spreadsheet, designed to make it easier to view, edit, and enter cell data and formulas. Formula bar is positioned above the sheet grid, it provides a centralized space for working with formulas. Formula bar can also be expanded or collapsed to suit your needs. When expanded, it offers more vertical space, making it easier to read and edit long or complex formulas with greater accuracy. Formula Bar can be enable/disable by using the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property, which is set to true by default.
+The formula bar is a key interface element in the Syncfusion Blazor Spreadsheet component, positioned at the top of the spreadsheet. It serves as a centralized space for viewing, editing, and entering cell content and formulas, promoting efficient data management and accurate formula input.
 
-N> When `ShowFormulaBar` is set to **false**, Formula Bar is removed from the interface.
+End users can expand or collapse the formula bar to adjust its height. Expanding it provides additional vertical space, making it easier to read and modify long or complex formulas.
 
-![Formula bar](./images/formulabar.png)
+Its visibility is controlled by the [`ShowFormulaBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property, which is enabled by default (**true**), ensuring the formula bar appears automatically. If `ShowFormulaBar` is set to **false**, the formula bar is removed from the interface.
+
+![Formula Bar](./images/formulabar.png)
 
 ## Working with formulas via UI
 
-The Syncfusion Blazor Spreadsheet component provides multiple methods for inserting and editing formulas, accommodating different workflow preferences. Each method serves specific use cases and offers unique advantages for formula creation and manipulation.
+The Syncfusion Blazor Spreadsheet component offers multiple ways to insert and edit formulas, supporting different workflow preferences. Each method is designed for specific use cases and provides distinct advantages for creating and managing formulas efficiently.
 
 ### Insert function dialog
 
-* Select **Insert Function** from the **Formulas** tab in the **Ribbon** toolbar. In the **Insert Function** dialog, choose a category, then select the desired formula to insert it into the selected cell and click **Ok** button.
+The Syncfusion Blazor Spreadsheet component provides two ways to access the **Insert Function** dialog for adding formulas:
 
-![Insert Function Dialog](./images/insertfunction-ribbon.gif)
+- From the Ribbon:
+Select **Insert Function** from the **Formulas** tab in the **Ribbon**. In the **Insert Function** dialog, choose a category, select a formula, and click the **OK** button to insert it into the selected cell.
 
-* Click the **Insert Function** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized formula list and insertion options as the **Ribbon** toolbar.
+![Insert Function Ribbon](./images/insertfunction-ribbon.png)
 
-![Insert Function Button](./images/inserfunction-formulabar.gif)
+- From the Formula Bar:
+Click the **Insert Function** button next to the **Name Box** to open the same dialog. This provides the same categorized formula list and insertion options as the **Ribbon**.
 
-### Direct Cell Entry
+![Insert Function Button](./images/insertfunction-button.png)
 
-Formulas can be entered directly into cells or the **Formula Bar** by typing an equals sign **(=)** followed by the formula expression. This method initiates the formula intellisense feature, which displays a dropdown list of relevant formulas. The intellisense feature accelerates formula creation by reducing typing and helping avoid syntax errors.
+![Insert Function Dialog](./images/insertfunction-dialog.png)
 
-![Formulas Intellisense](./images/formula-intellisence.gif)
+### Effortless formula typing using IntelliSense
 
-### Adding cell references to formulas
+Formulas can be entered directly into a cell or the **Formula Bar** by starting with an equals sign (**=**) followed by the formula expression. This action activates the **IntelliSense** feature, which displays a dropdown list of relevant functions and suggestions. 
+IntelliSense simplifies formula creation by offering quick access to available functions, reducing the need for manual typing, and helping prevent syntax errors. This makes formula entry faster, more accurate, and easier to manage.
+
+![Formula - Intellisense](./images/formula-intellisense.gif)
+
+### Using cell references in formulas
 
 When working with formulas that require cell references as arguments, the Spreadsheet component supports two primary interaction methods for streamlined formula creation.
 
 **Direct keyboard entry**
 
-The most straightforward approach involves typing cell references directly using the keyboard. After beginning a formula with an equals sign and entering a function name with an opening parenthesis, specific cell addresses can be manually entered in standard notation (e.g., A1, B5, C10). For example, to create a SUM formula, type **"=SUM("** followed by the cell reference **"A1"** and closing parenthesis **")"** to form the complete expression **"=SUM(A1)"**. This method provides precise control when constructing formulas with exact cell references already known.
+Formulas and cell references can be entered manually using the keyboard. Begin by typing an equals sign **(=)**, followed by either a cell address, a function name, or an arithmetic expression involving cell references.
 
-For formulas requiring multiple arguments, commas serve as argument separators. For instance, typing **"=SUM(A1,B1,C1)"** creates a formula that adds values from three individual cells. Range references use the colon notation between start and end cells, such as **"A1:A10"** to indicate a contiguous range.
+*Referencing a single cell*:
 
-**Interactive cell selection**
+To reference the value in a specific cell, enter the cell address preceded by an equals sign.
+Example:
+**=A2** retrieves the value from cell A2.
 
-The Spreadsheet component also supports a more interactive approach for adding cell references. After initiating a formula and typing a function name with an opening parenthesis, clicking directly on cells in the worksheet to automatically insert their references into the formula. The component automatically appends the selected cell's address to the current formula being edited.
+*Using functions with cell references*:
 
-For formulas with multiple arguments, the process follows an intuitive pattern: click the first cell to insert its reference, type a comma to indicate a new argument, then click another cell to add its reference. This sequence can be repeated for functions accepting multiple arguments. To complete the formula, add the closing parenthesis or press Enter. For example, when creating **"=AVERAGE()"**, clicking cells B2, C3, and D4 in sequence (with commas added between selections) generates **"=AVERAGE(B2,C3,D4)"**.
+To create a formula using a function, type the function name followed by an opening parenthesis, then enter the required cell addresses using standard format (for example, A1, B5, or C10).
+Example:
+**=SQRT(A1)** calculates the sum of the value in cell A1.
+
+For formulas involving multiple values, separate each cell reference with a comma.
+Example:
+**=SUM(A1,B1,C1)** adds the values from three individual cells.
+
+To refer to a range of cells, use a colon between the starting and ending cell addresses.
+Example:
+**=SUM(A1:A10)** adds values from all cells between A1 and A10.
+
+*Performing arithmetic operations with cell references*:
+
+Arithmetic operations can be performed directly using cell references. These expressions calculate results based on the values stored in the referenced cells.
+Examples:
+**=A1+B5** adds the values in cells **A1** and **B5**.
+**=A1*A6** multiplies the values in cells **A1** and **A6**.
+**=C3-D2** subtracts the value in cell **D2** from the value in cell **C3**.
+**=E4/F2** divides the value in cell **E4** by the value in cell **F2**.
+
+This approach enables dynamic calculations that automatically update when the values in the referenced cells change.
+
+**Inserting cell references using interactive selection**
+
+The Spreadsheet component supports interactive methods for inserting both individual cell references and cell ranges into formulas.
+
+*Referencing individual cells*:
+
+To insert individual cell references into a formula, begin by typing a function name followed by an opening parenthesis. Then, click directly on a cell in the worksheet to insert its reference. For functions requiring multiple arguments, type a comma after each cell reference, then click another cell to add its reference. This sequence can be repeated as needed. To complete the formula, add a closing parenthesis and press **Enter**.
+
+**Example**:
+Typing **=AVERAGE(** and clicking cells **B2**, **C3**, and **D4** in sequence—while inserting commas between selections—results in the formula:
+**=AVERAGE(B2,C3,D4)**
+
+![Interactive cell selection](./images/interactive-cellselection.png)
+
+*Referencing a range of cells*:
+
+To reference a range of adjacent cells, begin by typing a function name followed by an opening parenthesis. Click the starting cell of the range, then hold the **Shift** key and click the ending cell. The component inserts the full range reference into the formula.
+
+**Example**:
+Typing **=AVERAGE(**, clicking cell **A10**, then holding **Shift** and clicking cell **C10** results in the formula:
+**=AVERAGE(A10:C10)**
+
+![Interactive range selection](./images/interactive-rangeselection.png)
+
+This approach simplifies formula creation and ensures accurate cell referencing for both individual and grouped data.
 
 N> When a sheet is protected, **Insert Function** option is disabled. For more information on worksheet protection, refer [here](https://blazor.syncfusion.com/documentation/spreadsheet/protection#protect-sheet).
 
 ## Calculation Mode
 
-The Syncfusion Blazor Spreadsheet implements **Calculation Option**  that control when and how formulas are recalculated, allowing optimization for different performance scenarios. The available calculation modes mirror Microsoft Excel's functionality, providing familiar behavior. The available modes are:
+The Syncfusion Blazor Spreadsheet component includes a **Calculation Option** feature that controls when and how formulas are recalculated. This functionality helps optimize performance and mirrors the behavior found in Microsoft Excel.
 
-* **Automatic**: Formulas recalculate instantly when any dependent cell changes.
+**Available Modes**
+- *Automatic*:
+Formulas are recalculated immediately whenever a dependent cell value changes. This mode ensures real-time updates and is suitable for dynamic data entry.
+When this mode is active, the **Calculate Sheet** and **Calculate Workbook** buttons are disabled, as recalculation occurs automatically.
 
-* **Manual**: Formulas recalculate only when explicitly triggered using the **Calculate Sheet** or **Calculate Workbook** options.
+- *Manual*:
+Formulas are recalculated only when explicitly triggered. This mode is useful for improving performance in large datasets or when frequent recalculations are not required.
+In this mode, the **Calculate Sheet** and **Calculate Workbook** buttons are enabled, allowing manual control over recalculation.
 
-### Automatic
+### Managing calculation mode via Ribbon
+The **Ribbon** provides a user interface(UI) for managing formula calculation behavior.
 
-In **Automatic** calculation mode, formulas are recalculated immediately upon any modification to dependent cell values. This functionality ensures that all computed results remain accurate and up to date without requiring manual recalculation. The automatic propagation of changes throughout the formula dependency chain preserves data consistency and enhances computational reliability. By default, **Automatic** calculation is enabled in spreadsheet.
+- Select the **Formulas** tab from **Ribbon**.
+- Click the **Calculation Option** dropdown.
+- Choose either **Automatic** or **Manual** mode based on the desired behavior.
 
-**Example:**
+### Manual recalculation options
+When **Manual** mode is selected, the following options become available in the Formulas tab:
 
-If cell **C1** contains the formula **=A1+B1**, any changes to values in cells **A1** or **B1** will automatically update the result displayed in **C1**. This real-time calculation is ideal for scenarios requiring immediate feedback and continuous result validation.
+**Calculate Sheet:**
+Recalculates all formulas within the currently active worksheet. This is useful when changes are limited to a single sheet.
 
-![Automatic calculation mode](./images/automatic-calculation.gif)
+**Calculate Workbook:**
+Recalculates formulas across all worksheets in the workbook. This ensures consistency when formulas span multiple sheets.
 
-### Manual
+### Automatic mode behavior
+In **Automatic** mode, formulas are recalculated instantly when any referenced cell value changes. This ensures that computed results remain accurate and up to date without requiring manual intervention.
 
-In **Manual** calculation mode, formulas remain static until explicitly recalculated by triggered manually. This mode prevents automatic recalculation, which can significantly improve performance when working with large datasets or complex formulas. Manual calculation mode is particularly useful when performing multiple changes that would otherwise trigger numerous intermediate recalculations.
+**Example**:
+If cell **C1** contains the formula **=A1+B1**, any change to **A1** or **B1** will automatically update the result in **C1**.
 
-**Example:**
+### Manual mode behavior
+In **Manual** mode, formulas do not update automatically. Recalculation must be triggered manually using the **Calculate Sheet** or **Calculate Workbook** options.
 
-If cell **C1** containing the formula **=A1+B1** in manual mode, changes to cells **A1** or **B1** will not update the result in **C1** until recalculation is manually triggered. The Spreadsheet provides two recalculation options:
+**Example**:
+If cell **C1** contains the formula **=A1+B1**, changes to **A1** or **B1** will not affect **C1** until a manual recalculation is performed.
 
-**Calculate Sheet:** Recalculates only the formulas within the active sheet.
+![Manual calculation mode](./images/caculation-manual.gif)
 
-**Calculate Workbook:** Recalculates all formulas across all sheets in the workbook.
+## Named Range
 
-![Manual calculation mode](./images/manual-calculation.gif)
-
-## Named Ranges
-
-The **Named Range** feature in the Syncfusion Blazor Spreadsheet component allows you to assign a meaningful name to a specific cell or range of cells. This enhances the clarity and usability of spreadsheets, making them easier to navigate, maintain, and understand—especially when creating formulas or analyzing data.
+The **Named Range** feature in the Syncfusion Blazor Spreadsheet component enables assignment of a descriptive name to a specific cell or range of cells. This improves Spreadsheet readability and functionality, facilitating easier navigation, maintenance, and comprehension—particularly when constructing formulas or performing data analysis.
 
 **Named range usage in formulas**
 
-Using named ranges in formulas enhances readability and maintainability. Instead of referencing a range like **A1:A12**, you can use a descriptive name such as "MonthlyTotals" directly in your formula. For instance, writing **=SUM(MonthlyTotals)** makes the formula more intuitive for anyone reviewing the spreadsheet. Named ranges are fully supported across all standard formula entry methods, including the formula bar and direct cell input.
+A named range is a label given to a group of cells. This label makes formulas easier to read and understand. 
+**Example**: Using **A1:A2** as **MonthlyTotals** in a **Formula**.
 
-**Accessing the Name Manager in dialog box and toolbar**
+Suppose cells **A1** and **A2** contain monthly total values. Instead of writing a formula like **=SUM(A1:A2)**, a name such as **MonthlyTotals** can be assigned to the range **A1:A2**.
 
-The Name Manager serves as a central interface for managing all name ranges across the workbook. The Name Manager dialog box can be accessed via two methods:
+After assigning the name, the formula becomes:
 
-* The **Name Manager** button located in the **Formulas** tab on the Spreadsheet **Ribbon** toolbar.
-* The **Name Manager** option can also be launched when creating or managing ranges from the **Name Box**.
+**=SUM(MonthlyTotals)**
 
-N> Named Ranges can be defined only for cells or ranges that contain values.
+This makes the formula easier to read and understand, especially when working with large spreadsheets or sharing them with others.
 
-### Creating named ranges via UI
+### Creating named range via UI
 
-**Creating using the name box**
+**Using the Name Box**
 
-Named ranges can be created using the following methods:
+* Select the cell or range of cells to be named.
+* Click inside the **Name Box** located near the formula bar. The current cell reference will be highlighted.
+* Type a name that follows these rules:
+   - Start with a letter or an underscore.
+   - Do not include spaces.
+   - Avoid using names that look like cell references (e.g., A1, B2).
+* Press **Enter** to complete the process.
 
-The Name box is positioned to the left of the formula bar, above the sheet grid. To create a Named Range using the name box:
+![Named Range - Name Box](./images/namebox-namedrange.gif)
 
-* Select the desired cell or range of cells in the sheet.
-* Click inside the name box, this will highlight the current cell reference.
-* Enter a unique and descriptive name according to the naming rules (begin with a letter or underscore, no spaces, and avoid using cell reference format).
-* Press the **Enter** key to finalize creation. The new Named Range will be immediately active and available for use in formulas.
+**Using the Ribbon**
 
-![Named Range Name Box](./images/namedrange-namebox.gif)
+* Go to the **Formulas** tab in the **Ribbon** and click the **Name Manager** button to open the dialog.
+* In the **Range Name** field, enter a unique and descriptive name. Type a name that follows these rules:
+   - Start with a letter or an underscore.
+   - Do not include spaces.
+   - Avoid using names that look like cell references (e.g., A1, B2).
+* In the **Range Value** field, specify the cell or range to be named. This can be entered manually or selected from the sheet. The currently selected range is shown by default.
+* Choose the appropriate **Scope** (either **Workbook** or **Worksheet**, as supported).
+* Click the **Add Range** button to create the named range. The new entry will appear in the **Name Manager** list.
+* Click **OK** to close the dialog and apply the changes.
 
-**Creating using the dialog box**
+![Named Range - Ribbon](./images/namedrange-dialog.png)
 
-To establish a Named Range through the Name Manager dialog:
+### Editing named range via UI
 
-* Navigate to the **Formulas** tab in the ribbon toolbar and select the **Name Manager** button to open the dialog.
-* In the input field labeled "Range Name", enter a unique and descriptive name for the range.
-* Specify the desired range in the "Range Value" field. This can be done by entering a cell/range reference manually, by default it shows currently select cell/range reference in the field.
-* Set the appropriate scope (workbook or worksheet, as supported).
-* Confirm by clicking the **Add Range** button. The created Named Range will now appear in the Name Manager list and click **OK** button.
-
-![Named Range toolbar](./images/namedrange-ribbon.gif)
-
-### Editing named ranges via UI
-
-To modify an existing Named Range:
-
-* Open the Name Manager dialog box from the **Formulas** tab by clicking the **Name Manager** button.
-* In the Name Manager dialog, select the Named Range required for editing from the list.
-* Click the **Edit** icon provided for the selected Named Range. An editing panel will appear.
-* Update the "Range Name," "Range Value" or the scope as necessary, following the standard naming and reference rules.
+* Open the **Name Manager** dialog box from the **Formulas** tab by clicking the **Name Manager** button.
+* In the **Name Manager** dialog, select the **Named Range** required for editing from the list.
+* Click the **Edit** icon provided for the selected named range. An editing panel will appear.
+* Update the **Range Name**, **Range Value** or the **Scope** as necessary, following the standard naming and reference rules.
 * Confirm changes by clicking the **Update Range** button, then click the **OK** button to commit the edit. The modifications will become immediately effective throughout all associated formulas.
 
-![Named Range Editing](./images/namedrange-editing.gif)
+![Named Range - Editing](./images/namedrange-editing.png)
 
-### Deleting Named Range via UI
+### Deleting named range via UI
 
-To remove a Named Range using the UI:
+* Open the **Name Manager** dialog box from the **Formulas** tab by selecting the **Name Manager** button.
+* Select the **Named Range** targeted for deletion from the list.
+* Click the **Delete** icon associated with the selected **Named Range**.
+* Confirm the action by clicking the **OK** button in the Name Manager. When a named range is deleted from the workbook, any formula that used that name will stop working and show a **#NAME?** error. To fix the error, the formula must be updated with a valid range or name.
 
-* Open the Name Manager dialog box from the **Formulas** tab by selecting the **Name Manager** option.
-* Select the Named Range targeted for deletion from the list.
-* Click the **Delete** icon associated with the selected Named Range.
-* Confirm the action by clicking the **OK** button in the Name Manager. The Named Range will be deleted from the workbook, and all formulas referencing the deleted name will return a `#NAME?` error until updated.
+N> Removing a named range that is used in formulas can cause errors in those formulas. Before deleting a named range, ensure it is not referenced anywhere in the Spreadsheet. If a worksheet is deleted, any named ranges created specifically within that worksheet will also be removed automatically.
 
-N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it. Deleting a worksheet also removes any Name Ranges that were created specifically within that worksheet.
+![Named Range - Deleting](./images/namedrange-delete.png)
 
-![Named Range Deleting](./images/namedrange-delete.gif)
 ## Supported Formulas
 
 The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet component:
