@@ -9,264 +9,136 @@ documentation: ug
 
 # Selection in Blazor Spreadsheet component
 
-The selection feature in the Syncfusion Blazor Spreadsheet component delivers essential functionality for interactive highlighting and manipulation of cells, rows, and columns. Selection functionality establishes the foundation for most spreadsheet operations, including data entry, editing, formatting, and analysis. The Spreadsheet component implements multiple selection methods through mouse and keyboard interactions, facilitating efficient data management across various workflow scenarios. The selection capabilities accommodate diverse operational requirements with support for single cells, contiguous ranges, and non-adjacent selections, providing comprehensive data manipulation options for different use cases.
+The Syncfusion Blazor Spreadsheet component offers powerful selection functionality that allows to interactively highlight and manipulate cells, rows, and columns. This feature serves as the backbone for key operations such as data entry, editing, formatting, and analysis.
 
-## Selection Types
+Selections can be made using both mouse and keyboard inputs, enabling seamless and efficient data handling across various workflows. The Blazor Spreadsheet component supports multiple selection modes, including single cells, contiguous ranges, and non-contiguous selections, offering flexibility for diverse data manipulation tasks.
 
-The Blazor Spreadsheet provides multiple selection options to manage and analyze data effectively:
+The Blazor Spreadsheet component supports multiple selection methods to facilitate efficient data management and analysis:
 
-* **Cell Selection** - Precise targeting of individual cells or cell ranges for focused data entry and formatting operations. This selection type provides the most granular control over spreadsheet content.
-* **Row Selection** - Facilitates the highlighting of entire rows for operations that affect complete records or data entries. This selection type streamlines working with horizontal data sets.
-* **Column Selection** - Selects the entire columns when operations need to be applied to specific fields or attributes across multiple records. This selection type optimizes vertical data manipulation.
+- **Cell Selection** – Enables selection of a single cell or a range of cells for performing data-related operations.
+- **Row Selection** – Allows selection of entire rows to carry out row-specific tasks.
+- **Column Selection** – Permits selection of entire columns for column-based actions.
 
-### Cell Selection
+**Accessing selection via UI**
+
+In the active sheet, selection can be performed using any of the following ways:
+
+* **Using Mouse Interaction**:
+   * Click to select individual cells.
+   * Click and drag to select ranges.
+   * Click row or column headers for full row or column selection.
+
+* **Using Keyboard Navigation**:
+   * Use **Arrow** keys to navigate and select cells.
+   * Use **Shift + Arrow** keys for range selection.
+   * Use **Ctrl + Click** for non-adjacent selections.
+
+* **Using Name Box**: Enter cell references or range names and press **Enter** key to select the specified range.
+
+## Cell selection
 
 The Blazor Spreadsheet component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and serves as the basis for data entry and formatting.
 
-The component supports four cell selection modes:
+The single cell selection mode enables focus on a specific cell for data entry or formatting tasks. Range selection allows multiple adjacent cells to be selected for batch operations, such as formatting, data entry, or calculations. Multiple range selection supports the selection of non-adjacent cells or ranges, facilitating operations on scattered data within the sheet.
 
-* **Single Cell Selection** - Focuses on an individual cell, establishing a precise target for data entry, formula creation, or formatting operations.
-* **Multiple Cell Selection** - Selection of non-adjacent individual cells for applying identical operations across scattered data points. This selection mode enhances efficiency when working with distributed but related data.
-* **Range Selection** - Selection of contiguous cell blocks, supporting batch operations on adjacent data. This selection mode optimizes workflows involving related data segments.
-* **Multiple Range Selection** - Selection of non-adjacent cell ranges, allowing simultaneous operations on scattered data blocks. This advanced selection mode maximizes efficiency when working with complex data structures.
+- **Single Cell Selection** focuses on a specific cell for targeted operations.
+- **Range Selection** allows selection of multiple adjacent cells for batch operations.
+- **Multiple Range Selection** enables selection of non-adjacent cells or ranges for applying operations across scattered data or non-contiguous data within the sheet.
 
-**Selecting cells via UI**
+N> The **Select All** operation highlights all cells in the active worksheet. To perform this operation, press the keyboard shortcut **Ctrl+A** or click the **Select All** button at the intersection of the row and column headers in the top-left corner of the worksheet.
 
-The Syncfusion Blazor Spreadsheet component provides three primary methods for selecting cells through the user interface:
+**Selecting ranges via UI**
 
-* **Mouse Interactions**: The most intuitive and visual approach to selection, allowing direct clicking, dragging, and multi-selecting with modifier keys. This method provides immediate visual feedback and requires minimal technical knowledge.
-* **Keyboard Shortcuts**: Efficient navigation and selection within spreadsheets, optimizing workflows for keyboard-centric operation. These shortcuts significantly enhance productivity by minimizing hand movement between keyboard and mouse.
-* **Name Box**: Precise targeting of specific cells or ranges by direct reference input. This method excels at navigating to and selecting distant or specifically named areas within large spreadsheets.
+* Select the first cell or range using mouse or keyboard.
+* Hold **Ctrl** and click or drag to select additional cells or ranges.
+* Each selected range is highlighted independently.
+* The **Name Box** displays the first selected cell reference.
 
+![Cell Selection](./images/cell-selection.gif)
 
-| Selection   | Mouse             | Keyboard | Name Box |
-|-------------|-------------------|-------------|-------|
-| Single Cell | Clicking on a cell | Navigating to a cell using **arrow keys**, **Tab**, **Shift + Tab**, **Enter**, **Shift + Enter**  | Entering a cell reference in the Name Box and press Enter |
-| Multiple Cells | Selecting the first cell, then holding **Ctrl** key and click additional cells | - | - |
+## Row selection
 
-![single-cell-selection](./images/singlecell-selection.gif)
+Row selection allows entire rows to be selected for operations such as formatting, insertion, or deletion. This method is useful when working with complete records or structured data entries.
 
+**Selecting rows via UI**
 
-| Selection   | Mouse             | Keyboard | Name Box |
-|-------------|-------------------|-------------|-------|
-| Range | Clicking and dragging across cells . Clicking a starting cell, then holding **Shift** key and clicking an ending cell | Holding Shift and using **Arrow** keys to extend selection from active cell | Entering a cell range in the Name Box and pressing Enter |
-| Multiple Range | Selecting the first range, then holding **Ctrl** key while selecting additional ranges. Each selected range is highlighted independently | - | - |
+Row selection can be performed using the following methods:
 
-![range-cell-selection](./images/rangecell-selection.gif)
+- **Adjacent Rows**: Click the first row header, then drag to the last desired row header.
+- **Adjacent Rows with Keyboard**: Click the first row header, then hold **Shift** and click the last row header.
+- **Non-Adjacent Rows**: Hold **Ctrl** while clicking individual row headers.
+- **Range with Keyboard**: Use **Shift + Arrow** keys after selecting the initial row.
 
-**Selecting cells programmatically**
+![Row Selection](./images/row-selection.gif)
 
-The Syncfusion Blazor Spreadsheet component provides the ability to select cells programmatically using the [SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This method selects a range of cells in the active sheet.
+## Column selection
+
+Column selection enables entire columns to be selected for operations such as formatting, sorting, or applying formulas. This method is essential when working with data fields or attributes.
+
+**Selecting columns via UI**
+
+Column selection can be performed using the following methods:
+
+- **Adjacent Columns**: Click the first column header, then drag to the last desired column header.
+- **Adjacent Columns with Keyboard**: Click the first column header, then hold **Shift** and click the last column header.
+- **Non-Adjacent Columns**: Hold **Ctrl** while clicking individual column headers.
+- **Range with Keyboard**: Use **Shift + Arrow** keys after selecting the initial column.
+
+![Column Selection](./images/column-selection.gif)
+
+## Selection via programmatically
+
+Selection can be performed programmatically through the [SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. Programmatic selection is beneficial for scenarios requiring automated data processing, batch operations, and integration with business logic. The available parameter in the `SelectRangeAsync` method are:
 
 | Parameter   | Type              | Description |
 |-------------|-------------------|-------------|
-| address | string (optional) | Specifies the target range address to select. The address parameter supports both single ranges (e.g., "A1:B5") and multiple non-adjacent ranges separated by spaces (e.g., "A1:A10 B1:B10 C1:C10"). If null or empty string is provided, no cells will be selected. |
-
+| address | string (optional) | Specifies the target range to be selected within the active sheet. This parameter accepts various address formats, including a single cell such as **"A1"**, a contiguous range such as **"A1:B5"**, and multiple non-contiguous ranges separated by spaces, such as **"A1:B5 D1:E5"**. To select an entire row, use a format like **"A1:GR1"**, which selects the first row across the default 200 columns. To select an entire column, use a format like **"A1:A1000"**, which selects Column A across the default 1000 rows. These default limits may vary depending on the `ColumnCount` or `RowCount` settings, or the data present in the Spreadsheet. If the value is null or an empty string, no selection will occur. If an invalid entry is provided, the operation will be ignored without generating an error. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.Blazor.Buttons
 
-<button @onclick="SelectCell">Select Cell</button>
-<button @onclick="SelectRange" >Select Range</button>
-<button @onclick="SelectMultipleRange" >Select Multiple Range</button>
+<SfButton OnClick="SelectRange" Content="Select Range"></SfButton>
 
 <SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
-
     public byte[] DataSourceBytes { get; set; }
-
     public SfSpreadsheet SpreadsheetInstance { get; set; }
 
     protected override void OnInitialized()
     {
         string filePath = "wwwroot/Sample.xlsx";
         DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    public async Task SelectCell()
-    {
-        // Select a single cell "D5" using SelectRangeAsync
-        await SpreadsheetInstance.SelectRangeAsync("D5");
     }
 
     public async Task SelectRange()
     {
-        // Select a contiguous cell range from A1 to C3
+        // Selects a contiguous range of cells from A1 to C3.
         await SpreadsheetInstance.SelectRangeAsync("A1:C3");
-    }
 
-    public async Task SelectMultipleRange()
-    {
-        // Select multiple non-adjacent ranges simultaneously
-        await SpreadsheetInstance.SelectRangeAsync("A1:A10 F1:F10 C1:C10");
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-
-### Row selection
-
-The row selection feature allows entire rows to be selected for operations such as formatting or insertion. This selection type is especially useful when working with complete records or data entries. Rows can be selected individually or as multiple row groups.
-
-**Selecting rows via UI**
-
-The row selection operation can be performed using the following methods:
-
-* **Single row** - Click directly on the row header to select the entire row. The row header and all cells in the row will be highlighted.
-* **Adjacent rows**: Click the first row header, then drag to the last desired row header
-* **Adjacent rows with keyboard**: Click the first row header, then hold **Shift** key and click the last row header
-* **Non-adjacent rows**: Select multiple non-consecutive rows by holding the **Ctrl** key while clicking individual row headers
-* **Range with keyboard**: After selecting an initial row, use **Shift + Up Arrow** or **Shift + Down Arrow** to extend the selection to adjacent rows
-
-**Selecting rows programmatically**
-
-The Syncfusion Blazor Spreadsheet component enables programmatic row selection through the [SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. Programmatic row selection is beneficial for scenarios requiring automated data processing, batch operations, and integration with business logic.
-
-| Parameter   | Type              | Description |
-|-------------|-------------------|-------------|
-| address | string (optional) | The address of the row range to select. For a single row, the range spans from column A to column GR (e.g., "A1:GR1" selects the first row completely). When working with spreadsheets that have custom column requirements, the end column reference can be adjusted accordingly (e.g., "A1:ZZ1" for 702 columns). Multiple non-adjacent rows can be selected by separating each row range with spaces (e.g., "A2:GR2 A5:GR5" selects rows 2 and 5). If null or empty string is provided, no cells will be selected. |
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Spreadsheet
-
-<button @onclick="SelectRow">Select Row</button>
-<button @onclick="SelectMultipleRow" >Select Multiple Row</button>
-
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
-
-@code {
-
-    public byte[] DataSourceBytes { get; set; }
-
-    public SfSpreadsheet SpreadsheetInstance { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    public async Task SelectRow()
-    {
-        // Select the entire first row using SelectRangeAsync
-        // The range "A1:GR1" covers the first row from column A to column GR (maximum column)
+        // Selects the entire first row, spanning Columns A through GR (maximum column supported).
         await SpreadsheetInstance.SelectRangeAsync("A1:GR1");
-    }
 
-    public async Task SelectMultipleRow()
-    {
-        // Select multiple non-adjacent rows (rows 2 and 5)
-        await SpreadsheetInstance.SelectRangeAsync("A2:GR2 A5:GR5");
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![range-cell-selection](./images/row-selection.gif)
-
-### Column selection
-
-The column selection feature allows entire column to be selected for operations such as formatting and sorting. This selection type is essential for working with data fields or attributes. Column can be selected individually or as multiple column groups.
-
-**Selecting columns via UI**
-
-The column selection operation can be performed using the following methods:
-
-* **Single Column** - Click directly on the column header to select the entire column. The column header and all cells in the column will be highlighted.
-* **Adjacent columns**: Clicking the first column header and dragging to the last desired column header.
-* **Adjacent columns with keyboard**: Clicking the first column header, then holding **Shift** and clicking the last column header.
-* **Non-adjacent columns**: Select multiple non-consecutive columns by holding **Ctrl** while clicking individual column headers.
-* **Range with keyboard**: After selecting an initial column, use **Shift + Left Arrow** or **Shift + Right Arrow** to extend the selection to adjacent columns
-
-**Selecting columns programmatically**
-
-The Syncfusion Blazor Spreadsheet component facilitates programmatic column selection through the [SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This functionality enables precise control over column selection operations within applications, supporting data analysis workflows and automated processing tasks.
-
-| Parameter   | Type              | Description |
-|-------------|-------------------|-------------|
-| address | string (optional) | The address of the range to select. For a single column, the range spans from the first row to a designated row number (e.g., "A1:A1000" selects the entire A column to row 1000). Multiple non-adjacent columns can be selected by separating each column range with spaces (e.g., "B1:B1000 D1:D1000" selects columns B and D). The row number should be adjusted based on the dataset size - for larger datasets with 10,000 rows, use "D1:D10000" to ensure the entire column is selected. If null or empty string is provided, no cells will be selected. |
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Spreadsheet
-
-<button @onclick="SelectColumn">Select Column</button>
-<button @onclick="SelectMultipleColumn" >Select Multiple Column</button>
-
-<SfSpreadsheet DataSource="DataSourceBytes" @ref="@SpreadsheetInstance">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
-
-@code {
-
-    public byte[] DataSourceBytes { get; set; }
-
-    public SfSpreadsheet SpreadsheetInstance { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    public async Task SelectColumn()
-    {
-        // Select the entire column A. The range "A1:A1000" covers column A from row 1 to row 1000
+        // Selects the entire Column A, covering rows 1 through 1000.
         await SpreadsheetInstance.SelectRangeAsync("A1:A1000");
     }
-
-    public async Task SelectMultipleColumn()
-    {
-        // Select multiple non-adjacent columns (B and D)
-        // Each range spans from row 1 to row 1000 to ensure complete column selection
-        await SpreadsheetInstance.SelectRangeAsync("B1:B1000 D1:D1000");
-    }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-![range-cell-selection](./images/column-selection.gif)
 
 ## Events
 
-The Syncfusion Blazor Spreadsheet component provides an event to handle selection operations programmatically. This event allows tracking changes in selection and implementing custom logic when cells, rows, or columns are selected.
-
-* **Selected** - The `Selected` event is triggered automatically after a selection operation completes.
-
-### Selected
-
-The `Selected` event occurs after a selection operation is completed in the spreadsheet. This event triggers when cells, rows, or columns are selected through user interface or programmatic selection using the 
-[SelectRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_)
- method. The event handler receives a 
-[SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html)
- object that contains information about the selection.
-
- **Puropse**
- This event serves various functionalities such as tracking selection patterns, implementing validation rules, updating external UI elements with selection data, triggering analysis on selected content, and enabling integration with other systems. By handling these events, applications can create responsive spreadsheet experiences that adapt to selections with appropriate context-sensitive functions and feedback.
-
-**Event Arguments**
-
-The 
-[SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html)
- class provides details about the selection through the following property:
+The Syncfusion Blazor Spreadsheet component includes the [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SpreadsheetEvents.html#Syncfusion_Blazor_Spreadsheet_SpreadsheetEvents_Selected) event, which is triggered automatically after a selection is made—either through user interface(UI) or programmatically via the `SelectRangeAsync` method. This event enables the execution of custom logic when there is a change in the selection of cells, rows, or columns. The associated [SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html) object provides details about the selected range, enabling functionalities such as tracking selection patterns, applying validation rules, updating related UI elements, initiating data analysis, and integrating with external systems.
 
 | Event Arguments | Description |
 |----------------|-------------|
-| Range | Gets the range of cells that have been selected. The format includes the sheet name and the selected range address (e.g., "Sheet1!A1:B5"). For multiple non-contiguous selections, the ranges are separated by spaces. |
+| Range | Gets the range of cells that have been selected. The format of the returned value can vary, including a single cell such as **"SheetName!A1"**, a cell range such as **"SheetName!A1:B10"**, a column selection such as **"SheetName!A1:A1000"**, or multiple column selections such as **"SheetName!A1:A1000 B1:B1000"**. Row selections are represented using formats like for a single row or **"SheetName!A1:GR1 A2:GR2"** for multiple rows. An entire sheet selection is indicated by a format such as **"SheetName!A1:GR1000"**. Mixed selections involving columns, rows, and individual cells are also supported, for example **"SheetName!A1:GP1 D1:D1000 A5:G5"**. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -275,7 +147,7 @@ The
 
 <SfSpreadsheet DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents Selected="AfterSelection" ></SpreadsheetEvents>
+    <SpreadsheetEvents Selected="OnSelected"></SpreadsheetEvents>
 </SfSpreadsheet>
  
 @code {
@@ -287,14 +159,12 @@ The
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    public void AfterSelection(SelectedEventArgs args)
+    public void OnSelected(SelectedEventArgs args)
     {
-        // prints the selected range.
-        Console.WriteLine($"Selected range: {args.Range}");
+        // Prints the selected range.
+        Console.WriteLine($"Selected Range: {args.Range}");
     }
 }
  
 {% endhighlight %}
 {% endtabs %}
-
-N> The Select All operation highlights every cell in the active worksheet. This operation can be performed using the keyboard shortcut **Ctrl + A** or by clicking the Select All button located at the intersection of row and column headers in the top-left corner of the spreadsheet.
