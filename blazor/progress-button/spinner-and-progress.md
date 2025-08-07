@@ -148,15 +148,16 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 
 ### Start and Stop Methods
 
-You can pause and resume the progress using the [Stop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_Stop) and [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_Start_System_Nullable_System_Double__) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
+You can pause and resume the progress using the [StopAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StopAsync) and [StartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StartAsync_System_Double_) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
 
 ```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 
-<SfProgressButton Content="@Content" EnableProgress="true" CssClass="@CssClass" IconCss="@IconCss" OnClick="Click" @ref="ProgressBtn">
+<SfProgressButton Content="@Content" EnableProgress="true" CssClass="@CssClass" IconCss="@IconCss" @ref="ProgressBtn">
     <ProgressButtonEvents OnEnd="End"></ProgressButtonEvents>
 </SfProgressButton>
+<SfButton OnClick="Click">Start And Stop</SfButton>
 
 @code {
     SfProgressButton ProgressBtn;
@@ -175,13 +176,13 @@ You can pause and resume the progress using the [Stop](https://help.syncfusion.c
         {
             Content = "Resume";
             IconCss = "e-icons e-play";
-            await ProgressBtn.Stop();
+            await ProgressBtn.StopAsync();
         }
         else if (this.Content == "Resume")
         {
             Content = "Pause";
             IconCss = "e-icons e-pause";
-            await ProgressBtn.Start();
+            await ProgressBtn.StartAsync();
         }
     }
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Blazor Material Themes? | Syncfusion
+title: Use Blazor Themes - Bootstrap, Fluent, Tailwind, Material | Syncfusion
 description: Check out the documentation for built-in-themes in Blazor and learn here about how to use it in Blazor
 platform: Blazor
 component: Appearance
@@ -1366,7 +1366,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
 
 Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offline scenarios.
 
-1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
    ![Select styles folder](images/crg-styles.png)
 3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
