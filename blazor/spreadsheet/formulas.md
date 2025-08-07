@@ -15,7 +15,7 @@ The Syncfusion Blazor Spreadsheet component offers robust formula support, enabl
 
 The formula bar is a key interface element in the Syncfusion Blazor Spreadsheet component, positioned at the top of the spreadsheet. It serves as a centralized space for viewing, editing, and entering cell content and formulas, promoting efficient data management and accurate formula input.
 
-End users can expand or collapse the formula bar to adjust its height. Expanding it provides additional vertical space, making it easier to read and modify long or complex formulas.
+The formula bar height can be expanded or collapsed as needed. Expanding the formula bar increases its vertical space, facilitating easier reading and editing of lengthy or complex formulas.
 
 Its visibility is controlled by the [`ShowFormulaBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property, which is enabled by default (**true**), ensuring the formula bar appears automatically. If `ShowFormulaBar` is set to **false**, the formula bar is removed from the interface.
 
@@ -96,8 +96,8 @@ The Spreadsheet component supports interactive methods for inserting both indivi
 To insert individual cell references into a formula, begin by typing a function name followed by an opening parenthesis. Then, click directly on a cell in the worksheet to insert its reference. For functions requiring multiple arguments, type a comma after each cell reference, then click another cell to add its reference. This sequence can be repeated as needed. To complete the formula, add a closing parenthesis and press **Enter**.
 
 **Example**:
-Typing **=AVERAGE(** and clicking cells **B2**, **C3**, and **D4** in sequence—while inserting commas between selections—results in the formula:
-**=AVERAGE(B2,C3,D4)**
+Typing **=AVERAGE(** and clicking cells **F3**, **F5**, and **F7** in sequence—while inserting commas between selections—results in the formula:
+**=AVERAGE(F3,F5,F7)**
 
 ![Interactive cell selection](./images/interactive-cellselection.png)
 
@@ -106,8 +106,8 @@ Typing **=AVERAGE(** and clicking cells **B2**, **C3**, and **D4** in sequence�
 To reference a range of adjacent cells, begin by typing a function name followed by an opening parenthesis. Click the starting cell of the range, then hold the **Shift** key and click the ending cell. The component inserts the full range reference into the formula.
 
 **Example**:
-Typing **=AVERAGE(**, clicking cell **A10**, then holding **Shift** and clicking cell **C10** results in the formula:
-**=AVERAGE(A10:C10)**
+Typing **=AVERAGE(**, clicking cell **F3**, then holding **Shift** and clicking cell **F6** results in the formula:
+**=AVERAGE(F3:F6)**
 
 ![Interactive range selection](./images/interactive-rangeselection.png)
 
@@ -201,7 +201,9 @@ This makes the formula easier to read and understand, especially when working wi
 * Click the **Add Range** button to create the named range. The new entry will appear in the **Name Manager** list.
 * Click **OK** to close the dialog and apply the changes.
 
-![Named Range - Ribbon](./images/namedrange-dialog.png)
+![Named Range - Ribbon](./images/namemanager-ribbon.png)
+
+![Named Range - Dialog](./images/namedrange-dialog.png)
 
 ### Editing named range via UI
 
@@ -210,6 +212,8 @@ This makes the formula easier to read and understand, especially when working wi
 * Click the **Edit** icon provided for the selected named range. An editing panel will appear.
 * Update the **Range Name**, **Range Value** or the **Scope** as necessary, following the standard naming and reference rules.
 * Confirm changes by clicking the **Update Range** button, then click the **OK** button to commit the edit. The modifications will become immediately effective throughout all associated formulas.
+
+![Named Range - Dialog Editing](./images/namedrange-dialogedit.png)
 
 ![Named Range - Editing](./images/namedrange-editing.png)
 
