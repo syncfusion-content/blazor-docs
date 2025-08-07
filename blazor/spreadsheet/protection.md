@@ -82,7 +82,9 @@ When a sheet is protected, the following operations are permitted only for unloc
 
 * **Clear actions**: **Clear All** and **Clear Contents** are allowed only for unlocked cells, preserving protected data.
 
-These restrictions ensure that only designated unlocked areas can be modified, providing precise control over editable content in a protected sheet.
+These restrictions ensure that only designated unlocked areas can be modified, providing precise control over editable content in a protected sheet. If clipboard actions, autofill actions, cell editing, or formula bar editing are attempted on locked cells, a warning popup appears to indicate the action is restricted.
+
+![Protect Sheet Warning- Protected Sheet UI](./images/protect-sheet-warning.png)
 
 ### Protection settings in a protected sheet
 
@@ -98,22 +100,59 @@ To enable specific functionalities while the sheet is protected:
 
 * Click **OK** to apply the protection settings.
 
+![Protection Settings Dialog](./images/sheet-options.png)
+
 The available protection settings include:
 
-| Options | Description |
-|------------------------|---------|
-| Select Locked Cells | Permits selection of locked cells in the protected sheet. This option cannot be enabled alone. Enabling it automatically enables the option to select unlocked cells. |
-| Select UnLocked Cells | Permits selection of unlocked cells in the protected sheet. |
-| Format Cells | Permits formatting of cells, such as changing fonts or colors. |
-| Format Rows | Permits formatting of rows, such as adjusting row height. |
-| Format Columns | Permits formatting of columns, such as adjusting column width. |
-| Insert Columns | Permits inserting new columns in the protected sheet. |
-| Insert Rows | Permits inserting new rows in the protected sheet. |
-| Insert Hyperlinks | Permits adding hyperlinks to unlocked cells in the protected sheet. |
-| Sort | Permits sorting data in unlocked ranges within the protected sheet. |
-| Filter | Permits applying filters to data in unlocked ranges within the protected sheet. |
+* **Select Locked Cells**: Allows clicking on locked cells. This option cannot be turned on alone. Enabling it automatically turns on the **Select Unlocked Cells** option
 
-![Protection Settings Dialog](./images/sheet-options.png)
+* **Select Unlocked Cells**: Allows selection of unlocked cells in the protected sheet, enabling focus only on editable areas.
+
+* **Format Cells**: Allows changing fonts, colors, or styles. When this option enabled, the **Home** tab in the **Ribbon** displays options like Bold, Italic, Font Size, and Fill Color for both locked and unlocked cells. Additionally, the **Clear Formats** option enables in the **Ribbon** for unlocked cells only.
+
+![Format Cells - Protected Sheet UI](./images/format-cells.png)
+
+* **Format Rows**: Allows formatting of rows, such as adjusting row height. When this option is enabled, the row resize cursor becomes active for both locked and unlocked cells.
+
+![Format Rows - Protected Sheet UI](./images/format-rows.png)
+
+* **Format Columns**: Allows formatting of columns, such as adjusting column width. When this option is enabled, the column resize cursor becomes active for both locked and unlocked cells.
+
+![Format Columns - Protected Sheet UI](./images/format-columns.png)
+
+* **Insert Columns**: Allows adding new columns in the protected sheet. When this option is enabled, right-clicking a single column header or a range of selected column headers displays the **Insert Column** option in the context menu. This applies to both locked and unlocked cells.
+
+![Insert Columns - Protected Sheet UI](./images/insert-columns.png)
+
+* **Insert Rows**: Allows adding new rows in the protected sheet. When this option is enabled,  right-clicking a single row header or a range of selected row headers displays the **Insert Row** option in the context menu. This applies to both locked and unlocked cells.
+
+![Insert Rows - Protected Sheet UI](./images/insert-rows.png)
+
+* **Insert Hyperlinks**:  Allows adding hyperlinks to unlocked cells in the protected sheet. When this option is enabled, the **Insert** tab in the **Ribbon** displays the **Link** option, and the **Hyperlink** option becomes available in the context menu. Additionally, the **Clear Hyperlink** option appears in the Ribbon for unlocked cells only.
+
+![Insert Hyperlink - Protected Sheet UI](./images/insert-hyperlink.png)
+
+For locked cells, the **Link** and **Hyperlink** options in the Ribbon and context menu are disabled, preventing hyperlink addition.
+
+![Insert Hyperlink Disabled- Protected Sheet UI](./images/insert-hyperlink-disabled.png)
+
+* **Sort**: Allows sorting data in unlocked ranges within the protected sheet. When this option is enabled, the **Home** tab in the **Ribbon** displays the **Sort** option, and the **Sort** option also appears in the context menu.
+
+![Sort Contextmenu- Protected Sheet UI](./images/sort-contextmenu.png)
+![Sort Ribbon- Protected Sheet UI](./images/sort-ribbon.png)
+
+For locked cells, a warning popup appears if sorting is attempted, indicating the action is not allowed.
+
+![Protect Sheet Warning- Protected Sheet UI](./images/protect-sheet-warning.png)
+
+* **Filter**: Allows applying filters to data in unlocked ranges within the protected sheet. When this option is enabled, the **Home** tab in the **Ribbon** displays the **Filter** option, and the **Filter** option also appears in the context menu.
+
+![Filter Contextmenu- Protected Sheet UI](./images/filter-contextmenu.png)
+![Filter Ribbon- Protected Sheet UI](./images/filter-ribbon.png)
+
+For locked cells, a warning popup appears if filtering is attempted, indicating the action is not allowed.
+
+![Protect Sheet Warning- Protected Sheet UI](./images/protect-sheet-warning.png)
 
 ## Unprotect Sheet
 
@@ -133,7 +172,10 @@ If a password was set during protection, the correct password must be entered to
 
 ## Protect Workbook
 
-The **Protect Workbook** support prevents structural modifications within a workbook, such as inserting, deleting, renaming, duplicating, hiding, moving, or copying sheets. Protection can be applied with or without a password, depending on the required security level.
+The **Protect Workbook** support prevents structural modifications within a workbook, such as inserting, deleting, renaming, duplicating, hiding, moving, or copying sheets. Protection can be applied with or without a password, depending on the required security level. 
+When the workbook is protected, context menu options in the sheet tab related to structural changes are disabled to prevent modifications.
+
+![Protected Workbook Contextmenu](./images/protect-workbook-contextmenu.png)
 
 ### Protecting workbooks via UI
 
