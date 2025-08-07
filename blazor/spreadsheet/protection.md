@@ -49,7 +49,7 @@ To edit existing unlocked ranges:
 
 * In the **Protect Sheet** dialog, under the **Unlock Range** tab, view the unlocked ranges list, which shows all ranges currently set as editable in the protected sheet.
 
-* Hover over a range to reveal the **edit** icon.
+* Position the cursor over a range to reveal the **edit** icon.
 
 * Click the **edit** icon, modify the range name or cells (e.g., change "A1:A10" to "A1:A100").
 
@@ -59,7 +59,7 @@ To edit existing unlocked ranges:
 
 To delete an existing unlocked range:
 
-* In the unlocked ranges list, hover over the range to reveal the **delete** icon.
+* In the unlocked ranges list, position the cursor over the range to reveal the **delete** icon.
 
 * Click the **delete** icon to remove the range. Once removed, the range becomes protected and cannot be edited, aligning with the sheet’s protection restrictions.
 
