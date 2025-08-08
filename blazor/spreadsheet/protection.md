@@ -160,7 +160,7 @@ The available protection settings in Spreadsheet component include:
 
 ![Insert Hyperlink Disabled- Protected Sheet UI](./images/insert-hyperlink-disabled.png)
 
-* **Sort**: Allows sorting data in unlocked ranges within the protected sheet. When this option is enabled, the **Home** tab in the **Ribbon** displays the **Sort** option, and the **Sort** option also appears in the context menu.
+- **Sort**: Allows sorting data in unlocked ranges within the protected sheet. When this option is enabled, the **Home** tab in the **Ribbon** displays the **Sort** option, and the **Sort** option also appears in the context menu.
 
 ![Sort Context Menu- Protected Sheet UI](./images/sort-contextmenu.png)
 ![Sort Ribbon- Protected Sheet UI](./images/sort-ribbon.png)
