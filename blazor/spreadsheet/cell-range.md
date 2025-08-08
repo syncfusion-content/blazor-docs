@@ -109,6 +109,118 @@ Autofill can be performed programmatically using the `AutofillAsync` method, whi
 {% endhighlight %}
 {% endtabs %}
 
+## Events
+
+The Blazor Spreadsheet provides events that are triggered during autofill operations, such as [AutofillActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) and [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html). These events enable the execution of custom actions before and after an autofill operation, allowing for validation, customization, and response handling.
+
+**AutofillActionBegin** - The `AutofillActionBegin` event is triggered prior to the execution of an autofill operation. It offers an opportunity to validate the autofill operation and apply custom restrictions before it is executed, enabling control over when the operation should proceed.
+
+**AutofillActionEnd** - The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. It provides detailed information about the completed autofill action, enabling further processing or logging if required.
+
+### AutofillActionBegin
+
+The `AutofillActionBegin` event is triggered before an autofill operation is performed. This event provides an opportunity to validate the autofill operation and apply restrictions based on custom logic, such as preventing the operation under specific conditions.
+
+**Purpose**
+
+This event is useful for scenarios where autofill behavior needs to be controlled dynamically—such as restricting autofill in specific ranges or preventing autofill based on certain conditions.
+
+**Event Arguments**
+
+The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| FillRange | Specifies the address of the target range where the autofill operation will be applied (e.g., "Sheet1!A2:A5"). **Note**: This property is read-only. |
+| DataRange | Represents the source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). **Note**: This property is read-only. |
+| Direction | Indicates the direction of the autofill operation (e.g., "Down", "Right", "Up", "Left"), reflecting the drag direction of the fill handle. **Note**: This property is read-only. |
+| Cancel | Indicates whether the autofill operation should be aborted. Setting this property to **true** prevents the autofill from proceeding, allowing for conditional validation or restriction logic. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents AutofillActionBegin="OnAutofillActionBegin" ></SpreadsheetEvents>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnAutofillActionBegin(AutofillActionBeginEventArgs args)
+    {
+        // Prevent autofill for a specific range.
+        if (args.FillRange == "A1:A10")
+        {
+            args.Cancel = true;
+        }
+
+        // Prevent autofill when dragging upward.
+        if (args.Direction == "Up")
+        {
+            args.Cancel = true;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**AutofillActionEnd**
+
+The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. This event provides detailed information about the completed autofill action, enabling further processing or logging if required.
+
+**Purpose**
+
+This event is useful for scenarios where post-autofill actions are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
+
+**Event Arguments**
+
+The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) class, which includes properties detailing the completed autofill operation, such as the filled range and the source data used.
+
+| Event Arguments | Description |
+|----------------|-------------|
+| FillRange | Specifies the address of the target range where the autofill operation will be applied (e.g., "Sheet1!A2:A5"). **Note**: This property is read-only. |
+| DataRange | Represents the source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). **Note**: This property is read-only. |
+| Direction | Indicates the direction of the autofill operation (e.g., "Down", "Right", "Up", "Left"), reflecting the drag direction of the fill handle. **Note**: This property is read-only. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+    <SpreadsheetEvents AutofillActionEnd="OnAutofillActionEnd" ></SpreadsheetEvents>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnAutofillActionEnd(AutofillActionEndEventArgs args)
+    {
+        // Log or process the completed autofill operation.
+        Console.WriteLine($"Autofill completed for range: {args.FillRange}");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Clear
 
 The Spreadsheet component offers precise control over the removal of cell contents, formats, and hyperlinks. It provides four distinct clear options, each targeting specific elements within the selected cells or range:
