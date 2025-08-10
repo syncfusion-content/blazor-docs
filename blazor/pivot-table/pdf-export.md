@@ -111,6 +111,12 @@ N> This support is applicable only when the virtual scrolling is enabled.
 }
 ```
 
+Additionally, we recommend configuring the maximum incoming SignalR message size in your **Program.cs** file, as shown in the code snippet below. This configuration helps ensure smooth handling of large data operations, especially when exporting data from the Pivot Table component
+
+```csharp
+builder.Services.AddServerSideBlazor().AddHubOptions(options => { options.MaximumReceiveMessageSize = 1024 * 128; });
+```
+
 ## To add header and footer while exporting
 
 You can customize text, page number, line, page size and changing orientation in header and footer of the exported document.
