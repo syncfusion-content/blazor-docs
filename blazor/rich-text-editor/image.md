@@ -145,6 +145,60 @@ After selecting the image from the local machine, the URL for the image will be 
 
 ![Removing Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-remove-image.png)
 
+## Deleting Images from Server Using Keyboard and Quick Toolbar Actions
+
+In the Rich Text Editor, deleting images using the `Delete` or `Backspace` keys, or the Quick Toolbar's `Remove` button, removes the image from the editor content not from the server.
+
+This behavior is intentional, allowing undo/redo operations to function properly without breaking references to previously uploaded images.
+
+To explicitly remove images from the server, use the `ImageDelete` event. This event is triggered after an image is removed from the content and provides the src URL of the image, which can be used to initiate a request to your server for deleting the corresponding file.
+
+The following sample demonstrates how to use the ImageDelete event in Rich Text Editor to delete images from the server after they are removed from the editor content:
+
+`Index.razor`
+
+```cshtml
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+   <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
+   <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path" RemoveUrl="@RemoveURL"/>
+</SfRichTextEditor>
+@code{
+    private string SaveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/SaveFile";
+    private string Path = "[SERVICE_HOSTED_PATH]/RichTextEditor/";
+    private string RemoveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/DeleteFile";
+
+    public async Task OnImageDeleteHandler(AfterImageDeleteEventArgs args)
+    {
+        var imageSrc = args.Src;
+        var fileName = imageSrc.Split('/').Last();
+        var content = new MultipartFormDataContent();
+        var dummyFile = new ByteArrayContent(new byte[0]);
+        content.Add(dummyFile, "UploadFiles", fileName);
+        try
+        {
+            var response = await Http.PostAsync(RemoveURL, content);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Image deleted successfully: {fileName}");
+            }
+            else
+            {
+                Console.WriteLine($"Image deletion failed: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting image: {ex.Message}");
+        }
+    }
+
+}
+
+```
+
 ## Insert from web
 
 To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows to insert an image from online source.
