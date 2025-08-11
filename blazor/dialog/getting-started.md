@@ -224,7 +224,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfD
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog with Buttons](./images/blazor-dialog-content.png)
+![Blazor Dialog with Content](./images/blazor-dialog-content.png)
 
 ## See also
 

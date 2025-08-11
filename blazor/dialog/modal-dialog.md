@@ -7,6 +7,8 @@ control: Dialog
 documentation: ug
 ---
 
+# Modal Dialog
+
 Enabling the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_IsModal) property shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
 
 ```cshtml
@@ -58,4 +60,4 @@ While the user clicks the overlay, the action can be handled through the `OnOver
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeDFCMTCuSnnRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Header](./images/blazor-dialog-modal-closes.gif)
+![Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)
