@@ -230,9 +230,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhTjVLBVzsCojDt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog](./images/blazor-dialog.png)
 
-N> * Setting the Target property shows the dialog inside a specific container. If you don’t set Target, the dialog will considered the **document.body** as a target.
+N> * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
 
-N> * The MinHeight property in the Blazor Dialog component sets the minimum height of the dialog. It ensures that the dialog will not shrink below the specified height, even if the content inside is smaller. This helps maintain a consistent and usable appearance for the dialog in all scenarios.
+N> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, you can set the CSS style for the html and body to get the dialog height.
 
 {% tabs %}
 {% highlight cs %}
@@ -264,30 +264,14 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 
 ## Set Header to Dialog
 
-The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
+The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
 
 {% tabs %}
 {% highlight cshtml %}
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
-
-<SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
-    <DialogTemplates>
-        <Header> Dialog </Header>
-        <Content> This is a dialog with header </Content>
-    </DialogTemplates>
-</SfDialog>
-
-@code {
-    private bool IsVisible { get; set; } = true;
-
-    private void OpenDialog()
-    {
-        this.IsVisible = true;
-    }
-}
+<SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
 {% endhighlight %}
 {% endtabs %}
@@ -297,7 +281,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 
 ## Set Content to Dialog 
 
-By adding the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property, you can render a dialog with custom text content.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
 
 {% tabs %}
 {% highlight cshtml %}
