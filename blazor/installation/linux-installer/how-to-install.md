@@ -39,6 +39,6 @@ After the installation, the license key is required to register the demo source 
 You can also find the steps for getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Linux,
 
 * Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Linux.
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Linux.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac) using Visual Studio for Linux.
 
-N> License key registeration is required only for trial linux builds. For licensed Linux builds, there is no need to register a license key.
+N> License key registration is required only for trial linux builds. For licensed Linux builds, there is no need to register a license key.
