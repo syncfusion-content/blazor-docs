@@ -174,7 +174,7 @@ html, body {
 {% endhighlight %}
 {% endtabs %}
 
-## Prerender the Blazor dialog
+## Prerender the Dialog
 
 The dialog component is maintained in the DOM after hiding the dialog when the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`.
 
@@ -184,8 +184,6 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 {% tabs %}
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.Buttons
-
 {% include_relative code-snippet/prerender-blazor-dialog.razor %}
 
 {% endhighlight %}
@@ -194,70 +192,16 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVfjCBaAUCATHQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
 
-## Modal Blazor dialog
+## Set Header to Dialog
 
-A `modal` shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
-
-While the user clicks the overlay, the action can be handled through the [OnOverlayClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayClick) event. In the following code, it explains the Dialog close action performed while clicking the overlay.
+The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
 
 {% tabs %}
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
-<SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
-
-<SfDialog Width="250px" IsModal="true" @bind-Visible="@IsVisible">
-    <DialogEvents OnOverlayModalClick="@OnOverlayclick">
-    </DialogEvents>
-    <DialogTemplates>
-        <Content> This is a modal dialog </Content>
-    </DialogTemplates>
-</SfDialog>
-
-@code {
-    private bool IsVisible { get; set; } = true;
-
-    private void OpenDialog()
-    {
-        this.IsVisible = true;
-    }
-
-    private void OnOverlayclick(OverlayModalClickEventArgs arg)
-    {
-        this.IsVisible = false;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable header
-
-The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
-
-{% tabs %}
-{% highlight cshtml %}
-
-@using Syncfusion.Blazor.Buttons
-
-<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
-
-<SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
-    <DialogTemplates>
-        <Header> Dialog </Header>
-        <Content> This is a dialog with header </Content>
-    </DialogTemplates>
-</SfDialog>
-
-@code {
-    private bool IsVisible { get; set; } = true;
-
-    private void OpenDialog()
-    {
-        this.IsVisible = true;
-    }
-}
+<SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
 {% endhighlight %}
 {% endtabs %}
@@ -265,63 +209,22 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJZWrYAArBuqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
-## Render Blazor Dialog with buttons
+## Set Content to Dialog 
 
-By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) can render a Dialog with buttons in Razor page.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
 
 {% tabs %}
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
 
-<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
-
-<SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
-    <DialogTemplates>
-        <Header> Dialog </Header>
-        <Content> This is a Dialog with button and primary button </Content>
-    </DialogTemplates>
-    <DialogButtons>
-        <DialogButton Content="OK" IsPrimary="true" OnClick="@OkClick" />
-        <DialogButton Content="Cancel" OnClick="@CancelClick" />
-    </DialogButtons>
-    <span id="message">@ClickStatus</span>
-</SfDialog>
-
-@code {
-    private bool IsVisible { get; set; } = true;
-
-    private string ClickStatus { get; set; }
-
-    private void OpenDialog()
-    {
-        this.IsVisible = true;
-        this.ClickStatus = "";
-    }
-
-    private void CancelClick()
-    {
-        this.ClickStatus = "you have clicked Cancel";
-        this.IsVisible = false;
-    }
-    private void OkClick()
-    {
-        this.ClickStatus = "you have clicked Ok";
-        this.IsVisible = true;
-    }
-}
-<style>
-    #message {
-        color: blue;
-    }
-</style>
+<SfDialog Width="250px" Content="This is a dialog with Content property."></SfDialog>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjWVkggLndKKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Dialog with Content](./images/blazor-dialog-content.png)
 
 ## See also
 
