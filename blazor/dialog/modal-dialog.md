@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Modal Dialog
+# Modal in Blazor Dialog Component
 
 Enabling the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_IsModal) property shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
 

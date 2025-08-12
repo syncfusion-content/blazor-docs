@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor Dialog Component
 
-In [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.
+In [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), the template support is provided to the header, content and footer sections. So any text or HTML content can be appended in these sections.
 
 To get started quickly with templates in Blazor Dialog Component, you can check the video below.
 
@@ -19,13 +19,17 @@ To get started quickly with templates in Blazor Dialog Component, you can check 
 
 The Dialog header content can be provided through the `Header` property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the `ShowCloseIcon` property.
 
+## Content
+
+The Dialog content can be provided through the `Content` property, and it will allow both text and any HTML content as a string.
+
 ## Footer
 
 The Dialog footer can be enabled by adding built-in `DialogButton` or providing any HTML string through the `FooterTemplate`.
 
 N> The `DialogButton` and `FooterTemplate` properties can't be used at the same time.
 
-The following example demonstrates the usage of header and footer template in the Dialog.
+The following example demonstrates the usage of header, content and footer template in the Dialog.
 
 ```cshtml
 
@@ -225,7 +229,7 @@ The following example demonstrates the usage of header and footer template in th
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXheXvMrAnOYVzla?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
 ![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
 

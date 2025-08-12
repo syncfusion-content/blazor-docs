@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Visibility
+# Visibility in Blazor Dialog Component
 
 The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property controls whether the dialog is shown or hidden on the page. Setting it to true displays the dialog, while setting it to false hides the dialog from view.
 
