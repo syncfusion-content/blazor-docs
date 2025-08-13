@@ -12,7 +12,6 @@ documentation: ug
 A modal dialog prevents users from interacting with the rest of the application until the dialog is closed. The [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_IsModal) property enables modal behavior by displaying an overlay behind the Dialog, ensuring users must complete their interaction with the Dialog before accessing other application content.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -28,7 +27,6 @@ A modal dialog prevents users from interacting with the rest of the application 
         this.IsVisible = true;
     }
 }
-
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZheNlMgpKvYKqGE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -36,11 +34,11 @@ A modal dialog prevents users from interacting with the rest of the application 
 
 ## Handling Overlay Click Events
 
-The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayModalClick) event triggers when users click on the dialog's overlay area. This event enables custom functionality such as closing the dialog when users click outside the dialog content or implementing validation before allowing the dialog to close.
+The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayModalClick) event triggers when users click on the dialog's overlay area. This event provides access to the [OverlayModalClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.OverlayModalClickEventArgs.html) object, enabling custom functionality such as closing the dialog when users click outside the dialog content or implementing validation before allowing the dialog to close.
 
 ### Close Dialog When Clicking Outside of Its Region
 
-The following example demonstrates how to close a modal dialog when the user clicks on the overlay area outside the dialog content. This provides an intuitive way for users to dismiss the dialog.
+The following example demonstrates how to close a modal dialog when the user clicks on the overlay area outside the dialog content. This provides an intuitive way for users to dismiss the dialog without requiring explicit close button interaction.
 
 {% tabs %}
 {% highlight cshtml %}

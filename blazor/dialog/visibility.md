@@ -11,11 +11,11 @@ documentation: ug
 
 The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property controls whether the dialog is shown or hidden on the page. Setting it to true displays the dialog, while setting it to false hides the dialog from view.
 
-## Visible
+## Visible Property Binding
 
 ### One-Way Binding
 
-One-way binding of the Visible property assigns a fixed value, so the dialog’s visibility cannot change at runtime.
+One-way binding sets a fixed visibility state for the dialog. This approach is useful when the dialog's visibility should remain constant throughout the component lifecycle or be controlled entirely by the parent component.
 
 ```cshtml
 
@@ -27,7 +27,7 @@ One-way binding of the Visible property assigns a fixed value, so the dialog’s
 
 ### Two-Way Binding
 
-Two-way binding of the Visible property uses the @bind-Visible syntax, allowing the dialog’s visibility to be updated both from code and user actions. When the value changes, the UI and the underlying variable stay in sync.
+Two-way binding using the @bind-Visible syntax enables dynamic visibility control, allowing the dialog's state to be updated both programmatically and through user interactions. This approach automatically synchronizes the dialog's visibility with the bound variable, making it ideal for interactive scenarios where the dialog needs to respond to various user actions.
 
 ```cshtml
 
@@ -42,7 +42,7 @@ Two-way binding of the Visible property uses the @bind-Visible syntax, allowing 
 </SfDialog>
 
 @code {
-    private bool IsVisible { get; set; } = true;
+    private bool IsVisible { get; set; } = false;
 
     private void OpenDialog()
     {
@@ -57,7 +57,7 @@ Two-way binding of the Visible property uses the @bind-Visible syntax, allowing 
 
 ## ShowAsync Method
 
-The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method is used to programmatically open the dialog. Calling this method displays the dialog regardless of the Visible property or current state.
+The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method provides programmatic control to display the dialog asynchronously. This method is particularly useful for scenarios requiring conditional logic or validation before showing the dialog, and it works independently of the Visible property state.
 
 ```cshtml
 
@@ -81,7 +81,7 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 ## HideAsync Method
 
-The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_HideAsync) method is used to programmatically close the dialog. Calling this method will hide the dialog, regardless of its current visibility state.
+The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_HideAsync) method programmatically closes the dialog asynchronously. This method is ideal for implementing custom close logic, validation scenarios, or closing the dialog based on specific user interactions or business rules.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
 
 <SfDialog @ref="@DialogObj" Width="250px" IsModal="true" Content="This is a modal dialog">
-    <DialogEvents OnOverlayModalClick="@OnOverlayclick"></DialogEvents>
+    <DialogEvents OnOverlayModalClick="@OnOverlayClick"></DialogEvents>
 </SfDialog>
 
 @code {
@@ -101,7 +101,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
         await DialogObj.ShowAsync();
     }
 
-    private async void OnOverlayclick(OverlayModalClickEventArgs arg)
+    private async void OnOverlayClick(OverlayModalClickEventArgs args)
     {
         await DialogObj.HideAsync();
     }
@@ -111,33 +111,46 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 ## CloseOnEscape Action
 
-The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CloseOnEscape) property determines whether the dialog will close when the Escape key is pressed. Setting this property to true enables closing the dialog with the Escape key; setting it to false disables this behavior.
+The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CloseOnEscape) property enables or disables closing the dialog when the Escape key is pressed. This feature enhances user experience by providing a standard keyboard shortcut for dismissing dialogs, particularly useful for accessibility and power users.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 
-<SfDialog Width="250px" CloseOnEscape="true" Content="Click on ESC key"></SfDialog>
+<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
+<SfDialog @ref="@DialogObj" Width="250px" CloseOnEscape="true" Content="Press ESC key to close this dialog" ShowCloseIcon="true">
+</SfDialog>
+
+@code {
+    private SfDialog DialogObj { get; set; }
+    
+    private async void OpenDialog()
+    {
+        await DialogObj.ShowAsync();
+    }
+}
 ```
 
-## Related Events
+## Visibility Events
+
+Dialog visibility events provide hooks for executing custom logic during different phases of the dialog's show/hide lifecycle. These events are essential for implementing validation, animations, data loading, or cleanup operations.
 
 ### OnOpen
 
-The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event triggers when the dialog is being opened.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event fires before the dialog begins to open, allowing for validation or data preparation.
 
 ### Opened
 
-The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event triggers when a dialog is opened.
+The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event fires after the dialog has completely opened and is visible to the user.
 
 ### OnClose
 
-The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnClose) event triggers before the dialog is closed.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnClose) event fires before the dialog begins to close, enabling validation or confirmation prompts.
 
 ### Closed
 
-The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event triggers after the dialog has been closed.
+The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event fires after the dialog has completely closed and is no longer visible.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -161,7 +174,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 </SfDialog>
 
 @code {
-    private bool IsVisible { get; set; } = true;
+    private bool IsVisible { get; set; } = false;
     private List<string> EventList = new List<string>();
     private void OpenDialog()
     {
@@ -194,3 +207,5 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjreDlMsTcRmpfKb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 ![Blazor Dialog with Header](./images/blazor-dialog-visible-events.gif)
+
+N> Use property binding for simple visibility control and programmatic methods (ShowAsync/HideAsync) when you need to implement complex logic, validation, or asynchronous operations before showing or hiding the dialog.

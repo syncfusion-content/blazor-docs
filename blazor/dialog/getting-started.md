@@ -174,12 +174,34 @@ html, body {
 {% endhighlight %}
 {% endtabs %}
 
-## Created & Destroyed Events
+## Created and Destroyed Events
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Created) event fires when the dialog is initialized and rendered in the DOM. The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
+- The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Created) event fires when the dialog is initialized and rendered in the DOM.
+
+- The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
 
 {% tabs %}
 {% highlight cshtml %}
+
+@using Syncfusion.Blazor.Popups
+
+<SfDialog Width="250px" Header="Dialog Header" Content="Dialog Created & Destroyed">
+    <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
+</SfDialog>
+
+@code{
+    private void CreatedHandler()
+    {
+        // Here, you can customize your code.
+    }
+    private void DestroyedHandler()
+    {
+        // Here, you can customize your code.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -217,7 +239,6 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVfjCBaAUCATHQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
 
 ## Set Header to Dialog
 
