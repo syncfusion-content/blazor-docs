@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable State Persistence in Blazor Dialog Component
-description: Checkout and learn here all about state persistence in Syncfusion Blazor Dialog component and more.
+title: State Persistence in Syncfusion Blazor Dialog Component
+description: Checkout and learn here all about state persistence in Syncfusion Blazor Dialog component
 platform: Blazor
 control: Dialog
 documentation: ug

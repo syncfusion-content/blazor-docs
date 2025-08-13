@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Dialog Buttons
+# Dialog Buttons in Blazor Dialog Component
 
 The Syncfusion Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Inside this element, each button is defined using the [DialogButton Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html). These buttons can be fully customized with various properties, including:
 
@@ -80,7 +80,7 @@ The following example demonstrates how to define basic action buttons in the Bla
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrejPMsqToGRKoa?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 ![Blazor Dialog buttons](./images/blazor-dialog-buttons.gif)
 
-# Add Icons to Dialog Buttons in Blazor Dialog Component
+## Add Icons to Dialog Buttons in Blazor Dialog Component
 
 You can enhance the appearance of dialog footer buttons by adding icons using either the [DialogButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html) element or the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property.
 

@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-## Dialog Customization
+# Dialog Customization
 
 The Syncfusion Blazor Dialog component allows extensive customization options to enhance its appearance and behavior. You can modify its dimensions, support RTL layouts, apply custom styles, and animate its display.
 
