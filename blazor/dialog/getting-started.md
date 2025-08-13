@@ -203,26 +203,6 @@ html, body {
 {% endhighlight %}
 {% endtabs %}
 
-@using Syncfusion.Blazor.Popups
-
-<SfDialog Width="250px" Header="Dialog Header" Content="Dialog Created & Destroyed">
-    <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
-</SfDialog>
-
-@code{
-    private void CreatedHandler()
-    {
-        // Here, you can customize your code.
-    }
-    private void DestroyedHandler()
-    {
-        // Here, you can customize your code.
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Prerender the Dialog
 
 The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property controls how the dialog DOM elements are handled when the dialog is hidden. Understanding this property is crucial for optimizing performance in your application.
