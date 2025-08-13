@@ -9,9 +9,13 @@ documentation: ug
 
 # Draggable in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) allows users to drag and reposition the dialog within its target container by grabbing the dialog header, enabling dynamic placement and improved user interaction.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component supports draggable functionality, allowing users to reposition dialogs within their target container by clicking and dragging the dialog header. This feature enhances user experience by providing flexible dialog placement, particularly useful in applications with multiple dialogs or when users need to access content beneath the dialog while keeping it visible.
 
-To enable dragging, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to true on the Blazor Dialog component.
+The dragging operation is constrained to the boundaries of the target container, ensuring the dialog remains within the designated area and maintains proper visual hierarchy.
+
+## Enable Draggable Functionality
+
+To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
 
 To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
 
@@ -61,26 +65,25 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLeNliWgrBWrzOU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
-![Draggable in Blazor Dialog](./images/blazor-dialog-draggable.gif)
+![Blazor Dialog component with draggable functionality enabled](./images/blazor-dialog-draggable.gif)
 
->**Note:** Draggable functionality is supported in both standard dialog and modal dialog.
+>**Note:** Draggable functionality is supported in both standard dialog and modal dialog configurations. The drag operation is limited to the dialog header area only.
 
-# Draggable Events in Blazor Dialog Component
+## Draggable Events in Blazor Dialog Component
 
-The Dialog component provides three key events to track and respond to drag actions:
+The Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
 
-## OnDragStart
+### OnDragStart Event
 
-[`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStartEventArgs.html) event triggers when the user begins dragging the dialog.
+The [`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStartEventArgs.html) event fires when the user initiates dragging by clicking and holding the dialog header. This event is ideal for performing initial setup, validation, or preparing the application state for the drag operation.
 
-## OnDrag
+### OnDrag Event
 
-[`OnDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragEventArgs.html) event is continuously triggered while the user is actively dragging the dialog, from the moment the drag starts until it stops.
+The [`OnDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragEventArgs.html) event triggers continuously throughout the drag operation, providing real-time updates as the user moves the dialog. This event is useful for implementing dynamic feedback, position tracking, or live validation of the dialog's new position.
 
-## OnDragStop
+### OnDragStop Event
 
-[`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStopEventArgs.html) event triggers when the user stop dragging the dialog.
-
+The [`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStopEventArgs.html) event fires when the user releases the dialog and completes the drag operation. This event is perfect for finalizing position changes, saving state, or performing cleanup operations.
 
 ```cshtml
 
@@ -158,6 +161,10 @@ The Dialog component provides three key events to track and respond to drag acti
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBojPWiULceHziy?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
-![Drggable Events in Blazor Dialog](./images/blazor-draggable-events.gif)
+![Blazor Dialog component demonstrating drag events with real-time status updates](./images/blazor-draggable-events.gif)
 
+## Important Considerations
 
+**Container Constraints:** The dialog movement is restricted to the boundaries of its target container. Ensure the target container has sufficient dimensions to accommodate dialog repositioning.
+
+**Touch Support:** Draggable functionality is fully supported on touch devices, allowing users to drag dialogs using touch gestures.
