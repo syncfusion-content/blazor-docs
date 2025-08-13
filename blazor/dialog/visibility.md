@@ -149,7 +149,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 <span>Visible state: @IsVisible</span>
 
-<div style="display: grid;">
+<div style="display: grid; float: right;">
     @foreach (string evt in EventList)
     {
         <span>@evt "Event Triggered"</span>

@@ -244,12 +244,39 @@ html, body {
 {% endhighlight %}
 {% endtabs %}
 
+## Created & Destroyed Events
+
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Created) event fires when the dialog is initialized and rendered in the DOM. The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.Popups
+
+<SfDialog Width="250px" Header="Dialog Header" Content="Dialog Created & Destroyed">
+    <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
+</SfDialog>
+
+@code{
+    private void CreatedHandler()
+    {
+        // Here, you can customize your code.
+    }
+    private void DestroyedHandler()
+    {
+        // Here, you can customize your code.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Prerender the Dialog
 
-The dialog component is maintained in the DOM after hiding the dialog when the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`.
+The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property controls how the dialog DOM elements are handled when the dialog is hidden. Understanding this property is crucial for optimizing performance in your application.
 
-* By default, the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) is set to `false` where the dialog DOM elements are destroyed while hiding the dialog and each time the dialog will be re-rendered when showing the dialog. The [@bind-Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property of dialog also works based on the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property.
-* If the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`, the dialog elements are maintained in the DOM when hiding the dialog.
+* By default, AllowPrerender is set to false. In this mode, dialog DOM elements are completely removed from the DOM when the dialog is hidden, and recreated each time the dialog is shown. This approach saves memory but requires re-rendering on each display.
+* When AllowPrerender is set to true, the dialog elements remain in the DOM even when hidden, which improves performance for frequently accessed dialogs but uses more memory.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -269,7 +296,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 {% tabs %}
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
