@@ -682,7 +682,7 @@ The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich
 
 ### Prerequisites
 
-- Include the `marked` library:
+- Markdig for parsing Markdown (installed via NuGet):
 
   ```bash
   
@@ -690,7 +690,7 @@ The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich
 
   ```
 
-- Include `DOMPurify` for sanitizing the Markdown output:
+- DOMPurify for sanitizing Markdown output to prevent XSS attacks (included via CDN):
 
   ```bash
 
@@ -700,7 +700,7 @@ The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich
 
 ### Supported markdown formats
 
-The ChatUI supports the following Markdown formats via the `marked` library:
+The ChatUI leverages the `Markdig` library to support the following Markdown formats:
 
 - **Bold**: ** text ** or __ text __ 
 - *Italic*: * text * or _ text _ 
@@ -708,11 +708,11 @@ The ChatUI supports the following Markdown formats via the `marked` library:
 - Lists: - Item or 1. item
 - Code: 'code' or code 
 
-For full list refer to the  [marked documentation](https://marked.js.org/).
+For full list refer to the  [Markdig documentation](https://www.nuget.org/packages/Markdig).
 
 ### Configuring Markdown
 
-By integrating the [marked](https://github.com/markedjs/marked) library, you can parse Markdown text to enhance the chat experience. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property of each message can accept HTML generated from Markdown, allowing for formatted text display.
+By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, you can parse Markdown text to enhance the chat experience. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property of each message can accept HTML generated from Markdown, allowing for formatted text display.
 
 > To prevent XSS attacks, sanitize Markdown output using `DOMPurify`
 
