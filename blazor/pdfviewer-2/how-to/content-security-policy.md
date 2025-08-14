@@ -17,8 +17,6 @@ To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs
 
 * Syncfusion **material** and **tailwind** built-in themes contain a reference to the [`Roboto's external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which is also blocked. To allow them, add the [`external font`](https://fonts.googleapis.com/css?family=Roboto:400,500) reference to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the above meta tag.
 
-* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site. To overcome this restriction, it is necessary to add the [`img-src 'self' blob: data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive in the meta tag.
-
 * Syncfusion PDF Viewer control uses **web workers** and makes network connections, which are blocked on a strict CSP-enabled site. To allow them, add the [`worker-src 'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) and [`connect-src 'self' https://cdn.syncfusion.com data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src) directives in the above meta tag.
 
 * For JavaScript execution and WebAssembly operations, the [`script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.syncfusion.com blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive is required to allow inline scripts, eval operations, and blob-based scripts.
