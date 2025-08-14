@@ -682,19 +682,11 @@ The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich
 
 ### Prerequisites
 
-- Markdig for parsing Markdown (installed via NuGet):
+- `Markdig` for parsing Markdown (installed via NuGet):
 
   ```bash
   
-  <PackageReference Include="Markdig" Version="0.23.0" />
-
-  ```
-
-- DOMPurify for sanitizing Markdown output to prevent XSS attacks (included via CDN):
-
-  ```bash
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+  dotnet add package Markdig
 
   ```
 
@@ -713,8 +705,6 @@ For full list refer to the  [Markdig documentation](https://www.nuget.org/packag
 ### Configuring Markdown
 
 By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, you can parse Markdown text to enhance the chat experience. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property of each message can accept HTML generated from Markdown, allowing for formatted text display.
-
-> To prevent XSS attacks, sanitize Markdown output using `DOMPurify`
 
 ```cshtml
 
@@ -740,7 +730,7 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
         width: 450px;
         margin: 0 auto;
     }
-     p {
+     .markdown-chatui p {
         margin: 0;
         display: inline-block;
     }
@@ -752,7 +742,7 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
 </style>
 
 @code {
-    private SfChatUI ChatUI { get; set; } = null!;
+    private SfChatUI ChatUI { get; set; }
     private string headerText = "Chat UI with Markdown";
     private UserModel currentUserModel =  GetMarkdownUser("user1", "Albert");
     private UserModel michaleUserModel =  GetMarkdownUser("user2", "Michale Suyama");
@@ -777,18 +767,22 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
             {
                 Author = currentUserModel,
                 Text = RenderMarkdown("Hey Michale, did you review the _new API documentation_?"),
-                Timestamp = new DateTime(2024, 1, 15, 9, 30, 0)
+                Timestamp = DateTime.UtcNow.AddMinutes(-5)
             });
         chatMessages.Add(new ChatMessage
             {
                 Author = michaleUserModel,
                 Text = RenderMarkdown("Yes! The **endpoint specifications** look great. Check the [integration guide](https://api.example.com/docs) when you get a chance."),
-                Timestamp = new DateTime(2024, 1, 15, 9, 32, 0)
+                Timestamp = DateTime.UtcNow.AddMinutes(-5)
             });
     }
 
     private async Task HandleMessageSend(ChatMessageSendEventArgs args)
     {
+        if (string.IsNullOrEmpty(args.Message.Text))
+        {
+            return;
+        }
         args.Cancel = true; 
         var suggestion = suggestions.FirstOrDefault(s => s.DisplayText == args.Message.Text);
         var messageText = suggestion != null ? suggestion.MarkdownText : args.Message.Text;
