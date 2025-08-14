@@ -1,13 +1,11 @@
 @using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
 <div id="target">
     <div>
         <button class="e-btn" @onclick="@OnBtnClick">Open</button>
     </div>
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true" IsModal="true">
-        <DialogTemplates>
-            <Header> Dialog </Header>
-            <Content> This is a dialog with header </Content>
-        </DialogTemplates>
+    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="false" Header="AllowPrerender Dialog" Content="This is a dialog with content">
     </SfDialog>
 </div>
 <style>
@@ -16,7 +14,7 @@
     }
 </style>
 @code {
-    private bool Visibility { get; set; } = true;
+    private bool Visibility { get; set; } = false;
     private void OnBtnClick()
     {
         this.Visibility = true;
