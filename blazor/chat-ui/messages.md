@@ -822,4 +822,4 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
 
 ```
 
-![Blazor Chat UI MessageToolbarItem](./images/markdown.png)
+![Blazor Chat UI Markdown](./images/markdown.png)
