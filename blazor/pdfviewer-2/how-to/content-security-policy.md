@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to use strict CSP in Blazor SfPdfViewer | Syncfusion
+title: Use strict CSP in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to use the Content Security Policy in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How to use strict CSP in Blazor SfPdfViewer Component
+# Use strict CSP in Blazor SfPdfViewer Component
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It limits the sources from which content can be loaded on a web page.
 
