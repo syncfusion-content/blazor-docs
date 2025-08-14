@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Blazor Hybrid and Blazor Web App
+# Getting Started with .NET MAUI Blazor Hybrid and Web App
 
 This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI with Blazor Web App) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
