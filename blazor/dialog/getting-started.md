@@ -218,7 +218,7 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
     <div>
         <button class="e-btn" @onclick="@OnBtnClick">Open</button>
     </div>
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="false" Header="AllowPrerender Dialog" Content="This is a dialog with content">
+    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true" Header="AllowPrerender Dialog" Content="This is a dialog with content">
     </SfDialog>
 </div>
 <style>
@@ -237,7 +237,6 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVyNPspKoXXlIYf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog with Header](./images/blazor-dialog-allowprerender.gif)
 
 ## Set Header to Dialog
 
@@ -251,7 +250,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLItPsJgPdPFMYu?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
 ## Set Content to Dialog 
