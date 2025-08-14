@@ -675,3 +675,157 @@ You can use the `itemClicked` event when the toolbar item is clicked in the `Mes
 }
 
 ```
+
+## Displaying the markdown content
+
+The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich text capabilities such as bold, italic, links, and more.
+
+### Prerequisites
+
+- Include the `marked` library:
+
+  ```bash
+  
+  <PackageReference Include="Markdig" Version="0.23.0" />
+
+  ```
+
+- Include `DOMPurify` for sanitizing the Markdown output:
+
+  ```bash
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+
+  ```
+
+### Supported markdown formats
+
+The ChatUI supports the following Markdown formats via the `marked` library:
+
+- **Bold**: ** text ** or __ text __ 
+- *Italic*: * text * or _ text _ 
+- [Links](url): [Link text] (url)
+- Lists: - Item or 1. item
+- Code: 'code' or code 
+
+For full list refer to the  [marked documentation](https://marked.js.org/).
+
+### Configuring Markdown
+
+By integrating the [marked](https://github.com/markedjs/marked) library, you can parse Markdown text to enhance the chat experience. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property of each message can accept HTML generated from Markdown, allowing for formatted text display.
+
+> To prevent XSS attacks, sanitize Markdown output using `DOMPurify`
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Markdig
+
+<div class="control-section chat-ui">
+    <div class="markdown-chatui">
+        <SfChatUI @ref="ChatUI"
+                  User="@currentUserModel"
+                  Messages="@chatMessages"
+                  HeaderText="@headerText"
+                  Suggestions="@(suggestions.Select(s => s.DisplayText).ToList())"
+                  MessageSend="HandleMessageSend"
+                  ShowTimeBreak="true">
+        </SfChatUI>
+    </div>
+</div>
+
+<style>
+    .markdown-chatui {
+        height: 380px;
+        width: 450px;
+        margin: 0 auto;
+    }
+     p {
+        margin: 0;
+        display: inline-block;
+    }
+    @@media only screen and (max-width: 850px) {
+        .markdown-chatui {
+            width: 80%;
+        }
+    }
+</style>
+
+@code {
+    private SfChatUI ChatUI { get; set; } = null!;
+    private string headerText = "Chat UI with Markdown";
+    private UserModel currentUserModel =  GetMarkdownUser("user1", "Albert");
+    private UserModel michaleUserModel =  GetMarkdownUser("user2", "Michale Suyama");
+    private List<ChatMessage> chatMessages = new List<ChatMessage>();
+    private List<Suggestion> suggestions = new List<Suggestion>
+    {
+        new Suggestion
+        {
+            DisplayText = "Share quick link",
+            MarkdownText = "Check out our [project dashboard](https://dashboard.example.com) for updates!"
+        },
+        new Suggestion
+        {
+            DisplayText = "Emphasize priority",
+            MarkdownText = "This is **high priority** and needs _immediate attention_."
+        }
+    };
+
+    protected override void OnInitialized()
+    {
+        chatMessages.Add(new ChatMessage
+            {
+                Author = currentUserModel,
+                Text = RenderMarkdown("Hey Michale, did you review the _new API documentation_?"),
+                Timestamp = new DateTime(2024, 1, 15, 9, 30, 0)
+            });
+        chatMessages.Add(new ChatMessage
+            {
+                Author = michaleUserModel,
+                Text = RenderMarkdown("Yes! The **endpoint specifications** look great. Check the [integration guide](https://api.example.com/docs) when you get a chance."),
+                Timestamp = new DateTime(2024, 1, 15, 9, 32, 0)
+            });
+    }
+
+    private async Task HandleMessageSend(ChatMessageSendEventArgs args)
+    {
+        args.Cancel = true; 
+        var suggestion = suggestions.FirstOrDefault(s => s.DisplayText == args.Message.Text);
+        var messageText = suggestion != null ? suggestion.MarkdownText : args.Message.Text;
+
+        var newMessage = new ChatMessage
+            {
+                Text = RenderMarkdown(messageText),
+                Author = currentUserModel,
+                Timestamp = DateTime.Now
+            };
+
+        chatMessages.Add(newMessage);
+        await InvokeAsync(StateHasChanged); 
+    }
+
+    private string RenderMarkdown(string markdownText)
+    {
+        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+        return Markdig.Markdown.ToHtml(markdownText, pipeline);
+    }
+
+    public static UserModel GetMarkdownUser(string Id, string Username)
+    {
+        return new UserModel()
+            {
+                ID = Id,
+                User = Username
+            };
+    }
+
+    private class Suggestion
+    {
+        public string DisplayText { get; set; } = string.Empty;
+        public string MarkdownText { get; set; } = string.Empty;
+    }
+}
+
+```
+
+![Blazor Chat UI MessageToolbarItem](./images/markdown.png)
