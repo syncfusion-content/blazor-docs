@@ -752,7 +752,7 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
         new Suggestion
         {
             DisplayText = "Share quick link",
-            MarkdownText = "Check out our [project dashboard](https://dashboard.example.com) for updates!"
+            MarkdownText = "Check out our [project dashboard](https://help.syncfusion.com/) for updates!"
         },
         new Suggestion
         {
@@ -772,7 +772,7 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
         chatMessages.Add(new ChatMessage
             {
                 Author = michaleUserModel,
-                Text = RenderMarkdown("Yes! The **endpoint specifications** look great. Check the [integration guide](https://api.example.com/docs) when you get a chance."),
+                Text = RenderMarkdown("Yes! The **endpoint specifications** look great. Check the [integration guide](https://blazor.syncfusion.com/documentation/introduction) when you get a chance."),
                 Timestamp = DateTime.UtcNow.AddMinutes(-5)
             });
     }
