@@ -20,7 +20,7 @@ A modal dialog prevents users from interacting with the rest of the application 
     <div>
         <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
     </div>
-    <SfDialog Target="#target" Width="250px" IsModal="true" @bind-Visible="@IsVisible" Content="This is a modal dialog"></SfDialog>
+    <SfDialog Target="#target" Width="250px" IsModal="true" @bind-Visible="@IsVisible" Header="Modal Dialog" Content="This is a modal dialog" ShowCloseIcon="true"></SfDialog>
 </div>
 
 <style>
@@ -40,7 +40,7 @@ A modal dialog prevents users from interacting with the rest of the application 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBojFCpTMeVLCyS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotFCppdZxjRFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Modal in Blazor Dialog](./images/blazor-modal-dialog.png)
 
 ## Handling Overlay Click Events
@@ -60,8 +60,8 @@ The following example demonstrates how to close a modal dialog when the user cli
     <div>
         <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
     </div>
-    <SfDialog Target="#target" Width="250px" IsModal="true" @bind-Visible="@IsVisible" Content="This is a modal dialog">
-        <DialogEvents OnOverlayModalClick="@OnOverlayclick"></DialogEvents>
+    <SfDialog Target="#target" Width="250px" IsModal="true" @bind-Visible="@IsVisible" Header="Overlay Modal Dialog" Content="This is a modal dialog">
+        <DialogEvents OnOverlayModalClick="@OnOverlayClick"></DialogEvents>
     </SfDialog>
 </div>
 
@@ -73,7 +73,7 @@ The following example demonstrates how to close a modal dialog when the user cli
         this.IsVisible = true;
     }
 
-    private void OnOverlayclick(OverlayModalClickEventArgs arg)
+    private void OnOverlayClick(OverlayModalClickEventArgs arg)
     {
         this.IsVisible = false;
     }
@@ -88,5 +88,5 @@ The following example demonstrates how to close a modal dialog when the user cli
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVINvCzTiGFTkFb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLetFiJJHqtzBdm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 ![Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)
