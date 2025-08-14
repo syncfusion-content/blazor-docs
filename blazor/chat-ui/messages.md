@@ -752,7 +752,7 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
         new Suggestion
         {
             DisplayText = "Share quick link",
-            MarkdownText = "Check out our [project dashboard](https://help.syncfusion.com/) for updates!"
+            MarkdownText = "Check out our [project dashboard](https://help.syncfusion.com) for updates!"
         },
         new Suggestion
         {
