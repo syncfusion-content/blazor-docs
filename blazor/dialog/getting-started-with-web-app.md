@@ -250,28 +250,27 @@ html, body {
 
 - The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
 
-{% tabs %}
-{% highlight cshtml %}
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
-<SfDialog Width="250px" Header="Dialog Header" Content="Dialog Created and Destroyed">
+<SfDialog>
     <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
 </SfDialog>
+@code {
 
-@code{
-    private void CreatedHandler()
+    public void CreatedHandler(Object args)
     {
         // Here, you can customize your code.
     }
+
     private void DestroyedHandler()
     {
         // Here, you can customize your code.
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Prerender the Dialog
 
@@ -280,13 +279,32 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 * By default, AllowPrerender is set to false. In this mode, dialog DOM elements are completely removed from the DOM when the dialog is hidden, and recreated each time the dialog is shown. This approach saves memory but requires re-rendering on each display.
 * When AllowPrerender is set to true, the dialog elements remain in the DOM even when hidden, which improves performance for frequently accessed dialogs but uses more memory.
 
-{% tabs %}
-{% highlight cshtml %}
+```cshtml
 
-{% include_relative code-snippet/prerender-blazor-dialog.razor %}
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 
-{% endhighlight %}
-{% endtabs %}
+<div id="target">
+    <div>
+        <button class="e-btn" @onclick="@OnBtnClick">Open</button>
+    </div>
+    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="false" Header="AllowPrerender Dialog" Content="This is a dialog with content">
+    </SfDialog>
+</div>
+<style>
+    #target {
+        height: 500px;
+    }
+</style>
+@code {
+    private bool Visibility { get; set; } = false;
+    private void OnBtnClick()
+    {
+        this.Visibility = true;
+    }
+}
+
+```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVyNPspKoXXlIYf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog with Header](./images/blazor-dialog-allowprerender.gif)
@@ -295,32 +313,28 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 
 The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
 
-{% tabs %}
-{% highlight cshtml %}
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJZWrYAArBuqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Header](./images/blazor-dialog-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Dialog with Content](./images/blazor-dialog-content.png)
 
 ## Set Content to Dialog 
 
 The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
 
-{% tabs %}
-{% highlight cshtml %}
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Content="This is a dialog with Content property."></SfDialog>
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog with Content](./images/blazor-dialog-content.png)
