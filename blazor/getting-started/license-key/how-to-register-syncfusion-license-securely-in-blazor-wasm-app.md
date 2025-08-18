@@ -57,7 +57,7 @@ To ensure your project always restores Syncfusion packages from the licensed sou
 </configuration>
 ```
 
-### Verifying Assembly Licensing:
+### Verifying Assembly Licensing
 
 To confirm whether your application is referencing licensed or trial assemblies:
 
