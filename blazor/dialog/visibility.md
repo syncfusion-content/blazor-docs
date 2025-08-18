@@ -20,10 +20,35 @@ One-way binding sets a fixed visibility state for the dialog. This approach is u
 ```cshtml
 
 @using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 
-<SfDialog Width="250px" Visible="false"></SfDialog>
+<div class="control-section">
+    <SfButton @onclick="ToggleDialog">Toggle Dialog</SfButton>
+    
+    <SfDialog Width="300px" Visible="@IsDialogVisible">
+        <DialogTemplates>
+            <Header>Dialog!</Header>
+            <Content>This is a simple dialog using one-way binding.</Content>
+        </DialogTemplates>
+        <DialogButtons>
+            <DialogButton Content="Close" IsPrimary="true" @onclick="ToggleDialog" />
+        </DialogButtons>
+    </SfDialog>
+</div>
+
+@code {
+    private bool IsDialogVisible { get; set; } = false;
+
+    private void ToggleDialog()
+    {
+        IsDialogVisible = !IsDialogVisible;
+    }
+}
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeDbCbJHIqvGPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog with One-way Binding showing dynamic visibility control](./images/blazor-dialog-one-way-visible.gif)
 
 ### Two-Way Binding
 
@@ -36,7 +61,7 @@ Two-way binding using the @bind-Visible syntax enables dynamic visibility contro
 
 <div id="target">
     <div>
-        <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
+        <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
         <span>Visible state: @IsVisible</span>
     </div>
     <SfDialog Target="#target" Width="250px" @bind-Visible="@IsVisible" Header="Two-way Binding" Content="This is a Two way binding visible property of dialog" ShowCloseIcon="true">
@@ -60,8 +85,8 @@ Two-way binding using the @bind-Visible syntax enables dynamic visibility contro
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLeXbiTpBhUTMaq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Two-way Binding](./images/blazor-dialog-two-way-visible.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLeDlCbpcEqNPSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog with Two-way Binding showing dynamic visibility control](./images/blazor-dialog-two-way-visible.gif)
 
 ## ShowAsync Method
 
@@ -72,32 +97,40 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<div id="target">
-    <div>
-        <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
-    </div>
-    <SfDialog Target="#target" @ref="@DialogObj" Width="250px" Visible="false" Header="ShowAsync" Content="Dialog Opened by ShowAsync method" ShowCloseIcon="true">
+<div id="target" class="control-section">
+    <SfButton @onclick="OpenDialog">Open Dialog</SfButton>
+    
+    <SfDialog Target="#target" @ref="DialogObj" Width="300px" Visible="false" ShowCloseIcon="true">
+        <DialogTemplates>
+            <Header>Async Dialog</Header>
+            <Content>@DialogContent</Content>
+        </DialogTemplates>
     </SfDialog>
 </div>
 
 @code {
     private SfDialog DialogObj { get; set; }
-    private async void OpenDialog()
+    private string DialogContent { get; set; } = "Loading...";
+
+    private async Task OpenDialog()
     {
+        // Add validation or data loading logic here
+        DialogContent = "Content loaded successfully!";
         await DialogObj.ShowAsync();
     }
 }
 
 <style>
     #target {
-        height: 500px;
+        min-height: 300px;
+        padding: 20px;
     }
 </style>
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBoXlWJJVpumhwl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with ShowAsync](./images/blazor-dialog-showAsync.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeZbWPTFjcKrLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog opened using ShowAsync method demonstrating programmatic control](./images/blazor-dialog-showAsync.gif)
 
 ## HideAsync Method
 
@@ -108,38 +141,54 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<div id="target">
-    <div>
-        <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
-    </div>
-    <SfDialog @ref="@DialogObj" Target="#target" Width="250px" IsModal="true" Content="This is a modal dialog">
-        <DialogEvents OnOverlayModalClick="@OnOverlayClick"></DialogEvents>
+<div id="target" class="control-section">
+    <SfButton @onclick="OpenDialog">Open Modal Dialog</SfButton>
+    
+    <SfDialog @ref="DialogObj" Target="#target" Width="300px" IsModal="true" ShowCloseIcon="true">
+        <DialogTemplates>
+            <Header>Modal Dialog</Header>
+            <Content>@DialogMessage</Content>
+        </DialogTemplates>
+        <DialogButtons>
+            <DialogButton Content="Save & Close" IsPrimary="true" @onclick="SaveAndClose" />
+        </DialogButtons>
+        <DialogEvents OnOverlayModalClick="OnOverlayClick" />
     </SfDialog>
 </div>
 
 @code {
     private SfDialog DialogObj { get; set; }
-    private async void OpenDialog()
+    private string DialogMessage { get; set; } = "Content loaded successfully!";
+
+    private async Task OpenDialog()
     {
         await DialogObj.ShowAsync();
     }
 
-    private async void OnOverlayClick(OverlayModalClickEventArgs arg)
+    private async Task SaveAndClose()
     {
+        // Simulate async save operation
+        await DialogObj.HideAsync();
+    }
+
+    private async Task OnOverlayClick(OverlayModalClickEventArgs arg)
+    {
+        // Add validation or data loading logic here
         await DialogObj.HideAsync();
     }
 }
 
 <style>
     #target {
-        height: 500px;
+        min-height: 300px;
+        padding: 20px;
     }
 </style>
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreDPWpfrvVnuIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with HideAsync](./images/blazor-dialog-hideasync.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyNvCFJlgUWdtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog closed using HideAsync method with custom close logic](./images/blazor-dialog-hideasync.gif)
 
 ## CloseOnEscape Action
 
@@ -150,30 +199,44 @@ The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popu
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<div id="target">
-    <div>
-        <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
-    </div>
-    <SfDialog @ref="@DialogObj" Target="#target" Width="250px" CloseOnEscape="true" Content="Click on ESC key"></SfDialog>
+<div id="target" class="control-section">
+    <SfButton @onclick="OpenDialog">Open Dialog</SfButton>
+    
+    <SfDialog @ref="DialogObj" Target="#target" Width="300px" CloseOnEscape="true" ShowCloseIcon="true">
+        <DialogTemplates>
+            <Header>Keyboard Accessible Dialog!</Header>
+            <Content>Press ESC key to close this dialog!</Content>
+        </DialogTemplates>
+        <DialogButtons>
+            <DialogButton Content="OK" IsPrimary="true" @onclick="CloseDialog" />
+        </DialogButtons>
+    </SfDialog>
 </div>
 
 @code {
     private SfDialog DialogObj { get; set; }
-    private async void OpenDialog()
+
+    private async Task OpenDialog()
     {
         await DialogObj.ShowAsync();
+    }
+
+    private async Task CloseDialog()
+    {
+        await DialogObj.HideAsync();
     }
 }
 
 <style>
     #target {
-        height: 500px;
+        min-height: 300px;
+        padding: 20px;
     }
 </style>
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrIXvCTpqtrWAUU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLStlCbpPfMNlcY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
 ## Visibility Events
 
@@ -202,7 +265,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 <div id="target">
     <div>
-        <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
+        <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
         <span>Visible state: @IsVisible</span>
     </div>
     <div style="display: grid; float: right;">
@@ -254,7 +317,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrIZFCJpKqLwpow?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Visible events](./images/blazor-dialog-visible-events.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhytPsFpFydyWNt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![BBlazor Dialog demonstrating all visibility events in sequence](./images/blazor-dialog-visible-events.gif)
 
 N> Use property binding for simple visibility control and programmatic methods (ShowAsync/HideAsync) when you need to implement complex logic, validation, or asynchronous operations before showing or hiding the dialog.
