@@ -9,23 +9,193 @@ documentation: ug
 
 # Templates in Blazor Dialog Component
 
-In [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component provides comprehensive template support for header, content, and footer sections. This feature enables developers to create highly customized dialog experiences by incorporating custom HTML content, interactive components, and dynamic data binding within each section.
+
+Templates offer flexibility to transform standard dialogs into rich, interactive user interfaces that can include forms, multimedia content, custom styling, and complex layouts tailored to specific application requirements.
 
 To get started quickly with templates in Blazor Dialog Component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=K5o9JWbgjvQ" %}
 
-## Header
+## Header Template
 
-The Dialog header content can be provided through the `Header` property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the `ShowCloseIcon` property.
+The Dialog header content can be customized through the `Header` property within the `DialogTemplates` section. This property accepts both plain text and HTML content, allowing for rich header designs including icons, images, user information, and custom styling.
 
-## Footer
+```cshtml
 
-The Dialog footer can be enabled by adding built-in `DialogButton` or providing any HTML string through the `FooterTemplate`.
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Inputs
 
-N> The `DialogButton` and `FooterTemplate` properties can't be used at the same time.
+<div id="target" class="col-lg-12 control-section" style="height:100%">
+    <div>
+        @if (this.ShowButton)
+        {
+            <button class="e-btn" @onclick="@OpenDialog">Open Dialog</button>
+        }
+    </div>
+    <SfDialog Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility" Content="Greetings Nancy! When will you share me the source files of the project?">
+        <DialogTemplates>
+            <Header>
+                <span class="e-avatar template-image e-avatar-xsmall e-avatar-circle"></span>
+                <div id="template" title="Nancy" class="e-icon-settings">Nancy</div>
+            </Header>
+        </DialogTemplates>
+        <DialogEvents OnOpen="@BeforeDialogOpen" Closed="@DialogClosed"></DialogEvents>
+    </SfDialog>
+</div>
 
-The following example demonstrates the usage of header and footer template in the Dialog.
+@code {
+    private bool Visibility { get; set; } = true;
+    private bool ShowButton { get; set; } = false;
+
+    private void BeforeDialogOpen(BeforeOpenEventArgs args)
+    {
+        this.ShowButton = false;
+    }
+
+    private void DialogClosed(CloseEventArgs args)
+    {
+        this.ShowButton = true;
+    }
+
+    private void OpenDialog()
+    {
+        this.Visibility = true;
+    }
+}
+
+<style>
+    #target {
+        min-height: 400px;
+    }
+
+    .e-dialog .e-dlg-header-content {
+        background-color: #3f51b5;
+    }
+
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+        top: 5px;
+        left: -11px;
+    }
+
+    .e-dialog .e-dlg-header {
+        position: relative;
+    }
+
+    .e-dialog .e-dlg-header-content {
+        padding: 6px;
+    }
+
+    #template {
+        display: inline-block;
+        padding: 0px 10px;
+        vertical-align: middle;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .e-dlg-header .e-icon-settings, 
+    .e-icon-btn,
+    .e-dlg-header-content .e-icon-dlg-close {
+        color: #fff;
+    }
+
+    .e-dialog .e-dlg-header-content .e-dlg-header .e-avatar.template-image {
+        background-image: url("https://ej2.syncfusion.com/demos/src/dialog/images/1.png");
+        vertical-align: middle;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjPCAopFAWdrQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog with Header](./images/blazor-dialog-header-template.png)
+
+## Content Template
+
+The Dialog content area supports extensive customization through the `Content` property within the `DialogTemplates` section. This section can accommodate any HTML content, including forms, media elements, data grids, charts, and other Blazor components.
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<div id="target" class="col-lg-12 control-section" style="height:100%">
+    <div>
+        @if (this.ShowButton)
+        {
+            <button class="e-btn" @onclick="@OpenDialog">Open Dialog</button>
+        }
+    </div>
+    <SfDialog Width="20%" Target="#target" Header="Employee Login Portal" ShowCloseIcon="true" @bind-Visible="Visibility">
+        <DialogTemplates>
+            <Content>
+                <div class="dialogContent">
+                    <SfDataForm ID="MyForm" Model="@LogInModel" ButtonsAlignment="FormButtonsAlignment.Right">
+                        <FormItems>
+                            <FormItem Field="@nameof(LogInModel.Email)" LabelText="Email Id"> </FormItem>
+                            <FormItem Field="@nameof(LogInModel.Password)" LabelText="Password" EditorType="FormEditorType.Password"> </FormItem>
+                        </FormItems>
+                        <FormButtons>
+                            <SfButton>Log In</SfButton>
+                        </FormButtons>
+                    </SfDataForm>
+                </div>
+            </Content>
+        </DialogTemplates>
+        <DialogEvents OnOpen="@BeforeDialogOpen" Closed="@DialogClosed"></DialogEvents>
+    </SfDialog>
+</div>
+
+@code {
+    private bool Visibility { get; set; } = true;
+    private bool ShowButton { get; set; } = false;
+
+    private void BeforeDialogOpen(BeforeOpenEventArgs args)
+    {
+        this.ShowButton = false;
+    }
+
+    private void DialogClosed(CloseEventArgs args)
+    {
+        this.ShowButton = true;
+    }
+
+    private void OpenDialog()
+    {
+        this.Visibility = true;
+    }
+
+    public class LogInDetails
+    {
+        public string Password { get; set; }
+        public string Email { get; set; }
+    }
+
+    private LogInDetails LogInModel = new LogInDetails();
+}
+
+<style>
+    #target {
+        min-height: 400px;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVyjPCKonCLKCPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+![Blazor Dialog with Content](./images/blazor-dialog-content-template.png)
+
+## Footer Template
+
+The Dialog footer can be customized using either built-in `DialogButton` components or custom HTML through the `FooterTemplate` property. These approaches are mutually exclusive and cannot be used simultaneously within the same dialog instance.
+
+N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best fits the dialog's functional requirements.
 
 ```cshtml
 
@@ -225,9 +395,9 @@ The following example demonstrates the usage of header and footer template in th
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXheXvMrAnOYVzla?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
-
-![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
+![Blazor Dialog Component with customized header featuring user avatar and footer template with input controls](./images/blazor-dialog-header-footer-template.png)
 
 ## See also
 
