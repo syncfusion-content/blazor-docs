@@ -179,7 +179,7 @@ N> The `DialogButton` and `FooterTemplate` properties cannot be used together. C
     <SfDialog Width="435px" Target="#target" Header="Customer Name: 'Nancy'" Content="Please confirm you are received the OTP sent to your registered mobile number" ShowCloseIcon="true" @bind-Visible="Visibility">
         <DialogTemplates>
             <FooterTemplate>
-                <SfTextBox ID="inVal"  Type="InputType.Password" Placeholder="Enter your OTP number here!" />
+                <SfTextBox ID="inVal" Type="Syncfusion.Blazor.Inputs.InputType.Password" Placeholder="Enter your OTP number here!" />
                 <SfButton IsPrimary="true">Send</SfButton>
             </FooterTemplate>
         </DialogTemplates>
@@ -213,13 +213,9 @@ N> The `DialogButton` and `FooterTemplate` properties cannot be used together. C
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBIjlCbJoDsYaWY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVyZlivyKPfAwhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
 ![Blazor Dialog Component with customized Footer template](./images/blazor-dialog-footer-template.png)
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXheXvMrAnOYVzla?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-
-![Blazor Dialog Component with customized header featuring user avatar and footer template with input controls](./images/blazor-dialog-header-footer-template.png) -->
 
 ## See also
 
