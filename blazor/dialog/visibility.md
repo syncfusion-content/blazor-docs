@@ -113,7 +113,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
         <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
     </div>
     <SfDialog @ref="@DialogObj" Target="#target" Width="250px" IsModal="true" Content="This is a modal dialog">
-        <DialogEvents OnOverlayModalClick="@OnOverlayclick"></DialogEvents>
+        <DialogEvents OnOverlayModalClick="@OnOverlayClick"></DialogEvents>
     </SfDialog>
 </div>
 
@@ -124,7 +124,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
         await DialogObj.ShowAsync();
     }
 
-    private async void OnOverlayclick(OverlayModalClickEventArgs arg)
+    private async void OnOverlayClick(OverlayModalClickEventArgs arg)
     {
         await DialogObj.HideAsync();
     }
