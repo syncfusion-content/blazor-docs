@@ -21,6 +21,10 @@ The overall `syncfusion-blazor.min.js` script reference may be redundant. Instea
 * [Individual reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#individual-control-script-reference)
 * [Blazor custom resource generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
+## Use Optimized CSS Themes
+
+To reduce CSS payload and improve rendering speed, use optimized CSS themes provided by Syncfusion. These themes are tailored to include only the styles required for the components you use. Learn more at Optimized CSS Themes
+https://blazor.syncfusion.com/documentation/appearance/themes#optimized-css-themes
 ## Lazy Loading in Blazor WebAssembly App
 
 If you're using a Blazor WebAssembly app, consider implementing lazy loading to reduce the initial loading time. For guidance, refer to Microsoft's documentation on [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) and Syncfusion's blog on [lazy loading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
