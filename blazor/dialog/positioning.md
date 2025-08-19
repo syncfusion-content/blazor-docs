@@ -27,8 +27,8 @@ For Y is: top, center, bottom (or) any offset value
     <div>
         <SfButton Content="Open Dialog" @onclick="@OpenDialog"></SfButton>
     </div>
-    <SfDialog ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility" Header="Dialog Position" Content="Dialog positioned on Center and Right">
-        <DialogPositionData X="right" Y="center"></DialogPositionData>
+    <SfDialog ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility" Header="Dialog Position" Content="Dialog positioned on top and Right">
+        <DialogPositionData X="right" Y="top"></DialogPositionData>
     </SfDialog>
 </div>
 
@@ -49,7 +49,7 @@ For Y is: top, center, bottom (or) any offset value
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNPsEKPrfYlFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhStvikfNHgUxWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dialog with Dialog Position Data](./images/blazor-dialog-position-data.gif)
 
@@ -69,7 +69,7 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     <SfDialog @ref="@DialogObj" ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility" Header="Dialog Position">
         <DialogTemplates>
             <Content>
-                <SfButton Content="Change Dialog Position to Bottom Left" @onclick="@ChangePosition"></SfButton>
+                <SfButton Content="Change Dialog Position to Bottom Right" @onclick="@ChangePosition"></SfButton>
             </Content>
         </DialogTemplates>
         <DialogPositionData X="@XPosition" Y="@YPosition"></DialogPositionData>
@@ -103,7 +103,7 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoDbMYUOBKEKvI?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoDviafDQdSdeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dialog position with RefreshPositionAsync method](./images/blazor-dialog-position-refresh-method.gif)
 
