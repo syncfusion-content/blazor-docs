@@ -134,6 +134,7 @@ By default, when you scroll the page/container, Dialog will also scroll along wi
 </div>
 
 <SfDialog Width="250px" CssClass="e-fixed" Target="#targetContainer" @bind-Visible="@Visibility" Header="Dialog" Content="Dialog position fixed while scrolling" ShowCloseIcon="true">
+    <DialogPositionData X="center" Y="top"></DialogPositionData>
 </SfDialog>
 
 <style>
@@ -158,7 +159,7 @@ By default, when you scroll the page/container, Dialog will also scroll along wi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhotPCkTjWGrswU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoXlMEpViDbZCj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dialog position center with scrollable area](./images/blazor-dialog-position-center-scrollable.gif)
 
