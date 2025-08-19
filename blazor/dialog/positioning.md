@@ -11,10 +11,12 @@ documentation: ug
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
 
+## DialogPositionData Properties
+
+The DialogPositionData class sets the dialog's X and Y coordinates. The position is relative to a specified Target or the page body if no target is defined.
+
 For X is: left, center, right (or) any offset value
 For Y is: top, center, bottom (or) any offset value
-
-The following code demonstrates the different Dialog positions.
 
 ```cshtml
 
@@ -23,126 +25,142 @@ The following code demonstrates the different Dialog positions.
 
 <div id="target">
     <div>
-        @if (this.ShowButton)
-        {
-            <SfButton Content="Open Dialog" @onclick="@OpenDialog"></SfButton>
-        }
+        <SfButton Content="Open Dialog" @onclick="@OpenDialog"></SfButton>
     </div>
-    <SfDialog ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility">
-        <DialogTemplates>
-            <Header>
-                <div>Choose a Dialog Position</div>
-            </Header>
-            <Content>
-                <table style="width:405px;" id="poschange">
-                    <tr>
-                        <td>
-                            <SfRadioButton ID="LeftTop" TChecked="string" Name="xy" Label="Left Top" Value="left top" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="CenterTop" TChecked="string" Name="xy" Label="Center Top" Value="center top" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="RightTop" TChecked="string" Name="xy" Label="Right Top" Value="right top" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <SfRadioButton ID="LeftCenter" TChecked="string" Name="xy" Label="Left Center" Value="left center" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="CenterCenter" TChecked="string" Name="xy" Label="Center Center" Value="center center" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="RightCenter" TChecked="string" Name="xy" Label="Right Center" Value="right center" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <SfRadioButton ID="LeftBottom" TChecked="string" Name="xy" Label="Left Bottom" Value="left bottom" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="CenterBottom" TChecked="string" Name="xy" Label="Center Bottom" Value="center bottom" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                        <td>
-                            <SfRadioButton ID="RightBottom" TChecked="string" Name="xy" Label="Right Bottom" Value="right bottom" @bind-Checked="@Checked" ValueChange="@OnChangeHandler"></SfRadioButton>
-                        </td>
-                    </tr>
-                </table>
-            </Content>
-            <FooterTemplate><span>Position : { X: '@Xvalue', Y: '@Yvalue' }</span></FooterTemplate>
-        </DialogTemplates>
-        <DialogPositionData X="@Xvalue" Y="@Yvalue"></DialogPositionData>
-        <DialogEvents OnOpen="@BeforeDialogOpen" Closed="@DialogClosed"></DialogEvents>
+    <SfDialog ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility" Header="Dialog Position" Content="Dialog positioned on Center and Right">
+        <DialogPositionData X="right" Y="center"></DialogPositionData>
     </SfDialog>
 </div>
 
 <style>
-    #defaultDialog table,
-    #defaultDialog th,
-    #defaultDialog td {
-        border: 1px solid #D8D8D8;
-        border-collapse: collapse;
-    }
-
-    #defaultDialog.e-dialog .e-footer-content {
-        padding: 0px 10px 10px;
-        text-align: center;
-    }
-
     #target {
-        min-height: 450px;
-        height: 100%;
-    }
-
-    .e-dialog .e-dlg-content {
-        padding: 10px 16px 10px;
-    }
-
-    .e-radio + label .e-label {
-        line-height: 18px;
-    }
-
-    td {
-        padding: 4px;
+        height: 500px;
     }
 </style>
 
 @code {
-    private string Xvalue = "center";
-    private string Yvalue = "center";
-    private bool Visibility { get; set; } = true;
-    private bool ShowButton { get; set; } = false;
-    private string Checked { get; set; } = "center center";
+    private bool Visibility { get; set; } = false;
 
-    private void BeforeDialogOpen(BeforeOpenEventArgs args)
+    private void OpenDialog()
     {
-        this.ShowButton = false;
+        this.Visibility = true;
     }
+}
 
-    private void DialogClosed(CloseEventArgs args)
-    {
-        this.ShowButton = true;
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNPsEKPrfYlFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor Dialog with Dialog Position Data](./images/blazor-dialog-position-data.gif)
+
+## RefreshPositionAsync Method
+
+The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_RefreshPositionAsync) method is used to programmatically recalculate and update the dialog's position.
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<div id="target">
+    <div>
+        <SfButton Content="Open Dialog" @onclick="@OpenDialog"></SfButton>
+    </div>
+    <SfDialog @ref="@DialogObj" ID="defaultDialog" Target="#target" Width="445px" ShowCloseIcon="true" @bind-Visible="@Visibility" Header="Dialog Position">
+        <DialogTemplates>
+            <Content>
+                <SfButton Content="Change Dialog Position to Bottom Left" @onclick="@ChangePosition"></SfButton>
+            </Content>
+        </DialogTemplates>
+        <DialogPositionData X="@XPosition" Y="@YPosition"></DialogPositionData>
+    </SfDialog>
+</div>
+
+<style>
+    #target {
+    height: 500px;
     }
+</style>
+
+@code {
+    private SfDialog DialogObj;
+    private string XPosition = "left";
+    private string YPosition = "top";
+    private bool Visibility { get; set; } = false;
 
     private void OpenDialog()
     {
         this.Visibility = true;
     }
 
-    private void OnChangeHandler(ChangeArgs<string> arg)
+    private async void ChangePosition()
     {
-        this.Xvalue = arg.Value.ToString().Split(' ')[0];
-        this.Yvalue = arg.Value.ToString().Split(' ')[1];
-        this.StateHasChanged();
+        XPosition = "right";
+        YPosition = "bottom";
+        await DialogObj.RefreshPositionAsync();
     }
 }
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoDbMYUOBKEKvI?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Blazor Dialog position with RefreshPositionAsync method](./images/blazor-dialog-position-refresh-method.gif)
 
-![Blazor Dialog displays Different Position](./images/blazor-dialog-position.png)
+## Position the Blazor Dialog in center of the page on scrolling
+
+By default, when you scroll the page/container, Dialog will also scroll along with the page/container. To display the Dialog in the same position without scrolling, refer to the following code sample. Here, the `e-fixed` class is added to the Dialog element by using the `CssClass` property to prevent scrolling.
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<div id="targetContainer" style="height: 900px;">
+    <SfButton @onclick='@OnClicked'>Open Dialog</SfButton>
+    <hr />
+    <b>JavaScript:</b><br />
+    JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript
+    language specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web
+    content production; the majority of websites employ it and it is supported by all modern Web browsers without
+    plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting
+    object - oriented , imperative, and functional programming styles.
+    <br /><br /><br />
+    <b>MVC:</b><br />
+    Model–view–controller (MVC) is a software architecture pattern which separates the representation of information from the user's interaction with it. The model consists of application data, business rules, logic, and functions. A view can be any output representation of data, such as a chart or a diagram. Multiple views of the same data are possible, such as a bar chart for management and a tabular view for accountants. The controller mediates input, converting it to commands for the model or view. The central ideas behind MVC are code reusability and in addition to dividing the application into three kinds of components, the MVC design defines the interactions between them.
+    A controller can send commands to its associated view to change the view's presentation of the model (e.g., by scrolling through a document). It can also send commands to the model to update the model's state (e.g., editing a document).
+    A model notifies its associated views and controllers when there has been a change in its state. This notification allows the views to produce updated output, and the controllers to change the available set of commands. A passive implementation of MVC omits these notifications, because the application does not require them or the software platform does not support them.
+    A view requests from the model the information that it needs to generate an output representation to the user.
+</div>
+
+<SfDialog Width="250px" CssClass="e-fixed" Target="#targetContainer" @bind-Visible="@Visibility" Header="Dialog" Content="Dialog position fixed while scrolling" ShowCloseIcon="true">
+</SfDialog>
+
+<style>
+    body {
+        overflow-y: scroll;
+    }
+
+    .e-fixed {
+        position: fixed;
+    }
+</style>
+
+@code {
+    private string DialogClass { get; set; }
+    private bool Visibility { get; set; } = false;
+
+    private void OnClicked()
+    {
+        Visibility = true;
+    }
+}
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhotPCkTjWGrswU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor Dialog position center with scrollable area](./images/blazor-dialog-position-center-scrollable.gif)
 
 ## See also
 
