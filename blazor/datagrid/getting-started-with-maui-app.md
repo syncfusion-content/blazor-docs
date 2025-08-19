@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the DataGrid Component in the Blazor MAUI App | Syncfusion
+title: Getting Started with DataGrid Component | Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor DataGrid Component in Blazor MAUI App.
 platform: Blazor
 control: DataGrid
