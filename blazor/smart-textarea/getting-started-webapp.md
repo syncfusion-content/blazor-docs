@@ -147,25 +147,47 @@ var app = builder.Build();
 
 ## Configure AI Service
 
-To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+Follow the instructions below to register an AI model in your application.
+
+### OpenAI
+
+For **OpenAI**, create an API key and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+
+* Install the following NuGet packages to your project:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+
+{% endhighlight %}
+
+{% endtabs %}
+
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.SmartComponents;
 using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OpenAI;
 var builder = WebApplication.CreateBuilder(args);
 
 ....
 
 builder.Services.AddSyncfusionBlazor();
 
-string apiKey = "api-key";
-string deploymentName = "deployment-name";
-string endpoint = "end point url";// Must be null for OpenAI
+string openAiApiKey = "API-KEY";
+string openAiModel = "OPENAI_MODEL";
+OpenAIClient openAIClient = new OpenAIClient(openAiApiKey);
+IChatClient openAiChatClient = openAIClient.GetChatClient(openAiModel).AsIChatClient();
+builder.Services.AddChatClient(openAiChatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
-.ConfigureCredentials(new AIServiceCredentials(apiKey, deploymentName, endpoint))
 .InjectOpenAIInference();
 
 var app = builder.Build();
@@ -174,19 +196,64 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Here,
-
-* **apiKey**: "OpenAI or Azure OpenAI API Key";
-* **deploymentName**: "Azure OpenAI deployment name";
-* **endpoint**: "Azure OpenAI deployment end point URL";
+### Azure OpenAI
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
-N> From version 28.2.33, the Azure.AI.OpenAI package has been removed from the SmartComponents dependency. To use Azure OpenAI, please install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) package separately in your Blazor application.
+* Install the following NuGet packages to your project:
 
-If you are using **OpenAI**, [create an API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+{% tabs %}
 
-### Configuring Ollama for Self-Hosted AI Models
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+dotnet add package Azure.AI.OpenAI
+
+{% endhighlight %}
+
+{% endtabs %}
+
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+
+using Syncfusion.Blazor.SmartComponents;
+using Syncfusion.Blazor.AI;
+using Azure.AI.OpenAI;
+using Microsoft.Extensions.AI;
+using System.ClientModel;
+
+var builder = WebApplication.CreateBuilder(args);
+
+....
+
+builder.Services.AddSyncfusionBlazor();
+
+string azureOpenAiKey = "AZURE_OPENAI_KEY";
+string azureOpenAiEndpoint = "AZURE_OPENAI_ENDPOINT";
+string azureOpenAiModel = "AZURE_OPENAI_MODEL";
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
+     new Uri(azureOpenAiEndpoint),
+     new ApiKeyCredential(azureOpenAiKey)
+);
+IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
+builder.Services.AddChatClient(azureOpenAiChatClient);
+
+builder.Services.AddSyncfusionSmartComponents()
+.InjectOpenAIInference();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% endtabs %}
+
+
+N> From version 28.2.33 to 30.2.6, the Azure.AI.OpenAI package has been removed from the SmartComponents dependency. To use Azure OpenAI, please install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) package separately in your Blazor application.
+
+### Ollama
 
 To use Ollama for running self-hosted models:
 
@@ -198,11 +265,23 @@ To use Ollama for running self-hosted models:
 
 3. **Configure your application**
 
-   - Set `SelfHosted` to `true`.
    - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
-   - Set `DeploymentName` to the specific model you installed (e.g., `llama2:13b`).
+   - Set `ModelName` to the specific model you installed (e.g., `llama2:13b`).
 
-Add the following settings to the **~/Program.cs** file in your Blazor Server app.
+* Install the following NuGet packages to your project:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package OllamaSharp --version 5.3.5
+
+{% endhighlight %}
+
+{% endtabs %}
+
+* Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
@@ -215,8 +294,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSyncfusionBlazor();
 
+string ModelName = "MODEL_NAME";
+IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+builder.Services.AddChatClient(chatClient);
+
 builder.Services.AddSyncfusionSmartComponents()
-.ConfigureCredentials(new AIServiceCredentials { SelfHosted=true, Endpoint= new Uri("Your self-hosted end point url") ,DeploymentName = "Your model name" })
 .InjectOpenAIInference();
 
 var app = builder.Build();
