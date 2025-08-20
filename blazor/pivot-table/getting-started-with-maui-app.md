@@ -1,25 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
+title: Getting Started with PivotTable in Blazor MAUI App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor PivotTable Component in Blazor MAUI App.
 platform: Blazor
-control: Pivot Table
+control: PivotTable
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
-<!-- markdownlint-disable MD012 -->
-<!-- markdownlint-disable MD029 -->
-<!-- markdownlint-disable MD009 -->
+# Getting Started with Blazor Pivot Table component
 
-# Getting Started with Blazor Pivot Table Component
-
-This section briefly explains about how to include [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
-
-To get start quickly with Blazor Pivot Table component, you can check out this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable) sample.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=SUTN0oyVwPo&t=109s"%}
+In this section, we'll guide you through the process of adding Syncfusion® Blazor Pivot Table component to your Blazor Maui app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow.
 
 {% tabcontents %}
 
@@ -27,15 +17,15 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Create a new Blazor App in Visual Studio
+## Create a new Blazor MAUI App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the app
 
-To add **Blazor Pivot Table** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Pivot Table**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -54,30 +44,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Create a new Blazor App in Visual Studio Code
+## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+## Install Blazor PivotTable and Themes NuGet in the App
 
-{% tabs %}
-
-{% highlight c# tabtitle="Blazor WASM App" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
-
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+To add **Blazor Pivot Table**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 
@@ -95,98 +70,53 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-## Prerequisites
-
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor WebAssembly project using .NET CLI
-
-Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp -ho
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
-
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
-
-Here's an example of how to add **Blazor Pivot Table** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.PivotTable -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotTable` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor 
+@using Syncfusion.Blazor.PivotTable
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Blazor;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
+namespace MauiBlazorWindow;
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
-....
+            builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSyncfusionBlazor();
+#if DEBUG
+            builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Logging.AddDebug();
+#endif
+
+            return builder.Build();
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -204,7 +134,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Initializing Blazor pivot Table component
+## Add Blazor Pivot Table component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component in the **~/Pages/Index.razor** file.
 
@@ -423,7 +353,19 @@ N> Only fields from value section, which is in the form of numeric data values a
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component in your default web browser like below.
+### How to Run the Sample on Windows
+
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVfZMqtrIxIbWRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
+
+### How to Run the Sample on Android
+
+To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
+
+Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+
+N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVfZMqtrIxIbWRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
 
