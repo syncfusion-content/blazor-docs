@@ -15,7 +15,7 @@ The Syncfusion Blazor Dialog component allows extensive customization options to
 
 You can set the width of the dialog using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Width) property.
 
-```razor
+```cshtml
 <SfDialog Width="400px">
     <!-- Dialog content -->
 </SfDialog>
@@ -25,7 +25,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
 
 Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_MinHeight) property.
 
-```razor
+```cshtml
 <SfDialog MinHeight="200px">
     <!-- Dialog content -->
 </SfDialog>
@@ -35,7 +35,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
 
 Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableRtl) property.
 
-```razor
+```cshtml
 <SfDialog EnableRtl="true">
     <!-- Dialog content -->
 </SfDialog>
@@ -45,7 +45,7 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 
 Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property.
 
-```razor
+```cshtml
 <SfDialog CssClass="custom-dialog">
     <!-- Dialog content -->
 </SfDialog>
