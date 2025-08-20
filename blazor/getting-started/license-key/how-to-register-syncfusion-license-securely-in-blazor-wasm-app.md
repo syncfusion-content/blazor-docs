@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Secure Registration of Syncfusion License Keys in Blazor WebAssembly Applications
+# Secure Registration of Syncfusion License Keys in Blazor Wasm App
 
 Registering a license key directly in the Program.cs file of a Blazor WebAssembly Client project can expose it through the compiled assemblies, making it accessible in the browser, creating security risks.
 

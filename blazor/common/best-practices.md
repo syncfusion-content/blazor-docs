@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Best Practices for Improving Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor App Performance
+# Best Practices for Improving Syncfusion&reg; Blazor App Performance
 
 Enhancing the rendering performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor apps involves implementing the following best practices.
 
