@@ -73,7 +73,7 @@ Effortlessly download customized style changes as tokens and CSS variables using
 Follow these steps to download the customized styles from the Figma UI Kit:
 
 - First, open a [Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI Kit](https://www.figma.com/@syncfusion).
-- Navigate to the `Plugins & widgets` section in Figma and search for the `Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens`.
+- Navigate to the `Plugin & widgets` section in Figma and search for the `Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens`.
 - Once found, run the plugin. A popup will appear with an `Export` button.
 - Click the `Export` button. This action will generate a zip file containing your design tokens.
 - Select a directory to save the exported files.

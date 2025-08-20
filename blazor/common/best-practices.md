@@ -31,7 +31,7 @@ If you're using a Blazor WebAssembly app, consider implementing lazy loading to 
 
 ## Utilize PreventRender Option in Blazor WebAssembly App
 
-In a Blazor WebAssembly app, leverage the **PreventRender** option to avoid unnecessary rerendering of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. This ensures optimal performance. For reference, we have provided links for the DataGrid and PivotTable:
+In a Blazor WebAssembly app, leverage the **PreventRender** option to avoid unnecessary re-rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. This ensures optimal performance. For reference, we have provided links for the DataGrid and PivotTable:
 
 * DataGrid: [Link to WebAssembly performance documentation](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance)
 * PivotTable: [Link to WebAssembly performance documentation](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)
