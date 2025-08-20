@@ -134,7 +134,7 @@ Follow the instructions below to register an AI model in your application.
 
 ### OpenAI
 
-For **OpenAI**, create an API key and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+For **OpenAI**, create an API key and place it at `openAiApiKey`. The value for `openAiModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
 * Install the following NuGet packages to your project:
 
@@ -181,7 +181,7 @@ var app = builder.Build();
 
 ### Azure OpenAI
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAiKey`, `azureOpenAiEndpoint` and `azureOpenAiModel` will all be provided to you.
 
 * Install the following NuGet packages to your project:
 
