@@ -15,7 +15,7 @@ The Syncfusion ChatUI allows users to mention others in messages using the `@` c
 
 ## Configure Mention Users
 
-You can use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MentionUsers/) property to define an array of users for the mention suggestion popup.
+You can use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MentionUsers) property to define an array of users for the mention suggestion popup.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -48,7 +48,7 @@ You can use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Customize the Mention trigger character
 
-You can use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MentionChar/) property to customize the character which triggers the mention popup. The default value is `@`.
+You can use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MentionChar) property to customize the character which triggers the mention popup. The default value is `@`.
 
 ```cshtml
 
@@ -82,7 +82,7 @@ You can use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Predefine Mentions with messages
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property in the [ChatMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage/) to include predefined mentions in chat messages. The mentions field stores the selected users for each message.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property in the [ChatMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage) to include predefined mentions in chat messages. The mentions field stores the selected users for each message.
 
 ```cshtml
 
