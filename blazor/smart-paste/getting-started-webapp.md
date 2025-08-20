@@ -158,8 +158,8 @@ For **OpenAI**, create an API key and place it at `apiKey`, leave the `endpoint`
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 
@@ -205,9 +205,9 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Microsoft.Extensions.AI
-dotnet add package Microsoft.Extensions.AI.OpenAI
-dotnet add package Azure.AI.OpenAI
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
+Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 
@@ -273,8 +273,8 @@ To use Ollama for running self-hosted models:
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Microsoft.Extensions.AI
-dotnet add package OllamaSharp --version 5.3.5
+Install-Package Microsoft.Extensions.AI
+Install-Package OllamaSharp 
 
 {% endhighlight %}
 
@@ -287,6 +287,9 @@ dotnet add package OllamaSharp --version 5.3.5
 
 using Syncfusion.Blazor.SmartComponents;
 using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OllamaSharp;
+
 var builder = WebApplication.CreateBuilder(args);
 
 ....
