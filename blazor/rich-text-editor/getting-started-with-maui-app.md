@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with RichTextEditor Component | Blazor MAUI App | Syncfusion
+title: Getting Started with RichTextEditor | Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor RichTextEditor Component in Blazor MAUI App.
 platform: Blazor
 control: RichTextEditor
@@ -399,8 +399,6 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
-
-* [How to insert Emoticons](https://blazor.syncfusion.com/demos/rich-text-editor/insert-emoticons?theme=bootstrap5)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 

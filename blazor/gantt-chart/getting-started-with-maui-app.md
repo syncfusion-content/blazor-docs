@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with GanttChart Component | Blazor MAUI App | Syncfusion
+title: Getting Started with GanttChart | Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor GanttChart Component in Blazor MAUI App.
 platform: Blazor
 control: GanttChart
