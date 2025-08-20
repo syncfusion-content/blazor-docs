@@ -134,7 +134,7 @@ Follow the instructions below to register an AI model in your application.
 
 ### OpenAI
 
-For **OpenAI**, create an API key and place it at `openAiApiKey`. The value for `openAiModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
 * Install the following NuGet packages to your project:
 
@@ -164,11 +164,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSyncfusionBlazor();
 
-string openAiApiKey = "API-KEY";
-string openAiModel = "OPENAI_MODEL";
-OpenAIClient openAIClient = new OpenAIClient(openAiApiKey);
-IChatClient openAiChatClient = openAIClient.GetChatClient(openAiModel).AsIChatClient();
-builder.Services.AddChatClient(openAiChatClient);
+string openAIApiKey = "API-KEY";
+string openAIModel = "OPENAI_MODEL";
+OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
+IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
+builder.Services.AddChatClient(openAIChatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
 .InjectOpenAIInference();
@@ -181,7 +181,7 @@ var app = builder.Build();
 
 ### Azure OpenAI
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAiKey`, `azureOpenAiEndpoint` and `azureOpenAiModel` will all be provided to you.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
 
 * Install the following NuGet packages to your project:
 
@@ -214,15 +214,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSyncfusionBlazor();
 
-string azureOpenAiKey = "AZURE_OPENAI_KEY";
-string azureOpenAiEndpoint = "AZURE_OPENAI_ENDPOINT";
-string azureOpenAiModel = "AZURE_OPENAI_MODEL";
+string azureOpenAIKey = "AZURE_OPENAI_KEY";
+string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
+string azureOpenAIModel = "AZURE_OPENAI_MODEL";
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-     new Uri(azureOpenAiEndpoint),
-     new ApiKeyCredential(azureOpenAiKey)
+     new Uri(azureOpenAIEndpoint),
+     new ApiKeyCredential(azureOpenAIKey)
 );
-IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
-builder.Services.AddChatClient(azureOpenAiChatClient);
+IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
+builder.Services.AddChatClient(azureOpenAIChatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
 .InjectOpenAIInference();
