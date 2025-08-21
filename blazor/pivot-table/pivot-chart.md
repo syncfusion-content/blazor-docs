@@ -1198,7 +1198,7 @@ You can customize data label of the pivot chart markers in terms of angle, align
         <PivotChartSettings Title="Sales Analysis">
             <PivotChartSeries Type="ChartSeriesType.Column">
                 <PivotChartMarkerSettings>
-                    <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Rx="5" Ry="5">
+                    <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Opacity="1" Alignment=PivotChartAlignment.Center Rx="5" Ry="5">
                         <PivotChartMarkerDataLabelBorder Width="2" Color="red"></PivotChartMarkerDataLabelBorder>
                         <PivotChartMarkerDataLabelFont Size="12px"></PivotChartMarkerDataLabelFont>
                         <PivotChartMarkerDataLabelMargin Top="5" Bottom="5" Right="5" Left="5"></PivotChartMarkerDataLabelMargin>
