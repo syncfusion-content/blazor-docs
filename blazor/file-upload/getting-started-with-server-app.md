@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting Started with Blazor File Upload Component | Syncfusion
-description: Checkout and learn about getting started with Blazor File Upload component in Blazor WebAssembly Application.
+title: Getting Started with Blazor FileUpload Component | Syncfusion
+description: Checkout and learn about getting started with Blazor FileUpload component in Blazor Server Application.
 platform: Blazor
-control: File Upload
+control: FileUpload
 documentation: ug
 ---
 
 # Getting Started with Blazor File Upload Component
 
-This section briefly explains about how to include [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
+This section briefly explains about how to include [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get started quickly with Blazor File Upload component, check on the following video:
+To get start quickly with Blazor File Upload, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload) sample:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=MxyrifDwud4" %}
+"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
 
 {% tabcontents %}
 
@@ -26,7 +26,7 @@ To get started quickly with Blazor File Upload component, check on the following
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the App
 
@@ -53,15 +53,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, you can create a server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
-{% highlight c# tabtitle="Blazor WASM App" %}
+{% highlight c# tabtitle="Blazor Server App" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -104,32 +104,22 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor WebAssembly project using .NET CLI
+## Create a Blazor Server side project using .NET CLI
 
-Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp -ho
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
-
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the App
 
@@ -155,32 +145,29 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
 
-{% endhighlight %}
-{% endtabs %}
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+```
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -188,7 +175,11 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <head>
@@ -224,7 +215,7 @@ You can upload the files and files of folders in the Blazor application without 
 You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Find the save action code below.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Inputs
 <SfUploader AutoUpload="true">
@@ -363,139 +354,6 @@ The [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.U
 {% endhighlight %}
 {% endtabs %}
 
-### Server-side configuration for saving and returning responses
-
-The following example demonstrates the server-side action for saving files on the server and returning responses in JSON, String, and File formats.
-
-{% tabs %}
-{% highlight cshtml %}
-
-[Route("api/[controller]")]
-
-private IHostingEnvironment hostingEnv;
-
-public SampleDataController(IHostingEnvironment env)
-{
-    this.hostingEnv = env;
-}
-
-[HttpPost("[action]")]
-public IActionResult Save()
-{
-    // for JSON Data
-    try
-    {
-        // Process uploaded files
-        var responseData = new
-        {
-            Success = true,
-            Message = "Files uploaded successfully",
-            // Additional data can be added here
-        };
-
-        return Ok(responseData);
-    }
-    catch (Exception e)
-    {
-        var errorResponse = new
-        {
-            Success = false,
-            Message = "File upload failed: " + e.Message
-        };
-
-        return BadRequest(errorResponse);
-    }
-
-    // for String Data
-    try
-    {
-        // Process string data
-        var data = "success";
-        // Return the string data
-        return Content(data);
-    }
-    catch (Exception)
-    {
-        var data = "failed";
-        return Content(data);
-    }
-
-    // for File Data
-    try
-    {
-        // Example: Retrieve file path for stream.txt
-        var filePath = "stream.txt"; // Example file path
-        
-        var fullPath = Path.GetFullPath(filePath);
-
-        // Return the file
-        return PhysicalFile(fullPath, "text/plain");
-    }
-    catch (Exception e)
-    {
-        return Content("Failed to retrieve file response: " + e.Message, "text/plain");
-    }
-
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Client-side configuration for saving and returning responses
-
-The following example demonstrates the client-side action for saving files on the server and returning responses in JSON, String, and File formats.
-
-{% tabs %}
-{% highlight cshtml %}
-
-@using Syncfusion.Blazor.Inputs
-@using System.Text.Json
-
-
-<SfUploader>
-    <UploaderAsyncSettings SaveUrl="/api/Uploader/Save"></UploaderAsyncSettings>
-    <UploaderEvents Success="@OnSuccessHandler"></UploaderEvents>
-</SfUploader>
-
-@code {
-
-    private void OnSuccessHandler(SuccessEventArgs args)
-    {
-        if (args.Response is not null) // Check if the event argument is not null
-        {
-           var responseText = args.Response.ResponseText;
-           if (!string.IsNullOrWhiteSpace(responseText))
-           {    
-                // for JSON and File Datas
-                using var jsonDoc = JsonDocument.Parse(responseText);
-                var jsonResponse = jsonDoc.RootElement;
-
-                if (jsonResponse.TryGetProperty("success", out var successProp))
-                {
-                    var isSuccess = successProp.GetBoolean();
-
-                    if (isSuccess)
-                    {
-                        // File upload success
-                        var message = jsonResponse.TryGetProperty("message", out var messageProp) ? messageProp.GetString() : "File uploaded successfully";
-
-                        // Additional processing as needed
-                    }
-                }
-
-
-                // for string Data
-                var message = responseText;
-                // Additional processing as needed
-           }
-        }
-    }
-
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Configure allowed file types
 
 You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
@@ -503,7 +361,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 {% tabs %}
 {% highlight razor %}
 
-<SfUploader AllowedExtensions=".doc, docx, .xls, xlsx"></SfUploader>
+<SfUploader AllowedExtensions=".doc, .docx, .xls, .xlsx"></SfUploader>
 
 {% endhighlight %}
 {% endtabs %}
@@ -514,7 +372,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> File Upload in Blazor WebAssembly using Visual Studio](https://blazor.syncfusion.com/documentation/file-upload/how-to/getting-started-with-blazor-webassembly)
+1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+4. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> File Upload in Blazor WebAssembly using Visual Studio](https://blazor.syncfusion.com/documentation/file-upload/how-to/getting-started-with-blazor-webassembly)
