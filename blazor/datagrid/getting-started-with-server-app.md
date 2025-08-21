@@ -1,15 +1,20 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor DataGrid in Web App
-description: Checkout and learn about the documentation for getting started with Syncfusion Blazor DataGrid in Blazor Web App.
+title: Getting Started with DataGrid in the Blazor Server App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor DataGrid Component in Blazor Server App.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid in Web App
+# Getting Started with Blazor DataGrid
 
-This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor web app using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
+This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor Server app using Visual Studio, Visual Studio code and .NET CLI.
+
+To get start quickly with , you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataGrid) sample.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
 
 {% tabcontents %}
 
@@ -17,21 +22,15 @@ This section briefly explains about how to include [Syncfusion Blazor DataGrid](
 
 ## Prerequisites
 
-* [System requirements for Blazor component](https://blazor.syncfusion.com/documentation/system-requirements)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor web app in Visual Studio
+## Create a new Blazor app in Visual Studio
 
-You can create a **Blazor web app** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server app** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
+## Install Blazor DataGrid and Themes NuGet in the app
 
-## Install Blazor DataGrid and Themes NuGet in the Blazor web app
-
-To add **Syncfusion Blazor DataGrid** in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
-
-If you utilize `WebAssembly or Auto` render modes in the Blazor web app need to be install Syncfusion Blazor NuGet packages within the client project.
-
-Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Syncfusion Blazor DataGrid** in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -46,35 +45,30 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 {% endtabcontent %}
 
-{% tabcontent visual studio Code %}
+{% tabcontent Visual Studio Code %}
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor web app in Visual Studio Code
+## Create a new Blazor app in Visual Studio code
 
-You can create a **Blazor web app** using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server app** using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
-
-For example, in a Blazor web app with the `Auto` interactive render mode, use the following commands.
+Alternatively, you can create a server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet new blazor -o BlazorWebApp -int Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
+{% highlight c# tabtitle="Blazor Server App" %}
+
+dotnet new blazorserver -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
+
 {% endtabs %}
 
-N> For more information on creating a **Blazor web app** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
-
 ## Install Blazor DataGrid and Themes NuGet in the app
-
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor web app need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -110,58 +104,32 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Web project using .NET CLI
+## Create a Blazor Server side project using .NET CLI
 
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-For a Blazor Web App with `Server` interactive render mode & `Per page/component` interactivity location, use the following commands
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazor -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-For a Blazor Web App with `WebAssembly` interactive render mode & `Per page/component` interactivity location, use the following commands
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
-dotnet new blazor -o BlazorApp -int WebAssembly
-cd BlazorApp
-cd BlazorApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `Auto` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int Auto
-cd BlazorApp
-cd BlazorApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates new Blazor Web app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) topics for more details.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the App
 
 Here's an example of how to add **Blazor DataGrid** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
-
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -169,21 +137,16 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-{% endtabcontent %}
+{% endcontent %}
 
 {% endtabcontents %}
 
 ## Register Syncfusion Blazor service
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -191,58 +154,24 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor web app.
-
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor web app.
+Now, register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor Server app.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
 
-...
-...
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
-
-{% endhighlight %}
-{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.Services.AddSyncfusionBlazor();
-
-await builder.Build().RunAsync();
-
-{% endhighlight %}
-{% endtabs %}
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion Blazor Service only in that **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -250,43 +179,24 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script references in the `<head>` section of the main page as follows.
+
+For .NET 6 Blazor Server app, include it in ~/Pages/_Layout.cshtml file.
+
+For .NET 7 Blazor Server app, include it in the ~/Pages/_Host.cshtml file.
 
 ```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-....
-<body>
-    ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+</head>
 ```
-
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor DataGrid 
+## Add Blazor DataGrid component
 
-Add the Syncfusion Blazor DataGrid in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
-
-| Interactivity location | RenderMode | Code |
-| --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
-|  | None | --- |
-
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
+Add the Syncfusion Blazor DataGrid component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -316,9 +226,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVztWraLacsGbYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-component.png)" %}
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DataGrid in your default web browser.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Grid in your default web browser.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVztWraLacsGbYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-component.png)" %}
 
 ## Defining row data
 
@@ -359,7 +269,7 @@ To bind data for the Grid, you can assign a IEnumerable object to the [DataSourc
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the Grid.
 
-The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. To customize column properties, use [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html).
+The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). To customize column properties, use [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html).
 
 Let’s check the properties used here:
 * [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) is added to map with a property name in IEnumerable object.
@@ -468,11 +378,11 @@ The grouping feature enables you to view the Syncfusion Blazor DataGrid record i
 
 Exceptions occurred during Syncfusion Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
-The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
+The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 
 N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 
-The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+The following sample code demonstrates notifying user when server-side exception has occurred during data operation:
 
 {% tabs %}
 {% highlight razor %}
@@ -518,11 +428,10 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataGrid).
+## See Also
 
-## See also
+* [Getting started with Syncfusion Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
+* [Getting Started with Syncfusion Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)

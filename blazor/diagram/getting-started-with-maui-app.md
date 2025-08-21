@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the Diagram Component in the Blazor MAUI App | Syncfusion
+title: Getting Started with Diagram Component in Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor MAUI App.
 platform: Blazor
 control: Diagram Component

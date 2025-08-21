@@ -1,24 +1,20 @@
 ---
 layout: post
-title: Getting Started with Blazor DropDown List Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DropDown List component in Blazor WebAssembly Application.
+title: Getting Started with Blazor DropDownList Component | Syncfusion
+description: Checkout and learn about getting started with Blazor DropDownList component in Blazor Server Application.
 platform: Blazor
-control: DropDown List
+control: DropDownList
 documentation: ug
 ---
 
-# Getting Started with Dropdown List Component
+# Getting Started with Blazor DropDown List Component
 
-## Overview
+This section briefly explains about how to include [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
-The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as data binding, filtering, grouping, UI customization, accessibility, and preselected values.
-
-This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
-
-To get start quickly with Blazor DropDownList component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.
+To get start quickly with Blazor DropDownList, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=bavTLtVAn6I"%}
+"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
 
 {% tabcontents %}
 
@@ -30,7 +26,7 @@ To get start quickly with Blazor DropDownList component, you can check on this v
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
@@ -57,15 +53,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, you can create a server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
-{% highlight c# tabtitle="Blazor WASM App" %}
+{% highlight c# tabtitle="Blazor Server App" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -108,36 +104,26 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor WebAssembly project using .NET CLI
+## Create a Blazor Server side project using .NET CLI
 
-Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp -ho
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
-
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
-Here's an example of how to add **Blazor DropDowns** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+Here's an example of how to add **Blazor DropDownList** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -159,32 +145,29 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
 
-{% endhighlight %}
-{% endtabs %}
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+```
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -192,7 +175,11 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <head>
@@ -311,8 +298,9 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 {% endhighlight %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
+
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Syncfusion Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

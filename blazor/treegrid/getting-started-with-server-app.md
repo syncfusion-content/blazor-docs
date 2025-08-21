@@ -1,21 +1,20 @@
 ---
 layout: post
 title: Getting Started with Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn about getting started with Blazor TreeGrid component in Blazor WebAssembly Application.
+description: Checkout and learn about getting started with Blazor TreeGrid component in Blazor Server Application.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
-
 # Getting Started with Blazor TreeGrid Component
 
-This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
+This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get started quickly with Blazor TreeGrid, check out this video:
+To get start quickly with Blazor TreeGrid, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid) sample:
 
-{% youtube "https://www.youtube.com/watch?v=8He0kyiOgAI" %}
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
 
 {% tabcontents %}
 
@@ -27,11 +26,11 @@ To get started quickly with Blazor TreeGrid, check out this video:
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
-To add **Blazor TreeGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor TreeGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -54,15 +53,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, you can create a server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
-{% highlight c# tabtitle="Blazor WASM App" %}
+{% highlight c# tabtitle="Blazor Server App" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -105,32 +104,22 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor WebAssembly project using .NET CLI
+## Create a Blazor Server side project using .NET CLI
 
-Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp -ho
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
-
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
@@ -156,32 +145,29 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeGrid` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.TreeGrid
 
-{% endhighlight %}
-{% endtabs %}
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+```
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -189,7 +175,11 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <head>
@@ -296,7 +286,7 @@ Let’s check the properties used here:
 {% endhighlight %}
 {% endtabs %}
 
-In the above code example, the [Self-Referential](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) data binding is represented in which the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) properties denotes the hierarchy relationship; whereas in [Hierarchical](https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding) data binding [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) denotes the hierarchy relationship.
+In the above code example, the [Self-Referential](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) data binding is represented in which the `IdMapping` and `ParentIdMapping` properties denotes the hierarchy relationship; whereas in [Hierarchical](https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding) data binding [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) denotes the hierarchy relationship.
 
 ## Enable paging
 
@@ -399,8 +389,6 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid).
 
 ## Handling exceptions
 

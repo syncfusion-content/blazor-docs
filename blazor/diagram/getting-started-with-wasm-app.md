@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor WASM App
 
-In this section, we'll guide you through the process of adding the Blazor Diagram component component to your Blazor WebAssembly (WASM) app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
+In this section, we'll guide you through the process of adding the Blazor Diagram component component to your Blazor WebAssembly (WASM) app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
 
 {% tabcontents %}
 
@@ -74,17 +74,8 @@ await builder.Build().RunAsync();
 
 ## Step 4: How to Add Stylesheet and Script Resources
 
-Add the following stylesheet and script to the head section of the **wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the <head> section of the **wwwroot/index.html** file.
 
-If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
-```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-```
-If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....
@@ -212,6 +203,127 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods: ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)  topic to learn different approaches for adding script references in your Blazor application.
 
 ## Step 5: How to Add the Blazor Diagram component
+
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the **~/Pages/Index.razor** file.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfDiagramComponent Width="100%" Height="600px"/>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in your default web browser.
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 1: Create a Blazor WebAssembly project using .NET CLI
+
+Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp -ho
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+
+## Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet in the App
+
+Here's an example of how to add **Blazor Diagram** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Diagram -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+* In the **~/_Imports.razor** file, add the following namespaces:
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Diagram;
+
+{% endhighlight %}
+{% endtabs %}
+
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the program.cs file.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor();
+await builder.Build().RunAsync();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: How to Add Stylesheet and Script Resources
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the <head> section of the **wwwroot/index.html** file.
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+```
+
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods: ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)  topic to learn different approaches for adding script references in your Blazor application.
+
+## Step 5: How to Add the Blazor Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the **~/Pages/Index.razor** file.
 
