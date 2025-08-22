@@ -13,10 +13,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get start quickly with Blazor Rich Text Editor components, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=NvauE3z7W0k"%}
+To get start quickly with Blazor Rich Text Editor components, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
 
 N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
 

@@ -16,10 +16,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get start quickly with Blazor Pivot Table component, you can check out this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable) sample.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=SUTN0oyVwPo&t=109s"%}
+To get start quickly with Blazor Pivot Table component, you can check out this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable) sample.
 
 {% tabcontents %}
 

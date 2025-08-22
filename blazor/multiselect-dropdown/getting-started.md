@@ -11,9 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor MultiSelect DropDown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get started quickly with Blazor MultiSelect DropDown component in the Blazor WebAssembly App, you can check the video below or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
-
-{% youtube "https://www.youtube.com/watch?v=vS4NNQBJ0p4" %}
+To get started quickly with Blazor MultiSelect DropDown component in the Blazor WebAssembly App, you can check the or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
 
 {% tabcontents %}
 

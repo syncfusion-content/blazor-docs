@@ -11,10 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get start quickly with Blazor TextBox component, check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox) sample.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=vzBKF4Gs-Mc"%}
+To get start quickly with Blazor TextBox component, check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox) sample.
 
 {% tabcontents %}
 

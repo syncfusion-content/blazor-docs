@@ -11,11 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get started quickly with Blazor Maps component, check on the following video:
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=AkWI90I7ncE" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

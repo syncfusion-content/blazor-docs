@@ -11,10 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor Server App using Visual Studio and Visual Studio Code.
 
-To get start quickly with Blazor Gantt Chart, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart) sample:
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
+To get start quickly with Blazor Gantt Chart, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart) sample:
 
 {% tabcontents %}
 

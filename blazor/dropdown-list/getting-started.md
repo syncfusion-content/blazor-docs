@@ -15,10 +15,7 @@ The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-d
 
 This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get start quickly with Blazor DropDownList component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=bavTLtVAn6I"%}
+To get start quickly with Blazor DropDownList component, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.
 
 {% tabcontents %}
 

@@ -11,10 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get start quickly with Blazor TreeView, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeView) sample:
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
+To get start quickly with Blazor TreeView, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeView) sample:
 
 {% tabcontents %}
 
@@ -26,7 +23,7 @@ To get start quickly with Blazor TreeView, you can check on this video or [GitHu
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to this guide.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
