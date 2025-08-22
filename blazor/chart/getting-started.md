@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Chart Component | Syncfusion
+title: Getting Stared | Blazor Chart Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Charts component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Chart

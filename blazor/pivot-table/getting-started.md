@@ -12,7 +12,7 @@ documentation: ug
 <!-- markdownlint-disable MD029 -->
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started with Blazor Pivot Table Component
+# Getting Started with Blazor Pivot Table Component in WASM App
 
 This section briefly explains about how to include [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 

@@ -7,7 +7,7 @@ control: Scheduler
 documentation: ug
 ---
 
-# Getting Started with Blazor Scheduler Component
+# Getting Started with Blazor Scheduler Component in Server App
 
 This section briefly explains about how to include [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 

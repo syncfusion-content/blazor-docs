@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid
+# Getting Started with Blazor DataGrid in Server App
 
 This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor Server app using Visual Studio, Visual Studio code and .NET CLI.
 
