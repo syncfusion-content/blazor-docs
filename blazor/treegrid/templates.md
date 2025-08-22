@@ -278,3 +278,72 @@ public class Employee
 {% endtabs %}
 
 ![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.png)
+
+## Customize the empty record template in Blazor TreeGrid
+
+The empty record template feature in the Syncfusion Blazor TreeGrid allows you to use custom content such as images, text, or other components, when the TreeGrid doesn't contain any records to display. This feature replaces the default message of **No records to display** typically shown in the TreeGrid.
+
+To activate this feature, set the `EmptyRecordTemplate` feature of the TreeGrid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
+
+The following example demonstrates how an image and text can be rendered as a template to indicate that the TreeGrid has no data to display:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
+
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskID" ParentIdMapping="ParentID" HasChildMapping="IsParent" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"/>
+    <TreeGridTemplates>
+        <EmptyRecordTemplate>
+            <div class="emptyRecordTemplate text-center">
+                <img src="@ImageUrl" class="e-emptyRecord" alt="No record" />
+                <span>There is no data available to display at the moment.</span>
+            </div>
+        </EmptyRecordTemplate>
+    </TreeGridTemplates>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="120" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="200"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="130" Format="d" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public List<TreeData> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+	public string ImageUrl = "data:image/svg+xml;base64...."
+   
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public int TaskId { get; set;}
+        public string TaskName { get; set;}
+        public DateTime? StartDate { get; set;}
+        public int? Duration { get; set;}
+       
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> TreeDataCollection = new List<TreeData>();
+            return TreeDataCollection;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor TreeGrid with Empty Record Template](images/empty-record-template.png)
