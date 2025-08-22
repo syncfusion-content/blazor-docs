@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor RichTextEditor
 
-In this section, we'll guide you through the process of adding Syncfusion® Blazor RichTextEditor component to your Blazor Maui app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow.
+This section explains you through the step-by-step process of integrating the Syncfusion® Blazor RichTextEditor component to your Blazor Maui app using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 

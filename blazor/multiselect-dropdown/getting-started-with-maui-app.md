@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MultiSelect DropDown Component
 
-In this section, we'll guide you through the process of adding Syncfusion® Blazor MultiSelect DropDown component to your Blazor Maui app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow.
+This section explains you through the step-by-step process of integrating the Syncfusion® Blazor MultiSelect DropDown component into your Blazor Maui app using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 

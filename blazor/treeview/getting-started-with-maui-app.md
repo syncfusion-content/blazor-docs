@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeView component
 
-In this section, we'll guide you through the process of adding Syncfusion® Blazor TreeView component to your Blazor Maui app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow.
+This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeView component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
