@@ -9,7 +9,7 @@ documentation: ug
 
 # Resizing in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) supports resizing feature. To resize the dialog, select and resize it by using its handle (grip) or hovering on any of the edges or borders of the dialog within the sample container.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) supports resizing feature. To resize the dialog, select and resize it by using its resize handles (grip areas) or hovering on any of the edges or borders of the dialog within the sample container. This allows users to dynamically adjust the dialog size to better accommodate content or fit their preferred viewing area.
 
 To get started quickly with resizing in Blazor Dialog Component, Refer the video below.
 
@@ -17,7 +17,7 @@ To get started quickly with resizing in Blazor Dialog Component, Refer the video
 
 ## EnableResize Property
 
-The resizable dialog can be created by setting the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableResize) property to true, which is used to change the size of a dialog dynamically and view its content with expanded mode.
+The resizable dialog can be created by setting the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableResize) property to true, which is used to change the size of a dialog dynamically and view its content with expanded mode. When enabled, users can interact with the dialog's resize handles to modify its dimensions according to their needs.
 
 ```cshtml
 
@@ -54,7 +54,19 @@ The resizable dialog can be created by setting the [EnableResize](https://help.s
 
 ## ResizeHandles Property
 
-The [ResizeHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ResizeHandles) property can also be configured for all the directions in which the dialog should be resized. When you configure the target property along with the `EnableResize` property, the dialog can be resized within its specified target container.
+The [ResizeHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ResizeHandles) property configures the specific directions in which the dialog can be resized. Resize handles are interactive grip areas positioned on the dialog's edges and corners that users can drag to modify the dialog dimensions. When the target property is configured along with the `EnableResize` property, the dialog can be resized within its specified target container boundaries.
+
+The ResizeDirection enum provides the following options:
+
+* All: Enables resizing in all directions (default)
+* East: Enables resizing from the right edge
+* North: Enables resizing from the top edge
+* NorthEast: Enables resizing from the top-right corner
+* NorthWest: Enables resizing from the top-left corner
+* South: Enables resizing from the bottom edge
+* SouthEast: Enables resizing from the bottom-right corner
+* SouthWest: Enables resizing from the bottom-left corner
+* West: Enables resizing from the left edge
 
 ```cshtml
 
@@ -95,6 +107,8 @@ The [ResizeHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popu
 ## Related Events
 
 ### OnResizeStart
+
+The Dialog component provides several events that trigger during the resizing process, allowing developers to implement custom logic and handle resize operations programmatically.
 
 The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStart) event triggers when the user begins to resize a dialog.
 
