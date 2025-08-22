@@ -11,11 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
-To get started quickly with Blazor Gantt Chart component, check on the following video:
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=anPdfXkz0IY" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

@@ -7,11 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid
+# Getting Started with Blazor DataGrid in WASM App
 
 This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor webAssembly app using Visual Studio, Visual Studio code and .NET CLI.
-
-To get start quickly with , you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataGrid) sample.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}

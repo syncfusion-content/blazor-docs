@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Chart Component | Syncfusion
+title: Getting Stared | Blazor Chart Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Charts component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Chart
@@ -12,10 +12,6 @@ documentation: ug
 # Getting Started with Blazor Chart Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
-
-You can get started with the Blazor Chart component by watching the following video.
-
-{% youtube "youtube:https://www.youtube.com/watch?v=0xwwOvmYQ6E" %}
 
 {% tabcontents %}
 
