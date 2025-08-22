@@ -13,10 +13,17 @@ The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-di
 
 ## DialogPositionData Properties
 
-The DialogPositionData class sets the dialog's X and Y coordinates. The position is relative to a specified Target or the page body if no target is defined.
+The DialogPositionData class sets the dialog's X and Y coordinates within a coordinate system where the top-left corner serves as the origin point (0,0). The position is calculated relative to a specified Target container or the page body if no target is defined.
 
-For X is: left, center, right (or) any offset value
-For Y is: top, center, bottom (or) any offset value
+X-axis positioning options:
+* Named positions: left, center, right
+* Offset values: Numeric values in pixels (e.g., "100px", "50")
+
+Y-axis positioning options:
+* Named positions: top, center, bottom
+* Offset values: Numeric values in pixels (e.g., "100px", "50")
+
+When using offset values, positive numbers move the dialog away from the top-left origin, while the dialog remains constrained within the target container boundaries.
 
 ```cshtml
 
@@ -55,7 +62,7 @@ For Y is: top, center, bottom (or) any offset value
 
 ## RefreshPositionAsync Method
 
-The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_RefreshPositionAsync) method is used to programmatically recalculate and update the dialog's position.
+The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_RefreshPositionAsync) method programmatically recalculates and updates the dialog's position. This method is particularly useful when the dialog's positioning properties are modified dynamically or when the target container's dimensions change, ensuring the dialog maintains proper positioning relative to its container.
 
 ```cshtml
 
@@ -109,7 +116,7 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Position the Blazor Dialog in center of the page on scrolling
 
-By default, when you scroll the page/container, Dialog will also scroll along with the page/container. To display the Dialog in the same position without scrolling, refer to the following code sample. Here, the `e-fixed` class is added to the Dialog element by using the `CssClass` property to prevent scrolling.
+By default, when scrolling the page or container, the Dialog scrolls along with the content. To display the Dialog in a fixed position that remains stationary during scrolling, the following implementation uses the `e-fixed` CSS class applied through the `CssClass` property. This approach ensures the dialog maintains its position relative to the viewport rather than the scrollable content.
 
 ```cshtml
 
