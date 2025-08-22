@@ -294,6 +294,7 @@ The following example demonstrates how an image and text can be rendered as a te
 @using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskID" ParentIdMapping="ParentID" HasChildMapping="IsParent" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridPageSettings PageCount="5"></TreeGridPageSettings>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"/>
     <TreeGridTemplates>
         <EmptyRecordTemplate>
@@ -304,7 +305,7 @@ The following example demonstrates how an image and text can be rendered as a te
         </EmptyRecordTemplate>
     </TreeGridTemplates>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="120" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="120" IsPrimaryKey="true" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="200"></TreeGridColumn>
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="130" Format="d" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
