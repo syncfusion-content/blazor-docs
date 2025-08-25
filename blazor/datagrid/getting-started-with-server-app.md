@@ -24,7 +24,7 @@ This section briefly explains about how to include [Syncfusion Blazor DataGrid](
 
 ## Create a new Blazor app in Visual Studio
 
-You can create a **Blazor Server app** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
+You can create a **Blazor Server app** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
 
 ## Install Blazor DataGrid and Themes NuGet in the app
 
@@ -109,7 +109,7 @@ Run the `dotnet new blazorserver` command to create a new Blazor Server applicat
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazorserver -o BlazorApp
+dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
 
 {% endhighlight %}
@@ -150,7 +150,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor Server app.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
@@ -184,6 +184,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor DataGrid Component script reference.
+    //<script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
 </body>
 ```
 

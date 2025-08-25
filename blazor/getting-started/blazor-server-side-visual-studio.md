@@ -110,7 +110,7 @@ Run the `dotnet new blazorserver` command to create a new Blazor Server applicat
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazorserver -o BlazorApp
+dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
 
 {% endhighlight %}
