@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Symbol Palette Appearance in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Symbol Palette in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Symbol Palette Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
