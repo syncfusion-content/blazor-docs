@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Customization in Blazor Diagram Component
+# Connector Customization in Blazor Diagram Component
 
 ## How to Customize Connector Decorators
 
