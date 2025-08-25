@@ -24,7 +24,7 @@ To get start quickly with Blazor WebAssembly App, you can check on this video.
 
 ## Using Syncfusion Blazor Templates
 
-You can create a Blazor WebAssembly App using Syncfusion Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor WebAssembly Standalone App using Syncfusion Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Manually Creating a Project
 
@@ -38,9 +38,11 @@ This section provides a brief explanation on how to manually create a Blazor Web
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a new Blazor WebAssembly App in Visual Studio
+### Create a new Blazor WebAssembly App (Standalone) in Visual Studio
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+![Blazor WASM Create Project Template](blazor-wasm-app-template.png)
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
