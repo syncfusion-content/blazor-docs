@@ -15,7 +15,7 @@ The `RadialTree` layout provides support for adding space between the nodes. The
 
 >**Note:** The radial tree structure used in this context does not accommodate nodes with multiple parents. Each node within the tree is intended to have a single parent, maintaining a clear hierarchical relationship.
 
-## How to create a RadialTree with DataSource
+## How to Create a Radial Tree Using DataSource
 
 You can create a radial tree layout with a DataSource. The following code example illustrates how to create a radial tree layout using a data source.
 
@@ -147,7 +147,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## How to create a RadialTree with nodes and connectors
+## How to Create a Radial Tree With Nodes and Connectors
 
 You can render a radial tree layout without using a Datasource. The following code demonstrates how to render a radial tree layout without using a DataSource.
 

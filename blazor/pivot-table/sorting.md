@@ -83,30 +83,67 @@ Usually string sorting is applied to field members even if it starts with number
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="100%" Height="600" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
-    <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
+<SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="800" Height="350" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
         <PivotViewColumns>
-            <PivotViewColumn Name="Units"></PivotViewColumn>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
-            <PivotViewRow Name="Product"></PivotViewRow>
+            <PivotViewRow Name="ProductID"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFieldMapping>
-            <PivotViewField Name="Units" DataType="number"></PivotViewField>
+            <PivotViewField Name="ProductID" DataType="number"></PivotViewField>
         </PivotViewFieldMapping>
     </PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
+@code {
     public List<AlphaNumericData> data { get; set; }
+    public class AlphaNumericData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public int Sold { get; set; }
+        public long Amount { get; set; }
+    }
     protected override void OnInitialized()
     {
-        this.data = AlphaNumericData.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        data = new List<AlphaNumericData>
+        {
+            new AlphaNumericData { ProductID = "618-XW", Country = "Canada", Sold = 90, Amount = 9219069 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Australia", Sold = 37, Amount = 1571126 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "Germany", Sold = 31, Amount = 9523258 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "United States", Sold = 86, Amount = 1004572 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "United Kingdom", Sold = 73, Amount = 4532163 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Germany", Sold = 45, Amount = 1916052 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "Canada", Sold = 85, Amount = 6586156 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "Australia", Sold = 51, Amount = 6348087 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "Germany", Sold = 65, Amount = 1365854 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "United States", Sold = 81, Amount = 6461768 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "United Kingdom", Sold = 33, Amount = 6181560 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "Germany", Sold = 17, Amount = 611364 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "Canada", Sold = 41, Amount = 3688930 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "Australia", Sold = 51, Amount = 4648920 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Germany", Sold = 56, Amount = 4579862 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "United States", Sold = 25, Amount = 1249117 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "United Kingdom", Sold = 60, Amount = 9603891 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "Canada", Sold = 31, Amount = 9548655 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "Australia", Sold = 93, Amount = 7496742 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Germany", Sold = 62, Amount = 8692814 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "United States", Sold = 22, Amount = 4789234 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "United Kingdom", Sold = 61, Amount = 7927531 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "Germany", Sold = 68, Amount = 5440025 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Canada", Sold = 87, Amount = 8097913 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "Australia", Sold = 87, Amount = 1809071 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "Germany", Sold = 96, Amount = 9893092 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "United States", Sold = 22, Amount = 8136252 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "United Kingdom", Sold = 29, Amount = 9190577 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Germany", Sold = 85, Amount = 5410172 }
+        };
     }
 }
 
@@ -163,6 +200,53 @@ N> Value fields are set to the column axis by default. In such cases, the value 
 
 ![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.png)
 
+### Multiple Axis Sorting
+
+Users can apply value sorting to both row and column axes simultaneously for more dynamic and precise data analysis. The following settings are used to configure sorting:
+
+* [ColumnHeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_ColumnHeaderText): Specifies the column header hierarchy for value sorting. Header levels are defined from Level 1 to N using a delimiter for clarity.
+* [HeaderDelimiter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_HeaderDelimiter): It allows to set the delimiters string to separate the header text between levels.
+* [ColumnSortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_ColumnSortOrder): Sets the delimiter string used to separate levels in the column header text.
+* [RowHeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_RowHeaderText): Defines the specific row header for which the value sorting should be applied.
+* [RowSortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_RowSortOrder): Determines the sorting direction for the specified row header.
+
+N> This feature is applicable only to relational data sources.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" EnableValueSorting="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewValueSortSettings ColumnHeaderText="FY 2015##Unit Sold" HeaderDelimiter="##" ColumnSortOrder="Sorting.Descending" RowHeaderText="France" RowSortOrder="Sorting.Ascending"></PivotViewValueSortSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
 ## Events
 ### OnActionBegin
 
@@ -206,7 +290,7 @@ In the following example, sort action can be restricted by setting the **args.Ca
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>    
-   <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -268,7 +352,7 @@ N> This option is applicable only when the field based UI actions are performed 
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>    
-   <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
 </SfPivotView>
 
 @code{

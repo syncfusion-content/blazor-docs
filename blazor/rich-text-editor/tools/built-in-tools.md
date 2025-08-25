@@ -186,6 +186,12 @@ The following table lists the tools available in the toolbar.
 <td><img alt= "Bullet format list in Blazor RichTextEditor" src="../images/bullet-format.png"></td>
 <td><p>Allows to create list items with various list style types(bulleted).</p></td>
 </tr>
+
+<tr>
+<td><p>HorizontalLine</p></td>
+<td><img alt= "Horizontal Line in Blazor RichTextEditor" src="../images/horizontal-icon.png"></td>
+<td><p>Horizontal lines visually separate sections of content in the editor, enhancing readability and layout clarity.</p></td>
+</tr>
 </table>
 
 The tools order can be customized as your application requirement. If you are not specifying any tools order, the editor will create the toolbar with default items.

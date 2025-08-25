@@ -98,10 +98,9 @@ You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncf
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 <style>
@@ -169,10 +168,9 @@ You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syn
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 <style>

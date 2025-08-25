@@ -204,6 +204,27 @@ The background color can be set for each table cell through the [TableToolbarCom
 
 ![Blazor RichTextEditor changing table background color](../images/blazor-richtexteditor-table-background-color.png)
 
+## Copy, cut, and paste table rows and columns
+
+The Rich Text Editor supports copying, cutting, and pasting table content, significantly improving the efficiency of table data manipulation. This feature is ideal for applications that require dynamic table content management, allowing users to easily modify and manage table data within the editor.
+
+Users can select multiple table cells by dragging the mouse or by holding the <kbd>Shift</kbd> key and using the <kbd>Arrow keys</kbd>. After selecting the desired cells, the following standard keyboard shortcuts can be used:
+
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Copy   | <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> |
+| Cut    | <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> |
+| Paste  | <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> |
+
+**Paste behavior and supported scenarios:**
+
+* Table structure, formatting, and cell properties are automatically preserved during the paste operation.
+* The editor intelligently handles cell merging and splitting based on the destination context.
+* Supports cross-table operations. Users can copy content from one table and paste it into another.
+* Allows pasting partial table content as new tables or into existing table cells.
+* Compatible with content from external applications like Excel, Word, and other editors.
+* Maintains formatting consistency during both internal and external paste operations.
+* Supports pasting into a single clicked cell or a selected range of multiple cells.
 
 N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
 

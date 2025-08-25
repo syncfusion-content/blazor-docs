@@ -49,11 +49,11 @@ Diagram provides support to export the diagram as image or SVG files. The follow
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/Export)
 
-## Exporting options
+## Exporting Options
 
 Diagram provides support to export the desired region of the diagram to the desired formats.
 
-### File Formats
+### How to Export Diagram to Different File Formats
 
 [DiagramExportFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportFormat.html) specifies the type/format of the exported file. By default, the diagram is exported in .jpeg format. You can export the diagram to the following formats:
 
@@ -83,7 +83,7 @@ Diagram provides support to export the desired region of the diagram to the desi
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOption)
 
-### Page Size
+### How to Customize Page Size
 
 Diagram provides support to change the page size. The page size can be adjusted by setting the [DiagramExportSettings.PageWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageWidth) and [DiagramExportSettings.PageHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageHeight) properties. The default value for width is 1123 pixels and the height is 794 pixels.
 
@@ -111,7 +111,7 @@ Diagram provides support to change the page size. The page size can be adjusted 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPageSize)
 
-### How to add margin around exported image
+### How to Add Margin Around Exported Diagram Image
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Margin) specifies the space around the content to be printed/exported.The default value for margin is 25 for all sides.
 <!-- markdownlint-disable MD033 -->
@@ -143,7 +143,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportMargin)
 
-### How to export the diagram based on region
+### How to Export Diagrams by Region
 
 [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Region) specifies whether the diagram is to be exported based on page settings, content, or clip bounds. The exporting options are as follows:
 
@@ -182,7 +182,7 @@ The following code example illustrates how to export the diagram based on page s
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportRegion)
 
-### Custom bounds
+### How to Export Diagram with Custom Bounds
 
 Diagram provides support to export any specific region of the diagram by using the [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_ClipBounds) property.
 
@@ -214,7 +214,7 @@ The following code example illustrates how to export the region specified in the
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportClipBounds)
 
-### Export diagram as single or multiple page
+### How to Export Diagram as Single or Multiple Pages
 
 Diagram provides support to export the entire diagram to either a single page or multiple pages using the [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_FitToPage) property. By default, this property is set to false.
 
@@ -253,7 +253,7 @@ The following code example illustrates how to export the diagram to a single pag
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPage)
 
-### How to change orientation at runtime
+### How to Change Orientation at Runtime
 
 Diagram provides support to switch between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Portrait) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Landscape) orientation while exporting. You can change the orientation by setting the [DiagramExportSettings.Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Orientation) Property. The default value is Landscape.
 
@@ -286,7 +286,7 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOrientation)
 
-### How to export the diagram as PDF
+### How to Export the Diagram as PDF
 
 Diagram does not have built-in support to convert the diagram to a PDF file. However, you can achieve this by exporting the diagram as a base-64 and then converting the exported file to PDF using Syncfusion.PdfExport.PdfDocument. Javascript functions `downloadPdf` and `triggerDownload` are invoked to automatically download the pdf file. 
 
@@ -402,3 +402,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to print or export the HTML and Native node into image format](https://support.syncfusion.com/kb/article/12332/how-to-print-or-export-the-html-and-native-node-into-image-format-in-blazor-diagarm)
+
+* [How to Export the Blazor Diagram to PDF](https://support.syncfusion.com/kb/article/16302/how-to-export-the-blazor-diagram-to-pdf)
+
+* [How to Export Node Details into Excel File in Blazor Diagram](https://support.syncfusion.com/kb/article/16319/how-to-export-node-details-into-excel-file-in-blazor-diagram)
+
+* [How to Export HTML Shapes into Image and PDF Format in Blazor Diagram](https://support.syncfusion.com/kb/article/16039/how-to-export-html-shapes-into-image-and-pdf-format-in-blazor-diagram)
+
+* [How to Export Blazor Diagram with Image Nodes to a PNG File](https://support.syncfusion.com/kb/article/18750/how-to-export-blazor-diagram-with-image-nodes-to-a-png-file)

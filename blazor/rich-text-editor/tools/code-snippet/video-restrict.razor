@@ -1,21 +1,28 @@
 @using Syncfusion.Blazor.RichTextEditor;
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
-        <RichTextEditorVideoSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="../Files/"></RichTextEditorVideoSettings>
+        <RichTextEditorVideoSettings MaxFileSize="30000000"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Video }
+        new ToolbarItemModel() { Command = ToolbarCommand.Video },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-
-    private void onFileUploading(FileUploadingEventArgs args)
-    {
-        var imgSize = 500000;
-        var sizeInBytes = args.FilesData[0].Size;
-        if ( imgSize < sizeInBytes ) {
-            args.Cancel = true;
-        }
-    }
 }

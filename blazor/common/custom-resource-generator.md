@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
 
 ![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
 
@@ -19,9 +19,9 @@ Search and select the required Syncfusion<sup style="font-size:70%">&reg;</sup> 
 
 Refer to the following steps to search and select the components in CRG:
 
-1. Open [Syncfusion<sup style="font-size:70%">&reg;</sup> Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) application.
+1. Open [Syncfusion<sup style="font-size:70%">&reg;</sup> Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) application.
 2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
-![Search and select Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components](images/search-non-injectable.png)
+![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
 3. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
 ![Select the built-in themes in Blazor](images/select-inbuilt-themes.png)
 
@@ -47,11 +47,8 @@ N> When you download the resources of Material and Tailwind themes, either separ
 
 1. Copy and paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
 2. Now, manually add the custom interop script and styles in the Blazor App.
-    * For **Blazor Web App**, reference custom interop script in `~/Components/App.razor` file.
-    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file.
-    * For **Blazor Server App**, reference custom interop script in
-        * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 7` project.
+    * For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference custom interop script in `~/Components/App.razor` file.
+    * For **Blazor WASM Standalone App**, reference custom interop script in `~/wwwroot/index.html` file.
 
     ```html
     <head>

@@ -286,7 +286,7 @@ The label filtering dialog can be enabled by setting the [AllowLabelFilter](http
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
 </SfPivotView>
@@ -457,7 +457,7 @@ N> Operators like [Operators.Equals](https://help.syncfusion.com/cr/blazor/Syncf
         <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
     </PivotViewValues>
     <PivotViewFormatSettings>
-        <PivotViewFormatSetting Name="DeliveryDate" Type="date" Format="dd/MMM/yyyy"></PivotViewFormatSetting>
+        <PivotViewFormatSetting Name="DeliveryDate" Type="FormatType.DateTime" Format="dd/MMM/yyyy"></PivotViewFormatSetting>
     </PivotViewFormatSettings>
     <PivotViewFilterSettings>
         <PivotViewFilterSetting Name="DeliveryDate" Type=FilterType.Date Condition=Operators.Before Value1="2019-01-07"></PivotViewFilterSetting>
@@ -524,7 +524,7 @@ The value filtering dialog can be enabled by setting the [AllowValueFilter](http
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
 </SfPivotView>
@@ -595,7 +595,7 @@ For example, to show the data where total sum of units sold for each country exc
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
         <PivotViewFilterSettings>
             <PivotViewFilterSetting Name="Country" Measure="Sold" Type=FilterType.Value Condition=Operators.GreaterThan Value1=1500></PivotViewFilterSetting>

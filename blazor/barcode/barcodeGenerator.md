@@ -206,3 +206,8 @@ The below code explains how to set the EnableCheckSum property to hide the extra
     }
 }
 ```
+## See also
+
+* [How to generate a QR Code in (2FA) Application in Blazor Diagram?](https://support.syncfusion.com/kb/article/16295/how-to-generate-a-qr-code-in-2fa-application-in-blazor-diagram)
+
+* [How to create a simple BarcodeGenerator and QRCodeGenerator sample in a .NET 8 Blazor Web App using interactive render mode as a server?](https://support.syncfusion.com/kb/article/17284/how-to-create-a-simple-barcodegenerator-and-qrcodegenerator-sample-in-a-net-8-blazor-web-app-using-interactive-render-mode-as-a-server)

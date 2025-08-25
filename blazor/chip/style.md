@@ -28,7 +28,7 @@ Use the following CSS to customize the chip text properties.
 Use the following CSS to customize the chip icon properties.
 
 ```css
-.e-chip .e-icon {
+.e-chip .e-chip-icon {
     background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/laura.png');
     opacity: 0.8;
 }

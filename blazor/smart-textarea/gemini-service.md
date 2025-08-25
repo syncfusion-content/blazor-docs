@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gemini AI with Syncfusion Smart Components in Blazor App | Syncfusion
+title: Gemini AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart Components in a Blazor App.
 control: Smart TextArea
 documentation: ug
@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 
 For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
 
-## Next Steps
+## Getting Started for Gemini AI with SmartTextArea
 
 After completing this setup, you can:
 

@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Deploy Diagram Component in Blazor MAUI in windows | Syncfusion
+title: Getting Started with Diagram Component in Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor MAUI App.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Getting Started with Diagram Component in the Blazor MAUI app.
+# Getting Started with the Diagram Component in the Blazor MAUI App
 
-In this section, we'll guide you through the process of adding Syncfusion® Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
+
+Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 {% tabcontents %}
 
@@ -19,11 +21,11 @@ In this section, we'll guide you through the process of adding Syncfusion® Blaz
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Step 1: Create a new Blazor MAUI App in Visual Studio
+## Step 1: How to Create a New Blazor MAUI App in Visual Studio
 
 You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
 
-## Step 2: Install Diagram NuGet package in Blazor Maui App
+## Step 2: How to Install Diagram NuGet Package in Blazor MAUI App
 
 To add **Blazor Diagram**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -38,7 +40,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -88,7 +90,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Adding stylesheet and script
+## Step 4: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -109,7 +111,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 </head>
 ```
 
-## Step 5: Add Diagram component
+## Step 5: How to Add the Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
@@ -246,7 +248,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
-## Run on Windows
+## How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
@@ -256,7 +258,7 @@ When the application is successfully launched, the Diagram component will seamle
 
 ![Run Windows machine](images/blazor-diagram-maui-page.png)
 
-## Run on Android
+## How to Run the Sample on Android
 
 To run the Blazor DiagramComponent in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
@@ -276,11 +278,11 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Step 1: Create a new Blazor MAUI App in Visual Studio Code
+## Step 1: How to Create a New Blazor MAUI App Using Visual Studio Code
 
 You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Step 2: Install Diagram NuGet package in Blazor Maui App
+## Step 2: How to Install Diagram NuGet Packages in a Blazor MAUI App
 
 To add **Blazor Diagram**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -298,7 +300,7 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -348,7 +350,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Adding stylesheet and script
+## Step 4: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -369,7 +371,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 </head>
 ```
 
-## Step 5: Add Diagram component
+## Step 5: How to Add the Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
@@ -506,7 +508,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
-## Run on Windows
+## How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
@@ -516,7 +518,7 @@ When the application is successfully launched, the Diagram component will seamle
 
 ![Run Windows machine](images/blazor-diagram-maui-page.png)
 
-## Run on Android
+## How to Run the Sample on Android
 
 To run the Blazor DiagramComponent in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
@@ -531,3 +533,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+## See also
+
+* [How to Create Diagram Builder in MAUI Platform](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)

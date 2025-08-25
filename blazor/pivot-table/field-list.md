@@ -163,7 +163,7 @@ To enable search box in the static field list UI, set the [ShowFieldSearch](http
     private List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.dataSource = ProductDetails.GetProductData();
+        this.data = ProductDetails.GetProductData();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }   
 }

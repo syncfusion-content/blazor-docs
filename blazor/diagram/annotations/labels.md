@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions of Annotation in Blazor Diagram Component | Syncfusion
+title: Annotation in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about actions of annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
@@ -11,7 +11,7 @@ documentation: ug
 
 The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
-## How to create annotation
+## How to Create Annotation
 
 An annotation can be added to a node or connector by defining the annotation object and adding it to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the annotation defines the text to be displayed. 
 
@@ -78,7 +78,7 @@ N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotat
 <br/>* By default, connector’s path annotation positioned in center point of its path.
 >**Note:** Do not use underscores(_) for annotation's id.
 
-## How to add annotation at runtime
+## How to Add Annotation at Runtime
 
 You can add an annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
 
@@ -140,7 +140,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
-## How to remove annotations at runtime
+## How to Remove Annotation at Runtime
 
 A collection of annotations can be removed from a node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
@@ -202,7 +202,7 @@ Also, a collection of annotations can be removed from the node by using the `Rem
 N>* You can delete multiple annotations from a node to pass the collection of annotation objects as argument.
 <br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
-## How to update annotation at runtime
+## How to Update Annotation at Runtime
 
 You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime.
 
@@ -257,3 +257,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )
+
+* [How to dynamically create and connect diagram nodes with annotations via ports in syncfusion blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
+* [How to Prevent Text Overflow and Display Excess Content on Hover in a Diagram?](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
+
+* [How to generate a hierarchical layout with annotation at runtime?](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)

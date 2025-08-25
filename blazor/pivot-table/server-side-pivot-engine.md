@@ -780,3 +780,369 @@ Meanwhile, the memory cache is set to expire after 60 minutes from RAM to free i
 * **GetMembers:** Allows to get the members of a field. This fires when the member editor is opened to do a filtering operation.
 * **GetRawData:** Allows to get raw data of an aggregated value cell. This fires when the drill-through or editing dialog is opened.
 * **GetPivotValues:** Allows to update the stored engine properties in-memory cache and returns the aggregated values to browser to render the pivot table. Here, the return value can be modified. The pivot table will be rendered in the browser based on this.
+
+## Excel Export
+
+The server-side engine seamlessly supports Excel export functionality, enabling users to efficiently generate and download pivot table reports in Excel format directly from the server. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, the user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the pivot table to Excel by clicking an external button.
+
+N> The pivot table component can be exported to Excel format using options available in the toolbar. For more details [refer](./tool-bar) here.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData().ToList();
+       //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    public void OnExcelExport() {
+        this.pivot.ExportToExcelAsync(false);
+    }
+}
+
+```
+
+To enable export functionality in a server-side controller, initialize the **ExcelExport** class to handle export file generation.
+
+```csharp
+ private ExcelExport excelExport = new ExcelExport();
+```
+
+Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), invoke the **ExportToExcel** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        public async Task<object> Post([FromBody]object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+             else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                     param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else if (param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+                {
+                    return pivotExport.ExportAsPivot(param.Action == "onPivotExcelExport" ? ExportType.Excel : ExportType.CSV, engine, param);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+
+```
+
+![Server-side engine excel exporting](images/excel-export-with-server-side-pivot-engine.png)
+
+### Add header and footer while exporting
+
+The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Footer) properties in [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) and pass it as a parameter to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__System_Boolean_) method.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
+<SfPivotView TValue="PivotViewData" Height="300" @ref="pivotView" AllowExcelExport="true" EnableVirtualization="true">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    private SfPivotView<PivotViewData> pivotView;
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
+    }
+
+     public async Task OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
+        Syncfusion.Blazor.Grids.ExcelHeader header = new Syncfusion.Blazor.Grids.ExcelHeader();
+        Syncfusion.Blazor.Grids.ExcelFooter footer = new Syncfusion.Blazor.Grids.ExcelFooter();
+        header.HeaderRows = 1;
+        footer.FooterRows = 1;
+        List<Syncfusion.Blazor.Grids.ExcelRow> headerContent = new List<Syncfusion.Blazor.Grids.ExcelRow>
+        {
+            new Syncfusion.Blazor.Grids.ExcelRow() { Index = 1, Cells = new List<Syncfusion.Blazor.Grids.ExcelCell>
+            {
+                new Syncfusion.Blazor.Grids.ExcelCell() { Index=1, RowSpan= 1,ColSpan=11 , Value= "Pivot Table", Style = new Syncfusion.Blazor.Grids.ExcelStyle() { FontColor = "#C67878" ,Bold = true, FontSize = 20, Italic= true, HAlign = Syncfusion.Blazor.Grids.ExcelHorizontalAlign.Center }  },
+            } },
+        };
+        List<Syncfusion.Blazor.Grids.ExcelRow> footerContent = new List<Syncfusion.Blazor.Grids.ExcelRow>
+        {
+            new Syncfusion.Blazor.Grids.ExcelRow() { Index = 1, Cells = new List<Syncfusion.Blazor.Grids.ExcelCell>
+            {
+                new Syncfusion.Blazor.Grids.ExcelCell() { Index=1, RowSpan= 1,ColSpan=11 , Value= "Thank you for your business! Visit Again!", Style = new Syncfusion.Blazor.Grids.ExcelStyle() { Bold = true, FontSize = 13, Italic= true,  HAlign = Syncfusion.Blazor.Grids.ExcelHorizontalAlign.Center }  },
+            } },
+        };
+        header.Rows = headerContent;
+        footer.Rows = footerContent;
+        Syncfusion.Blazor.Grids.ExcelExportProperties excelExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties()
+        {
+            FileName = "sample.xlsx",
+            Header = header,
+            Footer = footer,
+        };
+        await this.pivotView.ExportToExcelAsync(excelExportProperties);
+    } 
+}
+
+```
+![Add header and footer while exporting](images/add-header-and-footer-while-exporting.png)
+
+## CSV Export
+
+The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, the user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the pivot table to CSV by clicking an external button.
+
+N> The pivot table component can be exported to CSV format using options available in the toolbar. For more details [refer](./tool-bar) here.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnCsvExport" Content="Csv Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData().ToList();
+       //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    public void OnCsvExport() {
+        this.pivot.ExportToCsvAsync(false);
+    }
+}
+
+```
+
+To enable export functionality in a server-side controller, initialize the **ExcelExport** class to handle export file generation.
+
+```csharp
+ private ExcelExport excelExport = new ExcelExport();
+```
+
+Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), invoke the **ExportToExcel** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        public async Task<object> Post([FromBody]object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+             else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                     param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else if (param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+                {
+                    return pivotExport.ExportAsPivot(param.Action == "onPivotExcelExport" ? ExportType.Excel : ExportType.CSV, engine, param);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+
+```
+
+![CSV Export](images/csv-export-with-server-side-pivot-engine.png)
+
+## Export as Pivot
+
+You can export a Syncfusion PivotTable to an Excel file while preserving its native pivot structure using the server-side engine. The exported Excel document contains a fully interactive PivotTable, allowing users to dynamically modify configurations such as filtering, sorting, grouping, and aggregation directly in Microsoft Excel.
+
+To enable native Excel pivot export in the PivotTable, the user must call the [ExportAsPivotAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the PivotTable to Excel by clicking an external button, specifying the export type (**Excel** or **CSV**) as a parameter.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
+<SfPivotView TValue="PivotViewData" Height="300"@ref="pivotView" >
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    private SfPivotView<PivotViewData> pivotView;
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
+    }
+
+      public async Task OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        await this.pivotView.ExportAsPivotAsync(ExportType.Excel);
+    }
+}
+
+```
+
+To enable native Excel pivot export functionality in a server-side controller, initialize the **PivotExportEngine** class to handle export file generation.
+
+```csharp
+    private PivotExportEngine<PivotData> pivotExport = new PivotExportEngine<PivotData>();
+```
+
+Then, based on the **Action** parameter (**onPivotExcelExport** or **onPivotCsvExport**), invoke the **ExportAsPivot** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        public async Task<object> Post([FromBody]object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+             else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                     param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else if (param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+                {
+                    return pivotExport.ExportAsPivot(param.Action == "onPivotExcelExport" ? ExportType.Excel : ExportType.CSV, engine, param);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+
+```
+
+![Export as Pivot](images/export-as-pivot.png)

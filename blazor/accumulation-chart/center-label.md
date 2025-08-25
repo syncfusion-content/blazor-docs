@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Center Label in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Center Label in Syncfusion Blazor Accumulation Chart component and more.
+title: Center Label in Blazor Pie and Donut Chart Component | Syncfusion
+description: Checkout and learn here all about Center Label in Syncfusion Blazor Pie and Donut Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Center Label in Blazor Accumulation Chart Component
+# Center Label in Blazor Pie and Donut Chart Component
 
-The center label feature allows you to place custom text in the middle of pie and donut charts using the `AccumulationChartCenterLabel`. This is especially useful for displaying the chart's title, percentage distribution, or other key metrics pertinent to the visualized data.
+The center label feature allows you to place custom text in the middle of pie and donut charts using the [AccumulationChartCenterLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html). This is especially useful for displaying the chart's title, percentage distribution, or other key metrics pertinent to the visualized data.
 
-You can configure the text that appears in the center using the `Text` property within the `AccumulationChartCenterLabel`.
+You can configure the text that appears in the center using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html#Syncfusion_Blazor_Charts_AccumulationChartCenterLabel_Text) property within the `AccumulationChartCenterLabel`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -45,10 +45,11 @@ You can configure the text that appears in the center using the `Text` property 
 }
 ```
 ![Blazor Accumulation Chart with Center Label](./images/center-label/blazor-accumulation-chart-with-center-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBetHBdgvneoPva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Hover Text
 
-The center label text can be dynamically updated when hovering over pie or donut chart slices using the `HoverTextFormat` property. This interactive feature enhances user engagement by offering relevant information about specific segments during the exploration of the visualization.
+The center label text can be dynamically updated when hovering over pie or donut chart slices using the [HoverTextFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html#Syncfusion_Blazor_Charts_AccumulationChartCenterLabel_HoverTextFormat) property. This interactive feature enhances user engagement by offering relevant information about specific segments during the exploration of the visualization.
 
 N> Line breaks can be provided to texts in the `HoverTextFormat` property using the `<br>` tag.
 
@@ -84,12 +85,13 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
 }
 ```
 ![Blazor Accumulation Chart with Center Label Dynamic Text](./images/center-label/blazor-accumulation-chart-with-center-label-hover-text.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBINdVRqvFzEVfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customization
 
-The appearance of the center label can be customized by using the `AccumulationChartCenterLabelFont`, which allows you to modify font properties such as size, font-family, font-style, font-weight, and color to enhance the visual presentation of the text displayed in the center of the chart.
+The appearance of the center label can be customized by using the [AccumulationChartCenterLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabelFont.html), which allows you to modify font properties such as size, font-family, font-style, font-weight, and color to enhance the visual presentation of the text displayed in the center of the chart.
 
-The position of the center label can be adjusted using the `XOffset` and `YOffset` properties in the `AccumulationChartCenterLabel`.
+The position of the center label can be adjusted using the [XOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html#Syncfusion_Blazor_Charts_AccumulationChartCenterLabel_XOffset) and [YOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html#Syncfusion_Blazor_Charts_AccumulationChartCenterLabel_YOffset) properties in the `AccumulationChartCenterLabel`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -124,11 +126,12 @@ The position of the center label can be adjusted using the `XOffset` and `YOffse
 }
 ```
 ![Blazor Accumulation Chart with Center Label Customization](./images/center-label/blazor-accumulation-chart-with-center-label-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryXRrRqbOzXVbD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 
-* [Data Label](./data-labels)
+* [Data Label](./data-label)
 * [Title and Subtitle](./title-and-sub-title)
 * [Annotation](./annotation)

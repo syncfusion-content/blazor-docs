@@ -145,7 +145,7 @@ builder.Services.AddSyncfusionBlazor();
 
 string apiKey = "api-key";
 string deploymentName = "deployment-name";
-string endpoint = "end point url";
+string endpoint = "end point url";// Must be null for OpenAI
 
 builder.Services.AddSyncfusionSmartComponents()
 .ConfigureCredentials(new AIServiceCredentials(apiKey, deploymentName, endpoint))
@@ -169,9 +169,21 @@ N> From version 28.2.33, the Azure.AI.OpenAI package has been removed from the S
 
 If you are using **OpenAI**, create an API key and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
-### Using Ollama 
+### Configuring Ollama for Self-Hosted AI Models
 
-If you are using [Ollama](https://ollama.com/), set SelfHosted to true and provide the Endpoint URL where the model is hosted (e.g., http://localhost:11434). The value for DeploymentName should be the specific [model](https://ollama.com/library) you wish to use (e.g., `llama2:13b`, `mistral:7b`, etc.).
+To use Ollama for running self-hosted models:
+
+1. **Download and install Ollama**  
+   Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
+
+2. **Install the desired model from the Ollama library**  
+   You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
+
+3. **Configure your application**
+
+   - Set `SelfHosted` to `true`.
+   - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
+   - Set `DeploymentName` to the specific model you installed (e.g., `llama2:13b`).
 
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
@@ -290,4 +302,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)

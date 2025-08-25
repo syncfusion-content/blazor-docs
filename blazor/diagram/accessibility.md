@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Diagram Component | Syncfusion
+title: Accessibility Features in Blazor Diagram Component | Syncfusion
 description: Checkout and Learn all about accessibility in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Accessibility in Blazor Diagram Component
+# Accessibility Features in Blazor Diagram Component
 
 Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor diagram component is outlined below:
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
@@ -100,7 +100,7 @@ The aria-label attribute provides the text label with some default description f
 </tr>
 </table>
 
-## Keyboard Navigation
+## Keyboard Shortcuts and Navigations
 
 The Blazor Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Diagram component.
 
@@ -157,7 +157,7 @@ The Blazor Diagram component followed the [keyboard interaction](https://www.w3.
 
 N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
 
-## Ensuring accessibility
+## How to Ensure Accessibility
 
 The Blazor diagram component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 

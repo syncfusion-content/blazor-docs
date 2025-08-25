@@ -9,7 +9,7 @@ documentation: ug
 
 # Style in Blazor Diagram Component
 
-## How to customize the connector endpoint handle
+## How to Customize the Connector Endpoint Handle
 
 To customize the visual appearance of the connector endpoint handle in a diagram, apply the following CSS code:
 
@@ -25,7 +25,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Endpoint Handle in Blazor Diagram](images/connector-endpoint.png)
 
-## How to customize the connector endpoint handle when it is connected
+## How to Customize the Connector Endpoint Handle When it is Connected
 
 To enhance the visual appearance of the connector endpoint handle when it is in a connected state, apply the following CSS code:
 
@@ -41,7 +41,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Endpoint Connected in Blazor Diagram](images/Connector-Endpoint-Connected.gif)
 
-## How to customize the connector endpoint handle when it disable
+## How to Customize the Connector Endpoint Handle When it Disabled
 
 To customize the visual appearance of the connector endpoint handle when it is in a disabled state, apply the following CSS code to your Blazor application:
 
@@ -58,7 +58,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Endpoint Disable in Blazor Diagram](images/Connector-Endpoint-Disable.png)
 
-## How to customize the bezier connector handle
+## How to Customize the Bezier Connector Handle
 
 To customize the appearance of the Bezier connector handle, apply the following CSS code to your Blazor application:
 
@@ -74,7 +74,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Bezier Connector in Blazor Diagram](images/BezierConnector.png)
 
-## How to customize the bezier connector line
+## How to Customize the Bezier Connector Line
 
 To customize the appearance of the Bezier connector line, apply the following CSS code to your Blazor diagram:
 
@@ -89,7 +89,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Bezier Connector Line in  Blazor Diagram](images/Connector-Bezier-Line.png)
 
-## How to customize the resize handle
+## How to Customize the Resize Handle
 
 To customize the appearance of the resize handle, apply the following CSS code to your Blazor application:
 
@@ -106,7 +106,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Resize Handle Blazor Diagram](images/ResizeHandle.png)
 
-## How to customize the selector pivot line
+## How to Customize the Selector Pivot Line
 
 To customize the appearance of the selector pivot line, apply the following CSS properties:
 
@@ -121,7 +121,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Selector Pivot Line Blazor Diagram](images/SelectorPivotLine.png)
 
-## How to customize the selector border
+## How to Customize the Selector Border
 
 To customize the appearance of the selector border, apply the following CSS styles:
 
@@ -136,7 +136,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Selector Border Blazor Diagram](images/SelectorBorder.png)
 
-## How to customize highlights for selected diagram elements
+## How to Customize Highlights for Selected Diagram Elements
 
 To customize the appearance of highlighter for selected diagram elements, apply the following CSS styles:
 
@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Rotate Handle Blazor Diagram](images/SelectionHighlighter.png)
 
-## How to customize the rotate handle
+## How to Customize the Rotate Handle
 
 To customize the appearance of the rotation handle, apply the following CSS code to your Blazor diagram:
 
@@ -170,7 +170,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Rotate Handle Blazor Diagram](images/RotateHandle.png)
 
-## How to customize the symbol palette while hovering over a symbol
+## How to Customize the Symbol Palette While Hovering Over a Symbol
 
 To customize the visual appearance of symbols in the symbol palette during mouse hover interactions, apply the following CSS code to your Blazor Diagram component:
 
@@ -200,7 +200,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SymbolPalette Selected in Blazor Diagram](images/SymbolPaletteSelect.gif)
 
-## How to customize the ruler
+## How to Customize the Ruler
 
 To customize the visual appearance of the ruler properties, apply the following CSS code to your Blazor diagram:
 
@@ -216,7 +216,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Ruler in Blazor Diagram](images/RulerCustomize.png)
 
-## How to customize the ruler overlap
+## How to Customize the Ruler Overlap
 
 To customize the visual appearance of the ruler overlap properties, apply the following CSS code to your Blazor diagram component:
 
@@ -231,7 +231,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Ruler Overlap in Blazor Diagram](images/RulerOverlap.png)
 
-## How to customize the text edit
+## How to Customize the Text Edit
 
 To customize the appearance of the text edit properties, apply the following CSS code to your Blazor application:
 
@@ -252,7 +252,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Text Edit in Blazor Diagram](images/TextEdit.png)
 
-## How to customize the text edit on selection
+## How to Customize the Text Edit on Selection
 
 To customize the appearance of the text edit control when selected, apply the following CSS properties:
 
@@ -268,7 +268,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Text Edit on Selection in Blazor Diagram](images/TextEditSelection.png)
 
-## How to customize the highlighter
+## How to Customize the Highlighter
 
 To customize the appearance of the highlighter, you can use the following CSS code:
 
@@ -284,7 +284,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Highlighter in Blazor Diagram](images/Highlighter.gif)
 
-## How to customize the diagram background color
+## How to Customize the Diagram Background Color
 
 To customize the background color of the diagram, apply the following CSS rule:
 
@@ -299,7 +299,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Diagram Background color in Blazor Diagram](images/Diagram-Background.png)
 
-## How to customize the overview resize handle
+## How to Customize the Overview Resize Handle
 
 To customize the appearance of the overview resize handle, apply the following CSS code to your Blazor application:
 
@@ -315,7 +315,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Overview Resize Handle in Blazor Diagram](images/OverviewResizer.png)
 
-## How to customize the helper
+## How to Customize the Helper
 
 To customize the appearance of the helper element, apply the following CSS rules:
 
@@ -332,7 +332,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Helper in Blazor Diagram](images/Helper.png)
 
-## How to customize the grid
+## How to Customize the Grid
 
 To customize the visual appearance of the diagram grid, apply the following CSS styles:
 
@@ -362,7 +362,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Thick grid in Blazor Diagram](images/ThickGrid.png)
 
-## How to customize the symbol palette symbols background color
+## How to Customize the Symbol Palette Symbols Background Color
 
 To customize the background color of symbols in the symbol palette, apply the following CSS code:
 
@@ -378,7 +378,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SymbolPalette in Blazor Diagram](images/SymbolPaletteSymbolContainer.png)
 
-## How to customize the style of orthogonal segment thumb
+## How to Customize the Orthogonal Segment Thumb
 
 
 To customize the visual appearance of the Orthogonal segment thumb, apply the following CSS code to your stylesheet:
@@ -397,7 +397,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Segment Thumb style in Blazor Diagram](images/OrthogonalThumbStyle.png)
 
-## How to customize the bezier and straight segment thumb 
+## How to Customize the Bezier and Straight Segment Thumb 
 To customize the visual appearance of Bezier and Straight connector segments, apply the following CSS code:
 
 ```cshtml
@@ -412,7 +412,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Segment shape  in Blazor Diagram](images/SegmentStyle.png)
 
+## see also
 
-
-
-
+* [How to Set Background Color for Entire Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/16016/how-to-set-background-color-for-entire-diagram-area-in-blazor-diagram)

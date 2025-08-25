@@ -158,7 +158,7 @@ By default, if the component width set in code-behind is more than the width of 
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
-    <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
         </PivotViewColumns>
@@ -407,7 +407,7 @@ N> By default, pivot table renders grid lines in [PivotGridLine.Both](https://he
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
         <PivotViewGridSettings GridLines=PivotTableGridLine.Vertical></PivotViewGridSettings>
@@ -586,6 +586,7 @@ The background-color of the selected cell can be changed using built-in CSS name
             <PivotViewRow Name="Products"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
     </PivotViewDataSourceSettings>
@@ -625,50 +626,49 @@ The event `CellSelected` is triggered when cell selection gets completed. It pro
 @using Syncfusion.Blazor.PivotView
 
 <div>
-    <div class="column-8">
-        <SfPivotView Width="800" Height="340">
-        <PivotViewDataSourceSettings @bind-DataSource="@data" ExpandAll="false" EnableSorting=true>
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewEvents TValue="ProductDetails" CellSelected="cellSelected"></PivotViewEvents>
-        <PivotViewGridSettings AllowSelection="true">
-            <PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotTableSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
-        </PivotViewGridSettings>
-        </SfPivotView>
-    </div>
-    <div class="column-4">
-    <h5>Event Trace:</h5> <br>
-    <div style="height:300px; overflow:auto;">
-        @if (SelectedCells != null)
-        {
-            @if (SelectedCells.SelectedCellsInfo != null)
-            {
-                @foreach (var cell in SelectedCells.SelectedCellsInfo)
-                {
-                    <p>
-                        <b>ColumnHeader:</b> @cell.ColumnHeaders<br>
-                        <b>RowHeader:</b> @cell.RowHeaders<br>
-                        <b>Value:</b> @cell.Value<br>
-                        <b>Measure:</b> @cell.Measure
-                    </p>
-                    <br>
-                }
-            }
-        }
-    </div>
-</div>
-
+	<div class="column-8">
+		<SfPivotView TValue="ProductDetails" Width="800" Height="340">
+			<PivotViewDataSourceSettings TValue="ProductDetails" DataSource="@data" ExpandAll="false" EnableSorting=true>
+				<PivotViewColumns>
+					<PivotViewColumn Name="Year"></PivotViewColumn>
+					<PivotViewColumn Name="Quarter"></PivotViewColumn>
+				</PivotViewColumns>
+				<PivotViewRows>
+					<PivotViewRow Name="Country"></PivotViewRow>
+					<PivotViewRow Name="Products"></PivotViewRow>
+				</PivotViewRows>
+				<PivotViewValues>
+					<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+					<PivotViewValue Name="Amount"></PivotViewValue>
+				</PivotViewValues>
+			</PivotViewDataSourceSettings>
+			<PivotViewEvents TValue="ProductDetails" CellSelected="cellSelected"></PivotViewEvents>
+			<PivotViewGridSettings AllowSelection="true">
+				<PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotTableSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
+			</PivotViewGridSettings>
+		</SfPivotView>
+	</div>
+	<div class="column-4">
+		<h5>Event Trace:</h5> <br>
+		<div style="height:300px; overflow:auto;">
+			@if (SelectedCells != null)
+			{
+				@if (SelectedCells.SelectedCellsInfo != null)
+				{
+					@foreach (var cell in SelectedCells.SelectedCellsInfo)
+					{
+						<p>
+							<b>ColumnHeader:</b> @cell.ColumnHeaders<br>
+							<b>RowHeader:</b> @cell.RowHeaders<br>
+							<b>Value:</b> @cell.Value<br>
+							<b>Measure:</b> @cell.Measure
+						</p>
+						<br>
+					}
+				}
+			}
+		</div>
+	</div>
 </div>
 
 @code{
@@ -716,10 +716,10 @@ N>By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ClipMode=PivotClipMode.Clip></PivotViewGridSettings>
+    <PivotViewGridSettings ClipMode=Syncfusion.Blazor.PivotView.PivotTableClipMode.Clip></PivotViewGridSettings>
 </SfPivotView>
 
 @code{

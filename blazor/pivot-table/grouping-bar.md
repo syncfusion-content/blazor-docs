@@ -68,27 +68,27 @@ The fields panel which is positioned above the grouping bar, displays the fields
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
-    <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
-    <PivotViewGroupingBarSettings ShowFieldsPanel="true"></PivotViewGroupingBarSettings>
+	<PivotViewDataSourceSettings DataSource="@data">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+		</PivotViewValues>
+	</PivotViewDataSourceSettings>
+	<PivotViewGroupingBarSettings ShowFieldsPanel="true"></PivotViewGroupingBarSettings>
 </SfPivotView>
 
-@code{
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetDefaultData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
+@code {
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
 }
 ```
 
@@ -126,7 +126,7 @@ The Grouping Bar has an option to filter members of particular fields at runtime
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -166,7 +166,7 @@ To disable the filter icon for a specific field, set the property [ShowFilterIco
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -206,7 +206,7 @@ The Grouping Bar has an option to order members of a particular fields either in
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -246,7 +246,7 @@ To disable the sort icon for a specific button, set the property [ShowSortIcon](
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -287,7 +287,7 @@ The Grouping Bar has an option to remove any field at runtime. To remove a field
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -327,7 +327,7 @@ To disable the remove icon for a specific button, set the property [ShowRemoveIc
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -367,7 +367,7 @@ The Grouping Bar has an option to drag-and-drop fields between row, column, valu
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -407,7 +407,7 @@ To disable dragging for a specific button, set the property [AllowDragAndDrop](h
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -445,7 +445,7 @@ End user can perform calculations over a group of values using the aggregation o
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -489,7 +489,7 @@ To disable the dropdown icon for a specific button, set the property [ShowValueT
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }

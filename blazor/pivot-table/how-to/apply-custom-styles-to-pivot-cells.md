@@ -17,7 +17,7 @@ In the following example, a custom style has been applied to the column header *
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>

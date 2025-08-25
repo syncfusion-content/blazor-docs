@@ -931,7 +931,7 @@ In the below code, the **Expand** method is defined to expand or collapse the de
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-ublic class OrderData
+public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
 

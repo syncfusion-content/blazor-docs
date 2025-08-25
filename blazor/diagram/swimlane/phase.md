@@ -11,7 +11,7 @@ documentation: ug
 
  The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is a subprocess that splits each lane either horizontally or vertically based on the swimlane orientation. Multiple phases can be added to the swimlane.
 
-## Create an empty Phase
+## How to Create an Empty Phase
 
 You can create a [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add it to the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
 
@@ -89,7 +89,7 @@ The following code example explains how to add a phase at the swimlane.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
 
-## Dynamically add phase to Swimlane
+## How to Dynamically Add and Remove Phase in Swimlane
 
  You can dynamically add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
 
@@ -189,7 +189,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
 
-## Create the Phase Header and Header customization
+## How to Create and Customize the Phase Header
 
 * The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of the Phase allows you to describe the phase textually and customize the appearance of the description.
 * The size of the Phase header can be controlled by using the header's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
@@ -342,7 +342,67 @@ The following code example explains how to define a Phase header annotation temp
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
 
-## Header Selection and Resize
+## How to Set the Orientation of a Phase
+
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Orientation) property in the Symbol Palette allows you to define whether a phase is displayed horizontally or vertically. This property is particularly relevant when the phase is part of a SymbolPalette.
+
+ * Horizontal Orientation: The phase will be aligned horizontally.
+ * Vertical Orientation: The phase will be aligned vertically.
+
+Below is an example demonstrating how to set the orientation for phases in a SfSymbolPaletteComponent:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+<div class="control-section">
+    <div style="width:20%;">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+@code
+{
+    //Reference the symbolpreview.
+    DiagramSize SymbolPreview;
+    //Define symbol margin.
+    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    SfSymbolPaletteComponent symbolpalette;
+    //Define palattes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's swimlane-shape collection.
+    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+    private void InitPaletteModel()
+    {
+        Palettes = new DiagramObjectCollection<Palette>();
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        //create a horizontal phase.
+        Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        //create a vertical phase.
+        Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+        {
+            horizontalPhase,
+            verticalPhase
+        };
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+        };
+      }
+}
+```
+![Phse](Swimlane-images/PhaseOrientation.PNG).
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
+
+## How to Select and Resize Phase Header
 
  * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 
 
@@ -354,7 +414,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Header Select and Resize](Swimlane-images/Header_Selection_Resize.gif).
 
-## Phase header editing
+## How to Edit Phase Header
 
 The diagram provides support for editing phase headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
 
@@ -363,13 +423,13 @@ The following image shows how to edit the phase header.
 ![Phase Header Editing](Swimlane-images/Phase_Header_Edit.gif)
 
 
-## Phase interaction
+## Phase Interaction
 
-### Select
+### How to Select a Phase
 
 Phase can be selected by clicking (tapping) the header of the phase.
 
-### Resizing
+### How to Resize a Phase
 
 * The phase can be resized by using its selector.
 * You must click the phase header to enable the phase selection.

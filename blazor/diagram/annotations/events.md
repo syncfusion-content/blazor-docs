@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Diagram Component | Syncfusion
+title: Annotation Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Annotation Events in Blazor Diagram Component
 
-## Text Change event
+## How to Handle Text Change event
 
 * While editing a node's or connector's annotation, the following event can be used to do the customization.
 * When a node's or connector's annotation is changed in the diagram, this event is getting triggered. 
@@ -17,7 +17,7 @@ documentation: ug
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
 |[TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|Triggers when the node’s/connector's label is changed in the diagram.|
-|[TextChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|An event that is raised when the node and connector's label is changing in the diagram.|
+|[TextChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanging)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|An event that is raised when the node and connector's label is changing in the diagram.|
 
 The following code example shows how to register and get notifications from the TextChanged and TextChanging events.
 
@@ -65,7 +65,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also
 
-* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)
 

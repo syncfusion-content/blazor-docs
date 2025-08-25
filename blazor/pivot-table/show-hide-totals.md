@@ -21,7 +21,7 @@ N> By default, [ShowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusio
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ShowGrandTotals=false>
+     <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals=false>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -41,7 +41,7 @@ N> By default, [ShowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusio
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -61,7 +61,7 @@ Allows to show grand totals either at top or bottom in rows and columns using th
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" GrandTotalsPosition=GrandTotalsPosition.Top>
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" GrandTotalsPosition=GrandTotalsPosition.Top>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -81,7 +81,7 @@ Allows to show grand totals either at top or bottom in rows and columns using th
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
 
     protected override void OnInitialized()
     {
@@ -104,7 +104,7 @@ N> By default, [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true" ShowSubTotals="false">
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" ShowSubTotals="false">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -124,7 +124,7 @@ N> By default, [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
 
     protected override void OnInitialized()
     {
@@ -147,7 +147,7 @@ N> By default, [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true">
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -167,7 +167,7 @@ N> By default, [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -187,7 +187,7 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar">
-        <PivotViewDataSourceSettings DataSource="@Data">
+        <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
                 <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -201,7 +201,7 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
                 <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
             </PivotViewValues>
             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+                <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
 </SfPivotView>
@@ -211,7 +211,7 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
         ToolbarItems.SubTotal,
         ToolbarItems.GrandTotal
     };
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -235,7 +235,7 @@ It can also be achieved using built-in toolbar options setting the [ShowToolbar]
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar">
-        <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true">
+        <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
                 <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -259,7 +259,7 @@ It can also be achieved using built-in toolbar options setting the [ShowToolbar]
         ToolbarItems.SubTotal,
         ToolbarItems.GrandTotal
     };
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();

@@ -49,6 +49,10 @@ The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 * transformCollection: Specifies the transform collection of the text annotation.
 
+* underline — Specifies whether the text should be underlined.
+
+* strikethrough — Specifies whether the text should have a strikethrough.
+
 By utilizing the `DrawTextAsync` method with these parameters, you can precisely position and customize text annotations within the image. This provides the flexibility to add labels, captions, or other text elements with specific font styles, sizes, and colors, enhancing the visual presentation and clarity of the image. 
 
 Here is an example of adding a text in a button click using `DrawTextAsync` method. 
@@ -251,7 +255,159 @@ Here is an example of adding additional font family using the `ImageEditorFontFa
 ```
 
 ![Blazor Image Editor with Custom font family in an image](./images/blazor-image-editor-font.png)
-        
+
+### Formatting Text with Bold, Italic, Underline, and Strikethrough
+
+The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Double_System_Double_System_String_System_String_System_Int32_System_Boolean_System_Boolean_System_String_System_Boolean_System_Int32_System_String_System_String_System_Int32_) method in the Blazor Image Editor component allows you to insert a text annotation into the image with specific customization options. Applying these styles enhances the text by improving readability and emphasizing key information, where bold increases visual weight to highlight important points, italic adds a slanted emphasis or creative touch, underline draws a line beneath the text for clarity or separation, and strikethrough places a line through text to indicate removal or outdated content. These formatting options enable users to make their annotations more visually distinctive and effective in conveying information
+
+
+Here is an example of adding a text in a button click using `DrawTextAsync` method. 
+
+In the following example, you can using the DrawTextAsync method in the button click event.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SplitButtons
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="330" Width="550" ShowQuickAccessToolbar="false">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+<div class="button-toolbar">
+    <SfButton CssClass="@(IsTextInsterted ? "e-disabled" : "e-primary")" Disabled="@IsTextInsterted" OnClick="AddTextAsync">Add Text</SfButton>
+    <SfButtonGroup Mode="SelectionMode.Multiple">
+        <ButtonGroupButton onclick="@BoldAsync" IconCss="e-icons e-bold">
+            Bold
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@ItalicAsync" IconCss="e-icons e-italic">
+            Italic
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@UnderlineAsync" IconCss="e-icons e-underline">
+            Underline
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@StrikethroughAsync" IconCss="e-icons e-strikethrough">
+            Strikethrough
+        </ButtonGroupButton>
+    </SfButtonGroup>
+</div>
+<style>
+    .button-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: nowrap;
+        margin-top: 10px;
+    }
+</style>
+
+@code {
+    SfImageEditor ImageEditor;
+    Boolean IsTextInsterted = false;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void AddTextAsync()
+    {
+        if (!IsTextInsterted)
+        {
+            IsTextInsterted = true;
+            ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+            await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Syncfusion");
+        }
+    }
+    private async void BoldAsync()
+    {
+        ShapeSettings[] shapes = await ImageEditor.GetShapesAsync();
+        if (shapes != null && shapes.Length > 0)
+        {
+            var shape = shapes[0];
+            var fontStyles = shape.FontStyle?.ToList();
+
+            if (fontStyles.Contains("bold"))
+            {
+                fontStyles.Remove("bold");
+            }
+            else
+            {
+                fontStyles.Add("bold");
+            }
+
+            shape.FontStyle = fontStyles.ToArray();
+            await ImageEditor.UpdateShapeAsync(shapes[0]);
+        }
+    }
+    private async void ItalicAsync()
+    {
+        ShapeSettings[] shapes = await ImageEditor.GetShapesAsync();
+        if (shapes != null && shapes.Length > 0)
+        {
+            var shape = shapes[0];
+            var fontStyles = shape.FontStyle?.ToList();
+
+            if (fontStyles.Contains("italic"))
+            {
+                fontStyles.Remove("italic");
+            }
+            else
+            {
+                fontStyles.Add("italic");
+            }
+
+            shape.FontStyle = fontStyles.ToArray();
+            await ImageEditor.UpdateShapeAsync(shapes[0]);
+        }
+    }
+    private async void UnderlineAsync()
+    {
+        ShapeSettings[] shapes = await ImageEditor.GetShapesAsync();
+        if (shapes != null && shapes.Length > 0)
+        {
+            var shape = shapes[0];
+            var fontStyles = shape.FontStyle?.ToList();
+
+            if (fontStyles.Contains("underline"))
+            {
+                fontStyles.Remove("underline");
+            }
+            else
+            {
+                fontStyles.Add("underline");
+            }
+
+            shape.FontStyle = fontStyles.ToArray();
+            await ImageEditor.UpdateShapeAsync(shapes[0]);
+        }
+    }
+    private async void StrikethroughAsync()
+    {
+        ShapeSettings[] shapes = await ImageEditor.GetShapesAsync();
+        if (shapes != null && shapes.Length > 0)
+        {
+            var shape = shapes[0];
+            var fontStyles = shape.FontStyle?.ToList();
+
+            if (fontStyles.Contains("strikethrough"))
+            {
+                fontStyles.Remove("strikethrough");
+            }
+            else
+            {
+                fontStyles.Add("strikethrough");
+            }
+
+            shape.FontStyle = fontStyles.ToArray();
+            await ImageEditor.UpdateShapeAsync(shapes[0]);
+        }
+    }
+}
+```
+
+![Blazor Image Editor with Draw text an image](./images/blazor-image-editor-formatting-text.png)
+
 ## Freehand drawing
 
 The Freehand Draw annotation tool in the Blazor Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image. 

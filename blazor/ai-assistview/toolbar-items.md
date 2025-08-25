@@ -397,10 +397,9 @@ In the following example, AI AssistView component rendered with built-in toolbar
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -430,10 +429,9 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -461,10 +459,9 @@ You can define [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
     private void ToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
     {
@@ -496,10 +493,9 @@ In the following example, AI AssistView renders with built-in toolbar items.
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -529,10 +525,9 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -560,10 +555,9 @@ You can define [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
     private void ToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
     {
@@ -603,10 +597,9 @@ You can use the [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfu
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 
@@ -643,10 +636,9 @@ You can use the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Sync
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
         var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
     }
 }
 

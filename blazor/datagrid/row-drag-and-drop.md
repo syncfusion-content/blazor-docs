@@ -204,6 +204,88 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfWirtinCYhFlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Drag and drop in empty area
+
+The Syncfusion Blazor DataGrid supports drag and drop functionality. By default, the `AllowEmptyAreaDrop` property is enabled, enhancing the user experience by allowing rows to be dropped anywhere within the DataGrid content. Whenever rows are dropped in an empty area, they are placed at the end of the DataGrid. This applies to both within the same Grid and between different DataGrids.
+ 
+If you prefer to show the drop indicator only when hovering over rows, you can disable the `AllowEmptyAreaDrop` property to achieve this.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid id="Grid" DataSource="@FirstGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridPageSettings PageCount="1" PageSize="12"></GridPageSettings>
+    <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="135"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<SfGrid id="DestGrid" DataSource="@SecondGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true" Height="350">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridPageSettings PageCount="1" PageSize="12"></GridPageSettings>
+    <GridRowDropSettings TargetID="Grid"></GridRowDropSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="135"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrdersDetails> FirstGridData { get; set; }
+    public List<OrdersDetails> SecondGridData { get; set; } = new List<OrdersDetails>();
+    protected override void OnInitialized()
+    {
+        FirstGridData = OrdersDetails.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrdersDetails.cs" %}
+
+public class OrdersDetails
+{
+    public static List<OrdersDetails> Orders = new List<OrdersDetails>();
+
+    public OrdersDetails() { }
+
+    public OrdersDetails(int orderID, string customerID, DateTime? orderDate)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.OrderDate = orderDate;
+    }
+
+    public static List<OrdersDetails> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrdersDetails(10248, "VINET", new DateTime(1996, 7, 4)));
+            Orders.Add(new OrdersDetails(10249, "TOMSP", new DateTime(1996, 7, 5)));
+            Orders.Add(new OrdersDetails(10250, "HANAR", new DateTime(1996, 7, 6)));
+            Orders.Add(new OrdersDetails(10251, "VINET", new DateTime(1996, 7, 7)));
+            Orders.Add(new OrdersDetails(10252, "SUPRD", new DateTime(1996, 7, 8)));
+            Orders.Add(new OrdersDetails(10253, "HANAR", new DateTime(1996, 7, 9)));
+            Orders.Add(new OrdersDetails(10254, "CHOPS", new DateTime(1996, 7, 10)));
+            Orders.Add(new OrdersDetails(10255, "VINET", new DateTime(1996, 7, 11)));
+            Orders.Add(new OrdersDetails(10256, "HANAR", new DateTime(1996, 7, 12)));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Drag and drop to custom component
 
 The Syncfusion Blazor DataGrid provides the feature to drag and drop Grid rows to any custom component. This feature allows you to easily move rows from one component to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [AllowRowDragAndDrop] property to **true** and defining the custom component [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ID) in the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property of the [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html) object. The `ID` provided in `TargetID` should correspond to the `ID` of the target component where the rows are to be dropped.

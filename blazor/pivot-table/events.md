@@ -183,34 +183,40 @@ The event [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Amount"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
-    <PivotViewEvents TValue="ProductDetails" CellSelecting="cellSelecting"></PivotViewEvents>
+	<PivotViewDataSourceSettings DataSource="@data">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Amount"></PivotViewValue>
+		</PivotViewValues>
+	</PivotViewDataSourceSettings>
+	<PivotViewGridSettings AllowSelection="true">
+		<PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
+	</PivotViewGridSettings>
+	<PivotViewEvents TValue="ProductDetails" CellSelecting="cellSelecting"></PivotViewEvents>
 </SfPivotView>
 
-@code{
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    private void cellSelecting(PivotCellSelectedEventArgs args)
-    {
-        args.CurrentCell.AddClass(new string[] { "e-test" });
-    }
+@code {
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
+	private void cellSelecting(PivotCellSelectedEventArgs args)
+	{
+		if (args.Data != null)
+		{
+			// args.Data -> get selected cells information
+		}
+	}
 }
 
 ```

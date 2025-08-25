@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Annotation Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides the support to the annotations rotation interactively.
 
-## Annotation Rotation
+## How to Rotate Annotations
 The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure RotationReference for an annotation.
 
 
@@ -77,6 +77,45 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Interactions/RotationReference)
 
+## How to rotate a Annotation using the RotationAngle property
+
+The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_RotationAngle)  property for an annotation gets or sets the rotation angle in degrees. This determines how much the annotation text is tilted from its normal position. The default value is 0.
+
+The following code examples illustrate how to configure RotationAngle for an annotation.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            Height = 100,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+    { 
+        new ShapeAnnotation 
+        { 
+            Content = "Node",
+            ID = "Annotation",
+            RotationAngle = 30,    
+        }
+    },
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RotationAngleProperty)
+
+![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
+
 ## See also
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
@@ -84,3 +123,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add annotation for Node](./node-annotation)
 
 * [How to add annotation for Connector](./connector-annotation)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )

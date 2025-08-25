@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Searching in Syncfusion Blazor DataGrid and much more details.
+description: Explore and understand the Searching in Syncfusion Blazor DataGrid. Learn about its features, usage, customization, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -572,6 +572,90 @@ In the below code example, the **Order ID** column search functionality is disab
 {% endtabs %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+
+## Ignore accents in search
+
+By default, the Syncfusion Blazor DataGrid's search functionality does not account for diacritic characters or accents. However, in scenarios where ignoring these characters is essential, this feature significantly improves the search experience. It allows for more comprehensive and accurate data searches by disregarding accents. This can be achieved by setting the [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property of the DataGrid to **true**.
+
+The following example demonstrates how to configure the `IgnoreAccent` property within the `GridSearchSettings` of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" Toolbar="@(new List<string>() { "Search" })">
+    <GridSearchSettings IgnoreAccent="true"></GridSearchSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(InventorDetails.Inventor) IsPrimaryKey="true" HeaderText="Inventor Name" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.PatentFamilies) HeaderText="Number of Patent Families" TextAlign="TextAlign.Right" Width="195"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.Country) HeaderText="Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.MainFields) HeaderText="Main Fields of Invention" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<InventorDetails> Grid;
+    public List<InventorDetails> GridData { get; set; }
+    protected override void OnInitialized()
+    {
+        GridData = InventorDetails.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="InventorDetails.cs" %}
+
+public class InventorDetails
+{
+    public static List<InventorDetails> Inventors = new List<InventorDetails>();
+    public InventorDetails()
+    {
+
+    }
+    public InventorDetails(string Inventor,int? PatentFamilies,string NumberofINPADOCpatents,string Country,string MainFields)
+    {
+      this.Inventor= Inventor;
+      this.PatentFamilies= PatentFamilies;
+      this.NumberofINPADOCpatents= NumberofINPADOCpatents;
+      this.Country= Country;
+      this.MainFields= MainFields;
+    }
+    public static List<InventorDetails> GetAllRecords()
+    {
+        if (Inventors.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Inventors.Add(new InventorDetails("Łukasz Kowalski", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
+                Inventors.Add(new InventorDetails("João Pereira", 4677, "10000+", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("Štěpán Novák",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("Guðrún Jónsdóttir", 1255, "3099", "India", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Zsófia Tóth", 1240, "2038", "USA", "Gaming machines"));
+                Inventors.Add(new InventorDetails("Márcio Silveira", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("René González", 1093, "3360", "USA", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Émile Durand", 993, "1398", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("José Martínez", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
+                code += 5;
+            }
+        }
+        return Inventors;
+    }
+    public string Inventor { get; set; }
+    public int? PatentFamilies { get; set; }
+    public string NumberofINPADOCpatents { get; set; }
+    public string Country { get; set; }
+    public string MainFields { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * This feature ignores accents for both searching and filtering operations in the Syncfusion Blazor DataGrid when using an `IEnumerable` data source.
+> * This features works only for characters outside the ASCII range.
 
 ## Search on each key stroke
 

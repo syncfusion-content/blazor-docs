@@ -135,7 +135,7 @@ N> Only measures from [PivotViewValues](https://help.syncfusion.com/cr/blazor/Sy
             <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C0"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
@@ -275,7 +275,7 @@ The filter axis contains collection of [OLAP cube elements](#olap-cube-elements)
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true">
-      <PivotViewDataSourceSettings TValue="ProductDetails"  Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" url="https://bi.syncfusion.com/olap/msmdpump.dll" ProviderType="SSAS" EnableSorting=true>
+      <PivotViewDataSourceSettings TValue="ProductDetails"  Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" url="https://bi.syncfusion.com/olap/msmdpump.dll" ProviderType="ProviderType.SSAS" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
             <PivotViewColumn Name="[Measures]" Caption="Measures"></PivotViewColumn>
@@ -339,7 +339,6 @@ N> Calculated measure can be added only in value axis.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Width="800" Height="350" >
-@*<PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>*@
 <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
     <PivotViewColumns>
         <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
@@ -486,7 +485,7 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails"  Width="800" Height="350" EnableVirtualization="true">
+<SfPivotView TValue="ProductDetails"  Width="800" Height="350" EnableVirtualization="true" ShowGroupingBar="true">
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -563,7 +562,7 @@ To bind OLAP datasource to the pivot table, you need to specify the following pr
             <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C0"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>

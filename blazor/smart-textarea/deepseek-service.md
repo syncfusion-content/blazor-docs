@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
+title: Deepseek AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with DeepSeek AI services.
 platform: Blazor
 control: Smart TextArea
@@ -31,7 +31,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Next Steps
+## Getting Started for DeepSeek AI with SmartTextArea
 
 After completing this setup, you can:
 

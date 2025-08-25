@@ -61,7 +61,7 @@ Using local variable, the JSON data can also be bound to the pivot table using [
 
 <SfPivotView TValue="ProductDetails" Width="1500" Height="300">
     <PivotViewDataSourceSettings TValue="ProductDetails" ExpandAll=false EnableSorting=true>
-        <SfDataManager Json="@dataSource" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
+        <SfDataManager Json="@data" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -387,7 +387,7 @@ OData is a standardized protocol for creating and consuming data. User can retri
 
 <SfPivotView TValue="OrderDetails" Width="800" Height="340">
     <PivotViewDataSourceSettings TValue="OrderDetails">
-        <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders"   Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+        <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <PivotViewColumns>
             <PivotViewColumn Name="OrderDate"></PivotViewColumn>
             <PivotViewColumn Name="ShipCity"></PivotViewColumn>
@@ -425,7 +425,7 @@ The OData V4 is an improved version of OData protocols, and the [SfDataManager](
 
 <SfPivotView TValue="OrderDetails" Width="800" Height="340">
     <PivotViewDataSourceSettings TValue="OrderDetails">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc/Orders/"   Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
         <PivotViewColumns>
             <PivotViewColumn Name="OrderDate"></PivotViewColumn>
             <PivotViewColumn Name="ShipCity"></PivotViewColumn>
@@ -764,6 +764,7 @@ N> This option is applicable only for relational data source.
         </PivotViewColumns>
         <PivotViewRows>
             <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>

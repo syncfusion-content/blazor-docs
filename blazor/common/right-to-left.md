@@ -17,7 +17,7 @@ You can enable right to left (RTL) for all Syncfusion<sup style="font-size:70%">
 
 ### Blazor Web App
 
-* For  Blazor Web App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 {% tabs %}
 
@@ -32,50 +32,21 @@ builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
 
 {% endtabs %}
 
-### Blazor Server App
-
-* For `.NET 6 or .NET 7` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
-
-{% tabs %}
-
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
-
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-....
-builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-var app = builder.Build();
-....
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Blazor WebAssembly App
+### Blazor WebAssembly Standalone App
 
 If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" %}
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 ....
 builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-var app = builder.Build();
+await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
