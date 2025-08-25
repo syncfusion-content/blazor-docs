@@ -216,7 +216,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 <td><p>Create an ordered list without any specific numbering style.</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "none");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "None");
 {% endhighlight %}</td>
 </tr>
 
@@ -225,52 +225,52 @@ await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "none");
 <td><p>Creates an ordered list using standard Arabic numerals (1, 2, 3...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "decimal");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
 {% endhighlight %}</td>
 </tr>
 
 <tr>
-<td><p>NumberFormatList - Lower alpha</p></td>
+<td><p>NumberFormatList - LowerAlpha</p></td>
 <td><p>Creates an ordered list using lowercase alphabetic characters (a, b, c...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "lowerAlpha");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerAlpha");
 {% endhighlight %}</td>
 </tr>
 
 <tr>
-<td><p>NumberFormatList - Upper alpha</p></td>
+<td><p>NumberFormatList - UpperAlpha</p></td>
 <td><p>Creates an ordered list using uppercase alphabetic characters (A, B, C...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "upperAlpha");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "UpperAlpha");
 {% endhighlight %}</td>
 </tr>
 
 <tr>
-<td><p>NumberFormatList - Lower roman</p></td>
+<td><p>NumberFormatList - LowerRoman</p></td>
 <td><p>Creates an ordered list using lowercase Roman numerals (i, ii, iii...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "lowerRoman");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerRoman");
 {% endhighlight %}</td>
 </tr>
 
 <tr>
-<td><p>NumberFormatList - Upper roman</p></td>
+<td><p>NumberFormatList - UpperRoman</p></td>
 <td><p>Creates an ordered list using uppercase Roman numerals (I, II, III...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "upperRoman");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "UpperRoman");
 {% endhighlight %}</td>
 </tr>
 
 <tr>
-<td><p>NumberFormatList - Lower greek</p></td>
+<td><p>NumberFormatList - LowerGreek</p></td>
 <td><p>Creates an ordered list using lowercase Greek letters (α, β, γ...).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "lowerGreek");
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerGreek");
 {% endhighlight %}</td>
 </tr>
 
@@ -279,7 +279,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "lowerGreek"
 <td><p>Creates an unordered list without any specific style.</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "none");
+await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "None");
 {% endhighlight %}</td>
 </tr>
 
@@ -288,7 +288,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "none");
 <td><p>Creates an unordered list using solid disc bullets (•).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "disc");
+await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
 {% endhighlight %}</td>
 </tr>
 
@@ -297,7 +297,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "disc");
 <td><p>Creates an unordered list using hollow circle bullets (○).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "circle");
+await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Circle");
 {% endhighlight %}</td>
 </tr>
 
@@ -306,7 +306,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "circle");
 <td><p>Creates an unordered list using square bullets (▪).</p></td>
 <td>
 {% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "square");
+await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Square");
 {% endhighlight %}</td>
 </tr>
 
