@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor File Manager Component | Syncfusion
+title: Getting Started with File Manager Component | Syncfusion
 description: Checkout and learn about getting started with Blazor File Manager component in Blazor WebAssembly App.
 platform: Blazor
 control: File Manager
@@ -9,14 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor File Manager Component
+# Getting Started with Blazor File Manager Component in WASM App
 
 This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
-
-To get start quickly with Blazor WebAssembly App of File Manager component, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=qcH3B8FTPao" %}
 
 {% tabcontents %}
 
