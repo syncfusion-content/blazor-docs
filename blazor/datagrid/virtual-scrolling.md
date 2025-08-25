@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor DataGrid and much more.
+description: Learn all about virtualization in the Syncfusion® Blazor DataGrid component, including virtual scrolling and paging.
 platform: Blazor
 control: DataGrid
 documentation: ug
