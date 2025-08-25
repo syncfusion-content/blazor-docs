@@ -474,7 +474,7 @@ namespace BlazorApp1.Components.Data
 
 The following screenshot represents the TreeGrid with **Observable Collection**.
 
-![Blazor TreeGrid with ObservableCollection](images/observable%20collection.gif)
+![Blazor TreeGrid with ObservableCollection](images/observable_collection.gif)
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the `StateHasChanged` method to reflect the changes in the UI.
 
@@ -648,7 +648,7 @@ namespace BlazorApp1.Components.Data
 
 The following screenshot represents the TreeGrid with **Observable Collection**.
 
-![Blazor TreeGrid With Range of Items ObservableCollection](images/adding%20range%20in%20observable%20collection.gif)
+![Blazor TreeGrid With Range of Items ObservableCollection](images/adding_range_in_observable_collection.gif)
 
 ## Remote Service binding
 
