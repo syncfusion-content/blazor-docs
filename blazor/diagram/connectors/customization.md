@@ -819,6 +819,63 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
 
+## How to Set MaxSegmentThumb for Connector
+ The property [MaxSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumb) is used to limit the number of segment thumb in the connector.
+```cshtml
+ @using Syncfusion.Blazor.Diagram 
+
+<SfDiagramComponent @ref="Diagram"   id="diagram" Width="1400px" Height="600px"  @bind-Connectors="@connectors"> 
+</SfDiagramComponent> 
+   
+@code {
+    SfDiagramComponent Diagram; 
+    // Initialize the diagram's connectors collection 
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>(); 
+  
+
+     protected override void OnInitialized() 
+     { 
+        
+         Connector orthogonalconnector = new Connector() 
+         { 
+             ID = "orthogonal", 
+             SourcePoint = new DiagramPoint() { X = 550, Y = 200 }, 
+             TargetPoint = new DiagramPoint() { X = 650, Y = 300 }, 
+             Style = new ShapeStyle() { StrokeColor = "#6495ED" }, 
+             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb, 
+             TargetDecorator = new DecoratorSettings() 
+             { 
+                 Shape = DecoratorShape.Arrow, 
+                 Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" } 
+             }, 
+             Type = ConnectorSegmentType.Orthogonal, 
+                 Segments = new DiagramObjectCollection<ConnectorSegment>() 
+             { 
+                 new OrthogonalSegment 
+                 { 
+                     Length = 60, 
+                     Type = ConnectorSegmentType.Orthogonal, 
+                     Direction = Direction.Right 
+                 }, 
+                 new OrthogonalSegment 
+                 { 
+                     Length = 60, 
+                     Type = ConnectorSegmentType.Orthogonal, 
+                     Direction = Direction.Bottom, 
+                 }, 
+                
+             }, 
+             MaxSegmentThumbs = 4, 
+         }; 
+         connectors.Add(orthogonalconnector); 
+     } 
+ }  
+
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
+![MaxSegmentThumb](../images/MaxSegmentThumb.png)
+
+ >**Note:** The MaxSegmentThumb property is applicable only for the [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector type.
 
 
 ## See also
