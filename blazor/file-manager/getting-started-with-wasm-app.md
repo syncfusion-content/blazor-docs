@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor File Manager Component | Syncfusion
+title: Getting Started with File Manager Component | Syncfusion
 description: Checkout and learn about getting started with Blazor File Manager component in Blazor WebAssembly App.
 platform: Blazor
 control: File Manager
@@ -9,14 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor File Manager Component
+# Getting Started with Blazor File Manager Component in WASM App
 
-This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
-
-To get start quickly with Blazor WebAssembly App of File Manager component, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=qcH3B8FTPao" %}
+This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
 {% tabcontents %}
 
@@ -86,6 +81,65 @@ dotnet restore
 
 {% endhighlight %}
 
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor WebAssembly project using .NET CLI
+
+Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp -ho
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
+
+Here's an example of how to add **Blazor FileManager** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.FileManager -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
 {% endtabs %}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.

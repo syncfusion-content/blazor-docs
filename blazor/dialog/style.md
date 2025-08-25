@@ -7,9 +7,119 @@ control: Dialog
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Dialog Component
+# Dialog Customization
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The Syncfusion Blazor Dialog component allows extensive customization options to enhance its appearance and behavior. You can modify its dimensions, support RTL layouts, apply custom styles, and animate its display.
+
+### Width
+
+You can set the width of the dialog using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Width) property.
+
+```cshtml
+<SfDialog Width="400px">
+    <!-- Dialog content -->
+</SfDialog>
+```
+
+### MinHeight
+
+Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_MinHeight) property.
+
+```cshtml
+<SfDialog MinHeight="200px">
+    <!-- Dialog content -->
+</SfDialog>
+```
+
+### RTL Support
+
+Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableRtl) property.
+
+```cshtml
+<SfDialog EnableRtl="true">
+    <!-- Dialog content -->
+</SfDialog>
+```
+
+### CssClass
+
+Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property.
+
+```cshtml
+<SfDialog CssClass="custom-dialog">
+    <!-- Dialog content -->
+</SfDialog>
+```
+
+### Animation
+
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be animated during the open and close actions. Also, users can customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
+
+To get started quickly with animation in Blazor Dialog Component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
+
+<!-- markdownlint-disable MD033 -->
+<table>
+<tr>
+<td>
+delay</td><td>
+The Dialog animation will start with the mentioned delay</td></tr>
+<tr>
+<td>
+duration</td><td>
+Specifies the animation duration to complete with one animation cycle</td></tr>
+<tr>
+<td>
+effect</td><td>
+Specifies the animation effects of Dialog open and close actions effect.
+<br /><br />
+List of supported animation effects:
+<br />
+'Fade' | 'FadeZoom' | 'FlipLeftDown' | 'FlipLeftUp' | 'FlipRightDown' | 'FlipRightUp' | 'FlipXDown' |
+'FlipXUp' | 'FlipYLeft' | 'FlipYRight' | 'SlideBottom' | 'SlideLeft' | 'SlideRight' | 'SlideTop' |
+'Zoom'| 'None'
+<br /><br />
+If the user sets 'Fade' effect, then the Dialog will open with 'FadeIn' effect and close with 'FadeOut' effect
+</td></tr>
+</table>
+
+In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
+
+<SfDialog Width="500px" ShowCloseIcon="true" @bind-Visible="@IsVisible">
+    <DialogTemplates>
+        <Header> Dialog </Header>
+        <Content> Dialog enabled with Zoom effect </Content>
+    </DialogTemplates>
+    <DialogAnimationSettings Effect="@AnimationEffect" Duration=400 />
+    <DialogButtons>
+        <DialogButton Content="Hide" IsPrimary="true" OnClick="@CloseDialog" />
+    </DialogButtons>
+</SfDialog>
+
+@code {
+    private bool IsVisible { get; set; } = true;
+    private DialogEffect AnimationEffect = DialogEffect.Zoom;
+
+    private void OpenDialog()
+    {
+        this.IsVisible = true;
+    }
+
+    private void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
+}
+
+```
 
 ## Customizing the dialog header
 
