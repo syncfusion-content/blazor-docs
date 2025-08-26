@@ -11,7 +11,7 @@ documentation: ug
 
 ## Mention Integration in Syncfusion Chat UI
 
-The Syncfusion ChatUI allows users to mention others in messages using the `@` character, with an autocomplete dropdown for selecting users. The following sections explain how to configure mentions
+The Syncfusion ChatUI allows users to mention others in messages using the `@` character, with an dropdown for selecting users. The following sections explain how to configure mentions
 
 ## Configure Mention Users
 
