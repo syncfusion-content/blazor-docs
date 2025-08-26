@@ -42,7 +42,7 @@ This section provides a brief explanation on how to manually create a Blazor Web
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-![Blazor WASM Create Project Template](blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
