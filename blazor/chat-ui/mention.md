@@ -21,7 +21,7 @@ You can use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" MentionUsers="MentionUsers" HeaderText="TeamSync Professionals"></SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages" MentionUsers="MentionUsers" HeaderText="TeamSync Professionals"></SfChatUI>
 </div>
 
 @code {
@@ -55,7 +55,7 @@ You can use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" MentionUsers="MentionUsers" HeaderText="TeamSync Professionals" MentionChar="MentionCharacter"></SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages" MentionUsers="MentionUsers" HeaderText="TeamSync Professionals" MentionChar="MentionCharacter"></SfChatUI>
 </div>
 
 @code {
@@ -84,14 +84,14 @@ You can use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property in the [ChatMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage) to include predefined mentions in chat messages. The mentions field stores the selected users for each message.
 
-> The MentionUsers property in a message contains a list of users, mapped by their order where the placeholder {0} is replaced by the first user, {1} by the second, and so on, automatically generating mentions in the user interface. If a placeholder's index is negative or exceeds the bounds of the mentionUsers array (e.g., using {5} with only two users), the mapping for that placeholder fails, and the placeholder text itself (e.g., {5}) is displayed in the final message.
+> The `MentionUsers` property in a message contains a list of users, mapped by their order where the placeholder {0} is replaced by the first user, {1} by the second, and so on, automatically generating mentions in the user interface. If a placeholder's index is negative or exceeds the bounds of the mentionUsers array (e.g., using {5} with only two users), the mapping for that placeholder fails, and the placeholder text itself (e.g., {5}) is displayed in the final message.
 
 ```cshtml
 
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" HeaderText="TeamSync Professionals"></SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages" HeaderText="TeamSync Professionals"></SfChatUI>
 </div>
 
 @code {
