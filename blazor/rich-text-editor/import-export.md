@@ -129,6 +129,178 @@ The Rich Text Editor allows you to load an external text file into the editor. R
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-file-to-blazor-rich-text-editor).
 
+## Importing content from Microsoft Word
+
+The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
+
+To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can add it as a custom toolbar [items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) using the items property in toolbarSettings.
+
+The following example illustrates how to set up the `ImportWord` in the Rich Text Editor to facilitate content importation from Word documents:
+
+{% tabs %}
+{% highlight razor %}
+
+@using System.IO; 
+@using Syncfusion.Blazor.RichTextEditor 
+ 
+<SfRichTextEditor Height="300px"> 
+    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/development/api/RichTextEditor/ImportFromWord"></RichTextEditorImportWord>
+</SfRichTextEditor> 
+ 
+@code { 
+     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ImportWord },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator},
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor import content from microsoft word](./images/ImportWord.png)
+
+### Maximum file size restriction
+
+You can restrict the word uploaded from the local machine when the uploaded word file size is greater than the allowed size by using the [maxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImportWord.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImportWord_MaxFileSize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+{% tabs %}
+{% highlight razor %}
+
+@using System.IO; 
+@using Syncfusion.Blazor.RichTextEditor 
+ 
+<SfRichTextEditor Height="300px"> 
+    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/development/api/RichTextEditor/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
+</SfRichTextEditor> 
+ 
+@code { 
+     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ImportWord },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator},
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+### Secure word file upload with authentication
+
+You can add additional data with the word file uploaded from the Rich Text Editor on the client side, which can even be received on the server side. By using the `FileUploading`  event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+
+{% tabs %}
+{% highlight razor %}
+
+@using System.IO; 
+@using Syncfusion.Blazor.RichTextEditor 
+ 
+<SfRichTextEditor Height="300px"> 
+    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorEvents FileUploading="@FileUploading"></RichTextEditorEvents>
+    <RichTextEditorImportWord ServiceUrl="api/Word/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
+</SfRichTextEditor> 
+ 
+@code { 
+    private void FileUploading(FileUploadingEventArgs args)
+    {
+        var accessToken = "Authorization_token";
+        // adding custom form Data
+        args.CustomFormData = new List<object> { new { Authorization = accessToken } };
+    }
+     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ImportWord },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator},
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight cshtml tabtitle="controller.cs" %}
+
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace WordUpload.Controllers
+{
+    [ApiController]
+    public class WordController : ControllerBase
+    {
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public WordController(IWebHostEnvironment env)
+        {
+            this.hostingEnv = env;
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Word/ImportFromWord")]
+        public void ImportFromWord(IList<IFormFile> UploadFiles)
+        {
+            string currentPath = Request.Form["Authorization"].ToString();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Export to RTF file
 
 Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format.
