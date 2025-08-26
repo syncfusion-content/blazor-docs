@@ -736,6 +736,111 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 ![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
 
+## Axis Label Template
+
+The Axis Label Template in Blazor Charts allows customization of how axis labels are displayed using the `LabelTemplate` property in the ChartAxis component. This makes it possible to format labels with HTML, apply conditional styling, and include dynamic content such as icons or additional data.
+
+Inside the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To use this data, cast context to the `ChartAxisLabelInfo` class, which includes the following properties:
+
+* `Text`: This property contains the label text and can be used in axis label templates for axis types such as **Category**, **Numeric**, and **Logarithmic**.
+* `DateTimeLabel`: This property holds the date and time value and is useful for axis label templates in **DateTime** axes.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" Width="70%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <LabelTemplate>
+            @{
+                var data = context as ChartAxisLabelInfo;
+            }
+            <table>
+                <tr>
+                    <td align="center" style="background-color: #2E8B57; font-size: 14px; color: #FFD700; font-weight: bold; padding: 5px">Country :</td>
+                    <td align="center" style="background-color: #4682B4; font-size: 14px; color: #FFFFFF; font-weight: bold; padding: 5px">@data.Text</td>
+                </tr>
+            </table>
+        </LabelTemplate>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Double"></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals" Type="ChartSeriesType.Column">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class MedalData
+    {
+        public string Country { get; set; }
+        public double Medals { get; set; }
+    }
+
+    public List<MedalData> MedalDetails = new List<MedalData>
+    {
+        new MedalData { Country = "USA", Medals = 46 },
+        new MedalData { Country = "UK", Medals = 27 },
+        new MedalData { Country = "China", Medals = 26 },
+        new MedalData { Country = "Russia", Medals = 19 },
+        new MedalData { Country = "Germany", Medals = 17 }
+    };
+}
+
+```
+![Blazor Column Chart Axis with Template using Text](images/axis-labels/blazor-column-chart-axis-text-template.png)
+
+### Customizing DateTimeLabel in Axis Label Template
+
+The `DateTimeLabel` property in the `ChartAxisLabelInfo` class contains the date and time value for each axis label when using a DateTime axis. This value directly reflects the timestamp from the chart’s data source and can be displayed in any format that suits the chart’s context. You can customize how this value appears by applying formatting options to show only the month, the full date, or even the day of the week. This helps make time-based data more readable and relevant to the chart’s purpose.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="70%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+        <LabelTemplate>
+            @{
+                var data = context as ChartAxisLabelInfo;
+            }
+            <table>
+                <tr>
+                    <td align="center" style="background-color: #6A5ACD; font-size: 10px; color: #F0E68C; font-weight: bold; padding: 5px">Month:<br>@data.DateTimeLabel.ToString("MMM yyyy", null)</td>
+                </tr>
+            </table>
+        </LabelTemplate>
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> Data = new List<ChartData>
+    {
+        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 46 },
+        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 28 },
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 68 }
+    };
+}
+
+```
+![Blazor Chart Axis with Template using DateTimeLabel](images/axis-labels/blazor-chart-axis-datetimelabel-template.png)
+
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
 ## See also
