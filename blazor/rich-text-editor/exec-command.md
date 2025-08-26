@@ -213,7 +213,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 
 <tr>
 <td><p>NumberFormatList</p></td>
-<td><p>Creates an ordered list with configurable numbering styles. You can find the available formats [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html).</p></td>
+<td><p>Creates an ordered list with configurable numbering styles. You can find the available formats <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html">here</a>.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
@@ -222,7 +222,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
 
 <tr>
 <td><p>BulletFormatList</p></td>
-<td><p>Creates an unordered list with configurable bullet styles. You can find the available formats [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html).</p></td>
+<td><p>Creates an unordered list with configurable bullet styles. You can find the available formats <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html">here</a>.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
