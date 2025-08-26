@@ -9,9 +9,9 @@ documentation: ug
 
 # No Data Template in Blazor Charts Component
 
-In the Blazor Chart component, when there is no data to render, a customizable layout is displayed within the chart area. This is managed using the `NoDataTemplate` property, which supports styled text, images, and interactive elements to align with the application's design and provide meaningful feedback to users.
+When there is no data available to render in the chart, the `NoDataTemplate` property allows you to display a custom layout within the chart area. This layout can include a message indicating the absence of data, a relevant image, or a button to initiate data loading. You can incorporate styled text, images, or interactive elements to maintain design consistency and enhance user guidance.
 
-This template is especially helpful in empty data scenarios. It can show a message indicating that no data is available, display a relevant image, and include a button to load or refresh data. Once data is available, the chart automatically updates to render the appropriate visualization.
+Once data becomes available, the chart automatically updates to display the appropriate visualization.
 
 ```cshtml
 
@@ -20,16 +20,16 @@ This template is especially helpful in empty data scenarios. It can show a messa
 
 <SfChart @ref="chart" Width="80%" Title="Milk Production in US - 2025" SubTitle="Jan 2025 - Apr 2025">
     <NoDataTemplate>
-        <div class="noDataTemplateContainerStyle" style=" border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
-            <span style="font-size: 100px;">📉</span>
-            <div style="font-size:15px;"><strong>No data available to display.</strong></div>
-            <SfButton IconCss="e-icons e-refresh" OnClick="LoadData">Load Data</SfButton>
-        </div>
-    </NoDataTemplate>
+    <div class="noDataTemplateContainerStyle" style="border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
+        <div><img src="images/appearance/no-data.png" alt="No Data" style="height: 150px;" /></div>
+        <div style="font-size:15px;"><strong>No data available to display.</strong></div>
+        <SfButton IconCss="e-icons e-refresh" OnClick="LoadData">Load Data</SfButton>
+    </div>
+</NoDataTemplate>
     <ChildContent>
         <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
         <ChartSeriesCollection>
-            <ChartSeries DataSource="@SalesReports" XName="Month" YName="Value" Type="ChartSeriesType.Column" Name="Milk Production">
+            <ChartSeries DataSource="@SalesReports" XName="Month" YName="Value" Type="ChartSeriesType.Column">
                 <ChartMarker>
                     <ChartDataLabel Visible="true" Name="Text"/>
                 </ChartMarker>
@@ -70,8 +70,7 @@ This template is especially helpful in empty data scenarios. It can show a messa
 
 ```
 
-![No Data Template in Blazor Chart Before Loading the Data](images/appearance/blazor-chart-no-data-template-before-data.png)
-![No Data Template in Blazor Chart After Loading the Data](images/appearance/blazor-chart-no-data-template-after-data.png)
+![No Data Template in Blazor Chart](images/appearance/blazor-chart-no-data-template.gif)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

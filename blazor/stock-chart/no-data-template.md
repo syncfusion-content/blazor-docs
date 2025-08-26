@@ -9,46 +9,39 @@ documentation: ug
 
 # No Data Template in Blazor Stock Chart Component 
 
-In the Blazor Stock Chart component, when there is no data to render, a customizable layout is displayed within the chart area. This is managed using the `NoDataTemplate` property, which supports styled text, images, and interactive elements to align with the application's design and provide meaningful feedback to users.
+When there is no data available to render in the chart, the `NoDataTemplate` property allows you to display a custom layout within the chart area. This layout can include a message indicating the absence of data, a relevant image, or a button to initiate data loading. You can incorporate styled text, images, or interactive elements to maintain design consistency and enhance user guidance.
 
-This template is especially helpful in empty data scenarios. It can show a message indicating that no data is available, display a relevant image, and include a button to load or refresh data. Once data is available, the chart automatically updates to render the appropriate visualization.
+Once data becomes available, the chart automatically updates to display the appropriate visualization.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
 
-<SfStockChart @ref="stockChart" Title="AAPL Stock stock">
+<SfStockChart @ref="stockChart" Title="AAPL Stock Price">
     <NoDataTemplate>
-        <div id="noDataTemplateContainer">
-            <div><span style="font-size: 100px;">📉</span><br /></div>
+        <div class="noDataTemplateContainerStyle" style="border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
+            <div><img src="images/appearance/no-data.png" alt="No Data" style="height: 150px;" /></div>
             <div style="font-size:15px;"><strong>No data available to display.</strong></div>
         </div>
     </NoDataTemplate>
     <ChildContent>
         <StockChartChartBorder Width="0"></StockChartChartBorder>
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@Visible" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume" Name="Google"/>
+            <StockChartSeries DataSource="@Visible" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"/>
         </StockChartSeriesCollection>
         <StockChartLegendSettings Visible="true"></StockChartLegendSettings>
     </ChildContent>
 </SfStockChart>
 
 <style>
-    #noDataTemplateContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: inherit;
-        width: inherit;
+    .noDataTemplateContainerStyle {
         background-color: #fafafa;
-        text-align: center;
-        border: 2px solid orange;
+        color: #000000;
     }
 </style>
 
 <div style="margin-top: 20px;">
-    <SfButton IconCss="e-icons e-refresh" OnClick="ToggleChartData"><b>@(HasData ? "Clear Data" : "Load Data")</b></SfButton>
+    <SfButton IconCss="e-icons e-refresh" OnClick="LoadData">Load Data</SfButton>
 </div>
 
 @code {
@@ -78,37 +71,18 @@ This template is especially helpful in empty data scenarios. It can show a messa
         new ChartData { Date = new DateTime(2012, 05, 28), Open = 81.5571, High = 83.0714, Low = 80.0743, Close = 80.1414, Volume = 480059584 }
     };
 
-    private void ToggleChartData()
-    {
-        if (ShowData)
-        {
-            ClearData();
-        }
-        else
-        {
-            UpdateChart();
-        }
-    }
-
-    private bool ShowData = false;
-    private IEnumerable<ChartData> Visible => ShowData ? StockDetails : new List<ChartData>();
-
-    private void UpdateChart()
+    private void LoadData()
     {
         ShowData = true;
         stockChart.UpdateStockChart();
     }
 
-    private void ClearData()
-    {
-        ShowData = false;
-        stockChart.UpdateStockChart();
-    }
+    private bool ShowData = false;
+    private IEnumerable<ChartData> Visible => ShowData ? StockDetails : new List<ChartData>();
 }
 
 ```
 
-![No Data Template in Blazor Stock Chart Before Loading the Data](images/appearance/blazor-stock-chart-no-data-template-before-data.png)
-![No Data Template in Blazor Stock Chart After Loading the Data](images/appearance/blazor-stock-chart-no-data-template-after-data.png)
+![No Data Template in Blazor Stock Chart](images/appearance/blazor-stock-chart-no-data-template.gif)
 
 N> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.
