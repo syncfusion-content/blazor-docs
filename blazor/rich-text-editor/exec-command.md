@@ -212,17 +212,8 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 </tr>
 
 <tr>
-<td><p>NumberFormatList - None</p></td>
-<td><p>Create an ordered list without any specific numbering style.</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "None");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>NumberFormatList - Number</p></td>
-<td><p>Creates an ordered list using standard Arabic numerals (1, 2, 3...).</p></td>
+<td><p>NumberFormatList</p></td>
+<td><p>Creates an ordered list with configurable numbering styles. You can find the available formats [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html).</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
@@ -230,86 +221,13 @@ await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
 </tr>
 
 <tr>
-<td><p>NumberFormatList - LowerAlpha</p></td>
-<td><p>Creates an ordered list using lowercase alphabetic characters (a, b, c...).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerAlpha");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>NumberFormatList - UpperAlpha</p></td>
-<td><p>Creates an ordered list using uppercase alphabetic characters (A, B, C...).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "UpperAlpha");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>NumberFormatList - LowerRoman</p></td>
-<td><p>Creates an ordered list using lowercase Roman numerals (i, ii, iii...).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerRoman");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>NumberFormatList - UpperRoman</p></td>
-<td><p>Creates an ordered list using uppercase Roman numerals (I, II, III...).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "UpperRoman");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>NumberFormatList - LowerGreek</p></td>
-<td><p>Creates an ordered list using lowercase Greek letters (α, β, γ...).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "LowerGreek");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>BulletFormatList - None</p></td>
-<td><p>Creates an unordered list without any specific style.</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "None");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>BulletFormatList - Disc</p></td>
-<td><p>Creates an unordered list using solid disc bullets (•).</p></td>
+<td><p>BulletFormatList</p></td>
+<td><p>Creates an unordered list with configurable bullet styles. You can find the available formats [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html).</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
 {% endhighlight %}</td>
 </tr>
-
-<tr>
-<td><p>BulletFormatList - Circle</p></td>
-<td><p>Creates an unordered list using hollow circle bullets (○).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Circle");
-{% endhighlight %}</td>
-</tr>
-
-<tr>
-<td><p>BulletFormatList - Square</p></td>
-<td><p>Creates an unordered list using square bullets (▪).</p></td>
-<td>
-{% highlight cshtml %}
-await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Square");
-{% endhighlight %}</td>
-</tr>
-
 
 <tr>
 <td><p>Outdent</p></td>
