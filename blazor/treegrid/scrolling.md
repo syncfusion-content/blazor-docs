@@ -204,6 +204,135 @@ You can scroll the tree grid content to the selected row position by using the [
 ```
 -->
 
+## Sticky header
+
+The Syncfusion Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can use the `EnableStickyHeader` property by setting it to **true**.
+
+In the below demo, the TreeGrid headers remain sticky while scrolling within the TreeGrid's parent div element.
+
+{% tabs %}
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Buttons
+
+<div>
+	<label>Enable or Disable Sticky Header</label>
+	<SfSwitch ValueChange="Change" TChecked="bool" style="margin-top:5px"></SfSwitch>
+</div>
+
+<div style="height:350px; margin-top:5px">
+	<SfTreeGrid @ref="TreeGrid"  DataSource="@TreeData" EnableStickyHeader="@isStickyHeaderEnabled" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" >
+		<TreeGridColumns>
+			<TreeGridColumn Field="TaskID" HeaderText="Jersey No" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD1" HeaderText="Name" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD2" HeaderText="Year" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD3" HeaderText="Stint" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD4" HeaderText="TMID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD5" HeaderText="LGID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="FIELD6" HeaderText="GP" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="Field7" HeaderText="GS" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="Field8" HeaderText="Minutes" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+			<TreeGridColumn Field="Field9" HeaderText="Points" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+		</TreeGridColumns>
+	</SfTreeGrid>
+</div>
+
+@code {
+	public SfTreeGrid<sampleData> TreeGrid;
+	public List<sampleData> TreeData { get; set; }
+	public bool isStickyHeaderEnabled;
+
+	protected override void OnInitialized()
+	{
+		this.TreeData = sampleData.GetTreeSampleData().ToList();
+	}
+
+	private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+	{
+		isStickyHeaderEnabled = args.Checked;
+		TreeGrid.RefreshAsync();
+	}
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data 
+{
+    public class sampleData
+    {
+        public int TaskID { get; set; }
+        public string FIELD1 { get; set; }
+        public int FIELD2 { get; set; }
+        public int FIELD3 { get; set; }
+        public int FIELD4 { get; set; }
+        public int FIELD5 { get; set; }
+        public int FIELD6 { get; set; }
+        public int Field7 { get; set; }
+        public int Field8 { get; set; }
+        public int Field9 { get; set; }
+        public int? ParentID { get; set; }
+        public static List<sampleData> GetTreeSampleData()
+        {
+            string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
+            "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
+            "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
+            "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
+            "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
+            "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
+            "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
+            List<sampleData> DataCollection = new List<sampleData>();
+            Random random = new Random();
+            var RecordID = 0;
+            for (var i = 1; i <= 100; i++)
+            {
+                var name = random.Next(0, 100);
+                sampleData Parent = new sampleData()
+                    {
+                        TaskID = ++RecordID,
+                        FIELD1 = Names[name],
+                        FIELD2 = 1967 + random.Next(0, 10),
+                        FIELD3 = 395 + random.Next(100, 600),
+                        FIELD4 = 87 + random.Next(50, 250),
+                        FIELD5 = 410 + random.Next(100, 600),
+                        FIELD6 = 67 + random.Next(50, 250),
+                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                        ParentID = null
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    var childName = random.Next(0, 100);
+                    DataCollection.Add(new sampleData()
+                        {
+                            TaskID = ++RecordID,
+                            FIELD1 = Names[childName],
+                            FIELD2 = 1967 + random.Next(0, 10),
+                            FIELD3 = 395 + random.Next(100, 600),
+                            FIELD4 = 87 + random.Next(50, 250),
+                            FIELD5 = 410 + random.Next(100, 600),
+                            FIELD6 = 67 + random.Next(50, 250),
+                            Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                            Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                            Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                            ParentID = Parent.TaskID
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Sticky header](images/sticky-header.gif)
+
 ## Frozen rows and columns
 
 Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the tree grid while scrolling.
