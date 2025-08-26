@@ -21,7 +21,7 @@ Once data becomes available, the chart automatically updates to display the appr
 <SfAccumulationChart @ref="accChart" Width="80%" Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
     <NoDataTemplate>
     <div style="border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
-        <div><img src="./no-data.png" alt="No Data" style="height: 150px;" /></div>
+        <div><img src="images/empty/no-data.png" alt="No Data" style="height: 150px;" /></div>
         <div style="font-size:15px;"><strong>No data available to display.</strong></div>
         <SfButton IconCss="e-icons e-refresh" OnClick="LoadData">Load Data</SfButton>
     </div>
