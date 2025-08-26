@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor File Manager Component | Syncfusion
+title: Getting Started | Blazor File Manager Component | Syncfusion
 description: Checkout and learn about getting started with Blazor File Manager component in Blazor Server Application.
 platform: Blazor
 control: File Manager
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor File Manager Component
+# Getting Started with Blazor File Manager Component in Server App
 
 This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
