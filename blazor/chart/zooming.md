@@ -435,14 +435,14 @@ These customization options provide flexibility in designing a scrollbar that al
     <ChartPrimaryXAxis Title="Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
         <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
-             TrackRadius="8" ScrollbarRadius="8" GripColor="red" TrackColor="blue" ScrollbarColor="yellow" />
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#BD000F" TrackColor="#FF9AA2" ScrollbarColor="#EE5A5A" />
     </ChartPrimaryXAxis>
 
     <ChartPrimaryYAxis Title="Profit ($)" RangePadding="ChartRangePadding.None">
         <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
-             TrackRadius="8" ScrollbarRadius="8" GripColor="red" TrackColor="blue" ScrollbarColor="yellow" />
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#BD000F" TrackColor="#FF9AA2" ScrollbarColor="#EE5A5A" />
     </ChartPrimaryYAxis>
 
     <ChartLegendSettings Visible="false"></ChartLegendSettings>
