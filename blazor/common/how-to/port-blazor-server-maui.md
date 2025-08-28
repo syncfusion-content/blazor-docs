@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to port Syncfusion&reg; Blazor Server App to MAUI Blazor Hybrid App
+# How to port Syncfusion&reg; Blazor Web App to MAUI Blazor Hybrid App
 
 This section explains how to port Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App to .NET MAUI Blazor Hybrid App using Razor Class Library (RCL). This way, you can avoid rewriting all your Blazor Web App pages for the .NET MAUI Blazor Hybrid App.
 
