@@ -384,6 +384,7 @@ It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syn
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
+@inject IJSRuntime JSRuntime
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true">
     <PivotViewDataSourceSettings DataSource="@data">
@@ -404,6 +405,25 @@ It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syn
     <PivotViewEvents TValue="ProductDetails"  HyperlinkCellClicked="hyperlink"></PivotViewEvents>
 </SfPivotView>
 
+<script type="text/javascript">
+function navigateFromPivotCellCoordinates(rowIndex, colIndex, baseUrl) {
+    const element = document.querySelector('[index="' + rowIndex + '"][aria-colindex="' + (colIndex + 1) + '"]');
+    const cellcontent =  element.innerText;
+    if (element && element.classList.contains('e-rowsheader') && cellcontent != "Grand Total")
+    {
+        const finalUrl = `${baseUrl}${encodeURIComponent(cellcontent)}`;
+        console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
+        window.location.href = finalUrl;
+    }
+    else
+    {
+        const finalUrl = "https://syncfusion.com/";
+        console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
+        window.location.href = finalUrl;
+    }
+}
+</script>
+
 <style>
 .e-custom-class,.e-custom-class:hover {
     text-decoration: underline !important;
@@ -420,9 +440,12 @@ It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syn
         this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-    public void hyperlink(HyperCellClickEventArgs args)
+       public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
     {
-        args.CurrentCell.SetAttribute("data-url", "https://syncfusion.com/");//here we have redirected to Syncfusion on hyperlinkcell click
+       int row= (args.Data as AxisSet).RowIndex;
+       int col= (args.Data as AxisSet).ColIndex;
+       string baseUrl = "https://en.wikipedia.org/wiki/";
+       await JSRuntime.InvokeVoidAsync("navigateFromPivotCellCoordinates", row, col, baseUrl);
     }
 }
 ```
