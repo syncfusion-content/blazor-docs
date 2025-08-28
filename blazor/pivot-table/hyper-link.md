@@ -442,10 +442,10 @@ function navigateFromPivotCellCoordinates(rowIndex, colIndex, baseUrl) {
     }
     public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
     {
-       int row= (args.Data as AxisSet).RowIndex;
-       int col= (args.Data as AxisSet).ColIndex;
-       string baseUrl = "https://en.wikipedia.org/wiki/";
-       await JSRuntime.InvokeVoidAsync("navigateFromPivotCellCoordinates", row, col, baseUrl);
+       	int row= (args.Data as AxisSet).RowIndex;
+       	int col= (args.Data as AxisSet).ColIndex;
+       	string baseUrl = "https://en.wikipedia.org/wiki/";
+       	await JSRuntime.InvokeVoidAsync("navigateFromPivotCellCoordinates", row, col, baseUrl);
     }
 }
 ```
