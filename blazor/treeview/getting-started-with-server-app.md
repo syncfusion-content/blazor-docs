@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeView Component | Syncfusion
+title: Getting Started with TreeView in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor TreeView component in Blazor Server Application.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeView Component
+# Getting Started with Blazor TreeView Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
