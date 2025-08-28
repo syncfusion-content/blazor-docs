@@ -791,7 +791,7 @@ The following code example demonstrates how to enable or disable the default too
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/ShowToolTip)
 
-![Default Tooltip ShowToolTip as false in symbol palette](../images/defaultShowToolTiptooltip.png)
+![Default Tooltip ShowToolTip as false in symbol palette](../images/defaultShowToolTiptooltip.gif)
 ### How to Provide Custom Tooltips for Symbols
 
 You can enhance the symbol palette by providing custom tooltips for symbols. This is achieved by assigning custom tooltip content to the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Tooltip) property of nodes and connectors. To enable these custom tooltips for symbols in the symbol palette, set the Tooltip constraints for both nodes and connectors. Once configured, these custom tooltips will be displayed when hovering over the corresponding symbols in the symbol palette, offering users more informative and context-specific details about each symbol.
