@@ -9,7 +9,11 @@ documentation: ug
 
 # Dynamically update report configuration in Blazor Pivot Table Component
 
+To enhance the dynamic data source and report manipulation of the Pivot Table component, a new public method, [RefreshAsync](), has been introduced. This method offers a more streamlined and efficient approach to refreshing the layout, replacing the previously used `LayoutRefreshAsync`.
 
+[RefreshAsync]() enables dynamic and asynchronous refreshing of the Pivot Table layout. It is designed to simplify the update process and improve responsiveness during runtime changes.
+
+The method `LayoutRefreshAsync` has been officially deprecated. Its functionality is now fully covered by [RefreshAsync](), ensuring backward compatibility while promoting a cleaner and more maintainable API.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
