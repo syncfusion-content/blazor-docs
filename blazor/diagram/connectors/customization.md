@@ -819,8 +819,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
 
-## How to Set MaxSegmentThumb for Connector
- The property [MaxSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumb) is used to limit the number of segment thumb in the connector.
+## How to Set MaxSegmentThumbs for Connector
+ The property [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) is used to limit the number of segment thumb in the connector.
 ```cshtml
  @using Syncfusion.Blazor.Diagram 
 
@@ -873,9 +873,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
-![MaxSegmentThumb](../images/MaxSegmentThumb.png)
+![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
 
- >**Note:** The MaxSegmentThumb property is applicable only for the [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector type.
+ >**Note:** The MaxSegmentThumbs property is applicable only for the [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector type.
 
 
 ## See also
