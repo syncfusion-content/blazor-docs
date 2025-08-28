@@ -43,7 +43,10 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 
 ## Source code view 
 
-The Rich Text Editor allows you to directly edit HTML code via `Source View` in the text area. If you make any direct modifications in the source view, the changes will be reflected in the editor content. So, you will have more flexibility over the content they have created.
+The Rich Text Editor enables you to directly edit HTML code through the `Source View` in the text area. Any changes you make in Source view are immediately reflected in the editor's content, giving you greater flexibility and control over your work.
+The source code is presented with enhanced formatting and consistent indentation for both block-level and inline HTML elements, resulting in a cleaner, more readable, and user-friendly editing experience.
+
+>While the visual alignment of the source code is improved, the editor's underlying value remains unchanged.
 
 {% tabs %}
 {% highlight razor %}
