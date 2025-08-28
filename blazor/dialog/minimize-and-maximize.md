@@ -19,7 +19,7 @@ The Syncfusion Blazor Dialog component supports adding custom minimize and maxim
 
 Index.razor
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @inject IJSRuntime JsRuntime
@@ -189,7 +189,7 @@ Index.razor
 
 App.razor
 
-```
+```cshtml
  <script>
      window.Dialog = {
          minimize: function () {

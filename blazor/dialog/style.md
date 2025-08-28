@@ -15,7 +15,7 @@ The Syncfusion Blazor Dialog component allows extensive customization options to
 
 You can set the width of the dialog using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Width) property.
 
-```razor
+```cshtml
 <SfDialog Width="400px">
     <!-- Dialog content -->
 </SfDialog>
@@ -25,7 +25,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
 
 Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_MinHeight) property.
 
-```razor
+```cshtml
 <SfDialog MinHeight="200px">
     <!-- Dialog content -->
 </SfDialog>
@@ -35,7 +35,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
 
 Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableRtl) property.
 
-```razor
+```cshtml
 <SfDialog EnableRtl="true">
     <!-- Dialog content -->
 </SfDialog>
@@ -45,7 +45,7 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 
 Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property.
 
-```razor
+```cshtml
 <SfDialog CssClass="custom-dialog">
     <!-- Dialog content -->
 </SfDialog>
@@ -121,7 +121,7 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 ```
 
-## Customizing the dialog header
+### Customizing the dialog header
 
 Use the following CSS to customize the dialog header properties.
 
@@ -133,7 +133,7 @@ Use the following CSS to customize the dialog header properties.
 }
 ```
 
-## Customizing the dialog content
+### Customizing the dialog content
 
 Use the following CSS to customize the dialog content properties.
 
@@ -146,7 +146,7 @@ Use the following CSS to customize the dialog content properties.
 }
 ```
 
-## Customizing modal dialog overlay
+### Customizing modal dialog overlay
 
 Use the following CSS to customize the modal dialog overlay.
 
@@ -157,7 +157,7 @@ Use the following CSS to customize the modal dialog overlay.
 }
 ```
 
-## Customizing the dialog resize icon
+### Customizing the dialog resize icon
 
 Use the following CSS to customize the dialog resize icon.
 
@@ -175,7 +175,7 @@ Use the following CSS to customize the dialog resize icon.
 
 The above CSS demonstration uses the font awesome icon.
 
-## Customizing the dialog close button
+### Customizing the dialog close button
 
 Use the following CSS to customize the dialog close button.
 
@@ -187,7 +187,7 @@ Use the following CSS to customize the dialog close button.
 }
 ```
 
-## Customizing the dialog footer button
+### Customizing the dialog footer button
 
 Use the following CSS to customize the dialog footer button.
 
