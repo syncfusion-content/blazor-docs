@@ -440,7 +440,7 @@ function navigateFromPivotCellCoordinates(rowIndex, colIndex, baseUrl) {
         this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-       public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
+    public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
     {
        int row= (args.Data as AxisSet).RowIndex;
        int col= (args.Data as AxisSet).ColIndex;
