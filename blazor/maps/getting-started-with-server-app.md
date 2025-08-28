@@ -7,7 +7,7 @@ control: Maps
 documentation: ug
 ---
 
-# Getting Started with Blazor Maps Component
+# Getting Started with Blazor Maps Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
