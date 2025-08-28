@@ -9,9 +9,9 @@ documentation: ug
 
 # Import and Export in Blazor RichTextEditor
 
-## Import to Html file
+## Import to HTML file
 
-The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [Strem Reader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -89,7 +89,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-rtf-file
 
 ## Import text file to editor
 
-The Rich Text Editor allows you to load an external text file into the editor. Read the text file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external text file into the editor. Read the text file from your path using the [Strem Reader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -143,9 +143,9 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 @using System.IO; 
 @using Syncfusion.Blazor.RichTextEditor 
  
-<SfRichTextEditor Height="300px"> 
+<SfRichTextEditor Height="300px" Width="700px"> 
     <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
-    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/development/api/RichTextEditor/ImportFromWord"></RichTextEditorImportWord>
+    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ImportFromWord"></RichTextEditorImportWord>
 </SfRichTextEditor> 
  
 @code { 
@@ -188,7 +188,7 @@ You can restrict the word uploaded from the local machine when the uploaded word
  
 <SfRichTextEditor Height="300px"> 
     <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
-    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/development/api/RichTextEditor/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
+    <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
 </SfRichTextEditor> 
  
 @code { 
@@ -383,7 +383,7 @@ While clicking on the export button, it makes a call to the Export to HTML servi
 {% endhighlight %}
 {% endtabs %}
 
-Here, the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) values are converted into document type and then coverted to HTML format.
+Here, the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) values are converted into document type and then converted to HTML format.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/ExportService.cs" %}
