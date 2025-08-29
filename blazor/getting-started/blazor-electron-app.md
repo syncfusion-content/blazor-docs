@@ -151,4 +151,5 @@ dotnet electronize build /target osx
 dotnet electronize build /target linux
 ```
 
-N> [View the complete Blazor Server electron application with Syncfusion<sup style="font-size:70%">&reg;</sup> controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
+N> This setup only works with .NET 6. For more details and troubleshooting, refer to this [GitHub thread](https://github.com/ElectronNET/Electron.NET/issues/837#issuecomment-1985434060).
+View the complete Blazor Server electron application with Syncfusion<sup style="font-size:70%">&reg;</sup> controls on [GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
