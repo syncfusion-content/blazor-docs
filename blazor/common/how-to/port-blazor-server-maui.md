@@ -24,7 +24,7 @@ Create a new [Blazor Web App](https://blazor.syncfusion.com/documentation/gettin
 Open Visual Studio and create a new project. Search for [.NET MAUI Blazor Hybrid App](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) template.
 Name the project and create it.
 
-### 2. Create Razor Class Library (RCL) and 
+### 2. Create Razor Class Library (RCL)
 
 In the solution, add a new project using the [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) template in Visual Studio and ensure it targets .NET 8.0 to match both Blazor Web App and Blazor Maui Hybrid.
 
@@ -36,7 +36,7 @@ Move all Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor NuGet packages
 
 Move  Components/Pages ,Components/Layouts to the RazorClassLibrary and Add Include Necessary Namespace to _Imports.razor
 
-    ![Folders to move](images/server-folders.png)
+![Folders to move](images/server-folders.png)
 
 ### 4. Add Project Reference 
 
@@ -61,4 +61,4 @@ Finally, update the _Imports.razor file to include the necessary namespaces from
 
  In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
 
-    ![Build and run MAUI Blazor Hybrid App](images/windows-machine-mode.png)
+![Build and run MAUI Blazor Hybrid App](images/windows-machine-mode.png)
