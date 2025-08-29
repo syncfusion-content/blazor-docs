@@ -83,7 +83,7 @@ padding-top: 20px;
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-app">PDF Viewer</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app">PDF Viewer</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app">Word Processor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
         <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>

@@ -1725,7 +1725,7 @@ SfPdfViewer
 <a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/accessibility" target="_blank">Documentation</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
