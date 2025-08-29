@@ -23,7 +23,7 @@ You can create Blazor Server application using either CLI or Visual Studio refer
 
 * [Create Blazor Server application using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-N> This setup does not work with Target Framework Monikers (TFM) greater than .NET 6. For more details and troubleshooting, refer to this [GitHub thread](https://github.com/ElectronNET/Electron.NET/issues/837#issuecomment-1985434060).
+N> This setup does not work with Target Frameworks greater than .NET 6. For more details and troubleshooting, refer to this [GitHub thread](https://github.com/ElectronNET/Electron.NET/issues/837#issuecomment-1985434060).
 
 ## Configure Electron in Blazor App
 
