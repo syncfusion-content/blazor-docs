@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Pivot Table in Blazor WASM App
 description: Checkout and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pivot Table
