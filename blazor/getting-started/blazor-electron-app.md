@@ -43,7 +43,7 @@ dotnet new tool-manifest
 
 ![.NET tool manifest file](images\electron\net-tool-manifest.png)
 
-3.Install the electronize tool locally in the project by running the below command.
+3.Install the tool locally in the project by running the below command.
 
 ```
 dotnet tool install ElectronNET.CLI
