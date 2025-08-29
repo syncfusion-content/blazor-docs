@@ -466,6 +466,113 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqCCBPUOxoyWyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Persist the Grouped Row State
+
+The Syncfusion Blazor DataGrid provides a feature to preserve the expand or collapse state of grouped rows after performing actions such as paging, sorting, filtering or editing. By default, these operations will reset the expand or collapse state of grouped rows. To maintain the user's grouping preferences for a consistent and uninterrupted experience, you can enable this feature by setting the [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) property to **true**. The expand or collapse state is also maintained when grouping externally using the [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) methods.
+
+**Note**: This feature is not compatible with the [Lazy Load Grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping) feature, as lazy loading may interfere with the persistence of group states.
+
+In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) is added to enable or disable the persistence of the grouped row state. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered, and the `GridGroupSettings` `PersistGroupState` property of the DataGrid is updated accordingly.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="display:flex;gap: 5px;">
+    <label> Enable or disable grouped row state persistence</label>
+    <SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
+</div>
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true">
+    <GridGroupSettings Columns="@Initial" PersistGroupState=@IsPersist></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData> Grid;
+
+    public bool IsPersist { get; set; } = true;
+
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    private bool? isChecked = null;
+
+    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    {
+        if (args.Checked == true)
+        {
+            IsPersist = true;
+        }
+        else
+        {
+            IsPersist = false;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();  
+    public OrderData(){}
+
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;            
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroDvrRpDAvxclV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Sort grouped columns in descending order during initial grouping
 
 By default, grouped columns are sorted in ascending order. However, you can sort them in descending order during initial grouping by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in the `GridSortSettings` of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) property.
