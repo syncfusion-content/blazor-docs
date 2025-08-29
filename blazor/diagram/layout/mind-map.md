@@ -439,7 +439,7 @@ The following code example illustrates how to create an mind map layout.
     public string[] LayoutOrientationValues = Enum.GetNames(typeof(LayoutOrientation));
 
     // The selected value, bound to the enum
-    public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.Horizontal;
+public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.Vertical;
 
     // Set the branch type on runtime
     private BranchType GetBranch(IDiagramObject obj)
