@@ -7,7 +7,7 @@ control: Maps
 documentation: ug
 ---
 
-# Getting Started with Blazor Maps component
+# Getting Started with Blazor Maps component in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the Syncfusion® Blazor Maps component into your Blazor Maui app using both Visual Studio and Visual Studio Code.
 
