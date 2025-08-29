@@ -121,7 +121,7 @@ This section explains the list of events of the Colorpicker component which will
 
 ## OnModeSwitch
 
-`OnModeSwitch` event trigerred before the mode switching is performed in the component.
+`OnModeSwitch` event triggered before the mode switching is performed in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -139,7 +139,7 @@ This section explains the list of events of the Colorpicker component which will
 
 ## ModeSwitched
 
-`ModeSwitched` event trigerred after the mode switching is performed in the component.
+`ModeSwitched` event triggered after the mode switching is performed in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -157,7 +157,7 @@ This section explains the list of events of the Colorpicker component which will
 
 ## OnTileRender
 
-`OnTileRender` event trigerred after the rendering of each color tile in the component is completed.
+`OnTileRender` event triggered after the rendering of each color tile in the component is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
