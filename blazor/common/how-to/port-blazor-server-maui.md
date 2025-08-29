@@ -36,7 +36,7 @@ Move all Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor NuGet packages
 
 Move  Components/Pages ,Components/Layouts to the RazorClassLibrary and Add Include Necessary Namespace to _Imports.razor
 
-![Folders to move](images\server-folders.png)
+![Folders to move](images/server-folders.png)
 
 ### 4. Add Project Reference 
 
