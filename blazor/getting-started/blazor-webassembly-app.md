@@ -7,14 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Getting Started with Blazor WebAssembly App in Visual Studio
+# Getting Started with Blazor WebAssembly Standalone App
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
-
-To get start quickly with Blazor WebAssembly App, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=zKU580cOqjg" %}
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
 
 ## Using Playground
 
@@ -28,7 +23,7 @@ You can create a Blazor WebAssembly Standalone App using Syncfusion Blazor Templ
 
 ## Manually Creating a Project
 
-This section provides a brief explanation on how to manually create a Blazor WebAssembly App using either Visual Studio or Visual Studio Code.
+This section provides a brief explanation on how to manually create a Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
 
 {% tabcontents %}
 
@@ -82,19 +77,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor WASM App" %}
-
-dotnet new blazorwasm -o BlazorApp -ho
-
-{% endhighlight %}
-{% endtabs %}
-
 This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
-
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -165,9 +148,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
 ```cshtml
 
@@ -176,7 +159,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor WebAssembly App (~/Program.cs)" hl_lines="3 11" %}
@@ -200,9 +185,7 @@ await builder.Build().RunAsync();
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
-
-* For Blazor WebAssembly app, include it in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the **~wwwroot/index.html** file.
 
 ```html
 <head>
@@ -211,6 +194,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
+
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
