@@ -865,7 +865,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                  }, 
                 
              }, 
-             MaxSegmentThumbs = 4, 
+             MaxSegmentThumbs = 2, 
          }; 
          connectors.Add(orthogonalconnector); 
      } 
