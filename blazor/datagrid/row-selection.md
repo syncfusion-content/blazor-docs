@@ -264,7 +264,7 @@ public class OrderDetails
 
 The Syncfusion Blazor DataGrid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the Grid.
 
-To achieve this, you can utilize the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method and the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method of the Grid. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `DropDownList`, you can implement the logic to navigate to the desired page and select the row based on the index value. 
+To achieve this, you can utilize the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method with the `selectAcrossPages` parameter set to **true**. Here by handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `DropDownList`, you can implement the logic to navigate to the desired page and select the row based on the index value. 
 
 The following example demonstrates how to select rows in any page based on index value using `ValueChange` event:
 
@@ -322,11 +322,7 @@ The following example demonstrates how to select rows in any page based on index
     private async Task ValueChange(ChangeEventArgs<int, DropDownOrder> Args)
     {
         int seletedrowIndex = Args.Value;
-        int pageSize = Grid.PageSettings.PageSize;
-        int pageIndex = (seletedrowIndex - 1) / pageSize + 1;
-        int rowIndex = (seletedrowIndex - 1) % pageSize;      
-        await Grid.GoToPageAsync(pageIndex);
-        await Grid.SelectRowAsync(rowIndex, true);        
+        await Grid.SelectRowAsync(seletedrowIndex, true,true);
     }    
 }
 
@@ -377,6 +373,9 @@ public class Order
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVojfLsCxSoSKyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * By default, the `selectAcrossPages` parameter in the `SelectRowAsync` method is set to false. To enable row selection across multiple pages, set this parameter to **true** when calling the method. This allows you to select a row based on its global index, regardless of the page it resides on.
+> * If the row index is not known, you can retrieve it using the `GetRowIndexByPrimaryKeyAsync` method by passing the primary key value of the desired row. To enable searching across all pages, set the `searchAcrossRecords` parameter to **true**.
 
 ## Multiple row selection by single click on row 
 
