@@ -117,26 +117,6 @@ public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
         Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
-
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
-{
-    try
-    {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
-        {
-            System.IO.File.Delete(filename);
-        }
-    }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-    }
-}
 ```
 
 ## Drag and drop
