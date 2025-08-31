@@ -458,6 +458,29 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```
 
+## SelectionChanged
+
+The `SelectionChanged` event triggers whenever the selection range is modified within the Rich Text Editor, such as when a user selects text with a mouse drag or shifts the selection with Shift+Arrow keys.
+
+N> This event does not trigger when the selection range is collapsed (i.e., when only the cursor is placed without any content being selected).
+
+```cshtml
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorEvents SelectionChanged="@SelectionChangedHandler"></RichTextEditorEvents>
+</SfRichTextEditor>
+
+@code {
+    public void SelectionChangedHandler(Syncfusion.Blazor.RichTextEditor.SelectionChangedEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+
+```
+
 ## OnResizeStart
 
 `OnResizeStart` event triggers only when resizing the image is started.
