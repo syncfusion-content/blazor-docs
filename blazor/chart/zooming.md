@@ -420,17 +420,17 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Scrollbar customization
+### Customization
 
-The appearance and behavior of the scrollbar can be customized using various properties available in the `ChartAxisScrollbarSettings`:
+Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html):
 
-- The `TrackColor` property changes the color of the scrollbar track.
-- The `TrackRadius` property sets the rounded corners of the track.
-- The `ScrollbarColor` property changes the color of the scrollbar.
-- The `ScrollbarRadius` property adjusts the roundness of the scrollbar edges.
-- The `GripColor` property changes the color of the grip element.
-- The `Height` property controls the height of the scrollbar.
-- The `EnableZoom` property enables or disables zooming with the scrollbar. When enabled, arrows appear at the edges of the scrollbar, allowing users to zoom in and out of the chart. If disabled, the arrows are hidden and zooming is not possible.
+- `TrackColor`: Specifies the track color.
+- `TrackRadius`: Specifies the track corner radius.
+- `ScrollbarColor`: Specifies the scrollbar color.
+- `ScrollbarRadius`: Specifies the scrollbar corner radius.
+- `GripColor`: Specifies the grip color. The grip is the draggable handle (thumb) within the scrollbar used to move the visible range.
+- `Height`: Specifies the scrollbar height.
+- `EnableZoom`: Enables or disables zooming via the scrollbar. When enabled, arrows appear at the scrollbar ends to zoom in or out; when disabled, arrows are hidden and zooming via the scrollbar is unavailable.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
