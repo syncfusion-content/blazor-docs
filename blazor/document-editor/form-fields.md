@@ -34,6 +34,47 @@ All the form fields names form current document can be retrieved using [`GetForm
 Task<List<string>> formFieldsNames = await container.DocumentEditor.GetFormFieldNamesAsync();
 ```
 
+## Form Field Shading
+
+You can customize form field shading at the application level using the [`formFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.FormFieldSettingsModel.html#Syncfusion_Blazor_DocumentEditor_FormFieldSettingsModel_SelectionColor_Syncfusion_Blazor_DocumentEditor_FormFieldSettings_) property.
+
+The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
+
+```csharp
+// Set a custom shading color (for example, white) 
+@page "/"
+@using Syncfusion.Blazor.DocumentEditor
+@inject IJSRuntime JS
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px">
+</SfDocumentEditorContainer>
+
+@code {
+    private SfDocumentEditorContainer container;
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
+    {
+        FormFieldSettings = new FormFieldSettingsModel() { ShadingColor = "#ffffff" }
+    };
+}
+
+// Disable form field shading entirely 
+@page "/"
+@using Syncfusion.Blazor.DocumentEditor
+@inject IJSRuntime JS
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings" Height="590px">
+</SfDocumentEditorContainer>
+
+@code {
+    private SfDocumentEditorContainer container;
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
+    {
+        FormFieldSettings = new FormFieldSettingsModel() { ApplyShading = false }
+    };
+}
+
+```
+
+N> This customization only affects the application UI and will not be preserved when exporting the document.
+
 ## Export form field data
 
 Data of the all the Form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).

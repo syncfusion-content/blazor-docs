@@ -22,7 +22,9 @@ You can create Blazor Server application using either CLI or Visual Studio refer
 * [Create Blazor server application using CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
 * [Create Blazor Server application using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
- 
+
+N> This setup does not work with Target Frameworks greater than .NET 6. For more details and troubleshooting, refer to this [GitHub thread](https://github.com/ElectronNET/Electron.NET/issues/837#issuecomment-1985434060).
+
 ## Configure Electron in Blazor App
 
 You can run the below commands either in **Visual Studio Developer Command Prompt** or **CLI** based on the tool you are using for development.
@@ -41,7 +43,7 @@ dotnet new tool-manifest
 
 ![.NET tool manifest file](images\electron\net-tool-manifest.png)
 
-3.Install the electronize tool locally in the project by running the below command.
+3.Install the tool locally in the project by running the below command.
 
 ```
 dotnet tool install ElectronNET.CLI
@@ -59,7 +61,7 @@ dotnet electronize init
 5.To integrate `Electron.NET` in the application add the below code in **~/Program.cs** file of the application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="2 9 10" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="2 9 10" %}
 
 using Syncfusion.Blazor;
 using ElectronNET.API;
@@ -78,10 +80,10 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-6.To open the Electron window add the below code in the **~/Program.cs** file of .NET 6 and .NET 7 applications.
+6.To open the Electron window add the below code in the **~/Program.cs** file of .NET 6 applications.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
 
 using ElectronNET.API;
 
@@ -113,10 +115,10 @@ dotnet electronize start
 
 ![Electron app output](images\electron\electron-grid-output.png)
 
-N> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Program.cs** file of .NET 6 and .NET 7 applications.
+N> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Program.cs** file of .NET 6 application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="14 15 16" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="14 15 16" %}
 
 using ElectronNET.API;
 

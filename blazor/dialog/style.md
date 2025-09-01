@@ -121,7 +121,7 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 ```
 
-## Customizing the dialog header
+### Customizing the dialog header
 
 Use the following CSS to customize the dialog header properties.
 
@@ -133,7 +133,7 @@ Use the following CSS to customize the dialog header properties.
 }
 ```
 
-## Customizing the dialog content
+### Customizing the dialog content
 
 Use the following CSS to customize the dialog content properties.
 
@@ -146,7 +146,7 @@ Use the following CSS to customize the dialog content properties.
 }
 ```
 
-## Customizing modal dialog overlay
+### Customizing modal dialog overlay
 
 Use the following CSS to customize the modal dialog overlay.
 
@@ -157,7 +157,7 @@ Use the following CSS to customize the modal dialog overlay.
 }
 ```
 
-## Customizing the dialog resize icon
+### Customizing the dialog resize icon
 
 Use the following CSS to customize the dialog resize icon.
 
@@ -175,7 +175,7 @@ Use the following CSS to customize the dialog resize icon.
 
 The above CSS demonstration uses the font awesome icon.
 
-## Customizing the dialog close button
+### Customizing the dialog close button
 
 Use the following CSS to customize the dialog close button.
 
@@ -187,7 +187,7 @@ Use the following CSS to customize the dialog close button.
 }
 ```
 
-## Customizing the dialog footer button
+### Customizing the dialog footer button
 
 Use the following CSS to customize the dialog footer button.
 
