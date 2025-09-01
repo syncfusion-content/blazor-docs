@@ -406,9 +406,11 @@ Also, you can render a mind map layout without using a Datasource. The following
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
 
 ## How to Change the Mind Map Orientation
-An [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) of a MindMap Layout is used to arrange the layout according to a specific direction. By default, the orientation is set to Horizontal.
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the MindMap Layout is used to arrange nodes in a specific direction. By default, the orientation is set to Horizontal.
 
-The following code example illustrates how to create an mind map layout. 
+To change the layout to a vertical orientation, set the Orientation property to Vertical.
+
+The following code example demonstrates how to create a mind map layout with vertical orientation:
 
 ```csharp
 
