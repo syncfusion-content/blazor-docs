@@ -11,7 +11,7 @@ documentation: ug
 
 The Tooltip feature in the Syncfusion Blazor DataGrid is designed to enrich the user interface by offering contextual information dynamically as users interact with the grid. When a user hovers over a header cell, the tooltip displays the column header text, helping users quickly identify the column headers. Similarly, when hovering over a content cell, the tooltip reveals the underlying data value contained in that cell, allowing users to view detailed information at a glance.
 
-This functionality is particularly useful in scenarios where the grid contains truncated or overflowing content. The feature is activated through the `ShowTooltip` property, when enabled, automatically applies tooltip to both header and content cells.
+This functionality is particularly useful in scenarios where the grid contains truncated or overflowing content. The feature is activated through the `ShowTooltip` property, when enabled, automatically applies tooltip to both header and content cells when we hover the cells.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
