@@ -518,13 +518,23 @@ public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.V
 ### How to change Orientation at Runtime
 The following example demonstrates how to dynamically change the orientation of the MindMap layout 
 
-Use the following markup to bind the layout's orientation to a runtime property:
+Use the following code to bind the layout's orientation to a runtime property:
 ```cshtml
-  <Layout Type="LayoutType.MindMap" @bind-Orientation="selectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50"/>
+  <Layout Type="LayoutType.MindMap"  @bind-Orientation="selectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50"/>
 ```
 Declare the orientation property within the Razor component to enable two-way binding with the layout:
+
 ```cshtml
     public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.Vertical;
+```
+Alternatively, you can change the layout's oriention by below code 
+
+```cshtml
+ private void ChangeLayoutOrientation()
+ {
+   diagram.Layout.Orientation = LayoutOrientation.Vertical
+ }
+
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
