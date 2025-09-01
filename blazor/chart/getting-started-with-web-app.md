@@ -170,14 +170,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
+Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -188,7 +183,9 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
@@ -253,6 +250,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 <head>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor Chart Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Charts/scripts/sf-chart.min.js" type="text/javascript"></script> -->
 </head>
 ```
 

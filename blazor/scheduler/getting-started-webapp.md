@@ -178,14 +178,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace .
+Open **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -195,6 +190,8 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace .
 
 {% endhighlight %}
 {% endtabs %}
+
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
@@ -266,6 +263,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor Scheduler Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Schedule/scripts/sf-schedule.min.js" type="text/javascript"></script> -->
 </body>
 ```
 
