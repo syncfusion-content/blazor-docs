@@ -451,6 +451,205 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SegmentCollectionChangeEvent)
 
+## How to Handle Collection Change Events
+
+* The diagram provides specific events that are triggered when connectors are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the connector collection undergoes changes.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[CollectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanging)|[CollectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangingEventArgs.html)|Triggers before the node or connector is added or removed from the diagram.|
+|[CollectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanged)|[CollectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangedEventArgs.html)|Triggers after the node or connector is added or removed from the diagram|
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Connectors="@connectors"
+                    CollectionChanged="OnCollectionChanged">
+</SfDiagramComponent>
+@code{
+    SfDiagramComponent Diagram;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+          Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+     //  Notify the Collection Changed event while changing the collection of the connector at run time.
+    private void OnCollectionChanged(CollectionChangedEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/CollectionChangeEvent)
+
+## How to Handle the Mouse Enter Event
+
+The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter) event is triggered when the mouse pointer enters the boundary of a connector in the diagram. This event provides valuable information about the element being interacted with. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html).
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Connectors="@connectors"
+                    MouseEnter="OnMouseEnter">
+</SfDiagramComponent>
+@code{
+    SfDiagramComponent Diagram;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+          Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+    private void OnMouseEnter(DiagramElementMouseEventArgs args)
+    {
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseEnterEvent)
+
+## How to Handle the Mouse Leave Event
+
+The [MouseLeave](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseLeaveEvent) event is triggered when the mouse pointer exits the boundaries of a  connector in the diagram. This event provides valuable information about the element being left. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html). 
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Connectors="@connectors"
+                    MouseLeave="OnMouseLeave">
+</SfDiagramComponent>
+@code{
+    SfDiagramComponent Diagram;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+          Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+    private void OnMouseLeave(DiagramElementMouseEventArgs args)
+    {
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseLeaveEvent)
+
+## How to Handle the Mouse Hover Event
+
+The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseHoverEvent) event is triggered when the mouse pointer hovers over a connector in the diagram. This event provides valuable information about the element being hovered. For detailed information about the event arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html).
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Connectors="@connectors"
+                    MouseHover="OnMouseHover">
+</SfDiagramComponent>
+@code{
+    SfDiagramComponent Diagram;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+    private void OnMouseHover(DiagramElementMouseEventArgs args)
+    {
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseHoverEvent)
+
+## How to Handle Property Changed Event
+
+The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when connector's property of the diagram component is modified at runtime. This event provides valuable information about the changes occurring in the diagram. For a detailed understanding of the event arguments, refer to the [PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html).
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@diagram" 
+                    Width="100%" 
+                    Height="700px" 
+                    Connectors="@connectors"
+                    PropertyChanged="OnNodePropertyChanged">
+</SfDiagramComponent>
+@code {
+    SfDiagramComponent diagram;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+          Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+    // Method to handle Property Changed event
+    private void OnNodePropertyChanged(PropertyChangedEventArgs args)
+    {
+        if (args.Element is Connector changedNode)
+        {
+            // Logic to handle the property change for the specific connector
+            Console.WriteLine($"Node ID: {changedNode.ID} property changed.");
+            // Additional logic to handle updates
+        }
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/PropertyChangedEvent)
+
 
 ## See also
 

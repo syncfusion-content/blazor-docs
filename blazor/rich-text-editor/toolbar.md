@@ -16,6 +16,7 @@ You can customize the toolbar configurations by using the [RichTextEditorToolbar
 1. Expand
 2. MultiRow
 3. Scrollable
+4. Popup 
 
 ## Expand Toolbar
 

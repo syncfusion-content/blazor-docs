@@ -7,49 +7,71 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using OpenAI with Syncfusion Blazor AI package
+# OpenAI Integration with Syncfusion Blazor AI
 
-This section helps to configuring and using the **Syncfusion.Blazor.AI** package with **OpenAI** to enable AI functionalities in your Blazor applications. The package allows seamless integration with OpenAI's API, empowering any Syncfusion Blazor component with intelligent features.
+## Introduction
+
+This section helps to configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to enable AI functionalities in your Blazor applications. The package allows seamless integration with OpenAI’s API, empowering any Syncfusion Blazor component with intelligent features.
 
 ## Prerequisites
-- Install the **Syncfusion.Blazor.AI** package via NuGet.
-- Obtain an OpenAI API key from the OpenAI platform.
-- Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
-## Configuration
-To use OpenAI, configure the AI service in your `Program.cs` file by registering the `AIServiceCredentials` and `IChatInferenceService`.
+Before you begin integrating OpenAI with your Blazor application, ensure you have:
 
-### Steps
-1. Open your Blazor application's `Program.cs`.
-2. Add the following code to configure OpenAI credentials:
+* Installed the following nuget packages:
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+* Obtained an [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) from the OpenAI platform
+* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components
+
+## Configuration Steps
+
+Follow these steps to configure OpenAI as your AI provider:
+
+### Register AI Services in Program.cs
+
+Open your Blazor application's `Program.cs` file and add the following configuration:
 
 ```csharp
-builder.Services.AddSingleton(new AIServiceCredentials
-{
-    ApiKey = "your-openai-key", // Replace with your OpenAI API key
-    DeploymentName = "gpt-4",   // Specify the model (e.g., "gpt-4", "gpt-3.5-turbo")
-    Endpoint = null             // Must be null for OpenAI
-});
+// Add required namespaces
+using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OpenAI;
 
-// Register the inference backend
+// Register OpenAI credentials
+string openAiApiKey = "API-KEY";
+string openAiModel = "OPENAI_MODEL";
+OpenAIClient openAIClient = new OpenAIClient(openAiApiKey);
+IChatClient openAiChatClient = openAIClient.GetChatClient(openAiModel).AsIChatClient();
+builder.Services.AddChatClient(openAiChatClient);
+
+// Register the inference service
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 ```
 
-3. Ensure the required Syncfusion Blazor namespaces are included in your `Program.cs`:
-```csharp
-using Syncfusion.Blazor.AI;
-```
-
-## Example: Syncfusion Grid with Azure OpenAI in a Blazor Application
+## Anomaly Detection with OpenAI and Syncfusion Blazor Grid
 
 This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid component. The grid displays machine data (e.g., MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with irrelevant production rates relative to other factors, updating the grid with anomaly descriptions and visual styling.
 
 ### Prerequisites
 - Install the following NuGet packages:
-  - `Syncfusion.Blazor.Grid`
-  - `Syncfusion.Blazor.Themes`
-  - `Syncfusion.Blazor.AI`
-- Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-smart-nuget).
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
 ```html
@@ -64,23 +86,60 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI
 </body>
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+## Register Syncfusion Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+...
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
+
+...
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
 builder.Services.AddSyncfusionBlazor();
+
 await builder.Build().RunAsync();
+
+{% endhighlight %}
+{% endtabs %}
+
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+
+...
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -293,10 +352,19 @@ namespace OpenAIExample.Components.Pages
 
 ![Anomaly Detection - Output](images/anomaly-detection.gif)
 
-### Explanation
-- **IChatInferenceService**: Injected to interact with the OpenAI service.
-- **ChatParameters**: Configures the AI request, including system and user messages, temperature, and token limits.
-- **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
-- **Response**: Displays the AI-generated text.
+## How It Works
 
+The example above demonstrates how to use OpenAI with Syncfusion Blazor components for intelligent data analysis:
+
+1. **Setup**: Configuring the OpenAI service in `Program.cs` with appropriate credentials.
+2. **Component Integration**: Using the `IChatInferenceService` to process data from Syncfusion Blazor Grid.
+3. **Prompt Engineering**: Creating appropriate prompts for the AI model to analyze data patterns.
+4. **Response Processing**: Parsing and processing the AI response to update the UI components.
+
+### Key Components
+
+- **IChatInferenceService**: Injected to interact with the OpenAI models.
+- **ChatParameters**: Configures the AI request, including system prompt and user messages.
+- **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
+- **UI Components**: Syncfusion Grid and Button components work together with the AI service.
 

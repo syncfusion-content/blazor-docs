@@ -307,6 +307,78 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
+## How to change the border color of a node
+
+The diagram provides support to customize the border color of a node using the [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderColor) property. By default, the border color of a node is black.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    // Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            // Sets the border color of the node
+            BorderColor = "Orange",
+            // Sets the border width for better visibility
+            BorderWidth = 20
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](hhttps://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderColor)
+
+![Border Color for Node](../images/BorderColor.png)
+
+## How to change the border width of a node
+
+The diagram allows you to customize the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is set to 1px. You can modify this value to increase or decrease the thickness of the node's border as needed.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    // Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            // Sets the border color of the node
+            BorderColor = "red",
+            // Sets the border width for better visibility
+            BorderWidth = 20
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderWidth)
+
 ## How to Update Node Shadow
 
 Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code shows how to draw shadow.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the Diagram Component in the Blazor MAUI App | Syncfusion
+title: Getting Started with Diagram Component in Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor MAUI App.
 platform: Blazor
 control: Diagram Component
@@ -9,7 +9,9 @@ documentation: ug
 
 # Getting Started with the Diagram Component in the Blazor MAUI App
 
-In this section, we'll guide you through the process of adding Syncfusion® Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
+
+Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 {% tabcontents %}
 
@@ -21,7 +23,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Step 1: How to Create a New Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Step 2: How to Install Diagram NuGet Package in Blazor MAUI App
 
@@ -278,7 +280,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Step 1: How to Create a New Blazor MAUI App Using Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Step 2: How to Install Diagram NuGet Packages in a Blazor MAUI App
 

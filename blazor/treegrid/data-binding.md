@@ -345,6 +345,311 @@ uniqueID | Specifies the unique ID of a record
 parentUniqueID | Specifies the parent Unique ID of a record
 checkboxState | Specifies the checkbox state of a record
 
+### Observable collection
+
+An Observable collection is a special type of collection in .NET that automatically notifies any subscribers (such as the UI or other components) when changes are made to the collection. This is particularly useful in data-binding scenarios, where you want the UI to reflect changes in the underlying data model without having to manually update the view.
+
+To achieve this, you can use the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8), a dynamic data collection that:
+
+   * Provides notifications when items are added, removed, or moved.
+
+   * Implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) interface to notify subscribers about changes such as adding, removing, moving, or clearing items in the collection.
+
+   * Implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to notify when a property value changes on the client side.
+
+The following sample demonstrates how the Order class implements the **INotifyPropertyChanged** interface and raises the event when the **TaskName** property value is changed.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using BlazorApp1.Components.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel
+
+<div style="margin-bottom:15px">
+<SfButton CssClass="e-outline" OnClick="@(() => AddRecord())" Content="Add Data"></SfButton>
+<SfButton CssClass="e-outline" Style="margin-left:5px" OnClick="@(() => DeleteRecord())" Content="Delete Data"></SfButton>
+<SfButton CssClass="e-outline" Style="margin-left:5px" OnClick="@(() => UpdateRecord())" Content="Update Data"></SfButton>
+</div>
+
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    public ObservableCollection<TreeData.BusinessObject> TreeGridData { get; set; }
+    private int taskCounter = 6;
+
+    protected override void OnInitialized()
+    {
+        TreeGridData = TreeData.GetSelfDataSource();
+    }
+
+    public void AddRecord()
+    {
+        TreeGridData.Add(new TreeData.BusinessObject
+        {
+            TaskId = taskCounter++,
+            TaskName = "New Task",
+            Duration = 5,
+            Progress = 50,
+            Priority = "Normal",
+            ParentId = null
+        });
+    }
+
+    public void DeleteRecord()
+    {
+        if (TreeGridData.Any())
+            TreeGridData.Remove(TreeGridData.Last());
+    }
+
+    public void UpdateRecord()
+    {
+        if (TreeGridData.Any())
+            TreeGridData.First().TaskName = "Updated Task Name";
+    }
+}
+
+{% endhighlight %}
+{% highlight cs tabtitle="OrdersDetailsObserveData.cs" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+
+namespace BlazorApp1.Components.Data
+{
+  public class TreeData
+  {
+    public class BusinessObject : INotifyPropertyChanged
+    {
+      public int TaskId { get; set; }
+
+      private string taskName;
+      public string TaskName
+      {
+        get => taskName;
+        set
+        {
+          taskName = value;
+          NotifyPropertyChanged(nameof(TaskName));
+        }
+      }
+
+      public int? Duration { get; set; }
+      public int? Progress { get; set; }
+      public string Priority { get; set; }
+      public int? ParentId { get; set; }
+
+      public event PropertyChangedEventHandler PropertyChanged;
+      private void NotifyPropertyChanged(string propertyName)
+      {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+      }
+    }
+
+    public static ObservableCollection<BusinessObject> GetSelfDataSource()
+    {
+      return new ObservableCollection<BusinessObject>
+          {
+              new BusinessObject { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null },
+              new BusinessObject { TaskId = 2, TaskName = "Child task 1", Duration = 6, Progress = 80, Priority = "Low", ParentId = 1 },
+              new BusinessObject { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 },
+              new BusinessObject { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 },
+              new BusinessObject { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null }
+          };
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot represents the TreeGrid with **Observable Collection**.
+
+![Blazor TreeGrid with ObservableCollection](images/observable_collection.gif)
+
+N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the `StateHasChanged` method to reflect the changes in the UI.
+
+#### Add a range of items into ObservableCollection in Blazor TreeGrid
+
+The Syncfusion Blazor TreeGrid supports binding to an **ObservableCollection**, which allows the TreeGrid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the TreeGrid at once, such as:
+
+  * Loading or importing a large dataset dynamically.
+
+  * Appending multiple items retrieved from an API or database.
+
+  * Performing bulk updates or data synchronization operations.
+
+  * Avoiding UI lag and flickering caused by multiple individual item additions.
+
+  * Ensuring smoother and more efficient data rendering in scenarios with high-frequency data changes.
+
+By default, the `Add` method is used to insert a single item into the **ObservableCollection**. When multiple items are added one by one using a `foreach` loop, the TreeGrid refreshes after each addition. This can lead to performance issues and UI flickering, especially when adding a large number of items.
+
+To optimize performance when adding multiple items at once, you can extend the `ObservableCollection<T>` class by implementing an `AddRange` method. By using this method, you can add a range of items and ensure that the `OnCollectionChanged` event is triggered only once, updating the TreeGrid a single time for the entire batch operation.
+
+To implement this functionality, follow these steps:
+
+1. **Create a Custom Collection Class**
+
+    Define a new class **SmartObservableCollection<T>** that inherits from `ObservableCollection<T>`. This allows you to customize the behavior of the collection.
+
+2. **Add a flag to control notifications**
+
+    Introduce a private boolean **flag _preventNotification** to temporarily disable collection change notifications while adding multiple items.
+
+3. **Override the OnCollectionChanged method**
+
+    Override this method to check the **_preventNotification** flag. When the flag is set to **true**, skip raising the notification to avoid multiple UI refreshes.
+
+4. **Implement the AddRange method**
+
+    This method enables adding multiple items efficiently by:
+
+      * Setting **_preventNotification** to **true** to suppress notifications.
+      * Adding each item from the input list to the collection using the `Add` method within a `foreach` loop.
+      * Resetting **_preventNotification** to **false**.
+      * Raising a single **NotifyCollectionChangedAction.Reset** notification to inform the TreeGrid that the entire collection has changed.
+
+The following example demonstrates how to use this approach in a TreeGrid:  
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using BlazorApp1.Components.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel
+
+<div style="margin-bottom:15px">
+    <SfButton CssClass="e-outline" Style="margin-left:5px" OnClick="@(() => AddRangeRecords())" Content="Add Range Data"></SfButton>
+</div>
+
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    public SmartObservableCollection<TreeData.BusinessObject> TreeGridData { get; set; }
+    private int taskCounter = 6;
+
+    protected override void OnInitialized()
+    {
+        TreeGridData = new SmartObservableCollection<TreeData.BusinessObject>(TreeData.GetSelfDataSource());
+    }
+
+    public void AddRangeRecords()
+    {
+        var newItems = new List<TreeData.BusinessObject>
+        {
+            new TreeData.BusinessObject { TaskId = taskCounter++, TaskName = "Batch Task 1", Duration = 4, Progress = 40, Priority = "High", ParentId = null },
+            new TreeData.BusinessObject { TaskId = taskCounter++, TaskName = "Batch Task 2", Duration = 6, Progress = 60, Priority = "Low", ParentId = null },
+            new TreeData.BusinessObject { TaskId = taskCounter++, TaskName = "Batch Subtask", Duration = 3, Progress = 30, Priority = "Normal", ParentId = taskCounter - 2 }
+        };
+
+        TreeGridData.AddRange(newItems);
+    }
+
+    public class SmartObservableCollection<T> : ObservableCollection<T>
+    {
+        private bool _preventNotification = false;
+
+        public SmartObservableCollection() : base() { }
+
+        public SmartObservableCollection(IEnumerable<T> collection) : base(collection) { }
+
+        protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+        {
+            if (!_preventNotification)
+                base.OnCollectionChanged(e);
+        }
+
+        public void AddRange(IEnumerable<T> items)
+        {
+            _preventNotification = true;
+            foreach (var item in items)
+            {
+                Add(item);
+            }
+            _preventNotification = false;
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrdersDetailsObserveData.cs" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+
+namespace BlazorApp1.Components.Data
+{
+  public class TreeData
+  {
+    public class BusinessObject : INotifyPropertyChanged
+    {
+      public int TaskId { get; set; }
+
+      private string taskName;
+      public string TaskName
+      {
+        get => taskName;
+        set
+        {
+          taskName = value;
+          NotifyPropertyChanged(nameof(TaskName));
+        }
+      }
+
+      public int? Duration { get; set; }
+      public int? Progress { get; set; }
+      public string Priority { get; set; }
+      public int? ParentId { get; set; }
+
+      public event PropertyChangedEventHandler PropertyChanged;
+      private void NotifyPropertyChanged(string propertyName)
+      {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+      }
+    }
+
+    public static ObservableCollection<BusinessObject> GetSelfDataSource()
+    {
+      return new ObservableCollection<BusinessObject>
+            {
+                new BusinessObject { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null },
+                new BusinessObject { TaskId = 2, TaskName = "Child task 1", Duration = 6, Progress = 80, Priority = "Low", ParentId = 1 },
+                new BusinessObject { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 },
+                new BusinessObject { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 },
+                new BusinessObject { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null }
+            };
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot represents the TreeGrid with **Observable Collection**.
+
+![Blazor TreeGrid With Range of Items ObservableCollection](images/adding_range_in_observable_collection.gif)
+
 ## Remote Service binding
 
 To bind remote data to Tree Grid component, assign service data as an instance of **SfDataManager** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. To interact with remote data source,  provide the endpoint **url** and define the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HasChildMapping) property of tree grid.

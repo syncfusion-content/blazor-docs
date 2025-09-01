@@ -739,6 +739,100 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Hide the filter operator dropdownlist in the filter menu dialog
+
+To hide the operator dropdown in the menu filter dialog of the Syncfusion Blazor DataGrid, the following CSS can be used to override the styling of the **.e-flm_optrdiv** class. Using this customization logic, the interface becomes more focused, allowing a default filter behavior to be applied automatically.
+
+```css
+    .e-flm_optrdiv {
+        display: none;
+    }
+```
+
+The following example demonstrates how to enable menu filtering and hide the operator dropdown in the filter popup:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowFiltering="true" Height="315">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-flm_optrdiv {
+        display: none;
+    }
+</style>
+
+
+@code {
+    public List<OrderData> Orders { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }    
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;   
+        this.Freight = Freight;  
+        this.OrderDate = OrderDate;           
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", 32.38,new DateTime(1996,7,4)));
+                Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5)));
+                Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 7, 6)));
+                Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 7, 7)));
+                Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 7, 8)));
+                Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 7, 9)));
+                Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 7, 10)));
+                Orders.Add(new OrderData(10255, "VINET", 148.33, new DateTime(1996, 7, 11)));
+                Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 7, 12)));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }       
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVeXQrIANVmdQhp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Filter by multiple keywords using filter menu
 
 The Syncfusion Blazor DataGrid allows you to perform filtering actions based on multiple keywords, rather than a single keyword, using the filter menu dialog. To enable this feature, you can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) as **Menu** and render the `MultiSelect` as a custom component in the filter menu dialog.
