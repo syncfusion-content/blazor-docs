@@ -409,7 +409,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the MindMap Layout is used to arrange nodes in a specific direction. By default, the orientation is set to Horizontal.
 To change the layout to a vertical orientation, set the Orientation property to Vertical.
 
-The following code example demonstrates how to create a mind map layout with vertical orientation:
+### Hot to Set Orientation During Initialization
+The following example demonstrates how to configure the MindMap layout with vertical orientation during component initialization.
 
 ```csharp
 
@@ -512,9 +513,22 @@ public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.V
 
 }
 ```
+
+### How to change Orientation at Runtime
+The following example demonstrates how to dynamically change the orientation of the MindMap layout 
+
+Use the following markup to bind the layout's orientation to a runtime property:
+```cshtml
+  <Layout Type="LayoutType.MindMap" @bind-Orientation="selectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50"/>
+```
+Declare the orientation property within the Razor component to enable two-way binding with the layout:
+```cshtml
+    public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.Vertical;
+```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
 
-![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png)
+![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png) 
 
 The following table outlines the various orientation types available:
 Orientation Type|Description|
