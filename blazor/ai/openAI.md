@@ -17,11 +17,13 @@ This section helps to configuring and using the [Syncfusion.Blazor.AI](https://w
 
 Before you begin integrating OpenAI with your Blazor application, ensure you have:
 
-* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+* Installed the following nuget packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -39,14 +41,15 @@ Open your Blazor application's `Program.cs` file and add the following configura
 ```csharp
 // Add required namespaces
 using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OpenAI;
 
 // Register OpenAI credentials
-builder.Services.AddSingleton(new AIServiceCredentials
-{
-    ApiKey = "your-openai-key", // Replace with your actual OpenAI API key
-    DeploymentName = "gpt-4",   // Specify the model (e.g., "gpt-4", "gpt-3.5-turbo")
-    Endpoint = null             // Must be null for OpenAI (as opposed to Azure OpenAI)
-});
+string openAiApiKey = "API-KEY";
+string openAiModel = "OPENAI_MODEL";
+OpenAIClient openAIClient = new OpenAIClient(openAiApiKey);
+IChatClient openAiChatClient = openAIClient.GetChatClient(openAiModel).AsIChatClient();
+builder.Services.AddChatClient(openAiChatClient);
 
 // Register the inference service
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -64,6 +67,8 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
