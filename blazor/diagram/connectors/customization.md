@@ -870,10 +870,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
      } 
  }  
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
-
-![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
-
 ### How to change the MaxSegmentThumbs at Run time 
 To dynamically update the value of `MaxSegmentThumbs` based on user interaction or application logic, you can modify the property at runtime.
 
@@ -898,6 +894,9 @@ The example below shows how to update the `MaxSegmentThumbs` property for all co
     }
   }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
+
+![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
 
  >**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
 
