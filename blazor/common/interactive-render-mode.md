@@ -9,7 +9,7 @@ documentation: ug
 
 # Render Interactive Modes in Blazor Web App
 
-This section explains how to create the Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux) with various interactive modes.
+This section explains the set of commands used to create a Blazor Web App with various Interactive Render Modes. These commands can be executed via the command prompt (Windows), terminal (macOS), or shell (Linux), allowing you to create Blazor applications using different rendering modes.
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
