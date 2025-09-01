@@ -407,7 +407,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Change the Mind Map Orientation
 The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the MindMap Layout is used to arrange nodes in a specific direction. By default, the orientation is set to Horizontal.
-To change the layout to a vertical orientation, set the Orientation property to Vertical.
+
+To change the layout to a vertical orientation, set the Orientation property to `Vertical`.
 
 ### Hot to Set Orientation During Initialization
 The following example demonstrates how to configure the MindMap layout with vertical orientation during component initialization.
