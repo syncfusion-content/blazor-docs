@@ -86,7 +86,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 
 ![Blazor Calendar Component](images/mac-output.png)
 
-N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/migration) since it has excellent compatibility with macOS (ARM) architecture.
+N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it has excellent compatibility with macOS (ARM) architecture.
 
 ## See also
 
