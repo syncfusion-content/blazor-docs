@@ -11,7 +11,7 @@ documentation: ug
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
 
-To create a Mindmap Layout using the Blazor Diagram, refer to the below video link,
+To create a Mind map Layout using the Blazor Diagram, refer to the below video link,
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_EHmKNok4GQ" %}
 
@@ -404,6 +404,123 @@ Also, you can render a mind map layout without using a Datasource. The following
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
+
+## How to Change the Mind Map Orientation
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the MindMap Layout is used to arrange nodes in a specific direction. By default, the orientation is set to Horizontal.
+To change the layout to a vertical orientation, set the Orientation property to Vertical.
+
+The following code example demonstrates how to create a mind map layout with vertical orientation:
+
+```csharp
+
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.DropDowns;
+
+
+<SfDiagramComponent @ref="@diagram" Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <RulerSettings>
+        <HorizontalRuler></HorizontalRuler>
+        <VerticalRuler></VerticalRuler>
+    </RulerSettings>
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="@DataSource"></DataSourceSettings>
+    <Layout Type="LayoutType.MindMap" @bind-Orientation="selectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50">
+        <LayoutMargin Top="20" Left="20"></LayoutMargin>
+    </Layout>
+</SfDiagramComponent>
+<SfDropDownList TValue="LayoutOrientation"
+                TItem="string"
+                DataSource="@LayoutOrientationValues"
+                @bind-Value="selectedOrientation"
+                Placeholder="Select Orientation"
+                Width="300px">
+</SfDropDownList>
+
+@code {
+    SfDiagramComponent diagram;
+    public string[] LayoutOrientationValues = Enum.GetNames(typeof(LayoutOrientation));
+
+    // The selected value, bound to the enum
+public LayoutOrientation selectedOrientation { get; set; } = LayoutOrientation.Vertical;
+
+    // Set the branch type on runtime
+    private BranchType GetBranch(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        MindMapDetails mindMapData = node.Data as MindMapDetails;
+        if (mindMapData == null || string.IsNullOrWhiteSpace(mindMapData.Branch))
+            return BranchType.Left;
+
+        return Enum.TryParse(mindMapData.Branch, out BranchType branchType) ? branchType : BranchType.SubLeft;
+    }
+
+    //Creates nodes with some default values.
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+
+        if(!(obj is NodeGroup)){
+            Node node = obj as Node;
+            node.Height = 100;
+            node.Width = 100;
+            node.BackgroundColor = "#6BA5D7";
+            node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
+            node.Shape = new BasicShape() { Type = NodeShapes.Basic };
+            MindMapDetails mindMapData = node.Data as MindMapDetails;
+            if (mindMapData != null)
+            {
+                node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
+                Content = mindMapData.Label
+            }
+        };
+            }
+        }
+
+    }
+
+    //Creates connectors with some default values.
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        Connector connectors = connector as Connector;
+        connectors.Type = ConnectorSegmentType.Bezier;
+        connectors.Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 };
+        connectors.TargetDecorator = new DecoratorSettings
+            {
+                Shape = DecoratorShape.None,
+            };
+    }
+    public class MindMapDetails
+    {
+        public string Id { get; set; }
+        public string Label { get; set; }
+        public string ParentId { get; set; }
+        public string Branch { get; set; }
+        public string Fill { get; set; }
+    }
+    public List<MindMapDetails> DataSource = new List<MindMapDetails>()
+   {
+        new MindMapDetails() { Id = "1", Label = "Project Planning", ParentId = "", Branch = "Root" },
+        new MindMapDetails() { Id = "2", Label = "Requirements", ParentId = "1", Branch = "Right" },
+        new MindMapDetails() { Id = "3", Label = "Design", ParentId = "1", Branch = "Right" },
+        new MindMapDetails() { Id = "5", Label = "Stakeholder Analysis", ParentId = "2", Branch = "SubRight" },
+        new MindMapDetails() { Id = "6", Label = "Documentation", ParentId = "2", Branch = "SubRight" },
+        new MindMapDetails() { Id = "7", Label = "UI Design", ParentId = "3", Branch = "SubRight" },
+        new MindMapDetails() { Id = "8", Label = "Database Design", ParentId = "3", Branch = "SubRight" }
+   };
+
+
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
+
+![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png)
+
+The following table outlines the various orientation types available:
+Orientation Type|Description|
+|---|---|
+|[Horizontal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_Horizontal)|Aligns the tree layout from left to right|
+|[Vertical](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_Vertical)|Aligns the tree layout from top to bottom|
 
 ## See also
 
