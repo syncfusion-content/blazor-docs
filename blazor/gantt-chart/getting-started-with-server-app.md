@@ -7,7 +7,7 @@ control: GanttChart
 documentation: ug
 ---
 
-# Getting Started with Blazor Gantt Chart Component
+# Getting Started with Blazor Gantt Chart in Blazor Server App
 
 This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor Server App using Visual Studio and Visual Studio Code.
 
