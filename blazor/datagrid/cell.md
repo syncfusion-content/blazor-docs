@@ -451,6 +451,11 @@ The following example demonstrates how to add a `QueryCellInfo` event handler to
 
 > The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
 
+> Additonally, there are more ways to customize the appearance of the Syncfusion Blazor DataGrid cell such as: [AddStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellDOM.html#Syncfusion_Blazor_Grids_CellDOM_AddStyle_System_String___), [SetAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellDOM.html#Syncfusion_Blazor_Grids_CellDOM_SetAttribute_System_Collections_Generic_IDictionary_System_String_System_Object__), and [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html?_gl=1*t9tglo*_gcl_au*MTk1MTM1ODQ3Ny4xNzU1NTg1OTQ2Ljc5NDc3MjMxNS4xNzU2MTgzNzcxLjE3NTYxODM3NzA.*_ga*MzA2MTcxMjg5LjE3NDcyMjMxNTM.*_ga_41J4HFMX1J*czE3NTYzMDY1NzMkbzExNyRnMSR0MTc1NjMwNjcyNyRqMjQkbDAkaDA.#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes).
+> - The precedence hierarchy is: `AddStyle` (highest), `SetAttribute`, `CustomAttributes` (lowest). 
+> - Prefer `AddStyle` for specific cell styling, `AddClass` or `CustomAttributes` for applying classes, and `SetAttribute` for non-class attributes.
+> - For example, if `color: red;` is set via `CustomAttributes`, `color: yellow;` via `SetAttribute`, and `color: green;` via `AddStyle`, `color: green;` will be rendered. Use these methods based on your use case to ensure the desired styling is applied correctly.
+
 ### Using CSS
 
 You can apply styles to the cells using CSS selectors. The Syncfusion Blazor DataGrid provides a class name for each cell element, which you can use to apply styles to that specific cell or cells in a particular column. The `e-rowcell` class is used to style the row cells, and the `e-selectionbackground` class is used to change the background color of the selected row.
