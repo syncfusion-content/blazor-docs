@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Diagram Component | Syncfusion
+title: Connector Customization in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Customization in Blazor Diagram Component
+# Connector Customization in Blazor Diagram Component
 
 ## How to Customize Connector Decorators
 
@@ -819,7 +819,60 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
 
+## How to Set MaxSegmentThumbs for Connector
+ The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the Connector is used to limit the number of segment thumbs displayed on the connector.
+```cshtml
+ @using Syncfusion.Blazor.Diagram 
+<SfDiagramComponent @ref="Diagram"   id="diagram" Width="1400px" Height="600px"  @bind-Connectors="@connectors"> 
+</SfDiagramComponent> 
+   
+@code {
+    SfDiagramComponent Diagram; 
+    // Initialize the diagram's connectors collection 
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>(); 
+  
+     protected override void OnInitialized() 
+     { 
+        
+         Connector orthogonalconnector = new Connector() 
+         { 
+             ID = "orthogonal", 
+             SourcePoint = new DiagramPoint() { X = 550, Y = 200 }, 
+             TargetPoint = new DiagramPoint() { X = 650, Y = 300 }, 
+             Style = new ShapeStyle() { StrokeColor = "#6495ED" }, 
+             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb, 
+             TargetDecorator = new DecoratorSettings() 
+             { 
+                 Shape = DecoratorShape.Arrow, 
+                 Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" } 
+             }, 
+             Type = ConnectorSegmentType.Orthogonal, 
+                 Segments = new DiagramObjectCollection<ConnectorSegment>() 
+             { 
+                 new OrthogonalSegment 
+                 { 
+                     Length = 60, 
+                     Type = ConnectorSegmentType.Orthogonal, 
+                     Direction = Direction.Right 
+                 }, 
+                 new OrthogonalSegment 
+                 { 
+                     Length = 60, 
+                     Type = ConnectorSegmentType.Orthogonal, 
+                     Direction = Direction.Bottom, 
+                 }, 
+                
+             }, 
+             MaxSegmentThumbs = 2, 
+         }; 
+         connectors.Add(orthogonalconnector); 
+     } 
+ }  
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
+![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
 
+ >**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
 
 ## See also
 
