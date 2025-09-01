@@ -542,7 +542,7 @@ Once data becomes available, the chart automatically updates to display the appr
 <SfStockChart @ref="stockChart" Title="AAPL Stock Price">
     <NoDataTemplate>
         <div class="noDataTemplateContainerStyle" style="border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
-            <div><img src="images/appearance/no-data.png" alt="No Data" style="height: 150px;" /></div>
+            <div><img src="images/common/no-data.png" alt="No Data" style="height: 150px;" /></div>
             <div style="font-size:15px;"><strong>No data available to display.</strong></div>
         </div>
     </NoDataTemplate>
