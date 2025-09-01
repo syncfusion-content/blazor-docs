@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeGrid component
+# Getting Started with Blazor TreeGrid in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
