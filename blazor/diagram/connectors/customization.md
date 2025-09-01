@@ -821,6 +821,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Set MaxSegmentThumbs for Connector
  The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the Connector is used to limit the number of segment thumbs displayed on the connector.
+### How to set MaxSegementThumbs for Connector during Initialization
 ```cshtml
  @using Syncfusion.Blazor.Diagram 
 <SfDiagramComponent @ref="Diagram"   id="diagram" Width="1400px" Height="600px"  @bind-Connectors="@connectors"> 
@@ -870,7 +871,33 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  }  
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb)
+
 ![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
+
+### How to change the MaxSegmentThumb at Run time 
+To dynamically update the value of `MaxSegmentThumbs` based on user interaction or application logic, you can modify the property at runtime.
+
+The following example demonstrates how to update the `MaxSegmentThumbs` property only for the connectors currently selected
+
+```cshtml
+ private void UpdateMaxSegmentThumb(){
+    for(int i = 0; Diagram.SelectionSettings.Connectors.Count > i ;i++ )
+    {
+        Diagram.SelectionSettings.Connectors[i].MaxSegmentThumbs = 5;
+    }
+ }
+```
+
+The example below shows how to update the `MaxSegmentThumbs` property for all connectors in the diagram.
+
+```chtml
+  private void UpdateMaxSegmentThumb(){
+    for(int i = 0; Diagram.Connectors.Count > i ; i++)
+    {
+       Diagram.Connectors[i].MaxSegmentThumbs = 6;
+    }
+  }
+```
 
  >**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
 
