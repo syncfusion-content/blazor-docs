@@ -610,11 +610,10 @@ By default, the symbol's ID is displayed as the tooltip for each symbol in the s
 
 ![Default Tooltip in symbol palette](../images/defaulttooltip.png)
 
-### How to enable or disable the default tooltip for shapes in the Symbol Palette 
+### How to Enable or Disable the Default Tooltip for Shapes in the Symbol Palette
+The [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property is used to control whether the default tooltip is displayed for individual symbols in the Symbol Palette.
 
-The [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property is used to determine whether the default tooltip should be shown for individual symbols in the Symbol Palette. 
-
-By default, ShowTooltip is set to true, which means the symbol's ID will be shown as a tooltip when the user hovers over the symbol.
+By default, ShowTooltip is set to true, which means the symbol's ID will be shown as a tooltip when the user hovers over the symbol. To disable the tooltip, set ShowTooltip to false.
 
 
 The following code example demonstrates how to enable or disable the default tooltip for shapes in the Symbol Palette. 
