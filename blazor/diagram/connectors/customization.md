@@ -874,7 +874,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
 
-### How to change the MaxSegmentThumb at Run time 
+### How to change the MaxSegmentThumbs at Run time 
 To dynamically update the value of `MaxSegmentThumbs` based on user interaction or application logic, you can modify the property at runtime.
 
 The following example demonstrates how to update the `MaxSegmentThumbs` property only for the connectors currently selected
