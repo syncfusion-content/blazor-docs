@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltip in Blazor DataGrid
 
-The Tooltip feature in the Syncfusion Blazor DataGrid allows you to display contextual information when hovering over grid content and header cells. For header cells, the tooltip presents the column header text; for content cells, it shows the corresponding data value. This feature enables quick access to relevant information without interaction.
+The Tooltip feature in the Syncfusion Blazor DataGrid is designed to enrich the user interface by offering contextual information dynamically as users interact with the grid. When a user hovers over a header cell, the tooltip displays the column header text, helping users quickly identify the column headers. Similarly, when hovering over a content cell, the tooltip reveals the underlying data value contained in that cell, allowing users to view detailed information at a glance.
 
-The Blazor DataGrid supports tooltip for both header and content cells through the `ShowTooltip` property. When enabled, tooltip appear on hover, providing additional context and enhancing the overall user experience.
+This functionality is particularly useful in scenarios where the grid contains truncated or overflowing content. The feature is activated through the `ShowTooltip` property, when enabled, automatically applies tooltip to both header and content cells.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -88,17 +88,19 @@ public class OrderData
 
 ### Display custom tooltip for headers and content
 
-The Syncfusion Blazor DataGrid provides a feature to display custom tooltip for its columns using the `TooltipTemplate` inside the `GridTemplates` component, allowing for flexible and visually enhanced designs.Tooltip customization is supported through the `TooltipTemplateContext` which provides access to the following built-in properties:
+The Syncfusion Blazor DataGrid offers a feature that enables developers to display custom tooltip for individual columns using the `TooltipTemplate` directive, which is defined within the GridTemplates component. This capability allows for the creation of visually rich and highly customizable tooltip designs, to meet specific application requirements and improve user engagement.
+
+To support this customization, the DataGrid provides the `TooltipTemplateContext` , a context object that exposes several built-in properties. These properties give developers fine-grained control over the content and behavior of tooltip:
 
   <ul>
-      <li><strong>Value</strong> - Shows the content of the hovered cell—either the column name <b>(for headers)</b> or the cell value <b>(for content)</b>.</li>
+      <li><strong>Value</strong> - Represents the content of the cell currently being hovered over. For header cells, this will be the column name, while for content cells, it will be the actual cell value.</li>
       <li><strong>RowIndex</strong> - Gives the row number of the hovered cell. Returns <code>-1</code> for header cells.</li>
       <li><strong>ColumnIndex</strong> - Gives the column number of the hovered cell.</li>
-      <li><strong>Data</strong> - Provides the full data of the row being hovered. Not available for header cells.</li>
+      <li><strong>Data</strong> - Provides access to the complete data object of the row being hovered. This is particularly useful for displaying additional contextual information in the tooltip. Note that this property is not available for header cells.</li>
       <li><strong>Column</strong> - Contains details about the column, like field name and formatting.</li>
   </ul>
 
-In this sample, the tooltip template presents a rich and customized tooltip that includes an employee mailID in hyperlink, icons, and additional contextual information, demonstrating tooltip customization within the DataGrid.
+In the provided sample, the tooltip template showcases a richly styled tooltip that includes elements such as an employee's email address rendered as a clickable hyperlink, icons for visual cues, and supplementary contextual data. This example demonstrates how developers can leverage the tooltip customization feature to create interactive and informative tooltips that go beyond simple text, enhancing the overall user experience within the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -153,9 +155,10 @@ In this sample, the tooltip template presents a rich and customized tooltip that
                                 break;
 
                             case nameof(OrdersDetails.Freight):
-                                <p style="margin: 4px 0;">
-                                    <strong>Expected Delivery: </strong>@order.DeliveryDays
-                                </p>
+                                    <p style="margin: 4px 0;">
+                                        <strong>Delivery Type: </strong>
+                                        @GetDeliveryType(order.Freight)
+                                    </p>
                                 break;
 
                             case nameof(OrdersDetails.ShipCity):
@@ -215,6 +218,15 @@ In this sample, the tooltip template presents a rich and customized tooltip that
             "Delivered" => $"<strong>Delivered Date: </strong> {orderDate?.ToShortDateString()}",
             _ => "<strong>Status Unknown</strong>"
         };
+    }
+    private string GetDeliveryType(double freight)
+    {
+        if (freight <= 100.00)
+            return "Standard Delivery";
+        else if (freight <= 150.00)
+            return "Express Delivery";
+        else
+            return "Premium Delivery";
     }
     public class OrdersDetails
     {
