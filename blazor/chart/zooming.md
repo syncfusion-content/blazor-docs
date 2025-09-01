@@ -422,11 +422,15 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ### Scrollbar customization
 
-The appearance and behavior of the scrollbar can be tailored using various properties available in the `ChartAxisScrollbarSettings`. To customize the scrollbar track, you can use the `TrackColor` property to define its color and the `TrackRadius` property to set rounded corners. For the scrollbar itself, the `ScrollbarColor` property allows you to change its color, while `ScrollbarRadius` lets you adjust the roundness of its edges.
+The appearance and behavior of the scrollbar can be customized using various properties available in the `ChartAxisScrollbarSettings`:
 
-In addition to these visual settings, you can modify the grip and overall size of the scrollbar. The `GripColor` property changes the color of the grip element, and the `Height` property controls the scrollbar’s height. If your application supports zooming through the scrollbar, you can manage this functionality using the `EnableZoom` property. Setting it to true enables zooming, while false disables it.
-
-These customization options provide flexibility in designing a scrollbar that aligns with your application's visual style and enhances the user experience.
+- The `TrackColor` property changes the color of the scrollbar track.
+- The `TrackRadius` property sets the rounded corners of the track.
+- The `ScrollbarColor` property changes the color of the scrollbar.
+- The `ScrollbarRadius` property adjusts the roundness of the scrollbar edges.
+- The `GripColor` property changes the color of the grip element.
+- The `Height` property controls the height of the scrollbar.
+- The `EnableZoom` property enables or disables zooming with the scrollbar. When enabled, arrows appear at the edges of the scrollbar, allowing users to zoom in and out of the chart. If disabled, the arrows are hidden and zooming is not possible.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
