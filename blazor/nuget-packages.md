@@ -1396,7 +1396,7 @@ The Blazor PDF Viewer supports viewing and reviewing PDF files in web applicatio
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer/">Syncfusion.Blazor.PdfViewer</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/web-assembly-application">PDF Viewer</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/web-assembly-application">PDF Viewer</a>
 </td>
 <td>
 SfPdfViewer
@@ -1441,7 +1441,7 @@ SfPdfViewer
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/server-side-application">PDF Viewer Server</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/server-side-application">PDF Viewer Server</a>
 </td>
 <td>
 SfPdfViewerServer
@@ -1486,7 +1486,7 @@ The SfPdfViewer is designed to be independent of web services, allowing users to
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer/">Syncfusion.Blazor.SfPdfViewer</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
 </td>
 <td>
 SfPdfViewer2
