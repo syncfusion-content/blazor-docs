@@ -821,7 +821,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 
 ## How to Set MaxSegmentThumbs for Connector
- The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector in Syncfusion Blazor Diagram is used to limit the number of segment thumbs displayed on a connector. 
+ The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the Connector in Syncfusion Blazor Diagram is used to limit the number of segment thumbs displayed on a connector. 
  Segment thumbs are interactive handles that allow users to modify the connector's path. 
  By setting this property, you can control how many of these handles appear, helping to simplify the user interface.
 
