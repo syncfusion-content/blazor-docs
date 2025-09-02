@@ -736,14 +736,14 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 ![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
 
-## Axis Label Template
+## Axis label template
 
-The Axis Label Template in Blazor Charts allows customization of how axis labels are displayed using the `LabelTemplate` property in the ChartAxis component. This makes it possible to format labels with HTML, apply conditional styling, and include dynamic content such as icons or additional data.
+The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the `LabelTemplate` property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) component.
 
-Inside the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To use this data, cast context to the `ChartAxisLabelInfo` class, which includes the following properties:
+Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the `ChartAxisLabelInfo` class, which exposes the following properties:
 
-* `Text`: This property contains the label text and can be used in axis label templates for axis types such as **Category**, **Numeric**, and **Logarithmic**.
-* `DateTimeLabel`: This property holds the date and time value and is useful for axis label templates in **DateTime** axes.
+* `Text`: Contains the label text. This is applicable for axis types such as **Category**, **Numeric**, and **Logarithmic**.
+* `DateTimeLabel`: Holds the date and time value, and is useful for axis label templates on **DateTime** axes.
 
 ```cshtml
 
@@ -793,9 +793,11 @@ Inside the `LabelTemplate`, the implicit parameter context provides access to la
 ```
 ![Blazor Column Chart Axis with Template using Text](images/axis-labels/blazor-column-chart-axis-text-template.png)
 
-### Customizing DateTimeLabel in Axis Label Template
+### Customizing axis label template in DateTime axis
 
-The `DateTimeLabel` property in the `ChartAxisLabelInfo` class contains the date and time value for each axis label when using a DateTime axis. This value directly reflects the timestamp from the chart’s data source and can be displayed in any format that suits the chart’s context. You can customize how this value appears by applying formatting options to show only the month, the full date, or even the day of the week. This helps make time-based data more readable and relevant to the chart’s purpose.
+In a **DateTime** axis, the `LabelTemplate` property enables customization of axis label appearance. The `DateTimeLabel` property, available in the `ChartAxisLabelInfo` class, contains the date and time value corresponding to each axis label. This value reflects the timestamp derived from the respective axis value and can be formatted to match the chart’s context.
+
+Formatting options allow display of specific components such as the month, full date, or day of the week. This enhances the clarity of time-based data and ensures alignment with the chart’s intended purpose.
 
 ```cshtml
 

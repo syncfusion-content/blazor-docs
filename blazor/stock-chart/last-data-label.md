@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Last Value Label in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Last Value Label in Syncfusion Blazor Stock Chart component and much more.
+title: Last Data Label in Blazor Stock Chart Component | Syncfusion
+description: Checkout and learn here all about Last Data Label in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Last Value Label in Blazor Stock Chart Component
+# Last Data Label in Blazor Stock Chart Component
 
-The Last Value Label feature in `StockChartLastDataLabel` allows you to easily display the value of the last data point in a series. This provides an intuitive way to highlight the most recent or final value in your chart.
+The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the stock chart. The label can be enabled and customized using the `StockChartLastDataLabel` property.
 
-## Enable Last Value Label
+## Enable last data label
 
-To show the last value label, ensure that the `ShowLabel` property inside `StockChartLastDataLabel` is set to **true** within the series configuration.
+To enable the last data label, set the `ShowLabel` property of the `StockChartLastDataLabel` configuration to **true** within the series settings.
 
 ```cshtml
 
@@ -56,11 +56,30 @@ To show the last value label, ensure that the `ShowLabel` property inside `Stock
 
 ```
 
-![Last Value Label in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label.png)
+![Last Data Label in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label.png)
 
-## Last Value Label Customization
+## Customization
 
-The appearance of the last value label can be customized using various style properties defined across different configuration settings. The background color, line color, line width, dash pattern, and corner radius of the label can be adjusted using properties such as **Background**, **LineColor**, **LineWidth**, **DashArray**, **Rx**, and **Ry** within `StockChartLastDataLabel`. You can customize the color and width of the label’s border through `StockChartLastDataLabelBorder` by setting the **Color** and **Width** properties. To style the label’s text, `StockChartLastDataLabelFont` provides options to specify the font color, font family, font style, font weight, and size. These settings allow you to create a visually distinct and well-integrated label that enhances the clarity and aesthetics of your chart.
+The appearance of the last data label can be customized using various properties defined across different settings.
+
+In the `StockChartLastDataLabel`:
+* `Background`: Sets the background color of the last data label container.
+* `LineColor`: Sets the color of the indicator line.
+* `LineWidth`: Sets the width of the indicator line.
+* `DashArray`: Defines the dash pattern of the indicator line.
+* `Rx`: Sets the horizontal corner radius of the label container.
+* `Ry`: Sets the vertical corner radius of the label container.
+
+In the `StockChartLastDataLabelBorder`:
+* `Color`: Sets the border color of the label container.
+* `Width`: Sets the border width of the label container.
+
+In the `StockChartLastDataLabelFont`:
+* `Size`: Sets the font size of the label text.
+* `Color`: Sets the font color of the label text.
+* `FontFamily`: Specifies the font family of the label text.
+* `FontWeight`: Sets the font weight of the label text.
+* `FontStyle`: Sets the font style of the label text.
 
 ```cshtml
 
@@ -106,4 +125,4 @@ The appearance of the last value label can be customized using various style pro
 
 ```
 
-![Last Value Label Customization in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label-customization.png)
+![Last Data Label Customization in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label-customization.png)
