@@ -536,7 +536,7 @@ Alternatively, you can update the layout orientation directly using a method.
     SfDiagramComponent diagram;
     private void ChangeLayoutOrientation()
    {
-     diagram.Layout.Orientation = LayoutOrientation.Vertical
+     diagram.Layout.Orientation = LayoutOrientation.Vertical;
    }
  }
 
