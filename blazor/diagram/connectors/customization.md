@@ -820,11 +820,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 >**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
 
 ## How to Set MaxSegmentThumbs for Connector
+
  The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector is used to limit the number of segment thumbs displayed on a connector. 
  Segment thumbs are interactive handles that allow users to modify the connector's path. 
  By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
 
-```razor
+```cshtml
  @using Syncfusion.Blazor.Diagram 
 <SfDiagramComponent @ref="Diagram"   id="diagram" Width="1400px" Height="600px"  @bind-Connectors="@connectors"> 
 </SfDiagramComponent> 
@@ -880,7 +881,7 @@ You can also update the `MaxSegmentThumbs` value dynamically at runtime.
 
 The example below demonstrates how to limit the segment thumbs for a selected connector.
 
-```razor
+```cshtml
  private void UpdateMaxSegmentThumb(){
     for(int i = 0; Diagram.SelectionSettings.Connectors.Count > i ;i++ )
     {
@@ -891,7 +892,7 @@ The example below demonstrates how to limit the segment thumbs for a selected co
 
 The example below shows how to limit the segment thumbs for all connectors in the diagram.
 
-```razor
+```cshtml
   private void UpdateMaxSegmentThumb(){
     for(int i = 0; Diagram.Connectors.Count > i ; i++)
     {
