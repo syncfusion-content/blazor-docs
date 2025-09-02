@@ -614,11 +614,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 
 ![Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
-## No Data Template in Blazor Charts Component
+## Handling when no data is available
 
-When there is no data available to render in the chart, the `NoDataTemplate` property allows you to display a custom layout within the chart area. This layout can include a message indicating the absence of data, a relevant image, or a button to initiate data loading. You can incorporate styled text, images, or interactive elements to maintain design consistency and enhance user guidance.
-
-Once data becomes available, the chart automatically updates to display the appropriate visualization.
+When no data is available to render in the chart, the `NoDataTemplate` property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
 
 ```cshtml
 
