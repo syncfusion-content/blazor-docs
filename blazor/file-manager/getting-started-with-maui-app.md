@@ -160,7 +160,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager comp
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor File Manager Component](images/blazor-filemanager-component.png)
+![Blazor File Manager Component](images/blazor-filemanager-maui-app.png)
 
 ### How to Run the Sample on Android
 
