@@ -604,13 +604,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Symbol Palette offers tooltip support, displaying informative text when the mouse hovers over any node or connector. These tooltips can be customized individually for each symbol within the palette, enhancing user experience and providing additional context for the available elements.
 
-### How to Show Default Tooltips for Symbols
+### How to enable or disable Default Tooltips for Symbols
 
 By default, the symbol's ID is displayed as the tooltip for each symbol in the symbol palette. The following image illustrates how the tooltip appears when the mouse hovers over symbols in the symbol palette.
 
 ![Default Tooltip in symbol palette](../images/defaulttooltip.png)
 
-### How to enable or disable tooltip in the symbol palette
 The [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property in the Symbol Palette controls whether a tooltip displaying the symbol ID is shown when hovering over a symbol. 
 
 By default, this property is set to `true`, meaning the tooltip will be displayed. To disable the tooltip, set `ShowTooltip` to `false` in [GetSymbolInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) function for the desired symbol. 
