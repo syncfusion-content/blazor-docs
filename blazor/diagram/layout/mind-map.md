@@ -431,7 +431,7 @@ The following example demonstrates how to configure the mind map layout with ver
 <SfDropDownList TValue="LayoutOrientation"
                 TItem="string"
                 DataSource="@LayoutOrientationValues"
-                @bind-Value="selectedOrientation"
+                @bind-Value="SelectedOrientation"
                 Placeholder="Select Orientation"
                 Width="300px">
 </SfDropDownList>
