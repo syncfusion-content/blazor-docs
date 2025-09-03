@@ -13,8 +13,6 @@ The Work Breakdown Structure (WBS) organizes project tasks hierarchically in the
 
 WBS provides a structured coding system for tasks, enabling clear hierarchy and predecessor relationships. The automatic code generation ensures efficient task organization, while auto-updates maintain accuracy during sorting, filtering, editing, and row operations. This enhances project tracking in hierarchical structures with event-driven control for performance optimization.
 
-> **Note**: Only string type is currently supported in WBS and WBS Predecessor columns.
-
 ## Configuration and implementation
 
 To enable and configure WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true` to display the WBS column in the Gantt grid. Enable the [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property to maintain WBS code accuracy during operations like editing, deleting, sorting, filtering, and searching. Essential for proper rendering, bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields` to display the WBS and WBS Predecessor columns correctly.
@@ -88,6 +86,7 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
     }
 }
 ```
+> The WBS implementation in Blazor Gantt currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
 ## Performance optimization with conditional updates
 
