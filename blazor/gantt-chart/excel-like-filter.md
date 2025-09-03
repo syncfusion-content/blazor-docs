@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Like Filter in Blazor Gantt Chart | Syncfusion
-description: Checkout and learn here all about Excel like filter in Syncfusion Blazor Gantt Chart and much more details.
+description: Learn here all about Excel like filter in Syncfusion Blazor Gantt Chart and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -59,14 +59,14 @@ Here is an example that showcasing how to render the Excel like filter within th
 }
 ```
 
-> * The Excel-like filter feature supports various filter conditions, including text-based filters for task names, number-based filters for duration and progress, and date-based filters for project timelines.
+> * The Excel-like filter feature supports various filter conditions, including text-based filters for task names, number-based filters for task Id and progress, and date-based filters for project timelines.
 > * The filter dialog provides additional options, such as searching for specific task values, and clearing applied project filters.
 
 ## Customize the filter choice count
 
 By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large project datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 task records bound to the Syncfusion Blazor Gantt Chart to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
 
-The Gantt Chart allows customization of the number of distinct data displayed in the checkbox list of the Excel/Checkbox type filter dialog. This can be useful when working with large project datasets and wanting to customize the default filter choice count values.
+The Gantt Chart allows customization of the number of distinct data displayed in the checkbox list of the Excel type filter dialog. This can be useful when working with large project datasets and wanting to customize the default filter choice count values.
 
 However, there is flexibility to increase or decrease the filter choice count based on specific project requirements. This can be achieved by adjusting the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Gantt_FilterDialogOpeningEventArgs_FilterChoiceCount) value in the filter dialog opening event.
 
@@ -127,13 +127,13 @@ The following example demonstrates how to customize the filter choice count in t
 }
 ```
 
-> The specified filter choice count value determines the display of unique items as a checkbox list in the Excel/Checkbox type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value for optimal project management performance.
+> The specified filter choice count value determines the display of unique items as a checkbox list in the Excel type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value for optimal project management performance.
 
 ## Show customized text in filter dialog
 
-The Syncfusion Blazor Gantt Chart provides flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows modification of the default text and provides more meaningful and contextual labels for project filtering, enhancing the project management experience.
+The Syncfusion Blazor Gantt Chart provides flexibility to customize the text displayed in the Excel filtering options. This allows modification of the default text and provides more meaningful and contextual labels for project filtering, enhancing the project management experience.
 
-To customize the text in the Excel/Checkbox filter, define a `FilterItemTemplate` and bind it to the desired column. The `FilterItemTemplate` property allows creation of custom templates for filter items. Any logic and HTML elements can be used within this template to display the desired text or content relevant to project management scenarios.
+To customize the text in the Excel filter, define a `FilterItemTemplate` and bind it to the desired column. The `FilterItemTemplate` property allows creation of custom templates for filter items. Any logic and HTML elements can be used within this template to display the desired text or content relevant to project management scenarios.
 
 In the example below, customization of the text displayed in the filter checkbox list for a **Status** column is demonstrated. This is achieved by defining a `FilterItemTemplate` within the column element. Inside the template, FilterItemTemplateContext can be used to conditionally display **Completed** if the data value is true and **In Progress** if the value is false:
 
