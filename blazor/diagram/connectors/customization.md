@@ -878,32 +878,97 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can also update the **MaxSegmentThumbs** value dynamically at runtime. 
 
-The example below demonstrates how to limit the segment thumbs for a selected connector.
+The example below demonstrates how to limit the segment thumbs for both selected connectors and all connectors in the diagram at runtime.
 
 ```cshtml
- // Updates MaxSegmentThumbs to 5 for all currently selected connectors at runtime
- private void UpdateMaxSegmentThumb()
- {
-    for(int i = 0; Diagram.SelectionSettings.Connectors.Count > i ;i++ )
-    {
-        Diagram.SelectionSettings.Connectors[i].MaxSegmentThumbs = 5;
-    }
- }
-```
-The example below shows how to limit the segment thumbs for all connectors in the diagram.
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-```cshtml
-  // Updates MaxSegmentThumbs to 6 for all connectors in the diagram at runtime
-  private void UpdateMaxSegmentThumb()
-  {
-    for(int i = 0; Diagram.Connectors.Count > i ; i++)
+<div class="d-flex flex-column gap-3">
+    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+        <SfButton Content="Update Selected Connectors (Max 5)" IsPrimary="true" OnClick="UpdateSelectedConnectorThumbs"
+                  CssClass="btn-selected">
+        </SfButton>
+        
+        <SfButton Content="Update All Connectors (Max 6)" OnClick="UpdateAllConnectorThumbs"CssClass="btn-all">
+        </SfButton>
+    </div>
+    <SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
+    </SfDiagramComponent>
+</div>
+
+@code {
+    private SfDiagramComponent? diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
     {
-       Diagram.Connectors[i].MaxSegmentThumbs = 6;
+        // Create orthogonal connector with custom segments and styling
+        Connector orthogonalConnector = new Connector()
+        {
+            ID = "orthogonal",
+            SourcePoint = new DiagramPoint() { X = 550, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 650, Y = 300 },
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" }
+            },
+            Type = ConnectorSegmentType.Orthogonal,
+            Segments = new DiagramObjectCollection<ConnectorSegment>()
+            {
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Right
+                },
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Bottom
+                }
+            },
+            MaxSegmentThumbs = 2
+        };
+        
+        connectors.Add(orthogonalConnector);
     }
-  }
+    
+    // Updates MaxSegmentThumbs to 5 for all currently selected connectors at runtime
+    private void UpdateSelectedConnectorThumbs()
+    {
+        if (diagram?.SelectionSettings?.Connectors != null)
+        {
+            for (int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                // Set segment thumb limit for selected connector only
+                diagram.SelectionSettings.Connectors[i].MaxSegmentThumbs = 5;
+            }
+        }
+    }
+    
+    // Updates MaxSegmentThumbs to 6 for all connectors in the diagram at runtime
+    private void UpdateAllConnectorThumbs()
+    {
+        if (diagram?.Connectors != null)
+        {
+            for (int i = 0; i < diagram.Connectors.Count; i++)
+            {
+                // Set segment thumb limit for each connector in diagram
+                diagram.Connectors[i].MaxSegmentThumbs = 6;
+            }
+        }
+    }
+}
+
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime)
+
  >**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [`Orthogonal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
-
 ## See also
 
 * [How to interact with the connector](./interactions)
