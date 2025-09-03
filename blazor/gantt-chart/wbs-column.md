@@ -15,7 +15,11 @@ WBS provides a structured coding system for tasks, enabling clear hierarchy and 
 
 ## Configuration and implementation
 
-To enable and configure WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true` to display the WBS column in the Gantt grid. Enable the [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property to maintain WBS code accuracy during operations like editing, deleting, sorting, filtering, and searching. Essential for proper rendering, bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields` to display the WBS and WBS Predecessor columns correctly.
+To enable WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true`. This displays the WBS column in the treegrid area of Gantt chart. 
+
+The [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property handles WBS code generation automatically. When you enable this, the component creates WBS codes based on your task hierarchy and keeps them updated when you add, delete, move, edit, indent, outdent, sort, filter, or search tasks.
+
+To render the WBS and WBS Predecessor columns, you need to bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields`.
 
 The WBS code generation follows a hierarchical numbering pattern where parent tasks receive sequential numbers (1, 2, 3), and child tasks append decimal notation (1.1, 1.2, 1.1.1). This automatic generation recalculates codes whenever the task hierarchy changes through operations like indenting, outdenting, or reordering tasks.
 

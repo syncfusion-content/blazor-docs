@@ -13,7 +13,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 ## Timezone date conversion
 
-The `Timezone` property enables the Gantt Chart to convert and display all task-related dates, including start dates, end dates, event markers, and baseline dates, in the specified timezone. For example, a `DateTime` value defined as `new DateTime(2019, 2, 4, 8, 0, 0)` in a system set to `Indian Standard Time` (IST, UTC+05:30) will be adjusted to `2019-02-03 09:30 PM` when the `Timezone` property is set to `America/New_York` (ET, UTC-05:00 during standard time). This conversion ensures accurate scheduling and visualization of tasks across different timezones, accounting for DST where applicable.
+The `Timezone` property enables the Gantt Chart to convert and display all task-related dates, including start dates, end dates, event markers, and baseline dates, in the specified timezone. For example, a `DateTime` value defined as `new DateTime(2025, 2, 4, 8, 0, 0)` in a system set to Pacific Standard Time (PST, UTC-08:00) will be adjusted to `2025-02-03 09:30 PM` when the `Timezone` property is set to `America/New_York` (ET, UTC-05:00 during standard time). This conversion ensures accurate scheduling and visualization of tasks across different timezones, accounting for DST where applicable.
 
 ## Setting the timezone
 
