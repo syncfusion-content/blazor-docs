@@ -639,7 +639,7 @@ The following code example demonstrates how to enable or disable the default too
     private bool ShowTooltip = false;
     private SfSymbolPaletteComponent? symbolPalette;
     private SfDiagramComponent? diagram;
-    private SymbolMargin symbolMargin = new SymbolMargin
+    private SymbolMargin symbolMargin = new SymbolMargin()
     {
         Left = 15,
         Right = 15,
