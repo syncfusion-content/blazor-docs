@@ -15,9 +15,9 @@ WBS provides a structured coding system for tasks, enabling clear hierarchy and 
 
 ## Configuration and implementation
 
-To enable WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true`. This displays the WBS column in the treegrid area of Gantt chart. 
+To enable WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true`. This displays the WBS column in the treegrid area of the Gantt chart. 
 
-The [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property handles WBS code generation automatically. When you enable this, the component creates WBS codes based on your task hierarchy and keeps them updated when you add, delete, move, edit, indent, outdent, sort, filter, or search tasks.
+The [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property handles WBS code generation automatically. When enabled, the component creates WBS codes based on the task hierarchy and maintains updated codes when tasks are added, deleted, moved, edited, indented, outdented, sorted, filtered, or searched.
 
 To render the WBS and WBS Predecessor columns, you need to bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields`.
 
@@ -94,9 +94,9 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
 
 ## Performance optimization with conditional updates
 
-For enhanced performance in large datasets, control when WBS codes are recalculated by using the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) and [RowDropped](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events. This approach optimizes performance during intensive operations like drag-and-drop by enabling auto-update only when necessary.
+For enhanced performance in large datasets, controlling when WBS codes are recalculated by through the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) and [RowDropped](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events. This approach optimizes performance during intensive operations like drag-and-drop by enabling auto-update only when necessary.
 
-The following example demonstrates conditional WBS auto-update activation specifically during row drag and drop operations, preventing unnecessary recalculations during other user interactions.
+The following example demonstrates conditional WBS auto-update activation specifically during row drag and drop operations, preventing unnecessary recalculations during other interactions.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
