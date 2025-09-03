@@ -821,8 +821,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Set MaxSegmentThumbs for Connector
 
- The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector is used to limit the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. 
- By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
+ The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector is used to limit the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -843,13 +842,20 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             SourcePoint = new DiagramPoint() { X = 550, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 650, Y = 300 },
             Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+
+            // Enable dragging segment thumbs
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+
             TargetDecorator = new DecoratorSettings()
             {
                 Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" }
             },
+
+            // Orthogonal connector
             Type = ConnectorSegmentType.Orthogonal,
+
+            // Define orthogonal segments (Type on each segment is redundant and omitted)
             Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
                 new OrthogonalSegment
@@ -865,9 +871,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                     Direction = Direction.Bottom
                 }
             },
+
+            // Limit the number of visible/draggable segment thumbs
             MaxSegmentThumbs = 2
+
         };
-        
         connectors.Add(orthogonalConnector);
     }
 }
@@ -876,9 +884,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
 
-You can also update the **MaxSegmentThumbs** value dynamically at runtime. 
-
-The example below demonstrates how to limit the segment thumbs for both selected connectors and all connectors in the diagram at runtime.
+The example below demonstrates how to dynamically update the **MaxSegmentThumbs** value at runtime for both selected connectors and all connectors in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -910,13 +916,20 @@ The example below demonstrates how to limit the segment thumbs for both selected
             SourcePoint = new DiagramPoint() { X = 550, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 650, Y = 300 },
             Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+
+            // Enable dragging segment thumbs
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+
             TargetDecorator = new DecoratorSettings()
             {
                 Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" }
             },
+
+            // Orthogonal connector
             Type = ConnectorSegmentType.Orthogonal,
+
+            // Define orthogonal segments (Type on each segment is redundant and omitted)
             Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
                 new OrthogonalSegment
@@ -932,9 +945,11 @@ The example below demonstrates how to limit the segment thumbs for both selected
                     Direction = Direction.Bottom
                 }
             },
+
+            // Limit the number of visible/draggable segment thumbs
             MaxSegmentThumbs = 2
+
         };
-        
         connectors.Add(orthogonalConnector);
     }
     
@@ -968,7 +983,8 @@ The example below demonstrates how to limit the segment thumbs for both selected
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime)
 
- >**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [`Orthogonal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
+>**Note:** The MaxSegmentThumbs property is applicable only when the connector type is set to  [`Orthogonal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) 
+
 ## See also
 
 * [How to interact with the connector](./interactions)
