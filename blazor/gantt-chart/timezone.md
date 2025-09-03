@@ -15,7 +15,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 The Gantt chart component provides a `Timezone` property that accepts a string value defining the desired time zone (such as "UTC" or "America/New_York"). When this property is set, all relevant dates including those used in tasks, event markers, baseline dates, and indicators are converted and displayed according to the specified timezone.
 
-When a `DateTime` value is defined as `new DateTime(2019, 2, 4, 8, 0, 0)` and the `Timezone` property is set to `"America/New_York"`, the time is automatically converted from the local system timezone to the target timezone. For instance, `2019-02-04 08:00:00` (local time) will be displayed as `2019-02-03 09:30 PM` if the system is set to a timezone such as `"Asia/Kolkata"` (UTC+05:30) and the desired output is `"America/New_York"` (UTC-05:00 at that date due to standard time).
+When a `DateTime` value is defined as `new DateTime(2019, 2, 4, 8, 0, 0)` and the `Timezone` property is set to `America/New_York`, the time is automatically converted from the local system timezone to the target timezone. For example, if the local system timezone is `Indian Standard Time` (IST, UTC+05:30), the date and time `2019-02-04 08:00:00` will be displayed as `2019-02-03 09:30 PM` in `Eastern Time` (ET, UTC-05:00 during standard time).
 
 ## Setting the Timezone
 The `Timezone` property can be set directly when defining the Gantt Chart component. For consistent handling, standard IANA time zone names (such as `UTC`, `America/New_York`, `Europe/London`) are supported.
