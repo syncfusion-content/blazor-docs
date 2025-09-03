@@ -615,23 +615,17 @@ The following code example demonstrates how to enable or disable the default too
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 
 <div style="display:flex;gap:20px;">
     <div style="width:20%">
         <div>
-            <label>
-                <input type="checkbox" @bind="ShowTooltip" id="ShowIDTooltip" />
-                Show Symbol ID as Tooltip
-            </label>
+            <SfCheckBox @bind-Checked="ShowTooltip" Label="Show Symbol ID as Tooltip" TChecked="bool">
+            </SfCheckBox>
         </div>
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="symbolPalette" 
-                                      Height="1000px" 
-                                      Width="300px"
-                                      GetSymbolInfo="GetSymbolInfo"
-                                      Palettes="Palettes" 
-                                      SymbolHeight="60" 
-                                      SymbolWidth="60" 
+            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px"GetSymbolInfo="GetSymbolInfo"
+                                      Palettes="Palettes" SymbolHeight="60" SymbolWidth="60" 
                                       SymbolMargin="symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
