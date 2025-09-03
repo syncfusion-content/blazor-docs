@@ -407,8 +407,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Change the Mind Map Orientation
 
-The [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the mind map layout specifies the direction in which nodes are arranged. 
-By default, the layout is set to **Horizontal**, which means nodes are arranged from left to right. To change the layout to vertical, set the Orientation property to **Vertical**.
+The [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the mind map layout specifies the direction in which nodes are arranged. By default, the layout is set to **Horizontal**, which means nodes are arranged from left to right. To change the layout to vertical, set the Orientation property to **Vertical**.
 
 The following example demonstrates how to configure the mind map layout with vertical orientation during component initialization.
 
@@ -431,7 +430,6 @@ The following example demonstrates how to configure the mind map layout with ver
 
 @code {
     private SfDiagramComponent? diagram;
-    
     public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
     public List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
     {
@@ -470,6 +468,7 @@ The following example demonstrates how to configure the mind map layout with ver
     {
        diagram.Layout.Orientation = LayoutOrientation.Vertical;
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is NodeGroup) 
@@ -535,9 +534,7 @@ The following example demonstrates how to configure the mind map layout with ver
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
 ![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png)
 
-You can update the layout's orientation dynamically at runtime using either data binding or direct method invocation.
-
-The following code demonstrates binding layout orientation to a property and updating it directly using methods at runtime.
+The following code demonstrates how to update the layout's orientation dynamically at runtime using  data binding and directly using methods.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -607,6 +604,7 @@ The following code demonstrates binding layout orientation to a property and upd
     {
        diagram.Layout.Orientation = LayoutOrientation.Vertical;
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is NodeGroup) 
