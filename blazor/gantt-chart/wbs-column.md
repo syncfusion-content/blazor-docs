@@ -19,7 +19,7 @@ To enable and configure WBS in the Blazor Gantt component, set the [ShowWbsColum
 
 The WBS code generation follows a hierarchical numbering pattern where parent tasks receive sequential numbers (1, 2, 3), and child tasks append decimal notation (1.1, 1.2, 1.1.1). This automatic generation recalculates codes whenever the task hierarchy changes through operations like indenting, outdenting, or reordering tasks.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" 
@@ -94,7 +94,7 @@ For enhanced performance in large datasets, control when WBS codes are recalcula
 
 The following example demonstrates conditional WBS auto-update activation specifically during row drag and drop operations, preventing unnecessary recalculations during other user interactions.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
