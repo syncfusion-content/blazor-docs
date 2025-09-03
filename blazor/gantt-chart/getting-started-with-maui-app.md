@@ -195,7 +195,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Gantt Chart Component](blazor-gantt-maui-app.png)
+![Blazor Gantt Chart Component](images/blazor-gantt-maui-app.png)
 
 ### How to Run the Sample on Android
 

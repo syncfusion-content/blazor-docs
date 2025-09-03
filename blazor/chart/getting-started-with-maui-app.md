@@ -155,7 +155,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Chart Component](images/getting-started/blazor-chart-maui-app.png)
+![Blazor Chart Component](images/blazor-chart-maui-app.png)
 
 ### How to Run the Sample on Android
 
