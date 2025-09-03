@@ -827,11 +827,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" 
-                    id="diagram" 
-                    Width="1400px" 
-                    Height="600px" 
-                    @bind-Connectors="connectors">
+<SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
 </SfDiagramComponent>
 
 @code {
