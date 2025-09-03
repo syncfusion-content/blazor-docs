@@ -416,39 +416,25 @@ The following example demonstrates how to configure the mind map layout with ver
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.DropDowns
 
-<SfDiagramComponent @ref="diagram" 
-                    Height="600px" 
-                    NodeCreating="OnNodeCreating" 
-                    ConnectorCreating="OnConnectorCreating">
+<SfDiagramComponent @ref="diagram" Height="600px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
     <RulerSettings>
         <HorizontalRuler></HorizontalRuler>
         <VerticalRuler></VerticalRuler>
     </RulerSettings>
-    <DataSourceSettings ID="Id" 
-                       ParentID="ParentId" 
-                       DataSource="DataSource">
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource">
     </DataSourceSettings>
-    <Layout Type="LayoutType.MindMap" 
-            @bind-Orientation="SelectedOrientation" 
-            GetBranch="GetBranch" 
+    <Layout Type="LayoutType.MindMap" @bind-Orientation="SelectedOrientation" GetBranch="GetBranch" 
             HorizontalSpacing="50">
         <LayoutMargin Top="20" Left="20"></LayoutMargin>
     </Layout>
 </SfDiagramComponent>
 
-<SfDropDownList TValue="LayoutOrientation"
-                TItem="OrientationItem"
-                DataSource="LayoutOrientationOptions"
-                @bind-Value="SelectedOrientation"
-                Placeholder="Select Orientation"
-                Width="300px">
+<SfDropDownList TValue="LayoutOrientation" TItem="OrientationItem" DataSource="LayoutOrientationOptions"
+                @bind-Value="SelectedOrientation" Placeholder="Select Orientation" Width="300px">
     <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
 </SfDropDownList>
 
- <SfButton Content="Set to Vertical" 
-                  IsPrimary="true"
-                  IconCss="e-icons e-refresh"
-                  OnClick="ChangeLayoutOrientation"
+ <SfButton Content="Set to Vertical" IsPrimary="true" IconCss="e-icons e-refresh" OnClick="ChangeLayoutOrientation"
                   CssClass="btn-orientation">
         </SfButton>
 @code {
