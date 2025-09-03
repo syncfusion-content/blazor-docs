@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltip in Blazor DataGrid
 
-The Tooltip feature in the Syncfusion Blazor DataGrid is designed to enrich the user interface by offering contextual information dynamically as users interact with the grid. When a user hovers over a header cell, the tooltip displays the column header text, helping users quickly identify the column headers. Similarly, when hovering over a content cell, the tooltip reveals the underlying data value contained in that cell, allowing users to view detailed information at a glance.
+The Tooltip feature in the Syncfusion Blazor DataGrid provides contextual information when hovering over header or content cells. When enabled via the `ShowTooltip` property, tooltip automatically display the column header text for header cells and the corresponding data value for content cells. This is particularly useful in grids with truncated or overflowing content, allowing detailed information to be accessed without expanding the cell.
 
-This functionality is particularly useful in scenarios where the grid contains truncated or overflowing content. The feature is activated through the `ShowTooltip` property, when enabled, automatically applies tooltip to both header and content cells when we hover the cells.
+The provided sample demonstrates tooltip, showing column header text when hovering over headers and cell values when hovering over content. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -86,11 +86,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjFVnKuSghwyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Display custom tooltip for headers and content
+### Custom tooltip for header and content cells
 
-The Syncfusion Blazor DataGrid offers a feature that enables developers to display custom tooltip for individual columns using the `TooltipTemplate` directive, which is defined within the GridTemplates component. This capability allows for the creation of visually rich and highly customizable tooltip designs, to meet specific application requirements and improve user engagement.
+The Syncfusion Blazor DataGrid supports displaying custom tooltip for individual columns using the `TooltipTemplate` directive, defined within the `GridTemplates` component. This feature enables the creation of visually rich and customizable tooltip content tailored to specific application requirements.
 
-To support this customization, the DataGrid provides the `TooltipTemplateContext` , a context object that exposes several built-in properties. These properties give developers fine-grained control over the content and behavior of tooltip:
+To support this customization, the DataGrid provides a `TooltipTemplateContext` object, which exposes built-in properties for accessing column and row information. These properties allow precise control over the tooltip content and behavior.
 
   <ul>
       <li><strong>Value</strong> - Represents the content of the cell currently being hovered over. For header cells, this will be the column name, while for content cells, it will be the actual cell value.</li>
@@ -100,7 +100,7 @@ To support this customization, the DataGrid provides the `TooltipTemplateContext
       <li><strong>Column</strong> - Contains details about the column, like field name and formatting.</li>
   </ul>
 
-In the provided sample, the tooltip template showcases a richly styled tooltip that includes elements such as an employee's email address rendered as a clickable hyperlink, icons for visual cues, and supplementary contextual data. This example demonstrates how developers can leverage the tooltip customization feature to create interactive and informative tooltips that go beyond simple text, enhancing the overall user experience within the DataGrid.
+The provided sample demonstrates a custom tooltip implementation using the TooltipTemplate. The tooltip includes styled elements such as a clickable email link, icons for visual indicators, and additional contextual information.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
