@@ -471,12 +471,6 @@ The following example demonstrates how to configure the mind map layout with ver
 
     private void OnNodeCreating(IDiagramObject obj)
     {
-        if (obj is NodeGroup) 
-            return;
-
-        if (obj is not Node node) 
-            return;
-
         // Apply default node styling
         node.Height = 100;
         node.Width = 100;
