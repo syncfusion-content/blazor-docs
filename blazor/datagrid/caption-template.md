@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Caption template in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid and much more details.
+description: Checkout and learn here all about Caption Template in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
