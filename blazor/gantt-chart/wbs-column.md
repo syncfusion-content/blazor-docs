@@ -86,7 +86,7 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
     }
 }
 ```
-> The WBS implementation in Blazor Gantt currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
+> The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
 ## Performance optimization with conditional updates
 
