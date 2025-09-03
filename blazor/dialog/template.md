@@ -164,7 +164,6 @@ The Dialog content area supports extensive customization through the `Content` p
 
 The Dialog footer can be customized using either built-in `DialogButton` components or custom HTML through the `FooterTemplate` property. These approaches are mutually exclusive and cannot be used simultaneously within the same dialog instance.
 
-N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best fits the dialog's functional requirements.
 
 ```cshtml
 
@@ -216,6 +215,8 @@ N> The `DialogButton` and `FooterTemplate` properties cannot be used together. C
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVyZlivyKPfAwhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
 ![Blazor Dialog Component with customized Footer template](./images/blazor-dialog-footer-template.png)
+
+N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best fits the dialog's functional requirements.
 
 ## See also
 
