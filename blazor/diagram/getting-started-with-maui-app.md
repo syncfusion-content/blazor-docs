@@ -40,9 +40,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Step 3: Add Import Namespaces
 
-* In the **~/_Imports.razor** file, add the following namespaces:
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Diagram` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -53,7 +53,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+
+## Step 4: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20" %}
@@ -90,7 +93,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: How to Add Stylesheet and Script Resources
+## Step 5: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -111,7 +114,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 </head>
 ```
 
-## Step 5: How to Add the Diagram Component
+## Step 6: How to Add the Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
@@ -300,9 +303,9 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Step 3: Add Import Namespaces
 
-* In the **~/_Imports.razor** file, add the following namespaces:
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Diagram` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -312,6 +315,8 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endhighlight %}
 {% endtabs %}
+
+## Step 4: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
@@ -350,7 +355,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: How to Add Stylesheet and Script Resources
+## Step 5: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -371,7 +376,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 </head>
 ```
 
-## Step 5: How to Add the Diagram Component
+## Step 6: How to Add the Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
