@@ -453,7 +453,8 @@ The following example demonstrates how to configure the mind map layout with ver
         </SfButton>
 @code {
     private SfDiagramComponent? diagram;
-    // Property bound to dropdown and diagram layout for orientation selection
+    
+    // Property bound to dropdown and diagram layout, updated at runtime by user interaction
     public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
     
     public List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
@@ -487,8 +488,8 @@ The following example demonstrates how to configure the mind map layout with ver
             ? branchType 
             : BranchType.SubLeft;
     }
-    
-    // Method triggered by button click to set diagram orientation to vertical
+
+    // Method triggered by button click at runtime to set diagram orientation to vertical
     private void ChangeLayoutOrientation()
     {
        diagram.Layout.Orientation = LayoutOrientation.Vertical;
@@ -566,7 +567,7 @@ Use the following code to bind the layout's orientation to a property that can b
   <Layout Type="LayoutType.MindMap"  @bind-Orientation="SelectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50"/>
    @code
    {
-      // Property bound to dropdown and diagram layout for orientation selection
+      // Property bound to dropdown and diagram layout, updated at runtime by user interaction
       public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
    }
 ```
@@ -577,7 +578,8 @@ Alternatively, you can update the layout orientation directly using a method.
  @code
  {
     private SfDiagramComponent diagram;
-    // Method triggered by button click to set diagram orientation to vertical
+
+    // Method triggered by button click at runtime to set diagram orientation to vertical
     private void ChangeLayoutOrientation()
     {
         diagram.Layout.Orientation = LayoutOrientation.Vertical;
