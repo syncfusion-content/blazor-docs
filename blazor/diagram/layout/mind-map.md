@@ -413,7 +413,6 @@ The following example demonstrates how to configure the mind map layout with ver
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.DropDowns
 
 <SfDiagramComponent @ref="diagram" Height="600px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
     <RulerSettings>
@@ -601,12 +600,6 @@ The following code demonstrates how to update the layout's orientation dynamical
 
     private void OnNodeCreating(IDiagramObject obj)
     {
-        if (obj is NodeGroup) 
-            return;
-
-        if (obj is not Node node) 
-            return;
-
         // Apply default node styling
         node.Height = 100;
         node.Width = 100;
