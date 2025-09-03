@@ -429,6 +429,133 @@ The following example demonstrates how to configure the mind map layout with ver
     </Layout>
 </SfDiagramComponent>
 
+@code {
+    private SfDiagramComponent? diagram;
+    
+    public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
+    public List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
+    {
+        new OrientationItem { Text = "Vertical", Value = LayoutOrientation.Vertical },
+        new OrientationItem { Text = "Horizontal", Value = LayoutOrientation.Horizontal },
+        new OrientationItem { Text = "Left to Right", Value = LayoutOrientation.LeftToRight },
+        new OrientationItem { Text = "Right to Left", Value = LayoutOrientation.RightToLeft }
+    };
+
+    public List<MindMapDetails> DataSource { get; set; } = new()
+    {
+        new MindMapDetails { Id = "1", Label = "Project Planning", ParentId = "", Branch = "Root" },
+        new MindMapDetails { Id = "2", Label = "Requirements", ParentId = "1", Branch = "Right" },
+        new MindMapDetails { Id = "3", Label = "Design", ParentId = "1", Branch = "Right" },
+        new MindMapDetails { Id = "5", Label = "Stakeholder Analysis", ParentId = "2", Branch = "SubRight" },
+        new MindMapDetails { Id = "6", Label = "Documentation", ParentId = "2", Branch = "SubRight" },
+        new MindMapDetails { Id = "7", Label = "UI Design", ParentId = "3", Branch = "SubRight" },
+        new MindMapDetails { Id = "8", Label = "Database Design", ParentId = "3", Branch = "SubRight" }
+    };
+
+    private BranchType GetBranch(IDiagramObject obj)
+    {
+        if (obj is not Node node)
+            return BranchType.Left;
+
+        if (node.Data is not MindMapDetails mindMapData || string.IsNullOrWhiteSpace(mindMapData.Branch))
+            return BranchType.Left;
+
+        return Enum.TryParse(mindMapData.Branch, out BranchType branchType) 
+            ? branchType 
+            : BranchType.SubLeft;
+    }
+
+    // Method triggered by button click at runtime to set diagram orientation to vertical
+    private void ChangeLayoutOrientation()
+    {
+       diagram.Layout.Orientation = LayoutOrientation.Vertical;
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is NodeGroup) 
+            return;
+
+        if (obj is not Node node) 
+            return;
+
+        // Apply default node styling
+        node.Height = 100;
+        node.Width = 100;
+        node.BackgroundColor = "#6BA5D7";
+        node.Style = new ShapeStyle 
+        { 
+            Fill = "#6495ED", 
+            StrokeWidth = 1, 
+            StrokeColor = "white" 
+        };
+        node.Shape = new BasicShape { Type = NodeShapes.Basic };
+        // Add annotation with label from data
+        if (node.Data is MindMapDetails mindMapData && !string.IsNullOrWhiteSpace(mindMapData.Label))
+        {
+            node.Annotations = new DiagramObjectCollection<ShapeAnnotation>
+            {
+                new ShapeAnnotation { Content = mindMapData.Label }
+            };
+        }
+    }
+
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        if (obj is not Connector connector) 
+            return;
+
+        connector.Type = ConnectorSegmentType.Bezier;
+        connector.Style = new ShapeStyle 
+        { 
+            StrokeColor = "#6495ED", 
+            StrokeWidth = 2 
+        };
+        connector.TargetDecorator = new DecoratorSettings
+        {
+            Shape = DecoratorShape.None
+        };
+    }
+
+    public class OrientationItem
+    {
+        public string Text { get; set; } = string.Empty;
+        public LayoutOrientation Value { get; set; }
+    }
+
+    public class MindMapDetails
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Label { get; set; } = string.Empty;
+        public string ParentId { get; set; } = string.Empty;
+        public string Branch { get; set; } = string.Empty;
+        public string Fill { get; set; } = string.Empty;
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
+![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png)
+
+You can update the layout's orientation dynamically at runtime using either data binding or direct method invocation.
+
+The following code demonstrates binding layout orientation to a property and updating it directly using methods at runtime.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.DropDowns
+
+<SfDiagramComponent @ref="diagram" Height="600px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
+    <RulerSettings>
+        <HorizontalRuler></HorizontalRuler>
+        <VerticalRuler></VerticalRuler>
+    </RulerSettings>
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource">
+    </DataSourceSettings>
+    <Layout Type="LayoutType.MindMap" @bind-Orientation="SelectedOrientation" GetBranch="GetBranch" 
+            HorizontalSpacing="50">
+        <LayoutMargin Top="20" Left="20"></LayoutMargin>
+    </Layout>
+</SfDiagramComponent>
+
 <SfDropDownList TValue="LayoutOrientation" TItem="OrientationItem" DataSource="LayoutOrientationOptions"
                 @bind-Value="SelectedOrientation" Placeholder="Select Orientation" Width="300px">
     <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
@@ -542,37 +669,8 @@ The following example demonstrates how to configure the mind map layout with ver
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation)
-![Blazor Mind Map Diagram with Orientation](../images/blazor-mind-map-diagram-with-orientation.png)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime)
 
-You can update the layout's orientation dynamically at runtime using either data binding or direct method invocation.
-
-Use the following code to bind the layout's orientation to a property that can be updated dynamically.
-
-```cshtml
-  <Layout Type="LayoutType.MindMap"  @bind-Orientation="SelectedOrientation" GetBranch="@GetBranch"  HorizontalSpacing="50"/>
-   @code
-   {
-      // Property bound to dropdown and diagram layout, updated at runtime by user interaction
-      public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
-   }
-```
-Alternatively, you can update the layout orientation directly using a method.
-
-```cshtml
-<SfDiagramComponent @ref="@diagram" Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating"/>
- @code
- {
-    private SfDiagramComponent diagram;
-
-    // Method triggered by button click at runtime to set diagram orientation to vertical
-    private void ChangeLayoutOrientation()
-    {
-        diagram.Layout.Orientation = LayoutOrientation.Vertical;
-    }
- }
-
-```
 The following table outlines the various orientation types available:
 Orientation Type|Description|
 |---|---|
