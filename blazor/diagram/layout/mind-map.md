@@ -535,27 +535,30 @@ The following code demonstrates how to update the layout's orientation dynamical
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.DropDowns
 
-<SfDiagramComponent @ref="diagram" Height="600px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
-    <RulerSettings>
-        <HorizontalRuler></HorizontalRuler>
-        <VerticalRuler></VerticalRuler>
-    </RulerSettings>
-    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource">
-    </DataSourceSettings>
-    <Layout Type="LayoutType.MindMap" @bind-Orientation="SelectedOrientation" GetBranch="GetBranch" 
-            HorizontalSpacing="50">
-        <LayoutMargin Top="20" Left="20"></LayoutMargin>
-    </Layout>
-</SfDiagramComponent>
+<div style="display:grid;gap:20px;">
+    <SfDiagramComponent @ref="diagram" Height="600px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
+        <RulerSettings>
+            <HorizontalRuler></HorizontalRuler>
+            <VerticalRuler></VerticalRuler>
+        </RulerSettings>
+        <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource">
+        </DataSourceSettings>
+        <Layout Type="LayoutType.MindMap" @bind-Orientation="SelectedOrientation" GetBranch="GetBranch"
+                HorizontalSpacing="50">
+            <LayoutMargin Top="20" Left="20"></LayoutMargin>
+        </Layout>
+    </SfDiagramComponent>
+    <div style="display:flex;gap:20px;">
+        <SfDropDownList TValue="LayoutOrientation" TItem="OrientationItem" DataSource="LayoutOrientationOptions"
+                        @bind-Value="SelectedOrientation" Placeholder="Select Orientation" Width="300px">
+            <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+        </SfDropDownList>
 
-<SfDropDownList TValue="LayoutOrientation" TItem="OrientationItem" DataSource="LayoutOrientationOptions"
-                @bind-Value="SelectedOrientation" Placeholder="Select Orientation" Width="300px">
-    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-</SfDropDownList>
-
- <SfButton Content="Set to Vertical" IsPrimary="true" IconCss="e-icons e-refresh" OnClick="ChangeLayoutOrientation"
-                  CssClass="btn-orientation">
+        <SfButton Content="Set to Vertical" IsPrimary="true" IconCss="e-icons e-refresh" OnClick="ChangeLayoutOrientation">
         </SfButton>
+    </div>
+</div>
+
 @code {
     private SfDiagramComponent? diagram;
     
