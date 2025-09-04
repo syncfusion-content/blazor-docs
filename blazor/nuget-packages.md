@@ -1441,7 +1441,7 @@ SfPdfViewer
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
 </td>
 <td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/getting-started/server-side-application">PDF Viewer Server</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/server-side-application">PDF Viewer Server</a>
 </td>
 <td>
 SfPdfViewerServer
