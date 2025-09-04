@@ -740,10 +740,7 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the `LabelTemplate` property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) component.
 
-Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the `ChartAxisLabelInfo` class, which exposes the following properties:
-
-* `Text`: Contains the label text. This is applicable for axis types such as **Category**, **Numeric**, and **Logarithmic**.
-* `DateTimeLabel`: Holds the date and time value, and is useful for axis label templates on **DateTime** axes.
+Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the `ChartAxisLabelInfo` class.
 
 ```cshtml
 
