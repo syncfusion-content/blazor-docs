@@ -790,56 +790,6 @@ Within the `LabelTemplate`, the implicit parameter context provides access to la
 ```
 ![Blazor Column Chart Axis with Template using Text](images/axis-labels/blazor-column-chart-axis-text-template.png)
 
-### Customizing axis label template in DateTime axis
-
-In a **DateTime** axis, the `LabelTemplate` property enables customization of axis label appearance. The `DateTimeLabel` property, available in the `ChartAxisLabelInfo` class, contains the date and time value corresponding to each axis label. This value reflects the timestamp derived from the respective axis value and can be formatted to match the chart’s context.
-
-Formatting options allow display of specific components such as the month, full date, or day of the week. This enhances the clarity of time-based data and ensures alignment with the chart’s intended purpose.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Width="70%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
-        <LabelTemplate>
-            @{
-                var data = context as ChartAxisLabelInfo;
-            }
-            <table>
-                <tr>
-                    <td align="center" style="background-color: #6A5ACD; font-size: 10px; color: #F0E68C; font-weight: bold; padding: 5px">Month:<br>@data.DateTimeLabel.ToString("MMM yyyy", null)</td>
-                </tr>
-            </table>
-        </LabelTemplate>
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue"/>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public DateTime XValue { get; set; }
-        public double YValue { get; set; }
-    }
-
-    public List<ChartData> Data = new List<ChartData>
-    {
-        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
-        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
-        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
-        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
-        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 46 },
-        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 28 },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 68 }
-    };
-}
-
-```
-![Blazor Chart Axis with Template using DateTimeLabel](images/axis-labels/blazor-chart-axis-datetimelabel-template.png)
-
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
 ## See also
