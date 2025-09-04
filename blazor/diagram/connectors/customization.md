@@ -895,7 +895,6 @@ The example below demonstrates how to dynamically update the **MaxSegmentThumbs*
         <SfButton Content="Update Selected Connectors (Max 5)" IsPrimary="true" OnClick="UpdateSelectedConnectorThumbs"
                   CssClass="btn-selected">
         </SfButton>
-        
         <SfButton Content="Update All Connectors (Max 6)" OnClick="UpdateAllConnectorThumbs"CssClass="btn-all">
         </SfButton>
     </div>
