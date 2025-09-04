@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timezone Support in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Timezone support in Syncfusion Blazor Gantt Chart component and much more details.
+description: Learn about timezone support in the Syncfusion Blazor Gantt Chart, including configuration and behavior details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,16 +9,15 @@ documentation: ug
 
 # Timezone support in Blazor Gantt Chart
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component schedules and displays dates and times based on the system timezone. To configure the Gantt Chart to use a specific timezone, assign the desired value to the [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Timezone) property. This ensures that all task dates and times are interpreted and rendered according to the specified timezone.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component schedules and displays dates and times based on the system timezone. To configure the Gantt Chart to use a specific timezone, assign the desired value to the [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Timezone) property accepts a standard IANA timezone string, such as `UTC` or `America/New_York`. This ensures that task dates, event markers, baseline dates, and indicators are interpreted and rendered in the specified timezone, with automatic handling of daylight saving time (DST) transitions.
 
-## Timezone conversion behavior in the Gantt chart
+## Timezone date conversion
 
-The Gantt chart component provides a `Timezone` property that accepts a string value defining the desired time zone (such as "UTC" or "America/New_York"). When this property is set, all relevant dates including those used in tasks, event markers, baseline dates, and indicators are converted and displayed according to the specified timezone.
+The `Timezone` property enables the Gantt Chart to convert and display all task-related dates, including start dates, end dates, event markers, and baseline dates, in the specified timezone. For example, a `DateTime` value defined as `new DateTime(2025, 2, 4, 8, 0, 0)` in a system set to Pacific Standard Time (PST, UTC-08:00) will be adjusted to `2025-02-03 09:30 PM` when the `Timezone` property is set to `America/New_York` (ET, UTC-05:00 during standard time). This conversion ensures accurate scheduling and visualization of tasks across different timezones, accounting for DST where applicable.
 
-When a `DateTime` value is defined as `new DateTime(2019, 2, 4, 8, 0, 0)` and the `Timezone` property is set to `America/New_York`, the time is automatically converted from the local system timezone to the target timezone. For example, if the local system timezone is `Indian Standard Time` (IST, UTC+05:30), the date and time `2019-02-04 08:00 AM` will be displayed as `2019-02-03 09:30 PM` in `Eastern Time` (ET, UTC-05:00 during standard time).
+## Setting the timezone
 
-## Setting the Timezone
-The `Timezone` property can be set directly when defining the Gantt Chart component. For consistent handling, standard IANA time zone names (such as `UTC`, `America/New_York`, `Europe/London`) are supported.
+The `Timezone` property can be assigned a standard IANA timezone string, such as `UTC`, `America/New_York`, or `Europe/London`, to control how dates are displayed. The following example demonstrates configuring the Gantt Chart with the `America/New_York` timezone and includes a dropdown to dynamically update the timezone, triggering a re-render of all task dates.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -134,9 +133,11 @@ The `Timezone` property can be set directly when defining the Gantt Chart compon
 ```
 ![Timezone in Blazor Gantt Chart](./images/gantt-timezone.gif)
 
-### CRUD Operations with Timezone
+### CRUD operations with timezone
 
-All crud operations in the Gantt chart are performed according to the configured `Timezone` property. When adding a record, the start date is determined based on the minimum start date in the current data set and applied as per the specified timezone. Similarly, editing and exporting records use the date and time values as displayed in the defined timezone, ensuring consistency in user interaction, data storage, and output.
+CRUD operations in the Blazor Gantt Chart respect the configured `Timezone` property, ensuring consistent date and time handling. When adding a task, the start date is calculated based on the minimum start date in the dataset and converted to the specified timezone. Editing or deleting tasks processes `StartDate` and `EndDate` values in the configured timezone, maintaining consistency in visualization, data storage, and export operations.
+
+This following code enables adding, editing, and deleting tasks in the Blazor Gantt Chart, with all operations processed in the `America/New_York` timezone. The `GanttEditSettings` properties (`AllowAdding`, `AllowEditing`, `AllowDeleting`, `AllowTaskbarEditing`) enable CRUD functionality, while the `Timezone` property ensures that task dates are converted and displayed consistently. The `GanttTaskFields` map nullable `StartDate` and `EndDate` properties to handle optional date values, and the `GanttDayWorkingTimeCollection` supports 24-hour scheduling in the specified timezone.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
