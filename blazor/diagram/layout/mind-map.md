@@ -470,6 +470,8 @@ The following example demonstrates how to configure the mind map layout with ver
 
     private void OnNodeCreating(IDiagramObject obj)
     {
+        if (obj is not Node node) 
+            return;
         // Apply default node styling
         node.Height = 100;
         node.Width = 100;
@@ -600,6 +602,8 @@ The following code demonstrates how to update the layout's orientation dynamical
 
     private void OnNodeCreating(IDiagramObject obj)
     {
+        if (obj is not Node node) 
+            return;
         // Apply default node styling
         node.Height = 100;
         node.Width = 100;
