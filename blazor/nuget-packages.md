@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# NuGet Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
+# NuGet Packages for Syncfusion® Blazor UI components
 
 Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 
@@ -1441,7 +1441,7 @@ SfPdfViewer
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
 </td>
 <td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/getting-started/server-side-application">PDF Viewer Server</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/server-side-application">PDF Viewer Server</a>
 </td>
 <td>
 SfPdfViewerServer
