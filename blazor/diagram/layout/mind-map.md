@@ -525,9 +525,9 @@ The following example demonstrates how to configure the mind map layout with ver
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation).
 
-![MindMapOrientation](../images/blazor-mind-map-diagram-with-orientation.png)
+![MindMapDiagram](../images/blazor-mind-map-diagram-with-orientation.png)
 
-The following code demonstrates how to update the layout's orientation dynamically at runtime using  data binding and directly using methods.
+The following code demonstrates how to update the layout's orientation dynamically at runtime using data binding and directly using methods.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
