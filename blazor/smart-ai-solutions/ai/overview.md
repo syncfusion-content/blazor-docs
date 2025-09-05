@@ -13,7 +13,7 @@ The [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.
 ## Key Features
 - **Multi-Provider AI Support**: Seamlessly integrate with popular AI services including [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) GPT models, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) services, and [Ollama](https://ollama.com) local model deployment. The library handles authentication, request formatting, and response processing for each provider, ensuring consistent behavior across different AI services.
 - **Custom AI Service Extensibility**: Implement custom AI providers through well-defined interfaces and extension points. The architecture supports integration with proprietary AI models, specialized language services, or domain-specific AI solutions while maintaining compatibility with existing Syncfusion components.
-- **Foundation for Smart UI Components**: Powers intelligent features across the [Syncfusion Blazor component](https://blazor.syncfusion.com/demos/) ecosystem. The library provides the core AI processing capabilities that enable components to offer context-aware suggestions, automated content generation, and intelligent user assistance features.
+- **Foundation for Smart UI Components**: Powers intelligent features across the [Syncfusion Blazor components](https://blazor.syncfusion.com/demos/) ecosystem. The library provides the core AI processing capabilities that enable components to offer context-aware suggestions, automated content generation, and intelligent user assistance features.
 
 ## See Also
 - [Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
