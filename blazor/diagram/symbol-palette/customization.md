@@ -619,7 +619,7 @@ The following code example demonstrates how to enable or disable the default too
 <div style="display:flex;gap:20px;">
     <div style="width:20%">
         <div>
-            <SfCheckBox @bind-Checked="ShowTooltip" Label="Show Symbol ID as Tooltip" TChecked="bool">
+            <SfCheckBox @bind-Checked="showTooltip" Label="Show Symbol ID as Tooltip" TChecked="bool">
             </SfCheckBox>
         </div>
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -635,7 +635,7 @@ The following code example demonstrates how to enable or disable the default too
 
 @code {
     // Controls tooltip visibility for symbols at runtime.
-    private bool ShowTooltip = false;
+    private bool showTooltip = false;
     private SfSymbolPaletteComponent? symbolPalette;
     private SfDiagramComponent? diagram;
     private SymbolMargin symbolMargin = new SymbolMargin()
@@ -670,7 +670,7 @@ The following code example demonstrates how to enable or disable the default too
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
         // Enable/disable tooltip display based on user preference at runtime.
-        return new SymbolInfo { ShowTooltip = ShowTooltip };
+        return new SymbolInfo { ShowTooltip = showTooltip };
     }
 
     private void InitPaletteModel()
