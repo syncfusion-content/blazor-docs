@@ -736,6 +736,60 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 ![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
 
+## Axis label template
+
+The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the `LabelTemplate` property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) component.
+
+Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the `ChartAxisLabelInfo` class.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" Width="70%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <LabelTemplate>
+            @{
+                var data = context as ChartAxisLabelInfo;
+            }
+            <table>
+                <tr>
+                    <td align="center" style="background-color: #2E8B57; font-size: 14px; color: #FFD700; font-weight: bold; padding: 5px">Country :</td>
+                    <td align="center" style="background-color: #4682B4; font-size: 14px; color: #FFFFFF; font-weight: bold; padding: 5px">@data.Text</td>
+                </tr>
+            </table>
+        </LabelTemplate>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Double"></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals" Type="ChartSeriesType.Column">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class MedalData
+    {
+        public string Country { get; set; }
+        public double Medals { get; set; }
+    }
+
+    public List<MedalData> MedalDetails = new List<MedalData>
+    {
+        new MedalData { Country = "USA", Medals = 46 },
+        new MedalData { Country = "UK", Medals = 27 },
+        new MedalData { Country = "China", Medals = 26 },
+        new MedalData { Country = "Russia", Medals = 19 },
+        new MedalData { Country = "Germany", Medals = 17 }
+    };
+}
+
+```
+![Blazor Column Chart Axis with Template using Text](images/axis-labels/blazor-column-chart-axis-text-template.png)
+
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
 ## See also

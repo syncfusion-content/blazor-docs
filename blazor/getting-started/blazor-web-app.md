@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App
 
-This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This article provides a step-by-step instructions for building Blazor Web App with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
 
 To get start quickly with Blazor Web App, you can check on this video.
 
@@ -28,7 +28,7 @@ You can create a Blazor Web App using Syncfusion Blazor Templates in both [Visua
 
 ## Manually Creating a Project
 
-This section provides a brief explanation on how to manually create a Blazor Web App using either Visual Studio or Visual Studio Code.
+This section provides a brief explanation on how to manually create a Blazor Web App using Visual Studio, Visual Studio Code and .NET CLI.
 
 {% tabcontents %}
 
@@ -40,7 +40,7 @@ This section provides a brief explanation on how to manually create a Blazor Web
 
 ### Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
@@ -70,174 +70,6 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-### Render Interactive Modes
-
-If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
-
-<table style="width:100%">
-<tr>
-<th style="width:30%">Interactive Render Mode</th>
-<th style="width:70%">Command</th>
-</tr>
-<tr>
-<td>Server</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int Server
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>WebAssembly</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int WebAssembly
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>Auto</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int Auto
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>None</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int None
-{% endhighlight %}
-</td>
-</tr>
-</table>
-
-If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
-
-<table style="width:100%">
-<tr>
-<th style="width:30%">Interactive Render Mode</th>
-<th style="width:70%">Command</th>
-</tr>
-<tr>
-<td>Server</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int Server
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>WebAssembly</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int WebAssembly
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>Auto</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int Auto
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>None</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int None
-{% endhighlight %}
-</td>
-</tr>
-</table>
-
-If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Global`, you need to use the following command.
-
-<table style="width:100%">
-<tr>
-<th style="width:30%">Interactive Render Mode</th>
-<th style="width:70%">Command</th>
-</tr>
-<tr>
-<td>Server</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int Server -ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>WebAssembly</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int WebAssembly -ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>Auto</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int Auto -ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>None</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -au Individual -int None -ai
-{% endhighlight %}
-</td>
-</tr>
-</table>
-
-If you set the Authentication Type as `None` and Interactivity location as `Global`, you need to use the following command.
-
-<table style="width:100%">
-<tr>
-<th style="width:30%">Interactive Render Mode</th>
-<th style="width:70%">Command</th>
-</tr>
-<tr>
-<td>Server</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int Server-ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>WebAssembly</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp -int WebAssembly -ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>Auto</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp8 -int Auto -ai
-{% endhighlight %}
-</td>
-</tr>
-<tr>
-<td>None</td>
-<td>
-{% highlight c# %}
-dotnet new blazor -o BlazorApp8 -int None -ai
-{% endhighlight %}
-</td>
-</tr>
-</table>
-
-N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
 ### Create a new Blazor Web App in Visual Studio Code
 
@@ -299,37 +131,14 @@ dotnet --version
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
-For a Blazor Web App with `Server` interactive render mode & `Per page/component` interactivity location, use the following commands
+You need to configure the corresponding `Interactive render mode` and `Interactivity location` while creating a Blazor Web Application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet new blazor -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `WebAssembly` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int WebAssembly
-cd BlazorApp
-cd BlazorApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `Auto` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int Auto
-cd BlazorApp
-cd BlazorApp.Client
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -358,24 +167,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Add Import Namespaces
 
-<table style="width:100%">
-<tr>
-<th style="width:30%">Interactive Render Mode</th>
-<th style="width:70%">Description</th>
-</tr>
-<tr>
-<td>WebAssembly or Auto</td>
-<td> Open <b>~/_Imports.razor</b> file from the client project.</td>
-</tr>
-<tr>
-<td>Server</td>
-<td>Open <b>~/_import.razor</b> file, which is located in the `Components` folder.</td>
-</tr>
-</table>
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
+Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -386,7 +180,9 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
@@ -418,27 +214,6 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
-
-{% endhighlight %}
-{% endtabs %}
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -494,7 +269,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion compon
 </tr>
 </table>
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
