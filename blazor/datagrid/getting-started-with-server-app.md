@@ -99,7 +99,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Server side project using .NET CLI
+## Create a Blazor Server App using .NET CLI
 
 Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
@@ -134,9 +134,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion Blazor service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -147,7 +147,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
@@ -183,7 +185,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
     //Blazor DataGrid Component script reference.
-    @* <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script> *@
     <!-- <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script> -->
 </body>
 ```

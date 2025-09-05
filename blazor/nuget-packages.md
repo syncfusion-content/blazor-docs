@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# NuGet Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
+# NuGet Packages for Syncfusion® Blazor UI components
 
 Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 
@@ -1396,7 +1396,7 @@ The Blazor PDF Viewer supports viewing and reviewing PDF files in web applicatio
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer/">Syncfusion.Blazor.PdfViewer</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/web-assembly-application">PDF Viewer</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/web-assembly-application">PDF Viewer</a>
 </td>
 <td>
 SfPdfViewer
@@ -1441,7 +1441,7 @@ SfPdfViewer
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/server-side-application">PDF Viewer Server</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/server-side-application">PDF Viewer Server</a>
 </td>
 <td>
 SfPdfViewerServer
@@ -1486,7 +1486,7 @@ The SfPdfViewer is designed to be independent of web services, allowing users to
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer/">Syncfusion.Blazor.SfPdfViewer</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
 </td>
 <td>
 SfPdfViewer2
@@ -2090,11 +2090,14 @@ The Blazor Spreadsheet supports drag selection simplifies data manipulation and 
 <ul>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/">Syncfusion.Compression.Net.Core</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/">Syncfusion.Blazor.Ribbon</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/">Syncfusion.Blazor.Spinner</a></li>
