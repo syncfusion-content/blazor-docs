@@ -116,6 +116,8 @@ In addition to above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor co
 
 N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/how-to/refer-sfpdfviewer-script-in-application).
 
+N> To add custom Smart PDF Viewer script file in your application, refer [How to refer SfSmartPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/how-to/refer-sfsmartpdfviewer-script-in-application).
+
 ## Static web assets
 
 You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the NuGet package's static web assets.
