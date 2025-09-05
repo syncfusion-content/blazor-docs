@@ -623,7 +623,7 @@ The following code example demonstrates how to enable or disable the default too
             </SfCheckBox>
         </div>
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px"GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60" 
+            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px" GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60" 
                                       SymbolWidth="60" SymbolMargin="symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
