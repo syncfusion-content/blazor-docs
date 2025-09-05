@@ -606,7 +606,7 @@ The Symbol Palette offers tooltip support, displaying informative text when the 
 
 ### How to Enable or Disable Default Tooltip for Symbols in Symbol Palette
 
-By default, the symbol [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property within the [`GetSymbolInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method. The ShowTooltip property is set to **true** by default, which enables the tooltip.
+By default, the symbol [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property within the [`GetSymbolInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method. The `ShowTooltip` property is set to **true** by default, which enables the tooltip.
 
 The following code example demonstrates how to enable or disable the default tooltip for shapes in the Symbol Palette. 
 
@@ -623,9 +623,8 @@ The following code example demonstrates how to enable or disable the default too
             </SfCheckBox>
         </div>
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px"GetSymbolInfo="GetSymbolInfo"
-                                      Palettes="Palettes" SymbolHeight="60" SymbolWidth="60" 
-                                      SymbolMargin="symbolMargin">
+            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px" GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60" 
+                                      SymbolWidth="60" SymbolMargin="symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
@@ -635,7 +634,7 @@ The following code example demonstrates how to enable or disable the default too
 </div>
 
 @code {
-    // Controls tooltip visibility for symbols at runtime
+    // Controls tooltip visibility for symbols at runtime.
     private bool ShowTooltip = false;
     private SfSymbolPaletteComponent? symbolPalette;
     private SfDiagramComponent? diagram;
@@ -654,7 +653,7 @@ The following code example demonstrates how to enable or disable the default too
 
     protected override void OnInitialized()
     {
-        // Initialize all palette models with predefined shapes
+        // Initialize all palette models with predefined shapes.
         InitPaletteModel();
     }
 
@@ -662,39 +661,39 @@ The following code example demonstrates how to enable or disable the default too
     {
         if (firstRender && symbolPalette != null && diagram != null)
         {
-            // Set diagram as drag-drop target for symbol palette
+            // Set diagram as drag-drop target for symbol palette.
             symbolPalette.Targets = new DiagramObjectCollection<SfDiagramComponent> { diagram };
         }
     }
 
-    // Configures symbol tooltip display based on checkbox state
+    // Configures symbol tooltip display based on checkbox state.
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
-        // Enable/disable tooltip display based on user preference at runtime
+        // Enable/disable tooltip display based on user preference at runtime.
         return new SymbolInfo { ShowTooltip = ShowTooltip };
     }
 
     private void InitPaletteModel()
     {
-        // Add flow shapes to palette
+        // Add flow shapes to palette.
         AddFlowShape(NodeFlowShapes.Terminator, "Terminator", 0);
         AddFlowShape(NodeFlowShapes.Decision, "Decision", 1);
         AddFlowShape(NodeFlowShapes.Process, "Process", 2);
         AddFlowShape(NodeFlowShapes.Document, "Document", 3);
 
-        // Add basic shapes to palette
+        // Add basic shapes to palette.
         AddBasicShape(NodeBasicShapes.Rectangle, "Rectangle", 0);
         AddBasicShape(NodeBasicShapes.Ellipse, "Ellipse", 1);
         AddBasicShape(NodeBasicShapes.Pentagon, "Pentagon", 2);
         AddBasicShape(NodeBasicShapes.Hexagon, "Hexagon", 3);
 
-        // Add connectors to palette
+        // Add connectors to palette.
         AddConnector("Orthogonal", ConnectorSegmentType.Orthogonal, DecoratorShape.Arrow, 0);
         AddConnector("Straight", ConnectorSegmentType.Straight, DecoratorShape.Arrow, 1);
         AddConnector("Bezier", ConnectorSegmentType.Bezier, DecoratorShape.Arrow, 2);
         AddConnector("StraightOpp", ConnectorSegmentType.Straight, DecoratorShape.None, 3);
 
-        // Create palette collection with all shape categories
+        // Create palette collection with all shape categories.
         Palettes = new DiagramObjectCollection<Palette>
         {
             new Palette { Symbols = FlowShapesPalette, Title = "Flow Shapes", ID = "FlowShapes", IsExpanded = true },
@@ -714,8 +713,7 @@ The following code example demonstrates how to enable or disable the default too
             Style = new ShapeStyle { Fill = "#6495ED", StrokeColor = "#6495ED" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
         };
-
-        // Add tooltip for even-indexed shapes only
+        // Add tooltip for even-indexed shapes only.
         if (index % 2 == 0)
         {
             node.Tooltip = new DiagramTooltip 
@@ -724,8 +722,7 @@ The following code example demonstrates how to enable or disable the default too
                 ShowTipPointer = true, 
                 Position = Position.RightCenter 
             };
-        }
-        
+        }  
         FlowShapesPalette.Add(node);
     }
 
@@ -745,8 +742,7 @@ The following code example demonstrates how to enable or disable the default too
             Style = new ShapeStyle { Fill = "#9CCC65", StrokeColor = "#558B2F" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
         };
-
-        // Add tooltip for even-indexed shapes only
+        // Add tooltip for even-indexed shapes only.
         if (index % 2 == 0)
         {
             node.Tooltip = new DiagramTooltip 
@@ -756,7 +752,6 @@ The following code example demonstrates how to enable or disable the default too
                 Position = Position.RightCenter 
             };
         }
-
         BasicShapesPalette.Add(node);
     }
 
@@ -776,8 +771,7 @@ The following code example demonstrates how to enable or disable the default too
             },
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip
         };
-
-        // Add tooltip for even-indexed connectors only
+        // Add tooltip for even-indexed connectors only.
         if (index % 2 == 0)
         {
             connector.Tooltip = new DiagramTooltip 
@@ -787,16 +781,16 @@ The following code example demonstrates how to enable or disable the default too
                 ShowTipPointer = true 
             };
         }
-
         ConnectorsPalette.Add(connector);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/ShowToolTip)
 
-![Default Tooltip ShowToolTip as false in symbol palette](../images/defaultShowToolTiptooltip.gif)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/ShowToolTip).
 
->**Note:** This property is effective only when tooltip constraints are disabled for the symbol palette element.
+![EnableDisableTooltip](../images/defaultShowToolTiptooltip.gif)
+
+>**Note:** This `ShowToolTip` property is effective only when tooltip constraints are disabled for the symbol palette element.
 
 ### How to Provide Custom Tooltips for Symbols
 
