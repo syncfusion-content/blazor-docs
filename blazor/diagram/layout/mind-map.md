@@ -602,7 +602,7 @@ The following code demonstrates how to update the layout's orientation dynamical
     {
         if (obj is not Node node) 
             return;
-        // Apply default node styling
+        // Apply default node styling.
         node.Height = 100;
         node.Width = 100;
         node.BackgroundColor = "#6BA5D7";
