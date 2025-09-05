@@ -2092,7 +2092,7 @@ The Blazor Spreadsheet supports drag selection simplifies data manipulation and 
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/">Syncfusion.Compression.Net.Core</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a></li>
