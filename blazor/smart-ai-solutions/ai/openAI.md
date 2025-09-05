@@ -1,4 +1,3 @@
-Apply
 ---
 layout: post
 title: Using OpenAI with Syncfusion Blazor AI | Syncfusion

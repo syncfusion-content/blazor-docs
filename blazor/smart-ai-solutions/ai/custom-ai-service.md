@@ -1,4 +1,3 @@
-Apply
 ---
 layout: post
 title: Using Custom AI Services with Syncfusion Blazor AI | Syncfusion

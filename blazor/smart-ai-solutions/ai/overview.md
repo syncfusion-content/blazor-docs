@@ -7,7 +7,7 @@ control: AI Integration
 documentation: ug
 ---
 
-# Overview
+# Overview of Syncfusion Blazor AI Package
 The [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package delivers comprehensive AI integration capabilities for Blazor applications, providing unified access to leading AI services including [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), [Ollama](https://ollama.com), and custom AI providers. This library serves as the foundational infrastructure that powers Syncfusion's intelligent components, including the [Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started) and [Smart Paste Button](https://blazor.syncfusion.com/documentation/smart-paste/getting-started), enabling developers to create sophisticated, AI-enhanced user experiences. The package focuses on **text completion** capabilities, providing context-aware text generation, content suggestions, and intelligent text processing features that adapt to user input and application context.
 
 ## Key Features
