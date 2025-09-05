@@ -6,7 +6,6 @@ platform: Blazor
 component: Appearance
 documentation: ug
 ---
-
 # Blazor Themes in Syncfusion® Components
 
 The following list of themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
@@ -91,7 +90,7 @@ Refer to the comparison below for the default and optimized theme file sizes:
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes can be used in your Blazor application by referencing the style sheet.
 
-*  For **Blazor Web Apps using any render mode (Server, WebAssembly, or Auto)**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
+*  For **Blazor Web Apps using any interactive render mode (Server, WebAssembly, or Auto)**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
 * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 
 Using the below approaches the themes can be referenced in the Blazor application,
@@ -110,13 +109,13 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
+N> For **Blazor Web App with interaction mode as Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer theme style sheet from static web assets
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
-*  For **Blazor Web Apps using any render mode (Server, WebAssembly, or Auto)**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
+*  For **Blazor Web Apps using any interactive render mode (Server, WebAssembly, or Auto)**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
 
 * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 
@@ -1046,7 +1045,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes using Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown component.
 
-* For **Blazor Web Apps using any render mode (Server, WebAssembly, or Auto)**, the theme is changed based on query string at the **~/Components/App.razor** file
+* For **Blazor Web Apps using any interactive render mode (Server, WebAssembly, or Auto)**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
@@ -1375,7 +1374,7 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
    ![Customized CSS](images/custom-css-crg.png)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
-    * For **Blazor Web Apps using any render mode (Server, WebAssembly, or Auto)**, reference custom styles in `~/Components/App.razor` file
+    * For **Blazor Web Apps using any interactive render mode (Server, WebAssembly, or Auto)**, reference custom styles in `~/Components/App.razor` file
     * For **Blazor WASM Standalone App**, reference custom styles in `~/wwwroot/index.html` file.
 
 ```html
