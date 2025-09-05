@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol Palette Appearance in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Symbol Palette in Syncfusion Blazor Diagram component and much more details.
+title: Symbol Palette Appearance in Blazor Diagram | Syncfusion&reg;
+description: Checkout and learn here all about symbol palette appearance in Syncfusion&reg; Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -604,11 +604,193 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Symbol Palette offers tooltip support, displaying informative text when the mouse hovers over any node or connector. These tooltips can be customized individually for each symbol within the palette, enhancing user experience and providing additional context for the available elements.
 
-### How to Show Default Tooltips for Symbols
+### How to Enable or Disable Default Tooltip for Symbols in Symbol Palette
 
-By default, the symbol's ID is displayed as the tooltip for each symbol in the symbol palette. The following image illustrates how the tooltip appears when the mouse hovers over symbols in the symbol palette.
+By default, the symbol [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property within the [`GetSymbolInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method. The `ShowTooltip` property is set to **true** by default, which enables the tooltip.
 
-![Default Tooltip in symbol palette](../images/defaulttooltip.png)
+The following code example demonstrates how to enable or disable the default tooltip for shapes in the Symbol Palette. 
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<div style="display:flex;gap:20px;">
+    <div style="width:20%">
+        <div>
+            <SfCheckBox @bind-Checked="showTooltip" Label="Show Symbol ID as Tooltip" TChecked="bool">
+            </SfCheckBox>
+        </div>
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px" GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60" 
+                                      SymbolWidth="60" SymbolMargin="symbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+    <div>
+        <SfDiagramComponent @ref="diagram" Height="1000px" Width="1000px" />
+    </div>
+</div>
+
+@code {
+    // Controls tooltip visibility for symbols at runtime.
+    private bool showTooltip = false;
+    private SfSymbolPaletteComponent? symbolPalette;
+    private SfDiagramComponent? diagram;
+    private SymbolMargin symbolMargin = new SymbolMargin()
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
+    };
+
+    public DiagramObjectCollection<Palette> Palettes { get; set; } = new DiagramObjectCollection<Palette>();
+    public DiagramObjectCollection<NodeBase> FlowShapesPalette { get; set; } = new DiagramObjectCollection<NodeBase>();
+    public DiagramObjectCollection<NodeBase> BasicShapesPalette { get; set; } = new DiagramObjectCollection<NodeBase>();
+    public DiagramObjectCollection<NodeBase> ConnectorsPalette { get; set; } = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        // Initialize all palette models with predefined shapes.
+        InitPaletteModel();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && symbolPalette != null && diagram != null)
+        {
+            // Set diagram as drag-drop target for symbol palette.
+            symbolPalette.Targets = new DiagramObjectCollection<SfDiagramComponent> { diagram };
+        }
+    }
+
+    // Configures symbol tooltip display based on checkbox state.
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+        // Enable/disable tooltip display based on user preference at runtime.
+        return new SymbolInfo { ShowTooltip = showTooltip };
+    }
+
+    private void InitPaletteModel()
+    {
+        // Add flow shapes to palette.
+        AddFlowShape(NodeFlowShapes.Terminator, "Terminator", 0);
+        AddFlowShape(NodeFlowShapes.Decision, "Decision", 1);
+        AddFlowShape(NodeFlowShapes.Process, "Process", 2);
+        AddFlowShape(NodeFlowShapes.Document, "Document", 3);
+
+        // Add basic shapes to palette.
+        AddBasicShape(NodeBasicShapes.Rectangle, "Rectangle", 0);
+        AddBasicShape(NodeBasicShapes.Ellipse, "Ellipse", 1);
+        AddBasicShape(NodeBasicShapes.Pentagon, "Pentagon", 2);
+        AddBasicShape(NodeBasicShapes.Hexagon, "Hexagon", 3);
+
+        // Add connectors to palette.
+        AddConnector("Orthogonal", ConnectorSegmentType.Orthogonal, DecoratorShape.Arrow, 0);
+        AddConnector("Straight", ConnectorSegmentType.Straight, DecoratorShape.Arrow, 1);
+        AddConnector("Bezier", ConnectorSegmentType.Bezier, DecoratorShape.Arrow, 2);
+        AddConnector("StraightOpp", ConnectorSegmentType.Straight, DecoratorShape.None, 3);
+
+        // Create palette collection with all shape categories.
+        Palettes = new DiagramObjectCollection<Palette>
+        {
+            new Palette { Symbols = FlowShapesPalette, Title = "Flow Shapes", ID = "FlowShapes", IsExpanded = true },
+            new Palette { Symbols = BasicShapesPalette, Title = "Basic Shapes", ID = "BasicShapes", IsExpanded = true },
+            new Palette { Symbols = ConnectorsPalette, Title = "Connectors", ID = "Connectors", IsExpanded = true }
+        };
+    }
+
+    private void AddFlowShape(NodeFlowShapes shape, string id, int index)
+    {
+        var node = new Node
+        {
+            ID = id,
+            Shape = new FlowShape { Type = NodeShapes.Flow, Shape = shape },
+            Width = 60,
+            Height = 60,
+            Style = new ShapeStyle { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
+        };
+        // Add tooltip for even-indexed shapes only.
+        if (index % 2 == 0)
+        {
+            node.Tooltip = new DiagramTooltip 
+            { 
+                Content = $"This is {id} (Flow)", 
+                ShowTipPointer = true, 
+                Position = Position.RightCenter 
+            };
+        }  
+        FlowShapesPalette.Add(node);
+    }
+
+    private void AddBasicShape(NodeBasicShapes shapeType, string id, int index)
+    {
+        var node = new Node
+        {
+            ID = id,
+            Width = 60,
+            Height = 60,
+            Shape = new BasicShape
+            {
+                Type = NodeShapes.Basic,
+                Shape = shapeType,
+                CornerRadius = 10 // Rounded corners for visual appeal.
+            },
+            Style = new ShapeStyle { Fill = "#9CCC65", StrokeColor = "#558B2F" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
+        };
+        // Add tooltip for even-indexed shapes only.
+        if (index % 2 == 0)
+        {
+            node.Tooltip = new DiagramTooltip 
+            { 
+                Content = $"This is {id} (Basic)", 
+                ShowTipPointer = true, 
+                Position = Position.RightCenter 
+            };
+        }
+        BasicShapesPalette.Add(node);
+    }
+
+    private void AddConnector(string id, ConnectorSegmentType type, DecoratorShape decoratorShape, int index)
+    {
+        var connector = new Connector
+        {
+            ID = id,
+            Type = type,
+            SourcePoint = new DiagramPoint { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint { X = 60, Y = 60 },
+            Style = new ShapeStyle { StrokeWidth = 2, StrokeColor = "#757575" },
+            TargetDecorator = new DecoratorSettings
+            {
+                Shape = decoratorShape,
+                Style = new ShapeStyle { StrokeColor = "#757575", Fill = "#757575" }
+            },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip
+        };
+        // Add tooltip for even-indexed connectors only.
+        if (index % 2 == 0)
+        {
+            connector.Tooltip = new DiagramTooltip 
+            { 
+                Content = $"This is {id} (Connector)", 
+                Position = Position.RightCenter, 
+                ShowTipPointer = true 
+            };
+        }
+        ConnectorsPalette.Add(connector);
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/ShowToolTip).
+
+![EnableDisableTooltip](../images/defaultShowToolTiptooltip.gif)
+
+>**Note:** This `ShowToolTip` property is effective only when tooltip constraints are disabled for the symbol palette element.
 
 ### How to Provide Custom Tooltips for Symbols
 
