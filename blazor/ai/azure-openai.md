@@ -15,11 +15,14 @@ This section explains how to configure and use the [Syncfusion.Blazor.AI](https:
 
 Before you begin integrating Azure OpenAI with your Blazor application, ensure you have:
 
-* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+* Installed the following nuget packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
+Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,14 +41,20 @@ Open your Blazor application's `Program.cs` file and add the following configura
 ```csharp
 // Add required namespaces
 using Syncfusion.Blazor.AI;
+using Azure.AI.OpenAI;
+using Microsoft.Extensions.AI;
+using System.ClientModel;
 
 // Register Azure OpenAI credentials
-builder.Services.AddSingleton(new AIServiceCredentials
-{
-    ApiKey = "your-azure-openai-key", // Replace with your Azure OpenAI API key
-    DeploymentName = "your-deployment-name", // Specify the Azure OpenAI deployment name
-    Endpoint = new Uri("https://your-openai.azure.com/") // Replace with your Azure OpenAI endpoint
-});
+string azureOpenAiKey = "AZURE_OPENAI_KEY";
+string azureOpenAiEndpoint = "AZURE_OPENAI_ENDPOINT";
+string azureOpenAiModel = "AZURE_OPENAI_MODEL";
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
+     new Uri(azureOpenAiEndpoint),
+     new ApiKeyCredential(azureOpenAiKey)
+);
+IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
+builder.Services.AddChatClient(azureOpenAiChatClient);
 
 // Register the inference service
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -64,6 +73,8 @@ Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.QueryBuilder -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
 Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}

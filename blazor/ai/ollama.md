@@ -15,11 +15,13 @@ This section explains how to configure and use the [Syncfusion.Blazor.AI](https:
 
 Before you begin integrating Ollama with your Blazor application, ensure you have:
 
-* Installed the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package via NuGet
+* Installed the following nuget packages
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,13 +43,12 @@ Open your Blazor application's `Program.cs` file and add the following configura
 ```csharp
 // Add required namespaces
 using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OllamaSharp;
 
-builder.Services.AddSingleton(new AIServiceCredentials
-{
-    DeploymentName = "llama2", // Specify the Ollama model (e.g., "llama2", "mistral", "codellama")
-    Endpoint = new Uri("http://localhost:11434"), // Replace with your Ollama endpoint URL
-    SelfHosted = true // Set to true for Ollama
-});
+string ModelName = "MODEL_NAME";
+IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+builder.Services.AddChatClient(chatClient);
 
 // Register the inference backend
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -66,6 +67,8 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with **Olla
 Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+Install-Package Microsoft.Extensions.AI
+Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
