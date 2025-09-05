@@ -737,7 +737,7 @@ The following code example demonstrates how to enable or disable the default too
             {
                 Type = NodeShapes.Basic,
                 Shape = shapeType,
-                CornerRadius = 10 // Rounded corners for visual appeal
+                CornerRadius = 10 // Rounded corners for visual appeal.
             },
             Style = new ShapeStyle { Fill = "#9CCC65", StrokeColor = "#558B2F" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
