@@ -420,6 +420,66 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Customization
+
+Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html):
+
+- `TrackColor`: Specifies the track color.
+- `TrackRadius`: Specifies the track corner radius.
+- `ScrollbarColor`: Specifies the scrollbar color.
+- `ScrollbarRadius`: Specifies the scrollbar corner radius.
+- `GripColor`: Specifies the grip color. The grip is the draggable handle (thumb) within the scrollbar used to move the visible range.
+- `Height`: Specifies the scrollbar height.
+- `EnableZoom`: Enables or disables zooming via the scrollbar. When enabled, arrows appear at the scrollbar ends to zoom in or out; when disabled, arrows are hidden and zooming via the scrollbar is unavailable.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Sales History of Product X" >
+    <ChartPrimaryXAxis Title="Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#9e9e9e" TrackColor="#f5f5f5" ScrollbarColor="#e0e0e0" />
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Title="Profit ($)" RangePadding="ChartRangePadding.None">
+        <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#9e9e9e" TrackColor="#f5f5f5" ScrollbarColor="#e0e0e0" />
+    </ChartPrimaryYAxis>
+
+    <ChartLegendSettings Visible="false"></ChartLegendSettings>
+
+    <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
+        EnableSelectionZooming="true"></ChartZoomSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Area">
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+</SfChart>
+
+@code {
+    
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+    public List<ChartData> SalesDetails = new List<ChartData>
+    {
+        new ChartData { X= 1900, Y= 4 },
+        new ChartData { X= 1920, Y= 3.0 },
+        new ChartData { X= 1940, Y= 3.8 },
+        new ChartData { X= 1960, Y= 3.4 },
+        new ChartData { X= 2000, Y= 3.9 }
+    };
+}
+```
+![Blazor Area Chart with scrollbar customization](images/zoom/blazor-area-chart-scroll-bar-customization.png)
+
 ## Auto interval on zooming
 
 The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) property is set to **true**.
