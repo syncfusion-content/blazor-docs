@@ -7,7 +7,7 @@ component: Appearance
 documentation: ug
 ---
 
-# Blazor Themes in Syncfusion&reg; Components
+# Blazor Themes in Syncfusion® Components
 
 The following list of themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
 
