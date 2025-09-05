@@ -131,7 +131,7 @@ To refer to optimized CSS files, use the following syntax:
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5-lite.css" rel="stylesheet" />
 </head>
 ```
 
@@ -146,7 +146,7 @@ To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap5-lite.css" rel="stylesheet" />
 </head>
 ```
 
