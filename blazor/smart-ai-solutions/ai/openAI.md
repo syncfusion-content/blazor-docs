@@ -1,3 +1,4 @@
+Apply
 ---
 layout: post
 title: Using OpenAI with Syncfusion Blazor AI | Syncfusion
@@ -11,13 +12,13 @@ documentation: ug
 
 ## Introduction
 
-This section helps to configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to enable AI functionalities in your Blazor applications. The package allows seamless integration with OpenAI’s API, empowering any Syncfusion Blazor component with intelligent features.
+This section demonstrates configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to enable AI functionalities in Blazor applications. The package provides seamless integration with OpenAI's API, empowering Syncfusion Blazor components with intelligent features such as anomaly detection, data analysis, and content generation.
 
 ## Prerequisites
 
-Before you begin integrating OpenAI with your Blazor application, ensure you have:
+Before integrating OpenAI with your Blazor application, ensure you have:
 
-* Installed the following nuget packages:
+* Installed the following NuGet packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
@@ -29,6 +30,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 {% endtabs %}
 * Obtained an [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) from the OpenAI platform
 * Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components
+* Configured secure API key storage using environment variables or user secrets
 
 ## Configuration Steps
 
@@ -57,7 +59,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ## Anomaly Detection with OpenAI and Syncfusion Blazor Grid
 
-This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid component. The grid displays machine data (e.g., MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with irrelevant production rates relative to other factors, updating the grid with anomaly descriptions and visual styling.
+This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid component. The grid displays machine data (MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with inconsistent production rates relative to other operational factors, updating the grid with anomaly descriptions and visual styling.
 
 ### Prerequisites
 - Install the following NuGet packages:
