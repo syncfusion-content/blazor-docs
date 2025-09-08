@@ -439,14 +439,14 @@ Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSett
     <ChartPrimaryXAxis Title="Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
         <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
-             TrackRadius="8" ScrollbarRadius="8" GripColor="#BD000F" TrackColor="#FF9AA2" ScrollbarColor="#EE5A5A" />
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#9e9e9e" TrackColor="#f5f5f5" ScrollbarColor="#e0e0e0" />
     </ChartPrimaryXAxis>
 
     <ChartPrimaryYAxis Title="Profit ($)" RangePadding="ChartRangePadding.None">
         <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Height="16" EnableZoom="true"
-             TrackRadius="8" ScrollbarRadius="8" GripColor="#BD000F" TrackColor="#FF9AA2" ScrollbarColor="#EE5A5A" />
+             TrackRadius="8" ScrollbarRadius="8" GripColor="#9e9e9e" TrackColor="#f5f5f5" ScrollbarColor="#e0e0e0" />
     </ChartPrimaryYAxis>
 
     <ChartLegendSettings Visible="false"></ChartLegendSettings>

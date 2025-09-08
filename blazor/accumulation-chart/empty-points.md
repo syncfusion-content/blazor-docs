@@ -96,9 +96,9 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 ![Customizing Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-empty-point-customization.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqiLMqfySLYAVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Handling when no data is available
+## Handling No Data
 
-When no data is available to render in the chart, the `NoDataTemplate` property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
+When no data is available to render in the accumulation chart, the `NoDataTemplate` property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
 
 ```cshtml 
 
