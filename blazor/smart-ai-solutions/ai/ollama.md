@@ -9,13 +9,15 @@ documentation: ug
 
 # Ollama Integration with Syncfusion Blazor AI
 
-This section explains how to configure and use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+## Introduction
+
+This section demonstrates configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, empowering Syncfusion Blazor components with intelligent features such as data restructuring, content analysis, and hierarchical organization without requiring external API dependencies.
 
 ## Prerequisites
 
-Before you begin integrating Ollama with your Blazor application, ensure you have:
+Before integrating Ollama with your Blazor application, ensure you have:
 
-* Installed the following nuget packages
+* Installed the following NuGet packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
@@ -25,7 +27,7 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
-* Installed **Ollama** on your local system (no virtual machines) following the instructions at [Ollama's official site](https://ollama.com/)
+* Installed **Ollama** on your local system (no virtual machines required) following the instructions at [Ollama's official site](https://ollama.com/)
 * Downloaded an Ollama model (e.g., `llama2`) using the command:
   ```bash
   ollama run llama2
@@ -56,9 +58,10 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ##  Smart Data Restructuring with Ollama and TreeGrid
 
-This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform smart data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, updating the TreeGrid to reflect the corrected structure.
+This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform intelligent data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, automatically updating the TreeGrid to reflect the corrected hierarchical structure.
 
 ### Prerequisites
+
 - Install the following NuGet packages:
 
 {% tabs %}
