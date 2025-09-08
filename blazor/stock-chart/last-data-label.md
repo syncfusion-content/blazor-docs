@@ -9,11 +9,11 @@ documentation: ug
 
 # Last Data Label in Blazor Stock Chart Component
 
-The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the stock chart. The label can be enabled and customized using the `StockChartLastDataLabel` property.
+The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the stock chart. The label can be enabled and customized using the [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) property.
 
 ## Enable last data label
 
-To enable the last data label, set the `ShowLabel` property of the `StockChartLastDataLabel` configuration to **true** within the series settings.
+To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_ShowLabel) property of the `StockChartLastDataLabel` configuration to **true** within the series settings.
 
 ```cshtml
 
@@ -63,23 +63,23 @@ To enable the last data label, set the `ShowLabel` property of the `StockChartLa
 The appearance of the last data label can be customized using various properties defined across different settings.
 
 In the `StockChartLastDataLabel`:
-* `Background`: Sets the background color of the last data label container.
-* `LineColor`: Sets the color of the indicator line.
-* `LineWidth`: Sets the width of the indicator line.
-* `DashArray`: Defines the dash pattern of the indicator line.
-* `Rx`: Sets the horizontal corner radius of the label container.
-* `Ry`: Sets the vertical corner radius of the label container.
+* [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Background): Sets the background color of the last data label container.
+* [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineColor): Sets the color of the indicator line.
+* [LineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineWidth): Sets the width of the indicator line.
+* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_DashArray): Defines the dash pattern of the indicator line.
+* [Rx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Rx): Sets the horizontal corner radius of the label container.
+* [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Ry): Sets the vertical corner radius of the label container.
 
-In the `StockChartLastDataLabelBorder`:
-* `Color`: Sets the border color of the label container.
-* `Width`: Sets the border width of the label container.
+In the [StockChartLastDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html):
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelBorder_Color): Sets the border color of the label container.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelBorder_Width): Sets the border width of the label container.
 
-In the `StockChartLastDataLabelFont`:
-* `Size`: Sets the font size of the label text.
-* `Color`: Sets the font color of the label text.
-* `FontFamily`: Specifies the font family of the label text.
-* `FontWeight`: Sets the font weight of the label text.
-* `FontStyle`: Sets the font style of the label text.
+In the [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html):
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_Size): Sets the font size of the label text.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_Color): Sets the font color of the label text.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_FontFamily): Specifies the font family of the label text.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_FontWeight): Sets the font weight of the label text.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_FontStyle): Sets the font style of the label text.
 
 ```cshtml
 
