@@ -738,9 +738,9 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 ## Axis label template
 
-The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the `LabelTemplate` property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) component.
+The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelTemplate) property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) component.
 
-Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the `ChartAxisLabelInfo` class.
+Within the `LabelTemplate`, the implicit parameter context provides access to label-specific information. To utilize this data, cast context to the [ChartAxisLabelInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisLabelInfo.html) class.
 
 ```cshtml
 
@@ -789,6 +789,7 @@ Within the `LabelTemplate`, the implicit parameter context provides access to la
 
 ```
 ![Blazor Column Chart Axis with Template using Text](images/axis-labels/blazor-column-chart-axis-text-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroXaDFiQqYQesU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
