@@ -98,7 +98,7 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ## Handling No Data
 
-When no data is available to render in the accumulation chart, the `NoDataTemplate` property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
+When no data is available to render in the accumulation chart, the [NoDataTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_NoDataTemplate) property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
 
 ```cshtml 
 
@@ -108,8 +108,7 @@ When no data is available to render in the accumulation chart, the `NoDataTempla
 <SfAccumulationChart @ref="accChart" Width="80%" Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
     <NoDataTemplate>
     <div style="border: 2px solid orange; display: row-flex; align-items: center; justify-content: center; align-content: center; white-space: normal; text-align: center; width: inherit; height: inherit; font-weight: bolder; font-size: medium;">
-        <div><img src="images/empty/no-data.png" alt="No Data" style="height: 150px;" /></div>
-        <div style="font-size:15px;"><strong>No data available to display.</strong></div>
+        <div style="font-size:15px; margin-bottom:10px"><strong>No data available to display.</strong></div>
         <SfButton IconCss="e-icons e-refresh" OnClick="LoadData">Load Data</SfButton>
     </div>
 </NoDataTemplate>
@@ -149,6 +148,7 @@ When no data is available to render in the accumulation chart, the `NoDataTempla
 ```
 
 ![No Data Template in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-no-data-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVojONbrgWPsFkS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
