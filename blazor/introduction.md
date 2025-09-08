@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Welcome to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Welcome to Syncfusion® Blazor Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are native Blazor components and not wrappers over EJ2 components.
 
