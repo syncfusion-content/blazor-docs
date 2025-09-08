@@ -79,12 +79,9 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started">Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">Multicolumn ComboBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/spreadsheet/getting-started-webapp">Spreadsheet</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app">PDF Viewer</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app">Word Processor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
         <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
