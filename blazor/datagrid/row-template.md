@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Template in Blazor DataGrid | Syncfusion
-description: Learn how to customize the appearance and layout of rows in the Syncfusion® Blazor DataGrid component using row templates.
+description: Learn how to customize the appearance and layout of rows in the Syncfusion Blazor DataGrid component using row templates.
 platform: Blazor
 control: DataGrid
 documentation: ug
