@@ -417,7 +417,7 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUWhVmqBcsUFix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoDPjIApZlKQMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Pointer Animation](./images/blazor-circulargauge-pointer-animation.gif)
 

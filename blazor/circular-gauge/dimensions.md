@@ -20,9 +20,17 @@ You can set the size of the Circular Gauge in pixel as demonstrated below.
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
-<SfCircularGauge Width= "200px" Height= "200px"></SfCircularGauge>
+<SfCircularGauge Width= "200px" Height= "200px">
+    <CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
+</SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrKihBwKMBZGKzB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBoNvDyhNOaXuis?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Size in Pixel](./images/blazor-circulargauge-size.png)
 
@@ -34,11 +42,19 @@ By setting value in percentage, gauge gets its dimension with respect to its con
 @using Syncfusion.Blazor.CircularGauge
 
 <div style="height:450px; width:450px">
-    <SfCircularGauge Width="50%" Height="50%"></SfCircularGauge>
+    <SfCircularGauge Width="50%" Height="50%">
+        <CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
+        </CircularGaugeAxes>
+    </SfCircularGauge>
 </div>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKsVVGACLBzBrP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIDljSVWAiPfmX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)
 
