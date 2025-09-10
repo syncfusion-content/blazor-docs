@@ -24,7 +24,7 @@ Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Bla
 
 ## Prerequisites
 
-* .NET SDK 6.0 (Latest .NET SDK 6.0.101 or above)
+* .NET SDK 8.0 or above
 
 * The latest preview of Visual Studio 2022 17.1 or above, with required workloads:
    * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
@@ -38,30 +38,28 @@ You can create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Tem
 
 The above steps creates a multi-targeted .NET MAUI Blazor app that can be deployed to Android, iOS, macOS, and Windows.
 
-In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the Blazor app. The root Blazor component for the app is in `Main.razor`, which Razor compiles into a type named `Main` in the application's root namespace.
+In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the Blazor app. The root Blazor component for the app is in `Routes.razor`, which Razor compiles into a type named `Routes` in the application's root namespace.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Microsoft.AspNetCore.Components.WebView.Maui"
              xmlns:local="clr-namespace:MauiApp1"
-             x:Class="MauiApp1.MainPage"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             x:Class="MauiApp1.MainPage">
 
-    <b:BlazorWebView HostPage="wwwroot/index.html">
-        <b:BlazorWebView.RootComponents>
-            <b:RootComponent Selector="app" ComponentType="{x:Type local:Main}" />
-        </b:BlazorWebView.RootComponents>
-    </b:BlazorWebView>
+    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+        <BlazorWebView.RootComponents>
+            <RootComponent Selector="#app" ComponentType="{x:Type local:Components.Routes}" />
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
 
 </ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
 
-For more details refer [Create a .NET MAUI Blazor app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
+For more details refer [Create a .NET MAUI Blazor app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. 
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -117,7 +115,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Now add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any razor file. Here, the Calendar component is added in `~/Pages/index.razor` page under the `~/Pages` folder.
+Now add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any razor file. Here, the Calendar component is added in `~/Home.razor` page under the `~/Components/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
