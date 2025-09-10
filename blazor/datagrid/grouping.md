@@ -482,7 +482,7 @@ The following example demonstrates how to dynamically enable or disable the `Per
 
 <div style="display:flex;gap: 5px;">
     <label> Enable or disable grouped row state persistence</label>
-    <SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
+    <SfSwitch OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
 
 <SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true">
@@ -497,18 +497,15 @@ The following example demonstrates how to dynamically enable or disable the `Per
 
 @code {
     public List<OrderData> GridData { get; set; }
-    SfGrid<OrderData> Grid;
+    SfGrid<OrderData>? Grid { get; set; }
 
-    public bool IsPersist { get; set; } = true;
-
-    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+    private bool IsPersist { get; set; } = true;
+    private string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
-
-    private bool? isChecked = null;
 
     private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
