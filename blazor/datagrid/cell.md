@@ -766,10 +766,7 @@ The Syncfusion Blazor DataGrid allows you to display information about the Grid 
 
 ### Show tooltip
 
-The Syncfusion Blazor DataGrid provides a built-in feature to display tooltips when hovering over header and content cells. You can enable this feature by setting the `ShowTooltip` property to **true** in the DataGrid.
-By default, it shows the cell value for both header and content cells. For special types like templates, it displays the row data of the corresponding cells.
-
-The following example demonstrates, how to set the `ShowTooltip` property in the DataGrid.
+The Syncfusion Blazor DataGrid provides a built-in feature to display tooltips when hovering over header and content cells. You can enable this feature by setting the `ShowTooltip` property to **true** in the DataGrid. By default, it shows the cell value for both header and content cells. For special types like templates, it displays the row data of the corresponding cells.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -778,77 +775,70 @@ The following example demonstrates, how to set the `ShowTooltip` property in the
 
 <SfGrid DataSource="@Orders" ShowTooltip="true" Width="700">
      <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="70"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
    </GridColumns>
 </SfGrid>
 
 @code {
-   private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }       
+    }
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Order.cs" %}
+{% highlight c# tabtitle="OrderData.cs" %}
 
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-           this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
-                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
     }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", new DateTime(2025, 07, 07), 32.38));
+            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2025, 07, 07), 92.38));
+            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2025, 07, 07), 62.77));
+            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2025, 07, 07), 12.38));
+            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2025, 07, 07), 82.38));
+            Orders.Add(new OrderData(10253, "CHOPS", new DateTime(2025, 07, 07), 31.31));
+            Orders.Add(new OrderData(10254, "RICSU", new DateTime(2025, 07, 07), 22.37));
+            Orders.Add(new OrderData(10255, "WELLI", new DateTime(2025, 07, 07), 44.34));
+            Orders.Add(new OrderData(10256, "RICSU", new DateTime(2025, 07, 07), 31.33));
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjFVnKuSghwyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSNYMiAEMphkRe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Tooltip template
 
-The Syncfusion Blazor DataGrid component provides a built-in option to customize tooltip content for both header and content cells. This can be achieved using the `TooltipTemplate` property, which accepts a `RenderFragment` under the `GridTemplates` component.
+The Syncfusion Blazor DataGrid component provides a built-in option to customize tooltip content for both header and content cells. This can be achieved using the `TooltipTemplate` property, which accepts a `RenderFragment` under the `GridTemplates` component. This feature allows you to display additional information about columns when users hover over them, enhancing the clarity and usability of the DataGrid.
 
-This feature allows you to display additional information about columns when users hover over them, enhancing the clarity and usability of the DataGrid.
 Tooltip customization is supported through the `TooltipTemplateContext`, which provides access to the following built-in properties:
 <ul>
     <li><strong>Value</strong> – Displays the content of the hovered cell: the column name for header cells or the cell value for content cells.</li>
@@ -865,19 +855,18 @@ The following sample demonstrates a custom tooltip implementation using the `Too
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@GridData" Height="330" ShowTooltip="true" Width="700">
+<SfGrid DataSource="@Orders" Height="330" ShowTooltip="true" Width="700">
     <GridTemplates>
         <TooltipTemplate>
             @{
                 var tooltip = context as TooltipTemplateContext;
-                var order = tooltip?.RowData as OrdersDetails;
+                var order = tooltip?.Data as OrdersDetails;
                 if (tooltip?.RowIndex == -1)
                 {
                     if (tooltip.Value == "Order ID")
                     {
                         <span><strong>@tooltip.Value: </strong>Unique number used to identify each customer order.</span>
                     }
-
                     else if (tooltip.Value == "Customer ID")
                     {
                         <div>
@@ -893,7 +882,6 @@ The following sample demonstrates a custom tooltip implementation using the `Too
                         <span><strong>@tooltip.Value: </strong>Name of the city where the order is delivered.</span>
                     }
                 }
-
                 else
                 {
                     var fieldName = tooltip?.Column?.Field;
@@ -903,27 +891,23 @@ The following sample demonstrates a custom tooltip implementation using the `Too
                             case nameof(order.OrderID):
                                 <p style="margin: 2px 0;">@((MarkupString)GetStatusMessage(order.Status, order.OrderDate))</p>
                                 break;
-
                             case nameof(OrdersDetails.CustomerID):
                                 <div>
                                     <p style="margin: 2px 0;">
-                                        <strong>EmailID: </strong><a href="mailto:@order.Email">@order.Email</a>
+                                        <strong>Email: </strong><a href="mailto:@order.Email">@order.Email</a>
                                     </p>
                                 </div>
                                 break;
-
                             case nameof(OrdersDetails.Freight):
-                                    <p style="margin: 4px 0;">
-                                        <strong>Delivery Type: </strong>
-                                        @GetDeliveryType(order.Freight)
-                                    </p>
+                                <p style="margin: 4px 0;">
+                                    <strong>Delivery Type: </strong>
+                                    @GetDeliveryType(order.Freight)
+                                </p>
                                 break;
-
                             case nameof(OrdersDetails.ShipCity):
-                            <span class="e-icons e-location"></span>
+                                <span class="e-icons e-location"></span>
                                 <strong>Country: </strong> @order.ShipCountry
                                 break;
-
                             default:
                                 <strong>@tooltip?.Column?.Field: </strong> @tooltip.Value
                                 break;
@@ -934,9 +918,9 @@ The following sample demonstrates a custom tooltip implementation using the `Too
         </TooltipTemplate>
     </GridTemplates>
     <GridColumns>
-        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.Freight) Format="C2" Width="80" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) Format="C2" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -946,26 +930,14 @@ The following sample demonstrates a custom tooltip implementation using the `Too
         position: relative;
         top: 2px; 
     }
-
 </style>
 
 @code {
-    public List<OrdersDetails> GridData { get; set; }
+    public List<OrdersDetails> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        GridData = new List<OrdersDetails>
-        {
-            new OrdersDetails { OrderID = 1001, CustomerID = "Nancy", Freight = 80, ProductName = "Laptop", OrderDate = DateTime.Now.AddDays(-1), ShipCity = "Reims", ShipCountry = "France", Status = "Delivered", Location = "France", Email = "nancy@example.com", DeliveryDays = "5-7 days" },
-            new OrdersDetails { OrderID = 1002, CustomerID = "Andrew", Freight = 120, ProductName = "Smartphone", OrderDate = DateTime.Now.AddDays(3), ShipCity = "Munster", ShipCountry = "Germany", Status = "Pending", Location = "Germany", Email = "andrew@example.com" , DeliveryDays = "3-4 days"},
-            new OrdersDetails { OrderID = 1003, CustomerID = "Janet", Freight = 180, ProductName = "Tablet", OrderDate = DateTime.Now.AddDays(-3), ShipCity = "Charleroi", ShipCountry = "Belgium", Status = "Cancelled", Location = "Belgium", Email = "janet@example.com" , DeliveryDays = "1-2 days"},
-            new OrdersDetails { OrderID = 1004, CustomerID = "Margaret", Freight = 60, ProductName = "Monitor", OrderDate = DateTime.Now.AddDays(-4), ShipCity = "Lyon", ShipCountry = "France", Status = "Delivered", Location = "France", Email = "margaret@example.com" , DeliveryDays = "5-7 days"},
-            new OrdersDetails { OrderID = 1005, CustomerID = "Steven", Freight = 130, ProductName = "Keyboard", OrderDate = DateTime.Now.AddDays(4), ShipCity = "Delhi", ShipCountry = "India", Status = "Pending", Location = "India", Email = "steven@example.com" , DeliveryDays = "3-4 days"},
-            new OrdersDetails { OrderID = 1006, CustomerID = "Michael", Freight = 220, ProductName = "Mouse", OrderDate = DateTime.Now.AddDays(-6), ShipCity = "Tokyo", ShipCountry = "Japan", Status = "Delivered", Location = "Japan", Email = "michael@example.com" , DeliveryDays = "1-2 days" },
-            new OrdersDetails { OrderID = 1007, CustomerID = "Robert", Freight = 90, ProductName = "Printer", OrderDate = DateTime.Now.AddDays(-7), ShipCity = "Toronto", ShipCountry = "Canada", Status = "Cancelled", Location = "Canada", Email = "robert@example.com" , DeliveryDays = "5-7 days"},
-            new OrdersDetails { OrderID = 1008, CustomerID = "Laura", Freight = 160, ProductName = "Camera", OrderDate = DateTime.Now.AddDays(1), ShipCity = "Sydney", ShipCountry = "Australia", Status = "Pending", Location = "Australia", Email = "laura@example.com", DeliveryDays = "1-2 days" },
-            new OrdersDetails { OrderID = 1009, CustomerID = "Anne", Freight = 90, ProductName = "Laptop", OrderDate = DateTime.Now.AddDays(-9), ShipCity = "Reims", ShipCountry = "France", Status = "Delivered", Location = "France", Email = "anne@example.com" ,DeliveryDays = "5-7 days" },
-            };
+        Orders = OrdersDetails.GetAllRecords();
     }
     private string GetStatusMessage(string status, DateTime? orderDate)
     {
@@ -986,26 +958,62 @@ The following sample demonstrates a custom tooltip implementation using the `Too
         else
             return "Premium Delivery";
     }
-    public class OrdersDetails
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrdersDetails
+{
+    public static List<OrdersDetails> Orders = new List<OrdersDetails>();
+    public OrdersDetails()
     {
-        public int? OrderID { get; set; }
-        public string? CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double Freight { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipCountry { get; set; }
-        public string? Status { get; set; }
-        public string? Location { get; set; }
-        public string? ProductName { get; set; }
-        public string? Email { get; set; }
-        public string? DeliveryDays { get; set; }
+
     }
+    public OrdersDetails(int OrderID, string CustomerID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry, string Status, string Location, string Email)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.Status = Status;
+        this.ShipCountry = ShipCountry;
+        this.Location = Location;
+        this.Email = Email;
+    }
+    public static List<OrdersDetails> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            Orders.Add (new OrdersDetails (1001, "Nancy", 80, DateTime.Now.AddDays(-1), "Reims", "France", "Delivered", "France", "nancy@example.com"));
+            Orders.Add (new OrdersDetails (1002, "Andrew", 120, DateTime.Now.AddDays(3), "Munster", "Germany", "Pending", "Germany", "andrew@example.com"));
+            Orders.Add (new OrdersDetails (1003, "Janet", 180, DateTime.Now.AddDays(-3), "Charleroi", "Belgium", "Cancelled", "Belgium", "janet@example.com"));
+            Orders.Add (new OrdersDetails (1004, "Margaret", 60, DateTime.Now.AddDays(-4), "Lyon", "France", "Delivered", "France", "margaret@example.com"));
+            Orders.Add (new OrdersDetails (1005, "Steven", 130, DateTime.Now.AddDays(4), "Delhi", "India", "Pending", "India", "steven@example.com"));
+            Orders.Add (new OrdersDetails (1006, "Michael", 220, DateTime.Now.AddDays(-6), "Tokyo", "Japan", "Delivered", "Japan", "michael@example.com"));
+            Orders.Add (new OrdersDetails (1007, "Robert", 90, DateTime.Now.AddDays(-7), "Toronto", "Canada", "Cancelled", "Canada", "robert@example.com"));
+            Orders.Add (new OrdersDetails (1008, "Laura", 160, DateTime.Now.AddDays(1), "Sydney", "Australia", "Pending", "Australia", "laura@example.com"));
+            Orders.Add (new OrdersDetails (1009, "Anne", 90, DateTime.Now.AddDays(-9), "Reims", "France", "Delivered", "France", "anne@example.com"));
+        }
+        return Orders;
+    }
+                    
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string Status { get; set; }
+    public string Location { get; set; }
+    public string Email { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDryjujMCPDfWrVi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBItaiifNQmMncI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, custom tooltips will be displayed if the `ShowTooltip` property is set to **true**.
 
