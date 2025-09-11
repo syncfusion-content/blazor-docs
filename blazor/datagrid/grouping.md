@@ -468,10 +468,7 @@ public class OrderData
 
 ## Persist grouped row expand or collapse state
  
-The Syncfusion Blazor DataGrid offers the ability to persist the expand or collapse state of grouped rows across various data operations such as paging, sorting, filtering, and editing. By default, these operations reset the grouped rows to their initial collapsed or expanded state.
-To retain the current state of grouped rows and ensure a consistent user experience, set the [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) property to **true**. This also applies when using external grouping methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
-
-The following example demonstrates how to dynamically enable or disable the `PersistGroupState` property in the DataGrid.
+The Syncfusion Blazor DataGrid offers the ability to persist the expand or collapse state of grouped rows across various data operations such as paging, sorting, filtering, and editing. By default, these operations reset the grouped rows to their initial collapsed or expanded state. To retain the current state of grouped rows and ensure a consistent user experience, set the [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) property to **true**. This also applies when using external grouping methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -481,13 +478,14 @@ The following example demonstrates how to dynamically enable or disable the `Per
 
 <div style="display:flex;gap: 5px;">
     <label> Enable or disable grouped row state persistence</label>
-    <SfSwitch OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
+    <SfSwitch @bind-checked="IsPersist" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
 </div>
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true">
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
     <GridGroupSettings Columns="@Initial" PersistGroupState=@IsPersist></GridGroupSettings>
+    <GridEditSettings AllowEditing="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
@@ -496,8 +494,6 @@ The following example demonstrates how to dynamically enable or disable the `Per
 
 @code {
     public List<OrderData> GridData { get; set; }
-    SfGrid<OrderData>? Grid { get; set; }
-
     private bool IsPersist { get; set; } = true;
     private string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
@@ -506,7 +502,7 @@ The following example demonstrates how to dynamically enable or disable the `Per
         GridData = OrderData.GetAllRecords();
     }
 
-    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
         if (args.Checked == true)
         {
@@ -540,19 +536,20 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
+            int code = 10001;
+            string[] customerIDs = { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI" };
+            string[] cities = { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" };
+            string[] shipNames = { "Vins et alcools Chevali", "Toms Spezialitäten", "Hanari Carnes", 
+                                    "Victuailles en stock", "Suprêmes délices", "Chop-suey Chinese", 
+                                    "Richter Supermarkt", "Wellington Import" };
+            for (int i = 0; i < 45; i++)
             {
-                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                code += 5;
+                string customerID = customerIDs[i % customerIDs.Length];
+                string city = cities[i % cities.Length];
+                string shipName = shipNames[i % shipNames.Length];
+                
+                Orders.Add(new OrderData(code, customerID, city, shipName));
+                code++;
             }
         }
         return Orders;
@@ -567,7 +564,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroDvrRpDAvxclV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrotYiMzstTQygM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sort grouped columns in descending order during initial grouping
 
