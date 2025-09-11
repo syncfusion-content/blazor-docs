@@ -704,7 +704,7 @@ The following code example demonstrates how to enable or disable the default too
 
     private void AddFlowShape(NodeFlowShapes shape, string id, int index)
     {
-        var node = new Node
+        Node node = new Node
         {
             ID = id,
             Shape = new FlowShape { Type = NodeShapes.Flow, Shape = shape },
@@ -728,7 +728,7 @@ The following code example demonstrates how to enable or disable the default too
 
     private void AddBasicShape(NodeBasicShapes shapeType, string id, int index)
     {
-        var node = new Node
+        Node node = new Node
         {
             ID = id,
             Width = 60,
@@ -757,7 +757,7 @@ The following code example demonstrates how to enable or disable the default too
 
     private void AddConnector(string id, ConnectorSegmentType type, DecoratorShape decoratorShape, int index)
     {
-        var connector = new Connector
+        Connector connector = new Connector
         {
             ID = id,
             Type = type,
