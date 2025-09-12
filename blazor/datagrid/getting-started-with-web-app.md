@@ -226,7 +226,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DataGrid 
 
-Add the Syncfusion Blazor DataGrid in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -424,6 +424,9 @@ The grouping feature enables you to view the Syncfusion Blazor DataGrid record i
 ## Handling exceptions
 
 Exceptions occurred during Syncfusion Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+
+**TValue**: Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
+**GridEvents**: When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
 
 The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
