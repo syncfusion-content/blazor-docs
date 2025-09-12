@@ -231,9 +231,9 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfZiBaJrrIVqHN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVJDsrOTBrCTUyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
 
 ## Configuring DropDownList
 
@@ -491,14 +491,14 @@ The edited data is submitted to the server and you can see the new values gettin
     public void OnSuccess(ActionEventArgs<string> args)
     {
         this.PreviousValue = this.CurrentValue;
-        this.CurrentValue = args.Value;
+        this.CurrentValue = this.DropdownValue;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzXiLafrzKnAQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)" %}
+![Blazor In-place Editor with modified value](./images/blazor-inplace-editor-refresh-data.gif)
 
 ## See also
 
