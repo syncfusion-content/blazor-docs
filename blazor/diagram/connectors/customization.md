@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
+title: Connector Customization in Blazor Diagram Component | Syncfusion&reg;
+description: Checkout and learn here all about connector customization in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Customization in Blazor Diagram Component
+# Connector Customization in Blazor Diagram Component
 
 ## How to Customize Connector Decorators
 
@@ -311,6 +311,8 @@ The following code example illustrates how to enable line bridging.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
+
+>**Note:** Bridging support is not applicable for the layout.
 
 The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
 
@@ -819,7 +821,153 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
 
+## How to Limit Segment Thumbs in a Connector
 
+ The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector is used to limit the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
+</SfDiagramComponent>
+
+@code {
+    private SfDiagramComponent? diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        // Create orthogonal connector with custom segments and styling.
+        Connector orthogonalConnector = new Connector()
+        {
+            ID = "orthogonal",
+            SourcePoint = new DiagramPoint() { X = 550, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 650, Y = 300 },
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" }
+            },
+            Type = ConnectorSegmentType.Orthogonal,
+            // Define orthogonal segments (Type on each segment is redundant and omitted).
+            Segments = new DiagramObjectCollection<ConnectorSegment>()
+            {
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Right
+                },
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Bottom
+                }
+            },
+            MaxSegmentThumbs = 2
+        };
+        connectors.Add(orthogonalConnector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb).
+
+![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
+
+The example below demonstrates how to dynamically update the `MaxSegmentThumbs` value at runtime for both selected connectors and all connectors in the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
+
+<div class="d-flex flex-column gap-3">
+    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+        <SfButton Content="Update Selected Connectors (Max 5)" IsPrimary="true" OnClick="UpdateSelectedConnectorThumbs" CssClass="btn-selected">
+        </SfButton>
+        <SfButton Content="Update All Connectors (Max 6)" OnClick="UpdateAllConnectorThumbs"CssClass="btn-all">
+        </SfButton>
+    </div>
+    <SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
+    </SfDiagramComponent>
+</div>
+
+@code {
+    private SfDiagramComponent? diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        // Create orthogonal connector with custom segments and styling.
+        Connector orthogonalConnector = new Connector()
+        {
+            ID = "orthogonal",
+            SourcePoint = new DiagramPoint() { X = 550, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 650, Y = 300 },
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle() { StrokeColor = "#6495ED", Fill = "#6495ED" }
+            },
+            Type = ConnectorSegmentType.Orthogonal,
+            // Define orthogonal segments (Type on each segment is redundant and omitted).
+            Segments = new DiagramObjectCollection<ConnectorSegment>()
+            {
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Right
+                },
+                new OrthogonalSegment
+                {
+                    Length = 60,
+                    Type = ConnectorSegmentType.Orthogonal,
+                    Direction = Direction.Bottom
+                }
+            },
+            // Limit the number of visible/draggable segment thumbs.
+            MaxSegmentThumbs = 2
+        };
+        connectors.Add(orthogonalConnector);
+    }
+    
+    // Updates MaxSegmentThumbs to 5 for all currently selected connectors at runtime.
+    private void UpdateSelectedConnectorThumbs()
+    {
+        if (diagram?.SelectionSettings?.Connectors != null)
+        {
+            for (int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                // Set segment thumb limit for selected connector only.
+                diagram.SelectionSettings.Connectors[i].MaxSegmentThumbs = 5;
+            }
+        }
+    }
+    
+    // Updates MaxSegmentThumbs to 6 for all connectors in the diagram at runtime.
+    private void UpdateAllConnectorThumbs()
+    {
+        if (diagram?.Connectors != null)
+        {
+            for (int i = 0; i < diagram.Connectors.Count; i++)
+            {
+                // Set segment thumb limit for each connector in diagram.
+                diagram.Connectors[i].MaxSegmentThumbs = 6;
+            }
+        }
+    }
+}
+
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime).
+
+>**Note:** The `MaxSegmentThumbs` property is applicable only when the connector type is set to [`Orthogonal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
 
 ## See also
 

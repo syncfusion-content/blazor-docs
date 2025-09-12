@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Accessibility with ADA Compliance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Accessibility with ADA Compliance in Blazor Components
 
 All the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
@@ -1725,7 +1725,7 @@ SfPdfViewer
 <a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/accessibility" target="_blank">Documentation</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2845,7 +2845,7 @@ PDF Viewer
 <a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pdfviewer/accessibility" target="_blank">Documentation</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 </table>

@@ -160,6 +160,26 @@ The [TableCommandsArgs.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ![Blazor RichTextEditor inserting table column](../images/blazor-richtexteditor-insert-table-column.png)
 
+## Quick insert for table rows and columns
+
+The Rich Text Editor offers a simple and intuitive way to add rows and columns to your tables without interrupting your workflow. You can expand tables directly from the interface, no need to use toolbar buttons.
+
+### Insert columns instantly
+
+- **Where to hover**: Place your cursor over any cell in the **first row** of your table.
+- **What you'll see**: A small dot icon (●) will appear at the **top edge** of the cell.
+- **How to add**: Hover over the dot to reveal a **plus icon (+)**. Click it to insert a new column to the left.
+
+![Blazor RichTextEditor table column quick insert](../images/table_column_quick_insert.gif)
+
+### Insert rows instantly
+
+- **Where to hover**: Place your cursor over any cell in the **first column** of your table.
+- **What you'll see**: A small dot icon (●) will appear at the **left edge** of the cell.
+- **How to add**: Hover over the dot to reveal a **plus icon (+)**. Click it to insert a new row above.
+
+![Blazor RichTextEditor table row quick insert](../images/table_row_quick_insert.gif)
+
 ## Vertical align
 
 The text inside the table can be aligned to the top, middle, or bottom using the [TableToolbarCommand.TableCellVerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCellVerticalAlign) command of the quick toolbar.
