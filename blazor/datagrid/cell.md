@@ -812,15 +812,15 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", new DateTime(2025, 07, 07), 32.38));
-            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2025, 07, 07), 92.38));
-            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2025, 07, 07), 62.77));
-            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2025, 07, 07), 12.38));
-            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2025, 07, 07), 82.38));
-            Orders.Add(new OrderData(10253, "CHOPS", new DateTime(2025, 07, 07), 31.31));
-            Orders.Add(new OrderData(10254, "RICSU", new DateTime(2025, 07, 07), 22.37));
-            Orders.Add(new OrderData(10255, "WELLI", new DateTime(2025, 07, 07), 44.34));
-            Orders.Add(new OrderData(10256, "RICSU", new DateTime(2025, 07, 07), 31.33));
+            Orders.Add(new OrderData(10248, "VINET", new DateTime(2025, 08, 01), 32.38));
+            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2025, 04, 30), 92.38));
+            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2025, 07, 26), 62.77));
+            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2025, 07, 09), 12.38));
+            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2025, 05, 07), 82.38));
+            Orders.Add(new OrderData(10253, "CHOPS", new DateTime(2025, 07, 10), 31.31));
+            Orders.Add(new OrderData(10254, "RICSU", new DateTime(2025, 01, 22), 22.37));
+            Orders.Add(new OrderData(10255, "WELLI", new DateTime(2025, 03, 17), 44.34));
+            Orders.Add(new OrderData(10256, "RICSU", new DateTime(2025, 07, 20), 31.33));
         }
         return Orders;
     }
@@ -833,7 +833,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSNYMiAEMphkRe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoZEshhfHlMplf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Tooltip template
 
@@ -855,7 +855,7 @@ The following sample demonstrates a custom tooltip implementation using the `Too
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="330" ShowTooltip="true" Width="700">
+<SfGrid DataSource="@Orders" ShowTooltip="true" Width="700">
     <GridTemplates>
         <TooltipTemplate>
             @{
@@ -994,7 +994,6 @@ public class OrdersDetails
             Orders.Add (new OrdersDetails (1006, "Michael", 220, DateTime.Now.AddDays(-6), "Tokyo", "Japan", "Delivered", "Japan", "michael@example.com"));
             Orders.Add (new OrdersDetails (1007, "Robert", 90, DateTime.Now.AddDays(-7), "Toronto", "Canada", "Cancelled", "Canada", "robert@example.com"));
             Orders.Add (new OrdersDetails (1008, "Laura", 160, DateTime.Now.AddDays(1), "Sydney", "Australia", "Pending", "Australia", "laura@example.com"));
-            Orders.Add (new OrdersDetails (1009, "Anne", 90, DateTime.Now.AddDays(-9), "Reims", "France", "Delivered", "France", "anne@example.com"));
         }
         return Orders;
     }
@@ -1013,7 +1012,7 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBItaiifNQmMncI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVetYCVBodvFKAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, custom tooltips will be displayed if the `ShowTooltip` property is set to **true**.
 
