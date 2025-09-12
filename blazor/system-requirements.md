@@ -41,4 +41,4 @@ If you are planning to use Visual Studio to develop Blazor Applications.
 * .NET 9.0 requires Visual Studio 2022 17.12.0 or later.
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
 
-N> [WASM workload](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-8.0#net-webassembly-build-tools) is necessary for [WASM PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application#prerequisites) component only.
+N> [WASM workload](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-8.0#net-webassembly-build-tools) is necessary for [WASM PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application#prerequisites) component only.

@@ -212,6 +212,24 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 </tr>
 
 <tr>
+<td><p>NumberFormatList</p></td>
+<td><p>Creates an ordered list with customizable numbering styles. The available formats are listed <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html">here</a>.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>BulletFormatList</p></td>
+<td><p>Creates an unordered list with customizable bullet styles. The available formats are listed <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html">here</a>.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
+{% endhighlight %}</td>
+</tr>
+
+<tr>
 <td><p>Outdent</p></td>
 <td><p>Allows you to decrease the content's indentation level.</p></td>
 <td>

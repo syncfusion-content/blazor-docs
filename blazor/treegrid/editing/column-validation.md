@@ -511,13 +511,13 @@ namespace TreeGridComponent. Data
 
 ## Display validation message in dialog template
 
-Use the form validation to display a validation message for a column that is not defined in the tree grid column.
+Use the form validation to display a validation message for a column that is not defined in the TreeGrid column.
 
-Use the **Validator** property to display a validation message for one of the fields in the dialog template that is not defined in the tree grid column. 
+You can use the **Validator** property to apply validation rules to fields included in the dialog template, even if those fields are not displayed in the TreeGrid columns.
 
-In the below example, the **TaskName** field is not defined in the tree grid column and the validation message for the **TaskName** is displayed in the dialog template. 
+In the below example, the **TaskName** field is not defined in the TreeGrid column and the validation message for the **TaskName** is displayed in the dialog template. 
 
-N> The validation message for fields that are not defined in the tree grid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
+N> The validation message for fields that are not defined in the TreeGrid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;

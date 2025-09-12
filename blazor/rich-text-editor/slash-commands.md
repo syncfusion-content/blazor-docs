@@ -15,6 +15,8 @@ The slash menu in the Rich Text Editor provides users with an efficient way to a
 
 To enable the slash menu, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Enable) property within [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) to `true`. By default, this feature is disabled. Once enabled, the slash menu will appear when the user types the “/” character in the editor.
 
+N> The SlashMenu feature is currently not supported in iframe mode of the Rich Text Editor. We are actively working on this, and support for SlashMenu in iframe mode is planned for a future update.
+
 ## Configure the slash menu items
 
 The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) property allows customization of the `Items` displayed in the slash menu. By setting the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property with a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel), you can define which commands are available when a user types a slash (/) in the Rich Text Editor.
