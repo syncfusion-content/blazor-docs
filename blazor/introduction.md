@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Welcome to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Welcome to Syncfusion® Blazor Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are native Blazor components and not wrappers over EJ2 components.
 
@@ -79,12 +79,9 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started">Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">Multicolumn ComboBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/spreadsheet/getting-started-webapp">Spreadsheet</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-app">PDF Viewer</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app">Word Processor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
         <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
@@ -259,6 +256,7 @@ padding-top: 20px;
             <div><p class="controlcategory-topics">Smart AI</p></div>
             <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></div>
             <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></div>
+            <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app">Smart PDF Viewer</a></div>
         </td>
     </tr>
 </table>

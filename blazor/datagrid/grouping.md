@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid and much more details.
+description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -465,6 +465,106 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqCCBPUOxoyWyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Persist grouped row expand or collapse state
+ 
+The Syncfusion Blazor DataGrid offers the ability to persist the expand or collapse state of grouped rows across various data operations such as paging, sorting, filtering, and editing. By default, these operations reset the grouped rows to their initial collapsed or expanded state. To retain the current state of grouped rows and ensure a consistent user experience, set the [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) property to **true**. This also applies when using external grouping methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="display:flex;gap: 5px;">
+    <label> Enable or disable grouped row state persistence</label>
+    <SfSwitch @bind-checked="IsPersist" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
+</div>
+
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
+    <GridGroupSettings Columns="@Initial" PersistGroupState=@IsPersist></GridGroupSettings>
+    <GridEditSettings AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+    private bool IsPersist { get; set; } = true;
+    private string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        if (args.Checked == true)
+        {
+            IsPersist = true;
+        }
+        else
+        {
+            IsPersist = false;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();  
+    public OrderData(){}
+
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;            
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10001;
+            string[] customerIDs = { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI" };
+            string[] cities = { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" };
+            string[] shipNames = { "Vins et alcools Chevali", "Toms Spezialitäten", "Hanari Carnes", 
+                                    "Victuailles en stock", "Suprêmes délices", "Chop-suey Chinese", 
+                                    "Richter Supermarkt", "Wellington Import" };
+            for (int i = 0; i < 45; i++)
+            {
+                string customerID = customerIDs[i % customerIDs.Length];
+                string city = cities[i % cities.Length];
+                string shipName = shipNames[i % shipNames.Length];
+                
+                Orders.Add(new OrderData(code, customerID, city, shipName));
+                code++;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrotYiMzstTQygM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sort grouped columns in descending order during initial grouping
 

@@ -71,6 +71,17 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfp
 
 </td>
 </tr>
+
+<tr>
+<td><p>Smart PDF Viewer</p></td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js
+{% endhighlight %}
+
+</td>
+</tr>
 </table>
 
 ```html
@@ -80,7 +91,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfp
 </head>
 ```
 
-If you are using `PDF Viewer (Classic)`,`PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
+If you are using `PDF Viewer (Classic)`,`PDF Viewer`, `Smart PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
 
 ```html
 <head>
@@ -88,6 +99,7 @@ If you are using `PDF Viewer (Classic)`,`PDF Viewer` or `DocumentEditor`, ensure
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </head>
 ```
 
@@ -99,9 +111,12 @@ In addition to above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor co
 | PDF Viewer (Classic)| https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
 | PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+| Smart PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfsmartpdfviewer.min.js |
 
 
-N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
+N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/how-to/refer-sfpdfviewer-script-in-application).
+
+N> To add custom Smart PDF Viewer script file in your application, refer [How to refer SfSmartPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/how-to/refer-sfsmartpdfviewer-script-in-application).
 
 ## Static web assets
 
@@ -124,7 +139,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
     </head>
     ```
 
-* If you're using the PDF viewer (Classic), PDF Viewer or Document Editor component, use the code below to refer to script from static web assets.
+* If you're using the PDF viewer (Classic), PDF Viewer, Smart PDF Viewer or Document Editor component, use the code below to refer to script from static web assets.
 
     ```html
     <head>
@@ -132,6 +147,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
        <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
        <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
        <script  src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js"  type="text/javascript"></script>
+       <script  src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
     </head>
     ```
 
