@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Accessibility with ADA Compliance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Accessibility with ADA Compliance in Blazor Components
 
 All the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
