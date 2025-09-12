@@ -658,6 +658,7 @@ The following code demonstrates how to update the layout's orientation dynamical
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
 
 The following table outlines the various orientation types available:
+
 |Orientation Type|Description|
 |---|---|
 |[`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_Horizontal)|Aligns the tree layout from left to right|
