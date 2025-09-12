@@ -478,11 +478,11 @@ The Syncfusion Blazor DataGrid offers the ability to persist the expand or colla
 
 <div style="display:flex;gap: 5px;">
     <label> Enable or disable grouped row state persistence</label>
-    <SfSwitch @bind-checked="IsPersist" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
+    <SfSwitch @bind-checked="IsGroupStatePersistent " OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
 </div>
 
-<SfGrid DataSource="@GridData" AllowGrouping="true" Height="315px" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
-    <GridGroupSettings Columns="@Initial" PersistGroupState=@IsPersist></GridGroupSettings>
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="190px" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
+    <GridGroupSettings Columns="@Initial" PersistGroupState=@IsGroupStatePersistent ></GridGroupSettings>
     <GridEditSettings AllowEditing="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="90"></GridColumn>
@@ -494,8 +494,8 @@ The Syncfusion Blazor DataGrid offers the ability to persist the expand or colla
 
 @code {
     public List<OrderData> GridData { get; set; }
-    private bool IsPersist { get; set; } = true;
-    private string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+    private bool IsGroupStatePersistent  { get; set; } = true;
+    private string[] Initial = new string[] { "CustomerID", "ShipCity" };
 
     protected override void OnInitialized()
     {
@@ -506,11 +506,11 @@ The Syncfusion Blazor DataGrid offers the ability to persist the expand or colla
     {
         if (args.Checked == true)
         {
-            IsPersist = true;
+            IsGroupStatePersistent  = true;
         }
         else
         {
-            IsPersist = false;
+            IsGroupStatePersistent  = false;
         }
     }
 }
@@ -564,7 +564,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrotYiMzstTQygM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjroZksVrfLQZJeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sort grouped columns in descending order during initial grouping
 
