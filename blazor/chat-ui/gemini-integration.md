@@ -91,7 +91,7 @@ const string GeminiApiKey = 'Place your API key here';
 @code {
     private UserModel currentUser = new() { ID = "user1", User = "You" };
     private UserModel aiUser = new() { ID = "ai", User = "Gemini" };
-    private List<ChatMessage> Messages { get; set; } = new();
+    private List<Syncfusion.Blazor.InteractiveChat.ChatMessage> Messages { get; set; } = new();
     private List<UserModel> typingUsers = new();
 
     private async Task OnMessageSend(ChatMessageSendEventArgs args)
@@ -103,36 +103,22 @@ const string GeminiApiKey = 'Place your API key here';
         {
             await Task.Delay(500);
             var userPrompt = args.Message.Text ?? "hi";
-
-            const string GeminiApiKey = "";
-            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GeminiApiKey}";
-            var requestBody = new
-            {
-                contents = new[] { new { parts = new[] { new { text = userPrompt } } } }
-            };
-            var json = JsonSerializer.Serialize(requestBody);
-            var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await HttpClient.PostAsync(url, httpContent);
-            response.EnsureSuccessStatusCode();
-            var resultJson = await response.Content.ReadAsStringAsync();
-            using var jsonDoc = JsonDocument.Parse(resultJson);
-            var responseText = jsonDoc.RootElement
-                .GetProperty("candidates")[0]
-                .GetProperty("content")
-                .GetProperty("parts")[0]
-                .GetProperty("text")
-                .GetString();
+            const string GeminiApiKey = "AIzaSyB0AdTfrCZlkEaPFac8VoS55DUKfP5cyeE";
+            var gemini = new GoogleAI(apiKey: GeminiApiKey);
+            var model = gemini.GenerativeModel(model: "gemini-1.5-flash");
+            var response = await model.GenerateContent(userPrompt);
+            var responseText = response.Text;
             var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions() // Includes tables, lists, etc.
-                .UsePipeTables()         // Explicitly handle pipe tables
-                .UseTaskLists()          // Enable checkbox-style task lists
+                .UseAdvancedExtensions()
+                .UsePipeTables()
+                .UseTaskLists()
                 .Build();
-            Messages.Add(new ChatMessage { Text = Markdown.ToHtml(responseText,pipeline), Author = aiUser });
+            Messages.Add(new Syncfusion.Blazor.InteractiveChat.ChatMessage { Text = Markdown.ToHtml(responseText, pipeline), Author = aiUser });
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error fetching Gemini response: {ex.Message}");
-            Messages.Add(new ChatMessage { Text = "Error generating response. Please try again.", Author = aiUser });
+            Messages.Add(new Syncfusion.Blazor.InteractiveChat.ChatMessage { Text = "Error generating response. Please try again.", Author = aiUser });
             StateHasChanged();
         }
         finally

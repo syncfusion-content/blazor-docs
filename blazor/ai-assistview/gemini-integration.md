@@ -93,8 +93,7 @@ const string GeminiApiKey = 'Place your API key here';
         "What are the best tools for organizing my tasks?",
         "How can I maintain work-life balance effectively?"
     };
-    private readonly string geminiApiKey = ""; // Replace with your Gemini API key
-    private readonly string geminiApiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
+    private readonly string geminiApiKey = "AIzaSyB0AdTfrCZlkEaPFac8VoS55DUKfP5cyeE"; // Replace with your Gemini API key
 
     [Inject]
     private HttpClient Http { get; set; }
@@ -102,36 +101,10 @@ const string GeminiApiKey = 'Place your API key here';
     {
         try
         {
-            var requestBody = new
-            {
-                contents = new[]
-                {
-                    new
-                    {
-                        parts = new[]
-                        {
-                            new { text = args.Prompt }
-                        }
-                    }
-                }
-            };
-
-            // Make API call to Google Generative AI
-            var request = new HttpRequestMessage(HttpMethod.Post, $"{geminiApiUrl}?key={geminiApiKey}");
-            request.Content = JsonContent.Create(requestBody);
-            var response = await Http.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-
-            // Parse the response
-            var jsonResponse = await response.Content.ReadAsStringAsync();
-            var jsonDoc = JsonDocument.Parse(jsonResponse);
-            var responseText = jsonDoc.RootElement
-                .GetProperty("candidates")[0]
-                .GetProperty("content")
-                .GetProperty("parts")[0]
-                .GetProperty("text")
-                .GetString();
-
+            var gemini = new GoogleAI(apiKey: geminiApiKey);
+            var model = gemini.GenerativeModel(model: "gemini-1.5-flash");
+            var response = await model.GenerateContent(args.Prompt);
+            var responseText = response.Text;
             // Add the response to the AIAssistView
             await Task.Delay(1000); // Simulate delay as in original code
             args.Response = responseText;
