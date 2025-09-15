@@ -7,44 +7,38 @@ control: Chat UI
 documentation: ug
 ---
 
-# Integration of Gemini AI With Blazor Chat UI Component
+# Integration of Gemini AI With Blazor Chat UI component
 
-The Syncfusion  Chat UI supports integration with [Gemini](Gemini API quickstart  |  Google AI for Developers), enabling advanced conversational AI features in your applications.
+The Syncfusion  Chat UI supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in your applications.
+
+## Prerequisites
+
+* Google account to generate API key on accessing `Gemini AI`
+* Syncfusion Chat UI for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
 
 ## Getting Started with the Chat UI Component
 
 Before integrating Gemini AI, ensure that the Syncfusion Chat UI is correctly rendered in your application:
 
-[ Blazor Getting Started Guide](../getting-started)
+[ Blazor Getting Started Guide](../getting-started) 
 
-## Prerequisites
+## Install Dependencies
 
-* Google account to generate API key on accessing `Gemini AI`
-* Syncfusion Chat UI for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project.  
+Install the Syncfusion Blazor package in the application.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InteractiveChat and Themes NuGet in the App
+```bash
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+Install-Package Syncfusion.Blazor.InteractiveChat
 
-{% tabs %}
+```
 
-{% highlight c# tabtitle="Package Manager" %}
+Install the Gemini AI package in the application.
 
-dotnet add package Syncfusion.Blazor.InteractiveChat -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
+```bash
 
-{% endhighlight %}
+Install-Package Mscc.GenerativeAI
 
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
-
-{% endtabcontent %}
-
-{% endtabcontents %}
+```
 
 ## Generate API Key
 
@@ -103,7 +97,7 @@ const string GeminiApiKey = 'Place your API key here';
         {
             await Task.Delay(500);
             var userPrompt = args.Message.Text ?? "hi";
-            const string GeminiApiKey = "AIzaSyB0AdTfrCZlkEaPFac8VoS55DUKfP5cyeE";
+            const string GeminiApiKey = "";
             var gemini = new GoogleAI(apiKey: GeminiApiKey);
             var model = gemini.GenerativeModel(model: "gemini-1.5-flash");
             var response = await model.GenerateContent(userPrompt);
