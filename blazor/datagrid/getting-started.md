@@ -11,9 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor webAssembly app using Visual Studio, Visual Studio code and .NET CLI.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -374,6 +371,9 @@ The grouping feature enables you to view the Syncfusion Blazor DataGrid record i
 
 Exceptions occurred during Syncfusion Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
+**TValue**: Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
+**GridEvents**: When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
+
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 
 N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
@@ -426,8 +426,8 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## See Also
 
-* [Getting started with Syncfusion Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting started with Syncfusion Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-* [Getting Started with Syncfusion Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
 * [Getting Started with Syncfusion Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)
