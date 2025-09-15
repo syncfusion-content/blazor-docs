@@ -180,7 +180,7 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor Calendar Example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Calendar.

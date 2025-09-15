@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive UI Layout in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) as Horizontal) and edit dialogs adaptively and have an option to render the Grid row elements in the vertical direction.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) as Horizontal) and edit dialogs adaptively and have an option to render the Grid row elements in the vertical direction.
 
 To know about how to **Adaptive UI Layout** in Grid, you can check this video.
 
@@ -17,7 +17,7 @@ To know about how to **Adaptive UI Layout** in Grid, you can check this video.
 
 ## Render adaptive dialogs
 
-The Syncfusion Blazor DataGrid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property, allowing the Grid to render filter, sort, and edit dialogs in full-screen mode.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property, allowing the Grid to render filter, sort, and edit dialogs in full-screen mode.
 
 The following sample demonstrates how to enable and utilize adaptive dialogs in the Grid:
 
@@ -239,7 +239,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 
 ## Vertical row rendering
 
-The Syncfusion Blazor DataGrid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) property to the value **Vertical**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) property to the value **Vertical**.
 
 >The default row rendering mode is **Horizontal**.
 

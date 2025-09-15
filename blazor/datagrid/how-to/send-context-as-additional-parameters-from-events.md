@@ -9,7 +9,7 @@ documentation: ug
 
 # Sending context as additional parameters from events in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid offers flexibility to pass additional context information during events. This capability is especially useful for dynamically updating Grid data based on interactions with other components, enabling seamless, real-time data modifications within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flexibility to pass additional context information during events. This capability is especially useful for dynamically updating Grid data based on interactions with other components, enabling seamless, real-time data modifications within the Grid.
 
 To implement this, follow these steps:
 

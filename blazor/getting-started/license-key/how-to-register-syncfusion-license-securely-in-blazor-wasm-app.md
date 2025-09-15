@@ -7,22 +7,22 @@ component: Common
 documentation: ug
 ---
 
-# Secure Registration of Syncfusion License Keys in Blazor Wasm App
+# Secure Registration of Syncfusion<sup style="font-size:70%">&reg;</sup> License Keys in Blazor Wasm App
 
 Registering a license key directly in the Program.cs file of a Blazor WebAssembly Client project can expose it through the compiled assemblies, making it accessible in the browser, creating security risks.
 
 ## Recommended Solution: Use Licensed NuGet Packages
 
-Syncfusion recommends using licensed NuGet packages, distributed with the licensed Blazor Product in Volume and Service Pack (SP) releases. These packages eliminate the need to register the license key in the application code.
+Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using licensed NuGet packages, distributed with the licensed Blazor Product in Volume and Service Pack (SP) releases. These packages eliminate the need to register the license key in the application code.
 
 ### Benefits of Using Licensed NuGet Packages
 
 - **Enhanced Security:** Prevents license key exposure in the browser.
 - **Simplified Deployment:** Removes the need for manual license key registration.
 
-## Reference: Syncfusion Blazor Web Installer User Guide
+## Reference: Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Installer User Guide
 
-Refer to the Syncfusion documentation to download and install the licensed Blazor Product:
+Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> documentation to download and install the licensed Blazor Product:
 
 - [Download Instructions](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download)
 - [Installation Guide](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)
@@ -38,10 +38,10 @@ Build your Blazor WASM application using licensed NuGet packages from these sour
 
 
 >**Important Note:**  
-> When referencing both a local folder or private repository and `nuget.org` in your `NuGet.config`, and if both sources contain the same version of Syncfusion packages, the build may default to restoring from `nuget.org` (trial versions). This fallback can result in **license popup issues**.
+> When referencing both a local folder or private repository and `nuget.org` in your `NuGet.config`, and if both sources contain the same version of Syncfusion<sup style="font-size:70%">&reg;</sup> packages, the build may default to restoring from `nuget.org` (trial versions). This fallback can result in **license popup issues**.
 
 ### Use Package Source Mapping
-To ensure your project always restores Syncfusion packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in your `NuGet.config`:
+To ensure your project always restores Syncfusion<sup style="font-size:70%">&reg;</sup> packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in your `NuGet.config`:
 
 ```xml
 <configuration>
@@ -61,7 +61,7 @@ To ensure your project always restores Syncfusion packages from the licensed sou
 
 To confirm whether your application is referencing licensed or trial assemblies:
 
-* Navigate to your build output directory and Locate the Syncfusion assemblies.
+* Navigate to your build output directory and Locate the Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies.
 
 * Right-click on each assemblies → Select Properties → Go to the Details tab.
 
@@ -86,9 +86,9 @@ dotnet nuget locals all --clear
 
 Delete the **bin and obj**  folders from your project directories to remove any cached build artifacts.
 
-Uninstall and reinstall the Syncfusion packages, making sure they are restored only from your licensed NuGet source.
+Uninstall and reinstall the Syncfusion<sup style="font-size:70%">&reg;</sup> packages, making sure they are restored only from your licensed NuGet source.
 
-## Securely manage Syncfusion license keys using Azure Key Vault
+## Securely manage Syncfusion<sup style="font-size:70%">&reg;</sup> license keys using Azure Key Vault
 
 You can integrate Azure Key Vault into your application to retrieve the license key at runtime, ensuring it is never exposed in the browser or stored in the client-side code.
 
@@ -97,4 +97,4 @@ For enhanced security, especially in cloud-hosted environments, store and access
 Integrate Azure Key Vault to retrieve the license key at runtime, preventing browser exposure or storage in client-side code.
 
 For detailed steps, refer to:
-[Securely Store and Use Syncfusion License Keys in Azure Key Vault](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/how-to-securely-store-and-use-syncfusion-license-keys-in-azure-key-vault)
+[Securely Store and Use Syncfusion<sup style="font-size:70%">&reg;</sup> License Keys in Azure Key Vault](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/how-to-securely-store-and-use-syncfusion-license-keys-in-azure-key-vault)

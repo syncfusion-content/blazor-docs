@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Clipboard in Syncfusion Blazor DataGrid
+# Clipboard in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-The clipboard feature in the Syncfusion Blazor DataGrid provides an easy way to copy selected rows or cells data into the clipboard. You can use keyboard shortcuts to perform the copy operation. The following list of keyboard shortcuts is supported in the Grid to copy selected rows or cells data into clipboard.
+The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an easy way to copy selected rows or cells data into the clipboard. You can use keyboard shortcuts to perform the copy operation. The following list of keyboard shortcuts is supported in the Grid to copy selected rows or cells data into clipboard.
 
 Interaction keys |Description
 -----|-----
@@ -98,7 +98,7 @@ public class OrderData
 
 ## Copy to clipboard by external buttons
 
-Copying data to the clipboard by using external buttons in the Syncfusion Blazor DataGrid allows you to programmatically trigger the copy operation, making it more friendly, especially for those who may not be familiar with keyboard shortcuts or manual copying.
+Copying data to the clipboard by using external buttons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to programmatically trigger the copy operation, making it more friendly, especially for those who may not be familiar with keyboard shortcuts or manual copying.
 
 To copy selected rows or cells data into the clipboard with the help of external buttons, you can utilize the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method available in the Grid. This is demonstrated in the following example,
 
@@ -194,7 +194,7 @@ public class OrderData
 
 ## AutoFill
 
-The AutoFill feature in the Syncfusion Blazor DataGrid allows you to copy the data of selected cells and paste it into other cells by simply dragging the autofill icon of the selected cells to the desired cells. This feature provides a convenient way to quickly populate data in a grid.
+The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to copy the data of selected cells and paste it into other cells by simply dragging the autofill icon of the selected cells to the desired cells. This feature provides a convenient way to quickly populate data in a grid.
 
 **how to use the autofill feature**
 
@@ -302,7 +302,7 @@ public class OrderData
 
 ## Paste
 
-The Syncfusion Blazor DataGrid provides a paste feature that allows you to copy the content of a cell or a group of cells and paste it into another set of cells. This feature allows you to quickly copy and paste content within the grid, making it convenient for data entry and manipulation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a paste feature that allows you to copy the content of a cell or a group of cells and paste it into another set of cells. This feature allows you to quickly copy and paste content within the grid, making it convenient for data entry and manipulation.
 
 Follow the steps below to use the Paste feature in the grid:
 

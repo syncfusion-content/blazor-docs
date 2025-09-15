@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration of Microsoft.Extensions.AI with the Blazor AI AssistView component
 
-The Syncfusion AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
 `The Microsoft.Extensions.AI` simplifies integration with different models, requiring minimal configuration changes depending on the provider. The following example demonstrates integration using `Azure OpenAI`.
 
@@ -48,7 +48,7 @@ dotnet add package Markdig
 
 ### Configure services in Program.cs
 
-Register the `Azure OpenAI` client and Syncfusion AI Assistview component within the Blazor application.
+Register the `Azure OpenAI` client and Syncfusion<sup style="font-size:70%">&reg;</sup> AI Assistview component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -88,7 +88,7 @@ var app = builder.Build();
 
 ### AI AssistView with IChatClient
 
-The Syncfusion `AI AssistView` component is built to seamlessly integrate with external AI services. When the `IChatClient` is registered via `Microsoft.Extensions.AI`, the component automatically uses it to handle user prompts without any additional configuration.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> `AI AssistView` component is built to seamlessly integrate with external AI services. When the `IChatClient` is registered via `Microsoft.Extensions.AI`, the component automatically uses it to handle user prompts without any additional configuration.
 
 In the following example, the user input is processed using the injected `IChatClient`. The AI model's response is returned in Markdown format which is converted to HTML using the `Markdig` library before rendering in the AI AssistView component.
 

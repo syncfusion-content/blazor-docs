@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion Blazor DataGrid
+# Style and appearance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-The Syncfusion Blazor DataGrid offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
 
 **Default CSS overrides:**
 
@@ -31,14 +31,14 @@ Here's a basic example of how you can override the header background color of th
 
 Syncfusion's Theme Studio tool allows you to create custom themes for all their controls, including the Grid. This is a more advanced approach that lets you define a comprehensive set of styles to achieve a consistent look and feel throughout your application.
 
-1. Visit the [Syncfusion Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
+1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select the Grid from the left panel.
 3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
 4. Once done, you can download the generated CSS file and include it in your Blazor project.
 
 ## Customizing the Blazor DataGrid root element
 
-To customize the appearance of the root element of the Syncfusion Blazor Grid, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
+To customize the appearance of the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
 
 ```css
 .e-grid {
@@ -261,7 +261,7 @@ public class OrderData
 
 ## Customize the color of Grid lines
 
-The Syncfusion Blazor DataGrid allows you to personalize the appearance of Grid lines to match your application's design.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to personalize the appearance of Grid lines to match your application's design.
 
 To customize the color of Grid lines, you can apply CSS styles directly to the Grid’s structural elements such as header cells and row cells. This approach gives you full control over the color, thickness, and style of the borders between cells.
 
