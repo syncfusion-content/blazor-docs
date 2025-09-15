@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor DataGrid and much more.
+description: Learn all about virtualization in the Syncfusion Blazor DataGrid component, including virtual scrolling and paging.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1093,7 +1093,7 @@ To refresh the virtualized Grid externally, set [EnableVirtualization](https://h
 
 > If [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) is specified, the page size is calculated based on the given row height. Otherwise, RowHeight will be determined from the offset height of the Grid row element.
 
-> You can refer to our [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## See also
 

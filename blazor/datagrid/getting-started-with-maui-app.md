@@ -21,7 +21,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the app
 
@@ -48,7 +48,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor DataGrid and Themes NuGet in the App
 
@@ -72,9 +72,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -85,7 +85,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
@@ -130,6 +132,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor DataGrid Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script> -->
 </head>
 ```
 
@@ -171,7 +176,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid compone
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVztWraLacsGbYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-component.png)" %}
+![Blazor DataGrid Component](images/blazor-datagrid-maui-page.png)
 
 ### How to Run the Sample on Android
 
@@ -181,7 +186,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVztWraLacsGbYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-component.png)" %}
+![Blazor DataGrid Component](images/blazor-datagrid-component.png)
 
 ## Defining row data
 
@@ -330,6 +335,9 @@ The grouping feature enables you to view the Syncfusion<sup style="font-size:70%
 ## Handling exceptions
 
 Exceptions occurred during Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+
+**TValue**: Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
+**GridEvents**: When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
 
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 

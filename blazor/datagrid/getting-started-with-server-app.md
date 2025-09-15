@@ -11,9 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor Server app using Visual Studio, Visual Studio code and .NET CLI.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -24,7 +21,7 @@ This section briefly explains about how to include [Syncfusion Blazor DataGrid](
 
 ## Create a new Blazor app in Visual Studio
 
-You can create a **Blazor Server app** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
+You can create a **Blazor Server app** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 ## Install Blazor DataGrid and Themes NuGet in the app
 
@@ -51,7 +48,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Create a new Blazor app in Visual Studio code
 
-You can create a **Blazor Server app** using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server app** using **Blazor Web App** template in Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
 Alternatively, you can create a server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -102,7 +99,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Server side project using .NET CLI
+## Create a Blazor Server App using .NET CLI
 
 Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
@@ -137,9 +134,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion Blazor service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -150,7 +147,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
@@ -186,7 +185,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
     //Blazor DataGrid Component script reference.
-    //<script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
+    <!-- <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script> -->
 </body>
 ```
 
@@ -194,7 +193,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Components/Pages/Home.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Home.razor` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/Home.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Home.razor` page.
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
@@ -382,6 +381,9 @@ The grouping feature enables you to view the Syncfusion Blazor DataGrid record i
 ## Handling exceptions
 
 Exceptions occurred during Syncfusion Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+
+**TValue**: Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
+**GridEvents**: When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
 
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 

@@ -11,9 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor webAssembly app using Visual Studio, Visual Studio code and .NET CLI.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -24,7 +21,7 @@ This section briefly explains about how to include [Syncfusion Blazor DataGrid](
 
 ## Create a new Blazor app in Visual Studio
 
-You can create a **Blazor webAssembly app** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor webAssembly app** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor WASM Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 ## Install Blazor DataGrid and Themes NuGet in the app
 
@@ -51,7 +48,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Create a new Blazor app in Visual Studio code
 
-You can create a **Blazor webAssembly app** using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor webAssembly app** using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
 
 Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -133,13 +130,13 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-{% endcontent %}
+{% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion Blazor service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -150,7 +147,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor webAssembly app.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor webAssembly app.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -181,6 +180,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor DataGrid Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script> -->
 </head>
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
@@ -369,6 +371,9 @@ The grouping feature enables you to view the Syncfusion Blazor DataGrid record i
 
 Exceptions occurred during Syncfusion Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
+**TValue**: Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
+**GridEvents**: When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
+
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 
 N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
@@ -421,8 +426,8 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## See Also
 
-* [Getting started with Syncfusion Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting started with Syncfusion Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-* [Getting Started with Syncfusion Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
 * [Getting Started with Syncfusion Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)

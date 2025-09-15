@@ -112,11 +112,11 @@ The Dialog component provides several events that trigger during the resizing pr
 
 The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStart) event triggers when the user begins to resize a dialog.
 
-## Resizing
+### Resizing
 
 The [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) event triggers when the user resize the dialog.
 
-## OnResizeStop
+### OnResizeStop
 
 The [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) event triggers when the user stop to resize a dialog.
 

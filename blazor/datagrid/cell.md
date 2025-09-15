@@ -769,6 +769,258 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 
 The Syncfusion Blazor DataGrid allows you to display information about the Grid columns to the user when they hover over them with the mouse.
 
+### Show tooltip
+
+The Syncfusion Blazor DataGrid provides a built-in feature to display tooltips when hovering over header and content cells. You can enable this feature by setting the `ShowTooltip` property to **true** in the DataGrid. By default, it shows the cell value for both header and content cells. For special types like templates, it displays the row data of the corresponding cells.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" ShowTooltip="true" Width="700">
+     <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+   </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", new DateTime(2025, 08, 01), 32.38));
+            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2025, 04, 30), 92.38));
+            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2025, 07, 26), 62.77));
+            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2025, 07, 09), 12.38));
+            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2025, 05, 07), 82.38));
+            Orders.Add(new OrderData(10253, "CHOPS", new DateTime(2025, 07, 10), 31.31));
+            Orders.Add(new OrderData(10254, "RICSU", new DateTime(2025, 01, 22), 22.37));
+            Orders.Add(new OrderData(10255, "WELLI", new DateTime(2025, 03, 17), 44.34));
+            Orders.Add(new OrderData(10256, "RICSU", new DateTime(2025, 07, 20), 31.33));
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoZEshhfHlMplf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Tooltip template
+
+The Syncfusion Blazor DataGrid component provides a built-in option to customize tooltip content for both header and content cells. This can be achieved using the `TooltipTemplate` property, which accepts a `RenderFragment` under the `GridTemplates` component. This feature allows you to display additional information about columns when users hover over them, enhancing the clarity and usability of the DataGrid.
+
+Tooltip customization is supported through the `TooltipTemplateContext`, which provides access to the following built-in properties:
+<ul>
+    <li><strong>Value</strong> – Displays the content of the hovered cell: the column name for header cells or the cell value for content cells.</li>
+    <li><strong>RowIndex</strong> – Indicates the row number of the hovered cell. Returns -1 for header cells.</li>
+    <li><strong>ColumnIndex</strong> – Indicates the column number of the hovered cell.</li>
+    <li><strong>Data</strong> – Provides the full data object of the hovered row. Not available for header cells.</li>
+    <li><strong>Column</strong> – Contains metadata about the column, such as the field name and formatting.</li>
+</ul>
+
+The following sample demonstrates a custom tooltip implementation using the `TooltipTemplate` in the DataGrid. The tooltip content is styled and includes interactive elements such as formatted text, icons, and contextual information to improve the overall user experience.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" ShowTooltip="true" Width="700">
+    <GridTemplates>
+        <TooltipTemplate>
+            @{
+                var tooltip = context as TooltipTemplateContext;
+                var order = tooltip?.Data as OrdersDetails;
+                if (tooltip?.RowIndex == -1)
+                {
+                    if (tooltip.Value == "Order ID")
+                    {
+                        <span><strong>@tooltip.Value: </strong>Unique number used to identify each customer order.</span>
+                    }
+                    else if (tooltip.Value == "Customer ID")
+                    {
+                        <div>
+                            <span><strong>@tooltip.Value: </strong>Displays the name of the customer who placed the order.</span>
+                        </div>
+                    }
+                    else if (tooltip.Value == "Freight")
+                    {
+                        <span><strong>@tooltip.Value: </strong>Shipping cost for the order. </span>
+                    }
+                    else
+                    {
+                        <span><strong>@tooltip.Value: </strong>Name of the city where the order is delivered.</span>
+                    }
+                }
+                else
+                {
+                    var fieldName = tooltip?.Column?.Field;
+                    <div style="font-family: Arial; line-height: 1.6;">
+                        @switch (fieldName)
+                        {
+                            case nameof(order.OrderID):
+                                <p style="margin: 2px 0;">@((MarkupString)GetStatusMessage(order.Status, order.OrderDate))</p>
+                                break;
+                            case nameof(OrdersDetails.CustomerID):
+                                <div>
+                                    <p style="margin: 2px 0;">
+                                        <strong>Email: </strong><a href="mailto:@order.Email">@order.Email</a>
+                                    </p>
+                                </div>
+                                break;
+                            case nameof(OrdersDetails.Freight):
+                                <p style="margin: 4px 0;">
+                                    <strong>Delivery Type: </strong>
+                                    @GetDeliveryType(order.Freight)
+                                </p>
+                                break;
+                            case nameof(OrdersDetails.ShipCity):
+                                <span class="e-icons e-location"></span>
+                                <strong>Country: </strong> @order.ShipCountry
+                                break;
+                            default:
+                                <strong>@tooltip?.Column?.Field: </strong> @tooltip.Value
+                                break;
+                        }
+                    </div>
+                }
+            }
+        </TooltipTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) Format="C2" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-icons.e-location:before {
+        position: relative;
+        top: 2px; 
+    }
+</style>
+
+@code {
+    public List<OrdersDetails> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrdersDetails.GetAllRecords();
+    }
+    private string GetStatusMessage(string status, DateTime? orderDate)
+    {
+        return status switch
+        {
+            "Cancelled" => "This item has been cancelled and will not be delivered.",
+            "Pending" => $"<strong>Expected Delivery Date: </strong> {orderDate?.ToShortDateString()}",
+            "Delivered" => $"<strong>Delivered Date: </strong> {orderDate?.ToShortDateString()}",
+            _ => "<strong>Status Unknown</strong>"
+        };
+    }
+    private string GetDeliveryType(double freight)
+    {
+        if (freight <= 100.00)
+            return "Standard Delivery";
+        else if (freight <= 150.00)
+            return "Express Delivery";
+        else
+            return "Premium Delivery";
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrdersDetails
+{
+    public static List<OrdersDetails> Orders = new List<OrdersDetails>();
+    public OrdersDetails()
+    {
+
+    }
+    public OrdersDetails(int OrderID, string CustomerID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry, string Status, string Location, string Email)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.Status = Status;
+        this.ShipCountry = ShipCountry;
+        this.Location = Location;
+        this.Email = Email;
+    }
+    public static List<OrdersDetails> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            Orders.Add (new OrdersDetails (1001, "Nancy", 80, DateTime.Now.AddDays(-1), "Reims", "France", "Delivered", "France", "nancy@example.com"));
+            Orders.Add (new OrdersDetails (1002, "Andrew", 120, DateTime.Now.AddDays(3), "Munster", "Germany", "Pending", "Germany", "andrew@example.com"));
+            Orders.Add (new OrdersDetails (1003, "Janet", 180, DateTime.Now.AddDays(-3), "Charleroi", "Belgium", "Cancelled", "Belgium", "janet@example.com"));
+            Orders.Add (new OrdersDetails (1004, "Margaret", 60, DateTime.Now.AddDays(-4), "Lyon", "France", "Delivered", "France", "margaret@example.com"));
+            Orders.Add (new OrdersDetails (1005, "Steven", 130, DateTime.Now.AddDays(4), "Delhi", "India", "Pending", "India", "steven@example.com"));
+            Orders.Add (new OrdersDetails (1006, "Michael", 220, DateTime.Now.AddDays(-6), "Tokyo", "Japan", "Delivered", "Japan", "michael@example.com"));
+            Orders.Add (new OrdersDetails (1007, "Robert", 90, DateTime.Now.AddDays(-7), "Toronto", "Canada", "Cancelled", "Canada", "robert@example.com"));
+            Orders.Add (new OrdersDetails (1008, "Laura", 160, DateTime.Now.AddDays(1), "Sydney", "Australia", "Pending", "Australia", "laura@example.com"));
+        }
+        return Orders;
+    }
+                    
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string Status { get; set; }
+    public string Location { get; set; }
+    public string Email { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVetYCVBodvFKAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> By default, custom tooltips will be displayed if the `ShowTooltip` property is set to **true**.
+
 ### Display custom tooltip for columns
 
 The Syncfusion Blazor DataGrid provides a feature to display custom tooltips for its columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started). This allows you to provide additional information about the columns when the user hovers over them.

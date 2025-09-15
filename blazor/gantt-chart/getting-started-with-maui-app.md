@@ -21,7 +21,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt and Themes NuGet in the app
 
@@ -48,7 +48,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor Gantt and Themes NuGet in the App
 
@@ -72,9 +72,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Gantt` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Gantt` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -85,7 +85,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
@@ -130,6 +132,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor GanttChart Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Gantt/scripts/sf-gantt.min.js" type="text/javascript"></script> -->
 </head>
 ```
 
@@ -189,6 +194,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 ### How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+
+![Blazor Gantt Chart Component](images/blazor-gantt-maui-app.png)
 
 ### How to Run the Sample on Android
 

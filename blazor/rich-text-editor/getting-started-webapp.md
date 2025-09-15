@@ -21,7 +21,7 @@ This section briefly explains about how to include [Blazor Rich Text Editor](htt
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
@@ -54,9 +54,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
@@ -112,32 +112,11 @@ dotnet --version
 
 ## Create a Blazor Web project using .NET CLI
 
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
-For a Blazor Web App with `Server` interactive render mode & `Per page/component` interactivity location, use the following commands
+Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `WebAssembly` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int WebAssembly
-cd BlazorApp
-cd BlazorApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `Auto` interactive render mode & `Per page/component` interactivity location, use the following commands
+For example, in a Blazor Web App with `Auto` interactive render mode, use the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -173,14 +152,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespace .
+Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespace .
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -191,7 +165,9 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespace 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
@@ -227,27 +203,6 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
@@ -261,6 +216,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor RichTextEditor Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.RichTextEditor/scripts/sf-richtexteditor.min.js" type="text/javascript"></script> -->
 </body>
 ```
 
@@ -274,10 +232,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor
 | --- | --- | --- |
 | Per page/component | Auto | @rendermode InteractiveAuto |
 |  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -371,7 +328,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZreDqjoLgZqvbHU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBSjuNoTrQNLwVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -434,7 +391,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBeXatSJUnenDUw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.png)" %}
 
 ## Retrieve the formatted content
 
@@ -533,11 +490,11 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
 
 * [How to insert Emoticons](https://blazor.syncfusion.com/demos/rich-text-editor/insert-emoticons?theme=bootstrap5)
 

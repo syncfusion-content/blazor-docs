@@ -21,7 +21,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin).
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this guide](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Schedule and Themes NuGet in the app
 
@@ -48,7 +48,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor Schedule and Themes NuGet in the App
 
@@ -72,9 +72,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Import Namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -85,7 +85,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
@@ -130,6 +132,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+    //Blazor Scheduler Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.Schedule/scripts/sf-schedule.min.js" type="text/javascript"></script> -->
 </head>
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
@@ -173,7 +178,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVpjWADUUybFgTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+![Blazor Scheduler Component](images/blazor-scheduler-maui-app.png)
 
 ### How to Run the Sample on Android
 
@@ -183,7 +188,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVpjWADUUybFgTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+![Blazor Scheduler Component](images/blazor-scheduler.png)
 
 ## Populating appointments
 
@@ -204,11 +209,11 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -228,7 +233,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVfjsgtAURzXylT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVyDujgpxNVnpFG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)" %}
 
 ## Setting date
 
