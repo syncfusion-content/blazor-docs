@@ -95,8 +95,6 @@ const string GeminiApiKey = 'Place your API key here';
     };
     private readonly string geminiApiKey = "AIzaSyB0AdTfrCZlkEaPFac8VoS55DUKfP5cyeE"; // Replace with your Gemini API key
 
-    [Inject]
-    private HttpClient Http { get; set; }
     private async Task OnPromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         try
