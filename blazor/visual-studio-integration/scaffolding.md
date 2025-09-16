@@ -31,7 +31,7 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
     ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
 
-2. In the **Add New Scaffolded item** dialog, select **Syncfusion Blazor Scaffolder** and then click **‘Add’**.
+2. In the **Add New Scaffolded item** dialog, select **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scaffolder** and then click **‘Add’**.
 
     ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
 
@@ -77,7 +77,7 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
     ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
 
-6. With the selected features of the Syncfusion control code snippet, the **Controller/Service** file and the corresponding **Razor** files are generated.
+6. With the selected features of the Syncfusion<sup style="font-size:70%">&reg;</sup> control code snippet, the **Controller/Service** file and the corresponding **Razor** files are generated.
 
     If you select **Local Data**, the service file and razor file will be added to the application.
 
@@ -169,6 +169,6 @@ N> Before adding the scaffolded item from command-line, check whether the **dotn
 
 Refer to the following UG links to render Syncfusion® control after performing scaffolding:
 
-WebAssembly App: [Configure Blazor components using Syncfusion Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+WebAssembly App: [Configure Blazor components using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
-Blazor Server App: [Configure Blazor components using Syncfusion Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+Blazor Server App: [Configure Blazor components using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integration of Microsoft.Extensions.AI with the Blazor AI AssistView component | Syncfusion
+title: Integration | Blazor AI AssistView component | Syncfusion
 description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Microsoft.Extensions.AI with the Blazor AI AssistView component
+# Integration of Microsoft.Extensions.AI with AI AssistView component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
@@ -48,7 +48,7 @@ dotnet add package Markdig
 
 ### Configure services in Program.cs
 
-Register the `Azure OpenAI` client and Syncfusion<sup style="font-size:70%">&reg;</sup> AI Assistview component within the Blazor application.
+Register the `Azure OpenAI` client and Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}

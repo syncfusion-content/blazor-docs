@@ -9,7 +9,7 @@ documentation: ug
 
 # Title and Subtitle in Blazor Sankey Diagram
 
-The Syncfusion Blazor Sankey Diagram allows you to add a title and subtitle to your chart, providing context and description for the data visualization. This topic covers how to set and customize the title and subtitle in the Sankey Diagram.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram allows you to add a title and subtitle to your chart, providing context and description for the data visualization. This topic covers how to set and customize the title and subtitle in the Sankey Diagram.
 
 ## Setting the Title and Subtitle
 

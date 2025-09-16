@@ -58,7 +58,7 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
 
 #### How to Enable Intermediate Language Trimming Safely for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid
 
-1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
+1. Modify your project file (.csproj) to include Trimmable assemblies and descriptors:
   ```xml
     <ItemGroup>
       <TrimmableAssembly Include="Syncfusion.Blazor" />

@@ -230,11 +230,11 @@ public class GeminiChatParameters
 
 ## Step 3: Create a Custom AI Service
 
-The Syncfusion Smart Components are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart Components to the Gemini AI service.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart Components to the Gemini AI service.
 
 ### Understanding the Interface
 
-The `IChatInferenceService` interface is the bridge between Syncfusion Smart Components and AI services:
+The `IChatInferenceService` interface is the bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
@@ -261,7 +261,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application to use the Gemini AI service with Syncfusion Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the Gemini AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
 
 ```CSharp
 
