@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Syncfusion Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IChatInferenceService` interface, which acts as a bridge between Smart Components and your custom AI service.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IChatInferenceService` interface, which acts as a bridge between Smart Components and your custom AI service.
 
 
 ## IChatInferenceService Interface

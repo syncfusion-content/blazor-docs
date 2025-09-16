@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Selection in Syncfusion Blazor DataGrid
+# Selection in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of the selection in the Syncfusion Blazor DataGrid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+You can customize the appearance of the selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
 
 ## Customizing the row selection background
 

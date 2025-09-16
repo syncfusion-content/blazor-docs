@@ -9,7 +9,7 @@ documentation: ug
 
 # Dialog editing in Blazor DataGrid
 
-Dialog editing is a feature in the Syncfusion Blazor DataGrid that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source. This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
+Dialog editing is a feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source. This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
 
 To enable dialog editing in the Grid, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog**. This property determines the editing mode for the Grid, and when set to **Dialog**, it enables the dialog editing feature.
 
@@ -81,7 +81,7 @@ public class OrderDetails
 
 ## Customize the edit dialog
 
-The edit dialog in the Syncfusion Blazor DataGrid allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements.
+The edit dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements.
 
 To customize the edit dialog, use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) properties of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) to modify the appearance of the edit dialog.
 
@@ -184,7 +184,7 @@ public class OrderDetails
 
 ## Show or hide columns in dialog editing
 
-The show or hide columns in dialog editing feature in the Syncfusion Blazor DataGrid allows you to dynamically control the visibility of columns while editing in dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the following Grid events:
+The show or hide columns in dialog editing feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to dynamically control the visibility of columns while editing in dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the following Grid events:
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the Grid.
 2. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an edit action is executed in the Grid.
@@ -322,7 +322,7 @@ public class OrderDetails
 
 ## Use wizard-like dialog editing
 
-Wizard-like dialog editing is a powerful feature in the Syncfusion Blazor DataGrid that enables the creation of intuitive, step-by-step forms. This approach provides a structured way to complete forms or enter data by breaking the process into manageable steps. It is especially useful for complex forms that need to be divided into smaller sections, guiding users through the data entry process.
+Wizard-like dialog editing is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that enables the creation of intuitive, step-by-step forms. This approach provides a structured way to complete forms or enter data by breaking the process into manageable steps. It is especially useful for complex forms that need to be divided into smaller sections, guiding users through the data entry process.
 
 To implement wizard-like dialog editing in the Grid, use the template feature. This allows you to define a custom editing template by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog** and specifying the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The template defines the editors for each step of the wizard.
 
@@ -556,7 +556,7 @@ public class OrderDetails
 
 ## Customize add/edit dialog footer
 
-The customize add/edit dialog footer feature in the Syncfusion Blazor DataGrid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which let you save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size. You can achieve this using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The customize add/edit dialog footer feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which let you save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size. You can achieve this using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 In the following sample, the action for the custom button is defined using the `FooterTemplate` property of the `GridEditSettings`.
 

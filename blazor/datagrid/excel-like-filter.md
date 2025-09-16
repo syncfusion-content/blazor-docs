@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel like filter in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the Grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the Grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
 
 Here is an example that showcasing how to render the Excel like filter within the Grid:
 
@@ -97,7 +97,7 @@ public class OrderData
 
 ## Checkbox filtering
 
-The checkbox filtering feature in the Syncfusion Blazor DataGrid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
+The checkbox filtering feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
 
 Here is an example that showcasing how to render the check box filter within the Grid:
 
@@ -182,7 +182,7 @@ public class OrderData
 
 ## Customize the filter choice count
 
-By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Syncfusion Blazor DataGrid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
+By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
 
 The Grid allows you to customize the number of distinct data displayed in the checkbox list of the Excel/Checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
 
@@ -304,7 +304,7 @@ public class OrderData
 
 ## Show customized text in checkbox list data
 
-The Syncfusion Blazor DataGrid provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
 
 To customize the text in the Excel/Checkbox filter, you can define a `FilterItemTemplate`  and bind it to the desired column. The `FilterItemTemplate`  property allows you to create custom templates for filter items. You can use any logic and HTML elements within this template to display the desired text or content.
 
@@ -405,7 +405,7 @@ public class OrderData
 
 ## Show template in checkbox list data
 
-The `FilterItemTemplate` property in the Syncfusion Blazor DataGrid allows you to customize the appearance of filter items in the Grid’s filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
+The `FilterItemTemplate` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the appearance of filter items in the Grid’s filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
 
 In this example, you can see how to use the `FilterItemTemplate` to render icons along with the category names in the filter checkbox list for the **CategoryName** column:
 
@@ -524,7 +524,7 @@ public class OrderData
 
 ## Customize the Excel filter dialog using CSS
 
-In the Syncfusion Blazor DataGrid, you have the flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you have the flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
 
 **1.Removing context menu option**
 

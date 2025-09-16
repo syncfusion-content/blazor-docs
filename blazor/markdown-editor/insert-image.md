@@ -9,7 +9,7 @@ documentation: ug
 
 # Insert Images in Blazor Markdown Editor Component
 
-The Syncfusion Blazor Markdown Editor allows users to insert images using the toolbar. This feature enables embedding images from online sources into the editor content.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor allows users to insert images using the toolbar. This feature enables embedding images from online sources into the editor content.
 
 ## Steps to Insert an Image  
 
@@ -21,7 +21,7 @@ Follow these steps to add an image in the Markdown editor:
 
 The image will be added to the editor content at the cursor position.
 
-The following example demonstrates how to enable image insertion in the Syncfusion Blazor Markdown Editor.
+The following example demonstrates how to enable image insertion in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor.
 
 {% tabs %}
 {% highlight cshtml %}

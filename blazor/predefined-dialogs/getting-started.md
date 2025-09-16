@@ -87,7 +87,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service and Syncfusion Dialog Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service and Syncfusion<sup style="font-size:70%">&reg;</sup> Dialog Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Popups` namespace.
 

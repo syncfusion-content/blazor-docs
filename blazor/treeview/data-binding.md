@@ -15,7 +15,7 @@ Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the ban
 
 By default, the [`LoadOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event can be used to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
-To bind list data and service URLs to the Syncfusion Blazor TreeView component , you can check on this video.
+To bind list data and service URLs to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeView component , you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=yvzewBlBRrI" %}

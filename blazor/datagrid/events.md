@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor DataGrid
 
-In this section, we have provided the list of events of the Syncfusion Blazor DataGrid which will be
-triggered for appropriate Grid actions.
+In this section, we have provided the list of events of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid which will be triggered for appropriate Grid actions.
 
 The events should be provided to the Grid using **GridEvents**. When using events of Grid, **TValue** must be provided in the **GridEvents**.
 

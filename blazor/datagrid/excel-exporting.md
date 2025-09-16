@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel exporting in Blazor DataGrid
 
-The Excel or CSV exporting feature in the Syncfusion Blazor DataGrid allows you to export the Grid data to an Excel or CSV document. This can be useful when you need to share or analyze the data in a spreadsheet format.
+The Excel or CSV exporting feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to export the Grid data to an Excel or CSV document. This can be useful when you need to share or analyze the data in a spreadsheet format.
 
 To enable Excel export in the Grid, you need to set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property is responsible for enabling the Excel or CSV export option in the Grid.
 
@@ -110,7 +110,7 @@ public class OrderData
 
 ## Show spinner while exporting 
 
-Showing a spinner while exporting in the Syncfusion Blazor DataGrid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
+Showing a spinner while exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
 
 To show or hide a spinner while exporting the Grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid within the `OnToolbarClick` event.
 
@@ -212,7 +212,7 @@ public class OrderData
 
 ## Binding custom data source while exporting
 
-The Syncfusion Blazor DataGrid provides a convenient way to export data to a Excel or CSV format. With the Excel or CSV export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the Grid, which can be generated or retrieved based on your application logic.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a convenient way to export data to a Excel or CSV format. With the Excel or CSV export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the Grid, which can be generated or retrieved based on your application logic.
 
 To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object. This property represents the data source that will be used for the Excel or CSV export.
 
@@ -309,7 +309,7 @@ public class OrderData
 
 ## Exporting with custom aggregate
 
-Exporting Syncfusion Blazor DataGrid data with custom aggregates allows you to include additional calculated values in the exported file based on specific requirements. This feature is highly valuable for providing a comprehensive view of the data in the exported file, incorporating specific aggregated information for analysis or reporting purposes.
+Exporting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid data with custom aggregates allows you to include additional calculated values in the exported file based on specific requirements. This feature is highly valuable for providing a comprehensive view of the data in the exported file, incorporating specific aggregated information for analysis or reporting purposes.
 
 In order to utilize custom aggregation, you need to specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property as **Custom** and provide the custom aggregate function in the `CustomAggregate` property.
 
@@ -433,7 +433,7 @@ public class OrderData
 
 ## Exporting with custom date format
 
-The exporting functionality in the Syncfusion Blazor DataGrid allows you to export Grid data, including custom date format. This feature is useful when you need to export Grid data with customized date values.
+The exporting functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to export Grid data, including custom date format. This feature is useful when you need to export Grid data with customized date values.
 
 To apply a custom date format to Grid columns during the export, you can utilize the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
 
@@ -525,7 +525,7 @@ public class OrderData
 
 ## Passing additional parameters to the server when exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion Blazor DataGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server when exporting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
 
 You can achieve this by utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property and the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. Within the `Query` property, you can invoke the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method to add parameters to the request.
 
