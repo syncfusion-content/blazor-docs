@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration of Gemini AI With Blazor AI AssistView component
 
-The Syncfusion  AI AssistView supports integration with [Gemini](Gemini API quickstart  |  Google AI for Developers), enabling advanced conversational AI features in your applications.
+The Syncfusion  AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in your applications.
 
 ## Prerequisites
 

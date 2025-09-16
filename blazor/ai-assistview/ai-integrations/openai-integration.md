@@ -13,7 +13,7 @@ The Syncfusion  AI AssistView supports integration with [OpenAI](https://platfor
 
 ## Prerequisites
 
-*OpenAI account to generate an API key for accessing the `OpenAI` API
+* OpenAI account to generate an API key for accessing the `OpenAI` API
 * Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
 
 ## Getting Started with the AI AssistView Component
