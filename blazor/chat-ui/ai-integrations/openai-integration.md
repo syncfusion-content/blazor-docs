@@ -54,7 +54,7 @@ Install-Package OpenAI
 
 ##  Integration Open AI with Chat UI
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line
 
 ```bash
 
