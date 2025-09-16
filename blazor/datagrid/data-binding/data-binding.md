@@ -9,9 +9,9 @@ documentation: ug
 
 # Data Binding in Blazor DataGrid
 
-Data binding is a fundamental technique that empowers the Syncfusion Blazor DataGrid to integrate data into its interface, enabling the creation of dynamic and interactive Grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
+Data binding is a fundamental technique that empowers the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to integrate data into its interface, enabling the creation of dynamic and interactive Grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-The Syncfusion Blazor DataGrid utilizes the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data service binding and IEnumerable binding. The key property, [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource), can be assigned to a `SfDataManager` instance or list of business objects.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid utilizes the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data service binding and IEnumerable binding. The key property, [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource), can be assigned to a `SfDataManager` instance or list of business objects.
 
 It supports two kinds of data binding methods:
 

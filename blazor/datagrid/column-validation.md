@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in Blazor DataGrid
 
-Validation is a crucial aspect of data integrity in any application. The Syncfusion Blazor DataGrid provides built-in support for easy and effective data validation. This feature ensures that the data entered or modified adheres to predefined rules, preventing errors and guaranteeing the accuracy of the displayed information.
+Validation is a crucial aspect of data integrity in any application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for easy and effective data validation. This feature ensures that the data entered or modified adheres to predefined rules, preventing errors and guaranteeing the accuracy of the displayed information.
 
 ## Column validation
 
@@ -433,7 +433,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 ## Disable in-built validator component
 
-The **Validator** property can also be used to disable the built-in validator component used by the Syncfusion Blazor DataGrid. By default, the Grid uses two validator components: **DataAnnotationsValidator** and an internal validator that handles the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property for edit form validation. If you want to use only the **DataAnnotationsValidator** component, you can achieve this by using the following code.
+The **Validator** property can also be used to disable the built-in validator component used by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. By default, the Grid uses two validator components: **DataAnnotationsValidator** and an internal validator that handles the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property for edit form validation. If you want to use only the **DataAnnotationsValidator** component, you can achieve this by using the following code.
 
 ```c#
 <SfGrid TValue="OrdersDetails" DataSource="GridData" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
@@ -463,7 +463,7 @@ The **Validator** property can also be used to disable the built-in validator co
 
 ## Display validation message in dialog template
 
-Use form validation to display a validation message for a field that is not defined as a column in the Syncfusion Blazor DataGrid.
+Use form validation to display a validation message for a field that is not defined as a column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
 You can use the **Validator** property to show a validation message for a field in the dialog template, even if that field is not present in the Grid columns. In the following example, the validation message for **ShipAddress** is displayed in the dialog template, even though the **ShipAddress** field is not defined as a Grid column.
 

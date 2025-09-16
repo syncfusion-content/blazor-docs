@@ -678,7 +678,7 @@ You can use the `itemClicked` event when the toolbar item is clicked in the `Mes
 
 ## Displaying the markdown content
 
-The Syncfusion ChatUI supports `Markdown` formatting for messages, enabling rich text capabilities such as bold, italic, links, and more.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ChatUI supports `Markdown` formatting for messages, enabling rich text capabilities such as bold, italic, links, and more.
 
 ### Prerequisites
 

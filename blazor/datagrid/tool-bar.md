@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor DataGrid
 
-The toolbar in the Syncfusion Blazor DataGrid offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the Grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing you to generate downloadable files in formats like Excel, CSV, or PDF.
+The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the Grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing you to generate downloadable files in formats like Excel, CSV, or PDF.
 
 This service provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom toolbar items.
 
@@ -86,7 +86,7 @@ The following example demonstrates how to enable toolbar items in the Grid:
 
 ## Enable or disable toolbar items
 
-Enabling or disabling toolbar items dynamically in Syncfusion Blazor DataGrid is to provide control over the availability of specific functionality based on application logic. This feature allows you to customize the toolbar based on various conditions or individuals interactions.
+Enabling or disabling toolbar items dynamically in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is to provide control over the availability of specific functionality based on application logic. This feature allows you to customize the toolbar based on various conditions or individuals interactions.
 
 You can enable or disable toolbar items dynamically by using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This method allows you to control the availability of specific toolbar items based on your application logic.
 
@@ -205,7 +205,7 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 
 ## Enable or disable toolbar items based on selected row data
 
-You can enable or disable toolbar items based on the selected row data in a Syncfusion Blazor DataGrid. This allows you to dynamically control which toolbar actions are available, ensuring they are only active when relevant to the selected row. 
+You can enable or disable toolbar items based on the selected row data in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. This allows you to dynamically control which toolbar actions are available, ensuring they are only active when relevant to the selected row. 
 
 This can be achieved by using the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event along with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This method allows you to programmatically enable or disable specific toolbar items based on the selected row's data.
 
@@ -310,7 +310,7 @@ public class OrderData
 
 ## Customize Toolbar buttons using CSS
 
-Customizing Toolbar buttons in Syncfusion Blazor DataGrid using CSS involves modifying the appearance of built-in toolbar buttons by applying CSS styles. This provides a flexible and customizable way to enhance the visual presentation of the toolbar and create a cohesive interface.
+Customizing Toolbar buttons in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS involves modifying the appearance of built-in toolbar buttons by applying CSS styles. This provides a flexible and customizable way to enhance the visual presentation of the toolbar and create a cohesive interface.
 
 The appearance of the built-in Toolbar buttons can be modified by applying the following CSS styles:
 
@@ -401,4 +401,4 @@ The following example demonstrates how to change the background color of the `Ad
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/Customizing-the-toolbar-items-tooltip-text-in-Blazor-Grid)
 
-N> You can refer to our [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Syncfusion Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

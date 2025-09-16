@@ -8,9 +8,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# WebApiAdaptor in Syncfusion Blazor DataGrid
+# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
+The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
 
 To enable the OData query option for a Web API, please refer to the corresponding [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options), which provides detailed instructions on configuring the endpoint to understand OData-formatted queries.
 
@@ -18,7 +18,7 @@ This section describes a step-by-step process for retrieving data using the `Web
 
 ## Creating an API service
  
-To configure a server with the Syncfusion Blazor DataGrid, follow these steps:
+To configure a server with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
  
 **1. Create a Blazor web app**
  
@@ -150,15 +150,15 @@ Run the application in Visual Studio. The API will be accessible at a URL like *
  
 ![WebApiAdaptor Data](../images/web-api-adaptor-data.png)
 
-## Connecting Syncfusion Blazor DataGrid to an API service
+## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an API service
  
-To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid into your project using Visual Studio, follow the below steps:
  
-**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
+**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
  
 To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
  
 Alternatively, use the following Package Manager commands:
  
@@ -167,9 +167,9 @@ Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
  
-> Syncfusion Blazor components are available on [nuget.org]( https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages]( https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org]( https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages]( https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
-**2. Register Syncfusion Blazor service**
+**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -179,7 +179,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Data
 ```
  
-- Register the Syncfusion Blazor service in the **~/Program.cs** file.
+- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
  
 ```csharp
 using Syncfusion.Blazor;
@@ -655,7 +655,7 @@ N> If you want to handle filtering, sorting, and paging operations using Dynamic
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
+To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
 
 To enable CRUD operations in the Grid, follow the steps below:
 
@@ -684,7 +684,7 @@ To enable CRUD operations in the Grid, follow the steps below:
 
 **Insert operation:**
 
-To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
+To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
 
 ![Insert Record](../images/web-api-adaptor-insert.png)
 
@@ -707,7 +707,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 **Update operation:**
 
-Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
+Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
 
 ![Update Record](../images/web-api-adaptor-update.png)
 
@@ -739,7 +739,7 @@ public void Put([FromBody] OrdersDetails updatedRecord)
 
 **Delete operation:**
 
-To delete a record from your Syncfusion Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
+To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
 
 ![Delete Record](../images/web-api-adaptor-delete.png)
 

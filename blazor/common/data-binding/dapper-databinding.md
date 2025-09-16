@@ -59,7 +59,7 @@ Run the following commands in the Package Manager Console.
 * The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
 
     ```
-    Install-Package Microsoft.Data.SqlClient -Version 5.1.2
+    Install-Package Microsoft.Data.SqlClient
     ```
 
 Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, you need to create model class manually. Here, you are creating a class named `Bug.cs` in the `Data` folder as follows.

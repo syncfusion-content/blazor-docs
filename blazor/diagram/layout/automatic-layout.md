@@ -279,13 +279,13 @@ Here’s an example of how to use this property:
 
 * [How to Create the Org Chart Blazor Diagram by Using MDF Database](https://support.syncfusion.com/kb/article/12128/how-to-create-the-org-chart-blazor-diagram-by-using-mdf-database)
 
-* [Why Is It Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion Blazor Diagram?](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+* [Why Is It Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram?](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
 
 * [How to Change the Parent Child Relationship in Layout at Runtime](https://support.syncfusion.com/kb/article/11632/how-to-change-the-parent-child-relationship-in-layout-at-runtime)
 
 * [How to Customize Connector Styles in a Hierarchical Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16310/how-to-customize-connector-styles-in-a-hierarchical-layout-in-blazor-diagram)
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
 * [How to Embed Diagrams Inside Panels of a Dashboard Layout in Blazor](https://support.syncfusion.com/kb/article/18993/how-to-embed-diagrams-inside-panels-of-a-dashboard-layout-in-blazor)
 
@@ -295,4 +295,4 @@ Here’s an example of how to use this property:
 
 * [How to Create an Organizational Chart Using Blazor Diagram](https://support.syncfusion.com/kb/article/16312/how-to-create-an-organizational-chart-using-blazor-diagram)
 
-* [How to Integrate Syncfusion SfDiagramComponent into a SfTab in a Blazor Application](https://support.syncfusion.com/kb/article/17224/how-to-integrate-syncfusion-sfdiagramcomponent-into-a-sftab-in-a-blazor-application)
+* [How to Integrate Syncfusion<sup style="font-size:70%">&reg;</sup> SfDiagramComponent into a SfTab in a Blazor Application](https://support.syncfusion.com/kb/article/17224/how-to-integrate-syncfusion-sfdiagramcomponent-into-a-sftab-in-a-blazor-application)

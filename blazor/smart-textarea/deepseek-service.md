@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Components using DeepSeek AI
 
-This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion Smart Components in your Blazor App. 
+This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components in your Blazor App. 
 
 ## Prerequisites
 
@@ -153,9 +153,9 @@ public class DeepSeekChoice
 
 ## Step 3: Create a Custom AI Service
 
-To integrate DeepSeek with Syncfusion Smart Components, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion components and your AI service.
+To integrate DeepSeek with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> components and your AI service.
 
-The `IChatInferenceService` interface is the bridge between Syncfusion Smart Components and AI services:
+The `IChatInferenceService` interface is the bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
@@ -180,7 +180,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application to use the DeepSeek AI service with Syncfusion Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the DeepSeek AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
 
 ```CSharp
 

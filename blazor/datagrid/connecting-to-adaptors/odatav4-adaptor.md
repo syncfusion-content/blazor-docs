@@ -8,13 +8,13 @@ keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata
 documentation: ug
 ---
 
-# ODataV4Adaptor in Syncfusion Blazor DataGrid
+# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the Syncfusion Blazor DataGrid enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Syncfusion Blazor DataGrid.
+The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
 ## Configuring an OData V4 Service
 
-To configure a server with Syncfusion Blazor DataGrid, follow these steps:
+To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
 
 **1. Create a Blazor web app**
 
@@ -155,11 +155,11 @@ After running the application, you can verify that the server-side API controlle
 
 ![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
 
-## Connecting Syncfusion Blazor DataGrid to an OData V4 Service
+## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an OData V4 Service
 
-To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid into your project using Visual Studio, follow the below steps:
 
-**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
+**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
 
 To add the Blazor DataGrid to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) for the `ODataV4Adaptor.Client` project, search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -170,9 +170,9 @@ Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
 
-> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
 
-**2. Register Syncfusion Blazor service**
+**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
 
 - Open the **~/_Imports.razor** file and import the required namespaces.
 
@@ -181,7 +181,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Grids
 ```
 
-- Register the Syncfusion Blazor service in the **~/Program.cs** file of `ODataV4Adaptor.Client` project.
+- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of `ODataV4Adaptor.Client` project.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -276,7 +276,7 @@ When you run the application, the Blazor DataGrid will display data fetched from
 
 ## Handling searching operation
 
-By default, ODataV4 does not support global search, which is the ability to search across all fields simultaneously. To overcome this limitation, Syncfusion provides a search fallback mechanism that allows you to implement a global search experience using the `EnableODataSearchFallback` option.
+By default, ODataV4 does not support global search, which is the ability to search across all fields simultaneously. To overcome this limitation, Syncfusion<sup style="font-size:70%">&reg;</sup> provides a search fallback mechanism that allows you to implement a global search experience using the `EnableODataSearchFallback` option.
 
 To enable search operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to search for specific data entries.
 
@@ -503,7 +503,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
+To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
 
 To enable CRUD operations in the Grid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
 
@@ -532,7 +532,7 @@ To enable CRUD operations in the Grid within your application, follow these step
 
 **Insert Record:**
 
-To insert a new record into your Syncfusion DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -566,7 +566,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
 **Update Record:**
 
-Updating a record in the Syncfusion DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
+Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -609,7 +609,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 
 **Delete Record:**
 
-To delete a record from your Syncfusion DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
