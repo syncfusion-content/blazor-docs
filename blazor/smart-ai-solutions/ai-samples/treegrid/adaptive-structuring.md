@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Restructuring with Blazor TreeGrid and AI Models
-description: Learn how to use Syncfusion Blazor TreeGrid with AI service to automatically organize hierarchical data by assigning ParentId values based on CategoryName relationships.
+title: Data Restructuring with Blazor TreeGrid and AI Models | Syncfusion
+description: Learn how to use Syncfusion Blazor TreeGrid with AI service to automatically organize hierarchical data.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -370,8 +370,6 @@ If the AI service fails to return a valid response, the TreeGrid will display an
 - **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt for efficiency.
-
-For further assistance, refer to the [Syncfusion Blazor Documentation](https://blazor.syncfusion.com/documentation) or the [Ollama Documentation](https://ollama.com/docs).
 
 ## Performance Considerations
 
