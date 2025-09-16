@@ -381,5 +381,5 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 
 A complete working example is available in the [Syncfusion Blazor Samples GitHub repository](https://github.com/syncfusion/blazor-samples).
 
-![Smart Structuring - Output](images/adaptive-datastructuring.gif)
+![Smart Structuring - Output](../../ai/images/adaptive-datastructuring.gif)
 *Alt text: Animation showing hierarchical data restructuring in Syncfusion Blazor TreeGrid, with categories like Electronics and Furniture organizing subcategories like Cell phone and Chair.*
