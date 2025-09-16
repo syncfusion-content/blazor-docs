@@ -218,7 +218,7 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |

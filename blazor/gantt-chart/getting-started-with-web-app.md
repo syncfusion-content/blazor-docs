@@ -226,7 +226,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
