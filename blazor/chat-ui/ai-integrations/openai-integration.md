@@ -141,4 +141,4 @@ const string openaiApiKey  = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI Open AI Integration](images/openai-integration.png)
+![Blazor Chat UI Open AI Integration](./images/openai-integration.png)

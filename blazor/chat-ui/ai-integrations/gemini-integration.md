@@ -132,4 +132,4 @@ const string GeminiApiKey = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI Gemini Integration](images/gemini-integration.png)
+![Blazor Chat UI Gemini Integration](./images/gemini-integration.png)
