@@ -455,7 +455,6 @@ The following example demonstrates how to add a page number in the header and fo
             {
                 Type = ContentType.PageNumber,
                 PageNumberType = pageType, // Set the selected page number format.
-                Value = "Page ${current} of ${total}", // Set placeholders for dynamic page numbers.
                 Position = new PdfPosition { X= 360, Y = 20 }, // set the position of the text in the header/footer.
                 Style = new PdfContentStyle
                 {
@@ -532,7 +531,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrojIjPAVzTWYBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLojkCeTOdnSgCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Insert an image in header and footer
 
