@@ -472,8 +472,6 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Complex data generation
 
 The Syncfusion Blazor DataGrid allows you to achieve complex data binding by using the dot (.) operator in the  column.field. This feature is particularly useful when dealing with nested or complex data structures.
@@ -631,8 +629,6 @@ Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncf
 
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgXRVXLFuZSlab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Complex data generation using DynamicObject
 
 Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding). You can achieve DynamicObject complex data binding in the Grid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
@@ -698,8 +694,6 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 {% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### How to set complex column as foreign key column
 
