@@ -129,4 +129,4 @@ const string openaiApiKey  = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Open AI Integration](images/openai-integration.png)
+![Blazor AI AssistView Open AI Integration](./images/openai-integration.png)

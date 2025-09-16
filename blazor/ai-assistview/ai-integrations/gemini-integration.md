@@ -128,4 +128,4 @@ const string GeminiApiKey = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Gemini Integration](images/gemini-integration.png)
+![Blazor AI AssistView Gemini Integration](./images/gemini-integration.png)
