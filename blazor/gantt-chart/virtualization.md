@@ -17,7 +17,9 @@ The `EnableRowVirtualization` property allows you to render only the rows that a
 
 The number of records displayed in the Gantt chart is determined implicitly by the height of the content area.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" AutoCalculateDateScheduling="@autoCalculateDateScheduling" TreeColumnIndex="1" EnableRowVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate" Toolbar="@(new List<string>() { "Add", "Delete", "Edit", "ZoomIn", "ZoomOut" })" ScrollToTaskbarOnClick="true">
@@ -34,13 +36,12 @@ The number of records displayed in the Gantt chart is determined implicitly by t
     <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
     <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
     </GanttColumns>
-    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Auto" ShowDeleteConfirmDialog="true">
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto" ShowDeleteConfirmDialog="true">
     </GanttEditSettings>
     <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
 </SfGantt>
 @code {
     private SfGantt<TaskData> Obj { get; set; }
-    private string DateFormat = "MM/dd/yyyy";
     private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
     private DateTime ProjectEndDate = new DateTime(2025, 12, 31);
     private bool autoCalculateDateScheduling = false;
@@ -112,9 +113,15 @@ The number of records displayed in the Gantt chart is determined implicitly by t
         public string Predecessor { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBeDasmfrkOvUON?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Managing records count
+
+<!-- Having doubt paging supported or not -->
 
 By default, the number of records rendered per page will be twice the Gantt chart's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) properties. Here's an explanation of these properties:
 
@@ -125,7 +132,9 @@ By default, the number of records rendered per page will be twice the Gantt char
     •	The `OverscanCount` property is used to render additional rows before and after the Gantt Chart's current page rows.
     •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
@@ -223,9 +232,11 @@ By default, the number of records rendered per page will be twice the Gantt char
         public string Predecessor { get; set; }
     }
 }
-```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLKWMBZrKaVXJhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSjuWwppImKWKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column virtualization
 
@@ -233,7 +244,8 @@ Column virtualization allows you to load more columns with high performance. It 
 
 To enable the column virtualization, set the [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -344,17 +356,20 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
         public int Field12 { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryXYCmpzdIEKPs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
-
-![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
 
 ## Timeline virtualization
 
 Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To enable timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -478,7 +493,11 @@ Timeline virtualization allows you to load data sources having a large timespan 
         public int Field12 { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSZYsmJzvPFSdf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor GanttChart with timeline virtualization](./images/timeline_virtual.gif)
 
