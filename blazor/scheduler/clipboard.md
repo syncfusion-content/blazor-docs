@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor Scheduler Component
 
-The Clipboard functionality in the Syncfusion Scheduler enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
+The Clipboard functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
 
 To activate the clipboard feature in the scheduler, simply set the [`AllowClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowKeyboardInteraction) property to **true**.
 
@@ -17,7 +17,7 @@ N> The [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Cut, copy and paste using keyboard
 
-The Syncfusion Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
 
 These keyboard shortcuts enable users to efficiently manage their schedules:
 
@@ -115,7 +115,7 @@ N> For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste opera
 
 You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods allow you to perform the same actions as the context menu or external buttons.
 
-Utilize these public methods to manage appointments programmatically in Syncfusion Schedule:
+Utilize these public methods to manage appointments programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule:
 
 | Method          | Parameters                            | Description                                                        |
 |-----------------|---------------------------------------|--------------------------------------------------------------------|

@@ -7,13 +7,13 @@ control: ListView
 documentation: ug
 ---
 
-# Retrieving Selected Items in Syncfusion Blazor ListView
+# Retrieving Selected Items in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView
 
-The Syncfusion Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
 
 ## Get selected items from ListView Component
 
-The ListView component in Syncfusion Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
+The ListView component in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
 
 | Return type | Purpose |
 |------------|-------------------|

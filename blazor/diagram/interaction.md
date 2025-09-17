@@ -574,7 +574,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
 
 ### How to Access and Modify Selected Nodes and Connectors at Runtime
-You can access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows you to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
+You can access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows you to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
 ```
 @page "/"
 @using Syncfusion.Blazor.Diagram
@@ -1070,17 +1070,17 @@ The following table illustrates those commands with the associated key values.
 
 * [How to Get the Mouse Position When Hovering Over the Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/18960/how-to-get-the-mouse-position-when-hovering-over-the-diagram-area-in-blazor-diagram)
 
-* [How to Drag a Node Programmatically Without User Interaction in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
+* [How to Drag a Node Programmatically Without User Interaction in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
 
 * [How to Add Nodes and Connectors at Runtime Asynchronously in Blazor Diagram Component](https://support.syncfusion.com/kb/article/16312/how-to-add-nodes-and-connectors-at-runtime-asynchronously-in-blazor-diagram-component)
 
-* [How to Identify the Clicked Diagram Elements in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to Identify the Clicked Diagram Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
 
 * [How to Notify the Double Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
 
-* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion Blazor Diagram Component](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
+* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
 

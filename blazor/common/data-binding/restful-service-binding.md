@@ -56,7 +56,7 @@ Now, click on **Update Database**.
 Open Visual Studio 2022 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
 
 ```
-Install-Package Microsoft.AspNetCore.OData -Version 8.2.3
+Install-Package Microsoft.AspNetCore.OData
 
 ```
 This package contains everything you need to create OData v4.0 endpoints using ASP.NET Core MVC and to support OData query syntax for your web APIs.
@@ -67,13 +67,13 @@ Now, you need to scaffold **DbContext** and **model classes** from the existing 
 
 * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools) : This package creates database context and model classes from the database.
 
-* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) :The database provider that allows Entity Framework Core to work with SQL Server.
+* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) :The database provider that allows [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) to work with SQL Server.
 
 Run the following commands in the **Package Manager Console**.
 
 ```
-Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
-Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 ```
 
@@ -165,7 +165,7 @@ builder.Services.AddDbContext<OrdersDetailsContext>(option =>
 
 ### Creating ODataV4 service
 
-The application is now configured to connect with the **OrdersDetails** database using Entity Framework. Now, it’s time to consume data from the OrdersDetails database. To do so, you need an OData controller to serve data from the DbContext to the Blazor application.
+The application is now configured to connect with the **OrdersDetails** database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/). Now, it’s time to consume data from the OrdersDetails database. To do so, you need an OData controller to serve data from the DbContext to the Blazor application.
 
 To create OData controller, right-click **Controller** folder in ODataServiceProject and select **Add -> New Item -> API controller with read/write actions**. We are naming this controller as **OrdersController** as it returns Orders table records.
 

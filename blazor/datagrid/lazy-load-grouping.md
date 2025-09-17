@@ -11,7 +11,7 @@ documentation: ug
 
 In Blazor , lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy loading can significantly improve the performance of your application by reducing the initial load time.
 
-Lazy load grouping in the Syncfusion Blazor DataGrid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
+Lazy load grouping in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
 
 To enable this feature, need to set the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) as **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
@@ -231,7 +231,7 @@ public class OrderData
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Syncfusion Blazor DataGrid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset.
+The lazy load grouping with virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset.
 
 **How lazy load grouping with virtual scrolling works**
 

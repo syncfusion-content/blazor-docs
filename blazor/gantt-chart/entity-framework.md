@@ -17,9 +17,9 @@ You need to follow the below steps to consume data from the **Entity Framework**
 **Step 2:** Install the below packages for Entity Framework Support using Nuget or Package manager console using the below command.
 
 ```bash
-Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.0.0
+Install-Package Microsoft.EntityFrameworkCore.Tools
 
-Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.0.0
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 ```
 

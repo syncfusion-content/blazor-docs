@@ -75,9 +75,9 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.Tools
 
-Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,9 +244,9 @@ Run the following commands in the Package Manager Console.
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.Tools
 
-Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 {% endhighlight %}
 {% endtabs %}

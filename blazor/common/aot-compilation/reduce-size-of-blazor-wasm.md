@@ -54,11 +54,11 @@ Partial trimming is less aggressive and may be safer for applications that use r
 
 To control **Intermediate Language (IL)** trimming on a per-assembly basis by supplying an XML configuration file. This approach allows you to explicitly preserve assemblies, types, or members that may be trimmed, even if they are not directly referenced in your application code.
 
-To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#enable-project-specific-trimming) in a Syncfusion Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
+To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#enable-project-specific-trimming) in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
 
-#### How to Enable Intermediate Language Trimming Safely for Syncfusion Blazor Grid
+#### How to Enable Intermediate Language Trimming Safely for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid
 
-1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
+1. Modify your project file (.csproj) to include Trimmable assemblies and descriptors:
   ```xml
     <ItemGroup>
       <TrimmableAssembly Include="Syncfusion.Blazor" />
@@ -117,7 +117,7 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
 
 ### Final Evaluation
 
-To evaluate application size, a Blazor WebAssembly test application was configured with Syncfusion components, specifically featuring the Blazor Grid with paging enabled.
+To evaluate application size, a Blazor WebAssembly test application was configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components, specifically featuring the Blazor Grid with paging enabled.
 
 |   AOT Status          | With Trim            | Without Trim         |
 |-----------------------|----------------------|----------------------|
