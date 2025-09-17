@@ -12,7 +12,6 @@ documentation: ug
 ## Introduction
 
 This section demonstrates configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, empowering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with intelligent features such as data restructuring, content analysis, and hierarchical organization without requiring external API dependencies.
->>>>>>> c8df4c3ee (Updated Blazor UG documentation):blazor/smart-ai-solutions/ai/ollama.md
 
 ## Prerequisites
 
