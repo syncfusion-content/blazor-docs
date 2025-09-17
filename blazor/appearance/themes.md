@@ -40,7 +40,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bootstrap Theme is d
 
 ## Optimized CSS Themes
 
-Syncfusion Blazor themes are available in two variants to help optimize application's performance:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available in two variants to help optimize application's performance:
  
 **Standard Theme Files:**
 
@@ -58,7 +58,7 @@ For improved performance, we offer optimized lite theme files (<theme_name>-lite
 
 * Choose the lite theme variant when your application doesn't require the bigger size mode. To implement a lite theme, simply reference the -lite.css version instead of the standard theme file in your application.
 
-Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
+Comparison of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Component in **normal** and **bigger** size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 

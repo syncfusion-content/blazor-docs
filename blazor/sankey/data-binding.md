@@ -32,7 +32,7 @@ The Blazor Sankey Diagram uses predefined data models for nodes and links. These
 - `TargetId`: A string property identifying the target node of the link.
 - `Value`: A double property representing the weight or magnitude of the connection.
 
-There's no need to define these classes yourself as they are provided by the Syncfusion library.
+There's no need to define these classes yourself as they are provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> library.
 
 ## Binding Data to the Sankey Diagram
 To use the Sankey Diagram, you need to create collections of `SankeyDataNode` and `SankeyDataLink` objects and bind them to the component. Here's how you can do this.

@@ -32,7 +32,7 @@ In Visual Studio Code, go to the **Terminal** menu and select **New Terminal** t
 Run the following commands one after the other in the terminal:
 
 1. **Restore dependencies**  
-   Run the command below to install all necessary packages related to the blocks, the Syncfusion Blazor components, and the sample browser.
+   Run the command below to install all necessary packages related to the blocks, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, and the sample browser.
 
     ```bash
     dotnet restore
@@ -55,10 +55,10 @@ Run the following commands one after the other in the terminal:
 
 ### Step 4: License Key Requirement
 
-The blocks include several Syncfusion Blazor components that require an active license key for proper display and usage. To activate the license, refer to the topics below:
+The blocks include several Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that require an active license key for proper display and usage. To activate the license, refer to the topics below:
 
 #### How to Obtain the License Key
-To obtain the license key, visit the following page: [Syncfusion License](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate).
+To obtain the license key, visit the following page: [Syncfusion<sup style="font-size:70%">&reg;</sup> License](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate).
 
 #### How to Register the License Key in the App
 Once you have your license key, register it in the Blazor app through any one of the following methods suggested in this [link](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).

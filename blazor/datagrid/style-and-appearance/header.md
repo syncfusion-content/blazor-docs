@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Header in Syncfusion Blazor DataGrid
+# Header in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of the header elements in the Syncfusion Blazor DataGrid using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
+You can customize the appearance of the header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
 
 ## Customizing the Blazor DataGrid header
 
@@ -145,7 +145,7 @@ public class OrderData
 
 ## Hide Blazor DataGrid header
 
-In the Syncfusion Blazor DataGrid, the header row (which displays the column titles) can be hidden using simple CSS styles.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the header row (which displays the column titles) can be hidden using simple CSS styles.
 
 Apply the following CSS to your application. This will completely hide the column headers of every Grid on the page:
 

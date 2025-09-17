@@ -9,7 +9,7 @@ documentation: ug
 
 # Insert Table in Blazor Markdown Editor Component
 
-The Syncfusion Blazor Markdown Editor provides built-in support for inserting tables, allowing users to create and customize tables effortlessly within the editor.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides built-in support for inserting tables, allowing users to create and customize tables effortlessly within the editor.
 
 ## Enable Table Insertion in Blazor Markdown Editor  
 

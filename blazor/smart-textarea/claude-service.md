@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Components using Claude AI
 
-This guide walks you through integrating Anthropic's Claude AI with Syncfusion Smart Components in your Blazor App. 
+This guide walks you through integrating Anthropic's Claude AI with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components in your Blazor App. 
 
 ## Prerequisites
 
@@ -168,12 +168,12 @@ public class ClaudeContentBlock
 
 ## Step 3: Create a Custom AI Service
 
-To integrate Claude with Syncfusion Smart Components, you need to implement the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion's components and Claude's AI capabilities.
+To integrate Claude with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components, you need to implement the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion's components and Claude's AI capabilities.
 
-The `IChatInferenceService` interface is designed to allow custom AI service implementations. It defines the contract for how Syncfusion components communicate with AI services:
+The `IChatInferenceService` interface is designed to allow custom AI service implementations. It defines the contract for how Syncfusion<sup style="font-size:70%">&reg;</sup> components communicate with AI services:
 
 1. Create a new file named `MyCustomService.cs` 
-2. Add the Syncfusion namespace
+2. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> namespace
 3. Implement the interface as shown below
 
 ```CSharp
@@ -197,7 +197,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application to use the Claude AI service with Syncfusion Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the Claude AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
 
 ```CSharp
 

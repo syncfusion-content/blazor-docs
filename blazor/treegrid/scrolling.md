@@ -206,7 +206,7 @@ You can scroll the tree grid content to the selected row position by using the [
 
 ## Sticky header
 
-The Syncfusion Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can use the `EnableStickyHeader` property by setting it to **true**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can use the `EnableStickyHeader` property by setting it to **true**.
 
 In the below demo, the TreeGrid headers remain sticky while scrolling within the TreeGrid's parent div element.
 

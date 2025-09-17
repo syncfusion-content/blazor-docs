@@ -17,7 +17,7 @@ The steps below assist you to using the Syncfusion® Project conversion in your 
 
 1. Open an existing Blazor Web Application or create a new Microsoft Blazor Web Application in Visual Studio Code.
 
-2. Select **Convert to Syncfusion Blazor Application...** from the context menu when you right-click on the **Project file** from Explorer (Workspace). Refer the screenshot below.
+2. Select **Convert to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application...** from the context menu when you right-click on the **Project file** from Explorer (Workspace). Refer the screenshot below.
 
     ![Conversion Add-in](images/Conversion.PNG)
 
@@ -37,11 +37,11 @@ The steps below assist you to using the Syncfusion® Project conversion in your 
 
 Based on the application type, the following NuGet packages are added as NuGet references.
 
-| Syncfusion Blazor NuGet packages  | Application type  |
+| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages  | Application type  |
 |---|---|
-| `Syncfusion.Blazor`  | Syncfusion Blazor Web App <br/> Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)|
-| `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion Blazor Server App  |
-| `Syncfusion.Blazor.WordProcessor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)|
+| `Syncfusion.Blazor`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)|
+| `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App  |
+| `Syncfusion.Blazor.WordProcessor`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)|
 
 The NuGet packages added to the application file as follows.
 
@@ -53,9 +53,9 @@ While converting the application, the selected Syncfusion® Blazor theme is adde
 
 | Application type  | File location  |
 |---|---|
-| Syncfusion Blazor Web App | ~/Components/App.razor |
-| Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
-| Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)| {Client Project location}/wwwroot/index.html  |
-| Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
+| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App | ~/Components/App.razor |
+| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App | {Project location}/Pages//_Host.cshtml |
+| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)| {Client Project location}/wwwroot/index.html  |
+| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
 
 ![CDNLink](images/CDNLink.png)

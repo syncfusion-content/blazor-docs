@@ -7,9 +7,11 @@ control: AI Integration
 documentation: ug
 ---
 
-# Ollama Integration with Syncfusion Blazor AI
+# Ollama Integration with Syncfusion® Blazor AI
 
-This section explains how to configure and use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+## Introduction
+
+This section demonstrates configuring and using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with [Ollama](https://ollama.com/) to enable AI functionalities in Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, empowering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with intelligent features such as data restructuring, content analysis, and hierarchical organization without requiring external API dependencies.
 
 ## Prerequisites
 
@@ -30,7 +32,7 @@ Install-Package OllamaSharp
   ```bash
   ollama run llama2
   ```
-* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
+* Met the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Configuration Steps
 
@@ -56,7 +58,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ##  Smart Data Restructuring with Ollama and TreeGrid
 
-This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform smart data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, updating the TreeGrid to reflect the corrected structure.
+This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform intelligent data restructuring in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, automatically updating the TreeGrid to reflect the corrected hierarchical structure.
 
 ### Prerequisites
 - Install the following NuGet packages:
@@ -74,7 +76,7 @@ Install-Package OllamaSharp
 {% endtabs %}
 
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
-- Add the following to `App.razor` for Syncfusion themes and scripts:
+- Add the following to `App.razor` for Syncfusion<sup style="font-size:70%">&reg;</sup> themes and scripts:
   
 ```html
 <head>
@@ -88,7 +90,7 @@ Install-Package OllamaSharp
 </body>
 ```
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
@@ -282,7 +284,7 @@ namespace OllamaExample.Components.Pages
 
 ## How It Works
 
-The example above demonstrates how to use Ollama with Syncfusion Blazor components for intelligent data organization:
+The example above demonstrates how to use Ollama with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components for intelligent data organization:
 
 1. **Setup**: Configuring the Ollama service in `Program.cs` with appropriate credentials and endpoint.
 2. **Component Integration**: Using the `IChatInferenceService` to process TreeGrid data.
@@ -294,5 +296,5 @@ The example above demonstrates how to use Ollama with Syncfusion Blazor componen
 - **IChatInferenceService**: Injected to interact with the Ollama models.
 - **ChatParameters**: Configures the AI request, including system prompt and user messages.
 - **GenerateResponseAsync**: Sends the request to Ollama and retrieves the response asynchronously.
-- **UI Components**: Syncfusion TreeGrid and Button components work together with the AI service.
+- **UI Components**: Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid and Button components work together with the AI service.
 

@@ -66,7 +66,7 @@ The following keyboard shortcuts are supported by the Chat UI component.
 |<b>Chat UI Toolbars</b>|||
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element.  |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
-| <kbd>Enter</kbd> / <kbd>Soace</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first toolbar element. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last toolbar element. |
 
@@ -76,4 +76,4 @@ The Chat UI component's accessibility levels are ensured through an [accessibili
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

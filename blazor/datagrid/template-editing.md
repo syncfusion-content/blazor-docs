@@ -9,13 +9,13 @@ documentation: ug
 
 # Template Editing in Blazor DataGrid Component
 
-The Syncfusion Blazor DataGrid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. This feature allows you to use templates to define the structure and content of the cells within the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. This feature allows you to use templates to define the structure and content of the cells within the grid.
 
 > Before implementing Template Editing, it is recommended to review the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section to understand the configuration of templates in the grid.
 
 ## Inline template editing
 
-The inline template editing feature in Syncfusion DataGrid allows customization of the default inline editing behavior by enabling individuals to define their custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping the desired editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is particularly useful when there is a need to include additional fields not present in the column model or to render highly customized editors.
+The inline template editing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows customization of the default inline editing behavior by enabling individuals to define their custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping the desired editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is particularly useful when there is a need to include additional fields not present in the column model or to render highly customized editors.
 
 > Custom HTML elements or components can be used as editors, and two-way data binding (**@bind-Value**) must be implemented to ensure synchronization with the grid's data.
 
@@ -192,7 +192,7 @@ To know about customizing the **Dialog Template** in Blazor DataGrid Component, 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Cfj476xT2ao"%}
 
-The Dialog template editing feature in Syncfusion DataGrid allows customization of the default dialog editing behavior, enabling individuals to define custom editors for grid rows within a dialog. To implement this, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrap the desired HTML editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is particularly useful for designing highly customized edit dialogs or including additional fields that are not part of the column model.
+The Dialog template editing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows customization of the default dialog editing behavior, enabling individuals to define custom editors for grid rows within a dialog. To implement this, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrap the desired HTML editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is particularly useful for designing highly customized edit dialogs or including additional fields that are not part of the column model.
 
 > Custom components used within the dialog template must be bound with two-way data binding (**@bind-Value**) to ensure synchronization with the grid's data.
 
@@ -358,7 +358,7 @@ public class OrderDetails
 
 ### Disable components in dialog template
 
-In the Syncfusion DataGrid, you can disable specific components rendered inside the dialog template based on the data source values. This is achieved by setting the `Enabled` property of the components, which controls whether the component is enabled or disabled.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid, you can disable specific components rendered inside the dialog template based on the data source values. This is achieved by setting the `Enabled` property of the components, which controls whether the component is enabled or disabled.
 
 To dynamically modify the `Enabled` property of components within the dialog template, you can use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events of the grid. These events are triggered before adding a new record or editing an existing record, respectively, allowing you to conditionally disable components based on your requirements.
 
@@ -529,7 +529,7 @@ public class OrderDetails
 
 ### Get value from editor
 
-The get value from editor feature in the Syncfusion Grid allows you to read, format, and update the current editor value before it is saved. This feature is particularly valuable when you need to perform specific actions on the data, such as formatting before it is committed to the underlying data source. 
+The get value from editor feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to read, format, and update the current editor value before it is saved. This feature is particularly valuable when you need to perform specific actions on the data, such as formatting before it is committed to the underlying data source. 
 
 To achieve this feature, you can utilize the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event, which is triggered before the save action is performed in the grid.
 
@@ -695,7 +695,7 @@ public class OrderDetails
 
 ### Set focus to particular column editor
 
-The Syncfusion Grid allows you to control the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, in scenarios where the first input element is disabled or hidden, you can specify which valid input element should receive focus. This can be achieved using the `Created` or `DataBound` event of the corresponding components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to control the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, in scenarios where the first input element is disabled or hidden, you can specify which valid input element should receive focus. This can be achieved using the `Created` or `DataBound` event of the corresponding components.
 
 In the following sample, the **CustomerID** column is focused by invoking its [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method within the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
@@ -1074,7 +1074,7 @@ public class OrderDetails
 
 ### Complex data binding with dialog template
 
-The Syncfusion DataGrid allows editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) by utilizing a dialog template. This feature provides flexibility for managing hierarchical or nested data structures.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) by utilizing a dialog template. This feature provides flexibility for managing hierarchical or nested data structures.
 
 To bind and edit complex objects, you can render desired HTML editor elements or components such as `SfNumericTextBox` inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The values of these components can be dynamically updated in the `GridColumn` using two-way (**@bind-Value**) data binding, ensuring real-time updates to the data.
 

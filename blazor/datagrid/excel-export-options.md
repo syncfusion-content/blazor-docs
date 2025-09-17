@@ -9,13 +9,13 @@ documentation: ug
 
 # Excel export options in Blazor DataGrid 
 
-The Syncfusion Blazor DataGrid allows you to customize the Excel or CSV export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the Excel or CSV export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
 
 The Excel or CSV export action can be customized based on your requirements using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. By using the `ExcelExportProperties` property, you can export specific columns, exclude or include hidden column, export with custom data source, enable filter in the exported Excel or CSV document, change the file name, add header and footer, multiple Grid exporting, customize the data based on query, define delimiter for CSV exporting and set the theme.
 
 ## Export current page records
 
-Exporting the current page in Syncfusion Blazor DataGrid to a Excel or CSV document provides the ability to export the currently displayed page records. This feature allows for generating Excel or CSV documents that specifically include the content from the current page of the Grid. 
+Exporting the current page in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a Excel or CSV document provides the ability to export the currently displayed page records. This feature allows for generating Excel or CSV documents that specifically include the content from the current page of the Grid. 
 
 To export the current page of the Grid to an Excel or CSV document, you need to specify the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType) property. This property allows you to define which records you want to export. You can choose between two options:
 
@@ -234,7 +234,7 @@ public class OrderData
 
 ## Exporting grouped records
 
-The Syncfusion Blazor DataGrid provides an outline option for grouped records, allowing you to hide detailed data for better viewing in the exported document. This feature is particularly useful when you need to share data that is grouped based on specific columns and maintain the grouping structure in the exported file.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an outline option for grouped records, allowing you to hide detailed data for better viewing in the exported document. This feature is particularly useful when you need to share data that is grouped based on specific columns and maintain the grouping structure in the exported file.
 
 To achieve this functionality, you need to enable grouping in the Grid by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true** . Additionally, you need define the [GroupSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property to specify the columns by which you want to group the data.
 
@@ -333,7 +333,7 @@ Microsoft Excel permits up to seven nested levels in outlines. So that in the Gr
 
 ## Export with hidden columns
 
-Exporting hidden columns in the Syncfusion Blazor DataGrid allows you to include hidden columns in the exported Excel or CSV document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
+Exporting hidden columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to include hidden columns in the exported Excel or CSV document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
 
 To export hidden columns of the Grid to a Excel or CSV document, you need to set the [includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) property as **true** in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property.
 
@@ -440,7 +440,7 @@ public class OrderData
 
 ## Show or hide columns while exporting
 
-The Syncfusion Blazor DataGrid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
 
 To show or hide columns based on user interaction during the export process, you can follow these steps:
 
@@ -554,7 +554,7 @@ public class OrderData
 
 ## Define file name
 
-The Syncfusion Blazor DataGrid allows you to specify a custom file name for the exported Excel or CSV document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to specify a custom file name for the exported Excel or CSV document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
 
 To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_FileName) property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
@@ -660,7 +660,7 @@ public class OrderData
 
 ## Customizing columns on export
 
-The Syncfusion Blazor DataGrid allows you to customize the appearance of Grid columns in your exported Excel or CSV documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported Excels align perfectly with your design and reporting requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the appearance of Grid columns in your exported Excel or CSV documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported Excels align perfectly with your design and reporting requirements.
 
 To customize the Grid columns, you can follow these steps:
 
@@ -883,7 +883,7 @@ public class OrderData
 
 ## Customizing the background color for a Grid in an exported Excel or CSV document
 
-The Syncfusion Blazor DataGrid allows you to customize the background color of the Grid content (header, record, and caption rows) when exporting it to an Excel or CSV document. This feature helps enhance the readability and visual appearance of the exported files.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the background color of the Grid content (header, record, and caption rows) when exporting it to an Excel or CSV document. This feature helps enhance the readability and visual appearance of the exported files.
 
 To apply a background color in the exported Excel or CSV document:
 
@@ -1001,7 +1001,7 @@ public class OrderData
 
 ## Add additional worksheets to Excel document while exporting
 
-The Syncfusion Blazor DataGrid allows you to add additional worksheets to the Excel or CSV document during export. This is especially useful when you want to include supplementary information, summaries, or additional datasets alongside the Grid content in the exported document.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to add additional worksheets to the Excel or CSV document during export. This is especially useful when you want to include supplementary information, summaries, or additional datasets alongside the Grid content in the exported document.
 
 To add additional worksheets during export, follow the steps below:
 
@@ -1114,7 +1114,7 @@ public class OrderData
 
 ## Conditional cell formatting
 
-When exporting data from the Syncfusion Blazor DataGrid, you have an option to conditionally format the cells in the exported Excel document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+When exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you have an option to conditionally format the cells in the exported Excel document. This allows you to customize the appearance of specific cells based on their values or other criteria.
 
 To achieve this feature, you need to use the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event of the Grid. This event is triggered for each cell during the export process to Excel document. Within this event, you can access the [args.Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Style) property and modify its properties, such as the background color, based on your desired conditions.
 
@@ -1249,7 +1249,7 @@ public class OrderData
 
 ## Adding header and footer in the exported Excel document
 
-The Excel or CSV Export feature in Syncfusion Blazor DataGrid allows you to include header and footer content in the exported Excel or CSV document. This feature is particularly useful when you want to add additional information or branding to the exported Excel or CSV document.
+The Excel or CSV Export feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to include header and footer content in the exported Excel or CSV document. This feature is particularly useful when you want to add additional information or branding to the exported Excel or CSV document.
 
 To achieve this, you can use [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event along with defining the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Footer) properties in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object allowing you to customize the header and footer content.
 
@@ -1487,7 +1487,7 @@ public class OrderData
 
 ## Exporting Grid Data as Stream
 
-The Syncfusion Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
 
 ### Exporting Grid Data as Memory Stream
 
@@ -1645,7 +1645,7 @@ public class OrderData
 
 ### Converting Memory Stream to File Stream for Excel Export
 
-The Excel Export feature in Syncfusion Blazor DataGrid allows you to export the Grid data to an Excel workbook. In some cases, you may want to save the exported Excel document as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
+The Excel Export feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to export the Grid data to an Excel workbook. In some cases, you may want to save the exported Excel document as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
 
 To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. The `ExportToExcelAsync` method generates the Excel document as a `MemoryStream`. You can then convert this memory stream into a `FileStream` and save the file to a specified location.
 
