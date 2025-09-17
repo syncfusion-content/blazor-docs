@@ -506,11 +506,11 @@ The Like filter can process single search patterns using the “%” symbol, ret
 * Custom Filter of Excel filter type.
 
 **For example**
-Operator |Description
------|-----|
-%ab% | Returns all the value that are contains “ab” character.
-ab% | Returns all the value that are ends with “ab” character.
-%ab | Returns all the value that are starts with “ab” character.
+| Operator | Description |
+| ----- | ----- |
+| %ab% | Returns all the value that are contains “ab” character. |
+| ab% | Returns all the value that are ends with “ab” character. |
+| %ab | Returns all the value that are starts with “ab” character. |
 
 The following GIF represent a Like operator filtering.
 
