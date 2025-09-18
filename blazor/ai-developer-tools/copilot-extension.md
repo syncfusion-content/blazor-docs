@@ -62,7 +62,9 @@ Restart your apps and begin a new Copilot chat session to start using it.
 * In the chat prompt, type `@` and select the `SyncfusionBlazor` extension from the list.
 * Enter your query related to any Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component.
 
-**Note:** When using this extension in VS Code, make sure you are in Ask mode and not in Edit or Agent mode. The Edit and Agent modes do not use the Syncfusion<sup style="font-size:70%">&reg;</sup> Copilot extension.
+### Mode availability in VS code
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Copilot extension provide full access to all AI interaction modes — Ask, Edit, and Agent — when integrated with VS code.
 
 ### Best Practices for Effective Usage
 

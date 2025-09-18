@@ -141,7 +141,7 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 }
 ```
 
-Click OK and Apply.
+4. Click OK and Apply.
 
 > For more detailed information about configuring MCP servers in various clients, refer to the official documentations.
   * [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
@@ -165,6 +165,10 @@ To activate the SyncfusionBlazorAssistant MCP server:
 
 2. Grant the SyncfusionBlazorAssistant MCP server a permission to run for this session, workspace, or always.
 3. For best results, start a new chat for each new topic to maintain clean context.
+
+### Mode availability
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Servers provide full access to all AI interaction modes — Ask/Chat, Edit, and Agent — across supported MCP clients.
 
 ### Best Practices for Effective Usage
 
