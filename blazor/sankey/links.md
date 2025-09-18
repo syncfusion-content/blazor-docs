@@ -107,7 +107,7 @@ In this example, we define multiple links connecting nodes across different cate
 
 ## Customizing Link Appearance
 
-In a Sankey Diagram, links represent the flow of data between nodes, and their appearance plays a critical role in making the visualization clear and aesthetically pleasing. The `SankeyLinkSettings` in the Syncfusion Blazor Sankey Diagram allows you to customize these links to match your design requirements or emphasize specific data points.
+In a Sankey Diagram, links represent the flow of data between nodes, and their appearance plays a critical role in making the visualization clear and aesthetically pleasing. The `SankeyLinkSettings` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram allows you to customize these links to match your design requirements or emphasize specific data points.
 
 - **`Color`**: Specifies the color of the links, which can be provided in standard formats like HEX (`#RRGGBB`) or RGBA (`rgba(r, g, b, a)`). This setting allows you to visually distinguish different flows in the diagram.
 - **`ColorType`**: Determines how the link color is applied, offering three options:

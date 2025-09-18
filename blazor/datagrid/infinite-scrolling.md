@@ -9,7 +9,7 @@ documentation: ug
 
 # Infinite scroll in Blazor DataGrid
 
-The infinite scrolling feature in the Syncfusion Blazor DataGrid is a powerful tool for seamlessly handling extensive data sets without compromising Grid performance. It operates on a “load-on-demand” concept, ensuring that data is fetched only when needed. In the default infinite scrolling mode, a new block of data is loaded each time the scrollbar reaches the end of the vertical scroller. This approach significantly enhances the user experience when working with large data collections in the Blazor Grid.
+The infinite scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is a powerful tool for seamlessly handling extensive data sets without compromising Grid performance. It operates on a “load-on-demand” concept, ensuring that data is fetched only when needed. In the default infinite scrolling mode, a new block of data is loaded each time the scrollbar reaches the end of the vertical scroller. This approach significantly enhances the user experience when working with large data collections in the Blazor Grid.
 
 In this mode, a block of data accumulates every time the scrollbar reaches the end of the scroller. To clarify, in this context, a **block** represents the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) of the Grid. If the `PageSize` is not explicitly specified, the Grid will automatically calculate it based on the Grid viewport height and row height.
 
@@ -86,7 +86,7 @@ public class TaskDetails
 
 ## Number of blocks rendered during initial loading
 
-The number of blocks to be initially rendered when the Syncfusion Blazor DataGrid is loaded. Each block corresponds to a page size of the Grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size by the page size.
+The number of blocks to be initially rendered when the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is loaded. Each block corresponds to a page size of the Grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size by the page size.
 
 You can define the initial loading page count by using the [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) property of the [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) class. By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
@@ -189,7 +189,7 @@ public class TaskDetails
 
 ## Efficient data caching and DOM management in Grid cache mode
 
-In Syncfusion Blazor DataGrid cache mode, cached data blocks are reused when revisiting them, reducing the need for frequent data requests while navigating the same block. This mode also manages DOM row elements based on the [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks) count value. If this limit is exceeded, it removes a block of row elements to create new rows.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid cache mode, cached data blocks are reused when revisiting them, reducing the need for frequent data requests while navigating the same block. This mode also manages DOM row elements based on the [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks) count value. If this limit is exceeded, it removes a block of row elements to create new rows.
 
 To enable cache mode, define the [EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) property of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) as **true**.
 

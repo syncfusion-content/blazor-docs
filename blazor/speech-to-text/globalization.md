@@ -30,4 +30,4 @@ The SpeechToText can be localized to any culture by defining the text in the cor
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the SpeechToText component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion Blazor components.
+RTL provides an option to switch the text direction and layout of the SpeechToText component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.

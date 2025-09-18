@@ -480,7 +480,7 @@ N> While using an Observable collection, the added, removed, and changed records
 
 #### Add a range of items into ObservableCollection in Blazor TreeGrid
 
-The Syncfusion Blazor TreeGrid supports binding to an **ObservableCollection**, which allows the TreeGrid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the TreeGrid at once, such as:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports binding to an **ObservableCollection**, which allows the TreeGrid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the TreeGrid at once, such as:
 
   * Loading or importing a large dataset dynamically.
 

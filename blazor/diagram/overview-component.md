@@ -202,4 +202,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also 
 
-* [How to Integrate Syncfusion Blazor Diagram with Overview Support in SfTab Component](https://support.syncfusion.com/kb/article/17263/how-to-integrating-syncfusion-blazor-diagram-with-overview-support-in-sftab-component)
+* [How to Integrate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram with Overview Support in SfTab Component](https://support.syncfusion.com/kb/article/17263/how-to-integrating-syncfusion-blazor-diagram-with-overview-support-in-sftab-component)

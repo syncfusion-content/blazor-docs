@@ -9,11 +9,11 @@ documentation: ug
 
 # Supported Markdown Syntax in Blazor Markdown Editor Component
 
-The Syncfusion [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports various Markdown syntax commands for text formatting, lists, links, tables, and more. This guide provides an overview of all supported commands along with their syntax and usage.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports various Markdown syntax commands for text formatting, lists, links, tables, and more. This guide provides an overview of all supported commands along with their syntax and usage.
 
 ## Markdown Syntax Guide for Blazor Markdown Editor
 
-The following table lists the Markdown commands supported by the Syncfusion Blazor Markdown Editor:
+The following table lists the Markdown commands supported by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor:
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|

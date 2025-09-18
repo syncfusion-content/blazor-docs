@@ -566,8 +566,8 @@ For more information about group node flip, refer to [Group Flip](./flip#how-to-
 
 * [How to enable/disable the behavior of the node](./constraints)
 
-* [How to Select a Group Child Element Without Selecting the Parent Group Node in Syncfusion Blazor Diagram Component](https://support.syncfusion.com/kb/article/18996/how-to-select-a-group-child-element-without-selecting-the-parent-group-node-in-syncfusion-blazor-diagram-component)
+* [How to Select a Group Child Element Without Selecting the Parent Group Node in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component](https://support.syncfusion.com/kb/article/18996/how-to-select-a-group-child-element-without-selecting-the-parent-group-node-in-syncfusion-blazor-diagram-component)
 
-* [How to Select Only the GroupNode Without Selecting Child Nodes in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/16302/how-to-select-only-the-groupnode-without-selecting-child-nodes-in-syncfusion-blazor-diagram)
+* [How to Select Only the GroupNode Without Selecting Child Nodes in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/16302/how-to-select-only-the-groupnode-without-selecting-child-nodes-in-syncfusion-blazor-diagram)
 
-* [How to Drag a Node Programmatically Without User Interaction in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
+* [How to Drag a Node Programmatically Without User Interaction in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)

@@ -174,7 +174,7 @@ Create a bridge between Syncfusion's Smart Components and our Groq service. This
 The `IChatInferenceService` interface is part of Syncfusion's infrastructure that allows Smart Components to work with different AI providers:
 
 1. Create a new file named `MyCustomService.cs` 
-2. Add the Syncfusion namespace
+2. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> namespace
 3. Implement the interface as shown below
 
 
@@ -196,7 +196,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application to use the Groq AI service with Syncfusion Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the Groq AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
 
 ```CSharp
 

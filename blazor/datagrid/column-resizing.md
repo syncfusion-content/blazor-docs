@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Resizing in Blazor DataGrid
 
-Syncfusion Blazor DataGrid provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowResizing) property of the Grid to true.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowResizing) property of the Grid to true.
 
 Once column resizing is enabled, columns width can be resized by clicking and dragging at the right edge of the column header. While dragging the column, the width of the respective column will be resized immediately.
 
@@ -93,7 +93,7 @@ public class OrderDetails
 
 ## Restrict the resizing based on minimum and maximum width
 
-The Syncfusion Blazor DataGrid allows you to restrict the column width resizing between a minimum and maximum width. This can be useful when you want to ensure that your Grid’s columns stay within a certain range of sizes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to restrict the column width resizing between a minimum and maximum width. This can be useful when you want to ensure that your Grid’s columns stay within a certain range of sizes.
 
 To enable this feature, you can define the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth) properties of the columns directive for the respective column.
 
@@ -178,7 +178,7 @@ public class OrderDetails
 
 ## Prevent resizing for particular column
 
-The Syncfusion Blazor DataGrid provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
 
 You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the column to false. The following example demonstrates, how to disabled resize for Customer ID column.
 
@@ -249,7 +249,7 @@ public class OrderDetails
 
 ## Resize stacked header column
 
-Syncfusion Blazor DataGrid allows to resize stacked columns by clicking and dragging the right edge of the stacked column header. During the resizing action, the width of the child columns is resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) as **false** to its columns.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows to resize stacked columns by clicking and dragging the right edge of the stacked column header. During the resizing action, the width of the child columns is resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) as **false** to its columns.
 
 In this below code, we have disabled resize for **Ship City** column.
 
@@ -329,7 +329,7 @@ public class OrderDetails
 
 ## Touch interaction
 
-Syncfusion Blazor DataGrid provides support for touch interactions to enable users to interact with the Grid using their mobile devices. Users can resize columns in the Grid by tapping and dragging the floating handler, and can also use the Column menu to autofit columns.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for touch interactions to enable users to interact with the Grid using their mobile devices. Users can resize columns in the Grid by tapping and dragging the floating handler, and can also use the Column menu to autofit columns.
 
 **Resizing Columns on Touch Devices**
 
@@ -347,7 +347,7 @@ The following screenshot represents the column resizing in touch device.
 
 ## Resizing column externally
 
-The Syncfusion Blazor DataGrid provides the ability to resize columns using an external button click. This can be achieved by changing the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the column and refreshing the Grid using the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method in the external button click function.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to resize columns using an external button click. This can be achieved by changing the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the column and refreshing the Grid using the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method in the external button click function.
 
 The following example demonstrates how to resize the columns in a Grid. This is done by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `DropDownList` by change the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the selected column. This is accomplished using the [GetColumnByFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnByFieldAsync_System_String_) on external button click. Then, the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method is called on the Grid to update the displayed columns based on user interaction.
 
@@ -467,7 +467,7 @@ public class OrderDetails
 
 ## Resizing events
 
-During the resizing action, the Syncfusion Blazor DataGrid triggers the below two events.
+During the resizing action, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid triggers the below two events.
 
 1. The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event triggers when column resize starts. This event can be used to perform actions when the user begins to resize a column.
 

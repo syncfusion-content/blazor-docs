@@ -47,6 +47,6 @@ N> Before use the Syncfusion® Blazor Project Conversion, check whether the Sync
 
     ![ConversionBackupLocation](images/Backuplocation.png)
 
-6. The selected Blazor application is converted into a Syncfusion® Blazor application by installing the appropriate Syncfusion Blazor NuGet packages with the selected version and adding the chosen styles to the corresponding layout file.
+6. The selected Blazor application is converted into a Syncfusion® Blazor application by installing the appropriate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages with the selected version and adding the chosen styles to the corresponding layout file.
 
 7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio®.

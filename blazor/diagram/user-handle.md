@@ -83,10 +83,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)
 
 ## How to Customize User Handle Actions
-User handles in the Syncfusion Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality, but you can configure them to execute custom logic such as cloning, deleting, or triggering other actions.
+User handles in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality, but you can configure them to execute custom logic such as cloning, deleting, or triggering other actions.
 
 ### How to Handle User Handle Click Actions
-To customize user handle actions in the Syncfusion Blazor Diagram component, you need to define a custom tool that implements the required behavior and map the user handle to this tool using the [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method, ensuring that the appropriate action is executed when the handle is clicked.
+To customize user handle actions in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component, you need to define a custom tool that implements the required behavior and map the user handle to this tool using the [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method, ensuring that the appropriate action is executed when the handle is clicked.
 
 The following code explains how to customize the User Handle click Actions.
 

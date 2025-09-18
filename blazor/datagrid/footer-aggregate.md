@@ -9,7 +9,7 @@ documentation: ug
 
 # Footer aggregate in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the Grid. You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render the aggregate value in the footer cells.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the Grid. You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render the aggregate value in the footer cells.
 
 To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template. 
 
@@ -117,7 +117,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 ## Format the aggregate value
 
-To format the aggregate value result in the Syncfusion Blazor DataGrid, you can use the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the **AggregateColumn**. The `Format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+To format the aggregate value result in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can use the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the **AggregateColumn**. The `Format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

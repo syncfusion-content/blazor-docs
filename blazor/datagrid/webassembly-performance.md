@@ -9,13 +9,13 @@ documentation: ug
 
 # WebAssembly Performance in Blazor DataGrid
 
-This section provides performance guidelines for using Syncfusion Blazor DataGrid efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
+This section provides performance guidelines for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Grid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
-During Blazor diffing algorithm, every cell of the Syncfusion Blazor DataGrid and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or Grid will check every child component once event callback is completed.
+During Blazor diffing algorithm, every cell of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or Grid will check every child component once event callback is completed.
 
 You can have fine-grained control over Grid rendering. [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) method help you to avoid unnecessary re-rendering of the Grid. This method internally overrides the [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) method of the Grid to prevent rendering. 
 
@@ -114,7 +114,7 @@ public class OrderData
 
 ## Avoid unnecessary component renders after Blazor DataGrid events
 
-When a callback method is assigned to the Syncfusion Blazor DataGrid events, then the **StateHasChanged** will be called in parent component of the Grid automatically once the event is completed.
+When a callback method is assigned to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid events, then the **StateHasChanged** will be called in parent component of the Grid automatically once the event is completed.
 
 You can prevent this re-rendering of the Grid by setting [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) property of the corresponding event argument as true.
 
@@ -213,7 +213,7 @@ public class OrderData
 
 ## Use paging or virtualization to load only visible rows
 
-The Syncfusion Blazor DataGrid renders each row and cell as individual component and loading large number of rows and cells in view will have performance impact on both memory consumption and CPU processing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid renders each row and cell as individual component and loading large number of rows and cells in view will have performance impact on both memory consumption and CPU processing.
 
 To use Grid without such performance impacts, you can load reduced set of rows in the Grid using [Paging](./paging) and [Virtualization](./virtualization) features.
 
