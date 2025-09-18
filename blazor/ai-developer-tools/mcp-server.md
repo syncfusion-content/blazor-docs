@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible MCP clients to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Key Benefits
 
@@ -24,27 +24,27 @@ The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor
 Before using [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant), ensure you have:
 
 * Required [node](https://nodejs.org/en/) version >= 18
-* A [compatible MCP client](https://modelcontextprotocol.io/clients) (Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio, VS Code with GitHub Copilot, etc.)
+* A [compatible MCP client](https://modelcontextprotocol.io/clients) ([Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), VS Code with GitHub Copilot, etc.)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Free Community License](https://www.syncfusion.com/products/communitylicense)
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
+  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 * An active [API KEY](https://staging.syncfusion.com/account/user-token-generation)
 
 ## Unlimited Access
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> users enjoy completely unlimited access to this MCP server. There are no restrictions on:
+Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to this MCP server. There are no restrictions on:
 
-* No request limits
-* No component restrictions
-* No query type limitations
-* No usage duration constraints
+* Number of requests
+* Components usage
+* Query types
+* Usage duration
 
-We believe in providing unrestricted access to tools that enhance your development experience, ensuring you can fully leverage Syncfusion components without limitations.
+This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components to enhance their development experience without limitations.
 
 ## Installation and setup
 
-Before you can invoke the SyncfusionBlazorAssistant MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
+Before you can invoke the `SyncfusionBlazorAssistant` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
 
 ### Generic MCP Server Settings
 
