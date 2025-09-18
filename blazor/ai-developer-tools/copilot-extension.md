@@ -7,7 +7,6 @@ platform: Blazor
 documentation: ug
 ---
 
-
 # SyncfusionBlazor GitHub Copilot Extension
 
 ## Overview
@@ -90,9 +89,9 @@ To remove the extension from your account:
 
 ## Support
 
-* [Support tickets](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
-* [Community forum](https://www.syncfusion.com/forums/essential-js2)
-* [Request feature or report bug](https://www.syncfusion.com/feedback/javascript)
+* [Support tickets](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
+* [Community forum](https://www.syncfusion.com/forums/blazor-components)
+* [Request feature or report bug](https://www.syncfusion.com/feedback/blazor-components)
 * Live chat
 
 ## See also
