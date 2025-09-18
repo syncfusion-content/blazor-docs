@@ -11,7 +11,7 @@ documentation: ug
 
 Data Annotations are used to define validation rules for model classes or properties, ensuring that data entered into an application conforms to the expected format and meets specific criteria. They also enable the display of appropriate error messages to end users.
 
-In the Syncfusion Blazor DataGrid, Data Annotations are leveraged to automatically map these validation rules to the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) properties. This integration provides seamless data validation during editing operations within the Grid.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, Data Annotations are leveraged to automatically map these validation rules to the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) properties. This integration provides seamless data validation during editing operations within the Grid.
 
 To enable Data Annotations for validation in a Grid, you need to refer the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the Grid automatically uses the data annotations applied to your model class properties to perform data validation.
 
@@ -35,7 +35,7 @@ The following table lists the data annotation attributes supported in the Grid:
 | Key | Key | Marks a column as the primary key in the Grid |
 | Validation Attributes:<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br> | | These validation attributes are used as `validation rules` in Grid CRUD operations |
 
-> The Syncfusion Blazor DataGrid property takes precedence over data annotation attributes. For example, when both the DisplayName attribute and `HeaderText` are assigned to a field in the Grid model class for a specific column, the `HeaderText` value will be prioritized and displayed in the Grid header.
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid property takes precedence over data annotation attributes. For example, when both the DisplayName attribute and `HeaderText` are assigned to a field in the Grid model class for a specific column, the `HeaderText` value will be prioritized and displayed in the Grid header.
 
 The following sample code demonstrates how to use data annotations in the Grid:
 
@@ -158,4 +158,4 @@ The following image shows how Data Annotations are applied to Grid columns in a 
 
 > The **Verified** column displays the `Enum` member using the `Display` attribute name, enhancing user experience by rendering a human-readable label instead of the raw enum value.
 
-> You can refer to our [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its features. You can also explore our [Syncfusion Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> You can refer to our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its features. You can also explore our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

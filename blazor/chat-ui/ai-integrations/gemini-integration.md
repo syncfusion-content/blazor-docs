@@ -54,7 +54,7 @@ Install-Package Mscc.GenerativeAI
 
 ##  Integration Gemini AI with Chat UI
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line 
 
 ```bash
 
@@ -132,4 +132,4 @@ const string GeminiApiKey = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI Gemini Integration](images/gemini-integration.png)
+![Blazor Chat UI Gemini Integration](./images/gemini-integration.png)

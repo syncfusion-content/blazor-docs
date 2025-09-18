@@ -9,11 +9,11 @@ documentation: ug
 
 # Globalization in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 ## Localization
 
-The Syncfusion Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 **Data Rendering**
 
@@ -154,7 +154,7 @@ Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization
 
 ### Switch the different localization
 
-The Syncfusion Blazor DataGrid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. For more details, you can refer to the official documentation on [dynamically setting the culture](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=razor#dynamically-set-the-culture).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. For more details, you can refer to the official documentation on [dynamically setting the culture](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=razor#dynamically-set-the-culture).
 
 To switch to a different localization, follow these steps:
 
@@ -162,11 +162,11 @@ To switch to a different localization, follow these steps:
  
 You can create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-**Step 2: Install Syncfusion Blazor DataGrid and Themes NuGet packages**
+**Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
  
-To add the Syncfusion Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
  
 Alternatively, use the following Package Manager commands:
  
@@ -176,9 +176,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 ```
  
-> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
-**Step 3: Register Syncfusion Blazor service**
+**Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -246,7 +246,7 @@ namespace LocalizationSample.Client
 
 * **Set the Culture of the Application:** In the client-side **~/Program.cs** , use JavaScript Interop to retrieve the user's culture setting from local storage. If none is found, set the default to **en-US**.
 
-* **Register Services:** Register the `SyncfusionLocalizer` and Syncfusion Blazor services in both **~/Program.cs**  files.
+* **Register Services:** Register the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs**  files.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -332,7 +332,7 @@ For a Blazor Web App, add the following JavaScript function to the **~/Component
 {% endhighlight %}
 {% endtabs %}
 
-**Step 9: Configure culture switching with Syncfusion Blazor DataGrid** 
+**Step 9: Configure culture switching with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid** 
 
 In the **Counter.razor** file, add the following code to change the culture and display a Grid with a Button to switch between English (en-US) and French (fr-FR):
  
@@ -440,7 +440,7 @@ When you run the application, the Grid will display data fetched from the API.
 
 ## Right to Left - RTL
 
-The Right to Left (RTL) feature in the Syncfusion Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the Grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
+The Right to Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the Grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
 To enable RTL in the Grid, you can use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This property switches the text direction and layout from left-to-right to right-to-left.
 
@@ -450,7 +450,7 @@ To achieve this, follow the steps below:
 
 **Step 2: Configure ~/Program.cs file**
 
-Register the `SyncfusionLocalizer` and Syncfusion Blazor services in both **~/Program.cs**  files.
+Register the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs**  files.
  
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}

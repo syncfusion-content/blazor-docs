@@ -9,11 +9,11 @@ documentation: ug
 
 # Performance tips for Blazor DataGrid
 
-This article is a comprehensive guide on improving the loading performance of the Syncfusion Blazor DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Grid during data binding, ensuring a smooth and efficient user experience.
+This article is a comprehensive guide on improving the loading performance of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Grid during data binding, ensuring a smooth and efficient user experience.
 
 ## How to improve loading performance by binding large dataset
 
-In Syncfusion Blazor DataGrid, the framework takes about 0.06 milliseconds to render one component in the page. You can find more details in the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0#avoid-thousands-of-component-instances). In Grid each cell(td) is rendered as separate Blazor component so, it is recommended to render only a limited number of rows and columns to guarantee the best loading performance for the component.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the framework takes about 0.06 milliseconds to render one component in the page. You can find more details in the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0#avoid-thousands-of-component-instances). In Grid each cell(td) is rendered as separate Blazor component so, it is recommended to render only a limited number of rows and columns to guarantee the best loading performance for the component.
 
 ### Optimizing performance with paging 
 
@@ -29,13 +29,13 @@ To enhance your application's efficiency, especially when dealing with substanti
 
 ### Optimizing performance with column virtualization in large no of columns
 
-[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtualization#column-virtualization) feature in the Syncfusion Blazor DataGrid that allows you to optimize the rendering of columns by displaying only the columns that are currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps to improve the performance and reduce the initial loading time.
+[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtualization#column-virtualization) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that allows you to optimize the rendering of columns by displaying only the columns that are currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps to improve the performance and reduce the initial loading time.
 
 It is possible to enable both row and column virtualization. This feature allows for efficient handling of large datasets by dynamically loading only the visible rows and columns, optimizing performance and enhancing the overall responsiveness of the Grid. For more information on implementing column virtualization , you can refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/virtualization#column-virtualization) section dedicated to this feature.
 
 ### How to overcome browser height limitation in virtual scrolling
 
-You can load millions of records in the Syncfusion Blazor DataGrid by using virtual scrolling, where the Grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the Grid is calculated using the **Total Records Count * RowHeight** property.
+You can load millions of records in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by using virtual scrolling, where the Grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the Grid is calculated using the **Total Records Count * RowHeight** property.
 
 The browser has some maximum pixel height limitations for the scroll bar element. The content placed above the maximum height can’t be scrolled if the element height is greater than the browser’s maximum height limit. The browser height limit affects the virtual scrolling of the Grid. When a large number of records are bound to the Grid, it can only display the records until the maximum height limit of the browser. Once the browser’s height limit is reached while scrolling, the user won’t able to scroll further to view the remaining records.
 
@@ -64,14 +64,14 @@ builder.Services.AddSignalR(hubOptions =>
 
 ## How to improve performance of Blazor DataGrid in WASM application
 
-This section provides performance guidelines for using Syncfusion Blazor DataGrid efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 1.	[Avoid unnecessary component renders](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance#avoid-unnecessary-component-renders)
 2.	[Avoid unnecessary component renders after grid events](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance#avoid-unnecessary-component-renders-after-grid-events)
 
 ## How to improve loading performance by binding data from service
 
-1.	When binding data to the Syncfusion Blazor DataGrid from a service, it's advisable to set the data source in the Grid [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event instead of the `OnInitializedAsync` method. If you call the data-fetching method within `OnInitializedAsync`, the delay in fetching data from the service can impact the application's startup time and the rendering of the Grid. However, if you assign the data inside the `Created` event, the Grid will have already been created/rendered. Since there are no service request calls inside the `Created` event, you are simply assigning the data already fetched from `OnInitializedAsync` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property within the Created event handler.
+1.	When binding data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid from a service, it's advisable to set the data source in the Grid [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event instead of the `OnInitializedAsync` method. If you call the data-fetching method within `OnInitializedAsync`, the delay in fetching data from the service can impact the application's startup time and the rendering of the Grid. However, if you assign the data inside the `Created` event, the Grid will have already been created/rendered. Since there are no service request calls inside the `Created` event, you are simply assigning the data already fetched from `OnInitializedAsync` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property within the Created event handler.
 
 2.	When dealing with a service that returns a large dataset, there's a possibility that the `Created` event might be triggered before the completion of the `OnInitializedAsync`. In such scenarios, it is recommended to employ a custom binding approach for associating data with the Grid. This method enables customization of the displayed data using the `Read/ReadAsync` method. Instead of relying on `OnInitializedAsync`, you can invoke your service within the `Read/ReadAsync` method and provide the data for display in the Grid. For detailed information, you can check the below documentations
 * [Custom binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
@@ -79,7 +79,7 @@ This section provides performance guidelines for using Syncfusion Blazor DataGri
 
 ## How to improve loading performance by referring individual script and CSS
 
-To improve the performance of Syncfusion Blazor DataGrid during the initial render as well as certain actions, suggested you to refer individual NuGet package (Syncfusion.Blazor.Grid) along with its specified script files. In the consolidated package (Syncfusion.Blazor) all the components will be defined and hence size of the package will be more. Along with its script file size will be more since scripts necessary for all the Syncfusion Blazor components will be defined inside it. 
+To improve the performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid during the initial render as well as certain actions, suggested you to refer individual NuGet package (Syncfusion.Blazor.Grid) along with its specified script files. In the consolidated package (Syncfusion.Blazor) all the components will be defined and hence size of the package will be more. Along with its script file size will be more since scripts necessary for all the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will be defined inside it. 
 
 When package and script file size is more, there might be delay or performance lag in rendering the component in certain specification compared to Grid rendered using individual scripts and NuGet. Individual Nuget package will contain all the necessary and required dependent component sources along with its script reference. So it is not necessary to refer the dependent component externally while referring the Individual package.
 
@@ -102,7 +102,7 @@ public async Task OnClick()
 
 ## How to optimize server-side data operations with adaptors
 
-The Syncfusion Blazor DataGrid provides support for various adaptors (OData, ODataV4, WebAPI, URL, etc.) to facilitate server-side data operations and CRUD functionalities. By leveraging these adaptors along with the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component, you can seamlessly bind remote data sources to the Grid and execute actions. During data operations like filtering, sorting, and paging, the corresponding action queries are generated as per the adaptor's requirements. It is crucial to handle these actions on the application end and return the processed data back to the Grid. Refer to the documentation for comprehensive details. It's worth noting that for efficient data processing, the suggested order for returning processed data to the Grid is as follows
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for various adaptors (OData, ODataV4, WebAPI, URL, etc.) to facilitate server-side data operations and CRUD functionalities. By leveraging these adaptors along with the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component, you can seamlessly bind remote data sources to the Grid and execute actions. During data operations like filtering, sorting, and paging, the corresponding action queries are generated as per the adaptor's requirements. It is crucial to handle these actions on the application end and return the processed data back to the Grid. Refer to the documentation for comprehensive details. It's worth noting that for efficient data processing, the suggested order for returning processed data to the Grid is as follows
 * Filtering
 * Sorting
 * Aggregates
@@ -111,7 +111,7 @@ The Syncfusion Blazor DataGrid provides support for various adaptors (OData, ODa
 
 ## Strategic approaches to addressing latency challenges
 
-Understanding the concerns you are facing regarding the lagging responsiveness of the Syncfusion Blazor components, your situation has been reviewed, and several factors contributing to this issue have been identified. It's important to note that when using dialog-oriented features like filtering and dialog editing, a call is made from the client to the server to share position details, resulting in some delay if the servers are located in a distant location.
+Understanding the concerns you are facing regarding the lagging responsiveness of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, your situation has been reviewed, and several factors contributing to this issue have been identified. It's important to note that when using dialog-oriented features like filtering and dialog editing, a call is made from the client to the server to share position details, resulting in some delay if the servers are located in a distant location.
 
 Additionally, potential solutions to mitigate the delay are offered:
 

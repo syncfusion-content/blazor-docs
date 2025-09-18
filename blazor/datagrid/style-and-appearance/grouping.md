@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Grouping in Syncfusion Blazor DataGrid
+# Grouping in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of grouping elements in the Syncfusion Blazor DataGrid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+You can customize the appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
 ## Customizing the group header
 
@@ -38,7 +38,7 @@ To customize the appearance of the group expand/collapse icons in the Grid, you 
 }
 ```
 
-In this example, the **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes target the expand and collapse icons, respectively. You can modify the `content` property to change the icon displayed. You can use the available [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on your theme.
+In this example, the **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes target the expand and collapse icons, respectively. You can modify the `content` property to change the icon displayed. You can use the available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on your theme.
 
 ![Group expand or collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.png)
 

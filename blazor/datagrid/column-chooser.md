@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The column chooser feature in the Syncfusion Blazor DataGrid allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true**.
+The column chooser feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -158,7 +158,7 @@ public class OrderData
 
 ## Open column chooser by external button
 
-The Syncfusion Blazor DataGrid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the Grid, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific X and Y axis positions by using the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the Grid, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific X and Y axis positions by using the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
 Here’s an example of how to open the column chooser in the Grid using an external button:
 
@@ -237,7 +237,7 @@ public class OrderData
 
 ## Customize column chooser dialog size
 
-The column chooser dialog in Syncfusion Blazor DataGrid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
+The column chooser dialog in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
 
 To customize the column chooser dialog size, you can use the following CSS styles:
 
@@ -336,7 +336,7 @@ public class OrderData
 
 ## Change default search operator of the column chooser
 
-The column chooser dialog in the Syncfusion Blazor DataGrid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+The column chooser dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
 
 To change the default search operator of the column chooser in Grid, you need to use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
 
@@ -711,7 +711,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 ## Group column chooser items in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid supports grouping items in the column chooser dialog to improve usability and organization.It allows you to organize column chooser items into logical groups. This can be achieved using the [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports grouping items in the column chooser dialog to improve usability and organization.It allows you to organize column chooser items into logical groups. This can be achieved using the [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html).
 
 To implement this:
 

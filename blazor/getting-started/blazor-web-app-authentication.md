@@ -57,7 +57,7 @@ Once migrations are applied, refresh the page. The home page will now display th
 
 ![Verify-login](images/verify-login.png)
 
-You can also integrate Syncfusion Blazor Components within the **AuthorizeView** component by following these steps:
+You can also integrate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components within the **AuthorizeView** component by following these steps:
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App in the App
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Dialog Buttons in Blazor Dialog Component
 
-The Syncfusion Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Inside this element, each button is defined using the [DialogButton Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html). These buttons can be fully customized with various properties, including:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Inside this element, each button is defined using the [DialogButton Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html). These buttons can be fully customized with various properties, including:
 
 DialogButtonOptions     | Description
 ------------ | -------------
@@ -146,7 +146,7 @@ The DialogButton element allows you to define action buttons in the dialog foote
 
 ## Using FooterTemplate Property
 
-Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Syncfusion Button.
+Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Syncfusion<sup style="font-size:70%">&reg;</sup> Button.
 
 ```cshtml
 

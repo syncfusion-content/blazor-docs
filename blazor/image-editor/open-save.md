@@ -326,7 +326,7 @@ User can easily open images in the Image Editor using the File Manager. This met
 
 ### Open an image from Treeview 
 
-Users can open images in the Syncfusion Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method. This allows for a seamless image editing experience directly from the TreeView component.
+Users can open images in the Syncfusion<sup style="font-size:70%">&reg;</sup> Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method. This allows for a seamless image editing experience directly from the TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -588,7 +588,7 @@ To save an image as a byte array, use the [`GetImageDataAsync`](https://help.syn
 
 ### Save the image as Blob
 
-To save an image as a blob, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance. 
+To save an image as a blob, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the open method on the Syncfusion<sup style="font-size:70%">&reg;</sup> Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance. 
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor

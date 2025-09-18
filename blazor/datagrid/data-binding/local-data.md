@@ -9,7 +9,7 @@ documentation: ug
 
 # Local data in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid offers a straightforward way to bind local data, such as arrays or JSON objects, to the Grid. This feature allows you to display and manipulate data within the Grid without the need for external server calls, making it particularly useful for scenarios where you're working with static or locally stored data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a straightforward way to bind local data, such as arrays or JSON objects, to the Grid. This feature allows you to display and manipulate data within the Grid without the need for external server calls, making it particularly useful for scenarios where you're working with static or locally stored data.
 
 To achieve this, you can assign a JavaScript object array to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Additionally, you have an option to provide the local data source using an instance of the **SfDataManager**.
 
@@ -91,13 +91,13 @@ public class OrderDetails
 
 ## List binding
 
-The Syncfusion Blazor DataGrid supports binding data from a list of objects (e.g., a List&lt;T&gt; or IEnumerable&lt;T&gt; collection). This is the most common approach when working with in-memory data in Blazor applications.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports binding data from a list of objects (e.g., a List&lt;T&gt; or IEnumerable&lt;T&gt; collection). This is the most common approach when working with in-memory data in Blazor applications.
 
 List binding allows the Grid to render and manage a collection of data directly in memory without requiring a remote service or external data manager unless needed. This is ideal for local CRUD operations, small datasets, or preloaded data.
 
 **List binding can be enabled in the following scenarios:**
 
-You can bind a list of data to the Syncfusion Blazor DataGrid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list can be:
+You can bind a list of data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list can be:
 
 * A basic in-memory IEnumerable&lt;T&gt; (e.g., List&lt;Order&gt;).
 
@@ -181,7 +181,7 @@ public class OrderDetails
 
 ### ExpandoObject binding
 
-The Syncfusion Blazor DataGrid is a strongly-typed generic component typically bound to a specific model at compile time. However, there are scenarios, especially in dynamic or metadata-driven applications, where the structure of the data is not known until runtime. In such cases, you can bind the Grid to a collection of [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0) instances for a fully dynamic Grid structure.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is a strongly-typed generic component typically bound to a specific model at compile time. However, there are scenarios, especially in dynamic or metadata-driven applications, where the structure of the data is not known until runtime. In such cases, you can bind the Grid to a collection of [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0) instances for a fully dynamic Grid structure.
 
 **ExpandoObject can be used in the following scenarios:**
 
@@ -242,7 +242,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### ExpandoObject complex data binding
 
-When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **ExpandoObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
+When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **ExpandoObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
 
 The following example demonstrates how to bind complex properties within an **ExpandoObject** to the Grid. In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
 
@@ -301,7 +301,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DynamicObject binding
 
-The Syncfusion Blazor DataGrid is designed to work with strongly-typed models. However, in scenarios where the model structure is not known at compile time, such as metadata-driven Grids or dynamic data sources, you can bind the Grid to a list of objects derived from [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is designed to work with strongly-typed models. However, in scenarios where the model structure is not known at compile time, such as metadata-driven Grids or dynamic data sources, you can bind the Grid to a list of objects derived from [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject).
 
 **DynamicObject can be implemented in this below scenarios:**
 
@@ -378,7 +378,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DynamicObject complex data binding
 
-When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **DynamicObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
+When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **DynamicObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
 
 The following example demonstrates how to bind complex properties within a **DynamicObject** to the Grid. In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
 
@@ -454,7 +454,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DataTable binding
 
-The Syncfusion Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is particularly useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is particularly useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
 
 To bind a `DataTable` to Grid, set `TValue` to **ExpandoObject**, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
 
@@ -603,7 +603,7 @@ You can perform data operations like **searching**, **sorting**, and **filtering
 
 **Grouping and Aggregates with DataTable:**
 
-The Syncfusion Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataTable` via a custom adaptor. This allows you to group rows by one or more columns and apply aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataTable` via a custom adaptor. This allows you to group rows by one or more columns and apply aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
 
 Below is an example showing how to implement grouping and aggregates in a custom adaptor:
 
@@ -754,7 +754,7 @@ Below is an example showing how to implement grouping and aggregates in a custom
 
 **DataTable with CRUD operations**
 
-The Syncfusion Blazor DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a DataTable using a custom adaptor. You can enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update your `DataTable` in memory.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a DataTable using a custom adaptor. You can enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update your `DataTable` in memory.
 
 **The supported methods are:**
 
@@ -1005,7 +1005,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ## Managing spinner visibility during data loading
 
-Showing a spinner during data loading in the Syncfusion Blazor DataGrid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+Showing a spinner during data loading in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
 
 To show or hide a spinner during data loading in the Grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid.
 
@@ -1112,7 +1112,7 @@ public class OrderData
 
 ## Change datasource dynamically
 
-The Syncfusion Blazor DataGrid allows to change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) of the Grid  dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows to change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) of the Grid  dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
 
 To implement this:
 
@@ -1215,9 +1215,9 @@ public class OrderData
 
 ## Data binding with SignalR 
 
-The Syncfusion Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
 
-To achieve real-time data binding with SignalR in your Syncfusion Blazor DataGrid, follow the steps below:
+To achieve real-time data binding with SignalR in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow the steps below:
 
 **Step 1:** Install the SignalR server package:
 
@@ -1260,7 +1260,7 @@ app.Run();
 
 ```
 
-**Step 4:** Create a simple Syncfusion Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
+**Step 4:** Create a simple Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
 
 **Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid: 
 
@@ -1429,7 +1429,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ## Binding data from Excel document
 
-The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader`.
 
 To import Excel data into Grid, you can follow these steps:
 
@@ -1725,7 +1725,7 @@ N> While using an Observable collection, the added, removed, and changed records
 
 ### Add a range of items into ObservableCollection in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
 
   * Loading or importing a large dataset dynamically.
 

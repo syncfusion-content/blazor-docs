@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel like filter in Blazor Gantt Chart
 
-The Syncfusion Blazor Gantt Chart offers an Excel-like filter feature, providing a familiar and intuitive interface for filtering project data within the Gantt Chart. This feature simplifies complex filtering operations on specific columns, allowing for quick task location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large project datasets and complex filtering requirements for project management scenarios.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart offers an Excel-like filter feature, providing a familiar and intuitive interface for filtering project data within the Gantt Chart. This feature simplifies complex filtering operations on specific columns, allowing for quick task location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large project datasets and complex filtering requirements for project management scenarios.
 
 Here is an example that showcasing how to render the Excel like filter within the Gantt Chart:
 
@@ -64,7 +64,7 @@ Here is an example that showcasing how to render the Excel like filter within th
 
 ## Customize the filter choice count
 
-By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large project datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 task records bound to the Syncfusion Blazor Gantt Chart to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
+By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large project datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 task records bound to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
 
 The Gantt Chart allows customization of the number of distinct data displayed in the checkbox list of the Excel type filter dialog. This can be useful when working with large project datasets and wanting to customize the default filter choice count values.
 
@@ -131,7 +131,7 @@ The following example demonstrates how to customize the filter choice count in t
 
 ## Show customized text in filter dialog
 
-The Syncfusion Blazor Gantt Chart provides flexibility to customize the text displayed in the Excel filtering options. This allows modification of the default text and provides more meaningful and contextual labels for project filtering, enhancing the project management experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart provides flexibility to customize the text displayed in the Excel filtering options. This allows modification of the default text and provides more meaningful and contextual labels for project filtering, enhancing the project management experience.
 
 To customize the text in the Excel filter, define a `FilterItemTemplate` and bind it to the desired column. The `FilterItemTemplate` property allows creation of custom templates for filter items. Any logic and HTML elements can be used within this template to display the desired text or content relevant to project management scenarios.
 
@@ -208,7 +208,7 @@ In the example below, customization of the text displayed in the filter checkbox
 
 ## Customize the Excel filter using CSS
 
-In the Syncfusion Blazor Gantt Chart, there is flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog's appearance according to specific project management needs and application aesthetics.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, there is flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog's appearance according to specific project management needs and application aesthetics.
 
 **1. Removing context menu option**
 

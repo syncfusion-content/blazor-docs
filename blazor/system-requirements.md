@@ -11,7 +11,7 @@ documentation: ug
 
 Blazor applications can be developed using one of the following IDEs or using [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-Syncfusion Blazor applications can be developed, hosted, and run on all major [platforms supported by Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0), including Windows, Linux, and macOS.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications can be developed, hosted, and run on all major [platforms supported by Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0), including Windows, Linux, and macOS.
 
 ## Integrated Development Environment
 

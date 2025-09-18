@@ -9,7 +9,7 @@ documentation: ug
 
 # Optimize Performance in Blazor WebAssembly using AOT Compilation
 
-This article explains how to improve the performance of **Blazor WebAssembly (WASM)** applications using **Ahead-of-Time (AOT) compilation**, specifically for applications using **Syncfusion Blazor components**.
+This article explains how to improve the performance of **Blazor WebAssembly (WASM)** applications using **Ahead-of-Time (AOT) compilation**, specifically for applications using **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components**.
 
 ## AOT Compilation Overview
 
@@ -62,7 +62,7 @@ bin/Release/net8.0/publish/wwwroot/
 ---
 
 ## Size vs Performance Tradeoff
-The following table compares performance and size metrics for Blazor WebAssembly with and without AOT, using a Syncfusion Grid with paging enabled.
+The following table compares performance and size metrics for Blazor WebAssembly with and without AOT, using a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with paging enabled.
 
 | Metric                     | Without AOT          | With AOT             |
 |----------------------------|----------------------|----------------------|

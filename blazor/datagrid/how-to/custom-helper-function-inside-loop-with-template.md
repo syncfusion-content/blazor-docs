@@ -9,7 +9,7 @@ documentation: ug
 
 # Use custom helper inside the loop with templates
 
-The Syncfusion Blazor DataGrid allows you to use custom helpers inside the loop with [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to use custom helpers inside the loop with [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
 
 The **customer rating** column includes a custom template defined using `Template`. Inside this template, iterates through the item array and generates `<span>` tag, displayed as stars using the CSS below:
 

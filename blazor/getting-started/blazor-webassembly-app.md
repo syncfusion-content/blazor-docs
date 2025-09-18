@@ -17,9 +17,9 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Using Syncfusion Blazor Templates
+## Using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Templates
 
-You can create a Blazor WebAssembly Standalone App using Syncfusion Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a Blazor WebAssembly Standalone App using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Manually Creating a Project
 
