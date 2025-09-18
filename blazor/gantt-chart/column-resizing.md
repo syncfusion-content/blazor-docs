@@ -61,8 +61,6 @@ The column width can be resized by clicking and dragging the right edge of the c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBytYsGJinULFbT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Resizing Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-resize.png)
-
 N> You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 
 ### Defining minimum and maximum column width
