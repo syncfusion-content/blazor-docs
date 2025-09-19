@@ -2114,7 +2114,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (Args.Item.Text == "Excel Export")
         {
-            await this.TreeGrid.ExcelExportAsync();
+            await this.TreeGrid.ExportToExcelAsync();
         }
     }
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<BusinessObject> args)
