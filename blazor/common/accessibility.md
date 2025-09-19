@@ -2848,41 +2848,6 @@ TreeView
 <a href="https://blazor.syncfusion.com/documentation/treeview/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
-<tr>
-<td>
-PDF Viewer
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
 </table>
 
 <style>
