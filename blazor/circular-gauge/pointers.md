@@ -327,7 +327,6 @@ You can use image instead of rendering marker shape to denote the pointer value.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUMLhmgVRVZgdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Image Pointer](./images/blazor-circulargauge-pointer-with-image.png)
 
