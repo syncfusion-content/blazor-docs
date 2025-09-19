@@ -1757,7 +1757,7 @@ SfPdfViewer
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/sfpdfviewer" target="_blank">Demo</a>
 </td>
 <td>
 <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/accessibility" target="_blank">Documentation</a>
