@@ -265,7 +265,6 @@ The following sample code shows how to send parameters using the Query property 
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVzNxLfUlNVErCr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
