@@ -135,7 +135,7 @@ The following sample code demonstrates defining custom context menu item and its
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.TreeGrid.Copy(true);
+            this.TreeGrid.CopyAsync(true);
         }
     }
 }

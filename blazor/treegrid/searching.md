@@ -9,7 +9,7 @@ documentation: ug
 
 # Searching in Blazor TreeGrid Component
 
-In a Tree Grid, the records are searched by using the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
+In a Tree Grid, the records are searched by using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ N> By default, the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Search by external button
 
-To search tree grid records from an external button, invoke the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method.
+To search tree grid records from an external button, invoke the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method.
 
 {% tabs %}
 
@@ -198,7 +198,7 @@ To search tree grid records from an external button, invoke the [Search](https:/
 
     private void search()
     {
-        this.TreeGrid.Search("Child Task 1");
+        this.TreeGrid.SearchAsync("Child Task 1");
     }
 }
 

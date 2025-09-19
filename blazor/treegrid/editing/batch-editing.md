@@ -9,7 +9,7 @@ documentation: ug
 
 # Batch Editing in Blazor Tree Grid Component
 
-In the Batch edit mode, when the tree grid cell is double-clicked, the target cell goes into edit state. It can be bulk saved (added, changed and deleted data in the single request) to the data source by clicking on the toolbar's **Update** button or by externally invoking the [EndEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
+In the Batch edit mode, when the tree grid cell is double-clicked, the target cell goes into edit state. It can be bulk saved (added, changed and deleted data in the single request) to the data source by clicking on the toolbar's **Update** button or by externally invoking the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEditAsync) method.
 To enable Batch edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property of the `TreeGridEditSettings` as **Batch**.
 
 {% tabs %}

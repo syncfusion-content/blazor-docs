@@ -9,9 +9,9 @@ documentation: ug
 
 # Get index value of selected row cell in Blazor TreeGrid Component
 
-The index value of a selected row cell or row is got by using the [GetSelectedRowCellIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexes) method of the Tree Grid component.
+The index value of a selected row cell or row is got by using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the Tree Grid component.
 
-This is demonstrated in the below sample code where the [GetSelectedRowCellIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexes) method is called on button click which returns the selected row cell indexes,
+This is demonstrated in the below sample code where the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method is called on button click which returns the selected row cell indexes,
 
 {% tabs %}
 
@@ -47,7 +47,7 @@ This is demonstrated in the below sample code where the [GetSelectedRowCellIndex
 
     public async Task SelectedRowCellIndex()
     {
-        var value = await this.TreeGrid.GetSelectedRowCellIndexes();
+        var value = await this.TreeGrid.GetSelectedRowCellIndexesAsync();
     }
 }
 
