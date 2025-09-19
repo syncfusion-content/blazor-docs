@@ -87,7 +87,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy to clipboard by external buttons
 
-To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the `copy` method.
+To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the `copyAsync` method.
 
 {% tabs %}
 
@@ -123,12 +123,12 @@ To copy the data of the selected rows or cells into the clipboard with help of e
 
     public async void Copy()
     {
-        await this.TreeGrid.Copy();
+        await this.TreeGrid.CopyAsync();
     }
 
     public async void CopyHeader()
     {
-        await this.TreeGrid.Copy(true);
+        await this.TreeGrid.CopyAsync(true);
     }
 }
 
