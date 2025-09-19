@@ -49,7 +49,7 @@ By setting value in percentage, gauge gets its dimension with respect to its con
                     <CircularGaugePointer/>
                 </CircularGaugePointers>
             </CircularGaugeAxis>
-    </CircularGaugeAxes>
+        </CircularGaugeAxes>
     </SfCircularGauge>
 </div>
 ```
