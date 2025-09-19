@@ -1929,7 +1929,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (Args.Item.Text == "PDF Export")
         {
-           await this.TreeGrid.PdfExport();
+           await this.TreeGrid.	ExportToPdfAsync();
         }
     }
     public void PdfExportHandler(object args)
@@ -1991,7 +1991,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (Args.Item.Text == "PDF Export")
         {
-            await this.TreeGrid.PdfExport();
+            await this.TreeGrid.ExportToPdfAsync();
         }
     }
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<BusinessObject> args)
@@ -2052,7 +2052,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (Args.Item.Text == "Excel Export")
         {
-            await this.TreeGrid.ExcelExport();
+            await this.TreeGrid.ExportToExcelAsync();
         }
     }
     public void ExcelExportHandler(object args)
@@ -2114,7 +2114,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (Args.Item.Text == "Excel Export")
         {
-            await this.TreeGrid.ExcelExport();
+            await this.TreeGrid.ExportToExcelAsync();
         }
     }
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<BusinessObject> args)

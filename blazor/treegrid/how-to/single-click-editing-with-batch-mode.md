@@ -9,9 +9,9 @@ documentation: ug
 
 # Single click editing with Batch mode in Blazor TreeGrid Component
 
-A cell is made editable on a single click with a [Batch](https://blazor.syncfusion.com/documentation/treegrid/edit#batch) mode of editing in TreeGrid, by using the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCell_System_Double_System_String_) method.
+A cell is made editable on a single click with a [Batch](https://blazor.syncfusion.com/documentation/treegrid/edit#batch) mode of editing in TreeGrid, by using the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCellAsync_System_Int32_System_String_) method.
 
-Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of **TreeGridSelectionSettings** component to **Both** and bind the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event to Tree Grid. In the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event handler, call the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCell_System_Double_System_String_) method based on the clicked cell.
+Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of **TreeGridSelectionSettings** component to **Both** and bind the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event to Tree Grid. In the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event handler, call the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCellAsync_System_Int32_System_String_) method based on the clicked cell.
 
 {% tabs %}
 
@@ -45,16 +45,16 @@ Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.
     public async Task CellSelectHandler(CellSelectEventArgs<TreeData> args)
     {
         //get selected cell index
-        var CellIndexes = await TreeGrid.GetSelectedRowCellIndexes();
+        var CellIndexes = await TreeGrid.GetSelectedRowCellIndexesAsync();
 
         //get the row and cell index
         var CurrentEditRowIndex = CellIndexes[0].Item1;
         var CurrentEditCellIndex = (int)CellIndexes[0].Item2;
 
         //get the available fields
-        var fields = await TreeGrid.GetColumnFieldNames();
+        var fields = await TreeGrid.GetColumnFieldNamesAsync();
         // edit the selected cell using the cell index and column name
-        await TreeGrid.EditCell(CurrentEditRowIndex, fields[CurrentEditCellIndex]);
+        await TreeGrid.EditCellAsync(CurrentEditRowIndex, fields[CurrentEditCellIndex]);
     }
 }
 
