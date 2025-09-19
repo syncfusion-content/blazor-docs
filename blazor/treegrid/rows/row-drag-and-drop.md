@@ -1068,7 +1068,7 @@ public class WrapData
 
 ![Drag and Drop Row between Different Blazor Tree Grid](../images/blazor-treegrid-drag-drop-row.png)
 
-N> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform RowDragandDrop operations.
+N> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform Row Drag and Drop operations.
 
 ## Drag and drop events
 
@@ -1077,4 +1077,5 @@ The following events are triggered while drag and drop the tree grid rows.
 [RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting) -Triggers when starts to drag the tree grid row.
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when a drag element is dropped on the target element.
+
 
