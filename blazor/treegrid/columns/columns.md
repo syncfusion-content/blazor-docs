@@ -467,7 +467,7 @@ public class TreeDataFormat
 
 ## AutoFit specific columns
 
-The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. A specific column can be autofitted at initial rendering by invoking the [AutoFitColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoFitColumnsAsync_System_String___) method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
+The **AutoFitColumnsAsync** method resizes the column to fit the widest cell's content without wrapping. A specific column can be autofitted at initial rendering by invoking the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoFitColumnsAsync_System_String___) method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
 
 {% tabs %}
 
@@ -498,7 +498,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 
     private void OnDataBound(object e)
     {
-        this.TreeGrid.AutoFitColumns(new List<string>() { "TaskName" });
+        this.TreeGrid.AutoFitColumnsAsync(new List<string>() { "TaskName" });
     }
 }
 
@@ -543,7 +543,7 @@ public class TreeData
 
 ![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.png)
 
-N> All the columns can be autofitted by invoking the **AutoFitColumns** method without column names.
+N> All the columns can be autofitted by invoking the **AutoFitColumnsAsync** method without column names.
 
 ## Lock columns
 
@@ -842,7 +842,7 @@ public class TreeData
 
 ## Show or Hide Columns by external button
 
-The tree grid columns can be shown or hidden dynamically using the external buttons by invoking the [ShowColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumns_System_Object_System_String_) or [HideColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HideColumns_System_Object_System_String_) method.
+The tree grid columns can be shown or hidden dynamically using the external buttons by invoking the [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HideColumnsAsync_System_String___System_String_) method.
 
 {% tabs %}
 
@@ -874,11 +874,11 @@ The tree grid columns can be shown or hidden dynamically using the external butt
     }
     private void HideColumns()
     {
-        this.TreeGrid.HideColumns(ColumnItems);  //hide by HeaderText
+        this.TreeGrid.HideColumnsAsync(ColumnItems);  //hide by HeaderText
     }
     private void ShowColumns()
     {
-        this.TreeGrid.ShowColumns(ColumnItems); //show by HeaderText
+        this.TreeGrid.ShowColumnsAsync(ColumnItems); //show by HeaderText
     }
 }
 

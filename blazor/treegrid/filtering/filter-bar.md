@@ -152,11 +152,11 @@ In the following sample, the dropdown is used as a custom component in the Durat
         {
             List<string> Data = new List<string>();
             Data.Add("Duration");
-            TreeGrid.ClearFiltering(Data);
+            TreeGrid.ClearFilteringAsync(Data);
         }
         else
         {
-            TreeGrid.FilterByColumn("Duration", "equal", Args.Value);
+            TreeGrid.FilterByColumnAsync("Duration", "equal", Args.Value);
         }
     }
 }
