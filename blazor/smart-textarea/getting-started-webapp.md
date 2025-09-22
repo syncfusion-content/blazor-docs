@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Getting started with Syncfusion Smart TextArea in Blazor Web App
-description: Checkout and learn here all about Getting started with Syncfusion Blazor Smart TextArea component in Blazor Webapp and more.
-platform: Blazor
+title: Blazor Smart TextArea Tutorial | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Smart TextArea component in a Blazor Web App, including setup and AI configuration.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
 ---
 
-# Getting Started with Smart TextArea
+# Getting Started with Blazor Smart TextArea
 
-This section briefly explains about how to include [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio code.
+The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, suitable for applications like issue trackers or customer support systems. This section explains how to integrate the component into a Blazor Web App using Visual Studio or Visual Studio Code.
 
-To get start quickly with Blazor Smart TextArea component, you can check on this video.
+To get started quickly, watch this video tutorial:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=RjHkC3idOdg" %}
@@ -23,20 +22,24 @@ To get start quickly with Blazor Smart TextArea component, you can check on this
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+- .NET SDK 8.0 or later
+- Visual Studio 2022 (version 17.0 or later)
+- OpenAI or Azure OpenAI account
+- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode. Refer to [Blazor Interactivity](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/server-interactivity) for details.
 
-## Create a new Blazor Web App in Visual Studio
+## Create a New Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SmartComponents and Themes NuGet in the App
+## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
 
-To add **Blazor Smart TextArea** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the **Blazor Smart TextArea** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the following packages:
+- [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, use the Package Manager Console:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -47,7 +50,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -55,41 +58,36 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+- .NET SDK 8.0 or later
+- Visual Studio Code (version 1.60 or later)
+- OpenAI or Azure OpenAI account
+- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode. Refer to [Blazor Interactivity](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/server-interactivity) for details.
 
-## Create a new Blazor Web App in Visual Studio Code
+## Create a New Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
-
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
-
-For example, in a Blazor Web App with the `Server` interactive render mode, use the following commands.
+Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
 dotnet new blazor -o BlazorWebApp -int Server
 cd BlazorWebApp
-cd BlazorWebApp.Client
+dotnet restore
 
 {% endhighlight %}
 {% endtabs %}
 
-N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
+N> For details on creating a Blazor Web App with various interactive render modes, refer to [Blazor Web App Render Modes](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SmartComponents and Themes NuGet in the App
+## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
 
-If you utilize `Server` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the server project.
-
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+1. Open the integrated terminal in Visual Studio Code (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+2. Ensure you are in the project root directory where the `.csproj` file is located.
+3. Run the following commands to install the required NuGet packages for the Server render mode:
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.Blazor.SmartComponents -v {{ site.releaseversion }}
@@ -97,25 +95,20 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion Blazor Service
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace.
+For Server interactive render mode, open the **~/Components/_Imports.razor** file and add the following namespaces:
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/Components/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartComponents
@@ -123,10 +116,10 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+Register the Syncfusion Blazor service in the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -147,38 +140,46 @@ var app = builder.Build();
 
 ## Configure AI Service
 
-Follow the instructions below to register an AI model in your application.
+To enable AI-powered autocompletion in the Smart TextArea, configure an AI model (OpenAI, Azure OpenAI, or Ollama) in your application. Install the required NuGet packages and update the **~/Program.cs** file as described below.
 
-### OpenAI
+### Install AI Service NuGet Packages
 
-For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
-
-* Install the following NuGet packages to your project:
+Install the following NuGet packages based on your chosen AI provider:
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
+@* For Azure OpenAI only *@
+Install-Package Azure.AI.OpenAI
+@* For Ollama only *@
+Install-Package OllamaSharp
 
 {% endhighlight %}
-
 {% endtabs %}
 
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+### OpenAI Configuration
+
+For OpenAI, obtain an API key from [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) and specify the desired model (e.g., `gpt-3.5-turbo`, `gpt-4`). Store the API key securely in a configuration file or environment variable.
+
+Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
 
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartComponents;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
+
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string openAIApiKey = "API-KEY";
@@ -188,7 +189,7 @@ IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatCl
 builder.Services.AddChatClient(openAIChatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+    .InjectOpenAIInference();
 
 var app = builder.Build();
 ....
@@ -196,39 +197,28 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-### Azure OpenAI
+### Azure OpenAI Configuration
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
+For Azure OpenAI, deploy a resource and model as described in [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain the API key, endpoint, and model name from your Azure portal.
 
-* Install the following NuGet packages to your project:
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI
-Install-Package Azure.AI.OpenAI
-
-{% endhighlight %}
-
-{% endtabs %}
-
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
 
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartComponents;
 using Syncfusion.Blazor.AI;
-using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
+using Azure.AI.OpenAI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string azureOpenAIKey = "AZURE_OPENAI_KEY";
@@ -242,7 +232,7 @@ IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIM
 builder.Services.AddChatClient(azureOpenAIChatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+    .InjectOpenAIInference();
 
 var app = builder.Build();
 ....
@@ -250,50 +240,33 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
+N> For versions 28.2.33 to 30.2.6, the Azure.AI.OpenAI package is not included in the SmartComponents dependency. Install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) package separately. Refer to [Syncfusion version history](https://blazor.syncfusion.com/documentation/release-notes) for the latest dependency information.
 
-N> From version 28.2.33 to 30.2.6, the Azure.AI.OpenAI package has been removed from the SmartComponents dependency. To use Azure OpenAI, please install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) package separately in your Blazor application.
+### Ollama Configuration
 
-### Ollama
+To use Ollama for self-hosted models:
 
-To use Ollama for running self-hosted models:
+1. Download and install Ollama from [Ollama's official website](https://ollama.com).
+2. Install a model from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`).
+3. Configure the endpoint URL (e.g., `http://localhost:11434`) and model name.
 
-1. **Download and install Ollama**  
-   Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
-
-2. **Install the desired model from the Ollama library**  
-   You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
-
-3. **Configure your application**
-
-   - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
-   - Set `ModelName` to the specific model you installed (e.g., `llama2:13b`).
-
-* Install the following NuGet packages to your project:
+Add the following to the **~/Program.cs** file:
 
 {% tabs %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
 
-{% highlight c# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package OllamaSharp
-
-{% endhighlight %}
-
-{% endtabs %}
-
-* Add the following settings to the **~/Program.cs** file in your Blazor Server app.
-
-{% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
-
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartComponents;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OllamaSharp;
+
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string ModelName = "MODEL_NAME";
@@ -301,7 +274,7 @@ IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName
 builder.Services.AddChatClient(chatClient);
 
 builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+    .InjectOpenAIInference();
 
 var app = builder.Build();
 ....
@@ -309,9 +282,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+Reference the theme stylesheet and script via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the following to the **~/Components/App.razor** file:
 
 ```html
 <head>
@@ -325,24 +298,30 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Explore [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for details on referencing themes via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). Refer to [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for additional methods to include script references.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea component
+## Add Smart TextArea Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart TextArea** component in the **~Pages/Index.razor** file.
+The **UserRole** attribute (required) defines the context for AI autocompletion based on the user's role. The **UserPhrases** attribute (optional) provides predefined expressions aligned with the application's tone and common phrases.
+
+Add the Syncfusion Blazor Smart TextArea component to the **~/Pages/Index.razor** file. The following example demonstrates autocompletion for GitHub issue responses:
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor tabtitle="~/Pages/Index.razor" %}
+
+@using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
 </SfSmartTextArea>
 
 @code {
     private string? prompt;
+    // Defines the context for AI autocompletion
     public string userRole = "Maintainer of an open-source project replying to GitHub issues";
+    // Predefined phrases for AI to suggest during typing
     public string[] userPhrases = [
         "Thank you for contacting us.",
-        "To investigate, We will need a reproducible example as a public Git repository.",
+        "To investigate, we will need a reproducible example as a public Git repository.",
         "Could you please post a screenshot of NEED_INFO?",
         "This sounds like a usage question. This issue tracker is intended for bugs and feature proposals. Unfortunately, we don't have the capacity to answer general usage questions and would recommend StackOverflow for a faster response.",
         "We do not accept ZIP files as reproducible examples.",
@@ -353,19 +332,27 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart TextArea
 {% endhighlight %}
 {% endtabs %}
 
-Here,
+## Run and Test the Application
 
-**UserRole**: This attribute is `required` to defines the context of the autocompletion based on the role of the person typing.
-**UserPhrases**: This attribute is optional to provides predefined expressions that align with User/application's tone and frequently used content.
+1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+2. Type "To investigate" in the GitHub example or "Thank you" in the customer support example to test instant sentence autocompletion.
+3. Verify that other phrases from the `userPhrases` array are suggested as you type related text.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea component in your default web browser.
-
-* Type 'To investigate' to experience instant sentence autocompletion.
-
-![Syncfusion Smart TextArea - Output](images/smart-textarea-userphrases.gif)
+![Syncfusion Smart TextArea - Autocompletion Demo](images/smart-textarea-userphrases.gif)
+*Alt text: Animation showing autocompletion of predefined phrases in the Syncfusion Blazor Smart TextArea component.*
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
-## See also
+## Troubleshooting
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+If you encounter issues, try the following:
+- **NuGet Installation Errors**: Ensure a stable internet connection and set the NuGet package source to `https://www.nuget.org`. Run `dotnet restore` again.
+- **AI Service Configuration Errors**: Verify the API key, endpoint, and model name in **Program.cs**. Check for typos or incorrect values.
+- **Component Not Rendering**: Confirm that the Syncfusion Blazor service is registered in **Program.cs** and the stylesheet/script references are correctly added in **App.razor**.
+
+## See Also
+
+- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
+- [Customizing Smart TextArea Behavior](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
+- [Syncfusion Blazor Smart Components Release Notes](https://blazor.syncfusion.com/documentation/release-notes)
+- [Troubleshooting Blazor Components](https://blazor.syncfusion.com/documentation/troubleshooting)
