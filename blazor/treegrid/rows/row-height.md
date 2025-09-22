@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Height in Blazor TreeGrid Component | Syncfusion
-description: Learn how to set and customize row height in the Syncfusion Blazor TreeGrid component.
+description: Check out here and learn more details about the Row Height in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -159,5 +159,6 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ![Customizing Specific Row Height in Blazor TreeGrid](../images/blazor-treegrid-specific-row-height-customization.png)
