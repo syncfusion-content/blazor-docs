@@ -114,7 +114,7 @@ Open the column chooser programmatically, for example from an external button, b
     }
     public void Show()
     {
-        this.TreeGrid.OpenColumnChooser(200, 50);
+        this.TreeGrid.OpenColumnChooserAsync(200, 50);
     }
 }
 
