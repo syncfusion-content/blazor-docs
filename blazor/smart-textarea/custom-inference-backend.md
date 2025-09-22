@@ -59,7 +59,7 @@ var app = builder.Build();
 4. Type phrases like "thank" or "investigate" in the Smart TextArea to verify that the custom AI service generates appropriate responses.
 5. Ensure suggestions appear as configured (e.g., inline or pop-up, based on the `ShowSuggestionOnPopup` setting).
 
-![Smart TextArea with Custom AI Service](images/smart-textarea-custom-ai.gif)
+![Smart TextArea with Custom AI Service](images/smart-textarea.gif)
 
 ## Implemented AI Services
 
