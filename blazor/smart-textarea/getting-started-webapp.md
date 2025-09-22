@@ -63,7 +63,7 @@ N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.o
 - OpenAI or Azure OpenAI account
 - [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode. Refer to [Blazor Interactivity](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/server-interactivity) for details.
+N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
 ## Create a New Blazor Web App in Visual Studio Code
 
@@ -355,4 +355,3 @@ If you encounter issues, try the following:
 - [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
 - [Customizing Smart TextArea Behavior](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
 - [Syncfusion Blazor Smart Components Release Notes](https://blazor.syncfusion.com/documentation/release-notes)
-- [Troubleshooting Blazor Components](https://blazor.syncfusion.com/documentation/troubleshooting)

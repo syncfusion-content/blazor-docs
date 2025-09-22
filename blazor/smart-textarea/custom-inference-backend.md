@@ -25,7 +25,7 @@ public interface IChatInferenceService
 ```
 
 - **Purpose**: Standardizes communication for AI-generated responses.
-- **Parameters**: The `ChatParameters` type includes properties like user input and context (e.g., `UserRole`, `UserPhrases`). Refer to [API Documentation](https://blazor.syncfusion.com/documentation/api/smart-textarea) for details.
+- **Parameters**: The `ChatParameters` type includes properties like user input and context (e.g., `UserRole`, `UserPhrases`).
 - **Benefits**: Enables seamless switching between AI providers without modifying component code.
 
 ## Registering the Custom AI Service
@@ -83,6 +83,4 @@ If the custom AI service does not work as expected, try the following:
 
 - [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 - [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-- [Syncfusion Blazor Smart TextArea API Documentation](https://blazor.syncfusion.com/documentation/api/smart-textarea)
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
-- [Troubleshooting Blazor Components](https://blazor.syncfusion.com/documentation/troubleshooting)
