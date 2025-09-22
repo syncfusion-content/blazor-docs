@@ -25,12 +25,12 @@ public interface IChatInferenceService
 ```
 
 - **Purpose**: Standardizes communication for AI-generated responses.
-- **Parameters**: The `ChatParameters` type includes properties like user input and context (e.g., `UserRole`, `UserPhrases`).
+- **Parameters**: The `ChatParameters` type includes properties like user input and context.
 - **Benefits**: Enables seamless switching between AI providers without modifying component code.
 
 ## Registering the Custom AI Service
 
-Register the custom AI service in the **~/Program.cs** file of your Blazor Web App or Server App:
+Register the custom AI service in the **~/Program.cs** file of your Blazor Web App:
 
 ```csharp
 using Microsoft.AspNetCore.Components;

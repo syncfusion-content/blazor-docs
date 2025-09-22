@@ -19,7 +19,7 @@ The `ShowSuggestionOnPopup` attribute controls how AI-generated suggestions are 
 
 Set `ShowSuggestionOnPopup="true"` to display suggestions in a pop-up window above the text area, ideal for scenarios where users need to select from multiple suggestions without cluttering the input area.
 
-Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
+Add the following code to a Razor file (e.g., `~/Pages/Home.razor`):
 
 ```razor
 @using Syncfusion.Blazor.SmartComponents
@@ -46,7 +46,7 @@ Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
 
 Set `ShowSuggestionOnPopup="false"` (default) to display suggestions inline within the text area, suitable for seamless text entry where users can accept suggestions by continuing to type or pressing a key (e.g., Tab).
 
-Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
+Add the following code to a Razor file (e.g., `~/Pages/Home.razor`):
 
 ```razor
 @using Syncfusion.Blazor.SmartComponents
@@ -71,10 +71,10 @@ Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
 
 ## Test Suggestion Customization
 
-1. Add the Smart TextArea component to your Blazor Web App or Server App as shown above.
+1. Add the Smart TextArea component to your Blazor Web App as shown above.
 2. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
 3. Type phrases like "Thank you" or "To investigate" to trigger suggestions.
-4. For pop-up mode, verify that suggestions appear in a pop-up window and can be selected. For inline mode, confirm that suggestions appear in the text area and can be accepted by typing or keypress.
+4. For pop-up mode, verify that suggestions appear in a pop-up window and can be selected. For inline mode, confirm that suggestions appear in the text area and can be accepted by tab keypress.
 
 ## Troubleshooting
 

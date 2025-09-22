@@ -304,7 +304,7 @@ N> Explore [Blazor Themes](https://blazor.syncfusion.com/documentation/appearanc
 
 The **UserRole** attribute (required) defines the context for AI autocompletion based on the user's role. The **UserPhrases** attribute (optional) provides predefined expressions aligned with the application's tone and common phrases.
 
-Add the Syncfusion Blazor Smart TextArea component to the **~/Pages/Index.razor** file. The following example demonstrates autocompletion for GitHub issue responses:
+Add the Syncfusion Blazor Smart TextArea component to the **~/Pages/Home.razor** file. The following example demonstrates autocompletion for GitHub issue responses:
 
 {% tabs %}
 {% highlight razor tabtitle="~/Pages/Index.razor" %}
@@ -339,7 +339,6 @@ Add the Syncfusion Blazor Smart TextArea component to the **~/Pages/Index.razor*
 3. Verify that other phrases from the `userPhrases` array are suggested as you type related text.
 
 ![Syncfusion Smart TextArea - Autocompletion Demo](images/smart-textarea-userphrases.gif)
-*Alt text: Animation showing autocompletion of predefined phrases in the Syncfusion Blazor Smart TextArea component.*
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
@@ -349,9 +348,3 @@ If you encounter issues, try the following:
 - **NuGet Installation Errors**: Ensure a stable internet connection and set the NuGet package source to `https://www.nuget.org`. Run `dotnet restore` again.
 - **AI Service Configuration Errors**: Verify the API key, endpoint, and model name in **Program.cs**. Check for typos or incorrect values.
 - **Component Not Rendering**: Confirm that the Syncfusion Blazor service is registered in **Program.cs** and the stylesheet/script references are correctly added in **App.razor**.
-
-## See Also
-
-- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-- [Customizing Smart TextArea Behavior](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
-- [Syncfusion Blazor Smart Components Release Notes](https://blazor.syncfusion.com/documentation/release-notes)
