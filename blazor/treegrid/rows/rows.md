@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Rows in Blazor Tree Grid Component | Syncfusion
-description: Check out here and learn more about rows in the Syncfusion Blazor Tree Grid component and much more details.
+title: Rows in Blazor TreeGrid Component | Syncfusion
+description: Learn how rows work in the Syncfusion Blazor TreeGrid and how to customize them using RowDataBound, style alternate rows with CSS, and access row model details programmatically.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Rows in Blazor Tree Grid Component
 
-The row represents record details fetched from the data source.
+A row represents the details of a single record fetched from the data source.
 
 ## Customize rows
 
-The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. The `RowDataBound` event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
+Customize the appearance of rows using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. This event triggers for each row and provides event **args** that include the row data (Data) and the row element (Row), allowing conditional styling and other modifications.
+
+The following example applies different background colors based on the Duration value.
 
 {% tabs %}
 
@@ -102,7 +104,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Blazor Tree Grid Rows](../images/blazor-treegrid-row-customization.png)
+![Customizing Blazor TreeGrid Rows](../images/blazor-treegrid-row-customization.png)
 
 ## Styling alternate rows
 
@@ -114,7 +116,7 @@ public class TreeData
 }
 ```
 
-Refer to the following example.
+The following example shows how to apply alternate row styling using a CSS override.
 
 {% tabs %}
 
@@ -184,11 +186,11 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Alternate Rows in Blazor Tree Grid](../images/blazor-treegrid-alternate-rows-customization.png)
+![Customizing Alternate Rows in Blazor TreeGrid](../images/blazor-treegrid-alternate-rows-customization.png)
 
 ## Accessing row model information programmatically
 
-The Blazor Tree Grid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
+Use the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method to obtain row model details for a given record, including Level, IsExpanded, and HasChildRecords. This is useful for conditional logic based on hierarchy state.
 
 This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the row model details of the passed record.
 
@@ -272,3 +274,6 @@ public class TreeData
 ## See Also
 
 * [TreeGridTemplates component](../templates#treegridtemplates-component)
+* [Row Template](./row-template)
+* [Row Height](./row-height)
+* [Selection](../selection/selection)
