@@ -779,5 +779,5 @@ The following image represents a tree grid with the mask row virtualization.
 * Virtual scrolling is not compatible with detail template.
 * Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) given to the Tree Grid.
 * The virtual height of the tree grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. In order to increase the row height to accommodate the content then the row height can be  specified as below to ensure all the table rows are in same height.
-* Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
+* Programmatic selection using the **SelectRowsAsync** method is not supported in virtual scrolling.
 * When row virtualization is enabled, reordering rows is limited to only the records currently visible in the viewport.

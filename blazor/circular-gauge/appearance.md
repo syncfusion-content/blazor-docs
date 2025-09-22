@@ -27,7 +27,7 @@ You can add a title to the Circular Gauge using the [Title](https://help.syncfus
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrqMhLwAfAAeKAL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLytkMmVzxeMrwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)
 

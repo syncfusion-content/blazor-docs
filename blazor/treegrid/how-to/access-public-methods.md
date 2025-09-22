@@ -11,7 +11,7 @@ documentation: ug
 
 The public methods available in the Tree Grid component can be accessed by using its reference defined in the component initialization.
 
-This is demonstrated in the below sample code where the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Print) method of the Tree Grid component is invoked on button click using the Tree Grid reference,
+This is demonstrated in the below sample code where the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method of the Tree Grid component is invoked on button click using the Tree Grid reference,
 
 {% tabs %}
 
@@ -42,7 +42,7 @@ This is demonstrated in the below sample code where the [Print](https://help.syn
 
     public void Print()
     {
-        this.TreeGrid.Print();
+        this.TreeGrid.PrintAsync();
     }
 
     protected override void OnInitialized()
