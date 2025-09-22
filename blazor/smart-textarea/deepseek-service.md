@@ -1,86 +1,62 @@
 ---
 layout: post
-title: Deepseek AI Service with Smart Components in Blazor App | Syncfusion
-description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with DeepSeek AI services.
+title: DeepSeek AI Integration with Blazor Smart TextArea | Syncfusion
+description: Learn how to integrate the Syncfusion Blazor Smart TextArea with DeepSeek AI services in a Blazor App.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
 ---
 
-# Getting Started with Smart Components using DeepSeek AI
+# DeepSeek AI Integration with Blazor Smart TextArea
 
-This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components in your Blazor App. 
+The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the DeepSeek AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
-## Prerequisites
+## Setting Up DeepSeek
 
-Before you begin, ensure you have:
+1. **Obtain a DeepSeek API Key**  
+   Create an account at [DeepSeek Platform](https://platform.deepseek.com), sign in, and navigate to [API Keys](https://platform.deepseek.com/api_keys) to generate an API key.
+2. **Review Model Specifications**  
+   Refer to [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing) for details on available models (e.g., `deepseek-chat`).
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* DeepSeek account and API key (see setup instructions below)
+## Create a DeepSeek AI Service
 
-### Setting Up DeepSeek
+Create a service class to manage interactions with the DeepSeek API, including authentication and response processing for the Smart TextArea.
 
-1. **DeepSeek API Access**
-   * Create a DeepSeek account at [platform.deepseek.com](https://platform.deepseek.com)
-   * Navigate to [API Keys](https://platform.deepseek.com/api_keys)
-
-2. **DeepSeek Models**
-
-   For detailed specifications and pricing, visit the [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing).
-
-
----
-
-## Getting Started for DeepSeek AI with SmartTextArea
-
-After completing this setup, you can:
-
-1. [Add Smart TextArea to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-2. [Customize Smart TextArea features](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
-
----
-
-## Step 1: Create a DeepSeek AI Service
-
-The `DeepSeekAIService` class is responsible for managing all interactions with the DeepSeek API. This service:
-
-### Implementation Steps
-
-1. Create a new file named `DeepSeekAIService.cs`
-2. Add the following using statements for required dependencies
-3. Implement the service class as shown below
+1. Create a `Services` folder in your project.
+2. Add a new file named `DeepSeekAIService.cs` in the `Services` folder.
+3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
 
 ```csharp
+using System.Net;
 using System.Text;
 using System.Text.Json;
-using System.Net;
 using Microsoft.Extensions.AI;
+
 public class DeepSeekAIService
 {
-    private const string ApiKey = "Your API Key";
-    private const string ModelName = "Your Model Name";
-    private const string Endpoint = "https://api.deepseek.com/v1/chat/completions";
-
+    private readonly string _apiKey;
+    private readonly string _modelName = "deepseek-chat"; // Example model
+    private readonly string _endpoint = "https://api.deepseek.com/v1/chat/completions";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
     {
         PooledConnectionLifetime = TimeSpan.FromMinutes(30),
-        EnableMultipleHttp2Connections = true,
+        EnableMultipleHttp2Connections = true
     })
     {
-        DefaultRequestVersion = HttpVersion.Version30
+        DefaultRequestVersion = HttpVersion.Version20 // Fallback to HTTP/2 for compatibility
     };
-
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public DeepSeekAIService()
+    public DeepSeekAIService(IConfiguration configuration)
     {
+        _apiKey = configuration["DeepSeek:ApiKey"] ?? throw new ArgumentNullException("DeepSeek API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
-            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
+            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
         }
     }
 
@@ -88,45 +64,44 @@ public class DeepSeekAIService
     {
         var requestBody = new DeepSeekChatRequest
         {
-            Model = ModelName,
-            Temperature = 0.7f,
+            Model = _modelName,
+            Temperature = 0.7f, // Controls response randomness (0.0 to 1.0)
+            MaxTokens = 2048,   // Maximum tokens in response
             Messages = chatMessages.Select(m => new DeepSeekMessage
             {
-                Role = m.Role == ChatRole.User ? "user" : "system",
+                Role = m.Role == ChatRole.User ? "user" : "assistant", // Align with DeepSeek API roles
                 Content = m.Text
             }).ToList()
         };
 
-
-        var json = JsonSerializer.Serialize(requestBody, JsonOptions);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var content = new StringContent(JsonSerializer.Serialize(requestBody, JsonOptions), Encoding.UTF8, "application/json");
 
         try
         {
-            var response = await HttpClient.PostAsync(Endpoint, content);
+            var response = await HttpClient.PostAsync(_endpoint, content);
             response.EnsureSuccessStatusCode();
-
             var responseString = await response.Content.ReadAsStringAsync();
             var responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
-
             return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from DeepSeek.";
         }
         catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
         {
-                
             throw new InvalidOperationException("Failed to communicate with DeepSeek API.", ex);
         }
     }
 }
 ```
 
-## Step 2: Define Request and Response Models
+N> Store the DeepSeek API key in `appsettings.json` (e.g., `{ "DeepSeek": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
-To effectively communicate with DeepSeek's API, we need to create strongly-typed models that represent the request and response data structures. 
+## Define Request and Response Models
 
-Create a new file named `DeepSeekModels.cs` with the following models:
+Define C# classes to match the DeepSeek API’s JSON request and response format.
 
-```CSharp
+1. Create a new file named `DeepSeekModels.cs` in the `Services` folder.
+2. Add the following model classes:
+
+```csharp
 public class DeepSeekMessage
 {
     public string Role { get; set; }
@@ -137,6 +112,7 @@ public class DeepSeekChatRequest
 {
     public string Model { get; set; }
     public float Temperature { get; set; }
+    public int MaxTokens { get; set; }
     public List<DeepSeekMessage> Messages { get; set; }
 }
 
@@ -151,51 +127,98 @@ public class DeepSeekChoice
 }
 ```
 
-## Step 3: Create a Custom AI Service
+## Create a Custom AI Service
 
-To integrate DeepSeek with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> components and your AI service.
+Implement the `IChatInferenceService` interface to connect the Smart TextArea to the DeepSeek service, acting as a bridge for AI-generated responses.
 
-The `IChatInferenceService` interface is the bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components and AI services:
-
-1. Create a new file named `MyCustomService.cs`
+1. Create a new file named `DeepSeekInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
 ```csharp
 using Syncfusion.Blazor.AI;
-public class MyCustomService : IChatInferenceService
-{
-    private readonly DeepSeekAIService _DeepSeekService;
+using System.Threading.Tasks;
 
-    public MyCustomService(DeepSeekAIService DeepSeekService)
+public class DeepSeekInferenceService : IChatInferenceService
+{
+    private readonly DeepSeekAIService _deepSeekService;
+
+    public DeepSeekInferenceService(DeepSeekAIService deepSeekService)
     {
-        _DeepSeekService = DeepSeekService;
+        _deepSeekService = deepSeekService;
     }
 
-    public Task<string> GenerateResponseAsync(ChatParameters options)
+    public async Task<string> GenerateResponseAsync(ChatParameters options)
     {
-        return _DeepSeekService.CompleteAsync(options.Messages);
+        return await _deepSeekService.CompleteAsync(options.Messages);
     }
 }
 ```
 
-## Step 4: Configure the Blazor App
+## Configure the Blazor App
 
-Configure your Blazor application to use the DeepSeek AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Register the DeepSeek service and `IChatInferenceService` implementation in the dependency injection container.
 
-```CSharp
+Update the **~/Program.cs** file as follows:
 
-using Syncfusion.Blazor.SmartComponents;
+```csharp
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
+
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<DeepSeekAIService>();
-builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, DeepSeekInferenceService>();
 
 var app = builder.Build();
-....
-
+// ...
 ```
+
+## Use DeepSeek AI with Smart TextArea
+
+Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Index.razor`) to use DeepSeek AI for autocompletion:
+
+```razor
+@using Syncfusion.Blazor.SmartComponents
+
+<SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
+</SfSmartTextArea>
+
+@code {
+    private string? prompt;
+    // Defines the context for AI autocompletion
+    private string userRole = "Customer support representative";
+    // Predefined phrases for AI to suggest during typing
+    private string[] userPhrases = [
+        "Thank you for reaching out.",
+        "Please provide more details.",
+        "We are investigating your issue."
+    ];
+}
+```
+
+## Test the Integration
+
+1. Ensure all services are registered in **Program.cs** and the Smart TextArea is added to a Razor file.
+2. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
+3. Type phrases like "Thank" or "Please provide" in the Smart TextArea to verify that DeepSeek AI generates appropriate suggestions.
+4. Check that suggestions appear as configured (e.g., inline or pop-up, based on the `ShowSuggestionOnPopup` setting).
+
+![Smart TextArea with DeepSeek AI](images/smart-textarea.gif)
+
+## Troubleshooting
+
+If the DeepSeek AI integration does not work, try the following:
+- **No Suggestions Displayed**: Verify that the DeepSeek API key and model name are correct in the configuration. Check the `DeepSeekAIService` implementation for errors.
+- **HTTP Request Failures**: Ensure a stable internet connection and that the DeepSeek API endpoint (`https://api.deepseek.com/v1/chat/completions`) is accessible. Test with HTTP/2 if compatibility issues arise.
+- **Service Registration Errors**: Confirm that `DeepSeekAIService` and `DeepSeekInferenceService` are registered in **Program.cs**.
+
+## See Also
+
+- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+- [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
