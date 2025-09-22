@@ -1,15 +1,15 @@
 ---
 layout: post
 title: AutoFill in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here about auto fill in Syncfusion Blazor TreeGrid component and much more details.
+description: Learn how to enable and use AutoFill in the Syncfusion Blazor TreeGrid to copy selected cell values by dragging the fill handle, including prerequisites and limitations.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # AutoFill in Blazor TreeGrid Component
 
-AutoFill Feature allows to copy the data of the selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as true.
+AutoFill copies the values of selected cells to other cells by dragging the fill handle (autofill icon) from the selection to the target range. Enable this feature by setting the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property to true.
 
 {% tabs %}
 
@@ -92,14 +92,14 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
-<br/> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
+N> * When [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) is true, the fill handle (autofill icon) appears on cell selection to copy values.  
+<br/> * Prerequisites: set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to Cell, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to Box, and enable batch editing.
 
-The following GIF represent a tree grid with auto fill feature.
+The following GIF represent a TreeGrid with auto fill feature.
 ![Auto FIll in Blazor TreeGrid](../images/blazor-treegrid-auto-fill.gif)
 
 
 ## Limitations of AutoFill
 
-* Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to the number type cells then it will be displayed as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will be displayed as an **empty cell**.
-* Linear series and the sequential data generations are not supported in this autofill feature.
+* String values are not parsed into numeric or date types. Copying string cells into numeric columns displays **NaN**. Copying string cells into date columns results in an **empty cell**.  
+* Linear series and sequential data generation are not supported by AutoFill.
