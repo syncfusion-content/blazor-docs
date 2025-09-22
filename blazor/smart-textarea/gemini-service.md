@@ -16,7 +16,7 @@ The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletio
 1. **Obtain a Gemini API Key**  
    Visit [Google AI Studio](https://ai.google.dev/gemini-api/docs/api-key), sign in, and generate an API key.
 2. **Review Model Specifications**  
-   Refer to [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models) for details on available models (e.g., `gemini-1.5-flash`).
+   Refer to [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models) for details on available models.
 
 ## Create a Gemini AI Service
 

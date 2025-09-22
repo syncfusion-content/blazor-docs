@@ -18,7 +18,7 @@ The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletio
 2. **Obtain an API Key**  
    Navigate to [API Keys](https://console.anthropic.com/settings/keys) and click "Create Key."
 3. **Review Model Specifications**  
-   Refer to [Claude Models Documentation](https://docs.anthropic.com/claude/docs/models-overview) for details on available models (e.g., `claude-3-5-sonnet-20241022`).
+   Refer to [Claude Models Documentation](https://docs.anthropic.com/claude/docs/models-overview) for details on available models.
 
 ## Create a Claude AI Service
 
