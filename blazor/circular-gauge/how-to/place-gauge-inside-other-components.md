@@ -23,15 +23,15 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Inputs
 
-<SfDashboardLayout ID="DashBoard" AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnWindowResize="@ResizingWindow" Resizing="@ResizingWindow"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+    <DashboardLayoutEvents Created="Created" OnWindowResize="@ResizingWindow"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
-        <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
+        <DashboardLayoutPanel Id="LayoutOne" Row="0" Column="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Circular Gauge </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Background="transparent" Height="100%" Width="100%">
+                    <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Background="transparent" Height="100%" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
@@ -54,72 +54,72 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
                     </SfCircularGauge>
                 }
             </ContentTemplate>
-        </DashboardLayoutPanel> 
-        <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
+        </DashboardLayoutPanel>
+        <DashboardLayoutPanel Id="LayoutTwo" Row="1" Column="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div>  Semi Circular Gauge </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%" Height="100%" MoveToCenter="true">
-                            <CircularGaugeAxes>
-                                <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
-                                    <CircularGaugeAxisLabelStyle Offset="-1">
+                    <SfCircularGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%" Height="100%" MoveToCenter="true">
+                        <CircularGaugeAxes>
+                            <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                                <CircularGaugeAxisLabelStyle Offset="-1">
                                     <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
-                                    </CircularGaugeAxisLabelStyle>
-                                    <CircularGaugeAxisLineStyle Width="0" Color="white" />
-                                    <CircularGaugeAxisMajorTicks Offset="15" />
-                                    <CircularGaugeAxisMinorTicks Offset="15" />
-                                    <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
-                                        </CircularGaugeRange>
-                                        <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
-                                        </CircularGaugeRange>
-                                        <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
-                                        </CircularGaugeRange>
-                                    </CircularGaugeRanges>
-                                </CircularGaugeAxis>
-                            </CircularGaugeAxes>
-                      </SfCircularGauge>
+                                </CircularGaugeAxisLabelStyle>
+                                <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                                <CircularGaugeAxisMajorTicks Offset="15" />
+                                <CircularGaugeAxisMinorTicks Offset="15" />
+                                <CircularGaugeRanges>
+                                    <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                    </CircularGaugeRange>
+                                    <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                    </CircularGaugeRange>
+                                    <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
+                                    </CircularGaugeRange>
+                                </CircularGaugeRanges>
+                            </CircularGaugeAxis>
+                        </CircularGaugeAxes>
+                    </SfCircularGauge>
                 }
             </ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Id="LayoutThree" Row="2" Col="5" SizeX="5" SizeY="7">
+        <DashboardLayoutPanel Id="LayoutThree" Row="2" Column="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Arc Gauge </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
                      <SfCircularGauge Background="transparent" ID="GaugeThree" @ref="GaugeThree" Width="100%" Height="100%">
-                            <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
-                            <CircularGaugeAxes>
-                                <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
-                                    <CircularGaugeAxisLineStyle Width="0" />
-                                    <CircularGaugeAxisLabelStyle>
-                                        <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
-                                    </CircularGaugeAxisLabelStyle>
-                                    <CircularGaugeAxisMajorTicks Height="0" />
-                                    <CircularGaugeAxisMinorTicks Height="0" />
-                                    <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
-                                    </CircularGaugeRanges>
-                                    <CircularGaugePointers>
-                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
-                                            <CircularGaugePointerAnimation Enable="false" />
-                                            <CircularGaugePointerBorder Width="0" />
-                                        </CircularGaugePointer>
-                                    </CircularGaugePointers>
-                                    <CircularGaugeAnnotations>
-                                        <CircularGaugeAnnotation Radius="30%" Angle="90" ZIndex="1">
-                                            <ContentTemplate>
-                                                <div class="annotationText">60/100</div>
-                                            </ContentTemplate>
-                                        </CircularGaugeAnnotation>
-                                    </CircularGaugeAnnotations>
-                                </CircularGaugeAxis>
-                            </CircularGaugeAxes>
+                        <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
+                        <CircularGaugeAxes>
+                            <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
+                                <CircularGaugeAxisLineStyle Width="0" />
+                                <CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
+                                </CircularGaugeAxisLabelStyle>
+                                <CircularGaugeAxisMajorTicks Height="0" />
+                                <CircularGaugeAxisMinorTicks Height="0" />
+                                <CircularGaugeRanges>
+                                    <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                </CircularGaugeRanges>
+                                <CircularGaugePointers>
+                                    <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
+                                        <CircularGaugePointerAnimation Enable="false" />
+                                        <CircularGaugePointerBorder Width="0" />
+                                    </CircularGaugePointer>
+                                </CircularGaugePointers>
+                                <CircularGaugeAnnotations>
+                                    <CircularGaugeAnnotation Radius="30%" Angle="90" ZIndex="1">
+                                        <ContentTemplate>
+                                            <div class="annotationText">60/100</div>
+                                        </ContentTemplate>
+                                    </CircularGaugeAnnotation>
+                                </CircularGaugeAnnotations>
+                            </CircularGaugeAxis>
+                        </CircularGaugeAxes>
                     </SfCircularGauge>
                 }
             </ContentTemplate>
-        </DashboardLayoutPanel> 
+        </DashboardLayoutPanel>
     </DashboardLayoutPanels>
 </SfDashboardLayout>
 
@@ -161,7 +161,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
             });
         }, null, 500, Timeout.Infinite);
     }
-    
+
     private async Task RefreshComponents()
     {
         await Task.Yield();
@@ -172,7 +172,6 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLAirBcqpadhlqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Dashboard Layout component](../images/blazor-circulargauge-with-dashboard-layout.png)
 
@@ -313,7 +312,6 @@ When the Circular Gauge component renders within the Tab component, its renderin
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKMLhwUeZXVtLD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Tab component](../images/blazor-circulargauge-with-tab.png)
 
@@ -405,7 +403,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrUCrrwKojeelUv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.png)
 
@@ -499,10 +497,12 @@ When you expand the Accordion component, the Circular Gauge component is not not
                                     <CircularGaugeAxisMajorTicks Height="0" />
                                     <CircularGaugeAxisMinorTicks Height="0" />
                                     <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" 
+RoundedCornerRadius="20" />
                                     </CircularGaugeRanges>
                                     <CircularGaugePointers>
-                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
+                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" 
+Color="#e5ce20" PointerWidth="30">
                                             <CircularGaugePointerAnimation Enable="false" />
                                             <CircularGaugePointerBorder Width="0" />
                                         </CircularGaugePointer>
