@@ -48,6 +48,8 @@ The Blazor File Upload component allows for the customization of the file list i
 </SfUploader>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrSZOLhhmAhbeZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Adding a progress bar using a template
 
 When using a file upload template, the default progress bar is not displayed in the UI. A progress bar can be added within the template, and its progress can be updated by reading and writing to the stream in the `ValueChange` event. The following code snippet demonstrates how to add a progress bar to a Blazor File Upload component using a custom template. The custom template includes elements to display the file name, size, progress bar, and file status.
@@ -202,5 +204,7 @@ When using a file upload template, the default progress bar is not displayed in 
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLytYhhLmmEGpkj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.gif)
