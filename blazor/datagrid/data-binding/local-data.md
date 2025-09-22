@@ -11,17 +11,17 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides straightforward methods to bind and display data that is available within your Blazor application's memory. This is particularly useful for scenarios involving static datasets, pre-loaded information, or data that does not require server-side operations for common Grid features.
 
-You can bind local data by assigning an `IEnumerable` collection (such as `List<T>`, `ObservableCollection<T>`, or collections of `ExpandoObject`/`DynamicObject`/`DataTable`) directly to the `[DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource)` property of the `SfGrid`.
+You can bind local data by assigning an `IEnumerable` collection (such as `List<T>`, `ObservableCollection<T>`, or collections of `ExpandoObject`/`DynamicObject`/`DataTable`) directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the `SfGrid`.
 
 > By default, the `SfDataManager` uses the `BlazorAdaptor` for list data binding, handling basic client-side operations transparently.
 
 ## List Binding
 
-The most common approach for local data binding is to provide a list of strongly-typed objects (e.g., `List<T>` or `IEnumerable<T>`). This allows the DataGrid to directly render and manage the in-memory data. Grid features like paging, sorting, filtering, and CRUD operations are handled on the client-side.
+The most common approach for local data binding is to provide a list of strongly typed objects (for example, `List<T>` or `IEnumerable<T>`). This allows the DataGrid to directly render and manage the in-memory data. Grid features like paging, sorting, filtering, and CRUD operations are handled on the client side.
 
 ### Example: Binding a List of Objects
 
-The following example demonstrates how to bind a `List<OrderDetails>` to the `SfGrid`'s `DataSource` property. The `OrderDetails` class contains a static list named `order` to simulate an in-memory data store.
+The following example demonstrates how to bind a `List<OrderDetails>` to the `SfGrid` DataSource. The `OrderDetails` class contains a static list named `order` to simulate an in-memory data store.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -105,11 +105,11 @@ namespace LocalDataExamples.Models
 
 ## Dynamic Data Binding (ExpandoObject and DynamicObject)
 
-For scenarios where the structure of your data is not known until runtime (e.g., metadata-driven UIs, dynamic reports), the Blazor DataGrid supports binding to collections of `ExpandoObject` or custom `DynamicObject` implementations. This provides maximum flexibility for handling schema-less data.
+When the structure of your data is not known until runtime (for example, metadata-driven UIs or dynamic reporting), the DataGrid supports binding to collections of `ExpandoObject` or custom `DynamicObject` implementations. This provides maximum flexibility for handling schema-less data while retaining support for Grid features such as paging, sorting, filtering, and editing.
 
 ### ExpandoObject Binding
 
-`ExpandoObject` (from `System.Dynamic`) allows you to define object members at runtime. This is useful for dynamic or runtime-generated data models and for dynamically constructing Grid columns and data. Grid features like paging, sorting, filtering, and editing are supported.
+`ExpandoObject` (from `System.Dynamic`) allows defining object members at runtime. This is useful for dynamic or runtime-generated data models and for dynamically constructing Grid columns and data.
 
 The following example demonstrates how to bind `ExpandoObject` in the Grid:
 
@@ -160,7 +160,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### ExpandoObject with Complex Data Binding
 
-When your `ExpandoObject` contains nested objects, you can bind to their properties using dot notation (`Parent.ChildProperty`) in the `GridColumn`'s `Field` property.
+When `ExpandoObject` contains nested objects, bind to their properties using dot notation (`Parent.ChildProperty`) in the `GridColumn.Field` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -210,7 +210,7 @@ When your `ExpandoObject` contains nested objects, you can bind to their propert
 {% endhighlight %}
 {% endtabs %}
 
-> Data operations and CRUD operations are fully supported for complex `ExpandoObject` binding fields.
+> Data operations and CRUD operations are fully supported for complex `ExpandoObject` fields.
 
 The following image represents `ExpandoObject` complex data binding:
 
@@ -220,9 +220,9 @@ Refer to the sample on GitHub: [ExpandoObjectComplexBinding.razor](https://githu
 
 ### DynamicObject Binding
 
-`DynamicObject` provides dynamic behavior but requires a custom class that inherits from `System.Dynamic.DynamicObject`. This approach is suitable when you need more control over how dynamic properties are accessed and modified. It is implemented in cases where data models are unknown at compile time or for creating dynamic, metadata-driven Grid layouts.
+`DynamicObject` provides dynamic behavior through a custom class inheriting from `System.Dynamic.DynamicObject`. This approach is suitable when you need control over how dynamic properties are accessed and modified for schema-less models.
 
-The `GetDynamicMemberNames` method must be overridden in your `DynamicObject` implementation. This allows the Grid to correctly detect property names for rendering and perform operations like editing, sorting, filtering, and paging.
+Override `GetDynamicMemberNames` in your `DynamicObject` implementation so the Grid can detect property names for rendering and for operations like editing, sorting, filtering, and paging.
 
 The following example demonstrates how to bind `DynamicObject` in the Grid:
 
@@ -291,7 +291,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DynamicObject with Complex Data Binding
 
-Similar to `ExpandoObject`, you can use dot notation to bind properties of nested `DynamicObject` instances within the Grid.
+Similar to `ExpandoObject`, use dot notation to bind properties of nested `DynamicObject` instances within the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -359,7 +359,7 @@ Similar to `ExpandoObject`, you can use dot notation to bind properties of neste
 {% endhighlight %}
 {% endtabs %}
 
-> Data operations and CRUD operations are fully supported for complex `DynamicObject` binding fields.
+> Data operations and CRUD operations are fully supported for complex `DynamicObject` fields.
 
 The following image represents `DynamicObject` complex data binding:
 
@@ -367,17 +367,17 @@ The following image represents `DynamicObject` complex data binding:
 
 Refer to the sample on GitHub: [DynamicObjectComplexBinding.razor](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/DynamicObjectComplexBinding.razor).
 
-> When binding the Grid DataSource dynamically as a list of IEnumerable collections, you need to call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect the changes externally. This is because tracking changes made externally to IEnumerable items is avoided for performance considerations.
+> When binding the Grid DataSource dynamically as a list of `IEnumerable` items, call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect external changes. Change tracking for external updates to `IEnumerable` items is avoided for performance reasons.
 
 ## DataTable Binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a `System.Data.DataTable` using a custom adaptor. This approach allows for dynamic generation of rows and columns, making it useful when data is retrieved or processed in a `DataTable` format. It supports all built-in data operations like paging, filtering, sorting, and searching.
+The Syncfusion Blazor DataGrid can bind data from a `System.Data.DataTable` using a custom adaptor. This approach allows for dynamic generation of rows and columns, making it useful when data is retrieved or processed in a `DataTable` format. It supports built-in data operations such as paging, filtering, sorting, and searching.
 
 The process involves:
-1.  Creating and populating a `DataTable`.
-2.  Converting the `DataTable` into an `IQueryable<ExpandoObject>` collection using a helper method.
-3.  Implementing a custom adaptor that extends `[DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html)`.
-4.  Overriding the `[Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_)` method in the custom adaptor to handle data fetching and operations.
+1. Creating and populating a `DataTable`.
+2. Converting the `DataTable` into an `IQueryable<ExpandoObject>` collection using a helper method.
+3. Implementing a custom adaptor that extends [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html).
+4. Overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) method in the custom adaptor to handle data fetching and operations.
 
 ### Example: DataTable Binding with Custom Adaptor
 
@@ -521,7 +521,9 @@ If `DynamicObjectOperation` and `QueryableOperation` are custom utility classes 
 
 ### Grouping and Aggregates with DataTable
 
-The Blazor DataGrid supports dynamic grouping and aggregates even when bound to a `DataTable` via a custom adaptor. This allows grouping rows by one or more columns and applying aggregate functions (such as Sum, Average, Count) on those groups or entire datasets.
+The DataGrid supports dynamic grouping and aggregates even when bound to a `DataTable` via a custom adaptor. This enables grouping rows by one or more columns and applying aggregate functions (such as Sum, Average, Count) on groups or the entire dataset.
+
+> The following example applies operations in this order: Skip → Take → Aggregates → Group.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -612,16 +614,14 @@ The Blazor DataGrid supports dynamic grouping and aggregates even when bound to 
         {
             IQueryable<ExpandoObject> currentDataSource = ToQueryableCollection(_inMemoryDataTableForGroups);
 
-            // Apply searching, filtering, and sorting first
+            // 1) Apply searching, filtering, and sorting first
             currentDataSource = PerformDataOperation(currentDataSource, dataManagerRequest);
 
-            // Get total count AFTER filtering/searching/sorting but BEFORE paging/grouping
+            // Compute total count AFTER filtering/searching/sorting but BEFORE paging/grouping
             int count = currentDataSource.Count();
             IEnumerable result = currentDataSource;
 
-            // Apply paging (Skip and Take)
-            // This is applied AFTER grouping if grouping is client-side, i.e., paging the groups.
-            // If grouping were server-side, paging would happen before grouping.
+            // 2) Apply paging (Skip then Take)
             if (dataManagerRequest.Skip != 0)
             {
                 result = QueryableOperation.PerformSkip<object>(result.Cast<object>().AsQueryable(), dataManagerRequest.Skip).Cast<ExpandoObject>();
@@ -631,14 +631,15 @@ The Blazor DataGrid supports dynamic grouping and aggregates even when bound to 
                 result = QueryableOperation.PerformTake<object>(result.Cast<object>().AsQueryable(), dataManagerRequest.Take).Cast<ExpandoObject>();
             }
 
-            // Perform aggregation operation (on the yet-to-be-paged/grouped data if it makes sense)
+            // 3) Perform aggregation on the current (paged) result if required
             IDictionary<string, object> aggregates = new Dictionary<string, object>();
             if (dataManagerRequest.Aggregates != null)
             {
-                aggregates = DataUtil.PerformAggregation(currentDataSource, dataManagerRequest.Aggregates);
+                // Use the same sequence for aggregation; aggregate on the current dataset
+                aggregates = DataUtil.PerformAggregation(result, dataManagerRequest.Aggregates);
             }
 
-            // Perform grouping operation (if requested)
+            // 4) Perform grouping operation (if requested)
             if (dataManagerRequest.Group != null && dataManagerRequest.Group.Any())
             {
                 // Grouping is typically applied to the full data set or filtered set.
@@ -696,9 +697,9 @@ If `DynamicObjectOperation` and `QueryableOperation` are custom utility classes 
 
 ### DataTable with CRUD Operations
 
-The Blazor DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a `DataTable` using a custom adaptor. You can enable editing features in the Grid and override specific methods of the `[DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html)` base class to update your in-memory `DataTable`.
+The DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a `DataTable` using a custom adaptor. Enable editing features in the Grid and override methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update your in-memory `DataTable`.
 
-The relevant methods to override in your custom adaptor are:
+Relevant methods to override in your custom adaptor include:
 
 *   `[Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_)` / `[InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_)`: To add new records.
 *   `[Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_)` / `[UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_)`: To modify existing records.
@@ -719,235 +720,229 @@ The relevant methods to override in your custom adaptor are:
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="100"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="100"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules { Required=true, Number=true })" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true })" Width="100"></GridColumn>
         <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="110"></GridColumn>
         <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public static DataTable dataTable { get; set; }
-    public static IQueryable DataSource;
+    private static DataTable _inMemoryDataTableForCrud;
+
     protected override void OnInitialized()
     {
-        dataTable = GetData();
-
-        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
-        DataSource = ToQueryableCollection(dataTable);
+        _inMemoryDataTableForCrud = CustomDataTableCrudAdaptor.GetDataForCrud();
     }
 
-    // Custom adaptor class to handle data operations by extending the DataAdaptor class.
-    public class CustomAdaptor : DataAdaptor
+    public class CustomDataTableCrudAdaptor : DataAdaptor
     {
-        // Perform the Read operation to fetch data from the source.
-        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
+        private static IQueryable<ExpandoObject> ToQueryableCollection(DataTable dataTable)
         {
-            // Convert DataTable to IQueryable ExpandoObject list
-            DataSource = ToQueryableCollection(dataTable);
-
-            // Get the total record count.
-            int count = DataSource.Cast<ExpandoObject>().Count();
-
-            // Perform paging operation using skip and take.
-            if (DataManagerRequest.Skip != 0)
+            List<ExpandoObject> expandoList = new List<ExpandoObject>();
+            foreach (DataRow row in dataTable.Rows)
             {
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
+                var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
+                foreach (DataColumn col in dataTable.Columns)
+                {
+                    var colValue = row[col.ColumnName];
+                    colValue = (colValue == DBNull.Value) ? null : colValue;
+                    expandoDict.Add(col.ColumnName, colValue);
+                }
+                expandoList.Add((ExpandoObject)expandoDict);
             }
-            if (DataManagerRequest.Take != 0)
+            return expandoList.AsQueryable();
+        }
+
+        // Perform the Read operation.
+        public override object Read(DataManagerRequest dataManagerRequest, string key = null)
+        {
+            IQueryable<ExpandoObject> currentDataSource = ToQueryableCollection(_inMemoryDataTableForCrud);
+
+            // Apply searching, sorting, and filtering
+            currentDataSource = PerformDataOperation(currentDataSource, dataManagerRequest); // Re-use helper logic
+
+            int count = currentDataSource.Count();
+
+            // Perform paging
+            if (dataManagerRequest.Skip != 0)
             {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
+                currentDataSource = QueryableOperation.PerformSkip(currentDataSource, dataManagerRequest.Skip).Cast<ExpandoObject>();
             }
-            
-            // Return the result with count if required.
-            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            if (dataManagerRequest.Take != 0)
+            {
+                currentDataSource = QueryableOperation.PerformTake(currentDataSource, dataManagerRequest.Take).Cast<ExpandoObject>();
+            }
+
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = currentDataSource, Count = count } : (object)currentDataSource;
+        }
+
+        private IQueryable<ExpandoObject> PerformDataOperation(IQueryable<ExpandoObject> dataSource, DataManagerRequest dataManagerRequest)
+        {
+            IQueryable<ExpandoObject> processedSource = dataSource;
+
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                processedSource = DynamicObjectOperation.PerformSearching(processedSource, dataManagerRequest.Search).Cast<ExpandoObject>();
+            }
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                processedSource = DynamicObjectOperation.PerformFiltering(processedSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator).Cast<ExpandoObject>();
+            }
+            if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+            {
+                processedSource = DynamicObjectOperation.PerformSorting(processedSource, dataManagerRequest.Sorted).Cast<ExpandoObject>();
+            }
+            return processedSource;
         }
 
         // Perform insert operation.
-        public override object Insert(DataManager DataManagerRequest, object value, string key)
+        public override object Insert(DataManager dataManager, object value, string key)
         {
-            DataRow newRow = dataTable.NewRow();
+            DataRow newRow = _inMemoryDataTableForCrud.NewRow();
             var data = (ExpandoObject)value;
-            foreach (var item in data)
+            foreach (var item in (IDictionary<string, object>)data)
             {
-                newRow[item.Key] = item.Value ?? DBNull.Value;
+                if (_inMemoryDataTableForCrud.Columns.Contains(item.Key))
+                {
+                    newRow[item.Key] = item.Value ?? DBNull.Value;
+                }
             }
-            
-            // Insert the new row at the top of the DataTable.
-            dataTable.Rows.InsertAt(newRow, 0);
-
+            _inMemoryDataTableForCrud.Rows.InsertAt(newRow, 0); // Insert at the beginning
             return value;
         }
 
         // Perform remove operation.
-        public override object Remove(DataManager DataManagerRequest, object value, string keyField, string key)
+        public override object Remove(DataManager dataManager, object value, string keyField, string key)
         {
-            DataRow? rowToRemove = null;
+            DataRow? rowToRemove = _inMemoryDataTableForCrud.AsEnumerable()
+                                      .FirstOrDefault(row => row[keyField]?.ToString() == value?.ToString());
 
-            // Find the row to remove based on the key field value.
-            foreach (DataRow row in dataTable.Rows)
-            {
-                if (row[keyField].Equals(value))
-                {
-                    rowToRemove = row;
-                    break;
-                }
-            }
-
-            // Remove the row from the DataTable if it exists.
             if (rowToRemove != null)
             {
-                dataTable.Rows.Remove(rowToRemove);
+                _inMemoryDataTableForCrud.Rows.Remove(rowToRemove);
             }
             return value;
         }
 
         // Perform update operation.
-        public override object Update(DataManager DataManagerRequest, object value, string keyField, string key)
+        public override object Update(DataManager dataManager, object value, string keyField, string key)
         {
             var data = (IDictionary<string, object>)value;
 
-            // Find the row to update based on the key field value.
-            var rowToUpdate = dataTable.Rows
-            .Cast<DataRow>()
-            .FirstOrDefault(row => row[keyField].Equals(data[keyField]));
+            DataRow? rowToUpdate = _inMemoryDataTableForCrud.AsEnumerable()
+                                        .FirstOrDefault(row => row[keyField]?.ToString() == data[keyField]?.ToString());
 
-            // Update the row with new values if found.
             if (rowToUpdate != null)
             {
-                foreach (DataColumn column in dataTable.Columns)
+                foreach (DataColumn column in _inMemoryDataTableForCrud.Columns)
                 {
-                    var columnName = column.ColumnName;
-                    var newValue = data[column.ColumnName] ?? column.DefaultValue;
-                    rowToUpdate[columnName] = newValue;
+                    if (data.ContainsKey(column.ColumnName))
+                    {
+                        var newValue = data[column.ColumnName];
+                        rowToUpdate[column.ColumnName] = newValue ?? DBNull.Value;
+                    }
                 }
             }
             return value;
         }
 
         // Perform batch update operation for changed, added, and deleted records.
-        public override object BatchUpdate(DataManager DataManagerRequest, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
+        public override object BatchUpdate(DataManager dataManager, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
         {
-            // Handle changed records.
-            if (Changed != null)
+            if (Changed is IEnumerable<ExpandoObject> changedRecords)
             {
-                var changedRecords = (IEnumerable<IDictionary<string, object>>)Changed;
-                foreach (var record in changedRecords)
+                foreach (var recordExpando in changedRecords)
                 {
-                    foreach (DataRow row in dataTable.Rows)
+                    var recordDict = (IDictionary<string, object>)recordExpando;
+                    DataRow? rowToUpdate = _inMemoryDataTableForCrud.AsEnumerable()
+                                                .FirstOrDefault(row => row[KeyField]?.ToString() == recordDict[KeyField]?.ToString());
+                    if (rowToUpdate != null)
                     {
-                        if (row[KeyField].Equals(record[KeyField]))
+                        foreach (DataColumn column in _inMemoryDataTableForCrud.Columns)
                         {
-                            foreach (DataColumn column in dataTable.Columns)
+                            if (recordDict.ContainsKey(column.ColumnName))
                             {
-                                row[column.ColumnName] = record[column.ColumnName] ?? column.DefaultValue;
+                                rowToUpdate[column.ColumnName] = recordDict[column.ColumnName] ?? DBNull.Value;
                             }
                         }
                     }
                 }
             }
 
-            // Handle added records.
-            if (Added != null)
+            if (Added is IEnumerable<ExpandoObject> addedRecords)
             {
-                var addedRecords = (IEnumerable<IDictionary<string, object>>)Added;
-
-                foreach (var record in addedRecords)
+                foreach (var recordExpando in addedRecords)
                 {
-                    DataRow newRow = dataTable.NewRow();
-                    foreach (var item in record)
+                    var recordDict = (IDictionary<string, object>)recordExpando;
+                    DataRow newRow = _inMemoryDataTableForCrud.NewRow();
+                    foreach (var item in recordDict)
                     {
-                        newRow[item.Key] = item.Value ?? DBNull.Value;
+                        if (_inMemoryDataTableForCrud.Columns.Contains(item.Key))
+                        {
+                            newRow[item.Key] = item.Value ?? DBNull.Value;
+                        }
                     }
-
-                    // Add the new row to the DataTable.
-                    dataTable.Rows.Add(newRow);
+                    _inMemoryDataTableForCrud.Rows.Add(newRow);
                 }
             }
 
-            // Handle deleted records.
-            if (Deleted != null)
+            if (Deleted is IEnumerable<ExpandoObject> deletedRecords)
             {
-                var deletedRecords = (IEnumerable<IDictionary<string, object>>)Deleted;
                 List<DataRow> rowsToRemove = new List<DataRow>();
-                foreach (var record in deletedRecords)
+                foreach (var recordExpando in deletedRecords)
                 {
-                    foreach (DataRow row in dataTable.Rows)
+                    var recordDict = (IDictionary<string, object>)recordExpando;
+                    DataRow? rowToRemove = _inMemoryDataTableForCrud.AsEnumerable()
+                                                .FirstOrDefault(row => row[KeyField]?.ToString() == recordDict[KeyField]?.ToString());
+                    if (rowToRemove != null)
                     {
-                        if (row[KeyField].Equals(record[KeyField]))
-                        {
-                            rowsToRemove.Add(row);
-                        }
+                        rowsToRemove.Add(rowToRemove);
                     }
                 }
-
-                // Remove the rows from the DataTable.
-                foreach (DataRow rowToRemove in rowsToRemove)
+                foreach (DataRow row in rowsToRemove)
                 {
-                    dataTable.Rows.Remove(rowToRemove);
+                    _inMemoryDataTableForCrud.Rows.Remove(row);
                 }
+            }
+            return _inMemoryDataTableForCrud; // Return the updated DataTable
+        }
+
+        public static DataTable GetDataForCrud() // Separate data generation for CRUD
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.AddRange(new DataColumn[4] {
+                new DataColumn("OrderID", typeof(long)),
+                new DataColumn("CustomerID", typeof(string)),
+                new DataColumn("EmployeeID",typeof(int)),
+                new DataColumn("OrderDate",typeof(DateTime))
+            });
+            int code = 1000;
+            int id = 0;
+            for (int i = 1; i <= 15; i++)
+            {
+                dataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+                dataTable.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+                dataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+                dataTable.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
+                dataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
+                code += 5;
+                id += 5;
             }
             return dataTable;
         }
     }
-
-    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
-    public static IQueryable ToQueryableCollection(DataTable DataTable)
-    {
-        List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in DataTable.Rows)
-        {
-            var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in DataTable.Columns)
-            {
-                var colValue = row[col.ColumnName];
-                colValue = (colValue == DBNull.Value) ? null : colValue;
-                expandoDict.Add(col.ToString(), colValue);
-            }
-            expandoList.Add((ExpandoObject)expandoDict);
-        }
-        return expandoList.AsQueryable();
-    }
-
-    public DataTable GetData()
-    {
-        DataTable DataTable = new DataTable();
-        DataTable.Columns.AddRange(new DataColumn[4] { 
-            new DataColumn("OrderID", typeof(long)),
-            new DataColumn("CustomerID", typeof(string)),
-            new DataColumn("EmployeeID",typeof(int)),
-            new DataColumn("OrderDate",typeof(DateTime))
-        });
-
-        int code = 1000;
-        int id = 0;
-        for (int i = 1; i <= 15; i++)
-        {
-            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            DataTable.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
-            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
-            DataTable.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
-            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
-            code += 5;
-            id += 5;
-        }
-        return DataTable;
-    }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/DataTable).
+Refer to the sample on GitHub: [DataTable Binding](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/DataTable).
 
 ## Managing spinner visibility during data loading
 
-Showing a spinner during data loading in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+Showing a spinner during data loading in the Syncfusion Blazor DataGrid enhances the user experience by providing a visual indication of progress. Use the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods to control spinner visibility.
 
-To show or hide a spinner during data loading in the Grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid.
-
-The following example demonstrates how to show and hide the spinner during data loading using external buttons in a Grid:
-
+The following example demonstrates how to show and hide the spinner during data loading using external buttons:
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -1049,24 +1044,22 @@ public class OrderData
 
 ## Change datasource dynamically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows to change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) of the Grid  dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
+The Syncfusion Blazor DataGrid allows changing the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) of the Grid dynamically through an external button. This is useful for displaying different datasets based on user actions.
 
 To implement this:
 
-* Bind the Grid's `DataSource` property to a public list (e.g., Orders).
-
+* Bind the Grid’s DataSource property to a public list (for example, `Orders`).
 * Create a method that replaces this list with a new set of data.
+* Trigger this method through a button or other user interaction.
+* The Grid detects the data change and re-renders with the new content.
 
-* Trigger this method through a button or any other user interaction.
-
-* The Grid automatically detects the data change and re-renders with the new content.
-
-The following example demonstrates how to change the `DataSource` of the Grid dynamically:
+The following example demonstrates how to change the Grid DataSource dynamically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ChangeDataSource">Change Data Source</SfButton>
 
@@ -1152,18 +1145,17 @@ public class OrderData
 
 ## Data binding with SignalR 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
+The Syncfusion Blazor DataGrid supports real-time data binding using SignalR, allowing the Grid to update automatically as data changes on the server. This is useful for applications that require live updates and synchronization across multiple clients.
 
-To achieve real-time data binding with SignalR in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow the steps below:
+Follow these steps to achieve real-time data binding with SignalR in the DataGrid:
 
 **Step 1:** Install the SignalR server package:
 
-To add the SignalR server package to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) package.
+Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for, and install the [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) package.
 
-**Step 2:** Create a **Hubs** folder and add the following **ChatHub** class (**Hubs/ChatHub.cs**):
+**Step 2:** Create a Hubs folder and add the following ChatHub class (Hubs/ChatHub.cs):
 
 ```cs
-
 using Microsoft.AspNetCore.SignalR;
 
 namespace SignalRDataGrid.Hubs;
@@ -1175,13 +1167,11 @@ public class ChatHub : Hub
         await Clients.All.SendAsync("ReceiveMessage");
     }
 }
-
 ```
 
-**Step 3:** Configure the SignalR server to route requests to the SignalR hub. In the **Program.cs** file, include the following code:
+**Step 3:** Configure the SignalR server to route requests to the SignalR hub. In Program.cs include the following code:
 
 ```cs
-
 using SignalRDataGrid.Hubs;
 
 var app = builder.Build();
@@ -1194,16 +1184,14 @@ app.UseEndpoints(endpoints =>
     endpoints.MapFallbackToFile("/_Host");
 });
 app.Run();
-
 ```
 
-**Step 4:** Create a simple Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
+**Step 4:** Create a simple Syncfusion Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-**Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid: 
+**Step 5:** Create a Data folder and add Data Controller (OrderDetails.cs) in your project to handle CRUD operations for the Grid: 
 
 {% tabs %}
 {% highlight cs tabtitle="OrderDetails.cs" %}
-
 namespace SignalRDataGrid.Data
 {
     public class OrderDetails
@@ -1256,15 +1244,13 @@ namespace SignalRDataGrid.Data
         }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the Grid data.
+**Step 6:** In Home.razor, establish a connection to the SignalR hub and configure the Grid data.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
@@ -1344,15 +1330,14 @@ namespace SignalRDataGrid.Data
             }
         }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 The above code demonstrates how to connect to a SignalR hub and refresh the Grid data in real time when updates are received.
 
-**Step 6:** Adding the `OrderService` reference:
+**Step 7:** Adding the `OrderService` reference:
 
-To include the `OrderService` reference, update the following line in your `Program.cs` file:
+To include the `OrderService` reference, update the following line in Program.cs:
 
 ```csharp
 builder.Services.AddSingleton<OrderDetails>();
@@ -1366,16 +1351,13 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ## Binding data from Excel document
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader`.
+The Syncfusion Blazor DataGrid allows importing data from Excel documents for display and manipulation within the Grid. This streamlines the process of transferring Excel data to a web-based environment. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader` can be used to process uploaded files.
 
-To import Excel data into Grid, you can follow these steps:
+To import Excel data into the Grid:
 
 1. Use the [SfFileUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
-
 2. Parse the file using the [Syncfusion.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
-
 3. Convert the parsed data into a list of `ExpandoObject`.
-
 4. Bind the list to the Grid.
 
 The following example demonstrates how an Excel document is uploaded, parsed, converted into a list of `ExpandoObject`, and then bound to the Grid:
@@ -1495,11 +1477,10 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
         StateHasChanged();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-[!Binding data from Excel document](./images/excel-import-data.gif)
+![Binding data from Excel document](./images/excel-import-data.gif)
 
 > You can find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Binding_data_from_excel/Excel_Export).
 
