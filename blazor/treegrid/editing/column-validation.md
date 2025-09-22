@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Validation in Blazor TreeGrid Component | Syncfusion
-description: Learn how to configure column validation in the Syncfusion Blazor TreeGrid component using ValidationRules, data annotations, custom validator components, disabling the built-in validator, and displaying validation messages in dialog templates.
+description: Checkout and learn here all about column validation in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -629,4 +629,5 @@ N> For fields not defined as TreeGrid columns, validation messages appear in the
 ```
 
 The following image shows how validation messages can be displayed from a dialog template for fields not defined as columns.
+
 ![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.png)
