@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor RichTextEditor component and more.
+title: Blazor Rich Text Editor Accessibility | Syncfusion
+description: Learn about the accessibility features in the Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Accessibility in Blazor Rich Text Editor Component
+# Blazor Rich Text Editor Accessibility
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) is designed in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, applying the appropriate roles, states, and properties. This ensures that the component is accessible to users who rely on assistive technologies (AT) or keyboard navigation.
 
-The Blazor Rich Text Editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Rich Text Editor follows established accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Rich Text Editor component is outlined below.
 
@@ -32,7 +32,7 @@ The accessibility compliance for the Blazor Rich Text Editor component is outlin
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of a component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
@@ -40,24 +40,24 @@ The accessibility compliance for the Blazor Rich Text Editor component is outlin
 
 ## WAI-ARIA attributes
 
-* The toolbar of Blazor Rich Text Editor, assigned the role of `Toolbar` and has the following list of [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) attribute.
+The toolbar of the Blazor Rich Text Editor is assigned the `toolbar` role and supports the following [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) attributes:
 
 | **Property** | **Functionalities** |
 | --- | --- |
 | role="toolbar" | This attribute added to the ToolBar element describes the actual role of the element. |
-| aria-orientation     | Indicates the ToolBar orientation. Default value is `horizontal`. |
-| aria-haspopup       | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | |
-| aria-disabled       | Indicates the disabled state of the ToolBar. |
+| aria-orientation | Indicates the toolbar's orientation. The default value is `horizontal`. |
+| aria-haspopup | Indicates if the toolbar has a popup. When popup mode is enabled, this value is set to `true`. The default is `false`. |
+| aria-disabled | Indicates the disabled state of the toolbar. |
 | aria-owns | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Rich Text Editor, the attribute contains the ID of the Rich Text Editor to indicate the popup as a child element. |
 
-For further details of Toolbar ARIA attributes, refer the  [`accessibility of Toolbar`](../../toolbar/accessibility) documentation.
+For more details on toolbar WAI-ARIA attributes, refer to the [accessibility of Toolbar](https://blazor.syncfusion.com/documentation/toolbar/accessibility) documentation.
 
-The Blazor Rich Text Editor element is assigned the role of `application`.
+The Blazor Rich Text Editor element is assigned the `application` role.
 
 | **Property** | **Functionalities** |
 | --- | --- |
 | role="application" | This attribute added to the Rich Text Editor element describes the actual role of the element. |
-| aria-disabled       | Indicates the disabled state of the ToolBar. |
+| aria-disabled | Indicates the disabled state of the toolbar. |
 
 {% tabs %}
 {% highlight cshtml %}
@@ -71,21 +71,21 @@ The Blazor Rich Text Editor element is assigned the role of `application`.
 
 ## Keyboard interaction
 
-The Blazor Rich Text Editor component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Rich Text Editor component. 
+The Blazor Rich Text Editor component follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) or rely solely on keyboard navigation. The component supports a variety of keyboard shortcuts for common actions.
 
-For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
+For a complete list of keyboard shortcuts, refer to the [Keyboard Support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 
 ## Ensuring accessibility
 
-The Blazor Rich Text Editor component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Rich Text Editor component's accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Rich Text Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the accessibility of the Rich Text Editor component with accessibility tools.
+The accessibility compliance of the Rich Text Editor component is demonstrated in the following sample. You can open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the component with accessibility tools.
 
 ### Custom key configuration
 
-Customize the key configuration for the keyboard interaction of the Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
+You can customize the key configurations for keyboard interactions in the Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
-In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
+In the following example, the bold and italic actions are customized to use **Ctrl+1** and **Ctrl+2**, respectively.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -95,8 +95,7 @@ In the following code block, customize the bold and italic, toolbar actions with
 {% endhighlight %}
 {% endtabs %}
 
-
-N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
+N> You can explore the [Blazor Rich Text Editor feature tour page](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) to see its capabilities. You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
 
 ## See also
 
