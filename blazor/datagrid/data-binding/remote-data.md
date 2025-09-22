@@ -291,7 +291,7 @@ The following GIF illustrates how the Grid updates its data when the query param
 On remote data binding, all Syncfusion Blazor DataGrid actions such as paging, sorting, editing, grouping, and filtering are processed on the server side. To avoid a request for every action, set the Grid to load all data on initialization and process actions on the client side. To enable this behavior, use the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html#Syncfusion_Blazor_Data_SfDataManager_Offline) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -309,7 +309,7 @@ On remote data binding, all Syncfusion Blazor DataGrid actions such as paging, s
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
