@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Empty Record Template in the Blazor DataGrid | Syncfusion
-description: Learn here all about customize the empty record template in Syncfusion Blazor DataGrid.
+description: Learn how to customize the EmptyRecordTemplate in the Syncfusion Blazor DataGrid to show a custom message or content when no records are available.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,11 +9,10 @@ documentation: ug
 
 # Customize the empty record template in Blazor DataGrid
 
-The empty record template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to use custom content such as images, text, or other components, when the Grid doesn't contain any records to display. This feature replaces the default message of 'No records to display' typically shown in the Grid.
+The empty record template in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables rendering custom content such as images, text, or other components when the Grid has no records to display. This replaces the default “No records to display” message.
+Define the template using the [EmptyRecordTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_EmptyRecordTemplate) within `<GridTemplates>`. In Blazor, this is a Razor fragment (RenderFragment), allowing any valid Razor markup or components. The empty record template is shown whenever the data source results in zero rows, including initial load, after filtering or searching yields no matches, or after deletions remove all rows.
 
-To activate this feature, set the [EmptyRecordTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_EmptyRecordTemplate) feature of the Grid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
-
-The following example demonstrates how an image and text can be rendered as a template to indicate that the Grid has no data to display:
+The following example demonstrates rendering an image and text to indicate that the Grid has no data:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
