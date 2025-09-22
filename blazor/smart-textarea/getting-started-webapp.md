@@ -27,7 +27,7 @@ To get started quickly, watch this video tutorial:
 - OpenAI or Azure OpenAI account
 - [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode. Refer to [Blazor Interactivity](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/server-interactivity) for details.
+N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
 ## Create a New Blazor Web App in Visual Studio
 
