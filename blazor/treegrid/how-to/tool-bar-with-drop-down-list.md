@@ -94,7 +94,7 @@ To render the DropDownList component, use the [DropDownListEvents](https://help.
     }
     public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Select> args)
     {
-        this.TreeGrid.SelectRow(int.Parse(args.Value));
+        this.TreeGrid.SelectRowAsync(int.Parse(args.Value));
     }
 
 }
