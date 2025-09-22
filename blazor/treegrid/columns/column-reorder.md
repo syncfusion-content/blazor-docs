@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Reorder in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and use column reordering in the Syncfusion Blazor TreeGrid component.
+description: Checkout here and learn more details about the column reorder in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -227,5 +227,6 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ![Reordering Multiple Columns in Blazor TreeGrid](../images/blazor-treegrid-reorder-multiple-columns.gif)
