@@ -36,7 +36,10 @@ The following list of themes are included in the Syncfusion<sup style="font-size
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bootstrap Theme is designed based on Bootstrap v3.
+
+N> The Syncfusion® Bootstrap4 theme is designed based on Bootstrap v4, specifically version 4.3. While it is built on v4.3, it remains compatible with Bootstrap v4.6 applications.
+There are no significant differences between Bootstrap v4.3 and v4.6 that affect our components. Therefore, using Bootstrap v4.3 will not impact functionality, as it performs equivalently to Bootstrap v4.6.
 
 ## Optimized CSS Themes
 
