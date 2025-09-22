@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Chooser in Blazor Tree Grid Component | Syncfusion
-description: Learn how to configure and use the column chooser in the Syncfusion Blazor Tree Grid, including options to show or hide columns, external triggers, templates, and grouping.
+description: Checkout and learn here all about column chooser in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -590,5 +590,6 @@ namespace TreeGridComponent.Data
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
+
 
 ![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.png)
