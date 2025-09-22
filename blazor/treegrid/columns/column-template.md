@@ -542,7 +542,7 @@ The following screenshot shows an image rendered inside a template.
 
 ## Using hyperlink column
 
-Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render hyperlinks. For routing, refer to the Blazor navigation and routing guidance in the Microsoft documentation: [Blazor routing and navigation](https://learn.microsoft.com/aspnet/core/blazor/fundamentals/routing).
+Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render hyperlinks. For routing, refer to the Blazor navigation and routing guidance in the Microsoft documentation: [UriHelper]([https://learn.microsoft.com/aspnet/core/blazor/fundamentals/routing](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers)).
 
 This approach defines an anchor element inside the column template and binds the click event to navigate. Using the implicit **context** parameter, pass the row data to the click event handler.
 
@@ -635,3 +635,4 @@ In this example, the target URL is specified in the `Link` field of the TreeGrid
 
 The following GIF represents template routing in tree grid
 ![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+
