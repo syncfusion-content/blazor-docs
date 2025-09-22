@@ -207,7 +207,6 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart3D>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpXnrpAccANHLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odatav4-adaptor-binding.png)
 
@@ -266,7 +265,6 @@ The following sample code shows how to send parameters using the Query property 
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVzNxLfUlNVErCr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
