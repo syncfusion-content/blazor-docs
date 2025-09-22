@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Resize the Blazor DataGrid in various dimension | Syncfusion
-description: Learn here all about resize the Grid in various dimension in Syncfusion Blazor DataGrid.
+title: Resize the Blazor DataGrid in various dimensions | Syncfusion
+description: Learn how to resize the Syncfusion Blazor DataGrid by adjusting its parent container using NumericTextBox inputs and an external button to control width and height.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Resize the Blazor DataGrid in various dimension 
+# Resize the Blazor DataGrid in various dimensions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a friendly way to resize the Grid, allowing you to adjust its width and height for improved data visualization.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
 
-To resize the Grid externally, you can use an external button to modify the width of the parent element that contains the Grid. This will effectively resize the Grid along with its parent container.
+> - When using `Height="100%"` for the Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
+> - Setting `Width="100%"` on the Grid ensures it follows the parent width exactly.
 
-The following example demonstrates how to resize the Grid on external button click based on input:
+The following example demonstrates resizing the Grid on an external button click based on the provided inputs:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -22,22 +23,22 @@ The following example demonstrates how to resize the Grid on external button cli
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
-<div style="display: flex;">
+<div style="display:flex; gap: 8px;">
     <div style="padding: 5px">
-        <label style="padding: 30px 17px 0 0">Enter the width:</label>
-        <SfNumericTextBox @ref="WidthTextBox" Min="400" Max="650" Placeholder="400" Step="5" Width="120px" TValue="int"></SfNumericTextBox>
+        <label for="widthBox" style="padding: 30px 17px 0 0">Enter the width (px):</label>
+        <SfNumericTextBox id="widthBox" @ref="WidthTextBox" Min="400" Max="650" Placeholder="400" Step="5" Width="120px" TValue="int"></SfNumericTextBox>
     </div>
     <div style="padding: 5px">
-        <label style="padding: 30px 17px 0 0">Enter the height:</label>
-        <SfNumericTextBox @ref="HeightTextBox" Min="200" Max="600" Placeholder="200" Step="5" Width="120px" TValue="int"></SfNumericTextBox>
+        <label for="heightBox" style="padding: 30px 17px 0 0">Enter the height (px):</label>
+        <SfNumericTextBox id="heightBox" @ref="HeightTextBox" Min="200" Max="600" Placeholder="200" Step="5" Width="120px" TValue="int"></SfNumericTextBox>
     </div>
     <div style="padding: 5px">
-        <SfButton CssClass="e-outline" Style="margin:28px 0 5px 5px" OnClick="ResizeGrid">Resize</SfButton>
+        <SfButton CssClass="e-outline" style="margin:28px 0 5px 5px" OnClick="ResizeGrid">Resize</SfButton>
     </div>
 </div>
 
 <div id="parent" style="@ParentStyle">
-    <SfGrid @ref="Grid" DataSource="@Orders" Height="100%">
+    <SfGrid @ref="Grid" DataSource="@Orders" Height="100%" Width="100%">
         <GridColumns>
             <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
             <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -53,7 +54,7 @@ The following example demonstrates how to resize the Grid on external button cli
     private SfNumericTextBox<int> WidthTextBox;
     private SfNumericTextBox<int> HeightTextBox;
 
-    private string ParentStyle;
+    private string ParentStyle = "padding: 5px; width: 400px; height: 200px;";
 
     protected override void OnInitialized()
     {
@@ -64,9 +65,8 @@ The following example demonstrates how to resize the Grid on external button cli
     {
         var width = WidthTextBox?.Value ?? 400;
         var height = HeightTextBox?.Value ?? 200;
-        ParentStyle = $"padding: 5px 5px; width: {width}px; height: {height}px;";
+        ParentStyle = $"padding: 5px; width: {width}px; height: {height}px;";
     }
-
 }
 
 {% endhighlight %}
