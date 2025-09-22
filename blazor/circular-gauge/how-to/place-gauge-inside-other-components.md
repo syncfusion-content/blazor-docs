@@ -172,7 +172,6 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLAirBcqpadhlqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Dashboard Layout component](../images/blazor-circulargauge-with-dashboard-layout.png)
 
@@ -313,7 +312,6 @@ When the Circular Gauge component renders within the Tab component, its renderin
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKMLhwUeZXVtLD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Tab component](../images/blazor-circulargauge-with-tab.png)
 
