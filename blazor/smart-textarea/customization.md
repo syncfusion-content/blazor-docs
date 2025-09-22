@@ -40,8 +40,7 @@ Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
 }
 ```
 
-![Suggestion on Popup](images/smart-textarea-suggestion-popup.gif)
-*Alt text: Animation showing pop-up suggestions in the Syncfusion Blazor Smart TextArea component.*
+![Suggestion on popup](images/smart-textarea-popup.gif)
 
 ### Inline Suggestions
 
@@ -68,8 +67,7 @@ Add the following code to a Razor file (e.g., `~/Pages/Index.razor`):
 }
 ```
 
-![Suggestion Inline](images/smart-textarea-suggestion-inline.gif)
-*Alt text: Animation showing inline suggestions in the Syncfusion Blazor Smart TextArea component.*
+![Suggestion inline](images/smart-textarea-inline.gif)
 
 ## Test Suggestion Customization
 
