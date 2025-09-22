@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use custom helper inside the loop with templates in Blazor DataGrid | Syncfusion
-description: Learn here all about place cancel icon in search bar in Syncfusion Blazor DataGrid.
+description: Learn how to use a custom helper method inside a column template loop to render a star rating in the Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Use custom helper inside the loop with templates
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to use custom helpers inside the loop with [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports using custom helpers inside the loop within a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This enables building flexible templates that incorporate additional logic and helper functions.
 
-The **customer rating** column includes a custom template defined using `Template`. Inside this template, iterates through the item array and generates `<span>` tag, displayed as stars using the CSS below:
+The following example renders a customer rating column with a custom template. Inside the template, the code iterates over a fixed range and generates star elements. The `IsRatingGreater` helper method determines which stars to highlight.
 
 ```css
 .e-grid .rating .star:before {
@@ -24,7 +24,7 @@ The **customer rating** column includes a custom template defined using `Templat
 }
 ```
 
-The class is dynamically assigned  based on the result of the `isRatingGreater` method, highlighting the star using the CSS below:
+The highlighted state is applied based on the result of the `IsRatingGreater` method:
 
 ```css
 .e-grid .rating .star.checked {
@@ -38,6 +38,7 @@ This is demonstrated in the following example.
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using System.Linq
 
 <SfGrid DataSource="@Orders" Height="300px">
     <GridColumns>
@@ -48,7 +49,7 @@ This is demonstrated in the following example.
                 @{
                     var rating = (context as Order)?.Rating ?? 0;
                 }
-                <div class="rate">
+                <div class="rate" aria-label="@($"{rating} out of 5 stars")">
                     <div class="rating">
                         @foreach (var i in Enumerable.Range(1, 5))
                         {
