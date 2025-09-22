@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started with Blazor Smart Paste Button
+title: Get Started with Blazor Smart Paste Button | Syncfusion
 description: Learn how to integrate the Syncfusion Blazor Smart Paste Button in a Blazor Web App with step-by-step instructions.
 platform: Blazor
 control: Smart Paste Button
@@ -376,6 +376,6 @@ For optimal performance with the Smart Paste Button:
 
 ## Troubleshooting Common Issues
 
-- **Invalid API Key**: Verify the API key is correct and has the necessary permissions. Check [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) or [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management) documentation for guidance.
+- **AI Service Configuration Errors**: Verify the API key, endpoint, and model name in `Program.cs`. Check for typos or incorrect values.
 - **Network Failures**: Ensure a stable internet connection for OpenAI or Azure OpenAI. For Ollama, confirm the local server is running at the specified endpoint (e.g., `http://localhost:11434`).
 - **Form Not Populating**: Confirm that the copied text matches the form field structure and that the AI model is correctly configured.
