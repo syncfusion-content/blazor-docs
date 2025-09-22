@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Local Data in Blazor DataGrid | Syncfusion
-description: Explore how to bind and display local data in the Syncfusion Blazor DataGrid using various in-memory approaches like Lists, ExpandoObject, DynamicObject, and DataTable.
+description: Learn how to bind and display local data in the Syncfusion Blazor DataGrid using in-memory sources like List, ExpandoObject, and DataTable.
 platform: Blazor
 control: DataGrid
 documentation: ug
