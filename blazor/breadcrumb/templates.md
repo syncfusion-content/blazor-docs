@@ -9,21 +9,21 @@ documentation: ug
 
 # Templates in Blazor Breadcrumb Component
 
-Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Breadcrumb is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic.
+The Blazor Breadcrumb component is templated, allowing you to customize various parts of its UI during rendering. This flexibility enables users to render custom components or content using your own logic, enhancing the appearance and functionality of your breadcrumbs.
 
-The available template options in Breadcrumb are as follows,
+The following template options are available in the Breadcrumb component:
 
-[Item template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) - Used to customize the items.
+[Item template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate): Used to customize the rendering of individual Breadcrumb items.
 
-[Separator template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate)- Used to customize the separators.
+[Separator template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate): Used to customize the rendering of the separators between Breadcrumb items.
 
-## Template context
+## Template Context
 
-The templates used by Breadcrumb are of type `RenderFragment` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
+Templates used by the Breadcrumb component are of type `RenderFragment` and receive parameters that provide contextual data. Users can access these parameters using the implicit `context` parameter. You can optionally change this implicit parameter name using the `Context` attribute if needed.
 
 ## Item template
 
-In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as Chip component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) tag directive. You can get the current item in `context` property.
+The `ItemTemplate` enables developers to define a custom UI for each Breadcrumb item. In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as Chip component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) tag directive. The current item's data is accessible via the `context` parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -49,11 +49,11 @@ In the following example, shopping cart details are used as Breadcrumb items and
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUsrippKxnwhYp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.png)
+![Blazor Breadcrumb Item Template with Chips](./images/blazor-Breadcrumb-item-template.png)
 
 ## Separator template
 
-In the following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. You can get the previous and next item in `context` property.
+The [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) enables customization of the separators between Breadcrumb items. In the example below, separators are customized with icons using the[SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. The `context` parameter provides access to the previous and next item data, though it's often unused for simple icon separators.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -81,11 +81,13 @@ In the following example, the separators are customized with icons using [Separa
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLUsrWzJARuZSHz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.png)
+![Blazor Breadcrumb Separator Template with Icon](./images/blazor-breadcrumb-separator-temp.png)
 
 ## Customize Specific Item Template
 
-The specific breadcrumb item can be customizable by adding the custom element as Child Content. In the following example, added the span element only for the breadcrumb text in breadcrumb item.
+A specific Breadcrumb item can be customized by adding custom elements directly as its `ChildContent`. This allows for fine-grained control over individual item rendering without affecting the `ItemTemplate` applied globally via `BreadcrumbTemplates`.
+
+In the following example, a custom `<span>` element with an `<a>` tag is added as `ChildContent` to the last `BreadcrumbItem`, effectively overriding any `ItemTemplate` for that specific item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -150,4 +152,4 @@ The specific breadcrumb item can be customizable by adding the custom element as
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgCrsTpAvZIhgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.png)
+![Blazor Breadcrumb Specific Item Template](./images/breadcrumb-specific-item-template.png)

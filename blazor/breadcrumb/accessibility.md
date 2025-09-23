@@ -38,16 +38,16 @@ The accessibility compliance for the Blazor Breadcrumb component is outlined bel
 
 ## WAI-ARIA attributes
 
-The Blazor Breadcrumb component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Breadcrumb component:
+The Blazor Breadcrumb component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor Breadcrumb component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Indicates the breadcrumb item text. |
-| `aria-disabled` | Indicates the state of breadcrumb item whether it is disabled. |
+| `aria-disabled` | Indicates the disabled state of a breadcrumb item. |
 
 ## Keyboard interaction
 
-The Blazor Breadcrumb component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
+The Blazor Breadcrumb component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, facilitating navigation for individuals who use assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -58,9 +58,9 @@ The Blazor Breadcrumb component followed the [keyboard interaction](https://www.
 
 ## Ensuring accessibility
 
-The Blazor Breadcrumb component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The accessibility levels of the Blazor Breadcrumb component are ensured through automated testing using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Breadcrumb component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/breadcrumb) in a new window to evaluate the accessibility of the Blazor Breadcrumb component with accessibility tools.
+The accessibility compliance of the Blazor Breadcrumb component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/breadcrumb) in a new window to evaluate the accessibility of the Blazor Breadcrumb component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/breadcrumb.html" %}
 
