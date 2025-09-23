@@ -11,7 +11,7 @@ documentation: ug
 
 Column validation validates edited or added row data and displays errors for invalid fields before saving. TreeGrid uses the **Form Validator** component for column validation. Define validation rules using the [TreeGridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html) property.
 
-N> Prerequisites: enable editing in [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) as needed (AllowEditing/AllowAdding/AllowDeleting), and define a primary key column (IsPrimaryKey) to support CRUD operations.
+N> Prerequisites: To enable CRUD operations in TreeGrid, configure the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) with AllowEditing, AllowAdding, and AllowDeleting as needed. Also, define a column with IsPrimaryKey set to true.
 
 ```cshtml
 @using TreeGridComponent.Data; 
@@ -631,3 +631,4 @@ N> For fields not defined as TreeGrid columns, validation messages appear in the
 The following image shows how validation messages can be displayed from a dialog template for fields not defined as columns.
 
 ![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.png)
+
