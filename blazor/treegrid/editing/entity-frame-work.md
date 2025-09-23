@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Entity Framework in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Entity Framework in Syncfusion Blazor Tree Grid component and much more details.
+title: Entity Framework in Blazor TreeGrid Component | Syncfusion
+description: Learn how to integrate Entity Framework with the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Entity Framework in Blazor Tree Grid Component
+# Entity Framework in Blazor TreeGrid Component
 
-This section uses and follows the code explained in the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) section hence it is recommended to refer Entity Framework data binding section before continue this section.
+This section builds on the code explained in the Entity Framework data binding section. Review the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) topic before continuing with this section.
 
 ### Handle CRUD in data access layer class
 
-Now add methods **AddTask**, **UpdateTask**, **DeleteTask** in the **"TasksDataAccessLayer.cs"** to handle the insert, update and remove operations respectively.**CRUD** record details are bound to the **Tasks** parameter.
+Add the methods **AddTask**, **UpdateTask**, and **DeleteTask** in the file **TasksDataAccessLayer.cs** to handle the create, update, and delete operations, respectively. **CRUD** record details are bound to the **Tasks** parameter.
 
 ```csharp
 using System;
@@ -103,7 +103,7 @@ namespace TreeGridWebApiEFSample.Shared.DataAccess
 
 ### Enable CRUD in Web API
 
-Now, create a new **Post**, **Put**, **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **'SfDataManager'** will make requests to this action based on route name.
+Create new **POST**, **PUT**, and **DELETE** methods in the Web API controller to perform CRUD operations and return the appropriate results. **SfDataManager** makes requests to these actions based on the configured route.
 
 ```csharp
 using System;
@@ -237,7 +237,9 @@ namespace TreeGridWebApiEFSample.Controllers
 }
 ```
 
-### Configure the Tree Grid to perform CRUD operations
+### Configure the TreeGrid to perform CRUD operations
+
+Use SfDataManager with the WebApiAdaptor to connect the TreeGrid to the Web API controller and enable editing settings for create, update, and delete operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -273,4 +275,4 @@ namespace TreeGridWebApiEFSample.Controllers
 }
 ```
 
-N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
+N> A fully working sample is available [on GitHub](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
