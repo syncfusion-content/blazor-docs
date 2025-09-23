@@ -28,6 +28,23 @@ public interface IChatInferenceService
 - **Parameters**: The `ChatParameters` type includes properties like user input and context.
 - **Benefits**: Enables seamless switching between AI providers without modifying component code.
 
+## Simple Implementation of a Custom AI Service
+
+Below is a sample implementation of a mock AI service named `MockAIService`. This service demonstrates how to implement the `IChatInferenceService` interface by returning sample, context-aware responses. You can replace the logic with your own AI integration.
+
+```csharp
+using Syncfusion.Blazor.AI;
+using System.Threading.Tasks;
+
+public class MockAIService : IChatInferenceService
+{
+    public Task<string> GenerateResponseAsync(ChatParameters options)
+    {
+
+    }
+}
+```
+
 ## Registering the Custom AI Service
 
 Register the custom AI service in the **~/Program.cs** file of your Blazor Web App:
