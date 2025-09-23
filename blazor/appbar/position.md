@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-The AppBar component offers flexible control over its placement and behavior within your application's layout. You can configure its position and whether it remains visible during scrolling using the  [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
+The AppBar component offers flexible control over its placement and behavior within your application's layout. You can configure its position and whether it remains visible during scrolling using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar

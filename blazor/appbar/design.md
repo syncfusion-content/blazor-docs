@@ -11,7 +11,7 @@ documentation: ug
 
 ## AppBarSpacer
 
-[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to introduce flexible spacing between items within the AppBar. It's particularly useful for pushing content to the left or right, or for creating balanced layouts.
+[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to introduce flexible spacing between items within the AppBar. It is particularly useful for pushing content to the left or right, or for creating balanced layouts.
 
 The following example demonstrates how to use `AppBarSpacer` to provide dynamic spacing between buttons:
 
@@ -72,7 +72,7 @@ The following example shows how to use `AppBarSeparator` to visually group actio
 
 ## Responsive AppBar with Media Queries
 
-You can use CSS Media Queries to define responsive layouts, ensuring the AppBar remains functional and aesthetically pleasing on both desktop and mobile devices.
+CSS media queries can be used to create responsive layouts, allowing the AppBar to remain functional and visually consistent across both desktop and mobile devices.
 The following example demonstrates how CSS media queries can adjust the AppBar's layout to wrap its content and resize for smaller screens:
 
 ```cshtml

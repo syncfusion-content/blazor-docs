@@ -11,11 +11,11 @@ documentation: ug
 
 The AppBar component is highly customizable, allowing you to tailor its visual presentation to perfectly fit your application's design language. This document outlines various methods to modify the AppBar's appearance, focusing on overriding default CSS, utilizing custom classes, and applying HTML attributes.
 
-For comprehensive custom theming across Syncfusion controls, you can utilize our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material), which provides a guided interface to create and manage custom themes.
+For comprehensive custom theming across Syncfusion controls, the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material) offers an intuitive interface to create and manage personalized custom themes efficiently.
 
 ## Customizing AppBar Elements with CSS Classes
 
-The AppBar component is structured with a set of default CSS classes that you can target to override its default styles. Here's a list of common classes and their purpose:
+The AppBar component includes a set of default CSS classes that can be targeted to customize its appearance. Below is a list of commonly used classes and their respective purposes:
 
 |CSS Class | Purpose of Class |
 |-----|----- |
@@ -31,8 +31,7 @@ N> You can change the prominent AppBar height if larger titles, images, or texts
 
 ## CssClass
 
-The `CssClass` property of the `SfAppBar` component allows you to apply a custom CSS class directly to the root HTML element of the AppBar. This provides a clean way to introduce your own styles or completely override existing ones.
-
+The `CssClass` property of the `SfAppBar` component assigns a custom CSS class to its root HTML element.
 In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
 
 ```cshtml
