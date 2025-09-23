@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Edit Types in Blazor Tree Grid Component | Syncfusion
+title: Cell Edit Types in Blazor TreeGrid Component | Syncfusion
 description: Learn how to configure cell edit types and customize edit templates in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
@@ -754,3 +754,4 @@ public class TreeData
 In the following image, the `SfRichTextEditor` component is rendered with the `EditTemplate` in the **TaskName** column.
 
 ![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.png)
+
