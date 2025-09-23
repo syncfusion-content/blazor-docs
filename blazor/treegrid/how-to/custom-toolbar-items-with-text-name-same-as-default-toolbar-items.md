@@ -1,26 +1,27 @@
 ---
 layout: post
-title: Custom toolbar items in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about custom toolbar items with text name same as default toolbar items in Syncfusion Blazor TreeGrid component and more.
+title: Custom toolbar items in Blazor TreeGrid
+description: Learn how to configure custom toolbar items with identical text to default buttons in Syncfusion Blazor TreeGrid and more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Custom toolbar items in Blazor TreeGrid Component
 
-The Custom toolbar items can be created with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, it is suggested to define the **Id** property for custom toolbar items.
+Custom toolbar items can be created using text labels identical to default toolbar items such as **Add**, **Edit**, or **Delete**. However, when these items are defined without an explicit `Id`, they are treated as default toolbar items, which may lead to unintended behavior—such as being disabled when certain settings are not configured.
 
-This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when TreeGridEditSettings is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behavior must be overcame by defining the Id property.
+To prevent this issue, it is recommended to define the **Id** property for each custom toolbar item. This ensures that the Tree Grid treats them as distinct from the default toolbar actions.
+
+The following example demonstrates how to define custom toolbar items with the same text as default buttons, and how to handle their click events appropriately.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
-
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 @{
     List<Syncfusion.Blazor.Navigations.ItemModel> Toolbaritems = new List<Syncfusion.Blazor.Navigations.ItemModel>();
     Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Text = "Add", Id = "add", TooltipText = "Add Record", PrefixIcon = "add" });
@@ -32,7 +33,7 @@ This is demonstrated in the below sample code where there are custom toolbar ite
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="85"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duation" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="70"></TreeGridColumn>
     </TreeGridColumns>
