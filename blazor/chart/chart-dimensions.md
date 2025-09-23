@@ -10,8 +10,7 @@ documentation: ug
 # Chart Dimensions in Blazor Charts Component
 
 N>
-* When no size is specified, the default height and width are 450 px and 600 px, respectively.
-* To avoid delayed rendering, architectural changes were introduced for scenarios where width/height are specified [in percentages](#in-percentage) or [through style settings](#size-for-container) applied to the component's parent. As a result, the chart first renders with the default size and then redraws responsively to adjust only its dimensions. To prevent this redraw, include the following script in the page head.
+When dimensions are defined using [percentages](#in-percentage) or [through style settings](#size-for-container), the chart initially renders at default size, then redraws responsively based on dimensions. To avoid this redraw, include the following script in the section of your HTML page.
 
 ```html
 <head>

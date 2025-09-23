@@ -102,7 +102,7 @@ The axis range is calculated automatically based on the data. You can also custo
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis IntervalType="Syncfusion.Blazor.Charts.IntervalType.Months" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    <ChartPrimaryXAxis IntervalType="IntervalType.Months" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>

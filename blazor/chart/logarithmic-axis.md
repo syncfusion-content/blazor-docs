@@ -11,7 +11,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-Use a logarithmic axis when data spans several orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). This scale helps visualize both small and large values on the same chart.
+Use a logarithmic axis when data spans multiple orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). This scale makes it easier to visualize both small and large values on the same chart.
 
 Watch the following video to learn how to customize the logarithmic axis.
 
