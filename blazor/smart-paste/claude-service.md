@@ -246,7 +246,7 @@ N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documen
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
 
-![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste-groq.gif)
+![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste.gif)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
