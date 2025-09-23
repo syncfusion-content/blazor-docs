@@ -57,7 +57,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+Alternatively, a WebAssembly application can be created by executing the following command in the terminal: (<kbd>Ctrl</kbd>+<kbd>`</kbd>)
 
 {% tabs %}
 
@@ -107,7 +107,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Avatar component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component to your **~/Pages/Index.razor** file. You can customize its appearance using properties like `Size` and providing content via `ChildContent` or `ContentTemplate`.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component to your **~/Pages/Index.razor** file. Its appearance can be customized using properties such as `Size`, and content can be provided through `ChildContent` or `ContentTemplate`.
 
 
 {% tabs %}
@@ -137,6 +137,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar components in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This action will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar components in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}

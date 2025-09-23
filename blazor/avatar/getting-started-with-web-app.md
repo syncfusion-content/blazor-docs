@@ -120,7 +120,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default  and does not need to be added to individual page components.
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default. In this case, it does not need to be specified in individual page components.
 
 {% tabs %}
 {% highlight razor %}
