@@ -55,7 +55,7 @@ Install-Package OpenAI
 
 ##  Integration Open AI with AI AssistView
 
-- Add the generated API key to the `openaiApiKey` variable used in the example below
+- Add the generated API key to the variable used in the example below
 
 ```bash
 
