@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Custom control in TreeGrid toolbar in Blazor TreeGrid Component
+# Custom control in Syncfusion Blazor TreeGrid Toolbar
 
 You can integrate custom controls within the toolbar area of the Tree Grid component. This is accomplished by initializing the desired control inside the `Template` property of the `Toolbar` component, which is nested within the TreeGrid.
 
