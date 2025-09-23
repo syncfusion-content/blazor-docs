@@ -7,7 +7,7 @@ control: Tree +Grid
 documentation: ug
 ---
 
-# Prevent Default TreeGrid Action in Syncfusion Blazor TreeGrid Component
+# Prevent Default TreeGrid Action in Blazor TreeGrid Component
 
 You can prevent default actions in the TreeGrid by canceling them within the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event.
 
