@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dialog Editing in Blazor TreeGrid Component | Syncfusion
-description: description: Learn how to enable Dialog Dditing in the Syncfusion Blazor TreeGrid, customize templates, validate inputs, and save or discard changes.
+description: Learn how to enable Dialog Dditing in the Syncfusion Blazor TreeGrid, customize templates, validate inputs, and save or discard changes.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -189,3 +189,4 @@ public class TreeData
 
 
 ![Customize the header and footer of the edit dialog in Blazor TreeGrid](../images/blazor-treegrid-customize-edit-dialog.png)
+
