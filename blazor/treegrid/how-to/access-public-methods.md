@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Access Public Methods in TreeGrid in Blazor TreeGrid Component
+# Access Public Methods in Syncfusion Blazor TreeGrid Component
 
 Public methods of the TreeGrid component can be accessed by using the component reference defined during initialization.
 
