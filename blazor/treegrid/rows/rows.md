@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Rows in Blazor Tree Grid Component
+# Rows in Blazor TreeGrid Component
 
 A row represents the details of a single record fetched from the data source.
 
@@ -278,3 +278,4 @@ public class TreeData
 * [Row Height](./row-height)
 
 * [Selection](../selection/selection)
+
