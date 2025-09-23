@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Blazor TreeGrid Component | Syncfusion
-description: Learn how rows work in the Syncfusion Blazor TreeGrid and how to customize them using RowDataBound, style alternate rows with CSS, and access row model details programmatically.
+description: Check out here and learn more about rows in the Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -276,4 +276,5 @@ public class TreeData
 * [TreeGridTemplates component](../templates#treegridtemplates-component)
 * [Row Template](./row-template)
 * [Row Height](./row-height)
+
 * [Selection](../selection/selection)
