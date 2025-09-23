@@ -9,7 +9,7 @@ documentation: ug
 
 # Gemini AI Integration with Blazor Smart Paste Button
 
-The Syncfusion Blazor Smart Paste Button component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Google Gemini AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
+The Syncfusion Blazor SmartPaste Button component enables AI-powered, context-aware content pasting into forms, typically using OpenAI or Azure OpenAI.  This guide explains how to integrate the Google Gemini AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
 ## Setting Up Gemini
 
@@ -285,7 +285,7 @@ N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documen
 ## Testing the Integration
 
 1. Configure the Blazor Web App with the Groq AI service and Smart Paste Button as described above.
-2. Add the code to **~/Pages/Index.razor**, **Program.cs**, and the `Services` folder.
+2. Add the code to **~/Pages/Home.razor**, **Program.cs**, and the `Services` folder.
 3. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
