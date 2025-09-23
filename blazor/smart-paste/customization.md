@@ -17,5 +17,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button c
 ## See Also
 
 - [Blazor Button Component: Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
-- [Getting Started with Blazor Smart Paste Button in Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
-- [Getting Started with Blazor Smart Paste Button in Server App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
+- [Getting Started with Blazor Smart Paste Button in Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
