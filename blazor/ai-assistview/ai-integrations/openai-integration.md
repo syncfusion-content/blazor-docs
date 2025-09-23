@@ -13,12 +13,13 @@ The Syncfusion  AI AssistView supports integration with [OpenAI](https://platfor
 
 ## Prerequisites
 
-* OpenAI account to generate an API key for accessing the `OpenAI` API
-* Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
+- OpenAI account and an API key to access the OpenAI API
+
+- Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in the project
 
 ## Getting Started with the AI AssistView Component
 
-Before integrating Open AI, ensure that the Syncfusion AI AssistView is correctly rendered in your application:
+Before integrating OpenAI, ensure the Syncfusion AI AssistView component renders correctly in the application:
 
 [ Blazor Getting Started Guide](../getting-started)
 
@@ -42,19 +43,19 @@ Install-Package OpenAI
 
 ## Generate API Key
 
-1. Go to [Open AI](https://platform.openai.com/docs/overview) and sign in with your Google account. If you don’t have one, create a new account. 
+1. Go to [Open AI](https://platform.openai.com/docs/overview) and sign in. Create an account if one does not exist.
 
-2. Once logged in, click on your profile icon in the top-right corner and select `API Keys` from the dropdown menu.  
+2. Once signed in, open the profile menu and select API Keys.  
 
-3. Click the `+ Create new secret key` button. You’ll be prompted to name the key (optional). Confirm to generate the key. 
+3. Select + `Create new secret key`, optionally provide a name, and confirm to generate the key. 
 
-4. Your API key will be displayed once. Copy it and store it securely, as it won’t be shown again.
+4. Copy the key and store it securely; it is shown only once.
 
 > `Security Note`: Never commit the API key to version control. Use environment variables or a secret manager for production.
 
 ##  Integration Open AI with AI AssistView
 
-* Add your generated `API Key` at the line 
+- Add the generated API key to the openaiApiKey variable used in the example below
 
 ```bash
 
