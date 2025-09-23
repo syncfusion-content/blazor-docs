@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Template in Blazor TreeGrid Component | Syncfusion
-description: Learn how to use the row template in the Syncfusion Blazor TreeGrid to customize entire row rendering with images, components, and custom layouts, including formatting considerations and limitations.
+description: Learn how to use the row template in the Syncfusion Blazor TreeGrid to customize entire row rendering.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -229,4 +229,5 @@ The row template replaces default cell rendering and has limited compatibility w
 * Searching
 * RTL
 * Context Menu
+
 * State Persistence
