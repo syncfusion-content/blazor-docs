@@ -1,32 +1,32 @@
 ---
 layout: post
-title: Filter Bar in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Filter Bar in Syncfusion Blazor Tree Grid component and much more details.
+title: Filter Bar in Blazor TreeGrid Component | Syncfusion
+description: Learn how to enable and use the filter bar in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Filter Bar in Blazor Tree Grid Component
 
-By setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true, the filter bar row will render next to the header, which allows to filter data. The records can be filtered with different expressions depending upon the column type.
+Enable the filter bar by setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true. A filter bar row renders below the header, allowing users to type expressions to filter data. The available expressions depend on the column type.
 
  **Filter bar expressions:**
 
- Enter the following filter expressions (operators) manually in the filter bar.
+Enter the following filter expressions (operators) directly in the filter bar.
 
-Expression |Example |Description |Column Type
+Expression |Example |Description |Column Type
 -----|-----|-----|-----
-= |=value |equal |Number
-!= |!=value |notequal |Number
-> |>value |greaterthan |Number
-< |<value |lessthan |Number
->= |>=value |greaterthanorequal |Number
-<=|<=value|lessthanorequal |Number
-* |*value |startswith |String
-% |%value |endswith |String
-N/A |N/A | **Equal** operator will always be used for date filter. |Date
-N/A |N/A |**Equal** operator will always be used for Boolean filter. |Boolean
+= | =value | equal | Number
+!= | !=value | not equal | Number
+> | >value | greater than | Number
+< | <value | less than | Number
+>= | >=value | greater than or equal | Number
+<= | <=value | less than or equal | Number
+* | *value | starts with | String
+% | %value | ends with | String
+N/A | N/A | The Equal operator is always used for date filtering. | Date
+N/A | N/A | The Equal operator is always used for Boolean filtering. | Boolean
 
 {% tabs %}
 
@@ -93,13 +93,13 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 The following screenshot shows filtering using FilterBar
-![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.png)
+![Filtering in Blazor TreeGrid](../images/blazor-treegrid-filtering.png)
 
 ## Filter bar template with custom component
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property is used to add custom components to a particular column. To access the filtered values inside the `FilterTemplate`, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
+Use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property to render a custom component for a column’s filter bar cell. Inside the `FilterTemplate`, the implicit parameter `context` represents the filter predicate. Cast `context` to `PredicateModel<T>` to read or bind the current filter value within the template.
 
-In the following sample, the dropdown is used as a custom component in the Duration column.
+In the following example, a dropdown is used as the custom filter control for the Duration column.
 
 {% tabs %}
 
@@ -107,7 +107,9 @@ In the following sample, the dropdown is used as a custom component in the Durat
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids 
 @using  Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.DropDowns;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">    
     <TreeGridColumns>
@@ -201,9 +203,9 @@ namespace TreeGridComponent.Data {
 
 ## Change default filter operator
 
-You can change the default filter operator by extending [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterSettings) property in the column.
+Change the default filter operator by extending the column’s [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterSettings) property.
 
-In the following sample, we have changed the default operator for TaskName column as **contains** from **startswith**
+In the following example, the default operator for the TaskName column is changed to **contains** from **startswith**.
 
 {% tabs %}
 
@@ -303,15 +305,15 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 The following screenshot represents Filter with change in default operator as contains
-![Changing Filter Operator in Blazor Tree Grid](../images/blazor-treegrid-filter-operator.png)
+![Changing Filter Operator in Blazor TreeGrid](../images/blazor-treegrid-filter-operator.png)
 
 ## Filter bar modes
 
-By default, filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Mode) will be of OnEnter type. So, you need to press the Enter key after typing a value in the filter bar.
+By default, the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Mode) is OnEnter. Users must press Enter after typing a value in the filter bar.
 
-You can also perform filtering operation without pressing Enter key in the filter bar by Setting the filter bar `Mode` property as [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate).
+Filtering can also be performed without pressing Enter by setting the filter bar `Mode` to [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate).
 
-The [ImmediateModeDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_ImmediateModeDelay) property of [TreeGridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) is used to define the time, tree grid has to wait for performing filter operation.
+Use the [ImmediateModeDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_ImmediateModeDelay) property of [TreeGridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) to define the delay (in milliseconds) before the TreeGrid performs filtering.
 
 {% tabs %}
 
