@@ -184,7 +184,7 @@ var app = builder.Build();
 
 ## Use Claude AI with Smart TextArea
 
-Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Index.razor`) to use Claude AI for autocompletion:
+Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use Claude AI for autocompletion:
 
 ```razor
 @using Syncfusion.Blazor.SmartComponents
