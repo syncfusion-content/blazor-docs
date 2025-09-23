@@ -31,7 +31,7 @@ N> You can change the prominent AppBar height if larger titles, images, or texts
 
 ## CssClass
 
-The `CssClass` property of the `SfAppBar` component assigns a custom CSS class to its root HTML element.
+The `CssClass` property of the `SfAppBar` component assigns a custom CSS class to its root HTML element. This provides a clean way to introduce your own styles or completely override existing ones.
 In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
 
 ```cshtml
