@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command Column Editing in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor Tree Grid component and much more details.
+description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -163,3 +163,4 @@ The following example adds a custom Details button in the **Manage Records** col
 The following image shows a custom command button in the **Manage Records** column of the TreeGrid.
 
 ![Blazor TreeGrid with Custom Command](../images/blazor-treegrid-custom-command.png)
+
