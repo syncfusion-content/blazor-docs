@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Line Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to render and customize the Stacked Line series in Syncfusion Blazor Charts, including data binding, styling, empty points, stack labels, gradients, and render events.
+description: Check out and learn how to configure and customize the stacked Line series in Syncfusion Blazor Charts.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -785,7 +785,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
         new ChartData { X = "Medical",Y = 50, Y2= 120, Y3= 50 },
         new ChartData { X = "Clothes",Y = 70, Y2= 60, Y3= 180 },
         new ChartData { X = "Personal Care", Y = 30, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y2= 30, Y3= 270},
+        new ChartData { X = "Books", Y = 10, Y2= 30, Y3= 270 },
         new ChartData { X = "Fitness",Y = 100, Y2= 70, Y3= 40 }
     };
 }
@@ -950,7 +950,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75 },
         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },

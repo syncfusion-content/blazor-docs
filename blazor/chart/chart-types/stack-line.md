@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Line in Blazor Charts Component | Syncfusion
-description: Check out and learn how to render and customize the 100% Stacked Line chart in Syncfusion Blazor Charts, including data binding, styling, empty points, stack labels, gradients, and render events.
+description: Check out and learn how to configure and customize the 100% stacked Line chart in Syncfusion Blazor Charts.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -613,7 +613,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
          new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
          new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
          new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y 3= 195 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
          new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }

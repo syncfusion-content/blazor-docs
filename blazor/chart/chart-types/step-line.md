@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Step Line Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn about the Blazor Step Line Chart in Syncfusion Blazor Charts, including data binding, series customization, empty points handling, and events.
+description: Check out and learn how to configure and customize step Line chart in Syncfusion Blazor Charts.
 platform: Blazor
 control: Chart
 documentation: ug

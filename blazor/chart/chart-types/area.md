@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Area in Blazor Charts Component | Syncfusion
-description: Check out and learn how to render and customize the Area chart in Syncfusion Blazor Charts, including data binding, fills, gradients, opacity, borders, empty points, and render events.
+description: Check out and learn how to configure and customize the area chart in Syncfusion Blazor Charts.
 platform: Blazor
 control: Chart
 documentation: ug
