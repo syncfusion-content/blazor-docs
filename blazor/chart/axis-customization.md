@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Charts Component | Syncfusion
-description: Check out how to customize axes in the Syncfusion Blazor Charts component, including axis crossing, titles, alignment, tick lines, grid lines, multiple axes, inverted axes, and opposed positions.
+description: Check out and learn how to customize axes in the Syncfusion Blazor Charts component, including axis crossing, titles, alignment, tick lines, grid lines, multiple axes, inverted axes, and opposed positions.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -17,7 +17,7 @@ Watch the following video to learn more about axis customization:
 
 ## Axis crossing
 
-You can control where an axis crosses another axis using the [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) and [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) properties.
+The position where one axis intersects another can be configured using the [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) and [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) properties in the Syncfusion Blazor Charts component.
 
 - CrossesAt: The value (numeric, DateTime, or logarithmic) at which the axis line should intersect the other axis.
 - CrossesInAxis: The name of the axis that this axis should cross.
@@ -71,11 +71,11 @@ Add a title to an axis using the [Title](https://help.syncfusion.com/cr/blazor/S
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-        <ChartAxisTitleStyle Size="16px" Color="red" FontFamily="Segoe UI" FontWeight="bold"/>
+        <ChartAxisTitleStyle Size="16px" Color="red" FontFamily="Segoe UI" FontWeight="bold" />
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column"/>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>
 </SfChart>
 

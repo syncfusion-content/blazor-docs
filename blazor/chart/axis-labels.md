@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Labels in Blazor Charts Component | Syncfusion
-description: Check out how to customize axis labels in the Syncfusion Blazor Charts component, including smart arrangements, positioning, multi-level labels, templates, and more.
+description: Check out and learn how to customize axis labels in the Syncfusion Blazor Charts component, including smart arrangements, positioning, multi-level labels, templates, and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This article explains the different ways to customize axis labels in the Blazor Charts component.
 
-You can also learn how to customize chart axis labels by watching the video below.
+Axis label customization in the Syncfusion Blazor Charts component can also be explored through the video linked below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
 
@@ -569,7 +569,7 @@ Customize label [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Trim label
 
-Enable trimming using [EnableTrim](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableTrim). Control the trimmed label width with [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MaximumLabelWidth). The default value of MaximumLabelWidth is **34px**.
+Trimming of axis labels can be enabled using the [EnableTrim](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableTrim) property. The width of trimmed labels can be controlled using the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MaximumLabelWidth) property. By default, MaximumLabelWidth is set to **34px**.
 
 ```cshtml
 
