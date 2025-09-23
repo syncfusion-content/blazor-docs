@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Chooser in Blazor Tree GridComponent | Syncfusion
+title: Column Chooser in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about column chooser in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
@@ -593,4 +593,5 @@ The following output is displayed as a result of the above code example.
 
 
 ![Column Chooser with Group in Blazor TreeGrid](../images/blazor-treegrid-column-chooser-group-template.png)
+
 
