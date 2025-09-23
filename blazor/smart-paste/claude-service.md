@@ -68,13 +68,13 @@ public class ClaudeAIService
         var requestBody = new ClaudeChatRequest
         {
             Model = _modelName,
-            MaxTokens = 1000, // Maximum tokens in response
+            Max_tokens = 1000, // Maximum tokens in response
             Messages = chatMessages.Select(m => new ClaudeMessage
             {
                 Role = m.Role == ChatRole.User ? "user" : "assistant",
                 Content = m.Text
             }).ToList(),
-            StopSequences = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" } // Configurable stop sequences
+            Stop_sequences  = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" } // Configurable stop sequences
         };
 
         var content = new StringContent(JsonSerializer.Serialize(requestBody, JsonOptions), Encoding.UTF8, "application/json");
@@ -108,9 +108,9 @@ Define C# classes to match the Claude API’s JSON request and response format.
 public class ClaudeChatRequest
 {
     public string Model { get; set; }
-    public int MaxTokens { get; set; }
+    public int Max_tokens { get; set; }
     public List<ClaudeMessage> Messages { get; set; }
-    public List<string> StopSequences { get; set; }
+    public List<string> Stop_sequences  { get; set; }
 }
 
 public class ClaudeMessage
@@ -246,7 +246,7 @@ N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documen
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
 
-![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste-groq.gif)
+![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste.gif)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
