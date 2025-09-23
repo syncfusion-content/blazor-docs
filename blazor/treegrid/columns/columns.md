@@ -234,7 +234,7 @@ public class Employee
 
 ![Blazor TreeGrid column with header template](../images/blazor-treegrid-column-header-template.png)
 
-N> For Templated TreeGrid component, define the [ModelType](../templates/#template-modeltype) property to enable strong typing inside templates.
+N> For Templated TreeGrid component, define the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property to enable strong typing inside templates.
 
 ## Header text
 
@@ -388,14 +388,12 @@ N | Denotes numeric type. | Follow with a precision specifier, such as N2 or N3,
 C | Denotes currency type. | Follow with a precision specifier, such as C2 or C3, to control decimal places.
 P | Denotes percentage type. | Expects input from 0 to 1. For example, 0.2 formats as 20%. Follow with a precision specifier such as P2 or P3.
 
-<!-- Please refer to the link to know more about [`Number formatting`](../../common/internationalization/#number-formatting). -->
 
 ### Date formatting
 
 Use built-in date format strings to format date values.
 
 For built-in date formats, specify the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property as a string (example: *d*).
-<!-- Please refer to the link to know more about [`Date formatting`](../../common/internationalization/#manipulating-datetime). -->
 
 {% tabs %}
 
@@ -990,3 +988,4 @@ public class TreeData
 {% endtabs %}
 
 ![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.png)
+
