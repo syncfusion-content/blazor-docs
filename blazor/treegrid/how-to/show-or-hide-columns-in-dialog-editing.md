@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Show or Hide Columns in Dialog Editing in Syncfusion Blazor TreeGrid Component
+# Show or Hide Columns in Dialog Editing in Blazor TreeGrid Component
 
 You can control the visibility of TreeGrid columns during dialog editing by using **Template** customization. This allows hidden columns to be shown and visible columns to be hidden dynamically when editing a record.
 
