@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom toolbar items in Blazor TreeGrid
+title: Custom toolbar items in Blazor TreeGrid Component | Syncfusion
 description: Learn how to configure custom toolbar items with identical text to default buttons in Syncfusion Blazor TreeGrid and more.
 platform: Blazor
 control: TreeGrid
