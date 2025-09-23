@@ -27,7 +27,7 @@ The AppBar component is structured with a set of default CSS classes that you ca
 |.e-appbar.e-primary|To customize the dark appbar.|
 |.e-appbar.e-inherit|To customize the inherit appbar.|
 
-> You can change the prominent AppBar height if larger titles, images, or texts are used.
+N> You can change the prominent AppBar height if larger titles, images, or texts are used.
 
 ## CssClass
 
