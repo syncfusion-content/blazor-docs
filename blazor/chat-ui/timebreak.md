@@ -11,7 +11,9 @@ documentation: ug
 
 ## Show or hide time break
 
-You can use the [ShowTimeBreak](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowTimeBreak) property to display date-wise separations between all the messages which enhances the readability and message organizing. The default value is `false`, indicating time breaks are disabled unless it is enabled.
+The Syncfusion Blazor Chat UI component allows you to display date-wise separators between messages using the [ShowTimeBreak](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowTimeBreak) property. This feature enhances readability and helps organize the conversation chronologically. By default, this property is `false`.
+
+When `ShowTimeBreak` is enabled, a separator will be displayed whenever the date changes between consecutive messages.
 
 ```cshtml
 
