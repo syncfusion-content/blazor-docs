@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom control in Blazor TreeGrid Toolbar
+title: Custom control in Blazor TreeGrid Toolbar | Syncfusion
 description: Learn how to integrate custom controls like Autocomplete into the Tree Grid toolbar in Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
