@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Columns in Blazor TreeGrid Component | Syncfusion
-description: Learn how to define and configure columns in the Syncfusion Blazor TreeGrid component and much more details.
+title: Columns in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about columns in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Columns in Blazor TreeGrid Component
+# Columns in Blazor Tree Grid Component
 
-Column definitions act as the data source schema for the TreeGrid and determine how values render. TreeGrid operations such as sorting, filtering, and searching operate based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component is required to map data source values to TreeGrid columns.
+The column definitions are used as the datasource schema in the Tree Grid. This plays a vital role in rendering column values in the required format. The tree grid operations such as sorting, filtering and searching etc. are performed based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper is necessary to map the data source values in Tree Grid columns.
 
-N> If the column `Field` does not match a property in the data source, the column cells render empty. <br />The [TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_TreeColumnIndex) property denotes the column used to expand and collapse child rows.
+N> If the column `Field` is not specified in the dataSource, the column values will be empty. <br />[TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_TreeColumnIndex) property denotes the column that is used to expand and collapse child rows.
 
 ## Complex data binding
 
-Complex data binding can be achieved by using the dot (.) operator in the column `Field`. In the following example, **Task.TaskName** and **Task.Duration** are complex data fields.
+The complex data binding in the Tree Grid can be achieved by using the dot(.) operator in the column.field. In the below examples **Task.TaskName** and **Task.Duration** are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -64,11 +64,11 @@ Complex data binding can be achieved by using the dot (.) operator in the column
 }
 ```
 
-![Blazor TreeGrid columns with complex data binding](../images/blazor-treegrid-column-data-binding.png)
+![Blazor Tree Grid Columns with Data Binding](../images/blazor-treegrid-column-data-binding.png)
 
 ### Expando data binding
 
-TreeGrid supports complex data binding with ExpandoObject. In the following example, **Task.TaskName** and **Task.Duration** are complex data fields using ExpandoObject.
+Tree Grid supports Complex Data Binding with ExpandoObject. In the below examples **Task.TaskName** and **Task.Duration** are complex data with ExpandoObject.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -134,16 +134,16 @@ TreeGrid supports complex data binding with ExpandoObject. In the following exam
 }
 ```
 
-![Blazor TreeGrid columns with ExpandoObject data binding](../images/blazor-treegrid-column-expando-binding.png)
+![Blazor Tree Grid Columns with Expando Data Binding](../images/blazor-treegrid-column-expando-binding.png)
 
 ## Header template
 
-To learn about header templates in the Blazor TreeGrid, refer to the following video.
+To know about **Header Template** in Blazor tree grid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
 
-Customize the header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderTemplate) property.
+The header element can be customized by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderTemplate) property.
 
 {% tabs %}
 
@@ -212,7 +212,7 @@ public class Employee
         public string EmpID { get; set; }
         public string Contact { get; set; }
         public int? ParentId { get; set; }
-        public Employee Treedata { get; set; }
+        public TreeData Treedata { get; set; }
 
         public static List<Employee> GetTemplateData()
         {
@@ -232,13 +232,14 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid column with header template](../images/blazor-treegrid-column-header-template.png)
 
-N> For Templated TreeGrid component, define the [ModelType](../templates/#template-modeltype) property to enable strong typing inside templates.
+![Blazor Tree Grid Column with Header Template](../images/blazor-treegrid-column-header-template.png)
+
+N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
 
 ## Header text
 
-By default, the column header text is derived from the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) value. To override the default, set the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) property.
+By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) value. To override the default header title, define the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) value.
 
 {% tabs %}
 
@@ -305,13 +306,13 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
+![Blazor Tree Grid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
 
 N> If both the `Field` and `HeaderText` are not defined in the column, the column renders with **empty** header text.
 
 ## Format
 
-To format cell values based on culture, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. The TreeGrid uses the **Internationalization** library to format number values.
+To format cell values based on specific culture, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property of the[TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper. The Tree Grid uses **Internalization** library to format the number values.
 
 {% tabs %}
 
@@ -324,7 +325,7 @@ To format cell values based on culture, use the [Format](https://help.syncfusion
     <TreeGridColumns>
         <TreeGridColumn Field="OrderID" HeaderText="Order ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="OrderName" HeaderText="Order Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Price" HeaderText="Price" Width="100" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Integer" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Price" HeaderText="Price" Width="100" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Number" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
@@ -376,25 +377,25 @@ public class TreeDataFormat
 
 {% endtabs %}
 
-N> By default, number and date values are formatted using the **en-US** locale.
+N> By default, the number and date values are formatted in **en-US** locale.
 
 ### Number formatting
 
-Use the following format strings for number and integer values.
+The number or integer values can be formatted using the below format strings.
 
 Format |Description |Remarks
 -----|-----|-----
-N | Denotes numeric type. | Follow with a precision specifier, such as N2 or N3, to control decimal places.
-C | Denotes currency type. | Follow with a precision specifier, such as C2 or C3, to control decimal places.
-P | Denotes percentage type. | Expects input from 0 to 1. For example, 0.2 formats as 20%. Follow with a precision specifier such as P2 or P3.
+N | Denotes numeric type. | The numeric format is followed by integer value as N2, N3. etc which denotes the number of precision to be allowed.
+C | Denotes currency type. | The currency format is followed by integer value as C2, C3. etc which denotes the number of precision to be allowed.
+P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 100. For example the cell value *0.2* is formatted as *20%*. The percentage format is followed by integer value as P2, P3. etc which denotes the number of precision to be allowed.
 
 <!-- Please refer to the link to know more about [`Number formatting`](../../common/internationalization/#number-formatting). -->
 
 ### Date formatting
 
-Use built-in date format strings to format date values.
+The date values can be formatted using built-in date format string.
 
-For built-in date formats, specify the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property as a string (example: *d*).
+For built-in date format specify the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property as string   (Example: *d*).
 <!-- Please refer to the link to know more about [`Date formatting`](../../common/internationalization/#manipulating-datetime). -->
 
 {% tabs %}
@@ -409,7 +410,7 @@ For built-in date formats, specify the [Format](https://help.syncfusion.com/cr/b
         <TreeGridColumn Field="OrderID" HeaderText="Order ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="OrderName" HeaderText="Order Name" Width="160"></TreeGridColumn>
         <TreeGridColumn Field="OrderDate" HeaderText="Order Date" Format="yMd" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Price" HeaderText="Price" Width="100" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Integer" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Price" HeaderText="Price" Width="100" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Number" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
