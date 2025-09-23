@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Labels in Blazor Charts Component | Syncfusion
-description: Check out and learn how to customize axis labels in the Syncfusion Blazor Charts component, including smart arrangements, positioning, multi-level labels, templates, and more.
+description: Check out and learn how to configure and customize axis labels in the Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug

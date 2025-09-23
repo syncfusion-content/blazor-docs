@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logarithmic Axis in Blazor Charts Component | Syncfusion
-description: Check out and learn about the Logarithmic Axis in the Syncfusion Blazor Charts component and more.
+description: Check out and learn how to configure and customize logarithmic axis in the Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 Use a logarithmic axis when data spans several orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). This scale helps visualize both small and large values on the same chart.
 
-Watch the following video to learn how to customize the logarithmic axis.
+Logarithmic axis customization in the Syncfusion Blazor Charts component can also be explored through the video linked below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_67hCchVOu4" %}
 

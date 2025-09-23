@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Charts Component | Syncfusion
-description: Check out and learn how to customize axes in the Syncfusion Blazor Charts component, including axis crossing, titles, alignment, tick lines, grid lines, multiple axes, inverted axes, and opposed positions.
+description: Check out and learn how to configure and customize axes in the Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
