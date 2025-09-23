@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Template in Blazor Tree Grid Component | Syncfusion
+title: Column Template in Blazor TreeGrid Component | Syncfusion
 description: Learn how to use column template in the Syncfusion Blazor TreeGrid component to render custom content such as images, conditional UI, and hyperlinks.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Column Template in Blazor Tree Grid
+# Column Template in Blazor TreeGrid
 
 N> Before adding a column template to the Tree Grid, review the [template](../templates/#templates) section to configure templates and understand model binding.
 
@@ -635,5 +635,6 @@ In this example, the target URL is specified in the `Link` field of the TreeGrid
 
 The following GIF represents template routing in tree grid
 ![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+
 
 
