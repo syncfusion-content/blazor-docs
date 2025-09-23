@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Panes in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Multiple Panes in Syncfusion Blazor Charts component and much more.
+description: Check out and learn all about configuring multiple panes in the Syncfusion Blazor Charts component, including rows, columns, axis spanning, and layout tips.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -15,35 +15,36 @@ The chart area can be divided into multiple panes using [Rows](https://help.sync
 
 Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) property to divide the chart area vertically into any number of rows.
 
-* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Height) property can be used to allocate space for each row. The value can be expressed either in percentage or pixel.
+* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Height) property can be used to allocate space for each row. The value can be expressed either in percentage or pixels.
 
-* To bind a vertical axis to a specific row, set the axis's [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html#Syncfusion_Blazor_PivotView_AxisSet_RowIndex) property to that row's index.
+* To bind a vertical axis to a specific row, set the axis's [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RowIndex) property to that row's index.
 
-* The bottom line of each row can be customized by specified in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+* The bottom line of each row can be customized by specifying the [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Border).
+
+N> Rows are zero-based. For example, the first row is index 0. Percentage values enable responsive layouts while pixel values allocate fixed space.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Weather condition JPN vs DEU">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />    
 
-    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>    
+    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20" />    
 
     <ChartRows>
-        <ChartRow Height="50%"/>
-        <ChartRow Height="50%"/>
+        <ChartRow Height="50%" />
+        <ChartRow Height="50%" />
     </ChartRows>
 
     <ChartAxes>
-        <ChartAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C"/>        
+        <ChartAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C" />        
     </ChartAxes>
 
     <ChartSeriesCollection>
 
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column"/>
-        
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" YAxisName="YAxis"/>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" YAxisName="YAxis" />
         
     </ChartSeriesCollection>
 </SfChart>
@@ -78,32 +79,29 @@ Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ![Rows with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-rows.png)
 
-The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_Span) property of the axis can be used to span the vertical axis across multiple rows.
+Use the axis [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Span) property to span the vertical axis across multiple rows.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Weather condition JPN vs DEU">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryYAxis Span="2" Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>    
+    <ChartPrimaryYAxis Span="2" Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20" />
 
     <ChartRows>
-        <ChartRow Height="50%"/>
-        <ChartRow Height="50%"/>
+        <ChartRow Height="50%" />
+        <ChartRow Height="50%" />
     </ChartRows>
 
     <ChartAxes>
-        <ChartAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C"/>        
+        <ChartAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C" />
     </ChartAxes>
 
     <ChartSeriesCollection>
-
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column"/>
-        
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" YAxisName="YAxis"/>
-        
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />   
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" YAxisName="YAxis" />   
     </ChartSeriesCollection>
 </SfChart>
 
@@ -142,35 +140,33 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) property to divide the chart area horizontally into any number of columns.
 
-* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Width) property can be used to allocate space for each column. The value can be expressed either in percentage or pixel.
+* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Width) property can be used to allocate space for each column. The value can be expressed either in percentage or pixels.
 
 * To bind a horizontal axis to a specific column, set the axis's [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ColumnIndex) property to that column's index.
 
-* The left line of each column can be customized by specified in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+* The left line of each column can be customized by specifying the column [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Border).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Weather condition JPN vs DEU">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
-
-    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>
+    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20" />
     
     <ChartColumns>
-        <ChartColumn Width="50%"/>        
-        <ChartColumn Width="50%"/>        
+        <ChartColumn Width="50%" />
+        <ChartColumn Width="50%" />
     </ChartColumns>
 
     <ChartAxes>
-        <ChartAxis Interval="2" OpposedPosition="true" ColumnIndex="1" Name="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
-       
+        <ChartAxis Interval="2" OpposedPosition="true" ColumnIndex="1" Name="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />   
     </ChartAxes>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column"/>
-        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" XAxisName="XAxis" />       
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y1" XAxisName="XAxis" />
     </ChartSeriesCollection>
 </SfChart>
 
@@ -204,25 +200,24 @@ Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Columns with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.png)
 
-The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_Span) property of the axis can be used to span the horizontal axis across multiple column.
+Use the axis [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Span) property to span the horizontal axis across multiple columns.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Weather condition JPN vs DEU">
+    <ChartPrimaryXAxis Span="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryXAxis Span="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
-
-    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>
+    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20" />
     
     <ChartColumns>
-        <ChartColumn Width="50%"/>        
-        <ChartColumn Width="50%"/>        
+        <ChartColumn Width="50%" />
+        <ChartColumn Width="50%" />
     </ChartColumns>
 
     <ChartAxes>
-        <ChartAxis Interval="2" OpposedPosition="true" ColumnIndex="1" Name="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+        <ChartAxis Interval="2" OpposedPosition="true" ColumnIndex="1" Name="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
        
     </ChartAxes>
 
@@ -262,7 +257,7 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ![Column Spanning with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for feature overviews and explore the [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to learn about chart types and time-based data visualization.
 
 ## See also
 
