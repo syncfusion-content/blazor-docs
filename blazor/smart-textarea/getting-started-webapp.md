@@ -70,7 +70,7 @@ N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and a
 Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
+{% highlight c# tabtitle="Blazor Web App Server" %}
 
 dotnet new blazor -o BlazorWebApp -int Server
 cd BlazorWebApp
@@ -119,7 +119,7 @@ For Server interactive render mode, open the **~/Components/_Imports.razor** fil
 Register the Syncfusion Blazor service in the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Web App Server" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -166,7 +166,7 @@ For OpenAI, obtain an API key from [OpenAI](https://help.openai.com/en/articles/
 Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Web App Server" hl_lines="7 8 9 11 12 13" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -204,7 +204,7 @@ For Azure OpenAI, deploy a resource and model as described in [Azure OpenAI docu
 Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Web App Server" hl_lines="7 8 9 11 12 13" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -253,7 +253,7 @@ To use Ollama for self-hosted models:
 Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Web App Server" hl_lines="7 8 9 11 12 13" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
