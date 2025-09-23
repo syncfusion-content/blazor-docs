@@ -35,7 +35,7 @@ Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](
 
 ## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
 
-To add the **Blazor Smart TextArea** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the following packages:
+To add the **Blazor Smart Paste Button** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the following packages:
 - [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
