@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Line Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the stacked Line series in Syncfusion Blazor Charts.
+description: Check out and learn how to configure and customize the Stacked Line Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug

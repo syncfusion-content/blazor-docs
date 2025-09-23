@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the line chart in the Syncfusion Blazor Charts component.
+description: Check out and learn how to configure and customize the Line Chart in the Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug

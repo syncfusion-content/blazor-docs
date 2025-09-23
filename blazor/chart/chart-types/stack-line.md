@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Line in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the 100% stacked Line chart in Syncfusion Blazor Charts.
+description: Check out and learn how to configure and customize the 100% Stacked Line Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug

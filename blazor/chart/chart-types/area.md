@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Area in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the area chart in Syncfusion Blazor Charts.
+description: Check out and learn how to configure and customize the Area Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
