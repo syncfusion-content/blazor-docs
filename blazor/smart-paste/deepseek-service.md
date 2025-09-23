@@ -36,7 +36,7 @@ public class DeepSeekAIService
 {
     private readonly string _apiKey;
     private readonly string _modelName = "deepseek-chat"; // Example model
-    private readonly string _endpoint = "https://api.deepseek.com/v1/chat/completions";
+    private readonly string _endpoint = "https://api.deepseek.com/chat/completions";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
     {
         PooledConnectionLifetime = TimeSpan.FromMinutes(30),
@@ -66,10 +66,9 @@ public class DeepSeekAIService
         {
             Model = _modelName,
             Temperature = 0.7f, // Controls response randomness (0.0 to 1.0)
-            MaxTokens = 2048,   // Maximum tokens in response
             Messages = chatMessages.Select(m => new DeepSeekMessage
             {
-                Role = m.Role == ChatRole.User ? "user" : "assistant", // Align with DeepSeek API roles
+                Role = m.Role == ChatRole.User ? "user" : "system", // Align with DeepSeek API roles
                 Content = m.Text
             }).ToList()
         };
@@ -112,7 +111,6 @@ public class DeepSeekChatRequest
 {
     public string Model { get; set; }
     public float Temperature { get; set; }
-    public int MaxTokens { get; set; }
     public List<DeepSeekMessage> Messages { get; set; }
 }
 
