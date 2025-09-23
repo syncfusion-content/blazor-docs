@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Batch Editing in Blazor TreeGrid Component | Syncfusion
-description: Learn how to use Batch editing in the Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about Batch Editing in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -154,3 +154,4 @@ N> - Batch mode stages edits on the client. Click Update on the toolbar or save 
 - A primary key column (IsPrimaryKey=true) is required for editing.  
 
 - Confirmation dialogs are available only when the TreeGridEditSettings Mode is set to **Batch**. If ShowConfirmDialog is false, no confirmation dialog is shown for save; use ShowDeleteConfirmDialog to control delete confirmations separately.
+
