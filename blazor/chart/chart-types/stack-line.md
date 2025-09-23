@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Line in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about 100% Stacked Line Chart in Syncfusion Blazor Charts component and more.
+description: Check out and learn how to render and customize the 100% Stacked Line chart in Syncfusion Blazor Charts, including data binding, styling, empty points, stack labels, gradients, and render events.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## 100% Stacked Line
 
-[100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) displays multiple series of data as stacked lines, ensuring that the cumulative proportion of each stacked element always totals 100%. Hence, the y-axis will always be rendered with the range 0–100%. To render a [100% stacked line](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingLine100`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100) in your chart configuration. This indicates that the data should be represented as a 100% stacked line chart, with each data series shown as a percentage of the total. This chart type ensures that all lines are stacked to always reach 100% at each data point, allowing for easy comparison of the proportional relationships between the series without the influence of absolute values.
+[100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) displays multiple series as stacked lines where the cumulative proportion at each category totals 100%. The y-axis range is normalized to 0–100% to compare proportional relationships rather than absolute values. To render a 100% stacked line series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`StackingLine100`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100).
 
 ```cshtml
 
@@ -57,18 +57,18 @@ documentation: ug
 	
     public List<ChartData> ExpenseReports = new List<ChartData>
 	{
-        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -77,11 +77,11 @@ documentation: ug
 
 ![Blazor Stacked Line100 Chart](../images/chart-types-images/blazor-stacked-line-100-chart.png)
 
-N> Refer to our [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap5) to know how to render and configure the 100% Stacked Line type chart.
+N> Refer to the [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour to learn about additional capabilities. Explore the [Blazor 100% Stacked Line Chart example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap5) to see how to render and configure this chart type.
 
 ## Binding data with series
 
-You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
+Bind data to the chart using the series [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The data source can be an [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or a list of business objects. For details, see [Working with data](../working-with-data). Map the data fields to [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) in the series.
 
 ```cshtml
 
@@ -127,18 +127,18 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 	
     public List<ChartData> ExpenseReports = new List<ChartData>
 	{
-        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -147,11 +147,11 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 ## Series customization
 
-The following properties can be used to customize the [100% Stacked Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100) series.
+The following properties customize the [100% Stacked Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100) series.
 
 **Fill**
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property determines the color applied to the series.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property sets the stroke color of the line series.
 
 ```cshtml
 
@@ -197,25 +197,25 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpNvMxVrNGkxdr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the 100% stacked line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can reference an SVG gradient (for example, `url(#id)`) to apply a gradient stroke to the line series.
 
 ```cshtml
 
@@ -281,18 +281,18 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -301,7 +301,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 **Opacity**
 
-The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property specifies the transparency of the series stroke color.
 
 ```cshtml
 
@@ -347,18 +347,18 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -367,7 +367,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 **Width**
 
-The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) property specifies the stroke width applied to the series.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) property sets the stroke width of the line series.
 
 ```cshtml
 
@@ -413,18 +413,18 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
          new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -433,7 +433,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 **DashArray**
 
-The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property determines the pattern of dashes and gaps in the series.
+The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property defines the dash and gap pattern for the series stroke.
 
 ```cshtml
 
@@ -479,18 +479,18 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 	
     public List<ChartData> ExpenseReports = new List<ChartData>
 	{
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -499,11 +499,11 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `double.NaN` values are considered empty. Empty data points are ignored and not plotted.
 
 **Mode**
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled. The default mode is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
 ```cshtml
 
@@ -543,18 +543,18 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2 = double.NaN, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -563,7 +563,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Fill**
 
-Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the color of empty points.
 
 ```cshtml
 
@@ -603,18 +603,18 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2 = double.NaN, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y 3= 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -623,7 +623,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Border**
 
-Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
+Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of empty point borders.
 
 ```cshtml
 
@@ -665,18 +665,18 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
-         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2 = double.NaN, Y3 = 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 }
 
@@ -685,15 +685,14 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Stack labels
 
-The stack labels display cumulative total values for stack segments directly using data labels. If all the values in a stack segment are negative, the stack label is displayed below the point.
+Stack labels display cumulative totals for stack segments using data labels. If all values in a stack segment are negative, the stack label appears below the point.
 
-The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Visible) property of the [ChartStackLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html) is used to enable stack labels. Setting it to **true** will display the stack labels.
+The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Visible) property of [ChartStackLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html) enables stack labels when set to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-
     <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
     </ChartPrimaryXAxis>
 
@@ -743,14 +742,14 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-        new ChartData { X = "Food" , Y = 90, Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y2= 55, Y3= 75}
+        new ChartData { X = "Food" , Y = 90, Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y2 = 55, Y3 = 75}
     };
 }
 ```
@@ -758,7 +757,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ### Customization
 
-The stack labels can be customized using the `ChartStackLabelSettings` properties as given below.
+Customize stack labels using `ChartStackLabelSettings` properties:
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Fill) - Specifies the background color of the stack labels when border is set. The default value is **transparent**.
 * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Format) - Specifies the format of the stack labels. It supports a placeholder `{value}` which will be replaced by the stack label value.
@@ -766,21 +765,21 @@ The stack labels can be customized using the `ChartStackLabelSettings` propertie
 * [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Ry) - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
 * [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Angle) - Specifies the rotation angle for stack labels in degrees. The default value is **0**.
 
-We can customize the font of the stack labels using the [ChartStackLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html) properties as given below:
+Customize the font using [ChartStackLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html):
 
-* [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_TextAlignment) - Customizes the alignment of the text within the stack label.
-* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontFamily) - Customizes the font family for the stack label text.
-* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Size) - Customizes the font size of the stack label text.
-* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultFont.html#Syncfusion_Blazor_Charts_ChartDefaultFont_FontStyle) - Customizes the font style of the stack label text.
-* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontWeight) - Customizes the font weight of the stack label text.
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Color) - Customizes the color of the stack label text.
+* [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_TextAlignment) - Specifies the alignment of the text within the stack label.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontFamily) - Specifies the font family for the stack label text.
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Size) - Specifies the font size of the stack label text.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultFont.html#Syncfusion_Blazor_Charts_ChartDefaultFont_FontStyle) - Specifies the font style of the stack label text.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontWeight) - Specifies the font weight of the stack label text.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Color) - Specifies the color of the stack label text.
 
-We can customize the border of the stack labels using the [ChartStackLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html) properties as given below:
+Customize the border using [ChartStackLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html):
 
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html#Syncfusion_Blazor_Charts_ChartStackLabelBorder_Width) - Specifies the width of the border around the stack label.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultBorder.html#Syncfusion_Blazor_Charts_ChartDefaultBorder_Color) - Specifies the color of the border around the stack label.
 
- To customize the margin, we can use the [ChartStackLabelMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html) properties as given below:
+Customize the margin using [ChartStackLabelMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html):
 
 * [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Bottom) - Specifies the bottom margin of the stack label.
 * [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Top) - Specifies the top margin of the stack label.
@@ -791,7 +790,6 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-
     <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
     </ChartPrimaryXAxis>
 
@@ -844,14 +842,14 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
 
     public List<ChartData> ExpenseReports = new List<ChartData>
     {
-        new ChartData { X = "Food" , Y = 90, Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y2= 55, Y3= 75},
+        new ChartData { X = "Food" , Y = 90, Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y2 = 55, Y3 = 75}
     };
 }
 ```
@@ -862,7 +860,7 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event customizes series properties such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series) before rendering.
 
 ```cshtml
 
@@ -907,18 +905,18 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<ChartData> ExpenseReports = new List<ChartData>
 	{
-        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 
     public void SeriesRender(SeriesRenderEventArgs args)
@@ -932,7 +930,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event customizes individual data points before rendering.
 
 ```cshtml
 
@@ -978,18 +976,18 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public List<ChartData> ExpenseReports = new List<ChartData>
 	{
-        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
-        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
-        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
-        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
-        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
-        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
-        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
-        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
-        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
-        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
-        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2 = 70, Y3 = 120 },
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2 = 110, Y3 = 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2 = 120, Y3 = 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2 = 60, Y3 = 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2 = 80, Y3 = 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2 = 30, Y3 = 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2 = 70, Y3 = 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2 = 55, Y3 = 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2 = 40, Y3 = 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2 = 80, Y3 = 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2 = 45, Y3 = 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2 = 65, Y3 = 115 }
     };
 
     public void PointRender(PointRenderEventArgs args)
@@ -1001,9 +999,9 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLpZlhMCrpBJvmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour for an overview of chart types and capabilities, and explore the [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to learn how to represent time-dependent data.
 
 ## See also
 
-* [Data Label](../data-labels)
+* [Data label](../data-labels)
 * [Tooltip](../tool-tip)
