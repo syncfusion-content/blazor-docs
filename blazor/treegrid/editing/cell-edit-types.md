@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Cell edit type and its params in Blazor Tree Grid Component
+# Cell edit type and its params in Blazor TreeGrid Component
 
 Use the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) property to customize the editor used for a specific column. The edit type is typically selected based on the column’s data type.
 
@@ -754,4 +754,5 @@ public class TreeData
 In the following image, the `SfRichTextEditor` component is rendered with the `EditTemplate` in the **TaskName** column.
 
 ![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.png)
+
 
