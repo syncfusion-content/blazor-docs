@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor TreeGrid
 
-N> Before adding a column template to the Tree Grid, review the [template](../templates/#templates) section to configure templates and understand model binding.
+N> Before adding a column template to the Tree Grid, review the [template](https://blazor.syncfusion.com/documentation/treegrid/templates#templates) section to configure templates and understand model binding.
 
 The following video provides an overview of using **Column Template** in the Blazor TreeGrid.
 
@@ -228,7 +228,7 @@ The following screenshot shows a column template rendering an employee image.
 
 N> 
 - Tree Grid actions such as editing, filtering, and sorting depend on the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified for a template column, Tree Grid actions cannot be performed on that column.  
-- For templated TreeGrid component, the [ModelType](../templates/#template-modeltype) property must be defined.
+- For templated TreeGrid component, the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property must be defined.
 
 ## Using conditions inside template
 
@@ -328,7 +328,7 @@ In the following example, a checkbox is rendered based on the `Duration` field v
 The following screenshot shows conditional rendering within a template.
 ![Blazor TreeGrid Conditional Template](../images/blazor-treegrid-conditional-template.png)
 
-N> For Templated TreeGrid component, define the [ModelType](../templates/#template-modeltype) property to enable strong typing within templates.
+N> For Templated TreeGrid component, define the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property to enable strong typing within templates.
 
 ## Using image inside template
 
@@ -635,6 +635,7 @@ In this example, the target URL is specified in the `Link` field of the TreeGrid
 
 The following GIF represents template routing in tree grid
 ![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+
 
 
 
