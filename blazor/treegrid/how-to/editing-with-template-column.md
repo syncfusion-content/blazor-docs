@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Editing Template Column in Suncfusion Blazor TreeGrid Component
+# Editing Template Column in Syncfusion Blazor TreeGrid Component
 
 To enable editing for a template column in the TreeGrid, define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for the corresponding [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. This ensures that the column is recognized as editable during row editing operations.
 
