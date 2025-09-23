@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# AutoFill in TreeGrid Component
+# AutoFill in Blazor TreeGrid Component
 
 AutoFill copies the values of selected cells to other cells by dragging the fill handle (autofill icon) from the selection to the target range. Enable this feature by setting the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property to true.
 
@@ -104,4 +104,5 @@ The following GIF represent a TreeGrid with auto fill feature.
 * String values are not parsed into numeric or date types. Copying string cells into numeric columns displays **NaN**. Copying string cells into date columns results in an **empty cell**.  
 
 * Linear series and sequential data generation are not supported by AutoFill.
+
 
