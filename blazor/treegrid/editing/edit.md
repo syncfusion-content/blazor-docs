@@ -640,7 +640,7 @@ Perform the CRUD operations like **Add**, **Update**, **Delete** by using the `A
     public async Task Update()
     {
         TreeData.BusinessObject data = new TreeData.BusinessObject() {  TaskId = 1,TaskName = "Updated Task",Duration = 45,Progress = 50,Priority = "Low",ParentId = null };
-        await this.treegrid.UpdateRow(1, data);
+        await this.treegrid.UpdateRowAsync(1, data);
     }
 
     public async Task Delete()
@@ -1022,3 +1022,4 @@ public class TreeData
 ## See also
     
 * [Cascading DropDownList while Editing in Blazor TreeGrid](https://www.syncfusion.com/forums/175409/cascading-dropdown-dont-work-inside-grid-dialog-form-template)
+
