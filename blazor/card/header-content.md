@@ -13,7 +13,9 @@ documentation: ug
 
 ## Header
 
-The Card can be created with header title, sub title and images. For adding header you need to add `CardHeader` Component. Card provides below elements and corresponding class definitions to include header.
+The `CardHeader` component is used to define the header section of the Card. It supports a title, subtitle, and can include an image.
+
+### Elements within CardHeader
 
 Elements   | Description
 ------------ | -------------
@@ -52,10 +54,9 @@ Card header has an option for adding images in the header. It is aligned with ei
 
 ## Content
 
-Content in Card holds texts, images, links, and all possible HTML elements. It is adaptable within the Card root element.
+The `CardContent` component is used to display the main textual or HTML content of the Card. It can hold various elements such as text, images, links, and other HTML structures.
 
-* Create a `Content` component.
-* Place content `div` element in the Card root element or within any Card inner elements.
+*   Wrap your content within the `CardContent` component, placed directly inside the `SfCard` element or within another card sub-element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -73,7 +74,7 @@ Content in Card holds texts, images, links, and all possible HTML elements. It i
 
 ### Image
 
-Card content is designed to display an image tag within it. You can wrap an image element inside the card content to create a visually appealing layout. Additionally, CSS styling can be used to further customize the appearance of card content.
+The `CardContent` area is designed to flexibly host various HTML elements, including `<img>` tags. You can embed images directly within the `CardContent` to create rich and visually appealing layouts. Custom CSS can be applied to further style the image and content.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

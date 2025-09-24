@@ -13,9 +13,11 @@ documentation: ug
 
 ## Images
 
-The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
+The Blazor Card component allows you to include images within its structure using the [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) component. You can add the `<CardImage>` component directly inside the `<SfCard>` element.
 
 N> By default, card images occupies full width of its parent element.
+
+The CardImage supports direct specification of the image source using its `Image` property. Additionally, it can include an `Alt` property for improved accessibility, providing alternative text for the image.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -28,7 +30,7 @@ N> By default, card images occupies full width of its parent element.
 
 ### Title
 
-Card image is supported to include a `Title` property for the image. By default, Title is placed over the image on left-bottom position with overlay.
+To apply custom CSS styles to an image within a `CardImage` component, you can define a CSS class and apply it using the `CssClass` property. This allows for advanced styling such as background images, specific sizing, or positioning.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -43,10 +45,11 @@ Card image is supported to include a `Title` property for the image. By default,
 </SfCard>
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUihLBhHVhadTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Title](images/Title-card.png)
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeparator` property to `true` in card content for adding a divider.
+Dividers are used to visually separate elements within the Card. To add a divider below a `CardContent` component, set its [`EnableSeparator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html#Syncfusion_Blazor_Cards_CardContent_EnableSeparator) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -69,3 +72,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhqsVBBLnBeVrnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Divider](images/Divider-card.png)

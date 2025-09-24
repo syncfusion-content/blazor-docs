@@ -11,9 +11,9 @@ documentation: ug
 
 # Getting Started with Blazor Card Component
 
-This section briefly explains about how to include [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section explains how to include the Syncfusion [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in your Blazor WebAssembly App using Visual Studio or Visual Studio Code.
 
-To get start quickly with Blazor Card component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card) sample.
+To get started quickly with the Blazor Card component, watch this video or refer to the [GitHub sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card) sample.
 {% youtube
 "youtube:https://www.youtube.com/watch?v=k8KSZIf5VPs"%}
 
@@ -25,13 +25,13 @@ To get start quickly with Blazor Card component, you can check on this video or 
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+## Create a New Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Cards and Themes NuGet in the App
 
-To add **Blazor Card** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Card** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, the Package Manager Console can be used to install the required NuGet package
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -52,11 +52,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio Code
+## Create a New Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
 
@@ -141,9 +141,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Card component
+## Add Syncfusion Blazor Card component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Card component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Card component to the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -157,27 +157,21 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Card component i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhJZiryJJlCWAIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Add header and content
+## Add Header and Content
 
-You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. You can also add the content by using [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
+To add a header, use the [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag with its [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) properties. For the main content, use the [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
 
 {% tabs %}
 {% highlight cshtml %}
 
-<div class="control-section">
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-            <SfCard>
-                <CardHeader Title="Debunking Five Data Science Myths" SubTitle="By John Doe | Jan 20, 2018" />
-                <CardContent Content="Tech evangelists are currently pounding their pulpits about all things AI, machine learning, analytics—anything that sounds like the future and probably involves lots of numbers. Many of these topics can be grouped under the intimidating term data science." />
-            </SfCard>
-        </div>
-    </div>
-</div>
+    <SfCard>
+        <CardHeader Title="Debunking Five Data Science Myths" SubTitle="By John Doe | Jan 20, 2018" />
+        <CardContent Content="Tech evangelists are currently pounding their pulpits about all things AI, machine learning, analytics—anything that sounds like the future and probably involves lots of numbers. Many of these topics can be grouped under the intimidating term data science." />
+    </SfCard>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLzZshSzfQZOzAc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component](images/blazor-card-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthytuLfqDCnNJHy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component](images/blazor-card-component.png)" %}
 
 N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent) that shows you how to render and configure the Card.
