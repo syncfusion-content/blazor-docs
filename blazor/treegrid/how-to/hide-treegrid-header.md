@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide TreeGrid Header in Syncfusion Blazor TreeGrid Component
 
-You can hide the TreeGrid header by applying custom CSS styles to the component. This approach is useful when you want to present a cleaner layout or embed the Tree rid in a minimal UI.
+The TreeGrid header can be hidden by applying custom CSS styles to the component. This approach is useful for presenting a cleaner layout or embedding the TreeGrid within a minimal user interface.
 
 ```html
 <style>
