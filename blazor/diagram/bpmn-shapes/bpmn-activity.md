@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN Activity in Blazor Diagram Component | Syncfusion
+title: BPMN Activity in Syncfusion Blazor Diagram Component | Syncfusion
 description: Learn here all about BPMN activity such as task, sub-process in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
@@ -58,7 +58,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Create a BPMN Activity Task
 
-The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property of the  [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the value of [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property is set to **None.** This is shown by a small event symbol in the top of the corner.
+The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property of the  [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows specification of the task type, such as sending, receiving, or user-based tasks. By default, the TaskType property is set to None, which is visually represented by a small event symbol in the top corner of the activity shape.
 
 The following code explains how to create different types of BPMN tasks.
 
@@ -356,7 +356,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sub-Process Type
 
-The `SubProcessType` property represents the type of task that is being processed. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property of subprocess allows you to define the type of SubProcessType. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
+The `SubProcessType` property represents the type of task being processed within a BPMN subprocess. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property of the subprocess allows specification of the subprocess type. By default, it is set to Default.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

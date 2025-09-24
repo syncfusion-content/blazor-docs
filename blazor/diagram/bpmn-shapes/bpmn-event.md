@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN Event in Blazor Diagram Component | Syncfusion
+title: BPMN Event in Syncfusion Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the BPMN event and event trigger in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

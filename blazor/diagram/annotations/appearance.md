@@ -544,7 +544,7 @@ Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/const
 
 ## How to Define Templates in Annotations
 
-The Diagram component supports using templates for annotations. HTML content can be defined within a Diagram Templates tag and associated with an annotation by setting its [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property to true. If you need to define separate templates for each annotation, you can differentiate using the ID property.
+The Diagram component supports templating for annotations. HTML content can be defined within the DiagramTemplates tag and linked to an annotation by setting the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property to true. To define separate templates for individual annotations, use the ID property to differentiate them.
 
 The following code illustrates how to define a template for both a node's and a connector's annotation.
 ```cshtml

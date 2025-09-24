@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN Shapes in Blazor Diagram Component | Syncfusion
+title: BPMN Shapes in Syncfusion Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create various BPMN Shapes in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
