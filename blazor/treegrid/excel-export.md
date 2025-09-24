@@ -1,18 +1,15 @@
 ---
 layout: post
 title: Excel Export in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about excel export in Syncfusion Blazor TreeGrid component and much more.
+description: Learn how to export TreeGrid data to Excel in the Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Excel Export in Blazor TreeGrid Component
 
-The excel export allows exporting Tree Grid data to Excel document. Use the
- **ExportToExcelAsync** method for exporting. To enable Excel export in the Tree Grid, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property as true.
-
-To know about exporting tree grid data to Excel document in Blazor tree grid component, you can check on this video.
+The Excel export feature allows exporting TreeGrid data to an Excel document using the **ExportToExcelAsync** method. To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property to `true`.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=FNVCqLmaF1A"%}
@@ -96,7 +93,7 @@ public class TreeData
 
 ## To customize excel export
 
-The excel export provides an option to customize mapping of the Tree Grid to excel document.
+The excel export provides an option to customize mapping of the TreeGrid to excel document.
 
 ### Export current page
 
@@ -183,7 +180,7 @@ public class TreeData
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of Tree Grid by defining **includeHiddenColumn** as **true**.
+The excel export provides an option to export hidden columns of Tre Grid by defining **includeHiddenColumn** as **true**.
 
 {% tabs %}
 
@@ -193,7 +190,7 @@ The excel export provides an option to export hidden columns of Tree Grid by def
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" AllowExcelExport="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
-             Toolbar="@(new List<string>() { "ExcelExport" })">
+            Toolbar="@(new List<string>() { "ExcelExport" })">
     <TreeGridEvents OnToolbarClick="ToolbarClickHandler" TValue="TreeData"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -223,7 +220,7 @@ The excel export provides an option to export hidden columns of Tree Grid by def
             this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
-}
+        }
 
 
 
@@ -529,4 +526,9 @@ public class TreeData
 
 ### Limitations
 
-Microsoft Excel permits up to seven nested levels in outlines. So that in the Tree Grid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Refer the [Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
+## Limitations
+
+Microsoft Excel supports up to **seven nested levels** in outlines. If the TreeGrid exceeds this depth, the document will be exported without outline formatting.
+
+Refer to the official documentation:  
+[Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
