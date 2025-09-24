@@ -35,7 +35,7 @@ The Syncfusion [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
 
-## Items based on current URL
+## Items Based on Current URL
 
 The Breadcrumb component can automatically generate its items based on the segments of the current page's URL. This provides a convenient way to create dynamic breadcrumbs without manual item definition. When the `SfBreadcrumb` is instantiated without any [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) directives, it inspects the current URL and generates breadcrumb items accordingly. Each segment of the URL becomes a breadcrumb item, and the text is typically derived from the URL segment
 
@@ -65,7 +65,7 @@ The Breadcrumb component can also be instructed to generate its items by parsing
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
 
-## Add or remove the Breadcrumb items
+## Add or Remove the Breadcrumb Items
 
 The Breadcrumb component allows programmatic manipulation of its items using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of Breadcrumb, so items in the breadcrumb can be dynamically add or remove from the Breadcrumb.
 

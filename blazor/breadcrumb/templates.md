@@ -21,7 +21,7 @@ The following template options are available in the Breadcrumb component:
 
 Templates used by the Breadcrumb component are of type `RenderFragment` and receive parameters that provide contextual data. Users can access these parameters using the implicit `context` parameter. You can optionally change this implicit parameter name using the `Context` attribute if needed.
 
-## Item template
+## Item Template
 
 The `ItemTemplate` enables developers to define a custom UI for each Breadcrumb item. In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as Chip component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) tag directive. The current item's data is accessible via the `context` parameter.
 
@@ -51,7 +51,7 @@ The `ItemTemplate` enables developers to define a custom UI for each Breadcrumb 
 
 ![Blazor Breadcrumb Item Template with Chips](./images/blazor-Breadcrumb-item-template.png)
 
-## Separator template
+## Separator Template
 
 The [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) enables customization of the separators between Breadcrumb items. In the example below, separators are customized with icons using the[SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. The `context` parameter provides access to the previous and next item data, though it's often unused for simple icon separators.
 
