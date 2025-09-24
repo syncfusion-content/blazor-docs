@@ -11,7 +11,7 @@ documentation: ug
 
 Dictionary values can be assigned to the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component.
 
-The following sample demonstrates how **Designation** is defined as a dictionary and accessed inside the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **Keyey** is compared with the **TaskId** column value, and the corresponding value is displayed.
+The following sample demonstrates how **Designation** is defined as a dictionary and accessed inside the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **KeyValuePair** is compared with the **TaskId** column value, and the corresponding value is displayed.
 
 ```cshtml
 @using TreeGridComponent.Data;
