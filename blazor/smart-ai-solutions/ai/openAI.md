@@ -7,7 +7,7 @@ control: AI Integration
 documentation: ug
 ---
 
-# OpenAI Integration with Syncfusion Blazor AI
+# OpenAI Integration with Syncfusion® Blazor AI
 
 The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to add AI-driven features to Blazor applications. These features include anomaly detection (identifying irregular data patterns), data analysis (processing and summarizing data), and content generation (creating text based on user input). This guide explains how to configure the library and use it with Syncfusion Blazor components, such as the Grid, to implement intelligent functionality.
 

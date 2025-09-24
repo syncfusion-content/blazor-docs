@@ -7,7 +7,7 @@ control: AI Integration
 documentation: ug
 ---
 
-# Ollama Integration with Syncfusion Blazor AI
+# Ollama Integration with Syncfusion® Blazor AI
 
 The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Ollama](https://ollama.com/) to add AI-driven features to Blazor applications using locally hosted AI models. These features include data restructuring (organizing data into hierarchical formats), content analysis (evaluating text or data patterns), and hierarchical organization (assigning parent-child relationships). This guide explains how to configure the library and use it with Syncfusion Blazor components, such as the TreeGrid, to implement intelligent functionality without external API dependencies.
 
