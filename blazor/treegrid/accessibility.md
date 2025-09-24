@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor TreeGrid component is outlined below
 
 ## WAI-ARIA
 
-The Blazor TreeGrid component follows [WAI-ARIA](https://www.w3.orgpg/patterns/treegrid/) patterns to ensure accessibility. The following ARIA attributes are used:
+The Blazor TreeGrid component follows [WAI-ARIA]([https://www.w3.orgpg/patterns/treegrid/](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/)) patterns to ensure accessibility. The following ARIA attributes are used:
 
 | Attribute | Purpose |
 |----------|---------|
@@ -97,7 +97,7 @@ The Blazor TreeGrid component supports [keyboard interaction](https://www.w3.org
 
 Accessibility levels in the Blazor TreeGrid component are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests. The accessibility compliance can be evaluated using the following sample:
 
-Open the [sample](https://ncfusion.com/accessibility/treegrid) in a new window to test accessibility features.
+Open the [sample](https://syncfusion.com/accessibility/treegrid) in a new window to test accessibility features.
 
 {% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
