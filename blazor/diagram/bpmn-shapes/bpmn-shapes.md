@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Shapes in Syncfusion Blazor Diagram Component | Syncfusion
+title: BPMN Shapes in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create various BPMN Shapes in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Shapes in Blazor Diagram Component
+# BPMN Shapes in Syncfusion Blazor Diagram Component
 
 BPMN (Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as any one of the built-in shapes.
 
