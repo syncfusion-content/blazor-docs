@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use custom helper inside the loop with templates in Blazor DataGrid | Syncfusion
+title: Use Custom Helper with Templates in Blazor DataGrid | Syncfusion
 description: Learn how to use a custom helper method inside a column template loop to render a star rating in the Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
