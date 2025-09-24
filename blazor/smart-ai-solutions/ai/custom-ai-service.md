@@ -100,8 +100,8 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 4. **Response Processing**: Parse the provider’s response and update the component (e.g., displaying text suggestions).
 
 ### Key Components
-- **IChatInferenceService**: Interface for interacting with custom AI providers. See [API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.AI.IChatInferenceService.html).
-- **AIServiceCredentials**: Syncfusion class for managing API keys, endpoints, and model names. See [API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.AI.AIServiceCredentials.html).
+- **IChatInferenceService**: Interface for interacting with custom AI providers.
+- **AIServiceCredentials**: Syncfusion class for managing API keys, endpoints, and model names.
 - **GenerateResponseAsync**: Sends asynchronous requests to the custom AI provider and retrieves responses.
 - **UI Components**: Syncfusion components like Smart TextArea integrate with the custom AI service for dynamic functionality.
 
@@ -115,4 +115,3 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 - [OpenAI Integration](https://blazor.syncfusion.com/documentation/ai-integration/openai)
 - [Azure OpenAI Integration](https://blazor.syncfusion.com/documentation/ai-integration/azure-openai)
 - [Ollama Integration](https://blazor.syncfusion.com/documentation/ai-integration/ollama)
-- [Smart TextArea Documentation](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
