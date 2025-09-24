@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor Breadcrumb Component
 
-The Blazor Breadcrumb component is templated, allowing you to customize various parts of its UI during rendering. This flexibility enables users to render custom components or content using your own logic, enhancing the appearance and functionality of your breadcrumbs.
+The Blazor Breadcrumb component is templated, allowing customization of various parts of its UI during rendering. This flexibility enables the rendering of custom components or content using user-defined logic, enhancing both the appearance and functionality of the breadcrumb trail.
 
 The following template options are available in the Breadcrumb component:
 

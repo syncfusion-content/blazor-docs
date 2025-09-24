@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Blazor Breadcrumb Component
 
-By default, [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) items support navigation using both relative and absolute URLs. You can also implement custom navigation logic by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property to `false`.
+By default, [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) items support navigation using both relative and absolute URLs. Custom navigation logic can be implemented by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property to `false`.
 
 ## Relative URL
 
@@ -60,7 +60,7 @@ The following example demonstrates Breadcrumb items configured with absolute URL
 
 ## Enable Navigation for the Last Breadcrumb Item
 
-By default, the last item in a breadcrumb trail represents the current page and is generally not navigable. However, you can enable navigation for the last Breadcrumb item by setting the[EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property to `true`. This can be useful in specific scenarios where the "current page" link should also be clickable.
+By default, the last item in a breadcrumb trail represents the current page and is typically not navigable. Navigation for the last Breadcrumb item can be enabled by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property to `true`. This can be useful in specific scenarios where the "current page" link should also be clickable.
 
 The following example demonstrates enabling navigation for the last Breadcrumb item:
 

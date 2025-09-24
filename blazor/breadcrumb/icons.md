@@ -35,7 +35,7 @@ N> By default, icons are positioned to the left side of the item text.
 
 ## Breadcrumb with image
 
-You can incorporate images into Breadcrumb items by utilizing the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, an image is added to the Breadcrumb item with height and width by using `e-image-home` CSS class.
+Images can be incorporated into Breadcrumb items using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, an image is added to a Breadcrumb item with specific height and width by using `e-image-home` CSS class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -61,7 +61,7 @@ You can incorporate images into Breadcrumb items by utilizing the [IconCss](http
 
 ![Blazor Breadcrumb with Image](./images/image.png)
 
-## Breadcrumb with SVG Image
+## Breadcrumb with SVG image
 
 To add an SVG image to a Breadcrumb item, use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property with a custom CSS class. In the following example, SVG image is added to the Breadcrumb item with height and width by using `e-svg-home` class.
 
@@ -89,7 +89,7 @@ To add an SVG image to a Breadcrumb item, use the [IconCss](https://help.syncfus
 
 ![Breadcrumb with SVG Image](./images/svg.PNG)
 
-## Icon Only
+## Icon only
 
 To display Breadcrumb items consisting solely of icons, provide the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property for each `BreadcrumbItem` without specifying the `Text` property.
 
