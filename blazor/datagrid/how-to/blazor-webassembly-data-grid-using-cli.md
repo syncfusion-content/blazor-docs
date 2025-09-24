@@ -669,6 +669,6 @@ public class OrderData
 
 * [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server using Visual Studio 2022](../getting-started)
+* [Getting Started with Syncfusion DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
 
 * [Getting Started with Syncfusion DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)

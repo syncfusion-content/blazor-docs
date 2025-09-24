@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize the Blazor DataGrid in various dimensions | Syncfusion
-description: Learn how to resize the Syncfusion Blazor DataGrid by adjusting its parent container using NumericTextBox inputs and an external button to control width and height.
+description: Learn how to resize the Blazor DataGrid by adjusting its parent container using NumericTextBox inputs and a button.
 platform: Blazor
 control: DataGrid
 documentation: ug
