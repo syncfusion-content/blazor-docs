@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TreeGrid Component | Syncfusion
-description: Learn how the Syncfusion Blazor TreeGrid component supports accessibility standards and much more.
+description: Learn how the Syncfusion Blazor TreeGrid component complies with accessibility standards, including keyboard navigation and ARIA support.
 platform: Blazor
 control: TreeGrid
 documentation: ug
