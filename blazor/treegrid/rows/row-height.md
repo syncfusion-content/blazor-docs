@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Row Height in Blazor Tree Grid Component | Syncfusion
+title: Row Height in Blazor TreeGrid Component | Syncfusion
 description: Check out here and learn more details about the Row Height in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Row Height in Blazor Tree Grid Component
+# Row Height in Blazor TreeGrid Component
 
-The row height of tree grid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. The `RowHeight` property changes the row height of the entire tree grid rows.
+The row height of TreeGrid data rows can be customized using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. This property sets the height for all data rows in pixels and does not affect header or footer rows.
 
-In the below example, the **RowHeight** is set as *60px*.
+In the following example, **RowHeight** is set to 60 pixels.
 
 {% tabs %}
 
@@ -77,11 +77,11 @@ public class TreeData
 
 ![Blazor TreeGrid with Custom Row Height](../images/blazor-treegrid-custom-row-height.png)
 
-## Customize row height for particular row
+## Customize row height for a particular row
 
-The row height for a particular row can be customized using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event by adding `row-height` custom class in required row element.
+Customize the row height for specific rows using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event by adding a custom CSS class to the target row element.
 
-In the below example, the row height for the row with TaskId as '3' is set as '90px' using the `RowDataBound` event.
+In the following example, the row with TaskId equal to 3 is set to 90 pixels using a CSS class applied in the `RowDataBound` event.
 
 {% tabs %}
 
@@ -160,4 +160,5 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Specific Row Height in Blazor Tree Grid](../images/blazor-treegrid-specific-row-height-customization.png)
+
+![Customizing Specific Row Height in Blazor TreeGrid](../images/blazor-treegrid-specific-row-height-customization.png)
