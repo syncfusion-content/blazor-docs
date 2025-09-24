@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Using dictionary as datasource in Blazor TreeGrid | Syncfusion
-description: Learn how to use dictionary values in the Tree Grid datasource in Syncfusion Blazor TreeGrid component.
+title: Using Dictionary as datasource in Blazor TreeGrid | Syncfusion
+description: Learn how to use dictionary values in the TreeGrid DataSource in Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Using dictionary values as datasource in Blazor TreeGrid Component
+# Using Dictionary values as DataSource in Blazor TreeGrid Component
 
 Dictionary values can be assigned to the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component.
 
