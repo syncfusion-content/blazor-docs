@@ -66,7 +66,7 @@ var app = builder.Build();
 
 ## Testing the Custom AI Integration
 
-1. Configure the Blazor Web App with the Smart Paste Button and custom AI service as described above.
+1. Configure the Blazor Web App Server with the Smart Paste Button and custom AI service as described above.
 2. Add the code to **~/Pages/Home.razor** and ensure **Program.cs** includes the service registrations.
 3. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
 4. Copy the sample content provided in the Razor file.
