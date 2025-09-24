@@ -37,5 +37,5 @@ To use the Syncfusion Blazor AI library, ensure the following:
 - Local models like Ollama demand sufficient hardware resources for optimal performance.
 
 ## See Also
-- [Smart TextArea Documentation](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-- [Smart Paste Button Documentation](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
+- [Smart TextArea Documentation](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+- [Smart Paste Button Documentation](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
