@@ -114,7 +114,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
     }
     public void Show()
     {
-        this.TreeGrid.OpenColumnChooser(200, 50);
+        this.TreeGrid.OpenColumnChooserAsync(200, 50);
     }
 }
 

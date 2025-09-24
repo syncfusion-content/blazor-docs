@@ -107,7 +107,7 @@ N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 ## Enable/Disable Toolbar Items
 
-The tool bar items can be enabled or disabled by using the [EnableToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableToolbarItems.html) method.
+The tool bar items can be enabled or disabled by using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method.
 
 ```cshtml
 
@@ -144,12 +144,12 @@ The tool bar items can be enabled or disabled by using the [EnableToolbarItems](
 
     public void Enable()
     {
-        this.TreeGrid.EnableToolbarItems(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, true);
+        this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, true);
     }
 
     public void Disable()
     {
-        this.TreeGrid.EnableToolbarItems(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, false);
+        this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, false);
     }
 
     public void ToolBarClick(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
@@ -160,7 +160,7 @@ The tool bar items can be enabled or disabled by using the [EnableToolbarItems](
         }
         if (Args.Item.Text == "CollapseAll")
         {
-            this.TreeGrid.CollapseAll();
+            this.TreeGrid.CollapseAllAsync();
         }
     }
 
