@@ -94,7 +94,7 @@ Use the `PathPosition` property to place a connector port along the connector pa
 | PathPosition value | Output |
 |---|---|
 | 0 | ![StConnector port at start positionart](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
-| 0.5 | ![Connector port at midpoint (default)](../images/ConnectorPort/ConnectorPortDefault.png) |
+| 0.5 | ![Connector port at midpoint](../images/ConnectorPort/ConnectorPortDefault.png) |
 | 1 | ![Connector port at end position](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
 
 The following code example demonstrates how to set path position for a connector port.

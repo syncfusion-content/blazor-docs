@@ -116,7 +116,7 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/NodeRotateAngle)
 
-![Changing a node’s rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
+![Changing a nodes rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
 
 ## How to Set Minimum and Maximum Node Size
 
