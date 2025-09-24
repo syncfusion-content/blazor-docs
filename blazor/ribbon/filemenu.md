@@ -7,17 +7,17 @@ control: Ribbon
 documentation: ug
 ---
 
-# File Menu in Blazor Ribbon component
+# File Menu in Blazor Ribbon Component
 
-The Ribbon component provides a built-in file menu to include menu items for performing specific actions. The file menu can be configured using the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive directly inside [SfRibbon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html).
+The Blazor Ribbon component features a built-in file menu to accommodate commands for handling files, such as `New`, `Open`, and `Save`. This guide demonstrates how to configure the file menu, add items, and handle events using the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive within the [SfRibbon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html).
 
 ## Visibility
 
-You can make the file menu visible by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_Visible) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive to `true`. By default, the file menu is hidden.
+To display the file menu, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_Visible) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive to `true`. By default, this property is `false`, and the file menu is hidden.
 
-## Adding menu items
+## Adding Menu Items
 
-Menu items can be added to the file menu by binding a collection of menu items to the [MenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_MenuItems) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive. Each menu item can have properties like [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Text), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss), and nested sub-menu items too.
+Add items to the file menu by binding a list of `MenuItem` objects to the [MenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_MenuItems) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive. Each `MenuItem` can have properties such as [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Text), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss), and a list of nested sub-menu items.
 
 {% tabs %}
 {% highlight razor %}
@@ -93,9 +93,9 @@ Menu items can be added to the file menu by binding a collection of menu items t
 
 ![Ribbon Filemenu Items](./images/filemenu/filemenu_items.png)
 
-## Open submenu on click
+## Open Submenu on Click
 
-By default, submenu opens on mouse hover. To change this behavior and open submenu on menu item click, you can set the [ShowItemOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ShowItemOnClick) property to `true`.
+By default, the file menu opens submenus on mouse hover. To change this behavior to open on a menu item click, set the [ShowItemOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ShowItemOnClick) property to `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -169,9 +169,9 @@ By default, submenu opens on mouse hover. To change this behavior and open subme
 {% endhighlight %}
 {% endtabs %}
 
-## Custom header text
+## Custom Header Text
 
-You can define custom header text for the file menu by using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_Text) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive. By default, the header text is set to `File`.
+To define custom header text for the file menu, use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_Text) property of the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive. The default text is `File`.
 
 {% tabs %}
 {% highlight razor %}
@@ -249,16 +249,16 @@ You can define custom header text for the file menu by using the [Text](https://
 
 ## Events
 
-The following events are available in the Ribbon File menu.
+The `RibbonFileMenuSettings` component exposes several events to control the behavior of the file menu.
 
 |Name|Args|Description|
 |---|---|---|
-|[FileMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuOpening)|FileMenuOpenEventArgs|Triggers before the file menu popup opens|
-|[FileMenuClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuClosing)|FileMenuCloseEventArgs|Triggers before the file menu popup closes|
-|[FileMenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuOpened)|FileMenuOpenedEventArgs|Triggers after the file menu popup opened|
-|[FileMenuClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuClosed)|FileMenuClosedEventArgs|Triggers after the file menu popup closed|
-|[FileMenuItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuItemRendering)|FileMenuItemRenderEventArgs|Triggers while a file menu item is being rendered|
-|[ItemSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ItemSelecting)|FileMenuItemSelectEventArgs|Triggers while a file menu item is being selected|
+|[FileMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuOpening)|FileMenuOpenEventArgs|Triggers before the file menu popup opens.|
+|[FileMenuClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuClosing)|FileMenuCloseEventArgs|Triggers before the file menu popup closes.|
+|[FileMenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuOpened)|FileMenuOpenedEventArgs|Triggers after the file menu popup has opened.|
+|[FileMenuClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuClosed)|FileMenuClosedEventArgs|Triggers after the file menu popup has closed.|
+|[FileMenuItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_FileMenuItemRendering)|FileMenuItemRenderEventArgs|Triggers while a file menu item is being rendered.|
+|[ItemSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ItemSelecting)|FileMenuItemSelectEventArgs|Triggers when a file menu item is selected.|
 
 {% tabs %}
 {% highlight razor %}
