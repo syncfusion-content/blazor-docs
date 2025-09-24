@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Using dictionary values as datasource in Blazor DataGrid | Syncfusion
-description: Learn here all about using dictionary values as datagrid datasource in Syncfusion Blazor DataGrid component and more.
+title: Using Dictionary Values in Blazor DataGrid
+description: Learn how to display dictionary values in Syncfusion Blazor DataGrid using column templates and KeyValuePair mapping.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
+
 # Using dictionary values as datasource in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can use dictionary values as a data source within a column by accessing them through the **KeyValuePair** type inside the column's [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This is helpful when you want to display values from a shared dictionary that maps keys to specific values. Since a dictionary isn't a typical scalar field, a custom template is needed to extract and display the correct value for each row using the row's key.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display values from a dictionary by using a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). Because a dictionary is not a scalar field, the column cannot bind directly to it. Instead, the template accesses the dictionary via the row item and renders the corresponding value by matching the row’s key with the dictionary key.
 
-This is demonstrated in the following sample code, where **ShipName** is defined as Dictionary value and it is accessed inside the template property of the `GridColumn` using **KeyValuePair** data type. The key value is compared with the **OrderID** column value and based on that the value is displayed.This approach allows each row in the Grid to dynamically retrieve and render the appropriate dictionary value based on its key:
+In the following example, the ShipName data is stored as a Dictionary and accessed inside the GridColumn template using the KeyValuePair type. The row’s OrderID is compared with the dictionary key, and the matching value is displayed. This approach lets each row retrieve and render the appropriate dictionary value from a shared lookup at runtime. For efficiency, ensure that a consistent key (such as the primary key) is used for the lookup, and consider a direct lookup pattern when rendering complex templates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
