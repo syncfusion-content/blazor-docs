@@ -103,7 +103,6 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 - **IChatInferenceService**: Interface for interacting with custom AI providers.
 - **AIServiceCredentials**: Syncfusion class for managing API keys, endpoints, and model names.
 - **GenerateResponseAsync**: Sends asynchronous requests to the custom AI provider and retrieves responses.
-- **UI Components**: Syncfusion components like Smart TextArea integrate with the custom AI service for dynamic functionality.
 
 ## Error Handling
 - **Invalid API Key**: Ensure the API key is valid and stored securely in environment variables or a configuration service.
