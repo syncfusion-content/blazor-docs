@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Blazor DataGrid to Server App Using .NET CLI
+title: Add Blazor DataGrid to Server App via .NET CLI | Syncfusion
 description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using .NET CLI with setup, theme, scripts, and basic features.
 control: DataGrid
 documentation: ug

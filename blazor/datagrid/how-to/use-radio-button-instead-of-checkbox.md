@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use Radio Button Instead of Checkbox in Blazor DataGrid
+title: Use Radio Button Instead of Checkbox in DataGrid | Syncfusion
 description: Learn how to use radio buttons for single-row selection in Syncfusion Blazor DataGrid using templates and ValueChange event.
 platform: Blazor
 control: DataGrid
