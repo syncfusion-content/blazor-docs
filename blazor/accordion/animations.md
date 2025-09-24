@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animations in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Animations in Syncfusion Blazor Accordion component and much more.
+description: Customize expand and collapse animations in Syncfusion Blazor Accordion component using various effects, durations, and easing options for enhanced user experience.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -13,7 +13,7 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 
 By default, the accordion uses `SlideDown` animation for expanding panels (set through the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) property) and `SlideUp` animation for collapsing panels (set through the [Collapse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) property). You can disable animations completely by setting the animation [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Effect) to `None`.
 
-The following example demonstrates various animation types that can be applied to the Accordion component:
+The following example demonstrates how to apply and select various animation types for both the expand and collapse actions of the Accordion component using interactive dropdowns:
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -73,15 +73,15 @@ The following example demonstrates various animation types that can be applied t
         this.CollapseEffect = args.Value;
     }
     List<Effect> AnimationData = new List<Effect> {
-        new Effect() { ID= AnimationEffect.SlideDown, Text= "SlideDown" },
-        new Effect() { ID= AnimationEffect.SlideUp, Text= "SlideUp" },
-        new Effect() { ID= AnimationEffect.FadeIn, Text= "FadeIn" },
-        new Effect() { ID= AnimationEffect.FadeOut, Text= "FadeOut" },
-        new Effect() { ID= AnimationEffect.FadeZoomIn, Text= "FadeZoomIn" },
-        new Effect() { ID= AnimationEffect.FadeZoomOut, Text= "FadeZoomOut" },
-        new Effect() { ID= AnimationEffect.ZoomIn, Text= "ZoomIn" },
-        new Effect() { ID= AnimationEffect.ZoomOut, Text= "ZoomOut" },
-        new Effect() { ID= AnimationEffect.None, Text= "None" }
+        new Effect() { ID = AnimationEffect.SlideDown, Text = "SlideDown" },
+        new Effect() { ID = AnimationEffect.SlideUp, Text = "SlideUp" },
+        new Effect() { ID = AnimationEffect.FadeIn, Text = "FadeIn" },
+        new Effect() { ID = AnimationEffect.FadeOut, Text = "FadeOut" },
+        new Effect() { ID = AnimationEffect.FadeZoomIn, Text = "FadeZoomIn" },
+        new Effect() { ID = AnimationEffect.FadeZoomOut, Text = "FadeZoomOut" },
+        new Effect() { ID = AnimationEffect.ZoomIn, Text = "ZoomIn" },
+        new Effect() { ID = AnimationEffect.ZoomOut, Text = "ZoomOut" },
+        new Effect() { ID = AnimationEffect.None, Text = "None" }
     };
     public class Effect
     {
