@@ -94,6 +94,8 @@ In the following sample, dropdown is used as custom component in the duration co
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.TreeGrid;
 @using  Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>   
