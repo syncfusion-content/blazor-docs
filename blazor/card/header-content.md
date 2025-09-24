@@ -74,7 +74,7 @@ The `CardContent` component is used to display the main textual or HTML content 
 
 ### Image
 
-The `CardContent` area is designed to flexibly host various HTML elements, including `<img>` tags. You can embed images directly within the `CardContent` to create rich and visually appealing layouts. Custom CSS can be applied to further style the image and content.
+The `CardContent` area is designed to flexibly host various HTML elements, including  tags. Images can be embedded directly within the `CardContent` to create rich and visually engaging layouts. Custom CSS can be applied to style the image and content.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

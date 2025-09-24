@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Card component can be visually customized by overriding its default CSS styles. This document provides a list of common CSS classes and demonstrations on how to apply custom styles to various parts of the Card, such as its background, header, content, images, and action buttons.
 
-For comprehensive theme generation across Syncfusion controls, you can also utilize our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+For comprehensive theme generation across Syncfusion components, the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material) can be used to efficiently create and customize themes.
 
 ## Customizing the Card
 

@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Card Component
 
-This section explains how to include the Syncfusion [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in your Blazor WebAssembly App using Visual Studio or Visual Studio Code.
+This section explains how to integrate the Syncfusion [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component into a Blazor WebAssembly App using Visual Studio or Visual Studio Code.
 
 To get started quickly with the Blazor Card component, watch this video or refer to the [GitHub sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card) sample.
 {% youtube

@@ -13,7 +13,7 @@ By default, elements within the Blazor Card component are aligned vertically, ap
 
 ## Stacked Cards
 
-Within a horizontally aligned card, you can group a set of elements to maintain a vertical stacking using the [`CardStacked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardStacked.html) component. This component acts as a container, aligning its child elements vertically even within the horizontal context of the parent `SfCard`.
+In a horizontally aligned card, the [`CardStacked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardStacked.html) component can be used to group elements and maintain vertical stacking. This component acts as a container that aligns its child elements vertically, even within the horizontal layout of the parent `SfCard`.
 
 The following example demonstrates a horizontal card where the image is displayed alongside a `CardStacked` section containing the header and content, which remain vertically aligned:
 

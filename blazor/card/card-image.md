@@ -13,7 +13,7 @@ documentation: ug
 
 ## Images
 
-The Blazor Card component allows you to include images within its structure using the [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) component. You can add the `<CardImage>` component directly inside the `<SfCard>` element.
+The Blazor Card component supports the inclusion of images using the [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) component. The element can be added directly within the structure to display an image.
 
 N> By default, card images occupies full width of its parent element.
 
@@ -30,7 +30,7 @@ The CardImage supports direct specification of the image source using its `Image
 
 ### Title
 
-To apply custom CSS styles to an image within a `CardImage` component, you can define a CSS class and apply it using the `CssClass` property. This allows for advanced styling such as background images, specific sizing, or positioning.
+To apply custom CSS styles to an image within a `CardImage` component, define a CSS class and apply it using the `CssClass` property. This allows for advanced styling such as background images, specific sizing, or positioning.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

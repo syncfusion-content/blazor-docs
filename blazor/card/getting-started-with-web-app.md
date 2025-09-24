@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Card Component in a Web App
 
-This section explains how to include the Syncfusion[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
+This section describes how to include the Syncfusion [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
 
 {% tabcontents %}
 
@@ -77,7 +77,7 @@ N> For more details on creating a **Blazor Web App** with various interactive mo
 If the Blazor Web App uses the `WebAssembly or Auto` render modes, ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages are installed in the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you are in the project root directory where your `.csproj` file is located.
+* Ensure the terminal is open in the project’s root directory where your `.csproj` file is located.
 * Run the following commands to install the [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
@@ -225,7 +225,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Add Header and Content
 
-Add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. You can also add the content by using [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
+Add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. To include content within the card, use the [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
 
 {% tabs %}
 {% highlight cshtml %}

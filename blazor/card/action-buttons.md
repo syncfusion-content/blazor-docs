@@ -9,9 +9,9 @@ documentation: ug
 
 # Action Buttons in Blazor Card Component
 
-The Blazor Card component allows you to include and customize action buttons within its structure. Action buttons are typically placed in the `CardFooter` section of the Card. This document explains how to add these buttons and control their alignment.
+The Blazor Card component provides support for adding and customizing action buttons within its structure. Action buttons are typically placed in the `CardFooter` section of the Card. This document explains how to add these buttons and control their alignment.
 
-Action buttons are rendered within the `<CardFooter>` section. You can define either a single button or multiple buttons directly inside the `CardFooterContent` of the `CardFooter` component. The `CardFooterContent` is a `RenderFragment` property that accepts any Blazor UI elements.
+Action buttons are rendered within the `CardFooter` section. A single button or multiple buttons can be defined directly inside the `CardFooterContent` of the `CardFooter` component. The CardFooterContent is a `RenderFragment` property that accepts any Blazor UI elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
