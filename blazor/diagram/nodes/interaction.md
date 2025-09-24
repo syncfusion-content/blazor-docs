@@ -65,10 +65,11 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Select)
 
-And also the selection enable during the interaction.
+Selection is also available during interaction:
 
-* An element can be selected by clicking that element.
-* When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events get triggered and do customization on those events.
+* Select an element by clicking it. Shift-click or drag a selection rectangle (if enabled) to select multiple elements.
+
+* When elements are selected, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events are triggered and do customization on those events.
 
 ![Node Selection in Blazor Diagram](../images/blazor-diagram-node-selection.png)
 
@@ -116,14 +117,14 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Drag)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Drag)
 
-Also, drag the node during the interaction.
+Dragging is also supported during interaction:
 
-* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves all the selected elements.
-* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and do customization on those events.
+* Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves all the selected elements.
+* During dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and do customization on those events.
 
-![Dragging Node at Runtime in Blazor Diagram](../images/blazor-diagram-drag-node.gif)
+![Dragging a node at runtime in Blazor Diagram](../images/blazor-diagram-drag-node.gif)
 
 ## How to Resize a Node
 
@@ -171,13 +172,13 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
 
-Also, you can resize the node during interaction.
+Resizing is also supported during interaction:
 
-* Selector is surrounded by eight thumbs. When dragging these thumbs, the selected items can be resized.
+* The selector displays eight resize handles. Drag these handles to resize the selected items.
 * When one corner of the selector is dragged, the opposite corner will be in a static position.
 * When a node is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
-![Node Resizing in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
+![Resizing a node using the selection handles in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
 
 ## How to Rotate a Node
 
@@ -223,16 +224,16 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Rotate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Rotate)
 
-Also, rotate the node during the interaction.
+Rotation is also supported during interaction:
 
-* A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction leads to rotating the node.
+* A rotate handle appears above the selector. Click and drag the handle in a circular direction to rotate the node.
 * The node is rotated with reference to the static pivot point.
-* Pivot thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
-* When a node is rotated, the [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) and [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) events get triggered.
+* The Pivot thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
+* When a node is rotated, the [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) and [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) events are triggered.
 
-![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
+![Rotating a node using the rotation handle in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
 ## How to rotate a node using the RotationAngle property
 
@@ -261,9 +262,9 @@ Use this property when you want to specify the node’s rotation at the time of 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
 
-![Node Resizing in Blazor Diagram](../images/NodeRotation.png)
+![Node rotated by a fixed angle using the RotationAngle property](../images/NodeRotation.png)
 
 ## How to Flip a Node
 

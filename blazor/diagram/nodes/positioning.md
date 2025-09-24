@@ -11,13 +11,13 @@ documentation: ug
 
 ## How to Arrange Nodes
 
-* The position of a node is controlled by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these offset properties represent the distance between the origin of the diagram’s page and node’s center point.
+* Control a node’s position by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these represent the distance from the diagram page’s origin to the node’s pivot (center) point.
 
-* You may expect this offset values to represent the distance between the page origin and node’s top-left corner instead of the center. The Pivot property helps to solve this problem. The default value of the node’s [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) point is (0.5, 0.5) which means the center of the node.
+* If the expected reference is the node’s top-left corner instead of its center, adjust the [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) property. The default pivot is (0.5, 0.5), which corresponds to the node’s center.
 
-* The size of the node can be controlled by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties.
+* Control the node size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties.
 
-The following table shows how pivot relates offset values with node boundaries.
+The following table explains how the pivot relates offset values with node boundaries.
 
 | Pivot | Offset |
 |-------- | -------- |
@@ -25,7 +25,7 @@ The following table shows how pivot relates offset values with node boundaries.
 | (0,0) | OffsetX and OffsetY values are considered as the top-left corner of the node. |
 | (1,1) | OffsetX and OffsetY values are considered as the bottom-right corner of the node. |
 
-The following code shows how to change the Pivot value.
+The following code shows how to change the pivot value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -73,11 +73,11 @@ The following code shows how to change the Pivot value.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/Positioning)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/Positioning)
 
-![Arranging Node Position in Blazor Diagram](../images/blazor-diagram-node-position.png)
+![Positioning a node using pivot and offsets in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
-Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
+Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -114,13 +114,13 @@ Rotation of a node is controlled by using the [RotationAngle](https://help.syncf
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/NodeRotateAngle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/NodeRotateAngle)
 
-![Changing Node Rotation Angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
+![Changing a node’s rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
 
 ## How to Set Minimum and Maximum Node Size
 
-The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinWidth) and [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinHeight) properties of node allows you to control the minimum size of the node while resizing. Similarly, the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxWidth) and [MaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxHeight) properties of node allows you to control the maximum size of the node while resizing. The below gif explains how minimum and maximum sizes are controlled.
+The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinWidth) and [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinHeight) properties control the minimum size of a node during resizing. Similarly, the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxWidth) and [MaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxHeight) properties control the maximum size of the node during resizing. The below gif explains how minimum and maximum sizes are controlled.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -161,7 +161,7 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/MinMaxSize)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/MinMaxSize)
 
 ![Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)
 
@@ -169,7 +169,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to customize the node](./customization)
 
-* [How to get events when they interact with the node](./events)
+* [How to get events when interacting with the node](./events)
 
 
 * [How to Drag a Node Programmatically Without User Interaction in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)

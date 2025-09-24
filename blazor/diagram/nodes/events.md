@@ -11,19 +11,19 @@ documentation: ug
 
 ## Events
 
-Diagram provides several events support for node that triggers when interacting with the node.
+The diagram provides a several events support for node that triggers when interacting with the node.
 
 ## How to Handle Selection Change Event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
-* When selecting or unselecting the diagram elements, the following events are getting triggered. 
+* When selecting or unselecting diagram elements, the following events are triggered.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
 |[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
 |[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the node's or connector's selection is changed in the diagram.|
 
-The following code example explains how to get the selection change event in the diagram.
+The following code example demonstrates how to get the selection change event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -50,7 +50,7 @@ The following code example explains how to get the selection change event in the
             // Size of the node.
             Width = 100,
             Height = 100,
-            // Appearances of the node
+            // Appearance of the node
             Style = new ShapeStyle() 
             { 
                 Fill = "#6BA5D7", 
@@ -80,7 +80,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to Handle Position Change Event 
 
 * While dragging the node or connector through interaction, the following events can be used to do the customization.
-* When dragging the node, the following events are getting triggered. 
+* When dragging a node, the following events are triggered.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
@@ -142,7 +142,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to Handle Size Change Event 
 
 * While resizing the node during the interaction, the following events can be used to do the customization.
-* When resizing the node, the following events are getting triggered. 
+* When resizing a node, the following events are triggered.
 
 |Event Name|Arguments|Description|
 |------------|------------|-----------------------|
@@ -203,7 +203,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to Handle Rotate Change Event 
 
 * While rotating the node during the interaction, the following events can be used to do the customization.
-* When rotating the node, the following events are getting triggered. 
+* When rotating a node, the following events are triggered.
 
 |Event Name|Arguments|Description|
 |------------|----------|-------------------------|
@@ -259,7 +259,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
 
 ## How to Use Node Creating Event
 
@@ -309,11 +309,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/NodeCreatingEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/NodeCreatingEvent)
 
 ## How to Handle Property Changed Event
 
-The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when node's property of the diagram component is modified at runtime. This event provides valuable information about the changes occurring in the diagram. For a detailed understanding of the event arguments, refer to the [PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html).
+The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when a node property of the diagram component is modified at runtime. This event provides details about the changes occurring in the diagram. For event argument details, refer to [PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -351,11 +351,11 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PropertyChangedEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PropertyChangedEvent)
 
 ## How to Handle Collection Change Events
 
-* The diagram provides specific events that are triggered when nodes are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the node collection undergoes changes.
+* The diagram raises events when nodes are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the node collection undergoes changes.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
@@ -393,11 +393,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/CollectionChangeEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/CollectionChangeEvent)
 
 ## How to Handle the Mouse Enter Event
 
-The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter) event is triggered when the mouse pointer enters the boundary of a node in the diagram. This event provides valuable information about the element being interacted with. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html).
+The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter) event is triggered when the mouse pointer enters the boundary of a node in the diagram. The event arguments include details about the element being interacted with. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html).
 
 
 ```cshtml
@@ -428,11 +428,11 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseEnterEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseEnterEvent)
 
 ## How to Handle the Mouse Leave Event
 
-The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseLeave) event is triggered when the mouse pointer exits the boundaries of a node in the diagram. This event provides valuable information about the element being left. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html). 
+The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseLeave) event is triggered when the mouse pointer exits the boundaries of a node in the diagram. The event arguments include details about the element being left. For a comprehensive understanding of the event arguments and their properties, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html). 
 
 
 ```cshtml
@@ -463,7 +463,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseLeaveEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseLeaveEvent)
 
 ## How to Handle the Mouse Hover Event
 
@@ -498,12 +498,12 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseHoverEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseHoverEvent)
 
 
 ## How to Enable or Disable Node Behaviors Using Constraints
 
-The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
+The node Constraints property enables or disables specific features (for example, select, drag, resize, rotate). For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
 
 ## See also
 
@@ -513,4 +513,4 @@ The Constraints property of node allows you to enable or disable certain feature
 
 * [How to get events when they interact with the annotation](../annotations/events)
 
-* [How to Identify the Clicked Diagram Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to identify the clicked diagram elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
