@@ -46,7 +46,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontent %}
 
-{% tabcontent visual studio Code %}
+{% tabcontent Visual Studio Code %}
 
 ## Prerequisites
 
