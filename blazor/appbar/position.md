@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
+The AppBar component offers flexible control over its placement and behavior within your application's layout. You can configure its position and whether it remains visible during scrolling using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
@@ -17,7 +17,7 @@ The position of the AppBar can be set using the [Position](https://help.syncfusi
 
 ### Top AppBar
 
-The top AppBar is the default one in which it positions the AppBar at the top of the content.
+A top AppBar is the most common configuration, positioning the AppBar at the top of its parent container or the viewport. This is the default behavior if the `Position` property is not explicitly set.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -63,7 +63,7 @@ The top AppBar is the default one in which it positions the AppBar at the top of
 
 ### Bottom AppBar
 
-This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). The bottom AppBar positions the AppBar at the bottom of the content.
+A bottom AppBar positions the component at the bottom of its parent container. This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position).
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -109,7 +109,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 
 ### Sticky AppBar
 
-This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky). AppBar will be sticky while scrolling the AppBar content.
+A sticky AppBar remains visible at the top of the viewport even when the page content is scrolled.This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky).
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
