@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to use radio button instead of checkbox for row selection in Blazor DataGrid
+# How to use Radio Button Instead of Checkbox in Blazor DataGrid
 
 By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides checkbox selection for multiple row selection. When only one row should be selectable at a time, a radio button can be used instead of checkbox selection. This is achieved by using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature to render an [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) in each row. Assign the same radio group name for all rows so only one radio button can be selected at a time, and bind each radio button to a unique value from the data source (typically the primary key field).
 
@@ -79,3 +79,4 @@ The following example demonstrates how to handle row selection in the Grid using
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSDOVfUiyKZUmQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
