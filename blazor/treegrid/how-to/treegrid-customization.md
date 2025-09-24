@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Tree Grid customization in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Tree Grid customization in Syncfusion Blazor TreeGrid component and more.
+title: Customization in Blazor TreeGrid Component | Syncfusion
+description: Learn how to customize styles in the Syncfusion Blazor TreeGrid component using dynamic class assignment and event handling.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Tree Grid customization in Blazor TreeGrid Component
+# Customization in Syncfusion Blazor TreeGrid Component
 
-It is possible to customize the default styles of the Tree Grid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. Then the required styles are added to this class.
+The default styles of the TreeGrid component can be customized by dynamically adding CSS classes to cells using the `AddClass` method within the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. Styles can then be defined for these classes in the application's stylesheet.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
             AllowPaging="true">
