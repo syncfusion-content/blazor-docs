@@ -9,7 +9,7 @@ documentation: ug
 
 # Display Custom Tooltip in Blazor TreeGrid cell
 
-You can display custom tooltips in TreeGrid cells using the https://blazor.syncfusion.com/documentation/treegrid/columns/column-template feature by rendering the [Column Template](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component inside the template.
+Custom tooltips can be displayed in TreeGrid cells by using the [Column Template](https://blazor.syncfusion.com/documentation/treegrid/columns/column-template) feature. This can be achieved by rendering the [Tooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component inside the column template.
 
 The following example demonstrates how to render a tooltip for the **TaskName** column using the `SfTooltip` component.
 
