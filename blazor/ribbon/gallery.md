@@ -100,7 +100,7 @@ Add items to a group by defining a list of [GalleryItem](https://help.syncfusion
 
 ![Ribbon Gallery Items](./images/gallery/gallery_items.png)
 
-#### Css class
+#### CSS class
 
 Apply custom styling to a gallery item by setting its [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_CssClass) property.
 

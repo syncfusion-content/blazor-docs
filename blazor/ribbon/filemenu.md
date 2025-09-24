@@ -95,7 +95,7 @@ Add items to the file menu by binding a list of `MenuItem` objects to the [MenuI
 
 ## Open Submenu on Click
 
-By default, the file menu opens submenus on mouse hover. To change this behavior to open on a menu item click, set the [ShowItemOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ShowItemOnClick) property to `true`.
+By default, the file menu opens submenu on mouse hover. To change this behavior to open on a menu item click, set the [ShowItemOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonFileMenuSettings_ShowItemOnClick) property to `true`.
 
 {% tabs %}
 {% highlight razor %}
