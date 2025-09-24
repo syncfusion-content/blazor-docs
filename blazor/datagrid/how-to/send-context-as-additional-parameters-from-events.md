@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Send context as parameters from events in Blazor DataGrid | Syncfusion
-description: Checkout the documentation for sending context as additional parameters from events in Blazor DataGrid in Visual Side using .NET CLI and much more.
+title: Send Context as Parameters from Blazor DataGrid Events
+description: Learn how to Pass current row context from Blazor DataGrid events using edit templates to update bound fields instantly.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Sending context as additional parameters from events in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flexibility to pass additional context information during events. This capability is especially useful for dynamically updating Grid data based on interactions with other components, enabling seamless, real-time data modifications within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports passing the current row context to event handlers. This approach is useful for updating Grid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
 
 To implement this, follow these steps:
 
@@ -17,13 +17,11 @@ To implement this, follow these steps:
 
    2. Bind the ComboBox’s `ValueChange` event to a handler method.
 
-   3. The method receives two parameters:
+   3. The handler receives:
+      * args: Event arguments that include the new ComboBox value and the selected item.
+      * context: The template context cast to the row type (Order) and stored in a local variable (order).
 
-    * **args**: The event arguments containing the new `ComboBox` value and selected item.
-
-    * **Context**: The current row data is referenced by the variable **Order**, which is cast from the template’s context object as **Order**.
-
-    4. Within the event handler, you can update properties of the current row, such as **ShipCity**, **ShipCountry** based on the selected `ComboBox` value. The Grid is directly bound to the data object, so changes made to this object are immediately reflected in the Grid UI.
+   4. Inside the handler, update properties of the current row (for example, ShipCity and ShipCountry) based on the selected ComboBox value. Because the Grid is bound to the same data object instance, changes are reflected immediately in the Grid UI.
 
 The following example demonstrates this approach:
 
@@ -51,7 +49,7 @@ Height="600" @ref="Grid">
           <SfComboBox TValue="string" TItem="Customer" DataSource="@Customers" @bind-Value="order.CustomerID"
           Placeholder="Select Customer" FloatLabelType="FloatLabelType.Always" AllowFiltering="true">
             <ComboBoxFieldSettings Value="CustomerID" Text="CustomerName"></ComboBoxFieldSettings>
-            <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="@(args => OnCustomerChange(args, order)" >
+            <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="args => OnCustomerChange(args, order)"></ComboBoxEvents>
           </SfComboBox>
         </div>
       </div>
@@ -154,4 +152,4 @@ Height="600" @ref="Grid">
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoXHDepIVbDBhd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhIXYrfAswqgaHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

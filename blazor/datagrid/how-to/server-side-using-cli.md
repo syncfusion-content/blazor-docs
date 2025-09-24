@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Add Blazor DataGrid to a Server-Side App via .NET CLI | Syncfusion
-description: Check out the documentation for getting started with the Syncfusion Blazor DataGrid in a server-side app using the .NET CLI and more.
-platform: Blazor
+title: Add Blazor DataGrid to Server App Using .NET CLI
+description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using .NET CLI with setup, theme, scripts, and basic features.
 control: DataGrid
 documentation: ug
 ---
 
 # Blazor DataGrid in Server Side App using CLI
 
-This article provides a step-by-step instructions to build a Blazor Server App with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
+This article provides step-by-step instructions to build a Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ## Manually creating a project
 
-This section provides a brief explanation on how to manually create a Blazor Server App using CLI.
+This section explains how to manually create a Blazor Server app using the CLI.
 
 ### Prerequisites
 
-Ensure you have the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) installed.
+Ensure the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) is installed.
 To check the installed version, run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
 
 {% tabs %}
@@ -41,13 +40,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor app project and places it in a new directory called BlazorApp inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) command topics for more details.
+This command creates a new Blazor app project and places it in a directory called BlazorApp inside your current location. See the [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-N> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add -f flag along with dotnet new blazorserver comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
+N> If multiple SDK versions are installed and a specific target framework (for example, net5.0/netcoreapp3.1) is required, add the -f flag with the dotnet new blazorserver command. Refer to the [dotnet new options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for available flags.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the app
 
-To add the `Syncfusion.Blazor.Grid` NuGet package to your application, use the following command in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to the [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
+To add the `Syncfusion.Blazor.Grid` NuGet package to the application, use the following command in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -59,7 +58,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
@@ -75,7 +74,7 @@ Open the **~/_Imports.razor** file and add the following namespaces:
 ```
 2. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> service:
 
-In your **~/Program.cs** file, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as shown below:
+In the **~/Program.cs** file, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as shown below:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -99,9 +98,7 @@ var app = builder.Build();
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` section of your main layout page as shown below:
-
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` section of the main layout page as shown below:
 
 * For **.NET 7,8,9 and 10** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
@@ -112,7 +109,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Review the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to learn various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for approaches to add script references.
 
 ### Add Blazor DataGrid
 
@@ -173,7 +170,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-* To build and run the Blazor Server App, use the following command in your terminal or command prompt:
+* To build and run the Blazor Server app, use the following command in the terminal or command prompt:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -189,7 +186,7 @@ dotnet run
 
 ### Defining row data
 
-To bind data for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, assign a `List<OrderData>` (or any other collection that implements `IEnumerable<OrderData>`) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the `OnInitialized` life cycle of the page.
+To bind data for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, assign a `List<OrderData>` (or any collection that implements `IEnumerable<OrderData>`) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. The data source is typically assigned in the `OnInitialized` lifecycle method of the page.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -257,13 +254,13 @@ public class OrderData
 
 ### Defining columns
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
+Columns are automatically generated when the column declaration is empty or undefined during initialization of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
-The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
+The Grid also supports defining columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn`, several properties are available to customize column behavior.
 
 Here are the key properties used in the example below:
 
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) : Binds the column to a property on your data model.
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) : Binds the column to a property in the data model.
 
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) : Sets the displayed column title.
 
@@ -273,7 +270,7 @@ Here are the key properties used in the example below:
 
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) : Specifies the column data type.
 
-* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width): Sets the column’s width.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width): Sets the column width.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -349,7 +346,7 @@ public class OrderData
 
 ### Enable paging
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display records in a paged format. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. You can customize the pager using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display records in a paged format. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. Customize the pager using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -425,7 +422,7 @@ public class OrderData
 
 ### Enable sorting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can sort records in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**. You can customize the sorting using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can sort records in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**. Customize sorting using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -500,7 +497,7 @@ public class OrderData
 
 ### Enable filtering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can filter records to display only those that meet specific criteria. To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. You can customize the filtering behavior using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can filter records to display only those that meet specific criteria. To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Customize filtering behavior using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -576,7 +573,7 @@ public class OrderData
 
 ### Enable grouping
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can group records by one or more columns. To enable grouping, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. You can customize grouping behavior using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can group records by one or more columns. To enable grouping, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Customize grouping behavior using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -656,8 +653,8 @@ public class OrderData
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started-with-server-app.md)
 
 * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid in Blazor WebAssembly App using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor WebAssembly using Visual Studio 2022](../getting-started.md)
