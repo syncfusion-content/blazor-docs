@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Port Interaction in Blazor Diagram Component | Syncfusion
+title: Port Interaction in Syncfusion Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Port Interaction in Blazor Diagram Component
+# Port Interaction in Diagram Component
 
 Ports can be used to start connector drawing by enabling the `Draw` flag in [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) for the desired port.
 

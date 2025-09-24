@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Organizational chart in Blazor Diagram Component | Syncfusion
+title: Organizational chart in Syncfusion Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create organization chart in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Organizational Chart in Blazor Diagram Component
+# Organizational Chart in Diagram Component
 
 An organizational chart is a diagram that displays the structure of an organization and the relationships. To create an organizational chart, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart).
 

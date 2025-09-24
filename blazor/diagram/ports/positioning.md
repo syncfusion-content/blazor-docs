@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning a Port in Blazor Diagram Component | Syncfusion
+title: Positioning a Port in Syncfusion Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Positioning a Port in Blazor Diagram Component
+# Positioning a Port in Diagram Component
 
 Customize the position and appearance of the port efficiently. Ports can be aligned relative to node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [PointPort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html) class. Ports of a node can be positioned using the following properties of `PointPort`.
 
