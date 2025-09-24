@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenAI Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion Blazor AI library with OpenAI to enable AI-powered features like anomaly detection and content generation in Blazor applications.
+description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, and practical examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -368,7 +368,7 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Op
 
 ## Error Handling
 - **Invalid API Key**: Ensure the API key is valid and correctly configured in environment variables or user secrets.
-- **Rate Limits**: OpenAI API usage may be limited based on your plan. Check [OpenAI’s pricing documentation](https://openai.com/pricing) for details.
+- **Rate Limits**: OpenAI API usage may be limited based on your plan.
 - **Network Issues**: Handle connectivity errors by implementing retry logic or displaying user-friendly messages.
 
 ## See Also

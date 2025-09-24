@@ -22,7 +22,7 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-- An API key is obtained from the chosen AI provider (e.g., DeepSeek via the [DeepSeek API documentation](https://platform.deepseek.com/docs)).
+- An API key is obtained from the chosen AI provider (e.g., DeepSeek via the [DeepSeek API documentation](https://platform.deepseek.com)).
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - Familiarity with HTTP client usage and JSON serialization in .NET applications.
 
@@ -104,5 +104,5 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 
 ## Error Handling
 - **Invalid API Key**: Ensure the API key is valid and stored securely in environment variables or a configuration service.
-- **Rate Limits**: Check the custom AI provider’s documentation (e.g., [DeepSeek API docs](https://platform.deepseek.com/docs)) for rate limit details.
+- **Rate Limits**: Check the custom AI provider’s documentation (e.g., [DeepSeek API docs](https://platform.deepseek.com)) for rate limit details.
 - **Network or Parsing Errors**: Handle HTTP or JSON errors gracefully, as shown in the `DeepSeekAIService` implementation.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure OpenAI Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use Syncfusion Blazor AI with Azure OpenAI to enable AI-driven features like natural language querying and data analysis in Blazor applications.
+description: Learn how to set up and use Syncfusion.Blazor.AI with Azure OpenAI for AI-powered features in your Blazor apps, including configuration and examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
