@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Dictionary as datasource in Blazor TreeGrid | Syncfusion
+title: Using Dictionary as DataSource in Blazor TreeGrid | Syncfusion
 description: Learn how to use dictionary values in the TreeGrid DataSource in Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
