@@ -180,7 +180,7 @@ public class TreeData
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of Tre Grid by defining **includeHiddenColumn** as **true**.
+The excel export provides an option to export hidden columns of TreeGrid by defining **includeHiddenColumn** as **true**.
 
 {% tabs %}
 
