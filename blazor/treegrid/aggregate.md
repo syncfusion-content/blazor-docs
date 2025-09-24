@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregate in Blazor TreeGrid Component | Syncfusion
-description: Learn all about aggregate functionality in the Syncfusion Blazor TreeGrid component  and much more.
+description: Learn how to use aggregate functionality in the Syncfusion Blazor TreeGrid component, including sum, average, min, max, and custom aggregates.
 platform: Blazor
 control: TreeGrid
 documentation: ug
