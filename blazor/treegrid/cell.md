@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Blazor TreeGrid Component | Syncfusion
-description: Learn about cell customization features in the Syncfusion Blazor TreeGrid component and much more.
+description: Learn about cell customization features in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
