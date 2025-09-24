@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Customize column menu icon in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about how to customize column menu icon in Syncfusion Blazor TreeGrid component and more.
+description: Learn how to override the default column menu icon in the Syncfusion Blazor TreeGrid component using custom CSS.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Customize column menu icon in Blazor TreeGrid Component
 
-The column menu icon can be customized by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
+You can customize the column menu icon in the TreeGrid by overriding the default icon class `.e-icons.e-columnmenu` using the `content` property in CSS. This allows you to replace the default glyph with a custom one from the Syncfusion icon font set.
+
+To apply this customization, ensure that the TreeGrid has the column menu feature enabled.
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
@@ -17,15 +19,15 @@ The column menu icon can be customized by overriding the default icon class `.e-
 }
 ```
 
-This is demonstrated in the below sample code,
+The following example demonstrates how to apply a custom icon:
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid height="315" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true" TreeColumnIndex="1" ShowColumnMenu="true" AllowSorting="true">
     <TreeGridColumns>
@@ -67,7 +69,7 @@ public class WrapData
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int? Duration { get; set; }
-        public String Progress { get; set; }
+        public string Progress { get; set; }
         public string Priority { get; set; }
         public bool Approved { get; set; }
         public int Resources { get; set; }
