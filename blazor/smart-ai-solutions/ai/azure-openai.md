@@ -9,8 +9,6 @@ documentation: ug
 
 # Azure OpenAI Integration with Syncfusion Blazor AI
 
-## Introduction
-
 The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to add AI-driven features to Blazor applications. These features include natural language querying (converting plain English queries to structured data filters), data analysis (processing and summarizing datasets), and content processing (generating or refining text). This guide explains how to configure the library and use it with Syncfusion Blazor components, such as the QueryBuilder and Grid, to implement intelligent functionality.
 
 ## Prerequisites
@@ -374,6 +372,5 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Az
 - **Rate Limits**: Azure OpenAI usage may be limited based on your subscription. Check [Azure OpenAI pricing documentation](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for details.
 
 ## See Also
-- [Syncfusion Blazor AI Library Overview](https://blazor.syncfusion.com/documentation/ai-integration/overview)
-- [Syncfusion Blazor QueryBuilder Documentation](https://blazor.syncfusion.com/documentation/query-builder/getting-started)
-- [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/grid/getting-started)
+- [Syncfusion Blazor QueryBuilder Documentation](https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp)
+- [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

@@ -7,9 +7,7 @@ control: AI Integration
 documentation: ug
 ---
 
-# Custom AI Service Integration with Syncfusion Blazor AI
-
-## Introduction
+## Custom AI Service Integration with Syncfusion Blazor AI
 
 The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables integration with custom AI providers by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility feature allows developers to connect Blazor applications to proprietary or specialized AI services, such as enterprise-specific models or local AI servers, enhancing Syncfusion Blazor components with tailored AI functionality like text generation or data processing.
 
@@ -108,9 +106,3 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 - **Invalid API Key**: Ensure the API key is valid and stored securely in environment variables or a configuration service.
 - **Rate Limits**: Check the custom AI provider’s documentation (e.g., [DeepSeek API docs](https://platform.deepseek.com/docs)) for rate limit details.
 - **Network or Parsing Errors**: Handle HTTP or JSON errors gracefully, as shown in the `DeepSeekAIService` implementation.
-
-## See Also
-- [Syncfusion Blazor AI Library Overview](https://blazor.syncfusion.com/documentation/ai-integration/overview)
-- [OpenAI Integration](https://blazor.syncfusion.com/documentation/ai-integration/openai)
-- [Azure OpenAI Integration](https://blazor.syncfusion.com/documentation/ai-integration/azure-openai)
-- [Ollama Integration](https://blazor.syncfusion.com/documentation/ai-integration/ollama)
