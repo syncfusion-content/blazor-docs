@@ -12,8 +12,8 @@ documentation: ug
 Custom toolbar items can be added to the TreeGrid using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. Actions for these toolbar template items can be defined using the `ToolbarClick` event.
 
 **Step 1**:
-I
-nitialize the template for the custom component. The following code adds a `DropDownList` component to the ToolBar.
+
+Initialize the template for the custom component. The following code adds a `DropDownList` component to the ToolBar.
 
 ```cshtml
 <SfToolbar>
