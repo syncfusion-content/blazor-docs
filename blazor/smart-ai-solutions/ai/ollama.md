@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ollama Integration with Syncfusion Blazor AI
+title: Ollama Integration with Syncfusion Blazor AI | Syncfusion
 description: Learn how to configure and use Syncfusion Blazor AI with Ollama for AI-driven features like data restructuring in Blazor applications.
 platform: Blazor
 control: AI Integration

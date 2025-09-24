@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Blazor AI Library Overview
+title: Syncfusion Blazor AI Library Overview | Syncfusion
 description: Discover the Syncfusion Blazor AI library, its key features, supported AI providers, and how it powers AI-driven features in Blazor applications.
 platform: Blazor
 control: AI Integration

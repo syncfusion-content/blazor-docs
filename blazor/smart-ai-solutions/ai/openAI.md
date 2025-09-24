@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Integration with Syncfusion Blazor AI
+title: OpenAI Integration with Syncfusion Blazor AI | Syncfusion
 description: Learn how to configure and use the Syncfusion Blazor AI library with OpenAI to enable AI-powered features like anomaly detection and content generation in Blazor applications.
 platform: Blazor
 control: AI Integration
