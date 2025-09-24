@@ -9,11 +9,11 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-Connectors can be selected, dragged, and routed over the diagram page.
+Connectors support interactive operations such as selection, dragging, and routing to improve diagram editing and readability.
 
 ## How to Select and Deselect Connectors
 
-A connector can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following code explains how to select and clear selection in the diagram.
+At runtime, a connector can be selected by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and the current selection can be cleared by using [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following example demonstrates how to select and clear selection in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -83,14 +83,14 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Select)
 
-And also the selection can be enabled during the interaction.
+Selection can also be performed through user interaction:
 
-* An element can be selected by clicking that element.
+* Click an element to select it.
 * When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events get triggered and allow customization in these events.
 
 ## How to Drag a Connector
 
-A connector can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the connector by using the drag method.
+A connector can be programmatically moved at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following example shows how to drag the connector by using the drag method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -150,18 +150,18 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Drag)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Drag)
 
-And also drag the connector during the interaction.
+Connectors can also be dragged through user interaction:
 
-* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and allow customization in these events.
+* Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
+* While dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and allow customization in these events.
 
 ![Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)
 
 ## How to Drag Connector Endpoints
 
-The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
+The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjusts the source and target points.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -213,7 +213,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/EndPointDragging)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/EndPointDragging)
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
@@ -307,7 +307,7 @@ The [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ro
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ClassicLineRouting)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ClassicLineRouting)
 
 #### Advanced Routing
 
@@ -352,9 +352,9 @@ The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.R
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/LineRoutingSettings)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/LineRoutingSettings)
 
-**Note:** Default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic).
+**Note:** The default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic).
 
 ### How to Enable or Disable Node Routing
 
@@ -415,11 +415,11 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 ```
 ![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/NodeRoutingObstable).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/NodeRoutingObstable).
 
 ### How to Enable or Disable Connector Routing
 
-By default, each connector's routing process is inherited based on the value of the diagram's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property. If you wish to independently control the routing of a specific connector regardless of the diagram settings, you can achieve this by removing the [InheritRouting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritRouting) enum value from the connector's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property. Then, add the [Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Routing) enum value to enable routing or remove it to disable routing altogether.
+By default, connector routing behavior is inherited based on the value of the diagram's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property. If you wish to independently control the routing of a specific connector regardless of the diagram settings, you can achieve this by removing the [InheritRouting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritRouting) enum value from the connector's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property. Then, add the [Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Routing) enum value to enable routing or remove it to disable routing altogether.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -489,11 +489,11 @@ By default, each connector's routing process is inherited based on the value of 
 ```
 ![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
 
 ### How to Define Distance Between Nodes and Connectors
 
-The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) defines the minimum distance between the connectors and obstacles when the advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles, improving diagram readability.
+The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property defines the minimum distance between connectors and obstacles when Advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles for improved readability.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -536,7 +536,7 @@ The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ObstaclePadding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ObstaclePadding)
 
 The following table shows the various obstacle padding.
 
@@ -548,9 +548,9 @@ The following table shows the various obstacle padding.
 **Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) is 12.
 
 ## How to Avoid Line Overlapping
-The diagram provides flexibility to prevent connectors from overlapping, enhance clarity and readability. This feature intelligently adjusts connector paths to minimise stacking orthogonal connectors on top of each other, reducing visual clutter and enhancing diagram structure. It is especially useful in complex diagrams with multiple orthogonal connectors, where overlapping lines can make interpretation difficult.
+The diagram can prevent connectors from overlapping to enhance clarity and readability. This feature intelligently adjusts connector paths to minimise stacking orthogonal connectors on top of each other, reducing visual clutter and enhancing diagram structure. It is especially useful in complex diagrams with multiple orthogonal connectors, where overlapping lines can make interpretation difficult.
 
-This feature can be activated by adding the [AvoidLineOverlapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_AvoidLineOverlapping) enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property of the diagram.
+Enable this behavior by adding the [AvoidLineOverlapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_AvoidLineOverlapping) enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property.
 
 
 ```cshtml
@@ -575,13 +575,13 @@ This feature can be activated by adding the [AvoidLineOverlapping](https://help.
 
 ![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.gif)
 
-The Avoid Connector Overlapping feature ensures that connectors do not visually overlap within the viewport. This behavior enhances diagram readability and minimizes visual clutter.
+The Avoid Connector Overlapping behavior ensures connectors do not visually overlap within the viewport, improving readability and reducing visual clutter.
 
-**Viewport-Based Resolution:** Overlaps are resolved only for connectors currently visible in the viewport. As you scroll through the diagram, additional connectors will automatically adjust and avoid overlapping once they come into view.
+**Viewport-Based Resolution:** Overlaps are resolved only for connectors visible in the current viewport. As you scroll through the diagram, additional connectors will automatically adjusted to avoid overlapping once they come into view.
 
-**Overview Behavior:** In the Overview panel, connectors that lie outside the current viewport may initially appear overlapped. These will also be resolved dynamically as the corresponding area comes into focus in the main diagram view.
+**Overview Behavior:** In the Overview panel, connectors outside the current viewport may initially appear overlapped. These will also be resolved dynamically as the corresponding area comes into focus in the main diagram view.
 
-The following example demonstrates how to enable the AvoidLineOverlapping feature in the diagram.
+The following example demonstrates enabling the AvoidLineOverlapping feature in the diagram.
 
 
 ```cshtml
@@ -935,15 +935,15 @@ The following example demonstrates how to enable the AvoidLineOverlapping featur
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/AvoidLineOverlap).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/AvoidLineOverlap).
 
-**Note:** The overlap will get resolved only for the connectors visible in the viewport. The rest will be resolved as they are scrolled into view. The same applies to the overview, where connectors outside the viewport will appear overlapped and will resolve when focused within the viewport.
+**Note:** Overlaps are resolved only for connectors visible in the viewport. The rest will be resolved as they are scrolled into view. The same applies to the overview, where connectors outside the viewport will appear overlapped and will resolve when focused within the viewport.
 
 ## How to Flip a Connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
-For more information about the connector flip, refer to [Connector Flip](../flip#how-to-flip-the-connector).
+For more information, refer to [Connector Flip](../flip#how-to-flip-the-connector).
 
 ## See also
 

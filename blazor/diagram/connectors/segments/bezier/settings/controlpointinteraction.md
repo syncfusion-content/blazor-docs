@@ -11,28 +11,28 @@ documentation: ug
 
 ## How to Interact with the Bezier Segments Efficiently
 
-When interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) property of the Connector class.
+When interacting with multiple Bezier segments, maintain their control points at the same distance and angle by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) property.
 
 | BezierSmoothness value | Description | Output |
 |-------- | -------- | -------- |
-| [SymmetricDistance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_SymmetricDistance)| Both control points of adjacent segments will be at the same distance when one of them is editing. | ![SymmetricDistance](../../../../images/SymmetricDistance.gif) |
-| [SymmetricAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_Both) | Both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricAngle](../../../../images/SymmetricAngle.gif) |
+| [SymmetricDistance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_SymmetricDistance)| keeps both control points of adjacent segments will be at the same distance when one of them is editing. | ![SymmetricDistance](../../../../images/SymmetricDistance.gif) |
+| [SymmetricAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_Both) | keeps both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricAngle](../../../../images/SymmetricAngle.gif) |
 | [SymmetricAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_) | Both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricAngle](../../../../images/SymmetricAngle.gif) |
-| [Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_Both) | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![Symmetric](../../../../images/SmoothnessBoth.png) |
+| [Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_Both) | keeps both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![Symmetric](../../../../images/SmoothnessBoth.png) |
 | [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSmoothness.html#Syncfusion_Blazor_Diagram_BezierSmoothness_None) | Segment’s control points interact independently from each other. | ![SymmetricNone](../../../../images/SymmetricNone.gif)
 
 
 ## How to Show or Hide Bezier Segment's Control Points
 
-By using the [BezierConnectorSettings.ControlPointsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_ControlPointsVisibility) property of the Connector class, you can enable or disable the visibility of the bezier segment's control points.
+By using the [BezierConnectorSettings.ControlPointsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_ControlPointsVisibility) property, you can enable or disable the visibility of the Bezier segment's control points.
 
 | ControlPointsVisibility value | Description | Output |
 |-------- | -------- | -------- |
-| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_None) | Hides all control points of the bezier connector. | ![None](../../../../images/ControlpointsvisibilityNone.png) |
-| [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Source) | Shows control points of the source segment and hides all other control points in a bezier connector. | ![Source](../../../../images/ControlpointsvisibilitySource.png) |
-| [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Target) | Shows control points of the target segment and hides all other control points in a bezier connector. | ![Target](../../../../images/ControlpointsvisibilityTarget.png) |
-| [Intermediate ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Intermediate)| Shows control points of the intermediate segments and hides all other control points in a bezier connector. | ![Intermediate](../../../../images/ControlpointsvisibilityIntermediate.png) |
-| [All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_All) | Shows all the control points of the bezier connector, including the source, target, and intermediate segments' control points. | ![All](../../../../images/ControlpointsvisibilityAll.png) |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_None) | Hides all control points of the Bezier connector. | ![None](../../../../images/ControlpointsvisibilityNone.png) |
+| [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Source) | Shows control points of the source segment and hides all other control points in a Bezier connector. | ![Source](../../../../images/ControlpointsvisibilitySource.png) |
+| [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Target) | Shows control points of the target segment and hides all other control points in a Bezier connector. | ![Target](../../../../images/ControlpointsvisibilityTarget.png) |
+| [Intermediate ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_Intermediate)| Shows control points of the intermediate segments and hides all other control points in a Bezier connector. | ![Intermediate](../../../../images/ControlpointsvisibilityIntermediate.png) |
+| [All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ControlPointsVisibility.html#Syncfusion_Blazor_Diagram_ControlPointsVisibility_All) | Shows all control points of the Bezier connector, including the source, target, and intermediate segments. | ![All](../../../../images/ControlpointsvisibilityAll.png) |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -63,4 +63,4 @@ By using the [BezierConnectorSettings.ControlPointsVisibility](https://help.sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
