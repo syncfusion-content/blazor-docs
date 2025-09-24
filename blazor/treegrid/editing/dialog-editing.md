@@ -134,11 +134,11 @@ In the following example, the dialog's header text and footer button content are
     }
     public async Task Cancel()
     {
-        await TreeGrid.CloseEdit();     //Cancel editing action
+        await TreeGrid.CloseEditAsync();     //Cancel editing action
     }
     public async Task Save()
     {
-        await TreeGrid.EndEdit();       //Save the edited/added data to Grid
+        await TreeGrid.EndEditAsync();       //Save the edited/added data to Grid
     }
     protected override void OnInitialized()
     {
