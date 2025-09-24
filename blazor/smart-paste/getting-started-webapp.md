@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Started with Blazor Smart Paste Button | Syncfusion
-description: Learn how to integrate the Syncfusion Blazor Smart Paste Button in a Blazor Web App with step-by-step instructions.
+description: Learn how to integrate the Syncfusion Blazor Smart Paste Button in a Blazor Web App Server with step-by-step instructions.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Paste Button
 
-This section explains how to integrate the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The Smart Paste Button leverages AI to intelligently populate form fields from copied text, streamlining user input workflows.
+This section explains how to integrate the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in a Blazor Web App Server using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The Smart Paste Button leverages AI to intelligently populate form fields from copied text, streamlining user input workflows.
 
 To get started quickly with the Blazor Smart Paste Button component, watch this video:
 
@@ -29,7 +29,7 @@ To get started quickly with the Blazor Smart Paste Button component, watch this 
 
 N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
-## Create a New Blazor Web App in Visual Studio
+## Create a New Blazor Web App Server in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
 
@@ -65,7 +65,7 @@ N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.o
 
 N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
-## Create a New Blazor Web App in Visual Studio Code
+## Create a New Blazor Web App Server in Visual Studio Code
 
 Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
 
