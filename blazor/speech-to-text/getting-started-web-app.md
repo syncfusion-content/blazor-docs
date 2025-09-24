@@ -9,9 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor SpeechToText in Blazor Web App
+# Getting Started with Blazor SpeechToText in a Blazor Web App
 
-This section briefly explains about how to include [Blazor SpeechToText](https://www.syncfusion.com/blazor-components) component in your Blazor Web App using Visual Studio and Visual Studio Code.
+This section explains how to add the [Blazor SpeechToText](https://www.syncfusion.com/blazor-components) component to your Blazor Web App using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -23,11 +23,11 @@ This section briefly explains about how to include [Blazor SpeechToText](https:/
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs NuGet in the App
 
-To add **Blazor SpeechToText** in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor SpeechToText** to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs). Alternatively, you can use the following package manager command.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -37,7 +37,7 @@ Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages and their corresponding components.
 
 {% endtabcontent %}
 
@@ -51,9 +51,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+You will need to configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) when creating the application.
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -69,11 +69,11 @@ N> For more information on creating a **Blazor Web App** with various interactiv
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If you use the `WebAssembly` or `Auto` render mode, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package must be installed in the client project.
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) NuGet package and ensure all dependencies are installed.
+*   Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+*   Ensure you are in the project root directory where your `.csproj` file is located.
+*   Run the following command to install the [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) NuGet package and its dependencies.
 
 {% tabs %}
 
@@ -86,7 +86,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages and their corresponding components.
 
 {% endtabcontent %}
 
@@ -94,12 +94,12 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
-
 Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespace.
+
+| Interactive Render Mode | File Location |
+| -- | -- |
+| WebAssembly or Auto | Open `~/_Imports.razor` from the client project. |
+| Server | Open `~/_Imports.razor` from the `Components` folder. |
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -146,7 +146,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single `~/Program.cs` file where the service should be registered.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -167,9 +167,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+## Add Script Resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The required script can be loaded from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the script reference at the end of the `<body>` tag in the `~/Components/App.razor` file.
 
 ```html
 <head>
@@ -178,11 +178,11 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 </head>
 ```
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to explore different methods for including script references in your Blazor application.
 
 ## Adding Blazor SpeechToText component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component to the `~/Pages/Index.razor` file.
 
 {% tabs %}
 {% highlight razor %}
@@ -211,15 +211,15 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component in your default web browser.
+*   Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component will render in your default web browser.
 
 ![Blazor SpeechToText Component](images/getting-started.png)
 
-> The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and using a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
+> The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an active internet connection and a browser that supports the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) Web Speech API.
 
-## Adding button content
+## Adding Button Content
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property to display the start listening text and [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to display the stop listening text by using the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property.
+You can customize the button text for its different states. Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property for the start listening state and the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property for the stop listening state within the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) configuration.
 
 {% tabs %}
 {% highlight razor %}
@@ -256,7 +256,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 ![Blazor SpeechToText with Button Content Start text](images/btn-content-start.png)
 ![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.png)
 
-## See also
+## See Also
 
 1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
