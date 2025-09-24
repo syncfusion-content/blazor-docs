@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Column Reorder in Blazor Tree Grid Component | Syncfusion
-description: Checkout here and learn more details about the column reorder in the Syncfusion Blazor Tree Grid component.
+title: Column Reorder in Blazor TreeGrid Component | Syncfusion
+description: Checkout here and learn more details about the column reorder in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Column Reorder in Blazor Tree Grid Component
+# Column Reorder in Blazor TreeGrid Component
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the tree grid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to true.
+Reordering can be performed by dragging a column header from one index to another within the TreeGrid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to true.
 
 {% tabs %}
 
@@ -73,13 +73,13 @@ public class TreeData
 
 {% endtabs %}
 
-![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.gif)
+![Reordering Columns in Blazor TreeGrid](../images/blazor-treegrid-column-reorder.gif)
 
 N> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false.
 
 ## Reorder single column
 
-Tree Grid has option to reorder a column either by interaction or by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **TaskName** column is reordered to third column position by using the method on button click.
+TreeGrid supports reordering a column either through interaction or programmatically using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, the **TaskName** column is moved to the third position by invoking the method on a button click.
 
 {% tabs %}
 
@@ -150,14 +150,14 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF represents the Reordering column **TaskName** by using the method,
-![Reordering Single Column in Blazor Tree Grid](../images/blazor-treegrid-reorder-single-column.gif)
+The following GIF represents reordering the **TaskName** column using the method.
+![Reordering Single Column in Blazor TreeGrid](../images/blazor-treegrid-reorder-single-column.gif)
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time by passing list of columns programmatically in the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
+Users can reorder a single column at a time by interaction. To reorder multiple columns at once, pass a list of column field names programmatically to the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
 
-In the following sample, **TaskName** and **Duration** columns are reordered to the last column position using this method on the click button.
+In the following sample, the **TaskName** and **Duration** columns are moved to the last position using this method on a button click.
 
 {% tabs %}
 
@@ -228,4 +228,6 @@ public class TreeData
 
 {% endtabs %}
 
-![Reordering Multiple Columns in Blazor Tree Grid](../images/blazor-treegrid-reorder-multiple-columns.gif)
+
+![Reordering Multiple Columns in Blazor TreeGrid](../images/blazor-treegrid-reorder-multiple-columns.gif)
+
