@@ -7,22 +7,24 @@ control: Ribbon
 documentation: ug
 ---
 
-# Items in Blazor Ribbon component
+# Items in Blazor Ribbon Component
 
-## Button item
+The Syncfusion Blazor Ribbon component supports a variety of item types that can be added to a ribbon group.
 
-You can render the built-in Ribbon button item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.Button`. You can customize the button item using the [RibbonButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ButtonSettings) tag directive, which provides options such as [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_IconCss), [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_Content), [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_IsToggle), and more.
+## Button Item
+
+To add a button to the Ribbon, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a `RibbonItem` to `RibbonItemType.Button`. You can customize its appearance and behavior using the [RibbonButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ButtonSettings) tag, which provides options such as [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_IconCss), [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_Content), and [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_IsToggle).
 
 ### Events
 
-The following events are available in the Button item.
+The following events are available for the Button item:
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_Created)|EventCallback|The `Created` event triggers when the Ribbon button is initialized, allowing you to perform immediate actions.|
-|[OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_OnClick)|MouseEventArgs|The `OnClick` event triggers when the Ribbon button is clicked, enabling custom click actions.|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_Created)|EventCallback|Triggers after the Ribbon Button is created, which is ideal for performing custom initialization logic.|
+|[OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonButtonSettings_OnClick)|MouseEventArgs|Triggers when the Ribbon Button is clicked. Use this event to define the primary action for the button.|
 
-Below example demonstrates how to configure a Button item including it's events
+The following example demonstrates how to configure a Button item and handle its events.
 
 {% tabs %}
 {% highlight razor %}
@@ -65,20 +67,20 @@ Below example demonstrates how to configure a Button item including it's events
 
 ![Ribbon Button Item](./images/items/button_item.png)
 
-## Checkbox item
+## Checkbox Item
 
-You can render the built-in Ribbon checkbox item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.Checkbox`. This item is used to toggle between selected and unselected states. You can customize the checkbox using the [RibbonCheckboxSettings]() tag directive with options such as [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Label) and [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Checked).
+The Ribbon can include a checkbox by defining a `RibbonItem` with its [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) set to `RibbonItemType.Checkbox`. This item is used to toggle between selected and unselected states. You can customize the checkbox using the [RibbonCheckboxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html) tag with options such as [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Label) and [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Checked).
 
 ### Events
 
-The following events are available in the Checkbox item.
+The following events are available for the Checkbox item:
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Created)|EventCallback|The `Created` event triggers when the Ribbon checkbox is initialized, allowing you to perform immediate actions.|
-|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_ValueChange)|ChangeEventArgs|The `ValueChange` event triggers when the checkbox value changes, enabling actions based on the new value.|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_Created)|EventCallback|Triggers after the Ribbon checkbox is created, allowing for immediate setup actions.|
+|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCheckBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonCheckBoxSettings_ValueChange)|ChangeEventArgs|Triggers when the checkbox state changes (checked or unchecked). The new boolean value is available in the event arguments.|
 
-Below example demonstrates how to configure a Checkbox item including it's events
+This example shows how to configure Checkbox items and handle their events.
 
 {% tabs %}
 {% highlight razor %}
@@ -128,25 +130,25 @@ Below example demonstrates how to configure a Checkbox item including it's event
 
 ![Ribbon Checkbox Item](./images/items/checkbox_item.png)
 
-## DropDownButton item
+## DropDownButton Item
 
-You can render the built-in Ribbon dropdown button item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.DropDown`. This item displays a button with a dropdown menu for additional options. The [RibbonDropDownSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_DropDownSettings) tag directive allows you to configure properties such as [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Content), [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Items) and more.
+To render a dropdown button, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property to `RibbonItemType.DropDown`. This item displays a button with a dropdown menu for additional options. The [RibbonDropDownSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_DropDownSettings) tag allows you to configure properties such as [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Content), [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Items), and more.
 
 ### Events
 
-The following events are available in the DropDownButton item.
+The following events are available for the DropDownButton item:
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Created)|EventCallback|The `Created` event triggers when the dropdown button is initialized, allowing you to perform immediate setup actions.|
-|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupOpening)|DropDownPopupOpenEventArgs|The `PopupOpening` event triggers before the dropdown popup opens, enabling pre-opening configurations.|
-|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupClosing)|DropDownPopupCloseEventArgs|The `PopupClosing` event triggers before the popup closes, allowing pre-closing actions.|
-|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupOpened)|DropDownPopupOpenedEventArgs|The `PopupOpened` event triggers after the popup opens, enabling post-opening actions.|
-|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupClosed)|DropDownPopupClosedEventArgs|The `PopupClosed` event triggers after the popup closes, enabling post-closing actions.|
-|[ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_ItemRendering)|DropDownItemRenderEventArgs|The `ItemRendering` event triggers during item rendering, allowing customization of dropdown items.|
-|[ItemSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_ItemSelecting)|DropDownItemSelectEventArgs|The `ItemSelecting` event triggers before an item is selected, enabling selection conditions.|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_Created)|EventCallback|Triggers after the dropdown button is created, allowing for custom setup actions.|
+|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupOpening)|DropDownPopupOpenEventArgs|Triggers before the dropdown popup opens, enabling tasks like dynamically populating items.|
+|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupClosing)|DropDownPopupCloseEventArgs|Triggers before the popup closes, which can be used for cleanup or validation.|
+|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupOpened)|DropDownPopupOpenedEventArgs|Triggers after the popup has opened.|
+|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_PopupClosed)|DropDownPopupClosedEventArgs|Triggers after the popup has closed.|
+|[ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_ItemRendering)|DropDownItemRenderEventArgs|Triggers while rendering each dropdown item, allowing for item-level customization.|
+|[ItemSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonDropDownSettings.html#Syncfusion_Blazor_Ribbon_RibbonDropDownSettings_ItemSelecting)|DropDownItemSelectEventArgs|Triggers when a dropdown item is selected. Use this event to define the action for each item.|
 
-Below example demonstrates how to configure a DropDownButton item including it's events
+The following example demonstrates how to configure a DropDownButton item and its events.
 
 {% tabs %}
 {% highlight razor %}
@@ -213,26 +215,26 @@ Below example demonstrates how to configure a DropDownButton item including it's
 
 ![Ribbon DropDown Item](./images/items/dropdown_item.png)
 
-## SplitButton item
+## SplitButton Item
 
-You can render the built-in Ribbon split button item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.SplitButton`. This item combines a primary button with a dropdown for secondary actions. The [RibbonSplitButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_SplitButtonSettings) tag directive lets you configure options like [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Content), [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Items) and more.
+A split button can be rendered by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property to `RibbonItemType.SplitButton`. This item combines a primary button for a default action with a dropdown list for secondary actions. Use the [RibbonSplitButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_SplitButtonSettings) tag to configure options like [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Content) and [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Items).
 
 ### Events
 
-The following events are available in the SplitButton item.
+The following events are available for the SplitButton item:
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Created)|EventCallback|The `Created` event triggers when the split button is initialized, allowing you to perform any necessary initialization or setup.|
-|[Clicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Clicked)|SplitButtonClickedEventArgs|The `Clicked` event triggers when the split button is clicked, enabling click-specific actions.|
-|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupOpening)|SplitButtonPopupOpenEventArgs|The `PopupOpening` event triggers before the split button popup opens, setting conditions for the popup.|
-|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupClosing)|SplitButtonPopupCloseEventArgs|The `PopupClosing` event triggers before the popup closes, allowing pre-closure actions.|
-|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupOpened)|SplitButtonPopupOpenedEventArgs|The `PopupOpened` event triggers after the popup opens, facilitating post-opening actions.|
-|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupClosed)|SplitButtonPopupClosedEventArgs|The `PopupClosed` event triggers after the popup closes, enabling post-closure actions.|
-|[ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_ItemRendering)|SplitButtonItemRenderEventArgs|The `ItemRendering` event triggers during item rendering, facilitating item customization.|
-|[ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_ItemSelected)|SplitButtonItemSelectedEventArgs|The `ItemSelected` event triggers when an item is selected, allowing selection-specific actions.|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Created)|EventCallback|Triggers when the split button is created, allowing for initialization.|
+|[Clicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_Clicked)|SplitButtonClickedEventArgs|Triggers when the primary button of the SplitButton is clicked, allowing you to define its main action.|
+|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupOpening)|SplitButtonPopupOpenEventArgs|Triggers before the dropdown popup opens.|
+|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupClosing)|SplitButtonPopupCloseEventArgs|Triggers before the popup closes.|
+|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupOpened)|SplitButtonPopupOpenedEventArgs|Triggers after the popup has opened.|
+|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_PopupClosed)|SplitButtonPopupClosedEventArgs|Triggers after the popup has closed.|
+|[ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_ItemRendering)|SplitButtonItemRenderEventArgs|Triggers during item rendering, allowing for item customization.|
+|[ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonSplitButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonSplitButtonSettings_ItemSelected)|SplitButtonItemSelectedEventArgs|Triggers when a dropdown item is selected, allowing for selection-specific actions.|
 
-Below example demonstrates how to configure a SplitButton item including it's events
+The following example demonstrates how to configure a SplitButton item and handle its events.
 
 {% tabs %}
 {% highlight razor %}
@@ -302,25 +304,25 @@ Below example demonstrates how to configure a SplitButton item including it's ev
 
 ![Ribbon SplitButton Item](./images/items/splitbutton_item.png)
 
-## Combobox item
+## Combobox Item
 
-You can render the built-in Ribbon combobox item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.Combobox`. This item provides a dropdown with optional search and filtering capabilities. The [RibbonComboboxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ComboBoxSettings) tag directive allows you to configure properties like [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_DataSource), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_AllowFiltering), [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Index), [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Placeholder) and lot more.
+Create a combobox item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property to `RibbonItemType.ComboBox`. This item provides an editable dropdown list with optional filtering. Use the [RibbonComboBoxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ComboBoxSettings) tag to configure properties like [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_DataSource), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_AllowFiltering), [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Index), [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Placeholder), and more.
 
 ### Events
 
-The following events are available in the Combobox item.
+The following events are available for the ComboBox item:
 
 |Name|Args|Description|
 |---|---|---|
-|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupOpening)|ComboBoxPopupOpenEventArgs|The `PopupOpening` event triggers before the combobox popup opens, allowing setup actions.|
-|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupClosing)|ComboBoxPopupCloseEventArgs|The `PopupClosing` event triggers before the popup closes, allowing cleanup actions.|
-|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupOpened)|ComboBoxPopupOpenedEventArgs|The `PopupOpened` event triggers after the popup opens, enabling post-open actions.|
-|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupClosed)|ComboBoxPopupClosedEventArgs|The `PopupClosed` event triggers after the popup closes, enabling post-close actions.|
-|[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Filtering)|ComboBoxFilterEventArgs|The `Filtering` event triggers during item filtering, allowing custom filter logic.|
-|[Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Selecting)|ComboBoxSelectEventArgs|The `Selecting` event triggers before an item is selected, enabling selection validation.|
-|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_ValueChange)|ComboBoxChangeEventArgs|The `ValueChange` event triggers when the combobox value changes, enabling actions based on the new value.|
+|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupOpening)|ComboBoxPopupOpenEventArgs|Triggers before the combobox popup opens.|
+|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupClosing)|ComboBoxPopupCloseEventArgs|Triggers before the popup closes.|
+|[PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupOpened)|ComboBoxPopupOpenedEventArgs|Triggers after the popup opens.|
+|[PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_PopupClosed)|ComboBoxPopupClosedEventArgs|Triggers after the popup closes.|
+|[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Filtering)|ComboBoxFilterEventArgs|Triggers when the user types in the combobox, allowing for custom filtering logic.|
+|[Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_Selecting)|ComboBoxSelectEventArgs|Triggers before an item is selected, which can be used for validation.|
+|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonComboBoxSettings.html#Syncfusion_Blazor_Ribbon_RibbonComboBoxSettings_ValueChange)|ComboBoxChangeEventArgs|Triggers when the combobox value changes, enabling actions based on the new selection.|
 
-Below example demonstrates how to configure a Combobox item including it's events
+The following example shows how to configure ComboBox items for font selection.
 
 {% tabs %}
 {% highlight razor %}
@@ -417,25 +419,25 @@ Below example demonstrates how to configure a Combobox item including it's event
 
 ![Ribbon Combobox Item](./images/items/combobox_item.png)
 
-## Colorpicker item
+## ColorPicker Item
 
-You can render the built-in Ribbon color picker item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.ColorPicker`. This item provides a color selection interface, which can be customized using the [RibbonColorPickerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ColorPickerSettings) tag directive with properties like [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Value), [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Mode) and more.
+To add a color picker, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property to `RibbonItemType.ColorPicker`. This item provides a rich color selection interface. It can be customized using the [RibbonColorPickerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ColorPickerSettings) tag directive with properties like [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Value) and [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Mode).
 
 ### Events
 
-The following events are available in the Colorpicker item.
+The following events are available for the ColorPicker item:
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Created)|EventCallback|The `Created` event triggers when the color picker is initialized, enabling setup actions.|
-|[Opening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Opening)|ColorPickerOpenEventArgs|The `Opening` event triggers before the color picker opens, allowing initial configurations.|
-|[Closing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Closing)|ColorPickerCloseEventArgs|The `Closing` event triggers before the color picker closes, facilitating pre-closure tasks.|
-|[Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Opened)|ColorPickerOpenedEventArgs|The `Opened` event triggers after the color picker opens, enabling post-opening actions.|
-|[TileRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_TileRendering)|TileRenderEventArgs|The `TileRendering` event triggers during the rendering of each palette tile, supporting tile customization.|
-|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_ValueChange)|ColorPickerEventArgs|The `ValueChange` event triggers when the color value changes, facilitating color updates.|
-|[Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Selected)|ColorPickerSelectedEventArgs|The `Selected` event triggers when a color is selected, allowing selected color handling.|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Created)|EventCallback|Triggers when the color picker is created.|
+|[Opening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Opening)|ColorPickerOpenEventArgs|Triggers before the color picker popup opens.|
+|[Closing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Closing)|ColorPickerCloseEventArgs|Triggers before the color picker closes.|
+|[Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Opened)|ColorPickerOpenedEventArgs|Triggers after the color picker has opened.|
+|[TileRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_TileRendering)|TileRenderEventArgs|Triggers when rendering each palette tile, allowing for tile customization.|
+|[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_ValueChange)|ColorPickerEventArgs|Triggers when the color value changes, which is useful for live previews.|
+|[Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonColorPickerSettings.html#Syncfusion_Blazor_Ribbon_RibbonColorPickerSettings_Selected)|ColorPickerSelectedEventArgs|Triggers when a color is selected from the palette.|
 
-Below example demonstrates how to configure a Colorpicker item including it's events
+This example shows how to configure a ColorPicker item and handle its events.
 
 {% tabs %}
 {% highlight razor %}
@@ -495,19 +497,19 @@ Below example demonstrates how to configure a Colorpicker item including it's ev
 
 ![Ribbon Colorpicker Item](./images/items/colorpicker_item.png)
 
-## GroupButton item
+## GroupButton Item
 
 You can render the built-in Ribbon group button item by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.GroupButton`. This item groups multiple buttons for single or multiple selection. Use the [RibbonGroupButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_GroupButtonSettings) tag directive to configure options like [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroupButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonGroupButtonSettings_Items), [Selection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroupButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonGroupButtonSettings_Selection), and more. `Items` property accepts a collection of [GroupButtonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GroupButtonItem.html) through which you can customize each group button item with options such as [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GroupButtonItem.html#Syncfusion_Blazor_Ribbon_GroupButtonItem_Content), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GroupButtonItem.html#Syncfusion_Blazor_Ribbon_GroupButtonItem_IconCss), [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GroupButtonItem.html#Syncfusion_Blazor_Ribbon_GroupButtonItem_Selected) and more.
 
 ### Events
 
-The following event is available in the GroupButton item.
+The following event is available for the GroupButton item:
 
 |Name|Args|Description|
 |---|---|---|
-|[ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroupButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonGroupButtonSettings_ItemClick)|GroupButtonClickEventArgs|The `ItemClick` event is triggered when an item in the Ribbon group button is clicked, enabling click-specific actions.|
+|[ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroupButtonSettings.html#Syncfusion_Blazor_Ribbon_RibbonGroupButtonSettings_ItemClick)|GroupButtonClickEventArgs|Triggers when a button within the group is clicked.|
 
-Below example demonstrates how to configure a GroupButton item with both selection types including it's event.
+The following example shows how to configure a GroupButton for both single and multiple selection modes.
 
 {% tabs %}
 {% highlight razor %}
@@ -619,9 +621,9 @@ Below example demonstrates how to configure a GroupButton item with both selecti
 
 ![Ribbon GroupButton Item](./images/items/groupbutton_item.png)
 
-## Custom item
+## Custom Item
 
-The Ribbon supports rendering non-built-in items or your own HTML content by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property as `RibbonItemType.Template`. And then, you can use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ItemTemplate) tag directive to define a custom `RenderFragment` for fully customizable content. [RibbonItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItemContext.html) is being passed as context to the template through which you can customize further based on the current state of the Ribbon item.
+The Ribbon supports rendering custom HTML content or other components by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property to `RibbonItemType.Template`. Inside the `RibbonItem`, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ItemTemplate) tag to define a `RenderFragment` for fully customized content. The [RibbonItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItemContext.html) is passed as `context` to the template, allowing you to create dynamic content based on the Ribbon's state.
 
 {% tabs %}
 {% highlight razor %}
@@ -695,18 +697,18 @@ The Ribbon supports rendering non-built-in items or your own HTML content by set
 
 ![Ribbon Custom Item](./images/items/custom_item.png)
 
-## Items display mode
+## Display Options
 
-The [DisplayOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_DisplayOptions) property determines how Ribbon items are displayed based on the Ribbon's layout and overflow state. Available options include:
+The [DisplayOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_DisplayOptions) property controls the visibility of Ribbon items based on the Ribbon's current layout and overflow state. The available options are:
 
 | Value | Description |
-|-----|-----|
-| `Auto` | The items are displayed in all layouts based on the ribbon's overflow state(Default) |
-| `Classic` | The items are displayed only in the classic layout group. |
-| `Simplified` | The items are displayed only in the simplified layout group. |
-| `Overflow` | The items are displayed only in the overflow popup. |
+|---|---|
+| `Auto` | (Default) The item is displayed in all layouts and respects the overflow state. |
+| `Classic` | The item is displayed only when the Ribbon is in the Classic layout. |
+| `Simplified` | The item is displayed only when the Ribbon is in the Simplified layout. |
+| `Overflow` | The item is displayed only in the overflow popup of a group. |
 
-Below example demonstrates the usages of `DisplayOptions` property to control the visibility of Ribbon items based on the layout and overflow state.
+The following example demonstrates how to use the `DisplayOptions` property to manage item visibility across different layouts.
 
 {% tabs %}
 {% highlight razor %}
@@ -783,7 +785,7 @@ Below example demonstrates the usages of `DisplayOptions` property to control th
 
 ![Display Options Simplified and Overflow](./images/items/displayoption_simp_overflow.png)
 
-## Enable/Disable items
+## Enable or Disable Items
 
 You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Disabled) property to disable particular Ribbon item. It prevents the user interaction when set to `true`. By default, the value is `false`.
 

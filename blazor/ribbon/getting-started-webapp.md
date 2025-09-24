@@ -7,11 +7,11 @@ control: Ribbon
 documentation: ug
 ---
 
-# Getting Started with Blazor Ribbon in Blazor Web App
+# Getting Started with Blazor Ribbon in a Blazor Web App
 
-This section briefly explains about how to include [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section explains how to add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
 
-To get started quickly with Blazor Ribbon component, check on the following video:
+To get started quickly with the Blazor Ribbon component, refer to the following video guide:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=bJCpW22KqJM" %}
@@ -32,11 +32,13 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon and Themes NuGet in the App
 
-To add **Blazor Ribbon** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Ribbon](https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor Ribbon component, install the `Syncfusion.Blazor.Ribbon` and `Syncfusion.Blazor.Themes` NuGet packages.
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+N> If your application uses `WebAssembly` or `Auto` render mode, you must install the NuGet packages in the client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install [Syncfusion.Blazor.Ribbon](https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+Alternatively, you can use the Package Manager Console:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -121,9 +123,10 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Ribbon` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **~/Program.cs**.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+*   For `Server` render mode, register the service in the server project's `Program.cs`.
+*   For `WebAssembly` or `Auto` render modes, you must register the service in *both* the server and client (`.Client`) project `Program.cs` files.
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -178,7 +181,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
@@ -196,16 +199,15 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
-| Interactivity location | RenderMode | Code |
+| Interactivity Location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
-|  | None | --- |
+| Per page/component | Auto | `@rendermode InteractiveAuto` |
+| | WebAssembly | `@rendermode InteractiveWebAssembly` |
+| | Server | `@rendermode InteractiveServer` |
 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
 
@@ -218,9 +220,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-### Adding ribbon tab
+### Adding a Ribbon Tab
 
-In Ribbon component, options are organized into tabs for easy access. You can use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag directive to group all the tabs and [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag directive to define each ribbon tab as shown below:
+Options in the ribbon are organized into tabs. Use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag to group all tabs and the [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag for each individual tab.
 
 {% tabs %}
 {% highlight razor %}
@@ -254,9 +256,9 @@ To define a ribbon group under each tab, you can use the [RibbonGroups](https://
 {% endhighlight %}
 {% endtabs %}
 
-### Adding ribbon item
+### Adding a Ribbon Item
 
-You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive with the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property to specify the type of item to be rendered, using the [RibbonItemType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) such as Button, a DropDown, a ComboBox, and more.
+Within a group, items are organized into collections. Use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag ditective for a set of items and the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive for each individual item. The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property specifies the kind of item to render, such as a Button, DropDown, or ComboBox.
 
 {% tabs %}
 {% highlight razor %}
