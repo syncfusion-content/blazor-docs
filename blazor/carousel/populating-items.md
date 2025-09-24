@@ -306,4 +306,4 @@ The following example demonstrates the functionality of `PartialVisible` when th
 
 ## See also
 
-* [Customizing partial slides area size](./styles-and-appearance/#customizing-partial-slides-size)
+* [Customizing partial slides area size](./styles-and-appearance.md/#customizing-partial-slides-size)

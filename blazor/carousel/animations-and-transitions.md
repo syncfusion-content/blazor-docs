@@ -75,7 +75,7 @@ The following demo depicts the example for `Fade` animation,
 
 The Carousel supports customized animation effects for slide transitions. This is accomplished by setting the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property to the [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option and then applying custom animation CSS via the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
 
-The following example demonstrates a custom "parallax" animation Effekt which involves a scaling and translation effekt during transitions:
+The following example demonstrates a custom "parallax" animation Effect which involves a scaling and translation effect during transitions:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
