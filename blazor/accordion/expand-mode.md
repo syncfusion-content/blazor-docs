@@ -9,14 +9,18 @@ documentation: ug
 
 # Expand Mode in Blazor Accordion Component
 
- The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports the two listed types of expand modes while expanding or collapsing the item.
+ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component offers flexible control over how its items expand and collapse. You can configure the Accordion to allow only one item to be open at a time or to permit multiple items to remain expanded simultaneously. This behavior is managed through the [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) property.
 
-* Single
-* Multiple
+The Accordion supports two primary types of expand modes:
 
-## Single
+*   **Single**: Only one Accordion item can be expanded at any given time.
+*   **Multiple**: Allows more than one Accordion item to be expanded concurrently.
 
-The property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
+## Single Expand Mode
+
+The `Single` expand mode ensures that only one `AccordionItem` is expanded at a time. If a new item is expanded, any previously expanded item automatically collapses, maintaining a focused view for the user. This is ideal for scenarios where screen space is limited or when the content of each item requires exclusive attention.
+
+To enable this mode, set the `ExpandMode` property of the `SfAccordion` component to `ExpandMode.Single`.
 
 ```cshtml
 
@@ -39,6 +43,7 @@ The property enables to expand only one Accordion item at a time. If you expand 
 ## Multiple
 
 The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
+To enable this mode, you can either explicitly set `ExpandMode="ExpandMode.Multiple"` (though it's the default) or omit the ExpandMode property entirely.
 
 ```cshtml
 
