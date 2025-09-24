@@ -10,7 +10,7 @@ documentation: ug
 # Excel Export in Blazor TreeGrid Component
 
 The excel export allows exporting Tree Grid data to Excel document. Use the
- **ExcelExport** method for exporting. To enable Excel export in the Tree Grid, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property as true.
+ **ExportToExcelAsync** method for exporting. To enable Excel export in the Tree Grid, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property as true.
 
 To know about exporting tree grid data to Excel document in Blazor tree grid component, you can check on this video.
 
@@ -50,7 +50,7 @@ To know about exporting tree grid data to Excel document in Blazor tree grid com
     {
         if(Args.Item.Text == "Excel Export")
         {
-            this.TreeGrid.ExcelExport();
+            this.TreeGrid.ExportToExcelAsync();
         }
     }
 }
@@ -137,7 +137,7 @@ The excel export provides an option to export the current page into excel. To ex
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.ExportType = Syncfusion.Blazor.Grids.ExportType.CurrentPage;
-            this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
 }
@@ -220,7 +220,7 @@ The excel export provides an option to export hidden columns of Tree Grid by def
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.IncludeHiddenColumn = true;
-            this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
 }
@@ -316,7 +316,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
             Theme.Record = ThemeStyle;
             Theme.Caption = ThemeStyle;
 
-            this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
 }
@@ -401,7 +401,7 @@ The file name can be assigned for the exported document by defining **fileName**
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.FileName = "New.xlsx";
-            this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
 }
@@ -446,7 +446,7 @@ public class TreeData
 
 ### To persist collapsed state
 
-The collapsed state can be persisted in the exported document by defining **IsCollapsedStatePersist** property as true in the **TreeGridExcelExportProperties** parameter of the [ExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
+The collapsed state can be persisted in the exported document by defining **IsCollapsedStatePersist** property as true in the **TreeGridExcelExportProperties** parameter of the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
 
@@ -483,7 +483,7 @@ The collapsed state can be persisted in the exported document by defining **IsCo
         {
             Syncfusion.Blazor.TreeGrid.TreeGridExcelExportProperties ExportProperties = new Syncfusion.Blazor.TreeGrid.TreeGridExcelExportProperties();
             ExportProperties.IsCollapsedStatePersist = true;
-            this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExportToExcelAsync(ExportProperties);
         }
     }
 }

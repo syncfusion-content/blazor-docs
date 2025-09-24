@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor TreeGrid Component
 
-To print the Tree Grid, use the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from the tree grid instance. The print option can be displayed on the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
+To print the Tree Grid, use the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from the tree grid instance. The print option can be displayed on the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ Some of the print options cannot be configured through JavaScript code. So the l
 
 ## Print using an external button
 
-To print the tree grid from an external button, invoke the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method.
+To print the tree grid from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ To print the tree grid from an external button, invoke the [Print](https://help.
     }
     private void onClick()
     {
-        TreeGrid.Print();
+        TreeGrid.PrintAsync();
     }
 }
 
