@@ -1,26 +1,26 @@
 ---
 layout: post
 title: Selection customization in Blazor DataGrid | Syncfusion
-description: Learn here all about selection in Syncfusion Blazor DataGrid and more.
+description: Learn how to customize row and cell selection styles in Syncfusion Blazor DataGrid using CSS, with tips on isolation and selector specificity.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Selection in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Selection customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of the selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+Customize the appearance of selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The examples below show how to change the row selection background and the cell selection background. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
 
 ## Customizing the row selection background
 
-To customize the appearance of row selection, you can use the following CSS code:
+Use the following CSS to change the row selection background color:
 
 ```css
 .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the **.e-selectionbackground** class targets the background color of the row selection. You can modify the `background-color` property to change the background color of the selected rows.
+In this example, the `.e-selectionbackground` class targets the background of the selected row cells. Modify the `background-color` value to apply the desired color to selected rows.
 
 ![Row selection](../images/style-and-appearance/row-selection.png)
 
@@ -100,11 +100,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLoDeNVAaPnabCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIjkVpyLLVdMBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing the cell selection background
 
-To customize the appearance of cell selection, you can use the following CSS code:
+Use the following CSS to change the cell selection background color:
 
 ```css
 .e-grid td.e-cellselectionbackground {
@@ -112,7 +112,7 @@ To customize the appearance of cell selection, you can use the following CSS cod
 }
 ```
 
-In this example, the **.e-cellselectionbackground** class targets the background color of the cell selection. You can modify the `background-color` property to change the background color of the selected cells.
+In this example, the `.e-cellselectionbackground` class targets the background of selected cells. Modify the `background-color` value to apply the desired color to selected cells.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.png)
 
@@ -192,4 +192,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtByjeXBpZNiRnBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLIXYLToiFSiQsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

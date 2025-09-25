@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Toolbar in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor DataGrid and more.
+title: Toolbar customization in Syncfusion Blazor DataGrid
+description: Learn how to customize the Syncfusion Blazor DataGrid toolbar with CSS, including styling the toolbar container and buttons, with tips on CSS isolation and selector specificity.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Toolbar customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
+Customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The following examples demonstrate styling the toolbar root element and toolbar buttons. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or wrap the Grid with a custom class to increase selector specificity if theme styles override custom CSS. For functional configuration of toolbar items, see the DataGrid toolbar documentation.
 
 ## Customizing the toolbar root element
 
-To customize the appearance of toolbar root element, you can use the following CSS code:
+To customize the appearance of the toolbar root element, use the following CSS:
 
 ```css
 .e-grid .e-toolbar-items {
@@ -21,13 +21,13 @@ To customize the appearance of toolbar root element, you can use the following C
 }
 ```
 
-In this example, the **.e-toolbar-items** class targets the background color of the toolbar root element. You can modify the `background-color` property to change the background color of the toolbar.
+In this example, the `.e-toolbar-items` selector targets the toolbar container. Modify the `background-color` value to change the toolbar background.
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
 ## Customizing the toolbar button element
 
-To customize the appearance of toolbar buttons, you can use the following CSS code:
+To customize the appearance of toolbar buttons, use the following CSS:
 
 ```css
 .e-grid .e-toolbar .e-btn {
@@ -35,7 +35,7 @@ To customize the appearance of toolbar buttons, you can use the following CSS co
 }
 ```
 
-In this example, the **.e-toolbar .e-btn** selector targets the background color of the toolbar button elements. You can modify the `background-color` property to change the background color of the toolbar buttons.
+In this example, the `.e-toolbar .e-btn` selector targets toolbar button elements. Modify the `background-color` value to change the button background. Depending on the theme, hover, active, and focus states may require additional selectors for complete styling.
 
 ![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.png)
 
