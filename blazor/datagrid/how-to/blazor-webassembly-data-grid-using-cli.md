@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Syncfusion DataGrid to Blazor WebAssembly using .NET CLI | Syncfusion
+title: Add Syncfusion DataGrid to Blazor WebAssembly using .NET CLI
 description: Learn how to create a Blazor WebAssembly app on .NET 8/9 and add the Syncfusion DataGrid using the .NET CLI with setup, themes, scripts, and grid features.
 platform: Blazor
 control: DataGrid
