@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Toolbar customization in Syncfusion Blazor DataGrid
-description: Learn how to customize the Syncfusion Blazor DataGrid toolbar with CSS, including styling the toolbar container and buttons, with tips on CSS isolation and selector specificity.
+description: Learn how to customize the Syncfusion Blazor DataGrid toolbar using CSS—style the container, buttons, and apply CSS isolation tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Toolbar customization in Syncfusion Blazor DataGrid
 
 Customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The following examples demonstrate styling the toolbar root element and toolbar buttons. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or wrap the Grid with a custom class to increase selector specificity if theme styles override custom CSS. For functional configuration of toolbar items, see the DataGrid toolbar documentation.
 
