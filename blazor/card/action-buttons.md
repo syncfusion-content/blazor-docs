@@ -32,10 +32,10 @@ By default, action buttons within the `CardFooter` are aligned horizontally. To 
 ```cshtml
 @using Syncfusion.Blazor.Cards
 @using Syncfusion.Blazor.Buttons
-
+<div style="height:300px;">
 <SfCard ID="HugeImage" Orientation="CardOrientation.Vertical">
-    <CardImage Image="images/cards/steven.png"/>
-    <CardHeader Title="Harrisburg Keith" SubTitle="@CardSubTitle"/>
+    <CardImage Image="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/steven.png"/>
+    <CardHeader Title="Harrisburg Keith"/>
     <CardContent Content="Hi, I'm creative graphic design for print, new media based in Edenbridge"/>
     <CardFooter>
         <CardFooterContent>
@@ -43,5 +43,13 @@ By default, action buttons within the `CardFooter` are aligned horizontally. To 
         </CardFooterContent>
     </CardFooter>
 </SfCard>
+</div>
+<style>
+   .e-card-image {
+   width: 150px !important;
+    margin-left: 35vw;
+   }
+    </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUWVrhVdfXSDrA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZByXarSVsIBkeKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Vertical Orientation](images/vertical-card.png)

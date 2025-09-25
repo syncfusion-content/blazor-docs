@@ -36,7 +36,7 @@ For adding header to the Card, Title Property.
 
 * Add `SubTitle` Property inside the header caption element for adding Title.
 
-### Image
+### Header with Image
 
 Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure. The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
 
@@ -44,13 +44,11 @@ Card header has an option for adding images in the header. It is aligned with ei
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
-</SfCard>
-<SfCard ID="SecondCard">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/profile-four.png" />
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKWLLVLykMTnDF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBSDuLoVztwxgGu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Title, SubTitle, Image](images/header-image.png)
 
 ## Content
 
@@ -62,7 +60,7 @@ The `CardContent` component is used to display the main textual or HTML content 
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/profile-four.png" />
 </SfCard>
 
 <SfCard ID="SecondCard">
@@ -70,7 +68,8 @@ The `CardContent` component is used to display the main textual or HTML content 
 </SfCard>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAWVhrLSuSWdJj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrIDEhyhgoGAJyl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Content](images/card-content.png)
 
 ### Image
 
