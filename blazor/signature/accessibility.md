@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with Blazor Signature Component | Syncfusion
-description: Get started with accessibility in the Blazor Signature component in a Blazor Server app and a Blazor WebAssembly app.
+description: Get started with accessibility features of the Blazor Signature component in Blazor Server and Blazor WebAssembly apps.
 platform: Blazor
 control: Signature
 documentation: ug

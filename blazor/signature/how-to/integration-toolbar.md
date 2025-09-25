@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integration Toolbar with Blazor Signature Component | Syncfusion
-description: Learn more about getting started with the Blazor Signature component ina  Blazor Server app and a Blazor WebAssembly app.
+description: Learn more about getting started with the Blazor Signature component in Blazor Server and Blazor WebAssembly apps.
 platform: Blazor
 control: Signature
 documentation: ug
