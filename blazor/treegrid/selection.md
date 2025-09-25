@@ -612,7 +612,7 @@ public class TreeData
 
 ## Get selected row indexes
 
-The selected row indexes is got by using the GetSelectedRowIndexes method.
+The selected row indexes is got by using the GetSelectedRowIndexesAsync method.
 
 {% tabs %}
 
@@ -650,12 +650,12 @@ The selected row indexes is got by using the GetSelectedRowIndexes method.
 
     private async void RowSelectHandler(RowSelectEventArgs<TreeData> Args)
     {
-        this.SelectedRowIndexes = await this.TreeGrid.GetSelectedRowIndexes();   /// get the selected row indexes
+        this.SelectedRowIndexes = await this.TreeGrid.GetSelectedRowIndexesAsync();   /// get the selected row indexes
 
         string index = JsonConvert.SerializeObject(this.SelectedRowIndexes);    
         JsRuntime.InvokeAsync<string>("window.alert", index);
 
-        this.SelectedRecords = await this.TreeGrid.GetSelectedRecords();   /// get the selected records
+        this.SelectedRecords = await this.TreeGrid.GetSelectedRecordsAsync();   /// get the selected records
 
         string records = JsonConvert.SerializeObject(this.SelectedRecords);
         JsRuntime.InvokeAsync<string>("window.alert", records);
