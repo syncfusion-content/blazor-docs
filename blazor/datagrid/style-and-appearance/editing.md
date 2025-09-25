@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing customization in Syncfusion Blazor DataGrid
-description: Customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
+title: Customize editing in Blazor DataGrid | Syncfusion
+description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,21 +9,28 @@ documentation: ug
 
 # Editing customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize various editing-related elements.
+The appearance of editing-related elements in the Syncfusion Blazor DataGrid can be customized with CSS. The following examples demonstrate how to style edited and added rows, input fields within the edit form, the edit dialog header, and command column buttons.
+
+> Notes:
+- Enable editing using GridEditSettings and, if needed, Toolbar items for CRUD actions.
+- Dialog header customization applies when EditMode is set to Dialog.
+- Icon colors for command buttons depend on the theme’s icon font; verify classes and glyphs in the DOM for the current version/theme.
+- Global selectors target all grids. To limit scope, wrap the grid in a custom container and prefix selectors, or use CSS isolation with the ::deep combinator.
+- Maintain sufficient color contrast and visible focus indicators for accessibility.
 
 ## Customizing the edited and added row element
 
-To style the edited and added row table elements in the Grid, use the following CSS:
+To style the edited and added row table elements in the grid, use the following CSS:
 
 ```css
 .e-grid .e-editedrow table, .e-grid .e-addedrow table {
 	    background-color: #62b2eb;
 }
 ```
-In this example, the `.e-editedrow` class represents the edited row element and the `.e-addedrow` class represents the added row element. Modify the `background-color` property to change the color of these row table elements.
+In this example, the `.e-editedrow` class targets the edited row and the `.e-addedrow` class targets the added row. Modify `background-color` to change the fill color for these row table elements.
 
-![Customizing the added row element](../images/style-and-appearance/edited-added-row-element.png)
-![Customizing the edited row element](../images/style-and-appearance/edited-added-row-element-2.png)
+![Blazor DataGrid added row with custom background color](../images/style-and-appearance/edited-added-row-element.png)
+![Blazor DataGrid edited row with custom background color](../images/style-and-appearance/edited-added-row-element-2.png)
 
 ## Customizing the edited row input element
 
@@ -37,9 +44,9 @@ To style input elements within the edited row form, use the following CSS:
 }
 
 ```
-In this example, the `.e-gridform` class represents the editing form, and the `.e-input` class targets input elements within the form. Modify the `font-family` to change the font and the color property to change the text color of the input elements.
+Here, `.e-gridform` represents the editing form and `.e-input` targets input elements within the form. Modify `font-family` to change the font and color to adjust the input text color.
 
-![Customizing the edited and added row element](../images/style-and-appearance/edited-row-input-element.png)
+![Blazor DataGrid edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -130,7 +137,7 @@ public class OrderData
 
 ## Customizing the edit dialog header element
 
-To style the edit dialog header element in the Grid when using dialog editing, use the following CSS:
+To style the edit dialog header when using dialog editing, use the following CSS:
 
 ```css
 
@@ -139,9 +146,9 @@ To style the edit dialog header element in the Grid when using dialog editing, u
 }
 
 ```
-In this example, the `.e-edit-dialog` class represents the edit dialog and the `.e-dlg-header-content` class targets the header content within the dialog. Modify the `background-color` property to change the header element’s color.
+In this example, `.e-edit-dialog` represents the edit dialog and `.e-dlg-header-content` targets the header content within the dialog. Modify `background-color` to change the header’s fill color.
 
-![Customizing the edit dialog header element](../images/style-and-appearance/edit-dialog-header-element.png)
+![Blazor DataGrid edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -242,8 +249,8 @@ To style command column buttons (edit, delete, update, cancel), use the followin
 ```
 In this example, the .e-edit, .e-delete, .e-update, and .e-cancel-icon classes represent the respective command column buttons. Modify the color property to change the color of these buttons.
 
-![Customize command column button](../images/style-and-appearance/commandbutton-1.png)
-![Customize command column button](../images/style-and-appearance/commandbutton-2.png)
+![Blazor DataGrid command buttons with customized icon colors (delete/cancel)](../images/style-and-appearance/commandbutton-1.png)
+![Blazor DataGrid command buttons with customized icon colors (edit/save)](../images/style-and-appearance/commandbutton-2.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

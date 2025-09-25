@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering customization in Blazor DataGrid | Syncfusion
+title: Customize filtering in Blazor DataGrid | Syncfusion
 description: Learn how to style and customize the Syncfusion Blazor DataGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
 platform: Blazor
 control: DataGrid
@@ -10,6 +10,12 @@ documentation: ug
 # Filtering customization in Syncfusion Blazor DataGrid
 
 The appearance of filtering UI elements in the Syncfusion Blazor DataGrid can be customized using CSS. The following examples demonstrate how to style the filter bar, input focus states, clear and filter icons, filter dialog content and footer, dialog inputs and buttons, and Excel filter dialog menu visuals.
+
+> Notes:
+- Ensure AllowFiltering is enabled and the required theme stylesheet is referenced so the filtering UI is rendered. For filtering concepts and options, see the DataGrid filtering overview: https://blazor.syncfusion.com/documentation/datagrid/filtering
+- Icon glyph codes (for example, '\e72c', '\e81e') are theme- and version-dependent. Verify the desired glyph in the current icon font.
+- The selectors shown target all grids (.e-grid). To scope styles to a specific instance, wrap the grid in a custom container and prefix the selectors with that class, or use CSS isolation with the ::deep combinator.
+- Class names/selectors may vary slightly by theme; inspect elements in the browser to confirm. Maintain sufficient color contrast and visible focus indicators for accessibility.
 
 ## Customizing the filter bar cell element
 
@@ -37,7 +43,7 @@ To customize the appearance of the filter bar input element in the Grid header, 
 }
 
 ```
-Here, `.e-filterbarcell` targets the filter bar cell and .`e-input` targets the input within the cell. Modify `font-family` to change the font used by the filter bar input.
+Here, `.e-filterbarcell` targets the filter bar cell and `.e-input` targets the input within the cell. Modify `font-family` to change the font used by the filter bar input.
 
 ![Blazor DataGrid filter bar input styled with custom font](../images/style-and-appearance/filter-bar-input-element.png)
 
@@ -52,7 +58,7 @@ To customize the focus highlight of the filter bar input element, apply CSS simi
 }
 
 ```
-In this example, `.e-input-group.e-input-focus` targets the focused input group. Modify background-color to adjust the focus highlight color. For accessibility, ensure sufficient contrast with the surrounding UI.
+In this example, `.e-input-group.e-input-focus` targets the focused input group. Modify `background-color` to adjust the focus highlight color. For accessibility, ensure sufficient contrast with the surrounding UI.
 
 ![Blazor DataGrid filter bar input with custom focus background](../images/style-and-appearance/filter-bar-input-element-focus.png)
 
@@ -228,7 +234,7 @@ To customize buttons inside the filter dialog, apply CSS similar to the followin
 }
 
 ```
-Here, `.e-filter-popup` targets the filter dialog and .`e-btn` targets the buttons within it. Modify `font-family` to change the button font.
+Here, `.e-filter-popup` targets the filter dialog and `.e-btn` targets the buttons within it. Modify `font-family` to change the button font.
 
 ![Blazor DataGrid filter dialog buttons styled with custom font](../images/style-and-appearance/filter-dialog-button-element.png)
 
