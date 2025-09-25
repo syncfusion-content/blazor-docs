@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Numeric TextBox Component | Syncfusion
-description: Learn how to use the customization options available in the Syncfusion Blazor Numeric TextBox component. 
+description: Learn how to use the customization options available in the Syncfusion Blazor Numeric TextBox component.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
