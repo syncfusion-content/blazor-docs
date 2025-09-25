@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Sorting customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Sorting customization in Syncfusion Blazor DataGrid
 
 Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon code points vary by theme; select appropriate glyphs from the Theme Studio or inspect computed styles. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
 
