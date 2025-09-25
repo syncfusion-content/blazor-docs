@@ -87,7 +87,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 
 **For WebAssembly or Auto Render Mode**:
-Register the service in both `~/Program.cs` files (server and client).
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="Server (~/Program.cs)" hl_lines="3 11" %}
@@ -121,7 +121,7 @@ await builder.Build().RunAsync();
 {% endtabs %}
 
 **For Server Render Mode**:
-Register the service in the single `~/Program.cs` file.
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
