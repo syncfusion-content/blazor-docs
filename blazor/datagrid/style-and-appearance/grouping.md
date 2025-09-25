@@ -47,7 +47,7 @@ To style the expand/collapse icons:
 
 Here, `.e-icon-gdownarrow` and `.e-icon-grightarrow` target the expand and collapse icons. Adjust the content value to switch icons. Choose from available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on the selected theme.
 
-![Customized expand and collapse icons in Blazor DataGrid group rows using CSS ::before content](../images/style-and-appearance/group-expand-or-collapse-icons.png)
+![Customized expand and collapse icons in Blazor DataGrid group rows using CSS before content](../images/style-and-appearance/group-expand-or-collapse-icons.png)
 
 ## Customizing the group caption row
 
