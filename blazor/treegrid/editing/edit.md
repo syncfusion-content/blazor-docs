@@ -587,10 +587,10 @@ public class TreeData
 
 ## Performing CRUD operations programmatically
 
-Perform the CRUD operations like **Add**, **Update**, **Delete** by using the `AddRecord`, `UpdateRow`, `DeleteRow` methods.
+Perform the CRUD operations like **Add**, **Update**, **Delete** by using the `AddRecordAsync`, `UpdateRowAsync`, `DeleteRow` methods.
 
-* **AddRecord** - Add a new record into the tree grid.
-* **UpdateRow** - Update an existing record in a tree grid.
+* **AddRecordAsync** - Add a new record into the tree grid.
+* **UpdateRowAsync** - Update an existing record in a tree grid.
 * **DeleteRow** - Delete a selected row from the tree grid.
 
 {% tabs %}
@@ -634,18 +634,18 @@ Perform the CRUD operations like **Add**, **Update**, **Delete** by using the `A
             Priority = "Low",
             ParentId = null
         };
-        await this.treegrid.AddRecord(adddata);
+        await this.treegrid.AddRecordAsync(adddata);
     }
 
     public async Task Update()
     {
         TreeData.BusinessObject data = new TreeData.BusinessObject() {  TaskId = 1,TaskName = "Updated Task",Duration = 45,Progress = 50,Priority = "Low",ParentId = null };
-        await this.treegrid.UpdateRow(1, data);
+        await this.treegrid.UpdateRowAsync(1, data);
     }
 
     public async Task Delete()
     {
-        await this.treegrid.DeleteRecord();
+        await this.treegrid.DeleteRecordAsync();
     }
 }
 
@@ -797,7 +797,7 @@ public class TreeData
 
 ## Custom external edit form 
 
-Perform the edit operation of tree grid in a custom external form. The edit operation can be done by the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event and `UpdateRow` method of tree grid.
+Perform the edit operation of tree grid in a custom external form. The edit operation can be done by the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event and `UpdateRowAsync` method of tree grid.
 
 {% tabs %}
 
@@ -872,7 +872,7 @@ Perform the edit operation of tree grid in a custom external form. The edit oper
     }
     async Task Save()
     {
-        await this.treegrid.UpdateRow(1, data);
+        await this.treegrid.UpdateRowAsync(1, data);
     }
     public void RowSelectHandler(RowSelectEventArgs<TreeData.BusinessObject> args)
     {
@@ -1022,3 +1022,4 @@ public class TreeData
 ## See also
     
 * [Cascading DropDownList while Editing in Blazor TreeGrid](https://www.syncfusion.com/forums/175409/cascading-dropdown-dont-work-inside-grid-dialog-form-template)
+

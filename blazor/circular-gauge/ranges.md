@@ -353,7 +353,6 @@ To apply linear gradient to the range, follow the below code sample.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgWrrmqhBbMMDq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Radial gradient
 
@@ -464,7 +463,6 @@ To apply radial gradient to the range, follow the below code sample.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqiLLcAhUizuIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
