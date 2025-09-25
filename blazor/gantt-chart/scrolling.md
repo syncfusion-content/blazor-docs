@@ -74,7 +74,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeNEVIVpUHKMmN?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeNEVIVpUHKMmN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Responsive with the parent container
 
@@ -139,7 +139,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVotaVoLTJVFSsi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVotaVoLTJVFSsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto scroll to taskbar
 
@@ -191,7 +191,7 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBejaVoVfoSMdbx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBejaVoVfoSMdbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Scroll the content by external button
 

@@ -89,7 +89,7 @@ In the following example:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLeNOryrTDbPabb?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLeNOryrTDbPabb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method accepts the Boolean argument that accepts true or false to disable or enable rendering respectively.
 This method can be used only after the Gantt component completed the initial rendering. Calling this method during initial rendering will not have any effect.

@@ -59,7 +59,7 @@ The column width can be resized by clicking and dragging the right edge of the c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrojaByrMWhLdCJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrojaByrMWhLdCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 
@@ -123,7 +123,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrIjOrIhiWvkVHp?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrIjOrIhiWvkVHp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Touch interaction 
 

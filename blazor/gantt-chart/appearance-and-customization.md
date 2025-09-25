@@ -432,7 +432,7 @@ N> By default, the `GridLines` property is set to `Horizontal` type.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLoXYrfLxMfKlqn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLoXYrfLxMfKlqn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Splitter
 
@@ -494,7 +494,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrotaBJhRYmjyBJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrotaBJhRYmjyBJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Change splitter position dynamically
 

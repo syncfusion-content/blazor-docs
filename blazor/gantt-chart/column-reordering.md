@@ -201,4 +201,4 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjryZYBILjQzOgas?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjryZYBILjQzOgas?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

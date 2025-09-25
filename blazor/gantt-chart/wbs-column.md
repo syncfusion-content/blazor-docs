@@ -93,7 +93,7 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoDEroBqxKFzeJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoDEroBqxKFzeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
@@ -197,7 +197,7 @@ The following example demonstrates conditional WBS auto-update activation specif
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZryNEBeVUcysGjr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZryNEBeVUcysGjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Limitations
 

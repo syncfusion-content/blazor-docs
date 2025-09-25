@@ -66,7 +66,7 @@ Interaction keys |Description
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSNEVJgLymNZrA?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSNEVJgLymNZrA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Copy to clipboard by external buttons
 
@@ -140,7 +140,7 @@ To copy the data of the selected rows or cells into the clipboard with the help 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhIDOBJqrnnaTje?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhIDOBJqrnnaTje?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Copy hierarchy modes
 
@@ -261,7 +261,7 @@ Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreZYhfgVwQdJtr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreZYhfgVwQdJtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Paste
 
@@ -627,4 +627,4 @@ With this customization, users can easily and quickly update multiple cells in t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyXaBShXqAcAGK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyXaBShXqAcAGK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
