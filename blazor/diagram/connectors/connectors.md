@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Actions of Connectors in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about actions of connectors in Syncfusion Blazor Diagram component and more.
+title: Actions of Connectors in Syncfusion Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about actions of connectors in Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Connector in Blazor Diagram Component
+# Connector in Diagram Component
 
 Connectors create links between points, nodes or ports to represent the relationships between them.
 
@@ -105,7 +105,7 @@ Add a connector at runtime by adding it to the connectors collection in the Diag
     }
 }
 ```
-A complete working sample can be downloaded [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorAtRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorAtRuntime).
 ### How to Clone a Connector at Runtime
 [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method on connector that creates a copy of a diagram object. After cloning, set a unique ID for the cloned connector. The following code demonstrates how to clone the connector during runtime.
 
@@ -476,7 +476,7 @@ The following code example illustrates how to connect two nodes.
     }
 }
 ```
-A complete working sample can be downloaded [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithNode)
 
 ![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
