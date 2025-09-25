@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Open AI Integration with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Open AI integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+title:  Azure Open AI Integration with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Azure Open AI integration with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration of Azure OpenAI With Blazor AI AssistView component
 
-The Syncfusion AI AssistView supports integration with Azure OpenAI, enabling advanced conversational AI features in your applications.
+The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your applications.
 
 ## Prerequisites
 
