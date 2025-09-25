@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header customization in Blazor DataGrid | Syncfusion
+title: Header customization in Syncfusion Blazor DataGrid
 description: Learn how to customize Syncfusion Blazor DataGrid header with CSS—style header bar, cells, text, or hide it, with CSS isolation tips and cautions.
 platform: Blazor
 control: DataGrid

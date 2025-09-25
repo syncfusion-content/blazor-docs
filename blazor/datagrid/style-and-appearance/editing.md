@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing customization in DataGrid | Syncfusion
+title: Editing customization in Syncfusion Blazor DataGrid
 description: Customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
 platform: Blazor
 control: DataGrid

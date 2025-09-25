@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Aggregate customization in Blazor DataGrid | Syncfusion
+title: Aggregate customization in Syncfusion Blazor DataGrid
 description: Learn how to customize aggregate rows in the Syncfusion Blazor DataGrid using CSS, including footer containers and summary cells.
 platform: Blazor
 control: DataGrid
