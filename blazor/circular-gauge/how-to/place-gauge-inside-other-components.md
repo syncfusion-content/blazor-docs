@@ -585,6 +585,5 @@ Color="#e5ce20" PointerWidth="30">
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAsVBGASDkmDes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Accordion component](../images/blazor-circulargauge-with-accordion.png)
