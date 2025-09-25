@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging customization in Syncfusion Blazor DataGrid
-description: Learn how to style the Syncfusion Blazor DataGrid paging UI using CSS—pager container, navigation buttons, numeric items, and page indicator.
+title: Pager styling and customization in Blazor DataGrid | Syncfusion
+description: Learn how to style the Syncfusion Blazor DataGrid pager using CSS—customize container, buttons, numeric items, and page indicator.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging customization in Syncfusion Blazor DataGrid
 
-The appearance of paging elements in the Syncfusion Blazor DataGrid can be customized using CSS. The following examples show how to style the pager root, pager container, navigation buttons, numeric page links, and the current page indicator.
+The appearance of paging elements in the Syncfusion Blazor DataGrid can be customized using CSS. The following examples show how to style the pager root, pager container, navigation buttons, numeric page links, and the current page indicator. When using CSS isolation (.razor.css), target internal Grid elements with :deep(...) or ::deep(...) so styles penetrate component boundaries, or scope selectors with a wrapper class or the Grid ID to avoid theme overrides. For production, prefer CSS isolation or a site stylesheet rather than inline styles, and ensure custom colors meet accessibility contrast guidelines.
 
 ## Customizing the Blazor DataGrid pager root element
 
@@ -21,7 +21,8 @@ To customize the Grid pager root element, apply CSS like the following:
     background-color: #deecf9;
 }
 ```
-In this example, the `.e-gridpager` class targets the pager root element. Modify `font-family` to change the typography and `background-color` to change the pager background.
+In this example, the `.e-gridpager` class targets the pager root element. Modify `font-family` to change the typography and `background-color` to change the pager background. In isolated CSS, wrap the selector with `:deep(.e-grid .e-gridpager)` in the component’s .razor.css file, or scope it with a wrapper/ID to limit the impact.
+
 ![Blazor DataGrid pager root with custom background and font](../images/style-and-appearance/grid-pager-root-element.png)
 
 ## Customizing the Blazor DataGrid pager container element
@@ -35,7 +36,7 @@ To customize the Grid pager container element, apply CSS like the following:
 }
 ```
 
-In this example, the `.e-pagercontainer` class targets the pager container. Modify the `border` and `font-family` properties to adjust the border style and typography.
+In this example, the `.e-pagercontainer` class targets the pager container. Modify the `border` and `font-family` properties to adjust the border style and typography. Consider using theme variables or a consistent design token system for brand-aligned styling.
 
 ![Blazor DataGrid pager container with custom border and font](../images/style-and-appearance/grid-pager-container-element.png)
 
@@ -56,7 +57,7 @@ To customize the Grid pager navigation elements, apply CSS like the following:
 }
 ```
 
-In this example, the classes `.e-prevpagedisabled`, .`e-prevpage`, `.e-nextpage`, `.e-nextpagedisabled`, .`e-lastpagedisabled`, `.e-lastpage`, `.e-firstpage`, and .`e-firstpagedisabled` target the navigation buttons. Modify `background-color` to change the button backgrounds.
+In this example, the classes `.e-prevpagedisabled`, `.e-prevpage`, `.e-nextpage`, `.e-nextpagedisabled`, `.e-lastpagedisabled`, `.e-lastpage`, `.e-firstpage`, and `.e-firstpagedisabled` target the navigation buttons. Modify `background-color` to change the button backgrounds. Preserve focus visibility (outline or equivalent) for keyboard users and verify icon directionality in right-to-left layouts.
 
 ![Blazor DataGrid pager navigation buttons with custom background](../images/style-and-appearance/grid-pager-navigation-element.png)
 
@@ -77,7 +78,7 @@ To customize the Grid pager page numeric link elements, apply CSS like the follo
 }
 ```
 
-In this example, the `.e-numericitem` class targets the numeric page links. Modify `background-color` and `color` to adjust the default and hover styles.
+In this example, the `.e-numericitem` class targets the numeric page links. Modify `background-color` and `color` to adjust the default and hover styles. Ensure sufficient contrast for default, hover, and focus states, and confirm hover effects are complemented by focus-visible styles for accessibility.
 
 ![Blazor DataGrid pager numeric links with custom default and hover styles](../images/style-and-appearance/pager-page-numeric-link-elements.png)
 
@@ -92,7 +93,7 @@ To customize the Grid pager current page numeric element, apply CSS like the fol
 }
 ```
 
-In this example, the `.e-currentitem` class targets the current page. Modify `background-color` and `color` to adjust the highlight and text color.
+In this example, the `.e-currentitem` class targets the current page. Modify `background-color` and `color` to adjust the highlight and text color. When scoping styles to a single Grid instance, prefix with the Grid ID or wrapper (for example, `#OrdersGrid .e-grid .e-gridpager .e-currentitem { ... }`).
 
 ![Blazor DataGrid current page indicator with custom background and text color](../images/style-and-appearance/grid-pager-current-page-numeric-element.png)
 

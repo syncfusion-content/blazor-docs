@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting customization in Blazor DataGrid | Syncfusion
-description: Learn how to customize sorting icons and multi-sort badges in the Syncfusion Blazor DataGrid using CSS, with notes on theme icon codes and CSS isolation.
+title: Sorting Icon Styling in Blazor DataGrid | Syncfusion
+description: Learn how to style sorting icons in Syncfusion Blazor DataGrid using CSS, with tips on theme icon codes and CSS isolation.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon code points vary by theme; select appropriate glyphs from the Theme Studio or inspect computed styles. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
+Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon code points vary by theme; obtain the correct glyph values from Theme Studio, the theme’s icon font CSS, or by inspecting computed styles in the browser dev tools. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or scope selectors with a wrapper class or Grid ID to increase specificity if the theme overrides custom CSS. For production, prefer CSS isolation or a site-wide stylesheet over inline styles.
 
 ## Customizing the Blazor DataGrid sorting icon
 
@@ -23,7 +23,7 @@ To customize the sorting icon that appears in the Grid header when sorting is ap
     content: '\e7b6'; /* Icon code for descending order */
 }
 ```
-In this example, the `.e-icon-ascending::before` selector targets the icon for ascending order, and `.e-icon-descending::before` targets the icon for descending order. Update the content values based on the selected theme’s icon set.
+In this example, the `.e-icon-ascending::before` selector targets the icon for ascending order, and `.e-icon-descending::before` targets the icon for descending order. Update the `content` values to match the selected theme’s icon set. Ensure the icon font family used by the theme is available and applied; overriding `content` without the correct font family can result in missing glyphs. In CSS isolation, apply selectors via `:deep(.e-grid .e-icon-ascending::before)` and `:deep(.e-grid .e-icon-descending::before)` if required. Verify icon appearance in both left-to-right and right-to-left layouts.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
@@ -38,7 +38,7 @@ To customize the multi-sorting badge that appears in the Grid header when multip
 }
 ```
 
-In this example, the `.e-sortnumber` selector customizes the background color and font family of the multi-sorting badge. Modify `background-color` and `font-family` to match the desired design.
+In this example, the `.e-sortnumber` selector customizes the background color and font family of the multi-sorting badge. Modify `background-color` and `font-family` to align with design requirements. Maintain sufficient color contrast and do not remove focus indicators to preserve accessibility. In isolated CSS, scope the rule with `:deep(.e-grid .e-sortnumber)` or use a wrapper/ID to limit the impact to a specific Grid instance.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.png)
 
