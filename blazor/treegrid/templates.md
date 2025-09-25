@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Templates in Blazor TreeGrid Component | Syncfusion
-description: Learn about all template options in the Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about templates in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Templates in Blazor TreeGrid Component
+# Templates in Syncfusion Blazor TreeGrid Component
 
 Blazor provides templated components that accept one or more UI fragments to render during component execution. The TreeGrid is a templated Razor component that enables customizing multiple parts of the UI through template parameters. It supports rendering custom content or components based on application logic.
 
