@@ -80,5 +80,3 @@ The Gantt Chart component maps any data source fields to [GanttLabelSettings](ht
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIDkVIpzpsrlhR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Gantt Chart with Task Label](images/blazor-gantt-chart-task-label.png)

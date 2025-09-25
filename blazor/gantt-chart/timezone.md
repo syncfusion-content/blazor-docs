@@ -138,8 +138,6 @@ The `Timezone` property can be assigned a standard IANA timezone string, such as
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIZuLqprprdGQl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Timezone in Blazor Gantt Chart](./images/gantt-timezone.gif)
-
 ### CRUD operations with timezone
 
 CRUD operations in the Blazor Gantt Chart respect the configured `Timezone` property, ensuring consistent date and time handling. When adding a task, the start date is calculated based on the minimum start date in the dataset and converted to the specified timezone. Editing or deleting tasks processes `StartDate` and `EndDate` values in the configured timezone, maintaining consistency in visualization, data storage, and export operations.

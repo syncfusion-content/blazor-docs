@@ -362,6 +362,9 @@ The Gantt Chart includes styling options that enable you to customize the appear
 
 Here is a code snippet that shows how to modify the color of dependency lines:
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" ConnectorLineBackground="#ff0000" ConnectorLineWidth="2" Height="450px" Width="750px">
     <GanttTaskFields Id="TaskID"
