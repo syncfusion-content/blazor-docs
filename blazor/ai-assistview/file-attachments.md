@@ -11,7 +11,7 @@ documentation: ug
 
 `Attachment` support in the AI AssistView allows users to include files with their prompts, providing additional context to improve responses. Configure this behavior using the `AttachmentSettings` property, which controls enabling, allowed file types, size limits, and the server endpoints used for upload and removal.
 
-You can use the `AttachmentSettings` property to configure  attachments in the AI AssistView.
+The `AttachmentSettings` property can be used to configure attachments in the AI AssistView component.
 
 ### Enabling attachment
 
