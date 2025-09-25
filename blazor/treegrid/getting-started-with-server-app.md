@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeGrid in Blazor Server App
 
-This section briefly explains how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
+This section briefly explains how to include the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in a Blazor Server App using Visual Studio, Visual Studio Code, and .NET CLI.
 
 To get start quickly with Blazor TreeGrid, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid) sample:
 
