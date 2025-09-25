@@ -9,28 +9,28 @@ documentation: ug
 
 # Data Binding in Blazor Diagram Component
 
-* [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) based on the information provided from an external data source.
+* The [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) from an external data source.
 
-* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved.
+* Diagram exposes data-related properties to specify the data source fields from where the node information has to be retrieved.
 
-* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
+* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property specifies the data source either as a collection of objects or as an instance of `DataSource` to populate the diagram.
 
-* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) property is used to define the unique field of each JSON data.
+* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) property defines the unique identifier field for each data item.
 
-* The [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) property is used to define the parent field which builds the relationship between ID and parent field.
+* The [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) property defines the parent field which builds the relationship between ID and parent field.
 
-* The [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_Root) property is used to define the root node for the diagram populated from the data source.
+* The [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_Root) property is used to define the root node for diagrams populated from a data source.
 
 * To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 
-* Diagram supports two types of data binding. They are:
+* Diagram supports two types of data binding:
 
     1. Local data
     2. Remote data
 
 ## How to Specify Parent Child Relationship in Data Source
 
-The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) types are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
+The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) properties are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -86,11 +86,11 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
 
 ## How to Bind Local Data to the Diagram
 
-Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
+Diagram can be populated from user defined JSON data (local data) by mapping the relevant data source fields.
 
 To map the user defined JSON data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind local data with the diagram.
 
@@ -195,7 +195,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/LocalData)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/LocalData)
 
 ## How to Bind ExpandoObject Data to the Diagram
 
@@ -381,7 +381,7 @@ The following code example illustrates how to bind ExpandoObject data with the d
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/ExpandoObject)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/ExpandoObject)
 
 ##  How to Bind DynamicObject Data to the Diagram
 
@@ -583,13 +583,13 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DynamicObj)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DynamicObj)
 
 ## How to Bind JSON Data to the Diagram
 
-Local JSON data can be bound to the Diagram component by assigning the array of objects to the Json property of the SfDataManager component.
+Local JSON data can be bound to the Diagram by assigning the array of objects to the Json property of the SfDataManager component.
 
-The following sample code demonstrates binding local data through the SfDataManager to the Diagram component,
+The following sample code demonstrates binding local data through SfDataManager to the Diagram component,
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -652,11 +652,11 @@ The following sample code demonstrates binding local data through the SfDataMana
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/JSONData)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/JSONData)
 
 ## How to Bind Remote Data to the Diagram
 
-To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or use the SfDataManager component. To interact with a remote data source, provide the endpoint Url.
+To bind remote data to the [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or use the SfDataManager component. To interact with a remote data source, provide the endpoint Url.
 
 When using SfDataManager for data binding, the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
@@ -747,11 +747,11 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataAdaptor)
 
 ### How to Bind OData V4 Services
 
-The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the ODataV4Adaptor.
+OData V4 is an updated version of the OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the OData V4 adaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -836,15 +836,15 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataV4Adaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataV4Adaptor)
 
 ### How to Bind Web API Services to the Diagram
 
-You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoints. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Therefore, to use the `WebApiAdaptor`, the endpoint must understand the OData formatted queries sent with the request.
+Use the `WebApiAdaptor` to interact with Web APIs created with OData endpoints. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Therefore, to use the `WebApiAdaptor`, the endpoint must understand the OData formatted queries sent with the request.
 
 To enable OData query option for a Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
-The following sample code demonstrates hoe to bind remote data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using a Web API service,
+The following sample code demonstrates how to bind remote data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using a Web API service,
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -929,7 +929,7 @@ The following sample code demonstrates hoe to bind remote data to the Diagram co
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
 
 ### How to Bind URL Services to the Diagram
 A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
@@ -1019,10 +1019,10 @@ The following sample code demonstrates how to bind data to the Diagram component
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
 ### How to Bind Custom Data
-The custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+Custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
@@ -1143,14 +1143,14 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### How to Perform CRUD Operation
 
-The CRUD operations for the custom bounded data in the diagram component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+The CRUD operations for custom bounded data in the diagram component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
 * **Update/UpdateAsync**
 * **Read/ReadAsync**
 
-The following sample code demonstrates implementing CRUD operations for the custom bounded data,
+The following sample code demonstrates implementing CRUD operations for custom bounded data,
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
@@ -1348,7 +1348,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
 ### How to Bind GraphQL Service
 GraphQL is a query language for APIs that allows you to can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from a GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
@@ -1444,11 +1444,11 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 
 ![Binding with GraphQL service](images/GraphQLAdaptor.png) 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
 
 ### How to Perform CRUD Operations Using Mutations
 
-You can perform CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+CRUD operations can be performed by setting mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
 The following sample code demonstrates performing CRUD operations. You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in `GraphQLAdaptorOptions`. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
 
@@ -1709,11 +1709,10 @@ namespace ASPNetCoreGraphQlServer.GraphQl
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptorCRUD)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptorCRUD)
 
 ## Entity Framework
-
-You need to follow the below steps to consume data from the **Entity Framework** in the diagram component.
+Follow these steps to consume data from **Entity Framework** in the Diagram.
 
 ### How to Create DBContext Class
 
@@ -1862,7 +1861,7 @@ namespace DiagramWithRemoteData.Controllers
 
 ### How to Configure Diagram Component Using Web API Adaptor
 
-Now, you can configure the diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with the web api, you need to use WebApiAdaptor.
+Configure the Diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with the web api, use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
