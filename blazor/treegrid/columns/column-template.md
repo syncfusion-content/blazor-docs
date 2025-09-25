@@ -1,27 +1,28 @@
 ---
 layout: post
-title: Column Template in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about column template in the Syncfusion Blazor Tree Grid component and much more details.
+title: Column Template in Blazor TreeGrid Component | Syncfusion
+description: Learn how to use column template in the Syncfusion Blazor TreeGrid component to render custom content such as images, conditional UI, and hyperlinks.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Column Template in Blazor Tree Grid
+# Column Template in Blazor TreeGrid
 
-N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates/#templates) section topic to configure the template.
+N> Before adding a column template to the Tree Grid, review the [template](https://blazor.syncfusion.com/documentation/treegrid/templates#templates) section to configure templates and understand model binding.
 
-To know about **Column Template** in Blazor tree grid Component, you can check this video.
+The following video provides an overview of using **Column Template** in the Blazor TreeGrid.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
 
-The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom content. Inside the `Template`, you can access the data using the implicit named parameter **context**.
+A column template enables rendering custom element values or content within a column. Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify custom content. Inside the `Template`, the row data is available through the implicit named parameter `context`.
 
-N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+N> The column template feature renders customized values in the UI for a specific column. Data operations such as filtering and sorting run against the underlying [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) values in the data source, not the rendered template content.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 <div class="col-lg-12 control-section">
     <div class="content-wrapper">
@@ -222,18 +223,18 @@ N> The column template feature is used to render the customized element value in
 }
 ```
 
-The following screenshot represents the column Template.
-![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.png)
+The following screenshot shows a column template rendering an employee image.
+![Blazor TreeGrid Column template rendering employee image](../images/blazor-treegrid-column-template.png)
 
-N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified in the
-template column, the tree grid actions cannot be performed.
-<br/> * For Templated tree grid component, [ModelType](../templates/#template-modeltype) property of tree grid should be defined.
+N> 
+- Tree Grid actions such as editing, filtering, and sorting depend on the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified for a template column, Tree Grid actions cannot be performed on that column.  
+- For templated TreeGrid component, the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property must be defined.
 
 ## Using conditions inside template
 
-Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+Template elements can be conditionally rendered within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
-In the following code, checkbox is rendered based on Discontinued field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) using the implicit named parameter **context**.
+In the following example, a checkbox is rendered based on the `Duration` field value from the data source. This data is accessed inside the template using the implicit `context` parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -324,17 +325,18 @@ In the following code, checkbox is rendered based on Discontinued field value in
 }
 ```
 
-The following screenshot represents the Conditional Template.
-![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.png)
+The following screenshot shows conditional rendering within a template.
+![Blazor TreeGrid Conditional Template](../images/blazor-treegrid-conditional-template.png)
 
-N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
+N> For Templated TreeGrid component, define the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property to enable strong typing within templates.
 
 ## Using image inside template
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom image content. Inside the `Template`, you can access the data using the implicit named parameter **context** of Model type.
+Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to render custom image content. Inside the `Template`, access the row data using the implicit `context` parameter of the model type.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 <div class="col-lg-12 control-section">
     <div class="content-wrapper">
@@ -535,18 +537,19 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 }
 ```
 
-The following screenshot represents the Image Template.
-![Blazor Tree Grid with Image Template](../images/blazor-treegrid-image-template.png)
+The following screenshot shows an image rendered inside a template.
+![Blazor TreeGrid image rendered in template cell](../images/blazor-treegrid-image-template.png)
 
 ## Using hyperlink column
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render the hyperlinks and for routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
+Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render hyperlinks. For routing, refer to the Blazor navigation and routing guidance in the Microsoft documentation: [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers).
 
-This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. By using the named parameter **context** of Model type, we can pass the row data to click event handler.
+This approach defines an anchor element inside the column template and binds the click event to navigate. Using the implicit **context** parameter, pass the row data to the click event handler.
 
 ```cshtml
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid  DataSource="@Employees" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -600,7 +603,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 }
 ```
 
-In the above code, the url to be navigated is specified in the Link variable of the tree grid data. Based on this, the page is routed to the corresponding url.
+In this example, the target URL is specified in the `Link` field of the TreeGrid data, and navigation is performed based on that value. To prevent the browser from following the `#` anchor by default, consider adding `@onclick:preventDefault="true"` to the link when appropriate.
 
 ```cshtml
 @page "/nancy_fuller/{EmpID}/{Name}/{Title}"
@@ -632,3 +635,7 @@ In the above code, the url to be navigated is specified in the Link variable of 
 
 The following GIF represents template routing in tree grid
 ![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+
+
+
+
