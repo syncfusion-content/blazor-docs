@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Customize Column Styles in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Customize Column Styles in Syncfusion Blazor TreeGrid component and more.
+description: Learn how to apply custom styles to specific columns in the Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Customize Column Styles in Blazor TreeGrid Component
 
- The appearance of the header and content of a particular column can be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+You can customize the appearance of both the header and content cells of specific columns in the TreeGrid using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
-To customize the Tree Grid column, follow the given steps:
+Follow the steps below to apply custom styles to a column:
 
 **Step 1**:
 
-Create a CSS class with custom style to override the default style for row cell and header cell.
+Define a CSS class with the desired styles to override the default appearance of the row and header cells.
 
 ```css
 .e-attr{
@@ -28,15 +28,15 @@ Create a CSS class with custom style to override the default style for row cell 
 
 **Step 2**:
 
-Add the custom CSS class to the specified column by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+Apply the custom CSS class to the target column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" 
             TreeColumnIndex="1" AllowPaging="true" Height="200">
@@ -59,7 +59,7 @@ Add the custom CSS class to the specified column by using the [CustomAttributes]
 
 
 @code{
-        SfTreeGrid<TreeData> TreeGrid;
+    SfTreeGrid<TreeData> TreeGrid;
 
     public List<TreeData> TreeGridData { get; set; }
 
