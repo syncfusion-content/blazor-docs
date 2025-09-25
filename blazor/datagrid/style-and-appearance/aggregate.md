@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Aggregate customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Aggregate customization in Syncfusion Blazor DataGrid
 
 Aggregates render in the Grid footer as summary rows and can be styled with custom CSS. The examples below show how to customize the footer container (aggregate root element) and the individual summary cells. For API details, see Grid aggregates, GridAggregateColumn, AggregateType, and the FooterTemplate with AggregateTemplateContext.
 

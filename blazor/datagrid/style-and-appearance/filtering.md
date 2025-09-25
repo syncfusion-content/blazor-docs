@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Filtering in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Filtering customization in Syncfusion Blazor DataGrid
 
 The appearance of filtering UI elements in the Syncfusion Blazor DataGrid can be customized using CSS. The following examples demonstrate how to style the filter bar, input focus states, clear and filter icons, filter dialog content and footer, dialog inputs and buttons, and Excel filter dialog menu visuals.
 

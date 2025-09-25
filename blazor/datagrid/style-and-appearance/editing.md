@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Editing in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Editing customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize various editing-related elements.
 
