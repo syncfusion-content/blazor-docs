@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor TreeGrid Component | Syncfusion
-description: Learn how to print data in the Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about print in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
