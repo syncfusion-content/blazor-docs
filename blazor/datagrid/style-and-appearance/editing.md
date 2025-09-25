@@ -249,8 +249,8 @@ To style command column buttons (edit, delete, update, cancel), use the followin
 ```
 In this example, the .e-edit, .e-delete, .e-update, and .e-cancel-icon classes represent the respective command column buttons. Modify the color property to change the color of these buttons.
 
-![Blazor DataGrid command buttons with customized icon colors (delete/cancel)](../images/style-and-appearance/commandbutton-1.png)
-![Blazor DataGrid command buttons with customized icon colors (edit/save)](../images/style-and-appearance/commandbutton-2.png)
+![Blazor DataGrid command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.png)
+![Blazor DataGrid command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
