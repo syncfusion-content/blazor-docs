@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Blazor DataGrid to Server App via .NET CLI | Syncfusion
-description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using .NET CLI with setup, theme, scripts, and basic features.
+title: Add Blazor DataGrid to a Blazor Server app using .NET CLI | Syncfusion
+description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using the .NET CLI on .NET 8/9, including setup, theme, scripts, and basic features.
 control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid in Server Side App using CLI
+# Blazor DataGrid in a Blazor Server app using the .NET CLI
 
-This article provides step-by-step instructions to build a Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
+This article provides step-by-step instructions to build a Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
 
 ## Manually creating a project
 
@@ -16,8 +16,17 @@ This section explains how to manually create a Blazor Server app using the CLI.
 
 ### Prerequisites
 
-Ensure the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) is installed.
-To check the installed version, run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
+Install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download) for .NET 8/9. To verify installed SDKs, run:
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --list-sdks
+
+{% endhighlight %}
+{% endtabs %}
+
+To check the current default .NET SDK version installed on a system, run the following command in a terminal or command prompt:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -29,7 +38,7 @@ dotnet --version
 
 ### Create a Blazor Server side project using .NET Core CLI
 
-To create a new Blazor Server application, open your terminal or command prompt and run:
+To create a new Blazor Server application using the .NET CLI, run the following command:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -40,9 +49,9 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor app project and places it in a directory called BlazorApp inside your current location. See the [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates a new Blazor app project and places it in a directory named BlazorApp within the current working location. For more details, refer to the [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) documentation.
 
-N> If multiple SDK versions are installed and a specific target framework (for example, net5.0/netcoreapp3.1) is required, add the -f flag with the dotnet new blazorserver command. Refer to the [dotnet new options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for available flags.
+N> If multiple SDK versions are installed and a specific target framework (for example, net8.0/net9.0) is required, add the -f flag with the dotnet new blazorserver command. Refer to the [dotnet new options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for available flags.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the app
 
@@ -58,7 +67,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a Syncfusion license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
@@ -100,14 +109,19 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` section of the main layout page as shown below:
 
-* For **.NET 7,8,9 and 10** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+* For **.NET 8 and .NET 9** Blazor Server apps, include them in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+
 ```
 N> Review the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to learn various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for approaches to add script references.
 
@@ -649,7 +663,7 @@ public class OrderData
 
 ![Blazor DataGrid](../images/blazor-datagrid.gif)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorServerApp).
+> Find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorServerApp).
 
 ## See also
 
