@@ -29,40 +29,39 @@ Before using this extension, ensure you have:
 
 * [Github copilot](https://github.com/copilot/)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Free Community License](https://www.syncfusion.com/products/communitylicense)
-  - [Syncfusion<sup style="font-size:70%">&reg;</sup> Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
+  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 * An active [API KEY](https://staging.syncfusion.com/account/user-token-generation)
 
 ## Unlimited Access
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> users enjoy completely unlimited access to this copilot extension. There are no restrictions on:
+Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to this copilot extension. There are no restrictions on:
 
-* No request limits
-* No component restrictions
-* No query type limitations
-* No usage duration constraints
+* Number of requests
+* Components usage
+* Query types
+* Usage duration
 
-We believe in providing unrestricted access to tools that enhance your development experience, ensuring you can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components without limitations.
+This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components to enhance their development experience without limitations.
 
 ## Installation
 
 * Visit the [SyncfusionBlazor GitHub App](https://github.com/apps/syncfusionblazor) and click **Install**.
 * Grant the required read-access permissions to allow the extension to function with Copilot chat.
 * Click **Install & Authorize**.
-* Sign in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials to complete the authorization.
-
-Based on the authorization, we will fetch the API key from your account and utilize it for response generation. After successful authentication, the extension will be integrated with your GitHub account.
-
-Restart your apps and begin a new Copilot chat session to start using it.
+* Sign in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account to authenticate and link the extension to your GitHub account. The API key is automatically retrieved upon successful authentication.
+* Restart your development environment (e.g., VS Code or GitHub Copilot) and start a new Copilot chat session to use the extension.
 
 ## Getting Started
 
 * Open the chat panel in a supported environment like [GitHub Copilot](https://github.com/copilot) or VSCode Copilot.
-* In the chat prompt, type `@` and select the `SyncfusionBlazor` extension from the list.
-* Enter your query related to any Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component.
+* Type `@` in the chat prompt and select the `SyncfusionBlazor` from the list of extensions.
+* Enter a query related to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components (e.g., configuration, implementation, or troubleshooting).
 
-**Note:** When using this extension in VS Code, make sure you are in Ask mode and not in Edit or Agent mode. The Edit and Agent modes do not use the Syncfusion<sup style="font-size:70%">&reg;</sup> Copilot extension.
+### Mode availability in VS code
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Copilot extension provide full access to all AI interaction modes — Ask, Edit, and Agent — when integrated with VS code.
 
 ### Best Practices for Effective Usage
 
@@ -85,7 +84,7 @@ To remove the extension from your account:
 
 * Go to [GitHub App Installations](https://github.com/settings/installations/).
 * Locate the `SyncfusionBlazor` extension in the list.
-* Click `Configure` and Select `Uninstall`.
+* Click `Configure`, then select `Uninstall`.
 
 ## Support
 
