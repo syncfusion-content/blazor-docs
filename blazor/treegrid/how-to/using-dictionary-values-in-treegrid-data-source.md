@@ -1,25 +1,22 @@
 ---
 layout: post
-title: Using dictionary as datasource in Blazor TreeGrid | Syncfusion
-description: Learn here all about using dictionary values in Tree Grid datasource in Syncfusion Blazor TreeGrid component and more.
+title: Using Dictionary as DataSource in Blazor TreeGrid | Syncfusion
+description: Learn how to use dictionary values in the TreeGrid DataSource in Syncfusion Blazor TreeGrid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Using dictionary values as datasource in Blazor TreeGrid Component
+# Using Dictionary values as DataSource in Blazor TreeGrid Component
 
-The dictionary values can be assigned in the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component
+Dictionary values can be assigned to the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component.
 
-This is demonstrated in the below sample code where **Designation** is defined as Dictionary value and it is accessed inside the template property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **KeyValuePair** data type. The key value is compared with the **TaskId** column value and based on that the value is displayed.
-
-
+The following sample demonstrates how **Designation** is defined as a dictionary and accessed inside the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **KeyValuePair** is compared with the **TaskId** column value, and the corresponding value is displayed.
 
 ```cshtml
-
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true"
