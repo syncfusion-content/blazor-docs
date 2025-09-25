@@ -250,7 +250,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhyjEByHgdKnwXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
 ## Set Content to Dialog 
