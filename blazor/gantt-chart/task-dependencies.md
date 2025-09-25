@@ -58,8 +58,9 @@ To implement task dependencies in your Blazor Gantt Chart, follow these steps:
 
 The following code snippets demonstrate how to define and configure task dependencies in the Gantt Chart component.
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
 
@@ -68,14 +69,14 @@ The following code snippets demonstrate how to define and configure task depende
     <DropDownListFieldSettings Text="Text" Value="ID" />
 </SfDropDownList>
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="650px" DependencyTypes="@types" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
                      Dependency="Predecessor"
-                     ParentID="ParentId">
+                     ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 @code {
@@ -117,32 +118,35 @@ The following code snippets demonstrate how to define and configure task depende
     {
         TaskCollection = new List<TaskData>
         {
-            new TaskData { TaskId = 1, TaskName = "Project Initiation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
-            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
-            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
-            new TaskData { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
-            new TaskData { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentId = 5 },
-            new TaskData { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 04, 04), Duration = "0", Progress = 30, Predecessor = "7SF", ParentId = 5 }
+            new TaskData { TaskID = 1, TaskName = "Project Initiation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 06) },
+            new TaskData { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData { TaskID = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentID = 1 },
+            new TaskData { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentID = 1 },
+            new TaskData { TaskID = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 06) },
+            new TaskData { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentID = 5 },
+            new TaskData { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 04, 04), Duration = "0", Progress = 30, Predecessor = "7SF", ParentID = 5 }
         };
     }
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 }
-```
-The example initially sets the `DependencyTypes` property with all task dependency types: Finish-to-Start (FS), Start-to-Start (SS), Start-to-Finish (SF), and Finish-to-Finish (FF). A dropdown allows you to dynamically change which types are active. As you select different options, the Gantt Chart immediately updates the dependencies based on the current `DependencyTypes` configuration.
 
-![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBIjEBoKCoYgxst?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+The example initially sets the `DependencyTypes` property with all task dependency types: Finish-to-Start (FS), Start-to-Start (SS), Start-to-Finish (SF), and Finish-to-Finish (FF). A dropdown allows you to dynamically change which types are active. As you select different options, the Gantt Chart immediately updates the dependencies based on the current `DependencyTypes` configuration.
 
 ## Relationship between task levels
 
@@ -196,13 +200,13 @@ The dependency string in the Gantt Chart follows a specific structure to define 
 
 **2FS+3d**
 
-- **2**: This is the TaskId of the predecessor task. It corresponds to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field mapped in the `GanttTaskFields`.
+- **2**: This is the TaskID of the predecessor task. It corresponds to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field mapped in the `GanttTaskFields`.
 - **FS**: This represents the dependency type (Finish-to-Start in this case).
 - **+3d**: This is the offset, indicating a 3-day lag after the predecessor finishes.
 
 Here's a detailed explanation of each component:
 
-1. **TaskId**: 
+1. **TaskID**: 
    - This is the unique identifier of the predecessor task.
    - It must match the `Id` field specified in your `GanttTaskFields` mapping.
 
@@ -227,20 +231,21 @@ Here's a detailed explanation of each component:
 
 The Gantt Chart component allows you to configure complex task dependencies to handle intricate project workflows. The following code snippets demonstrate how to define and set up such dependencies.
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields
-        Id="TaskId"
+        Id="TaskID"
         Name="TaskName"
         StartDate="StartDate"
         EndDate="EndDate"
         Duration="Duration"
         Progress="Progress"
         Dependency="Predecessor"
-        ParentID="ParentId">
+        ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
@@ -251,31 +256,34 @@ The Gantt Chart component allows you to configure complex task dependencies to h
     {
         TaskCollection = new List<TaskData>
         {
-            new TaskData { TaskId = 1, TaskName = "Project Initiation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
-            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
-            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
-            new TaskData { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
-            new TaskData { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentId = 5 },
-            new TaskData { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 04, 04), Duration = "0", Progress = 30, Predecessor = "7FF+2d", ParentId = 5 }
+            new TaskData { TaskID = 1, TaskName = "Project Initiation", StartDate = new DateTime(2023, 04, 03), EndDate = new DateTime(2023, 04, 06) },
+            new TaskData { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData { TaskID = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 03), Duration = "4", Progress = 40, Predecessor = "2FS", ParentID = 1 },
+            new TaskData { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 06), Duration = "0", Progress = 30, Predecessor = "3FF", ParentID = 1 },
+            new TaskData { TaskID = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 04), EndDate = new DateTime(2023, 04, 10) },
+            new TaskData { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentID = 5 },
+            new TaskData { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 04, 10), Duration = "0", Progress = 30, Predecessor = "7FF+2d", ParentID = 5 }
         };
     }
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 }
-```
-![Blazor Gantt Chart displays Complex Dependencies](images/blazor-gantt-chart-complex-dependencies.png)
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZroXYBeqWFyLlcL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 In this example:
 - Tasks 2, 3, and 4 are child tasks of Task 1 (Project Initiation).
@@ -291,18 +299,20 @@ Tasks can have multiple dependencies, allowing for complex project structures. S
 
 The following code snippets demonstrate how to define and configure multiple dependencies:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
                      Dependency="Predecessor"
-                     ParentID="ParentId">
+                     ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
@@ -313,29 +323,32 @@ The following code snippets demonstrate how to define and configure multiple dep
     {
         TaskCollection = new List<TaskData>
         {
-            new TaskData { TaskId = 1, TaskName = "Project Kickoff", StartDate = new DateTime(2023, 04, 02), Duration = "2", Progress = 20 },
-            new TaskData { TaskId = 2, TaskName = "Planning", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, ParentId = 1 },
-            new TaskData { TaskId = 3, TaskName = "Design", StartDate = new DateTime(2023, 04, 09), Duration = "2", ParentId = 1 },
-            new TaskData { TaskId = 4, TaskName = "Implementation", StartDate = new DateTime(2023, 04, 13), Duration = "3", ParentId = 1 },
-            new TaskData { TaskId = 5, TaskName = "Testing", StartDate = new DateTime(2023, 04, 18), Duration = "2", ParentId = 1 },
-            new TaskData { TaskId = 6, TaskName = "Review", StartDate = new DateTime(2023, 04, 20), Duration = "2", Predecessor = "4FS,5SS" }
+            new TaskData { TaskID = 1, TaskName = "Project Kickoff", StartDate = new DateTime(2023, 04, 04), Duration = "2", Progress = 20 },
+            new TaskData { TaskID = 2, TaskName = "Planning", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, ParentID = 1 },
+            new TaskData { TaskID = 3, TaskName = "Design", StartDate = new DateTime(2023, 04, 10), Duration = "2", ParentID = 1 },
+            new TaskData { TaskID = 4, TaskName = "Implementation", StartDate = new DateTime(2023, 04, 13), Duration = "3", ParentID = 1 },
+            new TaskData { TaskID = 5, TaskName = "Testing", StartDate = new DateTime(2023, 04, 18), Duration = "2", ParentID = 1 },
+            new TaskData { TaskID = 6, TaskName = "Review", StartDate = new DateTime(2023, 04, 18), Duration = "2", Predecessor = "4FS,5SS" }
         };
     }
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 }
-```
-![Blazor Gantt Chart displays Multiple Task Dependencies](images/blazor-gantt-chart-multiple-task-dependencies.png)
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBotkhoAMkvqVvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 In this example, the "Review" task starts after the "Implementation" task finishes (Finish-to-Start relationship) and starts simultaneously with the "Testing" task (Start-to-Start relationship).
 
@@ -349,17 +362,16 @@ The Gantt Chart includes styling options that enable you to customize the appear
 
 Here is a code snippet that shows how to modify the color of dependency lines:
 
-```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" ConnectorLineBackground="#ff0000" ConnectorLineWidth="2" Height="450px" Width="750px">
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
                      Dependency="Predecessor"
-                     ParentID="ParentId">
+                     ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 @code {
@@ -369,28 +381,32 @@ Here is a code snippet that shows how to modify the color of dependency lines:
     {
         TaskCollection = new List<TaskData>
         {
-            new TaskData { TaskId = 1, TaskName = "Research Phase", StartDate = new DateTime(2023, 05, 01) },
-            new TaskData { TaskId = 2, TaskName = "Literature Review", StartDate = new DateTime(2023, 05, 01), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData { TaskId = 3, TaskName = "Data Collection", StartDate = new DateTime(2023, 05, 05), Duration = "3", Progress = 0, Predecessor = "2FS", ParentId = 1 },
-            new TaskData { TaskId = 4, TaskName = "Concurrent Task Preparation", StartDate = new DateTime(2023, 05, 11), Duration = "3", Progress = 0, Predecessor = "3SS" },
-            new TaskData { TaskId = 5, TaskName = "Data Analysis", StartDate = new DateTime(2023, 05, 14), Duration = "3", Progress = 0, Predecessor = "4FF" },
-            new TaskData { TaskId = 6, TaskName = "Report Writing", StartDate = new DateTime(2023, 05, 18), Duration = "4", Progress = 0, Predecessor = "5SF" }
+            new TaskData { TaskID = 1, TaskName = "Research Phase", StartDate = new DateTime(2023, 05, 01) },
+            new TaskData { TaskID = 2, TaskName = "Literature Review", StartDate = new DateTime(2023, 05, 01), Duration = "4", Progress = 50, ParentID = 1 },
+            new TaskData { TaskID = 3, TaskName = "Data Collection", StartDate = new DateTime(2023, 05, 05), Duration = "3", Progress = 0, Predecessor = "2FS", ParentID = 1 },
+            new TaskData { TaskID = 4, TaskName = "Concurrent Task Preparation", StartDate = new DateTime(2023, 05, 05), Duration = "3", Progress = 0, Predecessor = "3SS" },
+            new TaskData { TaskID = 5, TaskName = "Data Analysis", StartDate = new DateTime(2023, 05, 05), Duration = "3", Progress = 0, Predecessor = "4FF" },
+            new TaskData { TaskID = 6, TaskName = "Report Writing", StartDate = new DateTime(2023, 05, 01), Duration = "4", Progress = 0, Predecessor = "5SF" }
         };
     }
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBIjaVygrWoZlhs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 Additionally, you can modify the colors of the dependency lines and arrows using CSS for better visualization:
 
@@ -405,7 +421,6 @@ Additionally, you can modify the colors of the dependency lines and arrows using
     }
 </style>
 ```
-![Blazor Gantt Chart displays Customizing Dependency Appearance](images/blazor-gantt-chart-dependency-appearance.png)
 
 This customization makes the dependency lines and arrows red and thicker for better visibility in the Gantt Chart.
 
