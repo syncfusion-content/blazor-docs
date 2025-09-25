@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar customization in Syncfusion Blazor DataGrid
-description: Learn how to customize the Syncfusion Blazor DataGrid toolbar using CSS—style the container, buttons, and apply CSS isolation tips.
+title: Toolbar Styling in Blazor DataGrid Using CSS | Syncfusion
+description: Learn how to customize the Syncfusion Blazor DataGrid toolbar using CSS, including styling buttons, container, and applying CSS isolation tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The following examples demonstrate styling the toolbar root element and toolbar buttons. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or wrap the Grid with a custom class to increase selector specificity if theme styles override custom CSS. For functional configuration of toolbar items, see the DataGrid toolbar documentation.
+Customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The following examples demonstrate styling the toolbar root element and toolbar buttons. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or scope the rules with a wrapper class or Grid ID to increase selector specificity if theme styles override custom CSS. For functional configuration of toolbar items (add, edit, delete, and custom items), see the DataGrid toolbar documentation.
 
 ## Customizing the toolbar root element
 
@@ -21,7 +21,7 @@ To customize the appearance of the toolbar root element, use the following CSS:
 }
 ```
 
-In this example, the `.e-toolbar-items` selector targets the toolbar container. Modify the `background-color` value to change the toolbar background.
+In this example, the `.e-toolbar-items` selector targets the toolbar container. Modify the `background-color` value to change the toolbar background. In CSS isolation, use `:deep(.e-grid .e-toolbar-items)` in the component’s .razor.css file, or prefix with a wrapper/ID to limit the style to a specific Grid instance.
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
@@ -35,7 +35,7 @@ To customize the appearance of toolbar buttons, use the following CSS:
 }
 ```
 
-In this example, the `.e-toolbar .e-btn` selector targets toolbar button elements. Modify the `background-color` value to change the button background. Depending on the theme, hover, active, and focus states may require additional selectors for complete styling.
+In this example, the `.e-toolbar .e-btn` selector targets toolbar button elements. Modify the `background-color` value to change the button background. Depending on the theme, hover, active, and focus states may require additional selectors for complete styling (for example, `.e-btn:hover`, `.e-btn:active`, `.e-btn:focus-visible`). Ensure customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation. In CSS isolation, apply `:deep(.e-grid .e-toolbar .e-btn)` or scope with a wrapper/ID to avoid affecting other Grids.
 
 ![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection customization in Blazor DataGrid | Syncfusion
-description: Learn how to customize row and cell selection styles in Syncfusion Blazor DataGrid using CSS, with tips on isolation and selector specificity.
+title: Selection styling with CSS in Blazor DataGrid | Syncfusion
+description: Learn how to style row and cell selection in Syncfusion Blazor DataGrid using CSS, with tips on isolation and selector specificity.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The examples below show how to change the row selection background and the cell selection background. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
+Customize the appearance of selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The examples below show how to change the row selection background and the cell selection background. When using CSS isolation (.razor.css), target Grid internals with the :deep(...) or ::deep(...) combinator (depending on tooling), or scope styles with a wrapper class or Grid ID to increase selector specificity if theme styles override custom CSS. For production, prefer CSS isolation or a site stylesheet rather than inline styles and verify that custom colors meet accessibility contrast guidelines.
 
 ## Customizing the row selection background
 
@@ -20,7 +20,7 @@ Use the following CSS to change the row selection background color:
     background-color: #00b7ea;
 }
 ```
-In this example, the `.e-selectionbackground` class targets the background of the selected row cells. Modify the `background-color` value to apply the desired color to selected rows.
+In this example, the `.e-selectionbackground` class targets the background of the selected row cells. Modify the `background-color` value to apply the desired color to selected rows. In isolated CSS, wrap the selector with `:deep(.e-grid td.e-selectionbackground)` in the component’s .razor.css file, or prefix with a Grid-specific wrapper/ID to limit the scope to a single instance.
 
 ![Row selection](../images/style-and-appearance/row-selection.png)
 
@@ -112,7 +112,7 @@ Use the following CSS to change the cell selection background color:
 }
 ```
 
-In this example, the `.e-cellselectionbackground` class targets the background of selected cells. Modify the `background-color` value to apply the desired color to selected cells.
+In this example, the `.e-cellselectionbackground` class targets the background of selected cells. Modify the `background-color` value to apply the desired color to selected cells. When using CSS isolation, use `:deep(.e-grid td.e-cellselectionbackground)` in the component’s .razor.css file, or scope with a wrapper/ID to avoid affecting other Grids. Ensure the selected state maintains sufficient color contrast and that focus-visible styles remain clearly visible for keyboard navigation.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.png)
 

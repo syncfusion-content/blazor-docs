@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor DataGrid | Syncfusion
-description: Learn how to style the Syncfusion Blazor DataGrid using CSS and Theme Studio—headers, rows, alternate rows, and grid lines.
+title: Syncfusion Blazor DataGrid Styling Guide with CSS and Theme Studio
+description: Learn to customize the Syncfusion Blazor DataGrid using CSS and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports extensive visual customization using default CSS and custom themes. The following guidance focuses on practical CSS overrides and theme-based styling. Note: when using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports extensive visual customization with CSS and theme-based styling. The following guidance focuses on practical CSS overrides and theme-driven approaches for headers, rows, alternate rows, and grid lines. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or increase specificity by scoping rules with a wrapper class or Grid ID if theme styles override custom CSS.
 
 **Default CSS overrides:**
 
-Use custom CSS to override default Grid styles such as colors, typography, padding, and borders. Inspect the rendered HTML with browser developer tools to identify relevant selectors and class names.
+Use custom CSS to override default Grid styles such as colors, typography, spacing, and borders. Inspect the rendered HTML with browser developer tools to identify relevant selectors and class names. Prefer CSS variables/theme tokens where available to keep styling consistent across components and themes.
 
 Here is a basic example that overrides the header background color:
 
@@ -29,12 +29,12 @@ Here is a basic example that overrides the header background color:
 
 **Using theme studio:**
 
-Syncfusion Theme Studio enables creating custom themes for all components, including the DataGrid, to achieve a consistent look and feel across an application.
+Syncfusion Theme Studio provides a consistent, theme-based styling workflow for all components, including the DataGrid.
 
-1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
-2. Select the Grid from the left panel.
+1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
+2. Select Grid in the left panel.
 3. Customize colors, typography, spacing, and other visual tokens.
-4. Download the generated CSS and include it in the Blazor project.
+4. Download the generated CSS and include it in the Blazor project (site stylesheet or theme bundle).
 
 ## Customizing the Blazor DataGrid root element
 
@@ -49,9 +49,9 @@ To customize the appearance of the Grid root element, apply CSS selectors to the
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
-In the above code snippet, the `.e-grid` selector targets the Grid root element, and the font-family property is set to cursive to change the Grid’s font family.
+In this example, the .e-grid selector targets the Grid root element and applies a cursive font. For isolated styles, wrap the selector with :deep(.e-grid) in the component’s .razor.css file, or scope with a wrapper/ID to restrict the change to a specific Grid instance. For accessibility, verify that font choices and color combinations meet contrast guidelines.
 
-In the following sample, the Grid content uses the `cursive` font family, and the background color of rows, selected rows, alternate rows, and row hover state is customized using the CSS shown.
+In the following sample, the Grid content uses the cursive font family, and the background color of rows, selected rows, alternate rows, and row hover state is customized using the CSS shown. The hover rule uses !important; consider increasing selector specificity instead of relying on !important in production.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -168,9 +168,9 @@ To adjust the alternate row style when [Frozen columns](https://blazor.syncfusio
 
 ```
 
-In this example, the `.e-altrow .e-rowcell` selector targets the cells in alternate rows and applies a custom background color.
+In this example, the `.e-altrow .e-rowcell` selector targets the cells in alternate rows and applies a custom background color. If using CSS isolation, apply :deep(.e-grid .e-altrow .e-rowcell) within the component’s .razor.css file, or scope the selector with a wrapper/ID to limit the change to a single Grid. Verify the appearance in right-to-left layouts if the application supports RTL.
 
-![Grid root element](../images/style-and-appearance/style-frozon.png)
+![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -263,7 +263,7 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of Grid line appearance to match application design requirements.
 
-To customize the color of Grid lines, apply CSS to structural elements such as header cells and row cells. This approach provides control over color, thickness, and style of borders between cells.
+To customize the color of Grid lines, apply CSS to structural elements such as header cells and row cells. This approach provides control over color, thickness, and style of borders between cells. Consider the GridLines property and theme defaults, as they also influence the presence and style of borders.
 
 ```css
     /* Customize the color of Grid lines */
@@ -275,9 +275,8 @@ To customize the color of Grid lines, apply CSS to structural elements such as h
 
 ```
 
-![Grid Line](../images/style-and-appearance/grid-line.png)
-
-The following example demonstrates customizing Grid line color while using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Grid:
+![Grid lines with custom borders](../images/style-and-appearance/grid-line.png)
+The following example demonstrates customizing Grid line color while using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Grid. Use the minimal set of selectors required to achieve the desired effect to avoid unintended layout changes, and verify accessibility and contrast in high-contrast themes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
