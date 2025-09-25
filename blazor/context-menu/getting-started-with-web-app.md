@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor ContextMenu Component in a WebApp
+title: Getting Started with Syncfusion Blazor ContextMenu in a WebApp
 description: Checkout and learn about the documentation for getting started with Blazor ContextMenu Component in Blazor Web App.
 platform: Blazor
 component: ContextMenu
