@@ -78,7 +78,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
         }
         public void OnSearch(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, TaskDetails> args)
         {
-            this.TreeGrid.Search(args.Value);
+            this.TreeGrid.SearchAsync(args.Value);
         }
     }
 
