@@ -7,7 +7,7 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard Layout Component in WebAssembly App
+# Getting Start with Blazor Dashboard Layout in WebAssembly App
 
 This section explains how to integrate the Syncfusion  [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component into a Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 

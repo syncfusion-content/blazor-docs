@@ -7,7 +7,7 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Building an SEO Analysis Dashboard with Blazor Dashboard Layout Component
+# SEO Analysis in Blazor Dashboard Layout Component
 
 The Blazor Dashboard Layout component is highly effective for creating dynamic and responsive dashboards in Blazor applications. This guide demonstrates how to build a real-time SEO (Search Engine Optimization) data analysis dashboard by integrating various Syncfusion Blazor components within the Dashboard Layout.
 

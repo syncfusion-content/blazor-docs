@@ -449,7 +449,7 @@ To get started quickly with designing a Blazor Dashboard Layout with UI Componen
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
-By default, the Dashboard Layout component is rendered with auto-adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive)panels according to the parent dimensions.
+By default, the Dashboard Layout component is rendered with auto-adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) panels according to the parent dimensions.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
