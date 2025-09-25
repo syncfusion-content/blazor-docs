@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Sorting customization in Blazor DataGrid | Syncfusion
-description: Learn here all about sorting in Syncfusion Blazor DataGrid and more.
+description: Learn how to customize sorting icons and multi-sort badges in the Syncfusion Blazor DataGrid using CSS, with notes on theme icon codes and CSS isolation.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Sorting customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
+Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon codepoints vary by theme; select appropriate glyphs from the Theme Studio or inspect computed styles. When using CSS isolation (.razor.css), target Grid internals with the ::deep combinator or apply a wrapper class to increase selector specificity if theme styles override custom CSS.
 
 ## Customizing the Blazor DataGrid sorting icon
 
-To customize the sorting icon that appears in the Grid header when sorting is applied, you can use the following CSS code:
+To customize the sorting icon that appears in the Grid header when sorting is applied, use the following CSS:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -23,13 +23,13 @@ To customize the sorting icon that appears in the Grid header when sorting is ap
     content: '\e7b6'; /* Icon code for descending order */
 }
 ```
-In this example, the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
+In this example, the `.e-icon-ascending::before` selector targets the icon for ascending order, and `.e-icon-descending::before` targets the icon for descending order. Update the content values based on the selected theme’s icon set.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
 ## Customizing the Blazor DataGrid multi sorting icon
 
-To customize the multi sorting icon that appears in the Grid header when multiple columns are sorted, you can use the following CSS code:
+To customize the multi-sorting badge that appears in the Grid header when multiple columns are sorted, use the following CSS:
 
 ```css
 .e-grid .e-sortnumber {
@@ -38,7 +38,7 @@ To customize the multi sorting icon that appears in the Grid header when multipl
 }
 ```
 
-In this example, the **.e-sortnumber** class targets the background color and font family of the multi sorting icon. You can modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
+In this example, the `.e-sortnumber` selector customizes the background color and font family of the multi-sorting badge. Modify `background-color` and `font-family` to match the desired design.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.png)
 
