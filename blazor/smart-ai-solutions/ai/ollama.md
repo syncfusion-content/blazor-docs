@@ -90,7 +90,7 @@ Install-Package OllamaSharp
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 
 **For WebAssembly or Auto Render Mode**:
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service should be registered in both **~/Program.cs** files.
 
 {% tabs %}
 {% highlight c# tabtitle="Server (~/Program.cs)" hl_lines="3 11" %}
@@ -124,7 +124,7 @@ await builder.Build().RunAsync();
 {% endtabs %}
 
 **For Server Render Mode**:
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, the project will contain a single **~/Program.cs** file. In this case, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service should be registered within that `~/Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
