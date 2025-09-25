@@ -24,7 +24,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" AutoCalculateDateScheduling="@autoCalculateDateScheduling" TreeColumnIndex="1" EnableRowVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate" Toolbar="@(new List<string>() { "Add", "Delete", "Edit", "ZoomIn", "ZoomOut" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
     <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
@@ -92,7 +92,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = 50,
-                            ParentId = Parent.ID,
+                            ParentID = Parent.ID,
                         });
                 }
             }
@@ -109,7 +109,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
     }
 }
@@ -140,7 +140,7 @@ By default, the number of records rendered per page will be twice the Gantt char
 <SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
          Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Cancel","ExpandAll","CollapseAll" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
@@ -210,7 +210,7 @@ By default, the number of records rendered per page will be twice the Gantt char
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = rand.Next(100),
-                            ParentId = Parent.ID,
+                            ParentID = Parent.ID,
                             Predecessor = j > 1 ? (x - 1) + "FS" : ""
                         });
                 }
@@ -228,7 +228,7 @@ By default, the number of records rendered per page will be twice the Gantt char
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
     }
 }
@@ -251,7 +251,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
 
 <SfGantt ID="Gantt" DataSource="@TaskCollection" 
     EnableRowVirtualization="true" EnableColumnVirtualization="true"  Height="450px" Width="1000px">
-    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentId">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentID">
     </GanttTaskFields>
      <GanttColumns>
         <GanttColumn Field="ProjectId" HeaderText="Task ID"></GanttColumn>
@@ -297,7 +297,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                     ProjectEndDate = new DateTime(2022, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
-                    ParentId = null,
+                    ParentID = null,
                     Predecessor = null,
                 };
                 DataCollection.Add(Parent);
@@ -312,7 +312,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                         ProjectEndDate = new DateTime(2022, 1, 13),
                         ProjectDuration = "10",
                         ProjectProgress = 50,
-                        ParentId = Parent.ProjectId,
+                        ParentID = Parent.ProjectId,
                         Predecessor = i + "FS",
                         Field1 = Names[name],
                         FIELD2 = 1967 + 10,
@@ -340,7 +340,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
         public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string Field1 { get; set; }
         public int FIELD2 { get; set; }
@@ -375,7 +375,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
 
 <SfGantt @ref="Gantt" Width="480px" Height="350px" ID="Gantt" DataSource="@TaskCollection"  Toolbar="@(new  List<string>() { "ZoomIn", "ZoomOut", "ZoomToFit"})" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd"
         EnableTimelineVirtualization="true" EnableColumnVirtualization="true">
-    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate"     Duration="ProjectDuration" Progress="ProjectProgress"  Dependency="Predecessor" ParentID="ParentId">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate"     Duration="ProjectDuration" Progress="ProjectProgress"  Dependency="Predecessor" ParentID="ParentID">
     </GanttTaskFields>
       <GanttEditSettings 
         AllowTaskbarEditing="true" 
@@ -435,7 +435,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                     ProjectEndDate = new DateTime(2017, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
-                    ParentId = null,
+                    ParentID = null,
                     Predecessor = null,
                 };
                 DataCollection.Add(Parent);
@@ -450,7 +450,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         ProjectEndDate = new DateTime(2021, 1, 13),
                         ProjectDuration = "10650",
                         ProjectProgress = 50,
-                        ParentId = Parent.ProjectId,
+                        ParentID = Parent.ProjectId,
                         Field1 = Names[name],
                         FIELD2 = 1967 + 10,
                         FIELD3 = 395 + 600,
@@ -477,7 +477,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
         public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string Field1 { get; set; }
         public int FIELD2 { get; set; }

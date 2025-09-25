@@ -36,7 +36,6 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
     <GanttTaskFields Id="TaskID" 
                      Name="TaskName" 
                      StartDate="StartDate" 
-                     EndDate="EndDate" 
                      Duration="Duration" 
                      Progress="Progress" 
                      ParentID="ParentID"
@@ -82,20 +81,19 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public int Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
         public string Predecessor { get; set; }
-        public string? WbsCode { get; set; }
-        public string? WbsPredecessor { get; set; }
+        public string WbsCode { get; set; }
+        public string WbsPredecessor { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLyZkCcgEDXhRzE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoDEroBqxKFzeJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 > The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
@@ -121,7 +119,6 @@ The following example demonstrates conditional WBS auto-update activation specif
     <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
-                     EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
                      ParentID="ParentID"
@@ -189,19 +186,18 @@ The following example demonstrates conditional WBS auto-update activation specif
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public int Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
-        public string? WbsCode { get; set; }
-        public string? WbsPredecessor { get; set; }
+        public string WbsCode { get; set; }
+        public string WbsPredecessor { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeZkMcgEtlnXEw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZryNEBeVUcysGjr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Limitations
 
