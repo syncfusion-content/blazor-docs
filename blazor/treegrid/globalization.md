@@ -150,10 +150,6 @@ public class TreeData
 
 The **Internationalization** library globalize numeric, date, and time values in the TreeGrid through column **Format** strings. In this example, **SetCulture** and **SetCurrencyCode** are used to apply culture and currency. When formatting dates, numbers, or currency, ensure the required CLDR data (numbers, currencies, calendar) is available to the app and loaded before applying culture.
 
-To support globalization:
-- Provide CLDR JSON files (for example, under wwwroot/cldr-data) for the target culture.
-- Load the required CLDR segments (such as numbers, currencies, and ca-gregorian) before calling SetCulture and SetCurrencyCode.
-
 {% tabs %}
 
 {% highlight razor %}
