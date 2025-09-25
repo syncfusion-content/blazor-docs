@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Select rows based on certain condition in Blazor TreeGrid | Syncfusion
-description: Learn here all about selecting rows based on certain condition in Syncfusion Blazor TreeGrid component and more.
+title: Select Rows based on certain condition in Blazor TreeGrid | Syncfusion
+description: Learn how to select rows based on specific conditions in the Syncfusion Blazor TreeGrid component using SelectRowsAsync and event hooks.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Select rows based on certain condition in Blazor TreeGrid Component
+# Select Rows based on certain condition in Blazor TreeGrid Component
 
-Specific rows in the Tree Grid can be selected based on some conditions by using the [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SelectRows_System_Double___) method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event of the Tree Grid component.
+Specific rows in the TreeGrid can be selected based on conditions using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SelectRowsAsync_System_Int32___) method inside the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event of the TreeGrid component.
 
-This is demonstrated in the below sample code where the index value of Tree Grid rows with **Duration** column value greater than 6 are stored in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event and then selected in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
+The following example demonstrates how to select rows where the **Duration** column value is greater than 6. The row indexes are collected in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event and selected during the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings Type=SelectionType.Multiple></TreeGridSelectionSettings>
@@ -49,7 +49,7 @@ This is demonstrated in the below sample code where the index value of Tree Grid
     public void OnDataBound(object args)
     {
         // The filtered index values are selected
-        this.TreeGrid.SelectRows(SelectedNodeIndex);
+        this.TreeGrid.SelectRowsAsync(SelectedNodeIndex);
     }
 
     public void OnRowDataBound(RowDataBoundEventArgs<TreeData> args)

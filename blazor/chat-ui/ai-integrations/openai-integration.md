@@ -13,7 +13,7 @@ The Syncfusion Chat UI supports integration with [OpenAI](https://platform.opena
 
 ## Prerequisites
 
-*OpenAI account to generate an API key for accessing the `OpenAI` API
+* OpenAI account to generate an API key for accessing the `OpenAI` API
 * Syncfusion Chat UI for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
 
 ## Getting Started with the Chat UI Component
@@ -54,7 +54,7 @@ Install-Package OpenAI
 
 ##  Integration Open AI with Chat UI
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line
 
 ```bash
 
@@ -141,4 +141,4 @@ const string openaiApiKey  = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI Open AI Integration](images/openai-integration.png)
+![Blazor Chat UI Open AI Integration](./images/openai-integration.png)
