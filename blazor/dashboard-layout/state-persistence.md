@@ -59,7 +59,7 @@ N> The Dashboard Layout component's [`ID`](https://help.syncfusion.com/cr/blazor
 
 The following output demonstrates the use of `HeaderTemplate` and `ContentTemplate` to define the header and content of panels:
 
-![Blazor Dashboard Layout.](../images/blazor-admin-template-layout-with-header.png)
+![Blazor Dashboard Layout.](images/blazor-admin-template-layout-with-header.png)
 
 ## Handling Blazor Dashboard Layout State Manually
 
@@ -132,4 +132,4 @@ The Blazor Dashboard Layout component provides built-in methods to manage its st
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVyZkBIfEuZVDNy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Dashboard Layout.](../images/presistence-sample.png)
+![Blazor Dashboard Layout.](images/presistence-sample.png)
