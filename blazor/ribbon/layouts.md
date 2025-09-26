@@ -9,11 +9,11 @@ documentation: ug
 
 # Layouts in Blazor Ribbon component
 
-The Ribbon component allows customization of its layout through the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property. It supports two primary layouts: `Classic` and `Simplified`.
+The Ribbon component supports customizable layouts through the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property. Two primary layouts are available: `Classic` and `Simplified`.
 
 ## Classic layout
 
-The Classic layout organizes Ribbon items and groups in a traditional format. You can set the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property to `RibbonLayout.Classic` to enable this layout. By default, the Ribbon component renders in the `Classic` layout.
+The Classic layout organizes Ribbon items and groups in a traditional, multi-row format with group headers and collections. Set the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property to `RibbonLayout.Classic` to enable this layout. By default, the Ribbon renders in the `Classic` layout.
 
 {% tabs %}
 {% highlight razor %}
@@ -73,13 +73,13 @@ The Classic layout organizes Ribbon items and groups in a traditional format. Yo
 
 ### Defining items size
 
-You can control the size of Ribbon items using the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_AllowedSizes) property in the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive. The Ribbon supports three item sizes:
+Control the size of Ribbon items using the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_AllowedSizes) property in the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive. The Ribbon supports three item sizes:
 
 - **Large**: Large icon with text.
 - **Medium**: Small icon with text.
 - **Small**: Small icon only.
 
-When resizing to smaller screen, the item sizes adjust based on the available tab content width in the order: Large → Medium → Small, and vice versa.
+When resizing to a smaller screen, item sizes adapt based on the available tab content width in the order Large → Medium → Small, and vice versa when space increases.
 
 {% tabs %}
 {% highlight razor %}
@@ -139,10 +139,10 @@ When resizing to smaller screen, the item sizes adjust based on the available ta
 
 ### Defining items orientation
 
-You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of the [RibbonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html) tag directive to arrange items vertically (Column) or horizontally (Row). By default, the orientation is `Column`.
+Use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of the [RibbonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html) tag directive to arrange items vertically (Column) or horizontally (Row). The default orientation is `Column`.
 
-Row: A group may have up to three collections, each containing multiple items.
-Column: A group can have any number of collections, with each collection containing one large-sized item or up to three medium/small-sized items.
+- Row: A group may contain up to three collections, and each collection can include multiple items.
+- Column: A group can contain any number of collections. Each collection can include either one large-sized item or up to three medium/small-sized items.
 
 {% tabs %}
 {% highlight razor %}
@@ -261,15 +261,15 @@ Column: A group can have any number of collections, with each collection contain
 
 ### Defining group properties
 
-You can customize the appearance and functionalities of Ribbon groups by using properties of [RibbonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html) such as `HeaderText`, `GroupIconCss`, `ShowLauncherIcon`, `IsCollapsible` and `Priority`.
+Customize the appearance and functionality of Ribbon groups using [RibbonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html) properties such as `HeaderText`, `GroupIconCss`, `ShowLauncherIcon`, `IsCollapsible`, and `Priority`.
 
 |Name|DataType|Description|
 |---|---|---|
-|[HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_HeaderText)|string|Defines the text that appears as the header for the group|
-|[GroupIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_GroupIconCss)|string|Icon that appears in group popup button while resizing|
-|[ShowLauncherIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_ShowLauncherIcon)|boolean|Enables or disables the launcher icon for each group. By default, the property is set to `false`|
-|[IsCollapsible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_IsCollapsible)|boolean|Controls whether a group can be collapsed or not during resizing. By default, the property is set to `true`|
-|[Priority](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Priority)|int|Determines the collapse and expand order of groups during resizing. Higher priority values collapse first, while lower values expand first|
+|[HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_HeaderText)|string|Defines the text that appears as the header for the group.|
+|[GroupIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_GroupIconCss)|string|Specifies the icon displayed in the group popup button during resizing.|
+|[ShowLauncherIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_ShowLauncherIcon)|bool|Enables or disables the launcher icon for the group. By default, this property is set to `false`.|
+|[IsCollapsible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_IsCollapsible)|bool|Controls whether a group can be collapsed during resizing. By default, this property is set to `true`.|
+|[Priority](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Priority)|int|Determines the collapse/expand order during resizing. Higher values collapse first; lower values expand first.|
 
 {% tabs %}
 {% highlight razor %}
@@ -388,7 +388,7 @@ You can customize the appearance and functionalities of Ribbon groups by using p
 
 ## Simplified layout
 
-In simplified layout, the Ribbon component organizes the items and groups into a single row. Set the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property to `RibbonLayout.Simplified` to enable this layout.
+In the Simplified layout, the Ribbon organizes items and groups into a single row to save vertical space and emphasize frequently used commands. Set the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property to `RibbonLayout.Simplified` to enable this layout.
 
 {% tabs %}
 {% highlight razor %}
@@ -448,7 +448,7 @@ In simplified layout, the Ribbon component organizes the items and groups into a
 
 ### Enabling group overflow popup
 
-You can control how overflow items appear in the group while resizing using the [EnableGroupOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_EnableGroupOverflow) property.
+Control how overflow items appear within a group during resizing using the [EnableGroupOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_EnableGroupOverflow) property.
 
 - Set to `true` to display overflow items in a separate popup near the group.
 - Set to `false` to display overflow items in a common popup at the right end of the tab content.
@@ -570,9 +570,9 @@ You can control how overflow items appear in the group while resizing using the 
 
 ## Minimized state
 
-You can hide the Ribbon contents and display only the tab headers by double-clicking on the tab header. When the Ribbon is on minimized state, it expands to its normal state when click on the tab header.
+Hide Ribbon contents and display only the tab headers by double-clicking a tab header to toggle the minimized state. When the Ribbon is in a minimized state, clicking a tab header temporarily expands the content; the Ribbon returns to the minimized state when focus moves away.
 
-Also, you can programmatically control the minimized state of Ribbon using the [IsMinimized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_IsMinimized) property. By default, the value is `false`.
+The minimized state can also be controlled programmatically using the [IsMinimized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_IsMinimized) property. By default, this property is set to `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -632,7 +632,7 @@ Also, you can programmatically control the minimized state of Ribbon using the [
 
 ## Show or hide the layout switcher
 
-You can use the [HideLayoutSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_HideLayoutSwitcher) property to show/hide the Ribbon layout switcher button. By default, the value is `false`, meaning the switcher will be visible.
+Use the [HideLayoutSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_HideLayoutSwitcher) property to show or hide the Ribbon layout switcher button. By default, this property is set to `false`, so the switcher is visible.
 
 {% tabs %}
 {% highlight razor %}
