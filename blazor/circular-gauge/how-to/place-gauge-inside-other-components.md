@@ -583,6 +583,5 @@ When you expand the Accordion component, the Circular Gauge component is not not
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAsVBGASDkmDes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge inside Accordion component](../images/blazor-circulargauge-with-accordion.png)
