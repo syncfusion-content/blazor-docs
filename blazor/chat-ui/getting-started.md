@@ -25,7 +25,7 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InteractiveChat and Themes NuGet in the App
 
-To add the **Blazor Chat UI** component to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install `Syncfusion.Blazor.InteractiveChat` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can use the following package manager command.
+To add the **Blazor Chat UI** component to the application, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for and install `Syncfusion.Blazor.InteractiveChat` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, the required packages can be installed using the Package Manager Console command.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -66,7 +66,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InteractiveChat and Themes NuGet in the App
 
 *   Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-*   Ensure you are in the project root directory where your `.csproj` file is located.
+*   Ensure the current working directory is set to the project root where the `.csproj` file is located.
 *   Run the following command to install the [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages.
 
 {% tabs %}

@@ -26,7 +26,7 @@ To get started quickly with the Blazor Chat UI component, refer to the following
 
 ## Create a New Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+A **Blazor Web App** can be created using Visual Studio 2022 with either the officia [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 Ensure you configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) when creating the Blazor Web Application.
 
@@ -36,7 +36,7 @@ To add the **Blazor Chat UI** component to your app, open the NuGet package mana
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
-Alternatively, you can use the following Package Manager Console commands to install the packages.
+Alternatively, the required packages can be installed using the Package Manager Console commands.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -59,9 +59,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a New Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+A **Blazor Web App** can be created using Visual Studio code with either the official [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Ensure you configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) when creating the application.
+To ensure proper functionality of a Blazor Web App, configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) during application setup.
 
 For example, to create a Blazor Web App with `Auto` interactive render mode, use the following commands:
 
@@ -121,7 +121,7 @@ First, import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InteractiveChat` na
 
 Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your **~/Program.cs** file.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service must be registered in both **~/Program.cs** files of the Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
