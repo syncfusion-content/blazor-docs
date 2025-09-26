@@ -43,7 +43,7 @@ The [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interact
 
 ## Setting timestamp format
 
-The [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TimestampFormat) property allows you to customize the display format for message timestamps. The default format is `dd/MM/yyyy hh:mm tt`.
+The [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TimestampFormat) property allows customization of the display format for message timestamps. The default format is `dd/MM/yyyy hh:mm tt`.
 
 ```cshtml
 
