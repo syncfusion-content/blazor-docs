@@ -9,11 +9,11 @@ documentation: ug
 
 # Azure OpenAI Integration with Syncfusion® Blazor AI
 
-The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to add AI-driven features to Blazor applications. These features include natural language querying (converting plain English queries to structured data filters), data analysis (processing and summarizing datasets), and content processing (generating or refining text). This guide explains how to configure the library and use it with Syncfusion Blazor components, such as the QueryBuilder and Grid, to implement intelligent functionality.
+The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to add AI-driven features to Blazor applications. These features include natural language querying (converting plain English queries to structured data filters), data analysis (processing and summarizing datasets), and content processing (generating or refining text). 
 
 ## Prerequisites
 
-To integrate Azure OpenAI with a Blazor application, ensure the following:
+To integrate Azure OpenAI with a Blazor WebApp Server, ensure the following:
 - The following NuGet packages are installed:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -33,7 +33,7 @@ Install-Package Azure.AI.OpenAI
 
 ### Register AI Services in Program.cs
 
-To configure Azure OpenAI in a Blazor application, update the `Program.cs` file as follows:
+To configure Azure OpenAI in a Blazor WebApp Server, update the `Program.cs` file as follows:
 
 ```csharp
 // Add required namespaces
