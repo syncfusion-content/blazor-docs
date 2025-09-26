@@ -7,11 +7,11 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Style and Appearance in Dropdown Tree
+# Style and Appearance in Dropdown Tree Component
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 
-## Disabled state
+## Disabled State
 
 Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Disabled) property that indicates whether the component is Disabled or not.
 
@@ -48,14 +48,14 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrytahnJsIjocnn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with Disabled ](./images/styles/blazor-dropdowntree-component-disabled.png)
 
-## CssClass  
+## CssClass
 
-Specifies the CSS class name that can be appended with the root element of the Dropdown Tree. One or more custom CSS classes can be added to a Dropdown Tree.
+The `CssClass` property appends custom CSS class names to the root element of the Dropdown Tree. This enables targeted styling for specific custom classes.
 
-Some of the predefined values are
+Syncfusion provides predefined CSS classes for common states:
 
 * `e-success`, which denotes the component in success state that is added green color to the Dropdown Tree's input field.
 * `e-warning`, which denotes the component in warning state that is added orange color to the Dropdown Tree's input field.
@@ -96,12 +96,14 @@ Some of the predefined values are
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLeXkrxpCyQnuzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with CssClass property](./images/styles/blazor-dropdowntree-component-cssclas.png)
 
-## Show the custom icon in dropdown icon
+## Customizing the Dropdown Icon
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddt-icon::before`, which indicates the icon element displayed within the Dropdown Tree component, and set the desired icon to the `content` property.
+### Global Icon Customization
+
+The default dropdown icon can be changed globally by targeting its CSS class `.e-ddt-icon::before`. Setting the `content` property to a Unicode character from an icon font (like Syncfusion's built-in icon font or Material Icons) replaces the default icon. Refer to the [Syncfusion Icons documentation](https://ej2.syncfusion.com/documentation/appearance/icons/#material) for available icons.
 
 ```cshtml
 .e-ddt.e-input-group.e-control-wrapper .e-ddt-icon::before {
@@ -111,7 +113,9 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ![Blazor Dropdown Tree with dropdown icon](./images/styles/blazor-dropdowntree-component-arrow.png)
 
-You can customize the dropdown icon for the particular component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
+### Component-Specific Icon Customization
+
+To apply a custom icon to a particular Dropdown Tree component, use the `CssClass` property to add a unique class name and then define the custom icon style within a `<style>` block.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -153,9 +157,9 @@ You can customize the dropdown icon for the particular component using the [CssC
 </style>
 ```
 
-## Customizing the dropdown icon’s color
+## Customizing the Dropdown Icon's Color
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
+Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
 
 ```cshtml
 .e-ddt .e-input-group-icon.e-ddt-icon.e-icons, 
@@ -167,9 +171,9 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ![Blazor Dropdown Tree icon color](./images/styles/blazor-dropdowntree-component-icon.png)
 
-## Replace the dropdown icon with svg
+## Replacing the Dropdown Icon with an SVG
 
-To replace the default dropdown icon in the Dropdown Tree component with an SVG, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and apply custom styles to the `.e-custom .e-ddt-icon` class. This allows for a personalized SVG design instead of the default icon.
+To replace the default dropdown icon in the Dropdown Tree component with an SVG, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property to assign a unique class name and then apply custom styles to the `.e-custom .e-ddt-icon::before` selector. Set the `content` property to `url()` that points to the SVG file.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -212,7 +216,7 @@ To replace the default dropdown icon in the Dropdown Tree component with an SVG,
 
 ## Customizing the appearance of container element
 
-You can customize the appearance of the container element within the Dropdown Tree component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
+The appearance of the input element within the Dropdown Tree component can be customized by targeting its CSS class `.e-input.` This class applies to the input field, allowing for the application of desired styles to the component's input.
 
 ```cshtml
 .e-ddt.e-input-group.e-control-wrapper .e-input {
@@ -225,9 +229,9 @@ You can customize the appearance of the container element within the Dropdown Tr
 
 ![Blazor Dropdown Tree container element customization](./images/styles/blazor-dropdowntree-component-container.png)
 
-## Customizing the focus color
+## Customizing the Focus Color
 
-You can customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
+To customize the component color when focused, target its CSS class `.e-input-focus::after`, which indicates the focused input element, and set the desired background property.
 
 ```cshtml
 .e-ddt.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddt.e-input-group.e-control-wrapper.e-input-focus::after {
@@ -237,9 +241,9 @@ You can customize the component color when it is focused by targeting its CSS cl
 
 ![Blazor Dropdown Tree focus color](./images/styles/blazor-dropdowntree-component-focus.png)
 
-## Customizing the outline theme's focus color
+## Customizing the Outline Theme's Focus Color
 
-You can customize the color of the Dropdown Tree component when it is in a focused state and rendered with an outline theme,  by targeting its CSS class `e-outline` which indicates the input element when it is focused, and allows you to set the desired color to the `color` property.
+Customize the color of the Dropdown Tree component when in a focused state and rendered with an outline theme by targeting its CSS class `e-outline`. This class indicates the input element when focused, allowing the desired color to be set to the `color` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -287,9 +291,9 @@ You can customize the color of the Dropdown Tree component when it is in a focus
 
 ![Blazor Dropdown Tree focusing color outline theme](./images/styles/blazor-dropdowntree-component-outline.png)
 
-## Customizing the background color of focus, hover, and active items
+## Customizing the Background Color of Focused, Hovered, and Active Items
 
-You can customize the background color and text color of list items within the Dropdown Tree component when they are in a focused, active, or hovered state by targeting the CSS classes `.e-ddt .e-treeview .e-list-item.e-active > .e-fullrow`, `.e-ddt .e-treeview .e-list-item.e-hover > .e-fullrow`, and `.e-ddt .e-treeview .e-list-item.e-node-focus > .e-fullrow`, and set the desired color to the background-color and color properties.
+Modify the background and text color of list items within the Dropdown Tree's popup when they are in a focused, active, or hovered state. Target the specific CSS classes `.e-ddt .e-treeview .e-list-item.e-active > .e-fullrow`, `.e-ddt .e-treeview .e-list-item.e-hover > .e-fullrow`, and `.e-ddt .e-treeview .e-list-item.e-node-focus > .e-fullrow` to apply custom styles.
 
 ```cshtml
 .e-ddt .e-treeview .e-list-item.e-active > .e-fullrow,
@@ -301,9 +305,9 @@ You can customize the background color and text color of list items within the D
 
 ![Blazor Dropdown Tree with customizing the focus, hover and active item color](./images/styles/blazor-dropdowntree-component-active.png)
 
-## Customizing the appearance of pop-up element
+## Customizing the Appearance of the Popup Element
 
-You can customize the appearance of the popup element within the Dropdown Tree component by targeting the CSS class `.e-ddt.e-popup`.
+Customize  the appearance of the popup element within the Dropdown Tree component by targeting the CSS class `.e-ddt.e-popup`.
 
 ```cshtml
  .e-ddt.e-popup {
@@ -314,9 +318,9 @@ You can customize the appearance of the popup element within the Dropdown Tree c
 
 ![Blazor Dropdown Tree with customizing popup color](./images/styles/blazor-dropdowntree-component-popup.png)
 
-## Change the HTML attributes
+## Changing HTML Attributes
 
-Add the additional html attributes such as styles, class, and more to the root element using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property and accepts n number of attributes in a key-value pair format.
+The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) propertyprovides a mechanism to apply additional HTML attributes, such as `class, style, title,` and others, to the root element of the Dropdown Tree component. This property accepts attributes in a dictionary format, consisting of key-value pairs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -360,11 +364,11 @@ Add the additional html attributes such as styles, class, and more to the root e
 
 ![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-html-attribute.png)
 
-## Set the various font family for Dropdown Tree elements
+## Setting Various Font Families for Dropdown Tree Elements
 
 The font-family of the Dropdown tree can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property.
 
-In the following sample, the font family of the Dropdown Tree, ListItem text in Dropdown Tree and filterInput text are changed.
+The following sample demonstrates changing the font family for the Dropdown Tree's input text, list item text, and filter input text.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -417,15 +421,15 @@ In the following sample, the font family of the Dropdown Tree, ListItem text in 
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrStaLHzLBnZpVx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-font.png)
 
-## Show tooltip on list item
+## Displaying Tooltips on List Items
 
-You can achieve this behavior by integrating the tooltip component. When the mouse hovers over the Dropdown Tree list items, a tooltip appears with information about the hovered list item.
+Integrate the Syncfusion Tooltip component to display information when a user hovers over individual list items in the Dropdown Tree. This enhances the user experience by providing contextual details.
 
 
-The following code demonstrates how to display a tooltip when hovering over the Dropdown Tree  option.
+The following code demonstrates how to display a tooltip when hovering over a Dropdown Tree option using `ItemTemplate` and `SfTooltip`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -493,10 +497,10 @@ The following code demonstrates how to display a tooltip when hovering over the 
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBSjkVnTBzsAwcf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-tooltip.png)
 
-### Tooltip using HTMLAttribute in Dropdown Tree component
+### Tooltip using HtmlAttributes in Dropdown Tree Component
 
 To display the tooltip in the Dropdown Tree component, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property.
 
@@ -540,10 +544,12 @@ In the following example, the `HtmlAttributes` property is used to add the title
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLIjELnTroPjIpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Dropdown Tree](./images/html-tooltip.png)
 
-## Customizing the Width of the component
+## Customizing the Width of the Component
 
-You can customize the width of the component using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Width) property. The default value is `100%`.
+Adjust the overall width of the Dropdown Tree component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Width) property. The default value for this property is `100%`, which makes the component take up the full width of its parent container.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -578,10 +584,12 @@ You can customize the width of the component using [Width](https://help.syncfusi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrIXarHzrmdmogd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Dropdown Tree](./images/width.png)
 
-## Wrapping the selected item as text 
+## Text Wrapping for Selected Items
 
-Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_TextWrap) property that indicates whether to wrap the selected items into multiple lines when the selected item’s text content exceeded the input width limit or not.
+Set the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_TextWrap) property to `true` to enable text wrapping for selected items within the Dropdown Tree's input field. This ensures that long text content for selected items displays across multiple lines if it exceeds the input's width.
 
 In the following example, by enabling the `TextWrap` the selected items will appear on multiple lines within the input. 
 
@@ -622,5 +630,6 @@ In the following example, by enabling the `TextWrap` the selected items will app
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhItEBnzBEVerpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dropdown Tree with TextWrap property.](./images/styles/blazor-dropdowntree-component-textwrap.png)
