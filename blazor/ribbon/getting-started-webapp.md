@@ -34,7 +34,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add the Blazor Ribbon component, install the `Syncfusion.Blazor.Ribbon` and `Syncfusion.Blazor.Themes` NuGet packages.
 
-N> If your application uses `WebAssembly` or `Auto` render mode, you must install the NuGet packages in the client project.
+N> When using the `WebAssembly` or `Auto` render mode, it is required to install the necessary NuGet packages in the client project.
 
 Open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install [Syncfusion.Blazor.Ribbon](https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
