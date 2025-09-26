@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Tooltip in Syncfusion Blazor Charts component.
+description: Check out and learn how to configure and customize Tooltip in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

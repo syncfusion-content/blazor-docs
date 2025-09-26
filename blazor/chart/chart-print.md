@@ -377,7 +377,7 @@ Customize the exported chart before generation using the [Exporting](https://hel
 
 * `Cancel`: Cancel the export process
 * `Height`: Set exported chart height (not applicable for XLSX/CSV)
-* `Width`: Set exported chart width (not applicabel for XLSX/CSV)
+* `Width`: Set exported chart width (not applicable for XLSX/CSV)
 * `Workbook`: Customize Excel/CSV export
 
 ### Customizing the exported Excel documents

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internationalization in Blazor Charts Component | Syncfusion
-description: Check out and learn here all about Internationalization in Syncfusion Blazor Charts component.
+description: Check out and learn here all about Internationalization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -18,7 +18,7 @@ Internationalization enables the Blazor Charts component to adapt for users from
 <!-- markdownlint-disable MD036 -->
 ## Globalization
 
-The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property in the axis globalizes number, date, and time values for [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
+The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property in the axis globalize number, date, and time values for [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
 
 In the example below, axis, point and tooltip labels are globalized to EUR.
 
