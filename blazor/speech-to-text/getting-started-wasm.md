@@ -29,6 +29,8 @@ Create a **Blazor WebAssembly App** in Visual Studio by using either the standar
 
 To add the **Blazor SpeechToText** component to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages). Alternatively, use the following package manager command to install it.
 
+To add **Blazor SpeechToText** to the application, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages). Alternatively, the package can be installed using the following Package Manager Console command.
+
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
@@ -51,7 +53,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create the application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, the application can be created by executing the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>)`.
 
 {% tabs %}
 
@@ -122,9 +124,11 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script references
+## Script and Style reference
 
-Reference the script from the NuGet package, which is available as a [Static Web Asset](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), by adding the following line to the `<head>` section of your main page.
+- Ensure that CSS stylesheets are referenced inside the tag.
+- Ensure that JavaScript files or script references are placed end of the tag.
+- If any markdown content or code snippet violates this structure, update it accordingly.
 
 * For a Blazor WebAssembly app, modify the **~/wwwroot/index.html** file.
 
