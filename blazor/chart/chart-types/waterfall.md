@@ -194,7 +194,7 @@ Use the [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
 
-You can also customize the corner radius for individual points using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event and the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property.
+The corner radius for individual points can be customized using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event and the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property.
 
 ```cshtml
 

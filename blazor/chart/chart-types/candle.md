@@ -13,7 +13,7 @@ documentation: ug
 
 The [Candle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series is similar to Hilo Open Close and represents **Low**, **High**, **Open**, and **Close** prices over time. It is commonly used in financial charts to visualize stock price movements.
 
-You can also learn how to create a candle chart using Blazor Charts by watching the video below.
+Learn how to create a candle chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 

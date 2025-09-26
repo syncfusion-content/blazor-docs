@@ -13,7 +13,7 @@ documentation: ug
 
 The [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series represents **Low**, **High**, **Open**, and **Close** values over time.
 
-You can also learn how to create a HiloOpenClose chart using Blazor Charts by watching the video below.
+Learn how to create a HiloOpenClose chart using Blazor Charts by watching the following video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 
