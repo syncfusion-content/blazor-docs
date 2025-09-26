@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scroll Settings in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Scroll Settings in Syncfusion Blazor Diagram component and much more.
+title: Scroll Settings in Syncfusion Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Scroll Setting in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Scroll Settings in Blazor Diagram Component
+# Scroll Settings in Diagram Component
 
 The diagram can be scrolled using vertical and horizontal scrollbars. In addition to the scrollbars, the mouse wheel can be used to scroll the diagram. The Diagram’s [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) allows to read the current scroll status, current zoom and zoom factor values. 
 

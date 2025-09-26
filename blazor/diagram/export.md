@@ -288,7 +288,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Export the Diagram as PDF
 
-Diagram does not have built-in support to convert the diagram to a PDF file. However, this can be achieved by exporting the diagram as a base64 and then converting the exported file to PDF using Syncfusion.PdfExport.PdfDocument. Javascript functions `downloadPdf` and `triggerDownload` are invoked to automatically download the pdf file. 
+Diagram does not have built-in support to convert the diagram to a PDF file. However, this can be achieved by exporting the diagram as a base64 and then converting the exported file to PDF using Syncfusion.PdfExport.PdfDocument. JavaScript functions `downloadPdf` and `triggerDownload` are invoked to automatically download the pdf file. 
 
 The following code illustrates how to export the diagram as PDF file.
 
