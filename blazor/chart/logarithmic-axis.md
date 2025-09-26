@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logarithmic Axis in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Logarithmic Axis in Syncfusion Blazor Charts component and much more.
+description: Check out and learn about the Logarithmic Axis in the Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-When data contains numeric values in both the lower order of magnitude (eg: 10<sup>-6</sup>) and the upper order of magnitude (eg: 10<sup>6</sup>), a logarithmic axis is highly useful in visualizing it.
+Use a logarithmic axis when data spans multiple orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). This scale makes it easier to visualize both small and large values on the same chart.
 
-You can learn how to customize the logarithmic axis by watching the video below.
+Watch the following video to learn how to customize the logarithmic axis.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_67hCchVOu4" %}
 
@@ -22,12 +22,12 @@ You can learn how to customize the logarithmic axis by watching the video below.
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
 
-    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
     </ChartSeriesCollection>
 </SfChart>
 
@@ -38,7 +38,7 @@ You can learn how to customize the logarithmic axis by watching the video below.
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData> 
+    public List<ChartData> Data = new List<ChartData>
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
