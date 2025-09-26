@@ -349,7 +349,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
+![Blazor TreeGrid](images/blazor-treegrid.png)
 
 ## Handling exceptions
 
@@ -438,8 +438,6 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVztHsLJVPJfMvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

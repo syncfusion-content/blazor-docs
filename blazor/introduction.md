@@ -83,11 +83,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
-        <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor">PDF</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor">Word</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">PowerPoint</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></div>

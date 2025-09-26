@@ -233,7 +233,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVyDujgpxNVnpFG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)" %}
+![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
 
 ## Setting date
 

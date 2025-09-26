@@ -34,9 +34,9 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor webAssembly project using .NET CLI
+### Create a Blazor WebAssembly App using .NET CLI
 
-To create a new Blazor WebAssembly app, open your terminal or command prompt and run:
+To create a new Blazor WebAssembly App, open your terminal or command prompt and run:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}

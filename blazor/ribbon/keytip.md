@@ -654,7 +654,7 @@ You can use the `HideKeyTipsAsync` method to remove all visible keytips from the
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.png)
+![Ribbon Show Hide keytips](./images/show-hide-keytip.png)
 
 ## Guidelines for adding keytips
 

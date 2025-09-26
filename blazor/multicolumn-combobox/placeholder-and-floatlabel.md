@@ -33,7 +33,7 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 {% endhighlight %} -->
 
- ## Add mandatory indicator using placeholder
+## Add mandatory indicator using placeholder
 
 The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
 
