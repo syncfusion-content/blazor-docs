@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Chat UI Component
 
-The Blazor Chat UI component provides a flexible event system that allows you to respond to key actions.
+The Blazor Chat UI component provides a flexible event system that enables developers to respond to key user interactions.
 
 This section covers the following available events:
 

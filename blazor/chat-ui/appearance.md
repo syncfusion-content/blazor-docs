@@ -8,7 +8,16 @@ documentation: ug
 ---
 
 # Appearance in Blazor Chat UI component
-This article explains how to customize the appearance of the Blazor Chat UI component using its built-in properties. You can modify the placeholder text, adjust the dimensions (height and width), and apply custom styles using CSS.
+
+This article explains how to customize the appearance of the Blazor Chat UI component using its built-in properties. The following customization options are available:
+
+- Placeholder Text: Update the default input field text to provide clearer guidance or match the application's context.
+
+- Dimensions: Configure the component's height and width to align with the layout and design requirements.
+
+- Custom Styles: Apply custom CSS classes or inline styles to personalize the visual presentation and ensure consistency with the overall UI theme.
+
+These customization features enable developers to deliver a user-friendly chat experience within Blazor applications.
 
 ## Setting the placeholder
 
