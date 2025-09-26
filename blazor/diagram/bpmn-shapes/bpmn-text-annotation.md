@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Text Annotation in Blazor Diagram Component | Syncfusion
+title: BPMN Text Annotation in Diagram | Syncfusion
 description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Text Annotation in Blazor Diagram Component
+# BPMN Text Annotation in Diagram Component
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but provides information about objects within a flow. 
 
@@ -15,7 +15,7 @@ documentation: ug
 
 * The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
 
-* By default, the TextAnnotation shape has a connection.
+* By default, the `TextAnnotation` shape has a connection.
 
 * The [TextAnnotationDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationDirection) property is used to set the shape direction of the text annotation.
 
@@ -68,7 +68,7 @@ documentation: ug
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotation)
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
 
@@ -139,13 +139,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
 ## How to Connect a Text Annotation to a BPMN Node
+
 Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
 
 The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.gif)
 
-There are several types of Text annotation directions as follows:
+The following table describes the available Text annotation directions
 
 | Direction | Image |
 | -------- | -------- |

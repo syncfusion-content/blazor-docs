@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connector Annotation Position in Blazor Diagram | Syncfusion
-description: Checkout and learn here all about Annotation for Connector in Syncfusion Blazor Diagram component and more.
+description: Checkout and Learn how to position and align annotations on connectors in the Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Connector Annotation Position in Blazor Diagram 
 
-Annotations of a connector can be positioned using the following properties of Annotation class.
+Connector annotations can be precisely positioned using several properties of the `PathAnnotation` class, including:
 
 * Offset
 * Alignment
@@ -21,7 +21,7 @@ Annotations of a connector can be positioned using the following properties of A
 
 ## How to Update Offset Position for Annotations
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. A value of 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property positions an annotation along the length of the connector segment. It accepts a fractional value from 0 to 1, where 0 represents the beginning of the segment, 1 represents the end, and 0.5 represents the center.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -68,19 +68,19 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/UpdateOffsetofAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/UpdateOffsetofAnnotation)
 
 The following image shows the relationship between the annotation position and offset (fraction values).
 
 ![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
 
 >**Note:**
-> * By default, offset value of the connector annotation is 0.5.
-> * Connector annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+> * By default, the Offset value of a connector annotation is 0.5.
+> * An annotation's ID must not start with a number or special character and must not contain underscores(_) or spaces.
 
 ## How to Change Annotation Alignment
 
-The connector’s annotation can be aligned over its segment path using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Alignment) property of the annotation.
+The [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Alignment) property aligns an annotation relative to the connector's path.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -121,7 +121,7 @@ The connector’s annotation can be aligned over its segment path using the [Ali
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/AlignmentOfAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/AlignmentOfAnnotation)
 
 The following screenshot shows how the annotation of the connector aligned over its path.
 
@@ -131,7 +131,7 @@ N> By default, Alignment value of the connector annotation is `Center`.
 
 ## How to Change Annotation Displacement
 
-The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Displacement) property is used to dislocate the annotation by the value given. By default, annotation will be in centered on the connector path. When you assign a value to the Displacement property, the annotation will be displaced from its position by displacement value.
+The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Displacement) property moves an annotation from its default position along the connector path. By default, annotation will be in centered on the connector path. It accepts a DiagramPoint object that specifies the horizontal (X) and vertical (Y) distance to move the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -171,7 +171,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/DisplacementOfAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/DisplacementOfAnnotation)
 
 ## How to Update Annotation Segment Angle
 
@@ -213,20 +213,20 @@ The following code example shows how the connector annotation rotated in its pat
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/SegmentAngleOfAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/SegmentAngleOfAnnotation)
 
 | SegmentAngle | Output |
 |---|---|
 | True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
 | False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
 
-N> By default, the SegmentAngle will be disabled.
+N> By default, the SegmentAngle property is disabled (false).
 
 The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were explained in the [NodeAnnotation](./node-annotation).
 
 ## See also
 
-* [How to add annotation for Node](./node-annotation)
+* [How to add an annotation for a Node](./node-annotation)
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
