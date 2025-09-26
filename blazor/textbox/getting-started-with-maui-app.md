@@ -197,7 +197,7 @@ You can add an icon to the TextBox component using the [AddIconAsync](https://he
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzZCKNfeoflPrc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with Icon](./images/blazor-textbox-icons.png)" %}
+![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
 
 ## Floating label
 
@@ -211,7 +211,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)" %}
+![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
 ## See Also
 
