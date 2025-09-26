@@ -66,8 +66,6 @@ Enable baselines by setting `RenderBaseline` to `true` and mapping `BaselineStar
 }
 ```
 
-![Blazor Gantt Chart showing baseline bars in default color alongside actual task bars](images/blazor-gantt-chart-with-baseline.png)
-
 ## Customize baseline color
 
 Change the baseline color using the `BaselineColor` property to enhance visibility or match branding. The following example sets a custom orange color for baselines.
