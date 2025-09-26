@@ -421,3 +421,69 @@ public WordDocument GetDocument(string htmlText)
 {% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).
+
+## Export Document/PDF with Authentication
+
+You can add additional data while exporting a document from the Rich Text Editor. When exporting, the OnExport event is triggered, allowing you to:
+
+- Add custom headers to the request using the `CurrentRequest` property (for example, passing an authentication token).
+
+- Send custom form data to the server using the `CustomFormData` property.
+
+On the server side, you can fetch the authentication token from the request headers and retrieve the custom form data.
+
+The following example demonstrates how to achieve this:
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+<SfRichTextEditor>
+    <RichTextEditorEvents OnExport="@Export" />
+    <RichTextEditorToolbarSettings Items="@Items" />
+    <RichTextEditorExportPdf ServiceUrl="@exportPdfServiceUrl" />
+    <RichTextEditorExportWord ServiceUrl="@exportWordServiceUrl" />
+    Rich Text Editor
+</SfRichTextEditor>
+@code {
+    private string exportWordServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToDocx";
+    private string exportPdfServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToPdf";
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportPdf },
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportWord },
+    };
+    private void Export(ExportingEventArgs args)
+    {
+        args.CurrentRequest = new Dictionary<string, string>
+        {
+            { "Authorization", "Bearer token" }
+        };
+        args.CustomFormData = new Dictionary<string, string>
+        {
+            { "userId", "12345" }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/ExportService.cs" %}
+    public class ExportParam
+    {
+        public string? html { get; set; }
+        public object? formData { get; set; }
+    }
+    [AcceptVerbs("Post")]
+    [EnableCors("AllowAllOrigins")]
+    [Route("ExportToPdf")]
+    public async Task<ActionResult> ExportToPdf([FromBody] ExportParam args)
+    {
+        var authorization = Request.Headers["Authorization"];
+        Console.WriteLine(args.formData);
+        Console.WriteLine(args.html);
+    }
+{% endhighlight %}
+{% endtabs %}
