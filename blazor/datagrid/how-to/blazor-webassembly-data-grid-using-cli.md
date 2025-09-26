@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Syncfusion DataGrid to Blazor WebAssembly using .NET CLI
-description: Learn how to create a standalone Blazor WebAssembly app on .NET 8/9 and add the Syncfusion DataGrid using the .NET CLI with setup, themes, scripts, and grid features.
+description: Create a standalone Blazor WebAssembly app on .NET 8/9 and add Syncfusion DataGrid using .NET CLI with setup, themes, scripts, and grid features.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -19,7 +19,7 @@ This article provides step-by-step instructions to build a standalone Blazor Web
 
 ## Manually creating a project
 
-This section explains how to manually create a Blazor WebAssembly app using the CLI.
+This section explains how to manually create a standalone Blazor WebAssembly app using the CLI.
 
 ### Prerequisites
 
@@ -45,12 +45,18 @@ dotnet --version
 
 ### Create a standalone Blazor WebAssembly project using .NET CLI
 
-To create a new standalone Blazor WebAssembly app, open the terminal or command prompt and run:
+To create a new standalone Blazor WebAssembly app targeting the latest supported framework, run one of the following:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET 8 (recommended)" %}
 
-dotnet new blazorwasm -o BlazorApp
+dotnet new blazorwasm -o BlazorApp -f net8.0
+cd BlazorApp
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 9 (preview or latest)" %}
+
+dotnet new blazorwasm -o BlazorApp -f net9.0
 cd BlazorApp
 
 {% endhighlight %}
@@ -59,14 +65,21 @@ cd BlazorApp
 For a hosted Blazor WebAssembly experience (with ASP.NET Core backend), add the hosted option:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET 8 hosted" %}
 
-dotnet new blazorwasm -o BlazorApp --hosted
+dotnet new blazorwasm -o BlazorApp -f net8.0 --hosted
+cd BlazorApp
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 9 hosted" %}
+
+dotnet new blazorwasm -o BlazorApp -f net9.0 --hosted
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-N> If multiple SDK versions are installed and a specific target framework (for example, net8.0/net9.0) is required, append -f to the dotnet new blazorwasm command. See the [template options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for details.
+N> If the project is created without specifying -f, the template may default to an older target framework depending on the installed SDKs. Always include -f net8.0 or -f net9.0 to target the intended framework version. See the [template options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for details.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the app
 
@@ -115,7 +128,6 @@ builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -236,6 +248,7 @@ To bind data for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dat
 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
