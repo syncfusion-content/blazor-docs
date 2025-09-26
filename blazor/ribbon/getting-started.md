@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Ribbon Component
 
-This section briefly explains about how to include [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This guide explains how to add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -232,6 +232,6 @@ You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfus
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon component in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon component will be rendered in your default web browser.
 
 ![Blazor Ribbon Component](./images/getting-started.png)
