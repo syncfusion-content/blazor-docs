@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Add Syncfusion DataGrid to Blazor WebAssembly using .NET CLI
-description: Learn how to create a Blazor WebAssembly app on .NET 8/9 and add the Syncfusion DataGrid using the .NET CLI with setup, themes, scripts, and grid features.
+description: Learn how to create a standalone Blazor WebAssembly app on .NET 8/9 and add the Syncfusion DataGrid using the .NET CLI with setup, themes, scripts, and grid features.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid in a Blazor WebAssembly app using the .NET CLI
+# Blazor DataGrid in a standalone WebAssembly app using .NET CLI
 
-This article provides step-by-step instructions to build a Blazor WebAssembly app and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards.
+This article provides step-by-step instructions to build a standalone Blazor WebAssembly app and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards and notes when to use a hosted WebAssembly option.
 
 ## Using the Playground
 
@@ -43,9 +43,9 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor WebAssembly project using .NET CLI
+### Create a standalone Blazor WebAssembly project using .NET CLI
 
-To create a new Blazor WebAssembly app, open the terminal or command prompt and run:
+To create a new standalone Blazor WebAssembly app, open the terminal or command prompt and run:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -56,7 +56,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-For a hosted Blazor WebAssembly experience, add the hosted option:
+For a hosted Blazor WebAssembly experience (with ASP.NET Core backend), add the hosted option:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -124,7 +124,7 @@ await builder.Build().RunAsync();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` section of the main layout page as shown below:
 
-For .NET 8/9 Blazor WebAssembly apps, add the following to the **wwwroot/index.html** file:
+For .NET 8/9 standalone Blazor WebAssembly apps, add the following to the **wwwroot/index.html** file:
 
 ```html
 <head>
