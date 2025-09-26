@@ -15,7 +15,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications (Blazor Ser
 
 ## Integrated Development Environment
 
-Blazor applications can be developed using the following IDEs. Development is also supported using the [.NET CLI](https://learn.microsoft.com/dotnet/core/tools/) without an IDE.
+Blazor applications can be developed using the following IDEs. Development is also supported using the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) without an IDE.
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio Code](https://code.visualstudio.com/download)

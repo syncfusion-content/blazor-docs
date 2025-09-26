@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Version compatibility for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+# Version compatibility for Syncfusion® Blazor components
 
 The following table shows the supported .NET and .NET Core versions for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component releases.
 
@@ -33,5 +33,5 @@ Example: for version `23.1.36`:
 ## See also
 
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
-* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
 * [System requirements](https://blazor.syncfusion.com/documentation/system-requirements)
