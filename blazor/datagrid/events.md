@@ -1699,7 +1699,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.PdfExport();
+        await this.Grid.ExportToPdfAsync();
     }
 
     public void PdfExportHandler(object args)
@@ -1752,7 +1752,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.PdfExport();
+        await this.Grid.ExportToPdfAsync();
     }
 
     public void PdfHeaderQueryCellInfoHandler(PdfHeaderQueryCellInfoEventArgs args)
@@ -1805,7 +1805,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.PdfExport();
+        await this.Grid.ExportToPdfAsync();
     }
 
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
@@ -1888,10 +1888,10 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.PdfExport();
+        await this.Grid.ExportToPdfAsync();
     }
 
-    public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs<Order> args)
+    public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs args)
     {
         // Here, you can customize your code.
     }
@@ -2005,7 +2005,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.ExcelExport();
+        await this.Grid.ExportToExcelAsync();
     }
 
     public void ExcelExportHandler(object args)
@@ -2058,10 +2058,10 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.ExcelExport();
+        await this.Grid.ExportToExcelAsync();
     }
 
-    public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs<Order> args)
+    public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs args)
     {
         // Here, you can customize your code.
     }
@@ -2111,7 +2111,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.ExcelExport();
+        await this.Grid.ExportToExcelAsync();
     }
 
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
@@ -2194,7 +2194,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        await this.Grid.ExcelExport();
+        await this.Grid.ExportToExcelAsync();
     }
 
     public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
@@ -2314,15 +2314,15 @@ N> All the events should be provided in a single **GridEvents**.
     {
         if (args.Item.Text == "Excel Export")
         {
-            await this.Grid.ExcelExport();
+            await this.Grid.ExportToExcelAsync();
         }
         if (args.Item.Text == "PDF Export")
         {
-            await this.Grid.PdfExport();
+            await this.Grid.ExportToPdfAsync();
         }
         if (args.Item.Text == "CSV Export")
         {
-            await this.Grid.CsvExport();
+            await this.Grid.ExportToCsvAsync();
         }
     }
 
