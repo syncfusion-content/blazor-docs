@@ -13,7 +13,7 @@ The diagram's core functionalities are implemented through a comprehensive set o
 
 ## How to Add Nodes Using the Add Method
 
-To create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add()` method. It's crucial to call the Add() method within the OnInitialized() lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the Add() method outside of OnInitialized() is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
+Create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add()` method. It's crucial to call the Add() method within the OnInitialized() lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the Add() method outside of OnInitialized() is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -48,7 +48,7 @@ To create a node in a Blazor diagram, define a Node object and add it to the dia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
 
 ## How to Add Nodes Using the AddDiagramElementsAsync Method
 
@@ -151,11 +151,11 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
 
 ## How to Clear Nodes and Connectors from the Diagram
 
-The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clear) method provides a quick and efficient way to remove all elements from the diagram, including nodes, connectors, and groups. This method is particularly useful when you need to reset the diagram to its initial state or prepare it for a new set of elements.
+The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clear) method removes all elements from the diagram, including nodes, connectors, and groups. Use it to reset the canvas to a blank state before loading or creating a new set of elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -220,13 +220,13 @@ The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Clear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Clear)
 
 ![Blazor Diagram clear](images/blazor-diagram-clear.gif)
 
 ## How to Delete Diagram Elements
 
-The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method is a powerful tool for removing diagram elements such as nodes, connectors, and groups. When invoked without parameters or with a null parameter, it automatically deletes all selected elements. Alternatively, you can pass a collection of specific diagram elements to be removed. This versatile method provides flexibility in managing your diagram's content. The following code example demonstrates how to effectively use the Delete method to remove elements from your diagram.
+The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method removes diagram elements such as nodes, connectors, and groups. When invoked without parameters or with a null parameter, it automatically deletes all selected elements. Alternatively, pass a collection of specific diagram elements to be removed. This versatile method provides flexibility in managing your diagram's content. The following code example demonstrates how to effectively use the Delete method to remove elements from your diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -327,10 +327,10 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
 
 ## How to Reset Diagram Zoom Level
-The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the current zoom level of the diagram page to its default value of 100%. This method is particularly useful when the diagram is in a zoomed-in or zoomed-out state, allowing users to quickly return to the standard view. The following code example demonstrates how to implement the ResetZoom method to restore the diagram's default zoom level.
+The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method restores the current zoom level of the diagram page to its default value of 100%. This method is particularly useful when the diagram is in a zoomed-in or zoomed-out state, allowing users to quickly return to the standard view. The following code example demonstrates how to implement the ResetZoom method to restore the diagram's default zoom level.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -428,12 +428,12 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ResetZoom)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ResetZoom)
 
 ![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.gif)
 
 ## How to Clear Selected Items
-The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method is used to deselect all currently selected nodes and connectors in the diagram. This method provides a quick way to reset the selection state of the diagram, allowing for a clean slate before performing new operations or updates.
+The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method deselects all currently selected nodes and connectors in the diagram. This method provides a quick way to reset the selection state of the diagram, allowing for a clean slate before performing new operations or updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -521,10 +521,10 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
 
 ## How to Get Object in the Diagram
-The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetObject_System_String_) method in SfDiagramComponent accepts an ID as a parameter and returns an IDiagramObject. You can retrieve a specific connector or node by passing its unique identifier to this method. This powerful functionality allows for easy access and manipulation of diagram elements within your Blazor application.
+The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetObject_System_String_) method in SfDiagramComponent accepts an ID as a parameter and returns an IDiagramObject. Retrieve a specific connector or node by passing its unique identifier to this method. This powerful functionality allows for easy access and manipulation of diagram elements within your Blazor application.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -613,10 +613,10 @@ The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetObjectMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetObjectMethod)
 
 ## How to Get Page Bounds of the Diagram
-The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetPageBounds_System_Nullable_System_Double__System_Nullable_System_Double__) method is used to retrieve the boundaries of the diagram page. This method allows you to obtain essential page dimensions such as width, height, and other relevant values, enabling precise control over the diagram's layout and positioning.
+The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetPageBounds_System_Nullable_System_Double__System_Nullable_System_Double__) method is used to retrieve the boundaries of the diagram page. This method allows to obtain essential page dimensions such as width, height, and other relevant values, enabling precise control over the diagram's layout and positioning.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -704,10 +704,10 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
 
 ## How to Select All Objects in the Diagram
-  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method allows you to select all objects (nodes, connectors, and annotations) in the diagram simultaneously. This feature is particularly useful for performing bulk operations or applying changes to multiple elements at once.
+  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method selects all objects (nodes, connectors, and annotations) in the diagram simultaneously. This feature is particularly useful for performing bulk operations or applying changes to multiple elements at once.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -796,10 +796,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/SelectAllMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/SelectAllMethod)
 
 ## How to Scale Selected Objects
-The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method allows you to resize diagram objects proportionally by applying a specified scaling factor. This enables precise control over the size of elements within your diagram.
+The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method resizes a diagram objects proportionally by applying a specified scaling factor. This enables precise control over the size of elements within your diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -887,10 +887,10 @@ The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ScaleMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ScaleMethod)
 
 ## How to Get and Customize Cursor Style
-The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) method allows you to create and customize your own cursor. You can define the cursor style according to your specific requirements, enhancing user interaction with the diagram component.
+The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) method create and customize own cursor. Define the cursor style according to your specific requirements, enhancing user interaction with the diagram component.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -962,7 +962,7 @@ The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
      }
  }
  ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
 ## How to Use BeginUpdate and EndUpdateAsync
 The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) method temporarily suspends visual updates to the diagram until the [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) method is called. This allows for multiple changes to be made efficiently without triggering unnecessary redraws. When EndUpdateAsync() is invoked, it releases the lock imposed by BeginUpdate(Boolean), resulting in an immediate visual refresh that reflects all accumulated changes to the diagram.
@@ -1043,10 +1043,10 @@ The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/BeginAndEndUpdate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/BeginAndEndUpdate)
 
 ## How to Unselect Diagram Elements
-The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnSelect_Syncfusion_Blazor_Diagram_IDiagramObject_) method is utilized to deselect previously selected objects within the diagram. This functionality allows for precise control over the selection state of diagram elements.
+The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnSelect_Syncfusion_Blazor_Diagram_IDiagramObject_) method deselects a specific previously selected object. This functionality allows for precise control over selection state of diagram elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1134,11 +1134,11 @@ The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.S
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/UnSelectMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/UnSelectMethod)
 
 ## How to Clone the Diagram
 
-The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clone) method allows you to create an exact copy of the diagram, including all its nodes, connectors, and properties. This is useful for duplicating diagrams or creating backup versions.
+The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clone) method creates an exact copy of the diagram, including all its nodes, connectors, and properties. This is useful for duplicating diagrams or creating backup versions.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1226,7 +1226,7 @@ The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/CloneMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/CloneMethod)
 
 ## How to Get Custom Tool
 The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method enables users to create and implement custom tools, extending the functionality of the diagram component. This powerful feature allows for tailored interactions and specialized behaviors within the diagram.
@@ -1428,7 +1428,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
  ```
- You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
+ A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
 
 
 ## How to Zoom and Pan Diagrams
@@ -1529,7 +1529,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
 
 ## How to Refresh the Data Source
 The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RefreshDataSourceAsync) method dynamically updates the diagram layout to reflect any changes made to the underlying data source. This ensures that the visual representation remains synchronized with the most current data.
@@ -1610,7 +1610,7 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/RefereshDataSource)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/RefereshDataSource)
 
 ## How to Get the Parent of Object
 
@@ -1660,7 +1660,7 @@ The following code illustrates how to set background color for node.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetParent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetParent)
 
 ## How to Enable the Chunk Message
 
@@ -1711,4 +1711,4 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ChunkMessage)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ChunkMessage)
