@@ -142,7 +142,7 @@ The component supports several built-in styles for common use cases.
 
 ### Custom styles
 
-You can also apply your own CSS rules by assigning a custom class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property.
+Custom CSS rules can be applied by assigning a class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property, enabling tailored styling for the component.
 
 The following example demonstrates how to apply a custom CSS class to change the button's background color, text color, and border radius.
 
