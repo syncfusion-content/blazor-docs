@@ -11,7 +11,7 @@ documentation: ug
 
 # Data Label Template in Blazor Charts Component
 
-You can bind text and additional information for a data point from a datasource beyond the x and y values. Use the implicit named parameter context to access aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). You can also modify the name of this implicit parameter using the context attribute.
+Text and additional information for a data point can be bound from a datasource beyond the x and y values. Use the implicit named parameter context to access aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). You can also modify the name of this implicit parameter using the context attribute.
 
 ```cshtml
 

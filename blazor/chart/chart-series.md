@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple Chart Series
 
-The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property enables you to add multiple series to a chart. Series are rendered in the order they appear in the series array.
+The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property enables multiple series to be added to a chart. Series are rendered in the order they appear in the series array.
 
 ```cshtml
 

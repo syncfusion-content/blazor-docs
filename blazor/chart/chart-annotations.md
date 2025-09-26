@@ -15,7 +15,7 @@ Learn how to add Annotations to Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=TpUoXrYlCkU" %}
 
-The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows you to add annotations to the chart. Use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property to specify the element to display in the chart area.
+The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) allows annotations to be added to the chart. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property specifies the element to display in the chart area.
 
 ```cshtml
 
