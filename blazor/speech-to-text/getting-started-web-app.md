@@ -27,7 +27,7 @@ You can create a **Blazor Web App** using either [Microsoft Templates](https://l
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs NuGet in the App
 
-To add **Blazor SpeechToText** to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs). Alternatively, you can use the following package manager command.
+To add **Blazor SpeechToText** to the application, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs). Alternatively, the package can be installed using the following Package Manager Console command.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -51,7 +51,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-You will need to configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) when creating the application.
+The appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) must be configured when setting up the application to ensure correct rendering and behavior of interactive components.
 
 For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
@@ -69,10 +69,10 @@ N> For more information on creating a **Blazor Web App** with various interactiv
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs NuGet in the App
 
-If you use the `WebAssembly` or `Auto` render mode, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package must be installed in the client project.
+When the `WebAssembly` or `Auto` render mode is used, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package must be installed in the client project to ensure proper functionality and interactivity.
 
 *   Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-*   Ensure you are in the project root directory where your `.csproj` file is located.
+*   Ensure that the terminal is opened in the root directory of the project, where the `.csproj` file is located.
 *   Run the following command to install the [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) NuGet package and its dependencies.
 
 {% tabs %}
@@ -146,7 +146,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single `~/Program.cs` file where the service should be registered.
+If the **Interactive Render Mode** is configured as `Server`, the project will contain a single `~/Program.cs` file, where the service should be registered.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -172,13 +172,13 @@ var app = builder.Build();
 The required script can be loaded from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the script reference at the end of the `<body>` tag in the `~/Components/App.razor` file.
 
 ```html
-<head>
+<body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
+</body>
 ```
 
-N> Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to explore different methods for including script references in your Blazor application.
+For detailed guidance on including script references in a Blazor application, refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic, which outlines various supported methods and best practices.
 
 ## Adding Blazor SpeechToText component
 
@@ -211,7 +211,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 {% endhighlight %}
 {% endtabs %}
 
-*   Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component will render in your default web browser.
+*  Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component will then render in the default web browser.
 
 ![Blazor SpeechToText Component](images/getting-started.png)
 
@@ -219,7 +219,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 
 ## Adding Button Content
 
-You can customize the button text for its different states. Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property for the start listening state and the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property for the stop listening state within the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) configuration.
+The button text can be customized for different states using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property for the start listening state and the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property for the stop listening state, both configured within the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) section.
 
 {% tabs %}
 {% highlight razor %}
