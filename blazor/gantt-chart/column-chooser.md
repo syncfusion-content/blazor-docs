@@ -77,8 +77,6 @@ Dynamically show or hide columns using the column chooser, enabled by setting `S
 }
 ```
 
-![Blazor Gantt Chart showing column chooser dialog opened via toolbar button](images/blazor-gantt-column-chooser.gif)
-
 > **Note**: Use <kbd>Tab</kbd> and arrow keys for keyboard navigation in the chooser. Test on mobile devices for responsiveness.
 
 ## Custom component in column chooser template

@@ -60,8 +60,6 @@ Reorder columns by dragging a header from one index to another in the Gantt colu
 }
 ```
 
-![Blazor Gantt Chart with column reordered by drag-and-drop](images/blazor-gantt-chart-column-reorder.png)
-
 > **Note**: Disable reordering for a specific column by setting [GanttColumn.AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_AllowReordering) to `false`.
 
 ## Reorder single column
@@ -185,8 +183,6 @@ Reorder multiple columns at once using the [ReorderColumnsAsync](https://help.sy
     }
 }
 ```
-
-![Blazor Gantt Chart with multiple columns reordered using the ReorderColumnsAsync method](images/blazor-gantt-chart-reorder-multiple-columns.png)
 
 ## See also
 
