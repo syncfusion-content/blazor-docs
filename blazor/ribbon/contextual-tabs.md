@@ -196,7 +196,7 @@ Use the `IsSelected` property to specify which `RibbonContextualTab` group is ac
 
 ## Controlling Visibility and Selection
 
-You can manage the state of contextual tabs both declaratively and programmatically.
+The visibility and selection state of contextual tabs can be managed both declaratively through markup and programmatically
 
 ### Visibility
 
