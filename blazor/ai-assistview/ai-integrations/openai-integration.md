@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Azure Open AI with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Azure Open AI with Blazor AI AssistView component in Blazor WebAssembly Application.
+title:  Azure Open AI Integration with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Azure Open AI integration with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
@@ -13,11 +13,7 @@ The Syncfusion AI AssistView supports integration with [Azure Open AI](https://m
 
 ## Prerequisites
 
-- An Azure subscription with an Azure OpenAI resource
-- A deployed chat completion model (for example, gpt-4o-mini) with:
-  - Endpoint URL
-  - API key
-  - Deployment name
+-  An Azure account with access to `Azure Open AI` services and a generated API key.
 - Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in the project
 
 ## Getting Started with the AI AssistView Component
@@ -32,31 +28,36 @@ Install the Syncfusion Blazor package in the application.
 
 ```bash
 
-Install-Package Syncfusion.Blazor.InteractiveChat
+Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
 
 ```
 
 Install the Markdown rendering package used to convert model responses to HTML.
 
 ```bash
-Install-Package Markdig
+
+NuGet\Install-Package OpenAI
+NuGet\Install-Package Azure.AI.OpenAI
+NuGet\Install-Package Azure.Core
+Nuget\Install-Package Markdig
+
 ```
 
 Note: The sample below uses HttpClient directly and does not require the Azure/OpenAI SDKs.
 
-## Generate API Key and Endpoint (Azure OpenAI)
+## Configure Azure Open AI
 
-1. In the Azure Portal, open your Azure OpenAI resource.
+1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource.
 
-2. Navigate to Resource Management > Keys and Endpoint.
+2. Under Resource Management, select Keys and Endpoint to retrieve your API key and endpoint URL. 
 
-3. Copy an API key and the Endpoint URL.
+3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version (e.g., 2024-07-01-preview) matches your resource configuration.
 
-4. Ensure you have a Deployment Name for a chat-capable model (for example, gpt-4o-mini).
+4. Store these values securely, as they will be used in your application.
 
-Security Note: Never commit secrets to source control. Use environment variables or a secret manager for production.
+> `Security Note`: expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-## Integration: Azure OpenAI with AI AssistView
+## Integration Azure OpenAI with AI AssistView
 
 - Configure your Azure OpenAI endpoint, API key, and deployment name in your Program.cs (or using your preferred configuration mechanism).
 
@@ -239,4 +240,4 @@ var deploymentName = "gpt-4o-mini";
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Open AI Integration](./images/openai-integration.png)
+![Blazor AI AssistView Azure Open AI Integration](./images/openai-integration.png)
