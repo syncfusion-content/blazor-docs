@@ -9,11 +9,11 @@ documentation: ug
 
 # Grid Lines in Blazor Diagram Component
 
-Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property is used to customize the gridlines and control the snapping behavior in the diagram.
+Gridlines are the pattern of lines drawn behind diagram elements. They provide visual guidance while dragging or arranging objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property customizes gridlines and controls snapping behavior in the diagram.
 
 ## How to Customize Grid Lines Visibility
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the SnapSettings class allows you to control the visibility of the gridlines.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings to control the visibility of gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -51,21 +51,21 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomGridline)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomGridline)
 
 ![GridLines in Blazor Diagram](images/blazor-diagram-gridlines.png)
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
+To show only horizontal or vertical gridlines, or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
 ## How to Customize Grid Lines Appearance
 
-The appearance of the gridlines can be customized by using a set of predefined properties.
+The appearance of gridlines can be customized using predefined properties.
 
-* The [HorizontalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_HorizontalGridLines) and the [VerticalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_VerticalGridLines) properties allow you to customize the appearance of the horizontal and vertical gridlines respectively.
+* The [HorizontalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_HorizontalGridLines) and [VerticalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_VerticalGridLines) properties customize the appearance of the horizontal and vertical gridlines respectively.
 
-* The horizontal gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the horizontal gridlines.
+* For horizontal gridlines, use [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the horizontal gridlines.
 
-* The vertical gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the vertical gridlines.
+* For vertical gridlines, use [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the vertical gridlines.
 
 The following code example illustrates how to customize the appearance of gridlines.
 
@@ -81,7 +81,7 @@ The following code example illustrates how to customize the appearance of gridli
     </SnapSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/Appearance)
 
 
 ## How to Create Dot Grid Patterns
@@ -110,14 +110,14 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeGridline)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeGridline)
 
 
 ![Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)
 
 ## How to Customize Line Intervals
 
-Thickness and the space between gridlines can be customized by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
+Customize line thickness and spacing using the by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
@@ -143,7 +143,7 @@ The following code example illustrates how to customize the thickness of lines a
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/LineInterval)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/LineInterval)
 
 
 ![Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.png)
@@ -152,9 +152,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to Enable Snap to Lines
 
-This feature allows the diagram objects to snap to the nearest intersection of gridlines while being dragged or resized. This feature enables easier alignment during layout or design.
+This feature snaps diagram objects to the nearest intersection of gridlines while being dragged or resized. This feature enables easier alignment during layout or design.
 
-Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html). The following code example illustrates how to enable/disable the snapping to gridlines.
+Snapping to gridlines can be enabled or disabled with the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html). The following code example illustrates how to enable/disable the snapping to gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -183,14 +183,14 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToLines)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToLines)
 
 
 ![Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)
 
 ### How to Customize Snap Intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized by using the [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_SnapIntervals) property of the HorizontalGridLines and VerticalGridLines.
+By default, objects snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized by using the [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_SnapIntervals) property of HorizontalGridLines and VerticalGridLines.
 
 ```cshtml
 @page "/CustomSnapLineInterval Sample"
@@ -230,7 +230,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeSnapInterval)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeSnapInterval)
 
 
 ### How to Enable Snap to Object
@@ -280,14 +280,14 @@ The snap to object provides visual cues to assist with aligning and spacing diag
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToObject)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToObject)
 
 
 ![GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)
 
 ### How to Customize Snap Line Style
 
-The [SnapLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapLineStyle) property of the [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) class allows you to adjust the appearance of snapping lines to enhance visibility or match specific aesthetic preferences. By customizing this property, you can modify the color, stroke width, stroke dash array, and opacity of the snap lines. These adjustments improve visual contrast, making it easier to align objects with precision. By default, the snap line color is set to '#07EDE1'.
+The [SnapLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapLineStyle) property of the [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) class allows to adjust the appearance of snapping lines to enhance visibility or match specific aesthetic preferences. By customizing this property, modify the color, stroke width, stroke dash array, and opacity of the snap lines. These adjustments improve visual contrast, making it easier to align objects with precision. By default, the snap line color is '#07EDE1'.
 
 The following code example illustrates how to customize the snap line style.
 
@@ -327,7 +327,7 @@ The following code example illustrates how to customize the snap line style.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapLineStyle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapLineStyle)
 
 
 ![GuideLines in Blazor Diagram](images/SnapLineStyle.png)

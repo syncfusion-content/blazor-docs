@@ -9,11 +9,11 @@ documentation: ug
 
 # Printing in Blazor Diagram Component
 
-Diagram provides support to print the content displayed on the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
+Diagram supports printing the visible content using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 
 ## How to Set Up Page Layout for Printing 
 
-Some of the print options cannot be configured through JavaScript code. Therefore, the layout, paper size, and margin options must be customized using the browser page setup dialog. Refer to the following links to learn more about the browser page setup:
+Some print options cannot be configured through JavaScript code. Therefore, the layout, paper size, and margin options must be customized using the browser page setup dialog. Refer to the following links to learn more about the browser page setup:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
@@ -22,7 +22,7 @@ Some of the print options cannot be configured through JavaScript code. Therefor
 
 ## How to Customize Printing Options
 
-The diagram can be customized while printing using the following properties of the [DiagramPrintSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html) class. 
+Customize the print output using the properties of the [DiagramPrintSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html) class. 
 
 | Name | Description|
 |-------- | -------- |
@@ -77,7 +77,7 @@ The following code example illustrates how to print the region occupied by the d
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintSample/PrintSample)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintSample/PrintSample)
 
 The following code example illustrates how to print a selected region in the diagram using clip bounds.
 
@@ -194,7 +194,7 @@ The following code example illustrates how to print a selected region in the dia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintUsingClipBounds/PrintUsingClipBounds)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintUsingClipBounds/PrintUsingClipBounds)
 
 ## See Also
 
