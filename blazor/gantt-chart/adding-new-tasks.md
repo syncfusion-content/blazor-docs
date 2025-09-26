@@ -15,10 +15,12 @@ The Syncfusion Blazor Gantt Chart component enables adding tasks through the too
 
 To add a task using the toolbar, configure the `Add` toolbar item and ensure `GanttEditSettings.AllowAdding` is `true`. Clicking the **Add** icon opens a dialog to enter task details, including a unique `TaskId`, `TaskName`, and `StartDate`. New tasks are added at the top of the Gantt Chart by default.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
@@ -33,13 +35,13 @@ To add a task using the toolbar, configure the `Add` toolbar item and ensure `Ga
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -58,9 +60,11 @@ To add a task using the toolbar, configure the `Add` toolbar item and ensure `Ga
         return Tasks;
     }
 }
-```
 
-![Blazor Gantt Chart add dialog open with task fields](images/blazor-gantt-chart-add-new-row.png)
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIjkMxqOcLSDUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > **Note**: A unique `TaskId` is required to avoid silent failures. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OnActionFailure) event to handle errors like invalid input or duplicate IDs.
 
@@ -68,11 +72,12 @@ To add a task using the toolbar, configure the `Add` toolbar item and ensure `Ga
 
 To add tasks relative to a selected task, enable the context menu by setting [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) to `true` alongside `GanttEditSettings.AllowAdding`. Right-click a task to access options such as `Above`, `Below`, or `Child`, then enter task details, including a unique `TaskId`, in the dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" EnableContextMenu="true" Width="900px" HighlightWeekends="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
-    </GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
@@ -86,14 +91,14 @@ To add tasks relative to a selected task, enable the context menu by setting [En
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -112,7 +117,11 @@ To add tasks relative to a selected task, enable the context menu by setting [En
         return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhIjYMHJtqJyIRP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > **Note**: The context menu supports keyboard navigation (e.g., <kbd>Enter</kbd> to select "Add Above"). Refer to the [Accessibility in Blazor Gantt Chart](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility) for keyboard shortcuts.
 
@@ -120,19 +129,21 @@ To add tasks relative to a selected task, enable the context menu by setting [En
 
 Tasks can be added programmatically using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method, specifying the task’s position with the [RowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.RowPosition.html) enum (`Top`, `Bottom`, `Above`, `Below`, or `Child`) and an optional `RowIndex`. The task data must include a unique `TaskId`.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
 <SfButton @onclick="AddRow">Add Row</SfButton>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
     public SfGantt<TaskData> Gantt;
-    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Task", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 50 };
+    public TaskData record = new TaskData() { TaskID = 9, TaskName = "New Added Record", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 50};
 
     public async Task AddRow()
     {
@@ -148,13 +159,13 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -173,10 +184,11 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
         return Tasks;
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Blazor Gantt Chart with new task added programmatically below row index 2](images/blazor-gantt-chart-add-new-record.png)
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejYiHpDyFanTO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+                           
 > **Note**: Ensure the `TaskId` is unique to prevent runtime errors. Use try-catch blocks with `AddRecordAsync` to handle exceptions, such as invalid data or missing dependencies. For keyboard accessibility, use <kbd>Ctrl</kbd> + <kbd>Insert</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>Insert</kbd> (Mac) to open the add dialog programmatically.
 
 ## See Also
@@ -184,3 +196,4 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
 - [Accessibility in Blazor Gantt Chart](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility)
 - [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)
 - [Blazor Gantt Chart Example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5)
+  
