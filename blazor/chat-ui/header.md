@@ -67,7 +67,7 @@ Use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Int
 
 ### Setting header icon CSS
 
-The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss) property allows you to customize the styling of the header icon.
+The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss) property allows you to customize the styling of the header icon.allows customization of the header icon's styling in the Blazor Chat UI component by applying custom CSS classes.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
 
 ## Toolbar
 
-You can render items in the Chat UI header's toolbar by using the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html) and [HeaderToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html) tag directives.
+Items can be rendered in the Chat UI header's toolbar using the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html) and [HeaderToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html) tag directives.
 
 ### Setting items
 
@@ -242,7 +242,7 @@ Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 #### Setting disabled
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Disabled) property allows you to disable a header toolbar item. Its default value is `false`.
+The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Disabled) property is used to disable a header toolbar item in the Blazor Chat UI component. Its default value is `false`.
 
 ```cshtml
 
@@ -311,7 +311,7 @@ Use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 #### Setting CSS Class
 
-The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_CssClass) property allows you to apply a custom CSS class to a header toolbar item for further styling.
+The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_CssClass) property allows applying a custom CSS class to a header toolbar item for styling purposes.
 
 ```cshtml
 
@@ -356,7 +356,7 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 #### Enabling tab key navigation in toolbar
 
-Set the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_TabIndex) property of a header toolbar item to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the `Tab` and `Shift+Tab` keys as well.
+Set the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_TabIndex) property of a header toolbar item to enable tab key navigation. By default, navigation between items is handled using arrow keys, but the TabIndex property allows switching between items using the `Tab` and `Shift+Tab` keys.
 
 To use the `TabIndex` property, set it for each Toolbar item which you want to enable tab key navigation. The `TabIndex` property should be set to a positive integer value. A value of `0` or a negative value will disable tab key navigation for the item.
 
