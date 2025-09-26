@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Add Blazor DataGrid to a Blazor Server app using .NET CLI | Syncfusion
+title: Add Syncfusion DataGrid to standalone Blazor Server app using .NET CLI
 description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using the .NET CLI on .NET 8/9, including setup, theme, scripts, and basic features.
+platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid in a Blazor Server app using the .NET CLI
+# Blazor DataGrid in a standalone Blazor Server app using .NET CLI
 
-This article provides step-by-step instructions to build a Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
+This article provides step-by-step instructions to build a standalone Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
 
 ## Manually creating a project
 
@@ -36,9 +37,9 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor Server side project using .NET Core CLI
+### Create a standalone Blazor Server side project using .NET Core CLI
 
-To create a new Blazor Server application using the .NET CLI, run the following command:
+To create a new standalone Blazor Server application using the .NET CLI, run the following command:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -49,7 +50,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor app project and places it in a directory named BlazorApp within the current working location. For more details, refer to the [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) documentation.
+This command creates a new standalone Blazor Server app and places it in a directory named BlazorApp within the current working location. For more details, refer to the [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) documentation.
 
 N> If multiple SDK versions are installed and a specific target framework (for example, net8.0/net9.0) is required, add the -f flag with the dotnet new blazorserver command. Refer to the [dotnet new options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for available flags.
 
