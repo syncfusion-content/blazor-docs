@@ -7,7 +7,7 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard Layout Component in a Web App
+# Getting Started with Blazor Dashboard Layout Component in a Blazor Web App
 
 This section describes how to include the Syncfusion  [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
 
