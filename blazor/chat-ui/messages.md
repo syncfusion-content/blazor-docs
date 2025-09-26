@@ -71,7 +71,7 @@ The [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interactive
 
 #### Setting the Avatar URL
 
-The [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarUrl) property defines the image URL for a user's avatar. If no URL is provided, the component displays fallback initials derived from the user's name.
+The [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarUrl) property defines the image URL for a user's avatar. When a URL is not provided, the component displays fallback initials derived from the user's name.
 
 ```cshtml
 
@@ -452,7 +452,7 @@ The [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 ### Enabling Auto-Scroll
 
-You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AutoScrollToBottom) property automatically scrolls the conversation to the latest message when it is set to 'true'. This is useful for keeping the user focused on the most recent activity. By default, this property is `false`. 
+The [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AutoScrollToBottom) property automatically scrolls the conversation to the latest message when set to true. This helps maintain focus on the most recent activity. By default, the property is set to `false`.
 
 - By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `AutoScrollToBottom` property.
 

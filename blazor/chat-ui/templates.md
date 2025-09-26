@@ -136,7 +136,7 @@ The [TimeBreakTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Typing indicator template
 
-With the [TypingUsersTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsersTemplate) tag, you can customize the display for users currently typing. It allows for unique styling and positioning of the typing indicator, enhancing the user experience. The template context includes a list of [Users](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.TypingUsersTemplateContext.html#Syncfusion_Blazor_InteractiveChat_TypingUsersTemplateContext_Users) who are typing.
+The [TypingUsersTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsersTemplate) tag directive is used to customize the display for users who are currently typing. It allows for unique styling and positioning of the typing indicator, enhancing the user experience. The template context includes a list of [Users](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.TypingUsersTemplateContext.html#Syncfusion_Blazor_InteractiveChat_TypingUsersTemplateContext_Users) who are typing.
 
 ```cshtml
 
