@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregates in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Aggregates in the Syncfusion Blazor DataGrid component and much more.
+description: Learn how to configure and display aggregates (sum, average, min, max, count, true/false count) in the Syncfusion Blazor DataGrid footer, group footer, and group caption using templates and formatting.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,17 +9,19 @@ documentation: ug
 
 # Aggregates in Blazor DataGrid
 
-The Aggregates feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to display aggregate values in the footer, group footer, and group caption of the Grid. With this feature, you can easily perform calculations on specific columns and show summary information.This feature can be configured using the **GridAggregates** component.To represent an aggregate column, you need to specify the minimum required properties, such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type).
+The aggregates feature in the Syncfusion Blazor DataGrid displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the DataGrid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
+
+For customized rendering, use aggregate templates and access values via AggregateTemplateContext (for example, Sum, Average, Min, Max, Count, TrueCount, and FalseCount). See: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) and [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html).
 
 **Displaying aggregate values**
 
-By default, the aggregate values are displayed in the footer, group, and caption cells of the Grid. However, you can choose to display the aggregate value in any of these cells by using the following properties:
+By default, aggregate values can be shown in the footer, group footer, and group caption cells. Control where and how the values are displayed using these properties:
 
-* [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate): Use this property to display the aggregate value in the footer cell. You can define a custom template to format the aggregate value as per your requirements. 
+* [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate): Display and format the aggregate value in the footer cell with a custom template.
+* [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate): Display and format the aggregate value in the group footer cell with a custom template.
+* [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Display and format the aggregate value in the group caption cell with a custom template.
 
-* [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate): Use this property to display the aggregate value in the group footer cell. Similar to the footerTemplate, you can provide a custom template to format the aggregate value.
-
-* [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Use this property to display the aggregate value in the group caption cell. You can define a custom template to format the aggregate value.
+N> Group footer and group caption aggregates appear when grouping is enabled and data is grouped.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -125,27 +127,26 @@ By default, the aggregate values are displayed in the footer, group, and caption
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrACXUDUeyrfGOs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrIDaLdIjQgCsmJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * When using local data, the total summary is calculated based on the entire dataset available in the Grid. The aggregate values will reflect calculations across all the rows in the Grid.
-> * When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
+> - With local data, total summaries are calculated over the entire bound dataset. Footer aggregates reflect calculations across all rows.
+> - With remote data, footer summaries typically reflect only the current page unless the data adaptor or server returns total summaries. When paging is enabled, the footer shows aggregates for visible page records by default.
 
 ## Built-in aggregate types
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides several built-in aggregate types that can be specified in the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to configure an aggregate column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides several built-in aggregate types that can be assigned via the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property on an aggregate column.
 
 The available built-in aggregate types are :
 
-* **Sum:** Calculates the sum of the values in the column.
+* Sum: Calculates the sum of values in the column.
+* Average: Calculates the average of values in the column.
+* Min: Finds the minimum value in the column.
+* Max: Finds the maximum value in the column.
+* Count: Counts the number of values in the column.
+* TrueCount: Counts the number of true values in the column.
+* FalseCount: Counts the number of false values in the column.
 
-* **Average:** Calculates the average of the values in the column.
-* **Min:** Finds the minimum value in the column.
-* **Max:** Finds the maximum value in the column.
-* **Count:** Counts the number of values in the column.
-* **TrueCount:** Counts the number of true values in the column.
-* **FalseCount:** Counts the number of false values in the column.
-
-Here is an example that demonstrates how to use built-in aggregates types in the Grid:
+The following example demonstrates built-in aggregate types with footer templates. Access aggregate values through AggregateTemplateContext using the matching type property (for example, Max, Min, TrueCount):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -289,11 +290,16 @@ Here is an example that demonstrates how to use built-in aggregates types in the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgCDAjUmunNwOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeturxIXlkRbPO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Multiple types for a column are supported only when one of the aggregate templates is used.
->  * The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
+> - Multiple aggregate types for a single column are supported only when one of the aggregate templates is used.
+> - Access aggregate values inside the template using the corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name (for example, Sum, Average, Min, Max, Count, TrueCount, FalseCount).
+> - Use the Format property (for example, C2 or d) to apply culture-aware currency and date formatting to aggregate values.
 
 ## See also
 
-* [Handling Aggregates in Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)
+* [Handling aggregates in custom adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)
+* [AggregateTemplateContext API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
+* [AggregateType enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
+* [Grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
+* [Column templates](https://blazor.syncfusion.com/documentation/datagrid/column-template)

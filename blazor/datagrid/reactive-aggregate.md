@@ -1,21 +1,21 @@
 ---
 layout: post
-title:  Reactive aggregate in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Reactive aggregate in Syncfusion Blazor DataGrid component and much more details.
+title:  Reactive aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn how reactive aggregates in the Syncfusion Blazor DataGrid auto-update summary values in the footer, group footer, and group caption during batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Reactive aggregate in Blazor DataGrid
+# Reactive aggregates in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports reactive aggregates that update dynamically as data changes. Aggregate values are recalculated when underlying data is edited, providing real-time updates to footer, group footer, and group caption summaries.
 
-## Auto update aggregate value in batch editing
+## Auto-update aggregate values in batch editing
 
-When the Grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
+When the DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption are refreshed each time a cell edit is saved. This ensures that summaries reflect the most recent edits.
 
-Here’s an example code snippet demonstrating how to auto update aggregate value in batch editing:
+The following example demonstrates automatic aggregate value updates in batch editing:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -123,6 +123,6 @@ Here’s an example code snippet demonstrating how to auto update aggregate valu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgCtAjJfZhemgh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLSNYqjWbvJQVPF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Adding a new record to the grouped Grid will not refresh the aggregate values.
+> Aggregate values refresh after batch changes are saved (Update). Adding a new record does not update aggregates until the changes are saved.
