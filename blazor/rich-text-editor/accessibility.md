@@ -79,7 +79,7 @@ For a complete list of keyboard shortcuts, refer to the [Keyboard Support](https
 
 The Blazor Rich Text Editor component's accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Rich Text Editor component is demonstrated in the following sample. You can open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the component with accessibility tools.
+The accessibility compliance of the Rich Text Editor component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the component with accessibility tools.
 
 ### Custom key configuration
 
