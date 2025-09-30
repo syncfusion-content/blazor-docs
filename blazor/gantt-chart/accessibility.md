@@ -54,7 +54,7 @@ The Blazor Gantt Chart component implements [WAI-ARIA](https://www.w3.org/WAI/AR
 | `aria-expanded` | Used for parent task rows, set to `true` when expanded and `false` when collapsed. |
 | `aria-grabbed` | Applied to taskbars during editing to indicate drag-and-drop interaction. |
 
-## Keyboard Navigation
+## Keyboard navigation
 
 The Blazor Gantt Chart component supports comprehensive [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) for users relying on keyboards or assistive technologies. Below are the supported keyboard shortcuts, organized by functionality.
 
