@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Rich Text Editor Component | Syncfusion
-description: Learn how to localize the Syncfusion Blazor Rich Text Editor and enable right-to-left (RTL) layout.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
