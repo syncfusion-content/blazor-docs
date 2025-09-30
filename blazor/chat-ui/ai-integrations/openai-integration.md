@@ -32,7 +32,7 @@ Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
 
 ```
 
-Install the Markdown rendering package used to convert model responses to HTML.
+Install the `Open AI` and `Markdig` nuget packages in the application.
 
 ```bash
 
@@ -59,7 +59,7 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 
 ## Integration Azure OpenAI with Chat UI
 
-- Configure your Azure OpenAI endpoint, API key, and deployment name in your Program.cs (or using your preferred configuration mechanism).
+- Configure your Azure OpenAI endpoint, API key, and deployment name in your **Program.cs** (or using your preferred configuration mechanism).
 
 - Register the service for dependency injection.
 
