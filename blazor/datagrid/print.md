@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Print in Syncfusion Blazor DataGrid component and much more details.
+description: Learn to print the Syncfusion Blazor DataGrid using the toolbar Print command or PrintAsync method, configure browser page setup, and handle large columns.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 # Print in Blazor DataGrid
 
-The printing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to easily generate and print a representation of the Grid’s content for better offline accessibility and documentation. You can enable this feature using either the Grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
+The printing feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid generates a print-ready view of the DataGrid content for offline access and documentation. Printing can be initiated from the built-in toolbar command or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
-To add the printing option to the Grid’s Toolbar, simply include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in your Grid configuration and add the **Print** as Toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar
+To add a print command to the toolbar, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with the Print item. Selecting the toolbar item opens the browser’s print dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -88,16 +88,16 @@ To add the printing option to the Grid’s Toolbar, simply include the [Toolbar]
 
 ## Page setup
 
-When printing a webpage, some print options, such as layout, paper size, and margin settings, cannot be configured through code. Instead, you need to customize these settings using the browser’s page setup dialog. Below are links to the page setup guides for popular web browsers:
+Print layout, paper size, margins, headers/footers, and scaling are controlled by the browser’s print dialog and cannot be set from application code. Refer to browser-specific setup guides:
 
-* [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
+* [Chrome](https://support.google.com/chrome/answer/1069693?hl=en)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](https://www.helpteaching.com/blog/)
+* [Internet Explorer](https://www.helpteaching.com/blog/)
 
-## Print by external button
+## Print with an external button
 
-You can print the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid’s content using an external button by utilizing the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. This method allows you to trigger the printing process programmatically.
+Printing can be triggered from external UI by calling the DataGrid’s [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -174,9 +174,9 @@ You can print the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWXZTryODdbNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Print visible Page
+## Print visible page
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid prints all the pages of the Grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the Grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
+By default, the Syncfusion Blazor DataGrid prints all pages. To print only the current page, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PrintMode.html) property to `CurrentPage`. The toolbar Print command and PrintAsync respect the configured print mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -357,9 +357,7 @@ The following image represents Hierarchial Grid with print toolbar item,
 
 ## Print large number of columns
 
-When printing a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid with a large number of columns, the browser’s default page size (usually A4) might not be sufficient to display all the columns properly. As a result, the browser’s print preview may automatically hide the overflowed content, leading to a cut-off appearance.
-
-To show a large number of columns when printing, you can adjust the scale option from the print option panel based on your content size. This will allow you to fit the entire Grid content within the printable area.
+When printing a DataGrid with many columns, the browser’s default page size (for example, A4) may not fit all columns. The print preview may hide overflowed content. Adjust the scale in the browser print dialog or choose landscape orientation to fit more columns within the printable area.
 
 ![Printing large number of columns in Syncfusion Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.png)
 
@@ -431,8 +429,10 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 
 ## Limitations of printing large data
 
-Printing a large volume of data all at once in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can have certain limitations due to potential browser performance issues. Rendering numerous DOM elements on a single page can lead to browser slowdowns or even hang the browser. The Grid offers a solution to manage extensive datasets through virtualization. However, it’s important to note that virtualization for both rows and columns is not feasible during the printing process.
+Printing a large volume of data in a single page can cause browser performance issues because rendering many DOM elements may slow or hang the page. The DataGrid supports virtualization for on-screen rendering; however, row and column virtualization are not applied to printed output.
 
-If printing all the data remains a requirement, an alternative approach is recommended. Exporting the Grid data to formats like [Excel](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [CSV](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [Pdf](https://blazor.syncfusion.com/documentation/datagrid/pdf-export) is advised. This exported data can then be printed using non-web-based applications, mitigating the potential performance challenges associated with printing large datasets directly from the browser.
+For large datasets that must be shared or printed, exporting to [Excel](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting), [CSV](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting), or [PDF](https://blazor.syncfusion.com/documentation/datagrid/pdf-export) is recommended, and the exported document can be printed using native applications.
 
-> You can refer to our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> The printed output reflects the current DataGrid state (such as visible columns, sorting, and filtering) at the time printing is initiated.
+
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
