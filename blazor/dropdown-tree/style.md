@@ -320,7 +320,7 @@ Customize  the appearance of the popup element within the Dropdown Tree componen
 
 ## Changing HTML Attributes
 
-The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) propertyprovides a mechanism to apply additional HTML attributes, such as `class, style, title,` and others, to the root element of the Dropdown Tree component. This property accepts attributes in a dictionary format, consisting of key-value pairs.
+The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property provides a mechanism to apply additional HTML attributes, such as `class, style, title,` and others, to the root element of the Dropdown Tree component. This property accepts attributes in a dictionary format, consisting of key-value pairs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

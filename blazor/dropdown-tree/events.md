@@ -312,7 +312,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
 
 ## Filtering
 
-The [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event of the Blazor Dropdown Tree component is triggered whenever a user types text into the search box within the dropdown. This event is typically used for implementing custom filtering logic, such as debouncing input or fetching filtered data from a remote source.
+The [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event of the Blazor Dropdown Tree component is triggered whenever a user types text into the search box within the dropdown. This event is typically used for implementing custom filtering logic, such as debounce input or fetching filtered data from a remote source.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
