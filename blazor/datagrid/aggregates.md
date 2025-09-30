@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure and display aggregates (sum, average, min, max, count, true/false count) in the Syncfusion Blazor DataGrid footer, group footer, and group caption using templates and formatting.
+description: Learn how to configure and display aggregates in Syncfusion Blazor DataGrid using templates for footer, group footer, and caption.
+
 platform: Blazor
 control: DataGrid
 documentation: ug
