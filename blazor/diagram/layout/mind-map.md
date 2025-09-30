@@ -81,7 +81,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
-You can also control the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following example demonstrates how to set all branches on the right side for a mind map layout using the GetBranch method.
+You can also control the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following example demonstrates how to configure all branches to appear on the right side using this method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
