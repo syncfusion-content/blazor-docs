@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Searching in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Searching in Syncfusion Blazor TreeGrid component and much more details.
+description: Learn all about Searching in the Syncfusion Blazor TreeGrid component, including toolbar integration, external triggers, and search customization.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Searching in Blazor TreeGrid Component
 
-In a Tree Grid, the records are searched by using the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
+In a TreeGrid, records can be searched using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method by passing a search key as a parameter. A search textbox can also be integrated into the TreeGrid toolbar by adding the **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
 
 {% tabs %}
 
@@ -77,7 +77,7 @@ namespace TreeGridComponent.Data {
 
 ## Initial search
 
-To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreCase in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
+To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/SyncfusionSearchSettings.html).
 
 {% tabs %}
 
@@ -146,27 +146,27 @@ namespace TreeGridComponent.Data {
 
 ![Blazor TreeGri with Initial Search](images/blazor-treegrid-initial-search.png)
 
-N> By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property.
+N> By default, the TreeGrid searches all bound column values. To customize this behavior, define the `Fields` property in [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property.
 
-## Search operators
+## Search Operators
 
 The search operator can be defined in the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Operator) property of the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html) to configure specific searching.
 
-The following operators are supported in searching:
+The following operators are supported:
 
-Operator |Description
------|-----
-startsWith |Checks whether a value begins with the specified value.
-endsWith |Checks whether a value ends with the specified value.
-contains |Checks whether a value contains the specified value.
-equal |Checks whether a value is equal to the specified value.
-notEqual |Checks for values not equal to the specified value.
+| Operator   | Description                                      |
+|------------|--------------------------------------------------|
+| startsWith | Checks if a value begins with the specified text |
+| endsWith   | Checks if a value ends with the specified text   |
+| contains   | Checks if a value contains the specified text    |
+| equal      | Checks if a value is equal to the specified text |
+| notEqual   | Checks if a value is not equal to the text       |
 
-N> By default, the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Operator) value is **contains**.
+> The default operator is **contains**.
 
-## Search by external button
+## Search by External Button
 
-To search tree grid records from an external button, invoke the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method.
+TreeGrid records can be searched from an external button by invoking the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method.
 
 {% tabs %}
 
@@ -198,7 +198,7 @@ To search tree grid records from an external button, invoke the [Search](https:/
 
     private void search()
     {
-        this.TreeGrid.Search("Child Task 1");
+        this.TreeGrid.SearchAsync("Child Task 1");
     }
 }
 
@@ -238,9 +238,9 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-## Search specific columns
+## Search Specific Columns
 
-By default, the tree grid searches all the visible columns. Specific columns can be searched by defining the specific column's field names in the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property of the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
+By default, the TreeGrid searches all visible columns. To restrict the search to specific columns, define the desired field names in the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property of [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
 
 {% tabs %}
 

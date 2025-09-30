@@ -1,25 +1,28 @@
 ---
 layout: post
-title: Single click editing with Batch mode in Blazor TreeGrid | Syncfusion
-description: Learn here all about single click editing with Batch mode in Syncfusion Blazor TreeGrid component and more.
+title: Single click Editing with Batch mode in Blazor TreeGrid | Syncfusion
+description: Learn how to enable single-click cell editing in the Syncfusion Blazor TreeGrid component using Batch mode and EditCellAsync method.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Single click editing with Batch mode in Blazor TreeGrid Component
+# Single Click Editing with Batch Mode in Blazor TreeGrid Component
 
-A cell is made editable on a single click with a [Batch](https://blazor.syncfusion.com/documentation/treegrid/edit#batch) mode of editing in TreeGrid, by using the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCell_System_Double_System_String_) method.
+A cell can be made editable with a single click when using [Batch](https://blazor.syncfusion.com/documentation/treegrid/edit#batch) editing mode in the TreeGrid. This is achieved using the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCellAsync_System_Int32_System_String_) method.
 
-Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of **TreeGridSelectionSettings** component to **Both** and bind the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event to Tree Grid. In the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event handler, call the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCell_System_Double_System_String_) method based on the clicked cell.
+To implement this:
+- Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of the **TreeGridSelectionSettings** component to **Both**.
+- Bind the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event.
+- In the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event handler, invoke the [EditCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EditCellAsync_System_Int32_System_String_) method based on the clicked cell.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Cancel", "Update" })">
     <TreeGridEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
@@ -45,16 +48,16 @@ Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.
     public async Task CellSelectHandler(CellSelectEventArgs<TreeData> args)
     {
         //get selected cell index
-        var CellIndexes = await TreeGrid.GetSelectedRowCellIndexes();
+        var CellIndexes = await TreeGrid.GetSelectedRowCellIndexesAsync();
 
         //get the row and cell index
         var CurrentEditRowIndex = CellIndexes[0].Item1;
         var CurrentEditCellIndex = (int)CellIndexes[0].Item2;
 
         //get the available fields
-        var fields = await TreeGrid.GetColumnFieldNames();
+        var fields = await TreeGrid.GetColumnFieldNamesAsync();
         // edit the selected cell using the cell index and column name
-        await TreeGrid.EditCell(CurrentEditRowIndex, fields[CurrentEditCellIndex]);
+        await TreeGrid.EditCellAsync(CurrentEditRowIndex, fields[CurrentEditCellIndex]);
     }
 }
 
@@ -91,9 +94,8 @@ public class TreeData
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-The following GIF represents the single click edit performed on the Tree Grid with Edit Mode as "Batch",
+The following GIF represents the single-click edit performed on the TreeGrid with Edit Mode set to "Batch":
 
 ![Single Click Editing in Blazor TreeGrid](../images/blazor-treegrid-single-click-editing.gif)

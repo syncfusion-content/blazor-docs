@@ -1,16 +1,17 @@
 ---
 layout: post
-title: Batch Editing in Blazor Tree Grid Component | Syncfusion
+title: Batch Editing in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about Batch Editing in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Batch Editing in Blazor Tree Grid Component
+# Batch Editing in Blazor TreeGrid Component
 
-In the Batch edit mode, when the tree grid cell is double-clicked, the target cell goes into edit state. It can be bulk saved (added, changed and deleted data in the single request) to the data source by clicking on the toolbar's **Update** button or by externally invoking the [EndEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
-To enable Batch edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property of the `TreeGridEditSettings` as **Batch**.
+Batch editing allows making multiple edits across cells and rows before committing changes to the data source. Double-click a cell to enter edit mode; edits are staged on the client and can be saved together or discarded. Save changes by clicking the toolbar **Update** button or by calling [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEditAsync). To enable Batch editing, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property of TreeGridEditSettings to **Batch**.
+
+The following example shows how to enable Batch editing, including add, edit, and delete operations with a toolbar.
 
 {% tabs %}
 
@@ -79,7 +80,9 @@ namespace TreeGridComponent.Data {
 
 ## Confirmation dialog
 
-The confirmation dialog can be enabled for all the batch operations by setting the [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowConfirmDialog) property of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component as **true**.
+Enable confirmation prompts for batch operations to prevent unintended changes. Set the [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowConfirmDialog) property of [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) to true. Use [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowDeleteConfirmDialog) to confirm deletions.
+
+The following example enables confirmation dialogs for save and delete actions in Batch mode.
 
 {% tabs %}
 
@@ -144,8 +147,12 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-The following GIF represents the confirmation dialog displayed while performing batch operations in the tree grid.
-![Blazor Tree Grid displays Update Confirmation Dialog](../images/blazor-treegrid-update-confirm-dialog.gif)
+The following GIF shows the confirmation dialog displayed during batch operations in the TreeGrid.
+![Blazor TreeGrid displays Update Confirmation Dialog](../images/blazor-treegrid-update-confirm-dialog.gif)
 
-N> Enabling `ShowConfirmDialog` requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property value of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component to be **Batch**.
-<br/> If `ShowConfirmDialog` is set to false, the confirmation dialog will not be displayed on batch editing.
+N> - Batch mode stages edits on the client. Click Update on the toolbar or save programmatically to commit changes; Cancel discards staged edits.  
+- A primary key column (IsPrimaryKey=true) is required for editing.  
+
+- Confirmation dialogs are available only when the TreeGridEditSettings Mode is set to **Batch**. If ShowConfirmDialog is false, no confirmation dialog is shown for save; use ShowDeleteConfirmDialog to control delete confirmations separately.
+
+
