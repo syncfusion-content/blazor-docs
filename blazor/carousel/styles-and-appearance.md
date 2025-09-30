@@ -7,13 +7,13 @@ control: Carousel
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Carousel Component
+# Styles and Appearance in Blazor Carousel Component
 
-To modify the Carousel appearance, you need to override the default CSS of Carousel component. Find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+To visually customize the Blazor Carousel component, it is necessary to override its default CSS styles. This document provides a list of key CSS classes and demonstrations on how to apply custom styles to various parts of the Carousel. Additionally, for comprehensive theme generation across Syncfusion controls, developers can utilize the online [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 ## CSS Structure in Blazor Carousel Component
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
+The following table lists the core CSS classes within the Carousel component, along with their respective purposes, which can be targeted for custom styling.
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
@@ -29,9 +29,11 @@ The following content provides the exact CSS structure that can be used to modif
 
 ![Carousel](./images/carousel.jpg)
 
-## Customizing the indicators
+## Customizing the Indicators
 
-Use the following CSS to customize the space between indicators by overriding the `.e-indicator-bar` CSS class.
+### Spacing Between Indicators
+
+Use the following CSS to customize the space between individual indicators by overriding the `.e-indicator-bar` CSS class.
 
 ```CSS
 
@@ -42,6 +44,8 @@ Use the following CSS to customize the space between indicators by overriding th
 ```
 
 ![Carousel](./images/indicators.jpg)
+
+### Indicator Appearance
 
 Use the following CSS to customize the indicators appearance by overriding the `.e-indicator` CSS class.
 
@@ -56,6 +60,8 @@ Use the following CSS to customize the indicators appearance by overriding the `
 
 ![Carousel](./images/indicator-size.jpg)
 
+### Positioning Indicators Outside
+
 Use the following CSS to render the indicators outside the carousel items by overriding the `.e-carousel-indicators` CSS class.
 
 ```CSS
@@ -68,9 +74,11 @@ Use the following CSS to render the indicators outside the carousel items by ove
 
 ![Carousel](./images/indicators-outside.jpg)
 
-## Customizing the navigators
+## Customizing the Navigators
 
-Use the following CSS to customize the previous and next icon size and colors.
+### Icon Size and Colors
+
+Use the following CSS to customize the size and colors of the previous and next navigation icons.
 
 ```CSS
 
@@ -85,6 +93,8 @@ Use the following CSS to customize the previous and next icon size and colors.
 
 ![Carousel](./images/navigators-size-color.jpg)
 
+### Navigators Position
+
 Use the following CSS to customize the navigators position to bottom by overriding the `.e-carousel-navigators` CSS class.
 
 ```CSS
@@ -97,7 +107,9 @@ Use the following CSS to customize the navigators position to bottom by overridi
 
 ![Carousel](./images/navigators-position.jpg)
 
-Use the following CSS to render the previous and next icon to outside the carousel items by overriding the `.e-previous` and `.e-next` CSS class.
+### Positioning Navigators Outside
+
+Use the following CSS to render the previous and next icons outside the main carousel bounds by overriding the `.e-previous` and `.e-next` CSS classes.
 
 ```CSS
 
