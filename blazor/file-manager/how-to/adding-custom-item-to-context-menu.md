@@ -9,9 +9,9 @@ documentation: ug
 
 # Adding Custom Item to Context Menu in Blazor File Manager Component
 
-The context menu can be customized using the [`ContextMenuSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html), [`MenuOpened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened), and [`OnMenuClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events.
+The context menu in the Blazor File Manager can be customized by configuring its [`ContextMenuSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html), [`MenuOpened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) and [`OnMenuClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events.
 
-The following example shows adding a custom item in the context menu. The `ContextMenuSettings` is used to add new menu item. The `MenuOpened` event is used to add the icon to the new menu item. The `OnMenuClick` event is used to add an event handler to the new menu item.
+The following example demonstrates how to add a custom item to the context menu. The `ContextMenuSettings` property is used to define the new menu item and its position. The `MenuOpened` event is then utilized to dynamically add an icon to the custom menu item before the menu is displayed. Finally, the `OnMenuClick` event is used to add an event handler to the new menu item.
 
 ```cshtml
 
@@ -34,8 +34,8 @@ The following example shows adding a custom item in the context menu. The `Conte
 
 ## Run the application
 
-After successful compilation of your application, simply press `F5` to run the application.
+After successful compilation of the application, simply press `F5` to run it.
 
 
 
-![Blazor File Manager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.png)
+![Blazor File Manager displays Custom Context Menu Item](../images/blazor-filemanager-custom-context-menu.png)
