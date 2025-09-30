@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Events in Blazor Rich Text Editor Component
+# Events in Syncfusion Blazor Rich Text Editor Component
 
 This section explains the list of events of the Rich Text Editor component which will be triggered for an appropriate Rich Text Editor actions.
 
