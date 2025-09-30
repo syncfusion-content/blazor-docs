@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Context menu in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Context menu in Syncfusion Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a context menu that appears on right-click in header, content, or pager areas. The menu offers quick access to context-sensitive actions. Enable and configure the menu using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) property. Items may include built-in commands or custom entries based on [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Export items require the corresponding features enabled (for example, AllowPdfExport, AllowExcelExport), and edit items require editing enabled.
 
