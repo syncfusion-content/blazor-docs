@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion
-description: Improve Blazor WebAssembly performance with the Syncfusion Blazor DataGrid using PreventRender, event-argument PreventRender, paging, virtualization, and key optimization practices.
+description: Boost Blazor WebAssembly performance in Syncfusion DataGrid using PreventRender, paging, virtualization, and key optimization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # WebAssembly performance in Blazor DataGrid
 
-This section outlines performance guidelines for using the Syncfusion Blazor DataGrid efficiently in Blazor WebAssembly applications. General Blazor WebAssembly performance guidance is available in the [Microsoft documentation](https://learn.microsoft.com/aspnet/core/blazor/performance).
+This section outlines performance guidelines for using the Syncfusion Blazor DataGrid efficiently in Blazor WebAssembly applications. General Blazor WebAssembly performance guidance is available in the [Microsoft documentation](https://learn.microsoft.com/aspnet/core/blazor/performance/?view=aspnetcore-8.0).
 
 N> Refer to Getting Started for configuration details: [Blazor Server DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio)  using Visual Studio.
 

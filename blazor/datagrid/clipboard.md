@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Clipboard in Blazor DataGrid Component | Syncfusion
-description: Learn clipboard operations in the Syncfusion Blazor DataGrid, including keyboard shortcuts, CopyAsync, AutoFill, and paste behavior with selection and batch editing.
+description: Learn clipboard operations in Syncfusion Blazor DataGrid, including CopyAsync, AutoFill, paste behavior, and shortcuts for selection and batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Clipboard in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Clipboard in Syncfusion Blazor DataGrid
 
 The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables copying selected rows or cells to the clipboard using keyboard shortcuts or API calls. The following shortcuts are supported to copy selected rows or cells to the clipboard.
 

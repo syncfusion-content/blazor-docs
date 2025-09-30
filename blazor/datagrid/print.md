@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor DataGrid Component | Syncfusion
-description: Learn to print the Syncfusion Blazor DataGrid using the toolbar Print command or PrintAsync method, configure browser page setup, and handle large columns.
+description: Learn to print the Syncfusion Blazor DataGrid using the toolbar or PrintAsync method, set up pages via browser, and manage wide column layouts.
 platform: Blazor
 control: DataGrid
 documentation: ug
