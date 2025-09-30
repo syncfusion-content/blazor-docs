@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add or Remove Series in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Add or Remove Series in Syncfusion Blazor Charts component and more.
+description: Check out and learn how to dynamically Add or Remove Series in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,13 +11,14 @@ documentation: ug
 
 # Add or Remove Series in Blazor Charts Component
 
-The chart series can be dynamically added or removed by adding and removing a series to the  [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). Follow the steps below to dynamically add or remove a series.
+Syncfusion Blazor Charts allow dynamic addition and removal of chart series using the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). Follow these steps to update chart series at runtime:
 
-**Step 1:**
+## Step 1: Render Series Dynamically
 
-Render a series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) class of the chart.
+Render chart series by iterating over a collection mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```cshtml
+
 <SfChart>
     <ChartSeriesCollection>
         @foreach (SeriesData series in SeriesCollection)
@@ -27,22 +28,26 @@ Render a series using [ChartSeriesCollection](https://help.syncfusion.com/cr/bla
         }
     </ChartSeriesCollection>
 </SfChart>
+
 ```
 
-**Step 2:**
+## Step 2: Add and Remove Controls
 
-Create buttons to call add and remove methods, which will add and remove a series from the chart respectively.
+Create buttons to trigger methods for adding or removing series from the chart.
 
 ```cshtml
+
 <SfButton @onclick="AddChartSeries">Add Chart Series</SfButton>
 <SfButton @onclick="RemoveChartSeries">Remove Chart Series</SfButton>
+
 ```
 
-**Step 3:**
+## Step 3: Add Series Method
 
-To add a new series to the chart dynamically, use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
+Add a new series to the chart by appending data to the series collection.
 
 ```c#
+
 public void AddChartSeries()
 {
     SeriesCollection.Add(new SeriesData
@@ -52,13 +57,15 @@ public void AddChartSeries()
         Data = GetChartData()
     });
 }
+
 ```
 
-**Step 4:**
+## Step 4: Remove Series Method
 
-To remove a series from the chart dynamically, use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+Remove a series from the chart by deleting the last item in the series collection.
 
 ```c#
+
 public void RemoveChartSeries()
 {
     if (SeriesCollection.Count > 0)
@@ -66,11 +73,12 @@ public void RemoveChartSeries()
         SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
     }
 }
+
 ```
 
-**Action:**
+## Action
 
-By clicking the **Add Chart Series** button a new series will be added to the chart and similarly by clicking the **Remove Chart Series** button the last series in the chart series collection will be removed from the chart. The complete code snippet for the preceding steps is available below.
+Click **Add Chart Series** to insert a new series, or **Remove Chart Series** to delete the last series from the chart. The complete code sample is shown below.
 
 ```cshtml
 
@@ -92,8 +100,7 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
     </SfChart>
 </div>
 
-@code{
-
+@code {
     List<SeriesData> SeriesCollection;
 
     // Here, the chart series has been added by adding series data to the "SeriesCollection" list.
@@ -185,8 +192,8 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
             set;
         }
     }
-
 }
+
 ```
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

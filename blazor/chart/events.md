@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Events usage in Syncfusion Blazor Charts component and much more.
+description: Checkout and learn how to configure and utilize Events in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,56 +9,9 @@ documentation: ug
 
 # Events in Blazor Charts Component
 
-In this section, we have provided a list of chart component events that will be triggered for appropriate chart actions.
+Chart component events are triggered by corresponding chart actions.
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
-
-N> From `v18.4.*`, we have added few additional events for the chart component.
-
-Event Name|
------|
-[OnZoomStart](events#onzoomstart)|
-[OnZoomEnd](events#onzoomend)|
-[OnLegendItemRender](events#onlegenditemrender)|
-[OnDataLabelRender](events#ondatalabelrender)|
-[OnPointRender](events#onpointrender)|
-[OnAxisLabelRender](events#onaxislabelrender)|
-[OnAxisLabelClick](events#onaxislabelclick)|
-[OnAxisActualRangeCalculated](events#onaxisactualrangecalculated)|
-[OnAxisMultiLevelLabelRender](events#onaxismultilevellabelrender)|
-
-N> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
-
-Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
------|-----
-Resized |[SizeChanged](events#sizechanged)
-ScrollChanged |[OnScrollChanged](events#onscrollchanged)
-OnScrollEnd |[OnScrollChanged](events#onscrollchanged)
-OnScrollStart |[OnScrollChanged](events#onscrollchanged)
-AfterExport |[OnExportComplete](events#onexportcomplete)
-OnPrint | [OnPrintComplete](events#onprintcomplete)
-DragStart |[OnDataEdit](events#ondataedit)
-DragEnd |[OnDataEditCompleted](events#ondataeditcompleted)
-LegendClick |[OnLegendClick](events#onlegendclick)
-MultiLevelLabelClick |[OnMultiLevelLabelClick](events#onmultilevellabelclick)
-OnSelectionComplete |[OnSelectionChanged](events#onselectionchanged)
-OnDragComplete |[OnSelectionChanged](events#onselectionchanged)
-
-N> From `v18.4.*`, We have removed the following previous release events from chart component.
-
-Event Name|
------|
-OnAnimationComplete|
-OnChartMouseClick|
-OnChartMouseDown|
-OnChartMouseLeave|
-OnChartMouseMove|
-OnChartMouseUp|
-PointMoved|
-BeforeExport|
-Load|
-OnPointDoubleClick|
-PointMoved|
 
 ## ChartMouseMove
 
@@ -75,9 +28,9 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents ChartMouseMove="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseMove="OnMouseEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -87,7 +40,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -127,9 +80,9 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents ChartMouseClick="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseClick="OnMouseEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -139,7 +92,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -181,9 +134,9 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents ChartMouseUp="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseUp="OnMouseEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -193,7 +146,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -233,9 +186,9 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents ChartMouseDown="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseDown="OnMouseEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -245,7 +198,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -286,9 +239,9 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnZoomStart="OnZoomingEvent"></ChartEvents>
+    <ChartEvents OnZoomStart="OnZoomingEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -298,7 +251,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -339,9 +292,9 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnZoomEnd="OnZoomingEvent"></ChartEvents>
+    <ChartEvents OnZoomEnd="OnZoomingEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -351,7 +304,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -392,9 +345,9 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnZooming="OnZoomingEvent"></ChartEvents>
+    <ChartEvents OnZooming="OnZoomingEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -404,7 +357,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -448,9 +401,9 @@ The following properties are available in the [LegendRenderEventArgs](https://he
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnLegendItemRender="LegendEvent"></ChartEvents>
+    <ChartEvents OnLegendItemRender="LegendEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" Name="Column" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -460,7 +413,7 @@ The following properties are available in the [LegendRenderEventArgs](https://he
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -505,9 +458,9 @@ The following properties are available in the [TextRenderEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnDataLabelRender="DataLabelEvent"></ChartEvents>
+    <ChartEvents OnDataLabelRender="DataLabelEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -518,7 +471,7 @@ The following properties are available in the [TextRenderEventArgs](https://help
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -566,9 +519,9 @@ The following properties are available in the [PointRenderEventArgs](https://hel
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+    <ChartEvents OnPointRender="PointRenderEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -578,7 +531,7 @@ The following properties are available in the [PointRenderEventArgs](https://hel
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -621,9 +574,9 @@ The following properties are available in the [AxisLabelRenderEventArgs](https:/
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnAxisLabelRender="AxisLabelEvent"></ChartEvents>
+    <ChartEvents OnAxisLabelRender="AxisLabelEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -631,7 +584,7 @@ The following properties are available in the [AxisLabelRenderEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -678,9 +631,9 @@ The following fields are available in the [AxisLabelClickEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnAxisLabelClick="AxisLabelClickEvent"></ChartEvents>
+    <ChartEvents OnAxisLabelClick="AxisLabelClickEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -688,7 +641,7 @@ The following fields are available in the [AxisLabelClickEventArgs](https://help
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -731,9 +684,9 @@ The following properties are available in the [AxisRangeCalculatedEventArgs](htt
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnAxisActualRangeCalculated="AxisActualRangeEvent"></ChartEvents>
+    <ChartEvents OnAxisActualRangeCalculated="AxisActualRangeEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -743,7 +696,7 @@ The following properties are available in the [AxisRangeCalculatedEventArgs](htt
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -786,7 +739,7 @@ The following properties are available in the [AxisMultiLabelRenderEventArgs](ht
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnAxisMultiLevelLabelRender="AxisMultiLevelLabelEvent"></ChartEvents>
+    <ChartEvents OnAxisMultiLevelLabelRender="AxisMultiLevelLabelEvent" />
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartMultiLevelLabels>
@@ -807,7 +760,7 @@ The following properties are available in the [AxisMultiLabelRenderEventArgs](ht
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     
     public class SalesInfo
     {
@@ -850,9 +803,9 @@ The following fields are available in the [ResizeEventArgs](https://help.syncfus
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents SizeChanged="@SizeChangedEvent"></ChartEvents>
+    <ChartEvents SizeChanged="@SizeChangedEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -860,7 +813,7 @@ The following fields are available in the [ResizeEventArgs](https://help.syncfus
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -909,7 +862,7 @@ The following properties are available in the [ScrollEventArgs](https://help.syn
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnScrollChanged="ScrollChangeEvent"></ChartEvents>
+    <ChartEvents OnScrollChanged="ScrollChangeEvent" />
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ZoomFactor="0.5" ZoomPosition="0.2">
         <ChartAxisScrollbarSettings Enable="true"></ChartAxisScrollbarSettings>
@@ -921,7 +874,7 @@ The following properties are available in the [ScrollEventArgs](https://help.syn
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -963,10 +916,9 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 <button class="btn-success" @onclick="Export">Export</button>
 <SfChart @ref="chart">
-    <ChartEvents OnExportComplete="ExportCompleteEvent"></ChartEvents>
+    <ChartEvents OnExportComplete="ExportCompleteEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -974,7 +926,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     SfChart chart;
     public class SalesInfo
     {
@@ -997,6 +949,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
     {
         chart.Export(ExportType.JPEG, "Charts");
     }
+
     public void ExportCompleteEvent(ExportEventArgs args)
     {
         // Here, you can customize your code.
@@ -1025,10 +978,9 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnDataEdit="DataEditEvent"></ChartEvents>
+    <ChartEvents OnDataEdit="DataEditEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1037,7 +989,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1083,10 +1035,9 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnDataEditCompleted="DataEditEvent"></ChartEvents>
+    <ChartEvents OnDataEditCompleted="DataEditEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1095,7 +1046,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1136,9 +1087,9 @@ The following properties are available in the [LegendClickEventArgs](https://hel
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnLegendClick="LegendClickEvent"></ChartEvents>
+    <ChartEvents OnLegendClick="LegendClickEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" Name="Column" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1148,7 +1099,7 @@ The following properties are available in the [LegendClickEventArgs](https://hel
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1194,7 +1145,7 @@ The following fields are available in the [MultiLevelLabelClickEventArgs](https:
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnMultiLevelLabelClick="MultiLabelClickEvent"></ChartEvents>
+    <ChartEvents OnMultiLevelLabelClick="MultiLabelClickEvent" />
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartMultiLevelLabels>
@@ -1215,8 +1166,7 @@ The following fields are available in the [MultiLevelLabelClickEventArgs](https:
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
-
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1257,10 +1207,9 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 @using Syncfusion.Blazor.Charts
 
 <SfChart SelectionMode="SelectionMode.Point">
-    <ChartEvents OnSelectionChanged="SelectionChangedEvent"></ChartEvents>
+    <ChartEvents OnSelectionChanged="SelectionChangedEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1268,8 +1217,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
-
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1304,9 +1252,9 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents Loaded="LoadedEvent"></ChartEvents>
+    <ChartEvents Loaded="LoadedEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1314,7 +1262,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1363,9 +1311,9 @@ The following fields are available in the [PointEventArgs](https://help.syncfusi
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnPointClick="PointClickEvent"></ChartEvents>
+    <ChartEvents OnPointClick="PointClickEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1373,7 +1321,7 @@ The following fields are available in the [PointEventArgs](https://help.syncfusi
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1415,19 +1363,19 @@ The following properties are available in the [TooltipRenderEventArgs](https://h
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents TooltipRender="TooltipEvent"></ChartEvents>
+    <ChartEvents TooltipRender="TooltipEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 	
-    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+    <ChartTooltipSettings Enable="true" />
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1469,9 +1417,9 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents SharedTooltipRender="SharedTooltipEvent"></ChartEvents>
+    <ChartEvents SharedTooltipRender="SharedTooltipEvent" />
 	
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -1480,10 +1428,10 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
         </ChartSeries>
     </ChartSeriesCollection>
 	
-    <ChartTooltipSettings Enable="true" Shared="true"></ChartTooltipSettings>
+    <ChartTooltipSettings Enable="true" Shared="true" />
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
