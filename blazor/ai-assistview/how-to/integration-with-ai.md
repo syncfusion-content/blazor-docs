@@ -11,20 +11,20 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
-`The Microsoft.Extensions.AI` simplifies integration with different models, requiring minimal configuration changes depending on the provider. The following example demonstrates integration using `Azure OpenAI`.
+`Microsoft.Extensions.AI` simplifies integration with different providers and typically requires only minimal configuration changes based on the selected model. The following example demonstrates integration using `Azure OpenAI`.
 
-N> The Microsoft AI extension libraries are currently in preview, and breaking changes may occur. Ensure that you use compatible versions to avoid integration issues.
+N> The Microsoft AI extension libraries are currently in preview and may include breaking changes. Use compatible versions of all referenced packages to prevent integration issues.
 
 ### Getting started with AI AssistView
 
-Before integrating `AI AssistView` with `Microsoft.Extensions.AI`, ensure the SfAIAssistView component is rendered by following the appropriate project guideline:
+Before integrating `AI AssistView` with `Microsoft.Extensions.AI`, ensure the `SfAIAssistView` component is rendered by following the appropriate project guidelines:
 
 * [Blazor Web App](../getting-started-webapp)
 * [Blazor WASM App](../getting-started)
 
 ### Prerequisites for Microsoft.Extensions.AI integration
 
-To add the required NuGet packages, use the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) search and install the following:
+To add the required NuGet packages, use the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the following packages:
 
 * `Azure.AI.OpenAI`
 * `Azure.Identity`
@@ -48,7 +48,7 @@ dotnet add package Markdig
 
 ### Configure services in Program.cs
 
-Register the `Azure OpenAI` client and Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component within the Blazor application.
+Register the `Azure OpenAI` client and the Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -88,9 +88,9 @@ var app = builder.Build();
 
 ### AI AssistView with IChatClient
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> `AI AssistView` component is built to seamlessly integrate with external AI services. When the `IChatClient` is registered via `Microsoft.Extensions.AI`, the component automatically uses it to handle user prompts without any additional configuration.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
 
-In the following example, the user input is processed using the injected `IChatClient`. The AI model's response is returned in Markdown format which is converted to HTML using the `Markdig` library before rendering in the AI AssistView component.
+In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML using the `Markdig` library, and rendered in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
