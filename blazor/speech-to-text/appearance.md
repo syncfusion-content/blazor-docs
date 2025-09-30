@@ -7,37 +7,31 @@ control: SpeechToText
 documentation: ug
 ---
 
-# Appearance in Blazor SpeechToText component
+# Appearance in Blazor SpeechToText Component
+
+This guide explains how to customize the visual appearance of the Blazor SpeechToText component.
 
 ## Customizing the button
 
-You can use the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property to customize the appearance of the start and stop buttons in the speech to text conversion.
+The [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property allows for detailed customization of the start and stop buttons.
 
-### Setting start content
+### Text content
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property to define text content for the listening start state in the SpeechToText button.
+Define the text for the button's start and stop states using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) and [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) properties.
 
-### Setting stop content
+### Icon
 
-You can use the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to define text content for the listening stop state in the SpeechToText button.
+Set a custom icon for the button's start and stop states by applying CSS classes to the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconCss) and [StopIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopIconCss) properties.
 
-### Setting iconcss
+### Icon position
 
-You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconCss) property to apply a CSS class to customize the icon appearance for the listening start state.
+Use the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconPosition) property to display the icon at the top, bottom, left, or right of the button's text.
 
-### Setting stop iconcss
+### Primary button
 
-You can use the [StopIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopIconCss) property to apply a CSS class to customize the icon appearance for the listening stop state.
+Configure the button as a primary action button by setting the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IsPrimary) property to `true`.
 
-### Setting icon position
-
-You can display the icon on the top, bottom, left, or right side of the button text content using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconPosition) property.
-
-### Setting primary
-
-You can use the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_isPrimary) property to configure the button as a primary action button.
-
-Below code sample demonstrates how to configure the button with above mentioned properties.
+The following example demonstrates how to configure these button settings.
 
 {% tabs %}
 {% highlight razor %}
@@ -81,21 +75,17 @@ Below code sample demonstrates how to configure the button with above mentioned 
 
 ## Customizing the tooltips
 
-You can use the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_TooltipSettings) property to customize the content and positions of the tooltip.
+The [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_TooltipSettings) property allows customization of the tooltip's content and position.
 
 ### Setting start content
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Text) property to customize the content to be displayed in the tooltip when the speech recognition begins.
+Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Text) and [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_StopStateText) properties to set the content for the start and stop state tooltips.
 
-### Setting stop content
+### Tooltip position
 
-You can use the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_StopStateText) property to customize the stop button tooltip text which is displayed on-hover.
+Determine where the tooltip appears relative to the button using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Position) property.
 
-### Setting tooltip position
-
-You can use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Position) property to determine the placement of tooltips relative to the button.
-
-Below code sample demonstrates how to configure the tooltip settings with above mentioned properties.
+This example shows how to configure the tooltip settings.
 
 {% tabs %}
 {% highlight razor %}
@@ -133,24 +123,28 @@ Below code sample demonstrates how to configure the tooltip settings with above 
 
 ![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.png)
 
-## Setting button styles
+## Styling
 
-The SpeechToText component supports the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property. You can customize by adding the cssClass property with the below defined class. 
+Customize the appearance of the SpeechToText component by applying predefined styles or creating custom styles using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property.
 
-| CssClass | Description | 
-| -------- | -------- | 
-| `e-primary` | Used to represent a primary action. | 
-| `e-outline` | Used to represent an appearance of button with outline. | 
-| `e-info` | Used to represent an informative action. | 
-| `e-success` | Used to represent a positive action. | 
-| `e-warning` | Used to represent an action with caution. | 
-| `e-danger` | Used to represent a negative action. |
+### Predefined styles
 
-## Setting cssclass
+The component supports several built-in styles for common use cases.
 
-You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property to customize the appearance of the SpeechToText component.
+| CssClass    | Description                                   |
+|-------------|-----------------------------------------------|
+| `e-primary` | Represents a primary action.                  |
+| `e-outline` | Renders the button with an outline style.     |
+| `e-info`    | Represents an informative action.             |
+| `e-success` | Represents a positive action.                 |
+| `e-warning` | Represents an action that requires caution.   |
+| `e-danger`  | Represents a negative or destructive action.  |
 
-Below code sample demonstrates how to configure cssclass and customize the button.
+### Custom styles
+
+Custom CSS rules can be applied by assigning a class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property, enabling tailored styling for the component.
+
+The following example demonstrates how to apply a custom CSS class to change the button's background color, text color, and border radius.
 
 {% tabs %}
 {% highlight razor %}
