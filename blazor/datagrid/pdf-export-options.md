@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export Options in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about PDF Export Options in Syncfusion Blazor DataGrid and much more.
+description: Learn how to customize PDF export in the Syncfusion Blazor DataGrid, including current/filtered/selected rows, hidden columns, page size/orientation, themes, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,24 +9,23 @@ documentation: ug
 
 # PDF export options in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides flexible PDF export options to control exported content and layout to meet specific reporting requirements.
 
-The PDF export action can be customized based on your requirements using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property. By using the `PdfExportProperties` property, you can export the current page records, selected records, or filtered records, exclude or include hidden column, export with custom data source and change the file name. Additionally, you can customize the page alignments using the `PdfExportProperties` property.
+Customize the export behavior using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property. With `PdfExportProperties`, export current, selected, or filtered records; include or exclude hidden columns; export with a custom data source; set the output file name; and configure page settings such as orientation and size.
 
 ## Export current page records
 
-Exporting the current page in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a PDF document provides the ability to export the currently displayed page records. This feature allows for generating PDF documents that specifically include the content from the current page of the Grid. 
+Exporting only the current page of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid generates a PDF with the records displayed on the active page.
 
-To export the current page of the Grid to a PDF document, you need to specify the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_ExportType) property. This property allows you to define which records you want to export. You can choose between two options:
+To export the current page, set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_ExportType) property:
 
-1. **CurrentPage**: Exports only the records on the current Grid page.
-2. **AllPages**: Exports all the records from the Grid.
+1. CurrentPage: Exports only the records on the current grid page.
+2. AllPages: Exports all records.
 
-The following example demonstrates how to export current page to a PDF document when a toolbar item is clicked, using the  [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+The following example shows how to export the current page when a toolbar item is clicked using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -65,7 +64,7 @@ The following example demonstrates how to export current page to a PDF document 
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
         {
             var exportProperties = new PdfExportProperties
                 {
@@ -82,67 +81,60 @@ The following example demonstrates how to export current page to a PDF document 
     }
 
 }
-
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
+public class EmployeeData
+{
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
 
- public class EmployeeData
- {
-     public static List<EmployeeData> Employees = new List<EmployeeData>();
-
-     public EmployeeData(int employeeID, string firstName, string lastName, string city)
-     {
-         this.EmployeeID = employeeID;
+    public EmployeeData(int employeeID, string firstName, string lastName, string city)
+    {
+        this.EmployeeID = employeeID;
          this.FirstName = firstName;
          this.LastName = lastName;
          this.City = city;
-     }
+    }
 
-     public static List<EmployeeData> GetAllRecords()
-     {
-         if (Employees.Count == 0)
-         {
-             Employees.Add(new EmployeeData(1001, "Nancy", "Davolio", "Seattle"));
-             Employees.Add(new EmployeeData(1002, "Andrew", "Fuller", "Tacoma"));
-             Employees.Add(new EmployeeData(1003, "Janet", "Leverling", "Kirkland"));
-             Employees.Add(new EmployeeData(1004, "Margaret", "Peacock", "Redmond"));
-             Employees.Add(new EmployeeData(1005, "Steven", "Buchanan", "London"));
-             Employees.Add(new EmployeeData(1006, "Michael", "Suyama", "London"));
-             Employees.Add(new EmployeeData(1007, "Robert", "King", "London"));
-             Employees.Add(new EmployeeData(1008, "Laura", "Callahan", "Seattle"));
-             Employees.Add(new EmployeeData(1009, "Anne", "Dodsworth", "London"));
-         }
-         return Employees;
-     }
+    public static List<EmployeeData> GetAllRecords()
+    {
+        if (Employees.Count == 0)
+        {
+            Employees.Add(new EmployeeData(1001, "Nancy", "Davolio", "Seattle"));
+            Employees.Add(new EmployeeData(1002, "Andrew", "Fuller", "Tacoma"));
+            Employees.Add(new EmployeeData(1003, "Janet", "Leverling", "Kirkland"));
+            Employees.Add(new EmployeeData(1004, "Margaret", "Peacock", "Redmond"));
+            Employees.Add(new EmployeeData(1005, "Steven", "Buchanan", "London"));
+            Employees.Add(new EmployeeData(1006, "Michael", "Suyama", "London"));
+            Employees.Add(new EmployeeData(1007, "Robert", "King", "London"));
+            Employees.Add(new EmployeeData(1008, "Laura", "Callahan", "Seattle"));
+            Employees.Add(new EmployeeData(1009, "Anne", "Dodsworth", "London"));
+        }
+        return Employees;
+    }
 
      public int EmployeeID { get; set; }
      public string FirstName { get; set; }
      public string LastName { get; set; }
      public string City { get; set; }
- }
-
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBeNzMWgoxPClQM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIZYBdToDnlIhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export selected records
 
-Exporting only the selected records from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows generating PDF document that include only the desired data from the Grid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
+Exporting selected records generates a PDF containing only the rows the user selected in the DataGrid. This enables focused, task-specific exports.
 
-To export the selected records from the Grid to a PDF document, you can follow these steps:
+Steps to export selected Grid records to a PDF document:
+1. Handle [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) and call [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync).
+2. Set the selected data to [PdfExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource).
+3. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_).
 
-1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the Grid and retrieve the selected records using the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method.
-
-2. Assign the selected data to the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property.
-
-3. Trigger the export operation using the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
-
-The following example demonstrates how to export the selected records to a PDF document when a toolbar item is clicked.
+The following example shows how to export selected records on a toolbar click.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
@@ -167,7 +159,7 @@ The following example demonstrates how to export the selected records to a PDF d
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
         {
             var selectedRecords = await Grid.GetSelectedRecordsAsync();
             PdfExportProperties exportProperties = new PdfExportProperties
@@ -178,10 +170,8 @@ The following example demonstrates how to export the selected records to a PDF d
         }
     }
 }
-
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -223,42 +213,35 @@ public class OrderData
     public double Freight { get; set; }
     public string ShipCity { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLyZJWignXqmlaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyDOVxJSyuJdwK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export filtered records
 
-Exporting only the filtered records from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to generate PDF document that include only the data that matches your applied filters. This feature is useful when you want to export a subset of data based on specific criteria.
+Exporting filtered records generates a PDF with only the rows that match the active filter criteria.
 
-This can be achieved by defining the filtered data in the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property before initiating the export.
+Steps to export filtered Grid data to PDF:
 
-To export only the filtered data from the Grid to a PDF document, you can follow these steps:
+1. Enable [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
+2. Retrieve filtered data with [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync_System_Boolean_).
+3. Assign the result to `PdfExportProperties.DataSource`.
+4. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_).
 
-1. Apply the desired filter to the Grid data by enabling [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property.
-
-2. Get the filtered data using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync_System_Boolean_) method.
-
-3. Assign the filtered data to the `ExportProperties.DataSource` property.
-
-4. Trigger the export operation using the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
-
-The following example demonstrates how to export the filtered records to a PDF document.
+The following example demonstrates exporting filtered records.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     <GridPageSettings PageSize="5" PageCount="5"></GridPageSettings>
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
     </GridColumns>
 </SfGrid>
@@ -274,21 +257,19 @@ The following example demonstrates how to export the filtered records to a PDF d
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
         {
-        var FilterdRecords = (IEnumerable<OrderData>)await Grid.GetFilteredRecordsAsync();
-        PdfExportProperties exportProperties = new PdfExportProperties
+            var filteredRecords = (IEnumerable<OrderData>)await Grid.GetFilteredRecordsAsync();
+            PdfExportProperties exportProperties = new PdfExportProperties
             {
-                DataSource = FilterdRecords
+                DataSource = filteredRecords
             };
-        await this.Grid.ExportToPdfAsync(exportProperties);
+            await this.Grid.ExportToPdfAsync(exportProperties);
         }
     }
 }
-
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -321,7 +302,6 @@ public class OrderData
             Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
             Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
         }
-
         return Orders;
     }
 
@@ -330,23 +310,21 @@ public class OrderData
     public double Freight { get; set; }
     public string ShipCity { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVINzMpVxeuzFVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrejOBnTelxNELN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export with hidden columns
 
-Exporting hidden columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to include hidden columns in the exported PDF document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables exporting hidden columns when generating the PDF if columns are intentionally hidden in the UI but required in the exported document.
 
-To export hidden columns of the Grid to a PDF document, you need to set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property as **true** in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property.
+To include hidden columns, set [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) to `true` in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
-The following example demonstrates how to export hidden columns to a PDF document using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the PDF document. You can also export the Grid by changing the `PdfExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
+The following example shows how to include hidden columns during export using [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) and [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_). In this example, the ShipCity column is hidden in the UI but included in the export. A [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) can also be used to control `IncludeHiddenColumn`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -379,7 +357,7 @@ The following example demonstrates how to export hidden columns to a PDF documen
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
         {
             PdfExportProperties exportProperties = new PdfExportProperties
                 {
@@ -390,11 +368,8 @@ The following example demonstrates how to export hidden columns to a PDF documen
         }
     }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -440,29 +415,25 @@ public class OrderData
     public string ShipName { get; set; }
     public string ShipCountry { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoNJWiAnvCslzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDreDkhHfwtjHYWh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show or hide columns while exporting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides functionality to show or hide columns dynamically during PDF export based on user-selected requirements.
 
-To show or hide columns based on user interaction during the export process, you can follow these steps:
+Steps to show or hide columns during PDF export based on user interaction:
 
-1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the Grid and update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of the column to **true** or **false**.
+1. In [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick), update column [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) to true or false before export.
+2. Export the grid to a PDF document.
+3. In [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete), restore the original visibility.
 
-2. Export the Grid to PDF document.
-
-3. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to restore the column visibility to its original state.
-
-In the following example, the **CustomerID** is initially a hidden column in the Grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden.
+The following example toggles CustomerID and ShipCity visibility during export.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfExport="true"
@@ -505,9 +476,7 @@ Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     }
 }
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -553,29 +522,26 @@ public class OrderData
     public string ShipName { get; set; }
     public string ShipCountry { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByZTBaJDQfXHAZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDreZOVnTQCljdmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page orientation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF document according to your needs.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows changing the PDF page orientation between portrait (default) and landscape to fit wider datasets.
 
-To change the page orientation to landscape for the exported document, you can set the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property. 
+Set [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
 The supported `PageOrientation` options are:
 
-1. **Landscape**: Exports the Grid with a landscape PDF page orientation.
+1. Landscape: Exports the DataGrid with landscape PDF page orientation, ideal for wide datasets.
+2. Portrait: Exports the DataGrid with portrait PDF page orientation, the default setting.
 
-2. **Portrait**: Exports the Grid with a portrait PDF page orientation.
-
-The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageOrientation` property using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
+The following example shows using a dropdown to select orientation before export.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Navigations
@@ -633,11 +599,8 @@ The following example demonstrates how to export the Grid into PDF document by s
         }
     }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -682,19 +645,18 @@ public class OrderData
     public string ShipName { get; set; }
     public string ShipCountry { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeNzVKUaStvZne?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhoDOrnfPtLEIQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page size
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the page size of the exported PDF document according to your requirements. This feature provides the flexibility to adjust the layout and PDF document to fit different paper sizes or printing needs. 
 
-To customize the page size for the exported document, you can set the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property to the desired [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html). 
+Set [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) to a value from [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html#fields).
 
-Supported [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html#fields) are:
+Supported [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html#fields) include:
 * Letter
 * Note
 * Legal
@@ -724,11 +686,10 @@ Supported [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 * Letter11x17
 * Ledger
 
-The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageSize` property by using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
+The following example shows how to select a page size before export using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Navigations
@@ -806,7 +767,6 @@ The following example demonstrates how to export the Grid into PDF document by s
 {% endhighlight %}
 
 {% highlight c# tabtitle="OrderDetails.cs" %}
-
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -849,7 +809,6 @@ public class OrderData
     public string ShipCity { get; set; }
     public string ShipName { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -857,15 +816,14 @@ public class OrderData
 
 ## Define file name
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows specifying a custom file name for the exported PDF document.
 
-To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html) property in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+Set [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html) and pass it to [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_).
 
 The following example demonstrates how to define a file name using `PdfExportProperties.FileName` property when exporting to PDF document, based on the entered value as the file name.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
@@ -884,11 +842,13 @@ The following example demonstrates how to define a file name using `PdfExportPro
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Grid ID and item name.
         {
-            PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.FileName = "New.pdf";
-            await this.DefaultGrid.PdfExport(ExportProperties);
+            var exportProps = new PdfExportProperties
+            {
+                FileName = "New.pdf"
+            };
+            await DefaultGrid.ExportToPdfAsync(exportProps);
         }
     }
     protected override void OnInitialized()
@@ -896,11 +856,9 @@ The following example demonstrates how to define a file name using `PdfExportPro
         Orders = OrderDetails.GetAllRecords();
     }
 }
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="OrderDetails.cs" %}
-
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
@@ -938,7 +896,6 @@ public class OrderDetails
     public string ShipCity { get; set; }
     public string ShipName { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -946,15 +903,12 @@ public class OrderDetails
 
 ## Enabling horizontal overflow
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to display all defined Grid columns on a single page even when the number of columns exceeds the maximum limits for columns in the exported PDF document. This ensures that your exported PDF document maintains its readability and comprehensiveness.
+Display all defined columns on a single PDF page even when the number of columns exceeds the default maximum by enabling horizontal overflow.
 
-You can achieve this by utilizing the [PdfExportProperties.AllowHorizontalOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_AllowHorizontalOverflow) property of the Grid.
-
-In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) is added to enable and disable the `PdfExportProperties.AllowHorizontalOverflow` property. Based on the switch toggle, the `PdfExportProperties.AllowHorizontalOverflow` property is updated using the `Checked` property, and the export action is performed accordingly when the toolbar is clicked.
+Set [AllowHorizontalOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_AllowHorizontalOverflow) in `PdfExportProperties`. The following example binds a toggle to control this behavior.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -990,183 +944,80 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     }
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
         {
             var pdfExportProps = new PdfExportProperties
-                {
-                    AllowHorizontalOverflow = !DisableHorizontalOverflow
-                };
+            {
+                AllowHorizontalOverflow = !DisableHorizontalOverflow
+            };
             await Grid.ExportToPdfAsync(pdfExportProps);
         }
     }
 }
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="OrderData.cs" %}
-
- public class OrderData
- {
-     public static List<OrderData> Orders = new();
-
-     public OrderData(int orderID, string customerID, string shipCity, string shipName, string shipAddress, string shipRegion, string shipPostalCode, string shipCountry)
-     {
-         OrderID = orderID;
-         CustomerID = customerID;
-         ShipCity = shipCity;
-         ShipName = shipName;
-         ShipAddress = shipAddress;
-         ShipRegion = shipRegion;
-         ShipPostalCode = shipPostalCode;
-         ShipCountry = shipCountry;
-     }
-
-     public static List<OrderData> GetAllRecords()
-     {
-         if (Orders.Count == 0)
-         {
-             Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier", "59 rue de l'Abbaye", "", "51100", "France"));
-             Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", "Luisenstr. 48", "", "44087", "Germany"));
-             Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", "Rua do Paço, 67", "RJ", "05454-876", "Brazil"));
-             Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", "2, rue du Commerce", "", "69004", "France"));
-             Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", "Boulevard Tirou, 255", "", "B-6000", "Belgium"));
-             Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", "Rua do Paço, 67", "RJ", "05454-876", "Brazil"));
-             Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese", "Hauptstr. 31", "", "3012", "Switzerland"));
-             Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt", "Starenweg 5", "", "1204", "Switzerland"));
-             Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importadora", "Rua do Mercado, 12", "SP", "08737-363", "Brazil"));
-             Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "HILARION-Abastos", "Carrera 22 con Ave. Carlos Soublette #8-35", "Táchira", "5022", "Venezuela"));
-         }
-
-         return Orders;
-     }
-
-     public int OrderID { get; set; }
-     public string CustomerID { get; set; } = string.Empty;
-     public string ShipCity { get; set; } = string.Empty;
-     public string ShipName { get; set; } = string.Empty;
-     public string ShipAddress { get; set; } = string.Empty;
-     public string ShipRegion { get; set; } = string.Empty;
-     public string ShipPostalCode { get; set; } = string.Empty;
-     public string ShipCountry { get; set; } = string.Empty;
- }
-
-{% endhighlight %}
-{% endtabs %}
-
-![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.gif)
-
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
-
-## Customizing columns on export
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the appearance of Grid columns in your exported PDF documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported PDFs align perfectly with your design and reporting requirements.
-
-To customize the Grid columns, you can follow these steps:
-
-1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and access the [PdfExportProperties.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the Grid.
-
-2. Define new list of GridColumn objects with the desired properties such as Field, HeaderText, TextAlign, Format, and Width for each column to be exported.
-
-3. Assign this list to the `Columns` property of the `PdfExportProperties` object, then pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to apply the customizations during export.
-
-The following example demonstrates how to customize the Grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: **OrderID** with `HeaderText` set to **Order Number**, **CustomerID** with headerText as **Customer Name**, and **Freight** with a center-aligned `TextAlign` property, which is not rendered in the Grid columns:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();
-    }
-
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
-        {
-            List<GridColumn> ExportColumns = new List<GridColumn>();
-            ExportColumns.Add(new GridColumn() { Field = "OrderID", HeaderText = "Order Number", Width = "120" });
-            ExportColumns.Add(new GridColumn() { Field = "CustomerID", HeaderText = "Customer Name", Width = "120" });
-            ExportColumns.Add(new GridColumn() { Field = "Freight", HeaderText = "Freight", Width = "120", Format = "C2", TextAlign = TextAlign.Center });
-
-            var exportProperties = new PdfExportProperties
-            {
-                Columns = ExportColumns
-            };
-            await Grid.ExportToPdfAsync(exportProperties);
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="OrderDetails.cs" %}
-
 public class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    public static List<OrderData> Orders = new();
 
-    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName, string shipCountry)
+    public OrderData(int orderID, string customerID, string shipCity, string shipName, string shipAddress, string shipRegion, string shipPostalCode, string shipCountry)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
-        this.ShipCountry = shipCountry;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
+        ShipAddress = shipAddress;
+        ShipRegion = shipRegion;
+        ShipPostalCode = shipPostalCode;
+        ShipCountry = shipCountry;
     }
 
     public static List<OrderData> GetAllRecords()
     {
         if (Orders.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "France"));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Germany"));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "France"));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "Belgium"));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland"));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export", "Brazil"));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
-            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria"));
-            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial", "Mexico"));
-            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany"));
-            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia", "Brazil"));
-            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA"));
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier", "59 rue de l'Abbaye", "", "51100", "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", "Luisenstr. 48", "", "44087", "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", "Rua do Paço, 67", "RJ", "05454-876", "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", "2, rue du Commerce", "", "69004", "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", "Boulevard Tirou, 255", "", "B-6000", "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", "Rua do Paço, 67", "RJ", "05454-876", "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese", "Hauptstr. 31", "", "3012", "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt", "Starenweg 5", "", "1204", "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importadora", "Rua do Mercado, 12", "SP", "08737-363", "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "HILARION-Abastos", "Carrera 22 con Ave. Carlos Soublette #8-35", "Táchira", "5022", "Venezuela"));
         }
 
         return Orders;
     }
 
     public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
-    public string ShipCountry { get; set; }
+    public string CustomerID { get; set; } = string.Empty;
+    public string ShipCity { get; set; } = string.Empty;
+    public string ShipName { get; set; } = string.Empty;
+    public string ShipAddress { get; set; } = string.Empty;
+    public string ShipRegion { get; set; } = string.Empty;
+    public string ShipPostalCode { get; set; } = string.Empty;
+    public string ShipCountry { get; set; } = string.Empty;
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeNzWspWvjNiOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.gif)
+
+> Find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
+
+## Customizing columns on export
+
+Customize the exported columns’ field, header text, alignment, format, and width using [PdfExportProperties.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns).
+
+Steps:
+1. Build a list of GridColumn with desired properties.
+2. Assign it to `PdfExportProperties.Columns`.
+3. Call `ExportToPdfAsync`.
+
+[Code sample shown earlier in the document]
 
 ### Customize column width in exported PDF document
 
