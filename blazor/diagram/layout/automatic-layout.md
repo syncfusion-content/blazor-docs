@@ -103,7 +103,7 @@ Use the DoLayoutAsync function to re-arrange nodes in the diagram when any of th
 * Layout Type
 * Alignment
 
-This function refreshes the layout to reflect these updates. By invoking DoLayoutAsync, you can ensure that the diagram remains visually consistent and properly aligned after any changes are made to its structure or properties. It provides an efficient way to update the diagram layout in response to user interactions or programmatic changes, ensuring smooth transitions and an organized appearance.
+This function refreshes the layout to reflect recent updates. Invoking this method ensures that the diagram remains visually consistent and properly aligned following changes to its structure or properties. It offers an efficient mechanism for updating the diagram layout in response to user interactions or programmatic modifications, thereby maintaining smooth transitions and an organized appearance.
 
 The function can be called on-demand, making it flexible for use in scenarios where automatic layout updates are required only at specific times, such as after multiple changes or interactions.
 
