@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Template Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Template Editing in Syncfusion Blazor Tree Grid component and much more details.
+title: Template Editing in Blazor TreeGrid Component | Syncfusion
+description: Learn how to customize the edit dialog in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Template Editing in Blazor Tree Grid Component
+# Template Editing in Blazor TreeGrid Component
 
 ## Dialog template
 
-To know about customizing the Dialog Template in Blazor tree grid component, you can check this video.
+The following video demonstrates how to customize the Dialog Template in the Blazor TreeGrid.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Template) using the **Template** of the **TreeGridEditSettings**.
+Dialog template editing enables customizing the default edit dialog. To use a dialog template, set [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) to Dialog and define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Template) in **TreeGridEditSettings**.
 
-In some cases, the new field editors must be added in the dialog which are not present in the column model. In that situation, the dialog template will help to customize the default edit dialog.
-
+Use a dialog template when additional field editors are required that are not present in the column model. The template is bound to the current row context, allowing custom editors to read and update field values.
 
 {% tabs %}
 
@@ -28,6 +27,8 @@ In some cases, the new field editors must be added in the dialog which are not p
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <TreeGridEvents TValue="TreeData" RowCreated="RowCreatedHandler"></TreeGridEvents>
@@ -127,15 +128,15 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
+![Blazor TreeGrid Dialog Template](../images/blazor-treegrid-dialog-template.png)
 
-N> The template form editors should have **name** attribute.
+N> Ensure that each template form editor includes a **name** attribute.
 
 ### Disable components in dialog template
 
-It is possible to disable particular components rendered inside the dialog template using the data source value. This can be achieved by utilizing the `Enabled` property of the components which specifies whether the component is enabled or disabled.
+Specific components rendered inside the dialog template can be disabled based on data source values. Use the component’s Enabled property to control whether it is enabled or disabled.
 
-This is demonstrated in the following sample code, by using [BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event, the `Enabled` property of the **TaskId** and **TaskName** Textbox is set to false.
+In the following example, the [BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event sets the Enabled property of the **TaskId** and **TaskName** editors to false.
 
 {% tabs %}
 
@@ -260,14 +261,14 @@ public class TreeData
 
 {% endtabs %}
 
-The following image represents the dialog template of the tree grid component with the disabled components,
-![Blazor Tree Grid displays Disable components](../images/blazor-treegrid-disable-component.png)
+The following image shows the dialog template with disabled components.
+![Blazor TreeGrid dialog template with disabled components](../images/blazor-treegrid-disable-component.png)
 
 ### Set focus to editor
 
-By default, the first input element in the dialog will be focused while opening it. If the first input element is in a disabled or hidden state, set focus to the required input element in the corresponding components [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+By default, the first input element in the dialog is focused when it opens. If the first input element is disabled or hidden, set focus to a specific input in the component’s [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
-In the following sample code, the first input element is in a disabled state. So the **TaskName** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
+In the following example, the first input element is disabled, so the **TaskName** editor is focused by calling its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete component’s `DataBound` event.
 
 {% tabs %}
 
@@ -389,5 +390,5 @@ public class TreeData
 
 {% endtabs %}
 
-The following image represents the AutoComplete component in a focused state inside the dialog template of the tree grid component,
-![Blazor Tree Grid displays Dynamic Focus of Component](../images/blazor-treegrid-dynamic-focus-component.gif)
+The following image shows the AutoComplete editor focused within the dialog template.
+![Blazor TreeGrid dialog template with focused component](../images/blazor-treegrid-dynamic-focus-component.gif)

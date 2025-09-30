@@ -18,7 +18,7 @@ To get start quickly with Blazor MAUI App, you can check on this video.
 
 ## What is .NET MAUI Blazor App?
 
-.NET MAUI Blazor App is a .NET MAUI App where `Blazor web app` is hosted in .NET MAUI app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of .NET MAUI app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. .NET MAUI Blazor apps can run on all the platforms supported by .NET MAUI.
+.NET MAUI Blazor App is a .NET MAUI App where `Blazor Web App` is hosted in .NET MAUI app using `BlazorWebView` control. This enable a Blazor Web App to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of .NET MAUI app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. .NET MAUI Blazor apps can run on all the platforms supported by .NET MAUI.
 
 Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Blazor Apps.
 
