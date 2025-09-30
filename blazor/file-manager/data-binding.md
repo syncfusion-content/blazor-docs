@@ -207,7 +207,7 @@ namespace filemanager.Server.Controllers
 
 ### Folder Upload
 
-To enable directory upload, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) to true in FileManagerUploadSettings. Directory upload is supported for physical, Azure, NodeJS, and Amazon file service providers.
+To enable directory upload, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) to true in FileManagerUploadSettings. Directory upload is supported for physical, Azure, Node.js, and Amazon file service providers.
 
 In this example, you can enable or disable the ability to upload directories by selecting an option from the DropDownButton. The DropDownButton is created using the Template feature in FileManagerCustomToolbarItems. 
 
@@ -343,9 +343,9 @@ For Azure file service provider, no customizations are needed for directory uplo
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for more details.
 
-#### NodeJS file service provider
+#### Node.js file service provider
 
-To perform the directory upload in the NodeJS file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
+To perform the directory upload in the Node.js file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
 
 ```typescript
 var folders = (req.body.filename).split('/');
