@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Constraints in Blazor Diagram Component
+# Constraints in Diagram Component
 
 Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
 
