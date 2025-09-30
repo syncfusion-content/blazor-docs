@@ -12,7 +12,7 @@ documentation: ug
 
 ## Localization
 
-The Blazor Dropdown Tree component supports `localization`, allowing default text content to be adapted for different languages (e.g., Arabic, German, French). This involves defining a `Locale` value and a corresponding translation object. For an in-depth introduction and guide on configuring localization in a Blazor application, refer to the [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) page.
+The Blazor Dropdown Tree component supports `localization`, allowing default text content to be adapted for different languages (e.g., Arabic, German, French). This involves defining a `Locale` value and a corresponding translation object. For an in-depth introduction and guide on configuring localization in a Blazor application, refer to the [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application) page.
 
 To localize the Dropdown Tree, modify the default values in `.res` files located in your project's `Resource` folder. Enter the locale key (from the table below) in the `Name` column and the translated string in the `Value` column.
 

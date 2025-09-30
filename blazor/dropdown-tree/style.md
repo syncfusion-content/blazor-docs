@@ -103,7 +103,7 @@ Syncfusion provides predefined CSS classes for common states:
 
 ### Global Icon Customization
 
-The default dropdown icon can be changed globally by targeting its CSS class `.e-ddt-icon::before`. Setting the `content` property to a Unicode character from an icon font (like Syncfusion's built-in icon font or Material Icons) replaces the default icon. Refer to the [Syncfusion Icons documentation](https://ej2.syncfusion.com/documentation/appearance/icons/#material) for available icons.
+The default dropdown icon can be changed globally by targeting its CSS class `.e-ddt-icon::before`. Setting the `content` property to a Unicode character from an icon font (like Syncfusion's built-in icon font or Material Icons) replaces the default icon. Refer to the [Syncfusion Icons documentation](https://ej2.syncfusion.com/documentation/appearance/icons#material) for available icons.
 
 ```cshtml
 .e-ddt.e-input-group.e-control-wrapper .e-ddt-icon::before {
@@ -159,7 +159,7 @@ To apply a custom icon to a particular Dropdown Tree component, use the `CssClas
 
 ## Customizing the Dropdown Icon's Color
 
-Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
+Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
 
 ```cshtml
 .e-ddt .e-input-group-icon.e-ddt-icon.e-icons, 
