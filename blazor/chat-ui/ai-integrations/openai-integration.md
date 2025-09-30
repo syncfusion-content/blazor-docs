@@ -13,14 +13,6 @@ The Syncfusion Chat UI supports integration with [Azure Open AI](https://microso
 
 ## Prerequisites
 
-- OpenAI account and an API key to access the OpenAI API
-
-- Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in the project 
-
-## Getting Started with the Chat UI Component
-
-Before integrating OpenAI, ensure the Syncfusion AI AssistView component renders correctly in the application:
-
 -  An Azure account with access to `Azure Open AI` services and a generated API key.
 - Syncfusion Chat UI for Blazor `Syncfusion.Blazor.InteractiveChat` installed in the project
 
@@ -53,14 +45,6 @@ Nuget\Install-Package Markdig
 
 Note: The sample below uses HttpClient directly and does not require the Azure/OpenAI SDKs.
 
-1. Go to [Open AI](https://platform.openai.com/docs/overview) and sign in. Create an account if one does not exist. 
-
-2. Once signed in, open the profile menu and select API Keys.  
-
-3. Select + `Create new secret key`, optionally provide a name, and confirm to generate the key. 
-
-4. Copy the key and store it securely; it is shown only once.
-
 ## Configure Azure Open AI
 
 1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource.
@@ -72,8 +56,6 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 4. Store these values securely, as they will be used in your application.
 
 > `Security Note`: expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
-
-- Add the generated API key to the variable used in the example below
 
 ## Integration Azure OpenAI with Chat UI
 
