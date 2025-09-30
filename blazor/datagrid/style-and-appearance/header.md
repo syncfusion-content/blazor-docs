@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Header customization in Blazor DataGrid | Syncfusion
-description: Learn here all about header in Syncfusion Blazor DataGrid and more.
+title: Header styling and visibility in Blazor DataGrid | Syncfusion
+description: Learn how to style and hide the Syncfusion Blazor DataGrid header using CSS—customize header bar, cells, text, with CSS isolation tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Header in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Header customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
+Customize the appearance of header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The examples below show how to style the Grid header, header cells, and the header text container. When using CSS isolation (.razor.css), target Grid internals with the :deep(...) or ::deep(...) combinator (depending on tooling), or apply a wrapper class or Grid ID to increase selector specificity if theme styles override custom CSS. In production, prefer CSS isolation or a site-wide stylesheet instead of inline styles.
 
 ## Customizing the Blazor DataGrid header
 
-To customize the appearance of the Grid header root element, you can use the following CSS code:
+To customize the appearance of the Grid header root element, use the following CSS:
 
 ```css
 
@@ -21,13 +21,13 @@ To customize the appearance of the Grid header root element, you can use the fol
     border: 2px solid green;
 }
 ```
-In this example, the **.e-gridheader** class targets the Grid header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the Grid.
+In this example, the .e-gridheader selector targets the header container. Adjust properties such as border, padding, or background to match the application’s theme and to override the default divider between the header and content. For isolated styles, wrap with :deep(.e-grid .e-gridheader) in the component’s .razor.css file, or scope with a wrapper class/ID to avoid conflicts.
 
 ![Grid header](../images/style-and-appearance/grid-header.png)
 
 ## Customizing the Blazor DataGrid header cell
 
-To customize the appearance of the Grid header cell elements, you can use the following CSS code:
+To style the Grid header cell elements, use the following CSS:
 
 ```css
 
@@ -37,13 +37,13 @@ To customize the appearance of the Grid header cell elements, you can use the fo
 }
 
 ```
-In this example, the **.e-headercell** class targets the header cell elements. You can modify the `color` and `background-color` properties to change the text color and background of the header cells.
+The `.e-headercell` selector targets individual header cells. Modify color and `background-color` (and optionally font, border, or alignment) to personalize header appearance. Consider theming or CSS variables for consistent branding across components.
 
 ![Grid header cell](../images/style-and-appearance/grid-header-cell.png)
 
 ## Customizing the Blazor DataGrid header cell div element
 
-To customize the appearance of the Grid header cell div element, you can use the following CSS code:
+To style the header cell text container, use the following CSS:
 
 ```css
 
@@ -53,7 +53,7 @@ To customize the appearance of the Grid header cell div element, you can use the
     color: darkblue;
 }
 ```
-In this example, the **.e-headercelldiv** class targets the div element within the header cell. You can modify the `font-size`, `font-weight`, `color` properties to change the font size, font-weight and color of the header text content.
+The `.e-headercelldiv` selector targets the inner text container within each header cell. Adjust font-size, font-weight, and color to improve readability and emphasis. In right-to-left layouts, verify text alignment and truncation behavior.
 
 ![Grid header cell div element](../images/style-and-appearance/grid-header-cell-div-element.png)
 
@@ -145,9 +145,9 @@ public class OrderData
 
 ## Hide Blazor DataGrid header
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the header row (which displays the column titles) can be hidden using simple CSS styles.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the header row (column titles) can be hidden using CSS. Hiding headers also hides sort/filter cues and column menu indicators and may affect accessibility. If headers are hidden, ensure alternative labels (for example, aria-label or aria-labelledby) are provided, or rely on keyboard shortcuts only if discoverability is addressed.
 
-Apply the following CSS to your application. This will completely hide the column headers of every Grid on the page:
+Apply the following CSS to hide the column headers of every Grid on the page:
 
 ```css
 <style>
@@ -231,4 +231,4 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVoDohZJpGSPqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> If you want to hide the header for particular Grid, then you can apply the above styles to that Grid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.
+N> To hide the header for a particular Grid only, scope the selector using the Grid’s ID (for example, #Grid.e-grid .e-gridheader .e-columnheader { display: none; }).
