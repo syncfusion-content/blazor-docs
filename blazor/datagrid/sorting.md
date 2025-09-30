@@ -264,7 +264,7 @@ To remove a single column from a multi-sort configuration, press Shift and leftâ
 
 ## Prevent sorting for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows preventing sorting for a specific column. This is useful for fields that should remain unsortable.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows preventing sorting for a specific column. This is useful for fields that should remain non-sortable.
 
 Set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property of the target [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to `false`.
 
