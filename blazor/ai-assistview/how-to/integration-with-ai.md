@@ -9,15 +9,15 @@ documentation: ug
 
 # Integration of Microsoft.Extensions.AI with AI AssistView component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the Microsoft.Extensions.AI framework, enabling seamless communication with various large language models (LLMs) such as Azure OpenAI, OpenAI, and more.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
-Microsoft.Extensions.AI simplifies integration with different providers and typically requires only minimal configuration changes based on the selected model. The following example demonstrates integration using Azure OpenAI.
+`Microsoft.Extensions.AI` simplifies integration with different providers and typically requires only minimal configuration changes based on the selected model. The following example demonstrates integration using `Azure OpenAI`.
 
 N> The Microsoft AI extension libraries are currently in preview and may include breaking changes. Use compatible versions of all referenced packages to prevent integration issues.
 
 ### Getting started with AI AssistView
 
-Before integrating AI AssistView with Microsoft.Extensions.AI, ensure the `SfAIAssistView` component is rendered by following the appropriate project guidelines:
+Before integrating `AI AssistView` with `Microsoft.Extensions.AI`, ensure the `SfAIAssistView` component is rendered by following the appropriate project guidelines:
 
 * [Blazor Web App](../getting-started-webapp)
 * [Blazor WASM App](../getting-started)
