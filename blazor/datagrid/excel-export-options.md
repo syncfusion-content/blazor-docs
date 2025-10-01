@@ -1754,7 +1754,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
 
 ### Merging Two Excel Memory Streams
 
@@ -1903,4 +1904,5 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Merging_Two_Excel_Memory%20_Streams/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Merging_Two_Excel_Memory%20_Streams/Exporting_Stream).
