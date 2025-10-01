@@ -1575,7 +1575,7 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/document-
             ExportProperties.BeginCellLayout = new PdfGridBeginCellLayoutEventHandler(BeginCellEvent);
             ExportProperties.FileName = "test.pdf";
             ExportProperties.IsRepeatHeader = true;
-            await this.DefaultGrid.PdfExport(ExportProperties);
+            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 
