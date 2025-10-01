@@ -1,36 +1,36 @@
 ---
 layout: post
-title: Image in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Image in Syncfusion Blazor Rich Text Editor component and much more.
+title: Image in Blazor RichTextEditor Component | Syncfusion
+description: Checkout and learn here all about Image in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Image in Blazor Rich Text Editor Component
+# Image in Blazor RichTextEditor Component
 
-The Rich Text Editor supports inserting images from online sources and the local computer wherever images are needed in the content. To configure image behavior, use the options in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html).
+Rich Text Editor allows inserting images from online sources and local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorImageSettings`.
 
 | Options | Description |
 |----------------|---------|
-| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with List<string>. For example, private List<string> AllowedTypes = new List<string> `{ ".jpg", ".png", ".gif" };`|
+| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with List<string>. For example, private List<string> AllowedTypes = new List<string> { ".jpg",".png", ".gif" };|
 | Display | Sets the default display for an image when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
-| Width | Sets the default width of an inserted image. |
-| Height | Sets the default height of an inserted image. |
-| SaveUrl | Specifies the URL of the controller action that handles image upload. |
-| Path | Specifies the location to store the image. It is of string type and it appends to the name of the file or folder where you want to store the image. For example, `"api/Images/"`|
-| EnableResize | Enables resizing for images. |
-| MinWidth | Sets the minimum width of the image. |
-| MaxWidth | Sets the maximum width of the image. |
-| MinHeight | Sets the minimum height of the image. |
-| MaxHeight | Sets the maximum height of the image. |
-| ResizeByPercent | Enables image resizing by percentage. |
+| Width | Sets the default width of the image when it is inserted in the Rich Text Editor.|
+| Height | Sets the default height of the image when it is inserted in the Rich Text Editor.|
+| SaveUrl | Provides URL to map the action result method to save the image.|
+| Path | Specifies the location to store the image. It is of string type and it appends to the name of the file or folder where you want to store the image. For example, "api/Images/"|
+| EnableResize | Enables resizing for image element.|
+| MinWidth | Defines the minimum Width of the image.|
+| MaxWidth | Defines the maximum Width of the image.|
+| MinHeight | Defines the minimum Height of the image.|
+| MaxHeight | Defines the maximum Height of the image.|
+| ResizeByPercent | Image resizing should be done by percentage calculation.|
 
 ## Upload options
 
-Use the `browse` option in the Image dialog to select an image from the local machine and insert into the Rich Text Editor content.
+Through the `browse` option in the Image dialog, select the image from the local machine and insert into the Rich Text Editor content.
 
-If the [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path)  field is not specified in the [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted into base64 and blob url for the image will be created then generated url will be set as `src` property of `<img>` tag as below.
+If the path field is not specified in the `RichTextEditorImageSettings`, the image will be converted into base64 and blob url for the image will be created then generated url will be set as `src` property of `<img>` tag as below.
 
 The image has been loaded from the local machine and it will be saved in the given location.
 
@@ -135,7 +135,7 @@ namespace ImageUpload.Controllers
 
 ```
 
-![Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-with-image.png)
+![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-with-image.png)
 
 ## Image delete
 
@@ -143,35 +143,35 @@ To remove an image from the Rich Text Editor content, select the image and click
 
 After selecting the image from the local machine, the URL for the image will be generated, from there also you can remove the image from the service location by clicking the cross icon as in the following image.
 
-![Removing Image in Blazor Rich Text Editor Content](./images/blazor-richtexteditor-remove-image.png)
+![Removing Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-remove-image.png)
 
 ## Insert from web
 
 To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows to insert an image from online source.
 
-![Inserting Image in Blazor Rich Text Editor Content](./images/blazor-richtexteditor-insert-image.png)
+![Inserting Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-insert-image.png)
 
 ## Dimension
 
 Sets the default width and height of the image when it is inserted in the Rich Text Editor using `Width` and `Height` of `RichTextEditorImageSettings`.
 
-The image size can also be changed through the `QuickToolbar` using the `Change Size` option. After clicking the option, a dialog opens where width and height can be specified in pixels.
+Through the `QuickToolbar` also you can change the width and height using `Change Size` option. After clicking the option, the image size will open as below. In that specify the width and height of the image in pixel.
 
-![Changing Image Dimension in Blazor Rich Text Editor](./images/blazor-richtexteditor-image-size.png)
+![Changing Image Dimension in Blazor RichTextEditor](./images/blazor-richtexteditor-image-size.png)
 
-## Caption and alt text
+## Caption and Alt Text
 
-Specify image captions and alternative text using `RichTextEditorQuickToolbarSettings` options such as Image Caption and Alternative Text.
+Image caption and alternative text can be specified for the inserted image in the Rich Text Editor using the `RichTextEditorQuickToolbarSettings` options such as Image Caption and Alternative Text.
 
-Use the Alternative Text option to set alt text that displays when the image fails to load.
+Through the Alternative Text option, set the alternative text for the image, when the image is not uploaded successfully into the Rich Text Editor.
 
-Clicking Image Caption wraps the image with a caption element, allowing caption text to be entered in the editor.
+By clicking the Image Caption, the image will get wrapped in an image element with a caption. Then, you can type caption content inside the Rich Text Editor.
 
 ## Display position
 
 Sets the default display for an image when it is inserted in the Rich Text Editor using `Display` field in`RichTextEditorImageSettings`.
 
-N> Available options: Inline and Break.
+N> It has two possible options: `Inline` and `Break`.
 
 ```cshtml
 
@@ -189,15 +189,15 @@ N> Available options: Inline and Break.
 
 ## Image with link
 
-An image can be used as a hyperlink. When an image is linked, the quick toolbar includes Remove Link, Edit Link, and Open Link options. For more details, see the[link documentation](./link).
+The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open links will be added to the quick toolbar of image as below. For further details about link, refer to the [link documentation](./link).
 
-![Blazor Rich Text Editor Image with Link](./images/blazor-richtexteditor-image-link.png)
+![Blazor RichTextEditor Image with Link](./images/blazor-richtexteditor-image-link.png)
 
 ## Resize
 
-The Rich Text Editor includes built-in support for image resizing. Resize handles appear on the image’s corners when focused, allowing users to resize with the mouse or touch easily. Resizing preserves the aspect ratio.
+Rich Text Editor has a built-in image inserting support. The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
 
-![Image Resizing in Blazor Rich Text Editor](./images/blazor-richtexteditor-image-resize.png)
+![Image Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-image-resize.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
 
