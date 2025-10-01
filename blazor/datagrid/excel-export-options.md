@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel Export in Blazor DataGrid | Syncfusion
+title: Excel Export Options in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
@@ -1641,7 +1641,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
 
 ### Converting Memory Stream to File Stream for Excel Export
 
