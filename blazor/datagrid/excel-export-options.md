@@ -1757,7 +1757,7 @@ public class OrderData
 
 ### Merging Two Excel Memory Streams
 
-When merging two Excel memory streams and exporting the combined file as an Excel workbook, you can use the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to efficiently copy worksheets either between different workbooks or within the same workbook.
+When merging two Excel memory streams and exporting the combined file as an Excel workbook, you can use the [Syncfusion.Blazor.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to efficiently copy worksheets either between different workbooks or within the same workbook.
 
 The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
 
