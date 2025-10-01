@@ -15,7 +15,7 @@ The Syncfusion AI AssistView supports integration with [Gemini](https://ai.googl
 
 * Google account to generate an API key for accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
 * Syncfusion AI AssistView for Blazor package [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project.
-* `Markdig` package available in the project for Markdown-to-HTML conversion (required by the sample code).
+* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
 
 ## Getting Started with the AI AssistView Component
 
