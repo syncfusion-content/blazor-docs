@@ -1560,7 +1560,7 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
 @using Syncfusion.ExcelExport;
 @inject IJSRuntime JSRuntime
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
