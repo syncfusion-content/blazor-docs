@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Input Form Validation in Blazor - Syncfusion
-description: Check out the documentation for Input Form Validation using data annotation attributes with supported Blazor component list.
+title: Input form validation in Blazor - Syncfusion
+description: Learn how to validate Syncfusion Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, and ValidationSummary.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
 
 ## How to validate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
 
-1. Create a model class and set [DataAnnotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) to its properties.
+1. Create a model class and apply [data annotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) to its properties.
 
     ```cshtml
     @using System.ComponentModel.DataAnnotations;
@@ -35,7 +35,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
     }
     ```
 
-2. Add the `EditForm` component in the view page and assign the model object to its `Model` property. Also, declare the `DataAnnotationsValidator` and `ValidationSummary` components inside the `EditForm` component.
+2. Add the `EditForm` component to the page and assign the model object to its `Model` property. Include the `DataAnnotationsValidator` and `ValidationSummary` components inside `EditForm`.
 
     ```cshtml
     <EditForm Model="@employeeDetails">
@@ -44,10 +44,10 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
     </EditForm>
     ```
 
-    N> [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-8.0) - Attaches validation support to an `EditContext` using data annotations.
-    <br/>[ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0) - Used to display a summarized list of all validation messages.
+N> [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-8.0): Attaches validation support to the `EditContext` using data annotations.
+<br/>[ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0): Displays a summarized list of all validation messages.
 
-3. Add any desired [Syncfusion<sup style="font-size:70%">&reg;</sup> components](#blazor-form-validation-supported-components) inside the `EditForm` and provide the values through `@bind-` property.
+3. Add any desired [Syncfusion<sup style="font-size:70%">&reg;</sup> components](#blazor-form-validation-supported-components) inside the `EditForm` and provide values via the appropriate `@bind-` parameter.
 
     ```cshtml
     <EditForm Model="@employeeModel">
@@ -65,9 +65,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
     </EditForm>
     ```
 
-    N> Refer to [this table](#blazor-form-validation-supported-components) for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components which supports the form validation and its `@bind` property details.
+N> Refer to [this table](#blazor-form-validation-supported-components) for Blazor components that support form validation and their corresponding `@bind` parameter details.
 
-4. The `EditForm` validates the input values based on its edit context and displays the validation message on the `ValidationSummary` component when submitting the form.
+4. The `EditForm` validates input values based on its `EditContext` and displays validation messages in the `ValidationSummary` component when the form is submitted.
 
     **Validation Failure:**
 
@@ -100,7 +100,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
 
     ![Validation message for individual input component in Blazor](images/validation-message.png)
 
-6. The `EditForm`'s submit events [OnValidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.onvalidsubmit?view=aspnetcore-8.0) and [OnInvalidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.oninvalidsubmit?view=aspnetcore-8.0) can be used to get the validation success and failure `EditContext` details.
+6. The `EditForm` submit events [OnValidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.onvalidsubmit?view=aspnetcore-8.0) and [OnInvalidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.oninvalidsubmit?view=aspnetcore-8.0) provide the `EditContext` on validation success or failure.
 
     ```cshtml
     <EditForm Model="@employeeDetails" OnValidSubmit="FormValidSubmit" OnInvalidSubmit="FormInvalidSubmit">
@@ -145,11 +145,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
     }
     ```
 
-    W> You shouldn't use the `OnSubmit` handler along with `OnValidSubmit` and `OnInvalidSubmit` event handlers in the `EditForm` component. It will throw a runtime error.
+W> Do not use the `OnSubmit` handler together with `OnValidSubmit` and `OnInvalidSubmit` in the same `EditForm`. This causes a runtime error.
 
 ## Blazor form validation supported components
 
-The following section provides the details about the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components that are supported with form validation, corresponding `@bind` properties, and validation examples.
+The following section lists the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components that support form validation, the corresponding `@bind` parameters, and validation examples.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -283,11 +283,11 @@ The following section provides the details about the Syncfusion<sup style="font-
 </table>
 <!-- markdownlint-enable MD033 -->
 
-N> Make sure to use nullable integer `int?` when you use the `Required` attribute on the `Value` property. The default value for `int` is 0. So, it will pass the validation when you submit the form.
+N> Use a nullable integer `int?` when applying `Required` to a `Value` property of type `int`. The default value of `int` is 0, which would otherwise pass validation.
 
 ### SfAutoComplete
 
-The Autocomplete component provides a list of suggestions when the user types the value on the input field. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The AutoComplete component provides a list of suggestions as the user types in the input field. It uses the `@bind-Value` parameter to participate in the form model `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -419,7 +419,7 @@ The ColorPicker component allows you to choose a specific color value instead of
 
 ### SfComboBox
 
-The Combobox component is an editable dropdown list that also allows users to select an option from a predefined popup list. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The ComboBox component is an editable drop-down list that also allows users to select an option from a predefined popup list. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -565,7 +565,7 @@ If you are using the `Required` attribute, make sure to use the `DateTime?` type
 
 ### SfDropDownList
 
-The DropdownList component allows users to select an option from a predefined popup list. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The DropDownList component allows users to select an option from a predefined popup list. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -691,7 +691,7 @@ The ListBox component allows users to select multiple options from a list of pre
 
 ### SfMaskedTextBox
 
-The Masked TextBox component provides an easy and reliable way to collect user input based on a standard mask. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The MaskedTextBox component provides an easy and reliable way to collect user input based on a standard mask. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -788,7 +788,7 @@ The MultiSelect component allows the user to type or select multiple values from
 
 ### SfNumericTextBox
 
-The Numeric TextBox component is used to get number inputs from the users. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The NumericTextBox component is used to get numeric input from users. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -817,7 +817,7 @@ The Numeric TextBox component is used to get number inputs from the users. It us
 
 ### SfRadioButton
 
-The Radio Button component allows users to select one option from a list of predefined choices. It uses the `@bind-Checked` parameter to validate the form model `EditContext`.
+The RadioButton component allows users to select one option from a list of predefined choices. It uses the `@bind-Checked` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -848,7 +848,7 @@ The Radio Button component allows users to select one option from a list of pred
 
 ### SfRichTextEditor
 
-The RichTextEditor component is used to create blogs, forum posts, notes sections, support tickets (incidents), comment sections, messaging applications, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The Rich Text Editor is used to create blogs, forum posts, notes sections, support tickets, comment sections, messaging applications, and more. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -877,7 +877,7 @@ The RichTextEditor component is used to create blogs, forum posts, notes section
 
 ### SfSlider
 
-The Slider component allows you to select a value or range of values between specified min and max values. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The Slider component allows selecting a value or range of values between specified min and max values. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 N> You can create your own [custom validation](#apply-custom-validation-attributes) logic to validate the `Range` type slider.
 
@@ -910,7 +910,7 @@ N> You can create your own [custom validation](#apply-custom-validation-attribut
 
 ### SfSwitch
 
-The Switch component allows you to perform a toggle (on/off) action between checked and unchecked states. It uses the `@bind-Checked` parameter to validate the form model `EditContext`.
+The Switch component allows toggling between checked and unchecked states. It uses the `@bind-Checked` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -936,7 +936,7 @@ The Switch component allows you to perform a toggle (on/off) action between chec
 
 ### SfTextBox
 
-The TextBox is a component for editing, displaying, or entering plain text on forms to capture user names, phone numbers, email, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The TextBox is used for editing, displaying, or entering plain text on forms to capture names, phone numbers, email, and more. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -964,7 +964,7 @@ The TextBox is a component for editing, displaying, or entering plain text on fo
 
 ### SfTimePicker
 
-The TimePicker component allows users to select a time value either from a pop-up time list or by entering the value directly in the text box. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The TimePicker component allows selecting a time value from a pop-up list or by typing directly. It uses the `@bind-Value` parameter to participate in `EditContext` validation.
 
 If you are using the `Required` attribute, make sure to use the `DateTime?` type. You can also specify the `Range` attribute to validate between two specific date and time values.
 
@@ -994,13 +994,13 @@ If you are using the `Required` attribute, make sure to use the `DateTime?` type
 
 ## Apply custom validation attributes
 
-You can implement your custom validation logic and apply the [custom attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0#custom-attributes) on the model class properties. Refer to the following steps to create and apply custom attributes to a model property.
+Custom validation logic can be implemented by applying [custom attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0#custom-attributes) to model class properties. Use the following steps to create and apply a custom attribute to a model property.
 
-1. Create a class and inherit it from [ValidationAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute?view=net-8.0&viewFallbackFrom=dotnet-aspire-8.0).
+1. Create a class that inherits from [ValidationAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute?view=net-8.0&viewFallbackFrom=dotnet-aspire-8.0).
 
-2. Override the [IsValid](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid?view=net-7.0) method to implement your custom validation logic.
+2. Override the [IsValid](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid?view=net-7.0) method to implement custom validation logic.
 
-3. Add the custom attribute to the model class property.
+3. Apply the custom attribute to the model class property.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -1061,7 +1061,7 @@ Refer to the following steps to create and validate the Syncfusion<sup style="fo
 
 1. Right-click on the `~/Pages/` folder in the Visual Studio and navigate to `Add -> Razor Component`. Specify the component name and create it.
 
-2. Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the new component and assign the `Value`, `ValueChanged`, and `ValueExpression` properties. Refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-8.0#binding-with-component-parameters), to know more about data binding in component parameters.
+2. Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the new component and assign the `Value`, `ValueChanged`, and `ValueExpression` parameters. Refer to the [data binding with component parameters](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-8.0#binding-with-component-parameters) documentation for details.
 
     ```cshtml
     @using System.Linq.Expressions;

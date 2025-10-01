@@ -1,40 +1,37 @@
 ---
 layout: post
 title: Globalization in Blazor - Syncfusion
-description: Learn here all about how globalization support in Syncfusion Blazor component, it's elements and more.
+description: Learn how Syncfusion Blazor components handle globalization for numbers, dates, times, and currencies across cultures in Blazor Web App, WASM, and Server App.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Globalization in Blazor Application
 
-Globalization is the combination of adapting the control to various languages by parsing and formatting the dates, times, numbers or currencies (`Internationalization (L18N)`) and adding cultural-specific customizations and translating the text (`Localization (L10N)`).
+Globalization combines internationalization (i18n)—parsing and formatting dates, times, numbers, and currencies—and localization (l10n)—adding culture-specific customizations and translating UI text.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are specific to the `American English (en-US)` culture by default. It utilizes the `Blazor Internationalization` package to parse and format the number and date objects based on the chosen culture.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components use American English (`en-US`) by default. Blazor relies on .NET globalization to parse and format numbers and dates based on the active culture. In Blazor WebAssembly, ensure globalization data is available when using non‑en cultures.
 
-Blazor uses the built-in .NET types from the `System.Globalization` namespace, such as the `CultureInfo` class and its `CurrentCulture` property.
+Blazor uses built-in .NET types from the System.Globalization namespace, such as the CultureInfo class and its culture properties.
 
-* Culture ([CultureInfo.CurrentCulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-8.0#system-globalization-cultureinfo-currentculture)): Determines the formatting of numbers, dates, and times. It's mainly concerned with how data is presented and interpreted.
-* UI Culture ([CultureInfo.CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-8.0#system-globalization-cultureinfo-currentuiculture)): Determines the language of the user interface, including which resource files (like .resx files) are used for localizing the app’s UI.
+* Culture ([CultureInfo.CurrentCulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-8.0#system-globalization-cultureinfo-currentculture)): Determines the formatting of numbers, dates, and times.
+* UI culture ([CultureInfo.CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-8.0#system-globalization-cultureinfo-currentuiculture)): Determines the language of the user interface and which .resx resources are used.
 
-When dealing with form fields in Blazor, it’s important to note that certain input types automatically respect the user's culture settings using [CultureInfo.InvariantCulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture?view=net-8.0#system-globalization-cultureinfo-invariantculture).
-
-For example, the following input types are culture-sensitive:
+When working with HTML form fields, browser-native input types affect culture behavior:
 
 * `date`
-* `number`
+* `number` 
 
 Blazor relies on the browser’s handling of these input types, which ensures that the user input is parsed and rendered according to their specific culture settings.
 
-However, some form field types are not yet fully supported across all browsers, making them less reliable in Blazor applications. These include:
+Some input types are inconsistently supported across browsers and may be less reliable:
 
 * `datetime-local`
 * `month`
 * `week`
 
-
-The following code snippet serves as an example to demonstrate how globalization can be implemented in a Blazor application. It illustrates the process of localizing content, formatting dates and numbers.
+The following example shows how globalization affects rendered values by formatting dates and numbers according to the current culture.
 
 {% tabs %}
 {% highlight razor %}
@@ -62,11 +59,11 @@ The following code snippet serves as an example to demonstrate how globalization
 {% endhighlight %}
 {% endtabs %}
 
-* Suppose, if you want to change any specific culture, then add the corresponding culture resource (`.resx`) file by using the below reference. 
+* To change any specific culture, add the corresponding `.resx` resource files and configure localization as described in the following article:
 
-[Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application)
+[Enable localization and add .resx files in the application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application)
 
 ## See also
 * [ASP.NET Core Blazor globalization and localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0)
-* [.NET Fundamentals: Globalization](https://learn.microsoft.com/en-us/dotnet/core/extensions/globalization)
-* [.NET Fundamentals: Localization](https://learn.microsoft.com/en-us/dotnet/core/extensions/localization)
+* [.NET fundamentals: Globalization](https://learn.microsoft.com/en-us/dotnet/core/extensions/globalization)
+* [.NET fundamentals: Localization](https://learn.microsoft.com/en-us/dotnet/core/extensions/localization)
