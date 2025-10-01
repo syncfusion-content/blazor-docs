@@ -29,7 +29,7 @@ Before using [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusi
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
-* An active [API KEY](https://staging.syncfusion.com/account/user-token-generation)
+* An active [API KEY](https://syncfusion.com/account/api-key)
 
 ## Unlimited Access
 
@@ -54,7 +54,7 @@ Before you can invoke the `SyncfusionBlazorAssistant` MCP server, you need to co
 - **Arguments**: -y
 - **Server name**: syncfusionBlazorAssistant
 
-You need to add your [Syncfusion API key](https://staging.syncfusion.com/account/user-token-generation) as an env parameter in the configuration file:
+You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key) as an env parameter in the configuration file:
 
 ```json
 "env": {
