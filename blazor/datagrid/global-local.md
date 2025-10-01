@@ -9,11 +9,13 @@ documentation: ug
 
 # Globalization in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports globalization to make applications accessible across regions and languages. Content can be displayed in the preferred culture with localized texts and culture-aware formats for a better user experience.
 
 ## Localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports localization, allowing customization of static texts used in the Grid for different languages or cultures. Text labels such as `group drop area text` and `pager information` can be localized to cultures like Arabic, Deutsch, French, and more. For detailed instructions, refer to the Blazor Localization documentation: [Localization](https://blazor.syncfusion.com/documentation/common/localization).
+
+A subset of localizable strings used by the DataGrid is listed below.
 
 **Data Rendering**
 
@@ -33,7 +35,7 @@ Grid_False | false | ![Locale false](images/globalization/locale-false.png)
 
 Locale key words |Text | Example 
 -----|-----|-----
-Grid_Columnchooser | Columns | ![Locale columnchooser](images/globalization/locale-column-chooser.png)
+Grid_Columnchooser | Columns | ![Locale column chooser](images/globalization/locale-column-chooser.png)
 Grid_ChooseColumns | Choose Column | ![Locale choose columns](images/globalization/locale-choose-columns.png)
 
 **Editing**
@@ -63,10 +65,10 @@ Grid_CancelEdit | Are you sure you want to Cancel the changes? | ![Locale cancel
 Locale key words |Text | Example 
 -----|-----|-----
 Grid_GroupDropArea | Drag a column header here to group its column | ![Locale group drop area](images/globalization/locale-group-drop-area.png)
-Grid_UnGroup | Click here to ungroup | ![Locale un group](images/globalization/locale-un-group.png)
-Grid_GroupDisable | Grouping is disabled for this column | ![Locale group disable](images/globalization/locale-group-disable.png)
-Grid_Item | item | ![Locale Item](images/globalization/locale-item.png)
-Grid_Items | items | ![Locale Items](images/globalization/locale-items.png)
+Grid_UnGroup | Click here to ungroup | ![Locale ungroup](images/globalization/locale-un-group.png)
+Grid_GroupDisable | Grouping is disabled for this column | ![Locale group disabled](images/globalization/locale-group-disable.png)
+Grid_Item | item | ![Locale item](images/globalization/locale-item.png)
+Grid_Items | items | ![Locale items](images/globalization/locale-items.png)
 Grid_UnGroupButton | Click here to ungroup |
 Grid_GroupDescription | Press Ctrl space to group | ![Locale group description](images/globalization/locale-group-description.png)
 
@@ -75,8 +77,8 @@ Grid_GroupDescription | Press Ctrl space to group | ![Locale group description](
 Locale key words |Text | Example 
 -----|-----|-----
 Grid_InvalidFilterMessage | Invalid Filter Data
-Grid_FilterbarTitle | \s filter bar cell | ![Locale filterbar title](images/globalization/locale-filterbar-title.png)
-Grid_Matchs | No Matches Found | ![Locale matchs](images/globalization/locale-matchs.png)
+Grid_FilterbarTitle | \s filter bar cell | ![Locale filter bar title](images/globalization/locale-filterbar-title.png)
+Grid_Matchs | No Matches Found | ![Locale no matches](images/globalization/locale-matchs.png)
 Grid_FilterButton | Filter | ![Locale filter button](images/globalization/locale-filter-button.png)
 Grid_ClearButton | Clear | ![Locale clear button](images/globalization/locale-clear-button.png)
 Grid_StartsWith | Starts With | ![Locale starts with](images/globalization/locale-starts-with.png)
@@ -105,8 +107,8 @@ Grid_Between | Between | ![Locale between](images/globalization/locale-between.p
 Grid_CustomFilter | Custom Filter | ![Locale custom filter](images/globalization/locale-custom-filter.png)
 Grid_CustomFilterPlaceHolder | Enter the value | ![Locale custom filter placeholder](images/globalization/locale-custom-filter-placeholder.png)
 Grid_CustomFilterDatePlaceHolder | Choose a date | ![Locale custom filter date placeholder](images/globalization/locale-custom-filter-date-placeholder.png)
-Grid_AND | AND | ![Locale AND](images/globalization/locale-AND.png)
-Grid_OR | OR | ![Locale OR](images/globalization/locale-OR.png)
+Grid_AND | AND | ![Locale and](images/globalization/locale-AND.png)
+Grid_OR | OR | ![Locale or](images/globalization/locale-OR.png)
 Grid_ShowRowsWhere | Show rows where: | ![Locale show rows where](images/globalization/locale-show-rows-where.png)
 
 **Searching**
@@ -121,9 +123,9 @@ Grid_SearchColumns | search columns
 Locale key words |Text | Example 
 -----|-----|-----
 Grid_Print | Print | ![Locale print](images/globalization/locale-print.png)
-Grid_Pdfexport | PDF Export | ![Locale pdfexport](images/globalization/locale-pdfexport.png)
-Grid_Excelexport | Excel Export | ![Locale excelexport](images/globalization/locale-excelexport.png)
-Grid_Csvexport | CSV Export | ![Locale csvexport](images/globalization/locale-csvexport.png)
+Grid_Pdfexport | PDF Export | ![Locale pdf export](images/globalization/locale-pdfexport.png)
+Grid_Excelexport | Excel Export | ![Locale excel export](images/globalization/locale-excelexport.png)
+Grid_Csvexport | CSV Export | ![Locale csv export](images/globalization/locale-csvexport.png)
 
 **ColumnMenu**
 
@@ -138,10 +140,10 @@ Grid_AutoFit | Autofit this column |
 Locale key words |Text | Example 
 -----|-----|-----
 Grid_Copy | Copy | ![Locale copy](images/globalization/locale-copy.png)
-Grid_Group | Group by this column | ![Locale group](images/globalization/locale-group.png)
-Grid_Ungroup | Ungroup by this column | ![Locale ungroup](images/globalization/locale-ungroup.png)
-Grid_autoFitAll | Auto Fit all columns | ![Locale autofit all](images/globalization/locale-autofit-all.png)
-Grid_autoFit | Auto Fit this column | ![Locale autofit](images/globalization/locale-autofit.png)
+Grid_Group | Group by this column | ![Locale group by column](images/globalization/locale-group.png)
+Grid_Ungroup | Ungroup by this column | ![Locale ungroup by column](images/globalization/locale-ungroup.png)
+Grid_autoFitAll | Auto Fit all columns | ![Locale autofit all columns](images/globalization/locale-autofit-all.png)
+Grid_autoFit | Auto Fit this column | ![Locale autofit column](images/globalization/locale-autofit.png)
 Grid_Export | Export | ![Locale export](images/globalization/locale-export.png)
 Grid_FirstPage | First Page | ![Locale first page](images/globalization/locale-first-page.png)
 Grid_LastPage | Last Page | ![Locale last page](images/globalization/locale-last-page.png)
@@ -154,19 +156,19 @@ Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization
 
 ### Switch the different localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. For more details, you can refer to the official documentation on [dynamically setting the culture](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=razor#dynamically-set-the-culture).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
 
 To switch to a different localization, follow these steps:
 
 **Step 1: Create a Blazor web app**
  
-You can create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+Create a `Blazor Web App` named LocalizationSample using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/aspnet/core/blazor/components/render-modes#render-modes) and [interactivity location](https://learn.microsoft.com/aspnet/core/blazor/tooling?pivots=windows).
 
 **Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
  
-To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, open NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
+If the Blazor Web App uses WebAssembly or Auto render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
  
 Alternatively, use the following Package Manager commands:
  
@@ -190,7 +192,7 @@ Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
   
 **Step 4: Add stylesheet and script resources**
  
-Include the theme stylesheet and script references in the **~/Components/App.razor** file.
+Include the theme stylesheet and script references in the **~/Components/App.razor** file for a Blazor Web App.
  
 ```html
 <head>
@@ -204,12 +206,12 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 </body>
 ```
  
-> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (Static Web Assets, CDN, or CRG).
+> * Set the rendermode to `InteractiveServer` or `InteractiveAuto` in the Blazor Web App configuration.
 
 **Step 5: Create and register localization service**
 
-Create a **SyncfusionLocalizer.cs** file and add the following code. For detailed steps on creating and registering a localization service, refer to the [Blazor Localization documentation](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=csharp#create-and-register-localization-service).
+Create a **SyncfusionLocalizer.cs** file and add the following code. For detailed steps on creating and registering a localization service, refer to the [Localization](https://blazor.syncfusion.com/documentation/common/localization#create-and-register-localization-service) documentation.
 
 {% tabs %}
 {% highlight cs tabtitle="SyncfusionLocalizer.cs" %}
@@ -244,9 +246,8 @@ namespace LocalizationSample.Client
 
 **Step 6: Configure ~/Program.cs file**
 
-* **Set the Culture of the Application:** In the client-side **~/Program.cs** , use JavaScript Interop to retrieve the user's culture setting from local storage. If none is found, set the default to **en-US**.
-
-* **Register Services:** Register the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs**  files.
+- **Set the culture of the application:** In the client-side **~/Program.cs**, use JavaScript interop to retrieve the user's culture from local storage. If none is found, set the default to en-US.
+- **Register services:** Register the SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in **~/Program.cs**.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -296,7 +297,7 @@ await builder.Build().RunAsync();
 
 ```
  
-**Step 8: Add javaScript function for culture management**
+**Step 8: Add JavaScript function for culture management**
 
 For a Blazor Web App, add the following JavaScript function to the **~/Components/App.razor** file (after the Blazor `<script>` tag and before the closing `</body>`). This function retrieves and sets the user's selected culture in the browser's local storage.
 
@@ -334,7 +335,7 @@ For a Blazor Web App, add the following JavaScript function to the **~/Component
 
 **Step 9: Configure culture switching with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid** 
 
-In the **Counter.razor** file, add the following code to change the culture and display a Grid with a Button to switch between English (en-US) and French (fr-FR):
+In the **Counter.razor** file, add the following code to change the culture and display a Grid with a button to switch between English (en-US) and French (fr-FR):
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -381,9 +382,9 @@ In the **Counter.razor** file, add the following code to change the culture and 
 {% endtabs %}
 
 
-**Step 11: Create a model class**
+**Step 10: Create a model class**
 
-Create a new folder named **Data**. Then, add a model class named **OrderData.cs** in the **Data** folder to represent the order data.
+Create a new folder named `Data`. Then add a model class named `OrderData.cs` in the `Data` folder to represent the order data.
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -432,25 +433,25 @@ namespace LocalizationSample.Client.Data
 {% endhighlight %}
 {% endtabs %}
 
-**Step 12: Run the application**
+**Step 11: Run the application**
  
-When you run the application, the Grid will display data fetched from the API.
+When the application runs, the Grid displays localized content and formats based on the current culture.
 
-![Switch the different localization](images/globalization/switch.png)
+![Switch to a different localization](images/globalization/switch.png)
 
 ## Right to Left - RTL
 
-The Right to Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the Grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
+The Right-to-left (RTL) feature switches the text direction and layout from left-to-right to right-to-left. This is beneficial for languages written and read right to left, such as `Arabic`, `Farsi`, and `Urdu`. Enabling RTL improves usability and accessibility for these languages.
 
-To enable RTL in the Grid, you can use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This property switches the text direction and layout from left-to-right to right-to-left.
+To enable RTL in the Grid, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This switches text direction and layout to right-to-left.
 
 To achieve this, follow the steps below:
 
-**Step 1:** Follow the steps from Step 1 to Step 5 in the following [link](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization), then continue with the steps below.
+**Step 1:** Follow the steps from Step 1 to Step 5 in the following [link](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization), then continue with the steps below: [Switch the different localization](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization)
 
 **Step 2: Configure ~/Program.cs file**
 
-Register the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs**  files.
+Register the SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both ~/Program.cs files.
  
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -466,11 +467,9 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 3: Setting the culture in Blazor start option**
 
-* Add the **autostart="false"** attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
-
-* Add the script block below Blazor’s `<script>` tag and before the closing `</body>` tag to start blazor with specific culture.
-
-* Use the `Blazor.start` method and set the `applicationCulture` to the desired culture code.
+- Add the `autostart="false"` attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
+- Add the script block below Blazor’s `<script>` tag and before the closing `</body>` tag to start Blazor with a specific culture.
+- Use the `Blazor.start` method and set `applicationCulture` to the desired culture code.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Components/App.razor" %}
@@ -506,7 +505,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 4: Enable or disable RTL mode using toggle Switch**
 
-The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) is added to enable or disable the Right-to-Left (RTL) feature for the Arabic (ar-AE) locale. When the switch is toggled, the [ValueChange](http://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered, and the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the Grid is updated accordingly.
+The [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) is added to enable or disable the RTL feature for the Arabic (ar-AE) locale. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered, and the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the Grid is updated accordingly.
 
 {% tabs %}
 {% highlight razor tabtitle="Counter.razor" %}
@@ -557,7 +556,7 @@ The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggl
 
 **Step 5: Create a model class**
 
-Create a new folder named **Models**. Then, add a model class named **OrderData.cs** in the **Models** folder to represent the order data.
+Create a new folder named **Models**. Then add a model class named `OrderData.cs` in the `Models` folder to represent the order data.
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -608,6 +607,6 @@ namespace LocalizationSample.Client.Models
 
 **Step 6: Run the application**
  
-When you run the application, the Grid will display data fetched from the API.
+When the application runs, the Grid reflects RTL layout and text direction according to the selected culture.
 
-![Right to Left - RTL](images/globalization/enable-rtl.png)
+![Right to left layout enabled](images/globalization/enable-rtl.png)
