@@ -13,8 +13,8 @@ The Syncfusion AI AssistView supports integration with [Azure Open AI](https://m
 
 ## Prerequisites
 
--  An Azure account with access to `Azure Open AI` services and a generated API key.
-- Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in the project
+-  An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
+- Syncfusion AI AssistView for Blazor [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project
 
 ## Getting Started with the AI AssistView Component
 
@@ -49,9 +49,9 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 
 1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource.
 
-2. Under Resource Management, select Keys and Endpoint to retrieve your API key and endpoint URL. 
+2. Under Resource Management, select keys and endpoint to retrieve your API key and endpoint URL. 
 
-3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version (e.g., 2024-07-01-preview) matches your resource configuration.
+3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version matches your resource configuration.
 
 4. Store these values securely, as they will be used in your application.
 
