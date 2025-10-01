@@ -43,11 +43,11 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with a google account. Create a new account if needed.
+1. Go to [Google AI Studio](https://aistudio.google.com/app/api-keys) and sign in with a google account. Create a new account if needed.
 
-2. Select get API key from the left menu or the top-right of the dashboard.
+2. Select `Get API key` from the left menu or the top-right of the dashboard.
 
-3. Choose create API key. Select an existing google cloud project or create a new one, then proceed.
+3. Choose `Create API keyx	`. Select an existing google cloud project or create a new one, then proceed.
 
 4. After creating or selecting a project, an API key is generated and displayed. Copy the key and store it securely, as it may be shown only once.
 
