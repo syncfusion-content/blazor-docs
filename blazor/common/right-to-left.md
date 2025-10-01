@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Right-to-left Support in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Right-to-left Support in Syncfusion® Blazor Components
 
 Right-to-left (RTL) support can be enabled for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by setting the `EnableRtl` property to `true`. This renders supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a right-to-left layout.
 
