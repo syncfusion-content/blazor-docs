@@ -91,7 +91,7 @@ public class TaskDetails
 
 The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid improves perceived scrolling performance by pre-rendering a buffer of rows before and after the visible viewport. This reduces the frequency of data fetches and DOM updates for smoother scrolling, and applies during both initial rendering and virtual scrolling.
 
-The following example sets `OverscanCount` to `5`, preloading five additional rows before and after the viewport.
+The following example sets `OverscanCount` to `5`,  which preloads five additional rows before and after the viewport.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
