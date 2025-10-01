@@ -611,6 +611,7 @@ Below is an example showing how to implement grouping and aggregates in a custom
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using System.Data
 @using System.Dynamic

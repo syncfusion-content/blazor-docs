@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel Export in Blazor DataGrid | Syncfusion
+title: Excel Export Options in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
@@ -1560,7 +1560,7 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
 @using Syncfusion.ExcelExport;
 @inject IJSRuntime JSRuntime
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -1641,7 +1641,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
 
 ### Converting Memory Stream to File Stream for Excel Export
 
@@ -1753,11 +1754,12 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
 
 ### Merging Two Excel Memory Streams
 
-When merging two Excel memory streams and exporting the combined file as an Excel workbook, you can use the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to efficiently copy worksheets either between different workbooks or within the same workbook.
+When merging two Excel memory streams and exporting the combined file as an Excel workbook, you can use the [Syncfusion.Blazor.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to efficiently copy worksheets either between different workbooks or within the same workbook.
 
 The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
 
@@ -1902,4 +1904,5 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Merging_Two_Excel_Memory%20_Streams/Exporting_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Merging_Two_Excel_Memory%20_Streams/Exporting_Stream).

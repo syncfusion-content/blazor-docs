@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export Options in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about PDF Export Options in Syncfusion Blazor DataGrid and much more.
+description: Checkout and learn here all about PDF Export Options in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1055,7 +1055,8 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 
 ![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.gif)
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
 
 ## Customizing columns on export
 
@@ -1575,7 +1576,7 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/document-
             ExportProperties.BeginCellLayout = new PdfGridBeginCellLayoutEventHandler(BeginCellEvent);
             ExportProperties.FileName = "test.pdf";
             ExportProperties.IsRepeatHeader = true;
-            await this.DefaultGrid.PdfExport(ExportProperties);
+            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 
@@ -1688,7 +1689,8 @@ public class OrderData
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Rotate_header).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Rotate_header).
 
 ## Exporting Blazor DataGrid data as stream
 
@@ -1845,7 +1847,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Blazor_Memory_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Blazor_Memory_Stream).
 
 ### Converting memory stream to file stream for PDF export
 
@@ -1952,7 +1955,8 @@ The example below demonstrates how to achieve this by converting the memory stre
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/PDF_Converting_Memory_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/PDF_Converting_Memory_Stream).
 
 ### Merging two PDF memory streams
 
@@ -2100,4 +2104,5 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Merging_Two_PDF_Memory_Stream).
+> You can find a complete sample on [GitHub]
+(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Merging_Two_PDF_Memory_Stream).
