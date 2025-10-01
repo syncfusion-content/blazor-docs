@@ -24,7 +24,7 @@ The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor
 Before using [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant), ensure you have:
 
 * Required [node](https://nodejs.org/en/) version >= 18
-* A [compatible MCP client](https://modelcontextprotocol.io/clients) ([Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), VS Code with GitHub Copilot, etc.)
+* A [compatible MCP client](https://modelcontextprotocol.io/clients) (VS Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
