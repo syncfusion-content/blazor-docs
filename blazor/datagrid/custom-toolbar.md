@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar Items in Blazor DataGrid Component | Syncfusion
-description: Learn how to create and use custom toolbar items in the Syncfusion Blazor DataGrid, including templates, images with text, dropdowns, autocomplete, and export actions.
+description: Learn how to create and use custom toolbar items in the Syncfusion Blazor DataGrid, including templates, icons with text, dropdowns, and export actions.
 platform: Blazor
 control: DataGrid
 documentation: ug
