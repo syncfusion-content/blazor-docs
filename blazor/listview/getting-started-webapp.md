@@ -116,7 +116,7 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Lists` namespace .
 {% endhighlight %}
 {% endtabs %}
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the appropriate **~/Program.cs** ile(s) of the Blazor Web App:
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the appropriate **~/Program.cs** file(s) of the Blazor Web App:
 
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files in the Blazor Web App.

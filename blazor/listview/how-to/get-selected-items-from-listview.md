@@ -7,7 +7,7 @@ control: ListView
 documentation: ug
 ---
 
-# Retrieving Selected Items in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView
+# Retrieving Selected Items from ListView Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView component offers functionalities for users to select one or more items from a list. This guide outlines how to retrieve selected items, a feature essential for applications that need to process or display data based on user choices.
 
