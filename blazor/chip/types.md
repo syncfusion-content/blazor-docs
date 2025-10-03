@@ -33,7 +33,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAWVrmVySxGUhD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhotaWuJwkKgwBO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chip with Input Items](./images/blazor-chip-input-items.png)
 
