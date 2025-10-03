@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Markers in Syncfusion Blazor Charts component.
+description: Check out and learn how to configure and customize Markers in Syncfusion Blazor Charts component to enhance data point visibility and styling.
 platform: Blazor
 control: Chart
 documentation: ug

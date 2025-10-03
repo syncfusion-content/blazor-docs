@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mixed Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure the Mixed Chart in Syncfusion Blazor Charts component.
+description: Check out and learn how to configure the Mixed Chart in Syncfusion Blazor Charts component for combining multiple series types in one visualization.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Legends in Syncfusion Blazor Charts component.
+description: Check out and learn how to configure and customize Legends in Syncfusion Blazor Charts component to improve series identification and chart clarity.
 platform: Blazor
 control: Chart
 documentation: ug

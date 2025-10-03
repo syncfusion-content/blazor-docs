@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Label Template in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure Data Label Template in Syncfusion Blazor Charts component.
+description: Check out and learn how to configure Data Label Template in Syncfusion Blazor Charts component to display custom content on chart data points.
 platform: Blazor
 control: Chart
 documentation: ug

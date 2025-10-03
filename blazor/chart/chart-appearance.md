@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Charts Component | Syncfusion
-description: Check out and learn how to customize Chart Appearance in Syncfusion Blazor Charts component.
+description: Check out and learn how to customize Chart Appearance in Syncfusion Blazor Charts component for enhanced visual presentation.
 platform: Blazor
 control: Chart
 documentation: ug
