@@ -7,7 +7,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Azure OpenAI With Blazor AI AssistView component
+# Azure OpenAI With Blazor AI AssistView component
 
 The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your applications.
 
@@ -57,7 +57,7 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 
 > `Security Note`: expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-## Integration Azure OpenAI with AI AssistView
+## Azure OpenAI with AI AssistView
 
 - Configure your Azure OpenAI endpoint, API key, and deployment name in your **Program.cs** (or using your preferred configuration mechanism).
 
