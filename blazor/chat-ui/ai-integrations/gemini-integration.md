@@ -13,8 +13,8 @@ The Syncfusion  Chat UI supports integration with [Gemini](https://ai.google.dev
 
 ## Prerequisites
 
-* Google account to generate API key on accessing `Gemini AI`
-* Syncfusion Chat UI for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
+* Google account to generate API key on accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
+* Syncfusion Chat UI for Blazor [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in your project. 
 
 ## Getting Started with the Chat UI Component
 
@@ -28,7 +28,7 @@ Install the Syncfusion Blazor package in the application.
 
 ```bash
 
-Install-Package Syncfusion.Blazor.InteractiveChat
+Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
 
 ```
 
@@ -36,17 +36,17 @@ Install the Gemini AI package in the application.
 
 ```bash
 
-Install-Package Mscc.GenerativeAI
+Nuget\Install-Package Mscc.GenerativeAI
 
 ```
 
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your Google account. If you don’t have one, create a new account.
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your google account. If you don’t have one, create a new account.
 
 2. Once logged in, click on `Get API Key` from the left-hand menu or the top-right corner of the dashboard.
 
-3. Click the `Create API Key` button. You’ll be prompted to either select an existing Google Cloud project or create a new one. Choose the appropriate option and proceed. 
+3. Click the `Create API key` button. You’ll be prompted to either select an existing google cloud project or create a new one. Choose the appropriate option and proceed.
 
 4. After selecting or creating a project, your API key will be generated and displayed. Copy the key and store it securely, as it will only be shown once.
 
@@ -64,6 +64,11 @@ const string GeminiApiKey = 'Place your API key here';
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Navigations
+@using Mscc.GenerativeAI
+@using Markdig
 
 <div style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUI" User="currentUser" HeaderText="Chat UI" HeaderIconCss="e-icons e-ai-chat" Messages="@Messages" MessageSend="OnMessageSend" TypingUsers="@typingUsers">
@@ -132,4 +137,4 @@ const string GeminiApiKey = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI Gemini Integration](./images/gemini-integration.png)
+![Blazor Chat UI Gemini Integration](../images/gemini-integration.png)

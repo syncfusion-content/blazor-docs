@@ -11,6 +11,8 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are native Blazor components and not wrappers over EJ2 components.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools](https://blazor.syncfusion.com/documentation/ai-developer-tools/overview)
+
 ## How to best read this user guide
 
 * The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives information that is to known before starting to write code. This is the only section that is recommended to be read end-to-end before starting to write code, all other information can be referred to as needed.
@@ -83,11 +85,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
-        <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor">PDF</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor">Word</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">PowerPoint</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></div>

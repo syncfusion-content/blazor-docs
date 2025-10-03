@@ -32,7 +32,7 @@ Before using this extension, ensure you have:
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
-* An active [API KEY](https://staging.syncfusion.com/account/user-token-generation)
+* An active [API KEY](https://syncfusion.com/account/api-key)
 
 ## Unlimited Access
 
