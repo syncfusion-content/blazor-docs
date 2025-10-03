@@ -27,3 +27,5 @@ The following example demonstrates how to prevent external drag-and-drop upload 
 </SfFileManager>
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNheitjUVympOBmI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

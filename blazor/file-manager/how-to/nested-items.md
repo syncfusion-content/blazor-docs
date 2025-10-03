@@ -231,5 +231,5 @@ This example demonstrates integrating the Blazor File Manager component within t
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhIiDDAVIHzinGn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Syncfusion Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.png)

@@ -124,6 +124,9 @@ The following example demonstrates how to add a custom item to the context menu.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIiXtqBRNQucNX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![File Manager with Custom Context Menu Items](./images/custom-context-menu.png)
+
 ## Showing Different Context Menu for Files and Folders
 
 In the Blazor File Manager component, customize the context menu items for files and folders using the File Manager [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) and [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) properties. 
@@ -151,6 +154,9 @@ The following example demonstrates how to achieve this by showing different cont
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeiDDqrHAogtZl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![File Manager with Different Context Menu Items for files and folders](./images/different-context-menu.png)
 
 ## Enabling or Disabling Items
 
@@ -190,6 +196,8 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVysDXULRSVhBNl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Enable or Disable File Manager Context Menu Items](./images/disable-context-menu.png)
 
 ## Showing or Hiding Items
 
@@ -228,6 +236,9 @@ In the following example, the **Cut** context menu item is shown for the files.
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrIsDjUrRRYDNDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Show or Hide File Manager Context Menu Items](./images/hide-context-menu.png)
 
 ## Events
 

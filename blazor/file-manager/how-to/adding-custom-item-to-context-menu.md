@@ -18,10 +18,10 @@ The following example demonstrates how to add a custom item to the context menu.
 @using Syncfusion.Blazor.FileManager
 
     <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 UploadUrl="/api/SampleData/Upload"
-                                 DownloadUrl="/api/SampleData/Download"
-                                 GetImageUrl="/api/SampleData/GetImage">
+         <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerContextMenuSettings  File="@Items" Folder="@Items"></FileManagerContextMenuSettings>
     </SfFileManager>
@@ -37,5 +37,5 @@ The following example demonstrates how to add a custom item to the context menu.
 After successful compilation of the application, simply press `F5` to run it.
 
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjreCNNghSfoOgUI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor File Manager displays Custom Context Menu Item](../images/blazor-filemanager-custom-context-menu.png)
