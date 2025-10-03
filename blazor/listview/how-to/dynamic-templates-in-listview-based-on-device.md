@@ -3,13 +3,13 @@ layout: post
 title: Use dynamic templates in Blazor ListView based on device | Syncfusion
 description: Learn here all about using dynamic templates in syncfusion blazor listview based on device and more.
 platform: Blazor
-control: Listview
+control: ListView
 documentation: ug
 ---
 
-# Use dynamic templates in Blazor ListView based on device
+# Use Dynamic Templates in Blazor ListView Based on Device
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion<sup style="font-size:70%">&reg;</sup> controls in both modes. The component templates are not always fixed. Applications may need to load various templates depending upon the device.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Blazor controls are desktop and mobile-friendly. So, the Syncfusion<sup style="font-size:70%">&reg;</sup> controls can be used in both modes. The component templates are not always fixed. Applications may need to load various templates depending upon the device.
 
 ## Integration
 
@@ -177,7 +177,7 @@ In the ListView component, [`template`](https://help.syncfusion.com/cr/blazor/Sy
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVIWXNsKqdteaLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ListView with Dynamic Layout](../images/list/blazor-listview-with-dynamic-layout.png)
 
 N> Make sure to register the **builder.Services.AddHttpContextAccessor();** service in the **Program.cs** file. This is required to access the current HTTP context in your application.

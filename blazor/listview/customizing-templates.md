@@ -9,16 +9,16 @@ documentation: ug
 
 # Customizing Templates in Blazor ListView Component
 
-The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.
+The ListView component provides extensive customization options for its individual list items and group headers through Blazor's powerful template engine.
 
-To customize the Blazor ListView component header, items, and group header using templates, you can check on this video.
+To customize the Blazor ListView component's header, items, and group header using templates, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=SZyehayHi_4" %}
 
 ## Header Template
 
-ListView header can be customized with the help of the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property as `true` to display the ListView header.
+The ListView's header can be fully customized using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To display a custom header, set the desired template within the `HeaderTemplate` property and ensure the [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property is set to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -60,7 +60,7 @@ ListView header can be customized with the help of the [`HeaderTemplate`](https:
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSCNDWKSRiFauB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ListView with Header Template](./images/list/blazor-listview-header-template.png)
 
 ## Template
@@ -231,12 +231,12 @@ The following built-in CSS classes can be used to customize the list-items.
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLeijDMAeRvEvIj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ListView with Item template](./images/list/blazor-listview-item-template.png)
 
-## Group template
+## Group Template
 
-ListView group header can be customized with the help of the [`GroupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GroupTemplate) property. To customize the group template in the application, set the customized template string to `GroupTemplate` property.
+The ListView's group header can be customized using the [`GroupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GroupTemplate) property. To customize the group template in the application, set the customized template string to `GroupTemplate` property.
 
 In the following example, ListView is grouped based on the category. The category of each list item should be mapped with [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) field of the data. The grouped list items have also displayed count in the group list header.
 
@@ -296,5 +296,5 @@ In the following example, ListView is grouped based on the category. The categor
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVIiNXiUomSAAif?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ListView with Group Template](./images/list/blazor-listview-group-template.png)

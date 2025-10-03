@@ -7,17 +7,15 @@ control: Listview
 documentation: ug
 ---
 
-# Add and remove list items in Blazor ListView Component
+# Add and Remove List Items in Blazor ListView Component
 
-You can add or remove list items from the ListView component using the `ObservableCollection`.
+The ListView component supports dynamic addition and removal of list items by utilizing an `ObservableCollection` as its data source. Changes made to the `ObservableCollection` are automatically reflected in the ListView UI.
 
-Refer to the following steps to add or remove a list item.
+Follow these steps to add or remove a list item:
 
-* Render the ListView with `ObservableCollection DataSource`, and use the [`ListViewTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) to append the delete icon for each list item. Also, bind the click event for the delete icon.
-
-* Render the Add Item button, and bind the click event. On the click event handler, pass data with random id to the **DataSource** using **Add method** to add a new list item on clicking the Add Item button.
-
-* Bind the `onclick` handler to the delete icon created in step 1. Within the click event, remove the list item by passing the delete icon list item to `OnDelete` method.
+*   **Configure ListView**: Render the ListView with an `ObservableCollection` as its `DataSource`. Use [`ListViewTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) to include a delete icon for each list item. Bind a click event to this delete icon.
+*   **Add Item Functionality**: Render an "Add Item" button and bind its click event. In the handler, generate new data (e.g., with a random ID and text) and add it to the `DataSource` using the `Add` method.
+*   **Remove Item Functionality**: Bind the `onclick` handler of the delete icon (created in step 1) to a method that removes the corresponding list item from the `DataSource` using the `Remove` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -101,5 +99,5 @@ Refer to the following steps to add or remove a list item.
 
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZroMtNCKBISeOlj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Add or Remove List Items in Blazor ListView](../images/list/blazor-listview-add-and-remove-list-items.png)
