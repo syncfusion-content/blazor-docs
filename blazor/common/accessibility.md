@@ -1004,7 +1004,7 @@ DocumentEditor
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
