@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Axis in Syncfusion Blazor HeatMap Chart component and much more details.
+description: Check out and learn how to configure and customize Axis in Syncfusion Blazor HeatMap Chart component.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,15 +9,19 @@ documentation: ug
 
 # Axis in Blazor HeatMap Chart Component
 
-Heat map consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.
+The HeatMap Chart includes two axes, X-axis and Y-axis, which display row and column headers for plotting data points. Both axes can be customized for type, format, and appearance.
 
 ## Types
 
-There are three different axis types available in the heat map, which defines the data type of the axis labels. You can define the axis type by using the `ValueType` property in the heat map.
+The HeatMap Chart supports three axis types, defined by the `ValueType` property:
+
+- **Category**: Represents string values in axis labels.
+- **Numeric**: Represents numeric values in axis labels.
+- **DateTime**: Represents date-time values in axis labels, with support for custom formats and intervals.
 
 ### Category axis
 
-Category axis type is used to represent the string values in axis labels.
+The category axis displays string values as axis labels.
 
 ```cshtml
 
@@ -30,7 +34,12 @@ Category axis type is used to represent the string values in axis labels.
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Category"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public object HeatMapData { get; set; }
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -44,9 +53,7 @@ Category axis type is used to represent the string values in axis labels.
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -60,7 +67,7 @@ Category axis type is used to represent the string values in axis labels.
 
 ### Numeric axis
 
-Numeric axis type is used to represent the numeric values in axis labels.
+The numeric axis displays numeric values as axis labels.
 
 ```cshtml
 
@@ -72,7 +79,12 @@ Numeric axis type is used to represent the numeric values in axis labels.
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Numeric"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public object HeatMapData { get; set; }
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -86,9 +98,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -101,7 +111,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ### Date-time axis
 
-Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the `Minimum` and `Maximum` properties.
+The date-time axis displays date-time values as axis labels. Use the `Minimum` and `Maximum` properties to define the range.
 
 ```cshtml
 
@@ -114,7 +124,15 @@ Date-time axis type is used to represent the date-time values in axis labels wit
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.DateTime" Minimum="@Minimum" Maximum="@Maximum" IntervalType="IntervalType.Months"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    public object Minimum = new DateTime(2007, 2, 1);
+    public object Maximum = new DateTime(2007, 7, 1);
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -128,11 +146,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
         };
         return dataSource;
     }
-    public object Minimum = new DateTime(2007, 2, 1);
-    public object Maximum = new DateTime(2007, 7, 1);
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -145,7 +159,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ## Inversed axis
 
-Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the `IsInversed` property.
+The HeatMap Chart supports inversing the axis origin for both axes, displaying axis labels in reverse order. Enable axis inversion with the `IsInversed` property.
 
 ```cshtml
 
@@ -158,7 +172,15 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.DateTime" Minimum="@Minimum" Maximum="@Maximum" IntervalType="IntervalType.Months"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    public object Minimum = new DateTime(2007, 2, 1);
+    public object Maximum = new DateTime(2007, 7, 1);
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -172,11 +194,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
         };
         return dataSource;
     }
-    public object Minimum = new DateTime(2007, 2, 1);
-    public object Maximum = new DateTime(2007, 7, 1);
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -189,7 +207,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ## Opposed axis
 
-In heat map, you can place the axis label in an opposite position of its default axis label position by using the `OpposedPosition` property.
+Axis labels can be placed on the opposite side of their default position using the `OpposedPosition` property.
 
 ```cshtml
 
@@ -202,7 +220,15 @@ In heat map, you can place the axis label in an opposite position of its default
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.DateTime" Minimum="@Minimum" Maximum="@Maximum" IntervalType="IntervalType.Months"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    public object Minimum = new DateTime(2007, 2, 1);
+    public object Maximum = new DateTime(2007, 7, 1);
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -216,11 +242,7 @@ In heat map, you can place the axis label in an opposite position of its default
         };
         return dataSource;
     }
-    public object Minimum = new DateTime(2007, 2, 1);
-    public object Maximum = new DateTime(2007, 7, 1);
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -235,15 +257,15 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ### Customizing the text style
 
-The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
+Customize axis label text style using the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) properties. Options include:
 
-* `Color` - It is used to change the text color of the axis labels.
-* `FontFamily` - It is used to change the font family of the axis labels.
-* `FontStyle` - It is used to change the font style of the axis labels.
-* `FontWeight` - It is used to change the font weight of the axis labels.
-* `Size` - It is used to change the font size of the axis labels.
-* `TextAlignment` - It is used to position and align the axis labels. This property takes values such as **Near**, **Center**, and **Far**.
-* `TextOverflow` - When the axis label exceeds the intended space, this property is used to trim or wrap it. This property takes values such as **None**, **Trim**, and **Wrap**.
+- `Color`: used to change label text color.
+- `FontFamily`: used to set the font family.
+- `FontStyle`: used to set the font style.
+- `FontWeight`: used to set the font weight.
+- `Size`: used to set the font size.
+- `TextAlignment`: used to align the axis labels (**Near**, **Center**, **Far**).
+- `TextOverflow`: used to handle label overflow (**None**, **Trim**, **Wrap**).
 
 ```cshtml
 
@@ -270,6 +292,12 @@ The text style of the axis labels can be customized using the following options 
 </SfHeatMap>
 
 @code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -288,9 +316,7 @@ The text style of the axis labels can be customized using the following options 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
-    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -303,7 +329,7 @@ The text style of the axis labels can be customized using the following options 
 
 ### Providing line breaks
 
-Axis labels with line breaks improve the readability of the HeatMap by splitting the text on an axis into multiple lines. The **"\<br>"** character is used to add line breaks to the axis labels.
+Improve readability by adding line breaks to axis labels using the **"<br>"** character.
 
 ```cshtml
 
@@ -315,6 +341,11 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 </SfHeatMap>
 
 @code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
+    string[] YAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -324,9 +355,7 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
-    string[] YAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -339,14 +368,12 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 ### Customizing axis labels when intersecting
 
-When the axis labels intersect, [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
+Handle intersecting axis labels using the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property. Options include:
 
-* **None** - It specifies that no action is taken when the axis labels intersect.
-* **Trim** - It specifies to trim the axis labels when they intersect.
-* **Rotate45** - When the axis labels intersect, they are rotated to 45 degrees.
-* **MultipleRows** - It specifies to show all the axis labels as multiple rows when they intersect.
-
-The below example demonstrates to trim the axis labels by using the `LabelIntersectAction` property.
+- **None**: No action on intersection.
+- **Trim**: Trim labels when they intersect.
+- **Rotate45**: Rotate labels 45 degrees.
+- **MultipleRows**: Display labels in multiple rows.
 
 ```cshtml
 
@@ -373,6 +400,12 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 </SfHeatMap>
 
 @code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -391,9 +424,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
-    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -406,7 +437,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 
 ### Rotating axis labels
 
-The axis labels can be rotated to a desired angle by using the [LabelRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelRotation) property.
+Rotate axis labels to a desired angle using the [LabelRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelRotation) property.
 
 ```cshtml
 
@@ -431,6 +462,12 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
 </SfHeatMap>
 
 @code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -449,9 +486,7 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
-    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -464,7 +499,7 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
 
 ### Label formatting
 
-The HeatMap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+Format axis labels using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Use global string formats (e.g., 'P', 'C') or custom formats (e.g., '{value}°C').
 
 ```cshtml
 
@@ -477,7 +512,15 @@ The HeatMap supports formatting the axis labels by using the [LabelFormat](https
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Numeric"  LabelFormat="${value}"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    public object Minimum = new DateTime(2007, 2, 1);
+    public object Maximum = new DateTime(2007, 7, 1);
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -491,11 +534,7 @@ The HeatMap supports formatting the axis labels by using the [LabelFormat](https
         };
         return dataSource;
     }
-    public object Minimum = new DateTime(2007, 2, 1);
-    public object Maximum = new DateTime(2007, 7, 1);
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -508,7 +547,7 @@ The HeatMap supports formatting the axis labels by using the [LabelFormat](https
 
 ## Axis intervals
 
-In heat map, you can define an interval between the axis labels using the `Interval` property. In date-time axis, you can change the interval mode by using the `IntervalType` property. The date-time axis supports the following interval types.
+Set intervals between axis labels using the `Interval` property. For date-time axes, use the `IntervalType` property to specify the interval mode.
 
 ```cshtml
 
@@ -521,7 +560,15 @@ In heat map, you can define an interval between the axis labels using the `Inter
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.DateTime" Minimum="@Minimum" Interval=2 Maximum="@Maximum" IntervalType="IntervalType.Months"></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    public object Minimum = new DateTime(2007, 2, 1);
+    public object Maximum = new DateTime(2007, 7, 1);
+
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -535,11 +582,7 @@ In heat map, you can define an interval between the axis labels using the `Inter
             };
         return dataSource;
     }
-    public object Minimum = new DateTime(2007, 2, 1);
-    public object Maximum = new DateTime(2007, 7, 1);
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -552,7 +595,7 @@ In heat map, you can define an interval between the axis labels using the `Inter
 
 ## Axis label increment
 
-Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the `Increment` property and the default value of this property is 1.
+Display axis labels at regular intervals using the `Increment` property. The default value is 1.
 
 ```cshtml
 
@@ -565,7 +608,12 @@ Axis label increment in the heat map is used to display the axis labels with reg
     <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Numeric" Increment=3></HeatMapYAxis>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -579,9 +627,7 @@ Axis label increment in the heat map is used to display the axis labels with reg
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -594,11 +640,9 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ## Multilevel labels
 
-Multilevel labels are used to classify a group of axis labels as a single category, which is then displayed with a label. By using multiple [HeatMapMultiLevelLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabels.html) tag, you can add multiple levels on top of the axis labels.
+Multilevel labels group axis labels into categories, displayed as a single label. Use multiple [HeatMapMultiLevelLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabels.html) tags to add levels.
 
-To divide and group the axis labels, you can use multiple [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tags. The starting and ending indexes of the axis labels can be set using the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_End) properties in the [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tag. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Text) property can be used to specify a name for the grouped axis labels.
-
-The multilevel labels can be customized by using the following properties and tags.
+Customize multilevel labels with these properties:
 * [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Overflow) - It is used to trim or wrap the multilevel labels when the label overflows the intended space. NOTE: This property is only for x-axis.
 * [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Alignment) - It is used to place and align the multilevel labels.
 * [MaximumTextWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_MaximumTextWidth) - It is used to set the maximum width of the text. When the text length exceeds the maximum text width, the overflow action will be performed.
@@ -678,35 +722,38 @@ The multilevel labels can be customized by using the following properties and ta
     </HeatMapTooltipSettings>
 </SfHeatMap>
 
-@code{
+@code {
     public string[] XLabels = new string[] { "Laptop", "Mobile", "Gaming", "Cosmetics", "Fragrance", "Watches", "Handbags", "Apparel", "Kitchenware", "Furniture", "Home Decor" };
+
     public string[] YLabels = new string[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
     int[,] DataSource;
+
     public void TooltipRendering(TooltipEventArgs args)
     {
         args.Content = new string[] { args.XLabel + " | " + args.YLabel + " : $ " + args.Value + "K" };
     }
+
     public void CellRender(HeatMapCellRenderEventArgs args)
     {
         string CellValue = (double.Parse(args.CellValue) / 10).ToString();
         args.CellValue = CellValue;
     }
+
     public static int[,] GetMultiLevelData()
     {
         int[,] dataSource = new int[,]
         {
-                {52, 65, 67, 45, 37, 52, 32, 76, 60, 64, 82, 91},
-                {68, 52, 63, 51, 30, 51, 51, 81, 70, 60, 88, 80},
-                {60, 50, 42, 53, 66, 70, 41, 69, 76, 74, 86, 97},
-                {66, 64, 46, 40, 47, 41, 45, 76, 83, 69, 92, 84},
-                {65, 42, 58, 32, 36, 44, 49, 79, 83, 69, 83, 93},
-                {54, 46, 61, 46, 40, 39, 41, 69, 61, 84, 84, 87},
-                {48, 46, 61, 47, 49, 41, 41, 67, 78, 83, 98, 87},
-                {69, 52, 41, 44, 41, 52, 46, 71, 63, 84, 83, 91},
-                {50, 59, 44, 43, 27, 42, 26, 64, 76, 65, 81, 86},
-                {47, 49, 66, 53, 50, 34, 31, 79, 78, 79, 89, 95},
-                {61, 40, 62, 26, 34, 54, 56, 74, 83, 78, 95, 98}
-
+            {52, 65, 67, 45, 37, 52, 32, 76, 60, 64, 82, 91},
+            {68, 52, 63, 51, 30, 51, 51, 81, 70, 60, 88, 80},
+            {60, 50, 42, 53, 66, 70, 41, 69, 76, 74, 86, 97},
+            {66, 64, 46, 40, 47, 41, 45, 76, 83, 69, 92, 84},
+            {65, 42, 58, 32, 36, 44, 49, 79, 83, 69, 83, 93},
+            {54, 46, 61, 46, 40, 39, 41, 69, 61, 84, 84, 87},
+            {48, 46, 61, 47, 49, 41, 41, 67, 78, 83, 98, 87},
+            {69, 52, 41, 44, 41, 52, 46, 71, 63, 84, 83, 91},
+            {50, 59, 44, 43, 27, 42, 26, 64, 76, 65, 81, 86},
+            {47, 49, 66, 53, 50, 34, 31, 79, 78, 79, 89, 95},
+            {61, 40, 62, 26, 34, 54, 56, 74, 83, 78, 95, 98}
         };
         return dataSource;
     }

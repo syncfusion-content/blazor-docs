@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Accessibility in Blazor HeatMap chart component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor HeatMap chart component and much more.
+description: Check out and learn here all about Accessibility in Syncfusion Blazor HeatMap chart component and much more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor HeatMap Chart component
+# Accessibility in Blazor HeatMap Chart Component
 
-The [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component follows widely recognized accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Blazor HeatMap Chart component is outlined below.
+The accessibility compliance for the Blazor HeatMap Chart component is summarized below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,29 +39,29 @@ The accessibility compliance for the Blazor HeatMap Chart component is outlined 
 
 ## WAI-ARIA attributes
 
-Blazor HeatMap Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the HeatMap component.
+The Blazor HeatMap Chart component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to ensure accessibility. The following WAI-ARIA attributes are used:
 
-| Attributes | Purpose |
+| Attribute | Purpose |
 | --- | --- |
-| `role=img` | It is specified in the legend and border of the HeatMap. This role is provided to specify the information in a visual manner. |
-| `role=region` | It specifies the HeatMap areas that do not support interactive functions like cell selection. |
-| `aria-label` | Provides an accessible name for the title, legend title, legend item labels, axis labels, cell labels and multilevel labels. |
+| `role=img` | Applied to the legend and border of the HeatMap to specify visual information. |
+| `role=region` | Specifies HeatMap areas that do not support interactive functions like cell selection. |
+| `aria-label` | Provides accessible names for the title, legend title, legend item labels, axis labels, cell labels, and multilevel labels. |
 
 ## Screen reading in HeatMap
 
-Blazor HeatMap Chart has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
+The Blazor HeatMap Chart includes built-in accessibility features for screen readers. The following elements are read aloud by screen reading software:
 
-| Elements | Description |
+| Element | Description |
 | --- | --- |
-| Title | Reads the contents of the HeatMap chart's title. |
-| Axis labels | Reads the x and y axis labels of the HeatMap chart. |
-| Multilevel labels | Reads the multilevel labels in the x and y axis of the HeatMap chart. |
-| Cell labels | Reads the labels from the cells in the Heatmap chart. |
-| Legend title | Reads the contents of the legend's title as specified in HeatMap chart. |
-| Legend item label | Reads the label of a legend item in HeatMap chart. |
+| Title | Reads the HeatMap chart's title. |
+| Axis labels | Reads the x and y axis labels. |
+| Multilevel labels | Reads multilevel labels on both axes. |
+| Cell labels | Reads the labels from the cells. |
+| Legend title | Reads the legend's title. |
+| Legend item label | Reads the label of a legend item. |
 
 ## Ensuring accessibility
 
-The Blazor HeatMap component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor HeatMap component's accessibility is validated using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
-The accessibility compliance of the HeatMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/heatmap) in a new window to evaluate the accessibility of the HeatMap component with accessibility tools.
+Accessibility compliance can be evaluated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/heatmap) in a new window to review the HeatMap component's accessibility with accessibility tools.

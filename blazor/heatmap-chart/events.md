@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor HeatMap Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor HeatMap component and much more details.
+description: Check out and learn here all about events in Syncfusion Blazor HeatMap component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,15 +9,14 @@ documentation: ug
 
 # Events in Blazor HeatMap Chart Component
 
-This section describes the events that will be triggered for appropriate actions in HeatMap. The events should be declared in the HeatMap component using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
+This section describes the events triggered by actions in the HeatMap Chart. Declare events using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html) property.
 
 ## CellClicked
 
-When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html). When you right-click on a HeatMap cell, the `CellClicked` event will be triggered, and the [HasRightClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html#Syncfusion_Blazor_HeatMap_CellClickEventArgs_HasRightClicked) property in the event argument will be set to **true**.
-
-The following example demonstrates how to use the `CellClicked` event. In this example, content will be displayed when you click on a HeatMap cell. Additionally, a dialog box showing the cell value, x-axis label, and y-axis label of the current cell will appear only when you right-click on the HeatMap cell.
+The [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered when a HeatMap cell is clicked. For right-clicks, the [HasRightClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html#Syncfusion_Blazor_HeatMap_CellClickEventArgs_HasRightClicked) property is set to **true**. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 @using Syncfusion.Blazor.Popups
 
@@ -91,13 +90,14 @@ The following example demonstrates how to use the `CellClicked` event. In this e
     public bool ShowButton { get; set; } = false;
     public bool Visibility { get; set; } = false;
     public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public string xLabel { get; set; }
     public string yLabel { get; set; }
     public double cellValue { get; set; }
     public string Xvalue { get; set; }
     public string Yvalue { get; set; }
+
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
     int[,] dataSource = new int[,]
     {
@@ -131,17 +131,17 @@ The following example demonstrates how to use the `CellClicked` event. In this e
         ShowButton = false;
     }
 }
+
 ```
 
 ![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
 
 ## CellRendering
 
-The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
-
-The following example demonstrates how to use the `CellRendering` event to customize the value, color, and border color of the cell.
+The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event is triggered before each cell is rendered. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@dataSource">
@@ -151,7 +151,10 @@ The following example demonstrates how to use the `CellRendering` event to custo
     <HeatMapYAxis Labels="@yAxisLabels"/>
 </SfHeatMap>
 
-@code{
+@code {
+    public string[] xAxisLabels = new string[] { "China", "India" };
+    public string[] yAxisLabels = new string[] { "2008", "2009" };
+
     private void CellRender(HeatMapCellRenderEventArgs args)
     {
         if (args.CellValue == "2.2")
@@ -161,25 +164,23 @@ The following example demonstrates how to use the `CellRendering` event to custo
             args.BorderColor = "Red";
         }
     }
+
     public double[,] dataSource = new double[2, 2]
     {
-            {9.5, 2.2 },
-            {4.3, 8.9 }
+        {9.5, 2.2 },
+        {4.3, 8.9 }
     };
-    public string[] xAxisLabels = new string[] { "China", "India" };
-    public string[] yAxisLabels = new string[] { "2008", "2009" };
 }
+
 ```
 ![CellRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
 
-
 ## CellSelected
 
-When single or multiple cells in the HeatMap are selected, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
-
-The following example demonstrates how to use the `CellSelected` event to obtain the count and details of the selected cells.
+The [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered when one or more cells are selected. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 
 @if (IsVisible)
@@ -196,46 +197,49 @@ The following example demonstrates how to use the `CellSelected` event to obtain
 @code {
     public bool IsVisible = false;
     public int SelectedCellCount { get; set; }
+
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+
     private void CellSelected(SelectedEventArgs args)
     {
         IsVisible = true;
         SelectedCellCount = args.Data.Count;
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.gif)
 
 ## Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered during the initial rendering process, that is, immediately after the HeatMap component is initialized. This indicates that this event will be executed only once.
-
-The following example demonstrates how to use the `Created` event.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered after the HeatMap Chart is initialized. This event executes only once.
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 
 @if (IsVisible)
 {
     <div> <b>@EventText</b> </div>
 }
+
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents Created="@Created" />
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
@@ -246,38 +250,40 @@ The following example demonstrates how to use the `Created` event.
 @code {
     public bool IsVisible = false;
     public string EventText { get; set; }
+
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+
     private void Created()
     {
         IsVisible = true;
         EventText = "The created event has been triggered!!!";
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![Created event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-created-event.png)
 
 ## OnLoad
 
-The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
-
-The following example demonstrates how to use the `OnLoad` event.
+The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 ```cshtml
 
@@ -287,6 +293,7 @@ The following example demonstrates how to use the `OnLoad` event.
 {
     <div> <b>@EventText</b> </div>
 }
+
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents OnLoad="@Load" />
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
@@ -297,38 +304,40 @@ The following example demonstrates how to use the `OnLoad` event.
 @code {
     public bool IsVisible = false;
     public string EventText { get; set; }
+
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+
     private void Load(LoadedEventArgs args)
     {
         IsVisible = true;
         EventText = "The load event has been triggered!!!";
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![OnLoad event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-on-load-event.png)
 
 ## Loaded
 
-The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered when the HeatMap component is re-rendered during a browser window resize. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
-
-The following example demonstrates how to use the `Loaded` event.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered when the HeatMap Chart is re-rendered, such as during a browser window resize. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -337,6 +346,7 @@ The following example demonstrates how to use the `Loaded` event.
 {
     <div> <b>@EventText</b> </div>
 }
+
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents Loaded="@Loaded" />
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
@@ -347,39 +357,36 @@ The following example demonstrates how to use the `Loaded` event.
 @code {
     public bool IsVisible = false;
     public string EventText { get; set; }
+
     private void Loaded(LoadedEventArgs args)
     {
         IsVisible = true;
         EventText = "The loaded event has been triggered!!!";
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![Loaded event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-loaded-event.png)
 
-
 ## Resized
 
-When the browser window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
-
-The following example demonstrates how to use the `Resized` event.
+The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered when the browser window is resized. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -388,6 +395,7 @@ The following example demonstrates how to use the `Resized` event.
 {
     <div> <b>@EventText</b> </div>
 }
+
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents Resized="@Resized" />
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
@@ -398,40 +406,43 @@ The following example demonstrates how to use the `Resized` event.
 @code {
     public bool IsVisible = false;
     public string EventText { get; set; }
+
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+    
     private void Resized(ResizeEventArgs args)
     {
         IsVisible = true;
         EventText = "The resized event has been triggered!!!";
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.gif)
 
 ## TooltipRendering
 
-The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on the HeatMap cell. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
-
-The following example demonstrates how to use the `TooltipRendering` event to customize tooltips for specific cells when hovering over them.
+The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on a cell. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@dataSource">
@@ -442,39 +453,41 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
 </SfHeatMap>
 
 @code {
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
     private void TooltipRendering(TooltipEventArgs args)
     {
         args.Content = new string[] { $"On {args.YLabel}, {args.XLabel} contributed {args.Value * 1000:C0} in sales revenue." };
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 }
+
 ```
 ![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
 
 ## CellDoubleClicked
 
-When you double-click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
-
-The following example demonstrates how to use the `CellDoubleClicked` event to retrieve the value of a cell, as well as its x-axis and y-axis labels, by performing a double-click action.
+The [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered when a cell is double-clicked. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.HeatMap
 
 @if(IsVisible) {
@@ -497,6 +510,11 @@ The following example demonstrates how to use the `CellDoubleClicked` event to r
     public string XLabel { get; set; }
     public string YLabel { get; set; }
     public double CellValue { get; set; }
+
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+
     private void CellDoubleClicked(CellDoubleClickEventArgs args)
     {
         IsVisible = true;
@@ -504,33 +522,30 @@ The following example demonstrates how to use the `CellDoubleClicked` event to r
         YLabel = args.YLabel;
         CellValue = args.Value;
     }
+
     public double[,] dataSource = new double[,]
     {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
+        { 73, 39, 26, 39, 94, 0 },
+        { 93, 58, 53, 38, 26, 68 },
+        { 99, 28, 22, 4, 66, 90 },
+        { 14, 26, 97, 69, 69, 3 },
+        { 7, 46, 47, 47, 88, 6 },
+        { 41, 55, 73, 23, 3, 79 },
+        { 56, 69, 21, 86, 3, 33 },
+        { 45, 7, 53, 81, 95, 79 },
+        { 60, 77, 74, 68, 88, 51 },
+        { 25, 25, 10, 12, 78, 14 },
+        { 25, 56, 55, 58, 12, 82 },
+        { 74, 33, 88, 23, 86, 59 }
     };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
+
 ```
 ![CellDoubleClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-double-clicked-event.gif)
 
 ## LegendRendering
 
-The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event is triggered before each legend item is rendered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
-
-The following example demonstrates how to use the `LegendRendering` event to customize the value of the text in the legend.
+The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event is triggered before each legend item is rendered. See the event arguments [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -560,8 +575,10 @@ The following example demonstrates how to use the `LegendRendering` event to cus
     <HeatMapLegendSettings Visible="true"></HeatMapLegendSettings>
 </SfHeatMap>
 
-
 @code {
+    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     public int[,] HeatMapData = new int[,]
     {
         {73, 39, 26, 39, 94, 0},
@@ -571,8 +588,7 @@ The following example demonstrates how to use the `LegendRendering` event to cus
         {7, 46, 47, 47, 88, 6},
         {41, 55, 73, 23, 3, 79}
     };
-    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     private void LegendRender(Syncfusion.Blazor.HeatMap.LegendRenderEventArgs args)
     {
         if (args.Text != "0")
@@ -581,5 +597,6 @@ The following example demonstrates how to use the `LegendRendering` event to cus
         }
     }
 }
+
 ```
 ![LegendRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-legendrendering-event.png)
