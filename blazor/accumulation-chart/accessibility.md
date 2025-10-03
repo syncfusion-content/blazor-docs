@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Accumulation Chart component and more.
+description: Check out and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Accumulation Chart component.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Accumulation Chart Component
 
-The Blazor Accumulation Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Accumulation Chart component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Accumulation Chart component is outlined below.
+Accessibility compliance for the Blazor Accumulation Chart component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -32,15 +32,12 @@ The accessibility compliance for the Blazor Accumulation Chart component is outl
 </style>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
-
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
-
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## WAI-ARIA Attributes
 
-## WAI-ARIA attributes
-
-The Blazor Accumulation Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Accumulation Chart component:
+The Blazor Accumulation Chart component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to ensure accessibility. The following ARIA attributes are used:
 
 * img (role)
 * button (role)
@@ -49,29 +46,28 @@ The Blazor Accumulation Chart component followed the [WAI-ARIA](https://www.w3.o
 * aria-hidden (attribute)
 * aria-pressed (attribute)
 
-## Keyboard interaction
+## Keyboard Interaction
 
-The Blazor Accumulation Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Accumulation Chart component.
+The component supports [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making navigation easy for users of assistive technologies and those relying on keyboard navigation. The following keyboard shortcuts are supported:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Accumulation Chart element. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Accumulation Chart. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Accumulation Chart. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point left side from the selected point. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>↓</kbd> / <kbd>←</kbd> | <kbd>↓</kbd> / <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
-| <kbd>↑</kbd> / <kbd>→</kbd> | <kbd>↑</kbd> / <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
-| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Toggles the visibility of the corresponding series. |
-| <kbd>ESC</kbd> | <kbd>Esc</kbd> | Cancel the tooltip for the data point. |
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves focus to the Accumulation Chart element. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the Accumulation Chart. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the Accumulation Chart. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point left side from the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the data point right side from the selected point. |
+| <kbd>↓</kbd> / <kbd>←</kbd> | <kbd>↓</kbd> / <kbd>←</kbd> | Moves focus to the legend left side from the selected legend. |
+| <kbd>↑</kbd> / <kbd>→</kbd> | <kbd>↑</kbd> / <kbd>→</kbd> | Moves focus to the legend right side from the selected legend. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Toggles visibility of the corresponding series. |
+| <kbd>ESC</kbd> | <kbd>Esc</kbd> | Cancels the tooltip for the data point. |
 | <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Accumulation Chart. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Accumulation Chart component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility levels are validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
 
-The accessibility compliance of the Blazor Accumulation Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accumulation-chart) in a new window to evaluate the accessibility of the Blazor Accumulation Chart component with accessibility tools.
-
+Accessibility compliance for the Blazor Accumulation Chart component can be evaluated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accumulation-chart) in a new window to review accessibility features with accessibility tools.
 
 ## See also
 

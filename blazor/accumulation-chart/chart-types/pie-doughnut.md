@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pie and Doughnut in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Pie and Doughnut in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn how to configure and customize Pie and Doughnut Charts in Syncfusion Blazor Accumulation Chart.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 ## Pie Chart
 
-The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) is used to represent numeric proportional data in divided slices. To render a [Pie Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pie), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pie).
+The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) visualizes numeric proportional data in divided slices. To render a [Pie Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pie), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as Pie.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -27,7 +27,7 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
     <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -41,21 +41,20 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
 ```
 
 ![Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart.png)
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLgsrWqJDwACRFV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Radius customization
 
-The radius of the pie series will be set to 80% of its size (minimum of chart width and height) by default. The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) property of the series can be used to customize the radius of the pie chart.
+Customize the pie series radius using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) property.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -69,7 +68,7 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -83,21 +82,20 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
 ```
 
 ![Customizing Radius in Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart-radius-customization.png)
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLgsriKfjQmubFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Pie center
 
-The center x and center y can be used to change the pie's center position. The pie series' center x and center y are set to 50% by default. The [AccumulationChartCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenter.html) property of the series can be used to customize this.
+Change the pie's center position using the [AccumulationChartCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenter.html) property.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -109,10 +107,9 @@ The center x and center y can be used to change the pie's center position. The p
     </AccumulationChartSeriesCollection>
 
     <AccumulationChartLegendSettings Visible="false" />
-
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -126,7 +123,7 @@ The center x and center y can be used to change the pie's center position. The p
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -137,9 +134,9 @@ The center x and center y can be used to change the pie's center position. The p
 
 ## Various Radius Pie Chart
 
-The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) mapping can be used to render the slice with different radius.
+Render slices with different radii using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) mapping.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -153,7 +150,7 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -163,13 +160,13 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
     {
-        new Statistics { Browser = "Argentina", Users = 505370, R = "100"},
-        new Statistics { Browser = "Belgium",    Users = 551500, R = "118.7"},
-        new Statistics { Browser = "Cuba",  Users = 312685 , R = "124.6"},
-        new Statistics { Browser = "Dominican Republic", Users = 350000 , R = "137.5"},
-        new Statistics { Browser = "Egypt", Users = 301000 , R = "150.8"},
-        new Statistics { Browser = "Kazakhstan", Users = 300000, R = "155.5"},
-        new Statistics { Browser = "Somalia",  Users = 357022, R = "160.6"}
+        new Statistics { Browser = "Argentina", Users = 505370, R = "100" },
+        new Statistics { Browser = "Belgium", Users = 551500, R = "118.7" },
+        new Statistics { Browser = "Cuba", Users = 312685 , R = "124.6" },
+        new Statistics { Browser = "Dominican Republic", Users = 350000 , R = "137.5" },
+        new Statistics { Browser = "Egypt", Users = 301000 , R = "150.8" },
+        new Statistics { Browser = "Kazakhstan", Users = 300000, R = "155.5" },
+        new Statistics { Browser = "Somalia", Users = 357022, R = "160.6" }
     };
 }
 
@@ -180,9 +177,9 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ## Doughnut chart
 
-The doughnut chart can be created by setting the [InnerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_InnerRadius) property of the [Pie Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pie) to a value ranging from 0% to 100%.
+Create a doughnut chart by setting the [InnerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_InnerRadius) property.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -196,7 +193,7 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -210,7 +207,7 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -221,9 +218,9 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
 
 ## Start and end angles
 
-The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_EndAngle) properties can be used to customize the start and end angles of the pie series. StartAngle is set to 0 degrees by default, and EndAngle is set to 360 degrees by default. Semi-pie series can be achieved by customizing these properties.
+Customize the start and end angles of the pie series using [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_EndAngle).
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -238,7 +235,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -252,7 +249,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -263,9 +260,9 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ## Color and text mapping
 
-[PointColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) in series and [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) in datalabel can be used to map the fill color and text from the data source to the chart.
+Map fill color and text from the data source using [PointColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) and [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name).
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -279,7 +276,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -289,13 +286,13 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-         new Statistics { Browser = "Chrome", Users = 37, Text= "37%", Fill="#498fff" },
-         new Statistics { Browser = "UC Browser", Users = 17, Text= "17%", Fill="#ffa060" },
-         new Statistics { Browser = "iPhone", Users = 19, Text= "19%", Fill="#ff68b6" },
-         new Statistics { Browser = "Others", Users = 4, Text= "4%", Fill="#81e2a1"  },
-         new Statistics { Browser = "Opera", Users = 11, Text= "11%", Fill="#ffb980" },
-         new Statistics { Browser = "Android", Users = 12, Text= "12%", Fill="#09e1e8" },
+    {
+        new Statistics { Browser = "Chrome", Users = 37, Text = "37%", Fill = "#498fff" },
+        new Statistics { Browser = "UC Browser", Users = 17, Text = "17%", Fill = "#ffa060" },
+        new Statistics { Browser = "iPhone", Users = 19, Text = "19%", Fill = "#ff68b6" },
+        new Statistics { Browser = "Others", Users = 4, Text = "4%", Fill = "#81e2a1"  },
+        new Statistics { Browser = "Opera", Users = 11, Text = "11%", Fill = "#ffb980" },
+        new Statistics { Browser = "Android", Users = 12, Text = "12%", Fill = "#09e1e8" }
     };
 }
 
@@ -306,9 +303,10 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ## Border radius
 
-The corners of all the slices in the pie/donut chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+Round the corners of pie/doughnut chart slices using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Pie Chart with Border Radius">
@@ -320,30 +318,33 @@ The corners of all the slices in the pie/donut chart series can be rounded using
 </SfAccumulationChart>
 
 @code {
-    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
-    {
-        new DonutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},
-        new DonutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%"},
-        new DonutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%"},
-        new DonutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%"},
-        new DonutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%"},
-    };
     public class DonutData
     {
         public string Food { get; set; }
         public double Amount { get; set; }
         public string DataLabelMappingName { get; set; }
     }
+
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
+    {
+        new DonutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%" },
+        new DonutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%" },
+        new DonutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%" },
+        new DonutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%" },
+        new DonutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%" }
+    };
 }
+
 ```
+
 ![Blazor Pie Chart with border radius applied.](../images/pie-dough-nut/blazor-pie-chart-border-radius.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjreZdhRKPiaFxIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Hide pie or doughnut border
 
-When the mouse hovers over the pie/doughnut chart, the border appears by default. The border can be turned off by setting the [EnableBorderOnMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableBorderOnMouseMove) property to **false**.
+Disable the border on mouse hover by setting [EnableBorderOnMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableBorderOnMouseMove) to **false**.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -356,7 +357,7 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -370,7 +371,7 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
