@@ -25,7 +25,7 @@ When working with HTML form fields, browser-native input types affect culture be
 
 Blazor relies on the browser’s handling of these input types, which ensures that the user input is parsed and rendered according to their specific culture settings.
 
-Some input types are inconsistently supported across browsers and may be less reliable:
+Input types are inconsistently supported across browsers and may be less reliable:
 
 * `datetime-local`
 * `month`

@@ -92,4 +92,4 @@ In the following example, RTL is enabled for the `SfDropDownList` component by s
 
 ```
 
-![DropDownList rendered in a right-to-left layout](images/righttoleft.png)
+![Blazor DropDownList rendered in a right-to-left layout](images/righttoleft.png)

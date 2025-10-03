@@ -46,8 +46,6 @@ All modern browsers listed are supported on their latest stable versions.
 |    Apple Safari, including iOS    |    Latest Version  |
 |    Microsoft Internet Explorer    |    11  |
 
-N> Internet Explorer 11 is supported only for Blazor Server apps targeting .NET Core 3.1 or earlier and requires additional polyfills. See the [supported platforms](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0) and the guidance to [render Blazor Server apps in IE](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie). IE11 is out of support and not recommended for production.
-
 ## See Also
 
-* [ASP.NET Core Blazor supported platforms](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0)
+* [ASP.NET Core Blazor supported platforms](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms)
