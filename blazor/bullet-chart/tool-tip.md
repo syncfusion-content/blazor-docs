@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Bullet Chart component and much more.
+description: Check out and learn how to configure and customize Tooltip in Syncfusion Blazor Bullet Chart component.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -9,31 +9,33 @@ documentation: ug
 
 # Tooltip in Blazor Bullet Chart Component
 
-When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
+When hovering over a bar in the Bullet Chart, the tooltip displays key information about the actual and target bar values.
 
-## Default tooltip
+## Default Tooltip
 
-The tooltip is not visible by default. To make it visible, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) to **true**.
+The tooltip is hidden by default. To display it, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property in [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) to **true**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="ValueField" TargetField="TargetValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" LabelFormat="{value}%" Title="Profit in Percentage">
     <BulletChartTooltip TValue="ChartData" Enable="true"></BulletChartTooltip>
     <BulletChartRangeCollection>
-        <BulletChartRange End=5> </BulletChartRange>
+        <BulletChartRange End=5></BulletChartRange>
         <BulletChartRange End=15></BulletChartRange>
         <BulletChartRange End=20></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double ValueField { get; set; }
         public double TargetValue { get; set; }
         public string Category { get; set; }
     }
+
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { ValueField = 5, TargetValue = 7.5, Category = "2001" },
@@ -44,19 +46,21 @@ The tooltip is not visible by default. To make it visible, set the [Enable](http
         new ChartData { ValueField = 8, TargetValue = 6, Category = "2006" }
     };
 }
+
 ```
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bulletchart-tooltip.png)
 
-## Tooltip customization
+## Tooltip Customization
 
-The following properties can be used to customize the Bullet Chart tooltip.
+Customize the Bullet Chart tooltip using the following properties:
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of tooltip.
-* [BulletChartTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) - Specifies the tooltip border color and width.
-* [BulletChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, font style, font weight, color and size.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) – Sets the tooltip background color.
+* [BulletChartTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) – Sets the tooltip border color and width.
+* [BulletChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) – Sets the tooltip font family, style, weight, color, and size.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="ValueField" TargetField="TargetValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" LabelFormat="{value}%" Title="Profit in Percentage">
@@ -65,22 +69,24 @@ The following properties can be used to customize the Bullet Chart tooltip.
         <BulletChartTooltipBorder Color="red" Width="2"></BulletChartTooltipBorder>
     </BulletChartTooltip>
     <BulletChartRangeCollection>
-        <BulletChartRange End=5> </BulletChartRange>
+        <BulletChartRange End=5></BulletChartRange>
         <BulletChartRange End=15></BulletChartRange>
         <BulletChartRange End=20></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
+
 ```
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
 ![Customizing Blazor Bullet Chart ToolTip](images/blazor-bullet-chart-tooltip-customization.png)
 
-## Tooltip template
+## Tooltip Template
 
-The tooltip can be rendered as a custom component using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
+Render a custom tooltip using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html), which accepts one or more UI elements as input.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="ValueField" TargetField="TargetValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" LabelFormat="{value}%" Title="Profit in Percentage">
@@ -102,11 +108,12 @@ The tooltip can be rendered as a custom component using the [Template](https://h
         </Template>
     </BulletChartTooltip>
     <BulletChartRangeCollection>
-        <BulletChartRange End=5> </BulletChartRange>
+        <BulletChartRange End=5></BulletChartRange>
         <BulletChartRange End=15></BulletChartRange>
         <BulletChartRange End=20></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
+
 ```
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
