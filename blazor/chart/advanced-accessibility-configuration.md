@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility Customization in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Accessibility Customization in Syncfusion Blazor Charts component and more.
+description: Check out and learn here all about Accessibility Customization in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -112,7 +112,7 @@ In blazor chart component, the [ChartTitleStyle](https://help.syncfusion.com/cr/
 <SfChart Title="Browser Statics in 2024" SubTitle="-In Percentage">
     <ChartTitleStyle AccessibilityDescription="Chart Title" AccessibilityRole="text" Focusable="true"></ChartTitleStyle>
     <ChartSubTitleStyle Focusable="false"></ChartSubTitleStyle>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries Name="Browsers-2024" XName="Browser" YName="Users" DataSource="@StatisticsDetails">
         </ChartSeries>
@@ -151,7 +151,7 @@ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Browser Statics in 2024" SubTitle="-In Percentage">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartAnnotations AccessibilityDescription="Arrows Used to Indicate High and Low Users in Browsers" AccessibilityRole="text" Focusable="true">
         <ChartAnnotation X="StatisticsDetails[0].Browser" Y="65.3" CoordinateUnits="Units.Point">
             <ContentTemplate>
@@ -317,6 +317,4 @@ The [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 ```
-
-Here is a preview sample demonstrating the accessibility customization support for all chart elements:
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfXnWhVHFlrqSz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDheDaVdUIUQJdGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
