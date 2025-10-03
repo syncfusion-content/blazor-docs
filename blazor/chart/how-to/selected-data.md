@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualize grid data in chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Visualize grid data in chart in Syncfusion Blazor Charts component and more.
+description: Check out and learn how to visualize and synchronize selected chart data with grid in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Visualize Grid Data in Chart in Blazor Charts Component
 
-Use the chart's [OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to get the list of selected data from the chart.
+Use the chart's [OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to retrieve the list of selected data from the chart.
 
 ```cshtml
 
@@ -31,9 +31,10 @@ public void ShowSelectedData(IDragCompleteEventArgs args)
     }
     this.StateHasChanged();
 }
+
 ```
 
-By using the grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html?&_ga=2.74923985.277089489.1621702797-1228991885.1619258362#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, chart's selected data can be listed in the grid.
+By using the grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, selected chart data can be displayed in the grid.
 
 ```cshtml
 
@@ -46,7 +47,7 @@ By using the grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-The complete code snippet is available below.
+The following code demonstrates how to visualize selected chart data in a grid.
 
 ```cshtml
 
@@ -97,13 +98,15 @@ The complete code snippet is available below.
         </SfGrid>
     </div>
 </div>
-@code{
+
+@code {
     public class RangeSelectionData
     {
         public double x { get; set; }
         public double y1 { get; set; }
         public double y2 { get; set; }
     }
+
     public class SelectionData
     {
         public double x { get; set; }
@@ -122,6 +125,7 @@ The complete code snippet is available below.
             dataSource.Add(new RangeSelectionData { x = 1971 + i, y1 = rnd.Next(10, 100), y2 = rnd.Next(10, 100) });
         }
     }
+
     public void ShowSelectedData(SelectionCompleteEventArgs Args)
     {
         object data = Args.SelectedDataValues;
