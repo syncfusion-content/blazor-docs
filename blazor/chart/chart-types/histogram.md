@@ -1,24 +1,26 @@
 ---
 layout: post
-title: Histogram in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Histogram Chart in Syncfusion Blazor Charts component and more.
+title: Histogram Chart in Blazor Charts Component | Syncfusion
+description: Check out and learn how to configure and customize the Histogram Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Histogram in Blazor Charts Component
+# Histogram Chart in Blazor Charts Component
 
-## Histogram
+## Histogram Chart
 
-[Histogram Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) can provide a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet form and it can be rendered by specifying the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Histogram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
+The [Histogram Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) provides a visual representation of large datasets that may be difficult to interpret in tabular or spreadsheet form. Render a histogram by setting the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Histogram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Score of Final Examination">
-    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartArea>
+        <ChartAreaBorder Width="0" />
+    </ChartArea>
 
     <ChartPrimaryXAxis Minimum="0" Maximum="100">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -41,8 +43,7 @@ documentation: ug
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 </SfChart>
 
-@code{
-
+@code {
     public class Data
     {
         public double Y { get; set;}
@@ -50,22 +51,22 @@ documentation: ug
 
     public List<Data> ExamScores = new List<Data>
 	{
-       new Data { Y=5.250},
-       new Data { Y=7.750},
-       new Data { Y=8.275},
-       new Data { Y=9.750},
-       new Data { Y=36.250},
-       new Data { Y=46.250},
-       new Data { Y=56.250},
-       new Data { Y=66.500},
-       new Data { Y=76.625},
-       new Data { Y=80.000},
-       new Data { Y=97.750}
+        new Data { Y = 5.250 },
+        new Data { Y = 7.750 },
+        new Data { Y = 8.275 },
+        new Data { Y = 9.750 },
+        new Data { Y = 36.250 },
+        new Data { Y = 46.250 },
+        new Data { Y = 56.250 },
+        new Data { Y = 66.500 },
+        new Data { Y = 76.625 },
+        new Data { Y = 80.000 },
+        new Data { Y = 97.750 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpXPLjednCMkiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpXPLjednCMkiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Histogram Chart](../images/othertypes/blazor-histogram-chart.png)
 
@@ -73,16 +74,18 @@ documentation: ug
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event enables customization of series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Score of Final Examination">
-    <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
+    <ChartEvents OnSeriesRender="SeriesRender" />
 
-    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartArea>
+        <ChartAreaBorder Width="0" />
+    </ChartArea>
 
     <ChartPrimaryXAxis Minimum="0" Maximum="100">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -106,7 +109,6 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 </SfChart>
 
 @code {
-
     public class Data
     {
         public double Y { get; set; }
@@ -119,17 +121,17 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<Data> ExamScores = new List<Data>
     {
-       new Data { Y=5.250},
-       new Data { Y=7.750},
-       new Data { Y=8.275},
-       new Data { Y=9.750},
-       new Data { Y=36.250},
-       new Data { Y=46.250},
-       new Data { Y=56.250},
-       new Data { Y=66.500},
-       new Data { Y=76.625},
-       new Data { Y=80.000},
-       new Data { Y=97.750}
+        new Data { Y = 5.250 },
+        new Data { Y = 7.750 },
+        new Data { Y = 8.275 },
+        new Data { Y = 9.750 },
+        new Data { Y = 36.250 },
+        new Data { Y = 46.250 },
+        new Data { Y = 56.250 },
+        new Data { Y = 66.500 },
+        new Data { Y = 76.625 },
+        new Data { Y = 80.000 },
+        new Data { Y = 97.750 }
     };
 }
 
@@ -138,16 +140,18 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows customization of each data point before rendering.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Score of Final Examination">
-    <ChartEvents OnPointRender="PointRender"></ChartEvents>
+    <ChartEvents OnPointRender="PointRender" />
 
-    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartArea>
+        <ChartAreaBorder Width="0" />
+    </ChartArea>
 
     <ChartPrimaryXAxis Minimum="0" Maximum="100">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -171,7 +175,6 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 </SfChart>
 
 @code {
-
     public class Data
     {
         public double Y { get; set; }
@@ -185,17 +188,17 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public List<Data> ExamScores = new List<Data>
     {
-       new Data { Y=5.250},
-       new Data { Y=7.750},
-       new Data { Y=8.275},
-       new Data { Y=9.750},
-       new Data { Y=36.250},
-       new Data { Y=46.250},
-       new Data { Y=56.250},
-       new Data { Y=66.500},
-       new Data { Y=76.625},
-       new Data { Y=80.000},
-       new Data { Y=97.750}
+        new Data { Y = 5.250 },
+        new Data { Y = 7.750 },
+        new Data { Y = 8.275 },
+        new Data { Y = 9.750 },
+        new Data { Y = 36.250 },
+        new Data { Y = 46.250 },
+        new Data { Y = 56.250 },
+        new Data { Y = 66.500 },
+        new Data { Y = 76.625 },
+        new Data { Y = 80.000 },
+        new Data { Y = 97.750 }
     };
 }
 
@@ -206,5 +209,6 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data Label](../data-labels)
+* [Data label](../data-labels)
 * [Tooltip](../tool-tip)
+
