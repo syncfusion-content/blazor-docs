@@ -9,13 +9,13 @@ documentation: ug
 
 # Context Menu in Blazor File Manager Component
 
-The context menu items can be added for the files, folders, and layout in the Blazor File Manager component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
+The context menu items can be added for files, folders, and layout in the Blazor File Manager component using the properties of [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
 
 * [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) - Specifies the array of string that is used to configure file items.
 * [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) - Specifies the array of string that is used to configure folder items.
 * [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Layout) - Specifies the array of string that is used to configure layout items.
 
-The following table provides the default context menu item and the corresponding target areas.
+The following table lists the default context menu items and their target areas.
 
 <!-- markdownlint-disable MD033 -->
 <table border="1">
@@ -82,7 +82,7 @@ The following table provides the default context menu item and the corresponding
 
 ## Adding Custom Items
 
-In the Blazor File Manager component, the context menu can be customized by utilizing the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) and the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event. 
+The context menu can be customized by using [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) and the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event. 
 
 The following example demonstrates how to add a custom item to the context menu. The **ContextMenuSettings** is used to add the new menu item, while the **MenuOpened** event is utilized to add an icon to the newly created menu item.
 
@@ -124,9 +124,12 @@ The following example demonstrates how to add a custom item to the context menu.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIiXtqBRNQucNX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![File Manager with Custom Context Menu Items](./images/custom-context-menu.png)
+
 ## Showing Different Context Menu for Files and Folders
 
-In the Blazor File Manager component, you can customize the context menu items for files and folders using the File Manager [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) and [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) properties. 
+In the Blazor File Manager component, customize the context menu items for files and folders using the File Manager [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) and [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) properties. 
 
 The following example demonstrates how to achieve this by showing different context menu items for files and folders.
 
@@ -152,9 +155,12 @@ The following example demonstrates how to achieve this by showing different cont
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeiDDqrHAogtZl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![File Manager with Different Context Menu Items for files and folders](./images/different-context-menu.png)
+
 ## Enabling or Disabling Items
 
-In the Blazor File Manager component, you can enable or disable context menu items by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Disabled) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to either **true** or **false**.
+Enable or disable context menu items by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Disabled) property the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to either **true** or **false**.
 
 In the following example, the **Cut** context menu item is disabled for the folders.
 
@@ -190,10 +196,12 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVysDXULRSVhBNl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Enable or Disable File Manager Context Menu Items](./images/disable-context-menu.png)
 
 ## Showing or Hiding Items
 
-In the Blazor File Manager component, you can control the visibility of context menu items by setting the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Hidden) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to **true** or **false**. 
+Control the visibility of context menu items by setting the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Hidden) property the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to **true** or **false**. 
 
 In the following example, the **Cut** context menu item is shown for the files.
 
@@ -229,15 +237,18 @@ In the following example, the **Cut** context menu item is shown for the files.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrIsDjUrRRYDNDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Show or Hide File Manager Context Menu Items](./images/hide-context-menu.png)
+
 ## Events
 
-The Blazor File Manager Context Menu component has a [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) and [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+The Blazor File Manager Context Menu component supports [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) and [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events. These events can be bound using the **FileManagerEvents** component, which requires the **TValue** parameter.
 
-N> All the events should be provided in a single **FileManagerEvents** component.
+N> All events should be provided in a single **FileManagerEvents** component.
 
 ### MenuOpened
 
-The [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event of the Blazor File Manager component is triggered before the context menu is opened.
+The [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event is triggered before the context menu opens.
 
 ```cshtml
 
@@ -263,7 +274,7 @@ The [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 
 ### OnMenuClick
 
-The [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) event of the Blazor File Manager component is triggered when the context menu item is clicked.
+The [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) event is triggered when a context menu item is clicked.
 
 ```cshtml
 
