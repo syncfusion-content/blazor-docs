@@ -7,7 +7,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Text-to-Speech
+# Text-to-Speech in Blazor AI AssistView
 
 The Syncfusion Blazor AI AssistView component supports `Text-to-Speech` (TTS) functionality using the browser's Web Speech API specifically using the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface, to convert AI-generated responses into spoken audio.
 
