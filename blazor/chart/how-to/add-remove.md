@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add or Remove Series in Blazor Charts Component | Syncfusion
-description: Check out and learn how to dynamically Add or Remove Series in Syncfusion Blazor Charts component.
+description: Learn to dynamically add or remove series in Syncfusion Blazor Charts component to update visualizations based on user input.
 platform: Blazor
 control: Chart
 documentation: ug

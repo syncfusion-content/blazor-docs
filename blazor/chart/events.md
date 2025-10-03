@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Charts Component | Syncfusion
-description: Checkout and learn how to configure and utilize Events in Syncfusion Blazor Charts component.
+description: Learn to configure and utilize Events in Syncfusion Blazor Charts component to handle user interactions and chart lifecycle changes.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -724,7 +724,7 @@ The following properties are available in the [AxisRangeCalculatedEventArgs](htt
 
 ## OnAxisMultiLevelLabelRender
 
-[OnAxisMultiLevelLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers while rendering multilevellabels.
+[OnAxisMultiLevelLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers while rendering multilevel labels.
 
 ### Arguments
 
@@ -1127,7 +1127,7 @@ The following properties are available in the [LegendClickEventArgs](https://hel
 
 ## OnMultiLevelLabelClick
 
-[OnMultiLevelLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after clicking on multilevellabelclick.
+[OnMultiLevelLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after clicking on multilevel label.
 
 ### Arguments
 
@@ -1403,7 +1403,7 @@ The following properties are available in the [TooltipRenderEventArgs](https://h
 
 ## SharedTooltipRender
 
-[SharedTooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers before the sharedtooltip for series is rendered.
+[SharedTooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers before the shared tooltip for series is rendered.
 
 ### Arguments
 

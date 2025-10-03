@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Live Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to implement live updating charts in Syncfusion Blazor Charts component.
+description: Learn to implement live updating charts in Syncfusion Blazor Charts using real time data binding and refresh logic.
 platform: Blazor
 control: Chart
 documentation: ug

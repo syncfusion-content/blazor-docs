@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Threshold in Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to add and customize threshold in Syncfusion Blazor Charts component.
+description: Learn to add and customize thresholds in Syncfusion Blazor Charts to highlight critical data ranges and trigger alerts.
 platform: Blazor
 control: Chart
 documentation: ug
