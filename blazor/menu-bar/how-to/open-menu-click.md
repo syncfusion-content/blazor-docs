@@ -9,9 +9,9 @@ documentation: ug
 
 # Open Sub Menu on Menu Item Click in Blazor Menu Bar Component
 
-This section explains about how to open a sub menu on Menu item click. This can be achieved by using `ShowItemOnClick` property of the Menu.
+This section explains how to open a sub-menu when a menu item is clicked. This functionality is achieved using the `ShowItemOnClick` property of the Menu component.
 
-In the following sample, Sub Menu will open while clicking `File` menu.
+In the following sample, the sub-menu will open when the "File" menu is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -50,4 +50,5 @@ In the following sample, Sub Menu will open while clicking `File` menu.
 </SfMenu>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoMXZUhrXpuMoM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Opening Menu Item in Blazor MenuBar](./../images/blazor-menubar-with-menu-item.png)

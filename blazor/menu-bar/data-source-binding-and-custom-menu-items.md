@@ -1,19 +1,18 @@
 ---
 layout: post
-title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion
+title: Data Source Binding and Custom Items in Blazor Menu Bar | Syncfusion
 description: Learn here all about data source binding and custom items in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# DataSource Binding and Custom Items in Blazor Menu Bar Component
+# Data Source Binding and Custom Items in Blazor Menu Bar Component
 
-The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source bindings such as data source that can be structured as `Self-referential` data.
-
+The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component supports data source binding, including structures such as self-referential data. This allows for dynamic generation of menu hierarchies from various data sources.
 ## Self-referential data
 
-Menu Bar can be populated from self-referential data structure that contains data with `ParentId` mapping.
+The Menu Bar can be populated from a self-referential data structure that defines parent-child relationships through a `ParentId` mapping.
 
 In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
 
@@ -70,13 +69,14 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrysjNKVhgmHQHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
 N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
 ## Handling Self-Referential Data with CustomMenuItem TValue in MenuTemplate
 
-When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
+When using a custom generic type (`TValue="CustomMenuItem"`) with [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), the Menu Bar's built-in self-referential data processing based on `ParentId` mapping is not directly supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -197,11 +197,14 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhIijtKhVJJaFLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
 
 ## Custom Menu Bar Items
 
-To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize the rendering of Menu Bar items, define a custom template using the [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html) component. This allows the embedding of rich content, custom styles, or interactive elements directly within each menu item.
+
+The following example demonstrates rendering a Menu Bar with extensively customized items, including images, badges, and a detailed "About Us" card.
 
 ```cshtml
 
@@ -377,4 +380,5 @@ To customize Menu Bar items in your application, set your customized template us
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtreijXUVhyRIyrJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)
