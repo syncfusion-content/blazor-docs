@@ -29,6 +29,7 @@ Here is a sample demonstrating Virtualization enabled in the **Details** ViewTyp
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVesNNUUoxPrHKf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The below GIF demonstrates the file loading when virtualization is enabled, a sizable collection of files can be found in the folders **Documents** and **Text Documents**..
 

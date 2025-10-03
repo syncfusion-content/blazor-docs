@@ -37,6 +37,8 @@ N> When `DirectoryUpload` is set to `true`, only folders can be uploaded. When i
 
 The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor File Manager component.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreiXDqgrHomyEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.png)
 
 ## Chunk Upload

@@ -681,6 +681,9 @@ The available options for the sort order are:
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSWNXgUiEgHxKb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![File Manager Sorting](./images/sorting.png)
+
 ## Custom Sorting
 
 The File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.

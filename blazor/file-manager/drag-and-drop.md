@@ -27,11 +27,11 @@ The events which trigger when using drag and drop functionality are listed below
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager AllowDragAndDrop="true" TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
-                                UploadUrl="/api/SampleData/Upload"
-                                DownloadUrl="/api/SampleData/Download"
-                                GetImageUrl="/api/SampleData/GetImage">
-    </FileManagerAjaxSettings>
+        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        </FileManagerAjaxSettings>
 </SfFileManager>
 
 ```
@@ -40,5 +40,5 @@ The events which trigger when using drag and drop functionality are listed below
 
 After successful compilation of your application, press `F5` to run the application.
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhosDjKUCGJtAQx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)

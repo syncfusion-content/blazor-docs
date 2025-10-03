@@ -36,6 +36,9 @@ The following example demonstrates how to change the page size of a File Manager
     <FileManagerPageSettings PageSize="3"></FileManagerPageSettings>
 </SfFileManager>
 ````
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreiXDqgrHomyEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 Below is a screenshot illustrating the `PageSize` property in the File Manager component.
 
 ![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize.png)
@@ -84,6 +87,8 @@ The following example demonstrates how to implement the `CurrentPage` property.
     </FileManagerPageSettings>
 </SfFileManager>
 ````
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLoiXtKgLEdEWUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 Below is a screenshot illustrating the `CurrentPage` property in the File Manager component.
 
 ![Pagination in Blazor File Manager](images/blazor-filemanager-currentpage.png)
@@ -124,6 +129,7 @@ Below is an example on how to customize pagination in the Syncfusion<sup style="
 }
 
 ````
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBSsNZgAUtSBvRN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The screenshot below shows the Blazor File Manager component with a custom pagination button.
 
@@ -149,6 +155,7 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
     </SfFileManager>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSCXXKgUiWEPWR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The screenshot below shows the page sizes dropdown in the File Manager.
 

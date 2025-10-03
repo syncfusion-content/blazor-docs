@@ -42,6 +42,9 @@ The Toolbar visibility can be controlled using the [Visible](https://help.syncfu
 </SfFileManager>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreiXDqgrHomyEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![File Manager Toolbar Visibility](images/toolbar-visible.png)
 
 ## Events
 

@@ -30,7 +30,7 @@ The File Manager allows the selection of multiple files by enabling the [`AllowM
 After successful compilation, the application can be run by pressing `F5`.
 
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBeWXZKALyVNmrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
 
 ## Getting Selected Files
