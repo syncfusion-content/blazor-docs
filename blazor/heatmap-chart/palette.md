@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Palette in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Palette in Syncfusion Blazor HeatMap Chart component and much more.
+description: Check out and learn here all about Palette in Syncfusion Blazor HeatMap Chart component and much more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Palette in Blazor HeatMap Chart Component
 
-In heat map, each data point is displayed as a cell with applied color based on the data value. The palette in the heat map is used to define the color range for cells and gradient type for colors. You can define the colors either in RGB or hex codes using the `Color` property in the `HeatMapPalette`. The defined colors are applied to the cell background based on the palette type and cell value.
+In the HeatMap Chart, each data point is displayed as a cell with a color applied based on its value. The palette defines the color range for cells and the gradient type for colors. Colors can be specified in RGB or hex codes using the `Color` property in `HeatMapPalette`. The defined colors are applied to cell backgrounds according to the palette type and cell value.
 
 ## Palette types
 
-You can display the heat map cells either in gradient colors or fixed colors.
+Heat map cells can be displayed using either gradient or fixed colors.
 
 ### Gradient
 
-The smooth transition between the given palette colors can be applied for the heat map cells based on value. The heat map calculates all the gradient colors between the start and end colors for all distinct data values. Default start color and end color will be considered for gradient calculation, if the colors are not defined. The palette type must be defined as `Gradient` for the `Type` property in the `HeatMapPaletteSettings` property.
+A smooth transition between palette colors is applied to cells based on their values. The HeatMap Chart calculates all gradient colors between the start and end colors for distinct data values. If colors are not defined, default start and end colors are used. Set the palette type to `Gradient` for the `Type` property in `HeatMapPaletteSettings`.
 
 ```cshtml
 
@@ -38,7 +38,12 @@ The smooth transition between the given palette colors can be applied for the he
     </HeatMapPaletteSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -52,9 +57,7 @@ The smooth transition between the given palette colors can be applied for the he
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -67,7 +70,7 @@ The smooth transition between the given palette colors can be applied for the he
 
 ### Fixed
 
-In fixed palette type, solid colors are applied to the heat map cells. The data values can be grouped based on the number of colors defined for the heat map. The palette type should be defined as `Fixed` for the `Type` property in the `HeatMapPaletteSettings` property.
+In the fixed palette type, solid colors are applied to cells. Data values are grouped based on the number of defined colors. Set the palette type to `Fixed` for the `Type` property in `HeatMapPaletteSettings`.
 
 ```cshtml
 
@@ -88,7 +91,12 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
     </HeatMapPaletteSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -102,9 +110,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -117,7 +123,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 <!-- ## Defining color stops
 
-You can define the colors ranges or color stops for data values in both gradient and fixed palette types. You need to define the data value in the `Value` property for `HeatMapPalette` property to calculate the color stops. The heat map automatically calculates the color stops if the `Value` property is not defined. The `Label` property is used to provide the additional information about the color that is to be displayed in the legend. If the label is not provided, the value will be displayed in the legend. The labels can be automatically calculated based on data values, if both the values and labels are not defined.
+You can define color ranges or stops for data values in both gradient and fixed palette types. Specify the data value in the `Value` property for `HeatMapPalette` to calculate color stops. The HeatMap Chart automatically calculates color stops if the `Value` property is not defined. The `Label` property provides additional information for the legend. If the label is not provided, the value is displayed in the legend. Labels can be automatically calculated based on data values if both values and labels are not defined.
 
 ```cshtml
 
@@ -138,7 +144,12 @@ You can define the colors ranges or color stops for data values in both gradient
     </HeatMapPaletteSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -152,9 +163,7 @@ You can define the colors ranges or color stops for data values in both gradient
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
