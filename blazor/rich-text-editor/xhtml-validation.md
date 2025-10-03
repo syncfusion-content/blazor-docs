@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Xhtml validation in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Xhtml validation in Syncfusion Blazor RichTextEditor component and more.
+title: Xhtml validation in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Xhtml validation in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -13,14 +13,14 @@ The Rich Text Editor includes an `EnableXhtml` property that allows for continuo
 
 The Rich Text Editor checks the following settings on validation:
 
-## Validating Attributes
+## Validating attributes
 
 * Case Sensitivity: All attributes must be in lowercase.
 * Quotation Marks: Proper use of quotation marks around attribute values is enforced.
 * Validity: Only valid attributes for corresponding HTML elements are allowed.
 * Required Attributes: All required attributes for HTML elements must be included.
 
-## Validating HTML Elements
+## Validating html elements
 
 * Case Sensitivity: All HTML tags must be in lowercase.
 * Proper Closing: All opening tags must have corresponding closing tags.

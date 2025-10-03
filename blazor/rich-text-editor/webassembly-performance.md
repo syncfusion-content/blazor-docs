@@ -1,7 +1,7 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor RichTextEditor | Syncfusion
-description: This topic helps you to improve the performance of Web Assembly Application when using Syncfusion Blazor RichTextEditor components with some tips.
+title: WebAssembly Performance in Blazor Rich Text Editor | Syncfusion
+description: This topic helps improve performance of Web Assembly Application when using Syncfusion Blazor RichTextEditor components with some tips.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # WebAssembly Performance in Blazor RichTextEditor Component
 
-This section provides performance guidelines for using Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
+This section outlines performance best practices for using Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> You can refer to our Getting Started with [Blazor Server-Side RichTextEditor](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/how-to/blazor-web-assembly) documentation pages for configuration specifications.
 
@@ -46,13 +46,13 @@ In the following example:
 ```
 
 N> * **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.
-<br/> * **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering will not have any effect.
+<br/> * **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering has no effect.
 
 ## Avoid unnecessary component renders after RichTextEditor events
 
 When a callback method is assigned to the RichTextEditor events, then the **StateHasChanged** will be called in the parent component of the RichTextEditor automatically once the event is completed.
 
-You can prevent this re-rendering of the RichTextEditor component by calling the **PreventRender** method.
+To prevent unnecessary re-rendering of the RichTextEditor component by calling the **PreventRender** method.
 
 In the following example:
 
