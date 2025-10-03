@@ -58,7 +58,7 @@ The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ## Series Combination
 
-You can create a chart by combining different chart types, such as line and column. Note: Bar series cannot be combined with other series due to axis orientation differences.
+A chart can be created by combining different chart types, such as line and column. Bar series cannot be combined with other series due to axis orientation differences.
 
 N> Bar series cannot be combined with any other series as the axis orientation is different from other series.
 
