@@ -1,15 +1,15 @@
 ---
 layout: post
-title: State Persistance in Blazor - Syncfusion
-description: Check out the documentation for State Persistence using browser's local storage with supported Blazor components and its properties.
+title: State Persistence in Blazor - Syncfusion
+description: Learn how to enable state persistence using the browser's localStorage for supported Syncfusion Blazor components and which properties are saved.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # State Persistence in Blazor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library supports persisting a component's state across page refreshes or navigation. To enable this feature, set the `EnablePersistence` property to `true` to the required component. This will store the component's state in the browser’s `localStorage` object on-page `unload` event. For example, persistence has been enabled to the grid component in the following code.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library supports persisting a component's state across page refreshes and navigation. To enable this feature, set the `EnablePersistence` property to `true` on the target component. The component's state is saved to the browser's `localStorage` when the page unloads. The following example enables persistence for the Grid component.
 
 N> The state of a component will be retained during navigation or refreshment based on the ID. Make sure to set an ID for the component to store the component's state in the browser.
 
@@ -55,7 +55,7 @@ N> The state of a component will be retained during navigation or refreshment ba
 
 ## State persistence supported components and properties
 
-The following table demonstrates the list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that are supported with state persistence and describes the list of properties stored in the `localStorage`.
+The following table lists the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that support state persistence and the properties saved in `localStorage`.
 
 <!-- markdownlint-disable MD033 -->
 <table>
