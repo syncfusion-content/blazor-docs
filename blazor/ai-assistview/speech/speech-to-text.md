@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Speech-to-Text integration with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Speech-to-Text integration with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Speech-to-Text with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Speech-to-Text configuration with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Speech-to-Text with Azure OpenAI in AI AssistView
+# Speech-to-Text
 
 The Syncfusion Blazor AI AssistView component supports `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API), enabling conversion of spoken words into text using the device's microphone.
 
@@ -20,13 +20,13 @@ Before integrating `Speech-to-Text`, ensure the following:
 
 2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
 
-    - [Integration of Azure Open AI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
+    - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
-## Integrating Speech-to-Text with AI AssistView
+## Configure Speech-to-Text
 
 To enable Speech-to-Text functionality, modify the `Home.razor` file to incorporate the Web Speech API. The SpeechToText component listens for microphone input, transcribes spoken words, and updates the AI AssistView's editable footer with the transcribed text. The transcribed text is then sent as a prompt to the Azure OpenAI service via the AI AssistView component.
 
-The `speechtotext.js` file handles operations related to the content of the editable footer, such as checking for meaningful input, clearing existing text, and updating the content with the transcribed value. Meanwhile, the `texttospeech.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
+The `speechtotext.js` file handles operations related to the content of the editable footer, such as checking for meaningful input, clearing existing text, and updating the content with the transcribed value. Meanwhile, the `speechtotext.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
 
 {% tabs %}
 {% highlight c# tabtitle="razor" %}
@@ -156,7 +156,6 @@ The `speechtotext.js` file handles operations related to the content of the edit
         if (args.Item.IconCss == "e-icons e-assist-edit") {
             AssistViewFooterValue = assistView.Prompts[args.DataIndex].Prompt;
             await JSRuntime.InvokeVoidAsync("updateContentEditableDiv", EditableDiv, AssistViewFooterValue);
-            await InvokeAsync(StateHasChanged);
             await UpdateContent();
         }
     }
@@ -198,18 +197,22 @@ function updateContentEditableDiv(element, value) {
     margin: 0 auto;
 }
 
-.integration-speechToText-section .e-aiassistview .banner-content .e-listen-icon:before {
-    font-size: 35px;
+.integration-speechToText-section .banner-content .e-listen-icon:before {
+    font-size: 25px;
 }
 
-.integration-speechToText-section .e-aiassistview .banner-content {
+.integration-speechToText-section .e-view-container {
+    margin: auto;
+}
+
+.integration-speechToText-section .banner-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper #assistview-sendButton {
+.integration-speechToText-section #assistview-sendButton {
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -218,23 +221,23 @@ function updateContentEditableDiv(element, value) {
     cursor: pointer;
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper #speechToText.visible,
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper #assistview-sendButton.visible {
+.integration-speechToText-section #speechToText.visible,
+.integration-speechToText-section #assistview-sendButton.visible {
     display: inline-block;
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper #speechToText,
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper #assistview-sendButton {
+.integration-speechToText-section #speechToText,
+.integration-speechToText-section #assistview-sendButton {
     display: none;
 }
 
 @media only screen and (max-width: 750px) {
-    .integration-speechToText-section .e-aiassistview {
+    .integration-speechToText-section {
         width: 100%;
     }
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper {
+.integration-speechToText-section .e-footer-wrapper {
     display: flex;
     border: 1px solid #c1c1c1;
     padding: 5px 5px 5px 10px;
@@ -242,21 +245,21 @@ function updateContentEditableDiv(element, value) {
     border-radius: 30px;
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper .content-editor {
+.integration-speechToText-section .content-editor {
     width: 100%;
     overflow-y: auto;
     font-size: 14px;
     min-height: 25px;
     max-height: 200px;
     padding: 10px;
-    scrollbar-color: #c1c1c1 transparent;
 }
 
-.integration-speechToText-section .e-aiassistview .e-footer-wrapper .content-editor[contentEditable=true]:empty:before {
-    content: attr(placeholder)
+.integration-speechToText-section .content-editor[contentEditable=true]:empty:before {
+    content: attr(placeholder);
+    color: #6b7280;
 }
 
-.integration-speechToText-section .e-aiassistview .option-container {
+.integration-speechToText-section .option-container {
     align-self: flex-end;
 }
 
@@ -265,3 +268,7 @@ function updateContentEditableDiv(element, value) {
 {% endtabs %}
 
 ![Integrating Speech-to-Text with AI AssistView](../images/assist-stt.png)
+
+## See Also
+
+* [Text-to-Speech](./text-to-speech.md)

@@ -1,18 +1,15 @@
 ---
 layout: post
-title:  Text-to-Speech integration with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Text-to-Speech integration with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title:  Text-to-Speech with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Text-to-Speech configuration with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Text-to-Speech with Azure OpenAI in AI AssistView
+# Text-to-Speech
 
-
-The Syncfusion Blazor AI AssistView component supports `Text-to-Speech` (TTS) functionality using the browser's Web Speech API specifically using the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface to convert AI-generated response into spoken audio.
-
-The Syncfusion AI AssistView supports integration with a `Text-to-Speech` (TTS) feature, which uses the browser's built-in [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) to convert the AI's response into speech.
+The Syncfusion Blazor AI AssistView component supports `Text-to-Speech` (TTS) functionality using the browser's Web Speech API specifically using the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface, to convert AI-generated responses into spoken audio.
 
 ## Prerequisites
 
@@ -23,13 +20,13 @@ Before integrating `Text-to-Speech`, ensure the following:
 
 2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
 
-    - [Integration of Azure Open AI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
+    - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
-## Integrating Text-to-Speech with AI AssistView
+## Configure Text-to-Speech
 
-To enable Text-to-Speech functionality, modify the `Home.razor` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) property. When clicked, the `ItemClicked` event extracts plain text from the generated AI response and use the browser SpeechSynthesis API to read it aloud.
+To enable Text-to-Speech functionality, modify the `Home.razor` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive. When clicked, the `ItemClicked` event extracts plain text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
 
-The `texttospeech.js` file handles the core speech logic—extracting text from HTML, initiating speech synthesis, and cancelling ongoing speech when needed. Meanwhile, the `texttospeech.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
+The `texttospeech.js` file handles the core speech logic—extracting text from HTML, initiating speech synthesis, and cancel ongoing speech when needed. Meanwhile, the `texttospeech.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
 
 {% tabs %}
 {% highlight c# tabtitle="razor" %}
@@ -65,12 +62,14 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
         </ResponseToolbar>
     </SfAIAssistView>
 </div>
+
 @code {
     private SfAIAssistView assistView;
     private string finalResponse { get; set; }
     private string audioIconCss = "e-icons e-audio";
     private string audioTooltip = "Read Aloud";
     private bool IsSpeaking = false;
+    // If component class name isn’t Home (file is not Home.razor), update DotNetObjectReference to match the actual component type.
     private DotNetObjectReference<Home>? dotNetRef;
 
     protected override void OnInitialized()
@@ -115,6 +114,7 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
         }
     }
 
+    // Handles toolbar item clicks to toggle text-to-speech functionality for AI responses
     private async void ResponseToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
     {
         var prompts = assistView.Prompts;
@@ -170,7 +170,7 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
 
 {% highlight c# tabtitle="texttospeech.js" %}
 
-/ Initialize the speechSynthesisInterop object to store speech-related data if it doesn't exist.
+// Initialize the speechSynthesisInterop object to store speech-related data if it doesn't exist.
 window.speechSynthesisInterop = window.speechSynthesisInterop || {};
 
 // Converts HTML content to plain text by stripping HTML tags.
@@ -225,22 +225,22 @@ function cancel() {
     margin: 0 auto;
 }
 
-.integration-textToSpeech-section .e-aiassistview .banner-content .e-audio:before {
+.integration-textToSpeech-section .banner-content .e-audio:before {
     font-size: 25px;
 }
 
-.integration-textToSpeech-section .e-aiassistview .e-view-container {
+.integration-textToSpeech-section .e-view-container {
     margin: auto;
 }
 
-.integration-textToSpeech-section .e-aiassistview .banner-content {
+.integration-textToSpeech-section .banner-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 }
 @media only screen and (max-width: 750px) {
-    .integration-textToSpeech-section .e-aiassistview {
+    .integration-textToSpeech-section {
         width: 100%;
     }
 }
@@ -250,3 +250,7 @@ function cancel() {
 {% endtabs %}
 
 ![Integrating Text-to-Speech with AI AssistView](../images/assist-tts.png)
+
+## See Also
+
+* [Speech-to-Text](./speech-to-text.md)
