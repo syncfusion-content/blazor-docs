@@ -24,7 +24,9 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 * `Cell`: Allows you to select only cells.
 * `Both`: Allows you to select rows and cells at the same time.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -75,7 +77,9 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 The toggle selection allows you to select and deselect a specific row or cell. To enable toggle selection, set the [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property of the `SelectionSettings` to `true`. If you click the selected row or cell, then it will be deselected and vice versa.
 By default, the `EnableToggle` property is set to `false`.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -137,7 +141,9 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
 
 * GanttChart supports drag selection in both [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_CellSelectionMode) `Flow` and `Box` when cell selection enabled.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -188,7 +194,9 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
 
 You can clear the selected cells and selected rows by using a method called [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearSelectionAsync). The following code example demonstrates how to clear the selected rows in Gantt Chart.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -248,7 +256,9 @@ You can clear the selected cells and selected rows by using a method called [Cle
 
 You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRowIndexesAsync) method. And by using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRecordsAsync) method, you can get the selected record details.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">

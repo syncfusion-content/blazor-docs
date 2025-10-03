@@ -19,7 +19,9 @@ In the Blazor Gantt chart, the [GanttSegmentFields](https://help.syncfusion.com/
 
 The below code snippet visualizes the task's segments in gantt chart.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt TValue="TaskData" DataSource="@taskCollection" Height="450px" Width="100%" TreeColumnIndex="1" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
@@ -123,7 +125,9 @@ When you right-click on a taskbar or segment element in the Gantt chart, the con
  
 The segmented taskbars can be merged together using **Merge Task** context menu item. The sub context menu of **Merge Task**  item includes options for **Right** and **Left**. When the **Right** submenu item is selected, the current segment and the segment to the right of the selected segment gets merged. Similarly, when the **Left** submenu item is selected, the current segment and the segment to the left of the selected segment gets merged.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@taskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
@@ -221,7 +225,9 @@ The segmented taskbars can be merged together using **Merge Task** context menu 
 
 In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing the segments details such as the start date, end date, and duration. However, it's important to note that the segment start date and end date cannot exceed the task's start date and end date.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
@@ -327,7 +333,9 @@ You can split or merge taskbars externally by using the methods [SplitTaskAsync]
 
 In the following code snippet, upon external button click, segments of the 1st index record are merged into a single taskbar, and the taskbar in the 2nd index record is split into two segments.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
 
@@ -446,7 +454,9 @@ The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ga
 
 In the below code snippet, using the `SegmentChanging` event a customized message is displayed when doing split or merge actions. Moreover, segment deletion is prevented to the 1st index task.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
     @using Syncfusion.Blazor.Gantt
     <span class="text-primary">@segmetEventMessage</span
     <SfGantt TValue="TaskData" DataSource="@taskCollection" Height="450px" Width="800px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
@@ -573,7 +583,9 @@ The segments appearance can be customized by using the [TaskbarTemplate](https:/
 
 In the code snippet below, the segments are customized based on template context data, and the segment count text is added inside each segment. 
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="gantt" TValue="TaskData" DataSource="@taskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
