@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges in Blazor Bullet Chart Component | Syncfusion
-description: Check out and learn how to define and customize ranges in Syncfusion Blazor Bullet Chart component.
+description: Check out and learn how to define and customize ranges in Syncfusion Blazor Bullet Chart component to represent performance thresholds and targets.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
