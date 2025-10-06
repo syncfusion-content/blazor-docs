@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Xhtml Validation
+# Xhtml validation in Rich Text Editor
 
 The Rich Text Editor includes an `EnableXhtml` property that allows for continuous validation of the Rich Text Editor’s source content against the XHTML standard. When content is entered or modified in the editor, this feature ensures ongoing compliance by automatically removing invalid elements and attributes.
 
