@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Insert image in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Insert image in Syncfusion Blazor RichTextEditor component and more.
+title: Insert image in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Insert image in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Insert image in RichTextEditor
+# Insert image in Rich Text Editor
 
-## Insert image from web
+## Inserting images from web urls
 
 To insert an image from an online source like Google, Ping, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
 
 ![Blazor RichTextEditor inserting image](../images/blazor-richtexteditor-insert-image.png)
 
-## Upload and insert image
+## Uploading and inserting images
 
 Through the browse option in the image dialog, select the image from the local machine and insert it into the Rich Text Editor content.
 
 If the path field is not specified in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted to `base64`, and a `blob` url for the image will be created, and the generated url will set as the `src` property of the `<img>` tag as follows:
 
-The image has been loaded from the local machine and it will be saved in the given location.
+The image selected from the local machine will be uploaded and saved to the specified location.
 
 ```
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
@@ -34,7 +34,7 @@ N> If you want to insert many tiny images in the editor and don't want a specifi
 
 The selected image can be uploaded to the required destination using the controller action below. Map this method name into [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) and provide required destination path through [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
 
-N> [Vie sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
+N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
 
 {% tabs %}
 {% highlight razor %}
@@ -221,9 +221,9 @@ By default, the Rich Text Editor inserts the images in [Blob](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Maximum file size restriction
+## Restricting maximum image file size
 
-By using the Rich Text Editor's [RichTextEditorImageSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_MaxFileSize) property, you can get the image size before uploading and restrict the image to upload when the given image size is greater than the allowed size.
+Using the Rich Text Editor's [RichTextEditorImageSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_MaxFileSize) property, you can get the image size before uploading and restrict the image to upload when the given image size is greater than the allowed size.
 
 In the following code, the image size has been validated before uploading and it has been determined whether the image has been uploaded or not.
 
@@ -264,23 +264,77 @@ In the following code, the image size has been validated before uploading and it
 
 N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
-## Delete image 
+## Delet image 
 
-To remove an image from the Rich Text Editor content, select the image and click the `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content.
+To delete an image from the Rich Text Editor, select the image and click the `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content.
 
 After selecting the image from the local machine, the URL for the image will be generated. From there also, remove the image from the service location by clicking the cross icon as in the following image.
 
 ![Blazor RichTextEditor removing image](../images/blazor-richtexteditor-remove-image.png)
 
-## Dimension
+## Deleting images from server using keyboard and quick toolbar actions
+
+In the Rich Text Editor, deleting images using the `Delete` or `Backspace` keys, or the Quick Toolbar's `Remove` button, removes the image from the editor content not from the server.
+
+This behavior is intentional, allowing undo/redo operations to function properly without breaking references to previously uploaded images.
+
+To explicitly remove images from the server, use the [ImageDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ImageDelete) event. This event is triggered after an image is removed from the content and provides the src URL of the image, which can be used to initiate a request to your server for deleting the corresponding file.
+
+The following sample demonstrates how to use the `ImageDelete` event in Rich Text Editor to delete images from the server after they are removed from the editor content:
+
+`Index.razor`
+
+```cshtml
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+   <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
+   <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path" RemoveUrl="@RemoveURL"/>
+</SfRichTextEditor>
+@code{
+    private string SaveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/SaveFile";
+    private string Path = "[SERVICE_HOSTED_PATH]/RichTextEditor/";
+    private string RemoveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/DeleteFile";
+
+    public async Task OnImageDeleteHandler(AfterImageDeleteEventArgs args)
+    {
+        var imageSrc = args.Src;
+        var fileName = imageSrc.Split('/').Last();
+        var content = new MultipartFormDataContent();
+        var dummyFile = new ByteArrayContent(new byte[0]);
+        content.Add(dummyFile, "UploadFiles", fileName);
+        try
+        {
+            var response = await Http.PostAsync(RemoveURL, content);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Image deleted successfully: {fileName}");
+            }
+            else
+            {
+                Console.WriteLine($"Image deletion failed: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting image: {ex.Message}");
+        }
+    }
+
+}
+
+```
+
+## Set image dimensions
 
 Sets the default width and height of the image when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Width) and [RichTextEditorImageSettings.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Height) property.
 
-Through the quickToolbar, also change the width and height using the change size option. After clicking the option, the image size will open as follows. In that, specify the width and height of the image in pixels.
+You can also adjust the image dimensions using the `Change Size` option in the quick toolbar. After clicking the option, the image size will open as follows. In that, specify the width and height of the image in pixels.
 
 ![Blazor RichTextEditor changing image dimension](../images/blazor-richtexteditor-image-size.png)
 
-## Caption and alt text
+## Adding captions and alt text to images
 
 The image caption and alternative text can be specified for the inserted image in the Rich Text Editor using the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) options such as `Image Caption` and `Alternative Text`.
 
@@ -288,9 +342,9 @@ Through the `Alternative Text` option, set the alternative text for the image w
 
 When you click the `Image Caption` button, the image is wrapped in an image element with a caption. Then, type the caption content inside the Rich Text Editor.
 
-## Display position
+## Setting image display position
 
-Sets the default display for an image when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Display) property.
+Configure the default display behavior for inserted images when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Display) property.
 
 N> It has two possible options: `Inline` and `Break`.
 
@@ -310,19 +364,19 @@ N> It has two possible options: `Inline` and `Break`.
 {% endhighlight %}
 {% endtabs %}
 
-## Image with link
+## Adding hyperlinks to images
 
 The hyperlink itself can be an image in the Rich Text Editor. If the image is given as a hyperlink, the remove, edit, and open links will be added to the quick toolbar of the image as follows. For further details about the link, refer to the [link documentation](#link-manipulation).
 
 ![Blazor RichTextEditor image with link](../images/blazor-richtexteditor-image-link.png)
 
-## Resize image
+## Resizing images
 
 The Rich Text Editor has built-in image inserting support. The resize points will appear on each corner of the image when focused. So, users can easily resize the image using mouse points or their thumbs through the resize points. Also, the resize calculation will be done based on the aspect ratio.
 
 ![Image Resizing in Blazor RichTextEditor](../images/blazor-richtexteditor-image-resize.png)
 
-### Rename images before inserting
+### Renaming images before inserting
 
 By using the `RichTextEditorImageSettings` property, the server handler can be specified to upload and rename the selected image. Then, the `OnImageUploadSuccess` event could be bound, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
  
