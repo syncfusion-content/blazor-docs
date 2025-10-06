@@ -46,6 +46,8 @@ A `BPMN Data Object` represents information flowing through the process, such as
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBeiXjxVORwXwCi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnDataObject/BpmnDataObject)
 
 ![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png)

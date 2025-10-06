@@ -58,6 +58,8 @@ The following code demonstrates how to set an annotation's `Offset`.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeiZDnBmmdikgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/OffsetofAnnotation)
 
 
@@ -135,6 +137,8 @@ The following code demonstrates how to align an annotation.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDByMjDHhGlBwFTP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/AlignmentOfAnnotation)
 
 
@@ -184,6 +188,8 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ann
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoWjDnBcbmFJCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/MarginOfAnnotation)
 
 
@@ -229,6 +235,7 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhSWDjdVvthJdOl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/AlignText)
 

@@ -61,6 +61,8 @@ The following code example shows how to register and get notifications from the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoijjnBnkUtSTH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Events/TextChangedEvent)
 
 ## See also

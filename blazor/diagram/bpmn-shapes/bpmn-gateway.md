@@ -45,6 +45,8 @@ A `BPMN Gateway` is used to control the flow of a process and it is represented 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIWZtdKJhVMLXv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnGateway/BpmnGateway)
 
 

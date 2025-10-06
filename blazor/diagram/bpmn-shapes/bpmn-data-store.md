@@ -42,6 +42,8 @@ A DataStore is used to store or access data associated with a business process. 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryCNtxhaGiAiQN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnDataStore/BpmnDataStore)
 
 ![BPMN Datasource](../images/Bpmn-DataStore.png)

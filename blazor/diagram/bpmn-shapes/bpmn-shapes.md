@@ -47,6 +47,8 @@ The following code example demonstrates how to create a simple BPMN Task shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIMZDRqphwEgmr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnShape/BpmnShape)
 
 

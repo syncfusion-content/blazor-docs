@@ -60,6 +60,8 @@ The following code example explains how to create an association.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBeitNHVuzaWWAu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Association)
 
 ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png)
@@ -115,6 +117,8 @@ The following code example explains how to create a sequence flow.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIsDjHBuSBuntI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Sequence)
 
 ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) 
@@ -172,6 +176,8 @@ The following code example explains how to define a message flow.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSittnhOeEgbiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Message)
 
  ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png)

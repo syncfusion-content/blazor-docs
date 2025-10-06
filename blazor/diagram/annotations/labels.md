@@ -69,6 +69,8 @@ The following code example demonstrates how to create an annotation for a node a
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroijNRrQAsIOIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/CreateAnnotation/CreateAnnotation)
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
@@ -122,6 +124,8 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIMjtxrwUyoCqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AddAnnotationAtRunTime)
 
 Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends the evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
@@ -186,6 +190,8 @@ An annotation can be removed from a node or connector's Annotations collection b
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByiXZHBwzKleyR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RemoveAnnotation/RemoveAnnotation)
 
 Also, The `Remove` method can also be used to remove a specific annotation object.
@@ -250,6 +256,8 @@ The following code sample shows how to change the content of a node's annotation
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIitZxBcSXRxWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/UpdateAnnotation/UpdateAnnotation)
 
 ## See also

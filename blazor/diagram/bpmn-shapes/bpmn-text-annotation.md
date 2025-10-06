@@ -68,6 +68,8 @@ documentation: ug
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIsXNxgTgIKWVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotation)
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
@@ -134,6 +136,8 @@ The following code example represents how to create a TextAnnotation and connect
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIWNXnKpTiBXyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/TextAnnotationTarget)
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 

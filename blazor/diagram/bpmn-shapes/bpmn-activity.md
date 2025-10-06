@@ -52,6 +52,8 @@ You can specify the any one of the above activity type using the [ActivityType](
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrIsXNHrvVrSjlR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivity)
 
  ![Send Task BPMN Shape](../images/Task.png) 
@@ -71,11 +73,11 @@ The following code explains how to create different types of BPMN tasks.
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             // Position of the node.
             OffsetX = 100,
@@ -97,6 +99,8 @@ The following code explains how to create different types of BPMN tasks.
     }   
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCtDxBvEwTETe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivityTask)
 
 
@@ -154,6 +158,8 @@ A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhoCNjHLuiTiOoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivityCollapsedSubProcess)
 
 
@@ -200,6 +206,8 @@ You can define the `Loop` property in BPMN Activity, as shown in the following c
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSCZDxBkiYnGrJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Loop)
 
 
@@ -250,10 +258,12 @@ The available loop types are described below.
                 IsCompensation = true,
             }
         };
-        nodes.Add(node1);
+        nodes.Add(node);
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoWZtRLYBpywwx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Compensation)
 
 
@@ -302,6 +312,8 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDByWDNnVYBkymiU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Call)
 
 
@@ -349,8 +361,9 @@ N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Adhoc)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrosNXRhkKyQthF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Adhoc)
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
 
@@ -393,6 +406,8 @@ The `SubProcessType` property represents the type of task being processed within
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSCZXxLkpZmobl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/SubProcessType)
 
  ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)

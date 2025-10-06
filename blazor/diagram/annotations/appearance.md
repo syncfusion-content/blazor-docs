@@ -44,6 +44,8 @@ The annotation size can be customized using the `Height` and `Width` properties.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXByCtXxVTAfPZsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/SizeOfAnnotation)
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
@@ -90,6 +92,8 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBIWtDRBTaSnpxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/HyperlinktoAnnotation)
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
@@ -137,6 +141,8 @@ The Content property of the Hyperlink can be set to display custom text for the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMXNRrIZKmISV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/HyperlinkWithContent)
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
@@ -184,6 +190,8 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthoiXDdVIsShZlW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationWithTextWrapping)
 
 | TextWrapping | Description | Image |
@@ -242,6 +250,8 @@ The following code sample demonstrates how the TextOverflow property works with 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoCXtHLSBncEEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationWithTextOverflow)
 
 | TextOverflow | Wrapping | Image |
@@ -316,6 +326,8 @@ The following code explains how to customize the visual appearance of an annotat
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSMtXHByUvlGFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/Appearance)
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
@@ -384,6 +396,8 @@ The font style of annotations can be changed dynamically at runtime by modifying
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLSMXXHLypEIAGt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationStyleatRunTime)
 
 ## How to Edit Annotations at Runtime
@@ -436,6 +450,8 @@ Annotations can be set to read-only mode by configuring their Constraints. Setti
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrIWjtxBeoSmkMG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/ReaonlyConstraints)
 
 ## How to Create Multiple Annotations
@@ -517,6 +533,8 @@ Multiple annotations can be added to a single node or connector. The following c
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoMZtHrSEKMWRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/MultipleAnnotation)
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
@@ -640,6 +658,8 @@ The following code illustrates how to define a template for both a node's and a 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVoMDtHVnZBKrQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/TemplateSupportforAnnotation)
 ![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 
@@ -688,6 +708,8 @@ The following code demonstrates how to set a value for the AdditionalInfo proper
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtreCDDHBnjOUXBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
 
 **Note:** The AdditionalInfo property can accept any type of object as its value.
