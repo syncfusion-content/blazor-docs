@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Resize the Blazor DataGrid in various dimension 
+# Resize the Blazor DataGrid in various dimensions
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a friendly way to resize the Grid, allowing you to adjust its width and height for improved data visualization.
 
