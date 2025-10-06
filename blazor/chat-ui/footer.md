@@ -7,11 +7,13 @@ control: Chat UI
 documentation: ug
 ---
 
-# Footer in Blazor Chat UI component
+# Footer in the Blazor Chat Component
 
-## Show or hide footer
+The Blazor Chat component includes a footer that serves as the primary user interaction area, typically containing the message input field and send button.
 
-You can use [ShowFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowFooter) property to enable or disable the chat footer.
+## Show or hide the footer
+
+The chat footer in the Blazor Chat UI component is displayed by default and includes the text input field along with the send button. Its visibility can be managed using the [ShowFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowFooter) and submission. This configuration is useful in scenarios such as read-only chat views or restricted interaction modes.
 
 ```cshtml
 
