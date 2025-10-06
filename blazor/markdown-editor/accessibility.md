@@ -78,7 +78,7 @@ For more details on keyboard navigation, refer to the [Keyboard support](https:/
 
 ## Ensuring accessibility
 
-ccessibility levels are validated using the[axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+Accessibility levels are validated using the[axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the Markdown Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the accessibility of the Markdown Editor component with accessibility tools.
 
