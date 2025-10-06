@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Header in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Header customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of the header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
 

@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Paging in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Paging customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of the paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
 
