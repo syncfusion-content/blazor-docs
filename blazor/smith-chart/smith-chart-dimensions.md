@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Smith Chart Component | Syncfusion
-description: Check out and learn how to set and customize dimensions in Syncfusion Blazor Smith Chart component.
+description: Check out and learn how to set and customize chart dimensions in Syncfusion Blazor Smith Chart component for optimized layout.
 platform: Blazor
 control: Smith Chart
 documentation: ug
