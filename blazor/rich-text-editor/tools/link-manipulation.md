@@ -48,8 +48,6 @@ When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
-![Blazor Rich Text Editor with quick toolbar link](../images/blazor-richtexteditor-quick-toolbar-link.png)
-
 {% tabs %}
 {% highlight razor %}
 
@@ -58,7 +56,7 @@ Add the custom tools on the selected link inside the Rich Text Editor through th
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor link quick toolbar](../images/blazor-richtexteditor-quick-link.png)
+![Blazor Rich Text Editor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
 
 ## See also
 
