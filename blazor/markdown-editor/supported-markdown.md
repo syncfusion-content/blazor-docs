@@ -9,7 +9,7 @@ documentation: ug
 
 # Supported Markdown Syntax in Blazor Markdown Editor Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports various Markdown syntax commands for text formatting, lists, links, tables, and more. This guide provides an overview of all supported commands along with their syntax and usage.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports a wide range of Markdown syntax for formatting text, creating lists, inserting links and images, and more. This guide provides a comprehensive reference to all supported Markdown commands, their syntax, and usage.
 
 ## Markdown Syntax Guide for Blazor Markdown Editor
 
@@ -44,4 +44,4 @@ The following table lists the Markdown commands supported by the Syncfusion<sup 
 | Escape Character | `\(`any syntax`)` | Escape any markdown syntax by prefix `\` to the syntax.<br>Example:<br>`\**`Bold text`**`|
 | HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: <sup style="font-size:70%">&reg;</sup> - `<sup style="font-size:70%">&reg;</sup>`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
 
-N> The above listed commands alone are supported in Syncfusion<sup style="font-size:70%">&reg;</sup> markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
+N> Only the listed commands are supported in the Syncfusion<sup style="font-size:70%">&reg;</sup> Markdown Editor. For unsupported features such as footnotes, definitions, math, and checklists, consider using HTML tags directly within the editor.

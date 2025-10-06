@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Markdown Syntax in Blazor Markdown Editor | Syncfusion
-description: Checkout and learn here all about Customizing Markdown Syntax in Syncfusion Blazor Markdown Editor component and more.
+description: Learn how to customize Markdown syntax in the Syncfusion Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
@@ -9,11 +9,14 @@ documentation: ug
 
 # Customizing Markdown Syntax in Blazor Markdown Editor Component
 
-The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [RichTextEditorMarkdownOptions.ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [RichTextEditorMarkdownOptions.FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [RichTextEditorMarkdownOptions.SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties.
+The Rich Text Editor allows you to customize the Markdown syntax by overriding its default behavior. You can configure custom Markdown syntax using the following properties:
+- [RichTextEditorMarkdownOptions.ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax)
+- [RichTextEditorMarkdownOptions.FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax)
+- [RichTextEditorMarkdownOptions.SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax)
 
-## Defining Custom Markdown Formatting  
+## Defining Custom Markdown Formatting
 
-You can define custom symbols for different Markdown formatting options:
+You can define custom symbols for various Markdown formatting options:
 
 * Use `+` for unordered lists instead of `-`.
 * Use `__text__` for bold text instead of `**text**`.
