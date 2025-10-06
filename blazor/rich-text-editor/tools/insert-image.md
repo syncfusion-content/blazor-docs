@@ -264,7 +264,7 @@ In the following code, the image size has been validated before uploading and it
 
 N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
-## Delet image 
+## Delete image 
 
 To delete an image from the Rich Text Editor, select the image and click the `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content.
 
@@ -380,7 +380,7 @@ The Rich Text Editor has built-in image inserting support. The resize points wil
 
 By using the `RichTextEditorImageSettings` property, the server handler can be specified to upload and rename the selected image. Then, the `OnImageUploadSuccess` event could be bound, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
  
-N> [View sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image)
+N> [View sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image)
 
 {% tabs %}
 {% highlight razor %}
