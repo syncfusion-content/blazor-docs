@@ -67,7 +67,7 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVesNXxpShYJhRa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
  Value | Description | Image |
 | -------- | -------- | -------- |
@@ -112,6 +112,8 @@ The following code examples illustrate how to configure `RotationAngle` for an a
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIiZDRTogIAqku?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RotationAngleProperty)
 
 ![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
