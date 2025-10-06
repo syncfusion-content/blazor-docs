@@ -7,7 +7,7 @@ control: SpeechToText
 documentation: ug
 ---
 
-# Accessibility in Blazor SpeechToText component
+# Accessibility in Blazor SpeechToText Component
 
 The SpeechToText component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -37,26 +37,26 @@ The accessibility compliance for the SpeechToText component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 The following ARIA attributes are used in the SpeechToText component:
 
-| Attributes | Purpose |
-| ------------ | ----------------------- |
-| `aria-label` | Provides an accessible name for the SpeechToText button. |
+| Attribute | Purpose |
+| :--- | :--- |
+| `aria-label` | Provides an accessible name for the SpeechToText button, clearly identifying its function to screen readers. |
 
-## Keyboard interaction
+## Keyboard Interaction
 
-The following keyboard shortcuts are supported by the SpeechToText component.
+Users can interact with the SpeechToText component using the following keyboard shortcuts.
 
-| Windows | Mac | Actions |
-| --- | --- | --- |
-| <kbd>Enter</kbd>/<kbd>Space</kbd> | <kbd>Enter</kbd>/<kbd>Space</kbd> | When the SpeechToText button has focus, pressing the enter/space key changes the state of the button. |
+| Windows & Linux | Mac | Action |
+| :--- | :--- | :--- |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | When the SpeechToText button is focused, this key combination starts or stops the speech recognition process. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
 The Blazor SpeechToText component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
