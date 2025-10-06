@@ -103,4 +103,6 @@ The following code example demonstrates handling the DataLoaded event in the dia
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSstXHJJtrZCJc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/DataLoadedEvent)

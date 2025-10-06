@@ -53,7 +53,11 @@ Orthogonal segments create segments that are perpendicular to each other. To cre
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZroijZnUeUFxqCq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
+
+![Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.png)
 
 The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow you to define the flow and length of the segment. The following code example illustrates how to create customized orthogonal segments.
 
@@ -112,9 +116,9 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryWZNdUofLzsmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
 
 N> Ensure the connector Type and each segment Type are both set to Orthogonal. There should be no contradiction between connector type and segment type.
 
@@ -151,6 +155,9 @@ N> Ensure the connector Type and each segment Type are both set to Orthogonal. T
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIijXxgIHDFceR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalSegmentEditing)
 
 ![Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)
@@ -205,6 +212,8 @@ The following code example illustrates how to customize the orthogonal segment t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSMNXRqeQwfDfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalThumbShape).
 
 ![Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings.png)
@@ -236,6 +245,8 @@ The following code example illustrates how to customize the orthogonal segment t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVoMjNdUevUbNDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalThumbSetting)
 
 ![Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings1.png)

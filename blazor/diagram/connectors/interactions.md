@@ -81,6 +81,8 @@ At runtime, a connector can be selected by using the [Select](https://help.syncf
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htByMXZRJrGVkhRw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Select)
 
 Selection can also be performed through user interaction:
@@ -150,6 +152,8 @@ A connector can be programmatically moved at runtime by using the [Drag](https:/
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyCDNdJVFmTCOP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Drag)
 
 Connectors can also be dragged through user interaction:
@@ -213,6 +217,8 @@ The connector can be selected by clicking it. When the connector is selected, ci
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhyWjXRfLkUypIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/EndPointDragging)
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
@@ -256,6 +262,8 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/DefaultRouting).
@@ -307,6 +315,8 @@ The [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ro
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhoMDZHzqDTEFIV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ClassicLineRouting)
 
 #### Advanced Routing
@@ -351,6 +361,7 @@ The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.R
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroCXNRpgiXQOTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/LineRoutingSettings)
 
@@ -413,6 +424,8 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/NodeRoutingObstable).
@@ -487,6 +500,8 @@ By default, connector routing behavior is inherited based on the value of the di
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
@@ -535,7 +550,7 @@ The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVSMZZdfKBTIWlh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ObstaclePadding)
 
 The following table shows the various obstacle padding.
@@ -572,7 +587,6 @@ Enable this behavior by adding the [AvoidLineOverlapping](https://help.syncfusio
     };
 }
 ```
-
 ![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.gif)
 
 The Avoid Connector Overlapping behavior ensures connectors do not visually overlap within the viewport, improving readability and reducing visual clutter.
@@ -934,6 +948,7 @@ The following example demonstrates enabling the AvoidLineOverlapping feature in 
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSsjjxpKTfTUFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/AvoidLineOverlap).
 

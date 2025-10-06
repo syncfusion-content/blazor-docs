@@ -53,6 +53,8 @@ The following code example illustrates how to add a connector through the connec
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBoMNtRKRqMWtbh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorThroughConnectorCollection).
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
@@ -105,6 +107,8 @@ Add a connector at runtime by adding it to the connectors collection in the Diag
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrSWjDxqRgcAwdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorAtRuntime).
 ### How to Clone a Connector at Runtime
 [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method on connector that creates a copy of a diagram object. After cloning, set a unique ID for the cloned connector. The following code demonstrates how to clone the connector during runtime.
@@ -149,6 +153,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVSCZtHgnwMnRkK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/CloneConnector)
 ![Cloning a connector in Blazor Diagram](../images/CloneConnector.gif)
 ## How to Add a Connector with Annotations at Runtime
@@ -162,7 +168,7 @@ The following code explains how to add a connector with annotation  at runtime b
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Add Connector" OnClick="@AddConnector" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 
 @code
 {
@@ -171,6 +177,8 @@ The following code explains how to add a connector with annotation  at runtime b
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+
+    SfDiagramComponent Diagram;
 
     protected override void OnInitialized()
     {
@@ -205,6 +213,7 @@ The following code explains how to add a connector with annotation  at runtime b
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheijZRqdvOdfPm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to Add a Connector to the Symbol Palette
 
@@ -284,6 +293,8 @@ Connectors can be predefined and added to the symbol palette. Then, drag and dro
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSijDHAnuQEcxN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectorFromPalette)
 
 ![Dragging connectors from the symbol palette into the diagram in Blazor](../images/blazor-diagram-connector-from-palette.gif)
@@ -341,6 +352,8 @@ The following code shows how to remove a connector at runtime.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBoWNZHqcZySvbN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/RemoveConnectorsAtRunTime)
 
 A connector can also be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the connector at runtime.
@@ -398,6 +411,8 @@ The following code example explains how to change the connector properties.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhoCXXRAwsrsupa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/UpdateConnectorAtRunTime).
 
 N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) methods allow you to temporarily stop the continuous update of the control and resume it once the updates are complete.
@@ -476,7 +491,9 @@ The following code example illustrates how to connect two nodes.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsZZHKcMbFFXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithNode).
 
 ![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
@@ -580,7 +597,9 @@ The following code example illustrates how to create port to port connections.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithPort)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htByCjDRKwBxkAkt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithPort).
 
 ![Connecting two nodes using specific ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 

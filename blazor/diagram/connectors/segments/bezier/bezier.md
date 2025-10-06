@@ -53,6 +53,8 @@ Bezier segments are used to create curved connectors. The curve can be configure
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreiNjHgpdAoFCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier).
 
 ![Connector with Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-connector-with-bezier.png)
@@ -61,7 +63,19 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
  The [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) properties define the length and angle between the source point and target point, respectively. The following code example illustrates how to use these properties.
 
 ```cshtml
-Connector Connector1 = new Connector()
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+     //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+       Connector Connector1 = new Connector()
         {
             ID = "Connector1",
             Type = ConnectorSegmentType.Bezier,
@@ -78,6 +92,8 @@ Connector Connector1 = new Connector()
                 }
             }
         };
+        //Add the connector into connectors's collection.
+        connectors.Add(Connector1);
          Connector Connector2 = new Connector()
          {
             ID = "Connector2",
@@ -95,7 +111,13 @@ Connector Connector1 = new Connector()
                 }
             }
         };
+        //Add the connector into connectors's collection.
+        connectors.Add(Connector2);
+    }
+}
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLoWXjHUpkqFQSO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 
@@ -171,6 +193,8 @@ By default, when there are no segments defined for a bezier connector, the bezie
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoijXdqetYDHum?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
 Also, if you provide segments during the initial rendering, the segment collection will be updated dynamically when you move the connector ends. If you do not want the segments to be updated dynamically when you move the connector end, you need to set [BezierConnectorSettings.AllowSegmentsReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_AllowSegmentsReset) as False.
@@ -241,6 +265,8 @@ Also, if you provide segments during the initial rendering, the segment collecti
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBSCDNnASCfNrtt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
 ![Avoid overlapping with bezier](../../../images/bezierOverlap.png)
@@ -308,6 +334,8 @@ The following code example illustrates how to create a customized bezier segment
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXryMtZnKysOPiqb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier/BezierSegmentShape).
 
 ![Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape.png)
@@ -348,6 +376,8 @@ The following code example illustrates how to create a customized bezier segment
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSMZtdUyrTVzDj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier/SegmentShape).
 
 ![Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape1.png)

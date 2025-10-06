@@ -73,6 +73,8 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ComplexHierarchicalTree)
 
 ![Blazor complex hierarchical layout with multi-parent support](../images/blazor-diagram-complex.png)
@@ -146,6 +148,8 @@ The following code example shows how to create a complex hierarchical tree with 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
 
 ![Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.png)
@@ -217,6 +221,8 @@ The following code illustrates how to arrange the nodes in a non linear manner.
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSCXNxzKPCTjys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementNonLinear)
 
 ![Blazor complex hierarchical layout with nonlinear child arrangemen](../images/blazor-diagram-non-linear.png)
@@ -283,6 +289,8 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBICjjHfqEiCuMb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementLinear)
 
 ![Blazor complex hierarchical layout with linear child arrangement](../images/blazor-diagram-lineararrangement.png)

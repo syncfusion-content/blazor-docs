@@ -53,6 +53,8 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLosDNdKeaXEThH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight)
 
 ### How to Edit Straight Segments
@@ -96,6 +98,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyiXjRAxXrpBqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/StraightSegmentEditing)
 
 ![Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)
@@ -160,6 +164,8 @@ The following code example illustrates how to create a customized straight segme
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryWNXdAHtbHWYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/StraightSegmentShape)
 
 ![Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.png)
@@ -199,6 +205,8 @@ The following code example illustrates how to create a customized straight segme
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/SegmentShape)
 
 ![Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.png)

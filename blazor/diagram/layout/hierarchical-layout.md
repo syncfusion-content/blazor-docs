@@ -75,6 +75,8 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBICjDdzpLQdEPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
 
 ![Blazor hierarchical layout with manually defined nodes and connectors](../images/blazor-hierarchical-diagram.png)
@@ -152,6 +154,8 @@ A hierarchical layout can also be created from a data source. The following exam
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVIsZNxJfPxIhga?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
 
 >**Note:** In DataSourceSettings, the type of the ID and ParentID properties is string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.

@@ -83,6 +83,8 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhyCDtnzispxatP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SelectionChangeEvent).
 
 ## How to Handle Position Change Event
@@ -156,6 +158,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrIWDjdJMBXdkEx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/PositionChangeEvent).
 
 ## How to Handle Connection Change Event
@@ -238,6 +242,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSiZXnfsORuETx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectionChangeEvent)
 
 ## How to Handle Source Point Change Event
@@ -296,6 +302,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhICZXRfhZiGtIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SourcePointChanged)
 
 ## How to Handle Target Point Change Event
@@ -354,6 +362,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSiXtHpVXnCpui?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/TargetPointChanged)
 
 ## How to Handle Connector Creating Event
@@ -405,6 +415,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrIWXjdfViroMCT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectorCreating)
 
 ## How to Handle Segment Collection Change Event
@@ -450,6 +462,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSMZXHTrpgeJhU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SegmentCollectionChangeEvent)
 
 ## How to Handle Collection Change Events
@@ -495,6 +509,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoCDNnpVAEjlgO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/CollectionChangeEvent)
 
 ## How to Handle the Mouse Enter Event
@@ -532,6 +548,8 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoCjXHTrIsWtog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseEnterEvent)
 
 ## How to Handle the Mouse Leave Event
@@ -569,6 +587,8 @@ The [MouseLeave](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSWNXnJLoppsUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseLeaveEvent).
 
 ## How to Handle the Mouse Hover Event
@@ -606,6 +626,8 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDroiZXnJhdsQvix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseHoverEvent).
 
 ## How to Handle Property Changed Event
@@ -649,6 +671,8 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrIsNNxfhRxEZXL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/PropertyChangedEvent)
 
 

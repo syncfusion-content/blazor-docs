@@ -89,5 +89,6 @@ The following code illustrates how to interact with Bezier efficiently by using 
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXryiZZdAzIRXeTs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).

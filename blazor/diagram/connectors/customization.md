@@ -70,6 +70,8 @@ To learn more about connector customization, watch the following video:
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsZDdUmUzCzAM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Decorator)
 
 ### How to Customize Connector Decorator Appearance
@@ -139,6 +141,8 @@ The following code example illustrates how to customize the decorator appearance
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiZNHqcgvBDIK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/DecoratorAppearance)
 
 ![Connector with customized decorators in Blazor Diagram](../images/blazor-diagram-decorator.png)
@@ -215,6 +219,8 @@ Padding adds space between the connector’s end point and the object to where i
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVeWZtdqQzoBYft?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Padding)
 
 ![Connector demonstrating source and target padding in Blazor Diagram](../images/blazor-diagram-connector-padding.png)
@@ -310,6 +316,8 @@ The following code example illustrates how to enable line bridging.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoiDNdqGSjrURl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
 
 >**Note:** Bridging support is not applicable for layout.
@@ -373,6 +381,8 @@ Corner radius rounds the corners of connectors. Set the radius using the [Corner
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVoCjXHAGooRosb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CornerRadius)
 
 ![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
@@ -436,6 +446,8 @@ The following code example illustrates how to customize the segment appearance.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoCNNxAmxqeFTF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SegmentAppearance)
 
 ## How to Enable or Disable Connector Behavior
@@ -494,7 +506,9 @@ The following code illustrates how to disable selection.
     }
 }
 ```
-A complete working sample can be downloaded [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Constraints)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIMXjnqwHvfxiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Constraints)
 
 ## How to Add Additional Information for Connector
 
@@ -550,6 +564,8 @@ A complete working sample can be downloaded [GitHub](https://github.com/Syncfusi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhysDZxAQmzMPsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CustomProperty)
 
 ## How to Set Connector Z-Index 
@@ -590,6 +606,8 @@ The following code illustrates how to render a connector based on stack order.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsZDnUcmuZCJG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ZIndexProperty)
 
 ## How to Set Hit Padding for Connector
@@ -633,6 +651,7 @@ The following code illustrates how to set hit padding for a connector.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoCDXHUmlpTCKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to Set Source Padding and Target Padding for Connector
 
@@ -685,6 +704,8 @@ The following code example illustrates how to leave space between the connection
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSiZjRUwPlqeJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SourcePaddingAndTargetPadding)
 
 ## How to Set Connection Padding for Connector
@@ -735,6 +756,8 @@ The following code example illustrates how to set connection padding for a conne
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIMZZHAQYodScU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
 
 ## How to enable Connector Split
@@ -814,6 +837,8 @@ The following code illustrates how to enable connector splitting and create conn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSsNXnqvDymRvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![ConnectorSplitting](../images/ConnectorSplitDemo.gif)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
@@ -872,6 +897,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSMXDnAFShGTba?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb).
 
 ![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
@@ -963,6 +990,7 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoCDtRUlyaTMHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime).
 
