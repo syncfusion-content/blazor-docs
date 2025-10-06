@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Animation Settings in Blazor ContextMenu Component | Syncfusion
-description: Customize Syncfusion Blazor ContextMenu animations: set duration, type (SlideDown, ZoomIn, FadeIn) for opening/closing effects.
+description: Customize animation settings for Syncfusion Blazor ContextMenu, including effect types (SlideDown, ZoomIn, FadeIn) and duration for opening and closing.
 platform: Blazor
 control: Context Menu
 documentation: ug

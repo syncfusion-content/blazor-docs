@@ -99,7 +99,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 
 ## Range and interval
 
-The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties can be used to customize the range of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
+Customize the category axis range using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
 ```cshtml
 
@@ -142,7 +142,7 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ## Indexed category axis
 
-The category axis can also be rendered using the data source index values. This can be achieved by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property in the axis to **true**.
+Render the category axis using data source index values by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property to **true**. This aligns category positions based on index rather than distinct category text.
 
 ```cshtml
 
@@ -191,7 +191,7 @@ The category axis can also be rendered using the data source index values. This 
 
 ![Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its feature highlights, and explore the [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know the various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
