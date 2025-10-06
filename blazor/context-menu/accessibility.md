@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ContextMenu Component | Syncfusion
-description: Discover Syncfusion Blazor ContextMenu's accessibility: WAI-ARIA support, keyboard interaction, and WCAG, Section 508, ADA compliance.
+description: Explore Syncfusion Blazor ContextMenu's WAI-ARIA support, keyboard interaction, and compliance with WCAG, Section 508, and ADA accessibility standards.
 platform: Blazor
 control: Context Menu
 documentation: ug
