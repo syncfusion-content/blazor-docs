@@ -24,7 +24,7 @@ Before integrating `Text-to-Speech`, ensure the following:
 
 ## Configure Text-to-Speech
 
-To enable Text-to-Speech functionality, modify the `Home.razor` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive. When clicked, the `ItemClicked` event extracts plain text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
+To enable Text-to-Speech functionality, modify the `Home.razor` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive. When clicked, the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html#Syncfusion_Blazor_InteractiveChat_ResponseToolbar_ItemClicked) event extracts plain text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
 
 The `texttospeech.js` file handles the core speech logic—extracting text from HTML, initiating speech synthesis, and cancel ongoing speech when needed. Meanwhile, the `texttospeech.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
 
