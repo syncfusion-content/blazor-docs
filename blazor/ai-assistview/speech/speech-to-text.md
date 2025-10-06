@@ -19,12 +19,11 @@ Before integrating `Speech-to-Text`, ensure the following:
     - [Blazor Getting Started Guide](../getting-started)
 
 2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
-
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
 ## Configure Speech-to-Text
 
-To enable Speech-to-Text functionality, modify the `Home.razor` file to incorporate the Web Speech API. The SpeechToText component listens for microphone input, transcribes spoken words, and updates the AI AssistView's editable footer with the transcribed text. The transcribed text is then sent as a prompt to the Azure OpenAI service via the AI AssistView component.
+To enable Speech-to-Text functionality, modify the `Home.razor` file to incorporate the Web Speech API. The [SpeechToText](https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app) component listens for microphone input, transcribes spoken words, and updates the AI AssistView's editable footer with the transcribed text. The transcribed text is then sent as a prompt to the Azure OpenAI service via the AI AssistView component.
 
 The `speechtotext.js` file handles operations related to the content of the editable footer, such as checking for meaningful input, clearing existing text, and updating the content with the transcribed value. Meanwhile, the `speechtotext.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
 
@@ -39,7 +38,7 @@ The `speechtotext.js` file handles operations related to the content of the edit
 @inject AzureOpenAIService OpenAIService
 @inject IJSRuntime JSRuntime
 
-<div class="integration-speechToText-section">
+<div class="integration-speechtotext-section">
     <SfAIAssistView @ref="assistView" PromptRequested="@PromptRequest">
         <AssistViews>
             <AssistView>
@@ -191,28 +190,28 @@ function updateContentEditableDiv(element, value) {
 
 {% highlight c# tabtitle="speechtotext.css" %}
 
-.integration-speechToText-section {
+.integration-speechtotext-section {
     height: 350px;
     width: 650px;
     margin: 0 auto;
 }
 
-.integration-speechToText-section .banner-content .e-listen-icon:before {
+.integration-speechtotext-section .banner-content .e-listen-icon:before {
     font-size: 25px;
 }
 
-.integration-speechToText-section .e-view-container {
+.integration-speechtotext-section .e-view-container {
     margin: auto;
 }
 
-.integration-speechToText-section .banner-content {
+.integration-speechtotext-section .banner-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 }
 
-.integration-speechToText-section #assistview-sendButton {
+.integration-speechtotext-section #assistview-sendButton {
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -221,23 +220,23 @@ function updateContentEditableDiv(element, value) {
     cursor: pointer;
 }
 
-.integration-speechToText-section #speechToText.visible,
-.integration-speechToText-section #assistview-sendButton.visible {
+.integration-speechtotext-section #speechToText.visible,
+.integration-speechtotext-section #assistview-sendButton.visible {
     display: inline-block;
 }
 
-.integration-speechToText-section #speechToText,
-.integration-speechToText-section #assistview-sendButton {
+.integration-speechtotext-section #speechToText,
+.integration-speechtotext-section #assistview-sendButton {
     display: none;
 }
 
 @media only screen and (max-width: 750px) {
-    .integration-speechToText-section {
+    .integration-speechtotext-section {
         width: 100%;
     }
 }
 
-.integration-speechToText-section .e-footer-wrapper {
+.integration-speechtotext-section .e-footer-wrapper {
     display: flex;
     border: 1px solid #c1c1c1;
     padding: 5px 5px 5px 10px;
@@ -245,7 +244,7 @@ function updateContentEditableDiv(element, value) {
     border-radius: 30px;
 }
 
-.integration-speechToText-section .content-editor {
+.integration-speechtotext-section .content-editor {
     width: 100%;
     overflow-y: auto;
     font-size: 14px;
@@ -254,12 +253,12 @@ function updateContentEditableDiv(element, value) {
     padding: 10px;
 }
 
-.integration-speechToText-section .content-editor[contentEditable=true]:empty:before {
+.integration-speechtotext-section .content-editor[contentEditable=true]:empty:before {
     content: attr(placeholder);
     color: #6b7280;
 }
 
-.integration-speechToText-section .option-container {
+.integration-speechtotext-section .option-container {
     align-self: flex-end;
 }
 

@@ -19,7 +19,6 @@ Before integrating `Text-to-Speech`, ensure the following:
     - [Blazor Getting Started Guide](../getting-started)
 
 2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
-
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
 ## Configure Text-to-Speech
@@ -38,7 +37,7 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
 @inject IJSRuntime JSRuntime
 @implements IDisposable
 
-<div class="integration-textToSpeech-section">
+<div class="integration-texttospeech-section">
     <SfAIAssistView @ref="assistView" PromptRequested="@PromptRequest">
         <AssistViews>
             <AssistView>
@@ -219,28 +218,28 @@ function cancel() {
 
 {% highlight c# tabtitle="texttospeech.css" %}
 
-.integration-textToSpeech-section {
+.integration-texttospeech-section {
     height: 350px;
     width: 650px;
     margin: 0 auto;
 }
 
-.integration-textToSpeech-section .banner-content .e-audio:before {
+.integration-texttospeech-section .banner-content .e-audio:before {
     font-size: 25px;
 }
 
-.integration-textToSpeech-section .e-view-container {
+.integration-texttospeech-section .e-view-container {
     margin: auto;
 }
 
-.integration-textToSpeech-section .banner-content {
+.integration-texttospeech-section .banner-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 }
 @media only screen and (max-width: 750px) {
-    .integration-textToSpeech-section {
+    .integration-texttospeech-section {
         width: 100%;
     }
 }
