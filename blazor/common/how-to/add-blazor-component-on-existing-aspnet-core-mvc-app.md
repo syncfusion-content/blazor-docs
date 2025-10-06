@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+title: Add a Blazor component to an existing ASP.NET Core MVC app | Syncfusion
+description: Learn how to integrate a Syncfusion Blazor component into an existing ASP.NET Core MVC application using the component tag helper and explore to more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# How to Add Blazor Component into Existing ASP.NET Core MVC Application
+# Add a Blazor component to an existing ASP.NET Core MVC application
 
-This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component on an existing ASP.NET Core MVC application.
+This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component to an existing ASP.NET Core MVC application.
 
-1. Open your existing ASP.NET Core MVC application on Visual Studio 2022.
+1. Open the existing ASP.NET Core MVC application in Visual Studio 2022.
 
-2. Right-click on the project and select `Manage NuGet Package`.
+2. Right-click the project and select `Manage NuGet Packages`.
 
     ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
 
-3. Search the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
+3. Search for the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
 
     ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
 
-4. Register Blazor server service and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file.
+4. Register Blazor Server and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the `~/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -41,7 +41,7 @@ This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup
     app.MapFallbackToPage("/_Host");
     ```
 
-6. Create `~/_Imports.razor` file in the root of your application and add the below namespaces.
+6. Create a `~/_Imports.razor` file at the root of the application and add the following namespaces.
 
     ```cshtml
     @using System.Net.Http
@@ -57,7 +57,7 @@ This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup
     @using Syncfusion.Blazor.Grids
     ```
 
-7. Add Blazor script references at the end of `<body>` tag and Syncfusion<sup style="font-size:70%">&reg;</sup> theme and script references inside the `<head>` tag on `~/Views/Shared/_Layout.cshtml` file.
+7. Add Blazor script references at the end of the `<body>` tag and Syncfusion<sup style="font-size:70%">&reg;</sup> theme and script references inside the `<head>` tag in the `~/Views/Shared/_Layout.cshtml` file.
 
     ```cshtml
     <head>
@@ -73,9 +73,9 @@ This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup
     </body>
     ```
 
-8. Create a new folder `~/Components` at the root of application. Right-click on the `~/Components` folder and add a new razor component by `Add -> Razor Component`.
+8. Create a new `~/Components` folder at the root of the application. Right-click the `~/Components` folder and add a new razor component via `Add -> Razor Component`.
 
-9. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the created razor file.
+9. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the created razor component file.
 
     ```cshtml
     <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -112,7 +112,7 @@ This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup
     }
     ```
 
-10. Now, add the razor component in the `~/Views/Home/Index.cshtml` page using `component` tag helper. The `.razor` file name will be considered as a Razor component. For example, the above SfGrid component is added on `~/Components/MyGrid.razor` file.
+10. Add the Razor component to the `~/Views/Home/Index.cshtml` page using the `component` tag helper. The `.razor` file name is the razor component type. For example, the `SfGrid` component above is added in the `~/Components/MyGrid.razor` file.
 
     ```cshtml
     @using AspCoreMvcApp.Components;
@@ -120,11 +120,11 @@ This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup
     <component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
     ```
 
-11. Run the application by pressing `F5` key. Now, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component will be rendered in the ASP.NET Core MVC application.
+11. Run the application by pressing `F5`. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component is rendered in the ASP.NET Core MVC application.
 
     ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.png)
 
 ## See Also
 
-* [Component Tag Helper in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper?view=aspnetcore-7.0)
-* [Integrating Blazor Components on Existing ASP.NET Core MVC apps](https://devblogs.microsoft.com/premier-developer/integrating-blazor-components-into-existing-asp-net-core-mvc-apps/)
+* [Component Tag Helper in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper)
+* [Integrating Blazor components into existing ASP.NET Core MVC apps](https://devblogs.microsoft.com/premier-developer/integrating-blazor-components-into-existing-asp-net-core-mvc-apps/)

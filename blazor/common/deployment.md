@@ -75,7 +75,7 @@ If the path is relative, the output directory generated is relative to the proje
 
 ## Ahead-of-time (AOT) compilation in Blazor WebAssembly
 
-Blazor WebAssembly supports ahead-of-time (AOT) compilation, which improves runtime performance at the expense of a larger app size. For details and enablement steps, see [Ahead-of-time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/?view=aspnetcore-8.0&tabs=windows#ahead-of-time-aot-compilation).
+Blazor WebAssembly supports ahead-of-time (AOT) compilation, which improves runtime performance at the expense of a larger app size. For details and enable steps, see [Ahead-of-time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/?view=aspnetcore-8.0&tabs=windows#ahead-of-time-aot-compilation).
 
 ### Enable AOT in the application
 

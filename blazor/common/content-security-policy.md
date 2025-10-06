@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with a strict Content Security Policy (CSP)
+# Syncfusion® Blazor components with a strict Content Security Policy (CSP)
 
 Content Security Policy (CSP) is a browser security feature that helps protect against cross-site scripting (XSS) and data injection by limiting the allowed sources for scripts, styles, images, fonts, and other resources.
 

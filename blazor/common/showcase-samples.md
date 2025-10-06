@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components showcase samples
+# Syncfusion® Blazor components showcase samples
 
 The following showcase applications demonstrate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in real-world scenarios.
 

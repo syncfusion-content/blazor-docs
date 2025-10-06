@@ -13,7 +13,7 @@ This section explains how to reference fallback [scripts](https://blazor.syncfus
 
 ## Blazor Web App
 
-For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference script and stylesheet fallbacks from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
+For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
 
 ### Script fallback
 
@@ -58,7 +58,7 @@ Reference the theme stylesheet inside the `<head>` of the **~/Components/App.raz
 
 ## Blazor WebAssembly Standalone App
 
-For Blazor WebAssembly Standalone App, reference script and stylesheet fallbacks from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
+For Blazor WebAssembly Standalone App, reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
 
 ### Script fallback
 
