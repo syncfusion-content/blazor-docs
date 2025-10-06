@@ -13,18 +13,21 @@ documentation: ug
 
 ## Images
 
-The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
+The Blazor Card component supports the inclusion of images using the [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) component. The element can be added directly within the structure to display an image.
 
 N> By default, card images occupies full width of its parent element.
+
+The CardImage supports direct specification of the image source using its `Image` property. Additionally, it can include an `Alt` property for improved accessibility, providing alternative text for the image.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard>
-    <CardImage/>
+    <CardImage Image="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/steven.png"/>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVgihBBLRBjgnKM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLyDOroLVSvaiee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Image](images/image-card.png)
 
 ### Title
 
@@ -32,21 +35,31 @@ Card image is supported to include a `Title` property for the image. By default,
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
-
-<SfCard>
-    <CardHeader Title="JavaScript"></CardHeader>
-    <CardContent>
-        JavaScript Succinctly was written to give readers an accurate, concise examination
-        of JavaScript objects and their supporting nuances, such as complex values, primitive
-        values scope, inheritance, the head object, and more.
-    </CardContent>
+@using Syncfusion.Blazor.Buttons
+<div style="height:300px;">
+<SfCard ID="HugeImage" Orientation="CardOrientation.Vertical">
+    <CardImage Image="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/steven.png" Title="Harrisburg Keith"/>
+    <CardContent Content="Hi, I'm creative graphic design for print, new media based in Edenbridge"/>
+    <CardFooter>
+        <CardFooterContent>
+            <SfButton CssClass="e-btn e-outline e-primary">FOLLOW US</SfButton>
+        </CardFooterContent>
+    </CardFooter>
 </SfCard>
+</div>
+<style>
+   .e-card-image {
+   width: 150px !important;
+    margin-left: 35vw;
+   }
+    </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUihLBhHVhadTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSDkhSrqrkBjAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component Image with Title](images/image-Title.png)
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeparator` property to `true` in card content for adding a divider.
+Dividers are used to visually separate elements within the Card. To add a divider below a `CardContent` component, set its [`EnableSeparator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html#Syncfusion_Blazor_Cards_CardContent_EnableSeparator) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -69,3 +82,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhqsVBBLnBeVrnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Divider](images/Divider-card.png)

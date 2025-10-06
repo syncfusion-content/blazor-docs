@@ -77,7 +77,7 @@ You can add and customize the leading icon of chip using the [`LeadingIconCss`](
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrgirrwBoGkWnCI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeDksEzbMVhnKc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
@@ -116,7 +116,7 @@ You can add and customize the avatar of chip using the [`LeadingIconCss`](https:
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgCBhQLIvJWaER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrItusapbhiLdgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
