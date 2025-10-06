@@ -56,7 +56,7 @@ Add the custom tools on the selected link inside the Rich Text Editor through th
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
+![Blazor Rich Text Editor link quick toolbar](../images/blazor-richtexteditor-link-quick-toolbar.png)
 
 ## See also
 
