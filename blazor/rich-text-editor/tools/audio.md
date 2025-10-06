@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Insert and Manage Audio in Blazor Rich Text Editor Component | Syncfusion
+title: Using Code Block in Blazor Rich Text Editor | Syncfusion
 description: Checkout and learn here all about insert audio in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
