@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Code Block in Blazor RichTextEditor Component | Syncfusion
+title: Code Block in Blazor RichTextEditor Component | Syncfusion
 description: Checkout and learn here all about Code Block in Syncfusion Blazor Rich Text Editor component and much more.
 platform: Blazor
 control: RichTextEditor
