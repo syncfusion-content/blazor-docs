@@ -24,7 +24,7 @@ The following table shows the supported .NET and .NET Core versions for Syncfusi
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release cadence. Blazor component packages use a semantic-style version format: Major.Minor.Revision.
 
-Example: for version `23.1.36`:
+Example: for version `{{ site.blazorversion }}`:
 
 * 23 — major release number; updated quarterly and may include new features and breaking changes.
 * 1 — minor release number; adds features and fixes without breaking changes.
