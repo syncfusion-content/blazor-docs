@@ -7,15 +7,15 @@ control: Kanban
 documentation: ug
 ---
 
-# Columns in Blazor Kanban Component
+# Columns in Syncfusion Blazor Kanban Component
 
-The **Kanban** columns represents each stage of the process. The column definitions are used as the **DataSource** schema in the Kanban. The Kanban operations such as drag-and-drop, swimlane, and toggle columns are performed based on column definitions.
+The **Kanban** columns represent each stage of workflow process.Column definitions serve as the schema for the Kanban board's **DataSource**. The Operations such as drag-and-drop, swimlane grouping, and column toggling are driven by these column definitions.
 
 ## Single-key mapping
 
-Kanban columns are categorized by mapping the **key** from the datasource using the `KeyField` property. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. Based on this categorization, Kanban columns are split on this board.
+Columns are categorized by mapping the `KeyField` property to specific key values in the data source. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. This categorization determines how cards are distributed across columns on the Kanban board.
 
-N> The `KeyField` property is mandatory to render the columns in the Kanban board.
+N> The `KeyField` property is required to render columns on the Kanban board.
 
 ```cshtml
 
@@ -79,7 +79,7 @@ N> The `KeyField` property is mandatory to render the columns in the Kanban boar
 
 ## Multi-key mapping
 
-Kanban board allows to render a single column by mapping multiple keys using `KeyField` property.
+The Kanban board supports rendering a single column with multiple key mappings using the `KeyField` property.
 
 ```cshtml
 
@@ -143,13 +143,13 @@ Kanban board allows to render a single column by mapping multiple keys using `Ke
 
 ## Header text
 
-You can provide the column header text of Kanban columns using the `HeaderText` property. If you have not specified any header text, it will render the header without any text.
+Use the `HeaderText` property to define the display text for each Kanban column header. If no header text is specified, the column header will appear blank.
 
 ## Header template
 
 You can customize the column header with `Template` property as shown in the following code.
 
-To get start quickly with Blazor Kanban component using Templates, you can check on this video.
+To quickly get started with using templates in the Blazor Kanban component, watch the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
@@ -323,7 +323,7 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 ## Toggle columns
 
-Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanColumn`. When the property is enabled, it will render the expand or collapse icon to the column header.
+Kanban columns can be expanded or collapsed by enabling the `AllowToggle` property in `KanbanColumn`. When enabled, an expand/collapse icon appears in the column header.
 
 N> By default, collapsed column width is set to `50px`.
 
@@ -389,7 +389,7 @@ N> By default, collapsed column width is set to `50px`.
 
 ### Initially collapsed column
 
-By default, all columns are on expanded state when loading the Kanban board initially. But, you can render the columns with collapsed state using the `IsExpanded` property.
+By default, all columns are expanded when the Kanban board is initially rendered. To render a column in a collapsed state initially, use the `IsExpanded` property.
 
 N> The `IsExpanded` property only works when enabling the `AllowToggle` property on particular column.
 
@@ -457,7 +457,7 @@ In the following example, the Backlog column is collapsed on initialization of K
 
 ## Stacked headers
 
-Stacked headers are the additional headers to column header that will group the similar columns. Define the grouping of columns **Key** value to the `KeyField` property and provide the custom header text name to grouped columns using the `Text` property in `KanbanStackedHeaders`.
+Stacked headers are additional header rows that group related columns under a common category. Group columns by specifying their key values in the `KeyFields` property and assign a custom header label using the `Text` property in `KanbanStackedHeaders`.
 
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 
