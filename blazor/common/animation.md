@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Animation in Blazor Components | Syncfusion
-description: Checkout and learn here all about enable or disable animation globally for Syncfusion Blazor Components.
+title: Animation in Blazor components | Syncfusion
+description: Learn how to enable or disable animations globally for Syncfusion Blazor components using GlobalOptions.Animation in Program.cs.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Animation in Blazor Components
+# Animation in Blazor components
 
-This section provides information about the animation process and how to enable/disable it globally for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components.
+This section explains how to enable or disable animations globally for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. Global animation settings apply app-wide and can override individual component animation settings.
 
 ## Enable or disable animation globally
 
-You can enable or disable animation for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component's globally by setting [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property while registering the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SyncfusionBlazor.html#Syncfusion_Blazor_SyncfusionBlazor_AddSyncfusionBlazor_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Syncfusion_Blazor_GlobalOptions__), with one of below options,
+Enable or disable animations for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by setting the [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property when registering the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SyncfusionBlazor.html#Syncfusion_Blazor_SyncfusionBlazor_AddSyncfusionBlazor_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Syncfusion_Blazor_GlobalOptions__). Use one of the following modes:
 
-* Enable - Enables the animation for all components regardless of individual component's animation settings.
-* Disable - Disables the animation for all components regardless of individual component's animation settings.
-* Default - Animation is enabled or disabled based on component's animation settings.
+* Enable: Enables the animation for all components, overriding individual component animation settings.
+* Disable: Disables the animations for all components, overriding individual component animation settings.
+* Default: Animation is enabled or disabled based on component's animation settings.
 
-In the below code example animation is disabled.
+The following example disables animations globally.
 
 {% tabs %}
 
@@ -34,4 +34,4 @@ builder.Services.AddSyncfusionBlazor(options => { options.Animation = GlobalAnim
 
 {% endtabs %}
 
-N> [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only and it is not applicable for direct CSS level animations (Animation defined from CSSs classes/properties).
+N> The [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only. It does not affect pure CSS animations defined by CSS classes or properties.
