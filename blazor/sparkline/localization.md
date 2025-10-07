@@ -7,7 +7,7 @@ control: Sparkline Charts
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor Sparkline Charts Component
 
 The Sparkline Charts component supports localization. The default culture is `en-US`. The culture can be changed using the `LoadCldrData` and `setCulture` methods.
 

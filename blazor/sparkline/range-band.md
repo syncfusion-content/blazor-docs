@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Band in Blazor Sparkline Component | Syncfusion
-description: Check out and learn about range band customization in the Syncfusion Blazor Sparkline component.
+description: Explore and understand how to customize range bands in the Syncfusion Blazor Sparkline component for better visuals.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

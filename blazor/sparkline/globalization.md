@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Sparkline Component | Syncfusion
-description: Check out and learn about globalization support in the Syncfusion Blazor Sparkline component.
+description: Check out and learn about globalization support in the Syncfusion Blazor Sparkline component for better adaptability.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -21,7 +21,7 @@ Globalization is the process of designing and developing a component to work in 
 
 ```
 
-N> Refer to the [localization documentation for Blazor Server](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for configuration details.
+N> Refer to the [localization documentation for Blazor Server](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-server-application) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-webassembly-application) for configuration details.
 
 On successful configuration, the Sparkline will be rendered as shown below.
 
