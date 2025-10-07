@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Extend and Customize the Syncfusion Components in Blazor - Syncfusion
-description: Checkout and learn here about how to extend, customize, and reuse the Syncfusion Components in Blazor
+title: Extend and customize Syncfusion Blazor components - Syncfusion
+description: Learn how to extend, compose, and reuse Syncfusion Blazor components, including dynamic rendering patterns.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Extend, Customize, and Reuse Components
 
-The Blazor framework provides the support to extend a component or customize it within another component for a strong composite model.
+Blazor framework provides the support to extend a component or customize it within another component for a strong composite model.
 
 ## Extend Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can extend and customize the logic by creating a new Blazor component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be extended by creating a new Razor component and implementing custom logic.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (SyncButton.razor).
 
@@ -82,11 +82,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can exten
     <SyncButton Content="Danger" Styles="SyncButton.ButtonStyles.Danger"></SyncButton>
     ```
 
-    ![Output of extending Syncfusion component](images/extend-sync-component.png)
+    ![Output of extending a Syncfusion Blazor component example](images/extend-sync-component.png)
 
 ## Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component within another Blazor component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be implemented within another Blazor component.
+A Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be implemented within another Razor component.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (TodoList.razor).
 
@@ -154,21 +154,21 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be imp
     <TodoList></TodoList>
     ```
 
-    ![Render Syncfusion Blazor components inside another Blazor component](images/todolist.gif)
+    ![Render Syncfusion Blazor components within another component (example)](images/todolist.gif)
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component dynamically
 
 The following methods can be used to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components dynamically:
 
-1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-8.0) with [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-8.0#razor-templates)
-2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-8.0) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-8.0) methods
-3. [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree?view=aspnetcore-7.0) method
+1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment) with [Razor template syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components#razor-templates)
+2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder) methods
+3. [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method
 
 ### RenderFragment with Razor Syntax
 
 The `RenderFragment` represents the segments of UI content that can be reused in the view page based on the application logic.
 
-You can use [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-8.0#razor-templates) to define the `RenderFragment` in the view page.
+You can use [Razor template syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components#razor-templates) to define the `RenderFragment` in the view page.
 
 The following code demonstrates the RenderFragment that renders the `SfButton` component.
 
@@ -212,9 +212,9 @@ The following code demonstrates the RenderFragment that renders the `SfGrid` com
 
 ## RenderFragment with RenderTreeBuilder methods
 
-You can define the RenderFragment delegate with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-8.0)'s methods.
+You can define the RenderFragment delegate with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder) methods.
 
-N> Refer to [Manual RenderTreeBuilder logic](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-8.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
+N> Refer to [Manual RenderTreeBuilder logic](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios#manual-rendertreebuilder-logic) to learn more about RenderTreeBuilder.
 
 ```cshtml
 @RenderSfButton()
@@ -295,7 +295,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Class` to create a new class file (SyncTextBox.cs).
 
-2. Inherit the newly created class with [ComponentBase](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase?view=aspnetcore-7.0) and override the [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree?view=aspnetcore-7.0) method to create the component.
+2. Inherit the newly created class with [ComponentBase](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
 
     ```c#
     using Microsoft.AspNetCore.Components;

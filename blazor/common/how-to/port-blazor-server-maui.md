@@ -1,48 +1,45 @@
 ---
 layout: post
-title: Port Blazor Server Side App to MAUI Blazor Hybrid App | Syncfusion
-description: Checkout and learn here all about porting Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App.
+title: Port a Blazor Web App to a .NET MAUI Blazor Hybrid App | Syncfusion
+description: Learn here about how to migrate a Blazor Web App to a .NET MAUI Blazor Hybrid app using a Razor Class Library (RCL) to reuse pages, assets, and services.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# How to port Syncfusion&reg; Blazor Web App to MAUI Blazor Hybrid App
+# How to port Syncfusion® Blazor Web App to .NET MAUI Blazor Hybrid App
 
-This section explains how to port Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App to .NET MAUI Blazor Hybrid App using Razor Class Library (RCL). This way, you can avoid rewriting all your Blazor Web App pages for the .NET MAUI Blazor Hybrid App.
+This guide explains how to migrate a Blazor Web App to a .NET MAUI Blazor Hybrid App by using a Razor Class Library (RCL) to share pages, layouts, assets, and services. This approach avoids rewriting Blazor Web App pages for the .NET MAUI Blazor Hybrid app.
 
 ## Prerequisites
 
-[.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+Install the [.NET SDK 8.0](https://dotnet.microsoft.com/download) or later and Visual Studio 2022 with the .NET MAUI and ASP.NET and web development workloads.
 
-## Create a new project for Blazor Server App
+## Create a Blazor Web App
 
-Create a new [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) with Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+Create a new [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) that uses the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-### 1. Create MAUI Hybrid App in Visual Studio
+### 1. Create a .NET MAUI Blazor Hybrid App in Visual Studio
 
-Open Visual Studio and create a new project. Search for [.NET MAUI Blazor Hybrid App](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) template.
-Name the project and create it.
+Open Visual Studio and create a new project using the [.NET MAUI Blazor Hybrid App](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) template. Specify a project name and create the project.
 
-### 2. Create Razor Class Library (RCL)
+### 2. Create a Razor Class Library (RCL)
 
-In the solution, add a new project using the [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) template in Visual Studio and ensure it targets .NET 8.0 to match both Blazor Web App and Blazor Maui Hybrid.
+In the solution, add a new project using the [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) template in Visual Studio. Ensure it targets .NET 8.0 to match both the Blazor Web App and the .NET MAUI Blazor Hybrid App.
 
-### 3. Migrate Static Assets, References, NuGet Packages, Razor Pages
+### 3. Migrate static assets, references, NuGet packages, and Razor pages
 
-Move all static assets (such as CSS, JavaScript, and images) from the Blazor Web App’s wwwroot folder to the Razor Class Library’s wwwroot directory. Then, update the asset references in the MAUI Hybrid App’s wwwroot/index.html to use the Razor Class Library’s assets via the _content/RazorClassLibrary/ path.
+- Move all static assets (such as CSS, JavaScript, and images) from the Blazor Web App’s `wwwroot` folder to the Razor Class Library’s `wwwroot` directory. Then, update asset references in the .NET MAUI Blazor Hybrid App to use the RCL assets via the `_content/RazorClassLibrary/` path.
+- Move Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package references from the Blazor Web App `.csproj` to the RCL `.csproj`.
+- Move `Components/Pages` and `Components/Layouts` to the Razor Class Library. Add the necessary namespaces in the RCL’s `_Imports.razor` file.
 
-Move all Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor NuGet packages` references from the Blazor web app's .csproj to the RCL's .csproj
+![Folders to move into the RCL](images/server-folders.png)
 
-Move  Components/Pages ,Components/Layouts to the RazorClassLibrary and Add Include Necessary Namespace to _Imports.razor
+### 4. Add project references and register services
 
-![Folders to move](images/server-folders.png)
+Add the Razor Class Library as a project reference in both the Blazor Web App and the .NET MAUI Blazor Hybrid App. Resolve any missing references or errors. After verifying the reference, remove folders such as `Components/Pages` and `Components/Layouts` from the .NET MAUI Blazor App to avoid duplication and keep the project structure clean.
 
-### 4. Add Project Reference 
-
-Afterward, add Razor Class Library project reference in both the Blazor Web App and the MAUI Blazor App. Resolve any missing references or errors that arise. Once completed, remove folders such as Components/Pages and Components/Layouts from the MAUI Blazor App to avoid duplication and maintain a clean project structure.
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MauiProgram.cs` file of the .NET MAUI Blazor App.
 
     {% tabs %}
     {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}
@@ -55,10 +52,10 @@ Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor servic
     {% endhighlight %}
     {% endtabs %}
 
-Finally, update the _Imports.razor file to include the necessary namespaces from the Razor Class Library. Then, modify the Routes.razor file in the Blazor MAUI Hybrid app to set the DefaultLayout and AppAssembly to use the MainLayout component from the Razor Class Library
+Finally, update the `_Imports.razor` file to include the necessary namespaces from the Razor Class Library. Then, modify the `Routes.razor` file in the Blazor MAUI Hybrid app to set the DefaultLayout and AppAssembly to use the `MainLayout` component from the Razor Class Library
 
 ### 5. Run the project
 
- In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
+In the Visual Studio toolbar, select the target (for example, **Windows Machine**) to build and run the app.
 
-![Build and run MAUI Blazor Hybrid App](images/windows-machine-mode.png)
+![Build and run the .NET MAUI Blazor Hybrid App](images/windows-machine-mode.png)
