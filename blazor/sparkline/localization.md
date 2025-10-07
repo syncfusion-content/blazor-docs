@@ -17,6 +17,8 @@ The Sparkline Charts tooltip supports localization. The following example shows 
 
 ```cshtml
 
+@using Microsoft.JSInterop;
+
 <SfSparkline DataSource="@Numbers"
               Type="SparklineType.Line"
               Fill="#b2cfff"
@@ -45,7 +47,7 @@ The Sparkline Charts tooltip supports localization. The following example shows 
 
 ```
 
-![Sparkline Charts with localization](./images/localization/Localization.png)
+![Sparkline Charts with localization](./images/localization/blazor-sparkline-localization.png)
 
 ## Rtl
 
@@ -54,6 +56,8 @@ If the `EnableRtl` property is set to true, the Sparkline Charts will render fro
 The following example shows the Sparkline Charts rendered in right-to-left mode.
 
 ```cshtml
+
+@using Microsoft.JSInterop;
 
 <SfSparkline DataSource="@Numbers"
               Type="SparklineType.Line"
@@ -72,5 +76,3 @@ The following example shows the Sparkline Charts rendered in right-to-left mode.
 }
 
 ```
-
-![Sparkline Charts with Rtl](./images/localization/Rtl.png)
