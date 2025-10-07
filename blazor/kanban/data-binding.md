@@ -206,7 +206,7 @@ N> By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
 ### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/odata-version-3-0) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -482,7 +482,7 @@ It is possible to dynamically modify Kanban [Query](https://help.syncfusion.com/
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors.
 
-The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bound data are performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
+The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bound data are performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) abstract class.
 
 ```cshtml
 
