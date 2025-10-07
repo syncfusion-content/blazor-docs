@@ -114,7 +114,7 @@ dotnet --version
 
 ## Create a Blazor Web App using .NET CLI
 
-Run the following command to create a new Blazor Web App. For detailed instructions, refer to  [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+Run the following command to create a new Blazor Web App. For detailed instructions, refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
 Configure the appropriate interactive render mode and interactivity location when setting up the project. For details, see the [interactive render mode](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) documentation.
 
@@ -508,3 +508,4 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 
 
 * [Globalization in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/globalization)
+
