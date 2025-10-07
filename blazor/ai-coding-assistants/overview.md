@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Syncfusion AI Coding Assistants Overview | Syncfusion
-description: Learn how Syncfusion AI Coding Assistants boost Blazor productivity by generating accurate code snippets, configuration examples, and contextual guidance.
-control: Syncfusion AI Coding Assistants Overview
+title: Syncfusion AI Coding Assistant Overview | Syncfusion
+description: Learn how Syncfusion AI Coding Assistant boost Blazor productivity by generating accurate code snippets, configuration examples, and contextual guidance.
+control: Syncfusion AI Coding Assistant Overview
 platform: Blazor
 documentation: ug
 ---
 
-# Syncfusion® AI Coding Assistants Overview
+# Syncfusion® AI Coding Assistant Overview
 
-The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants** are designed to streamline your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—minimizing documentation searches and maximizing productivity.
+The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant** are designed to streamline your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—minimizing documentation searches and maximizing productivity.
 
-AI Coding Assistants:
+AI Coding Assistant:
 
 * **The SyncfusionBlazorAssistant MCP Server**
   Processes advanced prompts and returns tailored code suggestions via [MCP-compatible clients](https://modelcontextprotocol.io/clients).
@@ -20,7 +20,7 @@ AI Coding Assistants:
 
 ## Getting Started
 
-To use the AI Coding Assistants, you need:
+To use the AI Coding Assistant, you need:
 
 * A [Syncfusion<sup style="font-size:70%">&reg;</sup> user account](https://www.syncfusion.com/account)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
@@ -32,7 +32,7 @@ To use the AI Coding Assistants, you need:
 
 ## Unlimited Access
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to the AI Coding Assistants, with no limitations on:
+Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to the AI Coding Assistant, with no limitations on:
 
 * Number of requests
 * Components usage
@@ -58,7 +58,7 @@ This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;
 
 ## Privacy & Data Handling
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants is designed with privacy in mind:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is designed with privacy in mind:
 
 * The tools do not access your project files or workspace directly.
 * User prompts are not stored by any of the tools or used for any other purpose.
@@ -67,6 +67,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants is des
 
 ## See also
 
-* Add the [SyncfusionBlazor MCP Server](./mcp-server.md) to an MCP-enabled client
-* Install the [SyncfusionBlazor GitHub Copilot Extension](./copilot-extension.md)
+* Add the [SyncfusionBlazorAssistant MCP Server](https://blazor.syncfusion.com/documentation/ai-coding-assistants/mcp-server) to an MCP-enabled client
+* Install the [SyncfusionBlazor GitHub Copilot Extension](https://blazor.syncfusion.com/documentation/ai-coding-assistants/copilot-extension)
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Documentation](https://blazor.syncfusion.com/documentation)
