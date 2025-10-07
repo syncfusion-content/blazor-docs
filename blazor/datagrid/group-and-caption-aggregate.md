@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Group and caption aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure group footer aggregates and group caption aggregates in the Syncfusion Blazor DataGrid using GroupFooterTemplate and GroupCaptionTemplate with AggregateTemplateContext.
+description: Learn to configure group footer and caption aggregates in Syncfusion Blazor DataGrid using GroupFooterTemplate and GroupCaptionTemplate.
 platform: Blazor
 control: DataGrid
 documentation: ug

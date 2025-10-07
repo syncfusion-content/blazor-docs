@@ -173,7 +173,7 @@ public class OrderData
 
 ## Prevent grouping for particular column
 
-Prevent grouping for a specific column by setting [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to `false` on that column. This disables drag-to-group for the designated field while leaving other columns groupable.
+To prevent grouping for a specific column, set [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to `false`. This disables the drag-to-group feature for that column, while allowing grouping for other columns.
 
 The following example disables grouping for the `CustomerID` column:
 
