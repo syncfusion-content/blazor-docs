@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Toolbar in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Toolbar in Syncfusion Blazor RichTextEditor component and much more.
+title: Toolbar Configuration in Blazor Rich Text Editor | Syncfusion
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor Rich Text Editor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Toolbar types in Blazor RichTextEditor
+# Toolbar types in Blazor Rich Text Editor
 
-The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content.
+The Rich Text Editor toolbar provides a collection of tools such as Bold, Italic, and text alignment buttons used to format the content.
 
 You can customize the toolbar configurations by using the [RichTextEditorToolbarSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
 
@@ -18,9 +18,9 @@ You can customize the toolbar configurations by using the [RichTextEditorToolbar
 3. Scrollable
 4. Popup 
 
-## Expand Toolbar
+## Expand toolbar
 
-The expand toolbar allows to hide the overflowing items in the next line by using the [ToolbarType.Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) property. By clicking the expand arrow, you can view the overflowing toolbar items. The default mode of toolbar is `Expand`.
+The [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) toolbar hides overflowing items in the next line using the  property. By clicking the expand arrow, you can view the overflowing toolbar items. The default mode of toolbar is `Expand`.
 
 {% tabs %}
 {% highlight razor %}
@@ -32,9 +32,9 @@ The expand toolbar allows to hide the overflowing items in the next line by usin
 
 ![Blazor RichTextEditor expand toolbar](./images/blazor-richtexteditor-expand-toolbar.png)
 
-## Multi-row Toolbar
+## Multi-row toolbar
 
-You can display the toolbar items in a row-wise format by using the [ToolbarType.MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) property. All toolbar items are visible always.
+The [MultiRow]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow)) toolbar displays items in multiple rows, ensuring all items are always visible.
 
 {% tabs %}
 {% highlight razor %}
@@ -46,9 +46,9 @@ You can display the toolbar items in a row-wise format by using the [ToolbarType
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
-## Scrollable Toolbar
+## Scrollable toolbar
 
-You can display the toolbar items in a single line with horizontal scrolling by using the [ToolbarType.Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Scrollable) property. 
+The [Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Scrollable) toolbar displays items in a single row with horizontal scrolling enabled.
 
 {% tabs %}
 {% highlight razor %}
@@ -62,7 +62,7 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 
 ## Configuring a popup toolbar
 
-You can display the toolbar items in a popup container by setting the [ToolbarType.Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Popup) property, which optimizes the toolbar layout for limited space and smaller screens.
+The [Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Popup) toolbar property displays items in a popup container, ideal for limited space or smaller screens.
 
 {% tabs %}
 {% highlight razor %}
@@ -74,7 +74,7 @@ You can display the toolbar items in a popup container by setting the [ToolbarTy
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-popup-toolbar.png)
 
-## Floating Toolbar
+## Floating toolbar
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [FloatingToolbarOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
 
@@ -101,7 +101,7 @@ The Rich Text Editor allows you to position the toolbar at the top or bottom of 
 
 By default, the toolbar is displayed at the top of the editor, making all formatting and editing tools immediately accessible above the content.
 
-To position the toolbar at the bottom, use the [RichTextEditorToolbarSettings.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Position) property and set its value to `Bottom`. This places the toolbar below the content area, which can help maintain a cleaner top layout and improve accessibility in certain use cases.
+To move the toolbar to the bottom, use the [RichTextEditorToolbarSettings.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Position) property and set its value to `Bottom`. This places the toolbar below the content area, which can help maintain a cleaner top layout and improve accessibility in certain use cases.
 
 {% tabs %}
 {% highlight razor %}
@@ -113,7 +113,7 @@ To position the toolbar at the bottom, use the [RichTextEditorToolbarSettings.Po
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-bottom-toolbar.png)
 
-## Quick Toolbar
+## Quick toolbar
 
 The Rich text editor has quick toolbars that are open as context-menu on clicking the image, link, audio, video and table elements. By default, the below quick toolbar items show on click on the corresponding elements. You can customize the quick toolbar items using the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) property.
 
@@ -126,9 +126,9 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 | [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
 | [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) |No Default item have it and it support the all toolbar items |
 
-### Image quick Toolbar
+### Image quick toolbar
 
-You can customize the inserted image in the editor by using the [RichTextEditorQuickToolbarSettings.Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Image) property. The image quick toolbar has the following items.
+Customize the inserted image using the [RichTextEditorQuickToolbarSettings.Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Image) property. The image quick toolbar has the following items.
 
 | Image Toolabr items | Description |
 | --------------------| ------------- |
@@ -151,9 +151,9 @@ You can customize the inserted image in the editor by using the [RichTextEditorQ
 
 ![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.png)
 
-### Link quick Toolbar
+### Link quick toolbar
 
-You can customize the selected link inside the editor through the quick toolbar by using [RichTextEditorQuickToolbarSettings.Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Link) property. The quick toolbar for link has the following options.
+Customize the selected link using the [RichTextEditorQuickToolbarSettings.Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Link) property. The quick toolbar for link has the following options.
 
 | Tools | Description |
 |----------------|--------------------------------------|
@@ -171,9 +171,9 @@ You can customize the selected link inside the editor through the quick toolbar 
 
 ![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
 
-### Table quick Toolbar
+### Table quick toolbar
 
-Quick toolbar is opened by clicking the table. You can customize the table by using the [RichTextEditorQuickToolbarSettings.Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Table) property. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
+The table quick toolbar appears when clicking on a table. You can customize the table by using the [RichTextEditorQuickToolbarSettings.Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Table) property. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
 
 | Tools | Description |
 |----------------|--------------------------------------|
@@ -195,9 +195,9 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 
 ![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-table-quick-toolbar.png)
 
-### Audio quick Toolbar
+### Audio quick toolbar
 
-The Rich Text Editor allows you to customize the inserted audio by using the [RichTextEditorQuickToolbarSettings.Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) property. The audio quick toolbar has the following items.
+Customize the inserted audio using the [RichTextEditorQuickToolbarSettings.Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) property. The audio quick toolbar has the following items.
 
 | Tools | Description |
 |----------------|--------------------------------------|
@@ -215,9 +215,9 @@ The Rich Text Editor allows you to customize the inserted audio by using the [Ri
 
 ![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.png)
 
-### Video quick Toolbar
+### Video quick toolbar
 
-The Rich Text Editor allows you to customize the inserted video by using the [RichTextEditorQuickToolbarSettings.video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) property. The video quick toolbar has the following items.
+Customize the inserted video using the [RichTextEditorQuickToolbarSettings.video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) property. The video quick toolbar has the following items.
 
 | Tools | Description |
 |----------------|--------------------------------------|
@@ -239,9 +239,9 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
 
-### Text quick Toolbar
+### Text quick toolbar
 
-By activating the "RichTextEditorQuickToolbarSettings.Text" property, the Rich Text Editor offers the ability to display a quick toolbar when needed. The floating toolbar shows up when you select or focus on editable text. By modifying the "RichTextEditorQuickToolbarSettings.Text" property, the commands shown in the text quick toolbar can be changed.
+By activating the [RichTextEditorQuickToolbarSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Text) property, the Rich Text Editor offers the ability to display a quick toolbar when needed. The floating toolbar shows up when you select or focus on editable text. By modifying the `RichTextEditorQuickToolbarSettings.Text` property, the commands shown in the text quick toolbar can be changed.
 
 {% tabs %}
 {% highlight razor %}
@@ -269,7 +269,8 @@ private List<ToolbarItemModel> textQuickToolbarItems = new List<ToolbarItemModel
 {% endhighlight %}
 {% endtabs %}
 
-Refer the following link for more items in the text quick toolbar.
+Refer to the following link for a complete list of available toolbar items:
+
 https://blazor.syncfusion.com/documentation/rich-text-editor/tools/built-in-tools
 
 {% tabs %}
