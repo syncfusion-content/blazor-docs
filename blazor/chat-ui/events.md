@@ -7,13 +7,19 @@ control: Chat UI
 documentation: ug
 ---
 
-# Events in Blazor Chat UI component
+# Events in Blazor Chat UI Component
 
-This section describes the Chat UI events that will be triggered when appropriate actions are performed. The following events are available in the Chat UI component.
+The Blazor Chat UI component provides a flexible event system that enables developers to respond to key user interactions.
+
+This section covers the following available events:
+
+*   [Created](#created)
+*   [MessageSend](#sending-message)
+*   [UserTyping](#user-typing)
 
 ## Created
 
-The Chat UI component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Created) event when the component rendering is completed.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Created) event is triggered after the Chat UI component has been rendered.
 
 ```cshtml
 
@@ -34,7 +40,7 @@ The Chat UI component triggers the [Created](https://help.syncfusion.com/cr/blaz
 
 ## Sending message
 
-The [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageSend) event is triggered when the message is being sent in the Chat UI component.
+The [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageSend) event is triggered when a user sends a message.
 
 ```cshtml
 
@@ -55,7 +61,7 @@ The [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 ## User typing
 
-The [UserTyping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_UserTyping) event is triggered when the user is typing a message in the Chat UI component.
+The [UserTyping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_UserTyping) event is triggered as the user types a message in the input field.
 
 ```cshtml
 
