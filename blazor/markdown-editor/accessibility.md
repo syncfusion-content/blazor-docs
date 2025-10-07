@@ -51,7 +51,7 @@ The toolbar in the Blazor Markdown Editor is assigned the role of `toolbar` and 
 | `aria-disabled` | Indicates the disabled state of the toolbar. |
 | `aria-owns` | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Markdown Editor, the attribute contains the ID of the Markdown Editor to indicate the popup as a child element. |
 
-or more information about toolbar ARIA attributes, refer to the  [accessibility of Toolbar](https://blazor.syncfusion.com/documentation/toolbar/accessibility) documentation.
+For more information about toolbar ARIA attributes, refer to the  [accessibility of Toolbar](https://blazor.syncfusion.com/documentation/toolbar/accessibility) documentation.
 
 The Blazor Markdown Editor element is assigned the role of `application`:
 
