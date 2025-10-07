@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Supported Markdown Syntax in Blazor Markdown Editor Component | Syncfusion
+title: Markdown Syntax Supported in Blazor Editor
 description: Checkout and learn here all about Supported Markdown Syntax in Syncfusion Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor
