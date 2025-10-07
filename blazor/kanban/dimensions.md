@@ -9,7 +9,9 @@ documentation: ug
 
 # Dimensions in Blazor Kanban Component
 
-The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) dimensions refers to both height and width of the entire layout and it accepts three types of values.
+This section explains how to configure the height and width of the Syncfusion Blazor Kanban component to achieve responsive and fixed layouts.
+
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component allows customization of its overall layout dimensions—height and width—using three value types:
 
 * Auto
 * Pixel
@@ -17,7 +19,9 @@ The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-b
 
 ## Auto height and width
 
-When height and width of the Kanban are set to `auto`, it will try as hard as possible to keep an element the same width as its parent container. In other words, the parent container that holds Kanban, its width or height will be the sum of its children. By default, Kanban is assigned with `auto` values for both the Height and Width properties.
+Use `auto` values when you want the Kanban component to adapt to its content and parent container dynamically.
+
+When the Kanban's height and width are set to `auto`, it automatically adjusts to fit the size of its parent container. This ensures the Kanban layout expands or contracts based on its content and surrounding elements. By default, the Kanban component uses `auto` for both [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Width), allowing it to adapt seamlessly to its container.
 
 ```cshtml
 
@@ -79,9 +83,11 @@ When height and width of the Kanban are set to `auto`, it will try as hard as po
 
 ![Changing Blazor Kanban Card Height and Width in Automatic](./images/blazor-kanban-change-height-and-width.png)
 
-## Height and width in pixel
+## Fixed dimensions using pixel values
 
-The Kanban height and width will be rendered exactly as per the given pixel values. It accepts both string and number values.
+Define explicit dimensions in pixels to maintain consistent sizing regardless of screen size or container.
+
+When pixel values are specified for the Kanban's [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Width), the component renders with exact dimensions. These values can be provided as either strings (e.g., `'650px'`) or numbers (e.g., `650`).
 
 ```cshtml
 
@@ -143,9 +149,11 @@ The Kanban height and width will be rendered exactly as per the given pixel valu
 
 ![Changing Blazor Kanban Card Height and Width in Pixel](./images/blazor-kanban-change-height-width-in-pixel.png)
 
-## Height and width in percentage
+## Responsive dimensions using percentage
 
-When height and width of the Kanban are given in percentage, it will make the Kanban as wide as the parent container.
+Use percentage values to make the Kanban component scale proportionally within its parent container.
+
+Specifying [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Width) in percentage makes the Kanban component scale relative to its parent container, ensuring responsive behavior across different screen sizes.
 
 ```cshtml
 
