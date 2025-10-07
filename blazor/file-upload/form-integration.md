@@ -9,153 +9,99 @@ documentation: ug
 
 # Form Integration in Blazor File Upload Component
 
-The Syncfusion Blazor File Upload component can be integrated with Blazor's `EditForm` and `DataForm` to build robust forms that include file-handling capabilities. This allows you to associate file uploads with a model and trigger validation.
+The Syncfusion Blazor File Upload component seamlessly integrates with Blazor's [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-9.0) and the Syncfusion [DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app), enabling you to build robust forms with file upload functionality. This integration associates the uploaded file information with a data model, leveraging the form's built-in validation.
 
-In a form, file validation is triggered by populating a model property when a file is selected and clearing it when removed. The `FileSelected` and `OnRemove` events are used for this purpose. When the form is submitted, the file can be uploaded manually to a server-side endpoint.
+When a file is selected, its information is added to the model property bound to the component. Upon form submission, the entire model, including the list of selected files, is passed to the submit event handler.
 
 ## File Upload with EditForm Integration
 
-The File Upload component can be integrated into a Blazor `EditForm` to manage file uploads as part of your data entry process.
+Integrating the File Upload component into a Blazor `EditForm` streamlines data entry by including file management directly within the form.
 
-To validate the file input, a model property is updated using the `FileSelected` and `OnRemove` events. The file upload is initiated only when the form is valid by calling the `UploadAsync` method in the `OnValidSubmit` event handler.
+Validation for the file input is achieved by binding the component to a model property. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) events are used to update this property with the current list of files. Within these events, it is crucial to call `EditContext.NotifyFieldChanged` to trigger the form's validation logic immediately after the file list changes.
 
-### Uploading to a Server-Side API (Blazor WASM and Server)
-
-This example shows how to configure the File Upload component to send files to a server-side API endpoint upon form submission. This approach is compatible with both Blazor WebAssembly and Blazor Server applications.
+When the form is successfully submitted, the `OnValidSubmit` event handler receives the `EditContext`, which contains the complete form model.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
 
-<EditForm Model="@employee" OnValidSubmit="@HandleValidSubmit">
+<EditForm Model="@employee" OnValidSubmit="@HandleValidSubmit" Context="formContext">
     <DataAnnotationsValidator />
     <div class="form-group">
-        <SfUploader @ref="UploadObj" AllowMultiple="false" AutoUpload="false" ID="UploadFiles">
-            <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
-                                     RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
-            <UploaderEvents OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>
+        <SfUploader @ref="@UploaderObj" ID="UploadFiles">
+            <UploaderEvents ValueChange="@(async (args) => await OnChange(args, formContext))" OnRemove="@(async (args) => await OnRemove(args, formContext))"></UploaderEvents>
         </SfUploader>
         <ValidationMessage For="() => employee.files" />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <SfButton type="submit" CssClass="e-primary">Submit</SfButton>
 </EditForm>
 
 @code {
-    private SfUploader UploadObj;
-
-    public class Employee
+    public class UserDataModel
     {
-        [Required(ErrorMessage = "Please upload a file")]
-        public List<UploaderUploadedFiles> files { get; set; }
+        [MinLength(1, ErrorMessage = "Please upload a file")]
+        public List<FileInfo> files { get; set; } = new();
     }
 
-    public Employee employee = new Employee();
+    public UserDataModel employee = new UserDataModel();
+    private SfUploader UploaderObj;
 
-    public void OnSelect(SelectedEventArgs args)
+    private async Task OnChange(UploadChangeEventArgs args, EditContext context)
     {
-        this.employee.files = new List<UploaderUploadedFiles> { new UploaderUploadedFiles { Name = args.FilesData[0].Name, Type = args.FilesData[0].Type, Size = args.FilesData[0].Size } };
+        employee.files = await UploaderObj.GetFilesDataAsync();
+        context?.NotifyFieldChanged(FieldIdentifier.Create(() => employee.files));
     }
 
-    public void OnRemove()
+    private async Task OnRemove(RemovingEventArgs args, EditContext context)
     {
-        this.employee.files = null;
-    }
-
-    public async Task HandleValidSubmit()
-    {
-        // Upload the selected file manually only when the form is valid
-        await this.UploadObj.UploadAsync();
-    }
-}
-```
-
-### Saving Files Directly to the File System (Blazor Server Only)
-
-In a Blazor Server application, you can save uploaded files directly to the server's file system. The following example demonstrates how to use the `ValueChange` event to read the file stream and save it to a path.
-
-> This method writes files to the server's local file system and is only supported in Blazor Server applications. It will not work in a Blazor WebAssembly environment.
-
-```cshtml
-@using System.ComponentModel.DataAnnotations
-@using Syncfusion.Blazor.Inputs
-
-<EditForm Model="@employee" OnValidSubmit="@HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <div class="form-group">
-        <SfUploader @ref="UploadObj" AllowMultiple="false" AutoUpload="false" ID="UploadFiles">
-            <UploaderEvents ValueChange="OnChange" OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>
-        </SfUploader>
-        <ValidationMessage For="() => employee.files" />
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</EditForm>
-
-@code {
-    private SfUploader UploadObj;
-
-    public class Employee
-    {
-        [Required(ErrorMessage = "Please upload a file")]
-        public List<UploaderUploadedFiles> files { get; set; }
-    }
-
-    public Employee employee = new Employee();
-
-    public void OnSelect(SelectedEventArgs args)
-    {
-        this.employee.files = new List<UploaderUploadedFiles> { new UploaderUploadedFiles { Name = args.FilesData[0].Name, Type = args.FilesData[0].Type, Size = args.FilesData[0].Size } };
-    }
-
-    private async Task OnChange(UploadChangeEventArgs args)
-    {
-        foreach (var file in args.Files)
+        var currentFiles = await UploaderObj.GetFilesDataAsync();
+        var fileToRemove = args.FilesData.FirstOrDefault();
+        if (fileToRemove != null)
         {
-            if (file.FileInfo != null && file.File != null)
-            {
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", file.FileInfo.Name);
-                using FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
-            }
+            currentFiles = currentFiles.Where(f => f.Name != fileToRemove.Name).ToList();
         }
+        employee.files = currentFiles;
+        context?.NotifyFieldChanged(FieldIdentifier.Create(() => employee.files));
     }
 
-    public void OnRemove()
+    public void HandleValidSubmit(EditContext args)
     {
-        this.employee.files = null;
-    }
-
-    public async Task HandleValidSubmit()
-    {
-        await this.UploadObj.UploadAsync();
+        // The form model (args.Model) now contains the list of selected files.
+        // The 'employee.files' property holds the FileInfo objects.
+        // From here, you can implement custom logic to upload the files to a server,
+        // for example, by iterating through the list and using HttpClient.
+        var filesToUpload = employee.files;
+        // Custom file upload logic goes here.
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNheNkBrgmbGBlgC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXroWjZwIzUqaemW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor File Upload component within an EditForm, showing validation and submission.](./images/blazor-uploader-editform.gif)
 
 ## File Upload with DataForm Integration
 
-The File Upload component can also be integrated into a Syncfusion `DataForm`, providing a streamlined way to create forms from a model. The example below shows how to save an uploaded file directly to the file system in a Blazor Server application when the form is submitted.
+The File Upload component can also be integrated into a Syncfusion `DataForm` to automatically build a form from a model that includes file upload capabilities.
 
-> This file-saving approach is only compatible with Blazor Server applications.
+When the `DataForm` is submitted, the [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnSubmit) event handler receives the `EditContext`. The `EditContext.Model` property contains the complete form data, including the list of `FileInfo` objects from the File Upload component. This allows you to access and process the file information as part of the form's submission logic.
+
 
 ```cshtml
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Inputs
-@using System.IO
 
-<SfDataForm ID="MyForm" Model="@UserModel" Width="50%" OnSubmit="Submit">
+<SfDataForm ID="MyForm" Model="@UserModel" Width="50%" OnSubmit="Submit" @ref="@DataForm">
     <FormValidator>
         <DataAnnotationsValidator></DataAnnotationsValidator>
     </FormValidator>
     <FormItems>
         <FormItem Field="@nameof(UserModel.files)">
             <Template>
-                <SfUploader @ref="UploadObj" AllowMultiple="false" AutoUpload="false" ID="UploadFiles">
-                    <UploaderEvents ValueChange="OnChange" OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>
+                <SfUploader ID="UploadFiles" @ref="@UploaderObj">
+                    <UploaderEvents ValueChange="async (args) => await OnChange(args)" OnRemove="async (args) => await OnRemove(args)"></UploaderEvents>
                 </SfUploader>
             </Template>
         </FormItem>
@@ -163,46 +109,47 @@ The File Upload component can also be integrated into a Syncfusion `DataForm`, p
 </SfDataForm>
 
 @code {
-    private SfUploader UploadObj;
-
     public class UserDataModel
     {
-        [Required(ErrorMessage = "Please upload a file")]
-        public List<UploaderUploadedFiles> files { get; set; }
+        [MinLength(1, ErrorMessage = "Please upload a file")]
+        public List<FileInfo> files { get; set; } = new();
     }
 
     private UserDataModel UserModel = new UserDataModel();
+    private SfDataForm DataForm;
+    private SfUploader UploaderObj;
 
     private async Task OnChange(UploadChangeEventArgs args)
     {
-        foreach (var file in args.Files)
+        this.UserModel.files = await UploaderObj.GetFilesDataAsync();
+        var fieldIdentifier = FieldIdentifier.Create(() => UserModel.files);
+        DataForm.EditContext?.NotifyFieldChanged(fieldIdentifier);
+    }
+
+    private async Task OnRemove(RemovingEventArgs args)
+    {
+        var currentFiles = await UploaderObj.GetFilesDataAsync();
+        var fileToRemove = args.FilesData.FirstOrDefault();
+        if (fileToRemove != null)
         {
-            if (file.FileInfo != null && file.File != null)
-            {
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", file.FileInfo.Name);
-                using FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
-            }
+            currentFiles = currentFiles.Where(f => f.Name != fileToRemove.Name).ToList();
         }
+        this.UserModel.files = currentFiles; ;
+        var fieldIdentifier = FieldIdentifier.Create(() => UserModel.files);
+        DataForm.EditContext?.NotifyFieldChanged(fieldIdentifier);
     }
 
-    private void OnRemove()
+    private void Submit(EditContext args)
     {
-        this.UserModel.files = null;
-    }
-
-    private void OnSelect(SelectedEventArgs args)
-    {
-        this.UserModel.files = new List<UploaderUploadedFiles> { new UploaderUploadedFiles { Name = args.FilesData[0].Name, Type = args.FilesData[0].Type, Size = args.FilesData[0].Size } };
-    }
-
-    private async Task Submit(object args)
-    {
-        await this.UploadObj.UploadAsync();
+        // The form model is available in args.Model.
+        // The 'files' property contains the list of selected FileInfo objects.
+        // Custom file upload logic can be implemented here.
+        var modelWithFileData = (UserDataModel)args.Model;
+        var filesToUpload = modelWithFileData.files;
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSDaBVKlbHqfgu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheWNXGeJtxWIXQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor File Upload component within a Syncfusion DataForm.](./images/blazor-uploader-dataform.gif)
