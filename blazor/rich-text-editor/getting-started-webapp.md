@@ -506,6 +506,4 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 
 * [Keyboard support in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support)
 
-
 * [Globalization in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/globalization)
-
