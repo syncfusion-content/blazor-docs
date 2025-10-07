@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bar Chart in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn configure and customize the Bar Charts in Syncfusion Blazor 3D Chart component.
+description: Check out and learn how to configure and customize Bar Charts in the Syncfusion Blazor 3D Chart component.
 platform: Blazor
 control: 3D Chart
 documentation: ug
