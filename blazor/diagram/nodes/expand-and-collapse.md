@@ -107,6 +107,8 @@ The following code example illustrates how to create icons of various shapes on 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSMZtQVZKXIhdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Icon)
 
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)
@@ -243,6 +245,8 @@ The following code example illustrates how to create an icon of various shapes i
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIMDZQhtJNQiMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapsewithLayout)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)
@@ -342,6 +346,8 @@ The following code explains how to initialize the icon with a path shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBoiNXwVtpmyxMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/IconWithPathShape)
 
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.png)
@@ -447,6 +453,8 @@ The following code explains how to change the appearance of the Icon using [Fill
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyWDDwhXSUaIpc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Appearance)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)
@@ -488,7 +496,7 @@ The following code explains how to change the icon appearance using the [CornerR
                 Shape = DiagramExpandIcons.Path,
                 Height = 20,
                 Width = 20,
-                PathData = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
+                PathData = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z",
                 CornerRadius = 10
             },
             CollapseIcon = new DiagramCollapseIcon()
@@ -543,6 +551,8 @@ The following code explains how to change the icon appearance using the [CornerR
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoMDNGVDxWXOkK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/CornerRadius)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)
@@ -673,6 +683,8 @@ The following table shows the relationship between the Icon position and Icon Of
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIWtNmhNHHQHJU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/IsExpandedProperty)
 
 ### How to Use Template Support for Expand and Collapse Icon
@@ -787,6 +799,7 @@ To implement a custom template for expand and collapse icons, please refer to th
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMXDQLNQrOfwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
@@ -906,6 +919,7 @@ The following code shows how to set the Padding property of expand/collapse icon
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSMXXcBjQcSQzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapsePadding)
 
@@ -1023,6 +1037,7 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIsjDcLtlvurBg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapseMargin)
 

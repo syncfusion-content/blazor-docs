@@ -71,6 +71,8 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBSijXcVpWKTOyP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/CreatePorts)
 
 ![Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.png)
@@ -153,6 +155,7 @@ The following code example demonstrates how to connect connectors to ports on no
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXheCtXwVJeRRDCO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/NodePortConnection).
 
@@ -199,6 +202,8 @@ The following code example demonstrates how to create a connector port.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjreWtDQLzdKOmAc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
 
 >**Note:** Port IDs should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
@@ -270,6 +275,8 @@ The following code example demonstrates how to connect one connector to a port o
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIitNQVpnbrMzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortConnection)
 
 ## How to Add Ports at Runtime
@@ -323,6 +330,8 @@ If an **ID** is not set, then default **ID** is assigned automatically.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSCjtcVJmUjDyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddPort)
 
 Also, a port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
@@ -421,6 +430,8 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoCjDmhJcOloQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddMultiplePorts)
 
 ![Adding multiple ports to a node in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
@@ -484,6 +495,8 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsjtQhTvfKOEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/RemovePorts)
 
 ## How to Update Port at Runtime
@@ -545,6 +558,8 @@ protected override void OnInitialized()
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSCtjQVTaiSkyT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
 
 ## How to Specify Connection Direction for Ports
@@ -627,6 +642,8 @@ The following code example shows how to set the connection direction for a port.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoWXZcrTaRefIs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/PortDirection)
 
 ![Port Connection Direction](../images/PortDirection.gif)
@@ -733,6 +750,8 @@ The following code example shows how to get [InEdges](https://help.syncfusion.co
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyCDDmBSZCuJme?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/InedgesAndOutedges)
 
 

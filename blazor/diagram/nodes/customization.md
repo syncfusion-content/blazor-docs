@@ -47,6 +47,8 @@ The following code shows how to customize the appearance of a shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeAppearance)
 
 ![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
@@ -105,6 +107,8 @@ The following code shows how to customize the appearance of a shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDroMttxJlMdwANx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeDefaultSample)
 
 ## How to Update Node Templates 
@@ -186,6 +190,8 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeTemplate)
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
@@ -303,6 +309,8 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/SetTemplate)
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
@@ -340,6 +348,8 @@ The diagram provides the ability to customize the border color of a node using t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](hhttps://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderColor)
 
 ![Border Color for Node](../images/BorderColor.png)
@@ -377,6 +387,8 @@ The diagram allows customizing the border width of a node using the [BorderWidth
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBeCjDHTvzsMOQM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderWidth)
 
 ## How to Update Node Shadow
@@ -419,6 +431,8 @@ Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfus
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeShadow)
 
 ![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
@@ -467,6 +481,8 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomShadow)
 
 ![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
@@ -529,6 +545,8 @@ There are two types of gradients:
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/LinearGradientStyle)
 
 ![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
@@ -587,6 +605,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/RadientGradientStyle)
 
 ![Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)
@@ -632,6 +652,8 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIMDtdpvxPfjor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomProperty)
 
 **Note:** You can set any type of value for the AdditionalInfo property.
@@ -696,6 +718,8 @@ The following code illustrates how to render nodes based on the stack order.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWXNdzbmSIZbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/ZIndexProperty)
 
 ## How to Set Pivot Property for a Node
@@ -742,6 +766,8 @@ The following code illustrates how to set the Pivot value.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSWDXHJFGuSlPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/PivotProperty)
 
 ## How to Set Background Color for a Node
@@ -782,6 +808,8 @@ The following code illustrates how to set the background color for the node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDheCjXRflFqrSPl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BackgroundColor)
 
 ## How to Check if a Node Is Automatically Positioned
@@ -860,6 +888,8 @@ The following code illustrates how to set the auto layout property for nodes.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyMZNRJFPvqBiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CanAutoLayout)
 
 ### How to Get InEdges and OutEdges of a Node
@@ -918,6 +948,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVestNxzlawypJC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/InedgesOutedges)
 
 ## How to Get Data Source Settings Details
@@ -1005,6 +1037,8 @@ The following code illustrates how to get data source settings details.
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrIsNjxpkNBdAVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/DataProperty)
 
 ## See also

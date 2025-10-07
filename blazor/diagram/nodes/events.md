@@ -75,6 +75,8 @@ The following code example demonstrates how to get the selection change event in
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBSCjjmsOntdxie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
 
 ## How to Handle Position Change Event 
@@ -137,6 +139,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthICtjciuGtobOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
 
 ## How to Handle Size Change Event 
@@ -198,6 +202,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSCtZGiEcHqVrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
 
 ## How to Handle Rotate Change Event 
@@ -259,6 +265,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMjNGMEPDIoUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
 
 ## How to Use Node Creating Event
@@ -308,6 +316,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSMZNwsaPGCptX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/NodeCreatingEvent)
 
@@ -321,7 +330,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
                     Width="100%" 
                     Height="700px" 
                     Nodes="nodes" 
-                    NodePropertyChanged="OnNodePropertyChanged">
+                    PropertyChanged="OnNodePropertyChanged">
 </SfDiagramComponent>
 @code {
     SfDiagramComponent diagram;
@@ -351,6 +360,8 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtroiXXcVZjLxVof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PropertyChangedEvent)
 
 ## How to Handle Collection Change Events
@@ -393,6 +404,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWDXQBDjHmggk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/CollectionChangeEvent)
 
 ## How to Handle the Mouse Enter Event
@@ -428,6 +441,8 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrSsDDGVXMoFpjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseEnterEvent)
 
 ## How to Handle the Mouse Leave Event
@@ -463,6 +478,8 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyCXZcBNhXdpGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseLeaveEvent)
 
 ## How to Handle the Mouse Hover Event
@@ -498,6 +515,8 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeiXjcLNBzlmCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseHoverEvent)
 
 

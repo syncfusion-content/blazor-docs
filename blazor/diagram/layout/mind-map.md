@@ -77,6 +77,8 @@ The following code example illustrates how to create a mind map layout using a d
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSiDNxJQsQKecM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample1)
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
@@ -160,6 +162,8 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIiDXHJGLCZNgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample2)
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
@@ -402,6 +406,7 @@ Also, you can render a mind map layout without using a Datasource. The following
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVIMtZRfwVSIPqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
 
@@ -522,6 +527,7 @@ The following example demonstrates configuring the mind map layout with a vertic
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeWNXxpmANjEaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation).
 
@@ -655,6 +661,8 @@ The following example demonstrates how to update the layout orientation dynamica
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhIWZXnfGJpthaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
 
 The following table outlines the various orientation types available:

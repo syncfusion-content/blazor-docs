@@ -63,6 +63,8 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVysXNchsTmFbDo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Select)
 
 Selection is also available during interaction:
@@ -117,6 +119,8 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVIsjtwBioTisdy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Drag)
 
 Dragging is also supported during interaction:
@@ -170,6 +174,8 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoCtjmBWRAMAXB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
 
 Resizing is also supported during interaction:
@@ -224,6 +230,8 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBSMZXcVsHwXFqk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Rotate)
 
 Rotation is also supported during interaction:
@@ -262,6 +270,8 @@ Use this property when you want to specify the node’s rotation at the time of 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSittQVMwKuLcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
 
 ![Node rotated by a fixed angle using the RotationAngle property](../images/NodeRotation.png)
