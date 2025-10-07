@@ -9,11 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor Kanban Component
 
-The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component has been designed, keeping in mind the WAI-ARIA specifications, and applies the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) roles, states, and properties. This component is characterized by complete `WAI-ARIA` accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component is built in accordance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, incorporating appropriate roles, states, and properties. It offers full accessibility support for users relying on assistive technologies (AT) or keyboard navigation.
 
-The Blazor Kanban component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+It adheres to key accessibility standards including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) , ensuring inclusive design and usability.
 
-The accessibility compliance for the Blazor Kanban component is outlined below.
+The following table summarizes the accessibility compliance of the Blazor Kanban component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -76,7 +76,7 @@ The Blazor Kanban component followed the [keyboard interaction](https://www.w3.o
 
 ## Disable keyboard interaction
 
-Disables all the functionalities in the Kanban board performed using keyboard by setting the `allowKeyboard` properties to `false`.
+To disable all keyboard-based interactions in the Kanban board, set the `allowKeyboard` property to `false`. This may impact accessibility for users relying on keyboard navigation or assistive technologies.
 
 ## Ensuring accessibility
 

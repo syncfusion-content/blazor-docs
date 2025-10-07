@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Table manipulation in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Table manipulation in Syncfusion Blazor RichTextEditor component and more.
+title: Table manipulation in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Table manipulation in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Table Manipulation in RichTextEditor
+# Table Manipulation in Rich Text Editor
 
 The Rich Text Editor allows you to insert the table of content in the edit panel and provide options to add, edit, and remove the table as well as to perform other table-related actions. For inserting the table into the Rich Text Editor, the following list of options has been provided in the [RichTextEditorTableSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html).
 
@@ -218,7 +218,7 @@ The Rich Text Editor provides support to custom styles for tables. If you want t
 
 ![Blazor RichTextEditor with custom table styles](../images/blazor-richtexteditor-custom-table-styles.png)
 
-## Cell Color
+## Cell color
 
 The background color can be set for each table cell through the [TableToolbarCommand.BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor) command available with the quick toolbar.
 

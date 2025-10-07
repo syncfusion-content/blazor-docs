@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Link manipulation in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Link manipulation in Syncfusion Blazor RichTextEditor component and more.
+title: Link manipulation in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Link manipulation in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Link Manipulation in RichTextEditor
+# Link Manipulation in Rich Text Editor
 
 The hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be text or an image.
 
@@ -15,14 +15,14 @@ The hyperlink can be inserted into the editor for quick access to the related in
 
 Point the cursor anywhere within the editor where you want to insert the link. It is also possible to select a text or an image within the editor that can be converted to the hyperlink. Click the insert hyperLink tool on the toolbar. The insert link dialog will open. The dialog has the following options.
 
-![Blazor RichTextEditor insert link](../images/blazor-richtexteditor-insert-link.png)
+![Blazor Rich Text Editor insert link](../images/blazor-richtexteditor-insert-link.png)
 
 | Options | Description |
 |----------------|--------------------------------------|
-| Web Address | Types or pastes the destination for the link you are creating |
-| Display Text | Types or edits the required text that you want to display text for the link |
-| Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the `Tooltip` field. |
-| Open Link | Specifies whether the given link will open in new window or not |
+| Web Address | Enter or paste the destination URL for the hyperlink |
+| Display Text | Enter or edit the text that will be displayed for the hyperlink |
+| Tooltip |Optional text that appears when hovering over the hyperlink, type the required text in the `Tooltip` field. |
+| Open Link | Choose whether the hyperlink should open in a new browser tab or the same tab |
 
 N> The Rich Text Editor link tool validates the URLs as you type them in the web address. URLs considered invalid will be highlighted with a red color by clicking the insert button in the [Insert Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
@@ -34,21 +34,19 @@ N> The Rich Text Editor link tool validates the URLs as you type them in the web
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying link icon](../images/blazor-richtexteditor-link-icon.png)
+![Link icon displayed in Blazor Rich Text Editor toolbar](../images/blazor-richtexteditor-link-icon.png)
 
-## Auto link
+## Enable auto-linking
 
 When you type URL and enter key to the Rich Text Editor, the typed URL will be automatically changed into the hyperlink.
 
-## Auto URL
+## Enable auto URL conversion
 
 When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property is enabled, it will accept the given URL (relative or absolute) without validating it for hyperlinks. Otherwise, the given URL will be automatically converted to absolute path URL by prefixing https:// for hyperlinks, and it defaults to false.
 
-## Edit and remove link
+## How to edit or remove a hyperlink
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
-
-![Blazor RichTextEditor with quick toolbar link](../images/blazor-richtexteditor-quick-toolbar-link.png)
 
 {% tabs %}
 {% highlight razor %}
@@ -58,7 +56,7 @@ Add the custom tools on the selected link inside the Rich Text Editor through th
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor link quick toolbar](../images/blazor-richtexteditor-quick-link.png)
+![Blazor Rich Text Editor link quick toolbar](../images/blazor-richtexteditor-link-quick-toolbar.png)
 
 ## See also
 
