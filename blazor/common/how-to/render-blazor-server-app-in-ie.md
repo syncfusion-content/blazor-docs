@@ -17,7 +17,7 @@ Internet Explorer does not support WebAssembly. Blazor WebAssembly apps do not r
 
 ## Blazor Server App
 
-IE11 can run Blazor Server Apps only when using .NET Core 3.1 with additional polyfills. IE11 is not supported for Blazor on .NET 5.0 or later. For current details, see [Blazor supported platforms and browsers](https://learn.microsoft.com/aspnet/core/blazor/supported-platforms).
+IE11 can run Blazor Server Apps only when using .NET Core 3.1 with additional polyfills. IE11 is not supported for Blazor on .NET 5.0 or later. For current details, see [Blazor supported platforms and browsers](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms).
 
 Follow these steps to add the polyfills for a .NET Core 3.1 Blazor Server app:
 
