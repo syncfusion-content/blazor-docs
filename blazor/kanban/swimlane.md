@@ -292,6 +292,7 @@ N> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ka
 ```
 
 ![Swimlane rows sorted in descending order in Blazor Kanban](./images/blazor-kanban-swimlane-row-sorting.png)
+
 ### Custom order
 
 The Blazor Kanban component allows custom sorting of swimlane rows by handling the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event.

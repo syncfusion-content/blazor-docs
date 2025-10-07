@@ -13,9 +13,9 @@ The **Kanban** columns represent each stage of workflow process.Column definitio
 
 ## Single-key mapping
 
-Columns are categorized by mapping the `KeyField` property to specific key values in the data source. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. This categorization determines how cards are distributed across columns on the Kanban board.
+Columns are categorized by mapping the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField) property to specific key values in the data source. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. This categorization determines how cards are distributed across columns on the Kanban board.
 
-N> The `KeyField` property is required to render columns on the Kanban board.
+N> The [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField) property is required to render columns on the Kanban board.
 
 ```cshtml
 
@@ -79,7 +79,7 @@ N> The `KeyField` property is required to render columns on the Kanban board.
 
 ## Multi-key mapping
 
-The Kanban board supports rendering a single column with multiple key mappings using the `KeyField` property.
+The Kanban board supports rendering a single column with multiple key mappings using the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField) property.
 
 ```cshtml
 
@@ -457,7 +457,7 @@ In the following example, the Backlog column is collapsed on initialization of K
 
 ## Stacked headers
 
-Stacked headers are additional header rows that group related columns under a common category. Group columns by specifying their key values in the `KeyFields` property and assign a custom header label using the `Text` property in `KanbanStackedHeaders`.
+Stacked headers are additional header rows that group related columns under a common category. Group columns by specifying their key values in the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField) property and assign a custom header label using the `Text` property in [KanbanStackedHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_StackedHeaders).
 
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 

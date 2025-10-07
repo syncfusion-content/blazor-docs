@@ -47,9 +47,9 @@ The Blazor Kanban component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 | `aria-label` |  It helps to provides information about elements in a kanban component for assistive technology. |
 | `aria-expanded` | Attributes indicate the state of a collapsible element. |
 | `aria-selected` | This attribute is assigned to the Kanban component for the selection of elements, and its default value is `false`. The value changes to true when the user selects a Kanban card. |
-| `aria-grabbed` | Indicates whether a Kanban card is currently selected for dragging. If set to `true`, the card is actively grabbed; if `false`, it is available for selection but not currently grabbed. |
+| `aria-grabbed` | Indicates whether the attribute is set to true. It has been selected for dragging. If this attribute is set to false, the element can be grabbed for a drag-and-drop operation but will not be currently grabbed. |
 | `aria-describedby` | This attribute contains the ID of the Kanban header column to indicate that the attribute establishes an association between the Kanban header column and the Kanban column body. |
-| `aria-roledescription` | Provides a human-readable description of the Kanban card's role, enhancing clarity for assistive technologies. |
+| `aria-roledescription` | This attribute is assigned to the Kanban component and is used to provide alternative descriptions for card elements. |
 
 ## Keyboard interaction
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Cards in the Blazor Kanban component can be dragged and dropped across columns, within columns, across swimlane rows, or between Kanban boards and external components.
 
-### Types of drag and drop in kanban
+## Types of drag and drop in kanban
 
 * Internal drag and drop
 * External drag and drop
