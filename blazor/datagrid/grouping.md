@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid component and much more details.
+description: Learn how to group data, manage drop area visibility, persist group state, and sort or format grouped columns in the Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor DataGrid
 
-The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to organize data into a hierarchical structure, making it easier to expand and collapse records. You can group the columns by simply dragging and dropping the column header to the group drop area. To enable grouping in the Grid, you need to set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Additionally, you can customize the grouping options using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
+The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to `true`. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -84,14 +84,14 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMCNQhjHRjNeQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * You can group and ungroup columns by using the [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_) methods.
-> * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to **false** in **GridColumn**.
+> - Group and ungroup columns programmatically using [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
+> - To prevent grouping for a specific column, set [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to `false`.
 
 ## Initial group
 
-To enable initial grouping in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can use the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) property and set the GridGroupSettings [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property to a string array of column names(field of the column) that you want to group by. This feature is particularly useful when working with large datasets, as it allows you to quickly organize and analyze the data based on specific criteria.
+Configure initial grouping in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to an array of field names. This pre-groups the specified columns on initial render to accelerate data analysis.
 
-The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering Grid, by using the `GridGroupSettings` of the `Columns` property.
+The following example applies initial grouping on the `CustomerID` and `ShipCity` columns:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -169,13 +169,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKsCNQBXkOKmSa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> You can group by multiple columns by specifying a string array of column names in the `Columns` property of the `GridGroupSettings`.
+> Group multiple columns by listing their field names in the `Columns` property of `GridGroupSettings`.
 
 ## Prevent grouping for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) property of the particular `Column` to **false**. 
+Prevent grouping for a specific column by setting [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to `false` on that column. This disables drag-to-group for the designated field while leaving other columns groupable.
 
-The following example demonstrates, how to disable grouping for **CustomerID** column:
+The following example disables grouping for the `CustomerID` column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -247,16 +247,15 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWWNcBWKrghqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap55" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWWNcBWKrghqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Hide drop area
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a drop area for grouping columns. This drop area allows you to drag and drop columns to group and ungroup them. However, in some cases, you may want to prevent ungrouping or further grouping a column after initial grouping.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays a drop area for grouping columns. In scenarios where further grouping or ungrouping should be restricted after initial grouping, hide the drop area.
 
-To hide the drop area in the Grid, you can set the `GridGroupSettings` of the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property to **false**. 
+To hide the drop area, set the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property of `GridGroupSettings` to `false`.
 
-
-The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) is added to hide or show the drop area. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` of the `ShowDropArea` property of the Grid is updated accordingly.
+The following example uses a [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) to show or hide the drop area. When toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event updates the `ShowDropArea` setting:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -356,13 +355,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgiitwBBVMzKlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> By default, the group drop area will be shown only if there is at least one column available to group.
+> By default, the group drop area is shown only if at least one column is available to group.
 
 ## Show the grouped column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the Grid, you can achieve this by setting the `GridGroupSettings` of the [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) property to **true**.
+By default, grouped columns are hidden to keep the view focused. To display grouped columns, set [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to `true` in `GridGroupSettings`.
 
-In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) is added to hide or show the grouped columns. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` of the `showGroupedColumn` property of the Grid is updated accordingly.
+In the following example, a [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) is used to hide or show grouped columns. When toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event updates the `ShowGroupedColumn` setting and refreshes the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -468,7 +467,7 @@ public class OrderData
 
 ## Persist grouped row expand or collapse state
  
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers the ability to persist the expand or collapse state of grouped rows across various data operations such as paging, sorting, filtering, and editing. By default, these operations reset the grouped rows to their initial collapsed or expanded state. To retain the current state of grouped rows and ensure a consistent user experience, set the [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) property to **true**. This also applies when using external grouping methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can persist the expand or collapse state of grouped rows across operations such as paging, sorting, filtering, and editing. By default, these operations reset grouped rows to their initial state. To retain the current state and ensure a consistent user experience, set [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) to `true`. This also applies when using external methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -568,9 +567,9 @@ public class OrderData
 
 ## Sort grouped columns in descending order during initial grouping
 
-By default, grouped columns are sorted in ascending order. However, you can sort them in descending order during initial grouping by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in the `GridSortSettings` of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) property.
+By default, grouped columns are sorted in ascending order. To sort in descending order during initial grouping, set the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in `GridSortSettings.Columns`.
 
-The following example demonstrates how to sort the **CustomerID** column by setting the `GridSortSettings` of the `Columns` property to **Descending** during the initial grouping of the Grid.
+The following example sorts the `CustomerID` column by setting its sort direction to `descending` during initial grouping:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -659,10 +658,9 @@ public class OrderData
 
 ## Group by format
 
-By default, columns are grouped by the data or value present for the particular row. However, you can also group numeric or datetime columns based on the specified format. To enable this feature, you need to set the [EnableGroupByFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat)
-property of the corresponding Grid column. This feature allows you to group numeric or datetime columns based on a specific format.
+By default, grouping is performed based on the raw values. Alternatively, numeric or datetime columns can be grouped based on a specified display format by setting [EnableGroupByFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) on the corresponding column.
 
-The following example demonstrates how to perform a group action using the `EnableGroupByFormat` property for the  **OrderDate** and **Freight** columns of the Grid:
+The following example demonstrates grouping using `EnableGroupByFormat` for the `OrderDate` and `Freight` columns:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -738,15 +736,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUisZcqcKfqGvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
+> Numeric columns can be grouped based on formats such as currency or percentage, and datetime columns can be grouped based on date or time formats.
 
 ## Collapse all grouped rows at initial rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. The option is useful when dealing with a large dataset that contains many groups, and there is a need to provide a summarized view by initially hiding the details.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can expand or collapse grouped rows to control the visibility of grouped data. This is useful for summarizing large datasets by initially hiding details.
 
-To collapse all grouped rows at the initial rendering of the Grid using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event along with the  [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) method.
+To collapse all grouped rows at initial rendering, use the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event with the [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) method.
 
-The following example demonstrates how to collapse all grouped rows at the initial rendering:
+The following example collapses all grouped rows on initial render:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -838,13 +836,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrfDsjKqkAfFfop?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The collapse all approach is suggested for a limited number of records since collapsing every grouped record takes some time. If you have a large dataset, it is recommended to use [lazy-load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping). This approach is also applicable for the [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) method.
+> Collapsing every grouped record can take time on large datasets. For large data, use [lazy-load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping). The same consideration applies to [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync).
 
 ## Group or Ungroup column externally
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the Grid. The Grid provides an ability to group and ungroup a column using [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports interaction-based grouping by dragging headers to the grouping area. It also supports programmatic grouping and ungrouping via [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
 
-The following example demonstrates how to group and ungroup the columns in a Grid. It utilizes the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) to select the column. When an external button is clicked, the `GroupColumnAsync` and `UngroupColumnAsync` methods are called to group or ungroup the selected column.
+The following example uses a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) to select a column and buttons to group or ungroup the selected column programmatically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -965,13 +963,13 @@ public class OrderData
 
 ## Expand or collapse externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. This section will provide guidance on enabling this functionality and integrating it into your application using the Grid properties and methods.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can expand or collapse grouped rows programmatically to control the visibility of grouped data.
 
 ### Expand or collapse all grouped rows
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an ability to expand or collapse grouped rows using [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) methods respectively.
+Use [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) to expand or collapse all grouped rows.
 
-In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) is added to expand or collapse grouped rows. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `ExpandAllGroupAsync` and `CollapseAllGroupAsync` methods are called to expand or collapse grouped rows.
+In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) triggers [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) to call these methods and toggle the grouped rows:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1072,11 +1070,11 @@ public class OrderData
 
 ## Clear grouping 
 
-The clear grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to removing all the grouped columns from the Grid. This feature provides a convenient way to clear the grouping of columns in your application.
+The clear grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid removes all grouped columns from the Grid, providing a quick way to reset grouping.
 
-To clear all the grouped columns in the Grid, you can utilize the [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method of the Grid.
+To clear all grouped columns, call the [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method.
 
-The following example demonstrates how to clear the grouping using `ClearGroupingAsync` method in the external button click.
+The following example clears grouping by invoking `ClearGroupingAsync` on an external button click:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1164,13 +1162,13 @@ public class OrderData
 
 ## Grouping events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides two events that are triggered during the group action such as [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). The `Grouping` event is triggered before the group action starts, and the `Grouped` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides two events for the group action: [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). `Grouping` is triggered before the action starts, and `Grouped` is triggered after completion. These events support custom logic based on grouping.
 
-1. **Grouping Event**: `Grouping` event is triggered before the grouping action or un-grouping action is performed in the Grid. It provides a way to perform any necessary operations before the group action takes place. This event provides a parameter that contains the current sorting column name, and action.
+1. **Grouping Event**: Triggered before the grouping or ungrouping action is performed in the Grid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.
 
-2. **Grouped Event**: `Grouped` event is triggered after the grouping action or un-grouping action is performed in the Grid. It provides a way to perform any necessary operations after the group action has taken place. This event provides a parameter that contains the current sorting column name, and action.
+2. **Grouped Event**: Triggered after the grouping or ungrouping action is performed in the Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
 
-The following example demonstrates how the `Grouping` and `Grouped` events work when grouping is performed. The `Grouping` event event is used to cancel the grouping of the **OrderID** column. The `Grouped` event is used to display a message
+The following example demonstrates `Grouping` and `Grouped` in action. The `Grouping` event is used to cancel grouping for the `OrderID` column. The `Grouped` event displays a message indicating the grouped column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1277,6 +1275,6 @@ public class OrderData
 
 ## See Also
 
-* [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
+- [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to learn how to present and manipulate data.
