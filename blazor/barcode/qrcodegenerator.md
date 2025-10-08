@@ -109,6 +109,7 @@ The following code example demonstrates how to generate a QR barcode with a logo
     <QRCodeLogo ImageSource="images/barcode/syncfusion.png"></QRCodeLogo>
 </SfQRCodeGenerator>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLSiDXvrxgTOVrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![QR barcode with logo in Blazor Barcode](images/blazor-barcode-qrcode-with-logo.png)
 
@@ -125,6 +126,8 @@ The size of the logo can be changed using the [Height](https://help.syncfusion.c
     <QRCodeLogo Width="30" Height="30" ImageSource="images/barcode/syncfusion.png"></QRCodeLogo>
 </SfQRCodeGenerator>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryitNPLdzgLNmN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 >**Note:** The default value is one-third of the QR code size.
 
 ## Event
@@ -144,6 +147,8 @@ The size of the logo can be changed using the [Height](https://help.syncfusion.c
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBosZZlhdfwvyVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 * [How can I adjust the margin of the QR code and handle text positioning when using the QRCodeGenerator in Syncfusion?](https://support.syncfusion.com/kb/article/18734/how-can-i-adjust-the-margin-of-the-qr-code-and-handle-text-positioning-when-using-the-qrcodegenerator-in-syncfusion)
 
 * [How to export the QR code in a Blazor Server project to a desired location using a memory stream?](https://support.syncfusion.com/kb/article/17216/how-to-export-the-qr-code-in-a-blazor-server-project-to-a-desired-location-using-a-memory-stream)

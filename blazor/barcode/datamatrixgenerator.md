@@ -82,3 +82,4 @@ Customize the barcode text by using the display [Text](https://help.syncfusion.c
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVystDPBHHDqsFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
