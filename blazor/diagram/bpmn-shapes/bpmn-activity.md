@@ -314,7 +314,7 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDByWDNnVYBkymiU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Call)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Call)
 
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-Task-Call.png)
