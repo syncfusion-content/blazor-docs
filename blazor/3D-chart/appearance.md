@@ -263,7 +263,7 @@ Set the margin between the 3D chart and its container using the `Chart3DMargin` 
 
 ## Animation
 
-Customize per-series animation using the `Chart3DAnimation` property. Enable or disable it via `Enable`. Use `Duration` to control the animation length and `Delay` to start the animation after a specified time.
+Customize particular series animation using the `Chart3DAnimation` property. Enable or disable it via `Enable`. Use `Duration` to control the animation length and `Delay` to start the animation after a specified time.
 
 ```cshtml
 
