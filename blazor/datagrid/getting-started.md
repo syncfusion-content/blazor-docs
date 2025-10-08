@@ -11,9 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor webAssembly app using Visual Studio, Visual Studio code and .NET CLI.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
