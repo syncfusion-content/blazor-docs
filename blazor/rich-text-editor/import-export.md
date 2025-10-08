@@ -346,7 +346,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Export to HTML file
 
-Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format. Make sure the required NuGet package is referenced in your project.
+Use [Syncfusion.DocIO](https://www.nuget.org/packages/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format. Make sure the required NuGet package is referenced in your project.
 
 While clicking on the export button, it makes a call to the Export to HTML service.
 
