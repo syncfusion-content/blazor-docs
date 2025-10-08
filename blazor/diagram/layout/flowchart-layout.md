@@ -422,9 +422,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/CustomYesOrNoBranch).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/CustomYesOrNoBranch).
+![Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)
 
 ## How to Update Spacing Between Nodes 
 

@@ -83,7 +83,7 @@ At runtime, a connector can be selected by using the [Select](https://help.syncf
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htByMXZRJrGVkhRw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Select)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Select)
 
 Selection can also be performed through user interaction:
 
@@ -264,9 +264,9 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/DefaultRouting).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/DefaultRouting).
+![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
@@ -426,9 +426,9 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/NodeRoutingObstable).
+
+![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
 
 ### How to Enable or Disable Connector Routing
 
@@ -502,9 +502,9 @@ By default, connector routing behavior is inherited based on the value of the di
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
+
+![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
 
 ### How to Define Distance Between Nodes and Connectors
 
