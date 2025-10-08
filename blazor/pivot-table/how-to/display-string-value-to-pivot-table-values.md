@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Display string value to pivot table values in Blazor | Syncfusion
-description: Learn here all about Display string value to pivot table values in Syncfusion Blazor Pivot Table component and more.
+title: Display string values in Blazor Pivot Table value cells | Syncfusion
+description: Learn how to display custom string values in Pivot Table value cells by using the CellTemplate property in the Syncfusion Blazor Pivot Table component.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Display string value to pivot table values in Blazor Pivot Table
+# Display string values in Blazor Pivot Table value cells
 
-End user can display string value to the pivot table's value cell by using the [CellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html#Syncfusion_Blazor_PivotView_PivotViewTemplates_CellTemplate) property in [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class.
+String values can be displayed in value cells by using the [CellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html#Syncfusion_Blazor_PivotView_PivotViewTemplates_CellTemplate) property of the [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class. The template receives an [AxisSet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html) context that contains the cell information (for example, Axis, Value, ActualText, and FormattedText). Setting [AxisSet.FormattedText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html#Syncfusion_Blazor_PivotView_AxisSet_FormattedText) determines the text rendered for that cell without altering the underlying value.
 
-In the following example, each cell value of the **Sold** field's actual value has been converted to **{hours:D2}:{minutes:D2}:{seconds:D2}** format and string values have been assigned to `data.FormattedText`.
+In the following example, each value cell for the **Sold** field is converted to the string format **{hours:D2}:{minutes:D2}:{seconds:D2}** (HH:mm:ss), and the result is assigned to `data.FormattedText` so the cell displays the custom string.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
