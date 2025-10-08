@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resizing in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about resizing events in Syncfusion Blazor Scheduler component.
+description: Learn how to resize events easily in the Syncfusion Blazor Scheduler component with step-by-step instructions and practical examples.
 platform: Blazor
 control: Scheduler
 documentation: ug
