@@ -37,7 +37,7 @@ Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syn
 
 The quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table, which increases the feasibility of editing the table easily.
 
-N> For more details about quick toolbar, refer to this documentation [section](../toolbar#quick-toolbar).
+N> For more details about quick toolbar, refer to this [documentation section](../toolbar#quick-toolbar).
 
 ## Table properties
 
