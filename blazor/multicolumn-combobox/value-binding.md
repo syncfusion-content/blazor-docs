@@ -1,6 +1,10 @@
 ---
 layout: post
+<<<<<<< HEAD
+title:  Value Binding in Blazor MultiColumn ComboBox Component | Syncfusion
+=======
 title:  Data Binding in Blazor MultiColumn ComboBox Component | Syncfusion
+>>>>>>> b8e97ed8432020616b8aa7057d4033c424ebc393
 description: Checkout and learn here all about value binding in Syncfusion Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
