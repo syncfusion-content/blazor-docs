@@ -39,6 +39,6 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [How to edit the quick toolbar settings](./toolbar#quick-inline-toolbar)
-* [How to insert link editing option in the toolbar items](./link#insert-link)
-* [How to insert image editing option in the toolbar items](./image#upload-options)
+* [How to Configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
+* [How to insert link editing option in the toolbar items](https://blazor.syncfusion.com/documentation/rich-text-editor/tools/link-manipulation#insert-link)
+* [How to insert image editing option in the toolbar items](https://blazor.syncfusion.com/documentation/rich-text-editor/tools/insert-image#upload-and-insert-image)
