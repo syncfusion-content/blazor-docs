@@ -119,7 +119,7 @@ In a Sankey Diagram, links convey the flow of data between nodes. Their appearan
   - `SankeyColorType.Blend`: Blends source and target colors as a gradient.
 - `Opacity`: Sets overall link transparency (0.0 – 1.0). The default value is **0.8**.
 - `HighlightOpacity`: Opacity on hover for emphasis. The default value is **0.8**.
-- `InactiveOpacity`: Opacity for non‑hovered links to de‑emphasize them. The default value is **0.2**.
+- `InactiveOpacity`: Opacity for non‑hovered links to minimize visual prominence. The default value is **0.2**.
 
 Example configuration:
 

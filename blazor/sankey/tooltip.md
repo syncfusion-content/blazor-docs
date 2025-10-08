@@ -351,7 +351,7 @@ Templates enable fully customized content and layout for node and link tooltips.
 
 ## Key Considerations
 
-- Keep tooltip text concise and scannable.
+- Keep tooltip text concise and readable.
 - Ensure sufficient contrast for tooltip text and background.
 - Use templates for richer content or additional fields.
 - Tune animation durations to balance responsiveness and polish.
