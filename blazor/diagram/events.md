@@ -45,6 +45,8 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDryCDtQpdvIVmCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/CreatedEvent)
 
 ## How to Handle Click Events
@@ -82,6 +84,8 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVeMtjcfROiEWpl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/ClickEvent)
 
 ## How to Handle the Key Down Event
@@ -120,6 +124,8 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthICZNmznawLOVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/KeyDownEvent)
 
 ## How to Handle the Key Up Event
@@ -157,6 +163,8 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyMDDcpmWhdWJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/KeyUpEvent)
 
 ## How to Handle the Drag Start Event
@@ -166,15 +174,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
-
+<SfSymbolPaletteComponent @ref="PaletteInstance" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
                     DragStart="DragStart">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent @ref="PaletteInstance" Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
-</SfSymbolPaletteComponent >
+
 @code{
     SfDiagramComponent Diagram;
     SfSymbolPaletteComponent PaletteInstance;
@@ -213,6 +221,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhyCjtcfwJSgxiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DragStartEvent)
 
 
@@ -224,14 +234,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
-
+<SfSymbolPaletteComponent Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
                     Dragging="Dragging">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+
 </SfSymbolPaletteComponent >
 @code{
     SfDiagramComponent Diagram;
@@ -265,6 +275,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhSMZZGJcKGJAkd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DraggingEvent)
 
 ## How to Handle the DragLeave Event
@@ -275,15 +287,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
+<SfSymbolPaletteComponent Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
                     DragLeave="DragLeave">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
-</SfSymbolPaletteComponent >
+
 @code{
     SfDiagramComponent Diagram;
     DiagramSize SymbolPreview;
@@ -320,6 +332,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCXNQJwSmzgkQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events)
 
 ## How to Handle the Drag Drop Event
@@ -330,14 +344,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
+<SfSymbolPaletteComponent Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
                     DragDrop="DragDrop">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
-</SfSymbolPaletteComponent >
+
 @code{
     SfDiagramComponent Diagram;
     DiagramSize SymbolPreview;
@@ -374,6 +389,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVIMNZczQFDlDDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DragDrop)
 
 ## How to Handle the On Auto Scroll Change Event
@@ -445,6 +462,7 @@ These properties allow for fine-tuned control over the auto-scrolling behavior i
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrosjtcpGFlAEMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.gif) 
 

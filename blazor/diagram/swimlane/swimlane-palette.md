@@ -21,7 +21,7 @@ The following code shows how to add lanes and phases to a palette.
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:20%;">
+    <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -111,11 +111,11 @@ The following code shows how to add lanes and phases to a palette.
       }
 }
 ```
-
-![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeWZXcKcyuCrTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlanePalette)
 
+![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
 
 ## How to Drag and Drop Swimlane Shapes from the Symbol Palette
 

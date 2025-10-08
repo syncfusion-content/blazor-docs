@@ -48,6 +48,8 @@ Create a node in a Blazor diagram, define a Node object and add it to the diagra
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZByCjXwfvJVAbsa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
 
 ## How to Add Nodes Using the AddDiagramElementsAsync Method
@@ -151,6 +153,8 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDcJPTQYWFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
 
 ## How to Clear Nodes and Connectors from the Diagram
@@ -220,6 +224,8 @@ The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBesjNQpboWvycs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Clear)
 
 ![Blazor Diagram clear](images/blazor-diagram-clear.gif)
@@ -327,6 +333,8 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyMZNwplRtkZvS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
 
 ## How to Reset Diagram Zoom Level
@@ -346,17 +354,17 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="ZoomIn" OnClick="@ZoomIn" />
+    <SfButton Content="ZoomOut" OnClick="@ZoomOut" />
+    <SfButton Content="Reset" OnClick="@ResetZoom" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="ZoomIn" OnClick="@ZoomIn" />
-    <SfButton Content="ZoomOut" OnClick="@ZoomOut" />
-    <SfButton Content="Reset" OnClick="@ResetZoom" />
 </div>
 
 @code {
@@ -428,6 +436,8 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDByMttQzaXbtFcK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ResetZoom)
 
 ![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.gif)
@@ -449,15 +459,15 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="ClearSelection" OnClick="@ClearSelection" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="ClearSelection" OnClick="@ClearSelection" />
 </div>
 
 @code {
@@ -521,6 +531,8 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDheWZZQzEjtSkVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
 
 ## How to Get Object in the Diagram
@@ -540,15 +552,15 @@ The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="GetObjectMethod" OnClick="@GetObjectMethod" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="GetObjectMethod" OnClick="@GetObjectMethod" />
 </div>
 
 @code {
@@ -613,6 +625,8 @@ The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVysDjwpPuWVGUI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetObjectMethod)
 
 ## How to Get Page Bounds of the Diagram
@@ -632,15 +646,15 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="GetPageBounds" OnClick="@GetPageBounds" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="GetPageBounds" OnClick="@GetPageBounds" />
 </div>
 
 @code {
@@ -704,6 +718,8 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVeiNNGfkUXpFSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
 
 ## How to Select All Objects in the Diagram
@@ -723,16 +739,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="SelectAllMethod" OnClick="@SelectAllMethod" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="SelectAllMethod" OnClick="@SelectAllMethod" />
-
 </div>
 
 @code {
@@ -796,6 +811,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVIsjZmzYpWNISa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/SelectAllMethod)
 
 ## How to Scale Selected Objects
@@ -815,15 +832,15 @@ The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="ScaleMethod" OnClick="@ScaleMethod" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="ScaleMethod" OnClick="@ScaleMethod" />
 </div>
 
 @code {
@@ -887,6 +904,8 @@ The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsNZmTYeioDqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ScaleMethod)
 
 ## How to Get and Customize Cursor Style
@@ -962,6 +981,8 @@ The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
      }
  }
  ```
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVICjNmfaRXpFsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
 ## How to Use BeginUpdate and EndUpdateAsync
@@ -971,13 +992,12 @@ The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
+    <SfButton Content="PropertyUpdate" OnClick="@PropertyUpdate" />
+
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-
-<SfButton Content="PropertyUpdate" OnClick="@PropertyUpdate" />
-
 
 @code {
     //Reference the diagram
@@ -1043,6 +1063,8 @@ The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByCXZmzadbzxhm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/BeginAndEndUpdate)
 
 ## How to Unselect Diagram Elements
@@ -1062,15 +1084,15 @@ The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.S
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="UnSelectMethod" OnClick="@UnSelectMethod" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="UnSelectMethod" OnClick="@UnSelectMethod" />
 </div>
 
 @code {
@@ -1134,6 +1156,8 @@ The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.S
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSCjNQfYGbfwMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/UnSelectMethod)
 
 ## How to Clone the Diagram
@@ -1154,15 +1178,15 @@ The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 </style>
 
+<div id="properties">
+    <SfButton Content="CloneMethod" OnClick="@CloneMethod" />
+</div>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
-</div>
-
-<div id="properties">
-    <SfButton Content="CloneMethod" OnClick="@CloneMethod" />
 </div>
 
 @code {
@@ -1226,6 +1250,8 @@ The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBoWXXmTEFbzmUx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/CloneMethod)
 
 ## How to Get Custom Tool
@@ -1428,6 +1454,8 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
  ```
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIMDjQoNXUmgcU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
  A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
 
 
@@ -1529,6 +1557,8 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIiXDwyttPZhfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
 
 ## How to Refresh the Data Source
@@ -1610,6 +1640,8 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhSCXtQSjiSpCit?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/RefereshDataSource)
 
 ## How to Get the Parent of Object
@@ -1660,6 +1692,8 @@ The following code illustrates how to set background color for node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhyMZZcyNVMWKLP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetParent)
 
 ## How to Enable the Chunk Message
@@ -1710,5 +1744,6 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXreCjjGeZLyqIGr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ChunkMessage)

@@ -63,6 +63,7 @@ To create a swimlane, you have to define the swimlane object and add it to the [
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIiDNcgwRwLkFg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >**Note:** Swimlane IDs should not start with numbers or special characters and should not contain special characters such as underscore(_) or spaces.
 
@@ -131,10 +132,11 @@ The following code example explains how to define the swimlane header.
     }
 }
 ```
-
-![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSsjjwUwQKDpUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeader)
+
+![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
 
 ### How to Customize Swimlane Header
 
@@ -171,7 +173,7 @@ The following code example explains how to customize a swimlane header.
                 }
             },
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
-        }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
@@ -191,10 +193,11 @@ The following code example explains how to customize a swimlane header.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLysXtQgmbodbwe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.PNG)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization)
 
 Swimlane header annotations also support templates. Define HTML content at the tag level and enable templating with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per swimlane, differentiate annotations by the ID property.
 
@@ -263,6 +266,8 @@ The following code example explains how to define a Swimlane header annotation t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreWDXmqwuTgXyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
@@ -304,6 +309,7 @@ The following code example explains how to set the orientation of the swimlane.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWDNwUPZKWhnw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneOrientation)
 
@@ -418,6 +424,7 @@ The following example shows how to apply custom spacing using ChildrenSpacing pr
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrosXjmqFjxamFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/ChildrenSpacingProperty)
 

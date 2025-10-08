@@ -86,6 +86,8 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVysNXGTednqtYb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
 
 ## How to Bind Local Data to the Diagram
@@ -195,6 +197,8 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBSitjmJywScwCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/LocalData)
 
 ## How to Bind ExpandoObject Data to the Diagram
@@ -381,6 +385,8 @@ The following code example illustrates how to bind ExpandoObject data with the d
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLSiDtcJyboFLqr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/ExpandoObject)
 
 ##  How to Bind DynamicObject Data to the Diagram
@@ -583,6 +589,8 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCNNGTykSwaxF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DynamicObj)
 
 ## How to Bind JSON Data to the Diagram
@@ -652,6 +660,8 @@ The following sample code demonstrates binding local data through SfDataManager 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLostXmzRXsgeJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/JSONData)
 
 ## How to Bind Remote Data to the Diagram
@@ -747,6 +757,8 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeWZNQpRDIabQI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataAdaptor)
 
 ### How to Bind OData V4 Services
@@ -836,6 +848,8 @@ OData V4 is an updated version of the OData protocols, and the SfDataManager can
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXreWtNmTdMAJWbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataV4Adaptor)
 
 ### How to Bind Web API Services to the Diagram
@@ -929,6 +943,8 @@ The following sample code demonstrates how to bind remote data to the Diagram co
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSsDXwpHLVLxIu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
 
 ### How to Bind URL Services to the Diagram
@@ -1019,6 +1035,8 @@ The following sample code demonstrates how to bind data to the Diagram component
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSMZjmfnrvrKJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
 ### How to Bind Custom Data

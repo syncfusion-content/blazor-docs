@@ -83,11 +83,11 @@ The following code example explains how to add a phase to a swimlane.
     }
 }
 ```
-
-![Phase](Swimlane-images/Swimlane_Phase.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoWZDwgIxDznSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
+![Phase](Swimlane-images/Swimlane_Phase.PNG).
 
 ## How to Dynamically Add and Remove Phase in Swimlane
 
@@ -184,10 +184,11 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 }
 ```
-
-![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXroWXXQAIHdICLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
+
+![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
 
 ## How to Create and Customize the Phase Header
 
@@ -258,9 +259,11 @@ The following code example shows how to define and customize a phase header.
     }
 }
 ```
-![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVICNNmAenacKHW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
+
+![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
 
 Phase header annotations also support templates. Define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per phase, differentiate annotations by the ID property.
 
@@ -338,9 +341,11 @@ The following code example explains how to define a phase header annotation temp
     }
 }
 ```
-![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSMjNcKovfbQWR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
+
+![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
 
 ## How to Set the Orientation of a Phase
 
@@ -355,7 +360,7 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 <div class="control-section">
-    <div style="width:20%;">
+    <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -398,9 +403,11 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
       }
 }
 ```
-![Phse](Swimlane-images/PhaseOrientation.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhSWDDwUHjXBppC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
+
+![Phse](Swimlane-images/PhaseOrientation.PNG).
 
 ## How to Select and Resize Phase Header
 

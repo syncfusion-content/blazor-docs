@@ -49,7 +49,7 @@ The following code example illustrates how to change the size of a symbol and up
         <SfButton Content="UpdateSize" OnClick="@UpdateSize" />
 
     </div>
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="@symbolwidth" SymbolWidth="@symbolheight" SymbolMargin="@SymbolMargin">
@@ -116,6 +116,8 @@ The following code example illustrates how to change the size of a symbol and up
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtheijNGKlrjjZXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/CustomSymbolSize)
 
 
@@ -204,6 +206,8 @@ The following code example illustrates how to change the preview size of a palet
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVIiDXGAbLGlnJz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPreview).
 
 ![SymbolPreview in Blazor Diagram](../images/blazor-diagram-symbol-preview.gif)
@@ -309,6 +313,8 @@ The following code example illustrates how to use the selectionChanged event.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIsNXQqFgvvztI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SelectionChanged).
 
 ## How to get notification for expanding the palette
@@ -400,6 +406,8 @@ These default settings can be customized to enhance the user experience and matc
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZreWZtmUlfeBbkl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AnimationSupport)
 
 ## How to Add Symbol Descriptions to Palette Symbols
@@ -471,6 +479,8 @@ The following code is an example to set a symbol description for symbols in the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIMtZwgbSZfWjG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolDescription)
 
 ![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
@@ -523,8 +533,8 @@ The following code is an example to change the style of a symbol description for
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width: 30%">
-        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff; height:200px">
+    <div style="width: 50%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff; height:253px">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" GetSymbolInfo="GetSymbolInfo"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120">
             </SfSymbolPaletteComponent>
@@ -595,6 +605,8 @@ The following code is an example to change the style of a symbol description for
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthSsjZcKbPsYmTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DescriptionStyle)
 
 ![Style of the Symbol Description in Blazor Diagram](../images/blazor-diagram-symbol-description-style.png)
@@ -785,6 +797,7 @@ The following code example demonstrates how to enable or disable the default too
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLSitjwgOVJiwfZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/ShowToolTip).
 
@@ -803,7 +816,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using Syncfusion.Blazor.Popups
 <div class="control-section">
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -861,6 +874,8 @@ The following code example illustrates how to provide the custom tooltip for nod
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLIsZDQAOTMXzzj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](../images/symboltooltip.png)
@@ -959,6 +974,8 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNheiDXwAkzRzMKU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](../images/differenttooltip.gif)
@@ -972,9 +989,10 @@ The following code example illustrates how to provide the tooltip template for n
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Popups
 
 <div class="control-section">
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -1036,7 +1054,9 @@ The following code example illustrates how to provide the tooltip template for n
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBICZNmJjWhgbhB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 
 >**Note:**  If a tooltip is not initialized for a symbol, the symbol ID is rendered by default as the tooltip content. When the tooltip is defined, either content or template must be specified; otherwise, the tooltip will be empty.
@@ -1491,6 +1511,7 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthysDXmfDrypXmO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/EnableChunkMessage)
 

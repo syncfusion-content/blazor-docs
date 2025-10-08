@@ -149,6 +149,8 @@ The following code example shows how to add custom context menu items along with
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtryWDDQToDgkczx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/CustomContextMenu)
 
 ### How to Show Custom Context Menu Alone
@@ -270,6 +272,8 @@ Diagram provides template support for the context menu. The context menu items c
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSitXcpeBhpOuL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuTemplate)
 ![Context Menu Template](images/ContextMenuTemplate.gif)
 
@@ -432,6 +436,8 @@ The following code example shows how to add separate custom context menu items f
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIMXjGfIhvkfXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuEvents)
 
 ## See also

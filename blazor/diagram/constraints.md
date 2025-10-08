@@ -72,6 +72,7 @@ Constraints="@DiagramConstraints" />
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeWtDcpKCfcxTa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following example shows how to add the Bridging constraint to the default constraints of the diagram.
 
@@ -171,6 +172,8 @@ The following example shows how to disable the rotate constraint from the defaul
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSsDtQTUBrDCxW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/NodeConstraints)
 
 ![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
@@ -280,6 +283,8 @@ The following code shows how to disable the Select constraint from the default c
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIMZXGzUrueWNG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/ConnectorConstraints)
 
 The following example shows how to add the Bridging constraint to the default constraints of a connector.
@@ -371,6 +376,8 @@ The following code shows how to disable creating connections with a port.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCNXQfqqgQgXk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/PortConstraints)
 
 The following code example shows how to modify the port constraints to accept only a target connection.
@@ -450,6 +457,8 @@ The following code shows how to enable read-only mode for annotations.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWZjcfAgQkhDE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/AnnotationConstraints)
 
 For more details about annotation constraints, refer to [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
@@ -513,6 +522,8 @@ The following code shows how to hide the rotator.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeCXNwpgTUNJnP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SelectorConstraints)
 
 ![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
@@ -523,12 +534,16 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 <p>Selector Constraints</p>
- <input type="checkbox" value="Tooltip" @onchange="@constraintschange"checked="@check5" />Tooltip
+ <input type="checkbox" value="Tooltip" @onchange="@constraintschange" />Tooltip
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 @code
 {
     DiagramObjectCollection<Node> nodes;
     bool selector=true;
+    public DiagramSelectionSettings selection = new DiagramSelectionSettings() 
+    { 
+        Constraints = SelectorConstraints.All 
+    };
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -567,6 +582,8 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeCXjwJAaYcwxx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
 
 |![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
@@ -647,6 +664,8 @@ The following code shows how to display only horizontal gridlines.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXheiNXwJzZyzJDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
 
 Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
@@ -711,6 +730,8 @@ The following code shows how to limit interaction within a page.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSiDNGJpWtaRbJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/BoundaryConstraints)
 
 For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
@@ -761,6 +782,8 @@ The following code example shows how to inherit line bridging behavior from the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoWXNQTzWHHdvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/InheritBehaviors)
 
 ## How to Use Bitwise Operations

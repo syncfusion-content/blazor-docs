@@ -102,7 +102,7 @@ The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -155,6 +155,8 @@ The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVyWNXcztJGwllm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddNodeToPalette)
 
 
@@ -169,7 +171,7 @@ The following example illustrates how to add a connector to a palette.
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="100">
@@ -225,6 +227,8 @@ The following example illustrates how to add a connector to a palette.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSsDtGpZyphJxt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddConnectorToSymbolPalette)
 
 
@@ -239,7 +243,7 @@ The following example illustrates how to add a node group to a palette.
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:20%">
+    <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -314,6 +318,8 @@ The following example illustrates how to add a node group to a palette.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBeiXNwTXHzIlfp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddGroupToPalette)
 
 
@@ -363,7 +369,7 @@ Palettes = new DiagramObjectCollection<Palette>()
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:20%">       
+    <div style="width:75%">       
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -471,6 +477,8 @@ Palettes = new DiagramObjectCollection<Palette>()
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryMXXmTXcwMRie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddPaletteToSymbolPalette)
 
 ![Adding Palette to SymbolPalette in Blazor Diagram](../images/blazor-diagram-add-palette-to-symbol-palette.png)
@@ -628,6 +636,8 @@ To enable drag and drop functionality, add the diagram component to the [Targets
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBeiXjGJZFQrXIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DragAndDrop)
 
 ![Drag and Drop in Blazor Diagram](../images/blazor-diagram-drag-and-drop.gif)
@@ -822,6 +832,8 @@ The diagram component offers a search functionality within the symbol palette. B
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLSsDXmJXuyQBBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SearchOption)
 
 ![Search Option in Blazor Diagram](../images/SymbolSearch.gif)
@@ -888,6 +900,8 @@ The [SearchTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeCtXmpMXBaSVF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SearchTag)
 
 ## How to Update Common Values for All Nodes and Connectors
@@ -975,6 +989,7 @@ Use the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjByWXjmJsiXCdSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
 
@@ -1052,7 +1067,9 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
         SymbolPalette.RefreshSymbols();
     }
 }
-```  
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZroCDjcJiseOtxy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/RefereshPalette)
 
 ## How to Set a Template for Symbol Palette Symbols
@@ -1092,6 +1109,7 @@ Customize the appearance of symbols using [SymbolPaletteTemplates](https://help.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiXNcTWhusyQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Symbol palette templates](../images/SymbolPaletteTemplate.png)
 
