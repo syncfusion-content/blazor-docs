@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about animation in Syncfusion Blazor Linear Gauge component and much more details.
+description: Check out and learn how to control animations in the Syncfusion Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Animation in Blazor Linear Gauge Component
 
-All of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property. The animation for the Linear Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
+Elements in the Linear Gauge—axis lines, ticks, labels, ranges, pointers, and annotations—can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_Linear_Gauge_SfLinearGauge_AnimationDuration) property. Animation is enabled when `AnimationDuration` is set to a nonzero value in milliseconds, providing a smooth rendering effect. When `AnimationDuration` is set to **0** (default), animation is disabled. When enabled, elements animate in the following sequence:
 
-1. The axis line, ticks, labels, and ranges will all be animated at the same time.
-2. If available, pointers will be animated in the same way as [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
-3. If available, annotations will be animated.
+1. Axis line, ticks, labels, and ranges animate concurrently.
+2. If present, pointers animate as described in [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
+3. If present, annotations animate.
 
-The animation of the Linear Gauge is demonstrated in the following example.
+The following example demonstrates Linear Gauge animation.
 
 ```cshtml
 
@@ -50,5 +50,4 @@ The animation of the Linear Gauge is demonstrated in the following example.
 
 ![Blazor Linear Gauge Animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
 
-N> Only the pointer of the Linear Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation) to enable only pointer animation.
-
+N> Only the pointer can be animated individually. For pointer-only animation, refer to [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
