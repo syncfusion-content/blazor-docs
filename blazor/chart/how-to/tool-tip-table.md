@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table in Tooltip in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Table in Tooltip in Syncfusion Blazor Charts component and much more.
+description: Check out and learn how to display a table in tooltips using templates in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,36 +9,41 @@ documentation: ug
 
 # Table in Tooltip in Blazor Charts Component
 
-A table type tooltip can be created using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). Follow the steps below to display a table inside the tooltip.
+A table-style tooltip can be created using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). Follow these steps to display a table inside the tooltip.
 
-**Step 1:**
+## Step 1: Render the Chart Series
 
 Render a chart with the required series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```cshtml
+
 <SfChart Title="Weather condition JPN vs DEU">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>
 </SfChart>
+
 ```
 
-**Step 2:**
+## Step 2: Enable the Tooltip
 
-The tooltip can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as **true** in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
+Enable the tooltip by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property to true in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
 ```cshtml
+
 ...
-<ChartTooltipSettings Enable="true">
+    <ChartTooltipSettings Enable="true">
 ...
+
 ```
 
-**Step 3:**
+## Step 3: Add a Table Template to the Tooltip
 
-Construct a HTML table as per the requirement and place the implicit named parameter context to access the aggregate values within the template. To retrieve aggregate values inside the template, type cast the context as [ChartTooltipInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html).
+Construct an HTML table and use the implicit named parameter context to access aggregate values within the template. Type cast the context as [ChartTooltipInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html) to retrieve values inside the template.
 
 ```cshtml
+
 ...
 <ChartTooltipSettings Enable="true">
     <Template>
@@ -58,11 +63,12 @@ Construct a HTML table as per the requirement and place the implicit named param
     </Template>
 </ChartTooltipSettings>
 ...
+
 ```
 
-**Action**
+## Action
 
-When the mouse is moved over the chart series points, the tooltip is displayed in table format. The complete code snippet for the preceding steps is available below.
+When the mouse is moved over chart series points, the tooltip is displayed in table format. The complete code sample is shown below.
 
 ```cshtml
 
@@ -92,7 +98,7 @@ When the mouse is moved over the chart series points, the tooltip is displayed i
     </ChartTooltipSettings>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
