@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Binding in Blazor MultiColumn ComboBox Component | Syncfusion
+title: Data Binding in Blazor MultiColumn ComboBox Component
 description: Checkout and learn here all about Data Binding in Syncfusion Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
