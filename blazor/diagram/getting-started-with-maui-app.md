@@ -511,6 +511,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyCjDPUkdgrQsk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> [View the Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 ## How to Run the Sample on Windows

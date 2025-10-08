@@ -77,6 +77,8 @@ The following code example illustrates how to print the region occupied by the d
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCNXPziyzzRgP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintSample/PrintSample)
 
 The following code example illustrates how to print a selected region in the diagram using clip bounds.
@@ -194,6 +196,8 @@ The following code example illustrates how to print a selected region in the dia
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoMXXbpCREFrTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintUsingClipBounds/PrintUsingClipBounds)
 
 ## See Also

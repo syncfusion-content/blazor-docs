@@ -100,6 +100,8 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeWZjlTtUfyBOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
 ![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
 
@@ -168,7 +170,9 @@ The following code illustrates how to ungroup at runtime.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UnGroup)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBoWZZvfZpAdhre?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UnGroup)
 
 
 >**Note:** A NodeGroup ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
@@ -183,7 +187,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 
 <SfButton Content="CloneGroup" OnClick="@CloneGroup" />
-<SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="80%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 
 @functions
 {
@@ -255,6 +259,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CloneNodeGroup)
 ![Grouping in Blazor Diagram](images/CloneGroup.gif)
 
@@ -318,6 +324,8 @@ The following code illustrates how to add padding to a node group.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryCDZlzjyxnaIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
 
 ![Padding in Blazor Diagram](images/GroupPadding.png)
@@ -387,6 +395,8 @@ The following code illustrates how a node group is added at runtime.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeWtNPpDntLeoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
 * Also, Add the child to the node group through the [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChildAsync method.
 
@@ -474,6 +484,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLysNDlpXdPhsab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddChildMethod)
 
 ## How to Update Node Group Position at Runtime
@@ -542,6 +554,8 @@ Change the position of the node group similar to a node. For more information ab
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLIiDZbzDGhrbJg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UpdatePositionForGroup)
 
 ## How to Customize Node Group Appearance

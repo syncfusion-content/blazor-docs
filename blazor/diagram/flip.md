@@ -109,7 +109,7 @@ The following code example shows how to flip the node.
                 ID = "node1",
                 Width = 100,
                 Height = 100,
-                OffsetX = 700,
+                OffsetX = 200,
                 OffsetY = 100,
                 Flip = FlipDirection.Horizontal,
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>()
@@ -146,7 +146,7 @@ The following code example shows how to flip the node.
                 ID = "node2",
                 Width = 100,
                 Height = 100,
-                OffsetX = 900,
+                OffsetX = 400,
                 OffsetY = 100,
                 Flip = FlipDirection.Horizontal,
                 FlipMode = DiagramFlipMode.Port,
@@ -218,6 +218,8 @@ The following code example shows how to flip the node.
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrysNtlgEhFRKGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipDirection)
 
 
@@ -331,7 +333,7 @@ The following code example shows how to flip the group.
                 ID = "node3",
                 Width = 100,
                 Height = 60,
-                OffsetX = 500,
+                OffsetX = 200,
                 OffsetY = 300,
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
@@ -367,7 +369,7 @@ The following code example shows how to flip the group.
                 ID = "node4",
                 Width = 100,
                 Height = 60,
-                OffsetX = 700,
+                OffsetX = 400,
                 OffsetY = 400,
                 Style = new ShapeStyle()
                 {
@@ -463,6 +465,8 @@ The following code example shows how to flip the group.
  }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBeiZDvgaptrZdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipGroup)
 
@@ -552,6 +556,7 @@ The following code example shows how to flip the connector.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 | FlipDirection | Output|
 | -------- | -------- |

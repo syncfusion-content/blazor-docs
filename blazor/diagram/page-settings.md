@@ -63,6 +63,8 @@ To learn more about customization of diagram page, refer to the below video link
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVyCZNFzDEIdtnt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
 
 |Orientation|Output|
@@ -112,6 +114,8 @@ Based on the diagramming element position, the size of the page dynamically incr
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjheCNNvpCCugjmh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/MultiplePage)
 
 ![Multiple Page](./images/MultiplePage.png)
@@ -167,6 +171,8 @@ Customize page appearance using the `PageSettings` properties:
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSCXXlzWrgqfQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
 
 ![PageBackground Color](./images/PageBackground.png)
@@ -200,6 +206,8 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
     </PageSettings>
 </SfDiagramComponent>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSMtXvJMhbUAKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageBreak)
 
 ![Pagebreak Color](./images/Pagebreak.png)
@@ -222,6 +230,8 @@ The area between the maintain content of a page and the page edges can be change
     </PageSettings>
 </SfDiagramComponent>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhSWXDFfMKLYgqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/Margin)
 
 ## How to Restrict Node Interaction Using Boundary Constraints
@@ -290,6 +300,8 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLSMtXPJiKwzUSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
 ## How to Make Responsive with Parent Container
@@ -323,6 +335,8 @@ The following code example illustrates how to set width and height in percentage
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSsZXvzCpMgFtp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/ResponsiveWithParentContainer)
 
 ## How to Handle Page Settings Property Changes Using Callback Methods
@@ -353,6 +367,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSsNtlfWfSvDNB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also 
 

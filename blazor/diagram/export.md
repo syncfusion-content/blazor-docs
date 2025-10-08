@@ -47,7 +47,9 @@ Diagram provides support to export the diagram as image or SVG files. The follow
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/Export)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVSsXjPKcQBMSRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/Export)
 
 ## Exporting Options
 
@@ -81,6 +83,8 @@ Diagram provides support to export the desired region of the diagram to the desi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVICZDlgwcGbHBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOption)
 
 ### How to Customize Page Size
@@ -109,6 +113,8 @@ Diagram provides support to change the page size. The page size can be adjusted 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBesNNFgwFiDfWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPageSize)
 
 ### How to Add Margin Around Exported Diagram Image
@@ -141,6 +147,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryCjZvAmvTSrzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportMargin)
 
 ### How to Export Diagrams by Region
@@ -180,6 +188,8 @@ The following code example illustrates how to export the diagram based on page s
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXtvUwbliLpo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportRegion)
 
 ### How to Export Diagram with Custom Bounds
@@ -212,6 +222,8 @@ The following code example illustrates how to export the region specified in the
      }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZresXjFUwYAvcER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportClipBounds)
 
 ### How to Export Diagram as Single or Multiple Pages
@@ -251,6 +263,8 @@ The following code example illustrates how to export the diagram to a single pag
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBoMtjbgwaFojuu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPage)
 
 ### How to Change Orientation at Runtime
