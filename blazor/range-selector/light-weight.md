@@ -47,4 +47,4 @@ By default, when the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## See Also
 
-* [Period Selector](./period-selector/)
+* [Period Selector](./period-selector)

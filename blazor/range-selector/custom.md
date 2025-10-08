@@ -34,13 +34,13 @@ Customize the Range Selector using [RangeNavigatorStyleSettings](https://help.sy
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails {  Date = 12, Close = 28 },
-        new StockDetails {  Date = 34, Close = 44 },
-        new StockDetails {  Date = 45, Close = 48 },
-        new StockDetails {  Date = 56, Close = 50 },
-        new StockDetails {  Date = 67, Close = 66 },
-        new StockDetails {  Date = 78, Close = 78 },
-        new StockDetails {  Date = 89, Close = 84 }
+        new StockDetails { Date = 12, Close = 28 },
+        new StockDetails { Date = 34, Close = 44 },
+        new StockDetails { Date = 45, Close = 48 },
+        new StockDetails { Date = 56, Close = 50 },
+        new StockDetails { Date = 67, Close = 66 },
+        new StockDetails { Date = 78, Close = 78 },
+        new StockDetails { Date = 89, Close = 84 }
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -79,13 +79,13 @@ Customize the thumb's border, fill color, size, and type using [RangeNavigatorTh
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails {  Date = 12, Close = 28 },
-        new StockDetails {  Date = 34, Close = 44 },
-        new StockDetails {  Date = 45, Close = 48 },
-        new StockDetails {  Date = 56, Close = 50 },
-        new StockDetails {  Date = 67, Close = 66 },
-        new StockDetails {  Date = 78, Close = 78 },
-        new StockDetails {  Date = 89, Close = 84 }
+        new StockDetails { Date = 12, Close = 28 },
+        new StockDetails { Date = 34, Close = 44 },
+        new StockDetails { Date = 45, Close = 48 },
+        new StockDetails { Date = 56, Close = 50 },
+        new StockDetails { Date = 67, Close = 66 },
+        new StockDetails { Date = 78, Close = 78 },
+        new StockDetails { Date = 89, Close = 84 }
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -120,13 +120,13 @@ Customize the Range Selector border using [RangeNavigatorBorder](https://help.sy
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails {  Date = 12, Close = 28 },
-        new StockDetails {  Date = 34, Close = 44 },
-        new StockDetails {  Date = 45, Close = 48 },
-        new StockDetails {  Date = 56, Close = 50 },
-        new StockDetails {  Date = 67, Close = 66 },
-        new StockDetails {  Date = 78, Close = 78 },
-        new StockDetails {  Date = 89, Close = 84 },
+        new StockDetails { Date = 12, Close = 28 },
+        new StockDetails { Date = 34, Close = 44 },
+        new StockDetails { Date = 45, Close = 48 },
+        new StockDetails { Date = 56, Close = 50 },
+        new StockDetails { Date = 67, Close = 66 },
+        new StockDetails { Date = 78, Close = 78 },
+        new StockDetails { Date = 89, Close = 84 }
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -160,13 +160,13 @@ Enable the [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails {  Date = 12, Close = 28 },
-        new StockDetails {  Date = 34, Close = 44 },
-        new StockDetails {  Date = 45, Close = 48 },
-        new StockDetails {  Date = 56, Close = 50 },
-        new StockDetails {  Date = 67, Close = 66 },
-        new StockDetails {  Date = 78, Close = 78 },
-        new StockDetails {  Date = 89, Close = 84 }
+        new StockDetails { Date = 12, Close = 28 },
+        new StockDetails { Date = 34, Close = 44 },
+        new StockDetails { Date = 45, Close = 48 },
+        new StockDetails { Date = 56, Close = 50 },
+        new StockDetails { Date = 67, Close = 66 },
+        new StockDetails { Date = 78, Close = 78 },
+        new StockDetails { Date = 89, Close = 84 }
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -198,13 +198,13 @@ Animation is enabled by default. Control the speed using the [AnimationDuration]
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails {  Date = 12, Close = 28 },
-        new StockDetails {  Date = 34, Close = 44 },
-        new StockDetails {  Date = 45, Close = 48 },
-        new StockDetails {  Date = 56, Close = 50 },
-        new StockDetails {  Date = 67, Close = 66 },
-        new StockDetails {  Date = 78, Close = 78 },
-        new StockDetails {  Date = 89, Close = 84 },
+        new StockDetails { Date = 12, Close = 28 },
+        new StockDetails { Date = 34, Close = 44 },
+        new StockDetails { Date = 45, Close = 48 },
+        new StockDetails { Date = 56, Close = 50 },
+        new StockDetails { Date = 67, Close = 66 },
+        new StockDetails { Date = 78, Close = 78 },
+        new StockDetails { Date = 89, Close = 84 }
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -214,5 +214,5 @@ Animation is enabled by default. Control the speed using the [AnimationDuration]
 
 ## See Also
 
-* [Grid and Tick Lines](./grid-tick/)
-* [Labels](./labels/)
+* [Grid and Tick Lines](./grid-tick)
+* [Labels](./labels)
