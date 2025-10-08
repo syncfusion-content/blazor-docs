@@ -29,7 +29,7 @@ Configure the corresponding [Interactive render mode](https://learn.microsoft.co
 
 To add **Blazor Sidebar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If `WebAssembly` or `Auto` render modes are utilized in the Blazor Web App, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component Nuget packages must be installed within the client project.
+If `WebAssembly` or `Auto` render modes are utilized in the Blazor Web App, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages must be installed within the client project.
 
 Alternatively, the Package Manager Console can be used to install the required NuGet package
 
