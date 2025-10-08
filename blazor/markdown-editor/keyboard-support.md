@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard support in Blazor Markdown Editor Component | Syncfusion
+title: Keyboard support in Markdown Editor Component | Syncfusion
 description: Checkout and learn here all about Keyboard support in Syncfusion Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor
@@ -10,6 +10,10 @@ documentation: ug
 # Keyboard support in Blazor Markdown Editor Component
 
 You can use the following keyboard shortcuts when the Rich Text Editor is set to [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EditorMode) as `Markdown`.
+
+## Overview
+
+The Syncfusion Blazor Markdown Editor supports a wide range of keyboard shortcuts to enhance productivity and streamline text editing. These shortcuts cover toolbar access, content formatting, insertion of elements, clipboard operations, and more. This guide provides a comprehensive list of available shortcuts for both Windows and Mac platforms.
 
 ## Toolbar
 
@@ -98,7 +102,7 @@ These shortcuts provide additional functionalities like fullscreen mode.
 @code{
 
     private string MarkdownValue { get; set; } = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-        the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
+        the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add our own custom formation syntax for the Markdown formation, [sample link]([https://ej2.syncfusion.com/home](https://blazor.syncfusion.com/demos/markdown-editor/overview?theme=fluent)). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
 
 }
 ```

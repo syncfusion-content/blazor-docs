@@ -9,30 +9,40 @@ documentation: ug
 
 # Number Formatting in Blazor Pivot Table Component
 
-Allows you to specify the required display format that should be used in values of the pivot table. Supported display formats are:
+The Pivot Table component provides comprehensive number formatting capabilities, allowing you to display numeric values in various formats. This enhances data readability and ensures values are displayed accurately to meet your specific needs.
 
-* Number
-* Currency
-* Percentage
-* Custom
+## Supported format types
 
-You can apply format for the numeric values using the following properties in the [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings).
+The Pivot Table component supports the following display formats for numeric values:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): It allows to specify the field name.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): It allows to specify the format of the respective field.
+* **Number** - Standard numeric formatting with optional grouping separators and configurable decimal places.
+* **Currency** - Formats currency values with appropriate symbols, optional grouping separators, and customizable decimal places.
+* **Percentage** - Values displayed as percentages with the % symbol.
+* **Custom** - User-defined formatting patterns for specific display requirements.
 
-Possible formatting values are:
+## Defining number format settings
 
-1. N - denotes numeric type.
-2. C - denotes currency type.
-3. P - denotes percentage type.
+To configure number formats for numeric values, use the [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Use the following main properties within the [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) option to define how values are formatted:
 
-N> If no format is specified it takes number as default format type.
+### Essential formatting properties
 
-Other properties include:
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): Specifies the field name to which the formatting should be applied.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): Defines the format pattern for the respective field.
 
-* [UseGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping): It allows to enable or disable the separator, for example, $100,000,000 or $100000000 respectively. By default, it will be set as **true**.
-* [Currency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency): It allows to set the currency code which needs to be considered for the currency formatting.
+### Format type codes
+
+Use these standard format codes to specify the formatting type:
+
+1. **N** - Numeric formatting (e.g., 1,234.56)
+2. **C** - Currency formatting (e.g., $1,234.56)
+3. **P** - Percentage formatting (e.g., 12.34%)
+
+N> When no format is specified, the component applies numeric formatting as the default.
+
+### Additional formatting options
+
+* [UseGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping): Controls the display of grouping separators. When set to **true** (default), displays values like $100,000,000; when **false**, displays as $100000000.
+* [Currency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency): Specifies the currency code to be considered for currency formatting (e.g., USD, EUR, GBP).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -74,7 +84,7 @@ You can also format the values at runtime using the formatting dialog. This opti
 
 ## Custom format
 
-You can add any custom format directly to the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) property in the [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings). Custom format can be achieved by using one or more format specifiers listed in the following table.
+Custom format lets you display numbers in your preferred pattern by setting the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) property within the [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings). You can use one or more format specifiers (shown in the table below) to control how values appear in the Pivot Table.
 
 | Specifier | Description | Input | Format Output |
 | ------- |--------------- | ---------------- | --------------- |
@@ -86,7 +96,7 @@ You can add any custom format directly to the [Format](https://help.syncfusion.c
 | ; | Denotes separate formats for positive, negative and zero values. | { format: '###.##;(###.00);-0' } | '(120.00)'    |
 | 'String' (single Quotes) | Denotes the characters that are enclosed in the single quote (') to be replaced in the resulting string. | { format: "####.00 '@'" } | "123.00 @"    |
 
-N> If custom format is defined, certain properties such as [UseGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping) and [Currency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency) will not be considered.
+N> When you define a custom format, certain properties such as [UseGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping) and [Currency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency) in the format settings will be ignored.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -127,7 +137,7 @@ N> If custom format is defined, certain properties such as [UseGrouping](https:/
 
 ## Toolbar
 
-You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
+Number formatting can be applied instantly at runtime through the built-in dialog, accessible from the toolbar. To enable this, set both the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowNumberFormatting) and [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) properties to **true**, and include the **NumberFormatting** option in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property. The toolbar will then automatically display the "Number Formatting" icon. Clicking this icon opens the dialog, allowing you to specify number formats for value fields directly within the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

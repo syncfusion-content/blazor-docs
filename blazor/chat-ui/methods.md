@@ -11,7 +11,7 @@ documentation: ug
 
 ## Edit message
 
-You can use the [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_UpdateMessageAsync_Syncfusion_Blazor_InteractiveChat_ChatMessage_System_String_) public method to update the messages in the ChatUI to modify an existing message within the chat, useful for editing or correcting sent messages.
+The [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_UpdateMessageAsync_Syncfusion_Blazor_InteractiveChat_ChatMessage_System_String_) method programmatically updates a message in the chat history. To identify the message to be modified, its unique ID must be provided. This is useful for implementing features like editing or correcting sent messages.
 
 ```cshtml
 
@@ -44,7 +44,7 @@ You can use the [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syn
 
 ## Scroll to bottom
 
-You can use [ScrollToBottomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ScrollToBottomAsync) public method to scroll the chat view to the latest message, ensuring users see the new content updated.
+The [ScrollToBottomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ScrollToBottomAsync) method programmatically scrolls the chat view to the most recent message. This ensures that newly added content is immediately visible to the user.
 
 ```cshtml
 
