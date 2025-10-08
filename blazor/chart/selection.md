@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Selection feature in Syncfusion Blazor Charts component and much more.
+description: Check out and learn how to configure and ulilize Selection feature in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 # Selection in Blazor Charts Component
 
-The chart provides selection support for the series and its data points on mouse or touch action.
+Blazor Charts support selection for series and data points using mouse or touch actions, enabling interactive data analysis.
 
-N> When clicked on the data points, the corresponding series legend will also be selected.
+N> Selecting a data point also highlights the corresponding series legend.
 
-The chart offers a variety of selection mode for selecting the data. They are,
+The chart provides several selection modes:
 
 * None
 * Point
@@ -27,15 +27,14 @@ The chart offers a variety of selection mode for selecting the data. They are,
 
 ## Point
 
-When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property is set to **Point**, it allows to select a single point.
+Set the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to **Point** to select a single point.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Point">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -47,7 +46,7 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -58,14 +57,14 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -75,15 +74,14 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Series
 
-When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property is set to **Series**, it allows to select a series.
+Set the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to **Series** to select an entire series.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Series">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -95,7 +93,7 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -106,14 +104,14 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -123,15 +121,14 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Cluster
 
-By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to **Cluster**, one can select the points in all series that correspond to the same index.
+Set the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to **Cluster** to select points in all series at the same index.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Cluster">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -143,7 +140,7 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -154,14 +151,14 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -173,23 +170,22 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 **DragXY, DragX and DragY**
 
-Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) to **DragXY** to retrieve a group of data under a specific region.
+Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) to **DragXY** to select a group of data within a specific region.
 
-* DragXY - Allows to select data with respect to horizontal and vertical axis.
-* DragX - Allows to select data with respect to horizontal axis.
-* DragY - Allows to select data with respect to vertical axis.
+* DragXY: Select data by both axes
+* DragX: Select data by horizontal axis
+* DragY: Select data by vertical axis
 
-In the drag complete event, the selected data will be returned as an array collection.
+Selected data is returned as an array collection in the drag complete event.
 
-N> To select a rectangular area on a chart using a touch device, quickly double-tap and then drag your finger to define the selection area.
+N> On touch devices, double-tap and drag to select a rectangular area.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.DragXY">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="XValue" Opacity="1" YName="YValue" Type="ChartSeriesType.Scatter">
@@ -260,15 +256,14 @@ N> To select a rectangular area on a chart using a touch device, quickly double-
 
 ## Multiple selection
 
-Multiple points or series can be selected by setting the [IsMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect) property to **true**.
+Enable multiple selection by setting the [IsMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect) property to **true**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Series" IsMultiSelect="true">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -280,7 +275,7 @@ Multiple points or series can be selected by setting the [IsMultiSelect](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -291,14 +286,14 @@ Multiple points or series can be selected by setting the [IsMultiSelect](https:/
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -308,15 +303,15 @@ Multiple points or series can be selected by setting the [IsMultiSelect](https:/
 
 ## Selection via code-behind
 
-A point or series can be selected programmatically on a chart using the [SelectedDataIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSelectedDataIndexes.html) property.
+Select points or series programmatically using the [SelectedDataIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSelectedDataIndexes.html) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Point" IsMultiSelect="true">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
     <ChartSelectedDataIndexes>
         @foreach (SelectedDataPoint s in Selection)
         {
@@ -334,13 +329,15 @@ A point or series can be selected programmatically on a chart using the [Selecte
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public List<SelectedDataPoint> Selection = new List<SelectedDataPoint>();
+
     public class SelectedDataPoint
     {
         public int seriesIndex { get; set; }
         public int pointIndex { get; set; }
     }
+
     protected override void OnInitialized()
     {
         Selection = new List<SelectedDataPoint>
@@ -349,6 +346,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
             new SelectedDataPoint { seriesIndex = 1, pointIndex = 3 }
         };
     }
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -359,33 +357,32 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend Selection
 
-A point or series can be selected through legend using the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property.
+Select points or series through the legend using the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Point">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -396,11 +393,10 @@ A point or series can be selected through legend using the [ToggleVisibility](ht
         </ChartSeries>
     </ChartSeriesCollection>
 
-    <ChartLegendSettings Visible="true" ToggleVisibility="false">
-    </ChartLegendSettings>
+    <ChartLegendSettings Visible="true" ToggleVisibility="false" />
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -411,14 +407,14 @@ A point or series can be selected through legend using the [ToggleVisibility](ht
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -426,20 +422,18 @@ A point or series can be selected through legend using the [ToggleVisibility](ht
 
 ![Blazor Column Chart with Legend Selection](images/selection/blazor-chart-legend-selection.png)
 
-## Selection customization 
+## Selection customization
 
-The custom style can be applied to selected points or series using the [SelectionStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SelectionStyle) property.
+Apply custom styles to selected points or series using the [SelectionStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SelectionStyle) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Point">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartLegendSettings Visible="true" ToggleVisibility="true">
-    </ChartLegendSettings>
+    <ChartLegendSettings Visible="true" ToggleVisibility="true" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold"
@@ -468,7 +462,7 @@ The custom style can be applied to selected points or series using the [Selectio
     }
 </style>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -479,14 +473,14 @@ The custom style can be applied to selected points or series using the [Selectio
 
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country ="China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
