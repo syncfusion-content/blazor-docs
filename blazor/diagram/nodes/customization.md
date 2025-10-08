@@ -192,7 +192,7 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeTemplate)
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
 
@@ -654,7 +654,7 @@ The following code shows how to set the AdditionalInfo value.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIMDtdpvxPfjor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomProperty)
 
 **Note:** You can set any type of value for the AdditionalInfo property.
 
@@ -720,7 +720,7 @@ The following code illustrates how to render nodes based on the stack order.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWXNdzbmSIZbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/ZIndexProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/ZIndexProperty)
 
 ## How to Set Pivot Property for a Node
 
@@ -1039,7 +1039,7 @@ The following code illustrates how to get data source settings details.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrIsNjxpkNBdAVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/DataProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/DataProperty)
 
 ## See also
 

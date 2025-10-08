@@ -65,7 +65,7 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVysXNchsTmFbDo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Select)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Select)
 
 Selection is also available during interaction:
 
@@ -176,7 +176,7 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoCtjmBWRAMAXB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
 
 Resizing is also supported during interaction:
 

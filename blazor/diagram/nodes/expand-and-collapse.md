@@ -109,7 +109,7 @@ The following code example illustrates how to create icons of various shapes on 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSMZtQVZKXIhdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Icon)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Icon)
 
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)
 
@@ -455,7 +455,7 @@ The following code explains how to change the appearance of the Icon using [Fill
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyWDDwhXSUaIpc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Appearance)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)
 
@@ -801,9 +801,9 @@ To implement a custom template for expand and collapse icons, please refer to th
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMXDQLNQrOfwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
+![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
 ### How to Set Padding for the Expand/Collapse Icon
 

@@ -663,7 +663,7 @@ The following example demonstrates how to update the layout orientation dynamica
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhIWZXnfGJpthaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
 
 The following table outlines the various orientation types available:
 

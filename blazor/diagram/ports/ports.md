@@ -281,7 +281,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add Ports at Runtime
 
-You can add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
+Add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
 The following code explains how to add ports to a node at runtime by using the `Add` method. The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property is  define a unique ID for the port and it is further used to find the port at runtime.
 If an **ID** is not set, then default **ID** is assigned automatically.

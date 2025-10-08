@@ -77,7 +77,7 @@ The following code example demonstrates how to get the selection change event in
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBSCjjmsOntdxie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
 
 ## How to Handle Position Change Event 
 
@@ -141,7 +141,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthICtjciuGtobOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
 
 ## How to Handle Size Change Event 
 
@@ -204,7 +204,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSCtZGiEcHqVrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
 
 ## How to Handle Rotate Change Event 
 
