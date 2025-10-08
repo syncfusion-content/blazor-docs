@@ -85,7 +85,7 @@ The legend can also be placed anywhere in the Smith Chart by setting [Position](
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -135,7 +135,7 @@ The legend's alignment can be customized. By default, it is centered. Use the [A
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -187,7 +187,7 @@ The legend is rendered as a **Circle** by default, matching the series color. Us
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -235,7 +235,7 @@ By default, the legend occupies 20%–25% of the Smith Chart's height (top/botto
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -286,7 +286,7 @@ Customize the space between legend items using the [ItemPadding](https://help.sy
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -341,7 +341,7 @@ Customize each legend item's style, border, and text using the following propert
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -391,7 +391,7 @@ The legend displays the series name by default. Series visibility can be toggled
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -438,7 +438,7 @@ Arrange the legend in rows and columns using the [RowCount](https://help.syncfus
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
@@ -494,7 +494,7 @@ The legend title provides information about the legend collection. Customize the
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance = 10, Reactance = 25 },
         new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactanc = 1.6 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
         new SmithChartData { Resistance = 2, Reactance = 1.2 },
         new SmithChartData { Resistance = 1, Reactance = 0.8 },
         new SmithChartData { Resistance = 0, Reactance = 0.2 }
