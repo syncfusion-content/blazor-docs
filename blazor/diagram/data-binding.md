@@ -1104,6 +1104,21 @@ The following sample code demonstrates implementing custom data binding using cu
         newConnector.CornerRadius = 5;
     }
 
+    protected override void OnInitialized()
+    {
+        employeeDetails = new List<EmployeeDetails>();
+        employeeDetails = new List<EmployeeDetails>() {
+            new EmployeeDetails { EmployeeID = "1", FirstName = "Andrew", Designation = "CEO", Country = "England", ReportsTo = "", Color = "Red" },
+            new EmployeeDetails { EmployeeID = "2", FirstName = "Nancy", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "3", FirstName = "Janet", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "4", FirstName = "Margaret", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "5", FirstName = "Steven", Designation = "Product Manager", Country = "England", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "7", FirstName = "Michael", Designation = "Team Lead", Country = "USA", ReportsTo = "5", Color = "Green" },
+            new EmployeeDetails { EmployeeID = "8", FirstName = "Robert", Designation = "Developer", Country = "England", ReportsTo = "5", Color = "Gray" },
+            new EmployeeDetails { EmployeeID = "9", FirstName = "Anne", Designation = "Developer", Country = "USA", ReportsTo = "5", Color = "Gray" },
+            new EmployeeDetails { EmployeeID = "6", FirstName = "Laura", Designation = "HR", Country = "USA", ReportsTo = "1", Color = "Purple" },
+        };
+    }
 
     public class EmployeeDetails
     {
@@ -1158,6 +1173,7 @@ The following sample code demonstrates implementing custom data binding using cu
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIMjNbqJwtqCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### How to Perform CRUD Operation
 
@@ -1250,6 +1266,21 @@ The following sample code demonstrates implementing CRUD operations for custom b
         newConnector.CornerRadius = 5;
     }
 
+    protected override void OnInitialized()
+    {
+        Details = new List<EmployeeDetails>();
+        employeeDetails = new List<EmployeeDetails>() {
+            new EmployeeDetails { EmployeeID = "1", FirstName = "Andrew", Designation = "CEO", Country = "England", ReportsTo = "", Color = "Red" },
+            new EmployeeDetails { EmployeeID = "2", FirstName = "Nancy", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "3", FirstName = "Janet", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "4", FirstName = "Margaret", Designation = "Product Manager", Country = "USA", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "5", FirstName = "Steven", Designation = "Product Manager", Country = "England", ReportsTo = "1", Color = "Blue" },
+            new EmployeeDetails { EmployeeID = "7", FirstName = "Michael", Designation = "Team Lead", Country = "USA", ReportsTo = "5", Color = "Green" },
+            new EmployeeDetails { EmployeeID = "8", FirstName = "Robert", Designation = "Developer", Country = "England", ReportsTo = "5", Color = "Gray" },
+            new EmployeeDetails { EmployeeID = "9", FirstName = "Anne", Designation = "Developer", Country = "USA", ReportsTo = "5", Color = "Gray" },
+            new EmployeeDetails { EmployeeID = "6", FirstName = "Laura", Designation = "HR", Country = "USA", ReportsTo = "1", Color = "Purple" },
+        };
+    }
 
     public class EmployeeDetails
     {
@@ -1366,6 +1397,8 @@ The following sample code demonstrates implementing CRUD operations for custom b
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthIMXNbKTJLixOX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
 ### How to Bind GraphQL Service

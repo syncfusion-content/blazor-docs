@@ -99,6 +99,8 @@ public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
 };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoitXvqgxOfTzQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/Overview)
 
 ## How to Zoom and Pan the Diagram
@@ -198,6 +200,8 @@ The following example shows how to disable the zoom constraint from the default 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIstXbqgwxdWkw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/OverviewConstraints)
 
 ## See also 

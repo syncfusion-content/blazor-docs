@@ -62,6 +62,8 @@ Select an element by clicking it. A single click clears any previous selection a
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLSMDtPLbKuecIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSelectionEvent)
 
 ## How to Select a Group
@@ -132,6 +134,8 @@ In the following example, the node can be selected with the first click and unse
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLSiNDbBbpTKpzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnSelectSample)
 
 ![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
@@ -168,7 +172,7 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent @ref="diagram" Width="50%" Height="800px" SelectionSettings="@select" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="60%" Height="800px" SelectionSettings="@select" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 @functions
 {
 
@@ -258,6 +262,8 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthysXZvLFILllHo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/RubberBandSelectionMode)
 
 ## Getting Current Selected Objects
@@ -365,6 +371,8 @@ The DiagramSelectionSettings provides access to:
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSsDjFhlxZSZvL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CurrentSelection)
 
 ### How to clone the selected nodes and connector at runtime
@@ -377,7 +385,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
 
 
 <SfButton Content="Clone" OnClick="@Clone" />
-<SfDiagramComponent @ref="diagram" Width="50%" Height="800px" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="60%" Height="800px" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 @functions
 {
     public string ID = "diagram";
@@ -570,6 +578,8 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICNXlrlnvNlVu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CloneSelectedItems)
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
 
@@ -625,6 +635,8 @@ SelectionChanged="OnSelectionChanged">
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIMDNbBPcaeybR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SelectedElements)
 ## How to Drag Elements
 
@@ -671,6 +683,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosXtvrPFdHwTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramPositionEvent)
 For more information about dragging, refer [Node Drag](./nodes/interaction#how-to-drag-the-node)
 
@@ -721,6 +735,8 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVostNPrvOZhuso?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSizeEvent)
 
 For more information about resizing, refer [Node Resize](./nodes/interaction#how-to-resize-the-node)
@@ -775,6 +791,8 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBIiZZlhvYIDpvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramRotateEvent)
 
 For more information about resizing, refer [Node Rotate](./nodes/interaction#how-to-rotate-the-node)
@@ -869,6 +887,8 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIiDDFLkXDqWqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramConnectionEvent)
 
 ## How to Edit Straight Connector Segments
@@ -951,6 +971,8 @@ For more information about straight segment editing, refer [Straight Segment Edi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoiNXFhEtTKrJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SegmentEditing)
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](./connectors/segments/orthogonal#orthogonal-segment-editing).
@@ -1023,6 +1045,8 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoWNtPgqsPzFca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/MouseClick)
 
 ## How to Customize the Appearance of User Handle
