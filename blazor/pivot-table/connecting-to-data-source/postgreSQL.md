@@ -1,24 +1,39 @@
 ---
+layout: post
 title: "PostgreSQL Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
 description: "Learn how to bind data from a PostgreSQL database in the Syncfusion Blazor Pivot Table and more."
+platform: Blazor
+documentation: ug
 ---
 
 # PostgreSQL Data Binding
 
-This section describes how to use [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) to retrieve data from a PostgreSQL database and bind it to the Blazor Pivot Table.
+This guide explains how to connect a PostgreSQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display PostgreSQL data.
 
 ## Connecting a PostgreSQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
-**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
+This section explains how to connect a PostgreSQL database to the Blazor Pivot Table by directly retrieving data using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library.
 
-**2.** To connect a PostgreSQL using the Npgsql EntityFrameworkCore PostgreSQL in our application, we need to install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Npgsql.EntityFrameworkCore.PostgreSQL** and install it.
+### Step 1: Set Up a Blazor Pivot Table
+1. Create a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) by following the [Getting Started](../getting-started) guide.
 
-![Add the NuGet package "Npgsql.EntityFrameworkCore.PostgreSQL" to the project](../images/postgreSQL-nuget-package-install.png)
+### Step 2: Install the Npgsql.EntityFrameworkCore.PostgreSQL NuGet Package
+1. Open the **NuGet Package Manager** in your project solution and search for **Npgsql.EntityFrameworkCore.PostgreSQL**.
+2. Install the **Npgsql.EntityFrameworkCore.PostgreSQL** package to add PostgreSQL support.
 
-**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to PostgreSQL database. You can get the specified database by using the **NpgsqlConnection**. Following that, the **NpgsqlCommand** is used to retrieve the desired collection from the database. Then populate the data collection from the **NpgsqlCommand** into a list using the **Read** method of **NpgsqlDataReader**.
+![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install.png)
 
-**4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the PostgreSQL data.
+### Step 3: Connect to the PostgreSQL Database
+In the **Index.razor** file, under the `OnInitialized` method, use the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library to connect to the PostgreSQL database and retrieve data.
+
+1. **Establish Connection**: Use `NpgsqlConnection` with a valid connection string (e.g., `Server=localhost;Database=mydb;User Id=myuser;Password=mypassword;`) to connect to the PostgreSQL database.
+2. **Query and Fetch Data**: Execute a SQL query, such as `SELECT * FROM apxtimestamp`, using `NpgsqlCommand` to retrieve data for the Pivot Table.
+3. **Structure Data**: Use `NpgsqlDataReader` to read the query results and populate them into a list for binding to the Pivot Table.
+
+### Step 4: Bind Data to the Pivot Table
+1. Assign the retrieved list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property of the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+2. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) to organize and format the data.
 
 ```cshtml
 @using System.Data
@@ -84,25 +99,42 @@ This section describes how to use [Npgsql EntityFrameworkCore PostgreSQL](https:
 }
 ```
 
-When you run the application, the resultant pivot table will look like this.
+### Step 5: Run and Verify the Pivot Table
+1. Run the Blazor application.
+2. The Pivot Table will display the PostgreSQL data, organized based on the defined configuration.
+3. The resulting Pivot Table will look like this:
 
 ![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-postgreSQL-databinding.png)
 
-## Connecting a PostgreSQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
+## Connecting a PostgreSQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API Service
+
+This section explains how to create a Web API service to fetch data from a PostgreSQL database and connect it to the Blazor Pivot Table.
 
 ### Create a Web API service to fetch PostgreSQL data
 
-**1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
+Follow these steps to set up a Web API service that retrieves PostgreSQL data for the Pivot Table.
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+#### Step 1: Create an ASP.NET Core Web Application
+1. Open Visual Studio and create a new ASP.NET Core Web App project named **MyWebService**.
+2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-**2.** To connect a PostgreSQL using the **Npgsql EntityFrameworkCore PostgreSQL** in our application, we need to install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Npgsql.EntityFrameworkCore.PostgreSQL** and install it.
+![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
-![Add the NuGet package "Npgsql.EntityFrameworkCore.PostgreSQL" to the project](../images/postgreSQL-nuget-package-install-in-web-service-app.png)
+#### Step 2: Install the Npgsql NuGet Package
+1. Install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) package using the **NuGet Package Manager** to enable PostgreSQL connectivity.
 
-**3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
+![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install-in-web-service-app.png)
 
-**4.** In the Web API controller (aka, PivotController), **NpgsqlConnection** helps to connect the PostgreSQL database. Next, using **NpgsqlCommand** and **NpgsqlDataAdapter** you can process the desired query string and retrieve data from the PostgreSQL database. The **Fill** method of the **NpgsqlDataAdapter** is used to populate the retrieved data into a **DataTable** as shown in the following code snippet.
+#### Step 3: Create a Web API Controller
+1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
+2. This controller handles data communication between the PostgreSQL database and the Pivot Table.
+
+#### Step 4: Connect to PostgreSQL and Retrieve Data
+In the **PivotController.cs** file, use the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library to connect to the PostgreSQL database and fetch data.
+
+1. **Establish Connection**: Use `NpgsqlConnection` with a valid connection string to access the PostgreSQL database.
+2. **Fetch Data**: Execute a SQL query, such as `SELECT * FROM apxtimestamp`, using `NpgsqlCommand` to retrieve data.
+3. **Prepare Data**: Use `NpgsqlDataAdapter`’s `Fill` method to store the query results in a `DataTable` for JSON serialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -132,7 +164,11 @@ namespace MyWebService.Controllers
 }
 ```
 
-**5.** In the **Get()** method of the **PivotController.cs** file, the **GetPostgreSQLResult** method is used to retrieve the PostgreSQL data as a DataTable, which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
+#### Step 5: Serialize Data to JSON
+1. In the **PivotController.cs** file, create a `Get` method that calls `GetPostgreSQLResult` to retrieve PostgreSQL data.
+2. Use `JsonConvert.SerializeObject` from the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) library to serialize the `DataTable` into JSON format.
+
+> Ensure the **Newtonsoft.Json** NuGet package is installed in your project.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -168,17 +204,30 @@ namespace MyWebService.Controllers
 }
 ```
 
-**6.** Run the application and it will be hosted within the URL `https://localhost:44378`.
+#### Step 6: Run the Web API Service
+1. Build and run the application.
+2. The application will be hosted at `https://localhost:44378/` (the port number may vary).
 
-**7.** Finally, the retrieved data from PostgreSQL which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:44378/Pivot`, as shown in the browser page below.
+#### Step 7: Verify the JSON Data
+1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from PostgreSQL.
+2. The browser will display the JSON data, as shown below.
 
 ![Hosted Web API URL](../images/postgreSQL-data.png)
 
-### Connecting the Pivot Table to a PostgreSQL using the Web API service
+### Connecting the Pivot Table to a PostgreSQL Database Using the Web API Service
 
-**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
+This section explains how to connect the Blazor Pivot Table to PostgreSQL data retrieved via the Web API service.
 
-**2.** Map the hosted Web API's URL link `https://localhost:44378/Pivot` to the Pivot Table in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html?&_ga=2.200411303.844585580.1677740066-2135459383.1677740066#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.200411303.844585580.1677740066-2135459383.1677740066). This [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property aids in the de-serialization of PostgreSQL data into instances of your model data class (aka, TValue="PostgreSQLService") while bound to the pivot table.
+#### Step 1: Set Up a Blazor Pivot Table
+1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
+
+#### Step 2: Configure the Web API URL
+1. In the **Index.razor** file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserializes PostgreSQL data into instances of your model data class (e.g., `TValue="PostgreSQLService"`) for binding to the Pivot Table.
+
+#### Step 3: Define the Pivot Table Report
+1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.
+2. Enable the field list by setting [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) to `true` for interactive field management.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -215,9 +264,12 @@ namespace MyWebService.Controllers
 }
 ```
 
-
-When you run the application, the resultant pivot table will look like this.
+#### Step 4: Run and Verify the Pivot Table
+1. Run the Blazor application.
+2. The Pivot Table will display the PostgreSQL data fetched via the Web API, structured according to the defined configuration.
+3. The resulting Pivot Table will look like this:
 
 ![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-mongodb-databinding.png)
 
-> In [this](https://github.com/SyncfusionExamples/how-to-bind-PostgreSQL-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from a PostgreSQL using the Web API service.
+### Additional Resources
+Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a PostgreSQL database in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-PostgreSQL-database-to-pivot-table/tree/master/Blazor).
