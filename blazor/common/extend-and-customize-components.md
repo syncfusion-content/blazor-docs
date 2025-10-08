@@ -154,7 +154,7 @@ A Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be imple
     <TodoList></TodoList>
     ```
 
-    ![Render Syncfusion Blazor components within another component (example)](images/todolist.gif)
+    ![Render Syncfusion Blazor components within another component](images/todolist.gif)
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component dynamically
 

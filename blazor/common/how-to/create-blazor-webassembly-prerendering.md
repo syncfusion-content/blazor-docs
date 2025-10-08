@@ -93,7 +93,7 @@ Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or late
 
 ### Resolving HttpClient errors on WebAssembly prerendering
 
-When the index page injects `HttpClient` and prerenders on the server, the client has not yet established a connection, which can result in runtime exceptions.
+When the index page injects `HttpClient` and prerender on the server, the client has not yet established a connection, which can result in runtime exceptions.
 
 E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 

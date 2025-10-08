@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade Syncfusion Blazor components to the latest version
-description: Learn how to upgrade Syncfusion Blazor components, verify .NET compatibility, and ensure correct CSS references and configuration for Blazor Web App, Server, WebAssembly.
+description: Learn how to upgrade Syncfusion Blazor components, verify .NET compatibility, ensure correct CSS references and configuration for Blazor Web, Server, WASM App.
 platform: Blazor
 control: Common
 documentation: ug

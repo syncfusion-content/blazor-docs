@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure Syncfusion Blazor Client Resources in Production
-description: Migrate a Blazor application from EJ2-based packages to Syncfusion Blazor 18.1.0.36, including NuGet, namespace, component prefix, resource, and DataManager changes.
+description: Migrate a Blazor application from EJ2-based package to Syncfusion Blazor 18.1.0.36, including NuGet, namespace, component prefix, resource, DataManager changes.
 platform: Blazor
 control: Common
 documentation: ug

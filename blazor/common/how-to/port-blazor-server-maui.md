@@ -13,7 +13,7 @@ This guide explains how to migrate a Blazor Web App to a .NET MAUI Blazor Hybrid
 
 ## Prerequisites
 
-Install the [.NET SDK 8.0](https://dotnet.microsoft.com/download) or later and Visual Studio 2022 with the .NET MAUI and ASP.NET and web development workloads.
+Install the [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) or later and Visual Studio 2022 with the .NET MAUI and ASP.NET and web development workloads.
 
 ## Create a Blazor Web App
 
