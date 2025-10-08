@@ -7,7 +7,11 @@ control: MultiColumn ComboBox
 documentation: ug
 ---
 
+<<<<<<< HEAD
 # Data Binding in Blazor MultiColumn ComboBox Component
+=======
+# Data Binding in MultiColumn ComboBox Component
+>>>>>>> b8e97ed8432020616b8aa7057d4033c424ebc393
 
 The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. For remote data binding, utilize the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
