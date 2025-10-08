@@ -45,8 +45,8 @@ In the following example:
 }
 ```
 
-N> * **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.
-<br/> * **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering has no effect.
+N> * **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.<br/> 
+   * **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering has no effect.
 
 ## Avoid unnecessary component renders after RichTextEditor events
 
@@ -79,5 +79,5 @@ In the following example:
 }
 ```
 
-N> * **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
-<br/> * It is recommended to use the **PreventRender** method for user interactive events such as OnToolbarClick, UpdatedToolbarStatus, etc., for better performance.
+N> * **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.<br/> 
+   * It is recommended to use the **PreventRender** method for user interactive events such as OnToolbarClick, UpdatedToolbarStatus, etc., for better performance.
