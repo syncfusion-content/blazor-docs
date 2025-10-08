@@ -7,13 +7,13 @@ control: Kanban
 documentation: ug
 ---
 
-# Events in Blazor Kanban Component
+# Event Handling in Blazor Kanban Component
 
-This section explains the list of events of the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component which will be triggered for appropriate Kanban actions.
+his guide provides a comprehensive overview of the available events in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component. These events enable developers to customize behavior and respond to user interactions effectively.
 
-## OnLoad
+## OnLoad event
 
-`OnLoad` event allows customization of Kanban properties before rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_OnLoad) is triggered before the Kanban component is rendered, allowing customization of its properties.
 
 ```cshtml
 
@@ -32,9 +32,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## ActionBegin
+## ActionBegin event
 
-`ActionBegin` event triggers at the beginning of every Kanban action.
+[ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_ActionBegin) event triggers at the beginning of every Kanban action.
 
 ```cshtml
 
@@ -53,9 +53,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## ActionComplete
+## ActionComplete event
 
-`ActionComplete` event triggers on successful completion of the Kanban actions.
+[ActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_ActionComplete) is triggered after a Kanban action completes successfully.
 
 ```cshtml
 
@@ -74,9 +74,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## ActionFailure
+## ActionFailure event
 
-`ActionFailure` event triggers when a Kanban action gets failed or interrupted and it will return an error information.
+[ActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_ActionFailure) is triggered when a Kanban action fails or is interrupted, providing error details.
 
 ```cshtml
 
@@ -95,9 +95,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## CardClick
+## CardClick event
 
-`CardClick` event triggers on single-clicking the Kanban cards.
+[CardClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_CardClick) is triggered when a user clicks on a Kanban card.
 
 ```cshtml
 
@@ -116,9 +116,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## CardDoubleClick
+## CardDoubleClick event
 
-`CardDoubleClick` event triggers on double-clicking the Kanban cards.
+[CardDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_CardDoubleClick) is triggered when a user double-clicks a Kanban card.
 
 ```cshtml
 
@@ -137,9 +137,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## CardRendered
+## CardRendered event
 
-`CardRendered` event triggers before each card of the Kanban rendering on the page.
+[CardRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_CardRendered) is triggered before each Kanban card is rendered on the page.
 
 ```cshtml
 
@@ -158,9 +158,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## DataBinding
+## DataBinding event
 
-`DataBinding` event triggers before the data binds to the Kanban.
+[DataBinding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DataBinding) is triggered before data is bound to the Kanban component.
 
 ```cshtml
 
@@ -179,9 +179,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## DialogClose
+## DialogClose event
 
-`DialogClose` event triggers before the dialog closes.
+[DialogClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DialogClose) is triggered before the Kanban dialog closes.
 
 ```cshtml
 
@@ -200,9 +200,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## DialogOpen
+## DialogOpen event
 
-`DialogOpen` event triggers before the dialog opens.
+[DialogOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DialogOpen) is triggered before the Kanban dialog opens.
 
 ```cshtml
 
@@ -221,9 +221,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## DragStart
+## DragStart event
 
-`DragStart` event triggers when the card drag actions start.
+[DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DragStart) is triggered when a card drag operation begins.
 
 ```cshtml
 
@@ -242,9 +242,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## DragStop
+## DragStop event
 
-`DragStop` event triggers when the card drag actions stop.
+[DragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DragStop) is triggered when a card drag operation ends.
 
 ```cshtml
 
@@ -263,9 +263,9 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 ```
 
-## QueryCellInfo
+## QueryCellInfo event
 
-`QueryCellInfo` event triggers before each column of the Kanban rendering on the page.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_QueryCellInfo) is triggered before each Kanban column is rendered on the page.
 
 ```cshtml
 
