@@ -59,7 +59,7 @@ The component supports [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/pa
 | --- | --- | --- |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Move focus to the next element in the Smith Chart. |
 | <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Move focus to the previous element in the Smith Chart. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Move focus to the data point to the right of the selected point. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Move focus to the data point to the left of the selected point. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Move focus to the data point to the right of the selected point. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Move focus to the next series in the Smith Chart. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Move focus to the previous series in the Smith Chart. |
