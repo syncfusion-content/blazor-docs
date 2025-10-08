@@ -67,7 +67,7 @@ The Blazor 3D Chart component follows the [keyboard interaction](https://www.w3.
 |<kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves focus to the chart element.|
 |<kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the chart.|
 |<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the chart.|
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point on the right of the selected point.|
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point on the left of the selected point.|
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the data point on the right of the selected point.|
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the next series in the chart.|
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the previous series in the chart.|
