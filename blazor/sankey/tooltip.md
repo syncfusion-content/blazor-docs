@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltips for Blazor Sankey Diagram | Syncfusion
-description: Learn how to configure and customize tooltips in the Blazor Sankey Diagram to enhance data visualization and user interaction.
+description: Learn how to configure and customize tooltips in the Syncfusion Blazor Sankey Diagram to enhance data visualization and user interaction.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Tooltips in Blazor Sankey Diagram
 
-The **Blazor Sankey Diagram** is a powerful tool for visualizing energy flow, financial data, or any other system with nodes and links. The component allows you to display a flow diagram where nodes represent entities, and links represent the relationships or flows between them.
+The Blazor Sankey Diagram visualizes flows between nodes and links. Tooltips surface contextual details for hovered elements without cluttering the diagram.
 
-This guide provides step-by-step instructions on how to configure and customize tooltips within the **Blazor Sankey Diagram**.
+This guide outlines how to enable and customize tooltips in the Blazor Sankey Diagram.
 
 ## Basic Tooltip Configuration
 
-Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Below is an example of how to configure tooltips in the Sankey Diagram:
+Enable tooltips using `SankeyTooltipSettings`.
 
 {% tabs %}
 {% highlight razor %}
@@ -26,9 +26,11 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
 <SfSankey Nodes=@Nodes Links=@Links>
     <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
 </SfSankey>
+
 @code {
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
-    public List<SankeyDataLink> Links = new List<SankeyDataLink>();        
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
+      
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -90,29 +92,27 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
 {% endhighlight %}
 {% endtabs %}
 
-
 ![Blazor Sankey Tooltip](images/tooltip/sankey-tooltip.png)
 
 
 ## Customizing Tooltip Appearance
 
-The **Blazor Sankey Diagram** allows you to customize the appearance and behavior of tooltips through several properties. The tooltip settings allow for full control over how tooltips appear, including their background color, opacity, and animation effects for both nodes and links.
+Adjust tooltip appearance and behavior using `SankeyTooltipSettings`.
 
-- **`Enable`**: Controls whether tooltips are displayed. Default is `true`.
-- **`Fill`**: Sets the background color of the tooltip.
-- **`Opacity`**: Adjusts the tooltip opacity (0 to 1). Default is `0.75`.
-- **`NodeFormat`**: Defines the format for node tooltips.
-- **`LinkFormat`**: Specifies the format for link tooltips.
-- **`EnableAnimation`**: Toggles tooltip animation. Default is `true`.
-- **`Duration`**: Sets the duration (in milliseconds) for the tooltip animation. Default is `300`.
-- **`FadeOutDuration`**: Specifies the fade-out duration for tooltips (in milliseconds). Default is `1000`.
+- **Enable**: Shows or hides tooltips.
+- **Fill**: Sets background color.
+- **Opacity**: Controls transparency (0 to 1). The default value is 0.75.
+- **NodeFormat**: Template string for node tooltips.
+- **LinkFormat**: Template string for link tooltips.
+- **EnableAnimation**: Toggles animation. Default: true.
+- **Duration**: Animation duration in milliseconds. The default value is 300.
+- **FadeOutDuration**: Fade‑out duration in milliseconds. The default value is 1000.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
-
 
 <SfSankey Nodes=@Nodes Links=@Links Title="Energy Flow" SubTitle="-2024">
     <SankeyTooltipSettings 
@@ -131,9 +131,11 @@ The **Blazor Sankey Diagram** allows you to customize the appearance and behavio
     </SankeyTooltipTextStyle>
 </SankeyTooltipSettings>
 </SfSankey>
+
 @code {
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
-    public List<SankeyDataLink> Links = new List<SankeyDataLink>();        
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
+    
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -195,14 +197,13 @@ The **Blazor Sankey Diagram** allows you to customize the appearance and behavio
 {% endhighlight %}
 {% endtabs %}
 
-
 ![Blazor Sankey Tooltip Customization](images/tooltip/sankey-tooltip-customization.png)
 
 ## Advanced Tooltip Configuration
 
 ### Custom Tooltip Templates
 
-For more advanced customizations, you can use custom templates for both node and link tooltips by utilizing the `SankeyNodeTemplate` and `SankeyLinkTemplate` properties. This allows you to define HTML templates that customize the layout and content of the tooltips.
+Customize tooltip content using `SankeyNodeTemplate` and `SankeyLinkTemplate` to render arbitrary HTML.
 
 {% tabs %}
 {% highlight razor %}
@@ -255,6 +256,7 @@ For more advanced customizations, you can use custom templates for both node and
         </SankeyLinkTemplate>
     </SankeyTooltipSettings>
 </SfSankey>
+
 <style>
     .e-sankeychart-tooltip-template{        
         margin: 0px !important;
@@ -273,9 +275,11 @@ For more advanced customizations, you can use custom templates for both node and
         margin-top: 30px;
     }
 </style>
+
 @code {
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
-    public List<SankeyDataLink> Links = new List<SankeyDataLink>();        
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
+ 
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -343,21 +347,21 @@ For more advanced customizations, you can use custom templates for both node and
 **Link Template**
 ![Blazor Sankey Link Tooltip Template](images/tooltip/sankey-tooltip-link-template.png)
 
-These templates allow you to completely customize the content and appearance of tooltips for nodes and links.
+Templates enable fully customized content and layout for node and link tooltips.
 
 ## Key Considerations
 
-- Use clear and concise tooltip content to improve readability.
-- Choose appropriate colors and opacity levels that contrast well with your Sankey diagram.
-- Consider using custom templates for more complex tooltip designs or to include additional data.
-- Adjust animation settings to ensure smooth transitions without being distracting.
-- Use the `NodeFormat` and `LinkFormat` properties for quick customization of tooltip content without needing to create full templates.
+- Keep tooltip text concise and readable.
+- Ensure sufficient contrast for tooltip text and background.
+- Use templates for richer content or additional fields.
+- Tune animation durations to balance responsiveness and polish.
+- Prefer `NodeFormat` and `LinkFormat` for simple content customization without templates.
 
 ## Tooltip Interaction
 
-Tooltips appear when users hover over nodes or links in the Sankey diagram. The `EnableAnimation` property, when set to true, allows for smooth transitions as the tooltip moves between different elements.
+Tooltips appear on hover over nodes or links. When `EnableAnimation` is true, transitions are animated as focus changes between elements.
 
-By effectively configuring and customizing tooltips in the Blazor Sankey Diagram, you can create more informative and interactive diagrams. Tooltips play a crucial role in helping users understand detailed information about specific nodes and links without cluttering the main diagram view.
+Well‑designed tooltips improve comprehension of detailed values while keeping the main diagram clear.
 
 ## See also
 
