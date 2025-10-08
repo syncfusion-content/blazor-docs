@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Export in RichTextEditor | Syncfusion
+title: Import and Export in Rich Text Editor | Syncfusion
 description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Import and Export in Blazor RichTextEditor
+# Import and Export in Blazor Rich Text Editor
 
 ## Import to HTML file
 
@@ -50,7 +50,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-fil
 
 ## Import to RTF file
 
-Import the RTF file into the editor by using the file uploader component and get the RTF file content from the uploader success event. Then, import the RTF values into the editor.
+To import an RTF file into the editor, use the file uploader component and retrieve the file content from the uploader's success event. Then, import the RTF values into the editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -131,7 +131,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-fil
 
 ## Importing content from Microsoft Word
 
-The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
+The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, while preserving the original formatting, structure, and styles. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
 
 To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can add it as a custom toolbar [items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) using the items property in toolbarSettings.
 
@@ -303,7 +303,7 @@ namespace WordUpload.Controllers
 
 ## Export to RTF file
 
-Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format.
+Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format. Ensure the Syncfusion.DocIO.NET NuGet package is installed in your project.
 
 Click **Export**, and use **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file. Use the following code to export the RTF file.
 
@@ -346,7 +346,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Export to HTML file
 
-Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format.
+Use [Syncfusion.DocIO](https://www.nuget.org/packages/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format. Make sure the required NuGet package is referenced in your project.
 
 While clicking on the export button, it makes a call to the Export to HTML service.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor RichTextEditor component and more.
+title: Style and appearance in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Style and Appearance
+# Styling and Appearance
 
 ## Set placeholder
 
@@ -43,7 +43,8 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 
 ## Source code view 
 
-The Rich Text Editor enables you to directly edit HTML code through the `Source View` in the text area. Any changes you make in Source view are immediately reflected in the editor's content, giving you greater flexibility and control over your work.
+The Rich Text Editor allows users to directly edit HTML code using the `Source View` mode. Changes made in Source View are instantly reflected in the editor's content, providing enhanced flexibility and control over content formatting.
+
 The source code is presented with enhanced formatting and consistent indentation for both block-level and inline HTML elements, resulting in a cleaner, more readable, and user-friendly editing experience.
 
 >While the visual alignment of the source code is improved, the editor's underlying value remains unchanged.
@@ -60,7 +61,7 @@ The source code is presented with enhanced formatting and consistent indentation
 
 ## Customizing editor content
 
-Use the following CSS to customize the default Rich Text Editor's content properties like font-family, font-size and color.
+Apply the following CSS to customize the default content styling of the Rich Text Editor like font-family, font-size and color.
 
 ```css
 /* To change font family and font size */
@@ -80,9 +81,9 @@ Use the following CSS to customize the default Rich Text Editor's content proper
 
 ![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.png)
 
-## Customizing editor toolbar
+## Customize toolbar appearance
 
-Use the following CSS to customize the default color of the Rich Text Editor's toolbar icon.
+Apply the following CSS to modify the default color of toolbar icons in the Rich Text Editor.
 
 ```css
 /* To change font color for toolbar icon */
@@ -112,7 +113,7 @@ Use the following CSS to customize the default color of the Rich Text Editor's t
 ```
 ![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.png)
 
-### Refresh editor
+### Refreshing the editor UI
 
 While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display: none, so the editor’s toolbar does not get the proper offset width and will render above the edit area container. To resolve this issue, call the `RefreshUI` method of the RichTextEditor in the dialog's opened event.
 
@@ -130,7 +131,7 @@ While rendering the Rich Text Editor inside the dialog component, the dialog con
 
 Programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
 
-Refer the jsintrob method in the `<head>` wwwroot/jsinterop.js of the file.
+Refer to the `jsinterop` method in the `<head>` wwwroot/jsinterop.js of the file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_jsinterop.js" %}
@@ -147,7 +148,7 @@ window.RichTextEditor = {
 {% endhighlight %}
 {% endtabs %}
 
-Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+Include the script reference in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/-Host.cshtml" %}
@@ -193,4 +194,4 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor com
 
 ![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.gif)
 
-N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
+N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
