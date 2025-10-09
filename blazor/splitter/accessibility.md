@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Splitter Component | Syncfusion
-description: Learn about the accessibility compliance of the Syncfusion Blazor Splitter component and more.
+description: Learn about the accessibility compliance of the Syncfusion Blazor Splitter component, covering WCAG 2.2, Section 508, and keyboard navigation.
 platform: Blazor
 control: Splitter
 documentation: ug
