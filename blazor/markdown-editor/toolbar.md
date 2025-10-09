@@ -9,6 +9,8 @@ documentation: ug
 
 # Toolbar configuration in Markdown Editor Component
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides a flexible toolbar that enhances the editing experience. Users can choose from multiple toolbar layouts, enable sticky behavior, and add custom tools to suit their application needs. This guide explains the available toolbar types, configuration options, and customization techniques.
+
 ## Default toolbar items
 
 By default, the Markdown Editor displays the following toolbar items:
@@ -27,7 +29,7 @@ The available toolbar types are:
 2. MultiRow
 3. Scrollable
 
-### Expanding the Toolbar
+### Expand Toolbar Configuration
 
 The expand toolbar allows to hide the overflowing items in the next line by using the [ToolbarType.Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) property. By clicking the expand arrow, you can view the overflowing toolbar items. The default mode of toolbar is `Expand`. 
 
@@ -41,7 +43,7 @@ The expand toolbar allows to hide the overflowing items in the next line by usin
 
 ![Blazor Markdown Editor expand toolbar](./images/blazor-markdowneditor-expand-toolbar.png)
 
-### Configuring a Multi-row Toolbar
+### Multi-row Toolbar Setup
 
 You can display the toolbar items in a row-wise format by using the [ToolbarType.MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) property. All toolbar items are visible always.
 
@@ -55,7 +57,7 @@ You can display the toolbar items in a row-wise format by using the [ToolbarType
 
 ![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-multirow-toolbar.png)
 
-### Implementing a Scrollable Toolbar
+### Scrollable Toolbar Implementation
 
 You can display the toolbar items in a single line with horizontal scrolling by using the [ToolbarType.Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Scrollable) property. 
 
@@ -69,7 +71,7 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 
 ![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-scrollable-toolbar.png)
 
-### Creating a Sticky Toolbar
+### Sticky Toolbar Behavior
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [FloatingToolbarOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
 
@@ -85,7 +87,7 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 
 ![Blazor Markdown Editor Sticky toolbar](./images/blazor-markdowneditor-sticky-toolbar.png)
 
-## Custom Toolbar Items
+## Adding Custom Toolbar Items
 
 The Rich Text Editor allows you to configure your own tools to its toolbar using the [RichTextEditorCustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) tag directive within a [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html). The tools can be plain text, icon, or HTML template. Also, define the order and group where the tool should be included.
 
