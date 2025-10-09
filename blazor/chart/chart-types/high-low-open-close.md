@@ -1,23 +1,23 @@
 ---
 layout: post
-title: High Low Open Close in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about High Low Open Close Chart in Syncfusion Blazor Charts component and more.
+title: High Low Open Close Chart in Blazor Charts Component | Syncfusion
+description: Check out and learn how to configure and customize the High Low Open Close Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# High Low Open Close in Blazor Charts Component
+# High Low Open Close Chart in Blazor Charts Component
 
-## High Low Open Close
+## High Low Open Close Chart
 
-[HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series is used to represent the **Low**, **High**, **Open** and **Closing** values over time.
+The [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series represents **Low**, **High**, **Open**, and **Close** values over time.
 
-You can learn how to create a HiloOpenClose chart using Blazor Charts by watching the video below.
+Learn how to create a HiloOpenClose chart using Blazor Charts by watching the following video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 
- The chart can be rendered by specifying the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose). This indicates that the data should be represented as a [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) chart, which displays the high, low, open, and close values for each data point, providing a comprehensive visualization of stock price movements. The [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series requires five fields (X, High, Low, Open, and Close) to accurately display the stock's high, low, open, and close prices. Ensure that your data source includes these fields to create a detailed representation of stock price movements over time.
+Render the chart by setting the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose). This chart displays high, low, open, and close values for each data point, providing a comprehensive visualization of stock price movements. The HiloOpenClose series requires five fields (X, High, Low, Open, and Close) to accurately display stock prices over time.
 
 ```cshtml 
 
@@ -32,7 +32,7 @@ You can learn how to create a HiloOpenClose chart using Blazor Charts by watchin
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class Data
     {
         public string X { get; set; }
@@ -44,11 +44,11 @@ You can learn how to create a HiloOpenClose chart using Blazor Charts by watchin
 
     public List<Data> StockDetails = new List<Data>
 	{
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = 130, High = 170, Low = 110, Close = 150 },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -59,7 +59,7 @@ You can learn how to create a HiloOpenClose chart using Blazor Charts by watchin
 
 ## Binding data with series
 
-You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Open) and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Close) properties.
+Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property in the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or a list of business objects. For more information, see [Working with Data](../working-with-data). Map the data fields to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Open), and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Close) properties.
 
 ```cshtml 
 
@@ -86,11 +86,11 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
     public List<Data> StockDetails = new List<Data>
 	{
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = 130, High = 170, Low = 110, Close = 150 },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -99,14 +99,14 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 ## Series customization
 
-In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series, [BullFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) property is used to fill the segment when the open value is greater than the close value and [BearFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) property is used to fill the segment when the open value is less than the close value. By default, [BullFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) is set as **green** and [BearFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) is set as **red**.
+In the HiloOpenClose series, [BullFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) fills the segment when the open value is greater than the close value, and [BearFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) fills the segment when the open value is less than the close value. By default, [BullFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) is green and [BearFillColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) is red.
 
 ```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />    
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@StockDetails" XName="X" High="High" Width="5" BearFillColor="darkred" BullFillColor="darkgreen" Low="Low" Open="Open" Close="Close" Type="ChartSeriesType.HiloOpenClose">
@@ -114,7 +114,7 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class Data
     {
         public string X { get; set; }
@@ -126,11 +126,11 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
     public List<Data> StockDetails = new List<Data>
 	{
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = 130, High = 170, Low = 110, Close = 150 },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -139,11 +139,11 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Empty points
 
-Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN`, or `undefined` values are considered empty and are not plotted.
 
 **Mode**
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to specify how empty or missing data points are handled. The default mode is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
 ```cshtml
 
@@ -171,11 +171,11 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= double.NaN, High= double.NaN, Low= double.NaN, Close= double.NaN },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = double.NaN, High = double.NaN, Low = double.NaN, Close = double.NaN },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -184,7 +184,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Fill**
 
-Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+Customize the fill color of empty points using the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property.
 
 ```cshtml
 
@@ -212,11 +212,11 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= double.NaN, High= double.NaN, Low= double.NaN, Close= double.NaN },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = double.NaN, High = double.NaN, Low = double.NaN, Close = double.NaN },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -227,7 +227,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event enables customization of series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering.
 
 ```cshtml
 
@@ -259,11 +259,11 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = 130, High = 170, Low = 110, Close = 150 },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -272,7 +272,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows customization of each data point before rendering.
 
 ```cshtml
 
@@ -304,11 +304,11 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+        new Data { X = "Jan", Open = 120, High = 160, Low = 100, Close = 140 },
+        new Data { X = "Feb", Open = 150, High = 190, Low = 130, Close = 170 },
+        new Data { X = "Mar", Open = 130, High = 170, Low = 110, Close = 150 },
+        new Data { X = "Apr", Open = 160, High = 180, Low = 120, Close = 140 },
+        new Data { X = "May", Open = 150, High = 170, Low = 110, Close = 130 }
     };
 }
 
@@ -319,5 +319,5 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data Label](../data-labels)
+* [Data label](../data-labels)
 * [Tooltip](../tool-tip)

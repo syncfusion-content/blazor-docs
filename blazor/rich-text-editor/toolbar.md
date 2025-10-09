@@ -34,7 +34,7 @@ The [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEdi
 
 ## Multi-row toolbar
 
-The [MultiRow]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow)) toolbar displays items in multiple rows, ensuring all items are always visible.
+The [MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) toolbar displays items in multiple rows, ensuring all items are always visible.
 
 {% tabs %}
 {% highlight razor %}
