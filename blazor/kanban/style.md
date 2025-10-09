@@ -66,9 +66,9 @@ To modify the Kanban appearance, you need to override the default CSS of Kanban.
 | .e-kanban .e-kanban-table.e-content-table .e-card .e-card-content | Cards content in kanban. |
 | .e-kanban .e-kanban-table.e-content-table .e-card .e-card-tag.e-card-label | Cards label in kanban. |
 
-## To set fixed position to the Kanban header
+## Customizing the fixed position of the Kanban header
 
-The Fixed header in Kanban control can be customized in following ways,
+The fixed header in the Kanban control can be customized using the following approaches:
 
 By setting a fixed height to the Kanban content,
 
