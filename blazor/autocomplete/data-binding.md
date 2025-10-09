@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+description:  Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Data Binding in AutoComplete
 
-The AutoComplete loads the data either from the local data sources or remote data services. Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
+The AutoComplete loads data from local collections or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or configure remote data using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-* **TItem** - Specifies the type of the datasource of the AutoComplete component.
+* TItem - Specifies the type of the AutoComplete data source.
 
 ## Binding local data
 
-The AutoComplete loads the data from local data sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `Array of primitive type`, `Array of object`, `List of primitive type`,`List of object`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
+Load data from local sources using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Supported types include: Array or List of primitives, Array or List of objects, ObservableCollection, ExpandoObject, and DynamicObject.
 
 {% highlight cshtml %}
 
@@ -27,7 +27,7 @@ The AutoComplete loads the data from local data sources through the [DataSource]
 
 ### DataBound event
 
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event triggers when the data source is populated in the popup list.
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event is triggered after the data source is populated in the popup list.
 
 {% highlight cshtml %}
 
@@ -37,9 +37,9 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 ### Primitive type
 
-Bind the data to the AutoComplete as an array or list of the `string`, `int`, `double` and `bool` type items.
+Bind arrays or lists of primitive types such as `string`, `int`, `double`, and `bool`.
 
-The following code demonstrates array of string values to the AutoComplete component.
+The following example binds an array of strings to the AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -49,7 +49,7 @@ The following code demonstrates array of string values to the AutoComplete compo
 
 ![Blazor AutoComplete with Primitive string type](./images/data-binding/blazor_autocomplete_primitive-type-string.png)
 
-The following code demonstrates array of integer values to the AutoComplete component.
+The following example binds an array of integers to the AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -61,9 +61,9 @@ The following code demonstrates array of integer values to the AutoComplete comp
 
 ### Complex data type
 
-The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html) property.
+Generate list items from an array of complex objects by mapping fields using the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html) property.
 
-In the following example, `Country.CountryID` column from complex data have been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value) field.
+In the following example, the `Country.CountryID` column is mapped to the [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value) field.
 
 {% highlight cshtml %}
 
@@ -75,7 +75,7 @@ In the following example, `Country.CountryID` column from complex data have be
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the AutoComplete component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the AutoComplete. The following example binds a collection of vehicles.
 
 {% highlight cshtml %}
 
@@ -87,7 +87,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Observable collection binding
 
-Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) data to the AutoComplete component. In the following example, the `Observable Data` is bound to a collection of colors data.
+Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) so UI updates reflect collection changes automatically. The following example binds a collection of colors.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the AutoComplete component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) instances to the AutoComplete. The following example binds a collection of customers.
 
 {% highlight cshtml %}
 
@@ -111,7 +111,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Enum data binding
 
-Bind the enum data to the AutoComplete component. The following code helps you to get a description value from the enumeration data.
+Bind enum values to the AutoComplete. The following example shows how to display the description value from enumeration data.
 
 {% highlight cshtml %}
 
@@ -123,17 +123,15 @@ Bind the enum data to the AutoComplete component. The following code helps you t
 
 ## Binding remote data 
 
-The AutoComplete loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. 
+Load data from remote services using the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to shape requests and bind results to the AutoComplete.
 
-The AutoComplete supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the AutoComplete.
-
-* [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
-* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
-* [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
+* [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Service endpoint to fetch data.
+* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Adaptor for the service. By default, [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding.
+* [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) provides predefined adaptors designed for common endpoints.
 
 ### OnActionBegin event
 
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionBegin) event is triggered before fetching data from the remote server.
 
 {% highlight cshtml %}
 
@@ -145,7 +143,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### OnActionComplete event
 
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionComplete) event is triggered after data is fetched successfully.
 
 {% highlight cshtml %}
 
@@ -155,7 +153,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ### OnActionFailure event
 
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnActionFailure) event is triggered when the data fetch request fails.
 
 {% highlight cshtml %}
 
@@ -165,7 +163,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### OData v4 services
 
-The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
+Use the [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) to consume data from OData v4 services. The following sample displays the first six customer records from the `Customers` table of the `Northwind` service.
 
 {% highlight cshtml %}
 
@@ -177,7 +175,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 ### Web API adaptor
 
-The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) interacts with Web API endpoints that understand OData-formatted queries. It extends the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor).
 
 {% highlight cshtml %}
 
@@ -189,12 +187,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the AutoComplete component.
-
-For implementing custom data binding in the AutoComplete, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
-
-The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. Following are the method signatures present in this class.
-
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors for manual data operations. Implement a custom adaptor by inheriting from `DataAdaptor` and overriding `Read` or `ReadAsync` to control data retrieval for the AutoComplete.
 
 ```csharp
 public abstract class DataAdaptor
@@ -211,9 +204,7 @@ public abstract class DataAdaptor
 }
 ```
 
-In custom Adaptor, the data binding operation can be performed in the AutoComplete component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
-
-The following sample code demonstrates implementing custom data binding using custom adaptor.
+The following example demonstrates custom data binding using a custom adaptor.
 
 {% highlight cshtml %}
 
@@ -223,9 +214,9 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the AutoComplete to load all data on initialization and make the actions process on the client-side. To enable this behavior, use the `Offline` property of `DataManager`.
+To avoid a round trip for every action, load data once on initialization and process actions on the client by setting the DataManager’s `Offline` property to true.
 
-The following example is for remote data binding and enabled offline mode.
+The following example shows remote data binding with offline mode enabled.
 
 {% highlight cshtml %}
 
@@ -237,11 +228,11 @@ The following example is for remote data binding and enabled offline mode.
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the AutoComplete component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the AutoComplete component.
 
 #### Create DBContext class
 
-The first step is to create a DBContext class called `OrderContext` to connect to a Microsoft SQL Server database.
+Create a `DbContext` class (`OrderContext`) to connect to SQL Server.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -270,7 +261,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Create data access layer to perform data operation
 
-Now, create a class named `OrderDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
+Create a data access class (`OrderDataAccessLayer`) to retrieve records from the database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -304,7 +295,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the AutoComplete to directly consume data from the Entity Framework.
+Create a Web API controller that allows the AutoComplete to consume data directly from Entity Framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -351,7 +342,7 @@ namespace EFDropDown.Controllers
 
 ### Configure AutoComplete component using Web API adaptor
 
-Now, configure the AutoComplete using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web API, use the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
+Configure the AutoComplete with [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the Web API using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% highlight cshtml %}
 
@@ -361,7 +352,7 @@ Now, configure the AutoComplete using the [SfDataManager](https://blazor.syncfus
 
 ## Adding new items
 
-Add the new item in the popup with the help of [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the AutoComplete popup without affecting the data source items.
+Add new items to the popup list using the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method. This adds items to the popup without modifying the underlying data source.
 
 {% highlight cshtml %}
 

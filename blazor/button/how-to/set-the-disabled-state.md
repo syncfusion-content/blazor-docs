@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the disabled state in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about setting the disabled state in Syncfusion Blazor Button component and more.
+description: Check out and learn about setting the disabled state in the Syncfusion Blazor Button component using the Disabled property.
 platform: Blazor
 control: Button
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Set the Disabled State in Blazor Button Component
 
-Button component can be enabled/disabled by giving [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Disabled) property. To disable Button component, the `Disabled` property can be set as `true`.
+The Button component can be enabled or disabled using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Disabled) property. To disable the Button, set `Disabled` to `true`.
 
-The following example demonstrates Button in `Disabled` state.
+The following example demonstrates a Button in the disabled state.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -32,4 +32,4 @@ The following example demonstrates Button in `Disabled` state.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqiBVhMGkwXmsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Disable State in Blazor Button](./../images/blazor-button-disable-state.png)
+![Disabled state in Blazor Button](./../images/blazor-button-disable-state.png)
