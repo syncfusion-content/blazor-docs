@@ -450,6 +450,7 @@ The following example demonstrates how to render a **NumericTextBox** in the pag
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowPaging="true">
       <GridPageSettings PageSize="@pageSize">
@@ -469,6 +470,7 @@ The following example demonstrates how to render a **NumericTextBox** in the pag
                         <span> of @totalPages pages (@GridData.Count items)</span>
                     </div>
                 </div>
+             </div>
             }
         </Template>
     </GridPageSettings>

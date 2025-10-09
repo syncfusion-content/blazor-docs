@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Reactive aggregate in Blazor DataGrid
+# Reactive aggregates in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the Grid.
 
-## Auto update aggregate value in batch editing
+## Auto update aggregate values in batch editing
 
 When the Grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
 
