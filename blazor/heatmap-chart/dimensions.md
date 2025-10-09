@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Dimensions in Syncfusion Blazor HeatMap Chart component and much more.
+description: Check out and learn how to set and customzie the Dimensions in Syncfusion Blazor HeatMap Chart component.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Dimensions in Blazor HeatMap Chart Component
 
-## Size for heat map
+## Size for HeatMap Chart
 
-You can set the size of heat map directly by using the  `Width` and `Height` properties.
+Set the size of the HeatMap Chart using the `Width` and `Height` properties.
 
 ### In pixel
 
@@ -29,7 +29,12 @@ You can set the size for heat map in a pixel.
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -43,9 +48,7 @@ You can set the size for heat map in a pixel.
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -58,7 +61,7 @@ You can set the size for heat map in a pixel.
 
 ### In percentage
 
-By setting the value in percentage, the heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, the heat map is rendered to half of the container height.
+Set the size in percentage to make the HeatMap Chart responsive to its container. For example, a height of '50%' renders the chart at half the container's height.
 
 ```cshtml
 
@@ -72,7 +75,12 @@ By setting the value in percentage, the heat map gets its dimension with respect
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -86,9 +94,7 @@ By setting the value in percentage, the heat map gets its dimension with respect
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
