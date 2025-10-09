@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DateRangePicker component and more.
+description: Learn how to bind values to the Syncfusion Blazor DateRangePicker using one-way binding, two-way binding with @bind-StartDate/@bind-EndDate, and dynamic updates.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor DateRangePicker Component
 
-This section briefly explains how to bind the value to the DateRangePicker component in the below different ways.
+This section explains how to bind values to the DateRangePicker component in the following ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -17,7 +17,7 @@ This section briefly explains how to bind the value to the DateRangePicker compo
 
 ## One-way binding
 
-You can bind the value to the DateRangePicker component directly for `StartDate` and `EndDate` properties as mentioned in the following code example. In one-way binding, You need to pass property or variable name along with `@` (For Ex: "@StartValue").
+Bind values to the DateRangePicker using the `StartDate` and `EndDate` properties as shown below. In one-way binding, pass the property or variable name prefixed with `@` (for example, `@StartValue`). Changes to the source update the UI, but user edits do not update the source automatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -42,7 +42,7 @@ You can bind the value to the DateRangePicker component directly for `StartDate`
 
 ## Two-way data binding
 
-Two-way binding can be achieved by using the `bind-StartDate` and `bind-EndDate` attributes and it supports string, int, Enum, DateTime, bool types. If the component value has been changed, it will affect all places where the variable is bound for the **bind-StartDate** and **bind-EndDate**attributes.
+Two-way binding is achieved with the `@bind-StartDate` and `@bind-EndDate` attributes. These attributes bind the component’s values to the specified fields and keep the UI and source in sync. Use types that match the component’s `TValue` (for example, `DateTime` or `DateTime?`). The `@bind-...` syntax is shorthand for using the corresponding parameter, change callback, and expression.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -61,9 +61,7 @@ public DateTime? EndValue { get; set; } = DateTime.Now;
 
 ## Dynamic value binding
 
-You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor DateRangePicker component** only. This method notifies the component that its state has changed and queues a re-render.
-
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Refer the below mentioned code example.
+Values can be updated programmatically in response to component events (such as `ValueChange`) or from external logic. When updating state within component event callbacks, the UI typically re-renders automatically; `StateHasChanged()` is mainly required when changes originate outside the normal event pipeline (for example, from timers or external services). The following example updates the range in the DateRangePicker’s `ValueChange` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -89,4 +87,4 @@ private void onChange(RangePickerEventArgs<DateTime?> args)
 }
 ```
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its key feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.

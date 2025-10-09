@@ -11,17 +11,17 @@ documentation: ug
 
 ## Enabled
 
-By default, the Enabled property is true, it specifies the input can be focused, editable, and allows you to select date from the popup. But when enabled property is false, the input is not focusable, non-editable and cannot open the popup.
+By default, the `Enabled` property is `true`. When `Enabled` is `true`, the input can receive focus, users can type into the textbox, and the popup calendar can be opened and used to select a date. When `Enabled` is set to `false`, the input cannot be focused or edited, and the popup cannot be opened (the component is fully disabled). This property can be data-bound to toggle the disabled state at runtime.
 
 ## AllowEdit
 
-By default, the AllowEdit property is true, it allows the textbox input to be changed as well as the user can select the value from the popup and false state defines the input is not editable but allows to select the value from the popup.
+By default, the `AllowEdit` property is `true`. When `AllowEdit` is `true`, users can type in the textbox and also select a value from the popup. When `AllowEdit` is `false`, the textbox becomes non-editable (typing is blocked), but users can still open the popup and select a value with the mouse or keyboard. Use this setting for selection-only scenarios while keeping the component interactive.
 
 ## Readonly
 
-By default, the Readonly property is false, it allows the input to be editable, and also allows value selection from the popup, and the true state does not allow user input, nor does it open popup, but the input can be focused. If you want to use the property Readonly, then you must disable the AllowEdit API.
+By default, the `Readonly` property is `false`. When `Readonly` is `false`, the input is editable and users can select a value from the popup. When `Readonly` is `true`, user input is not allowed and the popup should not be opened; the input can still receive focus for accessibility and form navigation. To enforce a fully read-only UI, set `Readonly="true"` and also disable editing with `AllowEdit="false"`.
 
-The following code demonstrates how to set `Readonly` in DatePicker component. You can achieve this by using the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Readonly) and [AllowEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_AllowEdit) properties.
+The following code demonstrates how to set `Readonly` in the DatePicker component. This is achieved using the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Readonly) and [AllowEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_AllowEdit) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -33,6 +33,4 @@ The following code demonstrates how to set `Readonly` in DatePicker component. Y
 }
 ```
 
-
-
-![Blazor DatePicker in Read-only Mode](../images/blazor-datepicker-read-only-mode.png)
+![Blazor DatePicker in read-only mode](../images/blazor-datepicker-read-only-mode.png)
