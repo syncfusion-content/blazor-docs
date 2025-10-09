@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging customization in Blazor DataGrid | Syncfusion
-description: Learn here all about paging customization in Syncfusion Blazor DataGrid component and more details.
+description: Checkout and learn here all about paging customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
