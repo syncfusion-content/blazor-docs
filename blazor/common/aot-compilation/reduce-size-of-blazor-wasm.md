@@ -40,7 +40,7 @@ To [enable trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/tri
 
 ## Trim mode
 
-For all assemblies in a Blazor application, trimming is enabled by default starting with the .NET 8 target framework. Trim warnings may occur for apps that previously used `PublishTrimmed=true` and `TrimMode=partial`. If the app compiles without trim warnings, this default behavior should not affect functionality. For more information, refer to the [trim configuration](https://learn.microsoft.com/aspnet/core/blazor/host-and-deploy/configure-trimmer) documentation.
+For all assemblies in a Blazor application, trimming is enabled by default starting with the .NET 8 target framework. Trim warnings may occur for apps that previously used `PublishTrimmed=true` and `TrimMode=partial`. If the app compiles without trim warnings, this default behavior should not affect functionality. For more information, refer to the [trim configuration](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/configure-trimmer) documentation.
 
 ### To Resolve trim warnings
 
