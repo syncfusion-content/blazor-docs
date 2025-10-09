@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title: Value Binding in Blazor AutoComplete Component | Syncfusion
+description: Check out and learn about value binding in the Syncfusion Blazor AutoComplete component, including @bind-Value, @bind-Index, primitive, object, and enum binding, two-way binding, and clearing values.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,16 +9,15 @@ documentation: ug
 
 # Value Binding in AutoComplete
 
-Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
-
-* bind-Value Binding 
-* bind-Index Binding
+Value binding is the process of synchronizing values between a component and its parent. There are two primary approaches:
+- @bind-Value binding
+- @bind-Index binding
 
 ## Bind value binding
 
-The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
+Value binding can be achieved using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute, which supports `string`, `int`, `enum`, `bool`, and complex types. When the component value changes, the bound variable is updated everywhere it is used via the `@bind-Value` attribute. For binding to work correctly with complex types, the bound value should correspond to the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value).
 
-* **TValue** - Specifies the type of each list item on the suggestion list.
+- TValue – Specifies the type of the bound value for the component.
 
 {% highlight cshtml %}
 
@@ -26,11 +25,13 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Bind Value](./images/value-binding/blazor-autocomplete-bind-value.png)
+![Blazor AutoComplete using @bind-Value to bind the selected value](./images/value-binding/blazor-autocomplete-bind-value.png)
 
 ## Index value binding
 
-The Index value binding is achieved by using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute, bind the values respective to its index.
+Index-based binding is achieved using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute, which supports `int` and nullable `int` types. This binds the selected item based on its index within the data source.
+
+N> The bound index is resolved against the current data order. If sorting is applied using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html), the index maps to the sorted data.
 
 {% highlight cshtml %}
 
@@ -38,11 +39,11 @@ The Index value binding is achieved by using the [@bind-Index](https://help.sync
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Index Value](./images/value-binding/blazor-autocomplete-index-value.png)
+![Blazor AutoComplete bound by index to select an item by position](./images/value-binding/blazor-autocomplete-index-value.png)
 
 ## Value field
 
-The AutoComplete [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value) property point to the corresponding names of the model. The `AutoCompleteFieldSettings.Value` mapped to the component maintains the unique value of the item in the data source, and display the text in the popup list items.
+The [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value) property points to the field name in the model that represents the value for the item. The mapped value is used for selection and binding, while the corresponding display text is shown in the popup. To control the displayed text, map [AutoCompleteFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Text).
 
 {% highlight cshtml %}
 
@@ -50,13 +51,13 @@ The AutoComplete [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/c
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Value](./images/value-binding/blazor-autocomplete-value.png)
+![Blazor AutoComplete with mapped value and display text fields](./images/value-binding/blazor-autocomplete-value.png)
 
 ## Primitive type binding
 
-The AutoComplete has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the AutoComplete 
+The AutoComplete supports binding to arrays of primitive data such as strings and numbers. Bind primitive values using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute.
 
-The following code demonstrates array of string as datasource to the AutoComplete component.
+The following example demonstrates an array of strings as a data source for the AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -64,9 +65,9 @@ The following code demonstrates array of string as datasource to the AutoComplet
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive Type as string](./images/value-binding/blazor-autocomplete-primitive-type-string.png)
+![Blazor AutoComplete bound to an array of strings](./images/value-binding/blazor-autocomplete-primitive-type-string.png)
 
-The following code demonstrates array of int as datasource to the AutoComplete component.
+The following example demonstrates an array of int as a data source for the AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -74,13 +75,11 @@ The following code demonstrates array of int as datasource to the AutoComplete c
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive Type as int](./images/value-binding/blazor-autocomplete-primitive-type-int.png)
+![Blazor AutoComplete bound to an array of integers](./images/value-binding/blazor-autocomplete-primitive-type-int.png)
 
 ## Object binding
 
-Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
-
-In the following example, the `Name` column has been mapped to the [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value).
+Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDownList_2_Value) attribute of the AutoComplete component by mapping the class to `TItem` and the value field to `TValue`. For complex types, ensure that the [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value) is mapped to a unique identifier to maintain correct selection and equality comparison.
 
 {% highlight cshtml %}
 
@@ -88,11 +87,11 @@ In the following example, the `Name` column has been mapped to the [AutoComplete
 
 {% endhighlight %}
 
-![Blazor AutoComplete with object values](./images/value-binding/blazor-autocomplete-object-binding.png)
+![Blazor AutoComplete bound to objects with a mapped value field](./images/value-binding/blazor-autocomplete-object-binding.png)
 
 ## Enum binding
 
-Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of AutoComplete component. The following code helps you to get a string value from the enumeration data.
+Bind enum values to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the AutoComplete component. The component binds to the enum’s underlying value while displaying the configured text.
 
 {% highlight cshtml %}
 
@@ -100,15 +99,15 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Enum Data](./images/value-binding/blazor-autocomplete-enum-binding.png)
+![Blazor AutoComplete bound to enumeration values](./images/value-binding/blazor-autocomplete-enum-binding.png)
 
 ## Show or hide clear button
 
-Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
+Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_ShowClearButton) property to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
 
-N> If the TValue is a non nullable type, then while using the clear button, it will set the default value of the data type, and if TValue is set as a nullable type, then while using the clear button it will set to a null value(for example If the TValue is int, then while clearing 0 will set to the component and if TValue is int?, then while clearing null will set to the component)
+N> If `TValue` is non-nullable, the clear action sets the default value of the type. If `TValue` is nullable, the clear action sets the value to `null` (for example, if `TValue` is `int`, clearing sets `0`; if `TValue` is `int?`, clearing sets `null`).
 
-The following sample demonstrates the `string` used as `TValue`. So, if you clear the value using the clear button, it will be set to null as it's the default value of the respective type.
+The following sample demonstrates `string` used as `TValue`. Clearing the value sets it to `null`, which is the default for that type.
 
 {% highlight cshtml %}
 
@@ -116,15 +115,15 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 {% endhighlight %}
 
-![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-show-hide-clear-button.png)
+![Blazor AutoComplete showing a clear button that resets the value](./images/value-binding/blazor-autocomplete-show-hide-clear-button.png)
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the AutoComplete component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` type can be changed dynamically by defining the AutoComplete’s data source type with the `@typeparam` directive. The following sample shows how to change `TItem` dynamically with different data source types.
 
 ### Creating generic AutoComplete component
 
-First, create a `AutoComplete.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+First, create an `AutoComplete.razor` file as a parent component in the `/Pages` folder. Add parameter properties for `List<TItem>` and `TValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -153,9 +152,9 @@ First, create a `AutoComplete.razor` file as a parent component in the `/Pages` 
 
 ### Usage of generic component with different type
 
-Then, render the Generic AutoComplete component with the required `TValue` and `TItem` in the respective razor components. 
+Render the generic AutoComplete with the required `TValue` and `TItem` in the respective Razor components.
 
-Here, the AutoComplete component is rendered with the TValue as a string type in the `/Index.razor` file and the AutoComplete component with TValue as an int nullable type in the `/Counter.razor` file.
+Here, the AutoComplete component is rendered with `TValue` as `string` in `/Index.razor` and with `TValue` as nullable `int` in `/Counter.razor`.
 
 **[Index.razor]**
 
@@ -218,7 +217,7 @@ Here, the AutoComplete component is rendered with the TValue as a string type in
 
 ## Two way binding
 
-Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component, you can use the @bind-Value directive to bind the value of the AutoComplete
+Two-way binding provides bi-directional data flow between the component and the bound property. In Blazor, this is achieved using the `@bind-Value` directive, which synchronizes changes from the model to the UI and from the UI back to the model. As an alternative, one-way binding can be implemented using `Value` with a corresponding `ValueChanged` callback.
 
 {% highlight cshtml %}
 
@@ -226,11 +225,11 @@ Two-way is having a bi-directional data flow, i.e., passing the value from the p
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Two way binding](./images/value-binding/blazor-autocomplete-two-way-binding.png)
+![Blazor AutoComplete demonstrating two-way value binding](./images/value-binding/blazor-autocomplete-two-way-binding.png)
 
 ## Programmatically clearing value
 
-You can clear the value programmatically by accessing the [ClearAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ClearAsync) method through an instance of the AutoComplete. You can bind the click event of a button to the `ClearAsync()` method. When the button is clicked, it will trigger the `ClearAsync()` method on the AutoComplete, clearing its value.
+Clear the value programmatically by calling the [ClearAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDownList_2_ClearAsync) method from an AutoComplete instance. You can bind a button click to invoke `ClearAsync()`, which resets the current value. This behavior is similar to using the clear button when [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_ShowClearButton) is enabled.
 
 {% highlight Razor %}
 
@@ -238,4 +237,4 @@ You can clear the value programmatically by accessing the [ClearAsync()](https:/
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-clearAsync-method.gif)
+![Blazor AutoComplete clearing the value programmatically via ClearAsync](./images/value-binding/blazor-autocomplete-clearAsync-method.gif)
