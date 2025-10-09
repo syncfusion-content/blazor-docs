@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor Linear Gauge Component | Syncfusion
-description: Check out and learn about the available methods in the Syncfusion Blazor Linear Gauge component.
+description: Check out and understand the various available methods in the Syncfusion Blazor Linear Gauge component.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -17,9 +17,9 @@ Use the [SetPointerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     axisIndex        |    Specifies the index of the axis in which the pointer value is to be updated.|
+|     axisIndex        |    Specifies the index of the axis in which the pointer value is to be updated. |
 |     pointerIndex     |    Specifies the index of the pointer to be updated.           |
-|     pointerValue            |    Specifies the value of the pointer to be updated.           |
+|     pointerValue     |    Specifies the value of the pointer to be updated.           |
 
 ```cshtml
 
