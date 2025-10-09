@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Blazor DateRangePicker in Web App
-description: Learn how to add and configure the Syncfusion Blazor DateRangePicker in a Blazor Web App, including NuGet setup, render modes, interactivity, namespaces, and basic usage.
+description: Checkout and learn about the documentation for getting started with Blazor DateRangePicker Component in Blazor Web App.
 platform: Blazor
 component: DateRangePicker
 documentation: ug
@@ -191,7 +191,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> See [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for different ways to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script reference options, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references). If styles or scripts are missing, the component may appear unstyled or may not function as expected.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DateRangePicker component
 

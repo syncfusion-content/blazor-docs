@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Date Format in Blazor DatePicker Component | Syncfusion
-description: Learn how to control display and input date formats in the Syncfusion Blazor DatePicker using .NET standard and custom format strings with culture-aware parsing.
+description: Checkout and learn here all about Date Format in Syncfusion Blazor DatePicker component and much more.
 platform: Blazor
 control: DatePicker
 documentation: ug

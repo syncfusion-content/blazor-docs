@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Week Numbers in Blazor DatePicker Component | Syncfusion
-description: Learn how to display and configure week numbers in the Syncfusion Blazor DatePicker, including the WeekNumber property and WeekRule options for defining the first week of the year.
+description: Checkout and learn here all about Week Numbers in Syncfusion Blazor DatePicker component and more details.
 platform: Blazor
 control: DatePicker
 documentation: ug

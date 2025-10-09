@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor DateRangePicker Component | Syncfusion
-description: Learn how to bind values to the Syncfusion Blazor DateRangePicker using one-way binding, two-way binding with @bind-StartDate/@bind-EndDate, and dynamic updates.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Blazor DatePicker Component in Web App
-description: Learn how to add and configure the Syncfusion Blazor DatePicker in a Blazor Web App, including NuGet setup, render modes, interactivity, namespaces, and basic usage.
+description: Checkout and learn about the documentation for getting started with Blazor DatePicker Component in Blazor Web App.
 platform: Blazor
 component: DatePicker
 documentation: ug

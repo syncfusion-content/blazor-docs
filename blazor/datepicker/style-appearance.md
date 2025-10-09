@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor DatePicker Component | Syncfusion
-description: Learn how to customize the style and appearance of the Syncfusion Blazor DatePicker using CSS, including container, icon, label, background color, and mobile full-screen.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug

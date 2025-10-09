@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization using CssClass in Blazor DateRangePicker | Syncfusion
-description: Learn how to customize the Syncfusion Blazor DateRangePicker using the CssClass property to override and scope styles for the wrapper, popup, calendars, and day states.
+description: Learn here all about Customization using CssClass in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
