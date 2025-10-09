@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter with Blazor Image Editor Component | Syncfusion
-description: Explore image filter options in the Blazor Image Editor for Blazor Server and WebAssembly Apps.
+description: Explore image filter options in the Blazor Image Editor component for Blazor Server and WebAssembly Apps.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -77,12 +77,12 @@ Here is an example of filtering using the `ApplyImageFilterAsync` method.
 
 ![Blazor Image Editor showing a filter applied to an image](./images/blazor-image-editor-filter.jpg)
 
-### Image filtering event
+## Image filtering event
 
 The [ImageFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ImageFiltering) event is triggered when a filter is applied to the image. The event provides details about the action.
 
 Parameters available in [ImageFilterEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterEventArgs.html):
 
-- Filter: The filter type, as an `ImageFilterOption`, to be applied.
+- `ImageFilterEventArgs.Filter`: The filter type, as an `ImageFilterOption`, to be applied.
 
-- Cancel: Indicates whether the filtering action should be canceled.
+- `ImageFilterEventArgs.Cancel`: Indicates whether the filtering action should be canceled.
