@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Toast Component | Syncfusion
-description: Check out and learn about positioning in Syncfusion Blazor Toast component and much more details.
+description: Check out and learn about positioning in Syncfusion Blazor Toast component.
 platform: Blazor
 control: Toast
 documentation: ug
