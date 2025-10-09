@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Learn how to bind data to the Syncfusion Blazor AutoComplete from local collections or remote services using DataSource or DataManager, with events and advanced scenarios.
+description:  Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

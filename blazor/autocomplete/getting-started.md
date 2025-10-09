@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor AutoComplete Component | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor AutoComplete in a Blazor WebAssembly app, including NuGet installation, service registration, and adding styles and scripts.
+description: Checkout and learn about getting started with Blazor AutoComplete component in Blazor WebAssembly App.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -138,7 +138,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> See [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for available themes and reference methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script options, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references). If styles or scripts are missing, the component may appear unstyled or may not function as expected.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Autocomplete component
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor AutoComplete component | Syncfusion
-description: Check out how to enable and configure sorting in the Syncfusion Blazor AutoComplete component, including sort order options and behavior with filtering and culture.
+description: Checkout and learn here all about the Sorting feature in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

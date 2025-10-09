@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor AutoComplete Component | Syncfusion
-description: Check out and learn about virtualization in the Syncfusion Blazor AutoComplete component, including local and remote data, grouping support, and keyboard navigation for large data sets.
+description: Checkout and learn here all about Virtualization in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

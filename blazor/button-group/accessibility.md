@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Button Group Component | Syncfusion
-description: Check out and learn about accessibility in the Syncfusion Blazor Button Group component, including WCAG 2.2 compliance, keyboard navigation, screen reader support, and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Button component and much more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug

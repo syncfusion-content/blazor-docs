@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor AutoComplete Component | Syncfusion
-description: Check out how to customize the style and appearance of the Syncfusion Blazor AutoComplete component, including read-only and disabled states, icons, colors, fonts, popup, width and height, and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -87,7 +87,8 @@ Customize the container element within the AutoComplete by targeting the `.e-inp
 
 ## Customizing the dropdown icon’s color
 
-Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) color by targeting the `.e-ddl-icon.e-icons` selector and setting the desired value for the `color` property.
+Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the autocomplete component, and setting the desired color to the `color` property.
+
 
 {% highlight cshtml %}
 

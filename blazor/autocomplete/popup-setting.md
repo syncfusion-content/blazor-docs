@@ -52,7 +52,7 @@ In the following sample, the `PopupHeight` is set as `200px`.
 
 ## Change the popup z-index
 
-Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element. The default value is `1000`. Adjust this in scenarios with overlays such as dialogs or modals to ensure the popup appears above other elements.
+Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
 
 ## Show popup on initial loading
 

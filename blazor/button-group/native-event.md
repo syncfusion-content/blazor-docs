@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor Button Group Component | Syncfusion
-description: Check out and learn about native events in the Syncfusion Blazor Button Group component, including onclick, onchange, keyboard, mouse, and touch events with event argument types.
+description: Checkout and learn here all about Native Events in Syncfusion Blazor Button Group component and much more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion AutoComplete in Blazor Web App
-description: Learn how to install packages, register services, add resources, and render the Syncfusion Blazor AutoComplete component in a Blazor Web App using Visual Studio or Visual Studio Code.
+description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Web App.
 platform: Blazor
 component: AutoComplete
 documentation: ug

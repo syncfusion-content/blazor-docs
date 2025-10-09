@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Button Component | Syncfusion
-description: Check out and learn about accessibility in the Syncfusion Blazor Button component, including WCAG 2.2 compliance, WAI-ARIA roles, screen reader support, and keyboard navigation.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug

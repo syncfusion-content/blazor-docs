@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion ButtonGroup in Blazor Web App
-description: Check out and learn how to get started with the Syncfusion Blazor Button Group component in a Blazor Web App, including installing NuGet packages, configuring render modes, registering services, adding resources, and rendering the component.
+description: Checkout and learn about the documentation for getting started with Blazor ButtonGroup Component in Blazor Web App.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
