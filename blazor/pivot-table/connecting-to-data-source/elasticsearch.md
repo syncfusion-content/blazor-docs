@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Elasticsearch Data Binding in Blazor Pivot Table Component | Syncfusion"
+title: "Elasticsearch Data Binding in Blazor Pivot Table | Syncfusion"
 component: "Pivot Table"
 description: "Learn how to bind data from an Elasticsearch database to the Syncfusion Blazor Pivot Table and more."
 platform: Blazor
 documentation: ug
 ---
 
-# Elasticsearch Data Binding
+# Elasticsearch Data Binding in Blazor Pivot Table
 
 This guide explains how to connect an Elasticsearch database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [NEST](https://www.nuget.org/packages/Nest) library. It describes two approaches: directly retrieving and binding data to the Pivot Table, and using a Web API service to fetch and display Elasticsearch data efficiently.
 

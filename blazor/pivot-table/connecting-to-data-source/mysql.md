@@ -2,12 +2,12 @@
 layout: post
 title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a MySQL database in the Syncfusion Blazor Pivot Table and more."
+description: "Learn how to connect a MySQL database to the Syncfusion Blazor Pivot Table using the MySql.Data library."
 platform: Blazor
 documentation: ug
 ---
 
-# MySQL Data Binding
+# MySQL Data Binding in Blazor Pivot Table Component
 
 This guide explains how to connect a MySQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display MySQL data.
 
@@ -274,4 +274,4 @@ The following code connects the Pivot Table to the Web API and configures the re
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
 
 ### Additional Resources
-Explore a complete example of the Blazor Pivot Table integrated with MySQL using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-MySQL-to-pivot-table/tree/master/Blazor).
+Explore a complete example of the Blazor Pivot Table integrated with MySQL using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/tree/master/Blazor).

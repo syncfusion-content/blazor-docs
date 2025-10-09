@@ -2,12 +2,12 @@
 layout: post
 title: "MongoDB Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a MongoDB in the Syncfusion Blazor Pivot Table and more."
+description: "Learn how to connect a MongoDB database to the Syncfusion Blazor Pivot Table using the MongoDB.Driver library."
 platform: Blazor
 documentation: ug
 ---
 
-# MongoDB Data Binding
+# MongoDB Data Binding in Blazor Pivot Table Component
 
 This guide explains how to connect a MongoDB database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) library. It covers two methods: directly retrieving and binding data to the Pivot Table, and using a Web API service to fetch and display MongoDB data.
 

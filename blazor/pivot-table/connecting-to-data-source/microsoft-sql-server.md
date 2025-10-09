@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Microsoft SQL Data Binding in Blazor Pivot Table Component | Syncfusion"
+title: "Microsoft SQL Data Binding in Blazor Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a Microsoft SQL server in the Syncfusion Blazor Pivot Table and more."
+description: "Learn how to connect a Microsoft SQL Server database to the Syncfusion Blazor Pivot Table and more."
 platform: Blazor
 documentation: ug
 ---
 
-# Microsoft SQL Data Binding
+# Microsoft SQL Data Binding in Blazor Pivot Table
 
 This guide explains how to connect a Microsoft SQL Server database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display Microsoft SQL data.
 
@@ -266,4 +266,4 @@ This section explains how to connect the [Blazor Pivot Table](https://www.syncfu
 ![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.png)
 
 ### Additional resources
-Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a Microsoft SQL database in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-SQL-to-pivot-table/tree/master/Blazor).
+Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a Microsoft SQL database in this [GitHub repository](https://github.com/SyncfusionExamples/aspnetcore-bind-SQL-database-to-pivot-table).
