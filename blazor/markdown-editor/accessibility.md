@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Markdown Editor Component
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The [Blazor Markdown Editor](https://blazor.syncfusion.com/demos/markdown-editor/overview?theme=fluent2) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 The Blazor Markdown Editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -18,7 +18,7 @@ The accessibility compliance for the Blazor Markdown Editor component is outline
 | Accessibility Criteria | Compatibility |
 | -- | -- |
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Section 508 Support](../common/accessibility#section-508) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
@@ -51,7 +51,7 @@ The toolbar in the Blazor Markdown Editor is assigned the role of `toolbar` and 
 | `aria-disabled` | Indicates the disabled state of the toolbar. |
 | `aria-owns` | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Markdown Editor, the attribute contains the ID of the Markdown Editor to indicate the popup as a child element. |
 
-or more information about toolbar ARIA attributes, refer to the  [accessibility of Toolbar](https://blazor.syncfusion.com/documentation/toolbar/accessibility) documentation.
+For more information about toolbar ARIA attributes, refer to the  [accessibility of Toolbar](https://blazor.syncfusion.com/documentation/toolbar/accessibility) documentation.
 
 The Blazor Markdown Editor element is assigned the role of `application`:
 
@@ -78,7 +78,7 @@ For more details on keyboard navigation, refer to the [Keyboard support](https:/
 
 ## Ensuring accessibility
 
-Accessibility levels are validated using the[axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+Accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the Markdown Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the accessibility of the Markdown Editor component with accessibility tools.
 

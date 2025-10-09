@@ -30,7 +30,7 @@ In iframe mode, the editor content is hosted in an isolated document. Only the e
 
 ## IFrame attributes
 
-Add additional attributes to the body element of the iframe document using the[RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes)  property. This property accepts name–value pairs in string format and can be used to override the default appearance of the content area.
+Add additional attributes to the body element of the iframe document using the[RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property accepts name–value pairs in string format and can be used to override the default appearance of the content area.
 
 {% tabs %}
 {% highlight cshtml %}

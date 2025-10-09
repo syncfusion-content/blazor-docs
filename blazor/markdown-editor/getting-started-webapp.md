@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Markdown Editor in Blazor Web App
 
-This section explains how to integrate [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section explains how to integrate [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
