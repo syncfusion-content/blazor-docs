@@ -7,9 +7,11 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# SEO Analysis Dashboard in Blazor Dashboard Layout Component
+# SEO Analysis in Blazor Dashboard Layout Component
 
-The Blazor Dashboard Layout component is used for creating dynamic and responsive layouts in Blazor applications. This documentation provides a comprehensive guide on how to utilize the Dashboard Layout component for real-time SEO data analysis within the context of a Blazor application.
+The Blazor Dashboard Layout component is highly effective for creating dynamic and responsive dashboards in Blazor applications. This guide demonstrates how to build a real-time SEO (Search Engine Optimization) data analysis dashboard by integrating various Syncfusion Blazor components within the Dashboard Layout.
+
+This complex example showcases how to combine an `SfDashboardLayout` with `SfSidebar`, `SfAccumulationChart`, `SfChart`, and `SfGrid` components to present a comprehensive view of SEO metrics.
 
 ```cshtml
 
@@ -653,7 +655,7 @@ The Blazor Dashboard Layout component is used for creating dynamic and responsiv
 
 ```
 
-To add UI components to Blazor Dashboard Layout component, you can check on this video.
+To integrate UI components into the Blazor Dashboard Layout component effectively, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
