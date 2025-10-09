@@ -74,6 +74,7 @@ The following code example explains how to create participants in sequence diagr
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub]().
 
@@ -224,6 +225,8 @@ The following code example explains how to create messages in sequence diagram.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub]().
 
 ![Message Example](./images/UmlSequenceDiagram/MessageExample.png)
@@ -317,6 +320,8 @@ The following code example explains how to create activation boxes in sequence d
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub]().
 
 ![Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)
@@ -448,6 +453,7 @@ Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub]().
 
@@ -582,5 +588,6 @@ Customize this value to increase or decrease the spacing based on the diagram’
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIsXNFJamPossc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub]().

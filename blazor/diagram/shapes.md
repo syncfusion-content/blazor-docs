@@ -58,7 +58,9 @@ The following code illustrates how to create a text node.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/TextNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVeMjjvpHHwFbIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/TextNode)
 
 ![Text Node in Blazor Diagram](images/blazor-diagram-TextNode.png)
 
@@ -94,13 +96,15 @@ The following code illustrates how an image node is created.
             {
                 Type = NodeShapes.Image,
                 //Sets the source to the image shape
-                Source = "/diagram/images/productmanager.png"
+                Source = "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png"
             }
         };
         nodes.Add(node);
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDZOBKhUldMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/ImageShape)
 
 ![Image Node in Blazor Diagram](images/blazor-diagram-image-node.png)
@@ -143,6 +147,8 @@ The following code illustrates how to add a Base64 image to the image node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBICDtlzdkNlPxo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/Base64image)
 
 ![Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.png)
@@ -189,6 +195,8 @@ Stretch and align the image content anywhere but within the node boundary. The [
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNryMtjFfxupxJNV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/ImageAlign)
 
 * [ImageAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_ImageAlign) property of the shape helps to align the image based on the x and y values in the node boundary. The following table illustrates the various image alignments in the node boundary.
@@ -294,6 +302,8 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheMZZvpQZVXgoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/HTMLShape)
 
 ![HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)
@@ -342,6 +352,8 @@ The following code example illustrates how to create a basic shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrosZDvfQBMblZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BasicShape)
 
 N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of the node is set as **Basic**. Default property for Shape is Rectangle.
@@ -393,6 +405,8 @@ To create a path node, set the shape as **Path**. The [Data](https://help.syncfu
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXNFzQVQgiZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/PathShape)
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
@@ -434,6 +448,8 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrSitZPfwqrXoFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/FlowShape)
 
 The list of flow shapes are as follows.
@@ -491,6 +507,8 @@ The diagram provides support to embed SVG element into a node. The Shape propert
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeWXXlpcUFFGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/SVGShape)
 
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
@@ -537,6 +555,8 @@ The following code example illustrates how to create a BPMN shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryCXjbzmprSCAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 For more information about node constraints, refer to the [BPMN Shapes](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BPMNShape).

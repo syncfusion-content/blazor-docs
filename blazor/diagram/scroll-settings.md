@@ -36,6 +36,8 @@ In the following example, the vertical scroll bar is scrolled down by 50 px and 
     </ScrollSettings>
 </SfDiagramComponent>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhysjXFTzpvVLgh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollSettings)
 ## How to Update Scroll Status
 
@@ -64,6 +66,8 @@ Programmatically change the scroll offsets at runtime by using the external butt
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVIWNDFzfeFyPFB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollStatus)
 
 ## How to Handle the Scroll Changed Event 
@@ -103,6 +107,7 @@ The Diagram control provides the following event for scroll settings.
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthesDXvffnSfzKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to Enable or Disable Auto Scroll 
 Autoscroll feature automatically scrolls the Diagram whenever the Node or Connector is moved beyond the boundary of the diagram. So that, it is always visible during dragging, resizing, and multiple selection operations. Autoscroll is automatically triggered when any one of the following is done towards the edges of the Diagram:
@@ -167,6 +172,7 @@ The auto-scroll behavior in the diagram can be enabled or disabled by using the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIsZNlpJHYSVvY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The auto-scrolling region is limited using [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of the [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) class.Please refer [ScrollLimit](scroll-settings#scroll-limit) page for more details about ScrollLimit.
 
@@ -219,6 +225,7 @@ The following example illustrates how to set auto scroll padding.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIWttvzTGEtyEB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/AutoScrollPadding)
 
@@ -248,6 +255,8 @@ The following example illustrates how to specify the scroll limit.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiNXPzflwBSak?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollLimit)
 
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
@@ -299,16 +308,18 @@ The following example illustrates how to sets scroll padding.
     }
 }
 ```
-![Scoll Padding support for node](images/ScrollPadding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollPadding)
+
+![Scoll Padding support for node](images/ScrollPadding.png)
 
 ## How to Restrict Scrollable Area
 Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited.” The following code example illustrates how to customize the scrollable area.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Width="50%" Height="300px" Nodes="@nodes">
+<SfDiagramComponent Width="70%" Height="300px" Nodes="@nodes">
     <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
     </ScrollSettings>
 </SfDiagramComponent>
@@ -339,6 +350,8 @@ Scrolling beyond any particular rectangular area can be restricted using the [Sc
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeCZjlJesCAUEE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollableArea)
 ## How to Handle Scroll Settings Property Changes Using Callback Methods
 
@@ -367,6 +380,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLysZDlzSiITIbl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## See also
 
 * [How to Detect Nodes That Cross Page Breaks in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)

@@ -123,6 +123,8 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryiZDPpEbHJxhw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/StackLimit)
 
 ![StackLimit in Blazor Diagram](images/stackLimitGIF.gif)
@@ -173,6 +175,8 @@ The following code shows how to get the current entry from the diagram history:
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryWtjvfOEyNJQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CurrentEntry)
 
 ## How to track custom entry
@@ -224,6 +228,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthSsNtPzakPcNfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CustomEntry)
 
 ### How to Handle History Adding Event
@@ -269,6 +275,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBysZXbyDjAqTVC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/HistoryAdding)
 
 ### How to Implement Custom Undo and Redo Logic in Blazor Diagram
@@ -348,6 +356,8 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Diagr
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSWDXleZtmdTYS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CustomUndoRedo)
 
 ## How to enable and disable undo and redo
@@ -361,6 +371,7 @@ This feature is useful when want to temporarily restrict users from performing u
 * These properties affect both programmatic calls to Undo() and Redo() methods as well as keyboard shortcuts (Ctrl+Z and Ctrl+Y).
 * The properties can be toggled dynamically based on your application's requirements.
 
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
@@ -409,5 +420,7 @@ This feature is useful when want to temporarily restrict users from performing u
         diagram.HistoryManager.CanRedo = true;
     }
 }
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLyWNNvojMQYlcS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/DisableUndoRedo)

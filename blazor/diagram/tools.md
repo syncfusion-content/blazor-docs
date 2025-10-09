@@ -71,6 +71,8 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSWXtlTaXxLYBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
@@ -134,6 +136,8 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIstXvJusulLEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
@@ -197,6 +201,8 @@ Create a text Node by click on the diagram page. The following code illustrates 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSWZDPJEVRtROs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
@@ -267,6 +273,8 @@ The following code illustrates how to draw a polygon shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSWZtvJYqNgdAL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolygonShapeTool)
 
 ## How to Draw a Polyline Using the Drawing Tool
@@ -328,6 +336,8 @@ The following code illustrates how to draw a polyline connector.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyCtXlTkUJtRHh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolylineDrawTool)
 
 ## How to Select Tool
@@ -445,6 +455,8 @@ The following code illustrates how to draw a freehand drawing.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeitNFTOofPXrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
 
 ![Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)
