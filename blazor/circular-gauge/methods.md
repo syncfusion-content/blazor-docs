@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Methods in Syncfusion Blazor Circular Gauge component and much more.
+description: Check out and learn about all the available Methods in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -9,19 +9,20 @@ documentation: ug
 
 # Methods in Blazor Circular Gauge Component
 
-The following methods are available in the Circular Gauge component.
+The Circular Gauge component exposes the following methods.
 
 ## SetAnnotationValueAsync
 
-To change the annotation content dynamically, use the [SetAnnotationValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method in the Circular Gauge component. The following are the arguments for this method.
+Use the [SetAnnotationValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method to update annotation content dynamically. The following arguments are supported.
 
-|   Argument name      |   Description                            |
-|----------------------| -----------------------------------------|
-|     axisIndex        |    Specifies the index of the axis where the annotation is to be placed.  |
-|     annotationIndex  |    Specifies the index number of the annotation to be updated.        |
-|     content          |    Specifies the text for the annotation to be updated.         |
+| Argument name   | Description |
+|-----------------|-------------|
+| axisIndex       | Index of the axis where the annotation is placed. |
+| annotationIndex | Index of the annotation to update. |
+| content         | Text content of the annotation to update. |
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <button style="margin-left:34px" @onclick="ChangeAnnotationValue">Change annotation value</button>
@@ -29,7 +30,7 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
-                <CircularGaugePointer Value="50"></CircularGaugePointer>
+                <CircularGaugePointer Value="50" />
             </CircularGaugePointers>
             <CircularGaugeAnnotations>
                 <CircularGaugeAnnotation Angle="195" ZIndex="1" Content="Gauge">
@@ -41,25 +42,28 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
 
 @code {
     SfCircularGauge gauge;
+
     public async Task ChangeAnnotationValue()
     {
         await gauge.SetAnnotationValueAsync(0, 0, "Circular Gauge");
     } 
 }
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgsBrwgTGlriiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## SetPointerValueAsync
 
-To change the pointer value dynamically, use the [SetPointerValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method in the Circular Gauge component. The following are the arguments for this method.
+Use the [SetPointerValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method to update a pointer value dynamically. The following arguments are supported.
 
-|   Argument name      |   Description                            |
-|----------------------| -----------------------------------------|
-|     axis index       |    Specifies the index of the axis in which the pointer value is to be updated. |
-|     pointerIndex     |    Specifies the index of the pointer to be updated.           |
-|     value            |    Specifies the value of the pointer to be updated.           |
+| Argument name | Description |
+|---------------|-------------|
+| axisIndex     | Index of the axis whose pointer value is updated. |
+| pointerIndex  | Index of the pointer to update. |
+| value         | Pointer value to set. |
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <button style="margin-left:34px" @onclick="ChangePoinerValue">Change pointer value</button>
@@ -67,7 +71,7 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
-                <CircularGaugePointer Value="50"></CircularGaugePointer>
+                <CircularGaugePointer Value="50" />
             </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -75,11 +79,13 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 
 @code {
     SfCircularGauge gauge;
+
     public async Task ChangePoinerValue()
     {
         await gauge.SetPointerValueAsync(0, 0, 30);
     }
 }
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqsVBwKfbNwfqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -87,16 +93,17 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 
 ## SetRangeValue
 
-To change the start and end of a range in axis, use the [SetRangeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetRangeValue_System_Int32_System_Int32_System_Double_System_Double_) method in the Circular Gauge component. The following are the arguments for this method.
+Use the [SetRangeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetRangeValue_System_Int32_System_Int32_System_Double_System_Double_) method to update the start and end values of a range on an axis. The following arguments are supported.
 
-|   Argument name      |   Description                            |
-|----------------------| -----------------------------------------|
-|     axis index       |    Specifies the index of the axis in which the range value is to be updated. |
-|     rangeIndex       |    Specifies the index of the range to be updated. |
-|     start            |    Specifies the start value of the range.         |
-|     end              |    Specifies the end value of the range            |
+| Argument name | Description |
+|---------------|-------------|
+| axisIndex     | Index of the axis whose range value is updated. |
+| rangeIndex    | Index of the range to update. |
+| start         | Start value of the range. |
+| end           | End value of the range. |
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <button style="margin-left:34px" @onclick="ChangeRangeValue">Change range value</button>
@@ -107,26 +114,32 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
                 <CircularGaugeRange Start="40" End="80">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="50" />
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
     SfCircularGauge gauge;
+
     public async Task ChangeRangeValue()
     {
         gauge.SetRangeValue(0, 0, 10, 50);
         await gauge.RefreshAsync();
     }
 }
+
  ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUiBhcUpvhczFW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNreiNZuKSczWeEz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## RefreshAsync
 
-The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method can be used to change the state of the component and render it again.
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method re-renders the component to reflect state changes.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <button style="margin-left:34px" @onclick="RefreshAsync">Refresh</button>
@@ -137,16 +150,21 @@ The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Circu
                 <CircularGaugeRange Start="40" End="80">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="50" />
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
     SfCircularGauge gauge;
+
     public async Task RefreshAsync()
     {
         await gauge.RefreshAsync();
     }
 }
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrUMLrcAJPpcAFo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBysXjOUIuxUQbM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
