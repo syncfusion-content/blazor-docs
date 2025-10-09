@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Linear Gauge component and more.
+description: Check out and learn here all about accessibility in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Linear Gauge Component
 
-The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component adheres to widely recognized accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and applicable [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 
 The accessibility compliance for the Blazor Linear Gauge component is outlined below.
 
@@ -39,26 +39,26 @@ The accessibility compliance for the Blazor Linear Gauge component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Linear Gauge component.
+The Blazor Linear Gauge component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to support accessibility. The following ARIA attributes are used in the Linear Gauge component.
 
 | Attributes | Purpose |
-| --- | --- |
-| `role=region` | It is specified in the title and pointer. The pointer supports the interactive drag-and-drop function to update the pointer value. |
-| `aria-label` | Provides an accessible name for the title, axis labels, text pointer and annotation. |
+|-----|-----|
+| `role=region` | Applied to the title and interactive pointer elements to identify landmark content and support pointer interactions such as drag-and-drop. |
+| `aria-label` | Provides accessible names for the title, axis labels, text pointer, and annotations. |
 
 ## Screen reading in Linear Gauge
 
-Accessibility in the Blazor Linear Gauge component ensures that all users, regardless of ability or disability, can use screen reading. The following Linear Gauge elements will be read aloud using screen reading software, such as Narrator for Windows.
+Accessibility features ensure that content is available to screen readers. The following Linear Gauge elements are announced by screen-reading software, such as Narrator on Windows.
 
 | Elements | Description |
-| --- | --- |
-| Title | Reads the title of the Linear Gauge.|
-| Axis labels | Reads the axis labels of the Linear Gauge.|
-| Text pointer | Reads the text content shown as a pointer in Linear Gauge. |
-| Annotation | Reads the content specified in the annotation. |
+|-----|-----|
+| Title | Announces the Linear Gauge title.|
+| Axis labels | Announces the axis labels in the Linear Gauge.|
+| Text pointer | Announces the text content shown as a pointer in the Linear Gauge. |
+| Annotation | Announces the content provided in the annotation. |
 
 ## Ensuring accessibility
 
-The Blazor Linear Gauge component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor Linear Gauge component's accessibility is validated using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
-The accessibility compliance of the Linear Gauge component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/lineargauge) in a new window to evaluate the accessibility of the Linear Gauge component with accessibility tools.
+The accessibility compliance of the Linear Gauge component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/lineargauge) in a new window to evaluate the component with accessibility tools.
