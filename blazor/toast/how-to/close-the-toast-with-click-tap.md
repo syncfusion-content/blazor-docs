@@ -9,9 +9,9 @@ documentation: ug
 
 # Close the toast with click/tap in Blazor Toast Component
 
-By default, the toasts are expired based on the `Timeout` value. The toast hiding process can be customized with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.
+By default, toasts automatically close based on the Timeout value. To close a toast when it is clicked or tapped, handle the OnClick event and set ClickToClose to true in the ToastClickEventArgs. To require user-initiated dismissal only, set Timeout to 0 to create a sticky toast and use click or tap to close it.
 
-The following sample demonstrates the click or tap action in toast.
+The following sample demonstrates closing a toast through a click or tap action.
 
 ```cshtml
 

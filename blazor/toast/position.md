@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about positioning in Syncfusion Blazor Toast component and much more details.
+description: Check out and learn about positioning in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -9,26 +9,26 @@ documentation: ug
 
 # Positioning in Blazor Toast Component
 
-The toast position can be updated based on predefined positions or customizable positions. The predefined position combinations are updated in the `X` and `Y` position properties.
+The toast position can be defined using predefined alignments or customized using explicit offsets. Predefined positions are configured using the `X` (horizontal: Left, Center, Right) and `Y` (vertical: Top, Bottom) properties on the position settings of the Toast component.
 
 ## Predefined
 
-`X` Positions
+`X` positions
 
 * Left
 * Center
 * Right
 
-`Y` Positions
+`Y` positions
 
 * Top
 * Bottom
 
-N> In multiple toast display, the new toast position will not be updated on dynamic change of property values until the old toast messages removed. The toast occupies full width when the width is set to '100%', so the X positions will not affect the changes when the width is '100%'.
+N> When multiple toasts are shown, dynamic changes to position properties do not affect already displayed toasts; the new position is applied to subsequent toasts after the previous messages are removed. If the toast width is set to 100%, it stretches across the container and horizontal (`X`) alignment has no visible effect.
 
 ## Custom
 
-Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The number value is considered as pixels based on the top and left values updated in the toast.
+Custom `X` and `Y` positions can be provided as pixel values, numbers, or percentages. Numeric values are interpreted as pixels and are applied as offsets from the top and left of the target container (or the viewport when no target is set).
 
 ```cshtml
 

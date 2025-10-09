@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor Toast component and more.
+description: Check out and learn about style and appearance in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -13,7 +13,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the toast title
 
-Use the following CSS to customize the default toast's content properties like font-family, font-size and color.
+Use the following CSS to customize the toast title properties such as font family, font size, and color.
 
 ```css
 /* To change color, font family and font size */
@@ -26,7 +26,7 @@ Use the following CSS to customize the default toast's content properties like f
 
 ## Customizing the toast content
 
-Use the following CSS to customize the default toast's content properties like font-family, font-size and color.
+Use the following CSS to customize the toast content properties such as font family, font size, and color.
 
 ```css
 /* To change color, font family and font size */
@@ -39,7 +39,7 @@ Use the following CSS to customize the default toast's content properties like f
 
 ## Customizing the toast icon
 
-Use the following CSS to customize the default toast icon color.
+Use the following CSS to customize the default toast icon color. Increase selector specificity or scope by ID if a theme rule takes precedence.
 
 ```css
 /* To change icon color */
@@ -50,7 +50,7 @@ Use the following CSS to customize the default toast icon color.
 
 ## Customizing the toast background
 
-Use the following CSS to customize the default toast's background color.
+Use the following CSS to customize the toast background color. Consider contrast requirements for accessibility when choosing colors.
 
 ```css
 /* To change background color */

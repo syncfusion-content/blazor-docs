@@ -9,13 +9,13 @@ documentation: ug
 
 # Configuring options in Blazor Toast Component
 
-This section explains the steps required to customize the appearance of the toast using built-in APIs.
+This section describes how to customize the appearance and behavior of the Toast component using built-in APIs.
 
 ## Title and content template
 
-Toast can be created with the notification message. The message contains `Title` and content of the toasts. The title and contents are adaptable in any resolution.
+Create a toast with a notification message that includes a Title and content. These values adapt to different screen sizes.
 
-N> The Title or `Content` property can be given as HTML Element/element ID to a string that can be displayed as a toast.
+N> Title and Content can be provided as plain text or HTML markup via string parameters. For richer layouts, use toast templates (for example, ToastTemplates or ContentTemplate) to define custom content.
 
 ```cshtml
 
@@ -169,9 +169,9 @@ The dimensions of the toast can be set using the `Width` and `Height` properties
 
 By default, the toast can be rendered with `300px` width with `auto` height.
 
-N> In mobile devices, the default width of the toast gets '100%' width of the page. When the toast width is set as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
+N> On mobile devices, the default toast width is 100% of the page. When Width is set to 100%, the toast occupies the full width of the viewport and is displayed at the top or bottom based on the Position Y property.
 
-Both the width and height properties allow setting pixels/numbers/percentage. The number value is considered as pixels.
+Both Width and Height accept pixel values, percentages, or numbers. A numeric value is interpreted as pixels.
 
 ```cshtml
 
@@ -276,9 +276,9 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 ## Show or hide toast using service
 
-You can initialize single toast instance and use it all over application by creating server. Refer below steps to create service to show toast from any page.
+Initialize a single toast instance and reuse it across the application by creating a service. The following steps show how to create a service to display toast notifications from any page.
 
-**Step 1**: Create a toast service to inject in pages to show toast messages from anywhere. Here, title and content can be passed to show the toast message. 
+**Step 1**: Create a toast service to inject into pages to show toast messages from anywhere. In this example, Title and Content are passed to display the toast message.
 
 ```c#
 public class ToastOption
@@ -298,7 +298,7 @@ public class ToastService
 }
 ``` 
 
-**Step 2**: Add the `ToastService` to services collection in **Program.cs**.
+**Step 2**: Add the ToastService to the services collection in Program.cs.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="13 14" %}
@@ -342,7 +342,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-**Step 3**: Create `ToastComponent` which shows `SfToast` based on `ToastService` notification.
+**Step 3**: Create ToastComponent, which shows SfToast based on ToastService notifications.
         
 {% tabs %}
 {% highlight cshtml tabtitle="ToastComponent.razor" hl_lines="13 14" %}
@@ -390,7 +390,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-**Step 4**: Add `ToastComponent` create in above step in `MainLayout.razor`.
+**Step 4**: Add the ToastComponent created in the above step to MainLayout.razor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="MainLayout.razor" hl_lines="21" %}
@@ -420,7 +420,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-**Step 5**: Now, you can inject `ToastService` in any page and call `ToastService.ShowToast()` method to show toast notifications.
+**Step 5**: Inject ToastService in any page and call ToastService.ShowToast to display toast notifications.
 
 {% tabs %}
 {% highlight cshtml tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
@@ -445,5 +445,4 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
-    
+N> [View the sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)

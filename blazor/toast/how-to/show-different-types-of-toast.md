@@ -9,14 +9,16 @@ documentation: ug
 
 # Show different types of toast in Blazor Toast Component
 
-The Blazor toast has the following predefined styles that can be defined using the `CssClass` property for achieving different types of toast:
+The Blazor Toast component provides predefined visual styles that can be applied using the CssClass property to represent different notification types. Use these styles to convey status and intent consistently across the application.
 
 | Class | Description |
 | -------- | -------- |
-| `e-toast-success` | Represents a positive toast |
-| `e-toast-info` | Represents an informative toast |
-| `e-toast-warning` | Represents a toast with caution |
-| `e-toast-danger` | Represents a negative toast |
+| `e-toast-success` | Indicates a successful or completed action |
+| `e-toast-info` | Conveys informational or neutral messages |
+| `e-toast-warning` | Highlights cautionary messages that may require attention |
+| `e-toast-danger` | Signals errors or critical issues |
+
+These classes style the toast appearance and can be combined with other custom classes as needed. Behavior such as Timeout, position, and content is configured independently.
 
 ```cshtml
 

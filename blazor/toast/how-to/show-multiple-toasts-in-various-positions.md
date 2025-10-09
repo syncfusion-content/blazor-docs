@@ -9,7 +9,7 @@ documentation: ug
 
 # Show multiple toasts in various positions in Blazor Toast Component
 
-By default, the positions of the new toasts are only updated after the visible toasts have been destroyed. If there is a need to display multiple toasts with different positions, initiate another toast.
+To display toasts in different positions at the same time, create multiple SfToast instances, each configured with its own ToastPosition. Each toast instance manages its own queue and position independently. Changing the position affects only toasts created after the change; toasts that are already visible are not repositioned.
 
 The following sample demonstrates adding multiple toasts in different positions.
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Action Buttons in Blazor Toast Component
 
-Action buttons can be included to the toast control by adding the `ToastButton` property. The click event callback function can also be included for each button.
+Add action buttons to the Toast component by defining the ToastButtons collection with one or more ToastButton items. Each button can include its own OnClick callback to perform actions such as dismissing the toast or triggering custom logic.
 
-In the following code, toast buttons are configured using `ToastButton` property.
+In the following example, toast buttons are configured using the ToastButtons collection, and both buttons invoke an OnClick handler to hide the toast.
 
 ```cshtml
 

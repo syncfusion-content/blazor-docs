@@ -9,9 +9,9 @@ documentation: ug
 
 # Access specific toast in Blazor Toast Component
 
-In the toast, the particular toast can be accessed by passing the `Key` value in `ShowModes`, and the `Key` should be unique in `ShowModels`. To close the specific toast, you also need to pass the corresponding toast `Key` value in the `Hide` method. The added `Key` value can be got in the toast `Opened` and `Closed` event.
+In the Toast component, an individual toast can be addressed by assigning a unique Key value in the ToastModel when showing the toast. To close a specific toast, pass the same Key to the HideAsync method. The assigned Key can be retrieved from the Opened and Closed events through the event arguments.
 
-In the following example, Toast is closed by calling the `Hide` method with the key value that is returned in the `Opened` event
+In the following example, each toast is closed by calling the HideAsync method with the Key value returned in the Opened event.
 
 ```cshtml
 

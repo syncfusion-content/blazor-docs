@@ -9,9 +9,9 @@ documentation: ug
 
 # Template in Blazor Toast Component
 
-Configure templates to display within a header, content, and footer section of Toast. The header, content and footer templates can be defined as `HTML element` inside `ToastTemplates`.
+Use templates to customize the layout and content of the Blazor Toast. A full-toast template can be defined by placing an HTML element inside ToastTemplates and specifying Template. This approach is ideal for static or markup-defined layouts.
 
-The following code explains how to initialize a Toast with `Template`.
+The following example initializes a Toast with a full template using Template within ToastTemplates. It also demonstrates positioning with ToastPosition.
 
 ```cshtml
 
@@ -123,7 +123,7 @@ The following code explains how to initialize a Toast with `Template`.
 
 ```
 
-The Template can be given as a RenderFragment type for the `ContentTemplate` property when updating the toast templates dynamically. The below code block explains the string template.
+For dynamic scenarios, a RenderFragment can be assigned to the ContentTemplate property when showing the toast programmatically. The following example demonstrates providing a RenderFragment to ContentTemplate via ShowAsync at runtime.
 
 ```cshtml
 

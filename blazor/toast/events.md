@@ -13,7 +13,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Created
 
-`Created` event triggers after the Toast gets created.
+The Created event occurs after the Toast component is initialized. This is suitable for one-time setup or initial configuration. Refer to the ToastEvents.Created API for details.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Destroyed
 
-`Destroyed` event triggers after the Toast gets destroyed.
+The Destroyed event occurs when the Toast component is disposed. Use this event to release resources or unsubscribe from external services. Refer to the ToastEvents.Destroyed API for details.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Opened
 
-`Opened` event triggers after the Toast shown on the target container.
+The Opened event occurs after the toast is displayed in the target container. It is useful for post-render actions, such as focusing elements or starting animations. See ToastOpenArgs for available data.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## OnOpen
 
-`OnOpen` event triggers before the toast shown.
+The OnOpen event occurs before the toast is displayed. Use it to modify content or settings just before render. See ToastBeforeOpenArgs for properties available during this phase.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Closed
 
-`Closed` event triggers after the Toast hides.
+The Closed event occurs after the toast is hidden. This event is useful for cleanup tasks or logging. See ToastCloseArgs for additional context.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## OnClick
 
-`OnClick` event triggers while clicking on the Toast.
+The OnClick event occurs when the toast is clicked. Handle this event to perform actions such as navigation, analytics, or dismissing a toast. See ToastClickEventArgs for click details.
 
 ```cshtml
 

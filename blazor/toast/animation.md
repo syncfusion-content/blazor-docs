@@ -9,9 +9,9 @@ documentation: ug
 
 # Animation in Blazor Toast Component
 
-The toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library. The default animation is given as `FadeIn` for showing the toast and `FadeOut` for hiding the toast.
+The Blazor Toast component supports configurable animations for both showing and hiding notifications through ToastAnimationSettings, which contains ToastShowAnimationSettings and ToastHideAnimationSettings. Animation effects are selected from the ToastEffect enum. By default, the toast uses FadeIn for showing and FadeOut for hiding.
 
-The following sample demonstrates some types of animations that suit toast.
+The following example demonstrates several animation effects that can be applied to the Toast component.
 
 ```cshtml
 

@@ -9,13 +9,12 @@ documentation: ug
 
 # Timeout in Blazor Toast Component
 
-The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
+The toast display duration is controlled by the `Timeout` property, expressed in milliseconds. A toast remains visible until the timeout elapses if there is no user interaction.
 
-* The `Timeout` delay can be visually represented using [Progress Bar](./config#progress-bar).
+* The `Timeout` duration can be visually represented using a [progress bar](./config#progress-bar).
+* The `ExtendedTimeOut` property specifies how long the toast remains visible after the user hovers over it.
 
-* The `ExtendedTimeOut` property determines how long the toast should be displayed after a user hovers over it.
-
-N> The process can be terminated by using the `ShowCloseButton` property for destroying the toast at any time.
+N> Allow users to dismiss the toast at any time by enabling the `ShowCloseButton` property.
 
 ```cshtml
 
@@ -88,7 +87,7 @@ N> The process can be terminated by using the `ShowCloseButton` property for des
 
 ## Static toast
 
-Auto hiding can be prevented in a toast as visible like static by setting zero (`0`) value in the `Timeout` Property.
+To prevent auto-hide and make the toast persist until dismissed, set the `Timeout` property to zero (`0`).
 
 ```cshtml
 

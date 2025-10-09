@@ -9,7 +9,7 @@ documentation: ug
 
 # Add dynamic template in Blazor Toast Component
 
-Toast supports to change templates dynamically with displaying in multiple toasts. The toast properties can be changed while calling in the `Show` method.
+The Blazor Toast component supports rendering dynamic templates for individual notifications. Provide a ContentTemplate in the ToastModel passed to ShowAsync to display a unique template for each toast. Toast properties can also be customized per toast when invoking ShowAsync, enabling different content and appearance across multiple toasts shown in sequence.
 
 ```cshtml
 

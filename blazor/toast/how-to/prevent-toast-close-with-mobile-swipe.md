@@ -9,9 +9,9 @@ documentation: ug
 
 # Prevent toast close with mobile swipe in Blazor Toast Component
 
-The toast close can be prevented with mobile swipe action by setting `OnClose` argument cancel value to true while argument type is swipe. The following code shows how to prevent toast close with mobile swipe.
+To prevent a toast from closing when swiped on mobile, handle the OnClose event and set the event argument’s Cancel property to true when RequestType equals "swipe". This cancels only swipe-initiated dismissal; other close actions (such as Timeout, close button, or programmatic HideAsync) continue to work unless handled separately.
 
-The following sample demonstrates preventing toast close with mobile swipe element displaying with custom code blocks.
+The following sample demonstrates preventing toast close on mobile swipe using the OnClose event.
 
 ```cshtml
 
