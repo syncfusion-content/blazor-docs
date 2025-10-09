@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column template in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about column template in Syncfusion Blazor Gantt Chart component and much more details.
+title: Column Template in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn here all about Column Template in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
 
-> **Note**: The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -25,10 +25,9 @@ A column template is used to customize the column’s look. The following code e
         <GanttColumn Field="TaskName" HeaderText="Task Name">
             <Template>
                 @{
-                    var task = context as TaskData;
-                    if (task != null)
+                    @if (context != null)
                     {
-                        <SfButton CssClass="e-bigger" Content="@task.TaskName"></SfButton>
+                        <SfButton CssClass="e-bigger" Content="@((context as TaskData).TaskName)"></SfButton>
                     }
                 }
             </Template>
@@ -63,11 +62,11 @@ A column template is used to customize the column’s look. The following code e
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
         new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
         new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
         new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-        new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08) },
         new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
         new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
         new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
@@ -79,4 +78,4 @@ A column template is used to customize the column’s look. The following code e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLINOiOiPhfvAzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjryZkBnBTRdmaLS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

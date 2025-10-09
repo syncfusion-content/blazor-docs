@@ -208,6 +208,4 @@ The following code snippet demonstrates how to customize the appearance of criti
 
 ![Customize taskbar](images/blazor-gantt-chart-critical-path-customize-taskbar.png)
 
-You can find the GitHub sample for customizing the taskbar in the critical path [here](https://github.com/SyncfusionExamples/Blazor-UG-Examples).
-
 >If the [ProjectEndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ProjectEndDate) property is set in the `SfGantt`, any task that ends on or after this date is considered critical. If the `ProjectEndDate` is not set, the maximum end date from the task records is used to determine which tasks are critical.
