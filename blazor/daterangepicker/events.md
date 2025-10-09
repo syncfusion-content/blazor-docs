@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor DateRangePicker component and much more.
+description: Learn about events in the Syncfusion Blazor DateRangePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, RangeSelected, and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor DateRangePicker Component
 
-This section explains the list of events of the DateRangePicker component which will be triggered for appropriate DateRangePicker actions.
+This section lists and describes the events raised by the DateRangePicker component for common user interactions and lifecycle actions.
 
-The events should be provided to the DateRangePicker using **DateRangePickerEvents** component.
+The events are configured using the **DateRangePickerEvents** child component.
 
-N> From `v17.2.*` added only the limited number of events for the DateRangePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+N> Starting with `v17.2.*`, the DateRangePicker exposes a streamlined set of events. Event names were changed from previous releases, and several events were removed. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -25,7 +25,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+The `Blur` event is triggered when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -44,7 +44,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## ValueChange
 
-`ValueChange` event triggers when the Calendar value is changed.
+The `ValueChange` event is triggered when the DateRangePicker value (start or end date) changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -63,7 +63,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## OnClose
 
-`OnClose` event triggers when the DateRangePicker is closed.
+The `OnClose` event is triggered when the DateRangePicker popup is closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -82,7 +82,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## Created
 
-`Created` event triggers when the component is created.
+The `Created` event is triggered when the component is initialized.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -101,7 +101,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The `Destroyed` event is triggered when the component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -120,7 +120,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The `Focus` event is triggered when the input gains focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -140,7 +140,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
+The `Navigated` event is triggered when navigating between calendar views (such as month, year, or decade) or within the same view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -160,7 +160,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## OnOpen
 
-`OnOpen` event triggers when the DateRangePicker is opened.
+The `OnOpen` event is triggered when the DateRangePicker popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -180,7 +180,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## OnRenderDayCell
 
-`OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
+The `OnRenderDayCell` event is triggered when each day cell of the calendar is rendered, allowing customization or disabling of specific dates.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -200,7 +200,7 @@ select |[RangeSelected](events#rangeselected)
 
 ## RangeSelected
 
-`RangeSelected` event triggers on selecting the start and end date.
+The `RangeSelected` event is triggered after selecting both the start and end dates of the range.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -218,4 +218,4 @@ select |[RangeSelected](events#rangeselected)
 }
 ```
 
-N> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The DateRangePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

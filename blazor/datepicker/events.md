@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor DatePicker component and much more details.
+description: Learn about events in the Syncfusion Blazor DatePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor DatePicker Component
 
-This section explains the list of events of the DatePicker component which will be triggered for appropriate DatePicker actions.
+This section lists and describes the events raised by the DatePicker component for common user interactions and component lifecycle actions.
 
-N> From `v17.2.*` added only the limited number of events for the DatePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+N> Starting with `v17.2.*`, the DatePicker exposes a streamlined set of events. Event names were changed from previous releases, and several events were removed. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -22,7 +22,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+The `Blur` event is triggered when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -41,7 +41,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## ValueChange
 
-`ValueChange` event triggers when the Calendar value is changed.
+The `ValueChange` event is triggered when the DatePicker value (selected date) changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +60,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnClose
 
-`OnClose` event triggers when the popup is closed.
+The `OnClose` event is triggered when the popup is closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -79,7 +79,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Created
 
-`Created` event triggers when the component is created.
+The `Created` event is triggered when the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -98,7 +98,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The `Destroyed` event is triggered when the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -117,7 +117,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The `Focus` event is triggered when the input gains focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -136,7 +136,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
+The `Navigated` event is triggered when navigating between calendar views (such as month, year, or decade) or within the same view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -155,7 +155,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened.
+The `OnOpen` event is triggered when the popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -174,7 +174,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnRenderDayCell
 
-`OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
+The `OnRenderDayCell` event is triggered when each day cell of the calendar is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -191,4 +191,4 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 }
 ```
 
-N> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The DatePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

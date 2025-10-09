@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Integration Toolbar with Blazor Signature Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: Toolbar Integration with Blazor Signature Component | Syncfusion
+description: Learn how to integrate the Syncfusion Blazor Signature component with a toolbar to enable undo, redo, clear, save (PNG/JPEG/SVG), stroke/background color pickers, stroke width selection, and disable toggle using Signature methods and toolbar events.
 platform: Blazor
 control: Signature
 documentation: ug
@@ -9,7 +9,13 @@ documentation: ug
 
 # Integration Signature with Toolbar
 
-The Signature component integrates with the toolbar and the interaction performed using the `Changed` event of the toolbar. In that, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods were used to enable/disable undo, redo, and clear buttons by checking the undo collection.
+The Signature component can be integrated with a toolbar to provide common actions such as undo, redo, clear, save, color selection, and stroke width adjustments. In this example, the toolbar buttons and pickers interact with the Signature using its events and APIs:
+- The Signature Changed event updates button states after each stroke.
+- CanUndoAsync, CanRedoAsync, and IsEmptyAsync determine whether Undo, Redo, and Clear/Save should be enabled.
+- SaveAsync is used to export the signature, with SplitButton events (Clicked and ItemSelected) selecting the format (PNG, JPEG, SVG).
+- ColorPicker ValueChange updates stroke and background colors.
+- DropDownList ValueChange adjusts MaxStrokeWidth.
+- CheckBox ValueChange toggles the Disabled state.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -364,4 +370,4 @@ The Signature component integrates with the toolbar and the interaction performe
 </style>
 ```
 
-![Blazor Signature Component](../images/blazor-signature-toolbar.PNG)
+![Blazor Signature integrated with toolbar controls for undo, redo, save (format selection), color pickers, stroke width, clear, and disable toggle](../images/blazor-signature-toolbar.PNG)

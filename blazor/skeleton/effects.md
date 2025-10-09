@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Effects in Blazor Skeleton Component | Syncfusion
-description: Checkout and learn here all about shimmer effects and how to use them in Syncfusion Blazor Skeleton component and much more.
+description: Check out and learn about shimmer effects and how to use them in the Syncfusion Blazor Skeleton component, including Wave, Pulse, and Fade animations.
 platform: Blazor
 control: Skeleton
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Shimmer Effect in Blazor Skeleton Component
 
-You can use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Effect) property to change animation effect in the skeleton component. Skeleton supports `Wave`, `Pulse` and `Fade` effects and by default, the `Effect` is set to `Wave` effect.
+Use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Effect) property to change the animation effect of the Skeleton component. The Skeleton supports `Wave`, `Pulse`, and `Fade` effects. By default, the `Effect` is set to `Wave`.
 
 {% tabs %}
 {% highlight razor %}
@@ -21,9 +21,9 @@ You can use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-pulse-effect.png)
+![Blazor Skeleton with Pulse effect](./images/Blazor-skeleton-pulse-effect.png)
 
-Below example demonstrates a list with pulse effect skeleton.
+The following example demonstrates a list with the Pulse effect applied to Skeleton placeholders.
 
 {% tabs %}
 {% highlight razor %}
@@ -73,4 +73,4 @@ Below example demonstrates a list with pulse effect skeleton.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-Effect.png)
+![Blazor Skeleton list using Pulse effect](./images/Blazor-skeleton-Effect.png)

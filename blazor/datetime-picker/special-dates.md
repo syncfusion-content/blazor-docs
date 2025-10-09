@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Special Dates in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about Special Dates in Syncfusion Blazor DateTimePicker component and more.
+description: Learn how to customize special dates in the Syncfusion Blazor DateTimePicker using the OnRenderDayCell event to highlight or disable specific days.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Special Dates in Blazor DateTimePicker Component
 
-You can customize specific dates in a DateTimePicker by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerEvents-1.html#Syncfusion_Blazor_Calendars_DateTimePickerEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the DateTimePicker. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
+Customize specific dates in the DateTimePicker using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerEvents-1.html#Syncfusion_Blazor_Calendars_DateTimePickerEvents_1_OnRenderDayCell) event. This event is triggered for each day cell as it is created, allowing you to apply custom styles or disable specific dates. In the following example, selected dates in the current month are styled by adding the CSS classes personal-appointment and official-appointment defined in the sample.
 
 ```cshtml
 
@@ -88,4 +88,4 @@ You can customize specific dates in a DateTimePicker by using the [OnRenderDayCe
 
 ```
 
-![Blazor DateTimePicker with special dates](./images/blazor_datetimepicker_special_dates.png)
+![Blazor DateTimePicker highlighting special dates for personal and official appointments](./images/blazor_datetimepicker_special_dates.png)

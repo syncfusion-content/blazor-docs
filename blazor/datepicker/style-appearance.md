@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DatePicker component and more.
+title: Style and Appearance in Blazor DatePicker Component | Syncfusion
+description: Learn how to customize the style and appearance of the Syncfusion Blazor DatePicker using CSS, including container, icon, label, background color, and mobile full-screen.
 platform: Blazor
 control: DatePicker
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and Appearance in Blazor DatePicker Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following guidance describes the CSS structure that can be used to tailor the DatePicker component’s appearance based on user preferences.
 
 ## Customizing the appearance of DatePicker container element
 
-Use the following CSS to customize the appearance of DatePicker container element.
+Use the following CSS to adjust the input height and font size for the DatePicker’s container element.
 
 ```css
 /* To specify height and font size */
@@ -25,7 +25,7 @@ Use the following CSS to customize the appearance of DatePicker container elemen
 
 ## Customizing the DatePicker icon element
 
-Use the following CSS to customize the DatePicker icon element
+Use the following CSS to modify the DatePicker’s icon size and background color.
 
 ```css
 /* To specify background color and font size */
@@ -37,7 +37,7 @@ Use the following CSS to customize the DatePicker icon element
 
 ## Customizing the appearance of the DatePicker label 
 
-To customize the appearance of the DatePicker label, you can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property in combination with custom CSS. 
+To customize the floating label’s appearance, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property with custom CSS. The example below applies a compact label size and color.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -61,7 +61,7 @@ To customize the appearance of the DatePicker label, you can use the [CssClass](
 
 ## Adding background color to DatePicker container element
 
-You can customize the background color of the container element for the DatePicker by targeting its CSS class, `input.e-input`, and setting the desired color to the `background-color` property.
+Customize the background color of the DatePicker’s visible input by targeting the appropriate wrapper class and setting the `background-color` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -71,11 +71,11 @@ You can customize the background color of the container element for the DatePick
 {% endhighlight %}
 {% endtabs %}
 
-![DatePicker with background color](./images/blazor-datepicker-background_color.png)
+![Blazor DatePicker with a customized background color](./images/blazor-datepicker-background_color.png)
 
 ## Full screen mode support in mobiles and tablets
 
-The DatePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen) API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
+The DatePicker supports full-screen mode on mobile devices to improve popup visibility and usability in both landscape and portrait orientations. To enable full-screen mode, set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen) property to `true`. On mobile devices, the calendar expands to occupy the entire screen; desktop behavior is unchanged.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -84,8 +84,8 @@ The DatePicker component's full-screen mode feature enables users to view the co
 
 ```
 
-![DatePickerFullScreen](./images/blazor-datepicker-full-screen.gif)
+![Blazor DatePicker popup displayed in mobile full-screen mode](./images/blazor-datepicker-full-screen.gif)
 
-Also check the below section to customize the style and appearance of the Calendar component
+Also see the following section for additional Calendar styling options:
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance)

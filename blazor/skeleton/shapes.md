@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapes in Blazor Skeleton Component | Syncfusion
-description: Checkout and learn here all about shapes and how to use them in Syncfusion Blazor Skeleton component and much more.
+description: Check out and learn about the built-in shapes in the Syncfusion Blazor Skeleton component and how to use the Shape property (Circle, Square, Rectangle, Text) to design loading placeholders.
 platform: Blazor
 control: Skeleton
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapes in Blazor Skeleton Component
 
-The Skeleton component support various built-in shape variants to design layout of the page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
+The Skeleton component supports multiple built-in shapes for designing loading placeholders. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to preview and compose any layout. Width and height can be configured per shape to match the intended content.
 
 The Skeleton component supports the following content shapes:
 
@@ -25,7 +25,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Circle Shape](./images/Blazor-skeleton-circle-shape.png)
+![Blazor Skeleton circle shape](./images/Blazor-skeleton-circle-shape.png)
 
 ## Square skeleton shape
 
@@ -39,7 +39,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Square Shape](./images/Blazor-skeleton-square.png)
+![Blazor Skeleton square shape](./images/Blazor-skeleton-square.png)
 
 ## Rectangle skeleton shape
 
@@ -53,7 +53,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Rectangle Shape](./images/Blazor-skeleton-rectangle-shape.png)
+![Blazor Skeleton rectangle shape](./images/Blazor-skeleton-rectangle-shape.png)
 
 ## Text skeleton shape
 
@@ -67,9 +67,9 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Text Shape](./images/Blazor-skeleton-text-shape.png)
+![Blazor Skeleton text shape](./images/Blazor-skeleton-text-shape.png)
 
-Below example demonstrates the above functionalities of a Skeleton component.
+The following example demonstrates a card-style layout composed using the above Skeleton shapes.
 
 {% tabs %}
 {% highlight razor %}
@@ -123,4 +123,4 @@ Below example demonstrates the above functionalities of a Skeleton component.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Shapes](./images/Blazor-skeleton-shape.png)
+![Blazor Skeleton card layout using multiple shapes](./images/Blazor-skeleton-shape.png)

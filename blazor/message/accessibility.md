@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Message Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Message component and much more.
+description: Learn about Blazor Message accessibility, including WCAG 2.2 and Section 508 compliance, ARIA roles and attributes (alert/status, aria-live), keyboard navigation, screen reader, and RTL support.
 platform: Blazor
 control: Message
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Message
 
-The Blazor Message component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Message component follows established accessibility guidelines and standards, including ADA, Section 508, and WCAG 2.2. It supports screen readers, keyboard navigation, right-to-left (RTL) layouts, and high-contrast themes. For component details, see the Message documentation and API reference in the Syncfusion Blazor docs.
 
 The accessibility compliance for the Blazor Message component is outlined below.
 
@@ -38,25 +38,29 @@ The accessibility compliance for the Blazor Message component is outlined below.
 
 ## ARIA attributes
 
-The Blazor Message component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Message component:
+The Blazor Message component follows the WAI-ARIA Authoring Practices for alerts to ensure compatibility with assistive technologies. The following ARIA roles and attributes are used:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=alert` | Used to convey a significant and contextual message to the user. |
-| `aria-label` | Provides an accessible name for the close icon. |
+| `role=alert` | Announces important, time-sensitive messages to screen reader users. Use for urgent content that should interrupt politely. |
+| `role=status` | Announces non-urgent status updates without interrupting the user’s task flow. |
+| `aria-live` (`polite`/`assertive`) | Controls how updates are announced by screen readers. `assertive` announces sooner; `polite` waits for a pause. |
+| `aria-atomic` | When set, ensures the entire message region is announced as a whole when updated. |
+| `aria-label` | Provides an accessible name for the close icon when it is present. |
+| `aria-labelledby` | Associates the message with a header or title element for an accessible name. |
 
 ## Keyboard interaction
 
-The Blazor Message component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Message component.
+The Blazor Message component follows the keyboard interaction guideline, making it accessible to users who rely on keyboards or assistive technologies. The following keyboard shortcuts are supported:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Tab</kbd> / <kbd>⇧</kbd> + <kbd>Tab</kbd> | To focus the close icon in the message. |
-| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Closes the focused close icon's message. |
+| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Tab</kbd> / <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the message’s actionable elements, such as the close icon. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Activates the focused close icon to dismiss the message. |
 
 ## Ensuring accessibility
 
-The Blazor Message component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Message component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) and Playwright tests to detect issues such as missing accessible names, incorrect ARIA states, and insufficient color contrast. Actual results may vary based on application markup, theme, and customization.
 
 The accessibility compliance of the Blazor Message component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/message) in a new window to evaluate the accessibility of the Blazor Message component with accessibility tools.
 
