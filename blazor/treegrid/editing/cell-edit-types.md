@@ -1,33 +1,27 @@
 ---
 layout: post
-title: Cell Edit Types in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Cell Edit Types in Syncfusion Blazor Tree Grid component and much more details.
+title: Cell Edit Types in Blazor TreeGrid Component | Syncfusion
+description: Learn how to configure cell edit types and customize edit templates in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Cell edit type and its params in Blazor Tree Grid Component
+# Cell edit type and its params in Blazor TreeGrid Component
 
-The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) is used to customize the edit type of the particular column. The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) can be set based on the data type of the column.
+Use the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) property to customize the editor used for a specific column. The edit type is typically selected based on the column’s data type.
 
-* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) component for integers, double, and decimal data types.
+* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) for integer, double, and decimal values.
+* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) for string values.
+* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) for list/choice values.
+* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) for date values.
+* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) for date and time values.
+* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) for boolean values.
+* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) for time values.
 
-* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) component for string data type.
+Editor behavior and parameters can be further customized using column editor settings. In Blazor, this is typically done through strongly typed edit cell parameter models (for example, NumericEditCellParams, DateEditCellParams) assigned to column editor settings.
 
-* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component for list data type.
-
-* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) component for date values.
-
-* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) component for datetime type.
-
-* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) component for boolean type.
-
-* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) component for TimeOnly data type.
-
-Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Edit).
-
-The following table describes cell edit type component and their corresponding edit params of the column.
+The following table describes commonly used editors and example editor parameters:
 
 Component |Example
 -----|-----
@@ -123,7 +117,7 @@ N> If edit type is not defined in the column, then it will be considered as the 
 
 ## Cell Edit Template
 
-The cell edit template is used to add a custom component for a particular column when the column is edited. The following code example describes, how to define the Edit template for a particular column.
+A cell edit template adds a custom component for a specific column when that column enters edit mode. The following example shows how to define an edit template for a column and bind it to the current row’s property.
 
 {% tabs %}
 
@@ -205,9 +199,7 @@ public class TreeData
 
 ### Using AutoComplete in EditTemplate
 
-Render the [SfAutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
-
-In the following sample the `SfAutoComplete` component is rendered in the **TaskName** column's `EditTemplate`.
+Render the [SfAutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). The following example renders SfAutoComplete for the **TaskName** column and binds the editor to the current row’s TaskName.
 
 {% tabs %}
 
@@ -282,14 +274,12 @@ public class TreeData
 
 {% endtabs %}
 
-In the following image, `Autocomplete` component is rendered with the  `EditTemplate` in the  **TaskName** column.
+In the following image, the AutoComplete component is rendered with the `EditTemplate` in the **TaskName** column.
 ![Blazor Tree Grid with Autocomplete Edit Template](../images/blazor-treegrid-autocomplete-edit-template.png)
 
 ### Using ComboBox in EditTemplate
 
-Render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
-
-In the following sample, the `SfComboBox` component is rendered in the `EditTemplate` for the **Priority** column.
+Render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). The following example renders SfComboBox for the **Priority** column and binds the editor to the current row’s Priority.
 
 {% tabs %}
 
@@ -379,9 +369,7 @@ public class TreeData
 
 ### Using NumericTextBox in EditTemplate
 
-You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
-
-In the following sample, the `SfNumericTextBox` component is rendered in the `EditTemplate` for the **Duration** column.
+Render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). The following example renders SfNumericTextBox for the **Duration** column and binds the editor to the current row’s Duration.
 
 {% tabs %}
 
@@ -459,7 +447,7 @@ public class TreeData
 
 ### Using TimePicker in EditTemplate
 
-Render the [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). In the following sample,  `SfTimePicker` component is rendered in the `EditTemplate` for the **StartDate** column.
+Render the [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). The following example renders SfTimePicker for the **StartDate** column and binds the editor to the current row’s StartDate.
 
 {% tabs %}
 
@@ -587,12 +575,12 @@ public class SelfReferenceData
 
 {% endtabs %}
 
-In the following image, `SfTimePicker` component is rendered with the `EditTemplate` in the **StartDate** column
+In the following image, the SfTimePicker component is rendered with the `EditTemplate` in the **StartDate** column.
 ![Blazor Tree Grid with Editing in Custom TimePicker](../images/blazor-treegrid-editing-in-custom-timepicker.png)
 
 ### Using MultiSelect dropdown in EditTemplate
 
-You can able to render [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). In the below sample we have rendered `SfMultiSelect` component in `EditTemplate` for ChosenItems column.
+Render the [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). The following example renders SfMultiSelect for the ChosenItems column, binds the editor to the current row’s value, and formats the display in read-only mode with a custom cell template.
 
 {% tabs %}
 
@@ -685,12 +673,12 @@ public class TreeData
 
 {% endtabs %}
 
-In the following image, `SfMultiSelect` component is rendered with the `EditTemplate` in the ChosenItems column
+In the following image, the `SfMultiSelect` component is rendered with the `EditTemplate` in the ChosenItems column.
 ![Blazor Tree Grid with Editing in Custom MultiSelect](../images/blazor-treegrid-editing-in-custom-multiselect.png)
 
 ### Using RichTextEditor in EditTemplate
 
-Render the [SfRichTextEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). To display the RTE control in the edit form, disable the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). In the following sample, the `SfRichTextEditor` component is rendered in the `EditTemplate` for the **Task Name** column.
+Render the [SfRichTextEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.html) component in a column’s edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). To display the rich text editor within the edit form, disable HTML encoding for the column by setting [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) to false on the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The following example renders SfRichTextEditor for the **TaskName** column and binds the editor to the current row’s TaskName.
 
 {% tabs %}
 
@@ -763,5 +751,8 @@ public class TreeData
 
 {% endtabs %}
 
-In the following image, `SfRichTextEditor` component is rendered with the `EditTemplate` in the **TaskName** column
+In the following image, the `SfRichTextEditor` component is rendered with the `EditTemplate` in the **TaskName** column.
+
 ![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.png)
+
+

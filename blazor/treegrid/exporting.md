@@ -1,20 +1,20 @@
 ---
 layout: post
-title: PDF Export in Blazor TreeGrid Component | Syncfusion
+title: Export TreeGrid Data to PDF in Blazor | Syncfusion
 description: Checkout and learn here all about PDF Export in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # PDF Export in Blazor TreeGrid Component
 
-PDF export allows exporting Tree Grid data to PDF document. You need to use the
- **PdfExport** method for exporting. To enable PDF export in the Tree Grid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
+The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
+ **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
 
-To know about exporting tree grid data to PDF document in Blazor tree grid component, you can check on this video.
+For a visual walkthrough of PDF export in the Blazor TreeGrid component, refer to the following video:
 
-{% youtube
+{% youtube alt="PDF Export in Blazor TreeGrid - Syncfusion"
 "youtube:https://www.youtube.com/watch?v=SHCWtM2buCc"%}
 
 {% tabs %}
@@ -50,7 +50,7 @@ To know about exporting tree grid data to PDF document in Blazor tree grid compo
     {
         if(Args.Item.Text == "PDF Export")
         {
-            this.TreeGrid.PdfExport();
+            this.TreeGrid.ExportToPdfAsync();
         }
     }
 }
@@ -94,11 +94,11 @@ public class TreeData
 
 {% endtabs %}
 
-## To customize PDF export
+## PDF Export Customization Options
 
-PDF export provides an option to customize mapping of Tree Grid to exported PDF document.
+PDF export provides an option to customize mapping of TreeGrid to exported PDF document.
 
-### File name for exported document
+### Set File Name for Exported PDF
 
 The file name can be assigned for the exported document by defining **fileName** property in **PdfExportProperties**.
 
@@ -137,7 +137,7 @@ The file name can be assigned for the exported document by defining **fileName**
         {
             Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties();
             ExportProperties.FileName = "test.pdf";
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }
@@ -181,9 +181,9 @@ public class TreeData
 
 {% endtabs %}
 
-### How to change page orientation
+### Change Page Orientation in Exported PDF
 
-Page orientation can be changed Landscape(Default Portrait) for the exported document using the export properties.
+Page orientation can be changed Landscape (default is Portrait) for the exported document using the export properties.
 
 {% tabs %}
 
@@ -220,7 +220,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
         {
             Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties();
             ExportProperties.PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.Landscape;
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }
@@ -264,7 +264,7 @@ public class TreeData
 
 {% endtabs %}
 
-### How to change page size
+### Customize Page Size for Exported PDF
 
 Page size can be customized for the exported document using the export properties.
 
@@ -333,7 +333,7 @@ Supported page sizes are:
         {
             Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties();
             ExportProperties.PageSize = Syncfusion.Blazor.Grids.PdfPageSize.Letter;
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }
@@ -377,7 +377,7 @@ public class TreeData
 
 {% endtabs %}
 
-### Export current page
+### Export Only the Current Page
 
 PDF export provides an option to export the current page into PDF. To export current page, define the **exportType** to **CurrentPage**.
 
@@ -416,7 +416,7 @@ PDF export provides an option to export the current page into PDF. To export cur
         {
             Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties();
             ExportProperties.ExportType = Syncfusion.Blazor.Grids.ExportType.CurrentPage;
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }
@@ -460,9 +460,9 @@ public class TreeData
 
 {% endtabs %}
 
-### Export hidden columns
+### Include Hidden Columns in Exported PDF
 
-PDF export provides an option to export hidden columns of the Tree Grid by defining the **includeHiddenColumn** as **true**.
+PDF export provides an option to export hidden columns of the TreeGrid by defining the **includeHiddenColumn** as **true**.
 
 {% tabs %}
 
@@ -499,7 +499,7 @@ PDF export provides an option to export hidden columns of the Tree Grid by defin
         {
             Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties();
             ExportProperties.IncludeHiddenColumn = true;
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }
@@ -543,7 +543,7 @@ public class TreeData
 
 {% endtabs %}
 
-### Theme
+### Apply Theme to Exported PDF
 
 PDF export provides an option to include theme for exported PDF document.
 
@@ -617,7 +617,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
             };
             Theme.Caption = CaptionThemeStyle;
             ExportProperties.Theme = Theme;
-            this.TreeGrid.PdfExport(ExportProperties);
+            this.TreeGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 }

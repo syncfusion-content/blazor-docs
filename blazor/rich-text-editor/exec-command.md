@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ExecCommand Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about ExecCommand in Rich Text Editor in Syncfusion Blazor RichTextEditor component and more.
+title: ExecuteCommand in Blazor Rich Text Editor Component | Syncfusion
+description: Learn here all about ExecuteCommand in Rich Text Editor in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Execute Command Programmatically
 
-In Rich Text Editor, the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method runs the HTML and Markdown commands programmatically to manipulate content in the current editable area.
+In the Rich Text Editor, the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method runs HTML and Markdown commands programmatically to manipulate content in the current editable area.
 
 ## HTML editor commands
 
-The `ExecuteCommand` methods support following HTML editor commands.
+The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#constructors) method supports the following HTML editor commands.
 
 <table>
 <tr>
@@ -24,7 +24,7 @@ The `ExecuteCommand` methods support following HTML editor commands.
 
 <tr>
 <td><p>Bold</p></td>
-<td><p>Make the selected content bold.</p></td>
+<td><p>Applies bold formatting to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Bold); 
@@ -33,7 +33,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
 
 <tr>
 <td><p>Italic</p></td>
-<td><p>Apply the italic style to the selected content.</p></td>
+<td><p>Applies italic formatting to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
@@ -42,7 +42,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 
 <tr>
 <td><p>Underline</p></td>
-<td><p>Underline the selected content.</p></td>
+<td><p>Underlines the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
@@ -51,7 +51,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
 
 <tr>
 <td><p>StrikeThrough</p></td>
-<td><p>Apply single-line strikethrough formatting for the selected content.</p></td>
+<td><p>Applies single-line strikethrough formatting to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
@@ -60,7 +60,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 
 <tr>
 <td><p>Superscript</p></td>
-<td><p>Makes the selected content as superscript (higher).</p></td>
+<td><p>Applies superscript (higher) formatting to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
@@ -69,7 +69,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 
 <tr>
 <td><p>Subscript</p></td>
-<td><p>Makes the selected content as subscript (lower).</p></td>
+<td><p>Applies subscript (lower) formatting to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
@@ -78,7 +78,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 
 <tr>
 <td><p>Uppercase</p></td>
-<td><p>Change the selected content to upper case.</p></td>
+<td><p>Changes the selected content to uppercase.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
@@ -87,7 +87,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 
 <tr>
 <td><p>Lowercase</p></td>
-<td><p>Change the selected content to lower case.</p></td>
+<td><p>Changes the selected content to lowercase.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
@@ -96,7 +96,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 
 <tr>
 <td><p>FontColor</p></td>
-<td><p>Apply the specified font color to the selected content.</p></td>
+<td><p>Applies the specified font color to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
@@ -105,7 +105,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
 
 <tr>
 <td><p>FontName</p></td>
-<td><p>Apply the specified font name to the selected content.</p></td>
+<td><p>Applies the specified font family to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
@@ -114,7 +114,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
 
 <tr>
 <td><p>FontSize</p></td>
-<td><p>Apply the specified font size to the selected content.</p></td>
+<td><p>Applies the specified font size to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
@@ -123,7 +123,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
 
 <tr>
 <td><p>BackgroundColor</p></td>
-<td><p>Apply the specified background color to the selected content.</p></td>
+<td><p>Applies the specified background color to the selected content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");
@@ -177,7 +177,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsAr
 
 <tr>
 <td><p>Indent</p></td>
-<td><p>Allows you to increase the content's indentation level.</p></td>
+<td><p>Increases the indentation level of the content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
@@ -186,7 +186,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
 
 <tr>
 <td><p>InsertHTML</p></td>
-<td><p>Insert the HTML content at the current cursor position.</p></td>
+<td><p>Inserts the specified HTML at the current cursor position.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor</div>");
@@ -195,7 +195,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Ri
 
 <tr>
 <td><p>InsertOrderedList</p></td>
-<td><p>Create a new list item(numbered).</p></td>
+<td><p>Creates a new numbered list item.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
@@ -204,7 +204,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 
 <tr>
 <td><p>InsertUnorderedList</p></td>
-<td><p>Create a new list item(bulleted).</p></td>
+<td><p>Creates a new bulleted list item.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
@@ -213,7 +213,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 
 <tr>
 <td><p>NumberFormatList</p></td>
-<td><p>Creates an ordered list with customizable numbering styles. The available formats are listed <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html">here</a>.</p></td>
+<td><p>Creates an ordered list with customizable numbering styles. See the available formats <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html">here</a>.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
@@ -222,7 +222,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.NumberFormatList, "Decimal");
 
 <tr>
 <td><p>BulletFormatList</p></td>
-<td><p>Creates an unordered list with customizable bullet styles. The available formats are listed <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html">here</a>.</p></td>
+<td><p>Creates an unordered list with customizable bullet styles. See the available formats <a href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html">here</a>.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
@@ -231,7 +231,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BulletFormatList, "Disc");
 
 <tr>
 <td><p>Outdent</p></td>
-<td><p>Allows you to decrease the content's indentation level.</p></td>
+<td><p>Decreases the indentation level of the content.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
@@ -258,7 +258,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);
 
 <tr>
 <td><p>InsertText</p></td>
-<td><p>Text will be inserted at the current cursor position.</p></td>
+<td><p>Inserts text at the current cursor position.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
@@ -267,7 +267,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 
 <tr>
 <td><p>InsertImage</p></td>
-<td><p>Insert an image to the current cursor position.</p></td>
+<td><p>Inserts an image at the current cursor position.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
@@ -277,7 +277,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 
 N> Provided support to apply execute commands which do not require direct DOM access.
 
-The following code block demonstrates the usage of the `ExecuteCommand` in Rich Text Editor.
+The following code block demonstrates the usage of the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#constructors) in Rich Text Editor.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -291,7 +291,7 @@ The following code block demonstrates the usage of the `ExecuteCommand` in Rich 
 
 ## Markdown editor commands  
 
-The `ExecuteCommand` methods support following markdown commands.
+The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#constructors) methods support following markdown commands.
 
 <table>
 <tr>
