@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization Using CssClass in Blazor DateRangePicker Component
 
-To customize the UI, use [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_CssClass), which adds a custom class to the DateRangePicker’s root element. By targeting this class in your CSS, existing styles can be overridden in a scoped and maintainable way. Multiple class names can be provided (space-separated). Depending on the selected theme, increased selector specificity may be required to override defaults.
+To customize the UI, use [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_CssClass), which adds a custom class to the DateRangePicker root element. By targeting this class in CSS, existing styles can be overridden in a scoped and maintainable way. Multiple class names can be provided (space-separated). Depending on the selected theme, increased selector specificity may be required to override defaults.
 
 Following is the list of classes that provide a flexible way to customize the DateRangePicker component:
 
-| **Class Name** | **Description** |
+| Class Name | Description |
 | --- | --- |
 | e-date-range-wrapper | Applied to the DateRangePicker wrapper. |
 | e-range-icon | Applied to the DateRangePicker icon. |
@@ -22,7 +22,7 @@ Following is the list of classes that provide a flexible way to customize the Da
 | e-right-calendar | Applied to the right calendar element. |
 | e-left-calendar | Applied to the left calendar element. |
 | e-start-label | Applied to the start label in the popup. |
-| e-end-calendar | Applied to the end label in the popup. |
+| e-end-label | Applied to the end label in the popup. |
 | e-day-span | Applied to the day span details label in the popup. |
 | e-footer | Applied to footer elements in the popup. |
 | e-apply | Applied to the Apply button in the popup footer. |
@@ -41,14 +41,14 @@ Following is the list of classes that provide a flexible way to customize the Da
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" CssClass="CustomCSS" ></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" CssClass="CustomCSS"></SfDateRangePicker>
 
 <style>
-     .CustomCSS .e-calendar .e-content .e-selected span.e-day,
+    .CustomCSS .e-calendar .e-content .e-selected span.e-day,
     .CustomCSS .e-calendar .e-content .e-selected span.e-day:hover,
     .CustomCSS .e-calendar .e-content .e-today.e-selected:hover span.e-day,
     .CustomCSS .e-calendar .e-content .e-today.e-selected span.e-day,
-    .CustomCSS .e-calendar .e-content .e-selected:hover span.e-day  {
+    .CustomCSS .e-calendar .e-content .e-selected:hover span.e-day {
         background-color: #35b86b;
     }
 
@@ -72,4 +72,6 @@ Following is the list of classes that provide a flexible way to customize the Da
 
 ![Blazor DateRangePicker customized with CssClass to style selected, today, and weekend dates](../images/blazor-daterangepicker-cssclass-customization.png)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+Additional references:
+- Blazor Date Range Picker feature tour: https://www.syncfusion.com/blazor-components/blazor-daterangepicker
+- Blazor Date Range Picker example (Default Functionalities): https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities

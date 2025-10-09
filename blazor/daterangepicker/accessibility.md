@@ -46,17 +46,17 @@ Common roles and attributes used include:
 - `aria-disabled`: Indicates the disabled state of the DateRangePicker.
 - `aria-activedescendant`: Identifies the currently focused date cell within the calendar grid.
 
-To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section. These roles and attributes help assistive technologies convey meaningful information to users.
+For information about the accessibility of Calendar, refer to the Calendar [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section. These roles and attributes help assistive technologies convey meaningful information to users.
 
 ## Keyboard interaction
 
-Use the following keys to interact with the DateRangePicker. This component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+The following keys provide interaction with the DateRangePicker. This component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
-It supports the following list of shortcut keys:
+The following list of shortcut keys is supported.
 
 ### Input navigation
 
-Before opening the popup, use the following list of keys to control the popup element.
+Before opening the popup, the following keys control the popup element.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ Before opening the popup, use the following list of keys to control the popup el
 
 ### Calendar navigation
 
-Use the following list of keys to navigate the currently focused Calendar after the popup has opened:
+The following keys navigate the currently focused Calendar after the popup has opened:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Alt</kbd> + <kbd>→</kbd> | <kbd>⌥</kbd> + <kbd>→</kbd> | Moves focus forward within the popup container. |
 | <kbd>Alt</kbd> + <kbd>←</kbd> | <kbd>⌥</kbd> + <kbd>←</kbd> | Moves focus backward within the popup container. |
 
-N> The “t” key behavior in the following example is custom to the sample and not a built-in shortcut. For additional information about native events, see [Native events in DateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/native-events).
+N> The “t” key behavior in the following example is custom to the sample and not a built-in shortcut. For details about native events, see [Native events in DateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/native-events).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -105,13 +105,15 @@ N> The “t” key behavior in the following example is custom to the sample and
 }
 ```
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its key feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+Preview of the code snippet: When the DateRangePicker input has focus, pressing the “t” key invokes FocusOutAsync on the SfDateRangePicker instance, causing the component to lose focus and the popup to close if it is open.
+
+Additional resources: The [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page provides an overview of capabilities. A live [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) demonstrates default functionalities.
 
 ## Ensuring accessibility
 
 The Blazor DateRangePicker component’s accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the DateRangePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/daterangepicker) in a new window to evaluate the DateRangePicker with accessibility tools.
+The accessibility compliance of the DateRangePicker component is demonstrated in the following sample. A standalone [sample](https://blazor.syncfusion.com/accessibility/daterangepicker) is available for evaluation with accessibility tools.
 
 ## See also
 

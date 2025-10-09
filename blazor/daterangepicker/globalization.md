@@ -35,4 +35,4 @@ The following code example initializes the DateRangePicker component with the `a
 
 ![Blazor DateRangePicker in Arabic culture with right-to-left layout](./images/blazor-daterangepicker-right-to-left.png)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> Additional resources: The [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page provides an overview of capabilities. A live [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) demonstrates default functionalities.

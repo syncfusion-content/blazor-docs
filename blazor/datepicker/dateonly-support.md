@@ -14,15 +14,42 @@ The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view
 > The Blazor DatePicker component supports the `DateOnly` type in .NET 7 and later. Although DateOnly was introduced in .NET 6, full support in Blazor requires .NET 7 due to serialization and model binding changes.
 
 Key points when using DateOnly:
-- Set the component’s TValue to `DateOnly` (or `DateOnly?` for nullable scenarios and clearing values).
+- Set the component’s `TValue` to `DateOnly` (or `DateOnly?` for nullable scenarios and clearing values).
 - Use `@bind-Value` for two-way binding with a DateOnly model property.
-- Ensure related properties (such as Min, Max, and Value) use compatible types when working with DateOnly.
+- Ensure related properties (such as `Min`, `Max`, and `Value`) use compatible types when working with DateOnly.
 - Formatting and parsing follow the current culture; DateOnly represents dates only and does not include time.
 
-{% highlight Razor %}
+```cshtml
+@using Syncfusion.Blazor.Calendars
 
-{% include_relative code-snippet/DateOnly.razor %}
+<p>Selected date: @DateValue</p>
 
-{% endhighlight %}
+<SfDatePicker TValue="DateOnly?"
+              @bind-Value="DateValue"
+              Format="yyyy-MM-dd"
+              Min="@MonthStart"
+              Max="@MonthEnd">
+</SfDatePicker>
+
+@code {
+    // Initial value
+    public DateOnly? DateValue { get; set; } =
+        new DateOnly(DateTime.Now.Year, DateTime.Now.Month, 15);
+
+    // Range compatible with DateOnly
+    public DateOnly MonthStart { get; set; } =
+        new DateOnly(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+    public DateOnly MonthEnd { get; set; } =
+        new DateOnly(
+            DateTime.Now.Year,
+            DateTime.Now.Month,
+            DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)
+        );
+}
+```
+
+Preview:
+- The DatePicker binds to a `DateOnly?` model, displays the value using the `yyyy-MM-dd` format, and restricts selection to the current month via `Min`/`Max`.
 
 ![Blazor DatePicker with DateOnly](./images/DatePickerDateOnly.gif)

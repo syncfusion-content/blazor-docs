@@ -23,30 +23,34 @@ In the following example, the `KeyPressed` method is called every time a key is 
 <SfDateRangePicker TValue="DateTime?" @onkeypress='@KeyPressed'></SfDateRangePicker>
 
 @code {
-    public void KeyPressed(){
-      Console.WriteLine("Key Pressed!");
-  }
+    public void KeyPressed()
+    {
+        Console.WriteLine("Key Pressed!");
+    }
 }
 ```
+
+Preview: Pressing a key while the input is focused triggers KeyPressed and writes a message to the console.
 
 The previous example can also be written using a lambda expression.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @onkeypress='@(() => Console.WriteLine("Key Pressed!"))'></SfDateRangePicker>
 ```
+
+Preview: Each key press executes the inline lambda and writes a message to the console.
 
 ## Pass event data to event handler
 
 Blazor provides argument types that map to native DOM events. Common event categories and argument types include:
-
-* Focus events - FocusEventArgs
-* Mouse events - MouseEventArgs
-* Keyboard events - KeyboardEventArgs
-* Input events - ChangeEventArgs/EventArgs
-* Touch events – TouchEventArgs
-* Pointer events – PointerEventArgs
+- Focus events - FocusEventArgs
+- Mouse events - MouseEventArgs
+- Keyboard events - KeyboardEventArgs
+- Input events - ChangeEventArgs/EventArgs
+- Touch events - TouchEventArgs
+- Pointer events - PointerEventArgs
 
 In the following example, the `KeyPressed` method is invoked on each key press, and a message is written only when the "5" key is pressed.
 
@@ -66,15 +70,15 @@ In the following example, the `KeyPressed` method is invoked on each key press, 
 }
 ```
 
-Lambda expressions can also be used to pass the event data to the handler.
+Preview: Pressing keys raises KeyPressed with KeyboardEventArgs; when the key value is "5", the console logs a message.
 
 ## List of native events supported
 
-| List of Native events |  |  | |
+| Event | Event | Event | Event |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
-| ontouchend | onfocusin | onmouseup | ontouchstart |
+| onmousemove | onmouseover | onmouseout | onmousedown |
+| onmouseup | ondblclick | onkeydown | onkeyup |
+| onkeypress | ontouchstart | ontouchend | onfocusin |
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its key feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+Additional resources: The [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page provides an overview of capabilities. A live [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) demonstrates default functionalities.

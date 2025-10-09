@@ -26,8 +26,8 @@ In the following sample, the selectable range is limited from the 15th of the cu
 <SfDateRangePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
-    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
-    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 15);
+    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15);
+    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 15);
 }
 ```
 
@@ -45,7 +45,7 @@ In the following example, the selected range must be greater than 5 days and les
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" MinDays=5 MaxDays=10 Placeholder='Select a range'>
+<SfDateRangePicker TValue="DateTime?" MinDays="5" MaxDays="10" Placeholder="Select a range">
 </SfDateRangePicker>
 ```
 
@@ -63,13 +63,13 @@ When StrictMode is enabled (true):
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=true Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode="true" Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
-    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
-    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 15);
-    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
-    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
+    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15);
+    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 15);
+    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20);
+    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 25);
 }
 ```
 
@@ -91,16 +91,16 @@ When StrictMode is disabled (false) (default):
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=false Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode="false" Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
-    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
-    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 15);
-    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
-    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
+    public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15);
+    public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 15);
+    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20);
+    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 25);
 }
 ```
 
 ![Blazor DateRangePicker with StrictMode disabled](./images/blazor-daterangepicker-without-strict-mode.png)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> Additional resources: The [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page provides an overview of capabilities. A live [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) demonstrates default functionalities.

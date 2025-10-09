@@ -9,59 +9,95 @@ documentation: ug
 
 # Style and Appearance in Blazor DatePicker Component
 
-The following guidance describes the CSS structure that can be used to tailor the DatePicker component’s appearance based on user preferences.
+This section describes how to tailor the DatePicker component’s appearance with CSS, component properties, and mobile full-screen support. For theming guidance, refer to Syncfusion themes and appearance documentation.
 
-## Customizing the appearance of DatePicker container element
+- Syncfusion Blazor themes overview: https://blazor.syncfusion.com/documentation/common/appearance
+- DatePicker component: https://blazor.syncfusion.com/documentation/datepicker/getting-started
 
-Use the following CSS to adjust the input height and font size for the DatePicker’s container element.
+## Customize the DatePicker container element
 
-```css
-/* To specify height and font size */
-.e-input-group input.e-input, .e-input-group.e-control-wrapper input.e-input {
-        height: 40px;
-        font-size: 20px;
-}
-```
-
-## Customizing the DatePicker icon element
-
-Use the following CSS to modify the DatePicker’s icon size and background color.
-
-```css
-/* To specify background color and font size */
-.e-input-group .e-input-group-icon:last-child, .e-input-group.e-control-wrapper .e-input-group-icon:last-child {
-        font-size: 12px;
-        background-color: darkgray;
-}
-```
-
-## Customizing the appearance of the DatePicker label 
-
-To customize the floating label’s appearance, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property with custom CSS. The example below applies a compact label size and color.
+Adjust the visible input height and font size by targeting the DatePicker wrapper. The following example scopes styles with a wrapper class to prevent affecting other inputs on the page.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDatePicker TValue="DateTime?" Placeholder="earliest date..." FloatLabelType="@FloatLabelType.Always" CssClass="e-small data-color" Width="150px">
-</SfDatePicker>
-
+<div class="dp-container-custom">
+    <SfDatePicker TValue="DateTime?" Placeholder="Select date"></SfDatePicker>
+</div>
 ```
+
 ```css
-    .data-color.e-float-input.e-control-wrapper label.e-float-text,
-    .data-color.e-float-input input:valid~label.e-float-text, 
-    .data-color.e-float-input input~label.e-label-top.e-float-text,
-    .data-color.e-float-input.e-input-focus label.e-float-text,
-    .data-color.e-float-input:not(.e-error) input:valid~label.e-float-text, 
-    .data-color.e-float-input:not(.e-error) input~label.e-label-top.e-float-text
-      {
-      font-size : 10px;
-      color: blue;
-    }
+/* Scoped container/input size adjustments */
+.dp-container-custom .e-input-group input.e-input,
+.dp-container-custom .e-input-group.e-control-wrapper input.e-input {
+    height: 40px;
+    font-size: 20px;
+}
 ```
 
-## Adding background color to DatePicker container element
+Preview:
+- The DatePicker input renders taller with a 40px height, and text appears larger at 20px font size.
 
-Customize the background color of the DatePicker’s visible input by targeting the appropriate wrapper class and setting the `background-color` property.
+## Customize the DatePicker icon element
+
+Modify the DatePicker’s icon size and background color with a scoped wrapper.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<div class="dp-icon-custom">
+    <SfDatePicker TValue="DateTime?" Placeholder="Select date"></SfDatePicker>
+</div>
+```
+
+```css
+/* Scoped icon size and background color */
+.dp-icon-custom .e-input-group .e-input-group-icon:last-child,
+.dp-icon-custom .e-input-group.e-control-wrapper .e-input-group-icon:last-child {
+    font-size: 12px;
+    background-color: darkgray;
+}
+```
+
+Preview:
+- The calendar icon displays slightly smaller glyphs and a dark gray background on the icon button.
+
+## Customize the appearance of the DatePicker label
+
+To adjust the floating label’s size and color, use the CssClass property with custom CSS. The example below applies a compact label size and blue color.
+
+- CssClass API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Inputs
+
+<SfDatePicker TValue="DateTime?"
+              Placeholder="Earliest date..."
+              FloatLabelType="@FloatLabelType.Always"
+              CssClass="e-small data-color"
+              Width="150px">
+</SfDatePicker>
+```
+
+```css
+.data-color.e-float-input.e-control-wrapper label.e-float-text,
+.data-color.e-float-input input:valid ~ label.e-float-text,
+.data-color.e-float-input input ~ label.e-label-top.e-float-text,
+.data-color.e-float-input.e-input-focus label.e-float-text,
+.data-color.e-float-input:not(.e-error) input:valid ~ label.e-float-text,
+.data-color.e-float-input:not(.e-error) input ~ label.e-label-top.e-float-text {
+    font-size: 10px;
+    color: blue;
+}
+```
+
+Preview:
+- The floating label renders in a compact 10px size and blue color above the input, including when focused or when the input has a value.
+
+## Add background color to the DatePicker container element
+
+Customize the background color of the visible input by targeting the wrapper class and setting the background-color property.
 
 {% tabs %}
 {% highlight razor %}
@@ -73,19 +109,16 @@ Customize the background color of the DatePicker’s visible input by targeting 
 
 ![Blazor DatePicker with a customized background color](./images/blazor-datepicker-background_color.png)
 
-## Full screen mode support in mobiles and tablets
+## Full screen mode support on mobiles and tablets
 
-The DatePicker supports full-screen mode on mobile devices to improve popup visibility and usability in both landscape and portrait orientations. To enable full-screen mode, set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen) property to `true`. On mobile devices, the calendar expands to occupy the entire screen; desktop behavior is unchanged.
+The DatePicker supports full-screen mode on mobile devices to improve popup visibility. Set the FullScreen property to true. On mobile devices, the calendar expands to occupy the entire screen; desktop behavior remains unchanged.
+
+- FullScreen API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDatePicker TValue="DateTime?" FullScreen=true></SfDatePicker>
-
+<SfDatePicker TValue="DateTime?" FullScreen="true"></SfDatePicker>
 ```
 
 ![Blazor DatePicker popup displayed in mobile full-screen mode](./images/blazor-datepicker-full-screen.gif)
-
-Also see the following section for additional Calendar styling options:
-
-[Customizing Calendar's style and appearance](../calendar/style-appearance)

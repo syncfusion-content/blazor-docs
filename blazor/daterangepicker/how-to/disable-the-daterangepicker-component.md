@@ -14,7 +14,7 @@ DateRangePicker can be disabled on a page by setting the [Enabled](https://help.
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" Enabled=false StartDate="@Start" EndDate="@End"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Enabled="false" StartDate="@Start" EndDate="@End"></SfDateRangePicker>
 
 @code {
     public DateTime? Start { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20);
@@ -22,6 +22,11 @@ DateRangePicker can be disabled on a page by setting the [Enabled](https://help.
 }
 ```
 
+Preview:
+- The DateRangePicker input appears disabled, does not accept focus or typing, and the popup cannot be opened.
+
 ![Blazor DateRangePicker shown in a disabled state](../images/blazor-daterangepicker-disable-state.png)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+Additional references:
+- Blazor DateRangePicker feature tour: https://www.syncfusion.com/blazor-components/blazor-daterangepicker
+- Blazor DateRangePicker example (Default Functionalities): https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities

@@ -11,7 +11,7 @@ documentation: ug
 
 This section lists and describes the events raised by the DateRangePicker component for common user interactions and lifecycle actions.
 
-The events are configured using the **DateRangePickerEvents** child component.
+The events are configured using the DateRangePickerEvents child component.
 
 N> Starting with `v17.2.*`, the DateRangePicker exposes a streamlined set of events. Event names were changed from previous releases, and several events were removed. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
 
@@ -33,14 +33,16 @@ The `Blur` event is triggered when the input loses focus.
 <SfDateRangePicker TValue="DateTime?">
     <DateRangePickerEvents TValue="DateTime?" Blur="BlurHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
-@code{
 
+@code {
     public void BlurHandler(Syncfusion.Blazor.Calendars.BlurEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to handle input losing focus.
     }
 }
 ```
+
+Preview: When the input field loses focus, the BlurHandler method executes.
 
 ## ValueChange
 
@@ -52,14 +54,16 @@ The `ValueChange` event is triggered when the DateRangePicker value (start or en
 <SfDateRangePicker TValue="DateTime?">
     <DateRangePickerEvents TValue="DateTime?" ValueChange="ValueChangeHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
-@code{
 
+@code {
     public void ValueChangeHandler(RangePickerEventArgs<DateTime?> args)
     {
-        // Here, you can customize your code.
+        // Add logic to respond to start/end date changes.
     }
 }
 ```
+
+Preview: Selecting or modifying the range invokes ValueChangeHandler with the updated start and end dates.
 
 ## OnClose
 
@@ -71,14 +75,16 @@ The `OnClose` event is triggered when the DateRangePicker popup is closed.
 <SfDateRangePicker TValue="DateTime?">
     <DateRangePickerEvents TValue="DateTime?" OnClose="OnCloseHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
-@code{
 
+@code {
     public void OnCloseHandler(RangePopupEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to handle popup close action.
     }
 }
 ```
+
+Preview: Closing the popup triggers OnCloseHandler after the popup is dismissed.
 
 ## Created
 
@@ -90,14 +96,16 @@ The `Created` event is triggered when the component is initialized.
 <SfDateRangePicker TValue="DateTime?">
     <DateRangePickerEvents TValue="DateTime?" Created="CreatedHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
-@code{
 
+@code {
     public void CreatedHandler(object args)
     {
-        // Here, you can customize your code.
+        // Add initialization logic after component creation.
     }
 }
 ```
+
+Preview: After the component is initialized and rendered, CreatedHandler executes once.
 
 ## Destroyed
 
@@ -109,14 +117,16 @@ The `Destroyed` event is triggered when the component is disposed.
 <SfDateRangePicker TValue="DateTime?">
     <DateRangePickerEvents TValue="DateTime?" Destroyed="DestroyHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
-@code{
 
+@code {
     public void DestroyHandler(object args)
     {
-        // Here, you can customize your code.
+        // Add cleanup logic during component disposal.
     }
 }
 ```
+
+Preview: When the component is disposed, DestroyHandler runs for cleanup operations.
 
 ## Focus
 
@@ -126,17 +136,18 @@ The `Focus` event is triggered when the input gains focus.
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
-    <DateRangePickerEvents TValue="DateTime?"  Focus="FocusHandler"></DateRangePickerEvents>
+    <DateRangePickerEvents TValue="DateTime?" Focus="FocusHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
-@code{
-
+@code {
     public void FocusHandler(Syncfusion.Blazor.Calendars.FocusEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to handle input focus.
     }
 }
 ```
+
+Preview: When the input receives focus, FocusHandler is executed.
 
 ## Navigated
 
@@ -149,14 +160,15 @@ The `Navigated` event is triggered when navigating between calendar views (such 
     <DateRangePickerEvents TValue="DateTime?" Navigated="NavigateHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
-@code{
-
+@code {
     public void NavigateHandler(NavigatedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to respond to view navigation.
     }
 }
 ```
+
+Preview: Changing the calendar view or moving within a view triggers NavigateHandler with navigation details.
 
 ## OnOpen
 
@@ -169,14 +181,15 @@ The `OnOpen` event is triggered when the DateRangePicker popup is opened.
     <DateRangePickerEvents TValue="DateTime?" OnOpen="OpenHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
-@code{
-
+@code {
     public void OpenHandler(RangePopupEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to handle popup open action.
     }
 }
 ```
+
+Preview: Opening the popup invokes OpenHandler before interaction with the calendar.
 
 ## OnRenderDayCell
 
@@ -186,17 +199,19 @@ The `OnRenderDayCell` event is triggered when each day cell of the calendar is r
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
-    <DateRangePickerEvents TValue="DateTime?" OnRenderDayCell="onRenderDayCellHandler"></DateRangePickerEvents>
+    <DateRangePickerEvents TValue="DateTime?" OnRenderDayCell="OnRenderDayCellHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
-@code{
-
-    public void onRenderDayCellHandler(RenderDayCellEventArgs args)
+@code {
+    public void OnRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add logic to customize or disable specific dates.
+        // Example: args.IsDisabled = true; // to disable a date
     }
 }
 ```
+
+Preview: As each calendar day cell is rendered, OnRenderDayCellHandler executes, enabling customization such as disabling dates or adding styles.
 
 ## RangeSelected
 
@@ -209,13 +224,14 @@ The `RangeSelected` event is triggered after selecting both the start and end da
     <DateRangePickerEvents TValue="DateTime?" RangeSelected="RangeSelectHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
-@code{
-
+@code {
     public void RangeSelectHandler(RangePickerEventArgs<DateTime?> args)
     {
-        // Here, you can customize your code.
+        // Add logic to respond after the full range is selected.
     }
 }
 ```
 
-N> The DateRangePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+Preview: After both dates are selected, RangeSelectHandler receives the finalized start and end dates.
+
+N> The DateRangePicker currently supports the events listed above. Additional events may be introduced in future releases based on feature requests. If a required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

@@ -1,4 +1,4 @@
----
+da---
 layout: post
 title: DateOnly Support in Blazor DateRangePicker Component | Syncfusion
 description: Learn how to use DateOnly with the Syncfusion Blazor DateRangePicker, including .NET 7+ support, TValue configuration, and binding StartDate/EndDate.

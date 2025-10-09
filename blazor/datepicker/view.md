@@ -26,10 +26,10 @@ The following example demonstrates how to create a DatePicker with `Decade` as t
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='Select a date' Start='CalendarView.Decade'></SfDatePicker>
+<SfDatePicker TValue="DateTime?" Value="@DateValue" Placeholder="Select a date" Start="CalendarView.Decade"></SfDatePicker>
 
 @code {
-    public DateTime? DateValue {get;set;} = DateTime.Now;
+    public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
 
@@ -37,18 +37,24 @@ The following example demonstrates how to create a DatePicker with `Decade` as t
 
 ## Depth view
 
-Use the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property to control how far the user can navigate when drilling down. Depth must be the same as, or a more detailed view than, Start (Month is more detailed than Year, and Year is more detailed than Decade). If Depth is set to a broader view than Start, the component constrains navigation to a valid combination.
+Use the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property to control how far navigation can drill down. Depth must be the same as, or a more detailed view than, Start (Month is more detailed than Year, and Year is more detailed than Decade). For DatePicker (which selects a day), set Depth to Month to enable date selection.
 
-The following example demonstrates how to create a DatePicker that allows users to select a month (Start at Decade, navigate down to Year):
+The following example demonstrates configuring the DatePicker to start at the Decade view and allow drilling down to the Month view (day grid) for date selection:
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='choose a date' Start='CalendarView.Decade' Depth='CalendarView.Year'></SfDatePicker>
+<SfDatePicker TValue="DateTime?" Value="@DateValue" Placeholder="Select a date" Start="CalendarView.Decade" Depth="CalendarView.Month"></SfDatePicker>
 
 @code {
     public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
+
+Preview of the Depth example:
+- The popup initially shows a Decade view with a grid of years.
+- Selecting a year drills down to the Year view (grid of months).
+- Selecting a month drills down to the Month view (grid of days).
+- A date is selected from the Month view, which is the configured Depth for DatePicker.
 
 N> To learn more about Calendar views, refer to the Calendar’s [Calendar Views](../calendar/calendar-views) section.
