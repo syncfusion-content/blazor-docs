@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fine-tune with Blazor Image Editor Component | Syncfusion
-description: Discover the Finetune feature available in the Blazor Image Editor component for Blazor Server and WebAssembly Apps.
+description: Discover the Finetune feature available in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -13,7 +13,7 @@ Fine-tuning refers to precise adjustments to image filter settings to achieve a 
 
 ## Adjust brightness, contrast, and saturation
 
-The [`FinetuneImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method performs fine-tuning on an image. It accepts two parameters: the first is [`ImageFinetuneOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html), which specifies the type of fine-tuning (brightness, contrast, and saturation), and the second is an integer value indicating the degree or intensity of the adjustment. This method enables convenient adjustments to brightness, contrast, and saturation by specifying the desired type and corresponding value.
+The [FinetuneImageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method performs fine-tuning on an image. It accepts two parameters: the first is [ImageFinetuneOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html), which specifies the type of fine-tuning (brightness, contrast, and saturation), and the second is an integer value indicating the degree or intensity of the adjustment. This method enables convenient adjustments to brightness, contrast, and saturation by specifying the desired type and corresponding value.
 
 The following example demonstrates brightness, contrast, and saturation fine-tuning using the `FinetuneImageAsync` method.
 
@@ -61,7 +61,7 @@ The following example demonstrates brightness, contrast, and saturation fine-tun
 
 ## Adjust hue, exposure, blur, and opacity
 
-The [`FinetuneImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method also supports fine-tuning for hue, exposure, blur, and opacity. The first parameter is [`ImageFinetuneOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html), which specifies the type of fine-tuning to apply (hue, exposure, blur, and opacity), and the second parameter is an integer value representing the intensity of the adjustment. This method allows straightforward adjustment of these properties by specifying the type and value.
+The [FinetuneImageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method also supports fine-tuning for hue, exposure, blur, and opacity. The first parameter is [ImageFinetuneOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html), which specifies the type of fine-tuning to apply (hue, exposure, blur, and opacity), and the second parameter is an integer value representing the intensity of the adjustment. This method allows straightforward adjustment of these properties by specifying the type and value.
 
 The following example demonstrates hue, exposure, blur, and opacity fine-tuning using the `FinetuneImageAsync` method.
 
@@ -115,12 +115,12 @@ The following example demonstrates hue, exposure, blur, and opacity fine-tuning 
 
 ## Finetune value changing event
 
-The [`FinetuneValueChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FinetuneValueChanging) event is triggered during fine-tuning. It provides details such as the fine-tune type and the applied value.
+The [FinetuneValueChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FinetuneValueChanging) event is triggered during fine-tuning. It provides details such as the fine-tune type and the applied value.
 
 Parameters available in [FinetuneEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FinetuneEventArgs.html):
 
-- `FinetuneEventArgs.Finetune`: The type of fine-tuning as `ImageFinetuneOption` to be applied in the image editor.
+- [FinetuneEventArgs.Finetune](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FinetuneEventArgs.html#Syncfusion_Blazor_ImageEditor_FinetuneEventArgs_Finetune) - The type of fine-tuning as `ImageFinetuneOption` to be applied in the image editor.
 
-- `FinetuneEventArgs.Value`: The fine-tuning value to be applied in the image editor.
+- [FinetuneEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FinetuneEventArgs.html#Syncfusion_Blazor_ImageEditor_FinetuneEventArgs_Value) - The fine-tuning value to be applied in the image editor.
 
-- `FinetuneEventArgs.Cancel`: A boolean value that cancels the fine-tuning action. 
+- [FinetuneEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FinetuneEventArgs.html#Syncfusion_Blazor_ImageEditor_FinetuneEventArgs_Cancel) - A boolean value that cancels the fine-tuning action. 
