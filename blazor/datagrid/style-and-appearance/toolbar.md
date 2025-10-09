@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor DataGrid and more details.
+description: Checkout and learn here all about toolbar customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

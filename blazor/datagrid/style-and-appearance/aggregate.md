@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregate customization in Blazor DataGrid | Syncfusion
-description: Learn here all about aggregate in Syncfusion Blazor DataGrid and more details.
+description: Learn here all about aggregate customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
