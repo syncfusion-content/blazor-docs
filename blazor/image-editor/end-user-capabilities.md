@@ -48,6 +48,7 @@ To zoom the image using the toolbar:
 To zoom the image using touch gestures:
 
 * Perform a two-finger pinch gesture to zoom in or out.
+
 * Zoom level is controlled by the pinch distance.
 
 ### Using mouse wheel
@@ -55,6 +56,7 @@ To zoom the image using touch gestures:
 To zoom the image using the mouse:
 
 * Press Ctrl and scroll the mouse wheel to zoom in or out.
+
 * Zoom level is adjusted based on the scroll direction.
 
 ### Using keyboard
@@ -62,6 +64,7 @@ To zoom the image using the mouse:
 To zoom the image using keyboard shortcuts:
 
 * Press Ctrl + ‘+’ to zoom in.
+
 * Press Ctrl + ‘−’ to zoom out.
 
 ## Panning
@@ -69,8 +72,11 @@ To zoom the image using keyboard shortcuts:
 To pan the image in the editor:
 
 * Click and drag on the image to move it within the canvas.
+
 * Panning is enabled in the following cases:
+
   * When a selection is active for cropping.
+
   * When the image size exceeds the canvas size due to zooming.
 
 ![Blazor Image Editor with Panning an image showcase](./images/blazor-image-editor-pan.gif)
@@ -128,7 +134,9 @@ To apply fine-tuning adjustments:
 To apply filters:
 
 * Click the Filter button to display available filters.
+
 * Select a filter to apply it to the image.
+
 * Click on the canvas or the tick icon at the right corner of the toolbar to apply changes.
 
 ![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-filter.jpg)
@@ -152,6 +160,7 @@ To undo and redo actions in the editor:
 To revert all changes in the editor:
 
 * Click the Reset button on the right side of the toolbar.
+
 * This action reverts all modifications applied in the editor.
 
 ## Export an image
