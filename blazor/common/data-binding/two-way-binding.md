@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Two-way data binding in Blazor
+title: Two-way data binding in Blazor | Syncfusion
 description: Learn here all about how Syncfusion Blazor components use the two-way data binding with @bind-Value and related patterns. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Two-way data binding in Blazor
+# Two-way data binding
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 

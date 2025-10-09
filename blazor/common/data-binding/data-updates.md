@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Data updates with ObservableCollection and INotifyPropertyChanged in Blazor
+# Data updates with Interface
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components automatically update UI when bound data implements `INotifyCollectionChanged` (`ObservableCollection`) or `INotifyPropertyChanged`.
 
