@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor Scheduler component.
+description: Learn how to implement drag and drop functionality for events within the Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
