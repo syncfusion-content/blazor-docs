@@ -55,7 +55,6 @@ To visualize tasks assigned to each resource in a hierarchical manner, you can s
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -198,7 +197,6 @@ You can indicate overallocation date ranges with square brackets by enabling the
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -335,7 +333,6 @@ Unassigned tasks in the Gantt Chart refer to tasks that have not been assigned t
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -650,7 +647,6 @@ Within the Gantt chart, taskbar repositioning tasks among different resources ca
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -831,7 +827,6 @@ In the resource view, you can easily change task resources. If the dialog box's 
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -994,7 +989,6 @@ These methods offer a convenient way to efficiently manage task resources in you
 }
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data

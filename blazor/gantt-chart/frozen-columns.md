@@ -193,8 +193,6 @@ The following is the sample code for using `FreezeDirection` in the Blazor Gantt
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBICttKJXuJjOKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Freeze direction in Blazor Gantt chart](./images/blazor-Gantt-chart-freeze-direction.gif)
-
 ## Add or remove frozen columns by dragging the column separator
 
 The Gantt Chart allows users to add or remove frozen columns by dragging and dropping the column separator. The column separator is a draggable line that separates the frozen columns from the non-frozen columns in the Gantt Chart. It is displayed as a vertical line between the columns.
