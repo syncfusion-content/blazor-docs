@@ -39,7 +39,8 @@ The following example demonstrates filtering with the [ODataAdaptor](https://bla
 
 ## Debounce delay
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_DebounceDelay) property to add a delay (in milliseconds) before issuing a filter request while typing. This helps reduce network chatter and improves responsiveness. The default DebounceDelay is 300 ms. To disable debouncing, set it to 0.
+Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, can set it to 0ms.
+
 
 {% highlight cshtml %}
 

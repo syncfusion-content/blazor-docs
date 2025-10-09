@@ -89,7 +89,6 @@ Customize the container element within the AutoComplete by targeting the `.e-inp
 
 Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the autocomplete component, and setting the desired color to the `color` property.
 
-
 {% highlight cshtml %}
 
 {% include_relative code-snippet/style/dropdown-icon-color.razor %}
