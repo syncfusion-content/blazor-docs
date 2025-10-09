@@ -7,9 +7,9 @@ control: Kanban
 documentation: ug
 ---
 
-# Workflow in Blazor Kanban Component
+# Workflow Restrictions in Blazor Kanban Component
 
-[Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) workflow allows to set the flow of cards between the columns. It provides restriction on columns when the card is moved from one column to another column. It provides support to prevent the drag and drop action on the column.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) workflow controls how cards move between columns. It enables restrictions when a card is moved from one column to another and supports disabling drag-and-drop actions per column.
 
 ## Prevent transition across columns
 
@@ -60,7 +60,7 @@ Provides restriction on columns when performing drag and drop actions while prov
 
 ## Prevent Drop actions
 
-Column will not allow any dropped card action when you disable the `AllowDrop` properties in the column.
+To prevent cards from being dropped into a column, set the `AllowDrop` property to `false`.
 
 In the following code, the `Backlog` column will not allow any card drop action within the column and any other columns cards.
 
@@ -109,7 +109,7 @@ In the following code, the `Backlog` column will not allow any card drop action 
 
 ## Prevent Drag actions
 
-Column will not allow any dragged card action when you disable the `AllowDrag` properties in the column.
+To prevent cards from being dragged from a column, set the `AllowDrag` property to `false`.
 
 In the following code, the `Done` column will not allow any card drag action within the column.
 

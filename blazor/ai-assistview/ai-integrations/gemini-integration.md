@@ -7,7 +7,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Gemini AI With Blazor AI AssistView component
+# Gemini AI With Blazor AI AssistView component
 
 The Syncfusion AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in applications.
 
@@ -53,7 +53,7 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 > Security note: Do not commit API keys to version control. Use environment variables, a secret manager, or a server-side proxy in production.
 
-##  Integration Gemini AI with AI AssistView
+## Gemini AI with AI AssistView
 
 * Add the generated API key in the following line.
 
