@@ -22,7 +22,7 @@ This section describes how to connect the Blazor Pivot Table to a MongoDB databa
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) package and install it to enable MongoDB connectivity.
 
-![Add the NuGet package "MongoDB.Driver" to the project](../images/mongodb-nuget-package-install.png)
+![Add the NuGet package MongoDB.Driver to the project](../images/mongodb-nuget-package-install.png)
 
 ### Step 3: Connect to MongoDB
 1. In the **Index.razor** file, under the `OnInitialized` method, use the **MongoClient** class to connect to the MongoDB database with a valid connection string.
@@ -113,7 +113,7 @@ Follow these steps to set up a Web API service that retrieves MongoDB data for t
 1. Open the **NuGet Package Manager** in the project solution.
 2. Search for and install the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) package to enable MongoDB connectivity.
 
-![Add the NuGet package "MongoDB.Driver" to the project](../images/mongodb-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package MongoDB.Driver to the project](../images/mongodb-nuget-package-install-in-web-service-app.png)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.

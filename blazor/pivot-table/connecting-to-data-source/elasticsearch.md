@@ -22,7 +22,7 @@ This section explains how to connect the Pivot Table component to an Elasticsear
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for the **NEST** package and install it to enable connectivity with the Elasticsearch server.
 
-![Add the NuGet package "Nest" to the project](../images/Elasticsearch-nuget-package-install.png)
+![Add the NuGet package Nest to the project](../images/next-nuget-package-install.png)
 
 ### Step 3: Configure Elasticsearch Connection
 1. In the **Index.razor** page, within the `OnInitialized` method, use the **ElasticClient** class from the NEST library to establish a connection to the Elasticsearch database.
@@ -122,7 +122,7 @@ Follow these steps to create a Web API service that retrieves data from an Elast
 #### Step 2: Install the NEST NuGet Package
 1. Install the **NEST** package using the **NuGet Package Manager** to enable Elasticsearch connectivity.
 
-![Add the NuGet package "Nest" to the project](../images/Elasticsearch-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package Nest to the project](../images/next-nuget-package-install.png)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.

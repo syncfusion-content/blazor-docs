@@ -212,7 +212,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from PostgreSQL.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/postgreSQL-data.png)
+![Hosted Web API URL](../images/postgresql_data.png)
 
 ### Connecting the Pivot Table to a PostgreSQL Database Using the Web API Service
 
@@ -223,7 +223,7 @@ This section explains how to connect the Blazor Pivot Table to PostgreSQL data r
 
 #### Step 2: Configure the Web API URL
 1. In the **Index.razor** file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserializes PostgreSQL data into instances of your model data class (e.g., `TValue="PostgreSQLService"`) for binding to the Pivot Table.
+2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserialize PostgreSQL data into instances of your model data class (e.g., `TValue="PostgreSQLService"`) for binding to the Pivot Table.
 
 #### Step 3: Define the Pivot Table Report
 1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.

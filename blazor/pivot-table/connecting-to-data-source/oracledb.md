@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/).
 2. Install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/) package to add Oracle support.
 
-![Add the NuGet package "Oracle.ManagedDataAccess.Core" to the project](../images/oracledb-nuget-package-install.png)
+![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install.png)
 
 ### Step 3: Connect to the Oracle database
 In the **Index.razor** file, under the `OnInitialized` method, use the [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library to connect to an Oracle database and retrieve data for the Pivot Table.
@@ -130,7 +130,7 @@ Follow these steps to set up a Web API service that retrieves Oracle data for th
 #### Step 2: Install the Oracle NuGet package
 1. Install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/) package using the **NuGet Package Manager** to enable Oracle connectivity.
 
-![Add the NuGet package "Oracle.ManagedDataAccess.Core" to the project](../images/oracledb-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install-in-web-service-app.png)
 
 #### Step 3: Create a Web API controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -221,7 +221,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:44346/Pivot` to view the JSON data retrieved from Oracle.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/oracledb-data.png)
+![Hosted Web API URL](../images/oracle-code-web-app.png)
 
 ### Connecting the Pivot Table to a Oracle database using the Web API service
 
@@ -232,7 +232,7 @@ This section explains how to connect the Blazor Pivot Table to Oracle data retri
 
 #### Step 2: Configure the Web API URL
 1. In the **Index.razor** file, map the Web API URL (`https://localhost:44346/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserializes Oracle data into instances of your model data class (e.g., TValue="EmployeeDetails") for binding to the Pivot Table.
+2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserialize Oracle data into instances of your model data class (e.g., TValue="EmployeeDetails") for binding to the Pivot Table.
 
 #### Step 3: Define the Pivot Table report
 1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.

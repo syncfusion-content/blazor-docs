@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for and install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) package to enable Microsoft SQL Server connectivity.
 
-![Add the NuGet package "System.Data.SqlClient" to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
 
 ### Step 3: Connect to the Microsoft SQL database
 In the **Index.razor** file, under the `OnInitialized` method, use the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) library to connect to a Microsoft SQL database and retrieve data for the Pivot Table.
@@ -117,7 +117,7 @@ Follow these steps to set up a Web API service that retrieves Microsoft SQL data
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for and install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) package to enable Microsoft SQL Server connectivity.
 
-![Add the NuGet package "System.Data.SqlClient" to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
 
 #### Step 3: Create a Web API controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -208,7 +208,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:7139/Pivot` to view the JSON data retrieved from the Microsoft SQL database.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/Ms-Sql-data.png)
+![Hosted Web API URL](../images/code-web-app.jpeg)
 
 ### Connecting the Pivot Table to a Microsoft SQL database using the Web API service
 
@@ -219,7 +219,7 @@ This section explains how to connect the [Blazor Pivot Table](https://www.syncfu
 
 #### Step 2: Configure the Web API URL
 1. In the **Index.razor** file, map the Web API URL (`https://localhost:7139/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserializes Microsoft SQL data into instances of your model data class (e.g., `TValue="OrderDetails"`) for binding to the Pivot Table.
+2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserialize Microsoft SQL data into instances of your model data class (e.g., `TValue="OrderDetails"`) for binding to the Pivot Table.
 
 #### Step 3: Define the Pivot Table report
 1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.

@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/).
 2. Install the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/) package to add Snowflake support.
 
-![Add the NuGet package "Snowflake.Data" to the project](../images/Snowflake-nuget-package-install.png)
+![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install.png)
 
 ### Step 3: Connect to the Snowflake Database
 In the **Index.razor** file, under the `OnInitialized` method, use the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) library to connect to the Snowflake database and retrieve data for the Pivot Table.
@@ -124,7 +124,7 @@ Follow these steps to set up a Web API service that retrieves Snowflake data for
 1. Open the NuGet Package Manager in your project solution.
 2. Search for and install the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) package to enable Snowflake connectivity.
 
-![Add the NuGet package "Snowflake.Data" to the project](../images/Snowflake-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install-in-web-service-app.png)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -228,7 +228,7 @@ This section explains how to connect the [Blazor Pivot Table](https://www.syncfu
 
 #### Step 2: Configure the Web API URL
 1. In the **Index.razor** file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserializes Snowflake data into instances of your model data class (e.g., `TValue="SnowflakeService"`) for binding to the Pivot Table.
+2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserialize Snowflake data into instances of your model data class (e.g., `TValue="SnowflakeService"`) for binding to the Pivot Table.
 
 #### Step 3: Define the Pivot Table Report
 1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.

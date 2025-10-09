@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for **MySql.Data**.
 2. Install the **MySql.Data** package to add MySQL database support.
 
-![Add the NuGet package "MySql.Data" to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
 
 ### Step 3: Connect to MySQL
 In the **Index.razor** file, under the `OnInitialized` method, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and retrieve data for the Pivot Table.
@@ -121,7 +121,7 @@ Follow these steps to set up a Web API service that retrieves MySQL data for the
 #### Step 2: Install the MySql.Data NuGet Package
 1. Install the [MySql.Data](https://www.nuget.org/packages/MySql.Data) package using the **NuGet Package Manager** to enable MySQL connectivity.
 
-![Add the NuGet package "MySql.Data" to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
