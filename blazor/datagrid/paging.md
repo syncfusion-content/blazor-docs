@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging in Blazor DataGrid
 
-[Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display Syncfsion Blazor DataGrid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
+[Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display Syncfusion Blazor DataGrid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
 
 To enable paging, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the Grid. When paging is enabled, a pager rendered at the bottom of the Grid, allowing you to navigate through different pages of data.
 
