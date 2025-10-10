@@ -370,4 +370,4 @@ The Signature component can be integrated with a toolbar to provide common actio
 </style>
 ```
 
-![Blazor Signature integrated with toolbar controls for undo, redo, save (format selection), color pickers, stroke width, clear, and disable toggle](../images/blazor-signature-toolbar.PNG)
+![Blazor Signature integrated with toolbar controls](../images/blazor-signature-toolbar.PNG)

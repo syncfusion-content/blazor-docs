@@ -55,7 +55,7 @@ The CheckBox supports two sizes: default and small. To render a small CheckBox, 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLAiVVQVzGyDwWz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor CheckBox size comparison: small vs. default](./images/blazor-checkbox-size.png)
+![Blazor CheckBox size](./images/blazor-checkbox-size.png)
 
 ## See also
 

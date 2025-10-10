@@ -114,7 +114,7 @@ An action chip triggers actions such as click or delete. Use the [`OnClick`](htt
 
 ### Deletable Chip
 
-A deletable chip includes a delete affordance to remove a chip from the list. Enable deletion by setting the [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) property to `true`.
+Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enabled by setting the [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
