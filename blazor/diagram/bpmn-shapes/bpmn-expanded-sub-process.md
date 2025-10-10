@@ -55,7 +55,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add BPMN Nodes into a BPMN Expanded Sub-Process
 
-To add a BpmnNode into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BpmnNodeViewModel object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).
+To add a Bpmn node into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BpmnNodeViewModel object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the `BpmnExpandedSubProcess`.
 
 The following code example explains how to add a BPMN node to an BPMN Expanded Sub-Process using the `Children` property.
 
@@ -121,8 +121,8 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
 
 ### How to Set Loop Type
 
- The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) property in the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) component defines the type of loop behavior for a task that is internally repeated. By default, the Loop property is set to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None).
- The Loop property can be configured within the BpmnExpandedSubProcess component, as demonstrated in the following example.
+ The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) property in the `BpmnExpandedSubProcess` component defines the type of loop behavior for a task that is internally repeated. By default, the Loop property is set to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None).
+ The Loop property can be configured within the `BpmnExpandedSubProcess` component, as demonstrated in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -176,7 +176,7 @@ The following table describes the available loop types for an Expanded Sub-Proce
 
 ### How to Enable Compensation
 
-[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) is triggered when the operation is partially failed and can be enabled with the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) property of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html). By default, the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) is set to false.
+[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) is triggered when the operation is partially failed and can be enabled with the `IsCompensation` property of the `BpmnExpandedSubProcess`. By default, the `IsCompensation` is set to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -221,7 +221,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
  
 ### How to Enable Ad-Hoc
 
-An `Ad-Hoc` Expanded Sub-Process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and can be set with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsAdhoc) property of [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).
+An `Ad-Hoc` Expanded Sub-Process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and can be set with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsAdhoc) property of `BpmnExpandedSubProcess`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -266,7 +266,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sub-Process Type
 
-The `SubProcessType` represents the type of task being processed within a BPMN expanded subprocess. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_SubProcessType) property of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) component allows specification of the subprocess type. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
+The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_SubProcessType) represents the type of task being processed within a BPMN expanded subprocess. The `SubProcessType` property of the `BpmnExpandedSubProcess` component allows specification of the subprocess type. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

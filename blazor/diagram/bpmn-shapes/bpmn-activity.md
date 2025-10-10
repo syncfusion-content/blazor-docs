@@ -60,7 +60,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Create a BPMN Activity Task
 
-The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property of the  [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows specification of the task type, such as sending, receiving, or user-based tasks. By default, the TaskType property is set to None, which is visually represented by a small event symbol in the top corner of the activity shape.
+The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property of the  [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows specification of the task type, such as sending, receiving, or user-based tasks. By default, the TaskType property is set to **None**, which is visually represented by a small event symbol in the top corner of the activity shape.
 
 The following code explains how to create different types of BPMN tasks.
 
@@ -121,7 +121,7 @@ The available BPMN task types are described below.
 
 ## How to Create a BPMN Activity Collapsed Sub-Process
 
-A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess) is a group of tasks that is used to hide or reveal details of additional levels. The following code explains how to create a [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess).
+A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess) is a group of tasks that is used to hide or reveal details of additional levels. The following code explains how to create a `Collapsed Sub-Process`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -167,7 +167,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Loop Type
 
-[Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) is a task that is internally being looped. The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) property of [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows you to define the type of loop. The default value for [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None). 
+[Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) is a task that is internally being looped. The `Loop` property of `Bpmn Activity` allows you to define the type of loop. The default value for `Loop` is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None). 
 
 You can define the `Loop` property in BPMN Activity, as shown in the following code.
 
@@ -224,7 +224,7 @@ The available loop types are described below.
 
 ### How to Enable Compensation
 
-[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) is triggered when the operation is partially failed and enabled it with the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) property of the [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html). By default, the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) property is set to false.
+[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) is triggered when the operation is partially failed and enabled it with the `IsCompensation` property of the `Bpmn Activity`. By default, the `IsCompensation` property is set to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -271,9 +271,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Enable Call
 
-A [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCall) activity is a global sub-process that is reused at various points of the business flow. To create a Call activity, enable the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCall) property of the [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html).
+A [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCall) activity is a global sub-process that is reused at various points of the business flow. To create a Call activity, enable the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCall) property of the `Bpmn Activity`.
 
-N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCall) property is false.
+N>* By default, the `IsCall` property is **false**.
 <br/>* This Property is only applicable for [Task](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_Task) Type Activity.
 
 ```cshtml
@@ -321,9 +321,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Enable Ad-Hoc
 
-An ad-hoc sub-process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsAdhoc) property of [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html).
+An ad-hoc sub-process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsAdhoc) property of `Bpmn Activity`.
 
-N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsAdhoc) property is false.
+N>* By default, the `IsAdhoc` property is **false**.
 <br/>* This Property is only applicable for [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess) Type Activity.
 
 ```cshtml
@@ -369,7 +369,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sub-Process Type
 
-The `SubProcessType` property represents the type of task being processed within a BPMN subprocess. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property of the subprocess allows specification of the subprocess type. By default, it is set to Default.
+The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property represents the type of task being processed within a BPMN subprocess. The `SubProcessType` property of the subprocess allows specification of the subprocess type. By default, it is set to **Default**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

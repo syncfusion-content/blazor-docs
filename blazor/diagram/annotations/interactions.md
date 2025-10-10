@@ -79,7 +79,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to rotate a Annotation using the RotationAngle property
 
-The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_RotationAngle) property sets the rotation angle of an annotation in degrees. This determines how much the annotation text is tilted from its normal position. The default value is 0.
+The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_RotationAngle) property sets the rotation angle of an annotation in degrees. This determines how much the annotation text is tilted from its normal position. The default value is **0**.
 
 The following code examples illustrate how to configure `RotationAngle` for an annotation.
 

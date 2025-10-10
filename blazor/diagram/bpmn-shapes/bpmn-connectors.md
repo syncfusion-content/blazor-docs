@@ -23,9 +23,9 @@ To create an Association, set the [Flow](https://help.syncfusion.com/cr/blazor/S
 
 The available association types are:
 
-* DirectionalAssociationFlow: A dotted graphical line with one side arrow.
-* BiDirectionalAssociationFlow: A dotted graphical line with double side arrow.
-* AssociationFlow: A dotted graphical line with an opened arrow.
+* **DirectionalAssociationFlow**: A dotted graphical line with one side arrow.
+* **BiDirectionalAssociationFlow**: A dotted graphical line with double side arrow.
+* **AssociationFlow**: A dotted graphical line with an opened arrow.
 
 The following code example explains how to create an association.
 
@@ -76,13 +76,13 @@ The following table shows the visual representation of association flows.
 
 ## How to Create a Sequence
 
-A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow,set the  [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) shape to one of the sequence types.
+A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow,set the  `Flow` property of the `BpmnFlowShape` shape to one of the sequence types.
 
 The available sequence types are:
 
-* SequenceFlow: Sequence flows represent the typical path between the two flow objects.
-* ConditionalSequenceFlow: Conditional sequence flows are used to control the flow of a process based on certain conditions.
-* DefaultSequenceFlow: Default sequence flows are represented by an arrow with a tic mark on one end.
+* **SequenceFlow**: Sequence flows represent the typical path between the two flow objects.
+* **ConditionalSequenceFlow**: Conditional sequence flows are used to control the flow of a process based on certain conditions.
+* **DefaultSequenceFlow**: Default sequence flows are represented by an arrow with a tic mark on one end.
 
 The following code example explains how to create a sequence flow.
 
@@ -135,13 +135,13 @@ N> The default value for the property `Sequence` is **Normal.**
 
 ## How to Create a Message
 
-A `Message` flows are used when two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle indicating where the message originates and an empty arrowhead where the message terminates. To create a MessageFlow, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to one of the message types.
+A `Message` flows are used when two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle indicating where the message originates and an empty arrowhead where the message terminates. To create a MessageFlow, the `Flow` property of the `BpmnFlowShape` should be set to one of the message types.
 
 The available message flow types are:
 
-* InitiatingMessageFlow: An activity or event in one pool can initiate a message to another pool.
-* NonInitiatingMessageFlow: An activity or event in one pool cannot initiate a message to another pool.
-* MessageFlow: A MessageFlow shows the flow of messages between two participants and is represented by line.
+* **InitiatingMessageFlow**: An activity or event in one pool can initiate a message to another pool.
+* **NonInitiatingMessageFlow**: An activity or event in one pool cannot initiate a message to another pool.
+* **MessageFlow**: A MessageFlow shows the flow of messages between two participants and is represented by line.
 
 The following code example explains how to define a message flow.
 

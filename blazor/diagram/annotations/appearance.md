@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Customize Annotation Size
 
-The annotation size can be customized using the `Height` and `Width` properties. By default, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties are 0, which means the annotation inherits the size of its parent node or connector. The following code example demonstrates how to customize the annotation size.
+The annotation size can be customized using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) properties. By default, the `Width` and `Height` properties are **0**, which means the annotation inherits the size of its parent node or connector. The following code example demonstrates how to customize the annotation size.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -100,7 +100,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Display Text in Annotation Hyperlinks
 
-The Content property of the Hyperlink can be set to display custom text for the link.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the `Hyperlink` can be set to display custom text for the link.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -202,13 +202,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Control Text Overflow
 
-The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The TextOverflow property can have the following values.
+The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The `TextOverflow` property can have the following values.
 
 * **Wrap**: Wraps the text to the next line when it exceeds its bounds.
 * **Ellipsis**: Truncates the overflown text and renders an ellipsis ("...") to represent the clipped text.
 * **Clip**: Clips the text, and the overflowed text will not be visible.
 
-The following code sample demonstrates how the TextOverflow property works with different TextWrapping settings.
+The following code sample demonstrates how the `TextOverflow` property works with different `TextWrapping` settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -407,7 +407,7 @@ Annotations can be edited at runtime either programmatically or interactively. B
 * Programmatically: Invoke the [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartTextEdit_Syncfusion_Blazor_Diagram_IDiagramObject_System_String_) method of the diagram component.
 * Interactively:
     * Double-click the annotation.
-    * Select the parent and press the F2 key.
+    * Select the parent and press the F2 or enter key.
 
 Double-clicking an annotation enables edit mode. For a object with multiple annotations, double-clicking the object itself will start the edit for the first annotation in its collection. When the focus of editor is lost, the annotation content is updated. 
 
@@ -540,7 +540,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
 N>* Type of the annotation’s property of the node or connector is ObservableCollection.
-<br/>* Default value of the annotation will be null.
+<br/>* Default value of the annotation will be **null**.
 <br/>* All customization options are applicable to each annotation in the collection.
 <br/>* When double-clicking a node or connector, text editing is initiated only for the first annotation in the collection.
 
@@ -548,7 +548,7 @@ N>* Type of the annotation’s property of the node or connector is ObservableCo
 
 [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) are used to enable or disable certain behaviors of an annotation. Constraints are provided as flag enumerations, allowing multiple behaviors to be combined using bitwise operators.
 
-AnnotationConstraints may have multiple behaviors as follows:
+`AnnotationConstraints` may have multiple behaviors as follows:
 
 | Constraints | Usages |
 |---|---|
@@ -562,7 +562,7 @@ Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/const
 
 ## How to Define Templates in Annotations
 
-The Diagram component supports templating for annotations. HTML content can be defined within the DiagramTemplates tag and linked to an annotation by setting the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property to true. To define separate templates for individual annotations, use the ID property to differentiate them.
+The Diagram component supports templating for annotations. HTML content can be defined within the `DiagramTemplates` tag and linked to an annotation by setting the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property to **true**. To define separate templates for individual annotations, use the ID property to differentiate them.
 
 The following code illustrates how to define a template for both a node's and a connector's annotation.
 ```cshtml
@@ -667,7 +667,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_AdditionalInfo) property of an annotation allows you to store extra information associated with the annotation in a flexible way. This can be useful for maintaining metadata or additional details that need to be accessed programmatically.
 
-The following code demonstrates how to set a value for the AdditionalInfo property.
+The following code demonstrates how to set a value for the `AdditionalInfo` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -712,7 +712,7 @@ The following code demonstrates how to set a value for the AdditionalInfo proper
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
 
-**Note:** The AdditionalInfo property can accept any type of object as its value.
+**Note:** The `AdditionalInfo` property can accept any type of object as its value.
 
 
 ## See also

@@ -21,7 +21,7 @@ Connector annotations can be precisely positioned using several properties of th
 
 ## How to Update Offset Position for Annotations
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property positions an annotation along the length of the connector segment. It accepts a fractional value from 0 to 1, where 0 represents the beginning of the segment, 1 represents the end, and 0.5 represents the center.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property positions an annotation along the length of the connector segment. It accepts a fractional value from **0** to **1**, where **0** represents the beginning of the segment, **1** represents the end, and **0.5** represents the center.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -228,7 +228,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 | True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
 | False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
 
-N> By default, the SegmentAngle property is disabled (false).
+N> By default, the `SegmentAngle` property is disabled (false).
 
 The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were explained in the [NodeAnnotation](./node-annotation).
 
