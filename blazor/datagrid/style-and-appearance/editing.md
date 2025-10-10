@@ -9,32 +9,36 @@ documentation: ug
 
 # Editing customization in Syncfusion Blazor DataGrid
 
-The appearance of editing-related elements in the Syncfusion Blazor DataGrid can be customized with CSS. The following examples demonstrate how to style edited and added rows, input fields within the edit form, the edit dialog header, and command column buttons.
+The appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
+- Edited and newly added rows
+- Input fields within the edit form
+- Edit dialog header
+- Command column buttons
 
-> Notes:
-- Enable editing using GridEditSettings and, if needed, Toolbar items for CRUD actions.
-- Dialog header customization applies when EditMode is set to Dialog.
-- Icon colors for command buttons depend on the theme’s icon font; verify classes and glyphs in the DOM for the current version/theme.
-- Global selectors target all grids. To limit scope, wrap the grid in a custom container and prefix selectors, or use CSS isolation with the ::deep combinator.
-- Maintain sufficient color contrast and visible focus indicators for accessibility.
+N> - Enable editing with [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and configure [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) to include actions like add, edit, delete, and update.
+- Customize dialog headers when [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to `Dialog`.
+- Command button icon colors are based on the theme’s icon font. Use browser inspection tools to check class names and glyph codes.
+- Use custom containers or CSS isolation with the **::deep** combinator to scope global selectors and avoid affecting all grids.
+- Ensure high color contrast and clear focus indicators to enhance accessibility and user experience.
 
-## Customizing the edited and added row element
+## Customizing Edited and Added Row Elements
 
-To style the edited and added row table elements in the grid, use the following CSS:
+The **.e-editedrow** and **.e-addedrow** classes are used to style the edited and added rows in the Blazor DataGrid. Customize their appearance with CSS like below:
 
 ```css
 .e-grid .e-editedrow table, .e-grid .e-addedrow table {
 	    background-color: #62b2eb;
 }
 ```
-In this example, the `.e-editedrow` class targets the edited row and the `.e-addedrow` class targets the added row. Modify `background-color` to change the fill color for these row table elements.
+
+Style properties such as `background-color` can be modified to visually distinguish rows that are being edited or newly added.
 
 ![Blazor DataGrid added row with custom background color](../images/style-and-appearance/edited-added-row-element.png)
 ![Blazor DataGrid edited row with custom background color](../images/style-and-appearance/edited-added-row-element-2.png)
 
-## Customizing the edited row input element
+## Customizing Edited Row Input Elements
 
-To style input elements within the edited row form, use the following CSS:
+The **.e-gridform** and **.e-input** classes are used to style input elements within the edit form of the Blazor DataGrid. Customize their appearance with CSS like below:
 
 ```css
 
@@ -44,7 +48,7 @@ To style input elements within the edited row form, use the following CSS:
 }
 
 ```
-Here, `.e-gridform` represents the editing form and `.e-input` targets input elements within the form. Modify `font-family` to change the font and color to adjust the input text color.
+Style properties such as `font-family` and `color` can be modified to improve the readability and visual appeal of editable fields.
 
 ![Blazor DataGrid edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.png)
 
@@ -135,9 +139,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLINOLffsrjCvCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the edit dialog header element
+## Customizing the Edit Dialog Header
 
-To style the edit dialog header when using dialog editing, use the following CSS:
+The **.e-edit-dialog** and **.e-dlg-header-content** classes are used to style the edit dialog header in the Blazor DataGrid when dialog editing is enabled. Customize its appearance with CSS like below:
 
 ```css
 
@@ -146,7 +150,7 @@ To style the edit dialog header when using dialog editing, use the following CSS
 }
 
 ```
-In this example, `.e-edit-dialog` represents the edit dialog and `.e-dlg-header-content` targets the header content within the dialog. Modify `background-color` to change the header’s fill color.
+Style properties such as `background-color` can be modified to visually separate the header from the rest of the dialog content.
 
 ![Blazor DataGrid edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.png)
 
@@ -233,9 +237,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBetEhJzsqPbguh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the command column buttons
+## Customizing Command Column Buttons
 
-To style command column buttons (edit, delete, update, cancel), use the following CSS:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes are used to style the command column buttons in the Syncfusion® Blazor DataGrid. These buttons represent actions such as `edit`, `delete`, `update`, and `cancel`. Customize their appearance with CSS like below:
 
 ```css
 
@@ -247,7 +251,7 @@ To style command column buttons (edit, delete, update, cancel), use the followin
 }
 
 ```
-In this example, the .e-edit, .e-delete, .e-update, and .e-cancel-icon classes represent the respective command column buttons. Modify the color property to change the color of these buttons.
+Style properties like `color`, `font-size`, and `font-weight` can be adjusted to differentiate action icons and enhance visibility during interaction.
 
 ![Blazor DataGrid command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.png)
 ![Blazor DataGrid command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.png)

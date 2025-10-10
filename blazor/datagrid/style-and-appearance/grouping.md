@@ -9,18 +9,24 @@ documentation: ug
 
 # Grouping customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of grouping elements in the Syncfusion Blazor DataGrid using CSS. The examples below show how to style the group header, expand/collapse icons, group caption row, and grouping indent cell.
+The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for various parts of the grouping interface, including:
 
-Notes:
-- Ensure grouping is enabled (AllowGrouping or GridGroupSettings) and the required theme stylesheet is referenced so grouping UI renders.
-- Global selectors (.e-grid …) affect all grids on the page. To limit scope, wrap the DataGrid in a custom container class and prefix selectors, or use CSS isolation with the ::deep combinator.
-- Icon glyph codes used with ::before are theme- and version-dependent. Verify the desired glyphs in the current icon font and documentation.
-- Selector names may vary slightly between themes; inspect the DOM to confirm class names.
-- Maintain accessible color contrast for custom backgrounds and verify focus visibility for keyboard users.
+- Group header text and container
+- Expand and collapse icons
+- Group caption row
+- Grouping indent cell
 
-## Customizing the group header
+N> - Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property. Ensure that the appropriate theme stylesheet is referenced so that grouping UI elements are displayed correctly.
+- Icon glyph codes (such as '\e7a2', '\e7a3') vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
+The provided CSS selectors apply to all DataGrid instances (.e-grid). To scope styles to a specific grid:
+    - Wrap the DataGrid in a custom container and prefix selectors with that container’s class.
+    - Alternatively, use CSS isolation with the ::deep combinator.
+- Class names and selectors may differ slightly depending on the theme. Use browser inspection tools to verify the correct classes.
+- Ensure sufficient color contrast and visible focus indicators to support accessibility standards.
 
-To style the group header element:
+## Customizing the Group Header
+
+The **.e-groupdroparea** class is used to style the group header area in the Blazor Grid. To change its appearance, apply CSS as shown below:
 
 ```css
 .e-grid .e-groupdroparea {
@@ -28,13 +34,13 @@ To style the group header element:
 }
 ```
 
-In this example, the .e-groupdroparea class targets the group header area. Modify background-color, padding, border, or font-related properties to match the application’s theme.
+Style properties such as background-color, padding, border, and font can be adjusted to match the desired design.
 
 ![Blazor DataGrid group header styled with a custom background color](../images/style-and-appearance/group-header.png)
 
-## Customizing the group expand or collapse icons
+## Customizing the Group Expand or Collapse Icons
 
-To style the expand/collapse icons:
+The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes are used to style the expand and collapse icons in the Blazor Grid. To change their appearance, apply CSS as shown below:
 
 ```css
 .e-grid .e-icon-gdownarrow::before{
@@ -45,13 +51,13 @@ To style the expand/collapse icons:
 }
 ```
 
-Here, `.e-icon-gdownarrow` and `.e-icon-grightarrow` target the expand and collapse icons. Adjust the content value to switch icons. Choose from available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on the selected theme.
+The `content` property can be modified to replace the default icon. This helps match the icon with a custom icon set or improve visual clarity. Choose from available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on the selected theme.
 
 ![Customized expand and collapse icons in Blazor DataGrid group rows using CSS before content](../images/style-and-appearance/group-expand-or-collapse-icons.png)
 
-## Customizing the group caption row
+## Customizing the Group Caption Row
 
-To style the caption row and record expand/collapse indicators:
+The **.e-groupcaption** class is used to style the caption row in the Blazor Grid. The **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the record-level expand and collapse indicators. Apply CSS as shown below to modify their appearance:
 
 ```css
 .e-grid .e-groupcaption {
@@ -64,13 +70,13 @@ To style the caption row and record expand/collapse indicators:
 }
 ```
 
-The `.e-groupcaption` class targets the caption row, and `.e-recordplusexpand`/`.e-recordpluscollapse` target the record-level indicators. Modify background-color or add borders and typography to align with the application theme.
+Style properties such as `background-color`, `padding`, `border`, and `font` can be adjusted to match the desired design.
 
 ![Blazor DataGrid group caption row styled with a custom background color](../images/style-and-appearance/group-caption-row.png)
 
-## Customizing the grouping indent cell
+## Customizing the Grouping Indent Cell
 
-To style the indent cell:
+The **.e-indentcell** class is used to style the grouping indent cell in the Blazor Grid. Apply CSS as shown below to modify its appearance:
 
 ```css
 .e-grid .e-indentcell {
@@ -78,7 +84,7 @@ To style the indent cell:
 }
 ```
 
-The `.e-indentcell` class targets the grouping indent cell. Adjust background-color or add borders to maintain visual alignment with caption rows and grouped content.
+Style properties such as `background-color`, `padding`, `border`, and `font` can be adjusted to match the desired design.
 
 ![Blazor DataGrid grouping indent cell styled with a custom background color](../images/style-and-appearance/indent-cell.png)
 
