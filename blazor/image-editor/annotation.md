@@ -866,3 +866,7 @@ Using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 ```
 ![Blazor Image Editor with annotation option](./images/blazor-image-editor-annotation-option.png)
+
+## See Also
+
+* [Identify Inserted Annotations](https://support.syncfusion.com/kb/article/21449/how-to-identify-inserted-annotations-in-blazor-image-editor)
