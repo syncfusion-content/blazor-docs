@@ -18,8 +18,8 @@ They are primarily classified into three categories:
 
 ## How to Create an Association
 
-An `BPMN Association` flow is used to link flow objects with their corresponding text or artifact. It is represented as a dotted graphical line with an opened arrow. 
-To create an Association, set the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to one of the association types.
+An BPMN `AssociationFlow` is used to link flow objects with their corresponding text or artifact. It is represented as a dotted graphical line with an opened arrow. 
+To create an association, set the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to one of the association types.
 
 The available association types are:
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Node Annotation Position in Blazor Diagram Component
 
-The diagram allows you to customize the position and appearance of the annotation efficiently. Annotations can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [ShapeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) class.
+The diagram allows you to customize the position and appearance of the annotation efficiently. Annotations can be aligned relative to the node boundaries. It has margin, offset, horizontal, and vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [ShapeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) class.
 
  Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
 
@@ -78,7 +78,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 >**Note:**
 > * Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
-> * Type of the offset property for a connector’s path annotation is **double**.
+> * Type of the offset property for a connector’s path annotation is double.
 > * Node annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to Change the Annotation Alignment
@@ -195,7 +195,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Align the Text
 
-The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of an annotation's Style allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set `TextAlign` for an annotation.
+The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of an annotation's style allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set `TextAlign` for an annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

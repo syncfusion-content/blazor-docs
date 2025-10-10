@@ -9,10 +9,10 @@ documentation: ug
 
 # BPMN Expanded Sub-Process in Blazor Diagram Component
 
-An `BPMN Expanded Sub-Process` is used to frame a part of the diagram, shows that elements included in it logically belong together, and has no other semantics other than organizing elements. It is represented by a rounded rectangle.
+An `BpmnExpandedSubProcess` is used to frame a part of the diagram, shows that elements included in it logically belong together, and has no other semantics other than organizing elements. It is represented by a rounded rectangle.
 
 ## How to Create an Expanded Sub-Process
-To create an `Expanded Sub-Process`, define the `Shape` property of the node as [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) and enable allow drop property of the node.
+To create an Expanded Sub-Process, define the `Shape` property of the node as [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) and enable `AllowDrop` constraint of the node.
 
 The following code example explains how to create a BPMN Expanded Sub-Process.
 

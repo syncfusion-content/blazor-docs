@@ -77,7 +77,7 @@ The following image shows the relationship between the annotation position and o
 ![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
 
 >**Note:**
-> * By default, the Offset value of a connector annotation is 0.5.
+> * By default, the `offset` value of a connector annotation is 0.5.
 > * An annotation's ID must not start with a number or special character and must not contain underscores(_) or spaces.
 
 ## How to Change Annotation Alignment
@@ -228,7 +228,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 | True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
 | False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
 
-N> By default, the `SegmentAngle` property is disabled (false).
+N> By default, the `SegmentAngle` property is **false**.
 
 The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were explained in the [NodeAnnotation](./node-annotation).
 
