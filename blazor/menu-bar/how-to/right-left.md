@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Right to Left in Blazor Menu Bar Component | Syncfusion
+title: Right to Left Support in Blazor Menu Bar Component | Syncfusion
 description: Checkout and learn here all about right to left in Syncfusion Blazor Menu Bar component and much more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Right to Left in Blazor Menu Bar Component
+# Right to Left Support in Blazor Menu Bar Component
 
-Menu Bar component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) as `true`.
+Menu Bar component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) as `true`. This feature ensures that the menu items, sub-menus, and their associated elements are correctly aligned and displayed for an intuitive user experience in these languages.
 
-The following example illustrates how to enable right-to-left support in Menu Bar component.
+The following example illustrates how to enable right-to-left support in the Menu Bar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -51,4 +51,5 @@ The following example illustrates how to enable right-to-left support in Menu Ba
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBoiXZUBBifyMCR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Right to Left in Blazor MenuBar](./../images/blazor-menubar-right-to-left.png)
