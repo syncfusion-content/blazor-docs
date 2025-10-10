@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about animation in the Syncfusion Blazor Circular Gauge component and much more.
+description: Check out and learn how to configure animation in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Animation in Blazor Circular Gauge Component
 
-All of the elements in the Circular Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property. The animation for the Circular Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
+All elements of the Circular Gauge—axis line, ticks, labels, ranges, pointers, and annotations—can be animated sequentially using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property. Animation is enabled when `AnimationDuration` is set to a value in milliseconds, providing smooth rendering. A value of **0** (the default) disables animation. When enabled, the component animates in the following order:
 
-1. The axis line will be animated in the rendering direction (clockwise or anticlockwise).
-2. Each tick line and label will then be animated.
-3. If available, ranges will be animated.
-4. If available, pointers will be animated in the same way as [pointer animation](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation).
-5. If available, annotations will be animated.
+1. The axis line animates in the rendering direction (clockwise or counterclockwise).
+2. Each tick line and label animates.
+3. If present, ranges animate.
+4. If present, pointers animate in the same manner as [pointer animation](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation).
+5. If present, annotations animate.
 
 The animation of the Circular Gauge is demonstrated in the following example.
 
@@ -67,5 +67,4 @@ The animation of the Circular Gauge is demonstrated in the following example.
 
 ![Blazor Circular Gauge Animation](./images/blazor-circulargauge-multiple-elements-animation.gif)
 
-N> Only the pointer of the Circular Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) to enable only pointer animation.
-
+N> Only the pointer of the Circular Gauge can be animated individually; the axis line, ticks, labels, ranges, and annotations cannot. See the [pointer animation](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) article to enable only pointer animation.

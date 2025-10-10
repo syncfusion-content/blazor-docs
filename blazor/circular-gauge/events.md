@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Circular Gauge component and much more.
+description: Check out and learn how to configure and handle Events in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -11,9 +11,10 @@ documentation: ug
 
 ## Using events in Circular Gauge component
 
-In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeEvents.html#Syncfusion_Blazor_CircularGauge_CircularGaugeEvents_OnDragMove) binds to the circular gauge component, so the event handler `UpdatePointerValue` will be called when you drag the pointer and update the pointer value in the div element.
+In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeEvents.html#Syncfusion_Blazor_CircularGauge_CircularGaugeEvents_OnDragMove) is bound to the circular gauge component. The handler `UpdatePointerValue` executes while the pointer is dragged and updates the displayed pointer value in the div element.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <div style="width:250px">
@@ -32,11 +33,13 @@ In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/
 
 @code {
     private double pointerValue = 10;
+
     void UpdatePointerValue(IPointerDragEventArgs args)
     {
         pointerValue = args.CurrentValue;
     }
 }
+
 ```
 
 ![Event Binding in Blazor Circular Gauge](./images/blazor-circulargauge-binding-events.png)
@@ -45,139 +48,139 @@ In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/
 
 ### AnimationCompleted
 
-Description: Triggers after animation is completed.
+Description: Triggers after the animation completes.
 
 ### AnnotationRendering
 
-Description: Triggers before rendering on each annotation. You can customize annotations using these arguments.
+Description: Triggers before each annotation is rendered. The following arguments customize annotations.
 
 |   Argument name      |   Description                               |
-|----------------------| --------------------------------------------|
+|----------------------|---------------------------------------------|
 |   Content            |   Specifies the annotation content          |
-|   TextStyle          |   To customize the text style               |
-|   Name               |   Specifies the name of the event            |
-|   Cancel             |   Specifies the event cancel status          |
+|   TextStyle          |   Specifies the text style                  |
+|   Name               |   Specifies the name of the event           |
+|   Cancel             |   Specifies the event cancel status         |
 
 ### Loaded
 
-Description: Triggers after the gauge component has been loaded.
+Description: Triggers after the gauge component loads.
 
 ### OnDragEnd
 
-Description: Triggers when you finished dragging the pointer needle.
+Description: Triggers after pointer dragging ends.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   AxisIndex          |   Specifies the current axis index value |
-|   CurrentValue       |   Specifies the current value of label    |
-|   PointerIndex       |   Index of the current pointer instance|
-|   Name               |   Specifies the name of the event      |
+|   Argument name      |   Description                              |
+|----------------------|--------------------------------------------|
+|   AxisIndex          |   Specifies the current axis index         |
+|   CurrentValue       |   Specifies the current pointer value      |
+|   PointerIndex       |   Specifies the current pointer index      |
+|   Name               |   Specifies the name of the event          |
 
 ### OnDragMove
 
-Description: Triggers when you drag the pointer needle.
+Description: Triggers while the pointer is being dragged.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   AxisIndex          |   Specifies the axis index value |
-|   CurrentValue       |   Specifies the current value of label    |
-|   PointerIndex       |   Index of the current pointer instance|
-|   PreviousValue      |   PreviousValue instance        |
-|   Name               |   Specifies the name of the event                |
+|   Argument name      |   Description                              |
+|----------------------|--------------------------------------------|
+|   AxisIndex          |   Specifies the axis index                 |
+|   CurrentValue       |   Specifies the current pointer value      |
+|   PointerIndex       |   Specifies the current pointer index      |
+|   PreviousValue      |   Specifies the previous pointer value     |
+|   Name               |   Specifies the name of the event          |
 
 ### OnDragStart
 
-Description: Triggers when you start to drag the pointer needle.
+Description: Triggers when pointer dragging starts.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   AxisIndex          |   Specifies the axis index value         |
-|   CurrentValue       |   Specifies the current value of label    |
-|   PointerIndex       |   Index of the current pointer instance|
-|   Name               |   Specifies the name of the event       |
+|   Argument name      |   Description                              |
+|----------------------|--------------------------------------------|
+|   AxisIndex          |   Specifies the axis index                 |
+|   CurrentValue       |   Specifies the current pointer value      |
+|   PointerIndex       |   Specifies the current pointer index      |
+|   Name               |   Specifies the name of the event          |
 
 ### OnGaugeMouseDown
 
-Description: Triggers when you click the mouse on the gauge.
+Description: Triggers when the mouse button is pressed on the gauge.
 
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Target             |   Defines current mouse event target id    |
-|   X                  |   Define the current mouse x location            |
-|   Y                  |   Define the current mouse y location            |
-|   Name               |   Specifies the name of the event                |
+|   Argument name      |   Description                                     |
+|----------------------|---------------------------------------------------|
+|   Target             |   Specifies the current mouse event target id     |
+|   X                  |   Specifies the current mouse x location          |
+|   Y                  |   Specifies the current mouse y location          |
+|   Name               |   Specifies the name of the event                 |
 
 ### OnGaugeMouseLeave
 
-Description: Triggers when the mouse pointer is moved out of the gauge.
+Description: Triggers when the mouse pointer leaves the gauge.
 
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Target             |   Defines current mouse event target id    |
-|   X                  |   Define the current mouse x location            |
-|   Y                  |   Define the current mouse y location            |
-|   Name               |   Specifies the name of the event                |
+|   Argument name      |   Description                                     |
+|----------------------| --------------------------------------------------|
+|   Target             |   Specifies the current mouse event target id     |
+|   X                  |   Specifies the current mouse x location          |
+|   Y                  |   Specifies the current mouse y location          |
+|   Name               |   Specifies the name of the event                 |
 
 ### OnGaugeMouseMove
 
-Description: Triggers when the cursor moves over the gauge.
+Description: Triggers when the mouse moves over the gauge.
 
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Target             |   Defines current mouse event target id    |
-|   X                  |   Define the current mouse x location           |
-|   Y                  |   Define the current mouse Y location            |
-|   Name               |   Specifies the name of the event                |
-|   Cancel             |   Specifies the event cancel status          |
+|   Argument name      |   Description                                     |
+|----------------------| --------------------------------------------------|
+|   Target             |   Specifies the current mouse event target id     |
+|   X                  |   Specifies the current mouse x location          |
+|   Y                  |   Specifies the current mouse y location          |
+|   Name               |   Specifies the name of the event                 |
+|   Cancel             |   Specifies the event cancel status               |
 
 ### OnGaugeMouseUp
 
-Description: Triggers when you release a mouse on the gauge.
+Description: Triggers when the mouse button is released on the gauge.
 
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Target             |   Defines current mouse event target id    |
-|   X                  |   Define the current mouse x location            |
-|   Y                  |   Define the current mouse Y location            |
-|   Name               |   Specifies the name of the event                |
+|   Argument name      |   Description                                     |
+|----------------------| --------------------------------------------------|
+|   Target             |   Specifies the current mouse event target id     |
+|   X                  |   Specifies the current mouse x location          |
+|   Y                  |   Specifies the current mouse y location          |
+|   Name               |   Specifies the name of the event                 |
 
 ### OnLoad
 
-Description: Triggers before rendering the gauge. Gauge will trigger this event first.
+Description: Triggers before the gauge is rendered. This is the first event triggered by the gauge.
 
 ### OnRadiusCalculate
 
-Description: Triggers before the radius is calculated for the gauge. You can customize the gauge radius using these arguments.
+Description: Triggers before the radius is calculated for the gauge. The following arguments can customize the radius.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   CurrentRadius      |   Specifies the current radius value      |
-|   MidPoint           |   Specifies the mid point of the gauge location |
-|   Name               |   Specifies the name of the event                |
-|   Cancel             |   Specifies the event cancel status              |
+|   Argument name      |   Description                                      |
+|----------------------| ---------------------------------------------------|
+|   CurrentRadius      |   Specifies the current radius value               |
+|   MidPoint           |   Specifies the midpoint of the gauge location     |
+|   Name               |   Specifies the name of the event                  |
+|   Cancel             |   Specifies the event cancel status                |
 
 ### Resizing
 
-Description: Triggers when you resize the gauges.
+Description: Triggers when the gauge is resized.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   CurrentSize        |   Define the current size of the gauge |
-|   PreviousSize       |   Define the previous size of the gauge    |
-|   Name               |   Specifies the name of the event          |
+|   Argument name      |   Description                              |
+|----------------------| -------------------------------------------|
+|   CurrentSize        |   Specifies the current size of the gauge   |
+|   PreviousSize       |   Specifies the previous size of the gauge  |
+|   Name               |   Specifies the name of the event           |
 
 ### TooltipRendering
 
-Description: Triggers before rendering the gauge tooltip.
+Description: Triggers before the gauge tooltip is rendered.
 
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   Content            |   Specifies the tooltip text             |
-|   Event              |   Specifies the mouse arguments             |
-|   Location           |   Specifies the tooltip location          |
-|   appendInBodyTag    |   Specifies the tooltip to append in body tag    |
-|   Tooltip            |   Tooltip instance, to customize the tooltip settings  |
-|   Name               |   Specifies the name of the event                       |
-|   Cancel             |   Specifies the event cancel status                     |
-|   Axis               |   Specifies the axis                     |
-|   Range              |   Specifies the range                     |
+|   Argument name      |   Description                                             |
+|----------------------| ----------------------------------------------------------|
+|   Content            |   Specifies the tooltip text                              |
+|   Event              |   Specifies the mouse event arguments                     |
+|   Location           |   Specifies the tooltip location                          |
+|   AppendInBodyTag    |   Specifies whether the tooltip is appended to the body   |
+|   Tooltip            |   Tooltip instance used to customize tooltip settings     |
+|   Name               |   Specifies the name of the event                         |
+|   Cancel             |   Specifies the event cancel status                       |
+|   Axis               |   Specifies the axis                                      |
+|   Range              |   Specifies the range                                     |

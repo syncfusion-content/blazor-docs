@@ -9,13 +9,13 @@ documentation: ug
 
 # Render Circular Gauge component inside other components
 
-The Circular Gauge can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Circular Gauge component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Circular Gauge component.
+The Circular Gauge can be rendered within components such as the Dashboard Layout, Tab, Dialog, and Accordion. In general, the Circular Gauge renders before its container, so a boolean flag is used to defer rendering until the container is ready.
 
 ## Circular Gauge component inside Dashboard Layout
 
-When the Circular Gauge component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) should be set to **true** to initiate the rendering of the Circular Gauge component. This ensures that the Dashboard Layout component is fully rendered before the Circular Gauge component begins rendering.
+When the Circular Gauge renders within a Dashboard Layout panel, it starts concurrently with the layout, which can result in incorrect sizing. To ensure correct rendering, create a boolean flag (for example, IsInitialRender) to control when the Circular Gauge is rendered. Set the flag to **false** by default so the Circular Gauge does not render initially. When the Dashboard Layout fires the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event, call `Task.Yield()` and set the flag to **true**. This ensures the Dashboard Layout is fully rendered before initializing the Circular Gauge.
 
-When you drag and resize the Dashboard Layout panel or resize the window, the Circular Gauge component is not notified and thus may not render properly within the panel. To address this, call the Circular Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method within the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Additionally, apply a 500-millisecond delay using a timer to refresh the Circular Gauge components after resizing is complete.
+When the Dashboard Layout panel is dragged or resized, or when the window is resized, the Circular Gauge is not notified and may render incorrectly. To address this, call the Circular Gauge [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method within the Dashboard Layout [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Additionally, use a 500-millisecond timer to refresh the Circular Gauge after resizing completes.
 
 ```cshtml
 
@@ -132,6 +132,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
         margin-left: -55px
     }
 </style>
+
 @code {
     SfCircularGauge GaugeOne;
     SfCircularGauge GaugeTwo;
@@ -177,7 +178,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
 
 ## Circular Gauge component inside Tab
 
-When the Circular Gauge component renders within the Tab component, its rendering begins concurrently with the Tab component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Tab component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
+When the Circular Gauge renders within the Tab component, it starts concurrently with the Tab, which can result in incorrect sizing. To ensure correct rendering, create a boolean flag (for example, IsInitialRender) to control when the Circular Gauge is rendered. Set the flag to **false** by default so the Circular Gauge does not render initially. When the Tab fires the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Created) event, set the flag to **true** to initiate rendering.
 
 ```cshtml
 
@@ -301,7 +302,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
     }
 </style>
 
-@code{
+@code {
     SfCircularGauge Gauge;
     public bool IsInitialRender { get; set; }
 
@@ -318,9 +319,9 @@ When the Circular Gauge component renders within the Tab component, its renderin
 
 ## Circular Gauge component inside Dialog
 
-When the Circular Gauge component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Dialog component is being opened, its [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event is fired, and the boolean variable (i.e. **IsInitialRender**) must be set to **true** to initiate the render of the Circular Gauge component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is triggered, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to false.
+When the Circular Gauge renders within the Dialog component, it starts concurrently with the Dialog, which can result in incorrect sizing. To ensure correct rendering, create a boolean flag (for example, IsInitialRender) to control when the Circular Gauge is rendered. Set the flag to **false** by default so the Circular Gauge does not render initially. When the Dialog is opened, the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event fires; set the flag to **true** to start rendering. When the Dialog is closed, the [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event fires; set the flag to false.
 
-When you drag and resize the Dialog component, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the Dialog. To avoid this scenario, the Circular Gauge component's `RefreshAsync` method must be called in the Dialog's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the size of the Dialog is determined after a delay, a 100 millisecond delay must be provided before refreshing the Circular Gauge component.
+When the Dialog is dragged or resized, the Circular Gauge is not notified, which can lead to incorrect sizing. Call `RefreshAsync` in the Dialog [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the Dialog size stabilizes after a brief delay, apply a 100-millisecond delay before refreshing the Circular Gauge.
 
 ```cshtml
 
@@ -367,11 +368,13 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
         </DialogTemplates>
     </SfDialog>
 </div>
+
 <style>
     #target {
         min-height: 400px;
     }
 </style>
+
 @code {
     SfCircularGauge Gauge;
     public bool IsInitialRender { get; set; }
@@ -390,11 +393,13 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
         this.ShowButton = false;
         IsInitialRender = true;
     }
+
     private void DialogClose(Object args)
     {
         this.ShowButton = true;
         IsInitialRender = false;
     }
+
     private void OnClicked()
     {
         this.Visibility = true;
@@ -410,9 +415,9 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 ## Circular Gauge component inside Accordion
 
-When the Circular Gauge component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Accordion component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
+When the Circular Gauge renders within the Accordion component, it starts concurrently with the Accordion, which can result in incorrect sizing. To ensure correct rendering, create a boolean flag (for example, IsInitialRender) to control when the Circular Gauge is rendered. Set the flag to false by default so the Circular Gauge does not render initially. When the Accordion fires the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event, set the flag to true to initiate rendering.
 
-When you expand the Accordion component, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the Accordion. To avoid this scenario, the Circular Gauge component's `RefreshAsync` method must be called in the Accordion's [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event.
+When the Accordion item expands, the Circular Gauge is not notified and may not render correctly. To handle this, call `RefreshAsync` in the Accordion [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event.
 
 ```cshtml
 
@@ -521,6 +526,7 @@ When you expand the Accordion component, the Circular Gauge component is not not
         </AccordionItems>
     </SfAccordion>
 </div>
+
 <style>
     @@-moz-document url-prefix() {
         .e-accordion .e-content table {
@@ -553,7 +559,8 @@ When you expand the Accordion component, the Circular Gauge component is not not
         margin-left: -55px
     }
 </style>
-@code{
+
+@code {
     SfCircularGauge GaugeOne;
     SfCircularGauge GaugeTwo;
     SfCircularGauge GaugeThree;

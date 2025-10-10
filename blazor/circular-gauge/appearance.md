@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Appearance in Syncfusion Blazor Circular Gauge component and more.
+description: Check out and learn here all about Appearance customization in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Circular gauge title
 
-You can add a title to the Circular Gauge using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title)  property. The title can be customized using the [CircularGaugeTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
+Add a title to the Circular Gauge using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property. Customize the title appearance using the [CircularGaugeTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -21,7 +21,7 @@ You can add a title to the Circular Gauge using the [Title](https://help.syncfus
     <CircularGaugeAxes>
        <CircularGaugeAxis>
            <CircularGaugePointers>
-              <CircularGaugePointer></CircularGaugePointer>
+              <CircularGaugePointer />
            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -33,47 +33,60 @@ You can add a title to the Circular Gauge using the [Title](https://help.syncfus
 
 ## Circular gauge position
 
-The Circular Gauge can be positioned anywhere in the container using the [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) properties which accept values either in percentage or in pixels. The default value of the [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) properties are 50%, so the Circular Gauge will get rendered to the center of the container.
+Position the Circular Gauge anywhere within the container using the [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) properties, which accept values in percentage or pixels. The default values of [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) are 50%, so the gauge renders at the center of the container.
 
-### In pixel
+### In pixels
 
-You can set the mid point of the Circular Gauge in pixel as shown below.
+Set the midpoint of the Circular Gauge in pixels as shown below.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge CenterX="20px" CenterY="20px">
     <CircularGaugeAxes>
-        <CircularGaugeAxis StartAngle="90" EndAngle="180"></CircularGaugeAxis>
+        <CircularGaugeAxis StartAngle="90" EndAngle="180">
+            <CircularGaugePointers>
+              <CircularGaugePointer />
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKWVrmgfzCKvPj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIsZNaUhYrJUzE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Position based on Pixel Value](./images/blazor-circulargauge-custom-position.png)
 
 ### In percentage
 
-By setting the value in percentage, Circular Gauge gets its mid point with respect to its plot area. For example, when setting the value of [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) to '1%' and the value of [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) to ‘50%’, the gauge will be positioned at the top-left corner of the plot area.
+When values are set in percentage, the Circular Gauge midpoint is calculated relative to the plot area. For example, setting [CenterX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) to "1%" and [CenterY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) to "50%" positions the gauge near the top-left of the plot area.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge CenterX="1%" CenterY="50%">
     <CircularGaugeAxes>
-        <CircularGaugeAxis StartAngle="0" EndAngle="180"></CircularGaugeAxis>
+        <CircularGaugeAxis StartAngle="0" EndAngle="180">
+            <CircularGaugePointers>
+              <CircularGaugePointer />
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKiVBGgzfHHcXo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXheWDNOgUCNUMEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![changing Blazor Circular Gauge Position based on Percent Value](./images/blazor-circulargauge-position-based-on-percentage.png)
 
 ## Background customization
 
-Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Background) and [CircularGaugeBorder](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorder.html) properties, you can change the background color and border of the Circular Gauge.
+Use the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Background) and [CircularGaugeBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorder.html) properties to change the background color and border of the Circular Gauge.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Background="skyblue">
@@ -100,6 +113,7 @@ Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBqiLLwApIVWPGg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -107,9 +121,10 @@ Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## Radius calculation based on angles
 
-You can render semi or quarter Circular Gauge by modifying the start and end angles. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles to avoid excess white space.
+Render a semi or quarter Circular Gauge by modifying the start and end angles. When radius is calculated based on angles, the gauge radius is derived from the start and end angles to minimize unused space.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -117,10 +132,14 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
         <CircularGaugeAxis Radius="60%" StartAngle="270" EndAngle="90">
             <CircularGaugeAxisLineStyle Width="5">
             </CircularGaugeAxisLineStyle>
+            <CircularGaugePointers>
+              <CircularGaugePointer />
+            </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqiVBmKJoTIDfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIWtZuAAhgUsTO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)
