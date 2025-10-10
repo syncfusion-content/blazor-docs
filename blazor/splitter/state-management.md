@@ -20,7 +20,7 @@ Min |
 Max |
 Size |
 
-## Enabling persistence in Splitter
+## Enabling Persistence in Splitter
 
 State persistence allows the Splitter to retain the current splitter panes state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which is set to false by default. When it is set to true, some properties of the `SplitterPane` will be retained even after refreshing the page.
 

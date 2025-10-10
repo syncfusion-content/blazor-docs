@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Keyboard Shortcuts | Syncfusion
-description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor Splitter component and more.
+title: Accessibility in Blazor Splitter Component | Syncfusion
+description: Learn about the accessibility compliance of the Syncfusion Blazor Splitter component, covering WCAG 2.2, Section 508, and keyboard navigation.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Splitter Component
 
-The [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and commonly used [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) for evaluating accessibility.
 
 The accessibility compliance for the Blazor Splitter component is outlined below.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor Splitter component is outlined below
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 
-## Keyboard interaction
+## Keyboard Interaction
 
 The following key shortcuts can be used to access the Blazor Splitter without interruptions:
 
@@ -51,12 +51,12 @@ The following key shortcuts can be used to access the Blazor Splitter without in
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Down` side. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the splitter bar when it is active. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
 The Blazor Splitter component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/splitter) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
