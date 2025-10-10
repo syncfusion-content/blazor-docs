@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Spinner Component
 
-This section explains the list of events of the Spinner component which will be triggered for appropriate Spinner actions.
+This section lists the events triggered by the Spinner component and when they occur during Spinner actions.
 
 ## Created
 
-`Created` event triggers after the Spinner is created.
+The `Created` event is triggered after the Spinner is created.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ This section explains the list of events of the Spinner component which will be 
 
 ## OnBeforeOpen
 
-`OnBeforeOpen` event triggers before the Spinner is opened.
+The `OnBeforeOpen` event is triggered before the Spinner is opened.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ This section explains the list of events of the Spinner component which will be 
 
 ## OnBeforeClose
 
-`OnBeforeClose` event triggers before the Spinner is closed.
+The `OnBeforeClose` event is triggered before the Spinner is closed.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section explains the list of events of the Spinner component which will be 
 
 ## Destroyed
 
-`Destroyed` event triggers after the Spinner is destroyed.
+The `Destroyed` event is triggered after the Spinner is destroyed.
 
 ```cshtml
 

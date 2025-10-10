@@ -9,11 +9,11 @@ documentation: ug
 
 # Styles in Blazor Skeleton Component
 
-You can customize skeleton component in the below ways.
+The Skeleton component can be customized as described below.
 
 ## CssClass
 
-You can customize the style of a Skeleton component by using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height.
+Customize the style of a Skeleton component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass) property. The appearance can be tailored by changing the wave color, background color, width, and height.
 
 {% tabs %}
 {% highlight razor %}
@@ -40,7 +40,7 @@ You can customize the style of a Skeleton component by using [CssClass](https://
 
 ## Visible
 
-You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Visible) property which defines the visible state of Skeleton.
+Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Visible) property to control whether the Skeleton is displayed.
 
 {% tabs %}
 {% highlight razor %}
