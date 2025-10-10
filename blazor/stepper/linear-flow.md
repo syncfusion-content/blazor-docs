@@ -7,11 +7,13 @@ control: Stepper
 documentation: ug
 ---
 
-# Linear flow in Blazor Stepper Component
+# Linear Flow in Blazor Stepper Component
 
-The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
+The Stepper component enables users to progress sequentially through each step by setting the [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property to `true`. This ensures navigation occurs strictly from one step to the next.
 
-The example demonstrates the functionality of both linear and non-linear flow in the Stepper.
+By default, the `Linear` property is `false`, which allows navigation between any steps, enabling non-sequential progression.
+
+The following example demonstrates the functionality of linear flow in the Stepper.
 
 ```cshtml
 
@@ -66,5 +68,7 @@ The example demonstrates the functionality of both linear and non-linear flow in
 </style>
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVoiZtOqPJNVbuC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.png)
