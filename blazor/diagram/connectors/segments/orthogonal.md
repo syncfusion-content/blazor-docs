@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Create Orthogonal Segments
 
-Orthogonal segments create segments that are perpendicular to each other. To create an orthogonal connector, set the connector Type to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
+[Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) segments create segments that are perpendicular to each other. To create an orthogonal connector, set the connector Type to **Orthogonal** to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
