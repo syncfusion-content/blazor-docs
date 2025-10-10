@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor TreeMap component and much more details.
+description: Check out and learn how to configure and customize Tooltip in the Syncfusion Blazor TreeMap component.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -9,13 +9,14 @@ documentation: ug
 
 # Tooltip in Blazor TreeMap Component
 
-Tooltip is used to display details about the items in the TreeMap. When space constraints prevents from displaying the information using Data Labels, the tooltip comes in handy.
+Tooltip displays item details in the TreeMap. When data labels cannot show all information due to space constraints, the tooltip provides the required context.
 
 ## Default tooltip
 
-The tooltip is not visible by default, to make it visible, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to **true**.
+The tooltip is hidden by default. To display it, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to **true**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
@@ -29,16 +30,18 @@ The tooltip is not visible by default, to make it visible, set the [Visible](htt
         public string Name { get; set; }
         public int Count { get; set; }
     };
+
     public List<Fruit> Fruits = new List<Fruit> {
-        new Fruit { Name="Apple", Count=5000 },
-        new Fruit { Name="Mango", Count=3000 },
-        new Fruit { Name="Orange", Count=2300 },
-        new Fruit { Name="Banana", Count=500 },
-        new Fruit { Name="Grape", Count=4300 },
-        new Fruit { Name="Papaya", Count=1200 },
-        new Fruit { Name="Melon", Count=4500 }
+        new Fruit { Name = "Apple", Count = 5000 },
+        new Fruit { Name = "Mango", Count = 3000 },
+        new Fruit { Name = "Orange", Count = 2300 },
+        new Fruit { Name = "Banana", Count = 500 },
+        new Fruit { Name = "Grape", Count = 4300 },
+        new Fruit { Name = "Papaya", Count = 1200 },
+        new Fruit { Name = "Melon", Count = 4500 }
     };
 }
+
 ```
 
 ![Blazor TreeMap with Tooltip](images/Tooltip/blazor-treemap-tooltip.png)
@@ -47,12 +50,13 @@ The tooltip is not visible by default, to make it visible, set the [Visible](htt
 
 Customize the TreeMap tooltip using the following properties.
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill) - Specifies the color of the tooltip.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Opacity) - Specifies the opacity of the tooltip.
-* [TreeMapTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipBorder.html) - Specifies the tooltip border color and width.
-* [TreeMapTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipTextStyle.html) - Specifies the tooltip font family, style, weight, color and size.
+- [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill) – Specifies the tooltip background color.
+- [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Opacity) – Specifies the tooltip opacity.
+- [TreeMapTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipBorder.html) – Specifies the tooltip border color and width.
+- [TreeMapTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipTextStyle.html) – Specifies the tooltip font family, style, weight, color, and size.
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
@@ -62,34 +66,38 @@ Customize the TreeMap tooltip using the following properties.
         </TreeMapTooltipTextStyle>
     </TreeMapTooltipSettings>
 </SfTreeMap>
+
 ```
 
-N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> See the [Default tooltip](#default-tooltip) sample for the **Fruits** data model.
 
 ![Blazor TreeMap with Custom Tooltip](images/Tooltip/blazor-treemap-custom-tooltip.png)
 
 ## Formatting tooltip content
 
-The tooltip content is displayed by default based on the [WeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath). In addition, to show more information in the tooltip, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Format) property and define properties from the data source as following.
+By default, the tooltip displays content based on the [WeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath). To include additional information, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Format) property and reference fields from the data source as shown below.
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
     <TreeMapLeafItemSettings LabelPath="Name"></TreeMapLeafItemSettings>
     <TreeMapTooltipSettings Visible=true Format="Name: ${Name} - TotalCount: ${Count}"></TreeMapTooltipSettings>
 </SfTreeMap>
+
 ```
 
-N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> See the [Default tooltip](#default-tooltip) sample for the **Fruits** data model.
 
 ![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.png)
 
 ## Tooltip template
 
-Tooltip can be rendered as a custom component using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
+Render the tooltip using a custom template with the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html). This property accepts UI elements that render as the tooltip content.
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
@@ -108,8 +116,9 @@ Tooltip can be rendered as a custom component using the [TooltipTemplate](https:
         </TooltipTemplate>
     </TreeMapTooltipSettings>
 </SfTreeMap>
+
 ```
 
-N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> See the [Default tooltip](#default-tooltip) sample for the **Fruits** data model.
 
 ![Blazor TreeMap with Tooltip Template](images/Tooltip/blazor-treemap-tooltip-template.png)
