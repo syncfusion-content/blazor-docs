@@ -11,7 +11,9 @@ documentation: ug
 
 ## Draw
 
-The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_) method with different font families like Arial, Serif, with different font sizes. This method accepts signature text, font family, font size as its parameters. The default font family is "Arial" and the default font size is "30".
+Use the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_) method to render text as a signature in the [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component. This method accepts the following parameters: signature text, font family, and font size. By default, the font family is Arial and the font size is 30.
+
+The following example uses a TextBox for the signature text and two DropDownList controls to select the font family and font size. Clicking Draw calls DrawAsync to render the text on the signature canvas (sized 400x300 via inline styles).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -99,4 +101,4 @@ The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-co
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-draw.png)
+![Blazor Signature rendered from text using DrawAsync](./images/blazor-signature-draw.png)

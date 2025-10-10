@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Chip Component
 
-The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Chips component is outlined below.
 
@@ -18,7 +18,7 @@ The accessibility compliance for the Blazor Chips component is outlined below.
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Right-to-left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -39,30 +39,30 @@ The accessibility compliance for the Blazor Chips component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Chips component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Chips component:
+The Blazor Chips component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes and roles are used in the Chips component:
 
 | Attributes | Purpose |
 | -- | -- |
-| `role=listbox` | Indicates the ChipList component wrapper element as `listbox`. |
-| `role=option` | Used to convey a significant and contextual message to the user(ChipList). |
-| `role=button` | Used to convey a significant and contextual message to the user(Single Chip). |
-| `aria-label` | Provides an accessible name for the Chip. |
-| `aria-selected` | Indicates the element is selected. |
-| `aria-disabled` | Indicates element is perceivable but disabled. |
-| `aria-multiselectable` | Indicates multiple items to be selected. |
+| `role=listbox` | Identifies the ChipList wrapper as a selectable list (ChipList). |
+| `role=option` | Identifies each chip item within a listbox as an option (ChipList). |
+| `role=button` | Identifies a single, clickable chip when not part of a selectable list (single chip). |
+| `aria-label` | Provides an accessible name for a chip. |
+| `aria-selected` | Indicates whether a chip is selected. |
+| `aria-disabled` | Indicates a chip is present but disabled. |
+| `aria-multiselectable` | Indicates that multiple items can be selected (applied on the listbox container). |
 
 ## Keyboard interaction
 
-The following shortcut keys are used to access the Blazor Chip component without any interruption.
+The following shortcut keys enable keyboard operation of the Blazor Chip component:
 
 | Windows | Mac | Actions |
 |------------|-------|------------|
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the targeted chip in Chip/ChipItems. |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the targeted chip in Chip/ChipItems. |
 
 ## Ensuring accessibility
 
-The Blazor Chips component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor Chips component’s accessibility is validated using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
 The accessibility compliance of the Chip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chips) in a new window to evaluate the accessibility of the Chip component with accessibility tools.
 

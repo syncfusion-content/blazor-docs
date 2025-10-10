@@ -9,11 +9,11 @@ documentation: ug
 
 # CSS Structure in Blazor Chip Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+Use the following CSS structure to modify the Chip component’s appearance according to application requirements. Styles can be applied globally or scoped to a specific instance by adding a custom class through the component’s CssClass property.
 
 ## Customizing the chip text
 
-Use the following CSS to customize the chip text properties.
+Use the following CSS to customize chip text properties.
 
 ```css
 .e-chip .e-chip-text {
@@ -25,7 +25,7 @@ Use the following CSS to customize the chip text properties.
 
 ## Customizing the chip icon
 
-Use the following CSS to customize the chip icon properties.
+Use the following CSS to customize chip icon properties.
 
 ```css
 .e-chip .e-chip-icon {
@@ -58,7 +58,7 @@ Use the following CSS to customize the chip outline.
 
 ## Customizing the chip on selection
 
-Use the following CSS to customize the chip on selection.
+Use the following CSS to customize chip appearance when selected.
 
 ```css
 /* To customize single chip on selection */
@@ -76,7 +76,7 @@ Use the following CSS to customize the chip on selection.
 
 ## Customizing the chip avatar text
 
-Use the following CSS to customize the chip avatar text properties.
+Use the following CSS to customize chip avatar text properties.
 
 ```css
 .e-chip-list .e-chip .e-chip-avatar {
