@@ -553,3 +553,4 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 * [Data label](./data-labels)
 * [Legend](./legend)
 * [Marker](./data-markers)
+* [Reset Zoom in Secondary Axes](https://support.syncfusion.com/kb/article/21322/how-to-reset-zoom-in-blazor-chart-with-secondary-axes)
