@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Accumulation Chart component and more.
+description: Check out and learn how to configure and customize Tooltip in Syncfusion Blazor Accumulation Chart component.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltip in Blazor Accumulation Chart Component
 
-The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be set to **true** to enable the tooltip.
+Enable tooltips by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -27,7 +27,7 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -41,7 +41,7 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -52,9 +52,9 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ## Header
 
-The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be used to specify the tooltip's header.
+Specify the tooltip's header using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html).
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -70,7 +70,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
     <AccumulationChartTooltipSettings Enable="true" Header="Mobile Browser"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -85,7 +85,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -94,11 +94,11 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 ![Blazor Accumulation Chart displays ToolTip for Header](images/tool-tip/blazor-accumulation-chart-header-tooltip.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVqChsApHestEJW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Tooltip format
+## Tooltip Format
 
-By default, tooltip shows information about x and y value in points. In addition, further customization can be done in the tooltip. For example, the format `${point.x} : <b>${point.y}%</b>` shows point x value and customized point y value.
+By default, the tooltip displays information about the x and y values of points. Customize the tooltip format as needed. For example, the format `${point.x} : <b>${point.y}%</b>` shows the x value and a customized y value.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -114,12 +114,11 @@ By default, tooltip shows information about x and y value in points. In addition
     <AccumulationChartTooltipSettings Enable="true" Format="${point.x} -> <b>${point.y} users</b>"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
         public double Users { get; set; }
-
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
@@ -129,7 +128,7 @@ By default, tooltip shows information about x and y value in points. In addition
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -138,11 +137,11 @@ By default, tooltip shows information about x and y value in points. In addition
 ![Customizing ToolTip Format in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-format.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLgsLCKzRIODYxT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Tooltip customization 
+## Tooltip Customization
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Fill) and [AccumulationChartTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipBorder.html) are used to customize the background color and the border of the tooltip respectively. The [AccumulationChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipTextStyle.html) in the tooltip is used to customize the font size of the tooltip text. The [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_HighlightColor) property can be used to change the color of the data point when hovering.
+Customize the tooltip background color using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Fill) property and the border using [AccumulationChartTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipBorder.html). Adjust the font size with [AccumulationChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipTextStyle.html). Change the color of the data point on hover using the [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_HighlightColor) property.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -160,7 +159,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
     </AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -174,7 +173,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+        new Statistics { Browser = "Android", Users = 12 }
     };
 }
 
@@ -185,9 +184,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ## Tooltip Text Mapping
 
-By default, tooltip shows information of x and y value in points. In addition, by using the [TooltipMappingName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName), more information from the datasource can be displayed in the tooltip. To display the specified tooltip content, **$point.tooltip** can be used as a placeholder.
+Display additional information from the data source in the tooltip using the [TooltipMappingName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName) property. Use **$point.tooltip** as a placeholder to show the specified tooltip content.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -203,7 +202,7 @@ By default, tooltip shows information of x and y value in points. In addition, b
     <AccumulationChartTooltipSettings Enable="true" Format="${point.tooltip}" ></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string XValue { get; set; }
@@ -213,18 +212,18 @@ By default, tooltip shows information of x and y value in points. In addition, b
 
     public List<ChartData> StatisticsDetails = new List<ChartData>
     {
-       new ChartData { XValue = "Jan", YValue = 3, Text= "Jan: 3M" },
-       new ChartData { XValue = "Feb", YValue = 3.5, Text= "Feb: 3.5M" },
-       new ChartData { XValue = "Mar", YValue = 7, Text= "Mar: 7M" },
-       new ChartData { XValue = "Apr", YValue = 3.5, Text= "Apr: 13.5M" },
-       new ChartData { XValue = "May", YValue = 19, Text= "May: 19M" },
-       new ChartData { XValue = "Jun", YValue = 23.5, Text= "Jun: 23.5M" },
-       new ChartData { XValue = "Jul", YValue = 26, Text= "Jul: 26M" },
-       new ChartData { XValue = "Aug", YValue = 25, Text= "Aug: 25M" },
-       new ChartData { XValue = "Sep", YValue = 21, Text= "Sep: 21M" },
-       new ChartData { XValue = "Oct", YValue = 15, Text= "Oct: 15M" },
-       new ChartData { XValue = "Nov", YValue = 9, Text= "Nov: 9M" },
-       new ChartData { XValue = "Dec", YValue = 13.5, Text= "Dec: 3.5M" }
+       new ChartData { XValue = "Jan", YValue = 3, Text = "Jan: 3M" },
+       new ChartData { XValue = "Feb", YValue = 3.5, Text = "Feb: 3.5M" },
+       new ChartData { XValue = "Mar", YValue = 7, Text = "Mar: 7M" },
+       new ChartData { XValue = "Apr", YValue = 3.5, Text = "Apr: 13.5M" },
+       new ChartData { XValue = "May", YValue = 19, Text = "May: 19M" },
+       new ChartData { XValue = "Jun", YValue = 23.5, Text = "Jun: 23.5M" },
+       new ChartData { XValue = "Jul", YValue = 26, Text = "Jul: 26M" },
+       new ChartData { XValue = "Aug", YValue = 25, Text = "Aug: 25M" },
+       new ChartData { XValue = "Sep", YValue = 21, Text = "Sep: 21M" },
+       new ChartData { XValue = "Oct", YValue = 15, Text = "Oct: 15M" },
+       new ChartData { XValue = "Nov", YValue = 9, Text = "Nov: 9M" },
+       new ChartData { XValue = "Dec", YValue = 13.5, Text = "Dec: 3.5M" }
    };
 }
 

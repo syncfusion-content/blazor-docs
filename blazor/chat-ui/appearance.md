@@ -9,9 +9,21 @@ documentation: ug
 
 # Appearance in Blazor Chat UI component
 
-## Setting placeholder
+This article explains how to customize the appearance of the Blazor Chat UI component using its built-in properties. The following customization options are available:
 
-You can use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Placeholder) property to set the placeholder text for the textarea. The default value is `Type your message…`.
+- Placeholder Text: Update the default input field text to provide clearer guidance or match the application's context.
+
+- Dimensions: Configure the component's height and width to align with the layout and design requirements.
+
+- Custom Styles: Apply custom CSS classes or inline styles to personalize the visual presentation and ensure consistency with the overall UI theme.
+
+These customization features enable developers to deliver a user-friendly chat experience within Blazor applications.
+
+## Setting the placeholder
+
+To define the placeholder text for the message input, use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Placeholder) property. The default value is `Type your message…`.
+
+The following example demonstrates how to set a custom placeholder.
 
 ```cshtml
 
@@ -37,9 +49,9 @@ You can use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ![Blazor Chat UI Placeholder](./images/placeholder.png)
 
-## Setting width
+## Setting the width
 
-You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Width) property to set the width of the Chat UI. The default value is `100%`.
+To specify the width of the Chat UI component, use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Width) property. The default value is `100%`.
 
 ```cshtml
 
@@ -65,9 +77,9 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ![Blazor Chat UI Width](./images/width.png)
 
-## Setting height
+## Setting the height
 
-You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Height) property to set the height of the Chat UI. The default value is `100%`.
+To specify the height of the Chat UI component, use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Height) property. The default value is `100%`.
 
 ```cshtml
 
@@ -93,9 +105,11 @@ You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor Chat UI Height](./images/width.png)
 
-## Setting CSS class
+## Applying a custom CSS class
 
-You can customize the appearance of the Chat UI component by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_CssClass) property.
+To apply custom styling to the Chat UI component, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_CssClass) property. This allows you to override default styles and create a unique appearance.
+
+The following example demonstrates how to apply a custom CSS class named `custom-container` to modify the component's background, border, and header.
 
 ```cshtml
 

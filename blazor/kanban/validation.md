@@ -9,21 +9,23 @@ documentation: ug
 
 # WIP Validation in Blazor Kanban Component
 
-Validate particular column using the `MinCount` or `MaxCount` properties. The corresponding columns gets different appearance when validation fails. In default layout, `ConstraintType` property accept only `Column` type. In swimlane layout, accept both `Column` and `Swimlane` constraint type.
+Work-In-Progress (WIP) validation in the Syncfusion Blazor Kanban component helps control the number of cards allowed in each column or swimlane cell. This is achieved using the `MinCount` and `MaxCount` properties. When validation fails, the affected column or cell is visually highlighted.
+
+In the default layout, the `ConstraintType` property accepts only the `Column` type. In the swimlane layout, it supports both `Column` and `Swimlane` constraint types.
 
 There are two types of constraints:
-1. Column
-2. Swimlane
+1. **Column**
+2. **Swimlane**
 
 N> By default, the column count validation is performed based on Kanban **Columns**.
 
 ## Minimum card limit
 
-The `MinCount` property is used to specify the minimum cards hold on particular column or swimlane cell. If the column or swimlane total card count falls short of the minimum count value, it shows the column or cell background color with validation fails.
+The `MinCount` property specifies the minimum number of cards required in a column or swimlane cell. If the total card count falls below this value, the column or cell background changes to indicate a validation failure.
 
 ## Maximum card limit
 
-The `MaxCount` property is used to specify the maximum cards hold on particular column or swimlane cell. If the column or swimlane cell total card count exceeds the maximum count value, it shows the column or cell background color with validation fails.
+The `MaxCount` property sets the maximum number of cards allowed in a column or swimlane cell. If the card count exceeds this value, the column or cell background changes to indicate a validation failure.
 
 ```csharp
 
