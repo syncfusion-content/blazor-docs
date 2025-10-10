@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about methods in Syncfusion Blazor Maps component and much more details.
+description: Check out and learn about all the available methods and how to utilize those methods in the Syncfusion Blazor Maps component.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Methods in Blazor Maps Component
 
-This section explains the methods used in the Maps component.
+This section describes the available methods in the Blazor Maps component.
 
 ## ShapeSelectionAsync
 
@@ -17,12 +17,13 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     layerIndex       |    Specifies the index number of layer in which the shape is to be selected. |
-|     propertyName     |    Specifies the property path for map shape data to select the shape.           |
-|     name             |    Specifies the shape data path for the data source of the layer.           |
-|     enable           |    Specifies whether to select or unselect the shape. |
+|     layerIndex       |    Specifies the zero based index of the layer in which the shape is selected. |
+|     propertyName     |    Specifies the property path in the map shape data used to locate the shape.           |
+|     name             |    Specifies the value to match for the given propertyName in the layer data source.           |
+|     enable           |    Specifies whether to select (true) or unselect (false) the shape. |
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ShapeSelectAsync">Select Shape</button>
@@ -38,18 +39,21 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 @code {
     SfMaps maps;
+
     public async Task ShapeSelectAsync()
     {
          await maps.ShapeSelectionAsync(0, "name", "Argentina");
     }
 }
+
 ```
 
 ## Refresh
 
-The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method can be used to change the state of the component and render it again.
+The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method refreshes the component and renders it again.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="Refresh">Refresh</button>
@@ -64,23 +68,26 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 @code {
     SfMaps maps;
+
     public void Refresh()
     {
        maps.Refresh();
     }
 }
+
 ```
 
 ## PanByDirectionAsync
 
-The [PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods)) method pans the Maps dynamically by specifying direction. The following are the arguments for this method.
+The [PanByDirectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods) method pans the Maps dynamically by specifying a direction. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     direction        |    Specifies to the direction of panning operation. |
-|     mouseLocation    |    Specifies the position of the panning within the Maps.  |
+|     direction        |    Specifies the panning direction. |
+|     mouseLocation    |    Specifies the position from which the panning originates within the Maps.  |
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="PanByDirectionAsync">Pan by Direction</button>
@@ -95,6 +102,7 @@ The [PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 @code {
     SfMaps maps;
+
     void PanByDirectionAsync()
     {
         Syncfusion.Blazor.Maps.Internal.Point position = new Syncfusion.Blazor.Maps.Internal.Point();
@@ -103,18 +111,20 @@ The [PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         maps.PanByDirectionAsync(Syncfusion.Blazor.Maps.PanDirection.Bottom, position);
     }
 }
+
 ```
 
 ## ZoomByPosition
 
-The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) method zooms the Maps by specifying the center position for the map. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
+The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) method zooms the Maps by specifying the center position. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     centerPosition   |    Specifies the position of the maps.   |
-|     zoomFactor       |    Specifies the zoom level of maps.     |
+|     centerPosition   |    Specifies the center position of the map.   |
+|     zoomFactor       |    Specifies the zoom level of the map.        |
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ZoomByPosition">ZoomByPosition</button>
@@ -129,6 +139,7 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 @code {
     SfMaps maps;
+
     public void ZoomByPosition()
     {
         MapsCenterPosition centerPosition = new MapsCenterPosition();
@@ -137,11 +148,12 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
         maps.ZoomByPosition(centerPosition, 2);
     }
 }
+
 ```
 
 ## ZoomToCoordinates
 
-The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provided minimum and maximum coordinates. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
+The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) method zooms the map to the center point of the provided minimum and maximum coordinates. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -151,6 +163,7 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 |     maxLongitude     |    Specifies the maximum longitude of the coordinate for the zooming operation. |
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ZoomToCoordinates">ZoomToCoordinates</button>
@@ -165,18 +178,21 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code {
     SfMaps maps;
+
     public void ZoomToCoordinates()
     {
         maps.ZoomToCoordinates(0, 0, 100, 100);
     }
 }
+
 ```
 
 ## GetMinMaxLatitudeLongitude
 
-The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method returns the minimum and maximum latitude and longitude values of the Maps visible area. This method returns a [MinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MinMaxLatitudeLongitude.html) class object that contains the Maps minimum and maximum latitude and longitude coordinates.
+The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method returns the minimum and maximum latitude and longitude values of the Maps visible area. This method returns a [MinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MinMaxLatitudeLongitude.html) class instance that contains the minimum and maximum latitude and longitude coordinates.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 @using System.Collections.ObjectModel;
 
@@ -191,7 +207,6 @@ The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusio
         Minimum Longitude = @MapBoundCoordinates.MinLongitude
     </div>
 }
-
 
 <SfMaps ID="maps" @ref="MapsRef">
     <MapsZoomSettings Enable="true" ZoomFactor="@ZoomFactor"></MapsZoomSettings>
@@ -231,4 +246,5 @@ The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusio
         new MarkerData {Latitude=25.0700428,Longitude=67.2847875}
     };
 }
+
 ```
