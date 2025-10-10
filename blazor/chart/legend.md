@@ -684,3 +684,4 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 * [Data label](./data-labels)
 * [Marker](./data-markers)
+* [Toggle Series Visibility Using Legend](https://support.syncfusion.com/kb/article/20966/how-to-toggle-series-visibility-using-legend-in-live-blazor-chart)
