@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides step-by-step instructions to build a Blazor WebAssembly App using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid with the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
-## Using playground
+## Using the Playground
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
@@ -34,7 +34,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor WebAssembly App using .NET CLI
+### Create a standalone Blazor WebAssembly project using .NET CLI
 
 To create a new Blazor WebAssembly App, open your terminal or command prompt and run:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Selection customization in Blazor DataGrid | Syncfusion
-description: Learn here all about selection in Syncfusion Blazor DataGrid and more.
+description: Learn here all about selection customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Selection in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Selection customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of the selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
 

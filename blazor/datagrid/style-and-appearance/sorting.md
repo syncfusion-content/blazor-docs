@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sorting customization in Blazor DataGrid | Syncfusion
-description: Learn here all about sorting in Syncfusion Blazor DataGrid and more.
+description: Learn here all about sorting customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Sorting customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
 

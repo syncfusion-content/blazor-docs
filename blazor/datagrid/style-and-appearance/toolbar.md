@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Toolbar in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor DataGrid and more.
+description: Checkout and learn here all about toolbar customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Toolbar customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
 

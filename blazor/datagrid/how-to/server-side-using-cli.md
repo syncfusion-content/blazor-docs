@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid in Server Side App using CLI
+# Blazor DataGrid in a standalone Blazor Server app using .NET CLI
 
 This article provides a step-by-step instructions to build a Blazor Server App with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
@@ -28,7 +28,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor Server side project using .NET Core CLI
+### Create a standalone Blazor Server side project using .NET Core CLI
 
 To create a new Blazor Server application, open your terminal or command prompt and run:
 

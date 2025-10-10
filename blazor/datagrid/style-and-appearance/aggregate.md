@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Aggregate customization in Blazor DataGrid | Syncfusion
-description: Learn here all about aggregate in Syncfusion Blazor DataGrid and more.
+description: Learn here all about aggregate customization in Syncfusion Blazor DataGrid component and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Aggregate in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Aggregate customization in Syncfusion Blazor DataGrid
 
 You can customize the appearance of aggregate elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
 
