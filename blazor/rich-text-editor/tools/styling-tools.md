@@ -482,7 +482,8 @@ Below is an example of how to configure the Checklist in the Rich Text Editor:
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-<RichTextEditorToolbarSettings Items="@Items" />
+  <RichTextEditorToolbarSettings Items="@Items" />
+  <p>The Rich Text Editor component is the WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update content. Users can format their content using standard toolbar commands.</p>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
