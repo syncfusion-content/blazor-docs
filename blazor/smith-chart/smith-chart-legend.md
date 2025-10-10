@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Legend in Syncfusion Blazor Smith Chart component and much more details.
+description: Check out and learn how to configure and customize Legend in Syncfusion Blazor Smith Chart component.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,13 +9,14 @@ documentation: ug
 
 # Legend in Blazor Smith Chart Component
 
-In the Smith Chart, a legend is a key containing symbols and descriptions. It can be interpreted in various colors, shapes, or other identifiers based on the data, and it provides valuable information for interpreting what the Smith Chart is displaying. In simple words, the legend is used to denote the series rendered in the Smith Chart.
+In the Smith Chart, the legend displays symbols and descriptions that help interpret the chart's data. The legend uses colors, shapes, or other identifiers to represent each series rendered in the Smith Chart.
 
 ## Position
 
-By default, the visibility of the legend is **false**. To enable the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Visible) property to **true** in the [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html). The default position for the legend is **Bottom**. By using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Position) property, the position of the legend can be changed. The legend can be placed on the Smith Chart's bottom, top, right, or left side.
+By default, the legend is not visible. To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Visible) property to **true** in [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html). The default legend position is **Bottom**. Use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Position) property to place the legend at the bottom, top, right, or left of the Smith Chart.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -33,31 +34,35 @@ By default, the visibility of the legend is **false**. To enable the legend, set
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Changing Legend Position in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-position.png)
 
-Other than these positions, the legend can be placed anywhere in the Smith Chart. To achieve this, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Position) as **Custom** in the [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html) and specify the X and Y coordinates using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_Y) properties in the [SmithChartLegendLocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html).
+The legend can also be placed anywhere in the Smith Chart by setting [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Position) to **Custom** and specifying [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_Y) coordinates in [SmithChartLegendLocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -76,33 +81,37 @@ Other than these positions, the legend can be placed anywhere in the Smith Chart
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart Legend with Custom Position](./images/Legend/blazor-smith-chart-legend-with-custom-position.png)
 
 ## Legend Alignment
 
-Other than positioning the legend in the Smith Chart, its alignment also can be customized. By default, the legend is aligned in the **Center** position. Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Alignment) property, the legend can be aligned in the Smith Chart's near, centre, or far locations.
+The legend's alignment can be customized. By default, it is centered. Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Alignment) property to align the legend to the near, center, or far positions of the Smith Chart.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -122,24 +131,27 @@ Other than positioning the legend in the Smith Chart, its alignment also can be 
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Changing Legend Alignment in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-alignment.png)
@@ -148,9 +160,10 @@ Other than positioning the legend in the Smith Chart, its alignment also can be 
 
 ### Legend Shape
 
-By default, the legend is rendered in **Circle** shape and the color of the shape is as same as the series color in the Smith Chart. Using the property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Shape) in the legend settings, the shape of the legend can be changed to rectangle, triangle, and so on.
+The legend is rendered as a **Circle** by default, matching the series color. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Shape) property to change the legend shape to rectangle, triangle, or other supported shapes.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -170,33 +183,37 @@ By default, the legend is rendered in **Circle** shape and the color of the shap
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart Legend with Custom Shape](./images/Legend/blazor-smith-chart-legend-custom-shape.png)
 
 ### Legend Size
 
-By default, the legend takes 20% - 25% of the Smith Chart's height horizontally when it is placed on the top or the bottom position, and 20% - 25% of the width vertically when it is placed on the left or the right position of the Chart. It can be changed by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Height) property of the legend settings. It can be in pixel or in percentage.
+By default, the legend occupies 20%–25% of the Smith Chart's height (top/bottom) or width (left/right). Adjust the legend's size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Height) properties, specified in pixels or percentage.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -214,33 +231,37 @@ By default, the legend takes 20% - 25% of the Smith Chart's height horizontally 
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart Legend with Custom Size](./images/Legend/blazor-smith-chart-legend-custom-size.png)
 
 ### Padding
 
-The space between two legend items can be customized using the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ItemPadding) property and, the space between legend shape and text can be customized using the [ShapePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ShapePadding) property.
+Customize the space between legend items using the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ItemPadding) property, and the space between the legend shape and text using the [ShapePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ShapePadding) property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -261,37 +282,41 @@ The space between two legend items can be customized using the [ItemPadding](htt
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart Legend with Padding](./images/Legend/blazor-smith-chart-legend-with-padding.png)
 
-### Other customization
+### Other Customization
 
-Each legend item's style, border, and text can be customized in the Smith Chart by using the following properties.
+Customize each legend item's style, border, and text using the following properties:
 
-* [SmithChartLegendItemStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendItemStyle.html) - Used to customize the height and the width of each legend item using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendItemStyle.html#Syncfusion_Blazor_Charts_SmithChartLegendItemStyle_Height) and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendItemStyle.html#Syncfusion_Blazor_Charts_SmithChartLegendItemStyle_Width) properties.
-* [SmithChartLegendBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendBorder.html) - Used to customize the border color and the width for legend collection using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Color) and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Width) properties.
-* [SmithChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTextStyle.html) - Used to customize the properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color) and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Size) for each legend text.
+* [SmithChartLegendItemStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendItemStyle.html) – Set the height and width of each legend item.
+* [SmithChartLegendBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendBorder.html) – Set the border color and width for the legend collection.
+* [SmithChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTextStyle.html) – Customize font properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color), and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTextStyle.html#Syncfusion_Blazor_Charts_SmithChartLegendTextStyle_Size).
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -312,33 +337,37 @@ Each legend item's style, border, and text can be customized in the Smith Chart 
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Customizing Legend in Blazor Smith Chart](./images/Legend/blazor-smith-chart-custom-legend.png)
 
 ## Toggle Visibility
 
-By default, the series name is displayed in the legend. The visibility of the series can be collapsed by clicking the legend of that particular series. The series visibility can be toggled by using the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ToggleVisibility) property. By default, it is **true**.
+The legend displays the series name by default. Series visibility can be toggled by clicking the legend item, controlled by the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ToggleVisibility) property, which is **true** by default.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -358,31 +387,35 @@ By default, the series name is displayed in the legend. The visibility of the se
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
-## Row and column
+## Row and Column
 
-The legend can also be placed in rows and columns using the [RowCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_RowCount) and the [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ColumnCount) property. By default, their value is **0**.
+Arrange the legend in rows and columns using the [RowCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_RowCount) and [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ColumnCount) properties. The default value for both is **0**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -401,38 +434,42 @@ The legend can also be placed in rows and columns using the [RowCount](https://h
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart with Legend Row and Column](./images/Legend/blazor-smith-chart-legend-row-and-column.png)
 
 ## Title
 
-The title depicts the information about the legend collection in the Smith Chart. It can be customized using the following properties in the [SmithChartLegendTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html).
+The legend title provides information about the legend collection. Customize the title using the following properties in [SmithChartLegendTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html):
 
-* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_Text) - Used to customize the legend title text.
-* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_Visible) - Used to specify the visibility of the legend title. By default, it is **true**.
-* [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_TextAlignment) - Used to specify the legend title alignment.
-* [SmithChartLegendTitleTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitleTextStyle.html) - Used to customize the properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color) and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitleTextStyle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitleTextStyle_Size) for the title text.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_Text) – Sets the legend title text.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_Visible) – Specifies the visibility of the legend title. Default is **true**.
+* [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitle.html#Syncfusion_Blazor_Charts_SmithChartLegendTitle_TextAlignment) – Sets the legend title alignment.
+* [SmithChartLegendTitleTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendTitleTextStyle.html) – Customize font properties for the title text.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -453,24 +490,27 @@ The title depicts the information about the legend collection in the Smith Chart
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
+
     public List<SmithChartData> SecondTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 20, Reactance= -50 },
-        new SmithChartData { Resistance= 9, Reactance= -4.5 },
-        new SmithChartData { Resistance= 7, Reactance= -2.5 },
-        new SmithChartData { Resistance= 5, Reactance= -1 },
-        new SmithChartData { Resistance= 2, Reactance= 0.5 },
-        new SmithChartData { Resistance= 1, Reactance= 0.4 },
-        new SmithChartData { Resistance= 0, Reactance= 0.05 }
+        new SmithChartData { Resistance = 20, Reactance = -50 },
+        new SmithChartData { Resistance = 9, Reactance = -4.5 },
+        new SmithChartData { Resistance = 7, Reactance = -2.5 },
+        new SmithChartData { Resistance = 5, Reactance = -1 },
+        new SmithChartData { Resistance = 2, Reactance = 0.5 },
+        new SmithChartData { Resistance = 1, Reactance = 0.4 },
+        new SmithChartData { Resistance = 0, Reactance = 0.05 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart with Legend Title](./images/Legend/blazor-smith-chart-legend-title.png)
