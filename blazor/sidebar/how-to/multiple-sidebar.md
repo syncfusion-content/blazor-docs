@@ -11,7 +11,7 @@ documentation: ug
 
 # Multiple Sidebar in Blazor Sidebar Component
 
-Two Sidebars can be initialized in a web page with same main content. Sidebars can be initialized on right side or left side of the main content using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Position) property.
+Multiple Sidebars can be initialized on a web page sharing the same main content. Sidebars can be positioned on either the right or left side of the main content using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Position) property.
 
 N> The HTML element with class name `e-main-content` will be considered as the main content and both the Sidebars will behave as side content to this main content area of a web page.
 
@@ -75,5 +75,5 @@ In the following sample, more than one Sidebar is rendered based on `Position` p
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBeWDjbptxxvPFD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Multiple Sidebars](./../images/blazor-multiple-sidebars.png)

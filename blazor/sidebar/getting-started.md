@@ -11,9 +11,9 @@ documentation: ug
 
 # Getting Started with Blazor Sidebar Component
 
-This section briefly explains about how to include [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section explains how to integrate the Syncfusion [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component into a Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
-To get start quickly to create and configure the Blazor Sidebar in a Blazor WebAssembly app, you can check on this video.
+To get started quickly to create and configure the Blazor Sidebar in a Blazor WebAssembly app, refer to this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=HazXk0_mbE0" %}
@@ -26,13 +26,13 @@ To get start quickly to create and configure the Blazor Sidebar in a Blazor WebA
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+## Create a New Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+A **Blazor WebAssembly App** can be created using Visual Studio via  [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
-To add **Blazor Sidebar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Sidebar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, the following package manager command can be used:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -53,11 +53,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio Code
+## Create a New Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+A **Blazor WebAssembly App** can be created using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, a WebAssembly application can be created using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 {% tabs %}
 
@@ -73,7 +73,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Ensure that the current directory is the project root where the `.csproj` file is located.
 * Run the following command to install a [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
@@ -107,7 +107,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -129,7 +129,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
 
@@ -140,9 +140,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in a Blazor application.
 
-## Add Blazor Sidebar component
+## Add Blazor Sidebar Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar component in the **~/Pages/Index.razor** file.
 
@@ -176,14 +176,13 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar componen
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhJjsKXKHvqsDGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar Component](./images/blazor-sidebar.png)" %}
 
-## Enable backdrop
+## Enable Backdrop
 
-Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent the main content from user interactions.
-Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen.
+Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) property in the Sidebar component prevents user interactions with the main content. The DOM elements remain unchanged. The main content is merely visually obscured by a black backdrop overlay, focusing attention on the Sidebar.
 
 {% tabs %}
 {% highlight razor %}
@@ -232,7 +231,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% endhighlight %}
 {% endtabs %}
 
-N> Class can be added to the Sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of Sidebar element.
+N> Classes can be added to the Sidebar element using the `HtmlAttributes` property. Within that class, new styles can be added or existing Sidebar styles can be overridden.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)" %}
 

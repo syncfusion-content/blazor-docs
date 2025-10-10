@@ -11,7 +11,7 @@ documentation: ug
 
 # Initialize the Blazor Sidebar with ListView
 
-Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
+Any HTML element can be placed in the Sidebar content area. The Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
 
 In the following example, the Sidebar is rendered with ListView component in its content area.
 
@@ -159,4 +159,5 @@ In the following example, the Sidebar is rendered with ListView component in its
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVIsXXbpNbundyi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.png)
