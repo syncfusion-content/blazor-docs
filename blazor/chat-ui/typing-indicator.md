@@ -7,13 +7,13 @@ control: Chat UI
 documentation: ug
 ---
 
-# Typing indicator in Blazor Chat UI component
+# Typing Indicator in Blazor Chat Component
 
 ## Show or hide typing indicator
 
-You can use the [TypingUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsers) property to display the current user’s who are typing to indicate the active participants typing response within the chat conversations. If the property is empty the typing indicators will be removed.
+Use the [TypingUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsers) property to display an indicator when other participants are typing. The indicator is automatically removed when the `TypingUsers` list is empty.
 
-The typing users are the [UserModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html) list, where you can update the user’s dynamically to display the current typing user.
+The `TypingUsers` property accepts a list of [UserModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html) objects. This list can be updated dynamically to show or hide the typing indicator for specific users.
 
 ```cshtml
 
@@ -42,4 +42,4 @@ The typing users are the [UserModel](https://help.syncfusion.com/cr/blazor/Syncf
 
 ## Typing indicator template 
 
-> Refer to the [Templates](./templates#typing-indicator-template) section for more details about the Typing indicator template.
+The appearance of the typing indicator can be customized using a template. For more details, refer to the [Templates](./templates#typing-indicator-template) section.

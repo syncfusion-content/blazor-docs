@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Print and Export in Syncfusion Blazor 3D Chart component and much more.
+description: Check out and learn how to enable and utilize the Print and Export feature in the Syncfusion Blazor 3D Chart component.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered 3D chart can be printed directly from the browser by calling the public method `PrintAsync`. The ID of the 3D chart's div element must be passed as the input parameter to that method.
+The rendered 3D chart can be printed directly from the browser by calling the public method `PrintAsync`. Pass the 3D chart reference so the component triggers the browser’s print dialog for the chart area.
 
 ```cshtml
 
@@ -19,7 +19,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 @using Syncfusion.Blazor.Buttons
 
 <SfChart3D @ref="Chart3DObj" Title="Inflation - Consumer Price" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.Column">
@@ -29,8 +29,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 
 <SfButton Id="button" Content="Print" @onclick="Print"  IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
-
+@code {
     SfChart3D Chart3DObj;
 
     private async Task Print(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
@@ -63,7 +62,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 
 ## Export
 
-The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the `ExportAsync` method. The input parameters for this method are: `type` for format and `fileName` for result.
+The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` using `ExportAsync`. Provide the export `type` (format) and `fileName` (output name).
 
 ```cshtml
 
@@ -71,7 +70,7 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 @using Syncfusion.Blazor.Buttons
 
 <SfChart3D @ref="Chart3DObj" Title="Inflation - Consumer Price" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.Column">
@@ -81,8 +80,7 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
 <SfButton Id="button" Content="Export" @onclick="Export"  IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
-
+@code {
     SfChart3D Chart3DObj;
 
     private async Task Export(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)

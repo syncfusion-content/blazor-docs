@@ -25,6 +25,8 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
+![Create Blazor Web App](images/blazor-create-web-app.png)
+
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
 To add **Blazor TreeGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
@@ -529,7 +531,7 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample alt="Blazor TreeGrid Exception Handling Sample" "https://blazorplayground.syncfusion.com/embed/hNVztHsLJVPJfMvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample alt="Blazor TreeGrid Exception Handling Sample"https://blazorplayground.syncfusion.com/embed/BXBIMtXaTweQwBMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
@@ -543,3 +545,4 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue documentation](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
+

@@ -7,7 +7,7 @@ control: Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Breadcrumb component
+# Accessibility in Blazor Breadcrumb Component
 
 The Blazor Breadcrumb component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -22,7 +22,7 @@ The accessibility compliance for the Blazor Breadcrumb component is outlined bel
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -36,18 +36,18 @@ The accessibility compliance for the Blazor Breadcrumb component is outlined bel
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
-The Blazor Breadcrumb component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Breadcrumb component:
+The Blazor Breadcrumb component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor Breadcrumb component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Indicates the breadcrumb item text. |
-| `aria-disabled` | Indicates the state of breadcrumb item whether it is disabled. |
+| `aria-disabled` | Indicates the disabled state of a breadcrumb item. |
 
-## Keyboard interaction
+## Keyboard Interaction
 
-The Blazor Breadcrumb component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
+The Blazor Breadcrumb component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, facilitating navigation for individuals who use assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -56,14 +56,14 @@ The Blazor Breadcrumb component followed the [keyboard interaction](https://www.
 | <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | Select the breadcrumb item. |
 | <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Breadcrumb component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The accessibility levels of the Blazor Breadcrumb component are ensured through automated testing using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Breadcrumb component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/breadcrumb) in a new window to evaluate the accessibility of the Blazor Breadcrumb component with accessibility tools.
+The accessibility compliance of the Blazor Breadcrumb component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/breadcrumb) in a new window to evaluate the accessibility of the Blazor Breadcrumb component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/breadcrumb.html" %}
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

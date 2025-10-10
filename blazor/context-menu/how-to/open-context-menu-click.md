@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Open Sub Menu on Item Click in Blazor ContextMenu | Syncfusion
+title: Open Sub-Menu on Item Click in Blazor ContextMenu | Syncfusion
 description: Learn here all about Open Sub Menu on Context Menu Item Click in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Open Sub Menu on Item Click in Blazor ContextMenu Component
+# Open Sub-Menu on Item Click in Blazor ContextMenu Component
 
-This section explains about how to open a sub menu on Context Menu item click. This can be achieved by using `ShowItemOnClick` property of the Context Menu.
+This section explains how to open a sub-menu of the Context Menu when its parent item is clicked. This functionality is achieved by using the `ShowItemOnClick` property of the Context Menu.
 
-In the following sample, Sub Menu will open while clicking `Save` item.
+The following sample demonstrates how clicking the `Save` item opens its sub-menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

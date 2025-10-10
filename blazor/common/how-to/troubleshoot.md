@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to troubleshoot server & client exceptions in Blazor | Syncfusion
-description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
+title: Troubleshoot server and client exceptions in Blazor | Syncfusion
+description: Learn here about how to diagnose and resolve common server and client exceptions in Blazor, including runtime, compile-time, and browser console errors.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
@@ -25,7 +25,7 @@ documentation: ug
 
     **Solution:**
 
-    You can register the `SyncfusionBlazorService` in `Program.cs` file to resolve the exception.
+    Register the `SyncfusionBlazorService` in the `Program.cs` file to resolve the exception.
 
     ```c#
     using Syncfusion.Blazor;
@@ -50,7 +50,7 @@ documentation: ug
 
     Update your dotnet SDK/hosting bundle with the latest version in your production/hosting server machine.
 
-    Install the latest dotnet SDK/hosting bundle from [here](https://dotnet.microsoft.com/en-us/download/dotnet) in your hosting machine to resolve this.
+    Install the latest .NET SDK/hosting bundle from [here](https://dotnet.microsoft.com/en-us/download/dotnet) on the hosting machine to resolve this.
 
 * **The type name 'Shared' does not exist in the type 'SyncfusionBlazor'**
 
@@ -111,7 +111,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library has changed its namespace, NuGet package name, component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#namespace-changes) to migrate your application with correct namespace. Example: `Syncfusion.EJ2.Blazor` is now modified as `Syncfusion.Blazor`.
+    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](../how-to/upgrade-syncfusion-components-to-18dot1-version#namespace-changes) to migrate the application with the correct namespace. Example: `Syncfusion.EJ2.Blazor` is now `Syncfusion.Blazor`.
 
 * **Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace**
 
@@ -125,7 +125,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library has changed its namespace, NuGet package name and component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate your application with correct component name. Example: `EjsGrid` is now modified as `SfGrid`.
+    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate the application with the correct component names. Example: `EjsGrid` is now `SfGrid`.
 
 ## Browser console errors
 
@@ -203,9 +203,9 @@ documentation: ug
     | ------------- | ------------- |
     | `<base href="/myblazorapp/" />`  | `app.UsePathBase("/myblazorapp");`|
 
-    N> The trailing slash is must for '_Host.cshtml' base path configuration.
+    N> The trailing slash is required for the '_Host.cshtml' base path configuration.
 
-    For further details, refer [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio#app-base-path) topic.
+    For further details, refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy#app-base-path).
 
 
 ## See also
