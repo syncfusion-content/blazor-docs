@@ -214,7 +214,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Restrict Symbol Dragging in a Palette
 
-The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` enables or disables dragging symbols from the palette. When set to `true`, users can drag symbols; when `false`, dragging is disabled. This property provides control over symbol interaction within the Symbol Palette component.
+The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` enables or disables dragging symbols from the palette. When set to **true**, users can drag symbols; when **false**, dragging is disabled. This property provides control over symbol interaction within the `SymbolPaletteComponent`.
 
 ## How to get notification when a symbol is selected
 
@@ -339,7 +339,7 @@ The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## How to Enable or Disable Animation in Symbol Palette
 
-The symbol palette can enable or disable animation when expanding and collapsing panels using the [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableAnimation) property. By default, `EnableAnimation` is `true`.
+The symbol palette can enable or disable animation when expanding and collapsing panels using the [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableAnimation) property. By default, `EnableAnimation` is **true**.
 
 When animation is enabled, the following default effects are applied:
 
@@ -491,7 +491,7 @@ Customize the appearance of symbol descriptions in the symbol palette by adjusti
 
 ### SymbolInfo Properties
 
-[Fit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Fit): Indicates whether the symbol can fit into the size defined by the symbol palette. When set to `true`, the symbol is resized to fit within the dimensions specified by the symbol palette; otherwise `false` maintains the symbol's original size. Default is `false`.
+[Fit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Fit): Indicates whether the symbol can fit into the size defined by the symbol palette. When set to **true**, the symbol is resized to fit within the dimensions specified by the symbol palette; otherwise **false** maintains the symbol's original size. Default is **false**.
 
 [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Width): Defines the symbol width in the palette. This property control the horizontal space allocated to each symbol.
 
@@ -618,7 +618,7 @@ The symbol palette supports tooltips, displaying informative text when hovering 
 
 ### How to Enable or Disable Default Tooltip for Symbols in Symbol Palette
 
-By default, the symbol [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, use the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property within the [`GetSymbolInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method. `ShowTooltip` is `true` by default.
+By default, the symbol [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, use the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_ShowToolTip) property within the [`GetSymbolInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method. `ShowTooltip` is **true** by default.
 
 The following code example demonstrates how to enable or disable the default tooltip for shapes in the symbol palette. 
 
@@ -982,7 +982,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Provide Tooltip Template for Symbols
 
-Provide a custom template as a tooltip for symbols in the symbol palette using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolPaletteTemplates.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolPaletteTemplates_TooltipTemplate) property of the `SfDiagramComponent`. Once the tooltip template is defined, enable custom tooltips for symbols in the symbol palette by setting the Tooltip constraints for nodes and connectors. This allows the custom tooltip template to be displayed when hovering over symbols in the symbol palette, enhancing the user experience and providing more informative tooltips for each symbol.
+Provide a custom template as a tooltip for symbols in the symbol palette using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolPaletteTemplates.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolPaletteTemplates_TooltipTemplate) property of the `SfDiagramComponent`. Once the tooltip template is defined, enable custom tooltips for symbols in the symbol palette by setting the **Tooltip** constraints for nodes and connectors. This allows the custom tooltip template to be displayed when hovering over symbols in the symbol palette, enhancing the user experience and providing more informative tooltips for each symbol.
 
 The following code example illustrates how to provide the tooltip template for nodes.
 
@@ -1083,7 +1083,7 @@ In the Blazor Diagram component, calculating the bounds of paths, text, images, 
 
 This property enables transmitting large data in smaller, manageable chunks, effectively preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size for a single incoming hub message (MaximumReceiveMessageSize of 32 KB). This approach ensures smooth data transfer and processing, even for complex diagrams with substantial amounts of information.
 
-By default, [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property is set to `false`. However, for scenarios involving large data sets or complex diagram elements, it is recommended to enable this feature to enhance performance and prevent potential connection issues.
+By default, [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property is set to **false**. However, for scenarios involving large data sets or complex diagram elements, it is recommended to enable this feature to enhance performance and prevent potential connection issues.
 
 Here is an example demonstrating how to use the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property:
 

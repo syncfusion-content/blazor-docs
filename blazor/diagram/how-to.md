@@ -13,7 +13,7 @@ The diagram's core functionalities are implemented through a comprehensive set o
 
 ## How to Add Nodes Using the Add Method
 
-Create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add()` method. It's crucial to call the Add() method within the OnInitialized() lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the Add() method outside of OnInitialized() is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
+Create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add` method. It's crucial to call the `Add` method within the `OnInitialized` lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the `Add` method outside of `OnInitialized` is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -723,7 +723,7 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
 
 ## How to Select All Objects in the Diagram
-  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method selects all objects (nodes, connectors, and annotations) in the diagram simultaneously. This feature is particularly useful for performing bulk operations or applying changes to multiple elements at once.
+  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method selects all objects (like nodes, connectors, and groups) in the diagram simultaneously. This feature is particularly useful for performing bulk operations or applying changes to multiple elements at once.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

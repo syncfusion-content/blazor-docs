@@ -65,7 +65,7 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIiDNcgwRwLkFg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
->**Note:** Swimlane IDs should not start with numbers or special characters and should not contain special characters such as underscore(_) or spaces.
+>**Note:** Swimlane ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or spaces.
 
 The swimlane appears as follows.
 
@@ -319,13 +319,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 | Vertical | ![Vertical](Swimlane-images/Swimlane_Vertical.PNG) |
 
 
-## How to set pacing between lane or phase header and its children
+## How to set spacing between lane or phase header and its children
 
-Define custom spacing between a lane or phase header and its child elements (nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property, which accepts a DiagramThickness with Top, Bottom, Left, and Right values.
+Define custom spacing between a lane or phase header and its child elements (nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property, which accepts a `DiagramThickness` with `Top`, `Bottom`, `Left`, and `Right` values.
 
-By default, ChildrenSpacing is 20 px on all sides. Adjust these values to control padding between the header and its children within the swimlane layout.
+By default, `ChildrenSpacing` is 20 pixels on all sides. Adjust these values to control padding between the header and its children within the `Swimlane`.
 
-The following example shows how to apply custom spacing using ChildrenSpacing property.
+The following example shows how to apply custom spacing using `ChildrenSpacing` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -433,7 +433,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Select the Swimlane
 
-Select a swimlane by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
+Select a `Swimlane` by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
 ### How to Drag the Swimlane
 

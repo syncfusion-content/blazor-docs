@@ -407,13 +407,13 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
 
-![Phse](Swimlane-images/PhaseOrientation.PNG).
+![Phase](Swimlane-images/PhaseOrientation.PNG).
 
 ## How to Select and Resize Phase Header
 
  * Select an individual phase header by clicking the header twice. The first click selects the phase, and the second click selects the header. 
 
- * Resize an individual phase header. While resizing a phase, a 20 px distance is maintained from the lane children.
+ * Resize an individual phase header. While resizing a phase, a 20 pixels distance is maintained from the lane children.
 
   * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events are triggered.
 

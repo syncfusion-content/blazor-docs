@@ -34,7 +34,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Add Node to Palette
 
-The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of the SfSymbolPaletteComponent are essential for defining the dimensions of symbols (nodes, connectors, or node groups) rendered in the palette. These properties ensure that symbols are displayed with the correct size and proportions. The following code example demonstrates how to add a node to a symbol palette with specified dimensions.
+The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of the `SfSymbolPaletteComponent` are essential for defining the dimensions of symbols (nodes, connectors, or node groups) rendered in the palette. These properties ensure that symbols are displayed with the correct size and proportions. The following code example demonstrates how to add a node to a symbol palette with specified dimensions.
 
 * To render a node in a palette, first create symbol palette and initialize the palettes collection.
 

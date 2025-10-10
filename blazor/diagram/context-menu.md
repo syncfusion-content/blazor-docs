@@ -155,7 +155,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Show Custom Context Menu Alone
 
-Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to true to display only custom context menu items.
+Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to **true** to display only custom context menu items.
 The following code example shows how to show custom context menu items alone.
 
 ```cshtml

@@ -781,7 +781,7 @@ The following example demonstrates the grouping commands.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/GroupingCommands)
 ## How to Arrange Diagram Elements Using Z-Order Commands
 
-Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, arrange the selected objects on the diagram page with their Z-order values by using the Bring to front, Bring forward, Send to back, and Send backward features.
+Z-Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, arrange the selected objects on the diagram page with their Z-order values by using the Bring to front, Bring forward, Send to back, and Send backward features.
 
 ### How to Use the Bring To Front Commands
 
@@ -1257,7 +1257,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Bring the Entire Diagram into the Current Viewport Using Fit to Page Command
 
-The `FitToPage` command is used to bring the entire diagram (including large diagrams) into view. Customize the behavior of the FitToPage command by passing a [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) object as a parameter. If no parameter is provided, the entire diagram is fit into the view using default settings.
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitMode.html) command is used to bring the entire diagram (including large diagrams) into view. Customize the behavior of the `FitToPage` command by passing a [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) object as a parameter. If no parameter is provided, the entire diagram is fit into the view using default settings.
 
 The following code illustrates how to execute the FitToPage method.
 
@@ -1397,7 +1397,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 #### FitToPage Parameters
 
-The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter allows you to customize the behavior of the FitToPage command. By configuring various properties of the FitOptions object, Control how the diagram is adjusted within the view. 
+The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter allows you to customize the behavior of the `FitToPage` command. By configuring various properties of the `FitOptions` object, Control how the diagram is adjusted within the view. 
 
 #### FitToPage
 
