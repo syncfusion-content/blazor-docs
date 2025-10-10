@@ -9,13 +9,13 @@ documentation: ug
 
 # Selection in Blazor Dropdown Tree Component
 
-The Dropdown Tree has been provided with single and multi-selection support. Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
+The Blazor Dropdown Tree component provides support for both single and multi-selection, enhancing user interaction by visually highlighting selected nodes. Selection can be achieved through mouse clicks or keyboard navigation.
 
-## Single Selection 
+## Single Selection
 
-By default, you can only select a single node. When you select the node, the popup will close automatically, and the text of the selected node will appear in the input box.
+By default, only a single node can be selected at a time. Upon selecting a node, the popup automatically closes, and the text of the selected node appears in the input box.
 
-In the following example, you can select the single node only.
+The following example demonstrates single node selection:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -50,12 +50,12 @@ In the following example, you can select the single node only.
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBSDEhHJCCBBQqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.png)
 
-## Multi Selection 
+## Multi-Selection
 
-The Dropdown Tree also supports selection of multiple nodes by setting [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowMultiSelection) to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
+The Dropdown Tree also supports the selection of multiple nodes by setting [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowMultiSelection) to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 
 In the following example, the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowMultiSelection) property is enabled.
 
@@ -92,5 +92,5 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrINYLRTCibMvNM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.png)
