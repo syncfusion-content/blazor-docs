@@ -198,3 +198,4 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
+* [Sort Series Points on Category Axis](https://support.syncfusion.com/kb/article/21383/how-to-sort-series-points-on-category-axis-in-blazor-chart-component)
