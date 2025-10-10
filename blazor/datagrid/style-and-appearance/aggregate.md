@@ -32,7 +32,7 @@ The **e-gridfooter** class is used to style the main container of the aggregate 
 }
 ```
 
-Properties such as font-family, font-size, padding, and border can be modified to match the desired design.
+Properties such as `font-family`, `font-size`, `padding`, and `border` can be modified to match the desired design.
 
 ![Blazor DataGrid aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
 
@@ -46,7 +46,7 @@ The **e-summaryrow** class targets the summary row, and **e-summarycell** target
 }
 ```
 
-properties such as background-color, color, text-align, or borders can be modified to match the desired design.
+properties such as `background-color`, `color`, `text-align`, or `borders` can be modified to match the desired design.
 
 ![Blazor DataGrid aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.png)
 
