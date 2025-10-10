@@ -77,11 +77,9 @@ Lambda expressions can be used to pass the event data to the handler. For more d
 
 ## List of native events supported
 
-Below are common native DOM events that can be attached to the DatePicker component using `@on<event>` attributes:
-
-| onclick | ondblclick | onmousedown | onmouseup |
+| List of Native events |  |  | |
 | --- | --- | --- | --- |
-| onmousemove | onmouseover | onmouseout | onwheel |
-| onfocus | onblur | onfocusin | onfocusout |
-| onkeydown | onkeyup | oninput | onchange |
-| ontouchstart | ontouchend | onpointerdown | onpointerup |
+| onclick | onblur | onfocus | onfocusout |
+| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| ondblclick | onkeydown | onkeyup | onkeypress |
+| ontouchend | onfocusin | onmouseup | ontouchstart |
