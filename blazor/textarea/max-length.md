@@ -3,16 +3,13 @@ layout: post
 title: Maximum Length in Blazor TextArea Component | Syncfusion
 description: Limiting the maximum number of characters of the Syncfusion Blazor Textarea component and much more.
 platform: Blazor
-control: Textarea
+control: TextArea
 documentation: ug
 ---
 
 # Maximum Length in Blazor TextArea Component
 
-You can enforce a maximum length limit for the text input in the TextArea using the [MaxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_MaxLength) property. This property allows to define the maximum number of characters that users can input into the TextArea.
-
-
-* By setting the `MaxLength` property, you can control the length of text input, preventing users from exceeding a specified character limit.
+Use the [MaxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_MaxLength) property to enforce a maximum character limit in the TextArea. This property defines the highest number of characters that can be entered, helping guide input length and maintain data quality.
 
 {% tabs %}
 {% highlight razor %}
@@ -22,6 +19,6 @@ You can enforce a maximum length limit for the text input in the TextArea using 
 {% endhighlight %}
 {% endtabs %}
 
-When the user reaches the specified limit, the TextArea prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.
+When the specified limit is reached, the TextArea prevents further input from typing or pasting. Newline characters count toward the limit. For data integrity, also validate on the server or with model attributes (for example, MaxLength or StringLength). The Input event fires as the user types until the limit is reached, and ValueChange occurs on blur when the value is committed.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthpDRsUCffyeOfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with MaxLength](./images/blazor-textarea-maxlength.png)" %}
