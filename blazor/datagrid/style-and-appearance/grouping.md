@@ -17,11 +17,9 @@ The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">
 - Grouping indent cell
 
 N> - Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property. Ensure that the appropriate theme stylesheet is referenced so that grouping UI elements are displayed correctly.
-- Icon glyph codes (such as '\e7a2', '\e7a3') vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
-The provided CSS selectors apply to all DataGrid instances (.e-grid). To scope styles to a specific grid:
-    - Wrap the DataGrid in a custom container and prefix selectors with that container’s class.
-    - Alternatively, use CSS isolation with the ::deep combinator.
-- Class names and selectors may differ slightly depending on the theme. Use browser inspection tools to verify the correct classes.
+- Icon glyph codes (such as `\e7a2`, `\e7a3`) vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may vary slightly depending on the theme or version. Use browser inspection tools to confirm the correct selectors.
 - Ensure sufficient color contrast and visible focus indicators to support accessibility standards.
 
 ## Customizing the Group Header

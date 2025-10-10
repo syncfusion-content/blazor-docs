@@ -15,20 +15,14 @@ The appearance of filtering elements in the Syncfusion<sup style="font-size:70%"
 - Input focus styles
 - Clear and filter icons
 - Filter dialog content and footer
-- nput fields and buttons within the filter dialog
+- Input fields and buttons within the filter dialog
 - Excel-style number filter visuals
 
-> Notes:
-- Enable filtering by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property. Ensure that the appropriate theme stylesheet is referenced so that filtering UI elements are displayed correctly.
-For details on filtering options and behavior, refer to the ][Blazor DataGrid filtering]( https://blazor.syncfusion.com/documentation/datagrid/filtering) documentation.
-
-
-N> - Icon glyph codes (such as **'\e72c'**, **'\e81e'**) vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
-- The provided CSS selectors apply to all DataGrid instances (**.e-grid**). To scope styles to a specific grid:
-- Wrap the DataGrid in a custom container and prefix selectors with that container’s class.
-Alternatively, use CSS isolation with the **::deep** combinator.
-- Class names and selectors may differ slightly depending on the theme. Use browser inspection tools to verify the correct classes.
-Ensure sufficient color contrast and visible focus indicators to support accessibility standards.
+N> - Enable filtering by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property. Ensure that the appropriate theme stylesheet is referenced so that filtering UI elements are displayed correctly.
+For details on filtering options and behavior, refer to the [Blazor DataGrid filtering]( https://blazor.syncfusion.com/documentation/datagrid/filtering) documentation.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may change slightly depending on the theme or version, so check the DOM to confirm. 
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
 ## Customizing the Filter Bar Cell Element
 
@@ -89,7 +83,7 @@ The **.e-clear-icon::before** selector is used to customize the glyph for the cl
 
 ```
 
-The `content` property defines the icon using a glyph code, which can be changed to match a custom icon set or to display a more recognizable symbol.
+The `content` property can be modified to replace the default icon. This helps match the icon with a custom icon set or improve visual clarity.
 
 ![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.png)
 

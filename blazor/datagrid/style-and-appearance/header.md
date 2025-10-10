@@ -15,7 +15,8 @@ The appearance of header elements in the Syncfusion<sup style="font-size:70%">&r
 - Header cells
 - Header text container
 
-N> When using CSS isolation (.razor.css), target internal elements with **:deep(...)** or **::deep(...)** depending on the tooling. If theme styles override custom CSS, apply a wrapper class or **Grid ID** to increase specificity.
+N> - When using CSS isolation (.razor.css), target internal DataGrid elements using **:deep(...)** or **::deep(...)**, depending on the tooling setup.
+- To prevent theme styles from overriding custom CSS, increase selector specificity by wrapping the grid in a custom container or using the Grid’s unique ID.
 
 ## Customizing the Blazor DataGrid header
 

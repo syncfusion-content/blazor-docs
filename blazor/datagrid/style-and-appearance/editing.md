@@ -18,8 +18,8 @@ The appearance of editing-related elements in the Syncfusion<sup style="font-siz
 N> - Enable editing with [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and configure [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) to include actions like add, edit, delete, and update.
 - Customize dialog headers when [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to `Dialog`.
 - Command button icon colors are based on the theme’s icon font. Use browser inspection tools to check class names and glyph codes.
-- Use custom containers or CSS isolation with the **::deep** combinator to scope global selectors and avoid affecting all grids.
-- Ensure high color contrast and clear focus indicators to enhance accessibility and user experience.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
 ## Customizing Edited and Added Row Elements
 

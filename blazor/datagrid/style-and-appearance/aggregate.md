@@ -9,24 +9,22 @@ documentation: ug
 
 # Aggregate customization in Syncfusion Blazor DataGrid
 
-Aggregates render in the DataGrid footer as summary rows and can be styled with CSS. Use these guidelines to customize the footer container (aggregate root element) and individual summary cells. For API details, see:
+Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows enhance data interpretation and can be styled using CSS to align with specific design requirements. Customization is supported for both the footer container and individual summary cells, allowing control over layout and visual presentation. Refer to the API documentation for configuration details:
 
-- Grid aggregates API: [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html)
-- Aggregate column API: [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html)
-- Aggregate types API: [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
-- Footer template API: [GridAggregateColumn.FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate)
-- Aggregate template context API: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
+- [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html)
+- [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html)
+- [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
+- [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate)
+- [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
 
-> Note:
-> - Define GridAggregates to render summary rows.
-> - Reference the correct theme stylesheet.
-> - With CSS isolation (.razor.css), either use the ::deep combinator to reach DataGrid internals or wrap the grid in a custom class and scope styles to that wrapper to increase selector specificity.
-> - CSS class names can vary by theme or version; verify in the DOM.
-> - Maintain sufficient color contrast and avoid using color alone to convey meaning.
+N> - To show summary rows in the DataGrid footer, [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html) must be set up. The correct theme stylesheet should be included to apply styles properly. 
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control. 
+- Class names may change slightly depending on the theme or version, so check the DOM to confirm. 
+- Maintain strong color contrast for accessibility compliance.
 
 ## Customizing the aggregate root element
 
-To customize the appearance of the DataGrid footer’s aggregate root container, use the following CSS:
+The **e-gridfooter** class is used to style the main container of the aggregate footer row in the DataGrid. To change its appearance, apply CSS like below:
 
 ```css
 .e-grid .e-gridfooter {
@@ -34,13 +32,13 @@ To customize the appearance of the DataGrid footer’s aggregate root container,
 }
 ```
 
-In this example, the **.e-gridfooter** class represents the root container of the aggregate footer row. Adjust properties such as font-family, font-size, padding, or borders as needed.
+Properties such as font-family, font-size, padding, and border can be modified to match the desired design.
 
 ![Blazor DataGrid aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
 
 ## Customizing the aggregate cell elements
 
-To customize the appearance of the summary row cells, use the following CSS:
+The **e-summaryrow** class targets the summary row, and **e-summarycell** targets individual cells within that row. To customize the appearance of the summary row cells, apply CSS such as:
 
 ```css
 .e-grid .e-summaryrow .e-summarycell {
@@ -48,7 +46,7 @@ To customize the appearance of the summary row cells, use the following CSS:
 }
 ```
 
-Here, the **.e-summaryrow** class targets the summary row, and **.e-summarycell** targets individual cells within that row. Modify properties such as background-color, color, text-align, or borders to achieve the desired style.
+properties such as background-color, color, text-align, or borders can be modified to match the desired design.
 
 ![Blazor DataGrid aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.png)
 
