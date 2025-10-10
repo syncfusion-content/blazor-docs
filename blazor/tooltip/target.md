@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Target support in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about setting target elements in the Syncfusion Blazor Tooltip component, and explore built-in support for displaying Tooltips on elements added dynamically after the initial render and more.
+description: Checkout and learn here all about setting target elements in the Syncfusion Blazor Tooltip component render and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Target
+# Configure target and container selectors in Blazor Tooltip
 
 The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property accepts a CSS selector that identifies the elements the tooltip should attach to. Matching elements display a tooltip based on user interactions such as hover, focus, or click, depending on the configured `OpensOn` setting.
 
