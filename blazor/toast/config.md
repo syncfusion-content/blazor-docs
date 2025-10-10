@@ -9,117 +9,125 @@ documentation: ug
 
 # Configuring options in Blazor Toast Component
 
-This section describes how to customize the appearance and behavior of the Toast component using built-in APIs.
+This section describes how to customize the appearance and behavior of the Blazor Toast component using built-in APIs.
+
+For reference:
+- Blazor Toast overview: https://blazor.syncfusion.com/documentation/toast/
+- SfToast API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html
+- Toast events: https://blazor.syncfusion.com/documentation/toast/events/
+- Positioning: https://blazor.syncfusion.com/documentation/toast/position
 
 ## Title and content template
 
-Create a toast with a notification message that includes a Title and content. These values adapt to different screen sizes.
+Create a toast with a notification message that includes a title and content. These values adapt to different screen sizes.
 
-N> Title and Content can be provided as plain text or HTML markup via string parameters. For richer layouts, use toast templates (for example, ToastTemplates or ContentTemplate) to define custom content.
+N> Title and Content can be provided as plain text or HTML markup via string parameters. For richer layouts, use toast templates (for example, **ToastTemplates** or **ContentTemplate**) to define custom content.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast ID="toast_default" @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent">
+<SfToast @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent">
     <ToastPosition X="Center"></ToastPosition>
 </SfToast>
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
-    <div id="toastBtnDefault" style="margin: auto;text-align: center">
-        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
+    <div style="margin: auto; text-align: center">
+        <SfButton OnClick="@ShowToast">Show Toast</SfButton>
     </div>
 </div>
 
-<style>
-    #toast_default .e-meeting::before {
-        content: "\e705";
-        font-size: 17px;
-    }
-</style>
-
 @code {
-    SfToast ToastObj;
+    private SfToast ToastObj;
 
-    private string ToastContent = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
+    private string ToastContent = "Conference Room 01 / Building 135 — 10:00 AM–10:30 AM";
 
     private async Task ShowToast()
     {
-       await this.ToastObj.ShowAsync();
+        await ToastObj.ShowAsync();
     }
 }
-
 ```
 
 ![Blazor Toast with Button](./images/blazor-toast-with-button.png)
 
 ## Specifying custom target
 
-By default, the toast can be rendered in the document body. The target position can be changed for the toast rendering using the `Target` property. Based on the target, the `Position` will be updated.
+By default, the toast is rendered in the document body. The target container can be changed using the **Target** property. Based on the target, the **ToastPosition** will be applied relative to that container.
+
+- Target property: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_Target
+- Position docs: https://blazor.syncfusion.com/documentation/toast/position
 
 ## Close button
 
-By default, the `ShowCloseButton` is not enabled. It can be enabled by setting the true value. Before expiring the toast, use this button to close or destroy toasts manually.
+By default, the **ShowCloseButton** property is disabled. Enable it to display a close button that dismisses the toast before it expires.
+
+- ShowCloseButton API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_ShowCloseButton
 
 ## Progress bar
 
-By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long it gets for the toast to expire. Based on the `Timeout` property, progress bar will appear.
+By default, the **ShowProgressBar** property is disabled. When enabled, it visually indicates the remaining time until the toast expires, based on the **Timeout** property.
+
+- ShowProgressBar API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_ShowProgressBar
+- Timeout API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_Timeout
 
 ### Progress bar direction
 
-By default, the `ProgressDirection` is set to "Rtl" and it will appear from right to left direction. The progressDirection can be changed to "Ltr" to make it appear from left to right direction.
+By default, **ProgressDirection** is "Rtl" and appears from right to left. Set **ProgressDirection** to "Ltr" to display from left to right.
+
+- ProgressDirection API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_ProgressDirection
 
 ## Newest on top
 
-By default, the newly created toasts will append next with existing toasts. The sequence can be changed like inserting before the toast by enabling the `NewestOnTop`.
+By default, newly created toasts are appended after existing toasts. Enable **NewestOnTop** to insert new toasts before existing toasts.
 
-Here, the following sample demonstrates the combination of the `Target`, `ShowCloseButton`, `ShowProgressBar` and `NewestOnTop` properties in toast.
+- NewestOnTop API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_NewestOnTop
+
+The following sample demonstrates the combination of **Target**, **ShowCloseButton**, **ShowProgressBar**, and **NewestOnTop** properties.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
 <div class="control-section toast-default-section">
-    <SfToast ID="toast_default" @ref="ToastObj" Title="File Downloading" Content="@ToastContent"
-             ShowCloseButton="true" ProgressDirection="Ltr" Target="#toast_target" NewestOnTop="true" ShowProgressBar="true">
+    <SfToast @ref="ToastObj"
+             Title="File Downloading"
+             Content="@ToastContent"
+             ShowCloseButton="true"
+             ProgressDirection="Ltr"
+             Target="#toast_target"
+             NewestOnTop="true"
+             ShowProgressBar="true">
         <ToastPosition X="Center"></ToastPosition>
     </SfToast>
 
     <div class="col-lg-12 col-sm-12 col-md-12 center">
-        <div id="toastBtnDefault" style="margin: auto; text-align: center">
-            <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
+        <div style="margin: auto; text-align: center">
+            <SfButton OnClick="@ShowToast">Show Toast</SfButton>
         </div>
     </div>
+
     <br /><br />
-    <div id='toast_target'></div>
+    <div id="toast_target"></div>
 </div>
 
 @code {
-    SfToast ToastObj;
+    private SfToast ToastObj;
 
     private string ToastContent = "<div class='progress'><span style='width: 80%'></span></div>";
 
     private async Task ShowToast()
     {
-       await this.ToastObj.ShowAsync();
+        await ToastObj.ShowAsync();
     }
 }
 
 <style>
-    #toast_default .e-meeting::before {
-        content: "\e705";
-        font-size: 17px;
-    }
-
     .progress {
         height: 20px;
         position: relative;
-        margin: 20px 0 20px 0;
+        margin: 20px 0;
         background: #555;
-        -moz-border-radius: 25px;
-        -webkit-border-radius: 25px;
         border-radius: 25px;
         box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
     }
@@ -136,151 +144,162 @@ Here, the following sample demonstrates the combination of the `Target`, `ShowCl
     }
 
     .progress span::after {
-        background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+        background-image: -webkit-gradient(
+            linear,
+            0 0,
+            100% 100%,
+            color-stop(.25, rgba(255, 255, 255, .2)),
+            color-stop(.25, transparent),
+            color-stop(.5, transparent),
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.75, rgba(255, 255, 255, .2)),
+            color-stop(.75, transparent),
+            to(transparent)
+        );
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        inset: 0;
         background-size: 50px 50px;
         -webkit-animation: moveAnimate 2s linear infinite;
         overflow: hidden;
     }
 
     @@-webkit-keyframes moveAnimate {
-        0% {
-            background-position: 0 0;
-        }
-
-        100% {
-            background-position: 50px 50px;
-        }
+        0% { background-position: 0 0; }
+        100% { background-position: 50px 50px; }
     }
 </style>
-
 ```
 
 ![Blazor Toast with ProgressBar](./images/blazor-toast-with-progressbar.png)
 
 ## Width and height
 
-The dimensions of the toast can be set using the `Width` and `Height` properties. This will individually set all toasts. Different custom dimension toasts can be created.
+Set toast dimensions using the **Width** and **Height** properties. Each toast can have custom dimensions. By default, the toast is rendered with 300px width and auto height.
 
-By default, the toast can be rendered with `300px` width with `auto` height.
+N> On mobile devices, the default toast width is 100% of the page. When **Width** is set to 100%, the toast occupies the full width of the viewport and is displayed at the top or bottom based on the **ToastPosition** Y setting.
 
-N> On mobile devices, the default toast width is 100% of the page. When Width is set to 100%, the toast occupies the full width of the viewport and is displayed at the top or bottom based on the Position Y property.
+Both **Width** and **Height** accept pixel values, percentages, or numbers. A numeric value is interpreted as pixels.
 
-Both Width and Height accept pixel values, percentages, or numbers. A numeric value is interpreted as pixels.
+- Width API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_Width
+- Height API: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html#Syncfusion_Blazor_Notifications_SfToast_Height
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
 <div class="control-section toast-default-section">
-    <SfToast @ref="ToastObj" Title="@Title" Width="@Width" Height="@Height" Content="@ToastContent">
+    <SfToast @ref="ToastObj"
+             Title="@Title"
+             Width="@Width"
+             Height="@Height"
+             Content="@ToastContent">
         <ToastPosition X="Center" Y="@PositionY"></ToastPosition>
     </SfToast>
 
     <div class="col-lg-12 col-sm-12 col-md-12 center">
-        <div id="toastBtnDefault" style="margin: auto; text-align: center">
-            <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
+        <div style="margin: auto; text-align: center">
+            <SfButton OnClick="@ShowToast">Show Toast</SfButton>
         </div>
     </div>
 
-    <div class='row' style="padding-top: 20px" id="toast_pos_target">
+    <div class="row" style="padding-top: 20px" id="toast_pos_target">
         <table style="margin-left: 200px">
             <tr>
                 <td>
-                    <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Name="toast" Label="Top" Value="Target"  TChecked="string" @bind-Checked="@RadioTopChecked" ValueChange="@RadioButtonChange"></SfRadioButton>
+                    <div style="padding:25px 0 0 0;">
+                        <SfRadioButton TValue="string"
+                                       Name="toast"
+                                       Label="Top"
+                                       Value="Top"
+                                       Change="@RadioButtonChange"
+                                       Checked="true">
+                        </SfRadioButton>
                     </div>
                 </td>
                 <td>
-                    <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Name="toast" Label="Bottom" Value="Global" TChecked="string" ValueChange="@RadioButtonChange" @bind-Checked="@RadioBottomChecked"></SfRadioButton>
+                    <div style="padding:25px 0 0 0;">
+                        <SfRadioButton TValue="string"
+                                       Name="toast"
+                                       Label="Bottom"
+                                       Value="Bottom"
+                                       Change="@RadioButtonChange">
+                        </SfRadioButton>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div style='padding:25px 0 0 0;'>
-                        <SfCheckBox Label="100% Width" TChecked="bool" ValueChange="@CheckBoxChange"></SfCheckBox>
+                    <div style="padding:25px 0 0 0;">
+                        <SfCheckBox TChecked="bool"
+                                    Label="100% Width"
+                                    Change="@CheckBoxChange">
+                        </SfCheckBox>
                     </div>
                 </td>
             </tr>
         </table>
     </div>
+
     <br /><br />
-    <div id='result'></div>
+    <div id="result"></div>
 </div>
 
 @code {
-    SfToast ToastObj;
+    private SfToast ToastObj;
 
     private string Width { get; set; } = "400";
     private string Height { get; set; } = "120";
     private string PositionY { get; set; } = "Bottom";
-    private string RadioBottomChecked { get; set; } = "Global";
-    private string RadioTopChecked { get; set; } = "Target";
 
-    private string Title { get; set; } = "Matt sent you a friend request";
-    private string ToastContent { get; set; } = "You have a new friend request yet to accept";
+    private string Title { get; set; } = "Notification received";
+    private string ToastContent { get; set; } = "A new item is pending review.";
 
     private async Task ShowToast()
     {
-        await this.ToastObj.ShowAsync();
+        await ToastObj.ShowAsync();
     }
 
     private async Task CheckBoxChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> e)
     {
+        await ToastObj.HideAsync();
+
         if (e.Checked)
         {
-            await ToastObj.HideAsync();
-            this.Width = "100%";
-            this.Title = "";
-            this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href='https://blazor.syncfusion.com/home/index.html' target='_blank'>LEARN MORE</a></div>";
-            StateHasChanged();
+            Width = "100%";
+            Title = string.Empty;
+            ToastContent = "<div class='e-custom'>Explore the next generation <b>JavaScript</b> library. <a href='https://blazor.syncfusion.com/home/index.html' target='_blank' rel='noopener'>Learn more</a></div>";
         }
         else
         {
-            await ToastObj.HideAsync();
-            this.Width = "300";
-            this.Title = "Matt sent you a friend request";
-            this.ToastContent = "You have a new friend request yet to accept";
-            StateHasChanged();
+            Width = "300";
+            Title = "Notification received";
+            ToastContent = "A new item is pending review.";
         }
+
+        StateHasChanged();
     }
 
     private async Task RadioButtonChange(Syncfusion.Blazor.Buttons.ChangeArgs<string> e)
     {
-        if (e.Value == "Target")
-        {
-            this.PositionY = "Top";
-            await ToastObj.HideAsync();
-            StateHasChanged();
-        }
-        else if (e.Value == "Global")
-        {
-            this.PositionY = "Bottom";
-            await ToastObj.HideAsync();
-            StateHasChanged();
-        }
+        PositionY = e.Value == "Top" ? "Top" : "Bottom";
+        await ToastObj.HideAsync();
+        StateHasChanged();
     }
 }
-
 ```
 
 ![Changing Blazor Toast Size](./images/blazor-toast-size.png)
 
 ## Show or hide toast using service
 
-Initialize a single toast instance and reuse it across the application by creating a service. The following steps show how to create a service to display toast notifications from any page.
+Initialize a single toast instance and reuse it across an application by creating a service. The following steps show how to create a service to display toast notifications from any page.
+
+- Creating a toast service (DI): https://learn.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection
 
 **Step 1**: Create a toast service to inject into pages to show toast messages from anywhere. In this example, Title and Content are passed to display the toast message.
 
-```c#
+```csharp
 public class ToastOption
 {
     public string Title { get; set; }
@@ -290,10 +309,11 @@ public class ToastOption
 public class ToastService
 {
     public event Action<ToastOption> ShowToastTrigger;
+
     public void ShowToast(ToastOption options)
     {
-        //Invoke ToastComponent to update and show the toast with messages  
-        this.ShowToastTrigger.Invoke(options);
+        // Invoke ToastComponent to update and show the toast with messages
+        ShowToastTrigger?.Invoke(options);
     }
 }
 ``` 
@@ -301,8 +321,7 @@ public class ToastService
 **Step 2**: Add the ToastService to the services collection in Program.cs.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="13 14" %}
-
+{% highlight c# tabtitle="~/Program.cs" hl_lines="13" %}
 using BlazorApp.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -324,7 +343,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -338,7 +356,6 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
-    
 {% endhighlight %}
 {% endtabs %}
     
@@ -346,27 +363,19 @@ app.Run();
         
 {% tabs %}
 {% highlight cshtml tabtitle="ToastComponent.razor" hl_lines="13 14" %}
-    
-@using Syncfusion.Blazor.Notifications;  
+@using Syncfusion.Blazor.Notifications
 @inject ToastService ToastService
 
-<SfToast @ref="Toast" Timeout=2000>  
-    <ToastTemplates>  
-        <Title>  
-            @Options.Title  
-        </Title>  
-        <Content>  
-            @Options.Content  
-        </Content>  
-    </ToastTemplates>  
-    <ToastPosition X="Right"></ToastPosition>  
-</SfToast>  
-  
-@code{
+<SfToast @ref="Toast" Timeout="2000">
+    <ToastTemplates>
+        <Title>@Options.Title</Title>
+        <Content>@Options.Content</Content>
+    </ToastTemplates>
+    <ToastPosition X="Right"></ToastPosition>
+</SfToast>
 
-    SfToast Toast;  
-
-    private bool IsToastVisible { get; set; } = false;  
+@code {
+    private SfToast Toast;
 
     private ToastOption Options = new ToastOption();
 
@@ -374,19 +383,17 @@ app.Run();
     {
         ToastService.ShowToastTrigger += (ToastOption options) =>
         {
-            InvokeAsync(() =>
+            InvokeAsync(async () =>
             {
-                this.Options.Title = options.Title;
-                this.Options.Content = options.Content;
-                this.IsToastVisible = true;
-                this.StateHasChanged();
-                this.Toast.ShowAsync();
+                Options.Title = options.Title;
+                Options.Content = options.Content;
+                StateHasChanged();
+                await Toast.ShowAsync();
             });
         };
         base.OnInitialized();
     }
-}  
-    
+}
 {% endhighlight %}
 {% endtabs %}
     
@@ -394,7 +401,6 @@ app.Run();
 
 {% tabs %}
 {% highlight cshtml tabtitle="MainLayout.razor" hl_lines="21" %}
-    
 @inherits LayoutComponentBase
 @using BlazorApp.Components;
 
@@ -407,7 +413,7 @@ app.Run();
 
     <main>
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank" rel="noopener">About</a>
         </div>
 
         <article class="content px-4">
@@ -415,8 +421,8 @@ app.Run();
         </article>
     </main>
 </div>
-<ToastComponent />
 
+<ToastComponent />
 {% endhighlight %}
 {% endtabs %}
     
@@ -424,24 +430,22 @@ app.Run();
 
 {% tabs %}
 {% highlight cshtml tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
-    
 @page "/"
-@using BlazorApp.Components  
-@inject ToastService ToastService 
+@using BlazorApp.Components
+@inject ToastService ToastService
 
-<button class="e-btn" @onclick="@ShowToast"> Show Toast</button>  
-  
-@code {  
-    private void ShowToast()  
-    {  
-        this.ToastService.ShowToast(new ToastOption()  
-        {  
-            Title = "Toast Title",  
+<button class="e-btn" @onclick="@ShowToast">Show Toast</button>
+
+@code {
+    private void ShowToast()
+    {
+        ToastService.ShowToast(new ToastOption
+        {
+            Title = "Toast Title",
             Content = "Toast content"
-        });  
-    }  
-}  
-    
+        });
+    }
+}
 {% endhighlight %}
 {% endtabs %}
     
