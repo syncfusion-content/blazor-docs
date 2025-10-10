@@ -9,8 +9,7 @@ documentation: ug
 
 # Set the disabled state in Blazor SplitButton Component
 
-Split Button component can be enabled or disabled by disabled property. To disable Split Button component, set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_Disabled) property as true.
-
+Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_Disabled) property to disable the SplitButton. When set to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
