@@ -421,3 +421,93 @@ public WordDocument GetDocument(string htmlText)
 {% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).
+
+## Secure Exported PDF/Word with Authentication
+
+You can add additional data while exporting a Word document or PDF from the Rich Text Editor on the client side, which can be received on the server side. By using the `OnExport` event and its `CurrentRequest` and `CustomFormData` properties, you can pass authentication tokens and parameters to the controller action. On the server side, you can fetch the authentication token from the request headers and retrieve the custom form data from the request body, which retrieves the values sent using the POST method.
+
+The following example demonstrates how to pass authentication tokens and custom data during export:
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.RichTextEditor
+<SfRichTextEditor>
+    <RichTextEditorEvents OnExport="@Export" />
+    <RichTextEditorToolbarSettings Items="@Items" />
+    <RichTextEditorExportPdf ServiceUrl="@exportPdfServiceUrl" />
+    <RichTextEditorExportWord ServiceUrl="@exportWordServiceUrl" />
+    Rich Text Editor
+</SfRichTextEditor>
+@code {
+    private string exportWordServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToDocx";
+    private string exportPdfServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToPdf";
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportPdf },
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportWord },
+    };
+    private void Export(ExportingEventArgs args)
+    {
+        // Add different authentication tokens based on export type
+        var token = (args.ExportType == "Pdf" ? "Pdf Bearer token" : "Word Bearer token");
+        args.CurrentRequest = new Dictionary<string, string>
+        {
+            { "Authorization", token }
+        };
+        args.CustomFormData = new Dictionary<string, string>
+        {
+            { "userId", "12345" }
+        };
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight controller %}
+
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace WordUpload.Controllers
+{
+    [ApiController]
+    public class WordController : ControllerBase
+    {
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public WordController(IWebHostEnvironment env)
+        {
+            this.hostingEnv = env;
+        }
+        public class ExportParam
+        {
+            public string? html { get; set; }
+            public object? formData { get; set; }
+        }
+        [AcceptVerbs("Post")]
+        [EnableCors("AllowAllOrigins")]
+        [Route("api/RichTextEditor/ExportToPdf")]
+        public async Task<ActionResult> ExportToPdf([FromBody] ExportParam args)
+        {
+            // Fetch authentication token from request headers
+            var authorization = Request.Headers["Authorization"].ToString();
+            // Access custom form data from the request body
+            Console.WriteLine("Authorization: " + authorization);
+            Console.WriteLine("Form Data: " + args.formData);
+            Console.WriteLine("HTML Content: " + args.html);
+            // Your export logic here
+            // Validate token, process formData, generate PDF, etc.
+            return Ok();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
