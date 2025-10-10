@@ -20,7 +20,7 @@ The following code demonstrates how to add a ruler to the diagram.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" >
+<SfDiagramComponent Height="600px" >
 	<RulerSettings>
         <HorizontalRuler>
           </HorizontalRuler>
@@ -28,10 +28,6 @@ The following code demonstrates how to add a ruler to the diagram.
           </VerticalRuler>
     </RulerSettings>
 </SfDiagramComponent>
-
-@code{
-    SfDiagramComponent diagram;
-}
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoiXXlTWQuPiRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

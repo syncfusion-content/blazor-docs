@@ -157,7 +157,7 @@ N> Deploy your HTML file in the web application and export the diagram (image no
 
 ### How to Stretch and Align Image Content
 
-Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramScale.html#Syncfusion_Blazor_Diagram_DiagramScale_Meet). The following code illustrates how to scale or stretch the content of the image node.
+Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the `Scale` property of the node is set as **Meet**. The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -213,7 +213,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Create HTML Template Shapes
 
-HTML elements can be embedded in the diagram by setting the node Shape type to [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_HTML). The Shape property of Node determines the node type. The following code illustrates how an HTML node is created.
+HTML elements can be embedded in the diagram by setting the node Shape type to [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_HTML). The `Shape` property of Node determines the node type. The following code illustrates how an HTML node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -312,7 +312,7 @@ N> HTML nodes cannot be exported to image format, like JPEG and PNG. It is by de
 
 ## How to Create a Basic Shape Node
 
-The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
+The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the `Type` of the shape should be set as **Basic**. Its `Shape` property can be set with any one of the built-in shapes. To render a rounded rectangle, set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
 
 The following code example illustrates how to create a basic shape.
 
@@ -356,7 +356,7 @@ The following code example illustrates how to create a basic shape.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BasicShape)
 
-N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of the node is set as **Basic**. Default property for Shape is Rectangle.
+N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of the node is set as **Basic**. Default property for `Shape` is **Rectangle**.
 <br/> When `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
 <br/> The `CornerRadius` property applies only to basic shapes.
 The list of basic shapes are as follows.
@@ -517,7 +517,7 @@ N> Similar to HTML node, SVG nodes cannot be exported to image format. The fill 
 
 ## Node with BPMN shapes
 
-The [BPMN](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Bpmn) shapes visually represent Business Process Model and Notation elements such as events, tasks, gateways, and more. To create BPMN shapes, the Type of the shape should be set as Bpmn.
+The [BPMN](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Bpmn) shapes visually represent Business Process Model and Notation elements such as events, tasks, gateways, and more. To create BPMN shapes, set the `Type` property of the shape to **Bpmn**.
 
 Its Shape property can then be configured with any one of the available built-in BPMN subtypes, such as events, activities, or gateways. Customize each BPMN shape by specifying its category and characteristics (like Event, Trigger, Loop, etc.).
 

@@ -41,7 +41,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Connector Endpoint Connected in Blazor Diagram](images/Connector-Endpoint-Connected.gif)
 
-## How to Customize the Connector Endpoint Handle When it iS Disabled
+## How to Customize the Connector Endpoint Handle When it is Disabled
 
 To customize the visual appearance of the connector endpoint handle when it is in a disabled state, apply the following CSS code to the Blazor application:
 

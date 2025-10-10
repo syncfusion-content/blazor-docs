@@ -332,7 +332,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add a Node Group at Runtime
 
-A node group can be added at runtime by using the Nodes collection of the diagram.
+A node group can be added at runtime by using the `Nodes` collection of the diagram.
 
 The following code illustrates how a node group is added at runtime.
 

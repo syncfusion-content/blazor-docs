@@ -286,7 +286,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Shows or Hides the Tip Pointer for Tooltip
 
-The [ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property controls the visibility of the tooltip pointer. Set it to true to display the pointer, or false to hide it. This property allows to customize the appearance of tooltips in your Blazor diagram.
+The [ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property controls the visibility of the tooltip pointer. Set it to **true** to display the pointer, or **false** to hide it. This property allows to customize the appearance of tooltips in your Blazor diagram.
 
 The following code example is used to set the tooltip tip pointer for nodes.
 
@@ -786,7 +786,7 @@ To enable or disable this sticky mode, use the `IsSticky` property in the toolti
 
 N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
-The following code example demonstrates how to set `IsSticky` property to `true` for a node:
+The following code example demonstrates how to set `IsSticky` property to **true** for a node:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -828,7 +828,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 |![ToolTip During hover the node with Stikcy Mode](images/StickyNode.png) | 
 
-The following code example demonstrates how to set `IsSticky` property to `true` for a connector:
+The following code example demonstrates how to set `IsSticky` property to **true** for a connector:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -930,7 +930,7 @@ To enable or disable this sticky mode, use the `IsSticky` property in the toolti
 
 N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
-The following code example demonstrates how to set `IsSticky` property to `true` for a user handle:
+The following code example demonstrates how to set `IsSticky` property to **true** for a user handle:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1032,7 +1032,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sticky Tooltip for Fixed User Handles
 
-When `IsSticky` property of the tooltip is set to `true`, tooltips for fixed user handles will remain visible on the screen until the user explicitly dismisses them by clicking the close icon. In this mode, a close icon is added to the top-right corner of the tooltip. This persistent tooltip behavior can be enabled or disabled using the `IsSticky` property. By default, the `IsSticky` property is set to `false`, meaning tooltips will disappear automatically when the user moves the mouse away from the handle.
+When `IsSticky` property of the tooltip is set to **true**, tooltips for fixed user handles will remain visible on the screen until the user explicitly dismisses them by clicking the close icon. In this mode, a close icon is added to the top-right corner of the tooltip. This persistent tooltip behavior can be enabled or disabled using the `IsSticky` property. By default, the `IsSticky` property is set to **false**, meaning tooltips will disappear automatically when the user moves the mouse away from the handle.
 
 The following code example demonstrates how to set IsSticky property to true for a fixed user handle:
 
@@ -1160,13 +1160,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sticky Tooltip for Ports
 
-Enhance the diagram's user experience with "sticky" tooltips for ports. This feature allows tooltips to remain visible until explicitly closed, providing users with persistent information. When enabled, a close icon appears in the top-right corner of the tooltip, empowering users to dismiss it at their convenience.
+Enhance the diagram's user experience with sticky tooltips for ports. This feature allows tooltips to remain visible until explicitly closed, providing users with persistent information. When enabled, a close icon appears in the top-right corner of the tooltip, empowering users to dismiss it at their convenience.
 
 To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
 
 N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
-The following code example demonstrates how to set `IsSticky` property to `true` for a ports:
+The following code example demonstrates how to set `IsSticky` property to **true** for a ports:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

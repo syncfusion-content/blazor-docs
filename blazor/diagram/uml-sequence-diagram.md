@@ -76,7 +76,7 @@ The following code example explains how to create participants in sequence diagr
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub]().
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateParticipant).
 
 ![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
 
@@ -455,7 +455,7 @@ Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub]().
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateFragments).
 
 ![Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)
 
@@ -590,4 +590,4 @@ Customize this value to increase or decrease the spacing based on the diagram’
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIsXNFJamPossc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub]().
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/SpaceBetweenParticipants).

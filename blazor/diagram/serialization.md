@@ -45,7 +45,7 @@ await Diagram.LoadDiagramAsync(data);
 
 ## How to Load the SfDiagram JSON Data String Using SfDiagram Component
 
-Load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) with [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. When loading the SfDiagram serialized string, the isClassicData parameter should be set to true. The default value of isClassicData is false.
+Load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) with [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. When loading the SfDiagram serialized string, the `isClassicData` parameter should be set to **true**. The default value of `isClassicData` is **false**.
 
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 

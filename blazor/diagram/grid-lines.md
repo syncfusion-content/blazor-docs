@@ -13,7 +13,7 @@ Gridlines are the pattern of lines drawn behind diagram elements. They provide v
 
 ## How to Customize Grid Lines Visibility
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings to control the visibility of gridlines.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of `SnapSettings` to control the visibility of gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -123,7 +123,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Customize Line Intervals
 
-Customize line thickness and spacing using the by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
+Customize line thickness and spacing using the by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineIntervals) property of the `HorizontalGridLines` and `VerticalGridLines`. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
@@ -301,7 +301,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Customize Snap Line Style
 
-The [SnapLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapLineStyle) property of the [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) class allows to adjust the appearance of snapping lines to enhance visibility or match specific aesthetic preferences. By customizing this property, modify the color, stroke width, stroke dash array, and opacity of the snap lines. These adjustments improve visual contrast, making it easier to align objects with precision. By default, the snap line color is '#07EDE1'.
+The [SnapLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapLineStyle) property of the [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) class allows to adjust the appearance of snapping lines to enhance visibility or match specific aesthetic preferences. By customizing this property, modify the color, stroke width, stroke dash array, and opacity of the snap lines. These adjustments improve visual contrast, making it easier to align objects with precision. By default, the snap line color is **#07EDE1**.
 
 The following code example illustrates how to customize the snap line style.
 

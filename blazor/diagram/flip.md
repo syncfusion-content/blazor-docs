@@ -15,7 +15,7 @@ The diagram component supports flipping nodes, connectors, and groups. Flipping 
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command mirrors the content and ports of selected objects across the horizontal axis, vertical axis, or both on the diagram page. This transformation allows for quick and easy reorientation of diagram elements.
 
-**Note:** The Flip command applies to both individual nodes and node groups, including their selected child nodes.
+**Note:** The `Flip` command applies to both individual nodes and node groups, including their selected child nodes.
 
 ### How to Change the Flip Direction
 

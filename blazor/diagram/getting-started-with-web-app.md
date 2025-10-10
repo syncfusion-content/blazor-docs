@@ -417,7 +417,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Step 6: How to Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `Per page/component` in the web app, define a render mode at the top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `per page/component` in the web app, define a render mode at the top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |

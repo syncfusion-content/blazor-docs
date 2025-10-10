@@ -305,7 +305,7 @@ The following code explains how to customize the displacement(margin) of the use
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleDisplacement)
 
 ### How to align the user handle using horizontal and vertical alignment properties
-The HorizontalAlignment property sets how the user handle is horizontally aligned at the position based on the Offset. The VerticalAlignment property is used to set how the user handle is vertically aligned at the position. These alignment properties provide precise control over the user handle positioning relative to the calculated offset position, allowing for fine-tuned placement and improved visual consistency.
+The `HorizontalAlignment` property sets how the user handle is horizontally aligned at the position based on the Offset. The `VerticalAlignment` property is used to set how the user handle is vertically aligned at the position. These alignment properties provide precise control over the user handle positioning relative to the calculated offset position, allowing for fine-tuned placement and improved visual consistency.
 
 The following code explains how to customize horizontal and vertical alignment of the user handle.
 
@@ -974,7 +974,7 @@ The user handle types follow a specific precedence order when multiple options a
 * PathData (Highest precedence)
 * ImageUrl (Medium precedence)
 * UserHandleTemplate (Lowest precedence)
-If multiple options are set, the higher-precedence option is used. For example, when both PathData and Source are provided, PathData is used and the image is ignored.
+If multiple options are set, the higher-precedence option is used. For example, when both `PathData` and `Source` are provided, `PathData` is used and the image is ignored.
 
 ## Fixed User Handles
 

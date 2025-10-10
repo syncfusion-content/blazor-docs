@@ -367,7 +367,7 @@ If using Syncfusion.Blazor && Syncfusion.Blazor.Themes NuGet package in your app
     <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-If using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
+If using `Syncfusion.Blazor.Diagram` && `Syncfusion.Blazor.Themes` NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....
