@@ -1,33 +1,44 @@
 ---
 layout: post
-title: Editing customization in DataGrid | Syncfusion
-description: Learn here all about editing in Syncfusion Blazor DataGrid and more.
+title: Customize editing in Blazor DataGrid | Syncfusion
+description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Editing in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Editing customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize various editing-related elements.
+The appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
+- Edited and newly added rows
+- Input fields within the edit form
+- Edit dialog header
+- Command column buttons
 
-## Customizing the edited and added row element
+N> - Enable editing with [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and configure [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) to include actions like add, edit, delete, and update.
+- Customize dialog headers when [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to `Dialog`.
+- Command button icon colors are based on the theme’s icon font. Use browser inspection tools to check class names and glyph codes.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
-To customize the appearance of edited and added row table elements in the Grid, you can use the following CSS code:
+## Customizing Edited and Added Row Elements
+
+The **.e-editedrow** and **.e-addedrow** classes are used to style the edited and added rows in the Blazor DataGrid. To change its appearance, apply CSS:
 
 ```css
 .e-grid .e-editedrow table, .e-grid .e-addedrow table {
 	    background-color: #62b2eb;
 }
 ```
-In this example, the .**e-editedrow** class represents the edited row element, and the **.e-addedrow** class represents the added row element. You can modify the `background-color` property to change the color of these row table elements.
 
-![Customizing the added row element](../images/style-and-appearance/edited-added-row-element.png)
-![Customizing the edited row element](../images/style-and-appearance/edited-added-row-element-2.png)
+Style properties such as `background-color` can be modified to visually distinguish rows that are being edited or newly added.
 
-## Customizing the edited row input element
+![Blazor DataGrid added row with custom background color](../images/style-and-appearance/edited-added-row-element.png)
+![Blazor DataGrid edited row with custom background color](../images/style-and-appearance/edited-added-row-element-2.png)
 
-To customize the appearance of edited row input elements in the Grid, you can use the following CSS code:
+## Customizing Edited Row Input Elements
+
+The **.e-gridform** and **.e-input** classes are used to style input elements within the edit form of the Blazor DataGrid. To change its appearance, apply CSS:
 
 ```css
 
@@ -37,9 +48,9 @@ To customize the appearance of edited row input elements in the Grid, you can us
 }
 
 ```
-In this example, the **.e-gridform** class represents the editing form, and the **.e-input** class represents the input elements within the form. You can modify the `font-family` property to change the font and `color` property  to change text color of the input elements.
+Style properties such as `font-family` and `color` can be modified to improve the readability and visual appeal of editable fields.
 
-![Customizing the edited and added row element](../images/style-and-appearance/edited-row-input-element.png)
+![Blazor DataGrid edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -50,7 +61,7 @@ In this example, the **.e-gridform** class represents the editing form, and the 
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
@@ -126,11 +137,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLStyZhJXEhbeSg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLINOLffsrjCvCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the edit dialog header element
+## Customizing the Edit Dialog Header
 
-To customize the appearance of the edit dialog header element in the Grid, you can use the following CSS code:
+The **.e-edit-dialog** and **.e-dlg-header-content** classes are used to style the edit dialog header in the Blazor DataGrid when dialog editing is enabled. To change its appearance, apply CSS:
 
 ```css
 
@@ -139,9 +150,9 @@ To customize the appearance of the edit dialog header element in the Grid, you c
 }
 
 ```
-In this example, the **.e-edit-dialog** class represents the edit dialog, and the **.e-dlg-header-content** class targets the header content within the dialog. You can modify the `background-color` property to change the color of the header element.
+Style properties such as `background-color` can be modified to visually separate the header from the rest of the dialog content.
 
-![Customizing the edit dialog header element](../images/style-and-appearance/edit-dialog-header-element.png)
+![Blazor DataGrid edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -152,7 +163,7 @@ In this example, the **.e-edit-dialog** class represents the edit dialog, and th
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
@@ -224,11 +235,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDretyNVJZGMwDNm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBetEhJzsqPbguh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the command column buttons
+## Customizing Command Column Buttons
 
-To customize the appearance of command column buttons such as edit, delete, update, and cancel, you can use the following CSS code:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes are used to style the command column buttons in the Syncfusion® Blazor DataGrid. These buttons represent actions such as `edit`, `delete`, `update`, and `cancel`. To customize their appearance, apply CSS:
 
 ```css
 
@@ -240,10 +251,10 @@ To customize the appearance of command column buttons such as edit, delete, upda
 }
 
 ```
-In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** classes represent the respective command column buttons. You can modify the `color` property to change the color of these buttons.
+Style properties like `color`, `font-size`, and `font-weight` can be adjusted to differentiate action icons and enhance visibility during interaction.
 
-![Customize command column button](../images/style-and-appearance/commandbutton-1.png)
-![Customize command column button](../images/style-and-appearance/commandbutton-2.png)
+![Blazor DataGrid command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.png)
+![Blazor DataGrid command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -254,7 +265,7 @@ In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** class
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="100"></GridColumn>
@@ -337,5 +348,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrItotrzWzFhlUN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrIjYBTfCdNCmvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
