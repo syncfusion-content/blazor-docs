@@ -94,7 +94,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Layout
 
-Use the DoLayoutAsync function to re-arrange nodes in the diagram when any of the following occur:
+Use the `DoLayoutAsync` function to re-arrange nodes in the diagram when any of the following occur:
 
 * Add
 * Remove
@@ -113,11 +113,11 @@ The function can be called on-demand, making it flexible for use in scenarios wh
 
 The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties customize the space between successive nodes in the diagram, both horizontally and vertically. These properties help control the overall layout and visual organization of nodes, ensuring clear and consistent spacing across the diagram.
 
-* [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing): Space between nodes along the horizontal axis. Useful for flowcharts, organizational charts, or radial layouts.
+* **HorizontalSpacing**: Space between nodes along the horizontal axis. Useful for flowcharts, organizational charts, or radial layouts.
 
-* [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing): Space between nodes along the vertical axis. It ensures a balanced distribution of nodes in layouts such as hierarchical trees or mind maps.
+* **VerticalSpacing**: Space between nodes along the vertical axis. It ensures a balanced distribution of nodes in layouts such as hierarchical trees or mind maps.
 
-Default values: HorizontalSpacing is 30 and VerticalSpacing is 30. Modify these to achieve the required layout density.
+Default values: HorizontalSpacing is **30** and VerticalSpacing is **30**. Modify these to achieve the required layout density.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -174,7 +174,7 @@ Default values: HorizontalSpacing is 30 and VerticalSpacing is 30. Modify these 
 
 [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) control how the layout is positioned or stretched along the horizontal and vertical axes, respectively. These settings determine the positioning of the diagram elements (nodes and connectors) within the available space.
 
-The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) property defines horizontal alignment within the container. The default value is Auto, which aligns automatically based on content.
+The `HorizontalAlignment` property defines horizontal alignment within the container. The default value is **Auto**, which aligns automatically based on content.
 
 The possible values for HorizontalAlignment are:
 
@@ -201,7 +201,7 @@ The possible values for HorizontalAlignment are:
 ```
 ![Blazor Diagram layout horizontal alignment centered](../images/LayoutAlignmentCenter.png)
 
-The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) property defines how the layout is aligned vertically within the container. The default value is Auto, which means the layout adjusts based on its content.
+The `VerticalAlignment` property defines how the layout is aligned vertically within the container. The default value is **Auto**, which means the layout adjusts based on its content.
 
 The possible values for VerticalAlignment are:
 
@@ -230,9 +230,9 @@ The possible values for VerticalAlignment are:
 
 ## How to Configure Layout Margins
 
-The [LayoutMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property defines the space between the viewport and the layout, creating padding around the diagram. The default margin values are Left: 50, Top: 50, Right: 0, Bottom: 0.
+The [LayoutMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property defines the space between the viewport and the layout, creating padding around the diagram. The default margin values are **Left: 50, Top: 50, Right: 0, Bottom: 0**.
 
-You can customize the margin for each side (top, right, bottom, left) using the LayoutMargin object:
+You can customize the margin for each side (top, right, bottom, left) using the `LayoutMargin` object:
 ```csharp
 <SfDiagramComponent Height="600px">
     <Layout Type="LayoutType.OrganizationalChart">
@@ -252,10 +252,10 @@ You can customize the margin for each side (top, right, bottom, left) using the 
 
 ## How to Handle Connector Segment Overlap in Layout
 
-The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property controls whether connectors in the layout should be arranged to avoid overlapping other connectors. Setting this property to true, ensures connectors are spaced out properly to avoid any overlap, making the layout more readable and visually clear.
+The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property controls whether connectors in the layout should be arranged to avoid overlapping other connectors. Setting this property to **true**, ensures connectors are spaced out properly to avoid any overlap, making the layout more readable and visually clear.
 
-* true: Connectors are arranged to avoid overlapping with other connectors (default).
-* false: Connectors can overlap with each other.
+* **true**: Connectors are arranged to avoid overlapping with other connectors (default).
+* **false**: Connectors can overlap with each other.
 
 Here’s an example of how to use this property:
 ```csharp

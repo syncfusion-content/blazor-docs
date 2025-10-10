@@ -158,7 +158,7 @@ A hierarchical layout can also be created from a data source. The following exam
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
 
->**Note:** In DataSourceSettings, the type of the ID and ParentID properties is string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.
+>**Note:** In `DataSourceSettings`, the type of the ID and ParentID properties is string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.
 
 ## Customizing the Properties
 

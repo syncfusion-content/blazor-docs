@@ -9,7 +9,7 @@ documentation: ug
 
 # Flowchart Layout in Blazor Diagram Component
 
-The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms. It uses standard symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts help communicate step-by-step sequences, making complex processes easier to understand and communicate.
+The [Flowchart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_Flowchart) layout provides a visual representation of processes, workflows, systems, or algorithms. It uses standard symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts help communicate step-by-step sequences, making complex processes easier to understand and communicate.
 
 ## How to Use Common Flowchart Symbols
 
@@ -234,7 +234,7 @@ This orientation arranges elements vertically from top to bottom. It is commonly
 
 ### How to Arrange Layout Using LeftToRight Orientation
 
-This orientation arranges elements horizontally from left to right. It is used to represent processes or workflows that move sequentially across the page, emphasizing a linear progression of steps or actions.
+This `Orientation` arranges elements horizontally from left to right. It is used to represent processes or workflows that move sequentially across the page, emphasizing a linear progression of steps or actions.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -268,13 +268,13 @@ The following table will explain the pictorial representation of the behavior:
 
 >**Note:** If both branch directions are the same, the **Yes** branch is prioritized.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayoutSettings).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayoutSettings).
 
 ### How to Define Custom Yes and No Branch Values
 
-The decision symbol produces two branches: **Yes** and **No**. If the output branch connector text value matches the values in the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) property of [FlowchartLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html), it is considered the **Yes** branch. Similarly, if the connector text value matches the values in the [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues) property, it will be considered as the **No** branch. By default, [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) property contains **Yes** and **True** string values and the [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues) property contains **No** and **False** string values.  
+The decision symbol produces two branches: **Yes** and **No**. If the output branch connector text value matches the values in the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) property of [FlowchartLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html), it is considered the **Yes** branch. Similarly, if the connector text value matches the values in the [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues) property, it will be considered as the **No** branch. By default, `YesBranchValues` property contains **Yes** and **True** string values and the `NoBranchValues` property contains **No** and **False** string values.  
 
-Any text value can be given as a connector text to describe the flow. Also, any string value can be given in the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) and [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues). To decide the flow based on if or else, the connector text should match the values in the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) and [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues).
+Any text value can be given as a connector text to describe the flow. Also, any string value can be given in the `YesBranchValues` and `NoBranchValues`. To decide the flow based on if or else, the connector text should match the values in the `YesBranchValues` and `NoBranchValues`.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

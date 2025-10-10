@@ -12,7 +12,7 @@ documentation: ug
 ## How to Handle Selection Change Event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
-* SelectionChanging occurs before the selection is committed and can be canceled; SelectionChanged occurs after selection is updated and is typically used for UI updates or logging.
+* `SelectionChanging` occurs before the selection is committed and can be canceled; `SelectionChanged` occurs after selection is updated and is typically used for UI updates or logging.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
@@ -468,7 +468,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Handle Collection Change Events
 
-* The following events are raised when elements are added to or removed from the diagram. CollectionChanging occurs before the update (cancellable), and CollectionChanged occurs after the update.
+* The following events are raised when elements are added to or removed from the diagram. `CollectionChanging` occurs before the update (cancellable), and `CollectionChanged` occurs after the update.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|

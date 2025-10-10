@@ -13,7 +13,7 @@ documentation: ug
 
 * The [DataLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DataLoaded) event is raised when the diagram layout is rendered completely.
 
-The following code example demonstrates handling the DataLoaded event in the diagram.
+The following code example demonstrates handling the `DataLoaded` event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
