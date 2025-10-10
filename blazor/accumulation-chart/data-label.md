@@ -382,3 +382,4 @@ Data labels can be customized using the template element for the accumulation ch
 
 * [Tooltip](./tool-tip)
 * [Legend](./legend)
+* [Dynamically Switch Themes](https://support.syncfusion.com/kb/article/21357/how-to-dynamically-switch-themes-in-a-blazor-accumulation-chart)
