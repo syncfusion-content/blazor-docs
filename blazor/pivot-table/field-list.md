@@ -9,10 +9,6 @@ documentation: ug
 
 # Field List in Blazor Pivot Table Component
 
-To have a quick glance on how to enable field list in the Blazor Pivot Table, watch this video:
-
-{% youtube "https://www.youtube.com/watch?v=YBjR8HiyyFw" %}
-
 The Field List makes it easy to organize and analyze data in your Pivot Table. It provides a user-friendly interface similar to Microsoft Excel that allows you to add or remove fields and move them between different axes like columns, rows, values, and filters. You can also apply sorting and filtering options while working with your data.
 
 The field list can be displayed in two different formats to interact with pivot table. They are:
