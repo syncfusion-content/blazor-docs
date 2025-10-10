@@ -7,35 +7,60 @@ control: DatePicker
 documentation: ug
 ---
 
-# Week Number in Blazor DatePicker Component
+# Week Numbers in Blazor DatePicker Component
 
-You can enable WeekNumber in the DatePicker by using the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html?&_ga=2.27644924.1192045546.1630297484-1815315561.1628088345#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property.
+Enable week numbers in the DatePicker to display the week index in the calendar’s left column. Turn this on using the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Width="250px" WeekNumber="true"></SfDatePicker>
-
 ```
 
+Preview:
+- The calendar displays a week index column on the left side of the month view.
 
-
-![Blazor DatePicker with week numbers](./images/blazor_datepicker_weeknumber.png)
+![Blazor DatePicker showing week numbers in the left column](./images/blazor_datepicker_weeknumber.png)
 
 ## Week Rule
 
-You can enable `WeekRule` in the DatePicker by using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property. This property provide an option to specify the rule for defining the first week of the year. Find the possible values of `WeekRule` property.
+Configure how the first week of the year is determined using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property. This setting controls how week numbers roll over at the start of the year. The following values are supported (aligned with .NET’s CalendarWeekRule):
 
-Types  |Description  
+Types  | Description  
 -----|-----
-FirstDay |Set the first week of the year's week number to be started from 1. Then it followed as 1, 2, 3 ...
-FirstFullWeek |Set the first week of the year's week number to be started from 52 or 53 (i.e December last week's week Number). Then it followed as 53, 1, 2 ...
-FirstFourDayWeek | Set the week number based on the majority of dates present in the week for the respected months. If January dates are presented in the week more than December, the first week of the year's week number will be started from 1. If December dates are presented in the week more than January, the first week of the year's week number will be started from 52 or 53.
+FirstDay | The first week starts on the first day of the year; subsequent weeks are numbered 1, 2, 3, and so on.
+FirstFullWeek | The first full week of the year is week 1; days before the first full week belong to the last week (52 or 53) of the previous year.
+FirstFourDayWeek | The first week with at least four days in the new year is week 1; otherwise, the week is counted as the last week (52 or 53) of the previous year.
 
+```cshtml
+@using Syncfusion.Blazor.Calendars
+@using System.Globalization
 
+<div class="row">
+    <div class="col">
+        <h4>FirstDay</h4>
+        <SfDatePicker TValue="DateTime?" WeekNumber="true" WeekRule="CalendarWeekRule.FirstDay"></SfDatePicker>
+    </div>
+    <div class="col">
+        <h4>FirstFullWeek</h4>
+        <SfDatePicker TValue="DateTime?" WeekNumber="true" WeekRule="CalendarWeekRule.FirstFullWeek"></SfDatePicker>
+    </div>
+    <div class="col">
+        <h4>FirstFourDayWeek</h4>
+        <SfDatePicker TValue="DateTime?" WeekNumber="true" WeekRule="CalendarWeekRule.FirstFourDayWeek"></SfDatePicker>
+    </div>
+</div>
+```
 
-![Blazor DatePicker displays Week Rule of FirstDay](./images/blazor-datepicker-first-day.png)
+Preview:
+- FirstDay: Week 1 begins on the first day of the new year.
+- FirstFullWeek: Week 1 begins on the first full week; days before that belong to the previous year’s final week.
+- FirstFourDayWeek: Week 1 begins on the first week containing at least four days in the new year.
 
-![Blazor DatePicker displays Week Rule of FirstFullWeek](./images/blazor-datepicker-first-full-week.png)
+N> The culture (Locale) and the first day of the week influence week numbering. By default, the DatePicker uses the current culture’s settings unless overridden.
 
-![Blazor DatePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datepicker-first-four-Day-Week.png)
+![Blazor DatePicker with WeekRule set to FirstDay](./images/blazor-datepicker-first-day.png)
+
+![Blazor DatePicker with WeekRule set to FirstFullWeek](./images/blazor-datepicker-first-full-week.png)
+
+![Blazor DatePicker with WeekRule set to FirstFourDayWeek](./images/blazor-datepicker-first-four-Day-Week.png)
