@@ -30,7 +30,7 @@ documentation: ug
 
 ## How to Specify Parent Child Relationship in Data Source
 
-The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) properties are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
+The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) properties are string in `DataSourceSettings`. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty `ParentID`. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the `DataSource`, we have defined three specific details. The `DataModel` class has attributes such as `ID`, `ParentID`, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a `ParentID`. Below is a code example illustrating this:
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -595,7 +595,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Bind JSON Data to the Diagram
 
-Local JSON data can be bound to the Diagram by assigning the array of objects to the Json property of the SfDataManager component.
+Local JSON data can be bound to the Diagram by assigning the array of objects to the Json property of the `SfDataManager` component.
 
 The following sample code demonstrates binding local data through SfDataManager to the Diagram component,
 
@@ -668,7 +668,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 To bind remote data to the [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or use the SfDataManager component. To interact with a remote data source, provide the endpoint Url.
 
-When using SfDataManager for data binding, the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
+When using `SfDataManager` for data binding, the TValue must be provided explicitly in the diagram component. By default, `SfDataManager` uses `ODataAdaptor` for remote data-binding.
 
 ### How to Bind OData Services
 
@@ -763,7 +763,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Bind OData V4 Services
 
-OData V4 is an updated version of the OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the OData V4 adaptor.
+OData V4 is an updated version of the OData protocols, and the `SfDataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the OData V4 adaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1040,7 +1040,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
 ### How to Bind Custom Data
-Custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+Custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class.
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
@@ -1912,7 +1912,7 @@ namespace DiagramWithRemoteData.Controllers
 
 ### How to Configure Diagram Component Using Web API Adaptor
 
-Configure the Diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with the web api, use WebApiAdaptor.
+Configure the Diagram using the 'SfDataManager' to interact with the created Web API and consume the data appropriately. To interact with the web api, use **WebApiAdaptor**.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
