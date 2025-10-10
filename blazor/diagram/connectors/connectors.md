@@ -603,8 +603,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Connecting two nodes using specific ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 
-* Set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect), to accept only incoming connection to dock in it. Similarly, Set PortConstraints to [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect), to accept only an outgoing connection to dock in it.
-* Setting [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connectors from establishing a connection to the port.
+* Set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to **InConnect**, to accept only incoming connection to dock in it. Similarly, Set PortConstraints to **OutConnect**, to accept only an outgoing connection to dock in it.
+* Setting **None**, the port restricts connectors from establishing a connection to the port.
 
 ## See also
 
