@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Customized Checkbox in Blazor CheckBox Component | Syncfusion
+title: Customized CheckBox in Blazor CheckBox Component | Syncfusion
 description: Checkout and learn here all about Customized Checkbox in Syncfusion Blazor CheckBox component and more.
 platform: Blazor
-control: Checkbox
+control: CheckBox
 documentation: ug
 ---
 
 # Customized Checkbox in Blazor CheckBox Component
 
+This topic explains multiple ways to customize the Blazor CheckBox appearance using CSS, including applying theme utility classes through the CssClass parameter, resizing the checkbox, customizing the frame shape, and changing the check icon. For an overview of the component, see CheckBox documentation (https://blazor.syncfusion.com/documentation/checkbox/). For API details, see SfCheckBox API (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html).
+
 ## Customize checkbox appearance
 
-You can customize the appearance of the Checkbox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the
-[CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
+You can customize the appearance of the CheckBox component using CSS rules. Define custom CSS rules based on the requirement and assign the class name using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
 
-The background and border color of the Checkbox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
+The background and border colors of the CheckBox can be adjusted using utility classes to create primary, success, info, warning, and danger styles (for example, e-primary, e-success, e-info, e-warning, and e-danger). These classes style the CheckBox wrapper and reflect hover and focus states.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -78,13 +79,13 @@ The background and border color of the Checkbox is customized through the custom
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Appearance of Blazor CheckBox](./../images/blazor-checkbox-appearance-customization.png)
+![Customize Blazor CheckBox appearance with theme utility classes](./../images/blazor-checkbox-appearance-customization.png)
 
 ## Customize width and height
 
-The height and width of the Checkbox component can be customized by setting `height` and `width` properties in `styles`
+The height and width of the CheckBox component can be customized by applying CSS rules to the CheckBox wrapper and its inner elements.
 
-The following section explains about how to customize the height and width of the Checkbox component.
+The following section explains how to increase the CheckBox size using a custom CSS class. The styles update the .e-frame box, the check icon size, the ripple container for proper interaction effects, and the label line-height for vertical alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -121,13 +122,13 @@ The following section explains about how to customize the height and width of th
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.png)
+![Customize Blazor CheckBox height and width with CSS](./../images/blazor-checkbox-height-width-customization.png)
 
 ## Custom frame
 
-Checkbox frame can be customized as per the requirement by adding CSS rules.
+Checkbox frame can be customized based on the requirement by adding CSS rules.
 
-In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
+In the following example, a to-do list uses a round CheckBox by setting border-radius to 100% via the e-custom class applied through CssClass.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -180,13 +181,13 @@ In the following example, to-do list is displayed with round checkbox by changin
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Blazor CheckBox Frame](./../images/blazor-checkbox-frame-customization.png)
+![Customize Blazor CheckBox frame to rounded shape](./../images/blazor-checkbox-frame-customization.png)
 
 ## Custom check icon
 
-Checkbox check icon can be customized as per the requirement by adding CSS rules.
+Checkbox check icon can be customized by adding CSS rules.
 
-In the following example, the check icon can be customized by changing check icon content, background and border color in focus and hovered states by adding `e-checkicon` class.
+In the following example, the check icon glyph, background, and border colors are customized for default, hover, and focus states by applying the e-checkicon class through CssClass.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -230,4 +231,4 @@ In the following example, the check icon can be customized by changing check ico
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Check Icon in Blazor CheckBox](./../images/blazor-checkbox-check-icon-customization.png)
+![Customize Blazor CheckBox check icon styles](./../images/blazor-checkbox-check-icon-customization.png)
