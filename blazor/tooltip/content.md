@@ -212,7 +212,7 @@ By default, the tooltip can show formatted content. To improve the layout or cre
 }
 ```
 
-This option is useful when rendering HTML stored as a string from a database or API. Do not render untrusted HTML without sanitization, as doing so may introduce cross-site scripting (XSS) vulnerabilities.
+This is useful when you need to render HTML content that's stored as a string, perhaps from a database or API.
 
 ![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)
 
