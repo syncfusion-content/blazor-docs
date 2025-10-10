@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Splitter in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Columns in Syncfusion Blazor Gantt Chart component and much more details.
+description: Checkout and learn here all about Splitter in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
