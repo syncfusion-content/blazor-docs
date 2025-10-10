@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Style Customization for active item in Blazor Tabs | Syncfusion
+title: Style Customization for Active Item in Blazor Tabs | Syncfusion
 description: Learn here all about style customization for active item in Syncfusion Blazor Tabs component, it's elements and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Style Customization for active Item in Blazor Tabs Component
+# Style Customization for Active Item in Blazor Tabs Component
 
-The style of tabs can be customized by overriding its header and active tab CSS classes. Define HTML string for adding animation and customizing the tab header and pass it to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_Text) property. Now you can override the style using custom CSS classes added to the tab elements.
+The style of tabs can be customized by overriding their header and active tab CSS classes. Use the `HeaderTemplate` property of `TabItem` to define custom HTML content, including elements for animation and styling. The appearance can then be controlled using custom CSS classes added to these tab elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -112,5 +112,7 @@ The style of tabs can be customized by overriding its header and active tab CSS 
     }
 </style>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhoiDtYTxTdRTJj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing active tabitem in Blazor Tabs](../images/blazor-tabs-custom-active-tabitem.png)
