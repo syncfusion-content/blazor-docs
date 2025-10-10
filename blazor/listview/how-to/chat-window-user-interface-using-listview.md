@@ -7,7 +7,7 @@ control: ListView
 documentation: ug
 ---
 
-# Chat window user interface using Blazor ListView Component
+# Chat Window User Interface using Blazor ListView Component
 
 ListView can be customized as chat window. To achieve that, use the ListView [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html).
 
@@ -37,10 +37,10 @@ ListView can be customized as chat window. To achieve that, use the ListView [`T
 
 In ListView template, the list items are rendered based on the receiver and sender information from the dataSource of listview.
 
-## Adding messages to chat window
+## Adding Messages to the Chat Window
 
-* Use textbox to get message from the user.
-* Add the textbox message to ListView dataSource using ObservableCollection.
+*   Use an `SfTextBox` component to capture messages from the user.
+*   Add the captured message to the ListView's `DataSource` (an `ObservableCollection`) using its `Add` method. This will automatically update the ListView.
 
 ```c#
 void OnSend()
@@ -274,5 +274,5 @@ void OnSend()
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLSWDtWgAZHwGDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap4" %}
 ![Blazor ListView with Chat Window](../images/list/blazor-listview-with-chat-window.png)
