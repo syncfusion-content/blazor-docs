@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Sorting customization in Blazor DataGrid | Syncfusion
-description: Learn here all about sorting in Syncfusion Blazor DataGrid and more.
+title: Sorting Icon Styling in Blazor DataGrid | Syncfusion
+description: Learn how to style sorting icons in Syncfusion Blazor DataGrid using CSS, with tips on theme icon codes and CSS isolation.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Sorting customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
+Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon code points vary by theme; obtain the correct glyph values from Theme Studio, the theme’s icon font CSS, or by inspecting computed styles in the browser dev tools. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or scope selectors with a wrapper class or Grid ID to increase specificity if the theme overrides custom CSS. For production, prefer CSS isolation or a site-wide stylesheet over inline styles.
 
 ## Customizing the Blazor DataGrid sorting icon
 
-To customize the sorting icon that appears in the Grid header when sorting is applied, you can use the following CSS code:
+To customize the sorting icon that appears in the Grid header when sorting is applied, use the following CSS:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -23,13 +23,13 @@ To customize the sorting icon that appears in the Grid header when sorting is ap
     content: '\e7b6'; /* Icon code for descending order */
 }
 ```
-In this example, the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
+In this example, the `.e-icon-ascending::before` selector targets the icon for ascending order, and `.e-icon-descending::before` targets the icon for descending order. Update the `content` values to match the selected theme’s icon set. Ensure the icon font family used by the theme is available and applied; overriding `content` without the correct font family can result in missing glyphs. In CSS isolation, apply selectors via `:deep(.e-grid .e-icon-ascending::before)` and `:deep(.e-grid .e-icon-descending::before)` if required. Verify icon appearance in both left-to-right and right-to-left layouts.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
 ## Customizing the Blazor DataGrid multi sorting icon
 
-To customize the multi sorting icon that appears in the Grid header when multiple columns are sorted, you can use the following CSS code:
+To customize the multi-sorting badge that appears in the Grid header when multiple columns are sorted, use the following CSS:
 
 ```css
 .e-grid .e-sortnumber {
@@ -38,7 +38,7 @@ To customize the multi sorting icon that appears in the Grid header when multipl
 }
 ```
 
-In this example, the **.e-sortnumber** class targets the background color and font family of the multi sorting icon. You can modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
+In this example, the `.e-sortnumber` selector customizes the background color and font family of the multi-sorting badge. Modify `background-color` and `font-family` to align with design requirements. Maintain sufficient color contrast and do not remove focus indicators to preserve accessibility. In isolated CSS, scope the rule with `:deep(.e-grid .e-sortnumber)` or use a wrapper/ID to limit the impact to a specific Grid instance.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.png)
 
