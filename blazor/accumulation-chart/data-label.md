@@ -382,3 +382,4 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 * [Tooltip](./tool-tip)
 * [Legend](./legend)
+* [Dynamically Switch Themes](https://support.syncfusion.com/kb/article/21357/how-to-dynamically-switch-themes-in-a-blazor-accumulation-chart)
