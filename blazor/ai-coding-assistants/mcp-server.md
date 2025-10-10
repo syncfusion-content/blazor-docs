@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Key Benefits
 
@@ -66,11 +66,10 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio
 
-* In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the `Custom Servers` tab.
-* Enter the Server Name as `blazor-mcp`, choose Server Type as npm package, and set the NPM Package name to `@syncfusion/blazor-assistant`.
-* Add an environment variable as `Syncfusion_API_Key` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
-* Once installed, the server will appear in the User Installed Server list, and will be added to the **config.yaml** file.
-* The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
+* In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace, find `SyncfusionBlazorAssistant`, and click Install.
+* When prompted, enter your [Syncfusion API key](https://syncfusion.com/account/api-key) and click Submit to register.
+* It installs locally on your machine and appears in the Installed list.
+* The server is ready for use in Code Studio.
 
 For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
 
@@ -150,7 +149,7 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 
 > For more detailed information about configuring MCP servers in various clients, refer to the official documentations.
   * [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
-  * [Cursor](https://cursor.com/docs/context/mcp#using-mcp-json)
+  * [Cursor](https://docs.cursor.com/en/context/mcp#using-mcp-json)
   * [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server)
   * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 

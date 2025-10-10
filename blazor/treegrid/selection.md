@@ -612,7 +612,7 @@ public class TreeData
 
 ## Get selected row indexes
 
-The selected row indexes is got by using the GetSelectedRowIndexesAsync method.
+Retrieve selected row indexes using the `GetSelectedRowIndexesAsync` method.
 
 {% tabs %}
 

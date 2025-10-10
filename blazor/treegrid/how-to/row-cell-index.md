@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Get index value of selected rowcell in Blazor TreeGrid | Syncfusion
-description: Learn here all about how to get index value of selected rowcell in Syncfusion Blazor TreeGrid component and more.
+title: Get Index Value of Selected Row Cell in Blazor TreeGrid | Syncfusion
+description: Learn how to get the index value of a selected row cell in the Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Get index value of selected row cell in Blazor TreeGrid Component
+# Get Index Value of Selected Row Cell in Blazor TreeGrid Component
 
-The index value of a selected row cell or row is got by using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the Tree Grid component.
+The index value of a selected row or cell in the Blazor TreeGrid component can be retrieved using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the TreeGrid component.
 
-This is demonstrated in the below sample code where the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method is called on button click which returns the selected row cell indexes,
+The following example demonstrates how to use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method on a button click to return the selected row cell indexes.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using Syncfusion.Blazor.Buttons
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfButton OnClick="SelectedRowCellIndex" CssClass="e-primary" IsPrimary="true" Content="Get selected rowcell index"></SfButton>
 
@@ -87,4 +87,4 @@ public class TreeData
 
 {% endtabs %}
 
-N> For getting the row cell index value, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of the [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) component should be set as **Cell**.
+> Note: To retrieve the row cell index value, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of the [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) component must be set to **Cell**.

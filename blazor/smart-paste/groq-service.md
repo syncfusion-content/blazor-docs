@@ -1,147 +1,108 @@
 ---
 layout: post
-title: Groq AI Service with Smart Components in Blazor App | Syncfusion
-description: Learn how to implement a custom AI service using Groq API with Syncfusion Smart Components in a Blazor App.
+title: Groq AI Integration with Blazor Smart Paste Button | Syncfusion
+description: Learn how to implement a custom AI service using the Groq API with the Syncfusion Blazor Smart Paste Button component in a Blazor App.
+platform: Blazor
 control: Smart Paste Button
 documentation: ug
 ---
 
-# Getting Started with Smart Components using Groq AI Service
+# Groq AI Integration with Blazor Smart Paste Button
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Groq AI services in your Blazor App. 
+The Syncfusion Blazor SmartPaste Button component enables AI-powered, context-aware content pasting into forms, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Groq AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
-## Prerequisites
+## Setting Up Groq
 
-Before you begin, ensure you have:
+1. **Create a Groq Account**  
+   Visit [Groq Cloud Console](https://console.groq.com), sign up or sign in, and complete the verification process.
+2. **Obtain an API Key**  
+   Navigate to [API Keys](https://console.groq.com/keys) in the Groq Console and click "Create API Key."
+3. **Review Model Specifications**  
+   Refer to [Groq Models Documentation](https://console.groq.com/docs/models) for details on available models (e.g., `llama3-8b-8192`).
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* Groq account and API key (see setup instructions below)
+## Create a Groq AI Service
 
-### Setting Up Groq
+Create a service class to manage interactions with the Groq API, including authentication and response processing for the Smart Paste Button.
 
-1. **Create a Groq Account**
-   * Visit [Groq Cloud Console](https://console.groq.com)
-   * Sign up for a new account or sign in
-   * Complete the verification process
-
-2. **Get Your API Key**
-   * Navigate to [API Keys](https://console.groq.com/keys) in the Groq Console
-   * Click "Create API Key"
-
-### Models
-
-For detailed model specifications and capabilities, visit the [Groq Models Documentation](https://console.groq.com/docs/models).
-
-## Getting Started for Groq AI with SmartPasteButton
-
-After completing this setup, you can:
-
-1. [Add Smart Components to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
-2. [Configure form annotations for better AI understanding](https://blazor.syncfusion.com/documentation/smart-paste/annotation)
-3. [Customize the appearance and behavior of Smart Components](https://blazor.syncfusion.com/documentation/smart-paste/customization)
-
----
-
-## Step 1: Create a Groq AI Service
-
-In this step, we'll create a service class that handles all interactions with the Groq API. This service will:
-
-* Manage API authentication
-* Send chat messages to Groq's LLM models
-* Process responses for use in your application
-
-### Implementation Steps
-
-1. Create a new file named `GroqService.cs` in your project's `Services` folder
-2. Add the required namespaces for HTTP and JSON handling
-3. Implement the service class following the code below
-
+1. Create a `Services` folder in your project.
+2. Add a new file named `GroqService.cs` in the `Services` folder.
+3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json` or environment variables).
 
 ```csharp
-
 using System.Net;
 using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.AI;
+
 public class GroqService
 {
-   private const string ApiKey = "Your API key";
-   private const string ModelName = "Your Model Name";
-   private const string Endpoint = "https://api.groq.com/openai/v1/chat/completions";
+    private readonly string _apiKey;
+    private readonly string _modelName = "llama3-8b-8192"; // Example model
+    private readonly string _endpoint = "https://api.groq.com/openai/v1/chat/completions";
+    private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
+    {
+        PooledConnectionLifetime = TimeSpan.FromMinutes(30),
+        EnableMultipleHttp2Connections = true
+    })
+    {
+        DefaultRequestVersion = HttpVersion.Version20 // Fallback to HTTP/2 for broader compatibility
+    };
+    private static readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
 
-   private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
-   {
-      PooledConnectionLifetime = TimeSpan.FromMinutes(30),
-      EnableMultipleHttp2Connections = true,
-   })
-   {
-      DefaultRequestVersion = HttpVersion.Version30
-   };
-
-   private static readonly JsonSerializerOptions JsonOptions = new()
-   {
-      PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-   };
-
-   public GroqService()
-   {
-      if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
-      {
+    public GroqService(IConfiguration configuration)
+    {
+        _apiKey = configuration["Groq:ApiKey"] ?? throw new ArgumentNullException("Groq API key is missing.");
+        if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
+        {
             HttpClient.DefaultRequestHeaders.Clear();
-            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
-      }
-   }
+            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
+        }
+    }
 
-   public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
-   {
-      var requestPayload = new GroqChatParameters
-      {
-            Model = ModelName,
+    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
+    {
+        var requestPayload = new GroqChatParameters
+        {
+            Model = _modelName,
             Messages = chatMessages.Select(m => new Message
             {
-               Role = m.Role == ChatRole.User ? "user" : "assistant",
-               Content = m.Text
+                Role = m.Role == ChatRole.User ? "user" : "assistant",
+                Content = m.Text
             }).ToList(),
-            Stop = new() { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
-      };
+            Stop = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" } // Configurable stop sequences
+        };
 
-      var content = new StringContent(JsonSerializer.Serialize(requestPayload, JsonOptions), Encoding.UTF8, "application/json");
+        var content = new StringContent(JsonSerializer.Serialize(requestPayload, JsonOptions), Encoding.UTF8, "application/json");
 
-      try
-      {
-            var response = await HttpClient.PostAsync(Endpoint, content);
+        try
+        {
+            var response = await HttpClient.PostAsync(_endpoint, content);
             response.EnsureSuccessStatusCode();
-
             var responseString = await response.Content.ReadAsStringAsync();
             var responseObject = JsonSerializer.Deserialize<GroqResponseObject>(responseString, JsonOptions);
-
             return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from model.";
-      }
-      catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
-      {
+        }
+        catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
+        {
             throw new InvalidOperationException("Failed to communicate with Groq API.", ex);
-      }
-   }
+        }
+    }
 }
-
-
 ```
 
-## Step 2: Define Request and Response Models
+N> Store the Groq API key in `appsettings.json` (e.g., `{ "Groq": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
-To communicate effectively with the Groq API, we need to define C# classes that map to Groq's API format. 
+## Define Request and Response Models
 
-1. Create a new file named `GroqModels.cs` in your project
-2. Add the following model classes that represent the API contract
+Define C# classes to match the Groq API’s request and response format.
 
-### Key Components
+1. Create a new file named `GroqModels.cs` in the `Services` folder.
+2. Add the following model classes:
 
-* **Message**: Represents a single chat message with role and content
-* **GroqChatParameters**: The main request object sent to Groq
-* **GroqResponseObject**: The response received from Groq
-* **Choice**: Represents a single response option from the model
-
-```CSharp
+```csharp
 public class Choice
 {
     public Message Message { get; set; }
@@ -167,52 +128,134 @@ public class GroqResponseObject
 }
 ```
 
-## Step 3: Create a Custom AI Service
+## Create a Custom AI Service
 
-Create a bridge between Syncfusion's Smart Components and our Groq service. This enables the Smart Components to use Groq's AI capabilities through a `IChatInferenceService` interface.
+Implement the `IChatInferenceService` interface to connect the Smart Paste Button to the Groq service.
 
-The `IChatInferenceService` interface is part of Syncfusion's infrastructure that allows Smart Components to work with different AI providers:
+1. Create a new file named `GroqInferenceService.cs` in the `Services` folder.
+2. Add the following implementation:
 
-1. Create a new file named `MyCustomService.cs` 
-2. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> namespace
-3. Implement the interface as shown below
-
-
-```CSharp
+```csharp
 using Syncfusion.Blazor.AI;
-public class MyCustomService : IChatInferenceService
+using System.Threading.Tasks;
+
+public class GroqInferenceService : IChatInferenceService
 {
-    public GroqService _groqServices;
-    public MyCustomService(GroqService groqServices) {
-        _groqServices = groqServices;
-    }
-    public Task<string> GenerateResponseAsync(ChatParameters options)
+    private readonly GroqService _groqService;
+
+    public GroqInferenceService(GroqService groqService)
     {
-        return _groqServices.CompleteAsync(options.Messages);
-        throw new NotImplementedException();
+        _groqService = groqService;
+    }
+
+    public async Task<string> GenerateResponseAsync(ChatParameters options)
+    {
+        return await _groqService.CompleteAsync(options.Messages);
     }
 }
 ```
 
-## Step 4: Configure the Blazor App
+## Configure the Blazor App
 
-Configure your Blazor application to use the Groq AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Register the Groq service and `IChatInferenceService` implementation in the dependency injection container.
 
-```CSharp
+Update the **~/Program.cs** file as follows:
 
-using Syncfusion.Blazor.SmartComponents;
+```csharp
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
+
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GroqService>();
-builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, GroqInferenceService>();
 
 var app = builder.Build();
-....
-
+// ...
 ```
 
+## Add the Smart Paste Button
+
+Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test the Groq AI integration.
+
+```razor
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.SmartComponents
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm" Model="@EventRegistrationModel">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(EventRegistration.Name)" ID="firstname"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Email)" ID="email"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Phone)" ID="phonenumber"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Address)" ID="address"></FormItem>
+    </FormItems>
+    <FormButtons>
+        <SfSmartPasteButton IsPrimary="true" Content="Smart Paste" IconCss="e-icons e-paste"></SfSmartPasteButton>
+    </FormButtons>
+</SfDataForm>
+
+<br>
+<h4 style="text-align:center;">Sample Content</h4>
+<div>
+    Hi, my name is Jane Smith. You can reach me at example@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001.
+</div>
+
+@code {
+    private EventRegistration EventRegistrationModel = new();
+
+    public class EventRegistration
+    {
+        [Required(ErrorMessage = "Please enter your name.")]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address.")]
+        [Display(Name = "Email ID")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Please enter your mobile number.")]
+        [Display(Name = "Phone Number")]
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Please enter your address.")]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+    }
+}
+```
+
+N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) package is installed for form integration.
+
+## Testing the Integration
+
+1. Configure the Blazor Web App with the Groq AI service and Smart Paste Button as described above.
+2. Add the code to **~/Pages/Home.razor**, **Program.cs**, and the `Services` folder.
+3. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
+4. Copy the sample content provided in the Razor file.
+5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
+
+![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste.gif)
+
+N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
+
+## Troubleshooting
+
+If the Groq AI integration does not work, try the following:
+- **No Suggestions Displayed**: Verify that the Groq API key and model name are correct in the configuration. Check the `GroqService` implementation for errors.
+- **HTTP Request Failures**: Ensure a stable internet connection and that the Groq API endpoint (`https://api.groq.com/openai/v1/chat/completions`) is accessible. Test with HTTP/2 instead of HTTP/3 if compatibility issues arise.
+- **Service Registration Errors**: Confirm that `GroqService` and `GroqInferenceService` are registered in **Program.cs**.
+
+## See Also
+
+- [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+- [Customizing Smart Paste Button Suggestions](https://blazor.syncfusion.com/documentation/smart-paste/customization)
