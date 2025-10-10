@@ -55,7 +55,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add BPMN Nodes into a BPMN Expanded Sub-Process
 
-To add a Bpmn node into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BpmnNodeViewModel object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the `BpmnExpandedSubProcess`.
+To add a BPMN node into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BpmnNodeViewModel object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the `BpmnExpandedSubProcess`.
 
 The following code example explains how to add a BPMN node to an BPMN Expanded Sub-Process using the `Children` property.
 
@@ -266,7 +266,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Set Sub-Process Type
 
-The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_SubProcessType) represents the type of task being processed within a BPMN expanded subprocess. The `SubProcessType` property of the `BpmnExpandedSubProcess` component allows specification of the subprocess type. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
+The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_SubProcessType) represents the type of task being processed within a BPMN expanded subprocess. The `SubProcessType` property of the `BpmnExpandedSubProcess` component allows specification of the subprocess type. By default, it is set to **Default**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

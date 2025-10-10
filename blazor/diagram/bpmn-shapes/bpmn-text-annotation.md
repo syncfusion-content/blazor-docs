@@ -11,15 +11,15 @@ documentation: ug
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but provides information about objects within a flow. 
 
-* A TextAnnotation points to or references another BPMN shape, which we call the [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) of the TextAnnotation. When a target shape is moved, copied, or deleted, any TextAnnotations attached to the shape will be moved, copied, or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The `TextAnnotationTarget` property of the [BpmnTextAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html) is used to connect an annotation element to the BPMN Node.
+* A BPMNTextAnnotation points to or references another BPMN shape, which we call the [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) of the BPMNTextAnnotation. When a target shape is moved, copied, or deleted, any BPMNTextAnnotation attached to the shape will be moved, copied, or deleted too. Thus, the BPMNTextAnnotations remain with their target shapes though you can reposition the BPMNTextAnnotation to any offset from its target. The `TextAnnotationTarget` property of the [BpmnTextAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html) is used to connect an annotation element to the BPMN Node.
 
 * The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
 
-* By default, the `TextAnnotation` shape has a connection.
+* By default, the `BPMNTextAnnotation` shape has a connection.
 
 * The [TextAnnotationDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationDirection) property is used to set the shape direction of the text annotation.
 
-* By default, the `TextAnnotationDirection` is set to a [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left).
+* By default, the `TextAnnotationDirection` is set to a **Left**.
 
 * To set the size for text annotation, use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties of the node.
 
@@ -142,7 +142,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
-## How to Connect a Text Annotation to a BPMN Node
+## How to Connect a BPMN Text Annotation to a BPMN Node
 
 Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
 

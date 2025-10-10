@@ -82,7 +82,7 @@ N>* Each annotation's [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## How to Add an Annotation at Runtime
 
-An annotation can be added to the Annotations collection of a node or connector at runtime by using the `Add` methods.
+An annotation can be added to the `Annotations` collection of a node or connector at runtime by using the `Add` method.
 
 The following code explains how to add an annotation to a node at runtime by using `Add` method.
 
@@ -146,7 +146,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Remove an Annotation at Runtime
 
-An annotation can be removed from a node or connector's Annotations collection by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
+An annotation can be removed from a node or connector's `Annotations` collection by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
