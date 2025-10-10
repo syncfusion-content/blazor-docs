@@ -11,17 +11,16 @@ documentation: ug
 
 The [Blazor Tab](https://www.syncfusion.com/blazor-components/blazor-tabs) component allows to drag and drop any item by setting `AllowDragAndDrop` &nbsp;to **true**. Items can be reordered to any place by dragging and dropping them onto the desired location.
 
-* If you need to prevent dragging action for a particular item, the `OnDragStart` event can be used which will trigger when the item drag is started. If you need to prevent dropping action for a particular item, the `Dragged` event can be used which will trigger when the drag action is stopped.
-
-* The `DragArea` defines the area in which the draggable element movement will be occurring. Outside that area will be restricted for the draggable element movement.
-
-* The `OnDragStart` event will be triggered before dragging the item from Tab.
-
-* The `Dragged` event will be triggered when the Tab item is dropped on the target element successfully.
+*   **Preventing Dragging:** To prevent dragging for a particular item, the [`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_OnDragStart) event can be used. This event triggers when an item's drag action begins, allowing for conditional cancellation.
+*   **Preventing Dropping:** To prevent dropping for a particular item, the [`OnDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_OnDrop) event (or `Dragged` event for post-drop logic) can be used. The `Dragged` event triggers when the drag action is stopped (i.e., the item is dropped).
+*   **Defining Drag Area:** The [`DragArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_DragArea) property defines the boundary within which a draggable element can be moved. Movement outside this area is restricted.
+*   **Event Triggering:**
+    *   The `OnDragStart` event triggers before dragging an item from the Tab.
+    *   The `Dragged` event triggers when the Tab item is dropped successfully onto a target element.
 
 In the following sample, the `AllowDragAndDrop` property is enabled.
 
-N> External drag and drop is not possible in blazor Tabs.
+N> External drag and drop (dragging items from outside the Tabs component into it, or vice-versa) is not directly supported by the Blazor Tabs component's `AllowDragAndDrop` feature.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,5 +59,7 @@ N> External drag and drop is not possible in blazor Tabs.
 </style>
 
  ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeMNiNCxoJPste?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.gif)

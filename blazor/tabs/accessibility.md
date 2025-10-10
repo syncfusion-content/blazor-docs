@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Tabs Component
 
-The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and commonly used [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) for evaluating accessibility.
 
 The accessibility compliance for the Blazor Tabs component is outlined below.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor Tabs component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
 
@@ -55,9 +55,9 @@ The following list of attributes are added in the Tab.
 | aria-haspopup       | Attribute is set to the Popup element  to indicates the popup mode in the Tab. The default value of this attribute is false. If popup mode is enabled, the attribute value is set to true. |
 | aria-disabled       | Attribute set to the Tab items to It indicates the disabled state of the Tab. |
 
-## Keyboard interaction
+## Keyboard Interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) practices. Once focus is on the active Tab element, the following key combinations can be used for interaction:
 
 | Windows | Mac | Actions |
 |--- |--- | --- |
@@ -71,12 +71,12 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 |  <kbd>Shift + F10 </kbd> | <kbd>⇧</kbd> + <kbd>F10</kbd> | If popup mode is enabled, it opens the popup when the Tab is focused. |
 |  <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the Tab, if close button is enabled in Tab header. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
 The Blazor Tabs component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the Tabs component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tab) in a new window to evaluate the accessibility of the Tabs component with accessibility tools.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

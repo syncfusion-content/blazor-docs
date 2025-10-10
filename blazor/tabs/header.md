@@ -9,7 +9,7 @@ documentation: ug
 
 # Header in Blazor Tabs Component
 
-This section explains about modifying the style of Tab header.
+This section explains how to modify the style of the Blazor Tab header.
 
 ## Styles
 
@@ -105,11 +105,13 @@ N> If the above custom style classes are not included in the root element, the d
 </style>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVIWtsDMnbXhmcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Tabs with Header](./images/blazor-tabs-header.png)
 
 ## Icon positions
 
-The position of the Tab header icons can be customized using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, Tab header icon is placed on left position. The position values are as follows:
+The position of the Tab header icons can be customized using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, the Tab header icon is positioned on the left. The available position values are as follows:
 
 * **Left**: Icon is placed on the left of the Tab header item.
 * **Right**: Icon is placed on the right of the Tab header item.
@@ -244,12 +246,13 @@ The position of the Tab header icons can be customized using the [IconPosition](
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjreMDWXCRbuwCzP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
+## Dynamically Add Tabs with a Floating Button
 
-## Add floating button to the right of existing tabs
-
-You can add floating button to the right of existing tabs by adding button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of last TabItem.
+You can add dynamic tab items by integrating a button into the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of last TabItem.
 
 Here, New tab items added when user clicks on the `Button` inside `HeaderTemplate`.
 
@@ -291,6 +294,8 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyMZMNiHOIBqEa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
 
