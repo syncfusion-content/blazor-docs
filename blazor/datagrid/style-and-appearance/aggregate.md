@@ -24,7 +24,7 @@ N> - To show summary rows in the DataGrid footer, [GridAggregates](https://help.
 
 ## Customizing the aggregate root element
 
-The **e-gridfooter** class is used to style the main container of the aggregate footer row in the DataGrid. To change its appearance, apply CSS like below:
+The **e-gridfooter** class is used to style the main container of the aggregate footer row in the DataGrid. To change its appearance, apply CSS:
 
 ```css
 .e-grid .e-gridfooter {
@@ -38,7 +38,7 @@ Properties such as `font-family`, `font-size`, `padding`, and `border` can be mo
 
 ## Customizing the aggregate cell elements
 
-The **e-summaryrow** class targets the summary row, and **e-summarycell** targets individual cells within that row. To customize the appearance of the summary row cells, apply CSS such as:
+The **e-summaryrow** class is used to target the entire summary row, while the **e-summarycell** class applies styles to each individual cell within that row. To change the appearance of these cells, apply CSS:
 
 ```css
 .e-grid .e-summaryrow .e-summarycell {

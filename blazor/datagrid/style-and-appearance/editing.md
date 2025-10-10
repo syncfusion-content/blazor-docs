@@ -23,7 +23,7 @@ N> - Enable editing with [GridEditSettings](https://help.syncfusion.com/cr/blazo
 
 ## Customizing Edited and Added Row Elements
 
-The **.e-editedrow** and **.e-addedrow** classes are used to style the edited and added rows in the Blazor DataGrid. Customize their appearance with CSS like below:
+The **.e-editedrow** and **.e-addedrow** classes are used to style the edited and added rows in the Blazor DataGrid. To change its appearance, apply CSS:
 
 ```css
 .e-grid .e-editedrow table, .e-grid .e-addedrow table {
@@ -38,7 +38,7 @@ Style properties such as `background-color` can be modified to visually distingu
 
 ## Customizing Edited Row Input Elements
 
-The **.e-gridform** and **.e-input** classes are used to style input elements within the edit form of the Blazor DataGrid. Customize their appearance with CSS like below:
+The **.e-gridform** and **.e-input** classes are used to style input elements within the edit form of the Blazor DataGrid. To change its appearance, apply CSS:
 
 ```css
 
@@ -141,7 +141,7 @@ public class OrderData
 
 ## Customizing the Edit Dialog Header
 
-The **.e-edit-dialog** and **.e-dlg-header-content** classes are used to style the edit dialog header in the Blazor DataGrid when dialog editing is enabled. Customize its appearance with CSS like below:
+The **.e-edit-dialog** and **.e-dlg-header-content** classes are used to style the edit dialog header in the Blazor DataGrid when dialog editing is enabled. To change its appearance, apply CSS:
 
 ```css
 
@@ -239,7 +239,7 @@ public class OrderData
 
 ## Customizing Command Column Buttons
 
-The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes are used to style the command column buttons in the Syncfusion® Blazor DataGrid. These buttons represent actions such as `edit`, `delete`, `update`, and `cancel`. Customize their appearance with CSS like below:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes are used to style the command column buttons in the Syncfusion® Blazor DataGrid. These buttons represent actions such as `edit`, `delete`, `update`, and `cancel`. To customize their appearance, apply CSS:
 
 ```css
 

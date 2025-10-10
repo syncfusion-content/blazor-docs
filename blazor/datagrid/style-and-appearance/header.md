@@ -20,7 +20,7 @@ N> - When using CSS isolation (.razor.css), target internal DataGrid elements us
 
 ## Customizing the Blazor DataGrid header
 
-The **.e-gridheader** class is used to style the header container element in the Blazor DataGrid. To change its appearance, apply CSS like below:
+The **.e-gridheader** class is used to style the header container element in the Blazor DataGrid. Apply CSS to modify its appearance:
 
 ```css
 
@@ -34,7 +34,7 @@ Style properties such as `border`, `padding`, and `background` can be adjusted t
 
 ## Customizing the Blazor DataGrid Header Cell
 
-The **.e-headercell** class is used to style individual header cells in the Blazor DataGrid. To change their appearance, apply CSS as shown below:
+The **.e-headercell** class is used to style individual header cells in the Blazor DataGrid. Apply CSS to modify its appearance:
 
 ```css
 
@@ -50,7 +50,7 @@ Style properties such as `color`, `background-color`, `font`, `border`, and `ali
 
 ## Customizing the Blazor DataGrid Header Cell Div Element
 
-The **.e-headercelldiv** class is used to style the text container inside each header cell. To change its appearance, apply CSS as shown below:
+The **.e-headercelldiv** class is used to style the text container inside each header cell. Apply CSS to modify its appearance:
 
 ```css
 
@@ -153,7 +153,7 @@ public class OrderData
 ## Hiding the Blazor DataGrid Header
 
 The **.e-gridheader .e-columnheader** class combination is used to target the column header row content in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. 
-To hide the column headers across all DataGrids on the page, apply the following CSS:
+To hide the column headers across all DataGrids on the page, apply the CSS like:
 
 ```css
 <style>

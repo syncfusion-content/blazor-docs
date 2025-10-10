@@ -26,7 +26,7 @@ For details on filtering options and behavior, refer to the [Blazor DataGrid fil
 
 ## Customizing the Filter Bar Cell Element
 
-The **.e-filterbarcell** class is used to style the filter bar cells located in the header row of the DataGrid. To modify their appearance, apply CSS as shown below:
+The **.e-filterbarcell** class is used to style the filter bar cells located in the header row of the DataGrid. To modify their appearance, apply CSS like:
 
 ```css
 
@@ -42,7 +42,7 @@ Style properties such as `background-color`, `spacing`, `borders`, and `padding`
 
 ## Customizing the Filter Bar Input Element
 
-The **.e-filterbarcell** and **.e-input** classes are used to style the input field inside the filter bar cell in the header row of the Blazor DataGrid. To modify its appearance, apply CSS as shown below:
+The **.e-filterbarcell** and **.e-input** classes are used to style the input field inside the filter bar cell in the header row of the Blazor DataGrid. To modify its appearance, apply CSS like:
 
 ```css
 
@@ -73,7 +73,7 @@ Properties such as background color, border, and padding can be modified to impr
 
 ## Customizing the Filter Bar Clear Icon
 
-The **.e-clear-icon::before** selector is used to customize the glyph for the clear icon in the filter bar input of the Blazor Grid.
+The **.e-clear-icon::before** selector is used to customize the glyph for the clear icon in the filter bar input of the Blazor Grid. 
 
 ```css
 
@@ -83,7 +83,7 @@ The **.e-clear-icon::before** selector is used to customize the glyph for the cl
 
 ```
 
-The `content` property can be modified to replace the default icon. This helps match the icon with a custom icon set or improve visual clarity.
+The `content` property can be modified to apply a custom icon from an icon set. Properties such as `color` and `font-size` to enhance icon visibility and ensure consistency with the overall design.
 
 ![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.png)
 
@@ -185,7 +185,7 @@ The **.e-icon-filter::before** class is used to style the filter icon displayed 
 
 ```
 
-The `content` property can be modified to replace the default icon. This helps match the icon with a custom icon set or improve visual clarity.
+The `content` property can be modified to apply a custom icon from an icon set. Properties such as `color` and `font-size` to enhance icon visibility and ensure consistency with the overall design.
 
 ![Header with customized filter icon](../images/style-and-appearance/grid-filtering-icon.png)
 
@@ -207,7 +207,7 @@ Style properties such as `background-color`, `padding`, and `borders` can be adj
 
 ## Customizing the Filter Dialog Footer
 
-The **.e-filter-popup .e-footer-content** class is used to style the footer area of the filter dialog in the Blazor DataGrid. To modify its appearance, apply CSS as shown below:
+The **.e-filter-popup .e-footer-content** class is used to style the footer area of the filter dialog in the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 
@@ -223,7 +223,7 @@ Style properties such as `background-color`, `color`, `text-align`, and `border`
 
 ## Customizing the Filter Dialog Input Element
 
-The **.e-filter-popup .e-input class** is used to style input elements inside the filter dialog in the Blazor DataGrid. To modify their appearance, apply CSS as shown below:
+The **.e-filter-popup .e-input class** is used to style input elements inside the filter dialog in the Blazor DataGrid. To modify their appearance, apply CSS:
 
 ```css
 
@@ -255,7 +255,7 @@ Style properties such as `font-family`, `background-color`, and `border` can be 
 
 ## Customizing the Excel Filter Dialog Number Filters Element
 
-The **.e-filter-popup .e-contextmenu-container ul** selector is used to style the number filter list in the Excel filter dialog of the Blazor DataGrid. To modify its appearance, apply CSS as shown below:
+The **.e-filter-popup .e-contextmenu-container ul** selector is used to style the number filter list in the Excel filter dialog of the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 

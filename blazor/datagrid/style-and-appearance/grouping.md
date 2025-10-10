@@ -24,7 +24,7 @@ N> - Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/
 
 ## Customizing the Group Header
 
-The **.e-groupdroparea** class is used to style the group header area in the Blazor Grid. To change its appearance, apply CSS as shown below:
+The **.e-groupdroparea** class is used to style the group header area in the Blazor Grid. To change its appearance, apply CSS:
 
 ```css
 .e-grid .e-groupdroparea {
@@ -32,13 +32,13 @@ The **.e-groupdroparea** class is used to style the group header area in the Bla
 }
 ```
 
-Style properties such as background-color, padding, border, and font can be adjusted to match the desired design.
+Style properties such as `background-color`, `padding`, `border`, and `font` can be adjusted to match the desired design.
 
 ![Blazor DataGrid group header styled with a custom background color](../images/style-and-appearance/group-header.png)
 
 ## Customizing the Group Expand or Collapse Icons
 
-The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes are used to style the expand and collapse icons in the Blazor Grid. To change their appearance, apply CSS as shown below:
+The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes are used to style the expand and collapse icons in the Blazor Grid. To customize their appearance, apply CSS:
 
 ```css
 .e-grid .e-icon-gdownarrow::before{
@@ -55,7 +55,7 @@ The `content` property can be modified to replace the default icon. This helps m
 
 ## Customizing the Group Caption Row
 
-The **.e-groupcaption** class is used to style the caption row in the Blazor Grid. The **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the record-level expand and collapse indicators. Apply CSS as shown below to modify their appearance:
+The **.e-groupcaption** class is used to style the caption row in the Blazor Grid. The **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the record-level expand and collapse indicators. To customize the appearance, apply CSS:
 
 ```css
 .e-grid .e-groupcaption {
@@ -74,7 +74,7 @@ Style properties such as `background-color`, `padding`, `border`, and `font` can
 
 ## Customizing the Grouping Indent Cell
 
-The **.e-indentcell** class is used to style the grouping indent cell in the Blazor Grid. Apply CSS as shown below to modify its appearance:
+The **.e-indentcell** class is used to style the grouping indent cell in the Blazor Grid. To customize its appearance, apply CSS like:
 
 ```css
 .e-grid .e-indentcell {
