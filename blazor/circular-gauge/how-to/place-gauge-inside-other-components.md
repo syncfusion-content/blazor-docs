@@ -88,7 +88,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge Background="transparent" ID="GaugeThree" @ref="GaugeThree" Width="100%" Height="100%">
+                    <SfCircularGauge Background="transparent" ID="GaugeThree" @ref="GaugeThree" Width="100%" Height="100%">
                         <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
                         <CircularGaugeAxes>
                             <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
