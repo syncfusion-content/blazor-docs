@@ -7,15 +7,15 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Gemini AI With Blazor AI AssistView component
+# Gemini AI With Blazor AI AssistView component
 
 The Syncfusion AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in applications.
 
 ## Prerequisites
 
-* Google account to generate an API key for accessing Gemini AI
-* Syncfusion AI AssistView for Blazor package (Syncfusion.Blazor.InteractiveChat) installed in the project
-* Markdig package available in the project for Markdown-to-HTML conversion (required by the sample code)
+* Google account to generate an API key for accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
+* Syncfusion AI AssistView for Blazor package [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project.
+* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
 
 ## Getting Started with the AI AssistView Component
 
@@ -29,7 +29,7 @@ Install the Syncfusion Blazor package in the application.
 
 ```bash
 
-Install-Package Syncfusion.Blazor.InteractiveChat
+Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
 
 ```
 
@@ -37,23 +37,23 @@ Install the Gemini AI package in the application.
 
 ```bash
 
-Install-Package Mscc.GenerativeAI
+Nuget\Install-Package Mscc.GenerativeAI
 
 ```
 
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with a Google account. Create a new account if needed.
+1. Go to [Google AI Studio](https://aistudio.google.com/app/api-keys) and sign in with a google account. Create a new account if needed.
 
-2. Select Get API Key from the left menu or the top-right of the dashboard.
+2. Select `Get API key` from the left menu or the top-right of the dashboard.
 
-3. Choose Create API Key. Select an existing Google Cloud project or create a new one, then proceed.
+3. Choose `Create API key`. Select an existing google cloud project or create a new one, then proceed.
 
 4. After creating or selecting a project, an API key is generated and displayed. Copy the key and store it securely, as it may be shown only once.
 
 > Security note: Do not commit API keys to version control. Use environment variables, a secret manager, or a server-side proxy in production.
 
-##  Integration Gemini AI with AI AssistView
+## Gemini AI with AI AssistView
 
 * Add the generated API key in the following line.
 
@@ -65,6 +65,11 @@ const string GeminiApiKey = 'Place your API key here';
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Navigations
+@using Mscc.GenerativeAI
+@using Markdig
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">

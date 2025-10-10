@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor DatePicker Component
 
-The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
+Web accessibility ensures that web content and applications are usable by people with disabilities. This is especially important for dynamic content and advanced UI components built with Ajax, HTML, and JavaScript.
 
-The [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor DatePicker component is outlined below.
 
@@ -20,7 +20,7 @@ The accessibility compliance for the Blazor DatePicker component is outlined bel
 | [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-to-left (RTL) support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -40,27 +40,25 @@ The accessibility compliance for the Blazor DatePicker component is outlined bel
 
 ## WAI-ARIA attributes
 
-The Blazor DatePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA supports can be achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
+The Blazor DatePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. Compliance is achieved through ARIA attributes such as `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input, toggle button, and popup elements to convey state and relationships to assistive technologies.
 
-To learn more about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility) section.
+To learn more about the accessibility of the Calendar component, refer to the Calendar [Accessibility](../calendar/accessibility) section.
 
-It provides information about the widget for assistive technology to the disabled person in screen reader.
+These attributes expose the component’s state and behavior to assistive technologies used by people who rely on screen readers.
 
-* **aria-expanded**: Attribute indicates the state of a collapsible element.
-
-* **aria-disabled**: Attribute indicates the disabled state of this DatePicker component.
-
-* **aria-activedescendent**: Attribute helps in managing the current active child of the DatePicker component.
+* **aria-expanded**: Indicates the expanded or collapsed state of the popup element.
+* **aria-disabled**: Indicates the disabled state of the DatePicker component.
+* **aria-activedescendant**: Identifies the currently active child element within the DatePicker popup.
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the Blazor DatePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+Use the following keys to interact with the Blazor DatePicker. The component implements keyboard navigation support in line with the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 It supports the following list of shortcut keys:
 
 ### Input navigation
 
-Before opening the pop-up, use the following list of keys to control the pop-up element:
+Before opening the popup, use the following keys to control the popup element:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -70,7 +68,7 @@ Before opening the pop-up, use the following list of keys to control the pop-up 
 
 ### Calendar navigation
 
-Use the following list of keys to navigate the Calendar after the pop-up has been opened:
+Use the following keys to navigate the calendar after the popup has been opened:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -84,13 +82,13 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date in the next month. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
 | <kbd>Shift</kbd> + <kbd>Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date in the previous year. |
-| <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date in the previous year. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves into the inner level of view like month-year and year-decade |
-| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves out from the depth level view like decade-year and year-month |
-| <kbd>Control</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> | Focuses the starting date in the current year. |
+| <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date in the next year. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves to a higher-level view (month to year, year to decade). |
+| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves to a lower-level view (decade to year, year to month). |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the starting date in the current year. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the ending date in the current year. |
 
-N> To focus out the DatePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/datepicker/native-events) here.
+N> To move focus out of the DatePicker component, press the `t` key. For details about handling native events in DatePicker, see [Native events in DatePicker](https://blazor.syncfusion.com/documentation/datepicker/native-events).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -110,9 +108,9 @@ N> To focus out the DatePicker component, use the `t` keys. For additional infor
 ```
 ## Ensuring accessibility
 
-The Blazor DatePicker component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor DatePicker component's accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the DatePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datepicker) in a new window to evaluate the accessibility of the DatePicker component with accessibility tools.
+The accessibility compliance of the DatePicker component is demonstrated in the following sample. Open the [DatePicker accessibility sample](https://blazor.syncfusion.com/accessibility/datepicker) in a new window to evaluate the component with accessibility tools.
 
 ## See also
 

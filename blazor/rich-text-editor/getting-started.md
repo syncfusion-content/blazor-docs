@@ -11,11 +11,13 @@ documentation: ug
 
 # Getting Started with Rich Text Editor in Blazor
 
-This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio, Visual Studio Code and .NET CLI.
+This guide explains how to add the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component to a Blazor WebAssembly app using Visual Studio, Visual Studio Code, and the .NET CLI.
 
-To get start quickly with Blazor Rich Text Editor components, you can check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
+N> Explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
 
-N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
+
+To get started quickly with the Blazor Rich Text Editor, see the [Getting Started sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
 
 {% tabcontents %}
 
@@ -27,11 +29,11 @@ N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
+Create a **Blazor WebAssembly App** in Visual Studio using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, see the [Blazor WebAssembly getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor and Themes NuGet packages
 
-To add **Blazor Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add the **Blazor Rich Text Editor** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, run the following Package Manager commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -42,7 +44,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -54,9 +56,9 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
+Create a **Blazor WebAssembly App** in Visual Studio Code using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, see the [Blazor WebAssembly getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a WebAssembly application using the following commands in the integrated terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
@@ -69,11 +71,11 @@ cd BlazorApp
 
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor and Themes NuGet packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Ensure the current directory contains your `.csproj` file.
+* Run the following commands to install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and restore dependencies.
 
 {% tabs %}
 
@@ -87,7 +89,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -95,7 +97,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Install the latest version of the [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the SDK is already installed, verify the version by running the following command in a command prompt (Windows), terminal (macOS), or shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -107,7 +109,7 @@ dotnet --version
 
 ## Create a Blazor WebAssembly App using .NET CLI
 
-Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly app in a command prompt (Windows) or terminal (macOS) or shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -118,11 +120,11 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor WebAssembly App and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates a new Blazor WebAssembly app in a directory named `BlazorApp` at the current location. See [Create a Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and the [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for more details.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor and Themes NuGet packages
 
-Here's an example of how to add **Blazor RichTextEditor** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+Use the following commands to add the **Blazor Rich Text Editor** component to the application by installing [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For details, see [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -134,13 +136,13 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Add Import Namespaces
+## Add import namespaces
 
 Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespace.
 
@@ -153,9 +155,9 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor WebAssembly app.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -179,7 +181,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script are available via NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet and script references in the `<head>` section of the **~/index.html** file.
 
 ```html
 <head>
@@ -213,7 +215,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
 
-## Configure the Toolbar
+## Configure the toolbar
 
 Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property as your application requires.
 
@@ -282,9 +284,9 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 
 ## Insert images and links
 
-The **Image** inserts an image into Rich Text Editor's content area, and the **Link** links an external resources such as website URLs to the selected text in the Rich Text Editor's content respectively.
+The **Image** tool inserts an image into the Rich Text Editor content area, and the **Link** tool applies hyperlinks (such as website URLs) to the selected text.
 
-Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
+Specify quick toolbar items for target elements such as images, links, and tables. The quick toolbar opens when clicking the target element, allowing customization of that element.
 
 {% tabs %}
 {% highlight razor %}
@@ -395,7 +397,7 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 
 ## Retrieve the number of characters
 
-To retrieve the maximum number of characters in the Rich Text Editor's content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
+To retrieve the number of characters in the Rich Text Editor content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
