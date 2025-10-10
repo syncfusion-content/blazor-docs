@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Components in bUnit Testing | Syncfusion
-description: Checkout and learn here all about configuring syncfusion Blazor Components in bUnit Testing and much more.
+title: Configure Syncfusion Blazor components in bUnit tests | Syncfusion
+description: Learn how to configure Syncfusion Blazor components in bUnit using xUnit or NUnit, register required services, write unit tests and explore to more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# How to Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component in bUnit Testing
+# How to configure Syncfusion® Blazor components in bUnit testing
 
-This section explains how to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in bUnit testing.
+This section explains how to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components for unit testing with bUnit.
 
 ## Configure bUnit with xUnit Test Project
 
@@ -17,37 +17,37 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 
 1. Open Visual Studio 2022 and create a new `xUnit Test Project`.
 
-    ![xUnit project creation in VS 2022](images/bunit/xunit-project.png)
+    ![xUnit project creation dialog in Visual Studio 2022](images/bunit/xunit-project.png)
 
 2. Specify the project name and click the `Next` button.
 
-    ![Specify xUnit project name in Blazor](images/bunit/xunit-project-name.png)
+    ![Specify the xUnit project name](images/bunit/xunit-project-name.png)
 
-3. Select specific `Target Framework` and click the `Create` button.
+3. Select the target framework and click the `Create` button.
 
-    ![Select target framework for xUnit project in Blazor](images/bunit/xunit-target-framework.png)
+    ![Select the target framework for the xUnit project](images/bunit/xunit-target-framework.png)
 
-4. Right-click on the project in the Solution Explorer and select `Manage NuGet Package`.
+4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
 
-    ![Manage NuGet package on xUnit project](images/bunit/xunit-manage-nuget-package.png)
+    ![Open Manage NuGet Packages on the xUnit project](images/bunit/xunit-manage-nuget-package.png)
 
-5. Search `bunit` and install both NuGet packages in the test project.
+5. Search for `bunit` and install both NuGet packages in the test project.
 
-    ![Installing bunit NuGet package in Blazor](images/bunit/xunit-bunit-install.png)
+    ![Install the bUnit NuGet packages in the xUnit project](images/bunit/xunit-bunit-install.png)
 
 ### Add Existing Blazor App and Configure it on xUnit Project
 
-1. Right-click on the Solution and select `Add -> Existing Project`. Browse and add your existing project from the local machine.
+1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
 
-    ![Add existing Blazor project](images/bunit/xunit-add-existing-project.png)
+    ![Add an existing Blazor project to the solution](images/bunit/xunit-add-existing-project.png)
 
     N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
-2. Now, right-click on the xUnit project and select `Add -> Project Reference` and select the added project reference.
+2. Right-click the xUnit project and select `Add -> Project Reference`, then select the added project.
 
-    ![Add existing project reference on xUnit project](images/bunit/xunit-add-project-reference.png)
+    ![Add a project reference to the xUnit project](images/bunit/xunit-add-project-reference.png)
 
-3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any Blazor component from your app instead of this example.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -159,47 +159,47 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
     ```
 
-5. Right-click on the xUnit project and select `Run Tests`. The test cases will run and report the output.
+5. Right-click the xUnit project and select `Run Tests`. The test cases run and report the results.
 
-    ![xUnit test case result in Blazor](images/bunit/xunit-test-run.png)
+    ![xUnit test case results](images/bunit/xunit-test-run.png)
 
 ## Configure bUnit with NUnit Test Project
 
 ### Create NUnit Test Project
 
-1. Open Visual Studio 2022 and create a new `NUnit 3 Text Project`.
+1. Open Visual Studio 2022 and create a new `NUnit 3 Test Project`.
 
-    ![NUnit project creation in VS 2022](images/bunit/nunit-project.png)
+    ![NUnit project creation dialog in Visual Studio 2022](images/bunit/nunit-project.png)
 
 2. Specify the project name and click the `Next` button.
 
-    ![Specify NUnit project name in Blazor](images/bunit/nunit-project-name.png)
+    ![Specify the NUnit project name](images/bunit/nunit-project-name.png)
 
-3. Select specific `Target Framework` and click the `Create` button.
+3. Select the target framework and click the `Create` button.
 
-    ![Select target framework for NUnit project in Blazor](images/bunit/nunit-target-framework.png)
+    ![Select the target framework for the NUnit project](images/bunit/nunit-target-framework.png)
 
-4. Right-click on the project in the Solution Explorer and select `Manage NuGet Package`.
+4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
 
-    ![Manage NuGet package on NUnit project](images/bunit/nunit-manage-nuget-package.png)
+    ![Open Manage NuGet Packages on the NUnit project](images/bunit/nunit-manage-nuget-package.png)
 
-5. Search `bunit` and install both NuGet packages in the test project.
+5. Search for `bunit` and install both NuGet packages in the test project.
 
-    ![Installing bunit NuGet package](images/bunit/nunit-bunit-install.png)
+    ![Install the bUnit NuGet packages in the NUnit project](images/bunit/nunit-bunit-install.png)
 
 ### Add existing Blazor App and configure it on NUnit project
 
-1. Right-click on the Solution and select `Add -> Existing Project`. Browse and add your existing project from the local machine.
+1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
 
-    ![Add existing Blazor project](images/bunit/nunit-add-existing-project.png)
+    ![Add an existing Blazor project to the solution](images/bunit/nunit-add-existing-project.png)
 
     N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
-2. Now, right-click on the NUnit project and select `Add -> Project Reference` and select the added project reference.
+2. Right-click the NUnit project and select `Add -> Project Reference`, then select the added project.
 
-    ![Add existing project reference on NUnit project](images/bunit/nunit-add-project-reference.png)
+    ![Add a project reference to the NUnit project](images/bunit/nunit-add-project-reference.png)
 
-3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any component from your app instead of this example.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -313,13 +313,13 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
     ```
 
-5. Right-click on the NUnit project and select `Run Tests`. The test cases will run and report the output.
+5. Right-click the NUnit project and select `Run Tests`. The test cases run and report the results.
 
-    ![NUnit test case result in Blazor](images/bunit/nunit-test-run.png)
+    ![NUnit test case results](images/bunit/nunit-test-run.png)
 
-## Passing Parameters to the Blazor Component Testing
+## Passing parameters to the Blazor component during testing
 
-You can set the Blazor component parameter using `SetParametersAndRender` method.
+Set component parameters using the `SetParametersAndRender` method.
 
 ```c#
 using Microsoft.AspNetCore.Components;
@@ -357,5 +357,5 @@ public void TestParameter()
 
 ## See Also
 
-* [Create a new bUnit Test Project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=xunit)
-* [Test components in ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/test?view=aspnetcore-8.0)
+* [Create a new bUnit test project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=xunit)
+* [Test components in ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/test)

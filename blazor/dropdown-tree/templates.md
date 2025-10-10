@@ -9,15 +9,13 @@ documentation: ug
 
 # Templates in Blazor Dropdown Tree Component
 
-The Dropdown Tree has been provided with several options to customize each list item, header, and footer elements.
+The Blazor Dropdown Tree component offers several templating options to completely customize the rendering of its various elements, including individual list items, header and footer sections, selected values, and messages for different states. The `context` variable in each template typically holds the data relevant to that specific part of the component.
 
-## Item template
+## Item Template
 
-The content of each list item within the Dropdown Tree can be customized with the help of the [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ItemTemplate) property.
+The content of each list item within the Dropdown Tree's popup can be customized using the [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ItemTemplate) property. This template receives the data of the current node via the `context` variable.
 
 In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the [**ItemTemplate**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ItemTemplate) property. 
-
-The variable `context` holds the data of the current node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,16 +58,15 @@ The variable `context` holds the data of the current node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoZahxfAMAsbVe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dropdown Tree with ItemTemplate.](./images/template/blazor-dropdowntree-item-template.png)
 
-## Value template
+## Value Template
 
-The currently selected value that is displayed by default on the Dropdown Tree input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueTemplate) property. The variable `context` holds the data of the current node.
+The [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueTemplate) property customizes the display of the currently selected value in the Dropdown Tree's input element. The `context` variable within this template holds the data of the selected node.
 
-In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
-
-The template expression can be provided directly inside the `ValueTemplate`, as shown in the code below.
+In the following example, the selected value in the Dropdown Tree's input field is displayed as a combined text of both `Name` and `Job`, separated by a hyphen.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -110,14 +107,15 @@ The template expression can be provided directly inside the `ValueTemplate`, as 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLytahnTgWuIwCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Dropdown Tree with ValueTemplate.](./images/template/blazor-dropdowntree-value-template.png)
 
-## Header template
+## Header Template
 
-The header element is shown statically at the top of the popup list items within Dropdown Tree, and any custom element can be placed as a header element using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HeaderTemplate) property.
+The [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HeaderTemplate) property allows placing any custom element as a header, which is displayed statically at the top of the popup list within the Dropdown Tree.
 
-In the following sample, the header is customized with the custom element.
+The following example customizes the header with a "Employee List" title.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -170,14 +168,14 @@ In the following sample, the header is customized with the custom element.
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIXkLxTqLSgkIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.png)
 
-## Footer template
+## Footer Template
 
-The Dropdown Tree has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [`FooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FooterTemplate) property.
+The Dropdown Tree provides the [`FooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FooterTemplate) property to display a custom element at the bottom of the list items in the popup.
 
-In the following sample, the footer element displays the total number of employees present in the Dropdown Tree.
+In the following example, the footer element displays the total number of employees present in the Dropdown Tree.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -231,14 +229,14 @@ In the following sample, the footer element displays the total number of employe
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXroDkrxpKUWUERt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with Footer Template.](./images/template/blazor-dropdowntree-footer-template.png)
 
-## No records template
+## No Records Template
 
-The Dropdown Tree is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
+The [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property provides support to custom design the popup list content when no data is found, or when no matches are found during a search operation.
 
-In the following sample, popup list content displays the notification of no data available.
+In the following example, the popup list content displays a "NO DATA AVAILABLE" notification because the `Data` list is empty.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -266,12 +264,12 @@ In the following sample, popup list content displays the notification of no data
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhyZkhRJqzNcqKa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree without Data.](./images/template/blazor-dropdowntree-nodata-template.png)
 
-## Action failure template
+## Action Failure Template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
+There [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property provides an option to customize the popup list content when a data fetch request fails from a remote server.
 
 In the following sample, when the data fetch request fails, the Dropdown Tree displays the notification.
 
@@ -315,7 +313,7 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSXYBxpKJQNWby?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with Action Failure Template.](./images/template/blazor-dropdowntree-failure-template.png)
 
 ## Placeholder
@@ -352,12 +350,12 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhotaBHJgoVjGYT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-placeholder.png)
 
-## FloatLabel
+## Floating Label
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property to specify the floating label behavior of the Dropdown Tree that the `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` is depends on `Placeholder`. Default value of `FloatLabelType` is `Never`.
+The [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property controls the floating label behavior of the Dropdown Tree. This property is applicable only when a `Placeholder` is used. The `Placeholder` text floats above the TextBox based on the assigned `FloatLabelType` value. The default value for `FloatLabelType` is `Never`.
 
 The floating label supports the types of actions as follow.
 
@@ -367,7 +365,7 @@ Type     | Description
   [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | The floating label will always float above the input.
   [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | By default, never float the label in the input when the placeholder is available.
 
-The `FloatLabelType` as `Auto` is demonstrated in the following code sample.
+The `FloatLabelType` set to `Auto` is demonstrated in the following code sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -400,12 +398,12 @@ The `FloatLabelType` as `Auto` is demonstrated in the following code sample.
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVSDYLnzqemUgTR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.png)
 
-## SelectedItem template
+## Selected Item Template
 
-In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, the custom text in [SelectedItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectedItemTemplate) can be displayed by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Mode) property as **Custom**.
+When selecting multiple items in the Dropdown Tree (e.g., via checkboxes or multi-selection mode), all selected item texts are displayed in the input. The `SelectedItemTemplate` property allows for displaying custom text instead of the default list of selected items. To enable this, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Mode) property to [`DdtVisualMode.Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtVisualMode.html#Syncfusion_Blazor_Navigations_DdtVisualMode_Custom).
 
 
 In this example, the custom text provided is displayed instead of the text of the selected item.
@@ -457,5 +455,5 @@ In this example, the custom text provided is displayed instead of the text of th
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVoXOVdJqdrtlsD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with SelectedItem template.](./images/template/blazor-dropdowntree-selecteditem-template.png)
