@@ -11,7 +11,7 @@ documentation: ug
 
 Web accessibility ensures that web content and applications are usable by people with disabilities, especially where dynamic content and advanced UI components are involved.
 
-The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) practices commonly used to evaluate accessibility.
+The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) practices commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor DateTimePicker component is outlined below.
 
