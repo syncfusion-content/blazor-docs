@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about sorting functionality in Syncfusion Blazor Charts component and more.
+description: Check out and learn how to configure and utilize sorting functionality in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Sorting in Blazor Chart Component
 
-Sorting enables you to sort data in ascending or descending order. To sort the chart based on the y-axis value, set **Y** to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
+Sorting in Blazor Charts allows data to be displayed in ascending or descending order for clearer analysis and comparison.
+
+To sort chart data by y-axis value, set **Y** to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
 
 ```cshtml
 
@@ -25,7 +27,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -35,14 +37,14 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, Profit = 25},
-        new ChartData { X= "GBR", YValue= 30, Profit = 30},
-        new ChartData { X= "CHN", YValue= 25, Profit = 20},
-        new ChartData { X= "UK", YValue= 40, Profit = 15},
-        new ChartData { X= "AUS", YValue= 28, Profit = 10},
-        new ChartData { X= "IND", YValue= 35, Profit = 20},
-        new ChartData { X= "DEN", YValue= 30, Profit = 10},
-        new ChartData { X= "MEX", YValue= 20, Profit = 5},
+        new ChartData { X = "USA", YValue = 46, Profit = 25},
+        new ChartData { X = "GBR", YValue = 30, Profit = 30},
+        new ChartData { X = "CHN", YValue = 25, Profit = 20},
+        new ChartData { X = "UK", YValue = 40, Profit = 15},
+        new ChartData { X = "AUS", YValue = 28, Profit = 10},
+        new ChartData { X = "IND", YValue = 35, Profit = 20},
+        new ChartData { X = "DEN", YValue = 30, Profit = 10},
+        new ChartData { X = "MEX", YValue = 20, Profit = 5}
     };
 }
 
@@ -52,7 +54,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
 ## Sorting order
 
-By default, the sorting order will be from ascending to descending. The sorting order can be changed from descending to ascending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property as **Descending** in the [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
+The default sorting order is **Ascending**. Change the order to descending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property to **Descending** in [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
 
 ```cshtml
 
@@ -68,7 +70,7 @@ By default, the sorting order will be from ascending to descending. The sorting 
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -78,23 +80,24 @@ By default, the sorting order will be from ascending to descending. The sorting 
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, Profit = 25},
-        new ChartData { X= "GBR", YValue= 30, Profit = 30},
-        new ChartData { X= "CHN", YValue= 25, Profit = 20},
-        new ChartData { X= "UK", YValue= 40, Profit = 15},
-        new ChartData { X= "AUS", YValue= 28, Profit = 10},
-        new ChartData { X= "IND", YValue= 35, Profit = 20},
-        new ChartData { X= "DEN", YValue= 30, Profit = 10},
-        new ChartData { X= "MEX", YValue= 20, Profit = 5},
+        new ChartData { X = "USA", YValue = 46, Profit = 25},
+        new ChartData { X = "GBR", YValue = 30, Profit = 30},
+        new ChartData { X = "CHN", YValue = 25, Profit = 20},
+        new ChartData { X = "UK", YValue = 40, Profit = 15},
+        new ChartData { X = "AUS", YValue = 28, Profit = 10},
+        new ChartData { X = "IND", YValue = 35, Profit = 20},
+        new ChartData { X = "DEN", YValue = 30, Profit = 10},
+        new ChartData { X = "MEX", YValue = 20, Profit = 5}
     };
 }
+
 ```
 
 ![Blazor Chart - Sort descending by y-axis](images/sorting/sorting-yaxis-descending.png)
 
 ## Sorting by custom value
 
-Data can also be sorted based on any field in the data source by passing the field name to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property in the [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
+Sort data by any field in the data source by specifying the field name in the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property of [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
 
 ```cshtml
 
@@ -110,7 +113,7 @@ Data can also be sorted based on any field in the data source by passing the fie
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }

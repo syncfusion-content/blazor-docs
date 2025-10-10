@@ -7,13 +7,13 @@ control: Kanban
 documentation: ug
 ---
 
-# Sorting in Blazor Kanban Component
+# How to Sort Cards in the Blazor Kanban Component
 
 The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.
 
-## SortBy
+## Using the SortBy Property
 
-Initially, users can change the arrangement of cards in the columns and position of the dropped card by using the `SortBy` property. The `SortBy` property contains three enumeration values as follows,
+Initially, users can change the arrangement of cards in the columns and position of the dropped card by using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_SortBy) property. The `SortBy` property contains three enumeration values as follows,
 
 * DataSourceOrder
 * Index
@@ -21,7 +21,7 @@ Initially, users can change the arrangement of cards in the columns and position
 
 ### DataSource Order
 
-The SortBy `DataSourceOrder` property does not require any `Field` mapping. In this behavior, cards are loaded based on the JSON data order, and also cards are dropped based on the JSON data order.
+The SortBy [DataSourceOrder] property does not require any `Field` mapping. In this behavior, cards are loaded based on the JSON data order, and also cards are dropped based on the JSON data order.
 
 N> By default, the `SortBy` property is `DataSourceOrder`.
 
@@ -85,7 +85,7 @@ N> By default, the `SortBy` property is `DataSourceOrder`.
 
 ![Sorting in Blazor Kanban](./images/blazor-kanban-sorting.png)
 
-### Index
+### Sorting by Index Field
 
 SortBy `Index` property must require datasource `Field` mapping. In this behavior, cards are loaded based on mapping `Field` values, and cards are dropped based on the dropped clone.
 
@@ -256,9 +256,9 @@ The SortBy `Custom` property must require datasource `Field` mapping. In this be
 
 ![Custom Sorting in Blazor Kanban](./images/blazor-kanban-custom-sorting.png)
 
-## Change the direction
+## Sorting Direction Configuration
 
-Kanban board also provides support for aligning the cards in the columns using the `Direction` property inside the `KanbanSortSettings` property. Based on this, cards can be aligned in the columns either in `Ascending` or `Descending` order. Sorting direction will be performed based on `SortBy` property.
+Kanban board also provides support for aligning the cards in the columns using the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_Direction) property inside the `KanbanSortSettings` property. Based on this, cards can be aligned in the columns either in `Ascending` or `Descending` order. Sorting direction will be performed based on `SortBy` property.
 
 N> By default, cards are aligned in the columns based on `Ascending` order.
 
