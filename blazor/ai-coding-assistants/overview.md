@@ -7,7 +7,7 @@ platform: Blazor
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants Overview
+# Syncfusion® AI Coding Assistants Overview
 
 The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants** are designed to streamline your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—minimizing documentation searches and maximizing productivity.
 
