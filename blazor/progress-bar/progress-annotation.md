@@ -61,3 +61,7 @@ When the [ShowProgressValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 
 ![Blazor ProgressBar with Label](images/blazor-progressbar-with-label.png)
+
+## See Also
+
+* [Dynamically Change the Value](https://support.syncfusion.com/kb/article/21303/how-to-dynamically-change-the-value-of-blazor-progress-bar)

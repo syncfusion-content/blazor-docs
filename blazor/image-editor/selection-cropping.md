@@ -254,3 +254,7 @@ Here is an example of cropping with a custom ratio selection using the [`OnSelec
 ```
 
 ![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
+
+## See Also
+
+* [Crop an Image with Aspect Ratio](https://support.syncfusion.com/kb/article/21448/how-to-crop-an-image-with-aspect-ratio-in-blazor-image-editor)
