@@ -23,11 +23,13 @@ Interaction Keys |Description
 
 ### Example
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 <SfGantt @ref=Gantt DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
     <GanttEvents RowSelected="RowSelect" RowDeselected="RowDeselect" TValue="TaskData"></GanttEvents>
 </SfGantt>
@@ -73,7 +75,7 @@ Interaction Keys |Description
                     {
                         foreach (var i in ClonedRecords)
                         {
-                            TaskCollection.Remove(TaskCollection.Where(x => x.TaskId == i.TaskId).FirstOrDefault());
+                            TaskCollection.Remove(TaskCollection.Where(x => x.TaskID == i.TaskID).FirstOrDefault());
                         }
                         Gantt.RefreshAsync();
                     }
@@ -87,7 +89,7 @@ Interaction Keys |Description
         }
         if (Args.CtrlKey && Args.Code == "KeyD")
         {
-            SelectedRecords.TaskId = TaskCollection.Count + 1;
+            SelectedRecords.TaskID = TaskCollection.Count + 1;
             //Insert the duplicate record here
             TaskCollection.Insert((int)SelectedIndex + 1, SelectedRecords);
             //Refresh the Gantt data.
@@ -102,16 +104,16 @@ Interaction Keys |Description
             {
                 if (SelectedIndex > -1)
                 {
-                    var parentID = TaskCollection[(int)SelectedIndex].ParentId;
+                    var ParentID = TaskCollection[(int)SelectedIndex].ParentID;
                     for (var i = CopiedRecords.Count; i > 0; i--)
                     {
-                        CopiedRecords[i - 1].TaskId = TaskCollection.Count + 1;
-                        CopiedRecords[i - 1].ParentId = parentID;
+                        CopiedRecords[i - 1].TaskID = TaskCollection.Count + 1;
+                        CopiedRecords[i - 1].ParentID = ParentID;
                         TaskCollection.Insert((int)SelectedIndex, CopiedRecords[i - 1]);
                     }
                     for (var i = ClonedRecords.Count; i > 0; i--)
                     {
-                        ClonedRecords[i - 1].ParentId = parentID;
+                        ClonedRecords[i - 1].ParentID = ParentID;
                         TaskCollection.Insert((int)SelectedIndex, ClonedRecords[i - 1]);
                     }
                 }
@@ -136,27 +138,31 @@ Interaction Keys |Description
     }
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
+        new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+        new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
+        new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+        new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08) },
+        new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
+        new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
+        new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
     };
         return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLoiDNEzWZEDHLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
