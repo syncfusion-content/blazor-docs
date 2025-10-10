@@ -7,9 +7,9 @@ control: File Manager
 documentation: ug
 ---
 
-# File Transfer Protocol file system provider
+# File Transfer Protocol (FTP) file system provider
 
-In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command
+In ASP.NET Core, the File Transfer Protocol (FTP) file system provider allows users to access a hosted file system as a collection of objects stored in the file storage using FTP. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) repository using the following command:
 
 ```
 
@@ -17,7 +17,7 @@ git clone https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.gi
 
 ```
 
-After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register File Transfer Protocol details like *hostName*, *userName* and *password* in **SetFTPConnection** method in the File Manager controller to perform the file operations.
+After cloning, open the project in Visual Studio and restore the NuGet packages. Register the FTP details, including *hostName*, *userName* and *password* in **SetFTPConnection** method in the File Manager controller to perform the file operations.
 
 ```csharp
 
@@ -43,7 +43,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the File Transfer Protocol file system provider, you need to initialize the File Transfer Protocol file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the FTP file system provider, initialize the FTP file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FTPProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider/blob/master/Controllers/FTPProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
