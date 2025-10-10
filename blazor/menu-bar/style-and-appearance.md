@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Menu Bar Component | Syncfusion
+title: Styles and Appearance in Blazor Menu Bar Component | Syncfusion
 description: Checkout and learn here all about styles and appearances in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Menu Bar Component
+# Styles and Appearance in Blazor Menu Bar Component
 
-To modify the Menu appearance, you need to override the default CSS of Menu component. Find the list of CSS classes and its corresponding section in Menu component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the visual appearance of the Menu Bar component, override its default CSS classes. The component exposes specific CSS classes that allow for granular control over different elements. Additionally, users can create custom themes for Syncfusion controls using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material), a dedicated tool for design customization.
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
@@ -20,9 +20,9 @@ To modify the Menu appearance, you need to override the default CSS of Menu comp
 | .e-menu-container ul .e-menu-item .e-caret::before | To customize the menu items caret icon |
 | .e-menu-container .e-ul .e-menu-item.e-selected | To customize selected menu item |
 
-## Customizing the appearance of menu
+## Customizing the Appearance of the Menu
 
-Use the following CSS to customize the background color of menu container, focus items and selected items.
+The following CSS example illustrates how to customize the background color of the menu container, as well as the background colors for focused and selected menu items.
 
 ```cshtml
 
@@ -79,4 +79,5 @@ Use the following CSS to customize the background color of menu container, focus
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVIsjNUrUUqMTbG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Menubar with Style and Appearance](./images/blazor-menubar-style-and-appearance.png)

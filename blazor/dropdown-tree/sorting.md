@@ -9,13 +9,15 @@ documentation: ug
 
 # Sorting in Blazor Dropdown Tree Component
 
-The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is used to sort the Dropdown Tree nodes in `Ascending` or `Descending` order in the Blazor Dropdown Tree component. The default value of [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is `None`.
+The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property controls the sorting behavior of the Dropdown Tree nodes in the Blazor Dropdown Tree component. This property allows rendering nodes in `Ascending` or `Descending` order. The default value for the `SortOrder` property is `None`, indicating no specific sorting is applied.
 
-* **Ascending** - specifies the Dropdown Tree nodes are sorted in the ascending order.
-* **Descending** - specifies the Dropdown Tree nodes are sorted in the descending order.
-* **None** - specifies the Dropdown Tree nodes are not sorted.
+The available `SortOrder` options are:
 
-In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is dynamically updated on the button click.
+*   **Ascending**: Specifies that the Dropdown Tree nodes are rendered in ascending alphabetical order.
+*   **Descending**: Specifies that the Dropdown Tree nodes are rendered in descending alphabetical order.
+*   **None**: Specifies that no specific sorting is applied, and the Dropdown Tree nodes maintain their original order from the data source.
+
+The following example demonstrates how to dynamically update the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property through button clicks.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -62,5 +64,5 @@ In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVyXOVRJCfrEqly?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.png)
