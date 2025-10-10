@@ -7,7 +7,7 @@ control: Kanban
 documentation: ug
 ---
 
-# Data Binding in Blazor Kanban Component
+# Data Binding Overview in Blazor Kanban Component
 
 The Kanban uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTFUL JSON data service binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property of Kanban can be assigned either with the instance of DataManager or a list of DataSource collection.
 
@@ -16,9 +16,9 @@ It supports the following types of data binding:
 * Local data
 * Remote data
 
-N> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component.
+N> **Note:** When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component.
 
-## Local data
+## Binding local data
 
 In list binding, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
@@ -60,13 +60,13 @@ In list binding, you can assign an IEnumerable object to the [DataSource](https:
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses BlazorAdaptor for list data-binding.
 
-### ExpandoObject binding
+### Binding with ExpandoObject
 
-Kanban is a generic component that is strongly bound to a model type.  In some cases, the model type may be unknown during compile time. In such cases, you can bind data to the Kanban as a list of ExpandoObject.
+The Kanban component is strongly typed and bound to a model class.  In some cases, the model type may be unknown during compile time. In such cases, you can bind data to the Kanban as a list of ExpandoObject.
 
 ExpandoObject can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
 
-To get start quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video.
+To get started quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=qkm_zPW3MSk" %}
@@ -110,9 +110,9 @@ To get start quickly with Blazor Kanban component using ExpandoObject and Dynami
 
 ```
 
-![Expando object in Blazor Kanban](./images/blazor-kanban-expando-object.png)
+![Expando object example in Blazor Kanban](./images/blazor-kanban-expando-object.png)
 
-### DynamicObject binding
+### Binding with DynamicObject
 
 DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in DynamicObject.
 
@@ -176,15 +176,15 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
 
 ```
 
-![Dynamic object in Blazor Kanban](./images/blazor-kanban-dynamic-object.png)
+![Dynamic object example in Blazor Kanban](./images/blazor-kanban-dynamic-object.png)
 
-### Observable collection
+### Binding with Observable Collection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) shows notifications when the items are added, removed, and moved. Implementing the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) will notify when there is any dynamic change (add, remove, move, and clear) in the collection. Implementing  the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) will notify when the property value has been changed on the client side.
 
 Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
 
-To get start quickly with Blazor Kanban component using Observable collection, you can check on this video.
+To get started quickly with Blazor Kanban component using Observable collection, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=jfUzKzS093w" %}
@@ -195,8 +195,9 @@ To get start quickly with Blazor Kanban component using Observable collection, y
 
 {% endhighlight %}
 
-![Observable object binding in Blazor Kanban](./images/blazor-kanban-observable-object.png)
-## Remote data
+![ObservableCollection binding example in Blazor Kanban](./images/blazor-kanban-observable-object.png)
+
+## Binding Remote Data
 
 Bind the remote data services to Kanban component by assigning service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
@@ -205,7 +206,7 @@ N> By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
 ### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/odata-version-3-0) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -278,7 +279,7 @@ The ODataV4 is an improved version of OData protocols to retrieve and consume OD
 
 ```
 
-### Web API
+### Binding with Web API
 
 You can use WebApiAdaptor to bind Kanban with Web API created using OData endpoint.
 
@@ -316,7 +317,7 @@ You can use WebApiAdaptor to bind Kanban with Web API created using OData endpoi
 
 ```
 
-### Enable Data Manager after Initial Rendering
+### Dynamically Enable Data Manager After Initial Render
 
 It is possible to render the data source in Kanban after initial rendering. This can be achieved by conditionally enabling the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component after Kanban rendering.
 
@@ -370,10 +371,10 @@ The following sample code demonstrates enabling data manager condition in the Ka
 ```
 
 **Before Button click**
-![Dynamic data manager before button click in Blazor Kanban](./images/blazor-kanban-dynamic-before-data-manager.png)
+![Kanban before enabling DataManager dynamically](./images/blazor-kanban-dynamic-before-data-manager.png)
 
 **After Button click**
-![Dynamic data manager after button click in Blazor Kanban](./images/blazor-kanban-dynamic-after-data-manager.png)
+![Kanban after enabling DataManager dynamically](./images/blazor-kanban-dynamic-after-data-manager.png)
 
 ### Sending additional parameters to the server
 
@@ -423,7 +424,7 @@ The following sample code demonstrates sending additional parameters using the Q
 
 ```
 
-### Change Query parameter value dynamically
+### Dynamically modify query parameters
 
 It is possible to dynamically modify Kanban [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Query) property value.
 
@@ -472,16 +473,16 @@ It is possible to dynamically modify Kanban [Query](https://help.syncfusion.com/
 ```
 
 **Before button Click**
-![Dynamic query before button click in Blazor Kanban](./images/blazor-kanban-before-dynamic-query.png)
+![Kanban before modifying query parameter dynamically](./images/blazor-kanban-before-dynamic-query.png)
 
 **After button Click**
-![Dynamic query after button click in Blazor Kanban](./images/blazor-kanban-after-dynamic-query.png)
+![Kanban after modifying query parameter dynamically](./images/blazor-kanban-after-dynamic-query.png)
 
-### Using Custom Adaptor
+### Binding with Custom Adaptor
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors.
 
-The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bound data are performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
+The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bound data are performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) abstract class.
 
 ```cshtml
 
@@ -603,4 +604,4 @@ In the following sample, Kanban fields are mapped with complex data binding.
 
 {% endhighlight %}
 
-![Complex Data Binding in Blazor Kanban](./images/blazor-kanban-complex-data-binding.png)
+![Complex data binding example in Blazor Kanban](./images/blazor-kanban-complex-data-binding.png)

@@ -9,9 +9,13 @@ documentation: ug
 
 # CSS Customization in Blazor Pivot Table Component
 
+The Blazor Pivot Table component provides extensive CSS customization options, allowing users to modify the visual appearance and layout of various pivot table elements. This includes styling row headers, column headers, value cells, summary cells, Field List components, and Grouping Bar areas to match application themes and design requirements.
+
 ## Hiding Axis
 
-The visibility of row, column, value and filter axis in Field List and Grouping Bar can be changed using custom CSS setting.
+The visibility of the row, column, value, and filter axis areas in both the Field List dialog and Grouping Bar can be controlled using custom CSS styling. Each axis area has specific CSS classes that allow precise targeting for customization.
+
+The following code example demonstrates how to hide the column axis in both the Grouping Bar and Field List within the Pivot Table. The CSS includes necessary height and spacing adjustments to prevent layout gaps and maintain visual consistency:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -103,13 +107,21 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
 
 ```
 
+**Note:** The CSS selectors above assume the Pivot Table component has the ID **PivotView**. Replace this with your actual component ID or use appropriate class-based selectors for your implementation.
+
+The CSS selectors target the following Pivot Table elements:
+- `.e-group-columns`: Hides the column axis in the Grouping Bar.
+- `.e-group-filters`: Adjusts the height of the filter axis to compensate for the hidden column axis in the Grouping Bar.
+- `.e-field-list-columns`: Hides the column axis in the Field List dialog.
+- `.e-field-list-values`: Adjusts the layout of the values axis when the column section is hidden in the Field List dialog.
+
 ![Hiding Columns in Blazor PivotTable GroupingBar](images/blazor-pivottable-hide-columns-in-groupbar.png)
 
 ![Hiding Columns in Blazor PivotTable Field List](images/blazor-pivottable-hide-columns-in-fieldlist.png)
 
 ## Text Alignment
 
-The alignment of text inside row headers, column headers, value cells and summary cells can be changed using custom CSS setting.
+The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -166,14 +178,15 @@ The alignment of text inside row headers, column headers, value cells and summar
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.png)
 
-## Customize header, value and summary cell style
+## Customize header, value and summary cell styles
 
-The elements in pivot table like header cell, value cell and summary cell style can be customized using built-in CSS names.
+The Pivot Table component elements including header cells, value cells, and summary cells can be styled using built-in CSS class names. This enables comprehensive visual customization of the component's appearance to match application themes and design requirements.
+
+The following code sample demonstrates how to apply custom background colors to different cell types:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -225,8 +238,13 @@ The elements in pivot table like header cell, value cell and summary cell style 
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
+
+The CSS classes target the following Pivot Table elements:
+- `.e-headercell`: Styles column header cells
+- `.e-rowsheader`: Styles row header cells  
+- `.e-summary:not(.e-gtot)`: Styles subtotal summary cells (excluding grand totals)
+- `.e-gtot`: Styles grand total cells
 
 ![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.png)
 
