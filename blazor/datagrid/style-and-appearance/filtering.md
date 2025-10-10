@@ -26,7 +26,7 @@ For details on filtering options and behavior, refer to the [Blazor DataGrid fil
 
 ## Customizing the Filter Bar Cell Element
 
-The **.e-filterbarcell** class is used to style the filter bar cells located in the header row of the DataGrid. To modify their appearance, apply CSS like:
+The **.e-filterbarcell** class is used to style the filter bar cells located in the header row of the DataGrid. To modify their appearance, apply CSS:
 
 ```css
 
@@ -42,7 +42,7 @@ Style properties such as `background-color`, `spacing`, `borders`, and `padding`
 
 ## Customizing the Filter Bar Input Element
 
-The **.e-filterbarcell** and **.e-input** classes are used to style the input field inside the filter bar cell in the header row of the Blazor DataGrid. To modify its appearance, apply CSS like:
+The **.e-filterbarcell** and **.e-input** classes are used to style the input field inside the filter bar cell in the header row of the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 
@@ -58,7 +58,7 @@ Style properties such as `font-family`, `font-size`, `padding`, and `border` can
 
 ## Customizing the filter bar input focus
 
-The **.e-filterbarcell** and **.e-input-focus** classes are used to style the filter bar input group when the input field is focused. To change its appearance, apply CSS like below:
+The **.e-filterbarcell** and **.e-input-focus** classes are used to style the filter bar input group when the input field is focused. To change its appearance, apply CSS:
 
 ```css
 
@@ -175,7 +175,7 @@ public class OrderData
 
 ## Customizing the Filtering Icon in the Header
 
-The **.e-icon-filter::before** class is used to style the filter icon displayed in the column headers of the Blazor DataGrid. To change its appearance, apply CSS like this:
+The **.e-icon-filter::before** class is used to style the filter icon displayed in the column headers of the Blazor DataGrid. To change its appearance, apply CSS:
 
 ```css
 
@@ -191,7 +191,7 @@ The `content` property can be modified to apply a custom icon from an icon set. 
 
 ## Customizing the Filter Dialog Content
 
-The **.e-filter-popup .e-dlg-content** class is used to style the content area of the filter dialog in the Blazor DataGrid. To modify its appearance, apply CSS as shown below:
+The **.e-filter-popup .e-dlg-content** class is used to style the content area of the filter dialog in the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 
@@ -239,7 +239,7 @@ Style properties such as `font-family`, `background-color`, `color`, `text-align
 
 ## Customizing the Filter Dialog Button Element
 
-The **.e-filter-popup .e-btn** class is used to style buttons inside the filter dialog in the Blazor DataGrid. To modify their appearance, apply CSS as shown below:
+The **.e-filter-popup .e-btn** class is used to style buttons inside the filter dialog in the Blazor DataGrid. To modify their appearance, apply CSS:
 
 ```css
 

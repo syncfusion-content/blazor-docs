@@ -152,8 +152,8 @@ public class OrderData
 
 ## Hiding the Blazor DataGrid Header
 
-The **.e-gridheader .e-columnheader** class combination is used to target the column header row content in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. 
-To hide the column headers across all DataGrids on the page, apply the CSS like:
+The **.e-gridheader .e-columnheader** class combination is used to target the column header row content in the Blazor DataGrid. 
+To hide the column headers across all DataGrids on the page, apply the CSS:
 
 ```css
 <style>
