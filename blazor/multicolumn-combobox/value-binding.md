@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Data Binding in Blazor MultiColumn ComboBox Component | Syncfusion
+title:  Value Binding in Blazor MultiColumn ComboBox Component | Syncfusion
 description: Checkout and learn here all about value binding in Syncfusion Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
@@ -103,7 +103,7 @@ First, create a `MultiColumnComboBox.razor` file as a parent component in the `/
     public EventCallback<TValue> ComboBoxValueChanged { get; set; }
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 ### Usage of generic component with different type
@@ -143,5 +143,5 @@ Here, the MultiColumn ComboBox component with TValue as an int nullable type in 
     };
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
