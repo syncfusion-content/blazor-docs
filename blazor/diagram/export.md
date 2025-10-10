@@ -269,7 +269,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Change Orientation at Runtime
 
-The diagram component supports switching between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Portrait) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Landscape) orientation while exporting. The orientation can be configured by setting the [DiagramExportSettings.Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Orientation) Property. By default, the orientation is set to Landscape.
+The diagram component supports switching between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Portrait) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Landscape) orientation while exporting. The orientation can be configured by setting the [DiagramExportSettings.Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Orientation) Property. By default, the orientation is set to **Landscape**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

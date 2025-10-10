@@ -15,7 +15,7 @@ By default, the diagram page size is decided based on the position of its diagra
 
 * The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
-* Page breaks are visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the visibility of page breaks (false by default). If it is true, then the page break lines will be visible.
+* Page breaks are visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the visibility of page breaks. By default, this property is set to **false**. If it is **true**, then the page break lines will be visible.
 
 * To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
@@ -126,9 +126,9 @@ Customize page appearance using the `PageSettings` properties:
 
 * The `Background` property of [BackgroundStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) sets the page background color.
 
-* The [Image Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageSource) property of the [Background Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) sets the background image path (URL/base64).
+* The [ImageSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageSource) property of the [BackgroundStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) sets the background image path (URL/base64).
 
-* The [Image Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageScale) and [Image Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageAlign) control background image scaling and alignment.
+* The [ImageScale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageScale) and [ImageAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageAlign) control background image scaling and alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -214,7 +214,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Change Page Margins
 
-The area between the maintain content of a page and the page edges can be changed by using the PageMargin property. The default margins are 25 px on all sides.
+The area between the maintain content of a page and the page edges can be changed by using the `PageMargin` property. The default margins are 25 px on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

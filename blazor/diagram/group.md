@@ -396,7 +396,6 @@ The following code illustrates how a node group is added at runtime.
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeWtNPpDntLeoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
 * Also, Add the child to the node group through the [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChildAsync method.
 

@@ -261,7 +261,7 @@ The flip functionality for a group node is similar to that of normal nodes. Howe
 
 ## How to Change Group Flip Mode
 
-The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) of a group node behaves similarly to that of normal nodes. However,When a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) of a group node behaves similarly to that of normal nodes. However,when a flip mode is applied to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
 For example, in the below code,  
 the flipMode for the child node `Node1` is set to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Text).  

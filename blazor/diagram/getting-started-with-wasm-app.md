@@ -217,7 +217,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram componen
 
 ## Prerequisites
 
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). f the SDK is already installed, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If the SDK is already installed, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
