@@ -9,7 +9,7 @@ documentation: ug
 
 # Target
 
-The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property specifies the target selector where the Tooltip needs to be displayed. It enables Tooltip activation on specific DOM elements based on user interactions like hover or focus.
+The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property accepts a CSS selector that identifies the elements the tooltip should attach to. Matching elements display a tooltip based on user interactions such as hover, focus, or click, depending on the configured `OpensOn` setting.
 
 ```cshtml
 <SfTooltip Content="Let's go green to save the planet!!" Target="#btn" >
@@ -21,9 +21,9 @@ The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Sf
 
 ## Displaying Tooltip for dynamically created target element
 
-The Tooltip component can be configured to display Tooltips for elements that are added to the DOM after the initial page load. This behavior is useful in applications where target is rendered dynamically, such as in response to user actions, API calls, or conditional logic.
+Tooltips can be shown for elements that are added to the DOM after the initial render. This is useful when targets are rendered dynamically in response to user actions, API results, or conditional logic.
 
-Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property using a CSS selector that defines the container in which Tooltip target elements will be automatically display Tooltips. All elements inside this container that match the Target selector will automatically show Tooltips, including those added after the component is rendered—no extra setup needed.
+Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property to a CSS selector that scopes where target discovery occurs. All descendants of this container that match the `Target` selector will automatically display tooltips, including elements added after the component is rendered—no additional configuration is required. Interactions follow the configured `OpensOn` behavior. For keyboard accessibility, ensure targets are focusable when relying on focus or click.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -50,6 +50,6 @@ Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-The [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property enables automatic Tooltip registration for newly added elements, enhancing dynamic content interactivity.
+The [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property enables automatic tooltip registration for newly added elements within the specified container, improving interactivity in dynamic content scenarios.
 
-![Blazor Tooltip with Dynamic Targets](images/dynamic-target.gif)
+![Blazor Tooltip showing on elements added dynamically after render](images/dynamic-target.gif)
