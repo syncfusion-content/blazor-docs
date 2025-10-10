@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Timeline in Blazor Web App | Syncfusion
+title: Getting Started with Timeline in Blazor | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Timeline Components in Blazor Web App.
 platform: Blazor
 control: Timeline
