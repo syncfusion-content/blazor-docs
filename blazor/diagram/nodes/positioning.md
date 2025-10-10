@@ -11,9 +11,9 @@ documentation: ug
 
 ## How to Arrange Nodes
 
-* Control a node’s position by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these represent the distance from the diagram page’s origin to the node’s pivot (center) point.
+* Control a Node’s position by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these represent the distance from the diagram page’s origin to the node’s pivot (center) point.
 
-* If the expected reference is the node’s top-left corner instead of its center, adjust the [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) property. The default pivot is (0.5, 0.5), which corresponds to the node’s center.
+* If the expected reference is the node’s top-left corner instead of its center, adjust the [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) property. The default pivot is **(0.5, 0.5)**, which corresponds to the node’s center.
 
 * Control the node size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties.
 
@@ -79,7 +79,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Positioning a node using pivot and offsets in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
-Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
+Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the `RotationAngle` value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

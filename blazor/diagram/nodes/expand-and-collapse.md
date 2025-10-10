@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand and Collapse Support for Nodes in Blazor Diagram Component
 
-The Diagram component supports to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. Use the IsExpanded property on a node to expand or collapse its children nodes. Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
+The Diagram component supports to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. Use the [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) property on a node to expand or collapse its children nodes. Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 
 The following Node properties represent the state of the node and allows user to Expand and Collapse the desired Node :
 
@@ -262,7 +262,7 @@ Change the icon size using the [Height](https://help.syncfusion.com/cr/blazor/Sy
 The shape of an [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
 To explore the available expand icon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).
 To explore the available collapse icon shapes, refer to [DiagramCollapseIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcons.html).
-If you need to render a custom shape, Set shape to [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html#Syncfusion_Blazor_Diagram_DiagramExpandIcons_Path) and define the path using the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_PathData) property.
+If you need to render a custom shape, Set shape to **Path** and define the path using the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_PathData) property.
 
 The following code explains how to initialize the icon with a path shape.
 
@@ -356,7 +356,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Customize the icon appearance using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Fill), [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderColor), [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderWidth), and [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_CornerRadius) properties.
 
-The following code explains how to change the appearance of the Icon using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Fill), [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderColor), [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderWidth) properties.
+The following code explains how to change the appearance of the Icon using `Fill`, `BorderColor`, `BorderWidth` properties.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -459,7 +459,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)
 
-The following code explains how to change the icon appearance using the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_CornerRadius) property.
+The following code explains how to change the icon appearance using the `CornerRadius` property.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -585,7 +585,7 @@ The following table shows the relationship between the Icon position and Icon Of
 
 ### How to find node is in expanded or not 
 
-[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of IsExpanded property is true.
+[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of IsExpanded property is **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -808,7 +808,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ### How to Set Padding for the Expand/Collapse Icon
 
 The Blazor Diagram component features a [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Padding) property specifically designed for the expand and collapse icons of the nodes. This property allows you to customize the spacing around these icons, providing greater control over their positioning. By adjusting the Padding, you can define the space that the icon should maintain from its border.
-The following code shows how to set the Padding property of expand/collapse icon.
+The following code shows how to set the `Padding` property of expand or collapse icon.
 
 
 ```csharp

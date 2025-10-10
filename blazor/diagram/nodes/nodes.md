@@ -23,7 +23,7 @@ To learn more about creating nodes and exploring different node shapes in a Blaz
 
 ## How to Add a Node Using the Nodes Collection
 
-To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add it to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
+To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add it to the `Nodes` collection of the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -65,7 +65,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add Nodes at Runtime
 
-A node can be added at runtime by adding it to the nodes collection of the Diagram component. The following code explains how to add a node at runtime.
+A node can be added at runtime by adding it to the `Nodes` collection of the Diagram component. The following code explains how to add a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -406,4 +406,4 @@ N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 * [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)
 * [How to Create Polygon and Circle Shapes in Blazor Diagram](https://support.syncfusion.com/kb/article/18054/how-to-create-polygon-and-circle-shapes-in-blazor-diagram)
 
-* [How to Provide IDs for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)
+* [How to Provide ID for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)

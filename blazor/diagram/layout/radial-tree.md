@@ -9,7 +9,7 @@ documentation: ug
 
 # Radial Tree Layout in Diagram Component
 
-A [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout is a diagram that presents information in a hierarchical structure, with a central node at the core of the diagram. The central node represents the main concept or topic, and branches extend outward in a radial fashion, creating a tree-like structure. The layout [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers the node without any incoming edges (InEdges connector count of 0) as the root node. To create radial tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree).
+A [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout is a diagram that presents information in a hierarchical structure, with a central node at the core of the diagram. The central node represents the main concept or topic, and branches extend outward in a radial fashion, creating a tree-like structure. The layout [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers the node without any incoming edges (InEdges connector count of 0) as the root node. To create radial tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as **RadialTree**.
 
 The radial tree layout supports adding space between the nodes. Use [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) to control the spacing. The arrangement results in an ever-expanding concentric arrangement with radial proximity to the root node indicating the node's level in the hierarchy.
 
@@ -17,7 +17,7 @@ The radial tree layout supports adding space between the nodes. Use [HorizontalS
 
 ## How to Create a Radial Tree Using DataSource
 
-Create a radial tree layout with a DataSource. The following code example illustrates how to create a radial tree from a data source.
+Create a radial tree layout with a `DataSource`. The following code example illustrates how to create a radial tree from a data source.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -147,11 +147,11 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
->**Note:** In DataSourceSettings, the ID and ParentID properties are string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the ID and ParentID properties are string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
 ## How to Create a Radial Tree With Nodes and Connectors
 
-Render a radial tree layout without using a Datasource. The following example demonstrates how to render a radial tree layout without using a DataSource.
+Render a radial tree layout without using a `Datasource`. The following example demonstrates how to render a radial tree layout without using a `DataSource`.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

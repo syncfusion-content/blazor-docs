@@ -9,7 +9,7 @@ documentation: ug
 
 # Mind Map Layout in Blazor Diagram Component
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap), set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to **MindMap**.
 
 To see a quick walkthrough of creating a mind map layout, watch the following video:
 
@@ -168,7 +168,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
->**Note:** In DataSourceSettings, the ID and ParentID properties are string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.
+>**Note:** In `DataSourceSettings`, the ID and ParentID properties are string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.
 
 Also, you can render a mind map layout without using a Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 

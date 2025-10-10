@@ -18,7 +18,7 @@ Customize the position and appearance of the port efficiently. Ports can be alig
 
 ## How to Change Offset at Runtime
 
-Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) to place a port using fractional values relative to the node: 0 represents the top/left, 1 represents the bottom/right, and 0.5 represents the center along each axis.
+Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) to place a port using fractional values relative to the node: **0** represents the top/left, **1** represents the bottom/right, and **0.5** represents the center along each axis.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -88,10 +88,10 @@ The following table shows the relationship between the shape port position and p
 
 Use the `PathPosition` property to place a connector port along the connector path. It accepts values between 0 to 1, where:
 
-* 0 represents the start point of the connector
-* 1 represents the end point of the connector
+* **0** represents the start point of the connector
+* **1** represents the end point of the connector
 
->**Note:** The default value is 0.5, which places the port at the midpoint of the connector.
+>**Note:** The default value is **0.5**, which places the port at the midpoint of the connector.
 
 | PathPosition value | Output |
 |---|---|
@@ -219,7 +219,7 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
 
 ## How to Update Margin for Port
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value that adds some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value that adds some blank space to any one of its four sides. The ports can be displaced with the `Margin` property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

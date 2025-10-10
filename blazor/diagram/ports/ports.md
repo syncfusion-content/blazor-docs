@@ -77,6 +77,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
+>**Note:** Port IDs should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+
 ### How to Connect a Connector to a Node Port
 
 Node ports are used to establish connections between node ports, connector ports, and nodes. To create such a connection, set the connector’s [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceID) or [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetID) property to the ID of the node and the [SourcePortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePortID) or [TargetPortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPortID) property to the ID of the corresponding port on the node.
@@ -206,11 +208,9 @@ The following code example demonstrates how to create a connector port.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
 
->**Note:** Port IDs should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
-
 ### How to Connect a Connector to a Connector Port
 
-Connector ports are used to establish connections between node ports, connector ports, and nodes. To create such a connection, set the connector’s `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
+Connector ports are used to establish connections between node ports, connector ports, and nodes. To create such a connection, set the connector’s **SourcePortID** or **TargetPortID** property to the ID of the corresponding port on the connector.
 
 The following code example demonstrates how to connect one connector to a port on another connector.
 
@@ -652,7 +652,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 [InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_InEdges) returns the incoming connectors of the port that are connected to the port. [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_OutEdges) returns the outgoing connectors of the port that are connected to the port.
 
-The following code example shows how to get [InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_InEdges) and [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_OutEdges) of a port.
+The following code example shows how to get `InEdges` and `OutEdges` of a port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons

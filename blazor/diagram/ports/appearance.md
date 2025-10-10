@@ -77,7 +77,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Control the Port Visibility
 
-The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of ports depends upon the properties of [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect), [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden), [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover), and [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible). By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
+The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of ports depends upon the properties of [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect), [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden), [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover), and [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible). By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to **Hidden**.
 
 | Property | Definition |
 |---|---|
@@ -152,7 +152,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Enable or Disable Port Behaviors Using Constraints
 
-The constraints property allows enabling or disabling  certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) for enabling or disabling port-related constraints.
+The constraints property allows enabling or disabling certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) for enabling or disabling port-related constraints.
 
 The PortConstraints may have multiple behaviors like listed below:
 
@@ -167,7 +167,7 @@ The PortConstraints may have multiple behaviors like listed below:
 
 The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property allows you to maintain additional information for a port.
 
-The following code shows how to set the AdditionalInfo value for a port.
+The following code shows how to set the `AdditionalInfo` value for a port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -212,7 +212,7 @@ The following code shows how to set the AdditionalInfo value for a port.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
 
 
-**Note:** Like AdditionalInfo for nodes, you can set any type of value for the AdditionalInfo property of a port.
+**Note:** Like `AdditionalInfo` for Nodes, you can set any type of value for the `AdditionalInfo` property of a port.
 
 ## See also
 

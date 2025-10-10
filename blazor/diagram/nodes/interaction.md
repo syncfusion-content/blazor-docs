@@ -245,7 +245,7 @@ Rotation is also supported during interaction:
 
 ## How to rotate a node using the RotationAngle property
 
-The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle)  property gets or sets the rotation angle of a node in degrees. This defines the fixed angle at which the node is displayed. The default value is 0.
+The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle)  property gets or sets the rotation angle of a node in degrees. This defines the fixed angle at which the node is displayed. The default value is **0**.
 
 Use this property when you want to specify the node’s rotation at the time of creation or update it programmatically.
 

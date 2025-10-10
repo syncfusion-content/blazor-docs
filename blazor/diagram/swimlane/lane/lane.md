@@ -152,7 +152,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG).
 
-Lane header annotations also support templates. Define HTML content at the tag level and enable template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per lane, differentiate annotations by the ID property.
+Lane header annotations also support templates. Define HTML content at the tag level and enable template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per lane, differentiate annotations by the `ID` property.
 
 The following code example explains how to define a lane header annotation template:
 
@@ -328,7 +328,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
  The node [LaneOffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetX) and [LaneOffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetY) properties position the element within the lane canvas.
 
->Note: By default, lane children maintain a 20 px padding from the lane canvas.
+>Note: By default, lane children maintain a **20 px** padding from the lane canvas.
 
 The following code example shows how to add nodes to a lane.
 
@@ -416,8 +416,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Orientation) property in the symbol palette defines whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a symbol palette.
 
-* Horizontal orientation: The lane is aligned horizontally.
-* Vertical orientation: The lane is aligned vertically.
+* **Horizontal orientation**: The lane is aligned horizontally.
+* **Vertical orientation**: The lane is aligned vertically.
 
 Below is an example demonstrating how to set the orientation for lanes in an SfSymbolPaletteComponent:
 
