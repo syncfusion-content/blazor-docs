@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about actions of annotation in Syncfusion Blazor Diagram component and more.
+description: Checkout and Learn how to create, add, remove, and update annotation for nodes and connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,18 +9,18 @@ documentation: ug
 
 # Annotation in Blazor Diagram Component
 
-The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
+The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a single node or connector.
 
-## How to Create Annotation
+## How to Create an Annotation
 
-An annotation can be added to a node or connector by defining the annotation object and adding it to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the annotation defines the text to be displayed. 
+An annotation can be added to a node or connector by defining the annotation object and adding it to the `Annotation` collection of the parent object. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the annotation defines the text to be displayed. 
 
 
-To create and add annotation to Nodes and Connectors using the Blazor Diagram, refer to the below video link,
+To create and add annotations to nodes and connectors using the Blazor Diagram, refer to the following video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=f7Jnl5hSy7I" %}
 
-The following code explains how to create an annotation.
+The following code example demonstrates how to create an annotation for a node and a connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -69,18 +69,20 @@ The following code explains how to create an annotation.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/CreateAnnotation/CreateAnnotation)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroijNRrQAsIOIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/CreateAnnotation/CreateAnnotation)
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
-N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
-<br/>* By default, node’s annotation positioned in center point of the shape.
-<br/>* By default, connector’s path annotation positioned in center point of its path.
+N>* Each annotation's [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) should be unique. It can be used to find and customize the annotation at runtime.
+<br/>* By default, a node's annotation is positioned at the center of the shape.
+<br/>* By default, a connector’s path annotation positioned at the center of its path.
 >**Note:** Do not use underscores(_) for annotation's id.
 
-## How to Add Annotation at Runtime
+## How to Add an Annotation at Runtime
 
-You can add an annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
+An annotation can be added to the `Annotations` collection of a node or connector at runtime by using the `Add` method.
 
 The following code explains how to add an annotation to a node at runtime by using `Add` method.
 
@@ -122,7 +124,9 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AddAnnotationAtRunTime)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIMjtxrwUyoCqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AddAnnotationAtRunTime)
 
 Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends the evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -136,13 +140,13 @@ public async void AddLabel()
     await(diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
-## How to Remove Annotation at Runtime
+## How to Remove an Annotation at Runtime
 
-A collection of annotations can be removed from a node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
+An annotation can be removed from a node or connector's `Annotations` collection by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -186,9 +190,11 @@ A collection of annotations can be removed from a node by using the `RemoveAt` m
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RemoveAnnotation/RemoveAnnotation)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByiXZHBwzKleyR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Also, a collection of annotations can be removed from the node by using the `Remove` method.
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RemoveAnnotation/RemoveAnnotation)
+
+Also, The `Remove` method can also be used to remove a specific annotation object.
 
 ```cshtml
     // Method to remove annotation at runtime using Remove method.
@@ -200,13 +206,13 @@ Also, a collection of annotations can be removed from the node by using the `Rem
 ```
 
 N>* You can delete multiple annotations from a node to pass the collection of annotation objects as argument.
-<br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
+<br/>* The `Add`, `AddAsync`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
-## How to Update Annotation at Runtime
+## How to Update an Annotation at Runtime
 
-You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime.
+An annotation can be updated at runtime by retrieving it from the node or connector's Annotations collection and modifying its properties.
 
-The following code sample shows how the annotation of the node changed at runtime.
+The following code sample shows how to change the content of a node's annotation at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -250,7 +256,9 @@ The following code sample shows how the annotation of the node changed at runtim
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/UpdateAnnotation/UpdateAnnotation)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIitZxBcSXRxWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/UpdateAnnotation/UpdateAnnotation)
 
 ## See also
 
@@ -258,9 +266,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to customize the annotation](./appearance)
 
-* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )
+* [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotation template-in-angular-diagram )
 
 * [How to dynamically create and connect diagram nodes with annotations via ports in syncfusion<sup style="font-size:70%">&reg;</sup> blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
-* [How to Prevent Text Overflow and Display Excess Content on Hover in a Diagram?](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
+* [How to Prevent text Overflow and display excess Content on hover in a diagram](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
 
-* [How to generate a hierarchical layout with annotation at runtime?](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
+* [How to generate a hierarchical layout with annotations at runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
