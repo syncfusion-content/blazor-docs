@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transform with Blazor Image Editor Component | Syncfusion
-description: Checkout the Transform available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Explore the transform support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Transform in the Blazor Image Editor Component
 
-The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component provides a range of transformation options for manipulating both the image and its annotations. These options include rotation, flipping, zooming, and panning. These transformations offer flexibility in adjusting the image and enhancing its visual appearance. 
+The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component provides rotation, flipping, straightening, zooming, and panning for images and annotations. These transformations enable precise adjustments and help enhance visual presentation.
 
 ## Rotate an image
 
-The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RotateAsync_System_Int32_) method allows to rotate the image and with annotations by a specific number of degrees clockwise or anti-clockwise. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise.
+The [RotateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RotateAsync_System_Int32_) method rotates the image and annotations by a specified number of degrees clockwise or counterclockwise. This method accepts one parameter: the rotation angle in degrees. A positive value rotates clockwise; a negative value rotates counterclockwise.
 
-`Note:` It is recommended to pass values in multiples of 90° (e.g., 90, 180, -90) for proper rotation alignment.
+Note: Use multiples of 90° (for example, 90, 180, -90) for proper alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -49,11 +49,11 @@ The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Imag
 
 ## Flip an image
 
-The [`FlipAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FlipAsync_Syncfusion_Blazor_ImageEditor_ImageEditorDirection_) method, which allows you to flip the image with annotations either horizontally or vertically. This method takes a single parameter of type ImageEditorDirection, which specifies the direction in which the flip operation should be applied. 
+The [FlipAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_FlipAsync_Syncfusion_Blazor_ImageEditor_ImageEditorDirection_) method flips the image and annotations horizontally or vertically. It accepts a single parameter of type `ImageEditorDirection`, which specifies the flip direction.
 
-The [`ImageEditorDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorDirection.html) parameter accepts two values: 'Horizontal' and 'Vertical'. When you choose 'Horizontal', the image and annotations will be flipped along the horizontal axis, resulting in a mirror effect. On the other hand, selecting 'Vertical' will flip them along the vertical axis, producing a vertical mirror effect. 
+The [ImageEditorDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorDirection.html) parameter supports two values: `Horizontal` and `Vertical`. `Horizontal` flips along the horizontal axis (mirror effect). `Vertical` flips along the vertical axis (flipping the image upside down).
 
-Here is an example of flipping an image in a button click event. 
+Here is an example of flipping an image on button click.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -87,11 +87,11 @@ Here is an example of flipping an image in a button click event.
 
 ## Straighten an image
 
-The straightening feature in an Image Editor allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation. The Image Editor control includes a [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method, which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
+Straightening rotates an image clockwise or counterclockwise within a range of -45 to +45 degrees. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. The [StraightenImageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method adjusts the degree of rotation with one parameter:
 
-* degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
+- degree - Amount of rotation used to straighten the image.
 
-Here is an example of straightening the image.
+Here is an example of straightening an image.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -123,23 +123,19 @@ Here is an example of straightening the image.
 
 ## Zoom in or out an image 
 
-The [`ZoomAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ZoomAsync_System_Double_Syncfusion_Blazor_ImageEditor_ImageEditorPoint_) method allows to magnify an image. This method allows one to zoom in and out of the image and provides a more detailed view of the image's hidden areas. This method takes two parameters to perform zooming. 
+The [ZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ZoomAsync_System_Double_Syncfusion_Blazor_ImageEditor_ImageEditorPoint_) method magnifies or reduces the image and reveals details in hidden areas. It accepts two parameters:
 
-* zoomFactor - Specifies a value to controlling the level of magnification applied to the image.
+- zoomFactor - Controls the magnification level.
 
-* zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming.
+- zoomPoint - Specifies the `ImageEditorPoint` (x, y) used as the focal point for zooming.
 
 ### Minimum and maximum zoom level 
 
-The [`MinZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinZoomFactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
+The [MinZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinZoomFactor) property defines the minimum zoom level. The default value is 0.1, allowing zoom out up to 10 times from the original size.
 
-By default, the `MinZoomFactor` value is set to 0.1, meaning that the image can be zoomed out up to 10 times from its original size. 
+The [MaxZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property defines the maximum zoom level. The default value is 10, allowing zoom in up to 10 times the original size.
 
-The [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
-
-By default, the `MaxZoomFactor` value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
-
-Here is an example of specifying `MinZoomFactor` and `MaxZoomFactor` property in [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html) options in an image editor.
+Here is an example of configuring `MinZoomFactor` and `MaxZoomFactor` in [ImageEditorZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -207,7 +203,7 @@ Here is an example of specifying `MinZoomFactor` and `MaxZoomFactor` property in
 
 ### Enable the specific types of zooming
 
-Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_ZoomTrigger) property of [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html), you can set one or more specific types of zoom actions like pinch, mouse wheel, commands, and toolbar options.
+Using the [ZoomTrigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_ZoomTrigger) property of [ImageEditorZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html), enable one or more zoom actions such as pinch, mouse wheel, commands, and toolbar options.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -225,60 +221,60 @@ Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 }
 ```
-![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.png)
+![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.jpg)
 
 ## Panning an image
 
-The Blazor Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
+Panning is available when the image exceeds the canvas or the selection area. After zooming or applying a selection for cropping, the image may extend beyond the canvas or selection. Click and drag on the canvas to move the image and view the desired area.
 
 ## OnPanStart and OnPanEnd event 
 
-The [`OnPanStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanStart) event is activated when the user begins dragging the image within the canvas, and the [`OnPanEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanEnd) event is triggered once the panning action is completed. These events provide an opportunity to perform specific actions, such as updating the image's position, in response to the panning gesture. And these event uses [`PanEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.PanEventArgs.html) to handle the panning panning action when the user starts dragging the image. 
+The [OnPanStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanStart) event fires when dragging begins within the canvas, and the [OnPanEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanEnd) event fires when the panning action completes. These events can update state in response to the gesture and use [PanEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.PanEventArgs.html).
 
-The parameter available in the `OnPanStart` and `OnPanEnd` events are, 
+Parameters for `OnPanStart` and `OnPanEnd`:
 
-PanEventArgs.StartPoint - The x and y coordinates as ImageEditorPoint for the start point. 
+- `PanEventArgs.StartPoint` – The `ImageEditorPoint` (x, y) representing the start point.
 
-PanEventArgs.Endpoint - The x and y coordinates as ImageEditorPoint for the end point. 
+- `PanEventArgs.Endpoint` – The `ImageEditorPoint` (x, y) representing the end point.
 
-PanEventArgs.Cancel – Specifies the boolean value to cancel the panning action. 
+- `PanEventArgs.Cancel` – Boolean value to cancel the panning action.
 
 ## Zooming event 
 
-The [`Zooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Zooming) event is triggered when performing zooming the image. This event can be used to perform certain actions, such as updating the position of the image. This event is passed an object that contains information about the zooming event, such as the amount of zooming performed. And this event uses [`ZoomEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ZoomEventArgs.html) to handle the zooming action in the image.
+The [Zooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Zooming) event triggers during zoom operations and can be used to react to image position or scale changes. It uses [ZoomEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ZoomEventArgs.html).
 
-The parameter available in the `Zooming` event is, 
+Parameter for `Zooming`:
 
-* ZoomEventArgs.ZoomPoint - The x and y coordinates as ImageEditorPoint for the zoom point. 
+- `ZoomEventArgs.ZoomPoint` – The `ImageEditorPoint` (x, y) used for zooming.
 
-* ZoomEventArgs.PreviousZoomFactor - The previous zoom factor applied in the image editor. 
+- `ZoomEventArgs.PreviousZoomFactor` – The previous zoom factor.
 
-* ZoomEventArgs.CurrentZoomFactor - The current zoom factor to be applied in the image editor. 
+- `ZoomEventArgs.CurrentZoomFactor` – The current zoom factor.
 
-* ZoomEventArgs.Cancel – Specify a boolean value to cancel the zooming action. 
+- `ZoomEventArgs.Cancel` – Boolean value to cancel the zoom action.
 
-* ZoomEventArgs.ZoomTrigger - The type of zooming performed in the image editor. 
+- `ZoomEventArgs.ZoomTrigger` – The type of zoom interaction performed.
 
 ## Rotating event 
 
-The [`Rotating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event is triggered when performing rotating / straightening the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.RotateEventArgs.html) to handle the rotating action in the image.
+The [Rotating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event triggers during rotate or straighten operations and provides rotation details. It uses [RotateEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.RotateEventArgs.html).
 
-The parameter available in the `Rotating` event is, 
+Parameters for `Rotating`:
 
-* RotateEventArgs.PreviousDegree: The degree of rotation before the recent rotation action was applied in the Image Editor. 
+- `RotateEventArgs.PreviousDegree` – The degree of rotation before the recent action in the Image Editor.
 
-* RotateEventArgs.CurrentDegree: The current degree of rotation after the rotation action has been performed in the Image Editor. 
+- `RotateEventArgs.CurrentDegree` – The degree of rotation after the action in the Image Editor.
 
-RotateEventArgs.Cancel – Specifies a boolean value to cancel the rotating action. 
+- `RotateEventArgs.Cancel` – Boolean value to cancel the rotation action.
 
 ## Flipping event 
 
-The [`Flipping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FlipEventArgs.html) to handle the flipping action in the image.
+The [Flipping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event triggers during flip operations and provides details about the flip. It uses [FlipEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FlipEventArgs.html).
 
-The parameter available in the `Flipping` event is, 
+Parameters for `Flipping`:
 
-* FlipEventArgs.Direction - The flip direction as ImageEditorDirection to be applied in the image editor.
+- `FlipEventArgs.Direction` – The `ImageEditorDirection` to apply.
 
-* FlipEventArgs.PreviousDirection - The previous flip direction, represented as ImageEditorDirection, applied within the image editor.
+- `FlipEventArgs.PreviousDirection` – The previous `ImageEditorDirection`.
 
-* FlipEventArgs.Cancel - Specifies a boolean value to cancel the flip action.
+- `FlipEventArgs.Cancel` – Boolean value to cancel the flip action.

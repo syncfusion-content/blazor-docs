@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection cropping with Blazor Image Editor Component | Syncfusion
-description: Checkout the Selection cropping available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Explore selection cropping in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -10,23 +10,23 @@ documentation: ug
 
 # Selection cropping in the Blazor Image Editor Component
 
-The cropping feature in the Blazor Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9. 
+The cropping feature in the Blazor Image Editor enables selection and cropping of specific regions of an image. It supports custom shapes, squares, circles, and preset aspect ratios, including 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9.
 
-To perform a selection, you can use the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method, which allows you to define the desired selection area within the image. Once the selection is made, you can then use the [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method to crop the image based on the selected region. This enables you to extract and focus on specific parts of the image while discarding the rest.
+To perform a selection, use the [SelectAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method to define the selection area within the image. After the selection is made, call the [CropAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method to crop the image based on the selected region. This workflow extracts and focuses on the selected area while discarding the remainder.
 
 ## Insert custom / square / circle region 
 
-The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method allows to perform selection based on the type of selection. Here, the `SelectAsync` method is used to perform the selection as custom, circle, or square. The selection region can also be customized using the select method based on the parameters below. 
+The [SelectAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method performs selection based on the specified selection type. In this context, `SelectAsync` is used to select custom, circle, or square regions. The selection region can be customized using the following parameters:
 
-type - Specify the type of selection 
+- type - Specifies the type of selection.
 
-startX - Specify the x-coordinate of the selection region’s starting point 
+- startX - Specifies the x-coordinate of the selection region’s starting point.
 
-startY - Specify the y-coordinate of the selection region’s starting point 
+- startY - Specifies the y-coordinate of the selection region’s starting point.
 
-width - Specify the width of the selection region 
+- width - Specifies the width of the selection region.
 
-height - Specify the height of the selection region 
+- height - Specifies the height of the selection region.
 
 Here is an example of square selection using the `SelectAsync` method. 
 
@@ -61,13 +61,13 @@ Here is an example of square selection using the `SelectAsync` method.
 
 ## Insert selection based on aspect ratio 
 
-The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method is used to perform the selection with the various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9. The selection region can also be customized using the `SelectAsync` method based on the parameters below. 
+The [SelectAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) method selects regions using various aspect ratios, including 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9. The selection region can be customized using the following parameters:
 
-type - Specify the type of selection 
+- type - Specifies the type of selection.
 
-startX - Specify the x-coordinate of the selection region’s starting point 
+- startX - Specifies the x-coordinate of the selection region’s starting point.
 
-startY - Specify the y-coordinate of the selection region’s starting point 
+- startY - Specifies the y-coordinate of the selection region’s starting point.
 
 Here is an example of ratio selection using the `SelectAsync` method. 
 
@@ -102,9 +102,9 @@ Here is an example of ratio selection using the `SelectAsync` method.
 
 ## Crop an image
 
-The [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method allows cropping based on the selected region. Here is an example of cropping the selection region using the `CropAsync` method. 
+The [CropAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method crops the image based on the selected region. 
 
-Here is an example of circle cropping using the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Double_System_Double_System_Double_System_Double_) and `CropAsync` method.
+Here is an example of circle cropping using the `SelectAsync` and `CropAsync` methods.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -138,19 +138,21 @@ Here is an example of circle cropping using the [`SelectAsync`](https://help.syn
 
 ## Cropping event
 
-The [`Cropping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event is triggered when performing cropping on the image. This event is passed an object that contains information about the cropping event, such as the start and end point of the selection region. And this event uses [`CropEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html) to handle the cropping action. 
+The [Cropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event is triggered during cropping. The event provides details such as the start and end points of the selection region.
 
-The parameter available in the `Cropping` event is,
+Parameters available in [CropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html):
 
-* CropEventArgs.StartPoint – The x and y coordinates of a start point as [`ImageEditorPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorPoint.html) of the selection region. 
+- [CropEventArgs.StartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_StartPoint) - The x and y coordinates of the start point as [ImageEditorPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorPoint.html) of the selection region.
 
-* CropEventArgs.EndPoint - The x and y coordinates of an end point as [`ImageEditorPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorPoint.html) of the selection region. 
+- [CropEventArgs.EndPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_EndPoint) - The x and y coordinates of the end point as [ImageEditorPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorPoint.html) of the selection region.
 
-* CropEventArgs.Cancel - To cancel the cropping action.
+- [CropEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_Cancel) - Indicates whether to cancel the cropping action.
+
+- [CropEventArgs.PreventScaling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_PreventScaling) - Default is `false`. When set to `true`, scaling during cropping is prevented so both the editor view and saved image keep the original cropped dimensions.
 
 ### Maintaining original image size during cropping 
 
-In the image editor, when an image is cropped, it is usually enlarged or scaled to improve visibility within the user interface. If you want to prevent this scaling and maintain the original cropping size, you can bind to the [`Cropping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event and set the [`PreventScaling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_PreventScaling) value to true. This not only keeps the image size consistent during cropping but also ensures that the saved image retains its original cropping size without being enlarged.
+In the image editor, a cropped image is typically enlarged or scaled for better visibility within the interface. To prevent this scaling and maintain the original cropping size, bind to the [Cropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event and set [PreventScaling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_PreventScaling) to true. This preserves the image size during cropping and ensures the saved image retains the original cropping size without enlargement.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -166,7 +168,7 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void CroppingAsync(CropEventArgs args)
+    private void CroppingAsync(CropEventArgs args)
     {
         args.PreventScaling = true;
     }
@@ -177,21 +179,21 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 ## SelectionResize events
 
-The selection region can be changed programmatically by using [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
+The selection region can be updated programmatically using the [OnSelectionResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [OnSelectionResizeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) events. These events are raised during pointer-based resizing and allow modifications to the selection region by adjusting the specified properties.
 
-The [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) is used in these events to customize the selection and it has the following parameters.
+Parameters available in [SelectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html):
 
-SelectionChangeEventArgs.Action - The type of action such as inserting or resizing 
+- [SelectionChangeEventArgs.Action](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_Action) - The type of action, such as inserting or resizing.
 
-SelectionChangeEventArgs.Cancel - Specifies to cancel the selection. 
+- [SelectionChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_Cancel) - Indicates whether to cancel the selection.
 
-SelectionChangeEventArgs.CurrentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html). 
+- [SelectionChangeEventArgs.CurrentSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_CurrentSelectionSettings) - Details of the selection after the current action, including type, position, width, and height.
 
-SelectionChangeEventArgs.PreviousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html) 
+- [SelectionChangeEventArgs.PreviousSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_PreviousSelectionSettings) - Details of the selection before the previous action, including type, position, width, and height.
 
 ### Locking selection area during cropping 
 
-When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the resizing of the selection area, you can bind to the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. Check if the action is `resize`, and if it is, set `Cancel` value to `true`. This will lock the selection area, preventing any adjustments to its size.
+During cropping, selection handles are available at corners and edges for resizing. To prevent resizing of the selection area, bind to the [OnSelectionResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [OnSelectionResizeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) events. If the action is `resize`, set `Cancel` to `true` to lock the selection area.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -207,7 +209,7 @@ When selecting an area for cropping, users can typically resize the selection fr
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void OnSelectionResizeStartAsync(SelectionChangeEventArgs args)
+    private void OnSelectionResizeStartAsync(SelectionChangeEventArgs args)
     {
         args.Cancel = true;
     }
@@ -218,9 +220,9 @@ When selecting an area for cropping, users can typically resize the selection fr
 
 ### Cropping with custom ratio selection
 
-Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, select. Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
+Cropping can be performed using the toolbar or public methods. While predefined ratio selections are available in the toolbar, custom ratios can also be applied using the public `SelectAsync` method. Regardless of the ratio type, the selection adheres to the specified ratio, even when the selection area is resized.
 
-Here is an example of cropping with a custom ratio selection using the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event.
+Here is an example of cropping with a custom ratio selection using the `OnSelectionResizeStart`event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
