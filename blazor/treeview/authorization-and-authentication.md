@@ -9,7 +9,7 @@ documentation: ug
 
 # Authorization and Authentication in Blazor TreeView Component
 
-**Authentication** involves verifying the identity of a user or system. This typically occurs through methods such as usernames and passwords, biometrics, or security tokens.
+**Authentication** involves verifying the identity of a user or system. This typically occurs through methods such as user names and passwords, biometrics, or security tokens.
 
 **Authorization** determines whether an authenticated user or system possesses the necessary permissions to access a specific resource or perform a particular action. After a user's identity is authenticated, the system evaluates their credentials or permissions against a set of established rules or policies to grant or deny access.
 
