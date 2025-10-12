@@ -422,7 +422,7 @@ public WordDocument GetDocument(string htmlText)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).
 
-## Secure Exported PDF/Word with Authentication
+## Securely Export Word or PDF Documents with Authentication
 
 You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the OnExport event with its `CurrentRequest` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
 
