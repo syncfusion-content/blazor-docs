@@ -424,7 +424,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Secure Exported PDF/Word with Authentication
 
-You can add additional data while exporting a Word document or PDF from the Rich Text Editor on the client side, which can be received on the server side. By using the `OnExport` event and its `CurrentRequest` and `CustomFormData` properties, you can pass authentication tokens and parameters to the controller action. On the server side, you can fetch the authentication token from the request headers and retrieve the custom form data from the request body, which retrieves the values sent using the POST method.
+You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the OnExport event with its `CurrentRequest` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
 
 The following example demonstrates how to pass authentication tokens and custom data during export:
 
@@ -448,7 +448,7 @@ The following example demonstrates how to pass authentication tokens and custom 
     };
     private void Export(ExportingEventArgs args)
     {
-        // Add different authentication tokens based on export type
+        // Assign different authentication tokens depending on the export type (PDF or Word)
         var token = (args.ExportType == "Pdf" ? "Pdf Bearer token" : "Word Bearer token");
         args.CurrentRequest = new Dictionary<string, string>
         {
@@ -475,14 +475,14 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
 
-namespace WordUpload.Controllers
+namespace ExportService.Controllers
 {
     [ApiController]
-    public class WordController : ControllerBase
+    public class ExportController : ControllerBase
     {
         private readonly IWebHostEnvironment hostingEnv;
 
-        public WordController(IWebHostEnvironment env)
+        public ExportController(IWebHostEnvironment env)
         {
             this.hostingEnv = env;
         }
