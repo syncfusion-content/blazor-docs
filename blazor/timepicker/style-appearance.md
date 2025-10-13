@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Blazor TimePicker Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following guidance shows CSS selectors that can be used to customize the TimePicker component’s appearance based on application needs. To avoid global changes, scope overrides by adding a custom class via the CssClass property and targeting that class in your styles.
 
 ## Customizing the appearance of TimePicker container element
 
-Use the following CSS to customize the appearance of TimePicker container element.
+Use the following CSS to customize the appearance of the TimePicker container element.
 
 ```css
 /* To specify height and font size */
@@ -25,7 +25,7 @@ Use the following CSS to customize the appearance of TimePicker container elemen
 
 ## Customizing the TimePicker icon element
 
-Use the following CSS to customize the TimePicker icon element
+Use the following CSS to customize the TimePicker icon element.
 
 ```css
 /* To specify background color and font size */
@@ -37,7 +37,7 @@ Use the following CSS to customize the TimePicker icon element
 
 ## Customizing the TimePicker popup
 
-Use the following CSS to customize the TimePicker popup
+Use the following CSS to customize the TimePicker popup.
 
 ```css
 /* To specify height */
@@ -48,7 +48,7 @@ Use the following CSS to customize the TimePicker popup
 
 ## Customizing the TimePicker popup content
 
-Use the following CSS to customize the TimePicker popup content
+Use the following CSS to customize the TimePicker popup content.
 
 ```css
 /* To specify height */
@@ -60,7 +60,7 @@ Use the following CSS to customize the TimePicker popup content
 
 ## Full screen mode support in mobiles and tablets
 
-The TimePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the TimePicker component, simply set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_FullScreen) API value to `true`. This action will extend the popup element to occupy the entire screen on mobile devices.
+The TimePicker component’s full-screen mode displays the popup element in full-screen on mobile devices for improved visibility and usability. This feature is supported only on mobile devices in both landscape and portrait orientations. To enable full-screen mode, set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_FullScreen) property to `true`. This expands the popup to occupy the entire screen on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -69,4 +69,4 @@ The TimePicker component's full-screen mode feature enables users to view the co
 
 ```
 
-![TimePickerFullScreen](./images/blazor-timepicker-full-screen-mode.gif)
+![Blazor TimePicker popup in mobile full-screen mode](./images/blazor-timepicker-full-screen-mode.gif)
