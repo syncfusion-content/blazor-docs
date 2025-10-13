@@ -17,10 +17,8 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-Create a Blazor WebAssembly app using either the Microsoft Project templates or the Syncfusion Template Studio for a guided setup.
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-- Microsoft templates: [Blazor tooling in Visual Studio](https://learn.microsoft.com/aspnet/core/blazor/tooling)
-- Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension: [Template Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder and Themes NuGet in the App
 
