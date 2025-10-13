@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Draggable in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about draggable in the predefined dialogs and much more details.
+description: Check out and learn here all about draggable in the predefined dialogs.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
