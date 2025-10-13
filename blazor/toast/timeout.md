@@ -9,35 +9,43 @@ documentation: ug
 
 # Timeout in Blazor Toast Component
 
-The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
+The toast display duration is controlled by the `Timeout` property, expressed in milliseconds. A toast remains visible until the timeout elapses if there is no interaction.
 
-* The `Timeout` delay can be visually represented using [Progress Bar](./config#progress-bar).
+- The `Timeout` duration can be visually represented using a [progress bar](./config#progress-bar).
+- The `ExtendedTimeout` property specifies how long the toast remains visible after pointer hover.
 
-* The `ExtendedTimeOut` property determines how long the toast should be displayed after a user hovers over it.
-
-N> The process can be terminated by using the `ShowCloseButton` property for destroying the toast at any time.
+N> To allow dismissal at any time, enable the `ShowCloseButton` property.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
 <div class="control-section toast-default-section">
-    <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="230" Height="250" Content="@ToastContent" Timeout="@ToastTimeOut">
+    <SfToast @ref="ToastObj"
+             Title="Notification"
+             Width="230"
+             Height="250"
+             Content="@ToastContent"
+             Timeout="@ToastTimeOut"
+             ExtendedTimeout="2000"
+             ShowCloseButton="true">
         <ToastPosition X="Right" Y="Bottom"></ToastPosition>
         <ToastButtons>
-            <ToastButton  Content = "Ignore" OnClick="@HideToast"></ToastButton>
-            <ToastButton  Content = "reply"></ToastButton>
+            <ToastButton Content="Dismiss" OnClick="@HideToast"></ToastButton>
+            <ToastButton Content="Snooze"></ToastButton>
         </ToastButtons>
     </SfToast>
 
     <div class="col-lg-12 col-sm-12 col-md-12 center">
         <div id="toastBtnDefault" style="margin: auto; text-align: center">
             <div id="textbox-contain" style="text-align: initial; display: inline-block;">
-                <SfTextBox @ref="TextBoxObj" FloatLabelType="FloatLabelType.Auto" Placeholder="Enter timeOut" Value="@TextBoxVal" ValueChange="@OnValChange"></SfTextBox>
+                <SfTextBox @bind-Value="TextBoxVal"
+                           FloatLabelType="FloatLabelType.Auto"
+                           Placeholder="Enter timeout (ms)">
+                </SfTextBox>
             </div>
-            <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
+            <SfButton CssClass="e-primary" @onclick="ShowToast">Show Toast</SfButton>
         </div>
     </div>
     <br /><br />
@@ -57,51 +65,46 @@ N> The process can be terminated by using the `ShowCloseButton` property for des
 </style>
 
 @code {
-    SfToast ToastObj;
-    SfTextBox TextBoxObj;
-
+    private SfToast ToastObj;
     private int ToastTimeOut { get; set; } = 0;
     private string TextBoxVal { get; set; } = "0";
-    private string ToastContent { get; set; } = "<p><img src='https://blazor.syncfusion.com/demos/images/toast/laura.png'></p>";
+    private string ToastContent { get; set; } =
+        "<p><img src='https://blazor.syncfusion.com/demos/images/toast/laura.png' alt='profile image'></p>";
 
     private async Task ShowToast()
     {
-       await this.ToastObj.ShowAsync();
-    }
-
-    private void OnValChange()
-    {
-        this.ToastTimeOut = int.Parse(this.TextBoxObj.Value);
-        this.TextBoxVal = this.TextBoxObj.Value;
-        this.StateHasChanged();
+        if (!int.TryParse(TextBoxVal, out var parsed))
+        {
+            parsed = 0;
+        }
+        ToastTimeOut = parsed;
+        await ToastObj.ShowAsync();
     }
 
     private async Task HideToast()
     {
-       await this.ToastObj.HideAsync();
+        await ToastObj.HideAsync();
     }
 }
-
 ```
 
-![TimeOut in Blazor Toast](./images/blazor-toast-timeout.png)
+![Timeout in Blazor Toast](./images/blazor-toast-timeout.png)
 
 ## Static toast
 
-Auto hiding can be prevented in a toast as visible like static by setting zero (`0`) value in the `Timeout` Property.
+To prevent auto-hide and keep the toast visible until dismissed, set the `Timeout` property to zero (`0`).
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Timeout=0 Title="Matt sent you a friend request" Content="@ToastContent">
+<SfToast @ref="ToastObj" Timeout="0" Title="Notification" Content="@ToastContent">
     <ToastPosition X="Right"></ToastPosition>
 </SfToast>
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
-        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
+        <SfButton CssClass="e-primary" @onclick="ShowToast">Show Toast</SfButton>
     </div>
 </div>
 
@@ -113,16 +116,14 @@ Auto hiding can be prevented in a toast as visible like static by setting zero (
 </style>
 
 @code {
-    SfToast ToastObj;
-
-    private string ToastContent = "You have a new friend request yet to accept";
+    private SfToast ToastObj;
+    private string ToastContent = "This toast remains visible until dismissed.";
 
     private async Task ShowToast()
     {
-       await this.ToastObj.ShowAsync();
+        await ToastObj.ShowAsync();
     }
 }
-
 ```
 
-![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.png)
+![Timeout in Blazor Static Toast](./images/blazor-static-toast-timeout.png)
