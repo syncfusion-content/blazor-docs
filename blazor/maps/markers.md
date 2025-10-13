@@ -816,3 +816,4 @@ Tooltip is used to display more information about a marker on mouse over or touc
 ## See also
 
 * [Add different types of markers](how-to/add-different-types-of-markers)
+* [Use ObservableCollection for Marker Updates](https://support.syncfusion.com/kb/article/21355/how-to-use-observablecollection-for-marker-updates-in-blazor-maps)
