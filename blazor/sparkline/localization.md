@@ -26,18 +26,18 @@ The Sparkline Charts tooltip supports localization. The following example shows 
               UseGroupingSeparator= "true"
               Height="200px" Width="350px"
               Format = "c0">
-                <SparklineContainerArea>
-                    <SparklineContainerAreaBorder Color="#033e96" Width="2"></SparklineContainerAreaBorder>
-                </SparklineContainerArea>
-                <SparklinePadding Left='20' Right='20' Bottom='20' Top='20'></SparklinePadding>
-                <SparklineTooltipSettings  Visible='true'></SparklineTooltipSettings>
+    <SparklineContainerArea>
+        <SparklineContainerAreaBorder Color="#033e96" Width="2"></SparklineContainerAreaBorder>
+    </SparklineContainerArea>
+    <SparklinePadding Left='20' Right='20' Bottom='20' Top='20'></SparklinePadding>
+    <SparklineTooltipSettings  Visible='true'></SparklineTooltipSettings>
 </SfSparkline>
 
 @code {
     [Inject]
     protected IJSRuntime JsRuntime { get; set; }
 
-    int[] Numbers={30000, 60000, 40000, 10000, 30000, 20000, 50000};
+    int[] Numbers = { 30000, 60000, 40000, 10000, 30000, 20000, 50000 };
 
     protected override void OnAfterRender() {
         this.JsRuntime.Ejs().LoadCldrData(new string[]{"ca-gregorian.json",
@@ -46,8 +46,6 @@ The Sparkline Charts tooltip supports localization. The following example shows 
 }
 
 ```
-
-![Sparkline Charts with localization](./images/localization/blazor-sparkline-localization.png)
 
 ## Rtl
 
@@ -68,7 +66,7 @@ The following example shows the Sparkline Charts rendered in right-to-left mode.
     [Inject]
     protected IJSRuntime JsRuntime { get; set; }
 
-    int[] Numbers={0, 6, 4, 1, 3, 2, 5};
+    int[] Numbers = { 0, 6, 4, 1, 3, 2, 5 };
 
     protected override void OnAfterRender() {
         this.JsRuntime.Ejs().EnableRtl(true);
