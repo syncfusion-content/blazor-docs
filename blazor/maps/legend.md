@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure and customize legends in the Syncfusion Blazor Maps component.
+description: Check out and learn how to configure and customize legends in the Syncfusion Blazor Maps component for effective data visualization.
 platform: Blazor
 control: Maps
 documentation: ug

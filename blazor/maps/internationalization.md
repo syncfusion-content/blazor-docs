@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure globalization in the Syncfusion Blazor Maps component.
+description: Check out and learn how to configure and apply globalization feature in the Syncfusion Blazor Maps component.
 platform: Blazor
 control: Maps
 documentation: ug

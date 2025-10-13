@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapefile in Blazor Maps component | Syncfusion
-description: Check out and learn here all about to view shapefile in the Syncfusion Blazor Maps component.
+description: Check out and learn how to view and work with shapefiles in the Syncfusion Blazor Maps component for better map rendering.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -79,7 +79,7 @@ A shapefile map, like a GeoJSON map, can be rendered using a multilayer structur
 1. Display the shapefile map as a sublayer over online map providers.
 2. Display the shapefile map as a sublayer above the GeoJSON map.
 3. Display the GeoJSON map as a sublayer over the shapefile map.
-4. Use shapefiles as both main and sublayers.
+4. Use shapefiles as both main and sublayer.
 
 The following example demonstrates a shapefile map as a sublayer above the GeoJSON map.
 

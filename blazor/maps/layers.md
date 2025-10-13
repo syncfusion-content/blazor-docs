@@ -19,7 +19,7 @@ The multilayer feature supports loading multiple shape files and map providers i
 
 Sublayer is a type of shape file layer. It supports loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to display geographic features such as rivers, valleys, and cities in a country map. Similar to the main layer, elements such as markers, bubbles, color mapping, and legends can be added to the sublayer.
 
-In this example, the United States map shape is used as shape data from the **usa.ts** file, and **texas.ts** and **california.ts** files are used as sublayers in the United States map.
+In this example, the United States map shape is used as shape data from the **usa.ts** file, and **texas.ts** and **california.ts** files are used as sublayer in the United States map.
 
 ```csharp
 
