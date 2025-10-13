@@ -61,7 +61,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 >**Note:** 
 > * The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) of each connector should be unique so it is further used to find the connector at runtime and perform any customization. 
-> * Connector IDs should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+> * Connector ID should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to Add Connectors at Runtime
 
@@ -178,7 +178,7 @@ The following code explains how to add a connector with annotation  at runtime b
 
     DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
 
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
 
     protected override void OnInitialized()
     {
@@ -499,7 +499,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * Removing [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
-* Removing both InConnect and OutConnect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connectors from establishing a connection to it.
+* Removing both `InConnect` and `OutConnect` [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from `Default`, the node restricts connectors from establishing a connection to it.
 
 ### How to Connect Nodes Using Specific Ports
 

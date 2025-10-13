@@ -9,7 +9,7 @@ documentation: ug
 
 # Hierarchical Layout in Diagram Component
 
-The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange nodes in a hierarchical structure, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to [HierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_HierarchicalTree). The following example shows how to arrange nodes in a hierarchical structure.
+The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange nodes in a hierarchical structure, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to **HierarchicalTree**. The following example shows how to arrange nodes in a hierarchical structure.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -158,7 +158,7 @@ A hierarchical layout can also be created from a data source. The following exam
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
 
->**Note:** In `DataSourceSettings`, the type of the ID and ParentID properties is string, and the provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to act as the root.
+>**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties is string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
 ## Customizing the Properties
 

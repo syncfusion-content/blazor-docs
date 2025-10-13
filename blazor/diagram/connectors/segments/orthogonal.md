@@ -220,7 +220,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 When the `InheritSegmentThumbShape` constraint is enabled in the connector, the shape specified at the diagram level will be applied to the connector's segment thumb. This allows for consistent segment thumb shapes across the diagram.
 
-The following code example illustrates how to customize the orthogonal segment thumb shape using `InheritSegmentThumbShape`.
+The following code example illustrates how to customize the orthogonal segment thumb shape using `InheritSegmentThumbShape` constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

@@ -113,11 +113,11 @@ The function can be called on-demand, making it flexible for use in scenarios wh
 
 The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties customize the space between successive nodes in the diagram, both horizontally and vertically. These properties help control the overall layout and visual organization of nodes, ensuring clear and consistent spacing across the diagram.
 
-* **HorizontalSpacing**: Space between nodes along the horizontal axis. Useful for flowcharts, organizational charts, or radial layouts.
+* `HorizontalSpacing`: Space between nodes along the horizontal axis. Useful for flowcharts, organizational charts, or radial layouts.
 
-* **VerticalSpacing**: Space between nodes along the vertical axis. It ensures a balanced distribution of nodes in layouts such as hierarchical trees or mind maps.
+* `VerticalSpacing`: Space between nodes along the vertical axis. It ensures a balanced distribution of nodes in layouts such as hierarchical trees or mind maps.
 
-Default values: HorizontalSpacing is **30** and VerticalSpacing is **30**. Modify these to achieve the required layout density.
+Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. Modify these to achieve the required layout density.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">

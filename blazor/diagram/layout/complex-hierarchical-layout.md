@@ -154,7 +154,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.png)
 
->**Note:** In DataSourceSettings, the type of the ID and ParentID properties are **string**. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties are **string**. The provided `DataSource` should have a parent-child relationship. It is necessary for at least one node to have an empty `ParentID`.
 
 ### How to Enable or Disable Linear Arrangement
 

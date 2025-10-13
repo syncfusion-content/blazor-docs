@@ -165,7 +165,7 @@ Connectors can also be dragged through user interaction:
 
 ## How to Drag Connector Endpoints
 
-The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjusts the source and target points.
+The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by thumbs. Clicking and dragging those handles helps you to adjusts the source and target points.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -365,7 +365,7 @@ The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.R
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/LineRoutingSettings)
 
-**Note:** The default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic).
+**Note:** The default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is **Classic**.
 
 ### How to Enable or Disable Node Routing
 
@@ -508,7 +508,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Define Distance Between Nodes and Connectors
 
-The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property defines the minimum distance between connectors and obstacles when Advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles for improved readability.
+The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property defines the minimum distance between connectors and obstacles when advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles for improved readability.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -595,7 +595,7 @@ The Avoid Connector Overlapping behavior ensures connectors do not visually over
 
 **Overview Behavior:** In the Overview panel, connectors outside the current viewport may initially appear overlapped. These will also be resolved dynamically as the corresponding area comes into focus in the main diagram view.
 
-The following example demonstrates enabling the AvoidLineOverlapping feature in the diagram.
+The following example demonstrates enabling the `AvoidLineOverlapping` feature in the diagram.
 
 
 ```cshtml
