@@ -188,7 +188,7 @@ The Maps component supports the following marker shapes. Set the marker shape us
 
 ### Rendering marker shape as image
 
-To render a marker as an image, set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **Image** and specify the image path in [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ImageUrl). Alternatively, bind the field containing the image path using [ImageUrlValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ImageUrlValuePath).
+To render a marker as an image, set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **Image** and specify the image path in [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ImageUrl) property. Alternatively, bind the field containing the image path using [ImageUrlValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ImageUrlValuePath) property.
 
 ```cshtml
 
@@ -277,7 +277,7 @@ Multiple groups of markers can be added by including multiple [MapsMarker](https
 
 ### Bind different colors and shapes to the marker from data source
 
-Using [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ShapeValuePath) and [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ColorValuePath), color and shape can be bound from the data source. Bind the data source to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) and set field names containing shape and color values to `ShapeValuePath` and `ColorValuePath`.
+Using [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ShapeValuePath) and [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ColorValuePath) properties, color and shape can be bound from the data source. Bind the data source to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) and set field names containing shape and color values to `ShapeValuePath` and `ColorValuePath`.
 
 ```cshtml
 
@@ -317,7 +317,7 @@ Using [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.M
 
 ### Setting value path from the data source
 
-Latitude and longitude determine the location of each marker. Use [LatitudeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_LatitudeValuePath) and [LongitudeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_LongitudeValuePath) to specify the corresponding fields in the marker data source.
+Latitude and longitude determine the location of each marker. Use [LatitudeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_LatitudeValuePath) and [LongitudeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_LongitudeValuePath) properties to specify the corresponding fields in the marker data source.
 
 ```cshtml
 
@@ -355,7 +355,7 @@ Latitude and longitude determine the location of each marker. Use [LatitudeValue
 
 ### Setting different sizes for markers individually
 
-Marker sizes within a group can vary using [WidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_WidthValuePath) and [HeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_HeightValuePath), which read width and height from the data source. Bind the data source to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource), and provide the width and height field names.
+Marker sizes within a group can vary using [WidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_WidthValuePath) and [HeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_HeightValuePath) properties, which read width and height from the data source. Bind the data source to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource), and provide the width and height field names.
 
 ```cshtml
 
@@ -395,7 +395,7 @@ Marker sizes within a group can vary using [WidthValuePath](https://help.syncfus
 
 ## Repositioning the marker using drag and drop
 
-Markers can be repositioned by dragging and dropping. Enable drag-and-drop by setting [EnableDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_EnableDrag) to **true** in the `MapsMarker` settings.
+Markers can be repositioned by dragging and dropping. Enable drag-and-drop by setting [EnableDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_EnableDrag) property to **true** in the `MapsMarker` settings.
 
 ```cshtml
 
@@ -509,7 +509,7 @@ The example below demonstrates customizing marker data in response to drag event
 
 ## Marker zooming
 
-Maps can initially zoom based on marker distribution by setting [ShouldZoomInitially](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ShouldZoomInitially) to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
+Maps can initially zoom based on marker distribution by setting [ShouldZoomInitially](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ShouldZoomInitially) property to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 
@@ -595,7 +595,7 @@ Maps typically zoom on click or double-click, including when clicking a marker. 
 
 Maps support clustering of overlapping markers. A cluster displays the count of contained markers. Zooming into a cluster location reduces the count and reveals individual markers; zooming out increases overlap and re-forms clusters.
 
-To enable clustering within a layer, set [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) to **true** in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) on the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). Customize clustering using the corresponding `MapsMarkerClusterSettings` properties.
+To enable clustering within a layer, set [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) property to **true** in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) on the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). Customize clustering using the corresponding `MapsMarkerClusterSettings` properties.
 
 ```cshtml
 
@@ -707,7 +707,7 @@ The following properties and classes are available to customize marker clusterin
 
 ### Expanding the marker cluster
 
-Clusters group identical and non-identical markers in nearby locations. Enable expansion by setting [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) to **true** in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html). Zooming in reduces cluster counts and reveals individual markers; zooming out increases counts and re-forms clusters.
+Clusters group identical and non-identical markers in nearby locations. Enable expansion by setting [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) property to **true** in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html). Zooming in reduces cluster counts and reveals individual markers; zooming out increases counts and re-forms clusters.
 
 ```cshtml
 
@@ -754,7 +754,7 @@ Clusters group identical and non-identical markers in nearby locations. Enable e
 
 ### Clustering markers within each marker group
 
-Clustering can be enabled per marker group by placing [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) inside each [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) within a [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). This enables individual customization of clusters for each group, reducing clutter and improving readability. When [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) is **true**, markers in that group are clustered and can expand on zoom. Manual expansion can be enabled using [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand). Appearance and behavior can be customized using the same `MapsMarkerClusterSettings` options described above.
+Clustering can be enabled per marker group by placing [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) inside each [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) within a [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). This enables individual customization of clusters for each group, reducing clutter and improving readability. When [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) property is **true**, markers in that group are clustered and can expand on zoom. Manual expansion can be enabled using [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) property. Appearance and behavior can be customized using the same `MapsMarkerClusterSettings` options described above.
 
 N> When `MapsMarkerClusterSettings` is enabled for a specific marker group, the `MapsMarkerClusterSettings` defined within the layer does not take effect.
 
@@ -847,7 +847,7 @@ N> When `MapsMarkerClusterSettings` is enabled for a specific marker group, the 
 
 ## Tooltip for marker
 
-A tooltip displays additional information about a marker on mouseover or touch end. Enable it by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) to **true** in [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html). Set [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_ValuePath) to the field name in the data source to display as tooltip text.
+A tooltip displays additional information about a marker on mouseover or touch end. Enable it by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property to **true** in [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html). Set [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_ValuePath) property to the field name in the data source to display as tooltip text.
 
 ```cshtml
 

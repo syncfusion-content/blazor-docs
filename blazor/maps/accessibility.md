@@ -83,6 +83,6 @@ All Blazor Maps actions can be controlled using the keyboard. The following key 
 
 ## Ensuring accessibility
 
-Accessibility compliance for the Blazor Maps component is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) during automated testing.
+Accessibility compliance for the Blazor Maps component is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The component’s accessibility compliance is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maps) in a new window to evaluate the component with accessibility tools.

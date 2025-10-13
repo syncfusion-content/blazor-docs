@@ -846,7 +846,7 @@ The [OnMarkerMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## OnPan
 
-When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) event is triggered. For event arguments, see [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) in the MapsEvents API reference.
+When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) event is triggered. For event arguments, see [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) in the MapsEvents API reference to know more about the arguments of this event.
 
 ```cshtml
 
@@ -876,7 +876,7 @@ When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## OnPanComplete
 
-The [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) event is triggered after panning completes. For event arguments, see [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) in the MapsEvents API reference.
+The [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) event is triggered after panning completes. For event arguments, see [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) in the MapsEvents API reference to know more about the arguments of this event.
 
 ```cshtml
 

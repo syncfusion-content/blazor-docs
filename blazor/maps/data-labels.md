@@ -13,7 +13,7 @@ Data labels display text for shapes in the Maps component. Enable them by settin
 
 ## Adding data labels
 
-Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to specify the field used for label text. The value can come from a field in the shape data or from the layer’s data source. In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) value is taken from the shape data of the Maps layer.
+Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to specify the field used for label text. The value can come from a field in the shape data or from the layer’s data source. In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property value is taken from the shape data of the Maps layer.
 
 ```cshtml
 
@@ -33,7 +33,7 @@ Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
 
 ![Blazor Maps with Data Label](./images/DataLabel/blazor-maps-data-label.png)
 
-In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) value is taken from the field in the layer’s data source.
+In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property value is taken from the field in the layer’s data source.
 
 ```cshtml
 

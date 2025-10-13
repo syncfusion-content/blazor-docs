@@ -210,7 +210,7 @@ Set a shape color from data by using the [ColorValuePath](https://help.syncfusio
 
 ## Applying border to individual shapes
 
-Customize the border of each shape by using [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) to define color and width from the layer data source. If these path values do not match a data field, the shape border configuration in shape settings is applied.
+Customize the border of each shape by using [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) properties to define color and width from the layer data source. If these path values do not match a data field, the shape border configuration in shape settings is applied.
 
 ```cshtml
 

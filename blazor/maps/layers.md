@@ -77,7 +77,7 @@ Custom shapes (also known as custom maps) can be rendered in Maps to represent b
 
 Refer to the sample GeoJSON file for bus seat selection: [Seat selection GeoJSON](https://cdn.syncfusion.com/maps/map-data/seat.json).
 
-For a live demonstration, see: [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5).
+For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5).
 
 ## See also
 
