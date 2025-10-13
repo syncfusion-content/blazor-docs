@@ -55,7 +55,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Add BPMN Nodes into a BPMN Expanded Sub-Process
 
-To add a BPMN node into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BpmnNodeViewModel object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the `BpmnExpandedSubProcess`.
+To add a BPMN node into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), define the BPMN node object and add it to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the `BpmnExpandedSubProcess`.
 
 The following code example explains how to add a BPMN node to an BPMN Expanded Sub-Process using the `Children` property.
 
@@ -121,8 +121,8 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
 
 ### How to Set Loop Type
 
- The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) property in the `BpmnExpandedSubProcess` component defines the type of loop behavior for a task that is internally repeated. By default, the Loop property is set to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None).
- The Loop property can be configured within the `BpmnExpandedSubProcess` component, as demonstrated in the following example.
+ The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) property in the `BpmnExpandedSubProcess` component defines the type of loop behavior for a task that is internally repeated. By default, the Loop property is set to **None**.
+ The `Loop` property can be configured within the `BpmnExpandedSubProcess` component, as demonstrated in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -221,7 +221,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
  
 ### How to Enable Ad-Hoc
 
-An `Ad-Hoc` Expanded Sub-Process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and can be set with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsAdhoc) property of `BpmnExpandedSubProcess`.
+An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and can be set with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsAdhoc) property of `BpmnExpandedSubProcess`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
