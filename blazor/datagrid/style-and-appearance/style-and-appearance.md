@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGri
+# Style and appearance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
 
