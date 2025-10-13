@@ -9,36 +9,26 @@ documentation: ug
 
 # Integrate Azure OpenAI with Blazor AI AssistView component
 
-The AI AssistView component integrates seamlessly with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface for a support bot, where user prompts are sent to the Azure Open AI service via API calls, providing natural language understanding and context-aware responses.
+The AI AssistView component integrates with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure Open AI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 Before starting, ensure you have the following:
 
-* An Azure account: with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
+* **An Azure account**: with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
 
-* Syncfusion AI AssistView: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
+* **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
 * [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
 
 ## Set Up the AI AssistView Component
 
-Follow the Syncfusion AI AssistView Getting Started guide to configure and render the AI AssistView component in the application and that prerequisites are met:
-
-[Blazor Getting Started Guide](../getting-started)
+Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
 Install the required packages:
 
-1. Syncfusion Blazor package:
-
-```bash
-
-Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
-
-```
-
-2. Install the `Open AI` and `Azure` nuget packages in the application.
+1. Install the `Open AI` and `Azure` nuget packages in the application.
 
 ```bash
 
@@ -48,7 +38,7 @@ NuGet\Install-Package Azure.Core
 
 ```
 
-3. Install the `Markdig` nuget packages in the application.
+2. Install the `Markdig` nuget packages in the application.
 
 ```bash
 
