@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Circular Gauge Component | Syncfusion
-description: Check out and learn how to configure animation in the Syncfusion Blazor Circular Gauge component.
+description: Check out and learn how to configure and customize animation in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Circular Gauge Component | Syncfusion
-description: Check out and learn about Accessibility support in the Syncfusion Blazor Circular Gauge component.
+description: Check out and learn here all about the Accessibility support in the Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
