@@ -103,9 +103,9 @@ To crop and transform an image:
 
 To add and modify annotations:
 
-* Click the annotation button on the toolbar and choose an annotation type: Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand.
+* Click the annotation button on the toolbar and choose an annotation type: Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand Drawing.
 
-* Click and drag on the canvas to draw the selected annotation.
+* Click and drag on the image to draw the selected annotation.
 
 * After insertion, annotations can be repositioned by clicking and dragging with the mouse, and resized by interacting with the selection circle placed around the annotation.
 

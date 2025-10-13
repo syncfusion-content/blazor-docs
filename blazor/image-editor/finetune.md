@@ -9,7 +9,7 @@ documentation: ug
 
 # Fine-tune in the Blazor Image Editor component
 
-Fine-tuning refers to precise adjustments to image filter settings to achieve a targeted visual result. It provides control over the intensity and specific aspects of a filter’s effect on an image. Typical parameters include brightness and saturation, among other properties, enabling accurate control of the filter’s outcome.
+Fine-tuning provides precise control over image filter settings to achieve a specific visual result. It adjusts the intensity and key attributes of a filter’s effect, such as brightness or saturation, to refine the final output.
 
 ## Adjust brightness, contrast, and saturation
 
