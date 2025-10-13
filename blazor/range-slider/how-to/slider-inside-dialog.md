@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range Slider inside Dialog in Blazor Range Slider Component | Syncfusion
+title: Range Slider inside Dialog in Blazor Range Slider | Syncfusion
 description: Checkout and learn here all about Slider inside Dialog popup in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
