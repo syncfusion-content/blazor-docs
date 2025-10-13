@@ -50,7 +50,7 @@ The **.e-grid** class is used to style the root container of the Blazor DataGrid
 
 ```
 
-Style properties such as `font-family`, b`ackground-color`, `padding`, and `border` can be adjusted to match the desired design.
+Style properties such as `font-family`, `background-color`, `padding`, and `border` can be adjusted to match the desired design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
@@ -153,7 +153,7 @@ internal sealed class OrderData
 
 ## Customizing Alternate Row with Frozen Columns
 
-The **.e-altrow .e-rowcell** selector is used to style the cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-columns) are enabled in the Blazor DataGrid.
+The **.e-altrow .e-rowcell** selector is used to style the cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled in the Blazor DataGrid.
 
 ```css
 .e-grid .e-altrow .e-rowcell {
