@@ -1034,7 +1034,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 When `IsSticky` property of the tooltip is set to **true**, tooltips for fixed user handles will remain visible on the screen until the user explicitly dismisses them by clicking the close icon. In this mode, a close icon is added to the top-right corner of the tooltip. This persistent tooltip behavior can be enabled or disabled using the `IsSticky` property. By default, the `IsSticky` property is set to **false**, meaning tooltips will disappear automatically when the user moves the mouse away from the handle.
 
-The following code example demonstrates how to set IsSticky property to true for a fixed user handle:
+The following code example demonstrates how to set `IsSticky` property to true for a fixed user handle:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

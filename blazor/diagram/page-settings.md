@@ -214,7 +214,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Change Page Margins
 
-The area between the maintain content of a page and the page edges can be changed by using the `PageMargin` property. The default margins are 25 pixels on all sides.
+The area between the maintain content of a page and the page edges can be changed by using the `PageMargin` property. The default margins are **25** pixels on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
