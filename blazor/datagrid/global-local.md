@@ -466,7 +466,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 3: Setting the culture in Blazor start option**
 
-* Add the **autostart="false"** attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
+* Add the **autostart="false"** attribute to the Blazor `<script>` tag to prevent Blazor from starting automatically.
 
 * Add the script block below Blazor’s `<script>` tag and before the closing `</body>` tag to start blazor with specific culture.
 
