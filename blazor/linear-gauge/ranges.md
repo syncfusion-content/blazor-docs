@@ -211,8 +211,8 @@ A radial gradient applies colors in a circular progression. Configure the inner 
                     <LinearGaugeRange Color="#f54ea2" Start="0" End="80"
                                       StartWidth="30" EndWidth="30" Offset="30">
                         <RadialGradient Radius="65%">
-                             <InnerPosition X="50%" Y="70%"></InnerPosition>
-                             <OuterPosition X="60%" Y="60%"></OuterPosition>
+                            <InnerPosition X="50%" Y="70%"></InnerPosition>
+                            <OuterPosition X="60%" Y="60%"></OuterPosition>
                             <ColorStops>
                                 <ColorStop Opacity="0.9" Color= "#fff5f5" Offset="5%">
                                 </ColorStop>

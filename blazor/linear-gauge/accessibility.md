@@ -44,7 +44,7 @@ The Blazor Linear Gauge component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA
 | Attributes | Purpose |
 |-----|-----|
 | `role=region` | Applied to the title and interactive pointer elements to identify landmark content and support pointer interactions such as drag-and-drop. |
-| `aria-label` | Provides accessible names for the title, axis labels, text pointer, and annotations. |
+| `aria-label` | Provides accessible names for the title, axis labels, text pointer and annotations. |
 
 ## Screen reading in Linear Gauge
 
