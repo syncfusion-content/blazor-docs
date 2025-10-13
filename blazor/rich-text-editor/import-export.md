@@ -422,9 +422,9 @@ public WordDocument GetDocument(string htmlText)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).
 
-## Securely Export Word or PDF Documents with Authentication
+## Securely Export Word or Pdf Documents with Authentication
 
-You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the OnExport event with its `CurrentRequest` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
+You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the `OnExport` event with its `CurrentRequest` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
 
 The following example demonstrates how to pass authentication tokens and custom data during export:
 
@@ -448,7 +448,7 @@ The following example demonstrates how to pass authentication tokens and custom 
     };
     private void Export(ExportingEventArgs args)
     {
-        // Assign different authentication tokens depending on the export type (PDF or Word)
+        // Assign different authentication tokens depending on the export type (Pdf or Word)
         var token = (args.ExportType == "Pdf" ? "Pdf Bearer token" : "Word Bearer token");
         args.CurrentRequest = new Dictionary<string, string>
         {
@@ -488,8 +488,8 @@ namespace ExportService.Controllers
         }
         public class ExportParam
         {
-            public string? html { get; set; }
-            public object? formData { get; set; }
+            public string? Html { get; set; }
+            public object? FormData { get; set; }
         }
         [AcceptVerbs("Post")]
         [EnableCors("AllowAllOrigins")]
@@ -500,8 +500,8 @@ namespace ExportService.Controllers
             var authorization = Request.Headers["Authorization"].ToString();
             // Access custom form data from the request body
             Console.WriteLine("Authorization: " + authorization);
-            Console.WriteLine("Form Data: " + args.formData);
-            Console.WriteLine("HTML Content: " + args.html);
+            Console.WriteLine("Form Data: " + args.FormData);
+            Console.WriteLine("HTML Content: " + args.Html);
             // Your export logic here
             // Validate token, process formData, generate PDF, etc.
             return Ok();
