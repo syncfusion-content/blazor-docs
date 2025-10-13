@@ -9,11 +9,20 @@ documentation: ug
 
 # Sorting customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of sorting icons and multi-sorting badges in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Icon code points vary by theme; obtain the correct glyph values from Theme Studio, the theme’s icon font CSS, or by inspecting computed styles in the browser dev tools. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or scope selectors with a wrapper class or Grid ID to increase specificity if the theme overrides custom CSS. For production, prefer CSS isolation or a site-wide stylesheet over inline styles.
+The appearance of sorting indicators in the Syncfusion® Blazor DataGrid can be styled using CSS. Styling options are available for:
 
-## Customizing the Blazor DataGrid sorting icon
+- Ascending and descending sort icons
+- Sort order indicators for multi-column sorting
 
-To customize the sorting icon that appears in the Grid header when sorting is applied, use the following CSS:
+N> - Enable sorting by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property. Ensure that the appropriate theme stylesheet is referenced so that sorting-related UI elements are displayed correctly.
+- Icon glyph codes (such as `\e7a2`, `\e7a3`) vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may vary slightly depending on the theme or version. Use browser inspection tools to confirm the correct selectors.
+- Ensure sufficient color contrast and visible focus indicators to support accessibility standards.
+
+## Customizing the Sorting Icon
+
+The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the Blazor DataGrid header when a column is sorted in `ascending` or `descending` order.
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -23,13 +32,14 @@ To customize the sorting icon that appears in the Grid header when sorting is ap
     content: '\e7b6'; /* Icon code for descending order */
 }
 ```
-In this example, the `.e-icon-ascending::before` selector targets the icon for ascending order, and `.e-icon-descending::before` targets the icon for descending order. Update the `content` values to match the selected theme’s icon set. Ensure the icon font family used by the theme is available and applied; overriding `content` without the correct font family can result in missing glyphs. In CSS isolation, apply selectors via `:deep(.e-grid .e-icon-ascending::before)` and `:deep(.e-grid .e-icon-descending::before)` if required. Verify icon appearance in both left-to-right and right-to-left layouts.
+
+Style properties such as `content`, `color`, `font-size`, and `margin` can be adjusted to match the desired design. Ensure the correct icon font family is loaded, as overriding content without the appropriate font may cause icons to not display.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
-## Customizing the Blazor DataGrid multi sorting icon
+## Customizing the Multi-Sorting Icon
 
-To customize the multi-sorting badge that appears in the Grid header when multiple columns are sorted, use the following CSS:
+The **.e-sortnumber** class is used to style the icon that appears in the Grid header when multiple columns are sorted. To change its appearance, apply CSS as shown below:
 
 ```css
 .e-grid .e-sortnumber {
@@ -38,7 +48,7 @@ To customize the multi-sorting badge that appears in the Grid header when multip
 }
 ```
 
-In this example, the `.e-sortnumber` selector customizes the background color and font family of the multi-sorting badge. Modify `background-color` and `font-family` to align with design requirements. Maintain sufficient color contrast and do not remove focus indicators to preserve accessibility. In isolated CSS, scope the rule with `:deep(.e-grid .e-sortnumber)` or use a wrapper/ID to limit the impact to a specific Grid instance.
+Style properties such as `background-color`, `font-family`, `font-size`, and `border-radius` can be adjusted to match the desired design. Maintain sufficient color contrast and preserve focus indicators to support accessibility.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.png)
 

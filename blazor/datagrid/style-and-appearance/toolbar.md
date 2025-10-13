@@ -9,11 +9,19 @@ documentation: ug
 
 # Toolbar customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The following examples demonstrate styling the toolbar root element and toolbar buttons. When using CSS isolation (.razor.css), ensure styles reach internal Grid elements by using the :deep(...) or ::deep(...) combinator (depending on tooling), or scope the rules with a wrapper class or Grid ID to increase selector specificity if theme styles override custom CSS. For functional configuration of toolbar items (add, edit, delete, and custom items), see the DataGrid toolbar documentation.
+The appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-## Customizing the toolbar root element
+- Toolbar container
+- Toolbar buttons
 
-To customize the appearance of the toolbar root element, use the following CSS:
+N> - When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may change slightly depending on the theme or version, so check the DOM to confirm. 
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
+- For configuring toolbar functionality (e.g., add, edit, delete, or custom actions), refer to the [Blazor DataGrid Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) documentation.
+
+## Customizing the Toolbar Root Element
+
+The **.e-toolbar-items** class defines the toolbar container in the Blazor DataGrid. To customize its appearance, apply CSS:
 
 ```css
 .e-grid .e-toolbar-items {
@@ -21,13 +29,13 @@ To customize the appearance of the toolbar root element, use the following CSS:
 }
 ```
 
-In this example, the `.e-toolbar-items` selector targets the toolbar container. Modify the `background-color` value to change the toolbar background. In CSS isolation, use `:deep(.e-grid .e-toolbar-items)` in the component’s .razor.css file, or prefix with a wrapper/ID to limit the style to a specific Grid instance.
+Style properties such as `background-color`, `padding`, `border`, and `box-shadow` can be adjusted to match the desired design.
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
-## Customizing the toolbar button element
+## Customizing the Toolbar Button Element
 
-To customize the appearance of toolbar buttons, use the following CSS:
+The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. To customize these buttons, apply CSS:
 
 ```css
 .e-grid .e-toolbar .e-btn {
@@ -35,7 +43,9 @@ To customize the appearance of toolbar buttons, use the following CSS:
 }
 ```
 
-In this example, the `.e-toolbar .e-btn` selector targets toolbar button elements. Modify the `background-color` value to change the button background. Depending on the theme, hover, active, and focus states may require additional selectors for complete styling (for example, `.e-btn:hover`, `.e-btn:active`, `.e-btn:focus-visible`). Ensure customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation. In CSS isolation, apply `:deep(.e-grid .e-toolbar .e-btn)` or scope with a wrapper/ID to avoid affecting other Grids.
+Style properties such as `background-color`, `color`, `border`, `font-size`, and `padding` can be adjusted to match the desired design.
+
+> Ensure that customized colors meet `WCAG` contrast guidelines and that focus indicators remain visible for keyboard navigation.
 
 ![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.png)
 
@@ -67,7 +77,7 @@ In this example, the `.e-toolbar .e-btn` selector targets toolbar button element
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -79,40 +89,40 @@ In this example, the `.e-toolbar .e-btn` selector targets toolbar button element
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -124,4 +134,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIZeXhqQdjJsjY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBysDMtSWwHRQAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

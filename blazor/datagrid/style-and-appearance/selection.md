@@ -9,18 +9,27 @@ documentation: ug
 
 # Selection customization in Syncfusion Blazor DataGrid
 
-Customize the appearance of selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. The examples below show how to change the row selection background and the cell selection background. When using CSS isolation (.razor.css), target Grid internals with the :deep(...) or ::deep(...) combinator (depending on tooling), or scope styles with a wrapper class or Grid ID to increase selector specificity if theme styles override custom CSS. For production, prefer CSS isolation or a site stylesheet rather than inline styles and verify that custom colors meet accessibility contrast guidelines.
+The appearance of selection elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be styled using CSS. Styling options are available for different selection states:
 
-## Customizing the row selection background
+- Row selection background
+- Cell selection background
 
-Use the following CSS to change the row selection background color:
+N> - Ensure that the required theme stylesheet is referenced so that selection-related UI elements are displayed correctly.
+- When using CSS isolation (.razor.css), use the ::deep selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
+
+## Customizing Row Selection Background
+
+The **.e-selectionbackground** class is used to style the background of selected row cells in the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the `.e-selectionbackground` class targets the background of the selected row cells. Modify the `background-color` value to apply the desired color to selected rows. In isolated CSS, wrap the selector with `:deep(.e-grid td.e-selectionbackground)` in the component’s .razor.css file, or prefix with a Grid-specific wrapper/ID to limit the scope to a single instance.
+
+Properties such as `background-color`, `color`, `border`, or `font-weight` can be modified to match the overall design of the grid layout.
 
 ![Row selection](../images/style-and-appearance/row-selection.png)
 
@@ -48,7 +57,7 @@ In this example, the `.e-selectionbackground` class targets the background of th
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -60,35 +69,35 @@ In this example, the `.e-selectionbackground` class targets the background of th
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
+    internal OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -100,11 +109,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIjkVpyLLVdMBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhyijCZSrZDvETW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the cell selection background
+## Customizing Cell Selection Background
 
-Use the following CSS to change the cell selection background color:
+The **.e-cellselectionbackground** class is used to style the background of selected cells in the Blazor DataGrid. To modify its appearance, apply CSS:
 
 ```css
 .e-grid td.e-cellselectionbackground {
@@ -112,7 +121,7 @@ Use the following CSS to change the cell selection background color:
 }
 ```
 
-In this example, the `.e-cellselectionbackground` class targets the background of selected cells. Modify the `background-color` value to apply the desired color to selected cells. When using CSS isolation, use `:deep(.e-grid td.e-cellselectionbackground)` in the component’s .razor.css file, or scope with a wrapper/ID to avoid affecting other Grids. Ensure the selected state maintains sufficient color contrast and that focus-visible styles remain clearly visible for keyboard navigation.
+Properties such as `background-color`, `color`, `border`, or `font-weight` can be modified to match the overall design of the grid layout.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.png)
 
@@ -123,7 +132,7 @@ In this example, the `.e-cellselectionbackground` class targets the background o
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315"  AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridSelectionSettings  Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
+     <GridSelectionSettings  Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -140,7 +149,7 @@ In this example, the `.e-cellselectionbackground` class targets the background o
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -152,35 +161,35 @@ In this example, the `.e-cellselectionbackground` class targets the background o
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
+    internal OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -192,4 +201,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLIXYLToiFSiQsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSWNMjyBCKUHjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
