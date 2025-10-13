@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Selector in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn how the range selector works in the Syncfusion Blazor Stock Chart component.
+description: Check out and learn how to configure and customize range selector in the Syncfusion Blazor Stock Chart component.
 platform: Blazor
 control: Stock Chart
 documentation: ug
