@@ -61,7 +61,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
->**Note:** Node IDs should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** Node ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ## How to Add Nodes at Runtime
 
@@ -201,7 +201,7 @@ Nodes can be predefined and added to the symbol palette, then dragged and droppe
 
 Nodes can be drawn interactively by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
-For more information about drawing nodes, refer to the `Draw Nodes`.
+For more information about drawing nodes, refer to the [Draw Nodes](https://blazor.syncfusion.com/documentation/diagram/tools#how-to-draw-shapes-using-the-drawing-tool).
 
 ![Drawing a node on the diagram surface in Blazor Diagram](../images/blazor-diagram-node-drawing.gif)
 

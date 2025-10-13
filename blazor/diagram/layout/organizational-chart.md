@@ -109,13 +109,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Organizational chart layout starts parsing from the root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides information about a node’s children and the way to arrange them (direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained below.
 
-**GetLayoutInfo** configures chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It uses the following parameters and return value:
+`GetLayoutInfo` configures chart orientations, chart types, and offset to be left between parent and child nodes. The `GetLayoutInfo` event callback method is called to configure every subtree of the organizational chart. It uses the following parameters and return value:
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set customizable properties.
 3. **TreeInfo**: Returns an object value to be customized.
 
->**Note:** In DataSourceSettings, the types of the ID and ParentID properties are string. The provided DataSource should have a parent-child relationship. At least one node must have an empty ParentID to serve as the root.
+>**Note:** In `DataSourceSettings`, the types of the `ID` and `ParentID` properties are string. The provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to serve as the root.
 
 ## How to Customize Layout
 
@@ -258,7 +258,7 @@ The layout supports adding some blank space between the layout bounds (or viewpo
 
 The layout supports customizing the `Orientation`. Set the desired orientation using `LayoutOrientation`.
 
-The following code illustrates arranging nodes in a TopToBottom orientation.
+The following code illustrates arranging nodes in a **TopToBottom** orientation.
 
 ```csharp
 //Initialize the layout with layout orientation as BottomToTop in page.
@@ -296,7 +296,7 @@ The layout supports arranging nodes with reference to the position of a fixed no
 
 [Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that use a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
-Use the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+Use the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the `LayoutInfo` property.
 
 The following code example illustrates how to add assistants to the layout.
 

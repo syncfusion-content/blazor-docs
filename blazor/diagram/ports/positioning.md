@@ -95,7 +95,7 @@ Use the `PathPosition` property to place a connector port along the connector pa
 
 | PathPosition value | Output |
 |---|---|
-| 0 | ![StConnector port at start positionart](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
+| 0 | ![Connector port at start position](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
 | 0.5 | ![Connector port at midpoint](../images/ConnectorPort/ConnectorPortDefault.png) |
 | 1 | ![Connector port at end position](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
 
@@ -219,7 +219,7 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
 
 ## How to Update Margin for Port
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value that adds some blank space to any one of its four sides. The ports can be displaced with the `Margin` property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value that adds some blank space to any one of its four sides. The ports can be displaced with the `Margin` property. The following code example explains how to align a port based on its `Offset`, `HorizontalAlignment`, `VerticalAlignment`, and `Margin` values.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

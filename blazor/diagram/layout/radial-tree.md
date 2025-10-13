@@ -147,7 +147,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
->**Note:** In `DataSourceSettings`, the ID and ParentID properties are string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the `ID` and `ParentID` properties are string. The provided `DataSource` should have a parent-child relationship. It is necessary for at least one node to have an empty `ParentID`.
 
 ## How to Create a Radial Tree With Nodes and Connectors
 

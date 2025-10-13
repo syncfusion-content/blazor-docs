@@ -328,7 +328,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
  The node [LaneOffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetX) and [LaneOffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetY) properties position the element within the lane canvas.
 
->Note: By default, lane children maintain a **20 px** padding from the lane canvas.
+>Note: By default, lane children maintain a **20** pixels padding from the lane canvas.
 
 The following code example shows how to add nodes to a lane.
 
@@ -506,7 +506,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * Select an individual lane header by clicking the header twice. The first click selects the lane, and the second click selects the header.
 
-* Resize an individual lane header. While resizing a lane, a 20 px distance is maintained from the lane children.
+* Resize an individual lane header. While resizing a lane, a 20 pixels distance is maintained from the lane children.
 
 * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events are triggered.
 

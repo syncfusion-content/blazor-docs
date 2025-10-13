@@ -9,10 +9,10 @@ documentation: ug
 
 # Port Interaction in Diagram Component
 
-Ports can be used to start connector drawing by enabling the `Draw` flag in [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) for the desired port.
+Ports can be used to start connector drawing by enabling the **Draw** flag in [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) for the desired port.
 
 ## How to Draw Connector from Node Port
-Draw connectors from a node port by enabling the Draw constraint on the port’s Constraints property. By default, the connector segment type is **Orthogonal**.
+Draw connectors from a node port by enabling the **Draw** constraint on the port’s `Constraints` property. By default, the connector segment type is **Orthogonal**.
 
 The following code explains how to draw a connector by using port constraints.
 
@@ -72,7 +72,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ![Drawing a connector from a node port in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
 
 ## How to Draw Connector from Connector Port
-Draw connectors from a connector port by enabling the Draw constraint on the port’s Constraints property. By default, the connector segment type is **Orthogonal**.
+Draw connectors from a connector port by enabling the **Draw** constraint on the port’s `Constraints` property. By default, the connector segment type is **Orthogonal**.
 
 The following code explains how to draw a connector by using port constraints.
 

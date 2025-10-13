@@ -238,7 +238,7 @@ Rotation is also supported during interaction:
 
 * A rotate handle appears above the selector. Click and drag the handle in a circular direction to rotate the node.
 * The node is rotated with reference to the static pivot point.
-* The Pivot thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
+* The rotate thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
 * When a node is rotated, the [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) and [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) events are triggered.
 
 ![Rotating a node using the rotation handle in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)

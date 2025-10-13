@@ -77,7 +77,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
->**Note:** Port IDs should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+>**Note:** Port ID should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ### How to Connect a Connector to a Node Port
 
@@ -210,7 +210,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Connect a Connector to a Connector Port
 
-Connector ports are used to establish connections between node ports, connector ports, and nodes. To create such a connection, set the connector’s **SourcePortID** or **TargetPortID** property to the ID of the corresponding port on the connector.
+Connector ports are used to establish connections between node ports, connector ports, and nodes. To create such a connection, set the connector’s `SourcePortID` or `TargetPortID` property to the `ID` of the corresponding port on the connector.
 
 The following code example demonstrates how to connect one connector to a port on another connector.
 
@@ -284,7 +284,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 Add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
 The following code explains how to add ports to a node at runtime by using the `Add` method. The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property is  define a unique ID for the port and it is further used to find the port at runtime.
-If an **ID** is not set, then default **ID** is assigned automatically.
+If an `ID` is not set, then default `ID` is assigned automatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -359,7 +359,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Add multiple ports at runtime by using the `Add` method on the port collection. The following code explains how to add two or more ports to a node at runtime.
 
-The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property defines a unique ID for the port and it is further used to find the port at runtime. If an **ID** is not set, then default **ID** is assigned automatically.
+The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property defines a unique ID for the port and it is further used to find the port at runtime. If an `ID` is not set, then default `ID` is assigned automatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
