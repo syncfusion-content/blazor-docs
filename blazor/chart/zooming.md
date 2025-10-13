@@ -1,36 +1,35 @@
 ---
 layout: post
 title: Zooming in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Zooming functionality in Syncfusion Blazor Charts component and more.
+description: Check out and learn how to configure and utilize Zooming functionality in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
 # Zooming in Blazor Charts Component
+Zooming and panning in Blazor Charts allow users to explore data in detail and interact with chart elements efficiently.
 
-You can learn how to zoom and pan in Blazor Charts by watching the video below.
+Watch the following video to learn how to zoom and pan in Blazor Charts.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=-fqwvVMI9Ec" %}
 
 ## Enable zooming
 
-The chart can be zoomed in three different ways.
+Blazor Charts support three zooming methods:
 
-* Selection - By setting [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableSelectionZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed using the rubber band selection.
-* Mouse Wheel - By setting [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed-in and zoomed-out by scrolling the mouse wheel.
-* Pinch - By setting [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed through pinch gesture in touch enabled devices.
+* Selection: Enable rubber band selection by setting [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableSelectionZooming) to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html).
+* Mouse Wheel: Enable mouse wheel zooming by setting [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) to **true**.
+* Pinch: Enable pinch zooming for touch devices by setting [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) to **true**.
 
- N> 
- * Pinch zooming is only usable in browsers that support multi-touch gestures.
- * To zoom in on a rectangular area on a chart using a touch device, quickly double-tap and then drag your finger to define the zooming area.
+N> Pinch zooming is available only in browsers supporting multi-touch gestures. To zoom on a touch device, double-tap quickly and drag to define the zoom area.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales History of Product X">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true"></ChartZoomSettings>
 
@@ -39,24 +38,23 @@ The chart can be zoomed in three different ways.
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
         public double YValue { get; set; }
     }
 
-
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
 
@@ -64,24 +62,22 @@ The chart can be zoomed in three different ways.
 
 ![Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-zooming.png)
 
-A zooming toolbar will show after zooming the chart, featuring options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. The **Pan** option allows you to pan the chart, while the **Reset** option allows you to reset the zoomed chart.
+After zooming, a toolbar appears with options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. Use **Pan** to move the chart and **Reset** to restore the original view.
 
 ## Modes
 
-The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_Mode) property in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html) determines whether the chart can scale along the horizontal or vertical axes. The default value of the mode is XY (both axis).
+The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_Mode) property in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html) controls zooming direction:
 
-There are three types of modes.
-
-* X - Allows us to zoom the chart horizontally.
-* Y - Allows us to zoom the chart vertically.
-* XY - Allows us to zoom the chart both vertically and horizontally.
+* X - Zoom horizontally
+* Y - Zoom vertically
+* XY - Zoom both axes (default)
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales History of Product X">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartZoomSettings EnableSelectionZooming="true" Mode="ZoomMode.X"></ChartZoomSettings>
 
@@ -90,7 +86,7 @@ There are three types of modes.
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -99,14 +95,14 @@ There are three types of modes.
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
 
@@ -116,14 +112,14 @@ There are three types of modes.
 
 ## Toolbar
 
-By default, zoom in, zoom out, pan, and reset buttons are available in the toolbar for zoomed charts. The [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property specifies which tools should be displayed in the toolbar.
+By default, the zoomed chart displays toolbar buttons for zooming, panning, and resetting. Use the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property to specify which tools appear.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart  Title="Sales History of Product X">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
                        EnablePinchZooming="true" ToolbarItems="@ToolbarItem">
@@ -134,7 +130,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public List<ToolbarItems> ToolbarItem = new List<ToolbarItems>() { ToolbarItems.Zoom, ToolbarItems.Reset, ToolbarItems.Pan };
 	
     public class ChartData
@@ -145,14 +141,14 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
 
@@ -162,14 +158,14 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ### Toolbar display mode
 
-By default, the zooming toolbar appears only when the chart is zoomed. However, you can display a zooming toolbar in the chart during the initial load by setting the [ToolbarDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarDisplayMode) to [ToolbarMode.Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ToolbarMode.html#Syncfusion_Blazor_Charts_ToolbarMode_Always).
+The zooming toolbar appears only after zooming by default. To display it on initial load, set [ToolbarDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarDisplayMode) to [ToolbarMode.Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ToolbarMode.html#Syncfusion_Blazor_Charts_ToolbarMode_Always).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
     </ChartZoomSettings>
     <ChartSeriesCollection>
@@ -179,37 +175,39 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
 @code {
 
-    public class ChartData1
+    public class ChartData
     {
         public string X { get; set; }
         public double YValue { get; set; }
     }
 
-    public List<ChartData1> SalesReports = new List<ChartData1>
+    public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData1 { X= "USA", YValue= 50 },
-        new ChartData1 { X= "GBR", YValue= 20 },
-        new ChartData1 { X= "CHN", YValue= 26 },
-        new ChartData1 { X= "UK", YValue= 20 },
-        new ChartData1 { X= "AUS", YValue= 35 },
-        new ChartData1 { X= "IND", YValue= 15 },
-        new ChartData1 { X= "DEN", YValue= 40 },
-        new ChartData1 { X= "MEX", YValue= 30 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
+
 ```
 
 ![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
 ### Toolbar positioning
 
-The zoom toolbar in the chart can be repositioned using the [ChartZoomToolbarPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html), allowing for flexible alignment and placement. It supports horizontal alignments (Near, Center, and Far) using the [HorizontalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_HorizontalAlign) property, and vertical alignments (Top, Middle, and Bottom) using the [VerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_VerticalAlign) property. By default, `HorizontalAlign` and `VerticalAlign` are set to **Far** and **Top** respectively. Additionally, for more precise positioning, you can specify custom coordinates using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_Y) properties.
+Reposition the zoom toolbar using [ChartZoomToolbarPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html). Set [HorizontalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_HorizontalAlign) and [VerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_VerticalAlign) for alignment, or use [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomToolbarPosition.html#Syncfusion_Blazor_Charts_ChartZoomToolbarPosition_Y) for custom coordinates.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
@@ -222,32 +220,33 @@ The zoom toolbar in the chart can be repositioned using the [ChartZoomToolbarPos
 </SfChart>
 
 @code {
-
-    public class ChartData1
+    public class ChartData
     {
         public string X { get; set; }
         public double YValue { get; set; }
     }
 
-    public List<ChartData1> SalesReports = new List<ChartData1>
+    public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData1 { X= "USA", YValue= 50 },
-        new ChartData1 { X= "GBR", YValue= 20 },
-        new ChartData1 { X= "CHN", YValue= 26 },
-        new ChartData1 { X= "UK", YValue= 20 },
-        new ChartData1 { X= "AUS", YValue= 35 },
-        new ChartData1 { X= "IND", YValue= 15 },
-        new ChartData1 { X= "DEN", YValue= 40 },
-        new ChartData1 { X= "MEX", YValue= 30 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
+
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLotErRCcmZKXdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable pan
 
-By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) property, one can pan the zoomed chart without the help of toolbar items.
+Enable panning by setting [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) to **true**. This allows users to pan the zoomed chart without using toolbar items.
 
 ```cshtml
 
@@ -263,7 +262,7 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -272,14 +271,14 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
+        new ChartData { X = "USA", YValue = 46 },
+        new ChartData { X = "GBR", YValue = 27 },
+        new ChartData { X = "CHN", YValue = 26 },
+        new ChartData { X = "UK", YValue = 26 },
+        new ChartData { X = "AUS", YValue = 26 },
+        new ChartData { X = "IND", YValue = 26 },
+        new ChartData { X = "DEN", YValue = 26 },
+        new ChartData { X = "MEX", YValue = 26 }
     };
 }
 
@@ -289,11 +288,11 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Scrollbar
 
-Scrollbars are active when the chart is zoomed, providing flexible navigation options for the expanded chart view.
+Scrollbars provide navigation for zoomed charts.
 
 ### Enabling scrollbar
 
-The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableScrollbar) property can be used to add a scrollbar to a zoomed chart. The chart can be panned or zoomed using this scrollbar.
+Add a scrollbar to a zoomed chart by setting [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableScrollbar) to **true**. Use the scrollbar to pan or zoom the chart.
 
 ```cshtml
 
@@ -327,7 +326,6 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 </SfChart>
 
 @code {
-
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -348,7 +346,7 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
         new ChartData { XValue = new DateTime(2004, 09, 06), YValue = 31 },
         new ChartData { XValue = new DateTime(2005, 02, 11), YValue = 39 },
         new ChartData { XValue = new DateTime(2005, 09, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 },
+        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 }
     };
 }
 
@@ -358,9 +356,10 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Scrollbar positioning
 
-The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_Position) property in [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html) allows users to specify their preferred scrollbar location. By default, both vertical and horizontal scrollbars are rendered near their respective axes, with the `Position` property value set to [PlaceNextToAxisLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_PlaceNextToAxisLine). Users can set [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Left) or [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Right) to position the vertical scrollbar and [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Top) or [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Bottom) to position the horizontal scrollbar.
+Set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_Position) property in [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html) to specify scrollbar location. By default, scrollbars are placed near their axes. Use [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Top), or [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollbarPosition.html#Syncfusion_Blazor_Charts_ScrollbarPosition_Bottom) for custom placement.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales History of Product X">
@@ -413,26 +412,29 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
         new ChartData { XValue = new DateTime(2004, 09, 06), YValue = 31 },
         new ChartData { XValue = new DateTime(2005, 02, 11), YValue = 39 },
         new ChartData { XValue = new DateTime(2005, 09, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 },
+        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 }
     };
 }
+
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSDOrxiGuycXRg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization
 
-Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html):
+Customize scrollbar appearance and behavior using [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html):
 
 - [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_TrackColor): Specifies the track color.
 - [TrackRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_TrackRadius): Specifies the track corner radius.
 - [ScrollbarColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_ScrollbarColor): Specifies the scrollbar color.
 - [ScrollbarRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_ScrollbarRadius): Specifies the scrollbar corner radius.
-- [GripColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_GripColor): Specifies the grip color. The grip is the draggable handle (thumb) within the scrollbar used to move the visible range.
+- [GripColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_GripColor): Specifies the grip color.
 - [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_Height): Specifies the scrollbar height.
-- [EnableZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_EnableZoom): Enables or disables zooming via the scrollbar. When enabled, arrows appear at the scrollbar ends to zoom in or out; when disabled, arrows are hidden and zooming via the scrollbar is unavailable.
+- [EnableZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonScrollbarSettings.html#Syncfusion_Blazor_Charts_ChartCommonScrollbarSettings_EnableZoom): Enable or disable zooming via the scrollbar.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales History of Product X" >
@@ -449,7 +451,7 @@ Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSett
              TrackRadius="8" ScrollbarRadius="8" GripColor="#9e9e9e" TrackColor="#f5f5f5" ScrollbarColor="#e0e0e0" />
     </ChartPrimaryYAxis>
 
-    <ChartLegendSettings Visible="false"></ChartLegendSettings>
+    <ChartLegendSettings Visible="false" />
 
     <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
         EnableSelectionZooming="true"></ChartZoomSettings>
@@ -462,28 +464,30 @@ Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSett
 </SfChart>
 
 @code {
-    
     public class ChartData
     {
         public double X { get; set; }
         public double Y { get; set; }
     }
+
     public List<ChartData> SalesDetails = new List<ChartData>
     {
-        new ChartData { X= 1900, Y= 4 },
-        new ChartData { X= 1920, Y= 3.0 },
-        new ChartData { X= 1940, Y= 3.8 },
-        new ChartData { X= 1960, Y= 3.4 },
-        new ChartData { X= 2000, Y= 3.9 }
+        new ChartData { X = 1900, Y = 4 },
+        new ChartData { X = 1920, Y = 3.0 },
+        new ChartData { X = 1940, Y = 3.8 },
+        new ChartData { X = 1960, Y = 3.4 },
+        new ChartData { X = 2000, Y = 3.9 }
     };
 }
+
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBIjkBdibhjKzmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Area Chart with scrollbar customization](images/zoom/blazor-area-chart-scroll-bar-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSXaDvCHkxWpZV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto interval on zooming
 
-The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) property is set to **true**.
+Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) to **true** to automatically calculate axis intervals based on the zoomed range.
 
 ```cshtml
 
@@ -500,7 +504,7 @@ The axis interval will be calculated automatically with respect to the zoomed ra
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
     </ChartPrimaryYAxis>
 
-    <ChartLegendSettings Visible="false"></ChartLegendSettings>
+    <ChartLegendSettings Visible="false" />
 
     <ChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true"
                        EnableSelectionZooming="true"></ChartZoomSettings>
@@ -517,7 +521,6 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 </SfChart>
 
 @code {
-
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -538,7 +541,7 @@ The axis interval will be calculated automatically with respect to the zoomed ra
         new ChartData { XValue = new DateTime(2004, 09, 06), YValue = 31 },
         new ChartData { XValue = new DateTime(2005, 02, 11), YValue = 39 },
         new ChartData { XValue = new DateTime(2005, 09, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 },
+        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 }
     };
 }
 
@@ -553,3 +556,4 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 * [Data label](./data-labels)
 * [Legend](./legend)
 * [Marker](./data-markers)
+* [Reset Zoom in Secondary Axes](https://support.syncfusion.com/kb/article/21322/how-to-reset-zoom-in-blazor-chart-with-secondary-axes)

@@ -1,23 +1,21 @@
 ---
 layout: post
 title: Virtualization in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor TreeGrid component and much more.
+description: Learn how to optimize large data rendering using virtualization features in Syncfusion Blazor TreeGrid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Virtualization in Blazor TreeGrid Component
 
-Tree Grid allows to load large amount of data without performance degradation.
+Virtualization enables the efficient rendering of large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
 
 ## Row Virtualization
 
-Row virtualization allows to load and render rows only in the content viewport. It is an alternative way of paging in which the rows will be appended while scrolling vertically. To setup the row virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableVirtualization.html) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
+Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableVirtualization.html) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
 
-The number of records displayed in the Tree Grid is determined implicitly by height of the content area and a buffer records will be maintained in the Tree Grid content in addition to the original set of rows.
-
-Expand and Collapse state of any child record will be persisted.
+The number of records displayed is determined implicitly by the content area's height, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
 
 {% tabs %}
 
@@ -191,16 +189,12 @@ public class VirtualData
 
 ![Virtualization in Blazor TreeGrid](images/blazor-treegrid-virtualization.gif)
 
-### Managing records count
+## Managing Records Count
 
-By default, the number of records rendered per page will be twice the TreeGrid's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OverscanCount) properties. Here's an explanation of these properties:
+By default, the TreeGrid renders twice as many records as the defined height per page. Customize the number of rows rendered using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OverscanCount) properties:
 
-* PageSize:
-    •	The `PageSize` property determines the number of rows rendered per page in the  tree grid.
-    •	It allows you to control how many rows are loaded and displayed at initial rendering and also while scrolling, helping to improve performance by reducing the number of DOM elements rendered.
-* OverscanCount:
-    •	The `OverscanCount` property is used to render additional rows before and after the tree grid's current page rows.
-    •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
+- **PageSize**: Specifies the number of rows rendered per page, controlling how many records are loaded initially and during scrolling to optimize performance.
+- **OverscanCount**: Renders additional buffer rows before and after the current page, minimizing frequent rendering during scrolling for a smoother experience.
 
 ```csharp
 
@@ -343,23 +337,23 @@ By default, the number of records rendered per page will be twice the TreeGrid's
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqCBiKKxvhUzUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rendered on the first and last pages. However, on in-between pages, a total of 10 buffer rows are rendered, with 5 rows allocated for both before and after the current page's visible rows.
+N> When the OverscanCount is set to 5, five buffer rows are rendered on the first and last pages. In between pages, a total of ten buffer rows (five before and five after) are rendered around the visible rows.
 
-## Virtualization with hierarchical data binding
+## Virtualization with Hierarchical Data Binding
 
-Virtualization boosts Tree Grid performance by rendering only the rows visible in the viewport, ensuring smooth scrolling and low memory usage. It provides a fast, responsive experience for users working with large, complex hierarchical datasets.
+Virtualization in TreeGrid boosts performance by rendering only the rows visible in the viewport, enabling smooth scrolling and efficient memory usage with large hierarchical datasets.
 
-In a Tree Grid, hierarchical data consists of parent rows with nested child rows. Virtual scrolling depends on knowing the total row count and their combined height to display only the rows in view. However, tree structures complicate this because the number of visible rows changes when users expand or collapse parents. Since child rows remain hidden until their parent is expanded, it's difficult to accurately determine the total scrollable height in advance. This can result in missing rows, jumpy scrolling, or incomplete data rendering, making it complicated for users to interact with the Tree Grid effectively. To avoid this, use the following solution to use the hierarchy binding with virtualization in Tree Grid.
+With hierarchical data, parent rows may contain nested child rows. Virtual scrolling requires knowing the total row count and their combined heights, but tree structures complicate this because the number of visible rows changes when parents are expanded or collapsed. Since child rows are hidden until their parent is expanded, accurately determining total scrollable height is challenging and can result in missing rows or incomplete rendering.
 
-To convert the hierarchical data into a flat structure that tracks parent-child relationships and expansion states, use recursive method named **HierarchyToFlatData** at the application level. This method traverses all parent-child relationships and flattens them into a single-level collection. This flat data source can then be efficiently bound to the Tree Grid with virtualization enabled. Here’s how to implement it:
+To resolve this, flatten hierarchical data using a recursive method such as **HierarchyToFlatData**. This method traverses all parent-child relationships and flattens them into a single-level collection for efficient binding to TreeGrid with virtualization enabled.
 
-Place the following method in your component (e.g., **Index.razor**) and call it during component initialization (OnInitialized lifecycle method) as like below:
+Use the following method in your component (e.g., **Index.razor**) and call it during initialization:
 
 ```ts
 
 protected override void OnInitialized()
 {
-  // Call the method to flatten hierarchical data and assign it to Tree Grid Data.
+  // Call the method to flatten hierarchical data and assign it to TreeGrid Data.
   this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
 }
 
@@ -403,7 +397,7 @@ public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, strin
 
 ``` 
 
-The following complete code example demonstrates how to bind hierarchical data to the Tree Grid using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property. Enable virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the Tree Grid:
+The following example demonstrates binding hierarchical data using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property, enabling virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the TreeGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -424,11 +418,11 @@ The following complete code example demonstrates how to bind hierarchical data t
 </SfTreeGrid>
 
 @code {
-  // Reference to Tree Grid instance.
+  // Reference to TreeGrid instance.
   private SfTreeGrid<VirtualData> TreeGrid;
   public VirtualData[] TreeGridData { get; set; }
 
-  // On component initialization, flatten the hierarchical data and bind to Tree Grid.
+  // On component initialization, flatten the hierarchical data and bind to TreeGrid.
   protected override void OnInitialized()
   {
     this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
@@ -541,24 +535,21 @@ The following complete code example demonstrates how to bind hierarchical data t
 {% endhighlight %}
 {% endtabs %}
 
+Organizing the data in a flat format allows TreeGrid to render large hierarchical datasets efficiently with virtualization enabled.
 
-By organizing the data in this format, the Tree Grid can efficiently render large hierarchical datasets with virtualization enabled.
+### Limitations
 
-**Limitations:**
+* Expand/collapse state maintenance is not supported for hierarchical data virtualization.
 
-* ExpandCollapse State maintenance is not supported for Hierarchy Data.
+* Batch editing and row drag-and-drop are not supported for hierarchical data.
 
-* Batch Editing is not supported for Hierarchy Data.
-
-* Row Drag and Drop feature is not supported for Hierarchy Data.
-
-* Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
+* Refer to [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for detailed constraints.
 
 ## Column Virtualization
 
-Column virtualization allows you to virtualize columns. It will render columns which are in the viewport. You can scroll horizontally to view more columns.
+Column virtualization limits rendering to only columns visible in the viewport, enhancing performance when working with wide datasets. 
 
-To setup the column virtualization, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) properties as **true**.
+Set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) properties to **true** to enable column virtualization.
 
 ```csharp
 
@@ -657,9 +648,9 @@ To setup the column virtualization, set the [EnableVirtualization](https://help.
 }
 ```
 
-N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) is required for column virtualization. If column's width is not defined then Tree Grid will consider its value as **200px**.
+N> Specify each column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property for column virtualization. If not provided, TreeGrid defaults to a width of **200px**.
 
-The following GIF represent a Tree Grid with Column virtualization.
+The following GIF represent a TreeGrid with Column virtualization.
 ![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.gif)
 
 ## Enable Cell placeholder during Virtualization
@@ -765,19 +756,19 @@ To set up the enable cell placeholder during virtualization, define the [EnableV
 }
 ```
 
-The following image represents a tree grid with the mask row virtualization.
-![Blazor Tree Grid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.gif)
+The following image represents a TreeGrid with the mask row virtualization.
+![Blazor TreeGrid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.gif)
 
 > For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property should be defined.
 
 ## Limitations for Virtualization
 
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
-* Due to the element height limitation in browsers, the maximum number of records loaded by the tree grid is limited by the browser capability.
+* Due to the element height limitation in browsers, the maximum number of records loaded by the TreeGrid is limited by the browser capability.
 * Cell selection will not be persisted in both row and column virtualization.
 * Stacked Header is not compatible with detail template.
 * Virtual scrolling is not compatible with detail template.
-* Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) given to the Tree Grid.
-* The virtual height of the tree grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. In order to increase the row height to accommodate the content then the row height can be  specified as below to ensure all the table rows are in same height.
+* Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) given to the TreeGrid.
+* The virtual height of the TreeGrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. In order to increase the row height to accommodate the content then the row height can be  specified as below to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRowsAsync** method is not supported in virtual scrolling.
 * When row virtualization is enabled, reordering rows is limited to only the records currently visible in the viewport.

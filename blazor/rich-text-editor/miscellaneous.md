@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Miscellaneous in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Miscellaneous in Syncfusion Blazor RichTextEditor component and more.
+title: Miscellaneous in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Miscellaneous in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Miscellaneous in Blazor RichTextEditor Component
+# Miscellaneous in Blazor Rich Text Editor Component
 
-## Placeholder
+## Placeholder Text Customization
 
-Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the `Placeholder` property.
+Defines placeholder text for the Rich Text Editor when the content area is empty using the `Placeholder` property.
 
-Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
+Customize the placeholder's font style and color using the `e-rte-placeholder` CSS class.
 
 ```css
 
@@ -41,11 +41,11 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
 
-## Character count
+## Character count and limit enforcement
 
-The Rich Text Editor automatically counts the number of characters in the content while typing, using the `ShowCharCount` property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the `MaxLength` property. By default, the editor sets the characters limit value to infinity.
+The Rich Text Editor automatically counts the number of characters in the content while typing, using the [ShowCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ShowCharCount) property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the [MaxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_MaxLength) property. By default, the editor sets the characters limit value to infinity.
 
-The character count color will be modified based on the characters in the Rich Text Editor.
+The character count indicator changes color based on usage thresholds:
 
 | Status | Description |
 |----------------|---------|
@@ -72,7 +72,7 @@ The character count color will be modified based on the characters in the Rich T
 
 ## Code view
 
-Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the Rich Text Editor's content. So, the users will have more flexibility over the content they have created.
+The Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the Rich Text Editor's content. So, the users will have more flexibility over the content they have created.
 
 ```cshtml
 

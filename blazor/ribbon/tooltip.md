@@ -9,21 +9,21 @@ documentation: ug
 
 # Tooltip in Blazor Ribbon component
 
-The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property within the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
+The Ribbon component supports tooltips to display additional information for Ribbon items. Tooltips appear when the user hovers over an item or moves keyboard focus to it; behavior on touch devices may vary. Configure tooltips per item using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property of the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
 
 ## Adding Title
 
-You can use the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Title) property to set the tooltip title for each Ribbon item.
+Use the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Title) property to set the tooltip title for each Ribbon item.
 
 ## Adding Content
 
-You can use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Content) property to set the tooltip content for each Ribbon item.
+Use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Content) property to set the tooltip content for each Ribbon item.
 
 ## Adding Icon
 
-You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_IconCss) property to specify the icons to be displayed in the tooltip.
+Use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_IconCss) property to specify the icons to be displayed in the tooltip.
 
-Below example demonstrates on how to configure `Title`, `Content` and `IconCss` in the `TooltipSettings` property.
+The following example demonstrates how to configure `Title`, `Content` and `IconCss` in the `TooltipSettings` property. Inline styles are included only to simplify the sample layout.
 
 {% tabs %}
 {% highlight razor %}

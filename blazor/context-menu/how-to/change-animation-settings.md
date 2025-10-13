@@ -1,16 +1,17 @@
 ---
 layout: post
-title: Change animation settings in Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn here all about Change animation settings in Syncfusion Blazor ContextMenu component and more.
+title: Change Animation Settings in Blazor ContextMenu Component | Syncfusion
+description: Customize animation settings for Syncfusion Blazor ContextMenu, including effect types (SlideDown, ZoomIn, FadeIn) and duration for opening and closing.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Change Animation Settings in Blazor ContextMenu Component
+# Configure Animation Settings in Blazor ContextMenu Component
 
-To change the animation of the Context Menu, [MenuAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.
-The supported effects for Context Menu are,
+To configure the animation of the Context Menu, [MenuAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) child component is used to define animation properties such as effect and duration.
+
+The supported animation effects for the Context Menu are:
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
@@ -19,7 +20,7 @@ The supported effects for Context Menu are,
 | ZoomIn | Specifies the sub menu transform with zoom in effect. |
 | FadeIn | Specifies the sub menu transform with fade in effect. |
 
-The following sample illustrates how to open Context Menu with `FadeIn` effect with the `Duration` of `800ms`.
+The following sample illustrates how to open the Context Menu with a `FadeIn` effect and a `Duration` of `800ms`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

@@ -9,7 +9,7 @@ documentation: ug
 
 # HTML Attribute Support in Blazor ListView Component
 
-The Blazor ListView component allows you to apply standard HTML attributes such as **id**, **style**, **title**, and more directly on the component tag. These attributes can be specified as part of the ListView element.
+The Blazor ListView component seamlessly integrates with standard HTML attributes. Attributes such as `id`, `style`, `title`, and others can be applied directly to the component's tag, allowing for easy customization of its root HTML element.
 
 The following example demonstrates how to set the **id**, **style**, and **title** attributes directly on the **SfListView** tag.
 
@@ -40,5 +40,5 @@ The following example demonstrates how to set the **id**, **style**, and **title
 }
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVesZDWKzIAYHSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ListView with HTML Attribute](./../images/blazor-listview-with-html.png)

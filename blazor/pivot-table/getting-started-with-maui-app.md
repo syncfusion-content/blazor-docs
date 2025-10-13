@@ -11,6 +11,8 @@ documentation: ug
 
 This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -413,7 +415,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpNWgjVxtIVCtC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)" %}
+![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
 
 ## Enable Grouping Bar
 
@@ -454,7 +456,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtWqjrnMHzUfe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)" %}
+![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
 
 ## Exploring Filter Axis
 
@@ -497,7 +499,7 @@ The filter axis contains collection of fields that would act as master filter ov
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhptsKZBRUHymkX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)" %}
+![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
 
 ## Calculated Field
 
@@ -546,7 +548,7 @@ The calculated field feature allows user to insert or add a new calculated field
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTDMUNBxfzcndb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)" %}
+![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
 
 ## Handling exceptions
 

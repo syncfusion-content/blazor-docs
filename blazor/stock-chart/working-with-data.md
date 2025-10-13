@@ -608,3 +608,4 @@ When no data is available to render in the stock chart, the [NoDataTemplate](htt
 ## See Also
 
 * [Series Types](./series-types)
+* [Integrate a Stock Chart Inside Accordion Component](https://support.syncfusion.com/kb/article/21362/how-to-integrate-a-stock-chart-inside-a-blazor-accordion-component)

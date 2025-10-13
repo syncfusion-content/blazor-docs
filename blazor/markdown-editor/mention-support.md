@@ -11,7 +11,7 @@ documentation: ug
 
 By integrating the [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started) component with the Markdown Editor, users can effortlessly mention or tag other users or objects from a suggested list. This eliminates the need to manually type out names or identifying information, improving both efficiency and accuracy.
 
-## Enabling Mention in Blazor Markdown Editor
+## How to Enable Mention in Blazor Markdown Editor
 
 To enable the Mention functionality within the Markdown Editor, set the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_Target)  property of the Mention component to the ID of the textarea element inside the editor. When specifying the target, ensure that you append the suffix `_editable-content` to the ID. This configuration allows users to mention or tag others from the suggested list while editing text.
 
@@ -25,7 +25,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Mention component provides 
 * [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) - The maximum number of items that will be displayed in the suggestion list.
 * [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) - Used to display the customized appearance in suggestion list.
 
-## Example: Implementing Mention in Markdown Editor
+## Example: How to Implement Mention Support in Markdown Editor
 
 The following example demonstrates how to enable Mention support in the Blazor Markdown Editor.
 
@@ -37,4 +37,4 @@ The following example demonstrates how to enable Mention support in the Blazor M
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Mention support](./images/blazor-markdowneditor-markdown-mention.png)
+![Blazor Markdown Editor with Mention Support](./images/blazor-markdowneditor-markdown-mention.png)

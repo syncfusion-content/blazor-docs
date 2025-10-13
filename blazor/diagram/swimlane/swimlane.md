@@ -13,14 +13,14 @@ A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swi
 
 ![Swimlane Content](./Swimlane-images/Swimlane_Default.PNG)
 
-## How to Create a swimlane
-A swimlane can be created and added to the diagram, either programmatically or interactively.
+## How to Create a Swimlane
+A swimlane can be created and added to the diagram either programmatically or interactively.
 
 ### How to Add Swimlane Through Swimlanes Collection
 
 To create a swimlane, you have to define the swimlane object and add it to the [Swimlanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Swimlanes) collection of the diagram.
 
->Note: By default, if you create a swimlane, one lane and phase will be added.
+>Note: By default, when a swimlane is created, one lane and one phase are added.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -63,22 +63,23 @@ To create a swimlane, you have to define the swimlane object and add it to the [
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIiDNcgwRwLkFg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
->**Note:** Swimlane's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** Swimlane ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or spaces.
 
-Now, the swimlane will be as follows.
+The swimlane appears as follows.
 
 ![Add swimlane](Swimlane-images/Swimlane_Empty.PNG)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneCreation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneCreation).
 
->Note: We can't add swimlane elements such as phase, lane, and lane children at runtime by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+>Note: Swimlane elements (phase, lane, and lane children) cannot be added at runtime using [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
 ### How to Create and Customize the Swimlane Header
 
-The Swimlane Header was the primary element for swimlanes. The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Header) property of swimlane allows you to define its textual description and to customize its appearance.
+The swimlane header is the primary interactive element for a swimlane. The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Header) property of swimlane allows you to define its textual description and to customize its appearance.
 
->Note: By using this header, swimlane interactions such as selection, dragging, and other functionalities can be performed.
+>Note: The header supports interaction such as selection, dragging, and related actions.
 
 The following code example explains how to define the swimlane header.
 
@@ -131,16 +132,17 @@ The following code example explains how to define the swimlane header.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSsjjwUwQKDpUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeader)
 
 ![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeader)
-
 ### How to Customize Swimlane Header
 
-The height and width of the swimlane header can be customized with the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the swimlane header. You can set the fill color of the header by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
+Customize the header height and width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the swimlane header. Set the fill color of the header by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
-The following code example explains how to customize the swimlane header.
+The following code example explains how to customize a swimlane header.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -171,7 +173,7 @@ The following code example explains how to customize the swimlane header.
                 }
             },
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
-        }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
@@ -191,12 +193,13 @@ The following code example explains how to customize the swimlane header.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLysXtQgmbodbwe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.PNG)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization)
-
-The Swimlane header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define a separate template for each Swimlane, differentiate the annotation by using the ID property.
+Swimlane header annotations also support templates. Define HTML content at the tag level and enable templating with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per swimlane, differentiate annotations by the ID property.
 
 The following code example explains how to define a Swimlane header annotation template.
 
@@ -263,21 +266,23 @@ The following code example explains how to define a Swimlane header annotation t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreWDXmqwuTgXyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
 
 ### How to Edit Header
 
-The diagram provides support to edit swimlane headers at runtime. You can achieve the header editing by double-clicking on it. Double-clicking the header label will enable the editing mode.
+Edit swimlane headers at runtime by double-clicking the header label to enable in-place editing.
 
 ![Header Editing](Swimlane-images/Header_Edit.gif).
 
 ## Orientation
 
-The orientation of the swimlane can be customized using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Orientation) property of the swimlane.
+Customize swimlane orientation using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Orientation) property.
 
->Note: The swimlane orientation is set to horizontal by default.
+>Note: The default swimlane orientation is Horizontal.
 
 The following code example explains how to set the orientation of the swimlane.
 
@@ -304,8 +309,9 @@ The following code example explains how to set the orientation of the swimlane.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWDNwUPZKWhnw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneOrientation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneOrientation)
 
 | Orientation | Output |
 |---|---|
@@ -315,11 +321,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set spacing between lane or phase header and its children
 
-The diagram allows you to define custom spacing between a lane or phase header and its child elements (such as nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property. This property takes a DiagramThickness object to define spacing on all four sides: Top, Bottom, Left, and Right.
+Define custom spacing between a lane or phase header and its child elements (nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property, which accepts a `DiagramThickness` with `Top`, `Bottom`, `Left`, and `Right` values.
 
-By default, the ChildrenSpacing value is 20 pixels on all sides. You can modify this value to control the padding between the header and its children within the swimlane layout.
+By default, `ChildrenSpacing` is 20 pixels on all sides. Adjust these values to control padding between the header and its children within the `Swimlane`.
 
-The following example shows how to apply custom spacing using the ChildrenSpacing property.
+The following example shows how to apply custom spacing using `ChildrenSpacing` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -418,20 +424,21 @@ The following example shows how to apply custom spacing using the ChildrenSpacin
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrosXjmqFjxamFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/ChildrenSpacingProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/ChildrenSpacingProperty)
 
 
 ## Interaction
 
 ### How to Select the Swimlane
 
-Swimlane can be selected by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
+Select a `Swimlane` by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
 ### How to Drag the Swimlane
 
-* Swimlane object can be dragged by clicking and dragging the header of the swimlane.
+* Drag a swimlane by clicking and dragging its header.
 
-* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and we can do customization on those events.
+* During drag, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are raised; handle these events to implement pre/post-move logic.
 
-![Drag Node](Swimlane-images/Swimlane_Select_Drag.gif)
+![Dragging a swimlane by its header](Swimlane-images/Swimlane_Select_Drag.gif)

@@ -7,20 +7,28 @@ control: MarkdownEditor
 documentation: ug
 ---
 
-# Insert Table in Blazor Markdown Editor Component
+# How to Insert Tables in Blazor Markdown Editor Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides built-in support for inserting tables, allowing users to create and customize tables effortlessly within the editor.
 
-## Enable Table Insertion in Blazor Markdown Editor  
+## Steps to Enable Table Insertion 
 
-To enable the table insertion feature, add the `CreateTable` option to the toolbar items. Once added, users can click the [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) icon in the toolbar to insert a table into the editor.
+To enable the table insertion feature:
 
-By default, when a table is inserted, it consists of:
+1. Add the `CreateTable` option to the toolbar items.
+2. Click the [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) icon in the toolbar.
+3. Select the desired table configuration and insert it into the editor.
+
+### Default Table Structure
+
+When a table is inserted, it includes:
 
 * 2 rows and 2 columns
 * A table header row
 
-This ensures that users can start formatting and adding content immediately.
+This default layout allows users to begin formatting and adding content immediately.
+
+The following example demonstrates how to enable table insertion in the Syncfusion Blazor Markdown Editor.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -30,4 +38,4 @@ This ensures that users can start formatting and adding content immediately.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor markdown table](./images/blazor-richtexteditor-markdown-table.png)
+![Table insertion using Blazor Markdown Editor toolbar](./images/blazor-richtexteditor-markdown-table.png)

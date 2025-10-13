@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Appearance Customization in Syncfusion Blazor Charts component and much more.
+description: Check out and learn how to customize Chart Appearance in Syncfusion Blazor Charts component for enhanced visual presentation.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,15 +11,14 @@ documentation: ug
 
 ## Custom color palette
 
-The default color of series or points can be changed by providing a custom color palette to the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property.
+Change the default color of series or points by providing a custom color palette to the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" Palettes="@palettes">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -31,7 +30,7 @@ The default color of series or points can be changed by providing a custom color
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -41,15 +40,15 @@ The default color of series or points can be changed by providing a custom color
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-         new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-         new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-         new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-         new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-         new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-         new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-         new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-         new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+    {
+        new ChartData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new ChartData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new ChartData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new ChartData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new ChartData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new ChartData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new ChartData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new ChartData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 
     public String[] palettes = new String[] { "#E94649", "#F6B53F", "#6FAAB0" };
@@ -69,7 +68,7 @@ The default color of series or points can be changed by providing a custom color
 
 <!-- markdownlint-disable MD013 -->
 
-The chart's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property and the border color and width can be customized based on the specified value in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+Customize the chart's background color using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property. Adjust border color and width with [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 
@@ -86,7 +85,7 @@ The chart's background color can be customized using the [Background](https://he
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -94,15 +93,15 @@ The chart's background color can be customized using the [Background](https://he
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -112,7 +111,7 @@ The chart's background color can be customized using the [Background](https://he
 
 ### Chart margin
 
-The chart's margin from its container can be customized using the [ChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html).
+Set the chart margin from its container using the [ChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html) property.
 
 ```cshtml
 
@@ -123,8 +122,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
     <ChartMargin Left="60" Right="60" Top="60" Bottom="60"></ChartMargin>
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -132,7 +130,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -140,15 +138,15 @@ The chart's margin from its container can be customized using the [ChartMargin](
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -158,9 +156,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ### Chart area customization
 
-Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
-
-Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
+Change the background color and border of the chart area using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html). Customize the chart area width with the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
 ```cshtml
 
@@ -178,7 +174,7 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -186,15 +182,15 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -204,14 +200,14 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Animation
 
-The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property allows to customize animation for a certain series. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Enable) property can be used to enable or disable the series animation. The duration of the animation is specified by [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Duration) property, and [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Delay) property allows to start the animation at a specific moment.
+Customize series animation using the [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property. Enable or disable animation with [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Enable), set duration with [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Duration), and specify a start delay with [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Delay).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
@@ -231,7 +227,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
+    {
         new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
         new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
         new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
@@ -247,7 +243,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ## Chart title
 
-The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property can be used to give the chart a title in-order to provide information about the data displayed.
+Add a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property to provide information about the displayed data.
 
 ```cshtml
 
@@ -256,8 +252,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 <SfChart Title="Olympic Medals">
     <ChartTitleStyle Size="23px" Color="red" FontFamily="Arial" FontWeight="regular" FontStyle="italic"></ChartTitleStyle>
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -265,7 +260,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -273,15 +268,15 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -291,7 +286,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ### Title position
 
-The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property customizes the placement of the chart title. It supports the following options: [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom), providing flexible title alignment based on layout requirements. By default, the chart title appears at the top of the chart.
+Customize the chart title placement using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property. Options include [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom). By default, the title appears at the **top**.
 
 N> The subtitle, which appears below the title, will also be positioned along with the title when the `Position` property is set.
 
@@ -302,8 +297,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 <SfChart Title="Olympic Medals" SubTitle="Medals">
     <ChartTitleStyle Position="ChartTitlePosition.Bottom"></ChartTitleStyle>
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
@@ -311,7 +305,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -319,21 +313,22 @@ N> The subtitle, which appears below the title, will also be positioned along wi
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIZEryzUPiuQCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -342,7 +337,6 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" SubTitle="Medals">
-
     <ChartTitleStyle Position="ChartTitlePosition.Custom" X="335" Y="60"></ChartTitleStyle>
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
@@ -363,25 +357,26 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrotuVozgajpbhW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Chart subtitle
 
-The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to add a subtitle to the chart in-order to provide additional information about the data displayed.
+Add a subtitle using the [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property for additional information about the chart data.
 
 ```cshtml
 
@@ -392,8 +387,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
     <ChartTitleStyle FontFamily="Arial" FontStyle="italic" FontWeight="regular" Size="23px" Color="red"></ChartTitleStyle>
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
@@ -401,7 +395,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -409,15 +403,15 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
-		new ChartData{ Country= "USA", Gold=50  },
-		new ChartData{ Country="China", Gold=40 },
-		new ChartData{ Country= "Japan", Gold=70 },
-		new ChartData{ Country= "Australia", Gold=60},
-		new ChartData{ Country= "France", Gold=50 },
-		new ChartData{ Country= "Germany", Gold=40 },
-		new ChartData{ Country= "Italy", Gold=40 },
-		new ChartData{ Country= "Sweden", Gold=30 }
+    {
+        new ChartData { Country = "USA", Gold = 50  },
+        new ChartData { Country = "China", Gold = 40 },
+        new ChartData { Country = "Japan", Gold = 70 },
+        new ChartData { Country = "Australia", Gold = 60 },
+        new ChartData { Country = "France", Gold = 50 },
+        new ChartData { Country = "Germany", Gold = 40 },
+        new ChartData { Country = "Italy", Gold = 40 },
+        new ChartData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -429,5 +423,5 @@ N> The chart components do not use any CSS style for customization; chart elemen
 
 ## See also
 
-* [Data Label](./data-labels)
+* [Data label](./data-labels)
 * [Tooltip](./tool-tip)

@@ -276,7 +276,7 @@ The color mapping supports customization of shape colors based on the underlying
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthTXCgjWGYITQsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)" %}
+![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -310,7 +310,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLJDiKjMPitIelx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Label](./images/blazor-map-label.png)" %}
+![Blazor Maps with Label](./images/blazor-map-label.png)
 
 ## Adding title for Blazor Maps
 
@@ -343,7 +343,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthftCKZWbsaohgF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Title](./images/blazor-map-title.png)" %}
+![Blazor Maps with Title](./images/blazor-map-title.png)
 
 ## Enable legend
 
@@ -377,7 +377,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLzNsKtiFmBLBLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Legend](./images/blazor-map-legend.png)" %}
+![Blazor Maps with Legend](./images/blazor-map-legend.png)
 
 ## Enable tooltip
 
@@ -412,7 +412,7 @@ The tooltip can be used when you cannot display information using the data label
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfXWgjCPFtJBKY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)" %}
+![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 

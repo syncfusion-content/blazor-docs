@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Format Painter in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Format Painter in Syncfusion Blazor RichTextEditor component and more.
+title: Using Format Painter in Blazor RichTextEditor | Syncfusion
+description: Checkout and learn here all about Format Painter in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Format Painter
+# Format Painter in Blazor Rich Text Editor
 
 The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
-## Configuring format painter tool in toolbar
+## How to add format painter tool to the toolbar
 
 You can add the `FormatPainter` tool in the Rich Text Editor using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
-By double-clicking the format painter toolbar button, `sticky` mode will be enabled. In sticky mode, the format painter remains active until the `Escape` key is pressed again to disable it.
+Double-clicking the Format Painter toolbar button enables **sticky mode**, allowing multiple formatting applications until the `Escape` key is pressed. In sticky mode, the format painter remains active until the `Escape` key is pressed again to disable it.
 
-The following code example shows how to add the format painter tool in the Rich Text Editor.
+The following example demonstrates how to add the Format Painter tool to the Rich Text Editor toolbar.
 
 {% tabs %}
 {% highlight razor %}
@@ -27,9 +27,9 @@ The following code example shows how to add the format painter tool in the Rich 
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing copy and paste format
+## How to customize format painter copy and paste behavior
 
-You can customize the format painter tool in the Rich Text Editor using the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) property.
+Users can customize the behavior of the Format Painter tool using the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) property.
 
 The [AllowedFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormatPainterSettings_AllowedFormats) property helps you to specify tag names that allow the formats to be copied from the selected text. For instance, you can include formats from the selected text using tags like `[p;]` `[h1;]` `[h2;]` `[h3;]` `[div;]` `[ul;]` `[ol;]` `[li;]` `[span;]` `[strong;]` `[em;]` `[code;]`. The following example demonstrates how to customize this functionality.
 
@@ -53,10 +53,10 @@ Below is an example illustrating how to define the `AllowedFormats` and `DeniedF
 {% endhighlight %}
 {% endtabs %}
 
-## Shortcut keys for copy and paste format
+## Format Painter keyboard shortcut keys for copying and pasting formatting.
 
 For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 
-> The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
+> The Format Painter retains formatting after application, allowing you to apply the same styles multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
-Additionally, You can perform the format painter actions programmatically using the [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_Syncfusion_Blazor_RichTextEditor_FormatPainterParams_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_) public method.
+Additionally, users can perform the format painter actions programmatically using the [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_Syncfusion_Blazor_RichTextEditor_FormatPainterParams_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_) public method.

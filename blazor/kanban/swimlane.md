@@ -7,13 +7,13 @@ control: Kanban
 documentation: ug
 ---
 
-# Swimlane in Blazor Kanban Component
+# How to Use Swimlanes in Blazor Kanban
 
 Swimlanes are horizontal categorizations of cards on the [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board). It is used for grouping of cards, which brings transparency to the workflow process.
 
 ## Render swimlane row
 
-Cards can be grouped based on `KeyField` and displayed in rows, which are separated by columns. It is mandatory to define the `KeyField` that is mapped from the datasource for rendering swimlane rows in the Kanban board.
+Cards can be grouped into swimlane rows based on the `KeyField`, with each row representing a unique value from the data source. To render swimlane rows, the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField) must be mapped to a corresponding field in the data source.
 
 ```cshtml
 
@@ -75,11 +75,11 @@ Cards can be grouped based on `KeyField` and displayed in rows, which are separa
 ```
 
 
-![Blazor Kanban with Swimlane Row](./images/blazor-kanban-with-swimlane-row.png)
+![Swimlane rows rendered in Blazor Kanban](./images/blazor-kanban-with-swimlane-row.png)
 
 ## Custom row text
 
-Customize the swimlane row header text by using the `TextField` property mapped from datasource.
+Customize the swimlane row header text by mapping the `TextField` property to a field in the data source.
 
 N> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`. It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
 
@@ -145,9 +145,9 @@ N> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`. It
 
 ## Template
 
-You can customize the Kanban swimlane row by using `Template`, which is specified within the `KanbanSwimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
+You can customize the Kanban swimlane row by using `Template`, which is specified within the [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) property. This example demonstrates how to customize the swimlane header using an HTML template.
 
-To get start quickly with Blazor Kanban component using Templates, you can check on this video.
+To get started quickly with Blazor Kanban component using Templates, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
@@ -245,11 +245,11 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 ```
 
-![Customizing Swimlane Row Text in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.png)
+![Customized swimlane row text using template in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.png)
 
 ## Sorting
 
-Kanban support to sort the swimlane rows in kanban board based on the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property by setting [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) property.
+The Blazor Kanban component supports sorting swimlane rows based on the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property by setting [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) property.
 
 N> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property is not provided, sorting will be performed based on the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_KeyField) property.
 
@@ -291,10 +291,11 @@ N> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ka
 
 ```
 
-![Sorting in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-sorting.png)
+![Swimlane rows sorted in descending order in Blazor Kanban](./images/blazor-kanban-swimlane-row-sorting.png)
+
 ### Custom order
 
-Kanban supports to sort the swimlane rows using custom sort logic by handling [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event.
+The Blazor Kanban component allows custom sorting of swimlane rows by handling the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event.
 
 In this event, you can get the argument of SwimlaneRows which contains the list of SwimlaneSettingsModel and it will align based on the SortDirection property. You can change the List of SwimlaneSettingsModel as per your wish and assign the changed list to it.
 
@@ -349,15 +350,15 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
 
 ```
 
-![Swimlane Custom Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-custom.png)
+![Custom swimlane row order in Blazor Kanban](./images/blazor-kanban-swimlane-row-custom.png)
 
 ## Calculate cards count
 
-Users can show or hide the cards count by swimlane row in header when enabling the `ShowItemCount` property, which is enabled by default on the Kanban board.
+Users can show or hide the card count in each swimlane row header by using the `ShowItemCount` property. This property is enabled by default.
 
 N> Provided localization support for **Items** text.
 
-In below demo, disabled on `ShowItemCount` property on rendering swimlane row without total count.
+In the following example, the `ShowItemCount` property is disabled to render swimlane rows without displaying the total card count.
 
 ```cshtml
 
@@ -418,7 +419,7 @@ In below demo, disabled on `ShowItemCount` property on rendering swimlane row wi
 
 ```
 
-![Displaying Blazor Kanban Cards Count](./images/blazor-kanban-cards-count.png)
+![Swimlane rows without card count in Blazor Kanban](./images/blazor-kanban-cards-count.png)
 
 ## Enable frozen rows
 
@@ -426,7 +427,7 @@ Frozen rows provide an option to make the current swimlane row header text alway
 
 By default, the `EnableFrozenRows` property is set as `false`. If you wish to show the swimlane frozen rows, you can enable the `EnableFrozenRows` property.
 
-N> This feature support only when using Kanban content scrolling. The Expand/collapse swimlane icon does not work on frozen rows.
+N> Note: This feature is supported only when Kanban content scrolling is enabled. The expand/collapse swimlane icon is not functional in frozen rows.
 
 ```cshtml
 

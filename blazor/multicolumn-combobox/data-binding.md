@@ -125,7 +125,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVTXahAKvxlOgaH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVeMZjQHJYqdimB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OnActionFailure event
 
@@ -137,7 +137,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLpZkrKqPQmofLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVoWNZwRIdKNBsr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OData v4 services
 
@@ -163,9 +163,8 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTDaLKUlkAUjhM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhIWjjwnRBWAlvb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor MultiColumn ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
 ### Offline mode
 

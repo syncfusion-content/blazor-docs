@@ -11,12 +11,11 @@ documentation: ug
 
 # Getting Started with Blazor Kanban Component
 
-This section briefly explains about how to include [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component in the Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This guide explains how to integrate the [Syncfusion Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component into a Blazor WebAssembly application using Visual Studio or Visual Studio Code.
 
-To get start quickly with Blazor Kanban component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban) sample.
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=EYDC0RCMZKg" %}
+To get started quickly with the Blazor Kanban component, explore to the[GitHub sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
 {% tabcontents %}
 
@@ -175,9 +174,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpZMLOpgSSDQVm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban Component](./images/blazor-kanban-component.png)" %}
 
-## Populating cards
+## Populate kanban with cards
 
-To populate the empty Kanban with cards, define the Enumerable object or remote data using the `DataSource` property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to `KeyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
+To populate the empty Kanban with cards, define the Enumerable object or remote data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField). In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -219,9 +218,9 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTtChkTKoFctAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)" %}
 
-## Enable Swimlane
+## Enable swimlane functionality
 
-`Swimlane` can be enabled by mapping the fields `KanbanSwimlaneSettings.KeyField` to appropriate column name in DataSource. This enables the grouping of the cards based on the mapped column values.
+`Swimlane` can be enabled by mapping the fields [KanbanSwimlaneSettings.KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) to appropriate column name in DataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
 {% highlight cshtml %}

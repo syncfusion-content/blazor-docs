@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Built-in tools in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Built-in tools in Syncfusion Blazor RichTextEditor component and more.
+title: Built-in tools in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about built-in tools in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Built-in Tools in RichTextEditor 
+# Overview of Built-in Tools in Blazor Rich Text Editor
 
 To initialize the tools, use the following code. You can change the tool's name as per your requirements. For your reference, here is the `bold` tool initialized.
 
@@ -88,25 +88,25 @@ The following table lists the tools available in the toolbar.
 <tr>
 <td><p>LowerCase</p></td>
 <td><img alt= "Lower case in Blazor RichTextEditor" src="../images/lower-case.png"></td>
-<td><p>Change the selected content to lower case.</p></td>
+<td><p>Changes the selected content to lowercase.</p></td>
 </tr>
 
 <tr>
 <td><p>UpperCase</p></td>
 <td><img alt= "Uppercase in Blazor RichTextEditor" src="../images/upper-case.png"></td>
-<td><p>Change the selected content to upper case.</p></td>
+<td><p>Changes the selected content to uppercase.</p></td>
 </tr>
 
 <tr>
 <td><p>SubScript</p></td>
 <td><img alt= "Sub script in Blazor RichTextEditor" src="../images/sub-script.png"></td>
-<td><p> Makes the selected text as subscript (lower).</p></td>
+<td><p> Formats the selected text as subscript (lower).</p></td>
 </tr>
 
 <tr>
 <td><p>SuperScript</p></td>
 <td><img alt= "Super script in Blazor RichTextEditor" src="../images/super-script.png"></td>
-<td><p> Makes the selected text as superscript (higher).</p></td>
+<td><p> Formats the selected text as superscript (higher).</p></td>
 </tr>
 
 <tr>
@@ -172,7 +172,7 @@ The following table lists the tools available in the toolbar.
 <tr>
 <td><p>SourceCode</p></td>
 <td><img alt= "Source code in Blazor RichTextEditor" src="../images/code-view.png"></td>
-<td><p>The Rich Text Editor allows users to directly edit HTML code via "Source View." If you make any modifications in the source view directly, synchronise with the design view.</p></td>
+<td><p>Allows users to toggle between design view and HTML source view. Changes made in source view are synchronized with the design view.</p></td>
 </tr>
 
 <tr>
@@ -194,11 +194,11 @@ The following table lists the tools available in the toolbar.
 </tr>
 </table>
 
-The tools order can be customized as your application requirement. If you are not specifying any tools order, the editor will create the toolbar with default items.
+Users can customize the order of toolbar tools to suit your application's requirements. If you are not specifying any tools order, the editor will create the toolbar with default items.
 
-## Removing built-in tool from Toolbar
+## How to remove built-in tool from toolbar
 
-Remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+Remove the built-in tools from the toolbar by using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
 {% tabs %}
 {% highlight razor %}

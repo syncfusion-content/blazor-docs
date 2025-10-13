@@ -9,9 +9,9 @@ documentation: ug
 
 # Styles and Appearance in Blazor File Manager Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides CSS structures that can be used to modify the component's appearance.
 
-## Customizing the File Manager navigation pane
+## Customizing the File Manager Navigation Pane
 
 To customize the File Manager navigation pane, use the `.e-navigation` selector and apply styles.
 
@@ -42,9 +42,9 @@ To customize the File Manager navigation pane, use the `.e-navigation` selector 
 
 ![Blazor File Manager displays Customized Navigation Pane](images/blazor-filemanager-customized-navigation-pane.png)
 
-## Customizing the File Manager thumbnail
+## Customizing the File Manager Thumbnail
 
-To customize the thumbnails in the File Manager, you can apply background-image styles to specific CSS selectors that represent different file types, as listed in the table below.
+To customize thumbnails in the File Manager, apply `background-image` styles to CSS selectors that represent different file types, as listed below.
 
 |File Type|CSS Selector|
 |----|----|
@@ -82,7 +82,7 @@ The following example demonstrates how to customize the File Manager's thumbnail
 
 ![Blazor FileManager displays Custom Thumbnail](images/blazor-filemanager-custom-thumbnail.png)
 
-## Customizing the File Manager layout
+## Customizing the File Manager Layout
 
 To customize the File Manager layout, use the `.e-layout-content` selector and apply styles. 
 
@@ -134,7 +134,7 @@ To customize the File Manager toolbar items, use the `.e-toolbar` selector and a
 
 ![Blazor FileManager displays Custom Toolbar](images/blazor-filemanager-custom-toolbar.png)
 
-## Customizing the File Manager selected files/folders
+## Customizing the File Manager Selected Files/Folders
 
 To customize the File Manager selected files/folders, use the below selectors and apply styles.
 
@@ -164,7 +164,7 @@ To customize the File Manager selected files/folders, use the below selectors an
 
 ## Customizing the File Manager Dialog
 
-To customize the dialog popup in the File Manager, you can apply styles to specific CSS selectors, as listed in the table below.
+To customize the dialog popup in the File Manager, apply styles to CSS selectors, as listed below.
 
 |Element|CSS Selector|
 |---------|------------|

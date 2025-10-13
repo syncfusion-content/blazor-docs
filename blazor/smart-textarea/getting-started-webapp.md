@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Smart TextArea Tutorial | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Smart TextArea component in a Blazor Web App, including setup and AI configuration.
+description: Learn how to get started with the Syncfusion Blazor Smart TextArea component in a Blazor Web App Server, including setup and AI configuration.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Smart TextArea
 
-The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, suitable for applications like issue trackers or customer support systems. This section explains how to integrate the component into a Blazor Web App using Visual Studio or Visual Studio Code.
+The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, suitable for applications like issue trackers or customer support systems. This section explains how to integrate the component into a Blazor Web App Server using Visual Studio or Visual Studio Code.
 
 To get started quickly, watch this video tutorial:
 
@@ -29,9 +29,9 @@ To get started quickly, watch this video tutorial:
 
 N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
-## Create a New Blazor Web App in Visual Studio
+## Create a New Blazor Web App Server in Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
+Create a **Blazor Web App Server** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
 
 ## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
 
@@ -65,9 +65,9 @@ N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.o
 
 N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
-## Create a New Blazor Web App in Visual Studio Code
+## Create a New Blazor Web App Server in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
+Create a **Blazor Web App Server** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App Server" %}

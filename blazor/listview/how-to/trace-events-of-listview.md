@@ -7,9 +7,11 @@ control: Listview
 documentation: ug
 ---
 
-# Trace events of listview in Blazor ListView Component
+# Trace Events of ListView in Blazor ListView Component
 
-The ListView component triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
+The ListView component exposes various events that trigger in response to its actions, such as data binding or user interactions. These events serve as extension points for executing custom operations or tracking the component's behavior.
+
+Follow these steps to trace and utilize ListView events:
 
 1. Render the ListView with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource), and bind the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionBegin), [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionComplete), and [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) events.
 
@@ -111,5 +113,5 @@ The ListView component triggers events based on its actions. The events can be u
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSiXDMgTbaiZKn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Displaying Event Action in Blazor ListView](../images/list/blazor-listview-trace-events.png)

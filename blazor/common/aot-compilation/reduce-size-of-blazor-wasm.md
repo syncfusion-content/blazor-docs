@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Reduce Size of Blazor WebAssembly Application - Syncfusion
-description: Check out the documentation for reduce size of blazor webassembly application in blazor using various techniques
+title: Reduce size of Blazor WebAssembly Applications - Syncfusion
+description: Learn here all about how to reduce Syncfusion Blazor WebAssembly (WASM) App size using trimming and linker configuration. Explore here to more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Reduce Size of Blazor WebAssembly Application
+# Reduce size of Blazor WebAssembly Application
 
-This article explains how to reduce the size of **Blazor WebAssembly (WASM)** applications. Although [Ahead-of-Time (AOT)](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) compilation improves performance, it also increases the app size. To help reduce this, you can enable code trimming options in our projects. Trimming automatically removes unused code from the final output, which helps lower the bundle size without affecting functionality. This is especially helpful when using large projects.
+This article explains how to reduce the size of **Blazor WebAssembly (WASM)** applications. Although [Ahead-of-Time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot#ahead-of-time-aot-compilation) improves performance, it also increases app size. To reduce size, enable code trimming options in projects. Trimming removes unused code from the final output, helping lower the bundle size without affecting functionality.
 
 ## Configure the Linker for ASP.NET Core Blazor
 
-Blazor WebAssembly uses [Intermediate Language (IL) linking](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#trim-net-il-after-ahead-of-time-aot-compilation) to trim unused code from the final output during build. This process is **only enabled in Release builds** and is **disabled in Debug configuration** by default. To take full advantage of trimming and reduce the size of the published application, it is recommended to **build your app in Release mode** before deployment.
+Blazor WebAssembly uses [Intermediate Language (IL) linking](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot#trim-net-il-after-ahead-of-time-aot-compilation) to trim unused code from the final output during build. This process is only enabled in Release builds and is disabled in Debug by default. To take full advantage of trimming and reduce the size of the published app, publish in Release mode before deployment.
 
 > Always publish your Blazor WebAssembly app using the `Release` configuration to enable trimming and optimize performance.
 
-### Disable Intermediate Language Linking (Optional)
+### Disable Intermediate Language linking (optional)
 
 To manually disable Intermediate Language linking, add the following MSBuild property in your `.csproj` file:
 
@@ -28,7 +28,7 @@ To manually disable Intermediate Language linking, add the following MSBuild pro
 ```
 ## Enable trimming
 
-**PublishTrimmed** property enables code trimming for self-contained publishing.It automatically disables features that aren’t compatible with trimming and provides warnings about trimming conflicts during build.
+The **PublishTrimmed** property enables code trimming for self-contained publishing. It automatically disables features that are not compatible with trimming and provides warnings about trimming conflicts during build.
 
 To [enable trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming), add the following to your `.csproj` file:
 
@@ -40,11 +40,11 @@ To [enable trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/tri
 
 ## Trim mode
 
-For all assemblies in a Blazor application, trimming is enabled by default from the.NET 8 target framework. Trim warnings may cause problems for applications that have previously used `PublishTrimmed=true` and `TrimMode=partial`. However, if your application compiles without any trim warnings, this default behavior shouldn't interfere with functionality or cause issues. For more information, refer to the [trim configuration](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/configure-trimmer?view=aspnetcore-9.0) documentation to achieve this.
+For all assemblies in a Blazor application, trimming is enabled by default starting with the .NET 8 target framework. Trim warnings may occur for apps that previously used `PublishTrimmed=true` and `TrimMode=partial`. If the app compiles without trim warnings, this default behavior should not affect functionality. For more information, refer to the [trim configuration](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/configure-trimmer) documentation.
 
 ### To Resolve trim warnings
 
-Partial trimming is less aggressive and may be safer for applications that use reflection. To ensure smooth builds, resolve all trim warnings in our application, make the below changes in our `.csproj` to resolve the trim warnings
+Partial trimming is less aggressive and may be safer for applications that use reflection. To ensure smooth builds, resolve all trim warnings in the application. If needed, make the following change in the `.csproj` file:
 
 ```xml
 <TrimMode>partial</TrimMode>
@@ -52,9 +52,9 @@ Partial trimming is less aggressive and may be safer for applications that use r
 
 ## Enable Link Trimming 
 
-To control **Intermediate Language (IL)** trimming on a per-assembly basis by supplying an XML configuration file. This approach allows you to explicitly preserve assemblies, types, or members that may be trimmed, even if they are not directly referenced in your application code.
+Control Intermediate Language (IL) trimming on a per-assembly basis by supplying an XML configuration file. This approach allows explicitly preserving assemblies, types, or members that may be trimmed, even if they are not directly referenced in application code.
 
-To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#enable-project-specific-trimming) in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
+To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#enable-project-specific-trimming) in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application, update the project file as shown below. This example demonstrates how to configure trimming using the Grid paging feature.
 
 #### How to Enable Intermediate Language Trimming Safely for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid
 
@@ -107,7 +107,7 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
      </assembly>
   </linker>
   ```
-3. Prevent Trimming of .NET Core Runtime Types. If your app uses reflection, LINQ expressions, or dynamic operations, consider including a LinkerConfig.xml to preserve critical system libraries. It is completely optional.
+3. Prevent trimming of .NET runtime types. If the app uses reflection, LINQ expressions, or dynamic operations, consider including a LinkerConfig.xml to preserve critical system libraries (optional).
 
   ```xml
     <ItemGroup>

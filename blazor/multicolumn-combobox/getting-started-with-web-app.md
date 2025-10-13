@@ -221,7 +221,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfMultiColumnComboBox TItem="string" TValue="string" Placeholder="Select a game"></SfMultiColumnComboBox>
+<SfMultiColumnComboBox TItem="string" TValue="string" Placeholder="Select any product"></SfMultiColumnComboBox>
 
 {% endhighlight %}
 {% endtabs %}

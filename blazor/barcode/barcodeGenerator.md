@@ -11,7 +11,7 @@ documentation: ug
 
 ## Code39
 
-The Code 39 character set includes the digits 0-9, the letters A-Z (upper case only), and the symbols: space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%). A special start/stop character is placed at the beginning and end of each barcode. The barcode can be of any length; even more than 25 characters begin to push the bounds. Code 39 is the only type of barcode that does not require a checksum for common use.
+The Code 39 character set includes digits 0-9, uppercase letters A–Z, and the symbols space, minus (-), plus (+), period (.), dollar ($), slash (/), and percent (%). A special start/stop character is placed at the beginning and end of each barcode. The barcode can be of any length; even more than 25 characters begin to push the bounds. Code 39 is the only type of barcode that does not require a checksum for common use.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -25,7 +25,7 @@ The Code 39 character set includes the digits 0-9, the letters A-Z (upper case o
 
 ## Code39 Extended
 
-Code 39 Extended is an extended version of Code 39 that supports ASCII character set. In Code 39 Extended, you can also code 26 lower letters (a-z) and the special characters in the keyboard.
+Code 39 Extended is an enhanced version of Code 39 that supports ASCII character set. In Code 39 Extended, it can encode lowercase letters (a–z) and special keyboard characters by using combinations of standard Code 39 symbols.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -39,7 +39,7 @@ Code 39 Extended is an extended version of Code 39 that supports ASCII character
 
 ## Code 11
 
-Code 11 is used primarily for labeling the telecommunication equipment’s. The character set includes the digits 0 to 9, a dash (-), and a start/stop code.
+Code 11 is used primarily for labeling telecommunications equipment. The character set includes digits 0 to 9, a dash (-), and start/stop codes.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -53,11 +53,11 @@ Code 11 is used primarily for labeling the telecommunication equipment’s. The 
 
 ## Codabar
 
-Codabar is a variable length symbol that encodes the following 20 characters:
+Codabar is a variable-length symbol that encodes the following 20 characters:
 
 0123456789-$:/.+ABCD
 
-The characters A, B, C and D are used as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
+The characters A, B, C, and D serve as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -71,11 +71,11 @@ The characters A, B, C and D are used as start and stop characters. Codabar is u
 
 ## Code 32
 
-Code 32 is mainly used for coding pharmaceuticals, cosmetics, and dietetics. It is often used to encode Italian Pharmacode that has the following structure:
+Code 32 is used mainly for coding pharmaceuticals, cosmetics, and dietetics. It is often to encode the Italian Pharmacode that has the following structure:
 
 * ‘A’ character (ASCII 65), that is not really encoded.
-* 8 digits for Pharmacode (It generally begins with / and prefixed with 0).
-* 1 digit for checksum module 10, that is automatically calculated by barcode.
+* 8 digits for the Pharmacode (It generally begins with / and prefixed with 0).
+* 1 digit for checksum module 10, that is automatically calculated by the barcode.
 
 The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if necessary), and the 9th digit (the checksum) is automatically calculated by barcode.
 
@@ -91,7 +91,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 
 ## Code 93
 
-Code 93 is designed to complement and improve Code 39. It can represent the entire ASCII character set by using combinations of 2 characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
+Code 93 is designed to complement and improve Code 39. It represents the entire ASCII character set through combinations of two characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -105,11 +105,11 @@ Code 93 is designed to complement and improve Code 39. It can represent the enti
 
 ## Code 93 Extended
 
-The Code 93 Extended Barcode symbology is continuous, variable length, and self-checking. It is based on Code 93 Barcode. The Extended Version can encode all 128 ASCII characters.
+Code 93 Extended Barcode symbology is a continuous, variable length, self-checking. It is based on Code 93 Barcode. The Extended Version can encode all 128 ASCII characters.
 
 ## Code 128
 
-Code 128 is a variable length, high density, alphanumeric, linear bar code symbology capable of encoding full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can also be verified character-by-character by verifying the parity of each data byte.
+Code 128 is a variable-length, high-density, alphanumeric, linear bar code symbology capable of encoding full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can be verified character-by-character by verifying the parity of each data byte.
 
 ### Code 128 Code Sets
 
@@ -119,7 +119,7 @@ Code 128 is a variable length, high density, alphanumeric, linear bar code symbo
 
 ### Code 128 Special characters
 
-The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
+The last seven characters of Code Sets A and B (character values 96-102) and the last three characters of Code Set C (character values 100-102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -147,7 +147,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 ## Customizing the Barcode dimension
 
-The dimension of the barcode can be changed using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Width) properties of the barcode generator.
+The dimensions of the barcode can be adjusted using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Width) properties of the barcode generator.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -161,7 +161,7 @@ The dimension of the barcode can be changed using the [Height](https://help.sync
 
 ## Customizing the text
 
-In barcode generators, you can customize the barcode text by using display [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.BarcodeGeneratorDisplayText.html#Syncfusion_Blazor_BarcodeGenerator_BarcodeGeneratorDisplayText_Text) property.
+In barcode generators, Customize the barcode text by using display [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.BarcodeGeneratorDisplayText.html#Syncfusion_Blazor_BarcodeGenerator_BarcodeGeneratorDisplayText_Text) property.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -193,7 +193,7 @@ The below code explains how to set the EnableCheckSum property to hide the extra
 
 ## Event
 
-[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is used to trigger when the input is an invalid string.
+[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is used to trigger when the input is invalid string.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -206,6 +206,8 @@ The below code explains how to set the EnableCheckSum property to hide the extra
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBSiDDFBHLnIOaq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## See also
 
 * [How to generate a QR Code in (2FA) Application in Blazor Diagram?](https://support.syncfusion.com/kb/article/16295/how-to-generate-a-qr-code-in-2fa-application-in-blazor-diagram)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor File Manager Component
 
-To enhance the customization of toolbar items, the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) tag and [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
+To enhance the customization of toolbar items, the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) tag and [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) property can be utilized. These features allow for easy addition and modification of custom toolbar items, including integrating other Blazor components.
 
-**Case 1**: To introduce the `Custom` item to the toolbar using the list of items and customize using icon and tooltip attributes, you can refer to the below code example.
+**Case 1**: To introduce the `Custom` item to the toolbar using the list of items and customize using icon and tooltip attributes. Refer to the below code example.
 
 
 ```cshtml
@@ -19,10 +19,10 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 @using Syncfusion.Blazor.FileManager
 
     <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 UploadUrl="/api/SampleData/Upload"
-                                 DownloadUrl="/api/SampleData/Download"
-                                 GetImageUrl="/api/SampleData/GetImage">
+        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"></FileManagerToolbarSettings>
     </SfFileManager>
@@ -46,11 +46,11 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIWjZgBIhwVrCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileManager displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.png)
 
-![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.png)
 
-
-**Case 2**: To include Blazor components in the File Manager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
+**Case 2**: To embed Blazor components directly within the File Manager toolbar, use the `FileManagerCustomToolbarItems` template tag. Assigning the same `Name` property in both the `ToolbarItems` list and `FileManagerCustomToolbarItem` specifies the component's position within the toolbar.
 
 ```cshtml
 
@@ -58,10 +58,10 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 @using Syncfusion.Blazor.Buttons
 
     <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 UploadUrl="/api/SampleData/Upload"
-                                 DownloadUrl="/api/SampleData/Download"
-                                 GetImageUrl="/api/SampleData/GetImage">
+         <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"> 
             <FileManagerCustomToolbarItems> 
@@ -94,5 +94,5 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 
 ```
 
-
-![Blazor FileManger displays Zoom button in Toolbar](../images/blazor-filemanager-zoom-button.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLeiNZgLoqJWouk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileManager displays Zoom button in Toolbar](../images/blazor-filemanager-zoom-button.png)

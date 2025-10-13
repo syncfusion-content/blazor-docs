@@ -12,9 +12,11 @@ documentation: ug
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the Dropdown Tree. The Dropdown Tree component has static text for select all checkbox, no records element and action failure element that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. You can refer [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) page for the introduction and configuring the localization.
+The Blazor Dropdown Tree component supports `localization`, allowing default text content to be adapted for different languages (e.g., Arabic, German, French). This involves defining a `Locale` value and a corresponding translation object. For an in-depth introduction and guide on configuring localization in a Blazor application, refer to the [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application) page.
 
-You can modify the default value in `.res` file added to Resource folder. Enter the key value (Locale Keywords) in the `Name` column and the translated string in the `Value` column. The following list of keys and their values are used in the Dropdown Tree.
+To localize the Dropdown Tree, modify the default values in `.res` files located in your project's `Resource` folder. Enter the locale key (from the table below) in the `Name` column and the translated string in the `Value` column.
+
+The following table lists the locale keys and their default English (`en-US`) and German (`de`) translations used in the Dropdown Tree:
 
 | **Locale key** | **en-US (default culture)** | **de (Deutsch culture)** |
 | ------------ | ----------------------- | --------------------|
@@ -25,4 +27,4 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 ## RTL
 
-Dropdown Tree component has `RTL` support. It helps to render the Dropdown Tree from right-to-left direction. Refer to the [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to enable the `RTL` in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+The Blazor Dropdown Tree component provides full support for Right-To-Left (RTL) rendering. This feature helps to render the Dropdown Tree UI from right to left, which is essential for languages such as Arabic, Hebrew, and Persian. For detailed instructions on enabling RTL in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the general [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic.

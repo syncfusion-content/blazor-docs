@@ -11,7 +11,7 @@ documentation: ug
 
 ## Executing prompt
 
-You can use the [ExecutePromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ExecutePromptAsync_System_String_) method to execute the prompts dynamically in the AI AssistView. It accepts prompts as string values, which triggers the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event and performs the callback actions.
+Use the [ExecutePromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ExecutePromptAsync_System_String_) method to programmatically execute prompts in the AI AssistView. This method accepts a prompt as a string and raises the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested), where the application can process the request, call an AI provider, and assign the response to the event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat

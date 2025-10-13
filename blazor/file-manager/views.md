@@ -57,6 +57,10 @@ To add a custom column to the details view, use the [FileManagerColumn](https://
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBoiXjqUSsGZyUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor File Manager with custom column](images/custom-column.png)
+
 ### Customize existing column format
 
 The details view settings like, column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Width), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Format), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_HeaderText), [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Template) for each field can be customized using [FileManagerColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) property.
@@ -89,4 +93,7 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 </SfFileManager>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhysttqgIKRGAWb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Customize column in File Manager ](images/customize-column.png)
 

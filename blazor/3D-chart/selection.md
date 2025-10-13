@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Selection feature in Syncfusion Blazor 3D Chart component and much more.
+description: Check out and learn how to enable and configure Selection feature in the Syncfusion Blazor 3D Chart component.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 # Selection in Blazor 3D Chart Component
 
-The 3D chart provides selection support for the series and its data points on mouse click.
+The 3D chart supports selecting series and data points on mouse click.
 
->When mouse is clicked on the data points, the corresponding series legend will also be selected.
+> When a data point is clicked, the corresponding series legend item is also selected.
 
-We have different types of selection mode for selecting a data.
+The following selection modes are available:
 
 * None
 * Point
@@ -31,8 +31,7 @@ To select a point, set the `SelectionMode` property to **Point**.
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -44,7 +43,7 @@ To select a point, set the `SelectionMode` property to **Point**.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -54,7 +53,7 @@ To select a point, set the `SelectionMode` property to **Point**.
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
         new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
@@ -80,8 +79,7 @@ To select a series, set the `SelectionMode` property to **Series**.
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Series" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -93,7 +91,7 @@ To select a series, set the `SelectionMode` property to **Series**.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -103,7 +101,7 @@ To select a series, set the `SelectionMode` property to **Series**.
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
         new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
@@ -122,15 +120,14 @@ To select a series, set the `SelectionMode` property to **Series**.
 
 ## Cluster
 
-To select the points that corresponds to the same index in all the series, set the `SelectionMode` property to **Cluster**.
+To select the points that correspond to the same index across all series, set the `SelectionMode` property to **Cluster**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Cluster" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -142,7 +139,7 @@ To select the points that corresponds to the same index in all the series, set t
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -152,7 +149,7 @@ To select the points that corresponds to the same index in all the series, set t
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
         new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
@@ -171,15 +168,14 @@ To select the points that corresponds to the same index in all the series, set t
 
 ## Selection type
 
-To select multiple points or series, enable the `AllowMultiSelection`  property.
+To select multiple points or series, enable the `AllowMultiSelection` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" AllowMultiSelection="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -220,15 +216,15 @@ To select multiple points or series, enable the `AllowMultiSelection`  property.
 
 ## Selection during initial loading
 
-In a 3D chart, selecting a point or series during initial loading can only be done programmatically. The `Chart3DSelectedDataIndexes` property can be used for this.
+In a 3D chart, selecting a point or series during initial loading can be performed programmatically using the `Chart3DSelectedDataIndexes` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category />
+
     <Chart3DSelectedDataIndexes>
         <Chart3DSelectedDataIndex Series="0" Point="1"></Chart3DSelectedDataIndex>
     </Chart3DSelectedDataIndexes>
@@ -242,7 +238,7 @@ In a 3D chart, selecting a point or series during initial loading can only be do
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -252,7 +248,7 @@ In a 3D chart, selecting a point or series during initial loading can only be do
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
         new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
@@ -272,15 +268,15 @@ In a 3D chart, selecting a point or series during initial loading can only be do
 
 ## Selection through legend
 
-To select a point or series through legend use the `ToggleVisibility` property. Also, use `EnableHighlight` property for highlighting the series through legend.
+To select a point or series through the legend, use the `ToggleVisibility` property. To highlight a series through the legend, use the `EnableHighlight` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column"></Chart3DSeries>
         <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" YName="Silver" Type="Chart3DSeriesType.Column"></Chart3DSeries>
@@ -289,7 +285,7 @@ To select a point or series through legend use the `ToggleVisibility` property. 
     <Chart3DLegendSettings Visible="true" ToggleVisibility="false" EnableHighlight="true"></Chart3DLegendSettings>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -299,7 +295,7 @@ To select a point or series through legend use the `ToggleVisibility` property. 
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
         new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },

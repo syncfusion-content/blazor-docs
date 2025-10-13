@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Block in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Code Block in Syncfusion Blazor RichTextEditor component and much more.
+description: Checkout and learn here all about Code Block in Syncfusion Blazor Rich Text Editor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Code Block in Blazor Rich Text Editor Component
 
-The Code Block feature in the Rich Text Editor, enabling users to insert and format code snippets effectively. It covers configuring supported languages, integrating syntax highlighters, editing tips, and enabling tab-based indentation, making it ideal for technical documentation, tutorials, and code-heavy content. While live code block highlighting is not supported during editing, syntax highlighting can be applied when content is displayed on the frontend.
+The Code Block feature in the Rich Text Editor enables users to insert and format code snippets effectively. It covers configuring supported languages, integrating syntax highlighters, editing tips, and enabling tab-based indentation, making it ideal for technical documentation, tutorials, and code-heavy content. Live syntax highlighting is not supported during editing, but it can be applied when the content is rendered on the frontend.
 
 ## Inserting a code block
 

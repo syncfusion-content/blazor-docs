@@ -7,13 +7,13 @@ control: Kanban
 documentation: ug
 ---
 
-# Cards in Blazor Kanban Component
+# Working with Cards in Blazor Kanban Component
 
 The cards are main elements in the [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board), which represents the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.
 
 ## Header
 
-The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property is enabled by Kanban board that is used to show the header at the top of the card.
+The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property is enabled by Kanban board that is used to display the header at the top of the card.
 
 N> The `HeaderField` property must be a unique datasource value to avoid the duplication of card data.
 
@@ -148,7 +148,7 @@ N> The mapped datasource key value contains single or multiple tags. If it is mu
 
 ![Blazor Kanban Card with Tags](./images/blazor-kanban-card-tags.png)
 
-## Left border color
+## Customizing left border color
 
 Kanban card supports to custom the left border color for all the cards. This can be achieved by mapping the data key value to the `GrabberField` property, which is placed inside the `KanbanCardSettings` property. The mapped data key value will be directly assigned to each card element border left color property.
 
@@ -213,7 +213,7 @@ N> By default, the card border left color width is `3px`.
 
 ![Customizing Left Border Color in Blazor Kanban Card](./images/blazor-kanban-card-with-custom-border-color.png)
 
-## Custom class
+## Rendering custom footer elements
 
 The card allows to render the custom elements based on the given class names inside the `e-card-footer` element. It can be achieved by mapping the data key to the `FooterCssField` property, which is placed inside the `KanbanCardSettings` property. It will help to create your own class name elements inside the `e-card-footer` element. The mapped datasource key value contains single or multiple class names. If it is multiple class names, each class name will be separated by a comma in the datasource.
 
@@ -362,7 +362,7 @@ In the following demo, images and icons are rendered using the `FooterCssField` 
 
 ![Blazor Kanban Card with Custom Elements](./images/blazor-kanban-card-with-custom-element.png)
 
-## Template
+## Customizing card layout with templates
 
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `KanbanCardSettings` property.
 
@@ -476,9 +476,9 @@ Kanban board allows to select single and multiple selection of cards when mouse 
 * **Single**: Only one card allowed to select at a time in the Kanban board.
 * **Multiple**: Multiple cards are allowed to select in a board.
 
-### Multiple Selection
+### Enabling multiple card selection
 
-Select the multiple cards randomly using Ctrl + mouse click and select the multiple cards continuously using Shift + mouse click action on Kanban board. Set `Multiple` in `SelectionType` to enable the multiple selection in a board.
+Select multiple cards randomly using Ctrl + mouse click and select the multiple cards continuously using Shift + mouse click action on Kanban board. Set `SelectionType` to `Multiple` to enable multi-selection in a board.
 
 ```cshtml
 

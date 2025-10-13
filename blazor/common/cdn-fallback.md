@@ -1,23 +1,23 @@
 ---
 layout: post
 title: CDN fallback in Blazor - Syncfusion
-description: Learn here about content delivery network (CDN) fallback handling in Blazor Server and WebAssembly (WASM) apps.
+description: Learn how to handle content delivery network (CDN) fallbacks in Blazor Web App, Blazor Server, and Blazor WebAssembly (WASM) apps using Static Web Assets.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # CDN fallback in Blazor application
 
-This section provides information about how to refer fallback [scripts](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [style sheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) from **Static Web Assets** when CDN is not available in Blazor application.
+This section explains how to reference fallback [scripts](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [stylesheets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) from Static Web Assets when the CDN is unavailable in a Blazor application.
 
 ## Blazor Web App
 
-For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
+For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
 
 ### Script fallback
 
-You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<body>` of **~/Components/App.razor** file in server side app as in the below code.
+Check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<body>` of the **~/Components/App.razor** file in the Server App, as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/App.razor" %}
@@ -39,7 +39,7 @@ You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object
 
 ### Stylesheet fallback
 
-You can refer the theme stylesheet inside the `<head>` of **~/Components/App.razor** file in server side app like below.
+Reference the theme stylesheet inside the `<head>` of the **~/Components/App.razor** file in the Server App, as shown below.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -58,11 +58,11 @@ You can refer the theme stylesheet inside the `<head>` of **~/Components/App.raz
 
 ## Blazor WebAssembly Standalone App
 
-For Blazor WebAssembly Standalone app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
+For Blazor WebAssembly Standalone App, reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
 
 ### Script fallback
 
-You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code.
+Check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<head>` of the **wwwroot/index.html** file in the client app, as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
@@ -84,7 +84,7 @@ You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object
 
 ### Stylesheet fallback
 
-You can refer the theme stylesheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
+Reference the theme stylesheet inside the `<head>` of the **wwwroot/index.html** file in the client app, as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}

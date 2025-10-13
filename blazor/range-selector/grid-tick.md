@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Lines and Tick Lines in Blazor Range Selector | Syncfusion
-description: Learn here all about grid lines and tick lines in Syncfusion Blazor Range Selector component, it's elements and more.
+description: Check out and learn about customizing grid lines and tick lines in the Syncfusion Blazor Range Selector component.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Gridline Customization
 
-The gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Width), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Color), and [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_DashArray) of the major gridlines can be customized by using the [RangeNavigatorMajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) setting.
+Gridlines indicate axis divisions and provide visual cues, especially for large or complex charts. Customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Width), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Color), and [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_DashArray) of major gridlines using the [RangeNavigatorMajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) setting.
 
 ```cshtml
 
@@ -26,7 +26,6 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public double Date { get; set; }
@@ -36,11 +35,11 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
     public int[] Value = new int[] { 25, 40 };
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date= 10, Close= 35 },
-        new StockDetails { Date= 20, Close= 28 },
-        new StockDetails { Date= 30, Close= 34 },
-        new StockDetails { Date= 40, Close= 32 },
-        new StockDetails { Date= 50, Close= 40 }
+        new StockDetails { Date = 10, Close = 35 },
+        new StockDetails { Date = 20, Close = 28 },
+        new StockDetails { Date = 30, Close = 34 },
+        new StockDetails { Date = 40, Close = 32 },
+        new StockDetails { Date = 50, Close = 40 }
     };
 }
 
@@ -50,7 +49,7 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 
 ## Tickline Customization
 
-Ticklines are the small lines which is drawn on the axis line representing the axis labels. Ticklines will be drawn outside the axis by default. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Width), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Color), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Height) of the major ticklines can be customized by using the [RangeNavigatorMajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) setting.
+Ticklines are small lines drawn on the axis to represent axis labels. By default, ticklines are drawn outside the axis. Customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Width), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Color), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Height) of major ticklines using the [RangeNavigatorMajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) setting.
 
 ```cshtml
 
@@ -65,7 +64,6 @@ Ticklines are the small lines which is drawn on the axis line representing the a
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public double Date { get; set; }
@@ -75,11 +73,11 @@ Ticklines are the small lines which is drawn on the axis line representing the a
     public int[] Value = new int[] { 25, 40 };
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date= 10, Close= 35 },
-        new StockDetails { Date= 20, Close= 28 },
-        new StockDetails { Date= 30, Close= 34 },
-        new StockDetails { Date= 40, Close= 32 },
-        new StockDetails { Date= 50, Close= 40 }
+        new StockDetails { Date = 10, Close = 35 },
+        new StockDetails { Date = 20, Close = 28 },
+        new StockDetails { Date = 30, Close = 34 },
+        new StockDetails { Date = 40, Close = 32 },
+        new StockDetails { Date = 50, Close = 40 }
     };
 }
 

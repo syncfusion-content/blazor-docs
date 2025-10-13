@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about axis in Syncfusion Blazor Smith Chart component and much more details.
+description: Check out and learn how to configure and customize axis in Syncfusion Blazor Smith Chart component for better visualization.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,20 +9,21 @@ documentation: ug
 
 # Axis in Blazor Smith Chart Component
 
-Smith Chart supports two different types of axes. They are:
-* **Horizontal Axis** - The axis is drawn as a straight line in the horizontal direction of the Smith Chart.
-* **Radial Axis** - The axis is drawn as a circular path.
+The Smith Chart provides two types of axes:
+* **Horizontal Axis** – Drawn as a straight line along the horizontal direction of the Smith Chart.
+* **Radial Axis** – Drawn as a circular path.
 
 ## Labels Customization
 
-Axis labels are used to indicate what type of data is bound for the Smith Chart. The use of axis labels makes it easy to determine at which interval chart is being rendered. The axis labels for the horizontal and radial axes can be customized using the properties listed as following.
+Axis labels indicate the type of data bound to the Smith Chart, making it easier to interpret chart intervals. Labels for both horizontal and radial axes can be customized using the following properties:
 
-* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_Visible) - Used to specify the visibility of the axis.
-* [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_LabelPosition) - Used to place labels either inside or outside the axis line.
-* [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_LabelIntersectAction) - Used to hide labels when intersecting.
-* [SmithChartRadialAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartRadialAxisLabelStyle.html) and [SmithChartHorizontalAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLabelStyle.html) - Used to customize properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color), and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Size).
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_Visible) – Specifies the visibility of the axis.
+* [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_LabelPosition) – Places labels inside or outside the axis line.
+* [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_LabelIntersectAction) – Hides labels when they intersect.
+* [SmithChartRadialAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartRadialAxisLabelStyle.html) and [SmithChartHorizontalAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLabelStyle.html) – Customize label font properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color), and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Size).
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -55,33 +56,36 @@ Axis labels are used to indicate what type of data is bound for the Smith Chart.
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> TransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart Axis with Custom Label](./images/Axis/blazor-smith-chart-axis-with-custom-label.png)
 
 ## Gridlines
 
-Gridlines on the horizontal and the radial axes can be used to make data in a chart easier to see. Gridlines extend from any horizontal or radial axis around the plot area of the Smith Chart. Both the horizontal and radial axes support major and minor gridlines. Major gridlines are drawn from the position in which the labels are rendered. Minor gridlines are drawn between two major gridlines using the [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Count) property in the minor gridlines.
+Gridlines on the horizontal and radial axes improve data readability. Gridlines extend from the axes around the plot area. Both axes support major and minor gridlines. Major gridlines are drawn at label positions, while minor gridlines are drawn between major gridlines using the [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Count) property.
 
-The following properties can be customized in both the major and minor gridlines.
+The following properties can be customized for both major and minor gridlines:
 
-* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Width) - Used to customize the width of the gridlines.
-* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartMinorGridLines_DashArray) - Used to customize whether the gridline has to render as normal line or dashed line.
-* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Visible) - Used to enable or disable the visibility of the gridlines.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMajorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMajorGridLines_Opacity) - Used to customize the opacity of the major gridlines.
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartMajorGridLines.html#Syncfusion_Blazor_Charts_SmithChartMajorGridLines_Color) - Used to customize the color of the major gridlines.
-* [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Count) - Used to customize the count of the minor gridlines.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Width) – Sets the gridline width.
+* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartMinorGridLines_DashArray) – Renders gridlines as solid or dashed lines.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Visible) – Enables or disables gridline visibility.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMajorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMajorGridLines_Opacity) – Sets the opacity of major gridlines.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartMajorGridLines.html#Syncfusion_Blazor_Charts_SmithChartMajorGridLines_Color) – Sets the color of major gridlines.
+* [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Count) – Sets the number of minor gridlines.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -109,29 +113,32 @@ The following properties can be customized in both the major and minor gridlines
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> TransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart with GridLines](./images/Axis/blazor-smith-chart-with-gridlines.png)
 
 ## Axis Line
 
-By default, the visibility of the axis line is **true**. Its visibility can be changed using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLine.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxisLine_Visible) property. Other than the visibility, the following properties can be used to customize the axis line.
+The axis line is visible by default. Its visibility can be changed using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLine.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxisLine_Visible) property. The following properties are available for customizing the axis line:
 
-* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_Width) - Used to customize the width of the axis line.
-* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_DashArray) - Used to render the axis line as dashed line.
-* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLine.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxisLine_Visible) - Used to enable or disable the visibility of the axis line.
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_Color) - Used to customize the axis line color.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_Width) – Sets the axis line width.
+* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_DashArray) – Renders the axis line as a dashed line.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLine.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxisLine_Visible) – Enables or disables axis line visibility.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_Color) – Sets the axis line color.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -155,15 +162,17 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+
     public List<SmithChartData> TransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance= 10, Reactance= 25 },
-        new SmithChartData { Resistance= 6, Reactance= 4.5 },
-        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
-        new SmithChartData { Resistance= 2, Reactance= 1.2 },
-        new SmithChartData { Resistance= 1, Reactance= 0.8 },
-        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+        new SmithChartData { Resistance = 10, Reactance = 25 },
+        new SmithChartData { Resistance = 6, Reactance = 4.5 },
+        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
+        new SmithChartData { Resistance = 2, Reactance = 1.2 },
+        new SmithChartData { Resistance = 1, Reactance = 0.8 },
+        new SmithChartData { Resistance = 0, Reactance = 0.2 }
     };
 }
+
 ```
 
 ![Blazor Smith Chart with Custom Axis Line](./images/Axis/blazor-smith-chart-custom-axis-line.png)

@@ -21,7 +21,7 @@ Set `ShowSuggestionOnPopup="true"` to display suggestions in a pop-up window abo
 
 Add the following code to a Razor file (e.g., `~/Pages/Home.razor`):
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5" ShowSuggestionOnPopup="true">
@@ -48,7 +48,7 @@ Set `ShowSuggestionOnPopup="false"` (default) to display suggestions inline with
 
 Add the following code to a Razor file (e.g., `~/Pages/Home.razor`):
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5" ShowSuggestionOnPopup="false">

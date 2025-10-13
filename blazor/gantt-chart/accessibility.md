@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Gantt Chart component and more.
+description: Learn about accessibility features in the Syncfusion Blazor Gantt Chart component, including WCAG 2.2, Section 508, and keyboard navigation support.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,20 +9,22 @@ documentation: ug
 
 # Accessibility in Blazor Gantt Chart Component
 
-The Blazor Gantt component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Syncfusion Blazor Gantt Chart component adheres to accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) standards, ensuring usability for all users, including those relying on assistive technologies.
 
-The accessibility compliance for the Blazor Gantt component is outlined below.
+## Accessibility Compliance
+
+The table below summarizes the accessibility compliance of the Blazor Gantt Chart component.
 
 | Accessibility Criteria | Compatibility |
-| -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+|------------------------|---------------|
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
 
 <style>
     .post .post-content img {
@@ -31,169 +33,161 @@ The accessibility compliance for the Blazor Gantt component is outlined below.
     }
 </style>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Full compatibility"> - All features meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> - Some features do not fully meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No compatibility"> - The component does not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+## WAI-ARIA attributes
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+The Blazor Gantt Chart component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to enhance accessibility. The following ARIA attributes are applied:
 
-## WAI-ARIA
-
-The Blazor Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Gantt component:
-
-The following ARIA attributes are used in Blazor Gantt:
-
-
-| **Attributes** | **Description** |
-| --- | --- |
-| `treegrid (role)` | Used to convey a significant and contextual message to the user. This attribute is added to the `e-table` element present in the Gantt, which represents Grid part. |
-| `gridcell (role)` | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt .|
-| `columnheader (role)` | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table. |
-| `separator (role)` | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart. |
-| `dialog (role)` | This attribute is added to the `e-dialog` element, which represents the pop-up dialog. |
-| `toolbar (role)` | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt. |
-| `aria-label` | It indicates the element's information`<br>`. It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
-| `aria-selected` | This attribute is assigned to the Gantt chart row and is set to `false` by default. The value is changed to `true` when the user selects a grid cell or task. |
-| `aria-expanded` | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false`. |
-| `aria-grabbed` | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing. |
+| Attributes | Description |
+|------------|-------------|
+| `treegrid (role)` | Applied to the `e-table` element in the Gantt's grid section to indicate a treegrid structure. |
+| `gridcell (role)` | Added to `td` elements within the `e-table` to represent work cells in the Gantt grid. |
+| `columnheader (role)` | Assigned to `th` elements within the `e-table` to denote header cells in the grid. |
+| `separator (role)` | Used for the `e-split-bar` element, representing the splitter between the grid and chart sections. |
+| `dialog (role)` | Applied to the `e-dialog` element for pop-up dialogs in the Gantt. |
+| `toolbar (role)` | Assigned to the `e-gantt-toolbar` element to indicate the toolbar. |
+| `aria-label` | Provides descriptive information for UI elements, such as timeline cells, taskbars, labels, dependency lines, and event markers. |
+| `aria-selected` | Indicates selection state for chart rows, set to `false` by default and `true` when a cell or task is selected. |
+| `aria-expanded` | Used for parent task rows, set to `true` when expanded and `false` when collapsed. |
+| `aria-grabbed` | Applied to taskbars during editing to indicate drag-and-drop interaction. |
 
 ## Keyboard navigation
 
-The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
+The Blazor Gantt Chart component supports comprehensive [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) for users relying on keyboards or assistive technologies. Below are the supported keyboard shortcuts, organized by functionality.
 
 <b>Focus Elements</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the entire gantt chart. |
-| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first cell of the focused row. |
-| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last cell of the focused row. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first Cell of the first row in the gantt chart. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last Cell of the last row in the gantt chart. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the cell focus upward from the focused cell. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> |  Moves the cell focus downward from the focused cell. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cell focus right side from the focused cell. |
-| <kbd>←</kbd> | <kbd>←</kbd> |  Moves the cell focus left side from the focused cell. |
-| <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Moves the focus to the gantt content element. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Focuses the entire Gantt chart. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first cell of the current row. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last cell of the current row. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first cell of the first row. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last cell of the last row. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the cell above the current cell. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the cell below the current cell. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the cell to the right. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the cell to the left. |
+| <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Focuses the Gantt content element. |
 
 <b>Expand/Collapse</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
+| Windows | Mac | Action |
+|---------|-----|--------|
 | <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Expands all tasks. |
 | <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all tasks. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapse the selected row. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>←</kbd> | Expands the selected row. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapses the selected row. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Expands the selected row. |
 
 <b>Selection</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves up a row/cell selection from the selected row/cell. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves down a row/cell selection from the selected row/cell. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves to the right cell selection from the selected cell. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves to the left cell selection from the selected cell. |
-| <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends the row/cell selection upwards from the selected row/cell. |
-| <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends the row/cell selection downwards from the selected row/cell. |
-| <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends the cell selection to the right side from the selected cell. |
-| <kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⇧</kbd> + <kbd>←</kbd> | Extends the cell selection to the left side from the selected cell. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the row/cell selection downward from the selected cell/row. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the row/cell selection upward. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all the selected row/cells. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Select all the row/cells in the current page. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Selects the row or cell above the current selection. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Selects the row or cell below the current selection. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Selects the cell to the right of the current selection. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Selects the cell to the left of the current selection. |
+| <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends selection upward. |
+| <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends selection downward. |
+| <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends cell selection to the right. |
+| <kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⇧</kbd> + <kbd>←</kbd> | Extends cell selection to the left. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the row or cell below the current selection. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Selects the row or cell above the current selection. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears all selections. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all rows or cells on the current page. |
 
 <b>Clipboard</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies selected rows or cells data into the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> | Copies selected rows or cells data with header into clipboard. |
- 
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies selected rows or cells to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> | Copies selected rows or cells with headers to the clipboard. |
+
 <b>Context Menu</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened sub menu. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. |
-| <kbd>Up</kbd> | <kbd>Up</kbd> | Navigates up or to the previous menu item. |
-| <kbd>Down</kbd> |  <kbd>Down</kbd> | Navigates down or to the next menu item. |
-| <kbd>Left</kbd> | <kbd>Left</kbd> | Close the current sub menu and navigates to the parent menu. |
-| <kbd>Right</kbd> | <kbd>Right</kbd> | Navigates and open the next sub menu. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the context menu. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused menu item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates to the previous menu item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates to the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Closes the current submenu and navigates to the parent menu. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Opens the next submenu. |
 
 <b>Cell Editing</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected Row/cell. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves current cell. |
-| <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Creates a new add form based on the new row position. |
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell, saves the current cell, and starts editing the next cell. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigates to the previous editable cell, saves the current cell, and starts editing the previous cell. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Saves the current cell and starts editing the previous row cell. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>F2</kbd> | <kbd>F2</kbd> | Initiates editing of the selected row or cell. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current cell. |
+| <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Opens a form to add a new row. |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected record. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Saves the current cell and moves to the next editable cell. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Saves the current cell and moves to the previous editable cell. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Saves the current cell and edits the cell in the previous row. |
 
 <b>Filtering</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the filter menu when its header element is in focused state. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the filter menu for the focused header. |
 
 <b>Column Menu</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens column menu when its header element is in focused state. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the column menu for the focused header. |
 
 <b>Reordering</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Reorders the focused header column to the left or right side. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Moves the focused column to the left or right. |
 
 <b>Sorting</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs sorting(ascending/descending) on a column when its header element is in focused state. |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Performs multi-sorting on a column when its header element is in focused state. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Clears sorting for the focused header column. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Sorts the focused column (ascending or descending). |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Applies multi-column sorting. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Clears sorting for the focused column. |
 
 <b>Toolbar</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous element. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next element. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the focused toolbar element action. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Activates the focused toolbar element. |
 
 <b>Tooltip</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes or dismisses the tooltip. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the tooltip, and on focus out closes it. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the tooltip. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Opens the tooltip on focus and closes it on focus out. |
 
 <b>Dialog Editing</b>
 
-| Windows | MAC | Actions |
-| ----- | ----- | ----- |
-| <kbd>Ctrl</kbd> + <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Insert</kbd> | Opens the add row dialog popup. |
-| <kbd>Ctrl</kbd> + <kbd>F2</kbd> | <kbd>⌘ + F2</kbd> | Opens the edit row dialog popup. |
-| <kbd>Del</kbd> | <kbd>Del</kbd> | Deletes the currently selected record. |
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Ctrl</kbd> + <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Insert</kbd> | Opens the add row dialog. |
+| <kbd>Ctrl</kbd> + <kbd>F2</kbd> | <kbd>⌘</kbd> + <kbd>F2</kbd> | Opens the edit row dialog. |
+| <kbd>Del</kbd> | <kbd>Del</kbd> | Deletes the selected record. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current row. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the dialog. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell, saves the current cell, and starts editing the next cell in the dialog elements. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigates to the previous editable cell, saves the current cell, and starts editing the previous cell in the dialog elements. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Saves the current cell and moves to the next editable cell in the dialog. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Saves the current cell and moves to the previous editable cell in the dialog. |
 
+## Ensuring Accessibility
 
-## Ensuring accessibility
+Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests to ensure compliance with WCAG 2.2 and other standards. Evaluate the accessibility of the Blazor Gantt Chart component using the [sample](https://blazor.syncfusion.com/accessibility/gantt-chart) in a new window with accessibility tools.
 
-The Blazor Gantt component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+## See Also
 
-The accessibility compliance of the Blazor Gantt component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/gantt-chart) in a new window to evaluate the accessibility of the Blazor Gantt component with accessibility tools.
-
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.
-
-## See also
-
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+- [Accessibility in Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
+- [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)
+- [Blazor Gantt Chart Example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5)

@@ -7,26 +7,35 @@ control: Kanban
 documentation: ug
 ---
 
-# Responsive Mode in Blazor Kanban Component
+# Responsive Layout in Blazor Kanban Component
 
-The [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component has support for responsive behavior based on the client browser's width and height.
+The [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports responsive behavior, automatically adapting its layout based on the width and height of the client’s browser.
 
-## Layouts
+## Available layouts
 
-Possible layouts are:
+The Kanban component provides the following responsive layouts:
 
-* Default Layout
-* Swimlane Layout
+* **Default Layout**
+* **Swimlane Layout**
 
 ### Default Layout
 
-Kanban user interface is customized and redesigned for the best view on small screens. In responsive mode, the first column occupies 80% and the second column occupies 20% of the screen layout. Tap and hold the Kanban card to drag and drop it. Swipe left or right to view the columns.
+In responsive mode, the Kanban user interface is optimized for smaller screens. The layout is adjusted so that:
+
+- The first column occupies 80% of the screen width.
+- The second column occupies 20% of the screen width.
+- Users can **tap and hold** a Kanban card to initiate drag-and-drop.
+- **Swipe left or right** to navigate between columns.
 
 ![Blazor Kanban with Default Layout](./images/blazor-kanban-default-layout.PNG)
 
 ### Swimlane Layout
 
-Kanban swimlane header is rendered with menu icon on top of the kanban board. It will show all the available swimlane groups of the header text with a popup when clicking the menu icon. Swimlane selected grouped header text resultant data is rendered on the Kanban board. By default, the first swimlane grouped header text is selected and the resultant data is shown on the Kanban board. The Kanban board data will be changed when changing the swimlane group header text.
+In responsive mode, the swimlane header is displayed with a menu icon at the top of the Kanban board. When the icon is clicked:
+
+- A popup displays all available swimlane group headers.
+- Selecting a swimlane group updates the Kanban board to show the corresponding cards.
+- By default, the first swimlane group is selected and displayed.
 
 ![Blazor Kanban with Swimlane Layout](./images/blazor-kanban-swimlane-layout.PNG)
 

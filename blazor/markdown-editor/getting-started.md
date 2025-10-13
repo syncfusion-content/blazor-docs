@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Markdown Editor in Blazor
 
-This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 N> You can also explore our [Blazor Markdown Editor](https://blazor.syncfusion.com/demos/markdown-editor/overview?theme=bootstrap5) example to knows how to render and configure the Markdown editor tools.
 

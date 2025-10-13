@@ -7,11 +7,11 @@ control: Kanban
 documentation: ug
 ---
 
-# Tooltip in Blazor Kanban Component
+# How to Use Tooltips in Syncfusion Blazor Kanban Component
 
-The tooltip is used to show the card information when the cursor hover over the card elements using the `EnableTooltip` property. Tooltip content is dynamically set based on hovering over the card elements.
+Tooltips in the Syncfusion Blazor Kanban component display card details when users hover over card elements. This behavior is enabled using the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_EnableTooltip) property, and the content is dynamically derived from the card's data.
 
-N> If you wish to show tooltip on Kanban board custom elements, you need to add `e-tooltip-text` class name of a particular element.
+N> To display tooltips on custom elements within the Kanban board, assign the `e-tooltip-text` class to the target element. This ensures the tooltip is triggered correctly.
 
 ```cshtml
 
@@ -71,4 +71,4 @@ N> If you wish to show tooltip on Kanban board custom elements, you need to add 
 
 ```
 
-![Blazor Kanban displays Tooltip](./images/blazor-kanban-tooltip.png)
+![Tooltip displayed on Blazor Kanban card showing task summary](./images/blazor-kanban-tooltip.png)

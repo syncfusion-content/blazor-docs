@@ -13,7 +13,9 @@ documentation: ug
 
 ## Header
 
-The Card can be created with header title, sub title and images. For adding header you need to add `CardHeader` Component. Card provides below elements and corresponding class definitions to include header.
+The `CardHeader` component is used to define the header section of the Card. It supports a title, subtitle, and can include an image.
+
+### Elements within CardHeader
 
 Elements   | Description
 ------------ | -------------
@@ -34,7 +36,7 @@ For adding header to the Card, Title Property.
 
 * Add `SubTitle` Property inside the header caption element for adding Title.
 
-### Image
+### Header with Image
 
 Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure. The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
 
@@ -42,26 +44,23 @@ Card header has an option for adding images in the header. It is aligned with ei
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
-</SfCard>
-<SfCard ID="SecondCard">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/profile-four.png" />
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKWLLVLykMTnDF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBSDuLoVztwxgGu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Title, SubTitle, Image](images/header-image.png)
 
 ## Content
 
-Content in Card holds texts, images, links, and all possible HTML elements. It is adaptable within the Card root element.
+The `CardContent` component is used to display the main textual or HTML content of the Card. It can hold various elements such as text, images, links, and other HTML structures.
 
-* Create a `Content` component.
-* Place content `div` element in the Card root element or within any Card inner elements.
+*   Wrap your content within the `CardContent` component, placed directly inside the `SfCard` element or within another card sub-element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/cards/profile-four.png" />
 </SfCard>
 
 <SfCard ID="SecondCard">
@@ -69,11 +68,12 @@ Content in Card holds texts, images, links, and all possible HTML elements. It i
 </SfCard>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAWVhrLSuSWdJj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrIDEhyhgoGAJyl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Card Component with Content](images/card-content.png)
 
 ### Image
 
-Card content is designed to display an image tag within it. You can wrap an image element inside the card content to create a visually appealing layout. Additionally, CSS styling can be used to further customize the appearance of card content.
+The `CardContent` area is designed to flexibly host various HTML elements, including  tags. Images can be embedded directly within the `CardContent` to create rich and visually engaging layouts. Custom CSS can be applied to style the image and content.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

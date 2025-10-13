@@ -9,20 +9,20 @@ documentation: ug
 
 # Data Binding in Blazor Scheduler Component
 
-The Scheduler uses [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful data service binding and datasource collections to bind data to the Scheduler. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection.
+The Scheduler component utilizes [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to handle data binding, supporting both RESTful data service binding and direct data source collections. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property within `ScheduleEventSettings` can be assigned either an instance of `DataManager` or a list of data source collections.
 
-It supports the following kinds of data binding methods:
-* List binding
-* Remote data
+The Scheduler supports the following primary methods for data binding:
+*   List Binding
+*   Remote Data Binding
 
 Please take a moment to watch this video to learn about data binding in the Blazor Scheduler.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=EwfxPrqxma8"%}
 
-## List binding
+## List Binding
 
-To bind list binding to the Scheduler, you can simply assign a list of datasource collections as IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) option of the scheduler within the ScheduleEventSettings tag. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To bind data from a local list to the Scheduler, simply assign a collection of data objects (implementing `IEnumerable`) to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property within the `<ScheduleEventSettings>` tag. The list data source can also be provided as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by directly using the `<SfDataManager>` component.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -55,18 +55,20 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVyMXtdUlEzkzNP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![List data in Blazor Scheduler](images/list-data.png)
+
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
-> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments#event-fields).
+> Different field names can be bound to the default event fields, and additional `custom fields` to the event object collection which can be referred [here](./appointments#event-fields).
 
-### ExpandoObject binding
+### ExpandoObject Binding
 
-The Scheduler is a generic component which is strongly bound to a model type, but there may be cases where the model type is unknown during compile or runtime. In these scenarios, you can use **ExpandoObject** binding to bind data to the Scheduler as a list of dynamic objects.
+The Scheduler is a generic component that is strongly bound to a model type. However, for scenarios where the model type is unknown at compile-time or runtime, **ExpandoObject** binding can be used. This allows data to be bound as a list of dynamic objects.
 
-**ExpandoObject** implements the IDictionary<string, object> interface, which means you can add properties and values to the object like you would with a dictionary.**ExpandoObject** binding provides a flexible way to bind data to the Scheduler component without the need for a predefined class or data structure. This can be particularly useful in scenarios where you have data sources with varying structures, or when you need to bind to data sources that are not known at compile-time.
+**ExpandoObject** implements the `IDictionary<string, object>` interface, enabling the addition of properties and values dynamically at runtime, similar to a dictionary. This provides a flexible way to bind data without requiring a predefined class or strict data structure, particularly useful for data sources with varying structures.
 
-**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` component. Scheduler can also perform all kinds of supported data operations and editing in ExpandoObject.
-To bind data to the Scheduler using ExpandoObject, you can create a list of ExpandoObjects and set it as the DataSource property of the Scheduler's `ScheduleEventSettings` component.
+To bind data using `ExpandoObject`, create a list of `ExpandoObject` instances and set it as the `DataSource` property of the Scheduler's `ScheduleEventSettings` component. The Scheduler supports all data operations and editing functionalities with `ExpandoObject` binding.
 
 ```csharp
 @using System.Dynamic
@@ -104,14 +106,15 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIMjjxguCLKwbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### DynamicObject Binding
 
-**DynamicObject** binding is another approach for binding data to the Scheduler when the model type is unknown at compile time. In this approach, you use the dynamic keyword to define variables that can hold objects of any type, including those with dynamically added properties.
+**DynamicObject** binding offers another method for data binding when the model type is unknown at compile time. This approach leverages the `dynamic` keyword, allowing variables to hold objects that can dynamically add or manage properties at runtime.
 
-To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of the Scheduler's `ScheduleEventSettings` component. You can then use the Scheduler's built-in data operations and editing features to work with the data.
+To bind data using `DynamicObject`, create a list of custom `DynamicObject` instances and set it as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of the Scheduler's `ScheduleEventSettings` component. This enables the use of the Scheduler's built-in data operations and editing features with dynamically behaving objects.
 
-**DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which means you can override member access operations like `GetMember` and `SetMember` to provide your own custom logic.**DynamicObject** binding is that it allows you to create objects with dynamic behavior, which can be useful in scenarios where you need to work with objects whose behavior is not known at compile-time.
+**DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which allows overriding member access operations like `GetMember` and `SetMember` for custom logic. This is particularly useful for scenarios where object behavior is determined at runtime.
 
 N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-7.0) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
@@ -170,10 +173,11 @@ N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/sy
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIstjRqEMwIAdI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## ObservableCollection
 
-This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) notifies when property value has changed in client side.
+Utilizing [`ObservableCollection`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) (a dynamic data collection) provides notifications when items are added, removed, or moved. This collection implements [`INotifyCollectionChanged`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0), informing the Scheduler of dynamic changes such as additions, removals, moves, or clearing of items. Furthermore, the `AppointmentData` class implements [`INotifyPropertyChanged`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0), which notifies the UI when a property value (e.g., `Subject`) has changed on the client side.
 
 Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
@@ -270,11 +274,14 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIMjXdAOVvBGfh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Scheduler](images/observablecollectiondata.png)
 
+## Custom Binding
 
-## Custom binding
+It is possible to create a custom `DataAdaptor` by extending the built-in `DataAdaptor` class. This allows for binding data from a custom service and performing CRUD operations using the methods of the [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) abstract class.
 
-It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) abstract class.
+The following example demonstrates the usage of a custom adaptor to bind data with a custom service. The `CustomAdaptor` overrides methods like `ReadAsync`, `InsertAsync`, `UpdateAsync`, and `RemoveAsync` to interact with a local `List<AppointmentData>`.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -419,15 +426,16 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 
 N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
-## Remote data
+## Remote Data Binding
 
-Any kind of remote data services can be bound to the Scheduler. To do so, provide the service URL to the `Url` option of `SfDataManager` within `ScheduleEventSettings` tag.
+Any type of remote data services can be bound to the Scheduler. To achieve this, provide the service URL to the `Url` option of `SfDataManager` within the `<ScheduleEventSettings>` tag.
 
-### Binding with OData services
+### Binding with OData Services
 
 [OData](https://www.odata.org/documentation/odata-version-3-0/) ((Open Data Protocol)) is a widely used protocol for creating and consuming RESTful APIs over various transport protocols such as HTTP, HTTPS, and others. It offers a standardized way for creating, retrieving, updating, and deleting data across various platforms and devices. OData provides a uniform way for interacting with data, which simplifies the task of developing and consuming RESTful APIs.
 
-You can retrieve data from OData service using the `SfDataManager`. Refer to the following code example for remote Data binding using OData service.
+Data can be retrieved from an OData service using `SfDataManager`. Refer to the following code example for remote data binding using an OData service.
+
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -445,7 +453,7 @@ You can retrieve data from OData service using the `SfDataManager`. Refer to the
 }
 ```
 
-### Binding with OData v4 services
+### Binding with OData v4 Services
 
 [ODataV4](https://www.odata.org/documentation/) is the latest version of the OData protocol, which offers more features and better performance than its predecessors. It provides support for advanced query options, data validation, and data shaping. The ODataV4 protocol is based on the JSON format, which makes it more lightweight and easier to use.
 
@@ -467,13 +475,13 @@ Refer to the following code example to retrieve the data from ODataV4 service us
 }
 ```
 
-N> You can find the working sample [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-ODATA-adaptor).
+N> A working sample demonstrating integration with OData can be found [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-ODATA-adaptor).
 
-### Filter events using the in-built query
+### Filtering Events Using the In-built Query
 
-To enable server-side filtering operations based on predetermined conditions, the [`IncludeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+To enable server-side filtering operations based on predetermined conditions, the [`IncludeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to `true`. This constructs a filter query using the start date, end date, and recurrence rule, allowing the request to be filtered accordingly.
 
-This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
+This method significantly improves the component's performance by reducing the amount of data transferred to the client side, thereby enhancing efficiency and responsiveness. However, it is important to consider the potential for longer query strings, which might exceed maximum URL lengths or server limitations.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -515,13 +523,14 @@ This method greatly improves the component's performance by reducing the data th
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLyCNjHqazFgUHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following image represents how the parameters are passed using ODataV4 filter.
 ![ODataV4 filter](images/blazor-odatav4-filter.jpg)
 
-### Web API adaptor
+### Web API Adaptor
 
-You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor). The following sample code demonstrates the way of binding remote services to the Scheduler component.
+Web API data can be bound to the Scheduler using [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor). The following sample code demonstrates binding remote services to the Scheduler component.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -560,16 +569,18 @@ You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrosjXdUuSITIaj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Url adaptor
-You can use the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of **SfDataManager** when binding data source for remote data. During the initial load of Scheduler, data are fetched from remote data and bound to the Scheduler using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of **SfDataManager**.
+### Url Adaptor
+
+The [`UrlAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of `SfDataManager` is used to bind remote data sources. During the initial load of the Scheduler, data is fetched from the remote service via the  [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of `SfDataManager` and bound to the Scheduler.
 
 CRUD operations in the Scheduler can be mapped to server-side controller actions by using the properties [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), and [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl).
 
-* `InsertUrl` – You can perform a single insertion operation on the server-side.
-* `UpdateUrl` – You can update single data on the server-side.
-* `RemoveUrl` – You can remove single data on the server-side.
-* `CrudUrl` – You can perform bulk data operation on the server-side.
+*   `InsertUrl` – Specifies the URL for a single insertion operation on the server-side.
+*   `UpdateUrl` – Specifies the URL for updating a single data record on the server-side.
+*   `RemoveUrl` – Specifies the URL for removing a single data record on the server-side.
+*   `CrudUrl` – Specifies the URL for performing bulk data operations (batch CRUD) on the server-side.
 
 The following sample code demonstrates binding data to the Scheduler component through the SfDataManager using UrlAdaptor.
 
@@ -704,7 +715,7 @@ namespace Url_Adaptor.Controller
 }
 ```
 
-### Sending additional parameters to the server
+### Sending Additional Parameters to the Server
 
 To send an additional custom parameter to the server-side post, make use of the `AddParams` method of [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query). Now, assign this [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) object with additional parameters to the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) property of Scheduler.
 
@@ -732,10 +743,10 @@ N> The parameters added using the [`Query`](https://help.syncfusion.com/cr/blazo
 
 ### Authorization and Authentication
 
-It is common to have authorization in the server of origin to prevent anonymous access to the data services. **SfDataManager** can consume data from such protected remote data services with the proper bearer token. The access token or bearer token can be used by **SfDataManager** in one of the following ways.
+It is common to have authorization configured on the server to prevent anonymous access to data services. `SfDataManager` can consume data from such protected remote services by including the proper bearer token in the request. The access token or bearer token can be utilized by `SfDataManager` in one of the following ways:
 
-* By using the pre-configured HttpClient with the access token or authentication message handler, SfDataManager can access protected remote services. When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Program.cs**, so that SfDataManager will not create its own HttpClient and uses the already configured HttpClient.
-* Setting access token in the default header of the HttpClient by injecting it in the page. See here for adding default headers to HttpClient.
+*   **Using a pre-configured `HttpClient`:** Register a pre-configured `HttpClient` with the access token or an authentication message handler before calling `AddSyncfusionBlazor()` in `Program.cs`. This ensures that `SfDataManager` uses the already configured `HttpClient` instead of creating its own.
+*  **Setting access token in `HttpClient.DefaultRequestHeaders`:** Inject `HttpClient` into the Blazor component and set the access token in `DefaultRequestHeaders`.
 
 ```csharp
 
@@ -762,9 +773,9 @@ It is common to have authorization in the server of origin to prevent anonymous 
 Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-7.0).
 
 
-### Setting custom headers
+### Setting Custom Headers
 
-To add a custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+To add custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The following sample code demonstrates adding custom headers to the `SfDataManager` request,
 
@@ -807,7 +818,9 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 }
 ```
 
-### Handling HTTP error
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthysjZnqYRnFOwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Handling HTTP Errors
 
 During server interaction from the Scheduler, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event.
 
@@ -868,9 +881,9 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
-## Load on demand
+## Load on Demand
 
-In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data. This can be achieved by filtering appointments on the server side based on start date and end date.
+The Scheduler supports implementing data loading on demand, which helps minimize data transfer over the network, particularly with large volumes of data. This is achieved by filtering appointments on the server side based on the currently requested `StartDate` and `EndDate`.
 
 ```cshtml
         public async Task<List<AppointmentData>> Get(DateTime StartDate, DateTime EndDate)
@@ -1066,15 +1079,15 @@ namespace syncfusion_blazor_app.Data
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/blazor-scheduler-load-appointments-on-demand)
+The complete working sample for load on demand can be downloaded from [GitHub](https://github.com/SyncfusionExamples/blazor-scheduler-load-appointments-on-demand).
 
-## SQL Server data binding(SQL Client)
+## SQL Server Data Binding (SQL Client)
 
-The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bind it to the Blazor Scheduler. This requirement can be achieved by using a [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
 
-Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
+Before implementation, add the required NuGet packages like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** to the application. In the following sample, the `CustomAdaptor` is created as a Blazor component. In its `Read` method, filter appointments are retrieved using `DataManagerRequest`.
 
-Based on the DataManagerRequest, you can form SQL query string and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Scheduler.
+Based on the `DataManagerRequest`, an SQL query string is formed and executed. The `SqlDataAdapter` then retrieves data from the database. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1177,14 +1190,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Performing CRUD using Entity Framework
 
-You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
-
-To get start quickly about CRUD action using entity framework in our Scheduler, you can check on this video:
+To consume data from **Entity Framework Core** in the Scheduler component, follow these steps. For a quick visual guide on CRUD actions with Entity Framework, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QlzdcZTmOrU-0"%}
 
-### Create DBContext class
+### Create DBContext Class
 
 The first step is to create a DBContext class called **ScheduleDataContext** to connect to a Microsoft SQL Server database.
 
@@ -1348,7 +1359,7 @@ namespace Restful_Services.Controllers
 }
 ```
 
-### Configure Scheduler component using ODataV4Adaptor
+### Configure Scheduler Component Using ODataV4Adaptor
 
 Now, the Scheduler can be configured using the `SfDataManager` to interact with the created OData service and consume the data appropriately. To interact with OData, use `ODataV4Adaptor`.
 
@@ -1367,17 +1378,17 @@ Now, the Scheduler can be configured using the `SfDataManager` to interact with 
 }
 ```
 
-N> You can find the working sample on Entity framework [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service).
+N> You can find the working sample on Entity Framework [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service).
 
-## Configuring Scheduler with Google API service
+## Configuring Scheduler with Google API Service
 
-We have assigned the dataSource that is retrieved from the Google services within the [`OnInitializedAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OnInitializedAsync) method. And, the CRUD actions are performed within the [`ActionCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_ActionCompleted) event.
+The Scheduler can be configured to retrieve events from a Google Calendar API service. The data obtained from Google services would typically be assigned to the Scheduler's `DataSource` within the [`OnInitializedAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OnInitializedAsync) method. And, the CRUD actions are performed within the [`ActionCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_ActionCompleted) event.
 
-We have to write our own service to connect retrieve the events from the Google calendar.
+A custom service would need to be implemented to connect and retrieve events from the Google Calendar API.
 
-N> The runnable sample for the above code will be available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).
+N> A runnable sample demonstrating Google Calendar synchronization with Blazor Scheduler is available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).
 
-## See also
+## See Also
 
 * [How to Access Microsoft Graph Calendar Events with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
 * [Easy Steps to Synchronize JIRA Calendar Tasks with the Blazor Scheduler](https://www.syncfusion.com/blogs/post/easy-steps-to-synchronize-jira-calendar-tasks-with-the-blazor-scheduler.aspx)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip and its customization in Syncfusion Blazor 3D Chart component and much more.
+description: Check out and learn how to configure and customize Tooltip in the Syncfusion Blazor 3D Chart component.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-The 3D Chart will display details about the points through tooltip, when the mouse is moved over the specific point.
+The 3D chart displays data point details through a tooltip when the pointer hovers over a specific point.
 
 ## Default tooltip
 
-By default, tooltip is not visible. The tooltip can be enabled by setting the `Enable` property in `Chart3DTooltipSettings` to **true**.
+By default, the tooltip is not visible. Enable the tooltip by setting the `Enable` property in `Chart3DTooltipSettings` to **true**.
 
 ```cshtml
 
@@ -35,7 +35,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
         public string Month { get; set; }
         public double Sales { get; set; }
     }
-	
+
     public List<Chart3DData> SalesReports = new List<Chart3DData>
     {
         new Chart3DData { Month = "Jan", Sales = 35 },
@@ -60,7 +60,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
 
 ## Fixed tooltip
 
-By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the `Chart3DTooltipLocation` property.
+By default, the tooltip tracks pointer movement. To render the tooltip at a fixed position, use the `Chart3DTooltipLocation` property.
 
 ```cshtml
 
@@ -69,14 +69,14 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true">
-        <Chart3DTooltipLocation X="120" Y="20"></Chart3DTooltipLocation>
+        <Chart3DTooltipLocation X="120" Y="20" />
     </Chart3DTooltipSettings>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="Chart3DSeriesType.Column" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Month { get; set; }
@@ -109,7 +109,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 
 <!-- markdownlint-disable MD013 -->
 
-By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the `Format` property. For example the format `${series.name} : ${point.y}` shows series name and point y value.
+By default, the tooltip displays the x and y values for each point. Additional information can be displayed using the `Format` property. For example, the format `${series.name} : ${point.y}` shows the series name and the point’s y-value.
 
 ```cshtml
 
@@ -124,7 +124,7 @@ By default, tooltip shows information of x and y value in points. In addition to
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Month { get; set; }
@@ -157,7 +157,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 ## Tooltip template
 
-Any HTML elements can be displayed within the tooltip by using the `Chart3DTooltipTemplate` property of the `Chart3DTooltipSettings`. You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point.
+Any HTML elements can be rendered in the tooltip using the `Chart3DTooltipTemplate` property of `Chart3DTooltipSettings`. The placeholders **data.X** and **data.Y** within the template represent the x and y values for the corresponding data point.
 
 ```cshtml
 
@@ -183,13 +183,13 @@ Any HTML elements can be displayed within the tooltip by using the `Chart3DToolt
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Month { get; set; }
         public double Sales { get; set; }
     }
-	
+
     public List<Chart3DData> SalesReports = new List<Chart3DData>
     {
         new Chart3DData { Month = "Jan", Sales = 35 },
@@ -214,7 +214,7 @@ Any HTML elements can be displayed within the tooltip by using the `Chart3DToolt
 
 ## Customize the appearance of tooltip
 
-The `Fill` and `Border` properties are used to customize the background color and the border of the tooltip respectively. The `ChartTooltipTextStyle` is used to customize the tooltip text.
+Use the `Fill` and `Border` properties to customize the tooltip background and border. Use `ChartTooltipTextStyle` to customize the tooltip text.
 
 ```cshtml
 
@@ -230,13 +230,13 @@ The `Fill` and `Border` properties are used to customize the background color an
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Month { get; set; }
         public double Sales { get; set; }
     }
-	
+
     public List<Chart3DData> SalesReports = new List<Chart3DData>
     {
         new Chart3DData { Month = "Jan", Sales = 35 },

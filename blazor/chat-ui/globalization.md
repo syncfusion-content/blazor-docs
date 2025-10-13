@@ -9,10 +9,13 @@ documentation: ug
 
 # Globalization in Blazor Chat UI Component
 
+The Syncfusion Blazor Chat component supports globalization features like `Localization` and `Right-to-Left (RTL)` alignment, enabling it to be adapted for different cultures and languages.
+
 ## Localization
 
-`Blazor Chat UI` component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The `Localization` feature allows for the translation of static text elements within the Chat component to a specific language.
+To localize the Chat UI component, refer to the guidance provided in the main [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-## RTL
+## Right-to-Left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Chat UI component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Right-to-Left (RTL) feature reverses the component's layout and text direction to support languages that are read from right to left, such as Arabic or Hebrew. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.

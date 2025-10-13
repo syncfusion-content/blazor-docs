@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor Range Selector component and much more.
+description: Check out and learn about all available events and event handling in the Syncfusion Blazor Range Selector component.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor Range Selector Component
 
-This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
+This section describes the events triggered by the Range Selector component. Events are provided through the **RangeNavigatorEvents** component.
 
-The Range Selector component supports the following events.
+Supported events:
 
 * [Loaded](events#loaded)
 * [OnPrintCompleted](events#onprintcompleted)
@@ -23,9 +23,10 @@ The Range Selector component supports the following events.
 
 ## Loaded
 
-The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers after the Range Selector is rendered.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -42,6 +43,7 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Rang
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -51,21 +53,25 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Rang
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void RangeNavigatorLoaded(RangeLoadedEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## OnPrintCompleted
 
-The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers, after the Range Selector is printed.
+The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers after the Range Selector is printed.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
 
@@ -82,11 +88,13 @@ The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 @code {
     public SfRangeNavigator RangeObj;
+
     public class StockDetails
     {
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -96,23 +104,27 @@ The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public async Task Click(MouseEventArgs args)
     {
         await RangeObj.PrintAsync();
     }
+
     public void PrintCompleted(EventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## Changed
 
-The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers, whenever the slider position is changed. The following arguments are present in this event:
+The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers when the slider position changes. Arguments include:
 
 * [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_Start) - Specifies the start value.
 * [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_End) - Specifies the end value.
@@ -121,6 +133,7 @@ The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
 * [SelectedData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_SelectedData) - The selected data collection can be accessed in this argument.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -137,6 +150,7 @@ The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -146,24 +160,28 @@ The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void SliderChanged(ChangedEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## Resized
 
-The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers, when the browser window is resized. The following arguments are present in this event:
+The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers when the browser window is resized. Arguments include:
 
 * [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for the Range Selector.
 * [PreviousSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for the Range Selector.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -180,6 +198,7 @@ The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -189,19 +208,22 @@ The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void RangeNavigatorResized(RangeResizeEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## LabelRender
 
-Before rendering each axis label, the [LabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_LabelRender) event is triggered. The following arguments are present in this event:
+The [LabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_LabelRender) event triggers before rendering each axis label. Arguments include:
 
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Text) - Specifies the current axis label text.
 * [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Value) - Specifies the current axis label value.
@@ -209,6 +231,7 @@ Before rendering each axis label, the [LabelRender](https://help.syncfusion.com/
 * [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_LabelStyle) - Specifies the current axis label style.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -225,6 +248,7 @@ Before rendering each axis label, the [LabelRender](https://help.syncfusion.com/
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -234,24 +258,28 @@ Before rendering each axis label, the [LabelRender](https://help.syncfusion.com/
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void LabelCustomization(RangeLabelRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## TooltipRender
 
-The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_TooltipRender) event triggers before the tooltip is rendered. The following arguments are present in this event:
+The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_TooltipRender) event triggers before the tooltip is rendered. Arguments include:
 
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_Text) - Specifies the current tooltip text.
 * [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_TextStyle) - Specifies the current tooltip text style.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -268,6 +296,7 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -277,25 +306,29 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void TooltipCustomization(RangeTooltipRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```
 
 ## SelectorRender
 
-The [SelectorRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_SelectorRender) event triggers before the period selector is rendered. The following arguments are present in this event:
+The [SelectorRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_SelectorRender) event triggers before the period selector is rendered. Arguments include:
 
 * [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Content) - Specifies the content for the calendar in the period selector.
 * [EnableCustomFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_EnableCustomFormat) - Enables to show the content for the calendar in the period selector. By default it is true.
 * [Selector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Selector) - Specifies the period selector collection.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -323,6 +356,7 @@ The [SelectorRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
+
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
         new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
@@ -332,12 +366,15 @@ The [SelectorRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
         new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
+
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+
     public void SelectorCustomization(RangeSelectorRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
+
 ```

@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Animations and Transitions with Blazor Carousel Component | Syncfusion
+title: Animations and Transitions in Blazor Carousel Component | Syncfusion
 description: Checkout and learn about Animations and Transitions with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Animations and Transitions with Blazor Carousel Component
+# Animations and Transitions in Blazor Carousel Component
 
-## Animations
+The Blazor Carousel component offers a variety of animation effects and transition controls to enhance user experience. These include built-in animations, custom effects, adjustable slide intervals, autoplay functionality, and looping options, all configurable for both Blazor Server and WebAssembly applications.
 
-### Fade animation
+## Animation Effects
 
-In Carousel, two built-in animations are provided for slide transitions. You can disable animation using the [AnimationEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property. By default, `Slide` animation is applied for the transition between slides.
+The Carousel provides built-in animation effects for slide transitions. These effects are controlled using the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property. By default, a `Slide` animation is applied.
+
+### Fade Animation
+
+The `Fade` animation provides a smooth cross-fade transition between slides. To apply this effect, set `AnimationEffect` to `CarouselAnimationEffect.Fade`.
 
 The following demo depicts the example for `Fade` animation,
 
@@ -67,11 +71,11 @@ The following demo depicts the example for `Fade` animation,
 
 ![Carousel fade animation](images/fade_animation.gif)
 
-### Custom animation
+### Custom Animation
 
-In Carousel, you can use customized animation effects for slide transitions using the [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option of the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property and apply custom animation css via [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
+The Carousel supports customized animation effects for slide transitions. This is accomplished by setting the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property to the [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option and then applying custom animation CSS via the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
 
-The following demo depicts the example for `parallax` custom animation
+The following example demonstrates a custom "parallax" animation Effect which involves a scaling and translation effect during transitions:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -158,11 +162,13 @@ The following demo depicts the example for `parallax` custom animation
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgWrBrLGWiDURZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Carousel custom animation](images/custom_animation.gif)
+![Carousel Custom Animation](images/custom_animation.gif)
 
-## Intervals between slides
+## Slide Interval Settings
 
-Using the items property, you can set different intervals for each item to transition between slides. The default interval is `5000 ms` (5 seconds). The following example depicts the code for setting the different intervals between each item.
+Different intervals for slide transitions can be assigned to individual `CarouselItem` components using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselItem.html#Syncfusion_Blazor_Navigations_CarouselItem_Interval) property. The default transition interval is `5000 ms` (5 seconds).
+
+The following example demonstrates setting varied intervals for each slide transition:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -206,11 +212,13 @@ Using the items property, you can set different intervals for each item to trans
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBAshBVVwCUQGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-N> Interval property can accept value in terms of milliseconds.
+N> The `Interval` property accepts values in milliseconds.
 
-## Auto play slides
+## Autoplay Slides
 
-In the carousel, all slides transitions are performed continuously after the specified or default intervals. You can enable or disable the auto slide transition using the [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) property. The following example depicts the code to disable the auto slide transitions.
+Autoplay functionality automatically advances slides after a specified or default interval. This behavior can be enabled or disabled using the [`AutoPlay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) property of the `SfCarousel` component.
+
+The following example demonstrates disabling autoplay, requiring manual navigation:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -254,11 +262,11 @@ In the carousel, all slides transitions are performed continuously after the spe
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAihLBhwCyYryK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Pause on hover
+## Pause On Hover
 
-By default, Slide transitions are paused when hovering the mouse pointer over the Carousel element. You can enable or disable this functionality using the [`PauseOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PauseOnHover) property.
+By default, slide transitions pause when the mouse pointer hovers over the Carousel. This feature can be enabled or disabled using the [`PauseOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PauseOnHover) property.
 
-The following example depicts the code to play the slides when hovering the mouse pointer over the Carousel element.
+The following example demonstrates overriding the default behavior to continue playing slides even when hovered:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -302,9 +310,11 @@ The following example depicts the code to play the slides when hovering the mous
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWLLhhGsvUQay?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Looping slides
+## Looping Slides
 
-In the carousel, slides transitions are repeated continuously when you reach the last slide by default. You can enable or disable the infinite slide transition using the [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) property. The following example depicts the code to disable the infinite slide transitions.
+By default, slide transitions repeat continuously, looping back to the first slide after reaching the last one. This infinite looping behavior can be enabled or disabled using the [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) property.
+
+The following example demonstrates disabling infinite looping, causing the carousel to stop after the last slide:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -350,11 +360,11 @@ In the carousel, slides transitions are repeated continuously when you reach the
 
 ![Carousel Looping Slides](images/looping_slides.png)
 
-## Slide changing events
+## Slide Changing Events
 
-Using the [SlideItemChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SelectedIndexChanged) events of the Carousel component, you can perform sample end customization while the carousel items are switched.
+The Carousel component exposes the [`SelectedIndexChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SelectedIndexChanged) event, which triggers whenever the active slide changes. This allows for custom actions or updates based on the current slide's index.
 
-The following demo depicts the example for carousel events,
+The following example demonstrates handling the `SelectedIndexChanged` event to log the current slide index to the console:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -405,9 +415,11 @@ The following demo depicts the example for carousel events,
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLKCrLrrQLIIQtX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Disable touch swiping
+## Disable Touch Swiping
 
-In the carousel, you can able to perform swipe the carousel slides using touch actions by default. You can enable or disable the swipe action using the [EnableTouchSwipe](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_EnableTouchSwipe) property. The following example depicts the code to disable the swipe action for the slide.
+By default, carousel slides can be navigated using touch swipe gestures. This functionality can be disabled by setting the [`EnableTouchSwipe`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_EnableTouchSwipe) property to `false`.
+
+The following example demonstrates disabling touch swipe actions for the carousel:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -451,15 +463,15 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUMrhBVGVwHmZw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Swipe modes
+## Swipe Modes
 
-In the carousel, the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
+The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows for precise control over whether slide transitions occur via touch, mouse, or both. This is configured using bitwise operators with `CarouselSwipeMode` enumeration values.
 
-The following are the different swipe modes available in the carousel:
+The following `CarouselSwipeMode` options are available:
 
-* [`CarouselSwipeMode.Touch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using touch actions.
-* [`CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using mouse actions.
-* [`CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using both touch and mouse actions.
+* [`CarouselSwipeMode.Touch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Enables slide navigation using touch actions.
+* [`CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Enables slide navigation using mouse actions.
+* [`CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Enables slide navigation using both touch and mouse actions.
 * [`~CarouselSwipeMode.Touch & ~CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Disables both touch and mouse actions.
 
 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Undo Redo Manager in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about undo redo manager in Syncfusion Blazor RichTextEditor component and much more.
+title: Undo Redo Manager in Blazor Rich Text Editor | Syncfusion
+description: Checkout and learn here all about undo redo manager in Syncfusion Blazor Rich Text Editor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Undo Redo Manager in Blazor Rich Text Editor
+# Undo and Redo Manager in Blazor Rich Text Editor
 
-The undo and redo tools allow you to edit the text by disregarding or canceling the recently made changes and restoring it to its previous state. It is a useful tool for restoring a previously performed action that was accidentally changed. In the editor, you can undo or redo up to `30` actions by default. 
+The undo and redo tools in the Rich Text Editor allow users to revert or restore recent changes, providing a convenient way to manage content edits. This feature is especially useful for correcting accidental modifications and maintaining content integrity. In the editor, you can undo or redo up to `30` actions by default. 
 
 To undo and redo operations, do one of the following:
 
 * Press the undo/redo button on the toolbar
 * Press the <kbd>Ctrl + Z</kbd>/ <kbd>Ctrl + Y</kbd> combination on the keyboard
 
-Using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html) property, you can customize the undo/redo step count. Undo and redo actions are stored in the undo/redo manager in `300` milliseconds by default. The time interval can be customized by using the [UndoRedoTimer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoTimer) property.
+You can customize the number of undo and redo steps using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html) property. By default, undo and redo actions are stored every `300` milliseconds in the undo/redo manager. The time interval can be customized by using the [UndoRedoTimer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoTimer) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -30,7 +30,7 @@ Using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Disable undo redo
 
-You can disable the undo and redo tools from the toolbar menu by using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoSteps) property. If you set the `UndoRedoSteps` to `0`, the count of undo history will not be maintained in the UndoRedoManager. So, the undo/redo icons are disabled from the toolbar.
+To disable undo and redo functionality, set the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoSteps) property to `0`. If you set the `UndoRedoSteps` to `0`, the count of undo history will not be maintained in the UndoRedoManager. So, the undo/redo icons are disabled from the toolbar.
 
 {% tabs %}
 {% highlight razor %}
@@ -44,7 +44,7 @@ You can disable the undo and redo tools from the toolbar menu by using the [Undo
 
 ## Remove undo redo toolbar item
 
-You can remove the undo and redo tools from the toolbar by using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+To remove undo and redo buttons from the toolbar, configure the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property accordingly.
 
 In the following code example, remove the undo and redo tools from the toolbar.
 
@@ -97,9 +97,9 @@ In the following code example, remove the undo and redo tools from the toolbar.
 {% endhighlight %}
 {% endtabs %}
 
-## Undo Redo Manager with Custom Toolbar
+## Undo redo manager with custom toolbar
 
-The Rich Text Editor allows you to configure custom tools in its toolbar, and any actions performed through these custom tools can be reverted or restored using the Undo/Redo manager by utilizing the [ExecuteCommandOption.Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_Undo)
+You can configure custom toolbar tools in the Rich Text Editor. Actions performed using these tools can be tracked by the Undo/Redo manager using the [ExecuteCommandOption.Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_Undo) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -141,11 +141,11 @@ The Rich Text Editor allows you to configure custom tools in its toolbar, and an
 
 ![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
 
-## Clear Undo/Redo stack
+## Clear undo/redo stack
 
 The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
 
-To clear the entire undo and redo stack, use the public [ClearUndoRedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ClearUndoRedoAsync) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
+To reset the undo and redo history, use the [ClearUndoRedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ClearUndoRedoAsync) public method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
 
 {% tabs %}
 {% highlight razor %}

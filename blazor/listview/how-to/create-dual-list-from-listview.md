@@ -7,42 +7,42 @@ control: ListView
 documentation: ug
 ---
 
-# Create dual list using Blazor ListView Component
+# Create Dual List Using Blazor ListView Component
 
-The dual list implementation consists of two ListView components that enable moving items between lists using client-side events. This guide explains how to integrate the ListView component to create a dual list.
+A dual list implementation typically consists of two ListView components that allow users to move items between lists using various actions. This guide explains how to integrate the ListView component to create such a dual list interface with client-side event handling.
 
-## Use cases
+## Use Cases
 
 * Stock exchanges of two different countries
 * Job applications (skill set management)
 
 ## Integration of Dual List
 
-This setup involves using two ListView components to display items. A Blazor Button facilitates data transfer between ListViews, while a textbox provides a UI for filtering items.
+This setup involves configuring two `SfListView` components. `SfButton` components facilitate data transfer between these `ListViews`, and `SfTextBox` components provide UI for filtering items in each list.
 
 The dual list supports:
 
 * Move all items from one list to another.
-* Move only the selected items between lists.
-* Filtering the list by using a client-side typed character.
+* Move only selected items between lists.
+* Filter items in each list by typing characters into a textbox.
 
-In the ListView component, sorting is enabled using the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property, and the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event allows for enabling and disabling button states through item selection.
+The `SfListView` component allows sorting using the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property (not explicitly used in this sample, but available). The [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event handles item selection, which then enables or disables the buttons for moving selected items.
 
-## Manipulating data
+## Manipulating Data
 
 ### Moving All Items from First to Second List (>>)
 
-By clicking the first button, all items from the first ListView are transferred to the second, and the first list is cleared. The button activates when the first ListView contains items.
+Clicking the `>>` button transfers all items from the left ListView to the right ListView. The left list is then cleared. This button is enabled only when the left ListView contains items.
 
 ### Moving All Items from Second to First List (<<)
 
-Similarly, the second button moves all items from the second ListView to the first. It is enabled when the second ListView has items.
+Similarly, the `<<` button moves all items from the right ListView back to the left ListView. This button is enabled only when the right ListView has items.
 
 ### Moving Selected Items (>) and (<)
 
 When an item is clicked in a ListView, the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event activates the corresponding button to move selected items between lists.
 
-The following example demonstrates how to manipulate data between two ListView components:
+The following example code illustrates the implementation of these data manipulation techniques between two ListView components:
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -257,5 +257,5 @@ The following example demonstrates how to manipulate data between two ListView c
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLoWNDiAgibLkhf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap4" %}
 ![Displaying Dual List in Blazor ListView](../images/list/blazor-listview-with-dual-list.png)

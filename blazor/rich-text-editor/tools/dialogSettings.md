@@ -1,21 +1,27 @@
 ---
 layout: post
-title: Customization of Blazor Rich Text Editor Dialog | Syncfusion
-description: Check out and learn here all about DialogSettings in Syncfusion Blazor RichTextEditor component and more. 
+title: DialogSettings in Blazor Rich Text Editor | Syncfusion
+description: Check out and learn here all about DialogSettings in Syncfusion Blazor Rich Text Editor component and more. 
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Customization of Blazor Rich Text Editor Dialog
+# Customizing Dialog Behavior in Blazor Rich Text Editor
 
-The Blazor Rich Text Editor allows for improved customization of the dialogs by configuring the RichTextEditorDialogSettings property. This addition enables users to control the behavior and appearance of the underlying dialogs within the RichTextEditor. the following list of options has been provided.
+The Blazor Rich Text Editor provides enhanced customization for built-in dialogs through the [RichTextEditorDialogSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorDialogSettings.html) property. This feature allows developers to control the appearance, behavior, and positioning of dialogs such as image, link, and audio insertion dialogs.
+
+The following table outlines the available configuration options:
 
 | Options | Description |
-|----------------|---------|
-|IsModel|Accepts a boolean value and determines whether the dialog operates in modal or modeless mode.|
-|Target|Specifies the target element for the dialog component.|
-|ZIndex|Allows adjustment of the Z-index value for the dialog component.|
+|---------|-------------|
+| `IsModal` | Accepts a boolean value that determines whether the dialog operates in **modal** (true) or **modeless** (false) mode. |
+| `Target` | Specifies the target element for the dialog component. |
+| `ZIndex` | Sets the z-index value of the dialog, allowing it to appear above or below other UI elements as needed. |
+
+## Configuring dialog settings
+
+The following example demonstrates how to configure dialog settings in the Blazor Rich Text Editor:
 
 {% tabs %}
 {% highlight cshtml %}

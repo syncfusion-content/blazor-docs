@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styling tools in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Styling tools in Syncfusion Blazor RichTextEditor component and more.
+title: Styling tools in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Styling tools in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Styling Tools in RichTextEditor
+# Styling Tools in Rich Text Editor
 
 ## Font family
 
@@ -184,7 +184,7 @@ The Rich Text Editor provides support for custom formats with an existing list. 
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
 
-## Font and background color
+## Applying font and background colors
 
 To apply the font color or background color for a selected content of RTE, use the font color and background color tools.
 
@@ -443,7 +443,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
 }
 
 ```
-## Number and bullet format lists
+## Customizing numbered and bulleted lists
 
 This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
@@ -459,7 +459,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## Code block
+## Formatting code blocks
 
 Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 

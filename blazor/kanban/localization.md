@@ -7,15 +7,20 @@ control: Kanban
 documentation: ug
 ---
 
-# Localization in Blazor Kanban Component
+# Localization Support in Blazor Kanban Component
 
 ## Localization
 
-[Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to localize the Blazor Kanban component to support different languages and cultures, including right-to-left (RTL) layouts for languages such as Arabic, Farsi, and Urdu.
 
-## Right to left (RTL)
+## Localizing Kanban Text
 
-The Kanban provides an option to switch its text direction and layout from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable right-to-left mode in Kanban, set the `EnableRtl` to true.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports localization by allowing you to translate built-in text strings into different languages. To learn how to configure localization across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
+
+## Enabling Right-to-Left (RTL) Layout
+
+The Kanban component provides built-in support for right-to-left (RTL) rendering. This feature improves accessibility and usability for users who read and write in RTL languages.
+To enable RTL mode in the Kanban component, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_EnableRtl) property to `true`. Additionally, specify the appropriate `Locale` value (e.g., `"ar"` for Arabic).
 
 ```cshtml
 

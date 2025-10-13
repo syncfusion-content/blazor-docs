@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strict Mode in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Strict Mode in Syncfusion Blazor DatePicker component and much more.
+description: Learn how StrictMode works in the Syncfusion Blazor DatePicker, including behavior for invalid and out-of-range input with Min and Max dates.
 platform: Blazor
 control: DatePicker
 documentation: ug
@@ -9,13 +9,14 @@ documentation: ug
 
 # Strict Mode in Blazor DatePicker Component
 
-The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) is an act that allows the users to enter only the valid date within the specified `Min/Max` range in text box. If the date is invalid, then the component will stay with the previous value. Else, if the date is out of range, then the component will set the date to the Min/Max date.
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property controls how typed input is handled with respect to the configured `Min` and `Max` range. By default, StrictMode is disabled (false).
 
-The following example demonstrates the DatePicker in `StrictMode` with Min/Max range of 5th to 25th in a month of May. Here, it allows the users to enter only the valid date within the specified range.
+When StrictMode is enabled (true):
+- Only valid dates within the `Min` and `Max` range are accepted in the textbox.
+- If the entered date is invalid (for example, 31 in a month with 30 days), the component retains the previous valid value.
+- If the entered date is out of range, the component clamps the value to the nearest boundary (sets to `Min` when below range, or to `Max` when above range).
 
-* If you are trying to enter the out-of-range value like 28th of May, then the Value will be set to the Max date of 25th May since the value 28th is greater than Max value of 25th.
-
-* If you are trying to enter the invalid date, then the Value will stay with the previous value.
+The following example demonstrates the DatePicker in StrictMode with a `Min`/`Max` range from the 5th to the 25th of May. Only valid dates within the range are accepted.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -29,17 +30,14 @@ The following example demonstrates the DatePicker in `StrictMode` with Min/Max r
 }
 ```
 
-
-
 ![Strict Mode in Blazor DatePicker](./images/blazor-datepicker-strict-mode.png)
 
-By default, the DatePicker act in `StrictMode` false state allows you to enter the invalid or out-of-range date in text box.
+When StrictMode is disabled (false):
+- The textbox allows invalid or out-of-range dates to be entered.
+- If the date is invalid, the model value becomes `null`.
+- If the date is out of range, the model can hold the out-of-range value. The input is highlighted with an `error` style to indicate an invalid or out-of-range entry.
 
-If the date is out-of-range or invalid, then the model value will be set to `out of range` date value or `null` respectively with highlighted  `error` class to indicate the date is out of range or invalid.
-
-The following code demonstrates the `StrictMode` as false. Here, it allows you to enter the valid or invalid value in text box.
-
-If you are entering out-of-range or invalid date value, then the model value will be set to `out of range` date value or `null` respectively with highlighted  `error` class to indicate the date is out of range or invalid.
+The following example demonstrates StrictMode set to false. Both valid and invalid values can be entered in the textbox.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -53,8 +51,6 @@ If you are entering out-of-range or invalid date value, then the model value wil
 }
 ```
 
-
-
 ![Blazor DatePicker without Strict Mode](./images/blazor-datepicker-without-strict-mode.png)
 
-N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
+N> Calendar selection always respects `Min` and `Max` regardless of StrictMode; disabled dates cannot be picked from the popup. If the values of `Min` or `Max` are changed through code-behind at runtime, update the `Value` property to ensure it remains within the defined range.
