@@ -3,15 +3,13 @@ layout: post
 title: Form Support in Blazor TextArea Component | Syncfusion
 description: Checkout and learn about the Form support of the Syncfusion Blazor Textarea component and much more.
 platform: Blazor
-control: Textarea
+control: TextArea
 documentation: ug
 ---
 
 # Form Support in Blazor TextArea Component
 
-The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of longer text data. By including TextArea inputs within HTML forms, users can conveniently input multiline text content and submit it as part of form submissions.
-
-This integration enhances the usability of forms, allowing users to provide detailed feedback, enter lengthy descriptions, or input other multiline text data seamlessly. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/formsvalidation?theme=fluent).
+The TextArea component integrates with HTML forms and Blazor’s EditForm to capture and submit multiline text efficiently. Typical scenarios include collecting detailed feedback, descriptions, and other long-form inputs as part of a form submission. See the TextArea forms and validation demo for a working example: TextArea forms and validation demo.
 
 {% tabs %}
 {% highlight razor %}
@@ -51,4 +49,4 @@ This integration enhances the usability of forms, allowing users to provide deta
 
 TextArea component seamlessly integrates with the `FormValidator` component, allowing users to incorporate textarea inputs into form validation processes efficiently.
 
-By integrating TextArea component with the `FormValidator` component, users can enforce validation rules specific to text inputs, such as required fields, minimum and maximum length constraints, pattern matching, and more. This ensures that user-submitted text data meets specified criteria and maintains data integrity.
+By integrating The TextArea component with the `FormValidator` component, users can enforce validation rules specific to text inputs, such as required fields, minimum and maximum length constraints, pattern matching, and more. This ensures that user-submitted text data meets specified criteria and maintains data integrity.
