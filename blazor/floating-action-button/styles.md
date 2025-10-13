@@ -37,7 +37,7 @@ N> Predefined Floating Action Button styles provide only visual indication. So, 
 
 ## Styles customization
 
-To modify the FAB appearance beyond predefined styles, override the component’s default CSS. The following CSS classes map to common styling scenarios. You can also create a custom theme using the [Theme Studio](https://blazor.syncfusion.com/themestudio/).
+To modify the FAB appearance beyond predefined styles, override the component’s default CSS. The following CSS classes map to common styling scenarios. You can also create a custom theme using the [Theme Studio](https://blazor.syncfusion.com/themestudio).
 
 | CSS Class | Purpose of Class |
 |-----|----- |
