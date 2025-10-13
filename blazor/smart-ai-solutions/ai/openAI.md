@@ -24,7 +24,10 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 - An [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) is obtained from the OpenAI platform.
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - The API key is stored securely using environment variables or user secrets (see [Microsoft’s guide on user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).

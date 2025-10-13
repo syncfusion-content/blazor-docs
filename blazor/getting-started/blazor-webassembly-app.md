@@ -113,7 +113,11 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 ### Create a Blazor WebAssembly App using .NET CLI
+=======
+## Create a Blazor WebAssembly App using .NET CLI
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 
 Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 

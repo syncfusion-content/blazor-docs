@@ -32,4 +32,8 @@ The Blazor SpeechToText component can be localized to any culture by translating
 
 The Right-to-Left (RTL) feature reverses the text direction and layout of the SpeechToText component, which is essential for languages written from right to left, such as Arabic or Hebrew.
 
+<<<<<<< HEAD
 For more details on enabling RTL across Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) documentation.
+=======
+For more details on enabling RTL across Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) documentation.
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

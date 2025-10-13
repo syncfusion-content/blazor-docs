@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion
+title: Implement Scrollable ContextMenu in Blazor Component | Syncfusion
 description: Checkout and learn here all about Render Scrollable Context Menu in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Render Scrollable Context Menu in Blazor ContextMenu Component
+# Implement Scrollable ContextMenu in Blazor Component
 
-To enable scrolling for the Context Menu, use the `EnableScrolling` property to manage the overflow behavior of menu items by enabling or disabling scroll functionality. This is especially useful when dealing with a large number of menu items that exceed the viewport height, ensuring the context menu remains accessible without affecting the page layout.
+To enable scrolling functionality for the ContextMenu, utilize the [`EnableScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_EnableScrolling) property. This property controls the overflow behavior of menu items, allowing the menu to become scrollable when its content exceeds the available viewport height. This ensures that all menu items remain accessible without disrupting the page layout, especially beneficial for menus with an extensive list of options.
 
-To achieve this functionality, set the `EnableScrolling` property to `true`. Additionally, use the `BeforeOpenCloseMenuEventArgs` event to adjust the height of the menu's parent element, ensuring the scrollable area is applied correctly.
+To achieve this functionality, set the `EnableScrolling` property to `true`. Additionally, use the `ScrollHeight` property within the `BeforeOpenCloseMenuEventArgs` of the `OnOpen` event to define the maximum height of the menu, thereby enabling the scrollable area.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -59,5 +59,5 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSDYrIgonfldQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.png)

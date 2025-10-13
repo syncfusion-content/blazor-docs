@@ -181,7 +181,11 @@ var app = builder.Build();
 
 Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test the Groq AI integration.
 
+<<<<<<< HEAD
 ```razor
+=======
+```cshtml
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.SmartComponents
 @using System.ComponentModel.DataAnnotations

@@ -70,7 +70,10 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -300,7 +303,12 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Ol
 - **Model Not Found**: Ensure the specified Ollama model (e.g., `llama2`) is downloaded and available.
 - **JSON Parsing Errors**: Handle invalid JSON responses by logging errors or displaying user-friendly messages, as shown in the `OpenAIHandler` method.
 - **Resource Limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://ollama.com/docs) for model-specific requirements.
+<<<<<<< HEAD
 
 ## See Also
 - [Syncfusion Blazor TreeGrid Documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)
+=======
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 
+## See Also
+- [Syncfusion Blazor TreeGrid Documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)

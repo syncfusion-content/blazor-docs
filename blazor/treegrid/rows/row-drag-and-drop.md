@@ -1073,9 +1073,16 @@ N> - Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ## Drag and drop events
 
 The following events are triggered while dragging and dropping TreeGrid rows.
+<<<<<<< HEAD
 
 [RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting) - Triggers when a row drag operation starts.
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when the dragged row is dropped on the target element.
 
 
+=======
+
+[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting) - Triggers when a row drag operation starts.
+
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when the dragged row is dropped on the target element.
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

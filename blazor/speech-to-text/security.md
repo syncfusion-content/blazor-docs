@@ -7,35 +7,35 @@ control: SpeechToText
 documentation: ug
 ---
 
-# Security concerns in Blazor SpeechToText component
+# Security concerns in Blazor SpeechToText Component
 
 ## Online dependency
 
-The SpeechToText component typically relies on browser-based APIs, which may require an active internet connection. If an internet connection is unavailable, an offline fallback should be considered.
+The Syncfusion Blazor SpeechToText component utilizes browser-based Web Speech APIs, which generally require an active internet connection to process speech data. This dependency introduces important security and privacy considerations that developers must address.
 
-## Potential security risks
+## Potential Security Risks
 
-Understanding the risks associated with speech recognition.
+When using speech recognition technology, it is essential to be aware of the following potential security risks:
 
-### Data transmission to external servers
+### Data Transmission to External Servers
 
-The audio data is sent to third-party servers (e.g., Google, Microsoft) for processing. So the sensitive spoken information might be exposed to external entities.
+Since speech-to-text processing is often handled by third-party services (e.g., Google, Microsoft), audio data is transmitted to external servers. This can expose sensitive spoken information to external entities.
 
-### Privacy concerns
+### Privacy Concerns
 
-Some services may store user voice data for analytics or improving AI models. Users should verify browser and service policies.
+Some speech recognition services may retain voice data for analytics or to improve their models. It is crucial to review the privacy policies of both the browser and the specific speech service being used.
 
-### Man-in-the-Middle (MITM) attacks
+### Man-in-the-Middle (MITM) Attacks
 
-Without HTTPS, attackers could intercept audio data during transmission.
+If the application is not served over HTTPS, attackers could intercept the audio data stream during transmission in a Man-in-the-Middle (MITM) attack.
 
-### Browser and permission exploits
+### Browser and Permission Exploits
 
-Malicious websites may misuse permissions to eavesdrop on conversations. Explicit user consent is essential before enabling microphone access.
+A malicious website could misuse microphone permissions to eavesdrop on user conversations. Therefore, obtaining explicit user consent before accessing the microphone is a critical security measure.
 
-## Mitigation strategies
+## Mitigation Strategies
 
-Ensuring security and privacy when using speech recognition and how to mitigate them.
+To ensure security and privacy when implementing speech recognition, adopt the following mitigation strategies:
 
 * Use the component only in trusted environments.
 * Inform users about third-party data processing.

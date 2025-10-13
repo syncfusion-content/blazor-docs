@@ -181,7 +181,11 @@ var app = builder.Build();
 
 Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use DeepSeek AI for autocompletion:
 
+<<<<<<< HEAD
 ```razor
+=======
+```cshtml
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">

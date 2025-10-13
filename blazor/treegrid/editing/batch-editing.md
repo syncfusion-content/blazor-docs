@@ -149,8 +149,18 @@ namespace TreeGridComponent.Data {
 
 The following GIF shows the confirmation dialog displayed during batch operations in the TreeGrid.
 ![Blazor TreeGrid displays Update Confirmation Dialog](../images/blazor-treegrid-update-confirm-dialog.gif)
+<<<<<<< HEAD
 
 N> - Batch mode stages edits on the client. Click Update on the toolbar or save programmatically to commit changes; Cancel discards staged edits.  
 - A primary key column (IsPrimaryKey=true) is required for editing.  
 
 - Confirmation dialogs are available only when the TreeGridEditSettings Mode is set to **Batch**. If ShowConfirmDialog is false, no confirmation dialog is shown for save; use ShowDeleteConfirmDialog to control delete confirmations separately.
+=======
+
+N> - Batch mode stages edits on the client. Click Update on the toolbar or save programmatically to commit changes; Cancel discards staged edits.  
+- A primary key column (IsPrimaryKey=true) is required for editing.  
+
+- Confirmation dialogs are available only when the TreeGridEditSettings Mode is set to **Batch**. If ShowConfirmDialog is false, no confirmation dialog is shown for save; use ShowDeleteConfirmDialog to control delete confirmations separately.
+
+
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

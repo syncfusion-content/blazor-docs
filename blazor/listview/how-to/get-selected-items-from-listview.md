@@ -7,11 +7,17 @@ control: ListView
 documentation: ug
 ---
 
+<<<<<<< HEAD
 # Retrieving Selected Items in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
+=======
+# Retrieving Selected Items from ListView Component
 
-## Get selected items from ListView Component
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView component offers functionalities for users to select one or more items from a list. This guide outlines how to retrieve selected items, a feature essential for applications that need to process or display data based on user choices.
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
+
+## Get Selected Items from ListView Component
 
 The ListView component in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
 
@@ -107,13 +113,12 @@ Here's a code snippet illustrating the implementation:
     }
 </style>
 ```
-
 ![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.png)
 
 
-## Get selected items from custom template in Blazor ListView Component
+## Get Selected Items from Custom Template in Blazor ListView Component
 
-In scenarios where you build custom templates in Blazor ListView Component, you can select multiple items. It's essential to map the `Id` and `Text` attributes properly using [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html). This ensures that selected item data is returned correctly in templates:
+In scenarios where custom templates are built in the Blazor ListView Component, multiple items can be selected. It's essential to map the `Id` and `Text` attributes properly using [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html). This ensures that selected item data is returned correctly in templates.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -197,6 +202,6 @@ In scenarios where you build custom templates in Blazor ListView Component, you 
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeMZtCATAcUTGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logarithmic Axis in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Logarithmic Axis in Syncfusion Blazor 3D Chart component and much more.
+description: Check out and learn how to configure and customize Logarithmic Axis in Syncfusion Blazor 3D Chart component.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>).
+A logarithmic axis applies a logarithmic scale, which is effective for visualizing data with values spanning several orders of magnitude, such as from 10<sup>-6</sup> to 10<sup>6</sup>.
 
 ```cshtml
 
@@ -20,14 +20,14 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic" />
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
@@ -57,7 +57,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 
 ## Range
 
-The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the `Minimum`, `Maximum` and `Interval` properties of the axis.
+The axis range is calculated automatically based on the data, but can be customized using the `Minimum`, `Maximum`, and `Interval` properties.
 
 ```cshtml
 
@@ -66,14 +66,14 @@ The range of an axis will be calculated automatically based on the provided data
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic" />
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />  
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
@@ -103,7 +103,7 @@ The range of an axis will be calculated automatically based on the provided data
 
 ## Logarithmic base
 
-Logarithmic base can be customized by using the `LogBase` property of the axis. For example when the `LogBase` is **5**, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
+The logarithmic base can be set using the `LogBase` property. For example, when `LogBase` is 5, the axis values follow 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup>, and so on.
 
 ```cshtml
 
@@ -112,14 +112,14 @@ Logarithmic base can be customized by using the `LogBase` property of the axis
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic" />
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
@@ -149,7 +149,7 @@ Logarithmic base can be customized by using the `LogBase` property of the axis
 
 ## Logarithmic interval
 
-The interval of the logarithmic axis can be customized by using the `Interval` property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the `Interval` is **1**.
+The interval of the logarithmic axis can be adjusted using the `Interval` property. For example, with a logarithmic base of 10 and an interval of 2, axis labels are placed at intervals of 10<sup>2</sup>. The default value for `Interval` is **1**.
 
 ```cshtml
 
@@ -158,14 +158,14 @@ The interval of the logarithmic axis can be customized by using the `Interval` p
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic" />
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
