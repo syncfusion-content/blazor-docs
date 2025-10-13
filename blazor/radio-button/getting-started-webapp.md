@@ -74,7 +74,7 @@ N> For details on creating a **Blazor Web App** with various interactive modes a
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Buttons and Themes NuGet in the App
 
- Use `WebAssembly` or `Auto` render modes in the Blazor Web App, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the Client project.ents NuGet packages within the client project.
+Use `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you are in the project directory where the `.csproj` file is located.
