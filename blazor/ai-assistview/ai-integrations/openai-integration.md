@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrate Azure OpenAI with Blazor AI AssistView component
 
-The AI AssistView component integrates seamlessly with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your Angular applications. The component acts as a user interface for a support bot, where user prompts are sent to the Azure Open AI service via API calls, providing natural language understanding and context-aware responses.
+The AI AssistView component integrates seamlessly with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface for a support bot, where user prompts are sent to the Azure Open AI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 Before starting, ensure you have the following:
