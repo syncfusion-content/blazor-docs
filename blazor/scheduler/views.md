@@ -15,7 +15,7 @@ To navigate between different views and dates, the navigation options are availa
 
 N> By default, Scheduler displays the calendar views such as day, week, work week, month and agenda.
 
-## Setting specific view on scheduler
+## Setting Specific View on Scheduler
 
 As the Scheduler displays `Week` view by default, therefore to change the active view, set [`CurrentView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property with the desired view name. The applicable view names that the Scheduler accepts are as follows,
 
@@ -34,7 +34,7 @@ As the Scheduler displays `Week` view by default, therefore to change the active
 
 It is possible to display only the desired views on the Scheduler using the [`Views`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) property.
 
-To get start quickly on customizing individual views of scheduler, you can check on this video:
+To get started quickly on customizing individual views of the Scheduler, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=bBhn7YHje8k"%}
@@ -67,6 +67,7 @@ In the following example, the Scheduler displays 2 views namely, Week and Timeli
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVIiXtcAwwQOKRG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 To configure Scheduler with different configurations on each view, refer the following code example. Here, the Week view displays the dates in `dd-MM-yyyy` format whereas the Month view hides the weekend days and also displays it in readonly mode.
 
@@ -96,10 +97,11 @@ To configure Scheduler with different configurations on each view, refer the fol
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheijDGKQvrVWBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## View specific configuration
+## View Specific Configuration
 
-There are scenarios where each view may need to have different configurations. For such cases, you can define the applicable scheduler properties within the `Views` Property for each view option as depicted in the following examples. The fields available to be used within each view options are as follows.
+Each view may require different configurations. For such cases, define the applicable Scheduler properties within the `Views` property for each view option, as depicted in the following examples. The fields available to be used within each view option are as follows:
 
 | Property | Type | Description | Applicable views |
 |----------|------|-------------|------------------|
@@ -123,9 +125,9 @@ There are scenarios where each view may need to have different configurations. F
 | [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) | bool | It is used to enable or disable the virtual scrolling functionality. | Applicable on Agenda and Timeline views. |
 | [`HeaderRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_HeaderRows) | `HeaderRowsModel` | Allows defining the custom header rows on timeline views of the Scheduler to display the year, month, week, date and hour label as an individual row. | Applicable only on all timeline views. |
 
-### Day view
+### Day Diew
 
-Usually a day view displays a single day with all its related appointments. It is possible to customize the day view to display more number of days by extending the [`Views`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) property with [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_Interval) option. You can also define any of the above defined properties within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) tag helper as depicted in the following code example.  
+Usually a day view displays a single day with all its related appointments. It is possible to customize the day view to display more number of days by extending the [`Views`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) property with [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_Interval) option. Any of the properties defined above can also be configured within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) tag helper, as depicted in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -161,10 +163,11 @@ Usually a day view displays a single day with all its related appointments. It i
 ```
 
 N> All the above defined properties can be accessed within Day view except [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) and [`HeaderRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_HeaderRows).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVeWZDwKQbldkdG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Day View in Blazor Scheduler](images/blazor-scheduler-views-day.png)
 
-### Week view
+### Week View
 
 The Week view displays a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the [`FirstDayOfWeek`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_FirstDayOfWeek) which accepts the integer (Sunday=0, Monday=1, Tuesday=2 and so on) value. You can navigate to a particular date in day view from the week view by clicking on the appropriate dates on the date header bar.
 
@@ -204,9 +207,11 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 
 N> All the above defined properties in the table can be accessed within Week and Work week views except [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) and [`HeaderRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_HeaderRows).
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBoCttcqGOrFqLR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Week View in Blazor Scheduler](images/blazor-scheduler-views-week.png)
 
-### Work Week view
+### Work Week View
 
 The Work week view displays only the working days of a week (count of 5 days) and its associated appointments. It is possible to customize the working days on the work week view by using the [`WorkDays`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_WorkDays) property which accepts an array of integer values (such as Sunday=0, Monday=1, Tuesday=2 and so on). By default, it displays from Monday to Friday (5 days). You can also navigate to a particular date in the day view from the work week view by clicking on the appropriate dates in the date header bar.
 
@@ -247,15 +252,17 @@ The following code example depicts how to change the start and end hours only on
 
 N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVSiNZGqcuvqBiN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Work week View in Blazor Scheduler](images/blazor-scheduler-views-workweek.png)
 
 ### Month view
 
 A Month view displays the entire days of a particular month and all its related appointments. You can navigate to a particular date in the day view by clicking on the appropriate date text on the month cells.
 
-By default, when you try to create an appointment through Month view, it is considered to be created for an entire day. You can explicitly change this behavior by unchecking the `All-day` option from editor window, so that it defaults to the start time duration as 9.00 AM and end time as 9.30 AM.
+By default, appointments created in the Month View are set as all-day events. This behavior can be explicitly changed by unchecking the `All-day` option from the editor window, which defaults the start time duration to 9:00 AM and end time to 9:30 AM.
 
-By default, in month view, you can view single appointment on each day cell. If you have more than one appointment in a day, the `+ more` text indicator will be available on that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a day based on your Scheduler and Month cell height using [`MaxEventsPerRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property within [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) whereas its default value is 1. The following code example depicts how to change the working days only on the `Month` view of the Scheduler.
+By default, in Month View, a single appointment can be viewed on each day cell. If there is more than one appointment for a day, the `+ more` text indicator will be available on that cell; clicking on it allows viewing the hidden appointments for that day. The number of appointments that can render on a day can be controlled using the [`MaxEventsPerRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property within [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html), which has a default value of 1. This is determined by the Scheduler and Month cell height. The following code example depicts how to change the working days only on the `Month` view of the Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -291,11 +298,13 @@ By default, in month view, you can view single appointment on each day cell. If 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWXDGKFXVRbuZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Month View in Blazor Scheduler](images/blazor-scheduler-views-month.png)
 
-### Agenda view
+### Agenda View
 
-The Agenda view lists out the appointments in a grid-like view for the next 7 days by default from the current date. The count of the days can be changed using the API [`AgendaDaysCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AgendaDaysCount). It allows virtual scrolling of dates by enabling the [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property. Also, you can enable or disable the display of days on Scheduler that has no appointments by setting true or false to the [`HideEmptyAgendaDays`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_HideEmptyAgendaDays) property.
+The Agenda view lists out the appointments in a grid-like view for the next 7 days by default from the current date. The count of the days can be changed using the API [`AgendaDaysCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AgendaDaysCount). It allows virtual scrolling of dates by enabling the [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property. The display of days without appointments in the Scheduler can also be enabled or disabled by setting `true` or `false` to the [`HideEmptyAgendaDays`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_HideEmptyAgendaDays) property.
 
 The following code example depicts how to display events of four days in Agenda view.
 
@@ -330,10 +339,11 @@ The following code example depicts how to display events of four days in Agenda 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXByWZNGqbNnyBNe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Agenda View in Blazor Scheduler](images/blazor-scheduler-views-agenda.png)
 
-### Month Agenda view
+### Month Agenda View
 
 A Month-Agenda view shows a month calendar, where clicking on a particular day will display the appointments present on that date below the calendar. The day with appointments are differentiated with a circular dot below the date of the calendar.
 
@@ -374,11 +384,13 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIitDGKvstoOjc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Month agenda View in Blazor Scheduler](images/blazor-scheduler-views-monthagenda.png)
 
-### Timeline views – Day, Week, Work Week
+### Timeline Views – Day, Week, Work Week
 
-Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler and you can view single appointment on each cell. If you have more than one appointment, the `+ more` text indicator will be available on the bottom of that cell, clicking on which allows you to view the hidden appointments of a day. You can decide how many appointments can render on a cell based on your Scheduler and work cell height using [`MaxEventsPerRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property within [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) whereas its default value is `1`.
+Similar to the vertical Day, Week, and Work Week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to the Scheduler, and only a single appointment is displayed on each cell. If there is more than one appointment, the `+ more` text indicator will be available at the bottom of that cell; clicking on it allows viewing the hidden appointments for that day. The number of appointments that can render on a cell can be controlled using the [`MaxEventsPerRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property within [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html), which has a default value of `1`. This is determined by the Scheduler and work cell height.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -418,9 +430,11 @@ Similar to the vertical day, week and work week views, the respective view shows
 
 N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXreiXDQAbMzoepy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Timeline Week View in Blazor Scheduler](images/blazor-scheduler-views-timelineweek.png)
 
-### Timeline Month view
+### Timeline Month View
 
 A Timeline Month view displays the current month days along with its appointments.
 
@@ -460,9 +474,10 @@ A Timeline Month view displays the current month days along with its appointment
 
 N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBIMZDQgbslOAlH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Displaying Timeline Month View in Blazor Scheduler](images/blazor-scheduler-views-timelinemonth.png)
 
-### Timeline Year view
+### Timeline Year View
 
 A Timeline Year view displays the complete year along with its appointments.
 
@@ -501,10 +516,11 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIWjDmAFrBHjnv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Timeline Year View in Blazor Scheduler](images/blazor-scheduler-views-timelineyear.png)
 
-#### Setting the first month of timeline year
+#### Setting the First Month of Timeline Year
 
 By default, months in timeline year view displayed from January to December. User can customize this default behavior with the help of scheduler [FirstMonthOfYear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear) property. This property allows user to set the first month of the timeline year on Scheduler. User can set first month of timeline year by passing integer value to the [FirstMonthOfYear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear) property, whereby 1 is always denoted as January, 2 as February and so on. This property applicable only in timeline year views.
 
@@ -540,10 +556,11 @@ By default, months in timeline year view displayed from January to December. Use
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZryWNDGgPrniKBv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Timeline Year with First Month in Blazor Scheduler](images/blazor-scheduler-views-timelineyear-firstmonth.png)
 
-### Year view
+### Year View
 
 The Year view shows a year calendar, where clicking on a particular day will display the appointments present on that date below the calendar. The day with appointments are differentiated with a circular dot below the date of the calendar.
 
@@ -581,13 +598,15 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBIMjNQgvVOlvVy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-year-view.png)
 
-## Extending view intervals
+## Extending View Intervals
 
 It is possible to customize the display of default number of days on different Scheduler view modes. For example, a day view can be extended to display 4 days by setting the `Interval` option as 4 for the `Day` option within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) as depicted in the following code example. In the same way, you can also display 3 weeks by setting interval 3 for the `Week` option.
 
-You can provide the alternative display name for such customized views on the Scheduler header bar, by setting the appropriate [`DisplayName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_DisplayName) property.
+An alternative display name can be provided for such customized views on the Scheduler header bar by setting the appropriate [`DisplayName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_DisplayName) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -622,6 +641,8 @@ You can provide the alternative display name for such customized views on the Sc
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVyiDZGKlgziNny?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-interval.png)
 
