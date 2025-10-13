@@ -7,23 +7,39 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Gemini AI With Blazor AI AssistView component
+# Integrate Gemini AI With Blazor AI AssistView component
 
-The Syncfusion AI AssistView integrates with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), to enable advanced conversational AI features in applications.
+The AI AssistView component integrates seamlessly with Google’s [Gemini](https://ai.google.dev/gemini-api/docs/quickstart) API to enable conversational interfaces. It supports natural language understanding, maintains context across interactions, and delivers relevant responses. To activate these capabilities, configure the component with proper authentication and secure data handling for smooth communication with the Gemini API.
 
 ## Prerequisites
 
-* The Syncfusion AI AssistView component is setup in the application:
+Before starting, ensure you have the following:
 
-    * [Blazor Getting Started Guide](../getting-started)
+* Google Account: For generating a Gemini API key.
 
-* Google account to generate an API key for accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
+* Syncfusion AI AssistView: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
+* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
+
+## Set Up the AI AssistView Component
+
+Follow the Syncfusion AI AssistView Getting Started guide to configure and render the AI AssistView component in the application and that prerequisites are met:
+
+[Blazor Getting Started Guide](../getting-started)
 
 ## Install Dependencies
 
-* Install the Gemini AI package in the application.
+Install the required packages:
+
+1. Syncfusion Blazor package:
+
+```bash
+
+Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
+
+```
+
+2. Install the `Gemini AI` nuget package in the application.
 
 ```bash
 
@@ -31,21 +47,29 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 ```
 
+3. Install the `Markdig` nuget packages in the application.
+
+```bash
+
+Nuget\Install-Package Markdig
+
+```
+
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your google account. Create one if you do not have it.
+1. Access Google AI Studio: Instructs users to sign into [Google AI Studio](https://aistudio.google.com/app/apikey) with a Google account or create a new account if needed. 
 
-2. Select `Get API key` from the left menu or the top-right of the dashboard.
+2. Navigate to API Key Creation: Go to the `Get API Key` option in the left-hand menu or top-right corner of the dashboard. Click the `Create API Key` button.
 
-3. Choose an existing Google Cloud project or create a new one, then click `Create API key`. 
+3. Project Selection: Choose an existing Google Cloud project or create a new one.
 
-4. Copy the generated API key and store it securely. It may be shown only once.
+4. API Key Generation: After project selection, the API key is generated. Users are instructed to copy and store the key securely, as it is shown only once.
 
-> Security note: Do not commit API keys to version control. Use environment variables, a secret manager, or a server-side proxy in production.
+> Security note: Advises against committing the API key to version control and recommends using environment variables or a secret manager in production.
 
 ## Gemini AI with AI AssistView
 
-* Add the generated API key in the following line.
+* Add your Gemini API key securely in the configuration:
 
 ```bash
 
