@@ -28,7 +28,7 @@ To manually disable Intermediate Language linking, add the following MSBuild pro
 ```
 ## Enable trimming
 
-**PublishTrimmed** property enables code trimming for self-contained publishing.It automatically disables features that aren’t compatible with trimming and provides warnings about trimming conflicts during build.
+The **PublishTrimmed** property enables code trimming for self-contained publishing. It automatically disables features that are not compatible with trimming and provides warnings about trimming conflicts during build.
 
 To [enable trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming), add the following to your `.csproj` file:
 
