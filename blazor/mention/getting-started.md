@@ -191,7 +191,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mention componen
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTNCAjLjgvQOEF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention component rendered in a contenteditable target](images/blazor-mention.png)" %}
 
 ## Mention target
-The `Target` property specifies the element to which the Mention should attach. This is useful when rendering Mention for a specific input, textarea, or contenteditable element. Provide a CSS selector or element reference to identify the target.
+
+The `Target` property of the Mention component allows you to specify an element on the page to which the mention element should be attached. This can be useful when you want to display the mention element in a specific location on the page. For example, you might use the `Target` property to attach the mention element to a specific div element or to a specific input field or to a specific textarea field. To specify the target element, you can pass a CSS selector, a DOM element.
 
 In the below example, the `Target` property is set to the CSS selector `#mentionTarget`, which matches the textarea with the ID `mentionTarget`. The Mention is attached to the textarea, allowing users to insert mentions within it.
 

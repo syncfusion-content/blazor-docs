@@ -64,7 +64,7 @@ Use the following key shortcuts to access the Blazor Mention component without i
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous item in the Mention list. |
 | <kbd>Esc (Escape)</kbd> | <kbd>Esc (Escape)</kbd> | Closes the popup list if it is open. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and closes the popup list if it is open. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next tabbable element when the popup is closed; otherwise, inserts the selected item and closes the popup list. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next tab index element on the page when the popup is closed. Otherwise, inserts the selected popup list item and closes the popup list. |
 
 {% highlight razor %}
 
