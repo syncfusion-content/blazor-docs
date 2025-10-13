@@ -154,7 +154,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The constraints property allows enabling or disabling certain behaviors of ports. For more information about port constraints, refer to [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) for enabling or disabling port-related constraints.
 
-The PortConstraints may have multiple behaviors like listed below:
+The `PortConstraints` may have multiple behaviors like listed below:
 
 | Constraints | Usage |
 |---|---|
