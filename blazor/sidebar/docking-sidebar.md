@@ -11,7 +11,7 @@ documentation: ug
 
 # Dock in Blazor Sidebar Component
 
-Dock state of the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text.
+The dock state of the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) reserves space on the page, remaining visible even when the Sidebar is collapsed. It is used to display a concise version of content, such as icons, instead of lengthy text.
 
 In the following sample, the list item has icon with text representation. On dock state only the icon listed out to interact. It can be achieved by using [`EnableDock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableDock) property
 
@@ -170,5 +170,5 @@ In the following sample, the list item has icon with text representation. On doc
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZroCDtlpsCxDdVf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.gif)
