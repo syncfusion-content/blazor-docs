@@ -19,6 +19,7 @@ Globalization enables a component to display numbers, dates, and times according
 In the following example, tooltips and data labels are formatted as currency based on the current application culture (for example, German).
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="GDP" DataSource="GrowthReports" Format="C">

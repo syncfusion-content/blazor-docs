@@ -203,7 +203,7 @@ The following example shows how to bind an `IEnumerable` object to the TreeMap c
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class GDPReport
     {
         public string CountryName { get; set; }
@@ -606,6 +606,7 @@ For instance, bind data directly from the **OrderDataAccessLayer** class and ass
 On the other hand, to configure the TreeMap by using a Web API, provide the endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with an [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from Entity Framework.
 
 ```cshtml
+
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
 

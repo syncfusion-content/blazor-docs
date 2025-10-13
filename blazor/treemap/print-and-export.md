@@ -87,7 +87,7 @@ N> See the [Print](#print) section for the **GrowthReport** sample data.
 
 ### PDF Export
 
-Enable PDF export by setting the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. Export the rendered TreeMap as a [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) using the `ExportAsync` method. The method requires the file type and file name; the orientation setting is optional.
+Enable PDF export by setting the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. Export the rendered TreeMap as a [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) using the `ExportAsync` method. The export method requires two parameters: file **type** and file **name**. The orientation setting is **optional**.
 
 ```cshtml
 

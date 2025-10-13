@@ -453,7 +453,7 @@ Remove duplicate legend items by setting the [RemoveDuplicateLegend](https://hel
 
 ## Positioning based on size
 
-Use a responsive legend that switches between the right and bottom positions based on available height and width. To enable this behavior, set [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html#Syncfusion_Blazor_TreeMap_LegendPosition_Auto) in [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html). The position adjusts automatically based on the available space.
+Use a responsive legend that switches between the right and bottom positions based on available height and width. To enable this behavior, set [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) property to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html#Syncfusion_Blazor_TreeMap_LegendPosition_Auto) in [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html). The position adjusts automatically based on the available space.
 
 ```cshtml
 
@@ -490,7 +490,7 @@ Use a responsive legend that switches between the right and bottom positions bas
 
 ## Legend with RTL support
 
-Set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableRtl) to **true** to render the legend icon on the right and the legend text on the left.
+Set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableRtl) property to **true** to render the legend icon on the right and the legend text on the left.
 
 ```cshtml
 

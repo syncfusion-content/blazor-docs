@@ -96,7 +96,7 @@ N> Refer to the **Employees** data source defined in the [Perform drill-down](#p
 
 ## Breadcrumb support
 
-Breadcrumb navigation indicates the path from the root to the current level and supports drilling back to any parent level. Enable it by setting [EnableBreadcrumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) to **true**. Customize the separator using [BreadcrumbConnector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector). The default connector is a hyphen (-).
+Breadcrumb navigation indicates the path from the root to the current level and supports drilling back to any parent level. Enable it by setting [EnableBreadcrumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true**. Customize the separator using [BreadcrumbConnector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. The default connector is a hyphen (-).
 
 ```cshtml
 
@@ -127,7 +127,7 @@ N> Refer to the **Employees** data source defined in the [Perform drill-down](#p
 
 ## Initial drill-down
 
-Initial drill-down navigates to a specified item and level during the first render. Configure the item index using [GroupIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupIndex) and the level name using [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupName) in [TreeMapInitialDrillSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html).
+Initial drill-down navigates to a specified item and level during the first render. Configure the item index using [GroupIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupIndex) property and the level name using [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupName) property in [TreeMapInitialDrillSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html).
 
 ```cshtml
 

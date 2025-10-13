@@ -91,7 +91,7 @@ Equal color mapping fills items with colors by matching equal values from the da
 
 ## Desaturation color mapping
 
-Desaturation color mapping applies colors to items based on [MinOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MinOpacity) and [MaxOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MaxOpacity) settings in [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html).
+Desaturation color mapping applies colors to items based on [MinOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MinOpacity) and [MaxOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MaxOpacity) properties in [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html).
 
 ```cshtml
 
@@ -156,7 +156,7 @@ N> See the [equal color mapping](#equal-color-mapping) section for the **Cars** 
 
 ## Color for items excluded from color mapping
 
-Retrieve excluded ranges from the data source and apply a specific color to those items without specifying [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_EndRange).
+Retrieve excluded ranges from the data source and apply a specific color to those items without specifying [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_EndRange) properties.
 
 ```cshtml
 
@@ -179,7 +179,6 @@ N> See the [range color mapping](#range-color-mapping) section for the **Fruits*
 ![Blazor TreeMap with Color Mapping for Excluded Items](images/Colormapping/blazor-treemap-color-for-exclude-item.png)
 
 ## Bind the colors to items from the data source
-
 
 ```cshtml
 
