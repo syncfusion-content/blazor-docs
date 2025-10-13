@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Grouping customization in Syncfusion Blazor DataGrid
+# Grouping in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
 You can customize the appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 

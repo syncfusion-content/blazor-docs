@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Define Grid events programmatically in Blazor DataGrid
+# Define the GridEvents programmatically in Blazor DataGrid
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, events are typically defined using the GridEvents child Razor component. As an alternative, Grid events can also be configured programmatically by accessing the Grid instance through a component reference. This method is useful when events need to be assigned dynamically during the application lifecycle.
 

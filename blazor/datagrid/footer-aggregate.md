@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Footer aggregates in Blazor DataGrid
+# Footer aggregate in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the Grid. You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render the aggregate value in the footer cells.
 

@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Sorting customization in Syncfusion Blazor DataGrid
+# Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
 You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
 
