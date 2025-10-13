@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor TreeMap Component | Syncfusion
-description: Check out and learn how to configure and customize Legends in Syncfusion Blazor TreeMap component.
+description: Check out and learn how to configure and customize Legends in the Syncfusion Blazor TreeMap component for effective data visualization.
 platform: Blazor
 control: TreeMap
 documentation: ug

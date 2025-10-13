@@ -14,9 +14,9 @@ The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap
 * Data label
 * Tooltip
 
-Globalization enables a component to display numbers, dates, and times according to a specific culture or locale. The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property globalizes number, date, and time values in the TreeMap component.
+Globalization enables a component to display numbers, dates, and times according to a specific culture or locale. The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property globalize number, date, and time values in the TreeMap component.
 
-In the following example, tooltips and data labels are formatted as currency based on the current application culture (for example, de-DE).
+In the following example, tooltips and data labels are formatted as currency based on the current application culture (for example, German).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
