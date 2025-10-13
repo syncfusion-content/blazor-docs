@@ -9,30 +9,20 @@ documentation: ug
 
 # Azure OpenAI With Blazor AI AssistView component
 
-The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your applications.
+The Syncfusion AI AssistView integrates with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), to enable advanced conversational AI features in applications.
 
 ## Prerequisites
+* The Syncfusion AI AssistView component is setup in the application:
 
--  An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
-- Syncfusion AI AssistView for Blazor [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project
+    * [Blazor Getting Started Guide](../getting-started)
 
-## Getting Started with the AI AssistView Component
+* An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
 
-Before integrating Azure OpenAI, ensure the Syncfusion AI AssistView component renders correctly in the application:
-
-[Blazor Getting Started Guide](../getting-started)
+* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
 
 ## Install Dependencies
 
-Install the Syncfusion Blazor package in the application.
-
-```bash
-
-Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
-
-```
-
-Install the `Open AI` and `Markdig` nuget packages in the application.
+* Install the `Open AI` and `Markdig` nuget packages in the application.
 
 ```bash
 
@@ -49,9 +39,13 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 
 1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource.
 
-2. Under Resource Management, select keys and endpoint to retrieve your API key and endpoint URL. 
+2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL. 
 
-3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version matches your resource configuration.
+3. Note the following values:
+   - API key
+   - Endpoint (for example, https://<resource-name>.openai.azure.com/)
+   - API version (must be supported by your resource)
+   - Deployment name (for example, gpt-4o-mini)
 
 4. Store these values securely, as they will be used in your application.
 
@@ -73,6 +67,7 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 @using Syncfusion.Blazor.Navigations
 @inject AzureOpenAIService OpenAIService
 
+// Initialize AI AssistView component
 <div class="aiassist-container" style="height: 450px; width: 650px;">
     <SfAIAssistView @ref="assistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest">
         <AssistViews>
@@ -101,7 +96,8 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
         "What are the best tools for organizing my tasks?",
         "How can I maintain work-life balance effectively?"
     };
-
+    
+    // Handle user prompt: call Azure OpenAI Chat Completions
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         // Reset the response for this prompt
@@ -233,6 +229,7 @@ namespace AIAssistView_AzureAI.Components.Services
 {% endhighlight %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" %}
 
+// Initialize Azure OpenAI
 var endpoint = "https://azure-testresource.openai.azure.com";
 var apiKey = "<Your API Key>"; // Replace with your API key;
 var deploymentName = "gpt-4o-mini";

@@ -9,31 +9,21 @@ documentation: ug
 
 # Gemini AI With Blazor AI AssistView component
 
-The Syncfusion AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in applications.
+The Syncfusion AI AssistView integrates with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), to enable advanced conversational AI features in applications.
 
 ## Prerequisites
 
+* The Syncfusion AI AssistView component is setup in the application:
+
+    * [Blazor Getting Started Guide](../getting-started)
+
 * Google account to generate an API key for accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
-* Syncfusion AI AssistView for Blazor package [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project.
+
 * [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
-
-## Getting Started with the AI AssistView Component
-
-Before integrating Gemini AI, ensure that the Syncfusion AI AssistView renders correctly in the application and that prerequisites are met:
-
-[Blazor Getting Started Guide](../getting-started)
 
 ## Install Dependencies
 
-Install the Syncfusion Blazor package in the application.
-
-```bash
-
-Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
-
-```
-
-Install the Gemini AI package in the application.
+* Install the Gemini AI package in the application.
 
 ```bash
 
@@ -43,13 +33,13 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/api-keys) and sign in with a google account. Create a new account if needed.
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your google account. Create one if you do not have it.
 
 2. Select `Get API key` from the left menu or the top-right of the dashboard.
 
-3. Choose `Create API key`. Select an existing google cloud project or create a new one, then proceed.
+3. Choose an existing Google Cloud project or create a new one, then click `Create API key`. 
 
-4. After creating or selecting a project, an API key is generated and displayed. Copy the key and store it securely, as it may be shown only once.
+4. Copy the generated API key and store it securely. It may be shown only once.
 
 > Security note: Do not commit API keys to version control. Use environment variables, a secret manager, or a server-side proxy in production.
 
@@ -72,6 +62,7 @@ const string GeminiApiKey = 'Place your API key here';
 @using Markdig
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
+// Initializes the AI Assist component
     <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">
         <AssistViews>
             <AssistView>
@@ -98,13 +89,15 @@ const string GeminiApiKey = 'Place your API key here';
         "What are the best tools for organizing my tasks?",
         "How can I maintain work-life balance effectively?"
     };
+    // Initialize Gemini API
     private readonly string geminiApiKey = "";
+    // Handle user prompt: call Gemini model
     private async Task OnPromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         try
         {
-            var gemini = new GoogleAI(apiKey: geminiApiKey);
-            var model = gemini.GenerativeModel(model: "gemini-1.5-flash");
+            var gemini = new GoogleAI(apiKey: geminiApiKey); // Replace with your Gemini API key
+            var model = gemini.GenerativeModel(model: "gemini-2.5-flash"); // Select the Gemini model (update model name as needed)
             var response = await model.GenerateContent(args.Prompt);
             var responseText = response.Text;
             var pipeline = new MarkdownPipelineBuilder()
