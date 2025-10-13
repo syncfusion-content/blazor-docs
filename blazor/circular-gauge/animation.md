@@ -24,44 +24,44 @@ The animation of the Circular Gauge is demonstrated in the following example.
 @using Syncfusion.Blazor.CircularGauge;
 
 <SfCircularGauge AnimationDuration="2000">
-        <CircularGaugeAxes>
-            <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
-                <CircularGaugeAxisLabelStyle Offset="-1">
-                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
-                </CircularGaugeAxisLabelStyle>
-                <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
-                <CircularGaugeAxisMajorTicks Offset="5" />
-                <CircularGaugeAxisMinorTicks Offset="5" />
-                <CircularGaugePointers>
-                    <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
-                        <CircularGaugePointerAnimation Duration="500" />
-                        <CircularGaugeCap Radius="8" Color="#c06c84">
-                            <CircularGaugeCapBorder Width="0" />
-                        </CircularGaugeCap>
-                        <CircularGaugeNeedleTail Length="0%" />
-                    </CircularGaugePointer>
-                </CircularGaugePointers>
-            <CircularGaugeRanges>
-                <CircularGaugeRange Color="#E63B86" Start="0" End="30" StartWidth="22" EndWidth="22" Radius="60%">
-                    <LinearGradient StartValue="0%" EndValue="100%">
-                        <ColorStops>
-                            <ColorStop Opacity="1" Offset="0%" Color="#9e40dc" />
-                            <ColorStop Opacity="1" Offset="70%" Color="#d93c95" />
-                        </ColorStops>
-                    </LinearGradient>
-                </CircularGaugeRange>
-                <CircularGaugeRange Color="#E0E0E0" Start="30" End="60" StartWidth="22" EndWidth="22" Radius="60%" />
-            </CircularGaugeRanges>
-            <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
-                    <ContentTemplate>
-                        <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">60</div>
-                    </ContentTemplate>
-                </CircularGaugeAnnotation>
-            </CircularGaugeAnnotations>
-            </CircularGaugeAxis>
-        </CircularGaugeAxes>
-    </SfCircularGauge>
+    <CircularGaugeAxes>
+        <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
+            <CircularGaugeAxisLabelStyle Offset="-1">
+                <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+            </CircularGaugeAxisLabelStyle>
+            <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
+            <CircularGaugeAxisMajorTicks Offset="5" />
+            <CircularGaugeAxisMinorTicks Offset="5" />
+            <CircularGaugePointers>
+                <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
+                    <CircularGaugePointerAnimation Duration="500" />
+                    <CircularGaugeCap Radius="8" Color="#c06c84">
+                        <CircularGaugeCapBorder Width="0" />
+                    </CircularGaugeCap>
+                    <CircularGaugeNeedleTail Length="0%" />
+                </CircularGaugePointer>
+            </CircularGaugePointers>
+        <CircularGaugeRanges>
+            <CircularGaugeRange Color="#E63B86" Start="0" End="30" StartWidth="22" EndWidth="22" Radius="60%">
+                <LinearGradient StartValue="0%" EndValue="100%">
+                    <ColorStops>
+                        <ColorStop Opacity="1" Offset="0%" Color="#9e40dc" />
+                        <ColorStop Opacity="1" Offset="70%" Color="#d93c95" />
+                    </ColorStops>
+                </LinearGradient>
+            </CircularGaugeRange>
+            <CircularGaugeRange Color="#E0E0E0" Start="30" End="60" StartWidth="22" EndWidth="22" Radius="60%" />
+        </CircularGaugeRanges>
+        <CircularGaugeAnnotations>
+            <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
+                <ContentTemplate>
+                    <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">60</div>
+                </ContentTemplate>
+            </CircularGaugeAnnotation>
+        </CircularGaugeAnnotations>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
+</SfCircularGauge>
     
 ```
 

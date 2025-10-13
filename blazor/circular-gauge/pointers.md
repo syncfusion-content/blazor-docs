@@ -72,7 +72,7 @@ The needle, tail, and cap of the pointer can be customized using the following p
     * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Color) – Sets pointer's cap color.
     * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Radius) – Sets pointer's cap radius.
     * [CircularGaugeCapBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Border) – sets pointer's cap border.
-    * [Position`] – Specifies the position of the Pointer. Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
+    * [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Position) – Specifies the position of the Pointer. Its possible values are `PointerRangePosition.Inside`, `PointerRangePosition.Outside` and `PointerRangePosition.Cross`.
 
 ```cshtml
 
@@ -109,7 +109,7 @@ The needle, tail, and cap of the pointer can be customized using the following p
 
 <!-- markdownlint-disable MD010 -->
 
-The appearance of the needle pointer can be modified using [NeedleStartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleStartWidth) and [NeedleEndWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleEndWidth).
+The appearance of the needle pointer can be modified using [NeedleStartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleStartWidth) and [NeedleEndWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleEndWidth) properties.
 
 ```cshtml
 
@@ -323,7 +323,7 @@ Customize the marker pointer using the following properties.
 
 ### Image marker pointer
 
-An image can be used instead of a marker shape to denote the pointer value. This is achieved by setting [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) to 'GaugeShape.Image' and providing the image path using [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl).
+An image can be used instead of a marker shape to denote the pointer value. This is achieved by setting [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) property to `GaugeShape.Image` and providing the image path using [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl).
 
 ```cshtml
 

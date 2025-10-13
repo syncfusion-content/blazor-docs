@@ -21,7 +21,7 @@ Set the size of the Circular Gauge in pixels as shown below.
 
 @using Syncfusion.Blazor.CircularGauge
 
-<SfCircularGauge Width= "200px" Height= "200px">
+<SfCircularGauge Width="200px" Height="200px">
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>

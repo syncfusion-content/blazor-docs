@@ -131,7 +131,7 @@ Use the [SetRangeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 
- ```
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNreiNZuKSczWeEz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## RefreshAsync

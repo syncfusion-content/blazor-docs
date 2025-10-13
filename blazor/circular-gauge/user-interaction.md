@@ -191,7 +191,7 @@ Pointers can be dragged across axis values by clicking and dragging the pointer.
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true">
-    <CircularGaugeAxes >
+    <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
                 <CircularGaugePointer Value="50">

@@ -115,7 +115,7 @@ Description: Triggers when the mouse button is pressed on the gauge.
 Description: Triggers when the mouse pointer leaves the gauge.
 
 |   Argument name      |   Description                                     |
-|----------------------| --------------------------------------------------|
+|----------------------|---------------------------------------------------|
 |   Target             |   Specifies the current mouse event target id     |
 |   X                  |   Specifies the current mouse x location          |
 |   Y                  |   Specifies the current mouse y location          |
@@ -126,7 +126,7 @@ Description: Triggers when the mouse pointer leaves the gauge.
 Description: Triggers when the mouse moves over the gauge.
 
 |   Argument name      |   Description                                     |
-|----------------------| --------------------------------------------------|
+|----------------------|---------------------------------------------------|
 |   Target             |   Specifies the current mouse event target id     |
 |   X                  |   Specifies the current mouse x location          |
 |   Y                  |   Specifies the current mouse y location          |
@@ -138,7 +138,7 @@ Description: Triggers when the mouse moves over the gauge.
 Description: Triggers when the mouse button is released on the gauge.
 
 |   Argument name      |   Description                                     |
-|----------------------| --------------------------------------------------|
+|----------------------|---------------------------------------------------|
 |   Target             |   Specifies the current mouse event target id     |
 |   X                  |   Specifies the current mouse x location          |
 |   Y                  |   Specifies the current mouse y location          |
@@ -153,7 +153,7 @@ Description: Triggers before the gauge is rendered. This is the first event trig
 Description: Triggers before the radius is calculated for the gauge. The following arguments can customize the radius.
 
 |   Argument name      |   Description                                      |
-|----------------------| ---------------------------------------------------|
+|----------------------|----------------------------------------------------|
 |   CurrentRadius      |   Specifies the current radius value               |
 |   MidPoint           |   Specifies the midpoint of the gauge location     |
 |   Name               |   Specifies the name of the event                  |
@@ -163,8 +163,8 @@ Description: Triggers before the radius is calculated for the gauge. The followi
 
 Description: Triggers when the gauge is resized.
 
-|   Argument name      |   Description                              |
-|----------------------| -------------------------------------------|
+|   Argument name      |   Description                               |
+|----------------------|---------------------------------------------|
 |   CurrentSize        |   Specifies the current size of the gauge   |
 |   PreviousSize       |   Specifies the previous size of the gauge  |
 |   Name               |   Specifies the name of the event           |

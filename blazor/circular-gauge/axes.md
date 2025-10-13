@@ -167,7 +167,7 @@ Position minor and major ticks using the [Offset](https://help.syncfusion.com/cr
 
 - The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Offset) defines the distance between the axis and ticks. The default value is 0.
 
-- The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.Position.html) specifies tick placement relative to the axis. The default value is **Inside**. Available values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
+- The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.Position.html) specifies tick placement relative to the axis. The default value is **Inside**. Available values are `Position.Inside`, `Position.Outside`, and `Position.Cross`.
 
 ```cshtml
 
@@ -231,7 +231,7 @@ Move labels using the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 - The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Offset) defines the distance between labels and ticks. The default value is 0.
 
-- The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Position) specifies label placement. The default value is **Inside**. Available values are 'Position.Inside', 'Position.Outside' and 'Position.Cross'.
+- The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Position) specifies label placement. The default value is **Inside**. Available values are `Position.Inside`, `Position.Outside` and `Position.Cross`.
 
 ```cshtml
 
@@ -426,7 +426,7 @@ Axis labels support custom formats using a placeholder such as {value}°C, where
 
 ### Show last label
 
-If the maximum value does not align with a major tick interval, the last label is hidden by default. To display the last label, set [ShowLastLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_ShowLastLabel) to true.
+If the maximum value does not align with a major tick interval, the last label is hidden by default. To display the last label, set [ShowLastLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_ShowLastLabel) property to **true**.
 
 ```cshtml
 
@@ -502,7 +502,7 @@ Change the axis direction using the [Direction](https://help.syncfusion.com/cr/b
 
 ## Multiple axes
 
-In addition to the default axis, multiple axes can be added to a gauge. Each axis has its own ranges, pointers, annotations, and customization options.
+In addition to the default axis, multiple axes can be added to a gauge. Each axis has its own ranges, pointers, annotations and customization options.
 
 ```cshtml
 

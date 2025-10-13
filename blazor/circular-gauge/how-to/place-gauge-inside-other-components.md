@@ -186,111 +186,111 @@ When the Circular Gauge renders within the Tab component, it starts concurrently
 @using Syncfusion.Blazor.CircularGauge
 @using Syncfusion.Blazor.Inputs
 
-     <SfTab CssClass="default-tab">
-        <TabEvents Created="Created"></TabEvents>
-        <TabItems>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Circular Gauge"></TabHeader>
-                </ChildContent>
+<SfTab CssClass="default-tab">
+    <TabEvents Created="Created"></TabEvents>
+    <TabItems>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Circular Gauge"></TabHeader>
+            </ChildContent>
+            <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent">
+                    <CircularGaugeAxes>
+                        <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
+                            <CircularGaugeAxisLabelStyle Offset="-1">
+                                <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                            </CircularGaugeAxisLabelStyle>
+                            <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
+                            <CircularGaugeAxisMajorTicks Offset="5" />
+                            <CircularGaugeAxisMinorTicks Offset="5" />
+                            <CircularGaugePointers>
+                                <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
+                                    <CircularGaugePointerAnimation Duration="500" />
+                                    <CircularGaugeCap Radius="8" Color="#c06c84">
+                                        <CircularGaugeCapBorder Width="0" />
+                                    </CircularGaugeCap>
+                                    <CircularGaugeNeedleTail Length="0%" />
+                                </CircularGaugePointer>
+                            </CircularGaugePointers>
+                        </CircularGaugeAxis>
+                    </CircularGaugeAxes>
+                </SfCircularGauge>
+                }   
+                </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Semi Circular Gauge"></TabHeader>
+            </ChildContent>
                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                    <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent">
+                @if (IsInitialRender)
+                {
+                <SfCircularGauge ID="GaugeOne" MoveToCenter="true">
+                    <CircularGaugeAxes>
+                        <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                            <CircularGaugeAxisLabelStyle Offset="-1">
+                            <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                            </CircularGaugeAxisLabelStyle>
+                            <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                            <CircularGaugeAxisMajorTicks Offset="15" />
+                            <CircularGaugeAxisMinorTicks Offset="15" />
+                            <CircularGaugeRanges>
+                                <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                </CircularGaugeRange>
+                                <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                </CircularGaugeRange>
+                                <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
+                                </CircularGaugeRange>
+                            </CircularGaugeRanges>
+                        </CircularGaugeAxis>
+                    </CircularGaugeAxes>
+                </SfCircularGauge>
+                }   
+                </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Arc Gauge"></TabHeader>
+            </ChildContent>
+                <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                    <SfCircularGauge Background="transparent" ID="GaugeTwo">
+                        <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
                         <CircularGaugeAxes>
-                            <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
-                                <CircularGaugeAxisLabelStyle Offset="-1">
-                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                            <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
+                                <CircularGaugeAxisLineStyle Width="0" />
+                                <CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
                                 </CircularGaugeAxisLabelStyle>
-                                <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
-                                <CircularGaugeAxisMajorTicks Offset="5" />
-                                <CircularGaugeAxisMinorTicks Offset="5" />
+                                <CircularGaugeAxisMajorTicks Height="0" />
+                                <CircularGaugeAxisMinorTicks Height="0" />
+                                <CircularGaugeRanges>
+                                    <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                </CircularGaugeRanges>
                                 <CircularGaugePointers>
-                                    <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
-                                        <CircularGaugePointerAnimation Duration="500" />
-                                        <CircularGaugeCap Radius="8" Color="#c06c84">
-                                            <CircularGaugeCapBorder Width="0" />
-                                        </CircularGaugeCap>
-                                        <CircularGaugeNeedleTail Length="0%" />
+                                    <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
+                                        <CircularGaugePointerAnimation Enable="false" />
+                                        <CircularGaugePointerBorder Width="0" />
                                     </CircularGaugePointer>
                                 </CircularGaugePointers>
+                                <CircularGaugeAnnotations>
+                                    <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
+                                        <ContentTemplate>
+                                            <div class="annotationText">60/100</div>
+                                        </ContentTemplate>
+                                    </CircularGaugeAnnotation>
+                                </CircularGaugeAnnotations>
                             </CircularGaugeAxis>
                         </CircularGaugeAxes>
-                    </SfCircularGauge>
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Semi Circular Gauge"></TabHeader>
-                </ChildContent>
-                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                    <SfCircularGauge ID="GaugeOne" MoveToCenter="true">
-                        <CircularGaugeAxes>
-                            <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
-                                <CircularGaugeAxisLabelStyle Offset="-1">
-                                <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
-                                </CircularGaugeAxisLabelStyle>
-                                <CircularGaugeAxisLineStyle Width="0" Color="white" />
-                                <CircularGaugeAxisMajorTicks Offset="15" />
-                                <CircularGaugeAxisMinorTicks Offset="15" />
-                                <CircularGaugeRanges>
-                                    <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
-                                    </CircularGaugeRange>
-                                    <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
-                                    </CircularGaugeRange>
-                                    <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
-                                    </CircularGaugeRange>
-                                </CircularGaugeRanges>
-                            </CircularGaugeAxis>
-                        </CircularGaugeAxes>
-                    </SfCircularGauge>
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Arc Gauge"></TabHeader>
-                </ChildContent>
-                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                     <SfCircularGauge Background="transparent" ID="GaugeTwo">
-                            <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
-                            <CircularGaugeAxes>
-                                <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
-                                    <CircularGaugeAxisLineStyle Width="0" />
-                                    <CircularGaugeAxisLabelStyle>
-                                        <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
-                                    </CircularGaugeAxisLabelStyle>
-                                    <CircularGaugeAxisMajorTicks Height="0" />
-                                    <CircularGaugeAxisMinorTicks Height="0" />
-                                    <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
-                                    </CircularGaugeRanges>
-                                    <CircularGaugePointers>
-                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
-                                            <CircularGaugePointerAnimation Enable="false" />
-                                            <CircularGaugePointerBorder Width="0" />
-                                        </CircularGaugePointer>
-                                    </CircularGaugePointers>
-                                    <CircularGaugeAnnotations>
-                                        <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
-                                            <ContentTemplate>
-                                                <div class="annotationText">60/100</div>
-                                            </ContentTemplate>
-                                        </CircularGaugeAnnotation>
-                                    </CircularGaugeAnnotations>
-                                </CircularGaugeAxis>
-                            </CircularGaugeAxes>
-                    </SfCircularGauge>
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-        </TabItems>
-    </SfTab>
+                </SfCircularGauge>
+                }   
+                </ContentTemplate>
+        </TabItem>
+    </TabItems>
+</SfTab>
 
 <style>
     .annotationText {
