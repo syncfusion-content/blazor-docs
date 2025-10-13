@@ -253,7 +253,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge INtegration
 
-The Blazor TreeView component integrates with the Syncfusion Badge component, enabling customization of the node structure. This is achieved using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which facilitates the creation of a tree node with any custom structure, such as a webmail folder displaying a name and unread message count using the Badge component.
+The Blazor TreeView component integrates with the Syncfusion Badge component, enabling customization of the node structure. This is achieved using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which facilitates the creation of a tree node with any custom structure, such as a web mail folder displaying a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
