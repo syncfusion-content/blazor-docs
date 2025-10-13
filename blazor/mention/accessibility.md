@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Mention Component
 
-Web accessibility makes web content and web applications more accessible for people with disabilities. Blazor Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
+Web accessibility ensures that web content and applications are usable by people with disabilities. The Blazor Mention component includes built-in support for WAI-ARIA specifications to improve accessibility for assistive technologies. Key attributes such as `aria-selected` and `aria-activedescendant` are applied to communicate state and focus.
 
-The [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Mention component is outlined below.
 
@@ -20,11 +20,11 @@ The accessibility compliance for the Blazor Mention component is outlined below.
 | [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-to-left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -56,16 +56,15 @@ Here are some of the `ARIA attributes` that might be used to denote the state of
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the Blazor Mention without interruptions. It allows users to quickly perform actions or navigate through an application using keyboard input.
+Use the following key shortcuts to access the Blazor Mention component without interruptions. These shortcuts allow users to navigate and select items using only the keyboard.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Focus the first item in the Mention list. Otherwise, focus the item next to the currently focused item. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Focus the item previous to the currently focused one. |
-| <kbd>Esc(Escape)</kbd> | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup list closes. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next tab index element on the page when the popup is closed. Otherwise, inserts the selected popup list item and closes the popup list. |
-
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the first item in the Mention list; otherwise, focuses the next item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous item in the Mention list. |
+| <kbd>Esc (Escape)</kbd> | <kbd>Esc (Escape)</kbd> | Closes the popup list if it is open. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and closes the popup list if it is open. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next tabbable element when the popup is closed; otherwise, inserts the selected item and closes the popup list. |
 
 {% highlight razor %}
 
@@ -75,9 +74,9 @@ You can use the following key shortcuts to access the Blazor Mention without int
 
 ## Ensuring accessibility
 
-The Blazor Mention component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Mention component’s accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) testing tool during automated testing.
 
-The accessibility compliance of the Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/mention) in a new window to evaluate the accessibility of the Mention component with accessibility tools.
+The accessibility compliance of the Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/mention) in a new window to evaluate the Mention component with accessibility tools.
 
 ## See also
 

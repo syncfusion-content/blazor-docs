@@ -9,9 +9,9 @@ documentation: ug
 
 # Disabled Items in Blazor Mention Component
 
-The [Mention](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `MentionFieldSettings.Disabled` property.
+The [Mention](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html) component supports disabling individual suggestion items for specific scenarios. Map the disabled state from your data model using the [MentionFieldSettings.Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Disabled) field. Disabled items are not selectable and are skipped during keyboard navigation.
 
-In the following sample, State are grouped according on its category using `Disabled` field.
+In the following sample, certain states are disabled by setting the `Disabled` field in the data source.
 
 {% highlight cshtml %}
 

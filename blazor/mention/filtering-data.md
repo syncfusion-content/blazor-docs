@@ -9,15 +9,15 @@ documentation: ug
 
 # Filtering data in Blazor Mention Component
 
-The Mention component has built-in support for filtering data items, which allows you to easily narrow down the list of mention suggestions based on user input. The filter operation begins as soon as the user starts typing characters in the Mention element, and it is designed to quickly and efficiently search through the available data items to find matches based on the entered characters.
+The Mention component includes built-in filtering to narrow the suggestion list based on user input. Filtering begins when the user types after the mention character and matches items from the data source against the entered text.
 
 ## Limit the minimum filter character
 
-The [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) property that allows you to control the minimum length of user input required to initiate the search action. By default, the `MinLength` property is set to `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
+The [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) property allows controlling the minimum number of characters required to start searching. By default, `MinLength` is `0`, which opens the suggestion list as soon as the mention character is entered.
 
-For example, if you set `MinLength` to `3`, the suggestion list will only open when the user has entered at least three characters.
+For example, when `MinLength` is set to `3`, suggestions appear only after at least three characters are typed.
 
-In the following example, the remote request does not fetch the search data until the search key contains three characters.
+In the following example, the remote request does not fetch data until the search key contains three characters.
 
 {% highlight razor %}
 
@@ -27,11 +27,11 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property allows you to specify the type of filter to use when filtering data items. By default, the `FilterType` property is set to `Contains`, which means that the Mention component will search for items that contain the entered search string as a substring. The `FilterType` property supports below three different filter types.
+The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property specifies the type of string comparison for filtering. By default, `FilterType` is `Contains`, which finds items containing the search text. The component supports the following filter types (see the [FilterType enum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html)):
 
-* `StartsWith` - This filter type searches for items that start with the entered characters.
-* `Contains` - This filter type searches for items that contain the entered characters as a substring.
-* `EndsWith` - This filter type searches for items that end with the entered characters.
+* `StartsWith` - Finds items that start with the entered characters.
+* `Contains` - Finds items that contain the entered characters as a substring.
+* `EndsWith` - Finds items that end with the entered characters.
 
 {% highlight razor %}
 
@@ -41,9 +41,9 @@ The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDow
 
 ## Allow spacing between search
 
-The [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_AllowSpaces) property is used to control whether spaces are allowed in the middle of the mention or not. If `AllowSpaces` is set to `true`, the Mention component will allow spaces in the middle of the mention and the data source will be filtered accordingly. If `AllowSpaces` is set to `false`, the Mention component will not allow spaces in the middle of the mention and the data source will not be filtered on space key press.
-
-> By default, the `AllowSpaces` property is disabled, and the space ends the Mention component search.
+The [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_AllowSpaces) property controls whether spaces are allowed within the search term after the mention character.
+- When `true`, typing a space continues filtering (for example, “John Sm” matches “John Smith”).
+- When `false` (default), pressing space ends the mention search and the list is not filtered on space key press.
 
 {% highlight razor %}
 
@@ -51,11 +51,11 @@ The [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 {% endhighlight %}
 
-![Blazor Mention with allow space between search](./images/blazor-mention-allow-space.png)
+![Blazor Mention allowing spaces in the search query](./images/blazor-mention-allow-space.png)
 
 ## Customize the suggestion item count
 
-The [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) property allows you to specify the number of list items that should be displayed in the suggestion list. By default, the `SuggestionCount` property is set to `25`, which means that the Mention component will display up to `25` list items in the suggestion list. The `SuggestionCount` property can be set to any integer value.
+The [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) property sets the maximum number of items displayed in the suggestion list. By default, `SuggestionCount` is `25`. Set it to any integer value to increase or reduce the number of visible suggestions.
 
 {% highlight razor %}
 
@@ -63,7 +63,7 @@ The [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor Mention with suggestion item count](./images/blazor-mention-suggestion-list.png)
+![Blazor Mention showing a limited number of suggestions](./images/blazor-mention-suggestion-list.png)
 
 ## See also
 
