@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Annotation in Blazor DataGrid | Syncfusion
-description: Learn how to achieve data validation with data annotations in the Syncfusion Blazor DataGrid component.
+description: Learn how to use Data Annotations for validation and column metadata in Syncfusion Blazor DataGrid, including enum display and CRUD form validation.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,35 +9,35 @@ documentation: ug
 
 # Data Annotation in Blazor DataGrid
 
-Data Annotations are used to define validation rules for model classes or properties, ensuring that data entered into an application conforms to the expected format and meets specific criteria. They also enable the display of appropriate error messages to end users.
+Data annotations apply validation and display rules to model classes or properties in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, ensuring input values meet defined formats and constraints while providing clear error messages. 
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, Data Annotations are leveraged to automatically map these validation rules to the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) properties. This integration provides seamless data validation during editing operations within the Grid.
+When bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) behaviors, enabling built-in validation during editing operations.
 
-To enable Data Annotations for validation in a Grid, you need to refer the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the Grid automatically uses the data annotations applied to your model class properties to perform data validation.
+To enable data annotation-based validation, include the `System.ComponentModel.DataAnnotations` namespace in the Blazor application. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) to apply attributes during `CRUD` operations.
 
-The following table lists the data annotation attributes supported in the Grid:
+The table lists the data annotation attributes supported in the DataGrid:
 
 | Attribute Name | Properties | Functionality |
 |---------------|------------|--------------|
-| Display | Name | Sets the header text for the Grid column |
-| Display | ShortName | Sets a shorter version of the header text for the Grid column |
-| Display | AutoGenerateField | Prevents the column from being auto-generated in the Grid |
+| Display | Name | Sets the header text for the DataGrid column |
+| Display | ShortName | Sets a shorter version of the header text for the DataGrid column |
+| Display | AutoGenerateField | Prevents the column from being auto-generated in the DataGrid |
 | Display | AutoGenerateFilter | Specifies whether filtering should be disabled for the column |
 | Display | Description | Sets the tooltip text displayed when hovering over the column ellipsis |
-| Display | Order | Defines the display order priority of the Grid column |
+| Display | Order | Defines the display order priority of the DataGrid column |
 | DisplayFormat | FormatString | Sets the format for displaying data in the column |
 | DisplayFormat | ApplyFormatInEditMode | Determines whether the format should be applied during edit mode |
 | DisplayFormat | NullDisplayText | Sets the text to be displayed when the value of the property is null |
 | DisplayFormat | ConvertEmptyStringToNull | Determines whether empty string values should be converted to null in the user interface |
-| DisplayFormat | NeedsHtmlEncode | Sets whether HTML encoding should be disabled for a particular column |
+| DisplayFormat | HtmlEncode | Controls whether HTML encoding is applied when displaying the field |
 | ScaffoldColumnAttribute | Scaffold | Sets whether the column is visible in the user interface |
-| EditableAttribute | ReadOnly | Sets whether the column allows editing |
-| Key | Key | Marks a column as the primary key in the Grid |
-| Validation Attributes:<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br> | | These validation attributes are used as `validation rules` in Grid CRUD operations |
+| ReadOnlyAttribute | IsReadOnly | Sets whether the column allows editing |
+| Key | Key | Marks a column as the primary key in the DataGrid |
+| Validation Attributes:<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br> | | These validation attributes are used as validation rules in DataGrid CRUD operations |
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid property takes precedence over data annotation attributes. For example, when both the DisplayName attribute and `HeaderText` are assigned to a field in the Grid model class for a specific column, the `HeaderText` value will be prioritized and displayed in the Grid header.
+> DataGrid column properties override data annotation attributes in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. For instance, if both the `Display` attribute’s `Name` and the `HeaderText` property are set for a column, the `HeaderText` value takes precedence and is displayed in the column header.
 
-The following sample code demonstrates how to use data annotations in the Grid:
+The sample demonstrates how to use data annotations in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -45,22 +45,21 @@ The following sample code demonstrates how to use data annotations in the Grid:
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using System.Reflection
-@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel.DataAnnotations
 
 <SfGrid TValue="Order" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) TextAlign="TextAlign.Right" Width="115"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="115"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="115"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="115"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Verified) Width="110">
             <EditTemplate>
                 @{
-                    var Order = (context as Order);
-                    <SfDropDownList Placeholder="Type" ID="Type" @bind-Value="@((context as Order).Verified)" DataSource="@DropDownData" TValue="Status" TItem="Data">
-                        <DropDownListEvents TItem="Data" TValue="Status"></DropDownListEvents>
+                    var CurrentOrder = (context as Order);
+                    <SfDropDownList Placeholder="Type" ID="Type" @bind-Value="CurrentOrder.Verified" DataSource="@DropDownData" TValue="Status" TItem="Data">
                         <DropDownListFieldSettings Value="Value" Text="Type"></DropDownListFieldSettings>
                     </SfDropDownList>
                 }
@@ -70,56 +69,60 @@ The following sample code demonstrates how to use data annotations in the Grid:
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-    public List<Data> DropDownData = new List<Data>();
+    private List<Order> Orders { get; set; }
+    private List<Data> DropDownData { get; } = new();
 
     protected override void OnInitialized()
     {
-        Random rnd = new Random();
-        var values = Enum.GetValues(typeof(Status));
-        foreach (Status item in Enum.GetValues(typeof(Status)))
+        var Rnd = new Random();
+        var Values = Enum.GetValues(typeof(Status));
+
+        foreach (Status Item in Values)
         {
-            DropDownData.Add(new Data { Type = GetDisplayName(item), Value = item });
+            DropDownData.Add(new Data { Type = GetDisplayName(Item), Value = Item });
         }
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+
+        Orders = Enumerable.Range(1, 75).Select(x => new Order
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", string.Empty, null })[new Random().Next(5)],
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", string.Empty, null })[Rnd.Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
-                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
-                Verified = (Status)(values.GetValue(rnd.Next(values.Length))),
+                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[Rnd.Next(5)],
+                Verified = (Status)Values.GetValue(Rnd.Next(Values.Length)),
             }).ToList();
     }
 
-    public static string GetDisplayName(Enum enumValue)
+    private static string GetDisplayName(Enum EnumValue)
     {
-        string displayName;
-        displayName = enumValue.GetType()
-            .GetMember(enumValue.ToString())
+        var DisplayName = EnumValue.GetType()
+            .GetMember(EnumValue.ToString())
             .FirstOrDefault()
             .GetCustomAttribute<DisplayAttribute>()?
             .GetName();
-        if (String.IsNullOrEmpty(displayName))
+
+        if (string.IsNullOrEmpty(DisplayName))
         {
-            displayName = enumValue.ToString();
+            DisplayName = EnumValue.ToString();
         }
-        return displayName;
+        return DisplayName;
     }
-    public enum Status
+
+    internal enum Status
     {
         [Display(Name = "Yeah")]
         Yes = 0,
         [Display(Name = "Nope")]
         No = 1
     }
-    public class Data
+
+    internal sealed class Data
     {
         public string Type { get; set; }
         public Status Value { get; set; }
     }
 
-    public class Order
+    internal sealed class Order
     {
         // Sets column as primary key.
         [Key]
@@ -128,21 +131,26 @@ The following sample code demonstrates how to use data annotations in the Grid:
         // Sets header text to the column.
         [Display(ShortName = "ID")]
         public int OrderID { get; set; }
+
         [Display(Name = "CustomerID", Description ="List of Customers")]
         // Sets column as required and error message to be displayed when empty.
         [Required(ErrorMessage = "Field should not be empty")]
         [DisplayFormat(NullDisplayText = "Empty", ConvertEmptyStringToNull = true)]
-        public string? CustomerID { get; set; }
+        public string CustomerID { get; set; }
+
         // Sets data type of column as Date.
         [DataType(DataType.Date)]
         [Display(Name = "Order Date")]
         // Sets column as read only.
         [Editable(false)]
         public DateTime? OrderDate { get; set; }
+
         [Display(Name = "Freight", AutoGenerateFilter = false)]
         public double? Freight { get; set; }
-        [ScaffoldColumn(scaffold:false)]
+
+        [ScaffoldColumn(false)]
         public string ShipCity { get; set; }
+
         public Status Verified { get; set; }
     }
 }
@@ -150,12 +158,12 @@ The following sample code demonstrates how to use data annotations in the Grid:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIijigsHQsZoWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
+The image shows how data annotations are applied to DataGrid columns in a Blazor application:
 
-![Data Annotation in Grid](./images/blazor-datagrid-data-annotation.png)
+![Data annotations in DataGrid](./images/blazor-datagrid-data-annotation.png)
 
-> The **Verified** column displays the `Enum` member using the `Display` attribute name, enhancing user experience by rendering a human-readable label instead of the raw enum value.
+> The `Verified` column displays the enum member using the `Display` attribute name, improving readability by showing a user-friendly label instead of the raw enum value.
 
-> You can refer to our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its features. You can also explore our [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
