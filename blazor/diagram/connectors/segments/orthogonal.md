@@ -120,7 +120,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
 
-N> Ensure the connector Type and each segment Type are both set to **Orthogonal**. There should be no contradiction between connector type and segment type.
+N> Ensure the connector type and each segment type are both set to **Orthogonal**. There should be no contradiction between connector type and segment type.
 
 ### How to Edit Orthogonal Segments
 

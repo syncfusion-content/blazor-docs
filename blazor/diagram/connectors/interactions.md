@@ -508,7 +508,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Define Distance Between Nodes and Connectors
 
-The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property defines the minimum distance between connectors and obstacles when advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles for improved readability.
+The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property defines the minimum distance between connectors and obstacles when [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) routing is enabled. This ensures connectors are routed with clear spacing around obstacles for improved readability.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

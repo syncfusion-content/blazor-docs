@@ -499,7 +499,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * Removing [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
-* Removing both `InConnect` and `OutConnect` [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from `Default`, the node restricts connectors from establishing a connection to it.
+* Removing both `InConnect` and `OutConnect` constraints from `Default`, the node restricts connectors from establishing a connection to it.
 
 ### How to Connect Nodes Using Specific Ports
 
