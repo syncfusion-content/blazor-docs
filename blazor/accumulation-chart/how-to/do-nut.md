@@ -1,48 +1,53 @@
 ---
 layout: post
-title: Text placing center of Blazor Doughnut Chart Component | Syncfusion
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and more.
+title: Text Placing Center of Blazor Doughnut Chart Component | Syncfusion
+description: Learn how to place text at the center of the doughnut chart in Syncfusion Blazor Accumulation Chart component.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Text placing center of the Blazor Doughnut Chart Component
+# Text Placing Center of the Blazor Doughnut Chart Component
 
-The annotation is used to place text, shapes or images in the center of the doughnut chart.
+Annotations are used to place text, shapes, or images in the center of the doughnut chart.
 
-The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows to add annotations to the chart. Specify the content that needs to be displayed in the accumulation chart area by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) property of the annotation.
+The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows adding annotations to the chart. Specify the content to display in the chart area using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) property of the annotation.
 
 **Step 1:**
 
 Render a doughnut chart with the required series using the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```cshtml
+
 <AccumulationChartSeriesCollection>
         <AccumulationChartSeries InnerRadius="60%" Name="@nameof(MyDataModel.XValue)" DataSource="@chartData" 
                                 YName="@nameof(MyDataModel.YValue)" XName="@nameof(MyDataModel.XValue)">
         </AccumulationChartSeries>
 </AccumulationChartSeriesCollection>
+
 ```
 
 **Step 2:**
 
-Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display the text placing the centre of the doughnut.
+Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display text at the center of the doughnut.
 
 ```cshtml
+
 <AccumulationChartAnnotation>
         <ContentTemplate>
             <div class="donut-text">Chart Annotation</div>
         </ContentTemplate>
     </AccumulationChartAnnotation>
 </AccumulationChartAnnotations>
+
 ```
 
 **Step 3:**
 
-Since the text need to be placed in the center of the doughnut chart the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property need to be set to **Regions.Chart**. Specify the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set the X and Y coordinate values in percentage as shown in the following.
+To place text in the center of the doughnut chart, set the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property to **Regions.Chart**. Specify [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) as [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set X and Y coordinates in percentage as shown below.
 
 ```cshtml
+
 <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="50%" Y="50%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
         <ContentTemplate>
@@ -50,15 +55,16 @@ Since the text need to be placed in the center of the doughnut chart the [Region
         </ContentTemplate>
         </AccumulationChartAnnotation>
 </AccumulationChartAnnotations>
+
 ```
 The complete code snippet for the preceding steps is as follows.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="50%" Y="50%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
@@ -80,12 +86,13 @@ The complete code snippet for the preceding steps is as follows.
 </style>
 
 @code {
+    private Random rnd = new Random();
+
     public class MyDataModel
     {
         public int XValue { get; set; }
         public int YValue { get; set; }
     }
-    private Random rnd = new Random();
     public List<MyDataModel> chartData = new List<MyDataModel>();
 
     protected override async Task OnInitializedAsync()

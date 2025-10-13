@@ -41,4 +41,8 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 * [How to Configuring the toolbar position](./toolbar#configuring-the-toolbar-position)
 * [How to insert link editing option in the toolbar items](./tools/link-manipulation#insert-link)
+<<<<<<< HEAD
 * [How to insert image editing option in the toolbar items](./tools/insert-image#uploading-and-inserting-images)
+=======
+* [How to insert image editing option in the toolbar items](./tools/insert-image#uploading-and-inserting-images)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

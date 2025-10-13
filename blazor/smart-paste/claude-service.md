@@ -186,7 +186,11 @@ var app = builder.Build();
 
 Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test the Groq AI integration.
 
+<<<<<<< HEAD
 ```razor
+=======
+```cshtml
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.SmartComponents
 @using System.ComponentModel.DataAnnotations
@@ -260,4 +264,8 @@ If the Claude AI integration does not work, try the following:
 ## See Also
 
 - [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+<<<<<<< HEAD
 - [Customizing Smart Paste Button Suggestions](https://blazor.syncfusion.com/documentation/smart-paste/customization)
+=======
+- [Customizing Smart Paste Button Suggestions](https://blazor.syncfusion.com/documentation/smart-paste/customization)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

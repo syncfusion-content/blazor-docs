@@ -186,7 +186,11 @@ var app = builder.Build();
 
 Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use Claude AI for autocompletion:
 
+<<<<<<< HEAD
 ```razor
+=======
+```cshtml
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
@@ -224,4 +228,8 @@ If the Claude AI integration does not work, try the following:
 ## See Also
 
 - [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+<<<<<<< HEAD
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
+=======
+- [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

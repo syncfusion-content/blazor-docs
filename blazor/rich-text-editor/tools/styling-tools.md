@@ -459,6 +459,46 @@ This feature allows users to change the appearance of the numbered and bulleted 
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
+<<<<<<< HEAD
+=======
+### Checklist
+
+The `Checklist` feature lets you create interactive task lists with clickable checkboxes. You can configure checkbox behavior, customize the visual appearance, manage item states, and enable keyboard interactions. This makes it perfect for project management, note-taking, and task tracking within your content. You can easily toggle between checked and unchecked states, giving you an intuitive way to manage the completion status of your list items—making it a simple and effective to-do list solution.
+
+#### Inserting a checklist
+You can embed interactive task lists directly within the Rich Text Editor. Here’s how you can insert a checklist:
+- **Using the toolbar**: Click the checklist button in the editor toolbar, usually represented by a checkbox icon.
+- **Using the shortcut**: Press `Ctrl+Shift+9` (or `Cmd+Shift+9` on macOS) to insert a checklist at your cursor’s position.
+- **Converting existing lists**: Select an existing bullet or numbered list and click the checklist button to convert it into an interactive checklist.
+- **Toggling checklist items**: You can toggle the state of checklist items between checked and unchecked by clicking the checkbox. If you prefer using the keyboard, press `Ctrl+Enter` (or `Cmd+Enter` on macOS) to toggle the check marks based on your selection or cursor position in the editor.
+
+#### Configuring checklist
+To enable the checklist feature in your editor, add the `Checklist` toolbar item to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.Items) property. This feature supports customizable behavior and can be easily integrated into your Rich Text Editor toolbar for quick access.
+
+Here’s an example of how you can configure the checklist in your Rich Text Editor:
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+  <RichTextEditorToolbarSettings Items="@Items" />
+  <p>The Rich Text Editor component is the WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Checklist }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor Checklist](../images/checklist.png)
+
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 ## Formatting code blocks
 
 Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.

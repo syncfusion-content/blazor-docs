@@ -9,7 +9,7 @@ documentation: ug
 
 # KeyTips in Blazor Ribbon component
 
-The Blazor Ribbon component supports keyboard navigation through KeyTips, enabling users to interact with Ribbon interface without using a mouse. KeyTips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using shortcut keys.
+The Blazor Ribbon component supports keyboard navigation through keytips, enabling users to interact with the Ribbon interface without a mouse. Keytips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using keyboard shortcuts.
 
 The keyTips will be shown when the **Alt + Windows/Command(on macOS)** keys are pressed.
 
@@ -17,7 +17,7 @@ The keyTips will be shown when the **Alt + Windows/Command(on macOS)** keys are 
 
 ### Ribbon items keytip
 
-You can add keytips to the Ribbon items by using the `KeyTip` property in the `RibbonItem` directive.
+Keytips can be added to Ribbon items by using the `KeyTip` property in the `RibbonItem` directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -275,11 +275,11 @@ You can add keytips to the Ribbon items by using the `KeyTip` property in the `R
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Items Keytip](./images/keytip/items-keytip.png)
+![Ribbon items keytip](./images/keytip/items-keytip.png)
 
 ### File menu keytip
 
-You can add keytip to the File menu by using the `KeyTip` property.
+A keytip can be added to the File menu by using the `KeyTip` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -346,11 +346,11 @@ You can add keytip to the File menu by using the `KeyTip` property.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon File Menu Keytip](./images/keytip/file-menu-keytip.png)
+![Ribbon file menu keytip](./images/keytip/file-menu-keytip.png)
 
 ### Backstage menu keytip
 
-You can add keytips for the backstage button and menu items by using `KeyTip` property.
+Keytips can be added for the backstage button and menu items by using the `KeyTip` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -418,11 +418,11 @@ You can add keytips for the backstage button and menu items by using `KeyTip` pr
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage menu keytip](./images/keytip/backstage-keytip.png)
+![Ribbon backstage menu keytip](./images/keytip/backstage-keytip.png)
 
 ### Ribbon layout switcher keytip
 
-You can add keytip to the layout switcher by using the `LayoutSwitcherKeyTip` property for switching between **Classic** and **Simplified** Ribbon layouts.
+A keytip can be added to the layout switcher by using the `LayoutSwitcherKeyTip` property to switch between the `Classic` and `Simplified` Ribbon layouts.
 
 {% tabs %}
 {% highlight razor %}
@@ -493,7 +493,7 @@ You can add keytip to the layout switcher by using the `LayoutSwitcherKeyTip` pr
 
 ### Ribbon launcher icon keytip
 
-You can add keytip to the launcher icon by using `LauncherIconKeyTip` property allowing you to quickly open additional options in Ribbon groups.
+A keytip can be added to the launcher icon by using the `LauncherIconKeyTip` property to quickly open additional options in Ribbon groups.
 
 {% tabs %}
 {% highlight razor %}
@@ -567,14 +567,14 @@ You can add keytip to the launcher icon by using `LauncherIconKeyTip` property a
 
 ### Show keytips
 
-You can use the `ShowKeyTipsAsync` method to dynamically display keytips.
+The `ShowKeyTipsAsync` method displays keytips dynamically for the Ribbon.
 
 - To activate a specific key action, pass the corresponding keytip string as an argument.
 - For example, calling `ShowKeyTipsAsync('H')` will look for the specific item associated with the **H** key and trigger its respective action.
 
 ### Hide keytips
 
-You can use the `HideKeyTipsAsync` method to remove all visible keytips from the Ribbon dynamically.
+The `HideKeyTipsAsync` method removes all visible keytips from the Ribbon dynamically.
 
 {% tabs %}
 {% highlight razor %}
@@ -654,16 +654,20 @@ You can use the `HideKeyTipsAsync` method to remove all visible keytips from the
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 ![Ribbon Show Hide keytips](./images/show-hide-keytip.png)
+=======
+![Ribbon show and hide keytips](./images/keytip/show-hide-keytip.png)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 
 ## Guidelines for adding keytips
 
-Before adding keytips to the Ribbon items, follow these best practices:
+Before adding keytips to Ribbon items, follow these best practices:
 
-* Avoid using the same keytip setting on multiple items.
+* Avoid assigning the same keytip to multiple items.
 
-> Each keytip should be distinct. If multiple items share the same keytip (e.g., `H` or `HF`), only the first occurrence will be activated, while any subsequent instances of H or HF are ignored.
+> Each keytip must be unique. If multiple items share the same keytip (for example, `H` or `HF`), only the first occurrence is activated; subsequent items using the same keytip are ignored.
 
-* Do not use the same first letter for the single and double keytip items.
+* Do not use the same first letter for single- and multi-character keytips on different items.
 
-> When using multi-character keytips (e.g., `F`, `FP`, and `FPF`) for different items, pressing `F` will activate only the first-level keytip (`F`), while `FP` and `FPF` will be ignored.
+> When using multi-character keytips (for example, `F`, `FP`, and `FPF`) for different items, pressing `F` activates only the first-level keytip (`F`), and `FP` and `FPF` are ignored.

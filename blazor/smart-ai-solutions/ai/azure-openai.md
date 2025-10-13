@@ -25,7 +25,10 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 - An [Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) is deployed to obtain `apiKey`, `deploymentName`, and `endpoint` values.
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - Credentials are stored securely using Azure Key Vault or environment variables (see [Microsoft’s guide on secure storage](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
@@ -77,7 +80,10 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -375,4 +381,8 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Az
 
 ## See Also
 - [Syncfusion Blazor QueryBuilder Documentation](https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp)
+<<<<<<< HEAD
 - [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+=======
+- [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

@@ -11,7 +11,11 @@ documentation: ug
 
 ## Overview
 
+<<<<<<< HEAD
 The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+=======
+The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
 
 ### Key Benefits
 
@@ -149,7 +153,11 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 
 > For more detailed information about configuring MCP servers in various clients, refer to the official documentations.
   * [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
+<<<<<<< HEAD
   * [Cursor](https://cursor.com/docs/context/mcp#using-mcp-json)
+=======
+  * [Cursor](https://docs.cursor.com/en/context/mcp#using-mcp-json)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
   * [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server)
   * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 

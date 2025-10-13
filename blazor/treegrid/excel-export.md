@@ -531,4 +531,8 @@ public class TreeData
 Microsoft Excel supports up to **seven nested levels** in outlines. If the TreeGrid exceeds this depth, the document will be exported without outline formatting.
 
 Refer to the official documentation:  
+<<<<<<< HEAD
 [Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
+=======
+[Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

@@ -38,4 +38,8 @@ To use the Syncfusion Blazor AI library, ensure the following:
 
 ## See Also
 - [Smart TextArea Documentation](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+<<<<<<< HEAD
 - [Smart Paste Button Documentation](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+=======
+- [Smart Paste Button Documentation](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+>>>>>>> 32c27d577704390b597a361089e564504af90b58

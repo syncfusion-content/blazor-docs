@@ -80,4 +80,8 @@ In the following example:
 ```
 
 N> **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.  
+<<<<<<< HEAD
 <br/> It is recommended to use the **PreventRender** method for user-interactive events such as `OnToolbarClick`, `UpdatedToolbarStatus`, etc., for better performance.
+=======
+<br/> It is recommended to use the **PreventRender** method for user-interactive events such as `OnToolbarClick`, `UpdatedToolbarStatus`, etc., for better performance.
+>>>>>>> 32c27d577704390b597a361089e564504af90b58
