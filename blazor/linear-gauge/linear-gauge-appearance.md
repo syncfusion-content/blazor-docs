@@ -78,7 +78,7 @@ Modify the container type using the [Type](https://help.syncfusion.com/cr/blazor
 
 ### Normal
 
-The [Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ContainerType.html#Syncfusion_Blazor_LinearGauge_ContainerType_Normal) type renders the container as a rectangle. This is the default container type.
+The [Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ContainerType.html#Syncfusion_Blazor_LinearGauge_ContainerType_Normal) type renders the container as a **rectangle**. This is the default container type.
 
 ```cshtml
 
@@ -141,8 +141,7 @@ The [Thermometer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Width="15" Type="Point.Bar"
-                                        Color="#a6a6a6">
+                    <LinearGaugePointer PointerValue="80" Width="15" Type="Point.Bar" Color="#a6a6a6">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>

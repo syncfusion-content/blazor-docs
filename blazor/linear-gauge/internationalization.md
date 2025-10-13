@@ -18,11 +18,11 @@ Globalization is the process of designing and developing a component that works 
 * Axis label
 * Tooltip
 
-These texts can be localized for cultures such as Arabic, German, and French.
+These texts can be localized for cultures such as Arabic, German and French.
 
 ### Numeric Format
 
-Axis labels and tooltips can display numeric values in formats such as currency, percentage, and more. To learn more about numeric formats in axis labels, refer to the [axis labels formatting](axis/#displaying-numeric-format-in-labels) section. In the following example, axis labels are displayed in the currency format.
+Axis labels and tooltips can display numeric values in formats such as currency, percentage and more. To learn more about numeric formats in axis labels, refer to the [axis labels formatting](axis/#displaying-numeric-format-in-labels) section. In the following example, axis labels are displayed in the currency format.
 
 ```cshtml
 

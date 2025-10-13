@@ -16,7 +16,7 @@ The following public methods are available in the Linear Gauge component.
 Use the [SetPointerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetPointerValue_System_Int32_System_Int32_System_Double_) method to update a pointer value at runtime. Arguments:
 
 |   Argument name      |   Description                            |
-|----------------------| -----------------------------------------|
+|----------------------|------------------------------------------|
 |     axisIndex        |    Specifies the index of the axis in which the pointer value is to be updated. |
 |     pointerIndex     |    Specifies the index of the pointer to be updated.           |
 |     pointerValue     |    Specifies the value of the pointer to be updated.           |
