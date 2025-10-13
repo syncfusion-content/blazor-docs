@@ -11,7 +11,7 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
-## Customizing Tab
+## Customizing the Tab Component
 
 Use the following CSS to customize the Tab.
 
@@ -53,7 +53,7 @@ Use the following CSS to customize the content items of Tab.
 
 ![Customize Tab](./images/blazor-tabs-customize-content.png)
 
-## Customizing Tab's header
+## Customizing Tab's Header
 
 Use the following CSS to customize the header of Tab control.
 
@@ -67,7 +67,7 @@ Use the following CSS to customize the header of Tab control.
 
 ![Customize Tab](./images/blazor-tabs-header-customization.png)
 
-## Customizing Tab's header icon
+## Customizing Tab's Header Icon
 
 Use the following CSS to customize the header item icon of Tab control.
 
@@ -81,7 +81,7 @@ Use the following CSS to customize the header item icon of Tab control.
 
 ![Customize Tab](./images/blazor-tabs-header-icon-customization.png)
 
-## Customizing Tab's content
+## Customizing Tab's Content
 
 Use the following CSS to customize the content of Tab control.
 
@@ -95,7 +95,7 @@ Use the following CSS to customize the content of Tab control.
 
 ![Customize Tab](./images/blazor-tabs-customize-content-background.png)
 
-## Customizing the hover state of Tab control
+## Customizing the Hover State of Tab Control
 
 Use the following CSS to customize the tab item when hovering.
 
@@ -120,7 +120,7 @@ Use the following CSS to customize the tab item popup icon when hovering.
 
 ```
 
-## Customizing selected item of Tab control
+## Customizing Selected Item of Tab Control
 
 Use the following CSS to customize the selected tab item.
 
