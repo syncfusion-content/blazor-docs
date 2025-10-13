@@ -13,10 +13,9 @@ A Context Menu, Badge, Sidebar, Error boundary components, and Icon library can 
 
 ## Context Menu in Blazor TreeView Component
 
-The Blazor TreeView component allows integration of a context menu to perform operations such as adding, removing, and renaming nodes. 
+The Blazor TreeView component integrates seamlessly with a context menu to perform operations such as adding, removing, and renaming nodes.
 
 This is demonstrated in an example where the TreeView operations are manipulated in the `ItemSelected` event of the context menu.
-
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -249,12 +248,12 @@ This is demonstrated in an example where the TreeView operations are manipulated
 }
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheMDMKCfviYktD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.png)
 
-## Badge
+## Badge INtegration
 
-The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
+The Blazor TreeView component integrates with the Syncfusion Badge component, enabling customization of the node structure. This is achieved using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which facilitates the creation of a tree node with any custom structure, such as a webmail folder displaying a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -415,10 +414,10 @@ The Blazor TreeView component can integrate with the Badge component and allows 
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXreitsqiTbQmSBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.png)
 
-## Icons Library
+## Icons Library Integration
 
 The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the [**IconCss**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IconCss) fields.
 
@@ -573,14 +572,12 @@ The Blazor TreeView component has the built-in option to customize each node's a
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIWZsKWoisIIxY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.png)
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used to navigate from one page to other pages using TreeView node selection. 
-
-In this example, TreeView's `NavigateUrl` is mapped to move one page to another page inside the Sidebar component.
+The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

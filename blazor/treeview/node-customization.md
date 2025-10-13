@@ -7,11 +7,11 @@ control: TreeView
 documentation: ug
 ---
 
-# Node customization in Blazor TreeView Component
+# Node Customization in Blazor TreeView Component
 
 The TreeView nodes in the Blazor TreeView component can be customised based on your needs.
 
-In TreeView component, you can customise the appearance of each node with images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customise the tooltip for tree nodes, and more.
+The TreeView component offers customization for the appearance of each node. This includes using images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customise the tooltip for tree nodes, and more.
 
 ## Images in Blazor TreeView Component
 
@@ -161,10 +161,11 @@ The Blazor TreeView component has the built-in option to customize each node's a
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSMDigsIlAHSne?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Wrapping Text in Blazor TreeView Component
 
-The [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property is used to enable or disable wrapping the text in the TreeView node. When this property is set to true, the TreeView node's text content will wrap to the next line when its text content exceeds the width of the TreeView node.
+The [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property is used to enable or disable text wrapping within TreeView nodes. When set to `true`, text will wrap to the next line if it exceeds the width of the TreeView node.
 
 The default value of the `AllowTextWrap` property is false.
 
@@ -225,10 +226,11 @@ The default value of the `AllowTextWrap` property is false.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXByMDMgWSPkEWvC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Enable or Disable individual node on load in Blazor TreeView Component
+## Enable or Disable Individual Node on Load in Blazor TreeView Component
 
-In the Blazor TreeView component, you are able to disable individual nodes on initial rendering by passing the particular node id inside the [DisableNodesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) method in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event. You can enable the disabled node by reverting the changes in the `Created` event.
+Individual nodes are disabled on initial rendering by passing their IDs to the [`DisableNodesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) method within the [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event handler. Disabled nodes can be re-enabled by modifying the logic in the `Created` event or by using `EnableNodesAsync` later.
 
 
 ```cshtml
@@ -292,11 +294,11 @@ In the Blazor TreeView component, you are able to disable individual nodes on in
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLyMXsUsyYSAomx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Enable or disable individual node programmatically in Blazor TreeView Component
+## Enable or Disable Individual Node Programmatically in Blazor TreeView Component
 
-In the Blazor TreeView component, you are able to enable or disable individual nodes dynamically by passing the particular node id inside the [EnableNodeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableNodesAsync_System_String___) and [DisableNodesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) methods with a button click.
-
+Individual nodes are enabled or disabled dynamically by passing their IDs to the [`EnableNodesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableNodesAsync_System_String___) and [`DisableNodesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) methods, typically triggered by a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -368,10 +370,11 @@ In the Blazor TreeView component, you are able to enable or disable individual n
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVIitiKinXtmohD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Show or Hide an individual node on load in Blazor TreeView Component
+## Show or Hide an Individual Node on Load in Blazor TreeView Component
 
-In the Blazor TreeView component, you can show or hide particular TreeView nodes on initial rendering by adding or removing them from the data source. 
+To show or hide particular TreeView nodes on initial rendering, add or remove them from the data source. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -439,9 +442,9 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 }
 ```
 
-## Show or Hide an individual node Programmatically in Blazor TreeView Component
+## Show or Hide an Individual Node Programmatically in Blazor TreeView Component
 
-In the Blazor TreeView component, you can show or hide particular TreeView nodes dynamically on a button click by adding or removing them from the data source. 
+Particular TreeView nodes are shown or hidden dynamically on a button click by adding or removing them from the data source, followed by a UI update.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -525,7 +528,7 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 
 ## Enable Tooltip in Blazor TreeView Component
 
-The TreeView component allows to set tooltip option to tree nodes using the **Tooltip** property. 
+The TreeView component provides a straightforward way to enable tooltips for tree nodes using the [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Tooltip) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -610,10 +613,12 @@ The TreeView component allows to set tooltip option to tree nodes using the **To
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIsDigMkgFfzRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![ToolTip in Blazor TreeView](./images/tooltip.png)
 
-## Customize nodes Tooltip in Blazor TreeView Component
+## Customize Nodes Tooltip in Blazor TreeView Component
 
-In the Blazor TreeView component, you are unable to customize the native tooltip element. But you can customize using the Blazor Tooltip component inside the TreeView node template and setting the Tooltip [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property.
+While native tooltip elements might offer limited customization, the Blazor Tooltip component allows for extensive customization of tooltips. It is integrated within the TreeView node template by setting the Tooltip [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property to apply the tooltip to desired elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -771,10 +776,12 @@ In the Blazor TreeView component, you are unable to customize the native tooltip
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyMNMqsOQjSsJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![ToolTip Template in Blazor TreeView](./images/tooltip-template.png)
 
-## Get all nodes in Blazor TreeView Component
+## Get all Nodes in Blazor TreeView Component
 
-In the Blazor TreeView component, you can get all TreeView node details using the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method. The following code example demonstrates how to get the TreeView node's text values by clicking the button.
+All TreeView node details are retrieved using the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method. The following code example demonstrates how to retrieve and display the `FolderName` (text) values of all TreeView nodes when a button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
