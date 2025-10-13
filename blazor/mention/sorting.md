@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about sorting in Mention component and much more.
+description: Checkout and learn about sorting in Mention component and much more.
 platform: Blazor
 control: Mention
 documentation: ug
