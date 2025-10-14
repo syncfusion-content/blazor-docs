@@ -51,12 +51,12 @@ Specify the direction of the In-place Editor using the `EnableRtl` property. Use
 
 Formatting is a way of representing the value in different formats. Format the following mentioned components with its `format` property when it is directly configured in the Editor component.
 
-* [DatePicker](../datepicker/date-format/)
-* [DateRangePicker](../daterangepicker/globalization/)
-* [DateTimePicker](../datetime-picker/globalization/)
+* [DatePicker](../datepicker/date-format)
+* [DateRangePicker](../daterangepicker/globalization)
+* [DateTimePicker](../datetime-picker/globalization)
 * [NumericTextBox](../numeric-textbox/formats/#custom-formats)
-* [Slider](../range-slider/format/)
-* [TimePicker](../timepicker/globalization/)
+* [Slider](../range-slider/format)
+* [TimePicker](../timepicker/globalization)
 
 ```cshtml
 

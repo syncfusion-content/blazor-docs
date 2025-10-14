@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor In-place editor component
 
-The [Blazor In-place editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component followes accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor In-place editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor In-place Editor component is outlined below.
 
