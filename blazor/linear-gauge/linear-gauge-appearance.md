@@ -62,7 +62,7 @@ Set the title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## Customizing the Linear Gauge container
 
-The container is the area used to render ranges and pointers at the center of the gauge. The following container types are available in Linear Gauge:
+The container is the central area of the gauge where ranges and pointers are rendered. The following container types are available in the Linear Gauge:
 
 * Normal
 * Rounded Rectangle

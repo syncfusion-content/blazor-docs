@@ -9,7 +9,7 @@ documentation: ug
 
 # Render Linear Gauge component inside other components
 
-The Linear Gauge can be hosted inside components such as Dashboard Layout, Tab, Dialog, and other containers. Because the Linear Gauge may render before its container completes layout, use a boolean flag to control when the Linear Gauge begins rendering.
+The Linear Gauge can be hosted inside components such as Dashboard Layout, Tab, Dialog, and other containers. However, since the Linear Gauge may render before its container completes its layout, use a boolean flag to control when the Linear Gauge begins rendering.
 
 ## Linear Gauge component inside Dashboard Layout
 
@@ -50,7 +50,7 @@ When the Dashboard Layout panel is dragged/resized or when the window size chang
                                 </LinearGaugePointers>
                             </LinearGaugeAxis>
                         </LinearGaugeAxes>
-                    </SfLinearGauge> 
+                    </SfLinearGauge>
                 }
             </ContentTemplate>
         </DashboardLayoutPanel> 
@@ -219,18 +219,18 @@ When the Linear Gauge is hosted inside a Tab, the gauge and Tab render at the sa
                                 </LinearGaugePointers>
                             </LinearGaugeAxis>
                         </LinearGaugeAxes>
-                    </SfLinearGauge> 
+                    </SfLinearGauge>
                 }   
-                </ContentTemplate>
+            </ContentTemplate>
         </TabItem>
         <TabItem>
             <ChildContent>
                 <TabHeader Text="Linear Gauge - Step Progress Bar"></TabHeader>
             </ChildContent>
-                <ContentTemplate>
+            <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                        <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%"  Orientation="@GaugeOrientation"  Background="transparent">
+                    <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%"  Orientation="@GaugeOrientation"  Background="transparent">
                         <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
                         <LinearGaugeAxes>
                             <LinearGaugeAxis Minimum="5" Maximum="20" OpposedPosition="true">
@@ -255,7 +255,7 @@ When the Linear Gauge is hosted inside a Tab, the gauge and Tab render at the sa
                         </LinearGaugeAxes>
                     </SfLinearGauge>
                 }   
-                </ContentTemplate>
+            </ContentTemplate>
         </TabItem>
         <TabItem>
             <ChildContent>
@@ -298,7 +298,7 @@ When the Linear Gauge is hosted inside a Tab, the gauge and Tab render at the sa
                             </LinearGaugeAxis>
                         </LinearGaugeAxes>
                         </LinearGaugeContainer>
-                    </SfLinearGauge> 
+                    </SfLinearGauge>
                 }   
                 </ContentTemplate>
         </TabItem>
@@ -352,27 +352,27 @@ When the Dialog is dragged or resized, the Linear Gauge is not automatically not
             <Content> 
                 @if(IsInitialRender)
                 { 
-                   <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Height="100%" Background="transparent">
-                           <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
-                           <LinearGaugeAxes>
-                               <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
-                                   <LinearGaugeLine Width="5" />
-                                   <LinearGaugeMajorTicks Interval="20" Height="7" Width="1" Position="Syncfusion.Blazor.LinearGauge.Position.Outside" />
-                                   <LinearGaugeMinorTicks Color="#9e9e9e" Interval="10" Height="3" Position="Syncfusion.Blazor.LinearGauge.Position.Outside" />
-                                   <LinearGaugeAxisLabelStyle Position="Syncfusion.Blazor.LinearGauge.Position.Outside">
-                                       <LinearGaugeAxisLabelFont FontFamily="inherit" />
-                                   </LinearGaugeAxisLabelStyle>
-                                   <LinearGaugeRanges>
-                                       <LinearGaugeRange Start="0" End="30" StartWidth="50" EndWidth="50" Color="#FB7D55" Offset="5" />
-                                       <LinearGaugeRange Start="30" End="65" StartWidth="50" EndWidth="50" Color="#ECC85B" Offset="5" />
-                                       <LinearGaugeRange Start="65" End="100" StartWidth="50" EndWidth="50" Color="#6FC78A" Offset="5" />
-                                   </LinearGaugeRanges>
-                                   <LinearGaugePointers>
-                                       <LinearGaugePointer Width="0" />
-                                   </LinearGaugePointers>
-                               </LinearGaugeAxis>
-                           </LinearGaugeAxes>
-                     </SfLinearGauge> 
+                    <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Height="100%" Background="transparent">
+                        <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
+                        <LinearGaugeAxes>
+                            <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
+                                <LinearGaugeLine Width="5" />
+                                <LinearGaugeMajorTicks Interval="20" Height="7" Width="1" Position="Syncfusion.Blazor.LinearGauge.Position.Outside" />
+                                <LinearGaugeMinorTicks Color="#9e9e9e" Interval="10" Height="3" Position="Syncfusion.Blazor.LinearGauge.Position.Outside" />
+                                <LinearGaugeAxisLabelStyle Position="Syncfusion.Blazor.LinearGauge.Position.Outside">
+                                    <LinearGaugeAxisLabelFont FontFamily="inherit" />
+                                </LinearGaugeAxisLabelStyle>
+                                <LinearGaugeRanges>
+                                    <LinearGaugeRange Start="0" End="30" StartWidth="50" EndWidth="50" Color="#FB7D55" Offset="5" />
+                                    <LinearGaugeRange Start="30" End="65" StartWidth="50" EndWidth="50" Color="#ECC85B" Offset="5" />
+                                    <LinearGaugeRange Start="65" End="100" StartWidth="50" EndWidth="50" Color="#6FC78A" Offset="5" />
+                                </LinearGaugeRanges>
+                                <LinearGaugePointers>
+                                    <LinearGaugePointer Width="0" />
+                                </LinearGaugePointers>
+                            </LinearGaugeAxis>
+                        </LinearGaugeAxes>
+                    </SfLinearGauge>
                 }
             </Content>
         </DialogTemplates>
@@ -425,7 +425,7 @@ When the Dialog is dragged or resized, the Linear Gauge is not automatically not
 
 When the Linear Gauge is placed inside an Accordion, concurrent rendering can lead to incorrect sizing. Use a boolean flag (for example, **IsInitialRender**) to control the Linear Gauge render. Initialize the flag to **false** and set it to **true** in the Accordion [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event to start rendering.
 
-When an Accordion item is expanded, the Linear Gauge is not automatically notified. Call the gauge `RefreshAsync` method from the Accordion [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event to ensure proper rendering within the expanded item.
+When an Accordion component is expanded, the Linear Gauge component is not automatically notified. Call the gauge `RefreshAsync` method from the Accordion [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event to ensure proper rendering within the expanded item.
 
 ```cshtml
 
@@ -442,27 +442,27 @@ When an Accordion item is expanded, the Linear Gauge is not automatically notifi
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                      <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Background="transparent">
-                           <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
-                           <LinearGaugeAxes>
-                               <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
-                                   <LinearGaugeLine Width="5" />
-                                   <LinearGaugeMajorTicks Interval="20" Height="7" Width="1" Position="Position.Outside" />
-                                   <LinearGaugeMinorTicks Color="#9e9e9e" Interval="10" Height="3" Position="Position.Outside" />
-                                   <LinearGaugeAxisLabelStyle Position="Position.Outside">
-                                       <LinearGaugeAxisLabelFont FontFamily="inherit" />
-                                   </LinearGaugeAxisLabelStyle>
-                                   <LinearGaugeRanges>
-                                       <LinearGaugeRange Start="0" End="30" StartWidth="50" EndWidth="50" Color="#FB7D55" Offset="5" />
-                                       <LinearGaugeRange Start="30" End="65" StartWidth="50" EndWidth="50" Color="#ECC85B" Offset="5" />
-                                       <LinearGaugeRange Start="65" End="100" StartWidth="50" EndWidth="50" Color="#6FC78A" Offset="5" />
-                                   </LinearGaugeRanges>
-                                   <LinearGaugePointers>
-                                       <LinearGaugePointer Width="0" />
-                                   </LinearGaugePointers>
-                               </LinearGaugeAxis>
-                           </LinearGaugeAxes>
-                     </SfLinearGauge>        
+                    <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Background="transparent">
+                        <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
+                        <LinearGaugeAxes>
+                            <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
+                                <LinearGaugeLine Width="5" />
+                                <LinearGaugeMajorTicks Interval="20" Height="7" Width="1" Position="Position.Outside" />
+                                <LinearGaugeMinorTicks Color="#9e9e9e" Interval="10" Height="3" Position="Position.Outside" />
+                                <LinearGaugeAxisLabelStyle Position="Position.Outside">
+                                    <LinearGaugeAxisLabelFont FontFamily="inherit" />
+                                </LinearGaugeAxisLabelStyle>
+                                <LinearGaugeRanges>
+                                    <LinearGaugeRange Start="0" End="30" StartWidth="50" EndWidth="50" Color="#FB7D55" Offset="5" />
+                                    <LinearGaugeRange Start="30" End="65" StartWidth="50" EndWidth="50" Color="#ECC85B" Offset="5" />
+                                    <LinearGaugeRange Start="65" End="100" StartWidth="50" EndWidth="50" Color="#6FC78A" Offset="5" />
+                                </LinearGaugeRanges>
+                                <LinearGaugePointers>
+                                    <LinearGaugePointer Width="0" />
+                                </LinearGaugePointers>
+                            </LinearGaugeAxis>
+                        </LinearGaugeAxes>
+                    </SfLinearGauge> 
                  }
                 </ContentTemplate>
             </AccordionItem>
@@ -501,8 +501,8 @@ When an Accordion item is expanded, the Linear Gauge is not automatically notifi
             <AccordionItem>
                 <HeaderTemplate>Linear Gauge - Horizontal</HeaderTemplate>
                 <ContentTemplate>
-                     @if (IsInitialRender)
-                     {
+                    @if (IsInitialRender)
+                    {
                         <SfLinearGauge ID="GaugeThree" @ref="GaugeThree" Orientation="Syncfusion.Blazor.LinearGauge.Orientation.Horizontal" Width="100%" Background="transparent">
                             <LinearGaugeContainer Width="58" Type="ContainerType.RoundedRectangle">
                             <LinearGaugeContainerBorder Width="5"></LinearGaugeContainerBorder>
@@ -537,8 +537,8 @@ When an Accordion item is expanded, the Linear Gauge is not automatically notifi
                                 </LinearGaugeAxis>
                             </LinearGaugeAxes>
                             </LinearGaugeContainer>
-                        </SfLinearGauge>  
-                     }   
+                        </SfLinearGauge>
+                    }   
                 </ContentTemplate>
             </AccordionItem>
         </AccordionItems>
