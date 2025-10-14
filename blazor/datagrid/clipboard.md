@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Clipboard in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Clipboard in Syncfusion Blazor DataGrid
 
 The **Clipboard** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables copying selected rows or cells using keyboard shortcuts or programmatic APIs. Selection must be enabled, and the DataGrid must be focused for keyboard shortcuts to function.
 
@@ -20,7 +20,7 @@ These shortcuts copy the current selection from the DataGrid and allow pasting i
 
 To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html).
 
-### Example: Enabling Clipboard Support
+### Example: Enabling Clipboard Functionality
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
