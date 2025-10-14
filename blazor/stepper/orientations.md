@@ -9,11 +9,11 @@ documentation: ug
 
 # Orientations in Blazor Stepper Component
 
-The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
+The Stepper component supports displaying steps in both horizontal and vertical orientations using the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
 
 ## Horizontal
 
-In horizontal orientation, the steps are displayed in a side-by-side manner by setting the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to `Horizontal`. By default, the steps are displayed in the horizontal orientation.
+In horizontal orientation, steps are displayed side-by-side by setting the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to `Horizontal`. By default, steps are displayed in a horizontal orientation.
 
 ```cshtml
 
@@ -57,11 +57,13 @@ In horizontal orientation, the steps are displayed in a side-by-side manner by s
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIMtjkUFuGRpet?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Stepper Component with Horizontal Orientation](./images/Blazor-horizontal.png)
 
 ## Vertical
 
-You can display the steps one below the other vertically by setting the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to `Vertical`.
+Display steps one below the other vertically by setting the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to `Vertical`.
 
 ```cshtml
 
@@ -110,5 +112,7 @@ You can display the steps one below the other vertically by setting the [Orienta
 </style>
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBIWDXaqvSVUove?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Vertical Orientation](./images/Blazor-vertical.png)
