@@ -9,15 +9,16 @@ documentation: ug
 
 # Value Binding in MultiSelect
 
-Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
+Value binding is the process of passing values between a component and its parent. There are two methods for binding values. These are:
 
-* bind-Value Binding 
+- @bind-Value binding
 
 ## Bind value binding
 
-The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value)
+Value binding is achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute, and it supports `string`, `int`, `enum`, `bool`, and complex types. When the component value changes, the bound variable used with `@bind-Value` is updated everywhere it is referenced. For binding to work correctly, the value assigned to `@bind-Value` must correspond to the field mapped to [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value).
 
-* **TValue** - Specifies the type of each list item of the multiselect component.
+- TItem - Specifies the type of the data items in the MultiSelect component.
+- TValue - Specifies the type of the value field (the selection type). The component’s Value is an array of this type.
 
 {% highlight cshtml %}
 
@@ -29,9 +30,9 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 
 ## Text and value
 
-The MultiSelect [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [MultiSelectFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The `MultiSelectFieldSettings.Value` mapped to the component maintains the unique value of the item in the data source, and the `MultiSelectFieldSettings.Text` is mapped to display the text in the popup list items for the respective text value.
+The [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [MultiSelectFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Text) properties map to the corresponding fields of the data model. The Value field maintains the unique value for each item in the data source, and the Text field provides the displayed text for list items in the popup.
 
-The following code demonstrates the Value and Text field of the MultiSelect component. For instance, the selected item is `Badminton` (Text Field, this is Game) but the value field holds `Game2` (Value Field, this is ID).
+The following example demonstrates Text and Value field mapping. For instance, the selected item displays `Badminton` (Text), while the Value field holds `Game2` (ID).
 
 {% highlight cshtml %}
 
@@ -43,9 +44,9 @@ The following code demonstrates the Value and Text field of the MultiSelect comp
 
 ## Primitive type binding
 
-The MultiSelect has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute of the MultiSelect. 
+The MultiSelect supports arrays of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute of the MultiSelect.
 
-The following code demonstrates array of string as datasource to the MultiSelect component.
+The following example demonstrates an array of strings as the data source.
 
 {% highlight cshtml %}
 
@@ -55,7 +56,7 @@ The following code demonstrates array of string as datasource to the MultiSelect
 
 ![Blazor MultiSelect with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.png)
 
-The following code demonstrates array of int as datasource to the MultiSelect component.
+The following example demonstrates an array of integers as the data source.
 
 {% highlight cshtml %}
 
@@ -67,9 +68,9 @@ The following code demonstrates array of int as datasource to the MultiSelect co
 
 ## Object binding
 
-Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
+Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute and map the value field via [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value). Set `TItem` to the data item type and `TValue` to the value field type.
 
-In the following example, the `Name` column has been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value).
+In the following example, the `Name` column is mapped to the Value field.
 
 {% highlight cshtml %}
 
@@ -81,7 +82,7 @@ In the following example, the `Name` column has been mapped to the [DropDownList
 
 ## Enum binding
 
-Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute of MultiSelect component. The following code helps you to get a string value from the enumeration data.
+Bind enum values to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute of the MultiSelect component. The following example shows how to use enum data and obtain the selected value(s).
 
 {% highlight cshtml %}
 
@@ -93,11 +94,11 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 
 ## Show or hide clear button
 
-Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
+Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowClearButton) property to show or hide the clear button. When clicked, the selection is cleared and the bound Value is reset.
 
-N> If the TValue is a non nullable type, then while using the clear button, it will set the default value of the data type, and if TValue is set as a nullable type, then while using the clear button it will set to a null value(for example If the TValue is int, then while clearing 0 will set to the component and if TValue is int?, then while clearing null will set to the component)
+N> If `TValue` is a non-nullable type, the clear button sets the default value of that type (for example, `0` for `int`). If `TValue` is a nullable type (for example, `int?`), the clear button sets the Value to `null`.
 
-The following sample demonstrates the `string` used as `TValue`. So, if you clear the value using the clear button, it will be set to null as it's the default value of the respective type.
+The following example uses `string` as `TValue`, so clearing sets the value to `null`.
 
 {% highlight cshtml %}
 
@@ -109,11 +110,11 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the MultiSelect component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` type can be changed dynamically by creating a generic wrapper component using the `@typeparam` directive. The following example shows how to change `TItem` dynamically for different data sources.
 
 ### Creating generic MultiSelect component
 
-First, create a `MultiSelect.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+Create a `MultiSelect.razor` file as a parent component. Add parameters for the List of `<TItem>` and the bound `TValue[]`.
 
 {% tabs %}
 {% highlight razor %}
@@ -140,9 +141,9 @@ public EventCallback<TValue> DDLValueChanged { get; set; }
 
 ### Usage of generic component with different type
 
-Then, render the Generic MultiSelect component with the required `TValue` and `TItem` in the respective razor components. 
+Render the generic MultiSelect with the required `TValue` and `TItem` in the respective Razor components.
 
-Here, the MultiSelect component is rendered with the TValue as a string type in the `/Index.razor` file and the MultiSelect component with TValue as an int nullable type in the `/Counter.razor` file.
+In this example, the MultiSelect is rendered with `TValue` as `string` in `Index.razor` and with `TValue` as `int?` in `Counter.razor`.
 
 **[Index.razor]**
 

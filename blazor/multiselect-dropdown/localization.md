@@ -11,11 +11,10 @@ documentation: ug
 
 ## Localization
 
-[Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
-
+The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) supports localization of built-in UI text (for example, select all, no records, clear). Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to configure culture files and resource keys for Syncfusion components.
 ## Globalization
 
-### Enable RTL mode
+### Enable right-to-left (RTL) mode
 
 The direction can be switched to right to left when specfies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as `true`. Writing systems like Arabic, Hebrew, and more will require `EnableRtl` property.
 
@@ -25,4 +24,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% include_relative code-snippet/localization/enableRtl-property.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
