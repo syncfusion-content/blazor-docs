@@ -25,7 +25,7 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 ![Add site in IIS](./images/add-site.png)
 
-* In the Add Website dialog, fill in the required field values such as site name, physical patha and customized port value and then click OK.
+* In the Add Website dialog, fill in the required field values such as site name, physical path and customized port value and then click OK.
 
 Set the physical path to the location where your sample application is developed.
 
