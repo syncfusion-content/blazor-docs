@@ -22,32 +22,32 @@ The following example demonstrates Linear Gauge animation.
 @using Syncfusion.Blazor.LinearGauge;
 
 <SfLinearGauge Orientation="Orientation.Horizontal" AnimationDuration="3000">
-        <LinearGaugeAxes>
-            <LinearGaugeAxis>
-                <LinearGaugeAxisLabelStyle Offset="48">
-                    <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
-                </LinearGaugeAxisLabelStyle>
-                <LinearGaugeMajorTicks Color="#9E9E9E" Interval="10" Height="20" />
-                <LinearGaugeMinorTicks Color="#9E9E9E" Interval="2" Height="10" />
-                <LinearGaugeAnnotations>
-                    <LinearGaugeAnnotation AxisIndex="0" AxisValue="10" X="10" Y="-70" ZIndex="1">
-                        <ContentTemplate>
-                            <div style="width: 70px;margin-left: -53%;margin-top: 5%;font-size: 16px;">10 MPH</div>
-                        </ContentTemplate>
-                    </LinearGaugeAnnotation>
-                </LinearGaugeAnnotations>
-                <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="10" Height="15" Width="15" Placement="Placement.Near" Offset="-40" MarkerType="MarkerType.Triangle" />
-                </LinearGaugePointers>
-            <LinearGaugeRanges>
-                <LinearGaugeRange Start="0" End="50" StartWidth="10" EndWidth="10" Color="#F45656" Offset="35" />
-            </LinearGaugeRanges>
-            </LinearGaugeAxis>
-        </LinearGaugeAxes>
-    </SfLinearGauge>
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugeAxisLabelStyle Offset="48">
+                <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
+            </LinearGaugeAxisLabelStyle>
+            <LinearGaugeMajorTicks Color="#9E9E9E" Interval="10" Height="20" />
+            <LinearGaugeMinorTicks Color="#9E9E9E" Interval="2" Height="10" />
+            <LinearGaugeAnnotations>
+                <LinearGaugeAnnotation AxisIndex="0" AxisValue="10" X="10" Y="-70" ZIndex="1">
+                    <ContentTemplate>
+                        <div style="width: 70px;margin-left: -53%;margin-top: 5%;font-size: 16px;">10 MPH</div>
+                    </ContentTemplate>
+                </LinearGaugeAnnotation>
+            </LinearGaugeAnnotations>
+            <LinearGaugePointers>
+                <LinearGaugePointer PointerValue="10" Height="15" Width="15" Placement="Placement.Near" Offset="-40" MarkerType="MarkerType.Triangle" />
+            </LinearGaugePointers>
+        <LinearGaugeRanges>
+            <LinearGaugeRange Start="0" End="50" StartWidth="10" EndWidth="10" Color="#F45656" Offset="35" />
+        </LinearGaugeRanges>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+</SfLinearGauge>
 
 ```
 
 ![Blazor Linear Gauge Animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
 
-N> Only the pointer of the Linear Gauge can be animated individually, not the axis lines, ticks, labels, ranges and annotations. For pointer-only animation, refer to [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
+N> Refer to the [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation) to enable only pointer animation.
