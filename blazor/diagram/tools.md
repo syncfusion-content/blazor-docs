@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Tools in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about tools in Syncfusion Blazor Diagram component and much more details.
+title: Tools in Syncfusion Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about drawing tools in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Tools in Blazor Diagram Component
+# Tools in Diagram Component
 
 ## How to Use Drawing Tools
 
-The drawing tool allows you to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
+Use drawing tool to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
 
 ## How to Draw Shapes Using the Drawing Tool
 
-To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html), you need to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) property and set the shape by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html), activate the drawing tool with the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) property and specify the shape with the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a rectangle at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -71,13 +71,15 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSWXtlTaXxLYBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
-## How to Draw Connector Using the Drawing Tool
+## How to Draw a Connector Using the Drawing Tool
 
-To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you need to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) property and set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
+To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), activate the drawing tool with [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) and set the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -134,13 +136,15 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIstXvJusulLEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
-## How to Draw Text Node Using the Drawing Tool
+## How to Draw a Text Node Using the Drawing Tool
 
-The diagram allows you to create a text Node as soon as you click on the diagram page. The following code illustrates how to draw a text.
+Create a text Node by click on the diagram page. The following code illustrates how to draw a text.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -197,13 +201,15 @@ The diagram allows you to create a text Node as soon as you click on the diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSWZDPJEVRtROs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
-## How to Draw Polygon Using the Drawing Tool
+## How to Draw a Polygon Using the Drawing Tool
 
-The diagram allows you to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBasicShapes.html#Syncfusion_Blazor_Diagram_NodeBasicShapes_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
+Create a [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBasicShapes.html#Syncfusion_Blazor_Diagram_NodeBasicShapes_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
 
 The following code illustrates how to draw a polygon shape.
 
@@ -267,11 +273,12 @@ The following code illustrates how to draw a polygon shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolygonShapeTool)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSWZtvJYqNgdAL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to Draw Polyline Using the Drawing Tool
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolygonShapeTool)
+## How to Draw a Polyline Using the Drawing Tool
 
-The diagram allows you to create the [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
+Create  [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 
 The following code illustrates how to draw a polyline connector.
 
@@ -328,7 +335,9 @@ The following code illustrates how to draw a polyline connector.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolylineDrawTool)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyCtXlTkUJtRHh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolylineDrawTool)
 
 ## How to Select Tool
 
@@ -343,17 +352,17 @@ When more than one of these interaction controllers are applied, an interaction 
 
 |Precedence|DiagramInteractions|Description|
 |----------|-----|-----------|
-|1st|[ContinuesDraw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_ContinuousDraw)|Allows you to draw the nodes or connectors continuously. Once it is activated, you cannot perform any other interaction in the diagram.|
-|2nd|[DrawOnce](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_DrawOnce)|Allows you to draw a single node or connector. Once you complete the DrawOnce action, SingleSelect, and MultipleSelect interaction controllers are automatically enabled.|
-|3rd|[ZoomPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_ZoomPan)|Allows you to pan the diagram. When you enable both the SingleSelect and ZoomPan interaction controllers, you can perform the basic interaction as the cursor hovers node/connector. Panning is enabled when cursor hovers the diagram.|
-|4th|[MultipleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_MultipleSelect)|Allows you to select multiple nodes and connectors. When you enable both the MultipleSelect and ZoomPan interaction controllers, cursor hovers the diagram. When panning is enabled, you cannot select multiple nodes.|
-|5th|[SingleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_SingleSelect)|Allows you to select individual nodes or connectors.|
+|1st|[ContinuesDraw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_ContinuousDraw)|Draw the nodes or connectors continuously. While active, other interactions are disabled until the mode is turned off.|
+|2nd|[DrawOnce](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_DrawOnce)|Draw a single node or connector. After completing the draw, SingleSelect and MultipleSelect are automatically enabled.|
+|3rd|[ZoomPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_ZoomPan)|Pan the diagram. When enable both the SingleSelect and ZoomPan interaction controllers, Perform the basic interaction as the cursor hovers node/connector. Panning is enabled when cursor hovers the diagram.|
+|4th|[MultipleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_MultipleSelect)|Select multiple nodes and connectors. When enable both the MultipleSelect and ZoomPan interaction controllers, cursor hovers the diagram. When panning is enabled, cannot select multiple nodes.|
+|5th|[SingleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_SingleSelect)|Select individual nodes or connectors.|
 |6th|[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_None)|Disables all interaction controllers.|
 |7th|[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_Default)|Allows users to select an individual as well as multiple nodes and connectors.|
 
 Set the desired [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) for the diagram.
 
-The following code illustrates how to enable single interaction controller,
+The following code illustrates how to enable a single interaction controller:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -369,7 +378,7 @@ The following code illustrates how to enable single interaction controller,
 }
 ```
 
-The following code illustrates how to enable multiple interaction controllers,
+The following code illustrates how to enable multiple interaction controllers:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -387,7 +396,7 @@ The following code illustrates how to enable multiple interaction controllers,
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ToolSelection).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ToolSelection).
 
 ## How to Enable Freehand Drawing
 
@@ -445,7 +454,9 @@ The following code illustrates how to draw a freehand drawing.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeitNFTOofPXrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
 
 ![Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)
 

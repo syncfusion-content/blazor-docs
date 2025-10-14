@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Events in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and Learn how to use annotation events in the Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Annotation Events in Blazor Diagram Component
 
-## How to Handle Text Change event
+## How to Handle Text Change Event
 
 * While editing a node's or connector's annotation, the following event can be used to do the customization.
 * When a node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|Triggers when the node’s/connector's label is changed in the diagram.|
-|[TextChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanging)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|An event that is raised when the node and connector's label is changing in the diagram.|
+|[TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|Triggers after a node or connector's annotation text has been changed in the diagram.|
+|[TextChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanging)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|An event that is raised when the node and connector's annotation text is changing in the diagram.|
 
-The following code example shows how to register and get notifications from the TextChanged and TextChanging events.
+The following code example shows how to register and get notifications from the `TextChanged` and `TextChanging` events.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -61,7 +61,9 @@ The following code example shows how to register and get notifications from the 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Events/TextChangedEvent)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoijjnBnkUtSTH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Events/TextChangedEvent)
 
 ## See also
 
@@ -69,6 +71,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to customize the annotation](./appearance)
 
-* [How to add annotation for Node](./node-annotation)
+* [How to add an annotation for a Node](./node-annotation)
 
-* [How to add annotation for Connector](./connector-annotation)
+* [How to add an annotation for a Connector](./connector-annotation)
