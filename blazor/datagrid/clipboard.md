@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Clipboard in the Syncfusion Blazor DataGrid component and much more.
+description: Learn how to copy, paste, and autofill data in the Syncfusion Blazor DataGrid using keyboard shortcuts, buttons, and batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,16 +9,18 @@ documentation: ug
 
 # Clipboard in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an easy way to copy selected rows or cells data into the clipboard. You can use keyboard shortcuts to perform the copy operation. The following list of keyboard shortcuts is supported in the Grid to copy selected rows or cells data into clipboard.
+The **Clipboard** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables copying selected rows or cells using keyboard shortcuts or programmatic APIs. Selection must be enabled, and the DataGrid must be focused for keyboard shortcuts to function.
 
-Interaction keys |Description
+Interaction keys | Description
 -----|-----
-<kbd>Ctrl + C</kbd> |Copy selected rows or cells data into clipboard.
-<kbd>Ctrl + Shift + H</kbd> |Copy selected rows or cells data with header into clipboard.
+<kbd>Ctrl + C</kbd> | Copy selected rows or cells to the clipboard
+<kbd>Ctrl + Shift + H</kbd> | Copy selected rows or cells with headers to the clipboard
 
-By using these keyboard shortcuts, you can quickly copy data from the Grid to the clipboard, making it easy to paste the data into other applications or documents.
+These shortcuts copy the current selection from the DataGrid and allow pasting into other applications.
 
-To enable the clipboard feature, you can use the Grid with your data source and selection property. 
+To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html).
+
+### Example: Enabling Clipboard Support
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -36,7 +38,7 @@ To enable the clipboard feature, you can use the Grid with your data source and 
 </SfGrid>
 
 @code {
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -48,40 +50,40 @@ To enable the clipboard feature, you can use the Grid with your data source and 
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -93,14 +95,20 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyNfMKeqJnkwxE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhoMDiJBektfqRc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-## Copy to clipboard by external buttons
+## Copy to Clipboard Using External Buttons
 
-Copying data to the clipboard by using external buttons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to programmatically trigger the copy operation, making it more friendly, especially for those who may not be familiar with keyboard shortcuts or manual copying.
+Copying data to the clipboard can also be triggered through external buttons. This approach is useful in scenarios where UI controls are preferred over keyboard shortcuts.
+The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to programmatically copy selected rows or cells:
 
-To copy selected rows or cells data into the clipboard with the help of external buttons, you can utilize the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method available in the Grid. This is demonstrated in the following example,
+- Pass `true` to include column headers in the copied content.
+- Pass `false` or omit the parameter to copy without headers.
+
+This method provides flexibility for integrating clipboard functionality into custom workflows or toolbar actions.
+
+**Example: Copy to Clipboard with External Buttons**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -123,19 +131,19 @@ To copy selected rows or cells data into the clipboard with the help of external
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task Copy()
+    private async Task Copy()
     {
         await Grid.CopyAsync();
     }
 
-    public async Task CopyHeader()
+    private async Task CopyHeader()
     {
         await Grid.CopyAsync(true);
     }
@@ -145,40 +153,40 @@ To copy selected rows or cells data into the clipboard with the help of external
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -190,25 +198,22 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSDfMKeTVVoBtf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrICDWTLHCgzVDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## AutoFill
 
-The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to copy the data of selected cells and paste it into other cells by simply dragging the autofill icon of the selected cells to the desired cells. This feature provides a convenient way to quickly populate data in a grid.
+The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rapid data entry by copying values from selected cells and filling them into adjacent cells using the autofill handle. This feature is particularly effective with [batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
-**how to use the autofill feature**
+**Steps to Use AutoFill Feature**
 
-1. Select the cells from which you want to copy data.
+1. Select the desired cells to copy.
+2. Hover over the bottom-right corner of the selection to display the autofill handle.
+3. Drag the handle to the target cells.
+4. Release the mouse to populate the target cells with the copied data.
 
-2. Hover over the bottom-right corner of the selection to reveal the autofill icon.
+To enable AutoFill, set the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property to `true`.
 
-3. Click and hold the autofill icon, then drag it to the target cells where you want to paste the copied data.
-
-4. Release the mouse to complete the autofill action, and the data from the source cells will be copied and pasted into the target cells.
-
-This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property as **true**.
-
-The following example demonstrates how to enable the autofill feature in the Grid.
+**Example: AutoFill with Batch Editing**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -227,7 +232,7 @@ The following example demonstrates how to enable the autofill feature in the Gri
 </SfGrid>
 
 @code {
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -239,40 +244,40 @@ The following example demonstrates how to enable the autofill feature in the Gri
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
     public OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -284,35 +289,30 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLojTCUezbECphd?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrosjMJrPHzLbmn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to **true**, then the autofill icon will be displayed on cell selection to copy cells.
-> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be **Cell**,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to be **Box** and also [EditMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#fields) to be **Batch**. 
-
+> * When [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to `true`, the autofill handle appears on cell selection.
+> * AutoFill requires selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) set to `Cell`, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) set to `Box`, and [EditMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#fields) set to `Batch`.
 
 ### Limitations
 
-* AutoFill does not automatically convert string values to number or date types. If the selected cells contain string data and are dragged to number-type cells, the target cells will display **NaN**. Similarly, when dragging string-type cells to date-type cells, the target cells will display as an **empty cell**. It is important to ensure data types are compatible before using autofill to avoid unexpected results.
-
-* The AutoFill feature does not support generating non-linear series or sequential data automatically. Cannot create complex series or patterns by simply dragging cells with non-sequential data. The autofill feature is designed for copying and pasting data from a selected range of cells.
-
-* The AutoFill feature does not support virtual scrolling or column virtualization in the Grid.
-
-* The Auto Fill feature can only be applied to the viewport cell when enabling the features of infinite scrolling in the Grid.
+- **Data Type Conversion**: AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in `NaN`, and copying strings into date cells results in an `empty cell`.
+- **Value Copying**: AutoFill copies values directly from the source range without generating non-linear or sequential series.
+- **Virtualization**: AutoFill is not supported with virtual scrolling or column virtualization.
+- **Infinite Scrolling**: With infinite scrolling, AutoFill applies only to cells within the current viewport.
 
 ## Paste
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a paste feature that allows you to copy the content of a cell or a group of cells and paste it into another set of cells. This feature allows you to quickly copy and paste content within the grid, making it convenient for data entry and manipulation.
+The Paste feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows copying content from a selected cell range and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>. This functionality requires batch editing to be enabled.
 
-Follow the steps below to use the Paste feature in the grid:
+### Steps to Paste Within the DataGrid
 
-1. Select the cells from which you want to copy the content.
+1. Select the source cells to copy.
+2. Press <kbd>Ctrl + C</kbd> to copy the content.
+3. Select the target cell range.
+4. Press <kbd>Ctrl + V</kbd> to paste the content.
 
-2. Press the <kbd>Ctrl + C</kbd> shortcut key to copy the selected cells' content to the clipboard.
-
-3. Select the target cells where you want to paste the copied content.
-
-4. Press the <kbd>Ctrl + V</kbd> shortcut key to paste the copied content into the target cells.
+**Example: Paste with Batch Editing**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -331,7 +331,7 @@ Follow the steps below to use the Paste feature in the grid:
 </SfGrid>
 
 @code {
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -343,40 +343,40 @@ Follow the steps below to use the Paste feature in the grid:
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
     public OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -388,11 +388,10 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthyNzsUeyrJRGbs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhyCZipKMZTUlzY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
-> To perform paste functionality, it requires the selection **mode** to be **Cell**,  **cellSelectionMode** to be **Box** and also Batch Editing should be enabled.
+> To paste content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to `Cell`, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to `Box`, and enable Batch editing.
 
 ### Limitations
 
-* The Paste feature does not automatically convert string values to number or date types. If the selected cells contain string data and are dragged to number-type cells, the target cells will display **NaN**. Similarly, when dragging string-type cells to date-type cells, the target cells will display as an **empty cell**. It is important to ensure data types are compatible before using AutoFill to avoid unexpected results.
+- **Data Type Conversion**: Pasting does not convert string values to numeric or date types. Pasting strings into numeric cells results in `NaN`; pasting strings into date cells results in an `empty cell`. Ensure that the pasted values are compatible with the target column's data type.
