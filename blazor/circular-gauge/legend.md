@@ -10,9 +10,9 @@ documentation: ug
 
 # Legend in Blazor Circular Gauge Component
 
-The legend explains what the circular gauge axis ranges represent. It can display symbols in various colors and shapes, or other identifiers, mapped to the underlying data. This helps interpret what each symbol denotes within the gauge’s axis range.
+The legend explains what the circular gauge axis ranges represent. It can display symbols in various colors and shapes, or other identifiers mapped to the underlying data. This helps interpret what each symbol denotes within the gauge’s axis range.
 
-Enable the legend for circular gauge ranges by setting the `Visible` property of `CircularGaugeLegendSettings` to true.
+Enable the legend for circular gauge ranges by setting the `Visible` property of `CircularGaugeLegendSettings` to **true**.
 
 <!-- markdownlint-disable MD036 -->
 
