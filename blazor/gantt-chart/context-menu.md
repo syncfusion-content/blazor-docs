@@ -100,7 +100,7 @@ The following sample code demonstrates defining a custom context menu item and i
     private SfGantt<TaskData> Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
-        new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="refresh"}
+        new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="Refresh"}
     };
     protected override void OnInitialized()
     {
@@ -236,7 +236,7 @@ The following sample code demonstrates defining the sub-context menu item and it
     private SfGantt<TaskData> Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
-        new ContextMenuItemModel{Text="GanttAction",Target=".e-content",Id="GanttAction",
+        new ContextMenuItemModel{Text="Gantt Action",Target=".e-content",Id="GanttAction",
             Items=new List<MenuItem>(){new MenuItem {Text="Refresh",Id= "Refresh"},new MenuItem {Text="Edit",Id= "Edit"} } }
     };
 
@@ -390,7 +390,7 @@ The following sample code demonstrates how to enable or disable context menu ite
     private SfGantt<TaskData> Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
-        new ContextMenuItemModel{Text="GanttAction",Target=".e-content",Id="GanttAction",
+        new ContextMenuItemModel{Text="Gantt Action",Target=".e-content",Id="GanttAction",
             Items=new List<MenuItem>(){new MenuItem{Text="Refresh",Id="Refresh"},new MenuItem{Text="Edit",Id= "Edit"}}}
     };
 

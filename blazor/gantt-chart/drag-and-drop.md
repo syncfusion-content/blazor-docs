@@ -130,7 +130,7 @@ Event Name |Description
 
 In Gantt, the `OnRowDragStart` and `RowDropped` events are triggered on row drag and drop action. Using this event, you can prevent dragging of particular record, validate the drop position, and cancel the drop action based on the target record and dragged record. The following topics explains about this.
 
- Prevent dragging of particular record
+Prevent dragging of particular record
 
 You can prevent drag action of the particular record by setting the `Cancel` property to `true`, which is available in the `OnRowDragStart` event argument based on our requirement. In the following sample, drag action was restricted for first parent record and its child records.
 
@@ -166,69 +166,16 @@ You can prevent drag action of the particular record by setting the `Cancel` pro
         public int Progress { get; set; }
         public int? ParentID { get; set; }
     }
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskID = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
-                Duration="4"
-            },
-            new TaskData() {
-                TaskID = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
-                Progress = 30,
-                ParentID = 1,
-                Duration="2",
-            },
-            new TaskData() {
-                TaskID = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
-                ParentID = 1,
-                Duration="4"
-            },
-            new TaskData() {
-                TaskID = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "4",
-                Progress = 30,
-                ParentID = 1
-            },
-            new TaskData() {
-                TaskID = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
-                Duration="4",
-            },
-            new TaskData() {
-                TaskID = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentID = 5
-            },
-            new TaskData() {
-                TaskID = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentID = 5
-            },
-            new TaskData() {
-                TaskID = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "2",
-                ParentID = 5
-            }
-        };
+    public static List<TaskData> GetTaskCollection() => new List<TaskData> {
+        new TaskData { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 03, 28), EndDate = new DateTime(2019, 07, 28), Duration = "4" },
+        new TaskData { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 03, 29), Progress = 30, ParentID = 1, Duration = "2" },
+        new TaskData { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 03, 29), ParentID = 1, Duration = "4" },
+        new TaskData { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 03, 29), Duration = "4", Progress = 30, ParentID = 1 },
+        new TaskData { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 03, 29), EndDate = new DateTime(2019, 04, 2), Duration = "4" },
+        new TaskData { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 03, 29), Duration = "3", Progress = 30, ParentID = 5 },
+        new TaskData { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 01), Duration = "3", Progress = 30, ParentID = 5 },
+        new TaskData { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 01), Duration = "2", ParentID = 5 }
+    };
         return Tasks;
     }
 }
