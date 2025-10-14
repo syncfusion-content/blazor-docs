@@ -499,7 +499,7 @@ The following example demonstrates all three behaviors using the OpenAsync metho
 }
 ```
 
-![Blazor Image Editor with Opening an image](./images/blazor-image-editor-custom-height-width.jpg)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-custom-height-width.png)
 
 ## Save as image
 
@@ -534,7 +534,7 @@ In the following example, the `ExportAsync` method is invoked on a button click.
 }
 ```
 
-![Blazor Image Editor with Save an image](./images/blazor-image-editor-export.jpg)
+![Blazor Image Editor with Save an image](./images/blazor-image-editor-export.png)
 
 ### Save the image as base64 format
 
