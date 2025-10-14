@@ -202,7 +202,7 @@ internal sealed class OrderData
 
 ## AutoFill
 
-The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rapid data entry by copying values from selected cells and filling them into adjacent cells using the autofill handle. This feature is particularly effective with [batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
+The **AutoFill** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rapid data entry by copying values from selected cells and filling them into adjacent cells using the autofill handle. This feature is particularly effective with [batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
 **Steps to Use AutoFill Feature**
 
@@ -303,7 +303,7 @@ internal sealed class OrderData
 
 ## Paste
 
-The Paste feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows copying content from a selected cell range and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>. This functionality requires batch editing to be enabled.
+The **Paste** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows copying content from a selected cell range and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>. This functionality requires batch editing to be enabled.
 
 ### Steps to Paste Within the DataGrid
 
