@@ -165,7 +165,7 @@ To configure localization in a Syncfusion<sup style="font-size:70%">&reg;</sup> 
 
 **Step 1: Create a Blazor Web App**
  
-Create a `Blazor Web App` named LocalizationSample using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/aspnet/core/blazor/components/render-modes#render-modes) and [interactivity location](https://learn.microsoft.com/aspnet/core/blazor/tooling?pivots=windows).
+Create a **Blazor Web App** named `LocalizationSample` using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
 
 **Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid NuGet Packages**
  
@@ -485,7 +485,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 3: Set Culture in Blazor Start Option**
 
-- Add the `autostart="false"` attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
+- Add the `autostart="false"` attribute to the Blazor `<script>` tag to prevent Blazor from starting automatically.
 - Add the script block below Blazor’s `<script>` tag and before the closing `</body>` tag to start Blazor with a specific culture.
 - Use the `Blazor.start` method and set `applicationCulture` to the desired culture code.
 
@@ -523,7 +523,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 4: Enable or Disable RTL Mode with Toggle Switch**
 
-Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the DataGrid.
+Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Counter.razor" %}
