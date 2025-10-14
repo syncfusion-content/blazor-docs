@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Numeric TextBox Component
 
-The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor NumericTextBox component is outlined below.
+The accessibility compliance for the Blazor Numeric TextBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,9 +38,9 @@ The accessibility compliance for the Blazor NumericTextBox component is outlined
 
 ## WAI-ARIA attributes
 
-The Blazor NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
+The Blazor Numeric TextBox provides comprehensive WAI-ARIA support to improve accessibility for screen readers and other assistive technologies. It is designed with reference to the  [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
 
-The NumericTextBox uses the `spin button` role and following ARIA properties to its element based on its state.
+The Numeric TextBox uses the role="spinbutton" and the following ARIA properties to convey state to assistive technologies.
 
 | **Property** | **Functionality** |
 | --- | --- |
@@ -55,14 +55,14 @@ The NumericTextBox uses the `spin button` role and following ARIA properties to 
 
 ## Keyboard interaction
 
-Keyboard interaction of the Blazor NumericTextBox component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
+Keyboard interaction of the Blazor Numeric TextBox component is designed based on the [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton) for spinbutton behavior. The input must have focus for the shortcuts to apply.
 
-The following table shows shortcut keys and its corresponding usage.
+The following table shows shortcut keys and their corresponding actions.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Increments the value. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Decrements the value. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Decrements the value. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Increments the value. |
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -74,9 +74,9 @@ The following table shows shortcut keys and its corresponding usage.
 
 ## Ensuring accessibility
 
-The Blazor NumericTextBox component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Numeric TextBox component's accessibility levels are validated through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the NumericTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/numerictextbox) in a new window to evaluate the accessibility of the NumericTextBox component with accessibility tools.
+The accessibility compliance of the Numeric TextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/numerictextbox) in a new window to evaluate the accessibility of the Numeric TextBox component with accessibility tools.
 
 ## See also
 
