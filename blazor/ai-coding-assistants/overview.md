@@ -15,8 +15,6 @@ AI Coding Assistant:
 
 * **The SyncfusionBlazorAssistant MCP Server**
   Processes advanced prompts and returns tailored code suggestions via [MCP-compatible clients](https://modelcontextprotocol.io/clients).
-* **SyncfusionBlazor GitHub Copilot Extension**
-  Augments GitHub Copilot with Syncfusion-specific support for rapid component setup and contextual guidance in the IDE.
 
 ## Getting Started
 
@@ -36,7 +34,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to the 
 
 * Number of requests
 * Components usage
-* Query types
+* Query formats
 * Usage duration
 
 This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components to enhance their development experience without limitations.
@@ -68,5 +66,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is desi
 ## See also
 
 * Add the [SyncfusionBlazorAssistant MCP Server](https://blazor.syncfusion.com/documentation/ai-coding-assistants/mcp-server) to an MCP-enabled client
-* Install the [SyncfusionBlazor GitHub Copilot Extension](https://blazor.syncfusion.com/documentation/ai-coding-assistants/copilot-extension)
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Documentation](https://blazor.syncfusion.com/documentation)
