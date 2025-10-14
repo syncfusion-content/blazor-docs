@@ -69,9 +69,7 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 * In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace, find `SyncfusionBlazorAssistant`, and click Install.
 * When prompted, enter your [Syncfusion API key](https://syncfusion.com/account/api-key) and click Submit to register.
 * It installs locally on your machine and appears in the Installed list.
-* The server is ready for use in Code Studio.
-
-For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
+* The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
 
 ### VS Code (GitHub Copilot MCP)
 
