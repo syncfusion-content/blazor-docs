@@ -50,4 +50,4 @@ The following example demonstrates Linear Gauge animation.
 
 ![Blazor Linear Gauge Animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
 
-N> Only the pointer can be animated individually. For pointer-only animation, refer to [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
+N> Only the pointer of the Linear Gauge can be animated individually, not the axis lines, ticks, labels, ranges and annotations. For pointer-only animation, refer to [pointer animation](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation).
