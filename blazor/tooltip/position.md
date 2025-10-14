@@ -9,7 +9,7 @@ documentation: ug
 
 # Position in Blazor Tooltip Component
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the [**Position**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Position) property with any one of the following values:
+Tooltips can be positioned at 12 predefined locations around the target. Set the [**Position**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Position) property to one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -24,7 +24,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 * `RightCenter`
 * `RightBottom`
 
-N> By default, Tooltip is placed at the **TopCenter** of the target element.
+N> By default, the tooltip is placed at the **TopCenter** of the target element.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -40,11 +40,11 @@ N> By default, Tooltip is placed at the **TopCenter** of the target element.
 }
 ```
 
-![Changing Blazor Tooltip Position](images/blazor-tooltip-position.gif)
+![Changing tooltip position around the target element](images/blazor-tooltip-position.gif)
 
 ## Mouse trailing
 
-Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the [`MouseTrail`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_MouseTrail) property. By default, it is set to `false`.
+Position the tooltip relative to the mouse pointer by enabling the [`MouseTrail`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_MouseTrail) property. By default, this property is `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -73,14 +73,14 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 
 ![Blazor Tooltip with Mouse Trail](images/blazor-tooltip-mouse-trail.gif)
 
-N> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
+N> When mouse trailing is enabled, the tip pointer alignment is auto-adjusted based on the target and cursor, and alignment options such as start, end, and middle are not applied (to keep the pointer within the target area). Consider accessibility needs when using pointer-tracking behavior.
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and Tooltip element. [`OffsetX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetY) properties are used to specify the offset left and top values.
+Use offsets to control the distance between the target and the tooltip element. [`OffsetX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetY) specify horizontal and vertical offsets relative to the chosen position.
 
-* `OffsetX` specifies the distance between the target and Tooltip element in X axis.
-* `OffsetY` specifies the distance between the target and Tooltip element in Y axis.
+* `OffsetX` specifies the distance on the X-axis between the target and the tooltip element.
+* `OffsetY` specifies the distance on the Y-axis between the target and the tooltip element.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -110,11 +110,11 @@ Offset values are set to specify the distance between the target and Tooltip ele
 
 ![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.gif)
 
-N> By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
+N> Collision is handled automatically. When a collision is detected, the tooltip fits horizontally and flips vertically to remain visible within the viewport. Use offsets sparingly to avoid overlap and maintain readability.
 
 ## Change collision target to viewport when setting Target
 
-You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change collision target to `viewport` instead of parent of Tooltip element.
+Set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change the collision target to the browser viewport instead of the tooltip’s parent.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -132,4 +132,4 @@ You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.png)
 
-N>[View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).
+N> [View sample on GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).

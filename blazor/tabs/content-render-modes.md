@@ -9,17 +9,17 @@ documentation: ug
 
 # Content Render Modes in Blazor Tabs Component
 
-In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
+In the [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component, content can be rendered according to specific scenarios using three different modes:
 
 * [Dynamic rendering](#dynamic-rendering)
 * [On Demand rendering or lazy loading](#on-demand-rendering-or-lazy-loading)
 * [On initial rendering](#on-initial-rendering)
 
-## Dynamic rendering
+## Dynamic Rendering
 
 This mode is the default one in which the content of the selected tab alone will be loaded and available in DOM initially and it will be replaced with corresponding content if you select the tab dynamically. Since in this mode, the browser maintains the DOM with current active tab content alone, page loading performance is increased with rendering DOM. But the Tabs doesn't maintain its current state since every time tab loaded with fresh content.
 
-In the following code example, there are two tabs. The first tab have a login page and second tab have Grid component. The second tab Grid component will be rendered in the DOM only when the login is completed. The second tab will be replaced the first tab in the DOM.
+In the following code example, there are two tabs. The second tab's Grid component is rendered in the DOM only after a successful login in the first tab. The second tab will be replaced the first tab in the DOM.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -127,11 +127,11 @@ In the following code example, there are two tabs. The first tab have a login pa
 }
 ```
 
-N> In this mode, if you want to maintain the state, you have to handle it in application end.
+N> To maintain the state in this mode, manage it within the application logic.
 
-## On Demand rendering or lazy loading
+## On Demand Rendering or Lazy Loading
 
-You can set this mode to our Tabs by setting `ContentLoad.Demand` to the property `LoadOn`. In this mode, the content of the selected tab alone will be loaded initially. The content of the selected tab will be rendered on selection. The content of the tabs which were loaded once will be maintained in the DOM. In this mode, since the selected tab content alone rendered on initial load and maintained the other tabs on selection in the DOM, state of the tabs like scroller position, form values etc.., will be maintained.
+Enable this mode by setting the `LoadOn` property to `ContentLoad.Demand`. In this mode, only the content of the initially selected tab is loaded into the DOM. Content for other tabs is rendered only when they are selected for the first time. Once loaded, the content of these tabs is maintained in the DOM. This approach ensures state preservation for components within tabs (e.g., scroll position, form values) while optimizing initial load times.
 
 In the following code example, Calendar and Scheduler have been rendered in first and second tab respectively. Initially, Scheduler is not available once the second tab is selected, scheduler will be rendered. Both the calendar and scheduler will be maintained in DOM, changing the date either in calendar or scheduler will change the date in other.
 
@@ -173,9 +173,9 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 }
 ```
 
-## On initial rendering
+## On Initial Rendering
 
- This mode can be set to the Tabs by setting `ContentLoad.Init` to the property `LoadOn`. In this mode, the content of all the tabs will be rendered on initial load and maintained in the DOM. You can use this mode, when you have less number of tabs and you need to maintain the state of tabs. In this mode, you can access the reference of components rendered in other tabs.
+Enable this mode by setting the `LoadOn` property to `ContentLoad.Init`. In this mode, the content of all tabs is rendered and loaded into the DOM initially. This mode is suitable for a smaller number of tabs, where maintaining the state of all tabs is a priority and you need to access components rendered in other tabs directly (e.g., via component references).
 
  In the following example, all the three tabs are rendered in initial load itself and the data entered in the first tab will be maintained even when second or third tab is in active state.
 

@@ -3,21 +3,20 @@ layout: post
 title: Style and appearance in Blazor TextArea Component | Syncfusion
 description: Learn here all about Style and appearance of the Syncfusion Blazor Textarea component and much more.
 platform: Blazor
-control: Textarea
+control: TextArea
 documentation: ug
 ---
 
 # Sizing in Blazor TextArea Component
 
-you can adjust the size of the TextArea by applying specific classes:
+The size of the TextArea can be adjusted by applying the following classes:
 
 | Property  | Description |
 | -- | -- |
 | Small  | Add the `e-small` class to the input element or its container to render a smaller-sized TextArea. |
 | Bigger | Add the `e-bigger` class to the input element or its container to render a larger-sized TextArea. |
 
-By applying these classes, users can easily customize the appearance of the TextArea to better fit their application's design requirements.
-
+Applying these classes helps align the TextArea with the overall density and visual scale of the application’s design.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -89,13 +88,13 @@ By adding these classes, users can choose between a filled or outline appearance
 {% endhighlight %}
 {% endtabs %}
 
->Note: Filled and Outline theme customization are available only with Material and Material3 themes.
+>Note: Filled and Outline appearances are available only with the Material and Material3 themes.
 
 ## Custom styling with CssClass property
 
-The `CssClass` Api provides a powerful way to apply custom styling to the TextArea component, allowing users to customize its appearance and layout according to their design requirements.
+The `CssClass` property provides a way to apply custom CSS classes to the TextArea container, enabling customization of color, padding, margins, borders, and other styles to meet design requirements.
 
-By utilizing the `CssClass` API, users can apply custom CSS classes to the TextArea component's container, enabling control over its styling properties such as color, padding, margins, borders, and more.
+By applying custom classes, the component’s appearance can be tailored while preserving built-in theme behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -107,7 +106,7 @@ By utilizing the `CssClass` API, users can apply custom CSS classes to the TextA
 
 ## Setting the disabled state
 
-To disable the TextArea, you can utilize the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
+Disable the TextArea by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
@@ -133,9 +132,9 @@ To make the TextArea read-only , you can use the [ReadOnly](https://help.syncfus
 
 ## Set the rounded corner
 
-Render the TextArea with `rounded corner` by adding the `e-corner` class to the input parent element.
+Render the TextArea with rounded corners by adding the `e-corner` class to the input’s parent element. This style applies to the boxed input wrapper.
 
->This rounded corner is visible only in box model input component
+>This rounded corner is visible only in the box model input component.
 
 {% tabs %}
 {% highlight razor %}
@@ -168,7 +167,7 @@ To display a static clear button in the TextArea component, you can add the `e-s
 
 ## Customize the TextArea background color and text color
 
-You can customize the TextArea styles such as background-color, text-color and border-color by overriding its default styles to achieve the desired appearance for the TextArea.
+Customize background color, text color, and border color by overriding the default wrapper styles. Target the appropriate wrapper classes to ensure consistent appearance across themes.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -295,7 +294,7 @@ You can change the floating label color of the TextArea for both `success` and `
 
 ## Adding mandatory asterisk to placeholder
 
-To add a mandatory asterisk (*) to the placeholder in the TextArea component, you can utilize CSS to append the asterisk after the placeholder text.
+Add a mandatory asterisk (*) to the floating label using CSS to append the symbol after the label text.
 
 ```css
 
@@ -306,7 +305,6 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 }
 
 ```
-
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}

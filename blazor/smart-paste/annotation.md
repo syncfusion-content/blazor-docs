@@ -15,7 +15,7 @@ The Syncfusion Blazor Smart Paste Button component leverages AI to intelligently
 
 Use the `data-smartpaste-description` attribute to provide custom instructions for specific form fields, overriding the default AI-generated descriptions. This is particularly useful for fields requiring specific formats, such as dates or custom data types. The example below demonstrates annotating a Date of Birth field to enforce a `DD-MM-YYYY` format within a `SfDataForm`, which maps form fields to clipboard data processed by the AI.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.SmartComponents
 @using Syncfusion.Blazor.Inputs
