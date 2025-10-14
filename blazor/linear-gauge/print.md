@@ -49,7 +49,7 @@ The rendered Linear Gauge can be printed directly from the browser by calling th
 
 ### Image Export
 
-Enable image export by setting the [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowImageExport) property to **true**. Export the rendered Linear Gauge as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method with the export type and file name. Supported image formats include:
+Enable image export by setting [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowImageExport) property to **true**. Then call [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method with the desired export type and file name to export the rendered Linear Gauge. Supported image formats include:
 
 * JPEG
 * PNG
