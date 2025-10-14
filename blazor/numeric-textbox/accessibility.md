@@ -40,7 +40,7 @@ The accessibility compliance for the Blazor Numeric TextBox component is outline
 
 The Blazor Numeric TextBox provides comprehensive WAI-ARIA support to improve accessibility for screen readers and other assistive technologies. It is designed with reference to the  [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
 
-The Numeric TextBox uses the role="spinbutton" and the following ARIA properties to convey state to assistive technologies.
+The Numeric TextBox uses the role="spin button" and the following ARIA properties to convey state to assistive technologies.
 
 | **Property** | **Functionality** |
 | --- | --- |
