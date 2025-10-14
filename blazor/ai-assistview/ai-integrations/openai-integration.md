@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Azure Open AI with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Azure Open AI with Blazor AI AssistView component in Blazor WebAssembly Application.
+title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Integrate Azure OpenAI with Blazor AI AssistView component
 
-The AI AssistView component integrates with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure Open AI service via API calls, providing natural language understanding and context-aware responses.
+The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
 Before starting, ensure you have the following:
 
-* **An Azure account**: with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
+* **An Azure account**: with access to [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
@@ -29,7 +29,7 @@ Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide 
 
 Install the required packages:
 
-1. Install the `Open AI` and `Azure` nuget packages in the application.
+1. Install the `OpenAI` and `Azure` nuget packages in the application.
 
 ```bash
 
@@ -49,9 +49,9 @@ Nuget\Install-Package Markdig
 
 Note: The sample below uses HttpClient directly and does not require the Azure/OpenAI SDKs.
 
-## Configure Azure Open AI
+## Configure Azure OpenAI
 
-1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource.
+1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure OpenAI resource.
 
 2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL. 
 
@@ -72,6 +72,8 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 - Register the service for dependency injection.
 
 - Inject and use the service in your Razor component.
+
+Modify the razor file to integrate the Azure OpenAI with the AI AssistView component.
 
 {% tabs %}
 {% highlight c# tabtitle="razor" %}
@@ -251,4 +253,4 @@ var deploymentName = "gpt-4o-mini";
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Azure Open AI Integration](../images/openai-integration.png)
+![Blazor AI AssistView Azure OpenAI Integration](../images/openai-integration.png)
