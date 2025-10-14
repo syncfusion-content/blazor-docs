@@ -3,19 +3,21 @@ layout: post
 title: Globalization in Blazor In-place Editor Component | Syncfusion
 description: Checkout and learn here all about Globalization in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
-control: In Place Editor 
+control: In-place Editor 
 documentation: ug
 ---
 
 # Globalization in Blazor In-place Editor Component
 
+This topic explains how to globalize the In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
+
 ## Localization
 
-[Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) supports localization. To localize component text (such as tooltips and buttons), follow the guidance in [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization).
 
 ## Right to left
 
-Specifies the direction of the In-place Editor component using the `EnableRtl` property. For writing systems that requires Arabic, Hebrew, and more. The direction can be switched to right-to-left.
+Specify the direction of the In-place Editor using the `EnableRtl` property. Use RTL layout for right-to-left languages such as Arabic, Hebrew, and Farsi. The layout direction can be switched to right-to-left independently of the current locale.
 
 > It will not change based on the locale property.
 
@@ -43,12 +45,11 @@ Specifies the direction of the In-place Editor component using the `EnableRtl` p
 
 ```
 
-
 ![Right to Left in Blazor In-place Editor](./images/blazor-inplace-editor-right-to-left.png)
 
 ## Format
 
-Formatting is a way of representing the value in different formats. You can format the following mentioned components with its `format` property when it is directly configured in the Editor component.
+Formatting is a way of representing the value in different formats. Format the following mentioned components with its `format` property when it is directly configured in the Editor component.
 
 * [DatePicker](../datepicker/date-format/)
 * [DateRangePicker](../daterangepicker/globalization/)
@@ -80,6 +81,5 @@ Formatting is a way of representing the value in different formats. You can form
 }
 
 ```
-
 
 ![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.png)
