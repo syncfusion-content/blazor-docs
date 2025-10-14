@@ -9,11 +9,9 @@ documentation: ug
 
 # Customization in Blazor Mention Component
 
-This page covers common customization options for the Blazor Mention component, including displaying the mention character, appending suffix text, configuring the popup list size, changing the trigger character, and controlling leading space behavior.
-
 ## Show or hide mention character
 
-To display the mention character alongside the selected item in the target element, set the [ShowMentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_ShowMentionChar) property to `true`. This helps distinguish the selected mention from surrounding text. The default value is `false`.
+To show the mentioned character along with the text when displaying the selected mention item in the target element, you can set the [ShowMentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_ShowMentionChar) property of the Mention component to `true`. This can be useful in cases where you want to clearly differentiate between the selected mention item and the rest of the text in the Mention component.
 
 {% highlight razor %}
 
@@ -21,7 +19,7 @@ To display the mention character alongside the selected item in the target eleme
 
 {% endhighlight %}
 
-![Blazor Mention showing the mention character with selected item](./images/blazor-mention-show-mention-char.png)
+![Blazor Mention with show or hide mention character](./images/blazor-mention-show-mention-char.png)
 
 ## Adding the suffix character after selection
 
@@ -35,13 +33,9 @@ The [SuffixText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDow
 
 ## Configure the popup list
 
-Customize the suggestion list size using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupWidth) properties. Values can be provided as:
-- A string with CSS units (for example, `"300px"`, `"50%"`)
-- A number (interpreted as pixels)
+You can customize the suggestion list's width and height using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupWidth) properties. These properties can accept values in pixels, percentage, or as a number. If a number value is specified, it will be treated as a pixel value.
 
-Defaults:
-- `PopupWidth`: `auto` (adjusts based on content)
-- `PopupHeight`: `300px`
+By default, the popup list width value is set to `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set to `300px`.
 
 {% highlight razor %}
 
@@ -49,11 +43,11 @@ Defaults:
 
 {% endhighlight %}
 
-![Blazor Mention with configured popup width and height](./images/blazor-mention-popup-list.png)
+![Blazor Mention with popup list](./images/blazor-mention-popup-list.png)
 
 ## Trigger character
 
-Change the character that triggers the suggestion list using the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property. By default, the trigger character is `@`, but it can be set to any character.
+The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property in the Mention component allows you to specify the character that will trigger the suggestion list to display in the target area. By default, the `@` character is used as the trigger character, but you can customize it to any other character by setting the `MentionChar` property.
 
 {% highlight razor %}
 
@@ -61,11 +55,11 @@ Change the character that triggers the suggestion list using the [MentionChar](h
 
 {% endhighlight %}
 
-![Blazor Mention using a custom trigger character](./images/blazor-mention-trigger-char.png)
+![Blazor Mention with trigger character](./images/blazor-mention-trigger-char.png)
 
 ## Leading Space Requirement
 
-Control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#properties) property in the Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
+You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#properties) property in the Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
 
 {% highlight razor %}
 
@@ -73,4 +67,4 @@ Control whether a space is required before the mention character using the [Requ
 
 {% endhighlight %}
 
-![Blazor Mention configured with leading space requirement](./images/require_leading_space.gif)
+![Blazor Mention with leading space configuration](./images/require_leading_space.gif)

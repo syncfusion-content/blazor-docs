@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Mention Component | Syncfusion
-description: Checkout and learn about localization in Mention component and more.
+description: Checkout and learn here all about localization in Syncfusion Blazor Mention component and more.
 platform: Blazor
 control: Mention
 documentation: ug
