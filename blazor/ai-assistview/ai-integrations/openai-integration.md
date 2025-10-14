@@ -57,7 +57,7 @@ Note: The sample below uses HttpClient directly and does not require the Azure/O
 
 3. Note the following values:
    - API key
-   - Endpoint (for example, https://<resource-name>.openai.azure.com/)
+   - Endpoint
    - API version (must be supported by your resource)
    - Deployment name (for example, gpt-4o-mini)
 
