@@ -9,9 +9,9 @@ documentation: ug
 
 # Data Binding in Blazor ComboBox Component
 
-The ComboBox loads the data either from the local data sources or remote data services. Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
+The ComboBox supports binding data from local sources or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data. For remote data, use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to configure endpoints and adaptors.
 
-* **TItem** - Specifies the type of the datasource of the combobox component.
+* **TItem** - Specifies the type of the data source items for the ComboBox component.
 
 ## Binding local data
 
@@ -27,7 +27,7 @@ The ComboBox loads the data from local data sources through the [DataSource](htt
 
 ## Index value binding
 
-Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+Bind by index using the `bind-Index` attribute (supports int and nullable int). This binds the selected item based on its index in the data.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -60,7 +60,7 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
 
 ### DataBound event
 
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_DataBound) event triggers when the data source is populated in the popup list.
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_DataBound) event fires after the data source is populated in the popup list.
 
 {% highlight cshtml %}
 
@@ -70,9 +70,9 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 ### Primitive type
 
-Bind the data to the ComboBox as an array or list of the `string`, `int`, `double` and `bool` type items.
+Bind arrays or lists of primitive types such as `string`, `int`, `double`, and `bool`.
 
-The following code demonstrates array of string values to the ComboBox component.
+The following code demonstrates binding an array of strings to the ComboBox.
 
 {% highlight cshtml %}
 
@@ -82,7 +82,7 @@ The following code demonstrates array of string values to the ComboBox component
 
 ![Blazor ComboBox with Primitive string type](./images/data-binding/blazor_combobox_primitive-type-string.png)
 
-The following code demonstrates array of integer values to the ComboBox component.
+The following code demonstrates binding an array of integers to the ComboBox.
 
 {% highlight cshtml %}
 
@@ -94,9 +94,9 @@ The following code demonstrates array of integer values to the ComboBox componen
 
 ### Complex data type
 
-The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxModel.html) property.
+Bind arrays or lists of complex objects. Map the appropriate fields using the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxModel.html) property (via ComboBoxFieldSettings).
 
-In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) and  [ComboBoxFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Text) respectively.
+In the following example, `Code.ID` is mapped to [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) and `Country.CountryID` is mapped to [ComboBoxFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Text).
 
 {% highlight cshtml %}
 
@@ -108,7 +108,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox. The following example binds a collection of vehicle objects.
 
 {% highlight cshtml %}
 
@@ -120,7 +120,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Observable collection binding
 
-Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) data to the ComboBox component. In the following example, the `Observable Data` is bound to a collection of colors data.
+Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) so UI updates reflect changes to the collection (add, remove, update).
 
 {% highlight cshtml %}
 
@@ -132,7 +132,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the ComboBox component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) instances to the ComboBox. The following example binds a collection of customers.
 
 {% highlight cshtml %}
 
@@ -144,7 +144,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Enum data binding
 
-Bind the enum data to the ComboBox component. The following code helps you to get a description value from the enumeration data.
+Bind enum data and display description values from enumeration members.
 
 {% highlight cshtml %}
 
@@ -156,7 +156,7 @@ Bind the enum data to the ComboBox component. The following code helps you to ge
 
 ### ValueTuple data binding
 
-Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data. The following example shows how to extract and display a string value using `ValueTuple`.
 
 {% highlight cshtml %}
 
@@ -168,17 +168,15 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 ## Binding remote data 
 
-The ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. 
+Load data from remote services using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) in combination with [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to shape requests.
 
-The ComboBox supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the ComboBox.
-
-* [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
-* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
-* [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
+* [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) – Specifies the service endpoint to fetch data.
+* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) – Selects the adaptor. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. Adaptors handle request/response processing for the endpoint.
+* The [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides predefined adaptors for common service endpoints.
 
 ### OnActionBegin event
 
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionBegin) event fires before data is requested from the server.
 
 {% highlight cshtml %}
 
@@ -188,7 +186,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### OnActionComplete event
 
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionComplete) event fires after data is successfully fetched from the server.
 
 {% highlight cshtml %}
 
@@ -198,7 +196,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ### OnActionFailure event
 
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnActionFailure) event fires when a remote data request fails.
 
 {% highlight cshtml %}
 
@@ -208,7 +206,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### OData v4 services
 
-The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
+The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) enables consuming and manipulating data from OData v4 services. The following example displays the first six customer records from the `Customers` table of the Northwind service.
 
 {% highlight cshtml %}
 
@@ -220,7 +218,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 ### Web API adaptor
 
-The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+Use the [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) to interact with Web API endpoints that follow OData conventions. `WebApiAdaptor` extends the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), so endpoints should understand OData-formatted queries.
 
 {% highlight cshtml %}
 
@@ -253,9 +251,7 @@ public abstract class DataAdaptor
 }
 ```
 
-In custom Adaptor, the data binding operation can be performed in the ComboBox component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
-
-The following sample code demonstrates implementing custom data binding using custom adaptor.
+Bind the ComboBox using your custom adaptor by providing the custom class to DataManager and implementing `Read` or `ReadAsync`.
 
 {% highlight cshtml %}
 
@@ -265,9 +261,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process on the client-side. To enable this behavior, use the `Offline` property of `DataManager`.
-
-The following example is for remote data binding and enabled offline mode.
+To avoid a server request for every action, preload all data at initialization and perform actions on the client. Enable this behavior by setting the DataManager’s `Offline` property.
 
 {% highlight cshtml %}
 
@@ -279,11 +273,11 @@ The following example is for remote data binding and enabled offline mode.
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the ComboBox component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the ComboBox component.
 
 #### Create DBContext class
 
-The first step is to create a DBContext class called `OrderContext` to connect to a Microsoft SQL Server database.
+Create a `DbContext` (for example, `OrderContext`) to connect to the database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -312,7 +306,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Create data access layer to perform data operation
 
-Now, create a class named `OrderDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
+Create a data access class (for example, `OrderDataAccessLayer`) to retrieve records from the database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -346,7 +340,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the ComboBox to directly consume data from the Entity Framework.
+Create a Web API controller so the ComboBox can consume data directly from Entity Framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -393,7 +387,7 @@ namespace EFDropDown.Controllers
 
 ### Configure ComboBox component using Web API adaptor
 
-Now, configure the ComboBox using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web API, use the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
+Configure the ComboBox with [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the Web API using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% highlight cshtml %}
 
@@ -403,7 +397,7 @@ Now, configure the ComboBox using the [SfDataManager](https://blazor.syncfusion.
 
 ## Adding new items
 
-Add the new item in the popup with the help of [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the ComboBox popup without affecting the data source items.
+Add items directly to the popup (without altering the bound data source) using [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__). This method inserts the specified items into the ComboBox popup at the given index (or at the end if not specified) while leaving the original data source unchanged.
 
 {% highlight cshtml %}
 

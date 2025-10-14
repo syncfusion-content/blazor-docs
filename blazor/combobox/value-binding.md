@@ -9,16 +9,16 @@ documentation: ug
 
 # Value Binding in ComboBox
 
-Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
-
-* bind-Value Binding 
-* bind-Index Binding
+Value binding is the process of passing values between a component and its parent. There are two methods for binding values:
+- bind-Value binding
+- bind-Index binding
 
 ## Bind value binding
 
 The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value)
 
-* **TValue** - Specifies the type of each list item on the suggestion list.
+- TValue: Specifies the value type of the component.
+- TItem: Specifies the type of each item in the data source.
 
 {% highlight cshtml %}
 
@@ -54,7 +54,7 @@ The following code demonstrates array of string as datasource to the ComboBox co
 
 ![Blazor ComboBox with Primitive Type as string](./images/value-binding/blazor_combobox_primitive-type-string.png)
 
-The following code demonstrates array of int as datasource to the ComboBox component.
+The following code demonstrates an array of int as the data source for the ComboBox component.
 
 {% highlight cshtml %}
 
@@ -66,9 +66,9 @@ The following code demonstrates array of int as datasource to the ComboBox compo
 
 ## Object binding
 
-Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox component, this is, You can map the class name to `TValue`. 
+Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Value) attribute by setting TValue to the appropriate type. Ensure the field mapped to [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) corresponds to the bound value.
 
-In the following example, the `Name` column has been mapped to the [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value).
+In the following example, the Name column is mapped to the Value field.
 
 {% highlight cshtml %}
 
@@ -94,9 +94,9 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 
 Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
 
-N> If the TValue is a non nullable type, then while using the clear button, it will set the default value of the data type, and if TValue is set as a nullable type, then while using the clear button it will set to a null value(for example If the TValue is int, then while clearing 0 will set to the component and if TValue is int?, then while clearing null will set to the component)
+N> If TValue is non-nullable, clearing sets the default value for the type. If TValue is nullable, clearing sets null. For example, if TValue is int, clearing sets 0; if TValue is int?, clearing sets null.
 
-The following sample demonstrates the `string` used as `TValue`. So, if you clear the value using the clear button, it will be set to null as it's the default value of the respective type.
+The following sample demonstrates using string as TValue. Clearing the value sets it to null, which is the default for that type.
 
 {% highlight cshtml %}
 
@@ -108,11 +108,11 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the ComboBox component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The TItem type can be changed dynamically by defining the ComboBox data source type with the `@typeparam` directive. The following example demonstrates changing TItem dynamically with different data sources.
 
 ### Creating generic combobox component
 
-First, create a `ComboBox.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+First, create a ComboBox.razor file as a parent component in the /Pages folder. Add parameter properties for a List<TItem> and TValue.
 
 {% tabs %}
 {% highlight razor %}
@@ -140,9 +140,9 @@ First, create a `ComboBox.razor` file as a parent component in the `/Pages` fold
 
 ### Usage of generic component with different type
 
-Then, render the Generic ComboBox component with the required `TValue` and `TItem` in the respective razor components. 
+Render the generic ComboBox component with the required TValue and TItem in the respective Razor components.
 
-Here, the ComboBox component is rendered with the TValue as a string type in the `/Index.razor` file and the ComboBox component with TValue as an int nullable type in the `/Counter.razor` file.
+Here, the ComboBox component is rendered with TValue as string in /Index.razor and with TValue as nullable int in /Counter.razor.
 
 **[Index.razor]**
 
