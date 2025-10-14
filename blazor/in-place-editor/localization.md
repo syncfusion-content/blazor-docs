@@ -54,7 +54,7 @@ Formatting is a way of representing the value in different formats. Format the f
 * [DatePicker](../datepicker/date-format)
 * [DateRangePicker](../daterangepicker/globalization)
 * [DateTimePicker](../datetime-picker/globalization)
-* [NumericTextBox](../numeric-textbox/formats/#custom-formats)
+* [NumericTextBox](../numeric-textbox/formats/#custom-formats/)
 * [Slider](../range-slider/format)
 * [TimePicker](../timepicker/globalization)
 
