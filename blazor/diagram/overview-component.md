@@ -99,7 +99,9 @@ public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
 };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/Overview)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoitXvqgxOfTzQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/Overview)
 
 ## How to Zoom and Pan the Diagram
 
@@ -112,13 +114,13 @@ The SfDiagramOverviewComponent displays a viewport of the diagram, highlighted b
 
 These interactions provide a seamless way to explore and navigate complex diagrams, enhancing the overall user experience and improving diagram comprehension.
 
-The following image shows how the diagram is zoomed/panned with an overview.
+The following image shows how the diagram is zoomed or panned with an overview.
 
 ![Overview Interaction](images/Overview.gif)
 
 ## How to Enable or Disable Overview Functionalities Using Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Constraints) property of the SfDiagramOverviewComponent allows you to enable or disable the following functionalities.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Constraints) property of the SfDiagramOverviewComponent allows enable or disable the following functionalities.
 
 * None
 * Zoom
@@ -198,7 +200,9 @@ The following example shows how to disable the zoom constraint from the default 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/OverviewConstraints)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIstXbqgwxdWkw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/OverviewConstraints)
 
 ## See also 
 

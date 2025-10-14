@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor Timeline component
 
-The Timeline component allows you to customize the appearance for each item by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Template) tag directive to modify the dot items, templated contents, progress bar styling and more.
+The Timeline component allows customization of each item's appearance using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Template) tag directive. This enables modification of dot items, templated contents, progress bar styling, and more.
 
 The `Template` context receives the following information:
 
@@ -169,5 +169,6 @@ The `Template` context receives the following information:
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIitWNVdDBCoBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Timeline Component with Template](./images/Blazor-template.png)

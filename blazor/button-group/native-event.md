@@ -3,35 +3,35 @@ layout: post
 title: Native Events in Blazor Button Group Component | Syncfusion
 description: Checkout and learn here all about Native Events in Syncfusion Blazor Button Group component and much more.
 platform: Blazor
-control: Button Group
+control: ButtonGroup
 documentation: ug
 ---
 
 # Native Events in Blazor Button Group Component
 
-You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+Define native events on components/elements using Blazor’s `@on...` event attributes. The attribute value is treated as an event handler, and event-specific data is provided via event argument types from `Microsoft.AspNetCore.Components.Web`.
 
-The different event argument types for each event are,
+Common event argument types include:
 
-* Focus Events - UIFocusEventArgs
-* Mouse Events - UIMouseEventArgs
-* Keyboard Events - UIKeyboardEventArgs
-* Touch Events – UITouchEventArgs
+* Focus events – `UIFocusEventArgs`
+* Mouse events – `UIMouseEventArgs`
+* Keyboard events – `UIKeyboardEventArgs`
+* Touch events – `UITouchEventArgs`
 
 ## List of native events supported for default Button Group
 
-The following native event support has been provided to the Button Group component:
+The following native events are supported by the Button Group component:
 
-| List of Native events |  |  | |
+| List of native events |  |  |  |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-|onmousemove|onmouseover|onmouseout|onmousedown|onmouseup|
-|ondblclick|onkeydown|onkeyup|onkeypress|
-|ontouchend|onfocusin|onmouseup|ontouchstart|
+| onmousemove | onmouseover | onmouseout | onmousedown |
+| onmouseup | ondblclick | onkeydown | onkeyup |
+| onkeypress | ontouchend | onfocusin | ontouchstart |
 
 ## How to bind click event to Button Group
 
-The `onclick` attribute is used to bind the click event for button group. Here, we have explained about the sample code snippets.
+Use the `onclick` attribute to bind the click event for a Button Group. The following example shows simple click handlers for each button.
 
 ```csharp
 
@@ -61,16 +61,16 @@ The `onclick` attribute is used to bind the click event for button group. Here, 
 
 ## List of native events supported for Single / Multiple selection mode Button Group
 
-The following native event support has been provided to the Button Group component:
+The following native events are supported by the Button Group component in single or multiple selection modes:
 
-| List of Native events |  |  | | |
+| List of native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocusout | onfocusin |
-|onfocus|onclick|onkeydown|onkeyup|onkeypress|
+| onfocus | onclick | onkeydown | onkeyup | onkeypress |
 
 ## How to bind onchange event to Button Group
 
-The `onchange` attribute is used to bind the change event for button group. Here, we have explained about the sample code snippets.
+Use the `onchange` attribute to bind the change event for a Button Group configured with selection mode. The following example demonstrates handling item changes with `ChangeEventArgs`, where `args.Value` contains the selected value.
 
 ```csharp
 
