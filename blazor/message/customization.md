@@ -9,13 +9,13 @@ documentation: ug
 
 # Customization in Blazor Message
 
-The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
+The Message component allows users to customize content alignment and visual appearance. This section explains how to change content alignment and adjust corner radius (rounded or square) using CSS. For an overview and API details, see the Message component documentation (https://blazor.syncfusion.com/documentation/message/getting-started) and the SfMessage API reference (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html).
 
 ## Content Alignment
 
-Normally, the message content is aligned to the **left**. The Message component allows the user to align the message content in the **center** or **right** through the [ContentAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ContentAlignment) property.
+By default, message content is aligned to the left. Use the [ContentAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ContentAlignment) property to align content to the center or right using the HorizontalAlign enum values.
 
-The following example demonstrates the message with different content alignments.
+The following example demonstrates messages with different content alignments.
 
 {% tabs %}
 {% highlight razor %}
@@ -46,13 +46,13 @@ The following example demonstrates the message with different content alignments
 {% endhighlight %}
 {% endtabs %}
 
-![Message Content Alignment](./images/message-content-alignment.png)
+![Blazor Message content aligned left, center, and right](./images/message-content-alignment.png)
 
 ## Rounded and Square
 
-To customize the Message component's appearance, add the custom class to the message through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_CssClass) property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
+To customize the Message component's appearance, add a custom class to the message via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_CssClass) property. The custom class is appended to the root element (.e-message), allowing styles to be scoped per instance.
 
-The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `CssClass` property.
+The following example shows rounded and square corner styles applied using the CssClass property.
 
 {% tabs %}
 {% highlight razor %}
@@ -90,13 +90,13 @@ The following example shows the rounded and squared appearance of the message, w
 {% endhighlight %}
 {% endtabs %}
 
-![Message Custom Appearance](./images/message-rounded-square.png)
+![Blazor Message with rounded and square corner styles](./images/message-rounded-square.png)
 
 ## CSS Message
 
-The Blazor Message has predefined CSS classes that can be defined in the HTML elements, which renders the message without any script reference. This can display a simple message with content and make the code lighter.
+The Blazor Message provides predefined CSS classes that can be applied to plain HTML elements to render a styled message without component or script references. Ensure a Syncfusion Blazor theme stylesheet is referenced in the app so these classes take effect. This approach provides visual styling only; interactive features (such as close button behavior) require component usage.
 
-The following DOM structure is required to display the simple message with the content.
+The following DOM structure renders a simple message with content:
 
 ```bash
 
@@ -106,7 +106,7 @@ The following DOM structure is required to display the simple message with the c
 
 ```
 
-The following DOM structure is required to display the simple message with the content and severity icon.
+The following DOM structure renders a simple message with content and a severity icon:
 
 ```bash
 
@@ -117,7 +117,7 @@ The following DOM structure is required to display the simple message with the c
 
 ```
 
-The following is the available list of predefined CSS classes to make the appearance of a message.
+The following is the available list of predefined CSS classes to control the appearance of a message.
 
 | Class | Description |
 | -------- | -------- |
@@ -132,7 +132,7 @@ The following is the available list of predefined CSS classes to make the appear
 | e-content-center | Aligns the message content to the center. |
 | e-content-right | Aligns the message content to the right. |
 
-The following example shows the message which renders without any script reference.
+The following example shows a message rendered with CSS classes only (no component or script reference). Add appropriate ARIA attributes (for example, role="alert") based on the message purpose for accessibility.
 
 {% tabs %}
 {% highlight razor %}
@@ -168,4 +168,4 @@ The following example shows the message which renders without any script referen
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Message Component](./images/message-default.PNG)
+![Blazor Message styled using predefined CSS classes](./images/message-default.PNG)
