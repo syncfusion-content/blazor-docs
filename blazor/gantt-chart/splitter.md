@@ -169,5 +169,3 @@ The following code example shows how to use this method.
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVoiXXaAhuibSQZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-with-splitter.png)
