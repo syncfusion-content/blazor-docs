@@ -7,9 +7,11 @@ control: Tabs
 documentation: ug
 ---
 
-# Enable/Disable Tab item in Blazor Tabs Component
+# Enable/Disable Tab Item in Blazor Tabs Component
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of the Tab item is used to enable or disable the item by setting false or true value to the property. In the following demo, specified tab item is enabled and disabled dynamically when you click **Enable/Disable First Item** button.
+The [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of a `TabItem` is used to enable or disable the item. Setting it to `true` disables the item, while setting it to `false` enables it.
+
+In the following demo, the first tab item is dynamically enabled and disabled when the **Enable/Disable First Item** button is clicked.
 
 ```cshtml
 
@@ -49,5 +51,7 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSitjufnGereTQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-enable-disable-tabitem.gif)
