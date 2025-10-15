@@ -3,17 +3,17 @@ layout: post
 title: Events in Blazor In-place Editor Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor In-place Editor component and much more.
 platform: Blazor
-control: In Place Editor 
+control: In-place Editor  
 documentation: ug
 ---
 
 # Events in Blazor In-place Editor Component
 
-This section explains the list of events of the In-place Editor's component which will be triggered for appropriate In-place Editor's actions.
+This section describes the events available in the In-place Editor component and when they are raised during typical actions. The events include: Created, OnActionBegin, OnActionSuccess, OnActionFailure, ValueChange, and Destroyed.
 
 ## Created
 
-`Created` event triggers once the component rendering is completed.
+`Created` event is raised after the component has completed rendering.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionBegin
 
-`OnActionBegin` event triggers before the data submitted to the server.
+`OnActionBegin` event is raised before data is submitted to the server as part of a save/update action. Use this event for preprocessing tasks such as validation or modifying the request.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionSuccess
 
-`OnActionSuccess` event triggers when data is submitted successfully to the server.
+`OnActionSuccess` event is raised when data is successfully submitted to the server and a successful response is received.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionFailure
 
-`OnActionFailure` event triggers when data submission failed.
+`OnActionFailure` event is raised when a data submission fails.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## ValueChange
 
-`ValueChange` event triggers when the integrated component value has changed that render based on the `type` property in the In-place editor.
+`ValueChange` event is raised when the value of the integrated editor changes, regardless of the editor rendered via the `Type` property.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## Destroyed
 
-`Destroyed` event  triggers when the component gets destroyed.
+`Destroyed` event is raised when the component is disposed.
 
 ```cshtml
 
