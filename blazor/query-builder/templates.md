@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in Blazor QueryBuilder Component
 
-This section explains the list of templates available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
+This section describes the template options available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) to customize editors and layout.
 
 ## Value Template
 
-The template allows to define our own widgets for column values. Use the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ValueTemplate), property to define templates.
+Use a value template to render a custom editor for a column’s value field. Define the template with the [`ValueTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ValueTemplate) property.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -86,13 +86,13 @@ The template allows to define our own widgets for column values. Use the [ValueT
 
 ```
 
-![Blazor QueryBuilder with Value Template](./images/blazor-querybuilder-value-template.png)
+![Blazor Query Builder with a value template](./images/blazor-querybuilder-value-template.png)
 
 ## Column Template
 
-Column Template allows to define our own widgets for entire column. Use the [ColumnTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ColumnTemplate) property to define templates.
+A column template allows customizing the entire editor area for a column, including the field and value UI. Define the template with the [`ColumnTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ColumnTemplate) property.
 
-In the following sample, the SFDropDownList component is used as the custom components for field and value in the `PaymentMode` column.
+In the following sample, the DropDownList component is used as a custom editor for both the field and value in the PaymentMode column.
 
 ```cshtml
 
@@ -240,13 +240,13 @@ In the following sample, the SFDropDownList component is used as the custom comp
 
 ```
 
-![Blazor QueryBuilder with Column Template](./images/blazor-querybuilder-column-template.png)
+![Blazor Query Builder with a column template](./images/blazor-querybuilder-column-template.png)
 
 ## Header Template
 
-Header Template allows to define our own widgets for group header. Customize the AND/OR/NOT operators and add rules/groups buttons. Use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_HeaderTemplate) property to define templates.
+A header template customizes the group header area, including the AND/OR operators and the Add Rule/Add Group actions. Define the template with the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_HeaderTemplate) property.
 
-In the following sample, the SFDropDownList component is used as the custom components for AND/OR operators and customized SfButtons for add rules and add groups button.
+In the following sample, the DropDownList is used to switch the group condition (AND/OR), and buttons are used to add or delete groups and add conditions.
 
 ```cshtml
 
@@ -361,6 +361,6 @@ In the following sample, the SFDropDownList component is used as the custom comp
 
 ```
 
-![Blazor QueryBuilder with Header Template](./images/blazor-querybuilder-header-template.png)
+![Blazor Query Builder with a header template](./images/blazor-querybuilder-header-template.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

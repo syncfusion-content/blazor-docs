@@ -9,23 +9,23 @@ documentation: ug
 
 # Items in Blazor Speed Dial Component
 
-The action items in Blazor Speed Dial can be added by using [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive.
+Add action items to the Blazor SpeedDial using the [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive. Items can display text, icons, or both, and support disabling, tooltips, animation, and templating.
 
 | Fields | Type | Description |
 |------|------|-------------|
-| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) | `string` | Defines the text content of SpeedDialItem. |
-| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) | `string` | Defines one or more CSS classes to include an icon or image in speed dial item. |
-| [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) | `boolean` | Defines whether to enable or disable the SpeedDialItem. |
-| [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_ID) | `string` | Defines a unique value for the SpeedDialItem which can be used to identify the item in event args. |
-| [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) | `string` | Defines the title of SpeedDialItem to display tooltip. |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) | `string` | Defines the text content of the SpeedDialItem. |
+| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) | `string` | Defines one or more CSS classes to include an icon or image in a speed dial item. |
+| [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) | `bool` | Enables or disables the SpeedDialItem. |
+| [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_ID) | `string` | Defines a unique value for the SpeedDialItem that can be used to identify the item in event arguments. |
+| [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) | `string` | Defines the title of the SpeedDialItem to display a tooltip. |
 
 ## Icons in speeddial items
 
-You can customize the icon and text of Speed Dial action items using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
+Customize the icon and text of speed dial action items using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
 
 ### Icon only
 
-You can show icon only in SpeedDial items by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) property. You can show tooltip on hover to show additional details to end-user by setting [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) property.
+Show only an icon in SpeedDial items by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) property. To provide additional details, display a tooltip on hover or focus by setting the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) property.
 
 ```cshtml
 
@@ -41,11 +41,11 @@ You can show icon only in SpeedDial items by setting [IconCss](https://help.sync
 
 ```
 
-![Blazor Speed Dial with Icon](./images/Blazor-SpeedDial-Icon.png)
+![Blazor SpeedDial with icons](./images/Blazor-SpeedDial-Icon.png)
 
 ### Text Only
 
-You can show only text in Speed Dial items by setting [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) property.
+Show only text in SpeedDial items by setting the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) property.
 
 ```cshtml
 
@@ -61,11 +61,11 @@ You can show only text in Speed Dial items by setting [Text](https://help.syncfu
 
 ```
 
-![Blazor Speed Dial with Text](./images/Blazor-SpeedDial-Text.png)
+![Blazor SpeedDial with text](./images/Blazor-SpeedDial-Text.png)
 
 ### Icon with Text
 
-You can show icon along with text in Speed Dial items by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
+Show an icon along with text in SpeedDial items by setting both the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
 
 ```cshtml
 
@@ -81,11 +81,11 @@ You can show icon along with text in Speed Dial items by setting [IconCss](https
 
 ```
 
-![Blazor Speed Dial with Icon and Text](./images/Blazor-SpeedDial-Iconwithtext.png)
+![Blazor SpeedDial with icon and text](./images/Blazor-SpeedDial-Iconwithtext.png)
 
 ### Disabled
 
-You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) property as `true`.
+Disable SpeedDial items by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) property to `true`.
 
 ```cshtml
 
@@ -101,7 +101,7 @@ You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.c
 
 ```
 
-![Blazor Speed Dial with Disabled](./images/Blazor-SpeedDial-DisabledItem.png)
+![Blazor SpeedDial with a disabled item](./images/Blazor-SpeedDial-DisabledItem.png)
 
 ## Animation
 
@@ -124,17 +124,17 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ```
 
-![Blazor Speed Dial Animation](./images/Blazor-SpeedDial-Animation.png)
+![Blazor SpeedDial animation](./images/Blazor-SpeedDial-Animation.png)
 
 ## Template
 
-The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
+The Speed Dial supports customizing both the action items and the popup container using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directives. For more details about templates, check the guidance [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
 
 ## HTML attribute
 
-The Blazor Speed Dial items support adding custom HTML attributes with [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property to customize the items. You can add them as inline attributes or use the `@attributes` directive.
+Blazor Speed Dial items support adding custom HTML attributes via the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property to customize items. Add them as inline attributes or use the `@attributes` directive.
 
-Below example demonstrates the Speed Dial items with HTML attributes.
+The following example shows SpeedDial items with HTML attributes.
 
 ```cshtml
 
@@ -150,4 +150,4 @@ Below example demonstrates the Speed Dial items with HTML attributes.
 
 ```
 
-![Blazor Speed Dial With HTML attributes](./images/Blazor-SpeedDial-HTML-Attribute.png)
+![Blazor SpeedDial with HTML attributes](./images/Blazor-SpeedDial-HTML-Attribute.png)

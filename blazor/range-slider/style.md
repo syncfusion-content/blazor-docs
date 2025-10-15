@@ -9,7 +9,7 @@ documentation: ug
 
 # CSS Structure in Blazor Range Slider Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content outlines the CSS structure that can be used to modify the control’s appearance according to application requirements.
 
 ## Customizing the slider track
 

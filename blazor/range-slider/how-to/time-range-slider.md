@@ -9,7 +9,7 @@ documentation: ug
 
 # Time Range Slider in Blazor Range Slider Component
 
-The time formatting can be achieved same as the date formatting using [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events.
+Time formatting for the Blazor Range Slider can be achieved in the same way as date formatting by using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -58,4 +58,4 @@ The time formatting can be achieved same as the date formatting using [`TicksRen
 }
 ```
 
-![Blazor Range Slider with TimeRange](../images/blazor-rangeslider-with-timerange.gif)
+![Blazor Range Slider showing a time range](../images/blazor-rangeslider-with-timerange.gif)
