@@ -29,7 +29,7 @@ Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide 
 
 Install the required packages:
 
-1. Install the `OpenAI` and `Azure` nuget packages in the application.
+* Install the `OpenAI` and `Azure` nuget packages in the application.
 
 ```bash
 
@@ -39,7 +39,7 @@ NuGet\Install-Package Azure.Core
 
 ```
 
-2. Install the `Markdig` nuget packages in the application.
+* Install the `Markdig` nuget packages in the application.
 
 ```bash
 
