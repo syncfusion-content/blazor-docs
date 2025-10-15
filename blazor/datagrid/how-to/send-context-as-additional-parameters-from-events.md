@@ -51,7 +51,7 @@ Height="600" @ref="Grid">
           <SfComboBox TValue="string" TItem="Customer" DataSource="@Customers" @bind-Value="order.CustomerID"
           Placeholder="Select Customer" FloatLabelType="FloatLabelType.Always" AllowFiltering="true">
             <ComboBoxFieldSettings Value="CustomerID" Text="CustomerName"></ComboBoxFieldSettings>
-            <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="@(args => OnCustomerChange(args, order)" >
+           <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="args => OnCustomerChange(args, order)"></ComboBoxEvents>
           </SfComboBox>
         </div>
       </div>
