@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Multicolumn in Blazor DropDown List Component | Syncfusion
+title: Multicolumn in Blazor DropDownList Component | Syncfusion
 description: Checkout and learn here all about Multicolumn in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
-control: DropDown List
+control: DropDownList
 documentation: ug
 ---
 
 # Multicolumn in Dropdown List 
 
-Provide two or more columns in the popup by using the class name `e-multi-column` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property  and the column will be aligned like grid.
+Render two or more columns in the popup by applying the `e-multi-column` CSS class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property, and structure the content using templates so items align in a grid-like layout.
 
-* [ItemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Using `ItemTemplate`, add the columns in the popup.
-* [ValueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Using `ValueTemplate`, display the value of which columns to be updated.
+* [ItemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Use `ItemTemplate` to define the columns and layout of each item in the popup.
+* [ValueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Use `ValueTemplate` to customize how the selected item’s value is displayed in the input.
 
-Display the custom text alignment in each column using a built-in class like in the following code example:
+Apply built-in text alignment classes to control alignment in each column:
 
-* `e-text-center`: Displays the text in the center of the column.
-* `e-text-right`: Displays the text in the right side of the column.
-* `e-text-left`: Displays the text in the left side of the column.
+* `e-text-center`: Centers the text within the column.
+* `e-text-right`: Aligns the text to the right within the column.
+* `e-text-left`: Aligns the text to the left within the column.
 
 {% highlight cshtml %}
 
@@ -26,8 +26,8 @@ Display the custom text alignment in each column using a built-in class like in 
 
 {% endhighlight %}
 
-![Blazor DropdownList with Multicolumn](./images/multicolumn/blazor_dropdown_multicolumn.png)
+![Blazor DropDownList with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.png)
 
 ## Limitation of multicolumn dropdownlist
 
-The component will not support column filtering and sorting, and the column will be alligned as same as grid.
+The component does not support built-in column filtering or sorting, and the columns are aligned using templates and CSS rather than a data grid feature set.
