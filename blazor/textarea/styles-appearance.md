@@ -13,8 +13,8 @@ The size of the TextArea can be adjusted by applying the following classes:
 
 | Property  | Description |
 | -- | -- |
-| Small  | Add the `e-small` class to the input element or its container to render a smaller-sized TextArea. |
-| Bigger | Add the `e-bigger` class to the input element or its container to render a larger-sized TextArea. |
+| Small  | Add the `e-small` class to render a smaller TextArea. |
+| Bigger | Add the `e-bigger` class to render a larger TextArea. |
 
 Applying these classes helps align the TextArea with the overall density and visual scale of the application’s design.
 
@@ -88,13 +88,11 @@ By adding these classes, users can choose between a filled or outline appearance
 {% endhighlight %}
 {% endtabs %}
 
->Note: Filled and Outline appearances are available only with the Material and Material3 themes.
+>Note: Filled and outline appearances are available only with the Material and Material3 themes.
 
 ## Custom styling with CssClass property
 
-The `CssClass` property provides a way to apply custom CSS classes to the TextArea container, enabling customization of color, padding, margins, borders, and other styles to meet design requirements.
-
-By applying custom classes, the component’s appearance can be tailored while preserving built-in theme behavior.
+Use `CssClass` to apply custom CSS classes to the TextArea wrapper. This approach scopes styles (color, padding, margins, borders, etc.) to specific instances while preserving built-in theme behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -106,7 +104,7 @@ By applying custom classes, the component’s appearance can be tailored while p
 
 ## Setting the disabled state
 
-Disable the TextArea by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
+Disable the TextArea using the [Disabled property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled). When set to `true`, the TextArea is non-interactive. For an example, see the TextArea API demo.
 
 {% tabs %}
 {% highlight razor %}
@@ -116,10 +114,9 @@ Disable the TextArea by using the [Disabled](https://help.syncfusion.com/cr/blaz
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Set the ReadOnly property
 
-To make the TextArea read-only , you can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly) property. When set to `true`, it prevents users from editing the content of the TextArea. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
+Make the TextArea read-only using the [ReadOnly property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly). When set to `true`, users cannot edit the content while it remains focusable. For an example, see the TextArea API demo.
 
 {% tabs %}
 {% highlight razor %}
@@ -128,7 +125,6 @@ To make the TextArea read-only , you can use the [ReadOnly](https://help.syncfus
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Set the rounded corner
 
@@ -155,7 +151,7 @@ Render the TextArea with rounded corners by adding the `e-corner` class to the i
 
 ## Static Clear Button
 
-To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `CssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
+Display a static clear button by adding the `e-static-clear` class and enabling `ShowClearButton`. The clear button remains visible at all times for quick content clearing. See the TextArea API demo for a working sample.
 
 {% tabs %}
 {% highlight razor %}
@@ -167,7 +163,7 @@ To display a static clear button in the TextArea component, you can add the `e-s
 
 ## Customize the TextArea background color and text color
 
-Customize background color, text color, and border color by overriding the default wrapper styles. Target the appropriate wrapper classes to ensure consistent appearance across themes.
+Override default wrapper styles to customize background color, text color, and border color. Target the appropriate wrapper classes to ensure a consistent appearance across themes. When changing colors, maintain sufficient contrast and preserve visible focus indicators for accessibility.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -219,7 +215,7 @@ Customize background color, text color, and border color by overriding the defau
 
 ## Change the floating label color
 
-You can change the floating label color of the TextArea for both `success` and `warning` validation states by applying the following CSS styles. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=fluent).
+Customize floating label color for `success` and `warning` validation states by applying the following CSS. Avoid relying on color alone for state indication; include text or icons where appropriate.
 
 ```css
 
@@ -294,7 +290,7 @@ You can change the floating label color of the TextArea for both `success` and `
 
 ## Adding mandatory asterisk to placeholder
 
-Add a mandatory asterisk (*) to the floating label using CSS to append the symbol after the label text.
+Add a mandatory asterisk (*) to the floating label using CSS to append a symbol after the label text.
 
 ```css
 
@@ -346,4 +342,4 @@ Add a mandatory asterisk (*) to the floating label using CSS to append the symbo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextArea with Sizing](./images/blazor-textarea-asterisk.png)
+![Blazor TextArea with asterisk appended to the floating label](./images/blazor-textarea-asterisk.png)
