@@ -287,23 +287,29 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
-    <ContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="true" ContextMenuOpening="@OnContextMenuOpen">
+
+<SfDiagramComponent @ref="diagram"
+                    Height="600px"
+                    Nodes="NodeCollection"
+                    Connectors="ConnectorCollection">
+    <ContextMenuSettings Show="true"
+                         Items="contextMenuItemModels"
+                         ShowCustomMenuOnly="true"
+                         ContextMenuOpening="OnContextMenuOpen">
     </ContextMenuSettings>
 </SfDiagramComponent>
 
-@code
-{
-    //Reference to diagram
+@code {
+    // Reference to diagram
     private SfDiagramComponent diagram;
-    //Defines diagram's nodes collection
+
+    // Diagram collections
     private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
-    //Defines diagram's connector collection
     private DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        //Create a node
+        // Nodes
         Node node1 = new Node()
         {
             ID = "node1",
@@ -318,24 +324,26 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
                 StrokeWidth = 1
             }
         };
+
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 100,
+            Width = 100,
+            OffsetX = 300,
+            OffsetY = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                Height = 100,
-                Width = 100,
-                OffsetX = 300,
-                OffsetY = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6BA5D7",
-                    StrokeColor = "white",
-                    StrokeWidth = 1
-                }
-            };
-        //Add node into node's collection
+                Fill = "#6BA5D7",
+                StrokeColor = "white",
+                StrokeWidth = 1
+            }
+        };
+
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
-        //Create a connector
+
+        // Connector
         Connector connector1 = new Connector()
         {
             ID = "connector1",
@@ -347,31 +355,33 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
                 StrokeWidth = 2
             }
         };
-        //Add connector into connector's collection
+
         ConnectorCollection.Add(connector1);
     }
-    List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
+
+    // Context menu items
+    private List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
     {
         new ContextMenuItem()
         {
-            Text ="Node Color",
-            ID="Node",
+            Text = "Node Color",
+            ID = "Node",
             Items = new List<ContextMenuItem>()
             {
-                new ContextMenuItem(){  Text ="Red", ID="Red", },
-                new ContextMenuItem(){  Text ="Yellow", ID="Yellow", },
+                new ContextMenuItem(){ Text = "Red",    ID = "Red"    },
+                new ContextMenuItem(){ Text = "Yellow", ID = "Yellow" }
             }
         },
         new ContextMenuItem()
         {
-            Text ="Connector Color",
-            ID="Connector",
+            Text = "Connector Color",
+            ID = "Connector",
             Items = new List<ContextMenuItem>()
             {
-                new ContextMenuItem(){  Text ="Black", ID="Black", },
-                new ContextMenuItem(){  Text ="Pink", ID="Pink", },
+                new ContextMenuItem(){ Text = "Black", ID = "Black" },
+                new ContextMenuItem(){ Text = "Pink",  ID = "Pink"  }
             }
-        },
+        }
     };
 
     private void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
@@ -381,22 +391,27 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
             Node node = diagram.SelectionSettings.Nodes[0];
             if (node.ID == "node1" || node.ID == "node2")
             {
-                foreach (var item in arg.Items!)
-                { 
+                foreach (ContextMenuItem item in arg.Items)
+                {
                     if (item.ID == "Connector")
-                        arg.HiddenItems!.Add(item.ID); // hiding connector's context menu item
+                    {
+                        arg.HiddenItems.Add(item.ID); // Hide connector menu when a node is selected
+                    }
                 }
             }
         }
+
         if (diagram.SelectionSettings.Connectors.Count > 0)
         {
             Connector connector = diagram.SelectionSettings.Connectors[0];
             if (connector.ID == "connector1")
             {
-                foreach (var item in arg.Items!)
+                foreach (ContextMenuItem item in arg.Items)
                 {
                     if (item.ID == "Node")
-                        arg.HiddenItems!.Add(item.ID);  // hiding node's context menu item
+                    {
+                        arg.HiddenItems.Add(item.ID); // Hide node menu when a connector is selected
+                    }
                 }
             }
         }
@@ -411,23 +426,30 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
-    <ContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="true" ContextMenuOpening="@OnContextMenuOpen" ContextMenuItemClicked="@ContextMenuItemClickHandler">
+
+<SfDiagramComponent @ref="diagram"
+                    Height="600px"
+                    Nodes="NodeCollection"
+                    Connectors="ConnectorCollection">
+    <ContextMenuSettings Show="true"
+                         Items="contextMenuItemModels"
+                         ShowCustomMenuOnly="true"
+                         ContextMenuOpening="OnContextMenuOpen"
+                         ContextMenuItemClicked="ContextMenuItemClickHandler">
     </ContextMenuSettings>
 </SfDiagramComponent>
 
-@code
-{
-    //Reference to diagram
+@code {
+    // Reference to diagram
     private SfDiagramComponent diagram;
-    //Defines diagram's nodes collection
+
+    // Diagram collections
     private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
-    //Defines diagram's connector collection
     private DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        //Create a node
+        // Nodes
         Node node1 = new Node()
         {
             ID = "node1",
@@ -442,24 +464,26 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
                 StrokeWidth = 1
             }
         };
+
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 100,
+            Width = 100,
+            OffsetX = 300,
+            OffsetY = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                Height = 100,
-                Width = 100,
-                OffsetX = 300,
-                OffsetY = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6BA5D7",
-                    StrokeColor = "white",
-                    StrokeWidth = 1
-                }
-            };
-        //Add node into node's collection
+                Fill = "#6BA5D7",
+                StrokeColor = "white",
+                StrokeWidth = 1
+            }
+        };
+
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
-        //Create a connector
+
+        // Connector
         Connector connector1 = new Connector()
         {
             ID = "connector1",
@@ -471,31 +495,33 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
                 StrokeWidth = 2
             }
         };
-        //Add connector into connector's collection
+
         ConnectorCollection.Add(connector1);
     }
-    List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
+
+    // Context menu items
+    private List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
     {
         new ContextMenuItem()
         {
-            Text ="Node Color",
-            ID="Node",
+            Text = "Node Color",
+            ID = "Node",
             Items = new List<ContextMenuItem>()
             {
-                new ContextMenuItem(){  Text ="Red", ID="Red", },
-                new ContextMenuItem(){  Text ="Yellow", ID="Yellow", },
+                new ContextMenuItem(){ Text = "Red",    ID = "Red"    },
+                new ContextMenuItem(){ Text = "Yellow", ID = "Yellow" }
             }
         },
         new ContextMenuItem()
         {
-            Text ="Connector Color",
-            ID="Connector",
+            Text = "Connector Color",
+            ID = "Connector",
             Items = new List<ContextMenuItem>()
             {
-                new ContextMenuItem(){  Text ="Black", ID="Black", },
-                new ContextMenuItem(){  Text ="Pink", ID="Pink", },
+                new ContextMenuItem(){ Text = "Black", ID = "Black" },
+                new ContextMenuItem(){ Text = "Pink",  ID = "Pink"  }
             }
-        },
+        }
     };
 
     private void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
@@ -505,49 +531,50 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
             Node node = diagram.SelectionSettings.Nodes[0];
             if (node.ID == "node1" || node.ID == "node2")
             {
-                foreach (var item in arg.Items!)
-                { 
+                foreach (ContextMenuItem item in arg.Items)
+                {
                     if (item.ID == "Connector")
-                        arg.HiddenItems!.Add(item.ID); // hiding connector's context menu item
+                    {
+                        arg.HiddenItems.Add(item.ID); // Hide connector menu when a node is selected
+                    }
                 }
             }
         }
+
         if (diagram.SelectionSettings.Connectors.Count > 0)
         {
             Connector connector = diagram.SelectionSettings.Connectors[0];
             if (connector.ID == "connector1")
             {
-                foreach (var item in arg.Items!)
+                foreach (ContextMenuItem item in arg.Items)
                 {
                     if (item.ID == "Node")
-                        arg.HiddenItems!.Add(item.ID);  // hiding node's context menu item
+                    {
+                        arg.HiddenItems.Add(item.ID); // Hide node menu when a connector is selected
+                    }
                 }
             }
         }
     }
+
     private void ContextMenuItemClickHandler(DiagramMenuClickEventArgs arg)
     {
         switch (arg.Item.Text)
         {
             case "Red":
-                {
-                    diagram.SelectionSettings.Nodes[0].Style.Fill = "Red";
-                }
+                diagram.SelectionSettings.Nodes[0].Style.Fill = "Red";
                 break;
+
             case "Yellow":
-                {
-                    diagram.SelectionSettings.Nodes[0].Style.Fill = "Yellow";
-                }
+                diagram.SelectionSettings.Nodes[0].Style.Fill = "Yellow";
                 break;
+
             case "Black":
-                {
-                    diagram.SelectionSettings.Connectors[0].Style.StrokeColor = "Black";
-                }
+                diagram.SelectionSettings.Connectors[0].Style.StrokeColor = "Black";
                 break;
+
             case "Pink":
-                {
-                    diagram.SelectionSettings.Connectors[0].Style.StrokeColor = "Pink";
-                }
+                diagram.SelectionSettings.Connectors[0].Style.StrokeColor = "Pink";
                 break;
         }
     }
