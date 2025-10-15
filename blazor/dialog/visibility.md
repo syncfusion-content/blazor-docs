@@ -90,7 +90,7 @@ Two-way binding using the @bind-Visible syntax enables dynamic visibility contro
 
 ## ShowAsync Method
 
-Use [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) to open the dialog asynchronously. This method is helpful when you must perform validation, load data, or apply conditional logic before showing the dialog. ShowAsync can also force fullscreen mode by passing `true`.
+Use [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) to open the dialog asynchronously. This method is helpful when you must perform validation, load data, or apply conditional logic before showing the dialog. ShowAsync can also force full screen mode by passing `true`.
 
 ```cshtml
 
