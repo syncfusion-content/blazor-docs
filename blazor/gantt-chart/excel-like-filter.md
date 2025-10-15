@@ -139,7 +139,7 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
 
 ## Show customized text in filter dialog
 
-You can customize the text shown in the filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart compoenent by using the [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This feature allows you to present meaningful labels based on the values of a specific column.
+You can customize the text shown in the filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component by using the [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This feature allows you to present meaningful labels based on the values of a specific column.
 
 In the example below, the filter checkbox list for the **Status** column is customized by defining a `FilterItemTemplate` within the column configuration. The **FilterItemTemplateContext** is used to conditionally render descriptive labels: **Completed** when the value is **true**, and **In Progress** when the value is **false**.
 
