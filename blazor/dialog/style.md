@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component all
 
 ### Width
 
-You can set the width of the dialog using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Width) property.
+Configure the dialog width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Width) property. Width accepts any valid CSS length (px, %, rem, etc.), letting you define fixed or responsive layouts.
 
 ```cshtml
 <SfDialog Width="400px">
@@ -23,7 +23,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
 
 ### MinHeight
 
-Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_MinHeight) property.
+Set the minimum height of the dialog with the [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_MinHeight) property to ensure essential content remains visible even when the dialog is resized smaller.
 
 ```cshtml
 <SfDialog MinHeight="200px">
@@ -33,7 +33,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
 
 ### RTL Support
 
-Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableRtl) property.
+Enable right-to-left rendering by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnableRtl) to true. This mirrors the dialog layout for languages such as Arabic and Hebrew.
 
 ```cshtml
 <SfDialog EnableRtl="true">
@@ -43,7 +43,7 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 
 ### CssClass
 
-Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property to apply custom classes and scope style overrides specifically to the dialog instance.
 
 ```cshtml
 <SfDialog CssClass="custom-dialog">
@@ -53,9 +53,9 @@ Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/b
 
 ### Animation
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be animated during the open and close actions. Also, users can customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
+The [DialogAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html) property customizes dialog animations. Configure animation Delay, Duration, and Effect (values from the [DialogEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEffect.html) enum) to define how the dialog opens and closes.
 
-To get started quickly with animation in Blazor Dialog Component, you can check the video below.
+To explore animation quickly, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
 

@@ -9,22 +9,22 @@ documentation: ug
 
 # Dialog Buttons in Blazor Dialog Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Inside this element, each button is defined using the [DialogButton Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html). These buttons can be fully customized with various properties, including:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Each button is defined using the [DialogButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html) element. These buttons can be customized with the following properties:
 
 DialogButtonOptions     | Description
 ------------ | -------------
-  [ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_ChildContent)       | Allows you to define custom content (e.g., HTML or string) inside the button.
+  [ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_ChildContent)       | Defines custom content (for example, HTML or string) inside the button.
   [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_Content)     | Sets the text displayed on the button.
   [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_CssClass)      | Applies one or more custom CSS classes to style the button.
-  [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_Disabled)       | Disables the button, preventing user interaction.
-  [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_EnableRtl)       | Enables right-to-left (RTL) rendering for languages like Arabic or Hebrew.
-  [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconCss)         | Specifies the CSS class for an icon to be displayed inside the button.
-  [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconPosition)     | Determines the position of the icon (e.g., Left, Right, Top, Bottom).
+  [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_Disabled)       | Disables the button and prevents user interaction.
+  [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_EnableRtl)       | Enables right-to-left (RTL) rendering for languages such as Arabic or Hebrew.
+  [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconCss)         | Specifies the CSS class for an icon to display inside the button.
+  [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconPosition)     | Determines the icon position (for example, Left, Right, Top, Bottom).
   [IsFlat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsFlat)           | Renders the button with a flat style (no background or border).
   [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsPrimary)         | Highlights the button as the primary action in the dialog.
-  [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsToggle)           | Enables toggle behavior, allowing the button to switch between active/inactive states.
-  [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_OnClick)             | Assigns a callback method to be executed when the button is clicked.
-  [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_Type)               | Specifies the button type (e.g., Button, Submit, Reset).
+  [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsToggle)           | Enables toggle behavior to switch between active and inactive states.
+  [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_OnClick)             | Assigns a callback method that executes when the button is clicked.
+  [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_Type)               | Specifies the button type (for example, Button, Submit, Reset).
 
 The following example demonstrates how to define basic action buttons in the Blazor Dialog.
 
@@ -86,7 +86,7 @@ You can enhance the appearance of dialog footer buttons by adding icons using ei
 
 ## Using DialogButton Element
 
-The DialogButton element allows you to define action buttons in the dialog footer with built-in support for icons. You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconCss) property to assign icon classes and customize their appearance.
+Use the DialogButton element to define action buttons in the dialog footer with built-in icon support. Assign icon classes using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IconCss) property and customize appearance with additional CSS as needed.
 
 ```cshtml
 
@@ -142,11 +142,11 @@ The DialogButton element allows you to define action buttons in the dialog foote
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBINlibCGKtcBPW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog buttons with icon](./images/blazor-dialog-button-with-icon.gif)
+![Blazor Dialog buttons with icons using DialogButton](./images/blazor-dialog-button-with-icon.gif)
 
 ## Using FooterTemplate Property
 
-Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Syncfusion<sup style="font-size:70%">&reg;</sup> Button.
+Alternatively, use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Syncfusion<sup style="font-size:70%">&reg;</sup> Button.
 
 ```cshtml
 

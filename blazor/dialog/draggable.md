@@ -9,15 +9,15 @@ documentation: ug
 
 # Draggable in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component supports draggable functionality, allowing users to reposition dialogs within their target container by clicking and dragging the dialog header. This feature enhances user experience by providing flexible dialog placement, particularly useful in applications with multiple dialogs or when users need to access content beneath the dialog while keeping it visible.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component supports draggable functionality, allowing users to reposition dialogs within their target container by clicking and dragging the dialog header. This feature improves usability by enabling flexible dialog placement, especially when multiple dialogs are displayed or when users need to access content beneath the dialog while keeping it visible.
 
-The dragging operation is constrained to the boundaries of the target container, ensuring the dialog remains within the designated area and maintains proper visual hierarchy.
+Dragging is constrained to the boundaries of the target container, ensuring the dialog remains within the designated area and maintains a clear visual hierarchy. When no explicit target is set, the document body is used as the container.
 
 ## Enable Draggable Functionality
 
-To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
+To enable dragging, set the [AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to true on the Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area. A visible header is required to initiate dragging.
 
-To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
+To get started quickly with draggable behavior in the Blazor Dialog component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
 
@@ -67,11 +67,11 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBItlsFWwtJqMVI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Dialog component with draggable functionality enabled](./images/blazor-dialog-draggable.gif)
 
->**Note:** Draggable functionality is supported in both standard dialog and modal dialog configurations. The drag operation is limited to the dialog header area only.
+>**Note:** Draggable functionality is supported in both standard and modal dialog configurations. The drag operation is initiated from the dialog header area only and does not affect modal focus behavior.
 
 ## Draggable Events in Blazor Dialog Component
 
-The Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
+The Dialog component provides three events to monitor and respond to drag interactions. These events enable custom logic during different phases of the drag operation, such as validation, logging, and UI updates.
 
 ### OnDragStart Event
 
@@ -165,6 +165,6 @@ The [`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popup
 
 ## Important Considerations
 
-**Container Constraints:** The dialog movement is restricted to the boundaries of its target container. Ensure the target container has sufficient dimensions to accommodate dialog repositioning.
+**Container constraints:** Dialog movement is restricted to the boundaries of its target container. Ensure the target has sufficient dimensions for repositioning and desired padding.
 
-**Touch Support:** Draggable functionality is fully supported on touch devices, allowing users to drag dialogs using touch gestures.
+**Touch and pointer support:** Draggable functionality supports mouse, touch, and pen input. On touch devices, users can drag the dialog using standard touch gestures.

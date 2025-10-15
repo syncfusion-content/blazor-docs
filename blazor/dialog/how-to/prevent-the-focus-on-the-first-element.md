@@ -9,7 +9,7 @@ documentation: ug
 
 # Prevent the focus on the first element in Blazor Dialog Component
 
-By default, the Blazor dialog focuses on the first elements of the content area which can be active and focusable. You can prevent this default focusing behavior using the `Opened` event and by enabling the `PreventFocus` argument.
+By default, the Blazor Dialog focuses the first focusable element in its content when it opens. To suppress this behavior, handle the `Opened` event and set the `PreventFocus` property on the event args (`OpenEventArgs`) to `true`. For reference, see the Opened event and OpenEventArgs in the API documentation.
 
 Bind the Opened event and enable the PreventFocus argument within an event like the following example.
 

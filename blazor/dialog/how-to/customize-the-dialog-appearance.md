@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Appearance in Blazor Dialog Component
 
-You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.
+The Blazor Dialog appearance can be tailored by providing custom markup in the `Content` template and applying styles for specific scenarios such as error messaging. The following example demonstrates an error-style Dialog that highlights validation feedback with custom icons, colors, and button styling.
 
 ```cshtml
 

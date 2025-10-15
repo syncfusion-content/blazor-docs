@@ -9,9 +9,9 @@ documentation: ug
 
 # Enable State Persistence in Blazor Dialog Component
 
-To ensure the Blazor Dialog component retains its size and position across page reloads and reopen actions, set the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnablePersistence) property to `true`. Additionally, enable the [`AllowPrerender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property to maintain the dialog's DOM elements even when it is hidden.
+To retain the Blazor Dialog component’s size, position, and other UI states across page reloads and future sessions, set the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnablePersistence) property to true. Persistence stores the dialog state in browser local storage using the dialog’s unique ID, so ensure each persisted dialog has a stable `ID` value. Clearing local storage or changing the ID resets the persisted settings.
 
-By default, `AllowPrerender` is set to `false`, which means the dialog's DOM elements are removed when hidden and re-rendered upon showing. Setting it to `true` retains the dialog's elements in the DOM, preserving its state such as position and size between show/hide operations.
+The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is optional and controls whether dialog DOM elements remain in the page when the dialog is hidden. Keeping `AllowPrerender` true preserves the DOM between show/hide cycles, which can reduce re-rendering and improve perceived responsiveness, but it does not affect persistence across page reloads.
 
 ## Example: Persistent Dialog
 

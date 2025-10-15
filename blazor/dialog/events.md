@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Dialog Component
 
-This section explains the list of events of the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog)component which will be triggered for appropriate Dialog actions.
+This section lists the events of the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component and explains when each event is triggered during Dialog actions.
 
 ## Created
 

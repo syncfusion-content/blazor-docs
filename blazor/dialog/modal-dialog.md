@@ -45,11 +45,11 @@ A modal dialog prevents users from interacting with the rest of the application 
 
 ## Handling Overlay Click Events
 
-The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayModalClick) event triggers when users click on the dialog's overlay area. This event provides access to the [OverlayModalClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.OverlayModalClickEventArgs.html) object, enabling custom functionality such as closing the dialog when users click outside the dialog content or implementing validation before allowing the dialog to close.
+The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayModalClick) event triggers when users click the dialog’s overlay area. This event provides [OverlayModalClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.OverlayModalClickEventArgs.html) and allows implementing custom behavior, such as closing the dialog on outside click or preventing close until validation succeeds. Closing on overlay click is optional and fully controlled in the event handler.
 
 ### Close Dialog When Clicking Outside of Its Region
 
-The following example demonstrates how to close a modal dialog when the user clicks on the overlay area outside the dialog content. This provides an intuitive way for users to dismiss the dialog without requiring explicit close button interaction.
+The following example closes a modal dialog when the overlay (outside the dialog content) is clicked, providing an intuitive way for users to dismiss the dialog without using the close icon.
 
 ```cshtml
 

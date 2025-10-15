@@ -9,21 +9,21 @@ documentation: ug
 
 # Positioning in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be positioned using the DialogPositionData property by providing X and Y coordinates. The dialog can be positioned within the specified target container or relative to the page body when no target is defined, based on the given X and Y values.
 
 ## DialogPositionData Properties
 
-The DialogPositionData class sets the dialog's X and Y coordinates within a coordinate system where the top-left corner serves as the origin point (0,0). The position is calculated relative to a specified Target container or the page body if no target is defined.
+The DialogPositionData class sets the dialog’s X and Y coordinates within a coordinate system where the top-left corner is the origin (0, 0). Positioning is calculated relative to a specified Target container or the document body if no target is set.
 
 X-axis positioning options:
-* Named positions: left, center, right
-* Offset values: Numeric values in pixels (e.g., "100px", "50")
+- Named positions: left, center, right
+- Offset values: Numeric values in pixels (for example, "100px", "50")
 
 Y-axis positioning options:
-* Named positions: top, center, bottom
-* Offset values: Numeric values in pixels (e.g., "100px", "50")
+- Named positions: top, center, bottom
+- Offset values: Numeric values in pixels (for example, "100px", "50")
 
-When using offset values, positive numbers move the dialog away from the top-left origin, while the dialog remains constrained within the target container boundaries.
+When using offset values, positive numbers move the dialog away from the top-left origin. The dialog remains constrained within the target container’s boundaries.
 
 ```cshtml
 
@@ -62,7 +62,7 @@ When using offset values, positive numbers move the dialog away from the top-lef
 
 ## RefreshPositionAsync Method
 
-The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_RefreshPositionAsync) method programmatically recalculates and updates the dialog's position. This method is particularly useful when the dialog's positioning properties are modified dynamically or when the target container's dimensions change, ensuring the dialog maintains proper positioning relative to its container.
+The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_RefreshPositionAsync) method programmatically recalculates and updates the dialog’s position. This is useful when positioning values are changed dynamically or when the target container’s dimensions or layout change, ensuring the dialog maintains its intended relative position.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Position the Blazor Dialog in center of the page on scrolling
 
-By default, when scrolling the page or container, the Dialog scrolls along with the content. To display the Dialog in a fixed position that remains stationary during scrolling, the following implementation uses the `e-fixed` CSS class applied through the `CssClass` property. This approach ensures the dialog maintains its position relative to the viewport rather than the scrollable content.
+By default, when scrolling the page or container, the dialog scrolls along with the content. To display the dialog in a fixed position that remains stationary during scrolling, apply the e-fixed CSS class through the CssClass property. This keeps the dialog fixed relative to the viewport rather than the scrollable content.
 
 ```cshtml
 

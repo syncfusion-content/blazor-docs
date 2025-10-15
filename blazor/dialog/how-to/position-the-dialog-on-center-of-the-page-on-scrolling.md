@@ -9,7 +9,7 @@ documentation: ug
 
 # Position the Blazor Dialog in center of the page on scrolling
 
-By default, when you scroll the page/container, Dialog will also scroll along with the page/container. To display the Dialog in the same position without scrolling, refer to the following code sample. Here, the `e-fixed` class is added to the Dialog element by using the `CssClass` property to prevent scrolling.
+By default, when scroll the page/container, Dialog will also scroll along with the page/container. To display the Dialog in the same position without scrolling, refer to the following code sample. Here, the `e-fixed` class is added to the Dialog element by using the `CssClass` property to prevent scrolling.
 
 ```cshtml
 

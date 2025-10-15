@@ -9,4 +9,4 @@ documentation: ug
 
 # Localization in Blazor Dialog Component
 
-[Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) supports localization so that built-in UI text (such as the close button tooltip) and any developer-provided content can appear in the user’s language. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) guide for configuring localization across Syncfusion Blazor components.

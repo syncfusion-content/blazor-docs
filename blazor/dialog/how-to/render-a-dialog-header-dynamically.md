@@ -9,9 +9,9 @@ documentation: ug
 
 # Render a dialog header dynamically in Blazor Dialog Component
 
-By default, the dialog is rendered without header. You can update its header dynamically using the `Header` property.
+By default, the Dialog renders without a header. The header can be added or updated at runtime by binding a string to the `Header` property.
 
-In the following code, the dialog header is rendered on a button click.
+In the following example, selecting the button updates the value bound to `Header`, which immediately renders the header. The Dialog visibility is managed via `@bind-Visible`.
 
 ```cshtml
 
@@ -52,7 +52,5 @@ In the following code, the dialog header is rendered on a button click.
 }
 
 ```
-
-
 
 ![Blazor Dialog without Header](../images/blazor-dialog-without-header.png)

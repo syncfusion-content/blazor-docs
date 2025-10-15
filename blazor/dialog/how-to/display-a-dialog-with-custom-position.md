@@ -9,7 +9,7 @@ documentation: ug
 
 # Display a Dialog with Custom Position in Blazor Dialog Component
 
-By default, the dialog is displayed in the center of the target container. The dialog position can be set using the `DialogPositionData` property by providing custom `X` and `Y` coordinates. The dialog can be positioned inside the target based on the given X and Y values.
+The Blazor Dialog renders in the center of its target container by default, but it can be moved to specific coordinates by supplying `DialogPositionData`. This is helpful when arranging multiple dialogs or aligning them with other layout elements inside a large container. Make sure the target element provides enough space for the specified coordinates so the Dialog remains fully visible.
 
 ```cshtml
 

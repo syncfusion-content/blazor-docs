@@ -9,7 +9,7 @@ documentation: ug
 
 # Show Dialog with full screen in Blazor Dialog Component
 
-You can show the dialog in full screen by passing `true` as argument to the dialog [`ShowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method. By using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property, you can prevent the dialog from showing initially.
+Display the dialog in full screen by passing `true` as argument to the dialog [`ShowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method. By using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property, prevent the dialog from showing initially.
 
 ```cshtml
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Visibility in Blazor Dialog Component
 
-The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property controls whether the dialog is shown or hidden on the page. Setting it to true displays the dialog, while setting it to false hides the dialog from view.
+The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property determines whether the dialog is rendered on the page. Setting Visible to true displays the dialog, while false hides it. The following sections explain different patterns for managing visibility, including property binding, programmatic show/hide calls, keyboard interactions, and lifecycle events.
 
 ## Visible Property Binding
 
-### One-Way Binding
+### One-way binding
 
 One-way binding sets a fixed visibility state for the dialog. This approach is useful when the dialog's visibility should remain constant throughout the component lifecycle or be controlled entirely by the parent component.
 
@@ -48,9 +48,9 @@ One-way binding sets a fixed visibility state for the dialog. This approach is u
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeDbCbJHIqvGPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with One-way Binding showing dynamic visibility control](./images/blazor-dialog-one-way-visible.gif)
+![Blazor dialog using one-way Visible binding controlled by a parent button](./images/blazor-dialog-one-way-visible.gif)
 
-### Two-Way Binding
+### Two-way binding
 
 Two-way binding using the @bind-Visible syntax enables dynamic visibility control, allowing the dialog's state to be updated both programmatically and through user interactions. This approach automatically synchronizes the dialog's visibility with the bound variable, making it ideal for interactive scenarios where the dialog needs to respond to various user actions.
 
@@ -90,7 +90,7 @@ Two-way binding using the @bind-Visible syntax enables dynamic visibility contro
 
 ## ShowAsync Method
 
-The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method provides programmatic control to display the dialog asynchronously. This method is particularly useful for scenarios requiring conditional logic or validation before showing the dialog, and it works independently of the Visible property state.
+Use [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) to open the dialog asynchronously. This method is helpful when you must perform validation, load data, or apply conditional logic before showing the dialog. ShowAsync can also force fullscreen mode by passing `true`.
 
 ```cshtml
 
@@ -130,7 +130,7 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeZbWPTFjcKrLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog opened using ShowAsync method demonstrating programmatic control](./images/blazor-dialog-showAsync.gif)
+![Blazor dialog opened programmatically after loading content using ShowAsync](./images/blazor-dialog-showAsync.gif)
 
 ## HideAsync Method
 
@@ -188,11 +188,11 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyNvCFJlgUWdtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog closed using HideAsync method with custom close logic](./images/blazor-dialog-hideasync.gif)
+![Blazor dialog closed programmatically using HideAsync after a save operation](./images/blazor-dialog-hideasync.gif)
 
-## CloseOnEscape Action
+## CloseOnEscape action
 
-The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CloseOnEscape) property enables or disables closing the dialog when the Escape key is pressed. This feature enhances user experience by providing a standard keyboard shortcut for dismissing dialogs, particularly useful for accessibility and power users.
+Set [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CloseOnEscape) to true so users can dismiss the dialog by pressing the Esc key. This familiar keyboard shortcut enhances accessibility and usability, especially for power users navigating with a keyboard.
 
 ```cshtml
 
@@ -238,7 +238,7 @@ The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLStlCbpPfMNlcY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
-## Visibility Events
+## Visibility events
 
 Dialog visibility events provide hooks for executing custom logic during different phases of the dialog's show/hide lifecycle. These events are essential for implementing validation, animations, data loading, or cleanup operations.
 

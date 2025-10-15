@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) is characterized with complete ARIA Accessibility support which makes it accessible to on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) provides complete WAI-ARIA accessibility support, enabling compatibility with screen readers and other assistive technologies. This component is designed in accordance with guidance from the [WAI-ARIA Authoring Practices for modal dialogs](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
 
-The Blazor Dialog component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Dialog component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Dialog component is outlined below.
 
@@ -44,14 +44,13 @@ The Blazor Dialog component uses the `Dialog` role and following ARIA properties
 
 | **Property** | **Functionalities** |
 | --- | --- |
-| aria-describedby | Indicates that the Dialog content description is notified to the users through assistive technologies. |
-| aria-labelledby | The Dialog title is notified to the users through assistive technologies. |
-| aria-modal | For modal dialog, it's value is true and non-modal dialog its value is false |
-| aria-grabbed | Enables the draggable Dialog and starts dragging if its value is true and stops dragging if its value is false. |
+| aria-describedby | Identifies the element that provides a description for the dialog content to assistive technologies. |
+| aria-labelledby | Identifies the element that provides the dialog title announced by assistive technologies. |
+| aria-modal | Indicates whether the dialog is modal. For a modal dialog, the value is true; for a non-modal dialog, the value is false. |
 
 ## Keyboard interaction
 
-Keyboard interaction of Blazor Dialog component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
+Keyboard interaction for the Blazor Dialog component aligns with the [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal) for dialogs. Users can use the following shortcut keys to interact with the dialog. For modal dialogs, keyboard focus is trapped within the dialog while it is open, and the initial focus moves to the first focusable element (or a designated element).
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -152,9 +151,9 @@ to last focusable element</td></tr>
 
 ## Ensuring accessibility
 
-The Blazor Dialog component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Dialog component’s accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the Dialog component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the accessibility of the Dialog component with accessibility tools.
+The accessibility compliance of the Dialog component is demonstrated in the following sample. Open the [Dialog accessibility sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the component with accessibility tools.
 
 ## See also
 

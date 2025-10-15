@@ -9,7 +9,7 @@ documentation: ug
 
 # Add minimize and maximize buttons to the Dialog header
 
-Blazor Dialog allows end users to either minimize or maximize the Dialog component. You can add minimize and maximize custom buttons near the close icon in the Dialog header using the `headerTemplate` property and handle the actions in the button click events, as shown in the following sample.
+The Blazor Dialog enables users to minimize or maximize the Dialog component. Custom minimize and maximize buttons near the close icon in the Dialog header using the `headerTemplate` property and handle the actions in the button click events, as shown in the following sample.
 
 {% tabs %}
 {% highlight cshtml tabtitle="index.razor" hl_lines="4" %}

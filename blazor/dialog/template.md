@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in Blazor Dialog Component
 
-The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component provides comprehensive template support for header, content, and footer sections. This feature enables developers to create highly customized dialog experiences by incorporating custom HTML content, interactive components, and dynamic data binding within each section.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component provides dedicated templates for its header, content, and footer. Templates let you compose rich UI experiences by combining HTML, Syncfusion components, data binding, and interactive elements in each section while preserving dialog behaviors such as modality, accessibility, and animations.
 
-Templates offer flexibility to transform standard dialogs into rich, interactive user interfaces that can include forms, multimedia content, custom styling, and complex layouts tailored to specific application requirements.
+Templates transform standard dialogs into tailored workflows, including forms, media layouts, or contextual dashboards. They also support localization, theming, and accessibility practices because each template renders standard HTML that can be annotated with ARIA attributes or localized text.
 
-To get started quickly with templates in Blazor Dialog Component, you can check the video below.
+To explore dialog templating quickly, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=K5o9JWbgjvQ" %}
 
@@ -216,7 +216,7 @@ The Dialog footer can be customized using either built-in `DialogButton` compone
 
 ![Blazor Dialog Component with customized Footer template](./images/blazor-dialog-footer-template.png)
 
-N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best fits the dialog's functional requirements.
+N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best aligns with your action layout, and ensure each button provides accessible labels and keyboard focus.
 
 ## See also
 

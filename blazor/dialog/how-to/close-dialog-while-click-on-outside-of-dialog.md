@@ -9,9 +9,9 @@ documentation: ug
 
 # Close Blazor Dialog Component When Clicking Outside of Its Region
 
-By default, dialog can be closed by pressing `Esc` key and clicking the close icon at the right of dialog header. It can also be closed by clicking outside of the dialog using `Visible` property. Set the `CloseOnEscape` property value to `false` to prevent closing of the dialog when pressing `Esc` key.
+By default, the Dialog can be closed by pressing `Esc` key or by clicking the close icon on the right side of the Dialog header. It can also be closed by clicking outside of the Dialog using `Visible` property. Set the `CloseOnEscape` property value to `false` to prevent closing of the dialog when pressing `Esc` key.
 
-In the following code, dialog is closed when clicking outside the dialog area using `Visible` property.
+The following example closes the Dialog when the overlay is clicked by handling the `OnOverlayModalClick` event and setting the bound `Visible` property to `false`.
 
 N> The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayModalClick) event will only be triggered if the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_IsModal) property is set to `true`.
 

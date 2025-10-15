@@ -9,9 +9,9 @@ documentation: ug
 
 # Add Icons to Dialog Buttons in Blazor Dialog Component
 
-You can add icons to the dialog buttons using the `DialogButton` property or `FooterTemplate` property.
+Icons can be added to dialog footer buttons using either the DialogButtons collection or the FooterTemplate within DialogTemplates. Use the IconCss property or icon span elements to apply Syncfusion icon classes (e-icons) or custom font icons via CSS.
 
-In the following code, dialog footer buttons are customized with icons using the `DialogButton` property.
+The following example customizes dialog footer buttons with icons using the DialogButtons collection on SfDialog. Icons are applied using the IconCss property. This sample initializes IsVisible to true to display the dialog on first render; the Open Dialog button can be used to reopen it after closing.
 
 ```cshtml
 
@@ -66,7 +66,7 @@ In the following code, dialog footer buttons are customized with icons using the
 
 ```
 
-In the following code, dialog footer buttons are customized with icons using the `FooterTemplate` template property.
+The following example customizes dialog footer buttons with icons using the FooterTemplate. Icons are added as span elements with icon classes, giving full control over layout and styling.
 
 ```cshtml
 
@@ -120,7 +120,5 @@ In the following code, dialog footer buttons are customized with icons using the
 }
 
 ```
-
-
 
 ![Adding Icons to Blazor Dialog Button](../images/blazor-dialog-button-with-icon.png)

@@ -11,9 +11,9 @@ documentation: ug
 
 ## Two-way binding
 
-The `Visible` property is enabled by default and has two-way binding capabilities in Blazor dialog. To prevent the dialog from showing on-page load, set the property to `false` using the `@bind-Visible` attribute.
+The `Visible` property in the Blazor Dialog supports two-way binding. To keep the dialog hidden on page load, bind the property with `@bind-Visible` to a boolean field initialized to `false`.
 
-Bind the `Visible` property as mentioned below to show/hide the dialog on CheckBox state change.
+Bind the `Visible` property as shown below to show or hide the Dialog when the CheckBox state changes.
 
 ```cshtml
 

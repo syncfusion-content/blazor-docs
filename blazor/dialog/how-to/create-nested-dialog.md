@@ -13,15 +13,15 @@ A Dialog can be nested within another Dialog. The following sample contains pare
 
 **Step 1**:
 
-Create two dialog elements with ID `#dialog` and `#innerDialog`.
+Create two Dialog components that act as the parent (`#dialog`) and child (`#innerDialog`) containers.
 
 **Step 2**:
 
-Initialize the Dialog as mentioned in the following sample.
+Initialize both Dialog components with the necessary templates, dimensions, and visibility bindings required for your scenario.
 
 **Step 3**:
 
-Set the inner Dialog target as `#dialog`.
+Configure the child Dialog `Target` property to `#dialog` so that it is rendered within the parent Dialog when opened.
 
 ```cshtml
 
