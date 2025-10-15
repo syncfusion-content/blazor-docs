@@ -118,4 +118,4 @@ In the following example, the Price column uses "C2" to display values in a curr
 
 {% include_relative code-snippet/column/format.razor %}
 
-{% endhighlight %}
+{% endhighlight %} 
