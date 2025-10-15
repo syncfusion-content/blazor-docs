@@ -32,7 +32,7 @@ The following example demonstrates how to handle row selection in the Grid using
             <Template>
                 @{
                     var PrimaryVal = (context as Order);
-                    <SfRadioButton @ref="RadioButtonInstance" Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
+                    <SfRadioButton @ref="RadioButtonInstance" Name="RadioBtn" Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
                 }
             </Template>
         </GridColumn>
