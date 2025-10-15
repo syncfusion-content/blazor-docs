@@ -196,8 +196,6 @@ To modify chunk upload behavior, the following options can be used.
 
 The following sample sets the chunk upload delay to 3000 milliseconds and the retry count to 5. The failure event triggers because an incorrect saveUrl is used.
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
-
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
@@ -212,8 +210,6 @@ The following sample sets the chunk upload delay to 3000 milliseconds and the re
 Chunk upload allows resuming an interrupted upload after a network failure or a manual pause. Pause and resume can be performed using public methods (`pause` and `resume`) as well as UI interactions. The pause icon becomes available after the upload begins. The [Paused](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Paused) event is triggered when pausing an upload, and the [OnResume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnResume) event is triggered when resuming to upload the remaining file. Ensure the server appends chunks consistently so that resume continues from the last successful chunk.
 
 N> The pause and resume features are available only when chunk upload is enabled.
-
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
