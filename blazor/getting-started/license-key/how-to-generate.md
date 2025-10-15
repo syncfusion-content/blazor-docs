@@ -1,47 +1,47 @@
 ---
 layout: post
-title: Overview of Syncfusion license generation - Syncfusion
-description: Learn here about how to generate Syncfusion blazor license key for syncfusion blazor application for license validation. 
+title: Generate Blazor license key | Syncfusion
+description: Learn here all about how to generate a Syncfusion Blazor license key for evaluation or licensed usage, including platform- and version-specific guidance.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Generate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor License Key
+# Generate Syncfusion® Blazor License Key
 
-License keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
+Generate license keys from the [License & Downloads](https://syncfusion.com/account/downloads) portal or the [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
 
-![Get Community License Key](images/get-community-license-key.png)
+![License & Downloads portal showing the Get Community License Key option](images/get-community-license-key.png)
 
-N> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version and platform specific**. Refer to the [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform.
-* Refer to this [KB](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to know which version of the Syncfusion<sup style="font-size:70%">&reg;</sup> license key should be used in the application.
+N> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version and platform specific**. See How to generate a license key for [licensed products](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products).
+* To determine which license key version to use in an application, see [Which version Syncfusion<sup style="font-size:70%">&reg;</sup> license key should I use in my application?](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application).
 
 ## Claim License key
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> License keys can also be generated from the **"Claim License Key"** page based on the trial or valid license associated with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+License keys can also be generated from the **Claim License Key** page based on the trial or active license associated with the Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-You can get the license key, based on license availability in your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+The generated key depends on license availability in the associated Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
 ### Active License
 
-If you have a Syncfusion<sup style="font-size:70%">&reg;</sup> account associated with valid license, license key will be generated from claim license key page.
+If the account has a valid license, a license key is generated from the Claim License Key page.
 
-![Active License](images/active-license.png)
+![Claim License Key page showing an active license state](images/active-license.png)
 
 ### Active Trial
 
-If you have a Syncfusion<sup style="font-size:70%">&reg;</sup> account associated with valid trial license, license key will be generated from claim license key page with expiry date.
+If the account has a valid trial license, a license key is generated with an expiry date.
 
-![Active Trial](images/active-trial.png)
+![Claim License Key page showing an active trial state with expiry date](images/active-trial.png)
 
 ### Expired License
 
-If you have a Syncfusion<sup style="font-size:70%">&reg;</sup> account with an expired license, your license subscription must be renewed in order to obtain a valid license key for the latest Essential Studio<sup style="font-size:70%">&reg;</sup> version. Meanwhile, a temporary license key with a 5-day validity period will be generated.
+If the account license has expired, renew the subscription to obtain a valid license key for the latest Essential Studio<sup style="font-size:70%">&reg;</sup> version. A temporary license key with a 5‑day validity period is generated in the meantime.
 
-![Expired License](images/expired-license.png)
+![Claim License Key page indicating an expired license with temporary key notice](images/expired-license.png)
 
 ### No Trial or No License or Expired trial
 
-If the Syncfusion<sup style="font-size:70%">&reg;</sup> account is not associated with a trial, license, or expired trial, you can try to claim either a trial or a valid license from claim license page.
+If the account does not have an active trial or license, request a trial or obtain a valid license from the Claim License Key page.
 
-![No Trial or No License](images/no-active-trial-or-license.png)
+![Claim License Key page showing no active trial or license state](images/no-active-trial-or-license.png)
