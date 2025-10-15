@@ -40,7 +40,7 @@ The following example demonstrates filtering with [ODataAdaptor](https://blazor.
 
 ## Debounce delay
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property to control the delay (in milliseconds) before filtering is applied as the user types. Debounching reduces the frequency of requests and improves responsiveness. By default, DebounceDelay is 300 ms. To disable debouching, set this property to 0.
+Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property to control the delay (in milliseconds) before filtering is applied as the user types. Debouching reduces the frequency of requests and improves responsiveness. By default, DebounceDelay is 300 ms. To disable debouching, set this property to 0.
 
 {% highlight cshtml %}
 
