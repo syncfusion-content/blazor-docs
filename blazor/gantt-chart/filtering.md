@@ -7,11 +7,11 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Filtering in Blazor Gantt Component
+# Filtering in Blazor Gantt Chart Component
 
-Filtering allows you to view specific or related records based on defined criteria. The Gantt component supports options like filter menu, Excel-like filtering, and toolbar search to narrow down visible data.
+Filtering allows you to view specific or related records based on defined criteria. The Gantt Chart component supports options like filter menu, Excel-like filtering, and toolbar search to narrow down visible data.
 
-To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true** in the Gantt configuration. You can define filter options using `GanttFilterSettings` and configure toolbar search using `GanttSearchSettings` property.
+To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true** in the Gantt Chart configuration. You can define filter options using `GanttFilterSettings` and configure toolbar search using `GanttSearchSettings` property.
 
 > The  filtering UI is rendered based on the column type, allowing data to be filtered using appropriate operators.
 > The filter menu is enabled by default. To disable the filtering option for a specific column, set the `AllowFiltering` property of the `GanttColumn` to **false**.
@@ -69,7 +69,7 @@ To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/
 
 ## Filter hierarchy modes
 
-The Blazor Gantt component supports multiple filtering modes, which can be configured using the [GanttFilterSettings.HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_HierarchyMode) property. The available modes are:
+The Blazor Gantt Chart component supports multiple filtering modes, which can be configured using the [GanttFilterSettings.HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_HierarchyMode) property. The available modes are:
 
 - **Parent**: This is the default mode. Filtered records are displayed along with their parent records. If no parent exists, only the filtered records are shown.
 
@@ -82,7 +82,6 @@ The Blazor Gantt component supports multiple filtering modes, which can be confi
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@page "/__Index"
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
 
@@ -164,7 +163,7 @@ The Blazor Gantt component supports multiple filtering modes, which can be confi
 
 ## Initial filter
 
-To apply filtering during the initial render of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component, define the filter conditions using a collection of `PredicateModel` objects within the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
+To apply filtering during the initial render of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, define the filter conditions using a collection of `PredicateModel` objects within the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
 
 The following sample demonstrates how to apply an initial filter where **TaskName** starts with **Identify** and **TaskID** equals **2**, using a `Predicate` condition set to **and**.
 
@@ -248,7 +247,7 @@ N> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
 
 ## Diacritics
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [GanttFilterSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_IgnoreAccent) property to **true**.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [GanttFilterSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_IgnoreAccent) property to **true**.
 
 The following sample demonstrates this behavior: when filtering the **TaskName** column, entries containing diacritic characters (e.g., “Próject”, “Projéct”) will be matched if you enter the base text **Project**.
 
@@ -305,7 +304,7 @@ The following sample demonstrates this behavior: when filtering the **TaskName**
 
 ## Filtering a specific column by method
 
-You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_) method.
+You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_) method.
 
 The example below demonstrates how to filter the **TaskName** and **TaskID** columns using a single value. Filtering is triggered by an external button click, which invokes the `FilterByColumnAsync` method.
 
@@ -370,7 +369,7 @@ The example below demonstrates how to filter the **TaskName** and **TaskID** col
 
 ## Clear filtered columns
 
-You can clear all the filtering conditions applied in the Gantt component by using the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearFilteringAsync) method.
+You can clear all the filtering conditions applied in the Gantt Chart component by using the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearFilteringAsync) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -441,7 +440,7 @@ You can clear all the filtering conditions applied in the Gantt component by usi
 
 ## Enable different filter for a column
 
-You can enable different filter types for individual columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
+You can enable different filter types for individual columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -568,7 +567,7 @@ You can enable different filter types for individual columns in the Syncfusion<s
 
 ## Get filtered records
 
-You can retrieve filtered records from the Gantt component using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetFilteredRecordsAsync) method. 
+You can retrieve filtered records from the Gantt Chart component using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetFilteredRecordsAsync) method. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -674,7 +673,7 @@ You can retrieve filtered records from the Gantt component using the [GetFiltere
 
 ## Customize filtering action
 
-You can customize the filtering behavior in the Gantt component using the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening), [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpened), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtering), and [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtered) events.
+You can customize the filtering behavior in the Gantt Chart component using the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening), [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpened), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtering), and [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtered) events.
 
 The following `Filtering` event cancels the filter action for the **TaskName** column.
 

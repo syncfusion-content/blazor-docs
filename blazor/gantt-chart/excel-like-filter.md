@@ -7,9 +7,9 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Excel like filter in Blazor Gantt component
+# Excel like filter in Blazor Gantt Chart component
 
-The Excel-like filter in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component enables column-level filtering similar to Microsoft Excel. It supports sorting, clearing filters, and applying advanced conditions through a submenu available in each column header. This feature is highly effective for working with large datasets and applying multiple filter criteria.
+The Excel-like filter in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component enables column-level filtering similar to Microsoft Excel. It supports sorting, clearing filters, and applying advanced conditions through a submenu available in each column header. This feature is highly effective for working with large datasets and applying multiple filter criteria.
 
 To enable this feature, configure [GanttFilterSettings.FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_FilterType) as **Excel** and set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true**.
 
@@ -70,7 +70,7 @@ To enable this feature, configure [GanttFilterSettings.FilterType](https://help.
 
 ## Customize the filter choice count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component displays up to 1000 distinct values per column in the filter dialog by default. These values are taken from the first 1000 records bound to the component and shown as checkbox list items to maintain optimal performance. Additional values can be accessed using the search option within the filter dialog.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component displays up to 1000 distinct values per column in the filter dialog by default. These values are taken from the first 1000 records bound to the component and shown as checkbox list items to maintain optimal performance. Additional values can be accessed using the search option within the filter dialog.
 
 To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Gantt_FilterDialogOpeningEventArgs_FilterChoiceCount) property can be configured within the[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event to increase or decrease the number of distinct values displayed, depending on the dataset size and filtering requirements.
 
@@ -139,7 +139,7 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
 
 ## Show customized text in filter dialog
 
-You can customize the text shown in the filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt compoenent by using the [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This feature allows you to present meaningful labels based on the values of a specific column.
+You can customize the text shown in the filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart compoenent by using the [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This feature allows you to present meaningful labels based on the values of a specific column.
 
 In the example below, the filter checkbox list for the **Status** column is customized by defining a `FilterItemTemplate` within the column configuration. The **FilterItemTemplateContext** is used to conditionally render descriptive labels: **Completed** when the value is **true**, and **In Progress** when the value is **false**.
 
@@ -218,7 +218,7 @@ In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, ther
 
 The Excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some project management scenarios. 
 
-To remove the context menu from the filter dialog, apply the following CSS rule to the Gantt:
+To remove the context menu from the filter dialog, apply the following CSS rule to the Gantt Chart:
 
 ```cshtml
 <style>

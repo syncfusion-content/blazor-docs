@@ -7,15 +7,15 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Filter menu in Blazor Gantt component
+# Filter menu in Blazor Gantt Chart component
 
-The Syncfusion Blazor Gantt component provides a filter menu for each column, allowing filtering based on data type and supported operators. 
+The Syncfusion Blazor Gantt Chart component provides a filter menu for each column, allowing filtering based on data type and supported operators. 
 
 To enable this feature, configure [GanttFilterSettings.FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_FilterType) as **Menu** and set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true**.
 
 ## Custom component in filter menu 
 
-You can customize the filter menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This allows you to replace the default filter controls with custom components such as dropdowns or textboxes for specific columns. By default, the Gantt uses Autocomplete for string columns, NumericTextBox for number columns, DatePicker for date columns, and DropDownList for boolean column.
+You can customize the filter menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property. This allows you to replace the default filter controls with custom components such as dropdowns or textboxes for specific columns. By default, the Gantt Chart uses Autocomplete for string columns, NumericTextBox for number columns, DatePicker for date columns, and DropDownList for boolean column.
 
 Here is a sample code demonstrating how to render a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) for the **TaskName** column:
 
@@ -186,7 +186,7 @@ You can perform filtering programmatically using the [FilterByColumnAsync](https
 
 ## Customize the default input component of filter menu dialog
 
-You can customize the input components in the filter menu of the Syncfusion Blazor Gantt by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property in `GanttColumn`. This enables column-specific customization and precise control over the behavior of individual filter components.
+You can customize the input components in the filter menu of the Syncfusion Blazor Gantt Chart by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_FilterItemTemplate) property in `GanttColumn`. This enables column-specific customization and precise control over the behavior of individual filter components.
 
 | Column Type | Default component  |Customization  | API Reference     |
 | ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
