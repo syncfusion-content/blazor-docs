@@ -154,5 +154,3 @@ N> - Batch mode stages edits on the client. Click Update on the toolbar or save 
 - A primary key column (IsPrimaryKey=true) is required for editing.  
 
 - Confirmation dialogs are available only when the TreeGridEditSettings Mode is set to **Batch**. If ShowConfirmDialog is false, no confirmation dialog is shown for save; use ShowDeleteConfirmDialog to control delete confirmations separately.
-
-
