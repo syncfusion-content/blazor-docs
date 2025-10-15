@@ -9,9 +9,16 @@ documentation: ug
 
 # HTML Attribute Support in Blazor Button Component
 
-You can incorporate additional HTML attributes like disabled, value, name, and others into the SfButton by explicitly specifying them within the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) tag. If you configure both the property and equivalent HTML attribute, then the component will consider the property value.
+You can add additional HTML attributes such as `type`, `disabled`, `title`, `id`, `name`, and `aria-*` directly on the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) tag. These attributes are passed to the underlying native button element. If both a component property and an equivalent HTML attribute are set, the component property value takes precedence.
 
-The following example demonstrates how to set type attribute in the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html).
+Common scenarios include:
+- Setting the `type` attribute for form behavior (`submit`, `button`, `reset`)
+- Adding a `title` attribute for a native tooltip
+- Providing `aria-*` attributes for accessibility
+- Using `id` and `name` for form integration and testing
+- Controlling the disabled state (prefer the `Disabled` property for consistent behavior)
+
+The following example demonstrates setting the `type` attribute on the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html).
 
 ```csharp
 
@@ -21,5 +28,4 @@ The following example demonstrates how to set type attribute in the [SfButton](h
 
 ```
 
-
-![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.png)
+![Blazor Button with HTML title and type attributes](./../images/blazor-button-with-html.png)

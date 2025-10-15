@@ -11,7 +11,7 @@ documentation: ug
 
 # Responsive Sidebar in Blazor Sidebar Component
 
-[Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) often behaves differently on a mobile versus a desktop display. It has an effective feature that offers to set it in opened or closed state corresponding to the specified resolution. This is achieved through [`MediaQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_MediaQuery) property that allows to set the Sidebar in an expanded state or collapsed state only in user-defined resolution.
+The [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) often exhibits different behavior on mobile and desktop displays. An effective feature allows setting its opened or closed state corresponding to a specified resolution. This is achieved through the [`MediaQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_MediaQuery) property, which allows the Sidebar to be set to an expanded or collapsed state based on a user-defined resolution.
 
 In the following sample, **mediaQuery** has been used for specific resolution to close and open sidebar.
 
@@ -46,4 +46,5 @@ In the following sample, **mediaQuery** has been used for specific resolution to
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthoCNtFTZkcfsLg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 ![Displaying Auto close in Blazor Sidebar](./images/blazor-sidebar-auto-close.gif)

@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Optimize Performance in Blazor WASM using AOT Compilation - Syncfusion
-description: Check out the documentation for Optimize Performance using AOT Compilation in Blazor WebAssembly in Blazor
+title: Optimize Blazor WASM performance with AOT compilation - Syncfusion
+description: Enable AOT compilation in Blazor WebAssembly to improve performance, understand trade-offs, and review size versus performance considerations and more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Optimize Performance in Blazor WebAssembly using AOT Compilation
+# Optimize Blazor WebAssembly performance with AOT compilation
 
-This article explains how to improve the performance of **Blazor WebAssembly (WASM)** applications using **Ahead-of-Time (AOT) compilation**, specifically for applications using **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components**.
+This article explains how to improve the performance of Blazor WebAssembly (WASM) Apps using **Ahead-of-Time (AOT) compilation**, including apps that use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## AOT Compilation Overview
 
-Blazor WebAssembly applications run entirely in the browser via WebAssembly. By default, the app’s .NET assemblies are downloaded and executed using a **Just-In-Time (JIT)** interpreter. However, enabling **AOT compilation** ahead of time converts the .NET Intermediate Language (IL) into native WebAssembly at build time, resulting in significant performance gains.
+Blazor WebAssembly Apps run entirely in the browser via WebAssembly. By default, the app’s .NET assemblies are downloaded and executed using a **Just-In-Time (JIT)** interpreter. Enabling AOT compilation converts .NET Intermediate Language (IL) into native WebAssembly at build time, which can provide significant performance gains.
 
 ## Enable AOT Compilation
 
-Follow the steps below to configure AOT for your Blazor WASM project.
+Follow these steps to configure AOT for a Blazor WebAssembly App.
+
+**Prerequisites:** Target .NET 8 or later and publish in Release configuration.
 
 ### Step 1: Target .NET 8+
 
@@ -62,7 +64,7 @@ bin/Release/net8.0/publish/wwwroot/
 ---
 
 ## Size vs Performance Tradeoff
-The following table compares performance and size metrics for Blazor WebAssembly with and without AOT, using a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with paging enabled.
+The following sample metrics compare performance and size for Blazor WebAssembly with and without AOT, using a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with paging enabled.
 
 | Metric                     | Without AOT          | With AOT             |
 |----------------------------|----------------------|----------------------|
@@ -71,32 +73,32 @@ The following table compares performance and size metrics for Blazor WebAssembly
 | Bundle Size (Brotli)       | ~114 MB              | ~192 MB              |
 | Memory Usage               | Slightly lower       | Slightly higher      |
 
-> [AOT compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) increases the application size but significantly improves load time, interactivity and overall runtime performance in Blazor WebAssembly applications.
+> [AOT compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot#ahead-of-time-aot-compilation) increases app size but can significantly improve load time, interactivity, and overall runtime performance in Blazor WebAssembly apps.
 
 ---
 
 ## Limitations
 
-- **Longer Build Time:** AOT compilation is slower compared to standard builds.
-- **Increased Bundle Size:** Final WebAssembly size is larger.
-- **Higher Memory Usage:** While AOT improves performance, it may result in slightly higher memory usage at runtime due to native code execution.
-- **Reduced Flexibility:** Dynamic features (e.g., reflection) may require additional handling.
-- **More Complex Debugging:** Source map support is limited.
-- **Slower Iterations:** Any code change needs full rebuild, affecting dev productivity.
+- **Longer build time:** compared to standard builds.
+- **Increased bundle size:** Final WebAssembly size is larger.
+- **Higher memory usage:** While AOT improves performance, it may result in slightly higher memory usage at runtime due to native code execution.
+- **Reduced flexibility:** Dynamic features (e.g., reflection) may require additional handling.
+- **More complex debugging:** Source map support is limited.
+- **Slower iterations:** Any code change needs full rebuild, affecting dev productivity.
 
 ---
 
 ## Considerations
 
-- **Better Performance:** Native WebAssembly improves execution speed and UI responsiveness.
-- **Enhanced Security:** Native code is harder to reverse-engineer than Intermediate Language code.
-- **Cross-Platform Consistency:** Consistent behavior across browsers and devices.
+- **Better performance:** Native WebAssembly improves execution speed and UI responsiveness.
+- **Enhanced security:** Native code is harder to reverse-engineer than Intermediate Language code.
+- **Cross-platform consistency:** Consistent behavior across browsers and devices.
 
 ---
 
 ## Specific Recommendations
 
-To further reduce published output size, [enable linker and trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming) options in your `.csproj`:
+To further reduce published output size, [enable linker and trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming) options in the `.csproj`.
 
 ```xml
 <PublishTrimmed>true</PublishTrimmed>

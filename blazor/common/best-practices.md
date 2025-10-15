@@ -1,37 +1,38 @@
 ---
 layout: post
-title: Optimizing Syncfusion Blazor App Performance | Best Practices
-description: Check out and learn here all about optimal strategies for enhancing Syncfusion Blazor App performance.
+title: Best practices to optimize Syncfusion Blazor App performance
+description: Learn practical ways to optimize Syncfusion Blazor Apps, including smaller packages, minimal scripts, optimized themes, lazy loading, and PreventRender.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Best Practices for Improving Syncfusion&reg; Blazor App Performance
+# Best practices for optimizing Syncfusion® Blazor App performance
 
-Enhancing the rendering performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor apps involves implementing the following best practices.
+Improve rendering performance by applying the following best practices.
 
-## Use Individual NuGet Packages
+## Use individual NuGet packages
 
-Opt for individual Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages for specific components. This approach allows you to selectively include only the necessary components, minimizing overhead. For detailed information, refer to [Benefits of Using Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+Use individual Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages for specific components. This lets the app include only what it needs and reduces download size. Learn more in [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-## Reduce Script Reference Size
+## Reduce script reference size
 
-The overall `syncfusion-blazor.min.js` script reference may be redundant. Instead, consider employing the following solutions to include only the required scripts for rendering Syncfusion<sup style="font-size:70%">&reg;</sup> components.
-* [Individual reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#individual-control-script-reference)
-* [Blazor custom resource generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+The overall `syncfusion-blazor.min.js` may include scripts the app doesn't use. Prefer referencing only the required scripts using one of the following options:
 
-## Use Optimized CSS Themes
+- [Individual reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#individual-control-script-reference)
+- [Blazor Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
-To reduce CSS payload and improve rendering speed, use optimized CSS themes provided by Syncfusion. These themes are tailored to include only the styles required for the components you use. Learn more at Optimized CSS Themes
-https://blazor.syncfusion.com/documentation/appearance/themes#optimized-css-themes
-## Lazy Loading in Blazor WebAssembly App
+## Use optimized CSS themes
 
-If you're using a Blazor WebAssembly app, consider implementing lazy loading to reduce the initial loading time. For guidance, refer to Microsoft's documentation on [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) and Syncfusion's blog on [lazy loading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
+To reduce CSS payload and improve rendering speed, use optimized CSS themes that include only the styles required by the components in use. Learn more in [Optimized CSS themes](https://blazor.syncfusion.com/documentation/appearance/themes#optimized-css-themes).
 
-## Utilize PreventRender Option in Blazor WebAssembly App
+## Lazy loading in Blazor WebAssembly App
 
-In a Blazor WebAssembly app, leverage the **PreventRender** option to avoid unnecessary re-rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. This ensures optimal performance. For reference, we have provided links for the DataGrid and PivotTable:
+If using a Blazor WebAssembly App, implement lazy loading to reduce initial load time. See [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) and the Syncfusion blog on [lazy loading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
 
-* DataGrid: [Link to WebAssembly performance documentation](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance)
-* PivotTable: [Link to WebAssembly performance documentation](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)
+## Use PreventRender in Blazor WebAssembly App
+
+In a Blazor WebAssembly App, use the `PreventRender` option to avoid unnecessary re-rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and improve performance. For details, see:
+
+- DataGrid: [WebAssembly performance](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance)
+- Pivot Table: [WebAssembly performance](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)
