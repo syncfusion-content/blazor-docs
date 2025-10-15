@@ -17,19 +17,19 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 * Right-click on the project in the `Solution Explorer` and select `Publish`.
 
-![Solution Explorer in Blazor](./images/publish.png)
+![Solution Explorer in Blazor](../images/publish.png)
 
 * Then, select the `Folder` option and select the publishing target location.
 
-![Publish Location in Blazor](./images/folder.png)
+![Publish Location in Blazor](../images/folder.png)
 
 * Check the configuration as Release by clicking the `Advanced...` option below the target location.
 
-![Release Configuration in Blazor](./images/config.png)
+![Release Configuration in Blazor](../images/config.png)
 
 * For `Blazor Server side application`, set Deployment Mode as `Self-Contained`. Because some dependencies are not loaded properly when the published folder is hosted.
 
-![Deploy Mode in Blazor](./images/deploy.png)
+![Deploy Mode in Blazor](../images/deploy.png)
 
 * Then, click `Save` and `Publish`.
 
