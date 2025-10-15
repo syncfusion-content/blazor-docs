@@ -29,8 +29,6 @@ Configure the corresponding [Interactive render mode](https://learn.microsoft.co
 
 ![Create Blazor Web App](images/blazor-create-web-app.png)
 
-![Create Blazor Web App](images/blazor-create-web-app.png)
-
 ## Step 2: How to Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet Packages in the Blazor Web App
 
 To add the **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
