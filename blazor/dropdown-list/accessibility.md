@@ -64,8 +64,8 @@ Use the following keys to operate the Blazor DropDownList by keyboard:
 |**Input Navigation**| | |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next tabbable element when the popup is closed; otherwise closes the popup and keeps focus on the component. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous tabbable element when the popup is closed; otherwise closes the popup and keeps focus on the component. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. When the popup is open, it closes after selection; otherwise, toggles the popup. |
 |**Popup Navigation**| | |

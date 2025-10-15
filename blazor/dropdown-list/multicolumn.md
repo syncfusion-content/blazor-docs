@@ -28,6 +28,6 @@ Apply built-in text alignment classes to control alignment in each column:
 
 ![Blazor DropDownList with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.png)
 
-## Limitation of multicolumn dropdownlist
+## Limitation of multicolumn dropdown list
 
 The component does not support built-in column filtering or sorting, and the columns are aligned using templates and CSS rather than a data grid feature set.

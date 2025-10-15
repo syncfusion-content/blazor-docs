@@ -121,7 +121,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ## Programmatically focus in and focus out the component
 
-In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the dropdownlist, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the dropdownlist.
+In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the dropdown list, you can use buttons. Bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the dropdown list.
 
 {% highlight Razor %}
 

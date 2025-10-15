@@ -218,7 +218,7 @@ public abstract class DataAdaptor
 }
 ```
 
-In a custom adaptor, return the data collection (and count when needed) based on the incoming `DataManagerRequest`. This approach is useful for custom backends or complex filtering/paging scenarios.
+In a custom adaptor, return the data collection (and count when needed) based on the incoming `DataManagerRequest`. This approach is useful for custom back ends or complex filtering/paging scenarios.
 
 {% highlight cshtml %}
 
