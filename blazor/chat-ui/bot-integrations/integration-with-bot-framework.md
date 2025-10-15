@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate Microsoft Bot Framework with Blazor Chat UI Component | Syncfusion
+title: Bot Framework with Blazor Chat UI Component | Syncfusion
 description: Checkout and learn here all about Integrate Microsoft Bot Framework with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
