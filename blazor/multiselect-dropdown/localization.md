@@ -7,7 +7,7 @@ control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Globalization and Localization
+# Globalization and Localization in Multiselect Dropdown
 
 ## Localization
 

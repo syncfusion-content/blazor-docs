@@ -64,8 +64,6 @@ The following example demonstrates an array of integers as the data source.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Primitive Type as int](./images/value-binding/blazor_MultiSelect_primitive-type-int.png)
-
 ## Object binding
 
 Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute and map the value field via [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value). Set `TItem` to the data item type and `TValue` to the value field type.
