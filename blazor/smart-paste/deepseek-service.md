@@ -131,7 +131,7 @@ public class DeepSeekChoice
 }
 
 {% endhighlight %}
-(% endtabs %)
+{% endtabs %}
 
 ## Create a Custom AI Service
 
