@@ -29,7 +29,7 @@ Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide 
 
 Install the required packages:
 
-1. Install the `Gemini AI` nuget package in the application.
+* Install the `Gemini AI` nuget package in the application.
 
 ```bash
 
@@ -37,7 +37,7 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 ```
 
-2. Install the `Markdig` nuget packages in the application.
+* Install the `Markdig` nuget packages in the application.
 
 ```bash
 
@@ -59,7 +59,7 @@ Nuget\Install-Package Markdig
 
 ## Gemini AI with AI AssistView
 
-Modify the razor file to integrate the Gemini AI with the AI AssistView component.
+Modify the Razor file to integrate the Gemini AI with the AI AssistView component.
 
 * update your Gemini API key securely in the configuration:
 
