@@ -612,6 +612,7 @@ Below is an example showing how to implement grouping and aggregates in a custom
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
 @using System.Data
 @using System.Dynamic
 @using System.Collections
