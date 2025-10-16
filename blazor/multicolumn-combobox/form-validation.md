@@ -17,11 +17,11 @@ The MultiColumn ComboBox component can be used inside an EditForm to create a fo
 
 When the MultiColumn ComboBox input is valid, the form is ready to be submitted; if invalid, a validation message is shown until a valid value is selected.
 
-* The `EditForm` wraps the form, sets the `Model` to the view model instance, and triggers the configured submit handlers (`OnValidSubmit`/`OnInvalidSubmit`) on submit.
-* The `DataAnnotationsValidator` enables validation based on data annotation attributes applied to the model properties (for example, `[Required]`).
-* The [`ValidationSummary`](https://learn.microsoft.com/aspnet/core/blazor/forms-and-validation#validation-summary-and-validation-message-components) displays a summary of validation errors.
-* The [`ValidationMessage`](https://learn.microsoft.com/aspnet/core/blazor/forms-and-validation#validation-summary-and-validation-message-components) displays a validation error for the specific bound property (via its `For` parameter).
-* The submit button submits the form and invokes the appropriate submit handler.
+* The EditForm component wraps the entire form, has the Model attribute set to the model variable of type, and triggers the OnValidSubmit() method when the form is submitted.
+* The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the model properties.
+* The ValidationSummary component displays a summary of all validation errors on the form.
+* The ValidationMessage component displays a validation error message for the Name property of the model variable.
+* The submit button submits the form and triggers the OnValidSubmit() method when clicked.
 
 {% highlight cshtml %}
 

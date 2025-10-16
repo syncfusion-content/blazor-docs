@@ -33,7 +33,7 @@ Retrieve the full data object corresponding to the selected value in the [ValueC
 
 ## Preselected value on OnInitializedAsync
 
-Preselect a value by binding the component using [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value). Set the bound value in [OnInitializedAsync](https://learn.microsoft.com/aspnet/core/blazor/components/lifecycle?view=aspnetcore-8.0#component-initialization-oninitializedasync). Ensure `TValue` aligns with the type of the bound model property.
+pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. You can set the value property in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following example illustrates how to bind the value when the component is initially rendered.
 
 {% highlight cshtml %}
 

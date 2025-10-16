@@ -68,7 +68,7 @@ Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor to the beginning of the input. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor to the end of the input. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | When the popup is closed, moves focus to the previous tabbable element. Otherwise, closes the popup and retains focus on the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. When the popup is open, confirms selection and closes the list; otherwise, toggles the popup. |
 |**Popup Navigation** | | |

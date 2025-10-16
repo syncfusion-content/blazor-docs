@@ -27,9 +27,9 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-For remote data, each key press and filter action is processed on the server side via DataManager queries. Use the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) (or another suitable adaptor) with a [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that includes predicates for the fields to filter. Ensure the field names used in the query exist on the server model. Consider debouncing requests for large datasets.
+For remote data, every key press and filter action request is processed on the server side.
 
-The following code illustrates the filtering capabilities using the OData adaptor in the MultiColumn ComboBox component, utilizing the Query property.
+The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
