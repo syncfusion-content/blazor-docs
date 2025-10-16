@@ -9,18 +9,16 @@ documentation: ug
 
 # Templates in Blazor Rating Component
 
-The Blazor Rating component allows you to customize the appearance of the rating items using templates. You can use templates to specify a custom layout for the rating items, which can include any content you want. This allows you to create a more customized and interactive rating experience for the user.
+The Blazor Rating component supports templates to customize the appearance of rating items. Templates let you define custom content for items to create tailored and interactive experiences.
 
-The rating component supports below templates for item customization.
+The rating component supports the following templates for item customization:
 
-* [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate)
-* [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate)
+* [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate): Template applied to unrated items.
+* [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate): Template applied to rated items.
 
 ## Empty (unrated) symbol template
 
-To customize the appearance of **unrated** items, you can use the `EmptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
-The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its `Value` and `Index`.
-If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both rated and unrated items. You can apply custom styles to differentiate between the rated and unrated states of the items.
+Use the `EmptyTemplate` tag directive to customize the appearance of unrated items. The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as the `context` to the template and provides information such as the item `Value` and `Index`. If `FullTemplate` is not defined, `EmptyTemplate` is used for both rated and unrated items; custom styles can differentiate the states for visual clarity.
 
 ```cshtml
 
@@ -71,9 +69,9 @@ If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the de
 
 ```
 
-![Blazor Rating Component with EmptyTemplate](./images/blazor-rating-empty-template.png)
+![Blazor Rating component with EmptyTemplate](./images/blazor-rating-empty-template.png)
 
-N> The current value of the rating item available in the template context (`RatingItemContext`)  as `Value` and in the rating item element as CSS Variable (`--rating-value`) can be used to support precision in templates.
+N> The current value of the rating item is available in the template context (`RatingItemContext`) as `Value` and `Index`. The rating item element also exposes a CSS custom property (`--rating-value`) representing the filled portion, which can be used to support precision in templates.
 
 ## Full (rated) symbol template
 
@@ -131,11 +129,11 @@ The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Rating Component with FullTemplate](./images/blazor-rating-full-template.png)
+![Blazor Rating component with FullTemplate](./images/blazor-rating-full-template.png)
 
 ## Using Emoji icon as rating symbol
 
-You can use emojis of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` tag directive.
+Use emoji as rating symbols by placing them as template content within the `EmptyTemplate` tag directive. This approach works well with single selection and animations disabled for a clean experience.
 
 ```cshtml
 
@@ -177,11 +175,11 @@ You can use emojis of your choice as rating symbol by specifying them as templat
 
 ```
 
-![Blazor Rating Component with Emoji Icon](./images/blazor-rating-emoji-icon.png)
+![Blazor Rating component with Emoji icon](./images/blazor-rating-emoji-icon.png)
 
 ## Using SVG icon as rating symbol
 
-You can use SVG icons of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
+Use SVG icons as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives. Gradients can be applied per item using unique IDs derived from the item index.
 
 ```cshtml
 
@@ -245,11 +243,11 @@ You can use SVG icons of your choice as rating symbol by specifying them as temp
 
 ```
 
-![Blazor Rating Component with SVG Icon](./images/blazor-rating-svg-icon.png)
+![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.png)
 
 ## Using PNG image as rating symbol
 
-You can use PNG images of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
+Use PNG images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
@@ -271,4 +269,4 @@ You can use PNG images of your choice as rating symbol by specifying them as tem
 
 ```
 
-![Blazor Rating Component with PNG Icon](./images/blazor-rating-png.png)
+![Blazor Rating component with PNG icon](./images/blazor-rating-png.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TextArea Component
 
-This section explains how to add the [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-textarea) component to a Blazor WebAssembly app using Visual Studio or Visual Studio Code.
+This guide explains how to add the [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-textarea) component to a Blazor WebAssembly app using Visual Studio or Visual Studio Code.
 
 {% tabcontents %}
 
