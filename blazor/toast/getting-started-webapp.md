@@ -93,18 +93,22 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Notifications` namespaces:
 
-```razor
+{% tabs %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both Program.cs files (Server and Client).
 
-Server:
+{% tabs %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
 
-```csharp
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -119,20 +123,24 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 ```
 
-Client:
+{% endhighlight %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
 
-```csharp
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 If the **Interactive Render Mode** is set to `Server`, the project contains a single **~/Program.cs** file. In this case, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service only in that file.
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -144,7 +152,9 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
@@ -179,14 +189,20 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 
 Render mode directive:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @* Desired render mode defined here *@
 @rendermode InteractiveAuto
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Toast component example:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <div class="col-lg-12 control-section toast-default-section">
     <SfToast ID="toast_default" @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
         <ToastPosition X="@ToastPosition"></ToastPosition>
@@ -226,7 +242,9 @@ Toast component example:
         await ToastObj.HideAsync("All");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Use <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toast component renders in the default web browser.
 
