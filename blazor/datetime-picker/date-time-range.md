@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DateTime Range in Blazor DateTimePicker Component | Syncfusion
-description: Learn how to restrict dates and times in the Syncfusion Blazor DateTimePicker using Min, Max, MinTime, MaxTime, and StrictMode to control valid input and selection.
+description: Checkout and learn here all about DateTime Range in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: DateTimePicker
 documentation: ug

@@ -63,4 +63,4 @@ The DateTimePicker supports a full-screen popup on mobile devices to improve vis
 
 See the following section to customize the Calendar’s style and appearance when used within the DateTimePicker.
 
-[Customizing Calendar's style and appearance](../calendar/style-appearance/)
+[Customizing Calendar's style and appearance](../calendar/style-appearance)

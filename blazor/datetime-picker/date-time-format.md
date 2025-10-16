@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DateTime Format in Blazor DateTimePicker Component | Syncfusion
-description: Learn how to configure display and input date-time formats in the Syncfusion Blazor DateTimePicker using culture-based, standard, and custom .NET format strings.
+description: Checkout and learn here all about DateTime Format in Syncfusion Blazor DateTimePicker component and much more.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
