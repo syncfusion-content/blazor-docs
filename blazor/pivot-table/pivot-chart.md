@@ -9,17 +9,17 @@ documentation: ug
 
 # Pivot Chart in Blazor Pivot Table Component
 
-In [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component, pivot chart would act as an additional visualization component with its basic and important characteristic like drill down and drill up, 15+ chart types, series customization, axis customization, legend customization, export, print and tooltip. Its main purpose is to show the pivot data in graphical format.
+The Pivot Chart in the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component helps users visualize aggregated values in a clear and graphical format. It provides essential options like drill down and drill up operations, over 15 chart types, and various display settings for series, axes, legends, export, print, and tooltips. The main purpose of the Pivot Chart is to present Pivot Table data in a way that is easy to understand and interact with.
 
-To have a quick glance about Pivot Chart in the Blazor Pivot Table, watch this video:
+To have a quick glance about Pivot Chart in the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=-R-aoblUd1k&t=1s"%}.
 
-If the user prefers, the pivot chart component can also be displayed individually with pivot values and can change the report dynamically with the help of field list and grouping bar. Using the [PivotViewDisplayOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class, user can set the visibility of grid and chart in pivot table component. It holds the following properties,
+Users can display the pivot chart component individually with pivot values and modify the report dynamically using the field list and grouping bar. The [PivotViewDisplayOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class allows users to control the visibility of both the grid and chart components. This property includes the following options:
 
-* [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View): Specifies the pivot table component to display grid alone or chart alone or both.
-* [Primary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_Primary): Specifies the pivot table to display either grid or chart as primary component during initial loading. It is applicable only when setting the property [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) to [View.Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.View.html).
+* [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View): Determines whether the Pivot Table component displays only the grid, only the chart, or both components.
+* [Primary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_Primary): Specifies which component (grid or chart) appears as the primary view during initial loading. This option applies only when the [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) property is set to [View.Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.View.html#Syncfusion_Blazor_PivotView_View_Both).
 
 The following sample displays the pivot chart component based on the pivot report bound on it.
 
@@ -58,19 +58,17 @@ The following sample displays the pivot chart component based on the pivot repor
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart](images/blazor-pivotchart.png)
 
 ## Data Binding
 
-End user can bind both local and remote data binding options available in the component to feed the data. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property can be assigned either with an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or list of object.
-For more information [refer](./data-binding) here.
+The Pivot Table component supports both local and remote data binding options to populate data in the pivot chart. Users can bind data to the component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property, which accepts either an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for remote data sources or a list of objects for local data. For further details, [refer](./data-binding) here.
 
 ## Chart Types
 
-Supports 19 different types of charts as follows,
+The Pivot Chart offers 19 different chart types, allowing users to visualize and analyze data in various ways. You can choose any of these chart types based on your needs:
 
 * Line
 * Column
@@ -92,9 +90,9 @@ Supports 19 different types of charts as follows,
 * Polar
 * Radar
 
-[ChartSeriesType.Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesType.html) is the default pivot chart type. User can change the pivot chart type by using the property [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Type) in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) class.
+By default, the **Line** chart type is displayed in the Pivot Chart. Users can change the chart type at any time using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Type) property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) class.
 
-In the following code sample, the pivot chart type is set as [ChartSeriesType.Bar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesType.html).
+In the following code sample, the pivot chart type is set as [ChartSeriesType.Bar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesType.html#Syncfusion_Blazor_PivotView_ChartSeriesType_Bar).
 
 ```cshtml
     @using Syncfusion.Blazor.PivotView
@@ -127,23 +125,22 @@ In the following code sample, the pivot chart type is set as [ChartSeriesType.Ba
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
         }
     }
-
 ```
 
 ![Blazor Pivot Bar Chart](images/blazor-pivot-bar-chart.png)
 
 ## Accumulation Charts
 
-Supports 4 different types of accumulation charts as follows,
+Pivot Chart supports four types of accumulation charts:
 
-* Pie
-* Doughnut
-* Funnel
-* Pyramid
+- Pie
+- Doughnut
+- Funnel
+- Pyramid
 
-As like other chart types it can be changed using the property [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Type) in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) class.
+You can use any of these chart types to visualize your aggregated data clearly. To select a specific accumulation chart, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Type) property in the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) class.
 
-In the following code sample, the **Pie** chart is rendered, and the other accumulation charts can be switched using the drop-down list.
+In the code example below, the **Pie** chart is displayed by default. You can switch to other accumulation chart types, such as Doughnut, Funnel, or Pyramid, using the dropdown list.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -223,20 +220,19 @@ In the following code sample, the **Pie** chart is rendered, and the other accum
         public ChartSeriesType Value { get; set; }
     }
 }
-
 ```
 
 ![Blazor Accumulation Chart](images/blazor-accumulation-chart.png)
 
-### Drill Down/Up
+### Drill down and up
 
-In the accumulation charts, drill down and drill up operations can be performed using the built-in context menu option. It will be shown while clicking on the chart series. The context menu has the following options:
+In accumulation charts, you can use the drill down and drill up options to explore data at different levels. When you click on a chart series, a built-in context menu appears with the following options:
 
-**Expand** - It is to drill down the corresponding series until the last level.
-**Collapse** - It is to drill up the corresponding series until the first level.
-**Exit** - It is to close the context menu.
+- **Expand**: Drill down to view more detailed data for the selected series, continuing until the lowest level is reached.
+- **Collapse**: Drill up to view higher-level, summarized information for that series, returning to the top level as needed.
+- **Exit**: Close the context menu without making any changes.
 
-N> The drill operation in accumulation charts can be performed only for row headers.
+N> You can use the drill operation for row headers only in accumulation charts.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -266,9 +262,7 @@ N> The drill operation in accumulation charts can be performed only for row head
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Pie;
-
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -276,16 +270,15 @@ N> The drill operation in accumulation charts can be performed only for row head
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pie Chart with Drill Down and Up](images/blazor-pie-chart-drill-down-up.png)
 
 ### Column Headers and Delimiters
 
-Unlike other chart types, the accumulation charts consider the values of a single column from the pivot table to be drawn. Preferably the first column of the pivot table is considered by default. But it can be changed by defining the column headers using the `ColumnHeader` property in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
+In accumulation charts, only the values from a single column in the pivot chart are displayed. By default, the first column is used. If you want to show values from a different column, you can specify the column headers with the [ColumnHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ColumnHeader) property in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-If the column has more than one header, then mention all the headers separated by the delimiter **-**, for example,**Germany-Road Bikes**. Using the property `ColumnDelimiter` in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class, one can set the desired delimiter to separate the column headers.
+If the column has more than one header, enter all the headers separated by a delimiter, such as **Germany-Road Bikes**. You can set your preferred delimiter using the [ColumnDelimiter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ColumnDelimiter) property in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. This allows you to display the correct values in your accumulation chart according to how your columns are grouped in the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -317,16 +310,13 @@ If the column has more than one header, then mention all the headers separated b
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Doughnut;
-
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
 }
 ```
 
@@ -334,14 +324,16 @@ If the column has more than one header, then mention all the headers separated b
 
 ### Data Label Customization
 
-The data labels are visible by default showing header name. Its visibility can be modified using the `Visible` boolean property in `DataLabel` Tag. With regard to the label arrangement, the **Smart Labels** options helps to arrange labels efficiently without overlapping. It can be disabled by setting the `EnableSmartLabels` property in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class as **false**.
+By default, the data labels in accumulation charts display the header name. You can control their visibility using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartDataLabel_Visible) property in the [PivotChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html) settings.
 
-The `position` property in `dataLabel` allows to specify the position of the data label. The available options are,
+To improve label arrangement and prevent overlapping, the **Smart Labels** option arranges labels efficiently. You can disable this option by setting the [EnableSmartLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableSmartLabels) property to **false** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-* `Outside`: Positions the label outside the point. It is the default option.
-* `Inside`: Positions the label inside the point.
+The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartDataLabel_Position) property in [PivotChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html) allows you to specify where the data label appears. The available options are:
 
-In the following code sample, the data labels are placed inside.
+* `Outside`: Places the label outside the chart point. This is the default option.
+* `Inside`: Places the label inside the chart point.
+
+In the following code sample, the data labels are placed inside the chart points.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -372,7 +364,6 @@ In the following code sample, the data labels are placed inside.
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Pyramid;
     public PivotChartLabelPosition Position = PivotChartLabelPosition.Inside;
     public List<ProductDetails> data { get; set; }
@@ -382,12 +373,11 @@ In the following code sample, the data labels are placed inside.
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pyramid Chart with Label](images/blazor-pyramid-chart-label.png)
 
-The **Connector Line** will be visible when the data label is placed outside the chart. It can be customized using the `ConnectorStyle` property in `PivotChartDataLabel` class for its color, length, width etc. In the following code sample, the connector line is customized.
+The **Connector Line** appears when data labels are positioned outside the chart. You can style this connector line using the [ConnectorStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartDataLabel_ConnectorStyle) property in [PivotChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html) class to modify its color, length, width, and other properties. In the example below, the connector line appearance is changed to show a different style.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -421,7 +411,6 @@ The **Connector Line** will be visible when the data label is placed outside the
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Funnel;
     public PivotChartLabelPosition Position = PivotChartLabelPosition.Outside;
     public List<ProductDetails> data { get; set; }
@@ -431,14 +420,13 @@ The **Connector Line** will be visible when the data label is placed outside the
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Funnel Chart with Connector](images/blazor-funnel-chart-connector.png)
 
-## Data Label Template
+### Data Label Template
 
-The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html) allows you to customize the appearance of data labels in the pivot chart series by using your own HTML elements for displaying the desired UI. The parameter named [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html) is always passed in as a context within the template, allowing it to access the data points such as x and y and display the associated data point within a customized UI, as shown in the code example below.
+The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartDataLabel.html) class lets users change the look of data labels in the pivot chart series using custom HTML elements. The [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html) parameter is passed as context to the template, enabling access to data points like x and y for displaying them in a custom design, as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -492,14 +480,13 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with data label customization using template for accumulation chart series](images/blazor-pieChart-dataLabel-customized-by-template.png)
 
 ### Pie and Doughnut Customization
 
-User can draw pie and doughnut charts within the specified range using the `StartAngle` and `EndAngle` properties in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. The default value of the `StartAngle` property is **0**, and the `EndAngle` property is **360**. By customizing these properties, user can draw semi pie and semi doughnut charts.
+You can draw pie and doughnut charts within a specific range by using the [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_EndAngle) properties in the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. The default value for the [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_StartAngle) property is **0**, and the [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_EndAngle) property is **360**. By modifying these properties, you can create semi-pie and semi-doughnut charts.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -528,7 +515,6 @@ User can draw pie and doughnut charts within the specified range using the `Star
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Doughnut;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -537,14 +523,13 @@ User can draw pie and doughnut charts within the specified range using the `Star
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Doughnut Chart with Custom Angle](images/blazor-dougnut-chart-custom-angle.png)
 
-Users can get doughnut chart from pie chart and vice-versa using the `InnerRadius` property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
+You can convert a pie chart to a doughnut chart and vice-versa using the [InnerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_InnerRadius) property in the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. When this property is set to a value greater than **0** percent, the chart appears as a doughnut instead of a pie chart.
 
-N> It takes the value only in percentage.
+N> This property accepts values only in percentage format.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -574,7 +559,6 @@ N> It takes the value only in percentage.
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Pie;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -583,16 +567,13 @@ N> It takes the value only in percentage.
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pie Chart with Custom Radius](images/blazor-pie-chart-custom-radius.png)
 
 #### Radius customization
 
-You can easily customize the radius of the pie chart series using the  [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Radius) property of the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html). The pie chart series has a radius of 80% of its total size by default.
-
-The radius of the pie chart series is set to **70%** in the following code sample.
+Users can adjust the radius of a pie chart series using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Radius) property in the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. By default, the pie chart series has a radius of 80% of its total size. For example, the following code sets the radius to 70%.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -616,12 +597,11 @@ The radius of the pie chart series is set to **70%** in the following code sampl
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotChartSettings Title="Sales Analysis">
-        <PivotChartSeries Type="ChartSeriesType.Pie" Radius= "70%"></PivotChartSeries>
+        <PivotChartSeries Type="ChartSeriesType.Pie" Radius="70%"></PivotChartSeries>
     </PivotChartSettings>
 </SfPivotView>
 
 @code{
-
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -629,14 +609,13 @@ The radius of the pie chart series is set to **70%** in the following code sampl
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with radius customization](images/blazor-pivotChart-with-customize-radius.png)
 
-You can also change the radius of each slice (i.e., data point) within the chart series. This can be accomplished by using the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, which is triggered whenever a series is rendered in the chart area. Within this event, you can set the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartData.html#Syncfusion_Blazor_PivotView_PivotChartData_Radius) property for each data object from the datasource, allowing the display of pie chart slices with different radii to meet your requirements.
+You can adjust the radius of each slice (i.e., data point) in the chart series using the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, which triggers when a series is rendered in the chart area. In this event, you can set the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartData.html#Syncfusion_Blazor_PivotView_PivotChartData_Radius) property for each data object in the data source, enabling the display of pie chart slices with varying radii to suit your needs.
 
-In the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, the radius for each slice in the pie chart series is set to different values: **80%**, **85%**, and **90%** in the following code sample. To effectively use these radius values, it's essential to configure the `args.Series[0].Radius` property as **Radius**.
+In the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, the radius of each slice in the pie chart series is set to different values: **80%**, **85%**, and **90%**, as shown in the following code sample. To apply these radius values effectively, you must set the `args.Series[0].Radius` property to **Radius**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -666,7 +645,6 @@ In the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </SfPivotView>
 
 @code{
-
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -683,14 +661,13 @@ In the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         args.Series[0].Radius = "Radius";
     }
 }
-
 ```
 
 ![Blazor Pivot Chart series with different radius customization for each slice](images/blazor-pivotChart-slice-with-different-radius.png)
 
 ### Exploding Series Points
 
-Exploding can be enabled by setting the `Explode` property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class to **true**. The series points will be exploded either on mouse click or touch.
+You can make an individual point in a pivot chart stand out by enabling the exploding option. To do this, set the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Explode) property in the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class to **true**. When this option is turned on, a chart point will separate from the rest of the series when a user clicks it with a mouse or taps it on a touch device. This makes it easier for users to highlight and identify specific data points in accumulation charts like Pie, Doughnut, Funnel, or Pyramid.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -720,7 +697,6 @@ Exploding can be enabled by setting the `Explode` property in [PivotChartSeries]
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Pie;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -729,16 +705,13 @@ Exploding can be enabled by setting the `Explode` property in [PivotChartSeries]
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor PivotChart with Explode Series Point](images/blazor-pivotchart-explode-series-point.png)
 
 ## Field List
 
-User can enable the field list by setting the property [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**.
-
-By using this, user can customize the report dynamically and view the result in pivot chart. For more information regarding the field list, refer the [field list](./field-list) topic.
+The field list makes it easy to add, remove, or rearrange fields in the pivot chart, so you can display exactly the data you need. To show the field list in the Pivot Chart, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. When you make changes with the field list, the pivot chart updates right away to show the new results. To learn more about the field list and how it works, see the [field list](./field-list) topic in the documentation.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -775,16 +748,15 @@ By using this, user can customize the report dynamically and view the result in 
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with FieldList](images/blazor-pivotchart-field-list.png)
 
 ## Grouping Bar
 
-User can enable the grouping bar by setting the property [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
+You can display the grouping bar in the Pivot Chart by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. When enabled, the grouping bar in the pivot chart shows a drop-down list on the value axis. This drop-down lets users select from the value fields defined in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Users can switch between these fields to update the chart based on the selected value field. This method of selection is the default behavior in the Pivot Chart component. For more details about how the grouping bar works, refer to the [grouping bar](./grouping-bar) documentation.
 
-N> For multiple axis support, buttons will be placed in value axis instead of dropdown list.
+N> When there are multiple axes, buttons appear on the value axis instead of the drop-down list.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -821,12 +793,11 @@ N> For multiple axis support, buttons will be placed in value axis instead of dr
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with GroupBar](images/blazor-pivotchart-groupbar.png)
 
-For accumulation charts alone, a drop-down list will be placed in the column axis instead of the buttons. The drop-down list shows the column headers available in the pivot table. Users can dynamically switch column headers with the help of the drop-down list, and the accumulation chart will be updated accordingly.
+When using accumulation charts, the drop-down list appears on the column axis. This list contains the column headers available in the Pivot Chart. Users can switch column headers using this drop-down, and the accumulation chart will update with the selected header.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -856,7 +827,6 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 </SfPivotView>
 
 @code{
-
     public ChartSeriesType ChartType = ChartSeriesType.Pie;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -865,14 +835,13 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Grouping in Blazor Pivot Chart](images/blazor-pivotchart-group.png)
 
 ## Single Axis
 
-By default, the pivot chart will be drawn with the value field (measure) which is set first in the report under value axis. But, user can change to specific value field using the property [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_Value) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
+By default, the pivot chart uses the first value field (measure) from your report as the value axis. If you want to display data using a different value field, you can do this easily. Use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_Value) property inside [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. This option lets you show a specific value field in the pivot chart, allowing you to focus on the data you need.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -915,32 +884,32 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 
 ## Multiple Axis
 
-User can draw the pivot chart with multiple value fields by setting the property [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class as **true**. In the following code sample, the pivot chart will be drawn with both value fields **Sold** and **Amount** available in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+The pivot chart can be drawn with multiple value fields by setting the [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) property to **true** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. In the following code sample, the pivot chart displays both value fields **Sold** and **Amount** from the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
-> The multiple axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Multiple axis support is not applicable for accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Width="800">
-	<PivotViewDataSourceSettings DataSource="@data">
-		<PivotViewColumns>
-			<PivotViewColumn Name="Country"></PivotViewColumn>
-			<PivotViewColumn Name="Products"></PivotViewColumn>
-		</PivotViewColumns>
-		<PivotViewRows>
-			<PivotViewRow Name="Year"></PivotViewRow>
-			<PivotViewRow Name="Quarter"></PivotViewRow>
-		</PivotViewRows>
-		<PivotViewValues>
-			<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-		</PivotViewValues>
-	</PivotViewDataSourceSettings>
-	<PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-	<PivotChartSettings EnableMultipleAxis="true">
-		<PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-	</PivotChartSettings>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings EnableMultipleAxis="true">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
 </SfPivotView>
 
 @code{
@@ -955,30 +924,30 @@ User can draw the pivot chart with multiple value fields by setting the property
 
 ![Blazor Pivot Chart with Multiple Axis](images/blazor-pivotchart-multi-axis.png)
 
-If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [EnableScrollOnMultiAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableScrollOnMultiAxis) property in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" – "180px" height showing a vertical scrollbar for a clear view.
+When binding more value fields, the result displays multiple pivot charts, with each chart shrinking within the parent container height. To prevent this behavior, set the [EnableScrollOnMultiAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableScrollOnMultiAxis) property to **true** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. This ensures each pivot chart maintains a minimum height of "160px" to "180px" and displays a vertical scroll bar for better visibility.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Width="800">
-	<PivotViewDataSourceSettings DataSource="@data">
-		<PivotViewColumns>
-			<PivotViewColumn Name="Country"></PivotViewColumn>
-			<PivotViewColumn Name="Products"></PivotViewColumn>
-		</PivotViewColumns>
-		<PivotViewRows>
-			<PivotViewRow Name="Year"></PivotViewRow>
-			<PivotViewRow Name="Quarter"></PivotViewRow>
-		</PivotViewRows>
-		<PivotViewValues>
-			<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-		</PivotViewValues>
-	</PivotViewDataSourceSettings>
-	<PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-	<PivotChartSettings EnableMultipleAxis="true" EnableScrollOnMultiAxis="true">
-		<PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-	</PivotChartSettings>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings EnableMultipleAxis="true" EnableScrollOnMultiAxis="true">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
 </SfPivotView>
 
 @code{
@@ -993,9 +962,9 @@ If the user binds more value fields, the result will be multiple pivot charts, a
 
 ![Blazor Pivot Chart with ScrollBar](images/blazor-pivotchart-scrollbar.png)
 
-Meanwhile, there is another way to display multiple values in a chart. In this approach, the series drawn from multiple values are grouped and displayed in a single chart. And, based on the values, multiple Y axis scales will be framed with different ranges. This can be achieved by setting the properties [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) as **true** and [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) as **Single** in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html).
+Alternatively, you can display multiple values in a single chart. In this approach, the series from multiple values are grouped and displayed together. Based on the values, multiple Y-axis scales are created with different ranges. This can be achieved by setting [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) to **true** and [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) to **Single** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-In the following code sample, the pivot chart can be seen as a single chart with multiple value fields such as **Sold** and **Amount** that are drawn as multiple Y axis.
+In the following code sample, the pivot chart appears as a single chart with multiple value fields such as **Sold** and **Amount**, each represented with its own Y-axis.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1033,11 +1002,11 @@ In the following code sample, the pivot chart can be seen as a single chart with
 
 ![Multiple Axis Mode in Blazor Pivot Chart](images/blazor-pivotchart-multiple-axis-mode.png)
 
-Additionally, to display chart series for multiple values within a single y-axis, set the properties [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) to **true** and the [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MultipleAxisMode.html) to **Combined**, in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html).
+To display multiple value fields on a single y-axis in the pivot chart, set the [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) property to **true** and the [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MultipleAxisMode.html) property to **Combined** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-> The y-axis range values will be formatted using the first value field on the value axis. For example, if the first value field is in currency format and the remaining value fields are in different number formats or no format, the y-axis range values will be displayed in the currency format of the first value field.
+> The y-axis range values are formatted based on the first value field in the value axis. For example, if the first value field uses currency format and other value fields use different number formats or no format, the y-axis range values will appear in the currency format of the first value field.
 
-The pivot chart in the following code sample can be seen as a single chart with multiple value fields such as **Sold** and **Amount** drawn as a single y-axis.
+The following code sample shows a pivot chart with multiple value fields, such as **Sold** and **Amount**, displayed on a single y-axis.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1075,12 +1044,11 @@ The pivot chart in the following code sample can be seen as a single chart with 
 
 ![Multiple axis mode set to combined in Blazor Pivot Chart](images/blazor-pivotchart-multiple-axis-Combined-mode.png)
 
-
 ### Show point color based on members
 
-When multiple axes are enabled, you can display the same color for each member in the column axis by setting the [ShowPointColorByMembers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ShowPointColorByMembers) property to **true** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html). As a result, the end user can easily identify each member across different measures in the entire chart.
+When you enable multiple axes in the pivot chart, you can use the [ShowPointColorByMembers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ShowPointColorByMembers) property in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class to display the same color for each member on the column axis across all measures. Setting this property to **true** makes it easy for users to spot and compare each member throughout the entire chart.
 
-Furthermore, end user can see or hide specific members across different measures in the entire chart with a single click on the legend item.
+In addition, users can show or hide specific members from all measures in the chart by clicking the corresponding legend item. This interaction allows users to focus on the members they want to analyze without distraction.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1124,35 +1092,33 @@ Furthermore, end user can see or hide specific members across different measures
 
 ## Series Customization
 
-User can customize series of the pivot chart using [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The changes handled in the property will be reflected commonly in all chart series.
+You can customize the series in the pivot chart by using the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) property inside [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. Any changes you make to the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) property will apply to all series in the chart.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails" Width="800">
-	<PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-	<PivotViewDataSourceSettings DataSource="@data">
-		<PivotViewColumns>
-			<PivotViewColumn Name="Country"></PivotViewColumn>
-			<PivotViewColumn Name="Products"></PivotViewColumn>
-		</PivotViewColumns>
-		<PivotViewRows>
-			<PivotViewRow Name="Year"></PivotViewRow>
-			<PivotViewRow Name="Quarter"></PivotViewRow>
-		</PivotViewRows>
-		<PivotViewValues>
-			<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-		</PivotViewValues>
-	</PivotViewDataSourceSettings>
-	<PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-	<PivotChartSettings Title="Sales Analysis">
-		<PivotChartSeries Type=ChartSeriesType.Column>
-			<PivotChartSeriesBorder Color="#000" Width=2></PivotChartSeriesBorder>
-			 @* Other major options are: *@
-			 @* <PivotChartCornerRadius TopLeft=20 TopRight=20 BottomLeft=10 BottomRight=10></PivotChartCornerRadius> *@
-			 @* <PivotChartSeriesAnimation Enable="true" Duration=500></PivotChartSeriesAnimation> *@
-		</PivotChartSeries>
-	</PivotChartSettings>
+<SfPivotView TValue="ProductDetails" Width="800" Height="500">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
 </SfPivotView>
 
 @code{
@@ -1163,70 +1129,67 @@ User can customize series of the pivot chart using [PivotChartSeries](https://he
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with Custom Series](images/blazor-pivotchart-custom-series.png)
 
 ## Data Label Customization
 
-You can customize data label of the pivot chart markers in terms of angle, alignment, border, color, margin, position, visibility, and more using [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html#Syncfusion_Blazor_PivotView_PivotChartMarkerSettings_DataLabel) in [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Marker) class. The changes handled in the property will be reflected commonly in all chart series.
+Users can adjust data labels in the pivot chart using the [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html#Syncfusion_Blazor_PivotView_PivotChartMarkerSettings_DataLabel) class in [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Marker). Options include changing the angle, alignment, border, color, margin, position, and visibility. These settings apply to all chart series, as shown in the example below.
 
 ```cshtml
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" Width="800px" Height="450px">
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type="ChartSeriesType.Column">
-                <PivotChartMarkerSettings>
-                    <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Rx="5" Ry="5">
-                        <PivotChartMarkerDataLabelBorder Width="2" Color="red"></PivotChartMarkerDataLabelBorder>
-                        <PivotChartMarkerDataLabelFont Size="12px"></PivotChartMarkerDataLabelFont>
-                        <PivotChartMarkerDataLabelMargin Top="5" Bottom="5" Right="5" Left="5"></PivotChartMarkerDataLabelMargin>
-                    </PivotChartMarkerDataLabel>
-                </PivotChartMarkerSettings>
-            </PivotChartSeries>
-            <PivotChartPrimaryYAxis>
-                <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
-            </PivotChartPrimaryYAxis>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" Width="800px" Height="450px">
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type="ChartSeriesType.Column">
+            <PivotChartMarkerSettings>
+                <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Rx="5" Ry="5">
+                    <PivotChartMarkerDataLabelBorder Width="2" Color="red"></PivotChartMarkerDataLabelBorder>
+                    <PivotChartMarkerDataLabelFont Size="12px"></PivotChartMarkerDataLabelFont>
+                    <PivotChartMarkerDataLabelMargin Top="5" Bottom="5" Right="5" Left="5"></PivotChartMarkerDataLabelMargin>
+                </PivotChartMarkerDataLabel>
+            </PivotChartMarkerSettings>
+        </PivotChartSeries>
+        <PivotChartPrimaryYAxis>
+            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+        </PivotChartPrimaryYAxis>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
+}
 ```
 
-![Blazor Pivot Chart with Custom Data Label](images/blazor-pivotchart-custom-data-label.png)
+![Blazor Pivot Chart with custom data label](images/blazor-pivotchart-custom-data-label.png)
 
 ## Data Label Template
 
-The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html) allows you to customize the appearance of data labels in the pivot chart series by using your own HTML elements for displaying the desired UI. The parameter named [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html) is always passed in as a context within the template, allowing it to access the data points such as x and y and display the associated data point within a customized UI, as shown in the code example below.
+The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html) class allows users to change the appearance of data labels in the pivot chart series using custom HTML elements. The [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html) parameter provides access to data points like x and y, enabling a custom display, as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1283,16 +1246,17 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with data label customization using template](images/blazor-pivotChart-dataLabel-customized-by-template.png)
 
 ## Axis Customization
 
-User can customize axis of the pivot chart using [PivotChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxis.html) and [PivotChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxis.html) properties in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
+Users can customize the x-axis and y-axis of the pivot chart using the [PivotChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxis.html) and [PivotChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxis.html) options in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-N> Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Please note that axis customization is not supported for accumulation chart types, such as pie, doughnut, pyramid, and funnel.
+
+For example, in the sample below, the titles for the y-axis and x-axis are set to custom values.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1329,40 +1293,39 @@ N> Axis customization is not applicable for the accumulation chart types like pi
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with Custom Axis](images/blazor-pivotchart-custom-axis.png)
 
 ## Legend Customization
 
-User can customize legend using [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. By default, legend will be visible and it can be hidden by setting the property [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html#Syncfusion_Blazor_PivotView_PivotChartLegendSettings_Visible) in [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html) class as **false**.
+Users can easily change the legend in the pivot chart by using the [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html) option inside the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. By default, the legend is shown. If you want to hide it, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html#Syncfusion_Blazor_PivotView_PivotChartLegendSettings_Visible) property in [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html) to **false**.
 
-The pivot chart support different types of legend shapes as follows,
+The pivot chart allows users to select from various legend shapes, including:
 
-* Circle
-* Rectangle
-* VerticalLine
-* Pentagon
-* InvertedTriangle
-* SeriesType
-* Triangle
-* Diamond
-* Cross
-* HorizontalLine
+- Circle
+- Rectangle
+- VerticalLine
+- Pentagon
+- InvertedTriangle
+- SeriesType (default)
+- Triangle
+- Diamond
+- Cross
+- HorizontalLine
 
-Here [PivotChartLegendShape.SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendShape.html) would act as the default shape and it can be changed using the property [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_LegendShape) in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class.
+The default shape for the legend is **SeriesType**, but you can change it by setting the [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_LegendShape) property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html).
 
-Also user can set the position of the legend in pivot chart using the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html#Syncfusion_Blazor_PivotView_PivotChartLegendSettings_Position) in [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html) class. The available options to set the legend position are as follows,
+Users can also choose where the legend appears in the pivot chart by setting the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html#Syncfusion_Blazor_PivotView_PivotChartLegendSettings_Position) property in [PivotChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartLegendSettings.html). The available positions include:
 
-* Auto: Places the legend based on area type. This is the default.
-* Top: Displays the legend at the top of the pivot chart.
-* Left: Displays the legend at the left of the pivot chart.
-* Bottom: Displays the legend at the bottom of the pivot chart.
-* Right: Displays the legend at the right of the pivot chart.
-* Custom: Displays the legend based on the given x and y values.
+- **Auto**: Places the legend based on the chart area (default).
+- **Top**: Shows the legend above the pivot chart.
+- **Left**: Displays the legend to the left of the chart.
+- **Bottom**: Places the legend below the chart.
+- **Right**: Shows the legend on the right side.
+- **Custom**: Positions the legend using specific x and y values you provide.
 
-N> By default, the legend is not visible for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Legends are not shown by default for accumulation charts such as pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1397,7 +1360,6 @@ N> By default, the legend is not visible for the accumulation chart types like p
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with Pentagon Legend](images/blazor-pivotchart-pentagon-legend.png)
@@ -1406,11 +1368,11 @@ N> By default, the legend is not visible for the accumulation chart types like p
 
 ### Marker and CrossHair
 
-User can enable and customize the marker and crosshair using [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html) and [PivotChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartCrosshairSettings.html) properties in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class respectively.
+You can show and customize markers and crosshair's on the pivot chart. To do this, use the [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html) and [PivotChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartCrosshairSettings.html) options within the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-Also user can enable and customize the crosshair tooltip for axes using [PivotChartPrimaryXAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxisCrosshairTooltip.html) and [PivotChartPrimaryYAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxisCrosshairTooltip.html) classes.
+If you want to display a tooltip when hovering over an axis crosshair, use the [PivotChartPrimaryXAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxisCrosshairTooltip.html) and [PivotChartPrimaryYAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxisCrosshairTooltip.html) options.
 
-N> Marker and crosshair is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Please note, marker and crosshair options do not work with accumulation chart types, such as pie, doughnut, pyramid, or funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1430,17 +1392,8 @@ N> Marker and crosshair is not applicable for the accumulation chart types like 
         </PivotViewValues>
     </PivotViewDataSourceSettings>
     <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings>
-        <PivotChartCrosshairSettings Enable="true"></PivotChartCrosshairSettings>
-        <PivotChartSeries Type=ChartSeriesType.Line>
-            <PivotChartMarkerSettings Fill="#EEE" Height=10 Width=10 Visible="true" Shape=PivotChartShape.Pentagon></PivotChartMarkerSettings>
-        </PivotChartSeries>
-        <PivotChartPrimaryXAxis>
-            <PivotChartPrimaryXAxisCrosshairTooltip Enable="true" Fill="#ff0000"></PivotChartPrimaryXAxisCrosshairTooltip>
-        </PivotChartPrimaryXAxis>
-        <PivotChartPrimaryYAxis>
-            <PivotChartPrimaryYAxisCrosshairTooltip Enable="true" Fill="#0000FF"></PivotChartPrimaryYAxisCrosshairTooltip>
-        </PivotChartPrimaryYAxis>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
     </PivotChartSettings>
 </SfPivotView>
 
@@ -1452,31 +1405,28 @@ N> Marker and crosshair is not applicable for the accumulation chart types like 
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with Marker and Crosshair](images/blazor-pivotchart-marker-crosshair.png)
 
 ### Zooming and Panning
 
-User can customize zooming and panning option using the property [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
+Users can customize the zooming and panning options in the pivot chart by using the [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html) property within [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The pivot chart supports four zooming options:
 
-The pivot chart support four types of zooming which can be set as follows,
+- [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnablePinchZooming) – Zooms by pinching on touch devices.
+- [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableSelectionZooming) – Zooms into a selected region on the chart.
+- [EnableDeferredZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableDeferredZooming) – Applies zooming only after the selection is complete, which helps improve performance for large data.
+- [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableMouseWheelZooming) – Zooms using the mouse wheel.
 
-* [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnablePinchZooming)
-* [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableSelectionZooming)
-* [EnableDeferredZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableDeferredZooming)
-* [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_EnableMouseWheelZooming)
+The direction of zooming can be controlled using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_Mode) property in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html). The available options are:
 
-Three modes of zooming direction specifies whether to zoom vertically or horizontally or in both ways and they are,
+- `x`: zooms horizontally,
+- `y`: zooms vertically,
+- `x,y`: zooms both horizontally and vertically.
 
-* x: Pivot chart can be zoomed horizontally.
-* y: Pivot chart can be zoomed  vertically.
-* x,y: Pivot chart can be zoomed both vertically and horizontally.
+When the pivot chart is zoomed, a toolbar appears at the top of the chart with tools for Zoom, Zoom In, Zoom Out, Pan, and Reset actions. This toolbar can be customized using the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_ToolbarItems) property in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html).
 
-This can be set using the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_Mode) in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html) class. By default, if the pivot chart is zoomed, a toolbar would display with the options - Zoom, ZoomIn, ZoomOut, Pan, and Reset. User can also customize its option using the property [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_ToolbarItems) in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_ToolbarItems) class.
-
-N> Zooming and panning is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Zooming and panning are not available for accumulation chart types, such as pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1525,9 +1475,9 @@ N> Zooming and panning is not applicable for the accumulation chart types like p
 
 ### Tooltip
 
-By default, tooltip for the pivot chart is enabled. User can customize it by using the property [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
+The tooltip in the Pivot Chart is enabled by default, showing detailed information about each data point when users move the pointer over the chart. Users can change how the tooltip looks and functions by using the [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) option inside the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-N> The tooltip can be disabled by setting the property [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html#Syncfusion_Blazor_PivotView_PivotChartTooltipSettings_Enable) in [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) class as **false**.
+If users do not want to show the tooltip, they can disable it by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html#Syncfusion_Blazor_PivotView_PivotChartTooltipSettings_Enable) property in [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1570,16 +1520,20 @@ N> The tooltip can be disabled by setting the property [Enable](https://help.syn
 
 ## Export
 
-The pivot chart can be exported using the [ExportToChartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToChartAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Nullable_System_Boolean__) method which holds parameters like export type, file name, PDF orientation, and base64 string in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
+You can export the pivot chart to various file formats by using the [ExportToChartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToChartAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Nullable_System_Boolean__) method. This method requires the `type` parameter, which specifies the file format. The supported export formats are:
 
-The following are the four export types:
+- PNG
+- JPEG
+- SVG
+- PDF
 
-* PNG
-* JPEG
-* SVG
-* PDF
+Other parameters for the [ExportToChartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToChartAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Nullable_System_Boolean__) method include:
 
-In the following code sample, exporting can be done using an external button named as "Chart Export".
+- `fileName`: Specifies the file name for the exported file. The default export file name is "PivotChart".
+- `orientation`: Specifies the portrait or landscape orientation of the page.
+- `asBase64`: Specify whether to obtain the chart image as a base64 string or not.
+
+The example below shows how to export the pivot chart using an external button labeled "Chart Export":
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1625,16 +1579,15 @@ In the following code sample, exporting can be done using an external button nam
         //this.pivot.ExportToChartAsync(Syncfusion.Blazor.Charts.ExportType.JPEG, "sample");
     }
 }
-
 ```
 
 ![Blazor Pivot Chart with PDF Export](images/blazor-pivotchart-pdf-export.png)
 
 ## Print
 
-The rendered pivot chart can be printed directly from the browser by calling [PrintChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PrintChart) method.
+You can print the current view of the pivot chart directly from the browser by using the [PrintChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PrintChart) method. This allows you to create a physical or digital copy of your pivot chart as displayed on the screen.
 
-In the following code sample, printing can be done using an external button named as "Print Chart".
+In the example below, clicking an external button labeled "Print Chart" calls the [PrintChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PrintChart) method and prints the rendered pivot chart.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1678,7 +1631,6 @@ In the following code sample, printing can be done using an external button name
         this.pivot.PrintChart();
     }
 }
-
 ```
 
 ![Printing in Blazor Pivot Chart](images/blazor-pivotchart-printing.png)

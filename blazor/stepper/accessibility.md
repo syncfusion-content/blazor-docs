@@ -7,10 +7,9 @@ control: Stepper
 documentation: ug
 ---
 
-# Accessibility in Blazor Stepper component
+# Accessibility in Blazor Stepper Component
 
-The Blazor Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
+The Blazor Stepper component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and commonly used [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) for evaluating accessibility.
 The accessibility compliance for the Blazor Stepper component is outlined below.
 
 | Accessibility Criteria | Compatibility |
@@ -37,7 +36,7 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 The following ARIA attributes are used in the Stepper component:
 
@@ -47,7 +46,7 @@ The following ARIA attributes are used in the Stepper component:
 | `aria-current` | Attribute denotes the currently active step in the Stepper. |
 | `aria-disabled`| Indicates when the step is disabled and cannot be interacted. |
 
-## Keyboard interaction
+## Keyboard Interaction
 
 The following keyboard shortcuts are supported by the Stepper component.
 
@@ -61,12 +60,12 @@ The following keyboard shortcuts are supported by the Stepper component.
 | <kbd>End</kbd> | <kbd>End</kbd> | Focuses on the last step of the Stepper. |
 | <kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Activates the currently focused step. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
 The Blazor Stepper component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Stepper component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/stepper) in a new window to evaluate the accessibility of the Blazor Stepper component with accessibility tools.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

@@ -25,6 +25,7 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
 - An [Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) is deployed to obtain `apiKey`, `deploymentName`, and `endpoint` values.
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - Credentials are stored securely using Azure Key Vault or environment variables (see [Microsoft’s guide on secure storage](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
@@ -76,6 +77,7 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -91,7 +93,7 @@ Install-Package Azure.AI.OpenAI
 </body>
 ```
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 

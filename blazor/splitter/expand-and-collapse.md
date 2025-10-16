@@ -9,11 +9,11 @@ documentation: ug
 
 # Expand and Collapse in Blazor Splitter Component
 
-## Collapsible panes
+## Collapsible Panes
 
-The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior in the SplitterPane property to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
+The Splitter panes include built-in expand and collapse functionalities. By default, this behavior is disabled. Enable the `Collapsible` property within the `SplitterPane` to display the expand or collapse icons. Panes can then be dynamically expanded and collapsed using these icons.
 
-The following code shows how to enable collapsible behavior.
+The following code demonstrates enabling collapsible behavior:
 
 ```cshtml
 
@@ -62,11 +62,13 @@ The following code shows how to enable collapsible behavior.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVIWjDbTGevpdop?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse.png)
 
-## Programmatically control the expand and collapse action
+## Programmatically Control Expand and Collapse Actions
 
-The Splitter provides public method to control the expand and collapse behavior programmatically using the `Expand` and `Collapse` methods.
+The Splitter component provides public methods (`ExpandAsync` and `CollapseAsync`) to control pane expansion and collapse programmatically.
 
 ```cshtml
 
@@ -138,12 +140,13 @@ The Splitter provides public method to control the expand and collapse behavior 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhyWttbpwHeoMpA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-dynamic.png)
 
-## Specify initial state to panes
+## Specify Initial State to Panes
 
-Specific panes can be rendered with collapsed state on page load. Specify a Boolean value to the `Collapsed` property to control this behavior. The following code explains how to collapse panes on rendering (the second panes renders with collapsed state).
+Specific panes can be rendered in a collapsed state upon page load. To control this behavior, set the `Collapsed` property to `true` for the desired `SplitterPane`. The following code demonstrates rendering the second pane in a collapsed state.
 
 ```cshtml
 
@@ -197,6 +200,7 @@ Specific panes can be rendered with collapsed state on page load. Specify a Bool
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBeWZZlpGczrUcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-initial.png)
 

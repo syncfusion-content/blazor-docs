@@ -145,7 +145,7 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 ```cshtml
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.PivotTable
+@using Syncfusion.Blazor.PivotView
 
 ```
 
