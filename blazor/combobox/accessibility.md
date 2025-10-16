@@ -67,8 +67,8 @@ Use the following key shortcuts to access and operate the Blazor ComboBox:
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor to the beginning of the input. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor to the end of the input. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next tabbable element when the popup is closed; otherwise, closes the popup and retains focus. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous tabbable element when the popup is closed; otherwise, closes the popup and retains focus. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. If open, the popup closes; otherwise, toggles the popup. |
 |**Popup Navigation**| | |

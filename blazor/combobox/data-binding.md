@@ -261,7 +261,7 @@ Bind the ComboBox using your custom adaptor by providing the custom class to Dat
 
 ### Offline mode
 
-To avoid a server request for every action, preload all data at initialization and perform actions on the client. Enable this behavior by setting the DataManager’s `Offline` property.
+To avoid a server request for every action, preloaded all data at initialization and perform actions on the client. Enable this behavior by setting the DataManager’s `Offline` property.
 
 {% highlight cshtml %}
 

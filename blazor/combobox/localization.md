@@ -7,7 +7,7 @@ control: ComboBox
 documentation: ug
 ---
 
-# Globalization and Localization in Blazor ComboBox Component
+# Localization and Globalization in Blazor ComboBox Component
 
 ## Localization
 

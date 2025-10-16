@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Binding in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about value binding in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn about value binding in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -135,7 +135,7 @@ First, create a ComboBox.razor file as a parent component in the /Pages folder. 
     public EventCallback<TValue> ComboBoxValueChanged { get; set; }
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 ### Usage of generic component with different type
@@ -173,7 +173,7 @@ Here, the ComboBox component is rendered with TValue as string in /Index.razor a
     };
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 **[Counter.razor]**
@@ -204,5 +204,5 @@ Here, the ComboBox component is rendered with TValue as string in /Index.razor a
     };
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
