@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multi-column in Blazor AutoComplete component | Syncfusion
-description: Check out how to create a multi-column popup in the Syncfusion Blazor AutoComplete component using ItemTemplate and CssClass, with alignment options and limitations.
+description: Checkout and learn here all about AutoComplete in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

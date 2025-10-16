@@ -25,4 +25,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor AutoComplete rendered in right-to-left (RTL) layout](./images/localization/blazor_autocomplete_enableRtl.png)
+![Blazor AutoComplete with EnableRtl](./images/localization/blazor_autocomplete_enableRtl.png)

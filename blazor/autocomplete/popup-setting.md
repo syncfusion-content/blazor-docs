@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize 
 
-You can dynamically adjust the size of the popup in the AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
+Can dynamically adjust the size of the popup in the AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
 
 {% highlight Razor %}
 
@@ -52,11 +52,13 @@ In the following sample, the `PopupHeight` is set as `200px`.
 
 ## Change the popup z-index
 
-Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element. The default value is `1000`. Adjust this in scenarios with overlays such as dialogs or modals to ensure the popup appears above other elements.
+Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
+
+Defaults to `1000`.
 
 ## Show popup on initial loading
 
-You can display the popup at initial load by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Created) event.
+Display the popup at initial load by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Created) event.
 
 {% highlight Razor %}
 
@@ -120,7 +122,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.A
 
 ## Popup height based on available space
 
-You can set the popup height based on the available viewport space by binding the window `resize` event and updating the popup height dynamically.
+Set the popup height based on the available viewport space by binding the window `resize` event and updating the popup height dynamically.
 
 {% highlight Razor %}
 

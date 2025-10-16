@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion AutoComplete in Blazor Web App
-description: Learn how to install packages, register services, add resources, and render the Syncfusion Blazor AutoComplete component in a Blazor Web App using Visual Studio or Visual Studio Code.
+description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Web App.
 platform: Blazor
 component: AutoComplete
 documentation: ug
@@ -79,7 +79,7 @@ N> For more information on creating a **Blazor Web App** with various interactiv
 If using `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you are in the project directory where the `.csproj` file is located.
+* Ensure in the project directory where the `.csproj` file is located.
 * Run the following commands to install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and restore dependencies.
 
 {% tabs %}

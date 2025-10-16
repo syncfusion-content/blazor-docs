@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor AutoComplete Component | Syncfusion
-description: Learn about accessibility in the Syncfusion Blazor AutoComplete, including WCAG/Section 508 compliance, WAI-ARIA roles and attributes, and full keyboard navigation support.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -65,8 +65,8 @@ Use the following key shortcuts to operate the AutoComplete with the keyboard:
 |**Input Navigation**| | |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | When the popup is closed, moves focus to the next tabbable element; otherwise, closes the list and keeps focus in the component. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | When the popup is closed, moves focus to the previous tabbable element; otherwise, closes the list and keeps focus in the component. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item; when closed, toggles or confirms the value based on context. |
 |**Popup Navigation**| | |

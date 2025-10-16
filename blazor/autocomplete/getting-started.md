@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor AutoComplete Component | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor AutoComplete in a Blazor WebAssembly app, including NuGet installation, service registration, and adding styles and scripts.
+description: Checkout and learn about getting started with Blazor AutoComplete component in Blazor WebAssembly App.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -71,7 +71,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you are in the project root directory where the `.csproj` file is located.
+* Ensure in the project root directory where the `.csproj` file is located.
 * Run the following commands to install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and ensure all dependencies are restored.
 
 {% tabs %}
@@ -105,7 +105,7 @@ Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor WebAssembly app.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of Blazor WebAssembly app.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -138,7 +138,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> See [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for available themes and reference methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script options, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references). If styles or scripts are missing, the component may appear unstyled or may not function as expected.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in  Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Autocomplete component
 
@@ -171,7 +171,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete com
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component in default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBJZMreLmNLRbiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)" %}
 

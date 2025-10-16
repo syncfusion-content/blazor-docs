@@ -329,7 +329,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ## Binding ExpandoObject
 
-You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the AutoComplete component. The following example binds an `ExpandoObject` collection of vehicles.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the AutoComplete component. The following example binds an `ExpandoObject` collection of vehicles.
 
 ```csharp
 
@@ -360,7 +360,7 @@ You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding DynamicObject
 
-You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the AutoComplete component. The following example binds a `DynamicObject` collection of customers.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the AutoComplete component. The following example binds a `DynamicObject` collection of customers.
 
 ```csharp
 
@@ -410,7 +410,7 @@ You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the AutoComplete component. The following example binds `ObservableCollection` data for colors.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the AutoComplete component. The following example binds `ObservableCollection` data for colors.
 
 ```csharp
 

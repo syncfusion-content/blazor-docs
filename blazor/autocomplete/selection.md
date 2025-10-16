@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor AutoComplete Component | Syncfusion
-description: Check out and learn about the selection features in the Syncfusion Blazor AutoComplete component, including getting selected values, events, programmatic control, and more.
+description: Checkout and learn here all about the Selection feature in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

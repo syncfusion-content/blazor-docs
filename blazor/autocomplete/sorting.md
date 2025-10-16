@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor AutoComplete component | Syncfusion
-description: Check out how to enable and configure sorting in the Syncfusion Blazor AutoComplete component, including sort order options and behavior with filtering and culture.
+description: Checkout and learn here all about the Sorting feature in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Sorting orders the displayed items in the AutoComplete popup. The default sort order is `None`.
 
-The Sorting enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the AutoComplete, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value. 
+The Sorting enables to sort data in the `Ascending` or `Descending` order. To enable sorting in the AutoComplete, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value. 
 
 The available type of sort orders are:
 

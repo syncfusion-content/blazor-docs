@@ -9,7 +9,7 @@ documentation: ug
 
 # Highlight Search Blazor AutoComplete Component
 
-You can highlight the search text in the suggested list items of the AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
+Highlight the search text in the suggested list items of the AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
 
 {% highlight Razor %}
 

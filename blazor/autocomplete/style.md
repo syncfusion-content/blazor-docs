@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor AutoComplete Component | Syncfusion
-description: Check out how to customize the style and appearance of the Syncfusion Blazor AutoComplete component, including read-only and disabled states, icons, colors, fonts, popup, width and height, and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -61,7 +61,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 ![Blazor AutoComplete with a custom dropdown icon](./images/style/blazor_autocomplete_dropdown-icon.png)
 
-You can customize the dropdown icon for a specific component instance using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and apply styles to that custom class.
+Customize the dropdown icon for a specific component instance using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and apply styles to that custom class.
 
 {% highlight cshtml %}
 
@@ -87,7 +87,7 @@ Customize the container element within the AutoComplete by targeting the `.e-inp
 
 ## Customizing the dropdown icon’s color
 
-Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) color by targeting the `.e-ddl-icon.e-icons` selector and setting the desired value for the `color` property.
+Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons) color by targeting the `.e-ddl-icon.e-icons` selector and setting the desired value for the `color` property.
 
 {% highlight cshtml %}
 

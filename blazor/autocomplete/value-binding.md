@@ -16,7 +16,7 @@ Value binding is the process of passing values between a component and its paren
 
 ## Bind value binding
 
-The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
+The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
 
 * **TValue** - Specifies the type of each list item on the suggestion list.
 
@@ -108,7 +108,7 @@ Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 N> If the TValue is a non nullable type, then while using the clear button, it will set the default value of the data type, and if TValue is set as a nullable type, then while using the clear button it will set to a null value(for example If the TValue is int, then while clearing 0 will set to the component and if TValue is int?, then while clearing null will set to the component)
 
-The following sample demonstrates the `string` used as `TValue`. So, if you clear the value using the clear button, it will be set to null as it's the default value of the respective type.
+The following sample demonstrates the `string` used as `TValue`. So, clear the value using the clear button, it will be set to null as it's the default value of the respective type.
 
 {% highlight cshtml %}
 
@@ -148,7 +148,7 @@ First, create a `AutoComplete.razor` file as a parent component in the `/Pages` 
     public EventCallback<TValue> SelectedValueChanged { get; set; }
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 ### Usage of generic component with different type
@@ -186,14 +186,13 @@ Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and
     };
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 **[Counter.razor]**
 
 {% tabs %}
 {% highlight razor %}
-    
 
 <AutoComplete TValue="int?" TItem="ZipCode" @bind-SelectedValue="@value" DataList="@LocalData">
 </AutoComplete>
@@ -213,12 +212,12 @@ Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and
         };
     }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Two way binding
 
-Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component, you can use the @bind-Value directive to bind the value of the AutoComplete
+Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component, Use the @bind-Value directive to bind the value of the AutoComplete
 
 {% highlight cshtml %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor AutoComplete Component | Syncfusion
-description: Check out and learn about templates in the Syncfusion Blazor AutoComplete component, including item, group, header, footer, no records, and action failure templates.
+description: Checkout and learn here all about Templates in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

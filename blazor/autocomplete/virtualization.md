@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor AutoComplete Component | Syncfusion
-description: Check out and learn about virtualization in the Syncfusion Blazor AutoComplete component, including local and remote data, grouping support, and keyboard navigation for large data sets.
+description: Checkout and learn here all about Virtualization in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Virtualization in Blazor AutoComplete Component
 
-The AutoComplete component includes a virtual scrolling feature designed to enhance UI performance when handling large data sets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the component renders only a window of items initially and loads additional items on demand as you scroll, providing a smooth and efficient experience.
+The AutoComplete component includes a virtual scrolling feature designed to enhance UI performance when handling large data sets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the component renders only a window of items initially and loads additional items on demand as scroll, providing a smooth and efficient experience.
 
-This feature applies to both local and remote data sources. For example, when the AutoComplete is bound to 150 items, only the items that fit within the popup height are rendered when the dropdown opens. As you scroll through the list, more items are fetched and rendered incrementally, enabling efficient exploration of the entire data set.
+This feature applies to both local and remote data sources. For example, when the AutoComplete is bound to 150 items, only the items that fit within the popup height are rendered when the dropdown opens. As scroll through the list, more items are fetched and rendered incrementally, enabling efficient exploration of the entire data set.
 
 N> Virtualization accuracy depends on consistent item heights. Using templates that significantly change item height may affect the calculation of rendered items. The number of initially rendered items is based on the configured PopupHeight.
 
