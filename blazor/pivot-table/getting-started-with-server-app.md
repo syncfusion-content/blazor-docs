@@ -141,10 +141,6 @@ To use the Pivot Table component, open the **~/_Imports.razor** file and include
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView
-<<<<<<< HEAD
-=======
-
->>>>>>> 043538e977ef5575c85531cf7704dd862f02fbec
 ```
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
