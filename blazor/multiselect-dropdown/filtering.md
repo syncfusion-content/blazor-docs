@@ -37,7 +37,8 @@ The following example demonstrates remote filtering using OData.
 
 ## Debounce delay
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_DebounceDelay) property to delay filtering requests by a specified number of milliseconds. This reduces the frequency of queries while typing and improves responsiveness. The default debounce delay is 300 ms. To disable debouncing, set the value to 0.
+Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. To disable this feature entirely, can set it to 0ms.
+
 
 {% highlight cshtml %}
 

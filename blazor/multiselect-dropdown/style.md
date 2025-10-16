@@ -105,7 +105,7 @@ Customize the appearance of the container element within the multiselect compone
 
 ## Customizing the dropdown icon’s color
 
-Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the multiselect component, and setting the desired color to the `color` property.
+Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the multiselect component, and setting the desired color to the `color` property.
 
 {% highlight cshtml %}
 

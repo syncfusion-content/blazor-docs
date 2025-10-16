@@ -136,7 +136,7 @@ public TValue[] DDLValue { get; set; }
 public EventCallback<TValue> DDLValueChanged { get; set; }
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 ### Usage of generic component with different type
@@ -175,7 +175,7 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
     };
 }
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
 **[Counter.razor]**
@@ -209,5 +209,5 @@ List<Games> LocalData = new List<Games> {
 }
 
 
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
