@@ -9,13 +9,13 @@ documentation: ug
 
 # Resize in Blazor TextArea Component
 
-The TextArea allows users to input and edit large amounts of text. Resizing can improve usability by accommodating varying content lengths. Configure resizing behavior using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) property, which provides these options:
+The TextArea supports resizing so users can adjust the control to fit varying content lengths. Configure resizing behavior using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) property:
 
 | Type  | Description |
 | -- | -- |
 | Vertical  | Enables vertical resizing to adjust the height of the TextArea. |
 | Horizontal | Enables horizontal resizing to adjust the width of the TextArea. |
-| Both | Enables both vertical and horizontal resizing for maximum flexibility. |
+| Both | Enables both vertical and horizontal resizing. |
 | None | Disables resizing and hides the resize handle to maintain a fixed layout. |
 
 N> In Razor, enums are typically referenced with the @ prefix (for example, @Resize.Both).
