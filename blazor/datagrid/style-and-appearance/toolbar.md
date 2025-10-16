@@ -33,7 +33,7 @@ Properties such as **background-color**, **padding**, **border**, and **box-shad
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
-# Customize the toolbar button elements
+## Customize the toolbar button elements
 
 The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize their styling:
 ```css
