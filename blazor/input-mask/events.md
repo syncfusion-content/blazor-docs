@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Input Mask Component
 
-This section explains the list of events of the Input Mask component which will be triggered for appropriate Input Mask actions.
+This section lists the events available in the Blazor Input Mask (MaskedTextBox) component and when they are raised. Use these events to react to focus changes, value updates, and lifecycle moments. For reference, see the SfMaskedTextBox API.
 
 ## Blur
 
-`Blur` event triggers when the Input Mask component has focus-out.
+`Blur` is raised when the component loses focus. See Blur event and MaskBlurEventArgs in the API for details.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,7 +30,7 @@ This section explains the list of events of the Input Mask component which will 
 
 ## Created
 
-`Created` event triggers when the Input Mask component is created.
+`Created` is raised after the component has been initialized and rendered for the first time.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -47,7 +47,7 @@ This section explains the list of events of the Input Mask component which will 
 
 ## Destroyed
 
-`Destroyed` event triggers when the Input Mask component is destroyed.
+`Destroyed` is raised when the component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -64,7 +64,7 @@ This section explains the list of events of the Input Mask component which will 
 
 ## Focus
 
-`Focus` event triggers when the Input Mask gets focus.
+`Focus` is raised when the component receives focus. See Focus event and MaskFocusEventArgs in the API.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -81,7 +81,7 @@ This section explains the list of events of the Input Mask component which will 
 
 ## ValueChange
 
-`ValueChange` event triggers when the content of Input Mask has changed and gets focus-out.
+`ValueChange` is raised when the input value changes and the component then loses focus (or commits the change). This is typically used to react to completed edits; for two-way binding, see `ValueChanged`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -98,8 +98,7 @@ This section explains the list of events of the Input Mask component which will 
 
 ## ValueChanged
 
-`ValueChanged` event Specifies the callback to trigger when the value changes.
-
+`ValueChanged` is raised whenever the value changes.
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
@@ -113,4 +112,4 @@ This section explains the list of events of the Input Mask component which will 
 }
 ```
 
-N> Input Mask is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Input Mask currently includes these events. Additional events may be added based on user requests. If a required event is not listed, submit a feature request in the Syncfusion Blazor feedback portal: https://www.syncfusion.com/feedback/blazor-components

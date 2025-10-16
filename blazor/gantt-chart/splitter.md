@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Splitter in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Columns in Syncfusion Blazor Gantt Chart component and much more details.
+description: Checkout and learn here all about Splitter in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -70,8 +70,6 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBIWNNaArlKXynp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-splitter-position.png)
 
 ## Change splitter position dynamically
 
@@ -171,5 +169,3 @@ The following code example shows how to use this method.
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVoiXXaAhuibSQZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-with-splitter.png)
