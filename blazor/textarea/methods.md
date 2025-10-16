@@ -15,7 +15,7 @@ This section describes the methods available for interacting with the TextArea c
 
 The [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusAsync) method programmatically moves focus to the TextArea element to enable user input. This asynchronous method should be awaited when used in an async context.
 
-By calling the `FocusAsync` method, focus is set to the TextArea so the user can immediately interact with it using the keyboard or other input methods. Ensure the component reference is available (after initial render) before invoking this method.
+By calling `FocusAsync`, the TextArea receives focus so the user can immediately interact with it using the keyboard or other input methods. Ensure the component reference is available (after the initial render) before invoking this method, for example by calling it in a Created/OnAfterRenderAsync handler or checking for null.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -36,8 +36,7 @@ By calling the `FocusAsync` method, focus is set to the TextArea so the user can
 
 ## FocusOutAsync method
 
-The [FocusOutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusOutAsync) method programmatically removes focus from the TextArea element, ending direct user interaction. This asynchronous method should be awaited when used in an async context.
-This method is useful when focus needs to move away after completing a task or to shift attention to another element in the application.
+The [FocusOutAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusOutAsync) programmatically removes focus (blurs) the TextArea element, ending direct user interaction. This asynchronous method returns a Task and should be awaited when used in an async context. To move focus to another control, explicitly set focus on the target element after blurring.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -58,8 +57,7 @@ This method is useful when focus needs to move away after completing a task or t
 
 ## GetPersistDataAsync method
 
-The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_GetPersistDataAsync) method retrieves the component state that should be maintained for persistence. It returns a serialized representation (typically a JSON string) of the properties to persist.
-Use this method to capture configuration and state for storage and later restoration, such as saving user settings between sessions. As an asynchronous method, it should be awaited when called in an async context.
+The [GetPersistDataAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_GetPersistDataAsync) retrieves a serialized representation (typically a JSON string) of the component state to be maintained for persistence. Use this method when persistence is enabled (for example, with EnablePersistence="true") to capture configuration and state for storage and later restoration. As an asynchronous method, it returns a Task<string> and should be awaited in an async context.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
