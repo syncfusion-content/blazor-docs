@@ -121,7 +121,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-```
+....
 
 {% endhighlight %}
 {% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
