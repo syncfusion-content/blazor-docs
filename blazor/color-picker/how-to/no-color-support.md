@@ -9,11 +9,11 @@ documentation: ug
 
 # Handle No Color Support in Blazor Color Picker Component
 
-The Color Picker component supports no color functionality. By clicking the no color tile from palette, the selected color becomes `empty` and considered as no color has been selected from Color Picker.
+The Color Picker supports a no color option. When the No color tile in the palette is selected, the chosen color is cleared (treated as no color/empty).
 
 ## Default no color
 
-To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property as true. In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile, you can achieve the above functionalities.
+Enable the built-in no color tile by setting the [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property to `true`. In the following example, the first palette tile is the No color tile. Selecting it clears the selection and applies no color.
 
 ```cshtml
 
@@ -42,13 +42,13 @@ To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUsLLGKoIFoxSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)
+![Blazor Color Picker with default no color](./../images/blazor-colorpicker-nocolor.png)
 
->If the [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property is enabled, make sure to disable the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) property.
+> If the [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property is enabled, make sure to disable the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) property.
 
 ## Custom no color
 
-The following sample shows the color palette with custom no color option.
+The following example demonstrates a custom no color option alongside a palette rendered inside a SplitButton. Selecting No color applies a transparent background.
 
 ```cshtml
 
@@ -132,4 +132,4 @@ The following sample shows the color palette with custom no color option.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthAsLLwAyxsVKHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ColorPicker with Custom No Color](./../images/blazor-colorpicker-custom-nocolor.png)
+![Blazor Color Picker with custom no color](./../images/blazor-colorpicker-custom-nocolor.png)
