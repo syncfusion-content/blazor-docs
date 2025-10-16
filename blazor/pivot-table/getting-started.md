@@ -542,7 +542,7 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 
 @code{
     public List<ProductDetails> dataSource { get; set; }
-    protected override to OnInitialized()
+    protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
