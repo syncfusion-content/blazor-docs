@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor In-place Editor in WebApp | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Web App.
 platform: Blazor
-component: In place Editor
+control: In-place Editor 
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor In-place Editor Component in Web App
 
-This section briefly explains about how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section explains how to include the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -23,17 +23,17 @@ This section briefly explains about how to include [Blazor In-place Editor](http
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) when creating the Blazor Web App.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InPlaceEditor and Themes NuGet in the Blazor Web App
 
-To add **Blazor In-place Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the **Blazor In-place Editor** component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for and install [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If using the `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the Client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, use the following Package Manager commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -44,7 +44,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on nuget.org. Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -56,11 +56,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) when creating the Blazor Web App.
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, in a Blazor Web App with the `Auto` interactive render mode, run the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -72,15 +72,15 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
+N> For more information on creating a **Blazor Web App** with different interactive modes and locations, refer to [Render interactive modes](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InPlaceEditor and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If using the `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the Client project.
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Press Ctrl+` to open the integrated terminal in Visual Studio Code.
+* Ensure the terminal path is the project root directory that contains the `.csproj` file.
+* Run the following commands to install [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and restore dependencies.
 
 {% tabs %}
 
@@ -94,7 +94,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on nuget.org. Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -104,10 +104,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 | Interactive Render Mode | Description |
 | -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
+| WebAssembly or Auto | Open **~/_Imports.razor** from the Client project. |
+| Server | Open **~/_Imports.razor** in the `Components` folder. |
 
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InPlaceEditor` namespace.
+Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InPlaceEditor` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -120,7 +120,7 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InPlaceEditor` namespace.
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files (Server and Client) of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -154,7 +154,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, your project contains a single **~/Program.cs** file. In this case, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -191,11 +191,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> See [Blazor themes](https://blazor.syncfusion.com/documentation/appearance/themes) for additional methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to reference themes. For script references, see [Adding script references](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor component to a `.razor` file inside the `Pages` folder. If the Interactivity location is `Per page/component` in the web app, define a render mode at the top of the component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -204,7 +204,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor 
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+N> If the **Interactivity location** is set to `Global` and the **Render mode** is `Auto`, `WebAssembly`, or `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -242,17 +242,17 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-N> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the In-place Editor component.
+N> Specify the editor [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) when using non-default editors (for example, `DropDownList`, `Date`, or `AutoComplete`). Configure two-way binding between the In-place Editor and its editor component to synchronize values.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhJtMLkzWvWaMvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
 ## Render Blazor In-place Editor with popup
 
-The following code explains how to initialize a simple In-place Editor with popup in the Blazor page.
+The following example shows how to initialize a simple In-place Editor with a popup in a Blazor page.
 
 {% tabs %}
 {% highlight razor %}
@@ -306,7 +306,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 ## Configuring DropDownList
 
-You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configuring the `DropDownList` component inside the Editor component.
+Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property to `DropDownList` and configuring the `DropDownList` component inside the editor component.
 
 {% tabs %}
 {% highlight razor %}
@@ -349,7 +349,7 @@ You can render the Blazor DropDownList by changing the [Type](https://help.syncf
 
 ## Integrate DatePicker
 
-You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configuring the `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component.
+Render the Blazor `DatePicker` by changing the `Type` property to `Date` and configuring the `DatePicker` component inside the editor component. Also configure its properties directly on the `DatePicker` component.
 
 {% tabs %}
 {% highlight razor %}
@@ -371,7 +371,7 @@ You can render the Blazor `DatePicker` by changing the `Type` property as `Da
 {% endhighlight %}
 {% endtabs %}
 
-In the following code, it is configured to render the `DatePicker`, `DropDownList` and `Textbox` components.
+In the following code, the `DatePicker`, `DropDownList`, and `TextBox` components are configured.
 
 {% tabs %}
 {% highlight razor %}
@@ -464,19 +464,18 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 
 ## Submitting data to the server (save)
 
-You can submit editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor) and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) properties.
+Submit the editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor), and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) properties.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
-| **`SaveUrl`**        | Gets the URL for server submit action.        |
-| **`Adaptor`**    | Specifies the adaptor type that is used by DataManager to communicate with DataSource.                |
-| **`PrimaryKey`** | Defines the unique primary key of editable field which can be used for saving data in the data-base.|
+| **`SaveUrl`**        | Gets the URL for the server submit action.        |
+| **`Adaptor`**    | Specifies the adaptor type used by DataManager to communicate with the data source.                |
+| **`PrimaryKey`** | Defines the unique primary key of the editable field used for saving data in the database. |
 
-> The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
-
+> The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
 ## Refresh Blazor In-place Editor with modified value
 
-The edited data is submitted to the server and you can see the new values getting reflected in the In-place Editor.
+After submit, the edited data is sent to the server, and the updated value is reflected in the In-place Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -571,7 +570,6 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ## See also
 
-1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-
+1. [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+2. [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+3. [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

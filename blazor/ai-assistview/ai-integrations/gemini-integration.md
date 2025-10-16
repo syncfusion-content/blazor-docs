@@ -7,33 +7,29 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Gemini AI With Blazor AI AssistView component
+# Integrate Gemini AI With Blazor AI AssistView component
 
-The Syncfusion AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs/quickstart), enabling advanced conversational AI features in applications.
+The AI AssistView component integrates with Google’s [Gemini](https://ai.google.dev/gemini-api/docs/quickstart) API to deliver intelligent conversational interfaces. It leverages advanced natural language understanding to interpret user input, maintain context throughout interactions, and provide accurate, relevant responses. By configuring secure authentication and data handling, developers can unlock powerful AI-driven communication features that elevate user engagement and streamline support experiences.
 
 ## Prerequisites
 
-* Google account to generate an API key for accessing [Gemini AI](https://ai.google.dev/gemini-api/docs/quickstart)
-* Syncfusion AI AssistView for Blazor package [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed in the project.
-* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
+Before starting, ensure you have the following:
 
-## Getting Started with the AI AssistView Component
+* **Google Account**: For generating a Gemini API key.
 
-Before integrating Gemini AI, ensure that the Syncfusion AI AssistView renders correctly in the application and that prerequisites are met:
+* **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-[Blazor Getting Started Guide](../getting-started)
+* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
+
+## Set Up the AI AssistView Component
+
+Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
-Install the Syncfusion Blazor package in the application.
+Install the required packages:
 
-```bash
-
-Nuget\Install-Package Syncfusion.Blazor.InteractiveChat
-
-```
-
-Install the Gemini AI package in the application.
+1. Install the `Gemini AI` nuget package in the application.
 
 ```bash
 
@@ -41,21 +37,31 @@ Nuget\Install-Package Mscc.GenerativeAI
 
 ```
 
+2. Install the `Markdig` nuget packages in the application.
+
+```bash
+
+Nuget\Install-Package Markdig
+
+```
+
 ## Generate API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/api-keys) and sign in with a google account. Create a new account if needed.
+1. **Access Google AI Studio**: Instructs users to sign into [Google AI Studio](https://aistudio.google.com/app/apikey) with a Google account or create a new account if needed. 
 
-2. Select `Get API key` from the left menu or the top-right of the dashboard.
+2. **Navigate to API Key Creation**: Go to the `Get API Key` option in the left-hand menu or top-right corner of the dashboard. Click the `Create API Key` button.
 
-3. Choose `Create API key`. Select an existing google cloud project or create a new one, then proceed.
+3. **Project Selection**: Choose an existing Google Cloud project or create a new one.
 
-4. After creating or selecting a project, an API key is generated and displayed. Copy the key and store it securely, as it may be shown only once.
+4. **API Key Generation**: After project selection, the API key is generated. Users are instructed to copy and store the key securely, as it is shown only once.
 
-> Security note: Do not commit API keys to version control. Use environment variables, a secret manager, or a server-side proxy in production.
+> Security note: Advises against committing the API key to version control and recommends using environment variables or a secret manager in production.
 
 ## Gemini AI with AI AssistView
 
-* Add the generated API key in the following line.
+Modify the razor file to integrate the Gemini AI with the AI AssistView component.
+
+* update your Gemini API key securely in the configuration:
 
 ```bash
 
@@ -72,6 +78,7 @@ const string GeminiApiKey = 'Place your API key here';
 @using Markdig
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
+// Initializes the AI Assist component
     <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">
         <AssistViews>
             <AssistView>
@@ -98,13 +105,15 @@ const string GeminiApiKey = 'Place your API key here';
         "What are the best tools for organizing my tasks?",
         "How can I maintain work-life balance effectively?"
     };
+    // Initialize Gemini API
     private readonly string geminiApiKey = "";
+    // Handle user prompt: call Gemini model
     private async Task OnPromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         try
         {
-            var gemini = new GoogleAI(apiKey: geminiApiKey);
-            var model = gemini.GenerativeModel(model: "gemini-1.5-flash");
+            var gemini = new GoogleAI(apiKey: geminiApiKey); // Replace with your Gemini API key
+            var model = gemini.GenerativeModel(model: "gemini-2.5-flash"); // Select the Gemini model (update model name as needed)
             var response = await model.GenerateContent(args.Prompt);
             var responseText = response.Text;
             var pipeline = new MarkdownPipelineBuilder()

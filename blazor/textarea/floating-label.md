@@ -9,15 +9,15 @@ documentation: ug
 
 # Floating Label in Blazor TextArea Component
 
-The floating label functionality in the TextArea component displays the placeholder as a floating label above the TextArea while the user interacts with it, improving readability and conserving space in forms. Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property to control this behavior. By default, the floating label is disabled (Never).
+The floating label displays the placeholder as a label above the TextArea while the user interacts with it, improving readability and saving space in forms. Control this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property. By default, the floating label is disabled (Never).
 
-The options below describe when the label floats and typical usage patterns:
+The following options describe when the label floats and typical usage patterns:
 
 | Type  | Description |
 | -- | -- |
-| Auto  | The label floats above the TextArea when it receives focus or input. If a value is present, the label remains floated after blur; if empty, it returns to its initial position. |
-| Always | The label always remains floating above the TextArea, regardless of user interaction or value. |
-| Never | The label never floats; it remains in its default position within the TextArea. |
+| Auto  | The label floats above the TextArea on focus or input. If a value is present, it remains floated after blur; if empty, it returns to its initial position. |
+| Always | The label remains floating above the TextArea at all times, regardless of interaction or value. |
+| Never | The label does not float and stays in its default placeholder position. |
 
 {% tabs %}
 {% highlight razor %}

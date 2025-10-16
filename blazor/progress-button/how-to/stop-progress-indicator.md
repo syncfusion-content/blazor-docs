@@ -9,7 +9,7 @@ documentation: ug
 
 # Stop Progress Indicator in Blazor ProgressButton Component
 
-You can stop the progress indicator using [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method. In the following sample, the progress is stopped by clicking the `STOP` button.
+Stop the active progress programmatically by calling the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method on the ProgressButton instance obtained via @ref. In the following example, clicking the Stop button invokes the handler that awaits EndProgressAsync to halt the current progress.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
