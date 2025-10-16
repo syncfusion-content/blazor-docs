@@ -9,48 +9,49 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports extensive visual customization using CSS and theme-based styling. Styling can be applied to various elements such as header cells, data rows, alternate rows, and grid lines.
+The Syncfusion Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements such as header cells, data rows, alternate rows, and grid lines.
 
-N> - When using CSS isolation (.razor.css), use the **::deep(...)** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Use component-level styles in the .razor.css file for production scenarios. Inline styles within the Razor page are suitable for quick demonstrations.
+> - When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Use component-level styles for production scenarios. Inline styles are suitable for quick demonstrations.
+- Avoid using `!important` for hover styles. Increase selector specificity instead.
+- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
-**Default CSS Overrides:**
+**Override Default Styles:**
 
-Override default Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid styles, such as colors, typography, spacing, and borders, using custom CSS. Use browser developer tools to inspect the rendered HTML and identify relevant selectors and class names. Where possible, utilize CSS variables or theme tokens to ensure consistency across components and themes.
+Default styles such as **colors**, **typography**, **spacing**, and **borders** can be customized using CSS. Use browser developer tools to inspect the rendered HTML and identify relevant selectors. Where possible, use CSS variables or theme tokens to maintain consistency across components.
 
 ```css
-/* In your control's CSS file */
 .e-grid .e-headercell {
     background-color: #333; /* Override the header background color */
     color: #fff;
 }
 ```
 
-Style properties such as `background-color`, `color`, `font-family`, and `padding` can be adjusted to align with the desired design.
+Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the grid layout design and improve visual consistency.
 
 ![Change header background](../images/style-and-appearance/header-background.png)
 
-**Using Theme Studio**
+**Using Theme Studio:**
 
-Syncfusion Theme Studio offers a unified approach to style all components, including the Blazor DataGrid, with consistent theming.
+Syncfusion Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
 
 1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select **Grid** in the left panel.
 3. Customize colors, typography, spacing, and other visual tokens.
-4. Download the generated CSS and include it in the Blazor project (site stylesheet or theme bundle).
+4. Download the generated CSS and include it in the Blazor project’s site stylesheet or theme bundle.
 
-## Customizing the Blazor DataGrid Root Element
+## Customize the DataGrid root element
 
-The **.e-grid** class is used to style the root container of the Blazor DataGrid. To modify its appearance, apply CSS:
+The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CSS to modify its appearance:
 
 ```css
 .e-grid {
-      font-family: cursive;
+    font-family: cursive;
 }
-
 ```
 
-Style properties such as `font-family`, `background-color`, `padding`, and `border` can be adjusted to match the desired design.
+Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
@@ -62,38 +63,45 @@ This customization applies a cursive font to the grid content. Additional stylin
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
-   <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-
     .e-grid {
         font-family: cursive;
+        /* Optional: set a base background for the grid area */
+        /* background-color: #fafafa; */
     }
 
-    .e-grid .e-row:hover .e-rowcell {
-        background-color: rgb(204, 229, 255) !important;
+    /* Prefer specificity over !important for hover */
+    .e-grid .e-content .e-row:hover .e-rowcell {
+        background-color: rgb(204, 229, 255);
     }
 
     .e-grid .e-rowcell.e-selectionbackground {
         background-color: rgb(230, 230, 250);
-     }
+    }
 
     .e-grid .e-row.e-altrow {
         background-color: rgb(150, 212, 212);
-     }
+    }
 
     .e-grid .e-row {
         background-color: rgb(180, 180, 180);
     }
-    
+
+    /* Optional: keyboard focus visibility */
+    .e-grid .e-row:focus-visible .e-rowcell {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
+    }
 </style>
 
 @code {
@@ -112,8 +120,7 @@ This customization applies a cursive font to the grid content. Additional stylin
 
 internal sealed class OrderData
 {
-    private static readonly List<OrderData> Data = new List<OrderData>();
-
+    private static readonly List<OrderData> Data = new();
     public OrderData(int orderId, string customerId, double freight, string shipCity)
     {
         OrderID = orderId;
@@ -122,7 +129,7 @@ internal sealed class OrderData
         ShipCity = shipCity;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
         if (Data.Count == 0)
         {
@@ -149,20 +156,19 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLIMXMNfRZbKGZC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLoCDCeBCPXKind?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing Alternate Row with Frozen Columns
+## Customize alternate rows with frozen columns
 
-The **.e-altrow .e-rowcell** selector is used to style the cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled in the Blazor DataGrid.
+The **.e-altrow .e-rowcell** selector styles cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled in the Blazor DataGrid.
 
 ```css
 .e-grid .e-altrow .e-rowcell {
     background-color: #E8EEFA;
 }
-
 ```
 
-Style properties such as` background-color`, `font-family`, `font-size`, and `border` can be adjusted to match the desired design.
+Adjust properties like **background-color**,**font-family**, and **border** to maintain consistent styling across frozen and movable sections.
 
 ![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.png)
 
@@ -182,11 +188,10 @@ Style properties such as` background-color`, `font-family`, `font-size`, and `bo
 </SfGrid>
 
 <style>
-
+    /* Applies to alt rows across frozen and movable sections */
     .e-grid .e-altrow .e-rowcell {
         background-color: #E8EEFA;
     }
-    
 </style>
 
 @code {
@@ -200,12 +205,11 @@ Style properties such as` background-color`, `font-family`, `font-size`, and `bo
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
 
 internal sealed class OrderData
 {
-    private static readonly List<OrderData> Data = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderId, string customerId, double freight, string shipCity)
     {
@@ -215,7 +219,7 @@ internal sealed class OrderData
         ShipCity = shipCity;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
         if (Data.Count == 0)
         {
@@ -242,11 +246,13 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthyMDsjpeYMriLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLysNWSLBgVRXGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the Color of Grid Lines
+## Customize the color of grid lines
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control the color, thickness, and border style. The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `horizontal`, `vertical`, `both`, or `none`.
+The Syncfusion Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
 ```css
     /* Customize the color of Grid lines */
@@ -265,41 +271,47 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables cus
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" GridLines="Syncfusion.Blazor.Grids.GridLine.Both">
+<SfGrid DataSource="@Orders" Height="315" GridLines="GridLine.Both">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    /* Customize the color of Grid lines */
-    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+    /* Customize the color and thickness of grid lines */
+    .e-grid .e-gridheader,
+    .e-grid .e-headercell,
+    .e-grid .e-rowcell,
+    .e-grid {
         border-color: yellow;
         border-style: solid;
         border-width: 2px;
-        
+    }
+
+    /* Optional: ensure header divider lines are visible */
+    .e-grid .e-headercell {
+        border-right-width: 2px;
     }
 </style>
 
 @code {
     private List<OrderData> Orders { get; set; }
-   
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
 
 internal sealed class OrderData
 {
-    private static readonly List<OrderData> Data = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
@@ -309,7 +321,7 @@ internal sealed class OrderData
         OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
         if (Data.Count == 0)
         {
@@ -330,10 +342,10 @@ internal sealed class OrderData
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public double Freight { get; set; }
-    public DateTime OrderDate { get; set; }       
+    public DateTime OrderDate { get; set; }
 }
  
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVyMtWtTlHHsAzL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheCtiyVBIDLkTf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

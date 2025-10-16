@@ -9,19 +9,19 @@ documentation: ug
 
 # Selection customization in Syncfusion Blazor DataGrid
 
-The appearance of selection elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be styled using CSS. Styling options are available for different selection states:
+The appearance of selection elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-- Row selection background
-- Cell selection background
+- **Row selection background:** The visual highlight applied to entire rows when selected.
+- **Cell selection background:** The visual highlight applied to individual cells when selected.
 
 N> - Ensure that the required theme stylesheet is referenced so that selection-related UI elements are displayed correctly.
-- When using CSS isolation (.razor.css), use the ::deep selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
 - Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
 - Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
-## Customizing Row Selection Background
+## Customize row selection background
 
-The **.e-selectionbackground** class is used to style the background of selected row cells in the Blazor DataGrid. To modify its appearance, apply CSS:
+The **.e-selectionbackground** class styles the background of selected rows in the DataGrid. Use CSS to modify its appearance:
 
 ```css
 .e-grid td.e-selectionbackground {
@@ -29,7 +29,7 @@ The **.e-selectionbackground** class is used to style the background of selected
 }
 ```
 
-Properties such as `background-color`, `color`, `border`, or `font-weight` can be modified to match the overall design of the grid layout.
+Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
 
 ![Row selection](../images/style-and-appearance/row-selection.png)
 
@@ -73,7 +73,7 @@ internal sealed class OrderData
 {
     private static readonly List<OrderData> Data = new List<OrderData>();
 
-    internal OrderData(int orderId, string customerId, double freight, DateTime orderDate)
+    public OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
         OrderID = orderId;
         CustomerID = customerId;
@@ -109,11 +109,11 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhyijCZSrZDvETW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMNsoWGPYQGPH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing Cell Selection Background
+## Customize cell selection background
 
-The **.e-cellselectionbackground** class is used to style the background of selected cells in the Blazor DataGrid. To modify its appearance, apply CSS:
+The **.e-cellselectionbackground** class styles the background of selected cells in the DataGrid. Apply CSS to customize its appearance:
 
 ```css
 .e-grid td.e-cellselectionbackground {
@@ -121,7 +121,7 @@ The **.e-cellselectionbackground** class is used to style the background of sele
 }
 ```
 
-Properties such as `background-color`, `color`, `border`, or `font-weight` can be modified to match the overall design of the grid layout.
+Modify visual properties to align with the overall layout and improve clarity.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.png)
 
@@ -130,9 +130,9 @@ Properties such as `background-color`, `color`, `border`, or `font-weight` can b
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315"  AllowPaging="true">
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-     <GridSelectionSettings  Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -144,6 +144,11 @@ Properties such as `background-color`, `color`, `border`, or `font-weight` can b
 <style>
     .e-grid td.e-cellselectionbackground {
         background-color: #00b7ea;
+    }
+    /* Optional: visible focus for cell mode */
+    .e-grid td.e-focused {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
     }
 </style>
 
@@ -163,17 +168,17 @@ Properties such as `background-color`, `color`, `border`, or `font-weight` can b
 
 internal sealed class OrderData
 {
-    private static readonly List<OrderData> Data = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
-    internal OrderData(int orderId, string customerId, double freight, DateTime orderDate)
+    public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        OrderID = orderId;
-        CustomerID = customerId;
+        OrderID = orderID;
+        CustomerID = customerID;
         Freight = freight;
         OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
         if (Data.Count == 0)
         {
@@ -201,4 +206,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSWNMjyBCKUHjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIWDsoivLIZrXK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
