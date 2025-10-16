@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Scheduler component is outlined below.
+The accessibility compliance for the Blazor Scheduler component is detailed below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor Scheduler component is outlined belo
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
 
@@ -52,9 +52,9 @@ The following ARIA attributes are used in the Scheduler:
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
 | aria-disabled | Attribute is set to the appointment element to indicates the disabled state of the Scheduler. |
 
-## Keyboard interaction
+## Keyboard Interaction
 
-All the Scheduler actions can be controlled via keyboard keys and is availed by using `AllowKeyboardInteraction` property which is set to `true` by default. The applicable key combinations and its relative functionalities are listed below.
+All interactive actions within the Blazor Scheduler can be controlled via keyboard keys, supporting users who rely on assistive technologies or prefer keyboard-only navigation. This functionality is enabled by the `AllowKeyboardInteraction` property, which is set to `true` by default. The key combinations and their functionalities are outlined below.
 
 | Windows | Mac | Actions |
 | ----- | ----- | ---- |
@@ -78,12 +78,12 @@ All the Scheduler actions can be controlled via keyboard keys and is availed by 
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>Y</kbd> | To navigate to today date. |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>N</kbd> | To open editor window. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Scheduler component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor Scheduler component's adherence to accessibility standards is rigorously validated through automated testing using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright).
 
-The accessibility compliance of the Scheduler component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/schedule) in a new window to evaluate the accessibility of the Scheduler component with accessibility tools.
+The accessibility compliance of the Scheduler component can be evaluated by opening the [sample](https://blazor.syncfusion.com/accessibility/schedule) in a new window and using various accessibility testing tools.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 
-To customize Blazor TreeView items easily using a template and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property, you can check on this video.
+To customize Blazor TreeView items easily using a template and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=LQlFt9d5E34" %}
@@ -163,10 +163,11 @@ In the following sample, employee information such as employee photo, name, and 
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor TreeView with Template](./images/blazor-treeview-template.png)
 
-## Apply template to Header
+## Apply Template to Header
 
 The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) property. This property is nested within the [`TreeViewTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html) tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
 
@@ -325,5 +326,6 @@ The Blazor TreeView component provides the ability to customize the appearance o
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)

@@ -202,5 +202,6 @@ On clicking the toggle Button, change the required icon and content based on cur
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSWXsZqaepVhRz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Toolbar Item with Toggle Button](../images/blazor-toolbar-item-with-toggle-button.gif)

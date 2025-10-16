@@ -17,7 +17,7 @@ The Timeline views can have additional header rows other than its default date a
 * `Date`
 * `Hour`
 
-To get start quickly on customizing the header rows of timeline views on scheduler, you can check on this video:
+For a quick start on customizing the header rows of timeline views in the Scheduler, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=2eYGFgwqK6U"%}
@@ -56,10 +56,11 @@ N> The `Hour` row is not applicable for Timeline month view.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoCXtQhVQXFVrw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Timeline Header Rows in Blazor Scheduler](images/blazor-scheduler-headerrow-default.png)
 
-## Display year and month rows in timeline views
+## Display Year and Month Rows in Timeline Views
 
 To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) property.
 
@@ -91,10 +92,12 @@ To display the timeline Scheduler simply with year and month names alone, define
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLeWtDcBLQyVaZY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Display Year and Month rows in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-month-year.png)
 
-## Display week numbers in timeline views
+## Display Week Numbers in Timeline Views
+
 
 The week number can be displayed in a separate header row of the timeline Scheduler by setting `Week` option within [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) property.
 
@@ -128,12 +131,13 @@ The week number can be displayed in a separate header row of the timeline Schedu
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLoWNDwhLQaQXmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Display Week numbers in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-weeknumber.png)
 
-## Timeline view displaying dates of a complete year
+## Timeline View Displaying Dates of a Complete Year
 
-It is possible to display a complete year in a timeline view by setting `Interval` value as 12 and defining **TimelineMonth** view option within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) tag helper.
+A complete year can be displayed in a timeline view by setting the`Interval` value as 12 and defining **TimelineMonth** view option within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) tag helper.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -163,10 +167,11 @@ It is possible to display a complete year in a timeline view by setting `Interva
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSiZtcVhbgOtNW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Display dates of a complete year in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-dates.png)
 
-## Customizing the header rows using template
+## Customizing the Header Rows Using Template
 
 The text of the header rows can be customized and display any images or format text on each individual header rows using the built-in [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRow.html#Syncfusion_Blazor_Schedule_ScheduleHeaderRow_Template) option available within the [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRow.html).
 
@@ -225,5 +230,6 @@ The text of the header rows can be customized and display any images or format t
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSiZjmrhbbkwHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Display customize header rows using template in  Blazor Scheduler](images/blazor-scheduler-headerrow-custom-header.png)

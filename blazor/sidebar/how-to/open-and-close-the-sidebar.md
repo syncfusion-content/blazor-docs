@@ -9,11 +9,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Open and close the Sidebar in Blazor Sidebar Component
+# Open and Close the Sidebar in Blazor Sidebar Component
 
-Opening and closing the Sidebar can be achieved with [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property.
+Opening and closing the Sidebar is controlled by the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property.
 
-In the following sample, `IsOpen` property has been used to show or hide the Sidebar on button click.
+The following sample demonstrates using the `IsOpen` property to show or hide the Sidebar based on a button click.
 
 ```cshtml
 
@@ -69,4 +69,5 @@ In the following sample, `IsOpen` property has been used to show or hide the Sid
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBIsNZPpZcPXBbL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Opening and Closing Blazor Sidebar](./../images/OpenCloseSidebar.gif)

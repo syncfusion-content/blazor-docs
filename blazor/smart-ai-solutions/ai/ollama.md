@@ -70,6 +70,7 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
+
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -85,7 +86,7 @@ Install-Package OllamaSharp
 </body>
 ```
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 
@@ -300,5 +301,7 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Ol
 - **JSON Parsing Errors**: Handle invalid JSON responses by logging errors or displaying user-friendly messages, as shown in the `OpenAIHandler` method.
 - **Resource Limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://ollama.com/docs) for model-specific requirements.
 
+
 ## See Also
 - [Syncfusion Blazor TreeGrid Documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)
+

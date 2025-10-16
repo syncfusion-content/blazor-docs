@@ -7,11 +7,11 @@ control: Media Query
 documentation: ug
 ---
 
-# Global level reuse of Blazor Media Query component
+# Global level reuse of Blazor Media Query Component
 
-You can globally reuse the Media Query component in any `razor` pages within web application to achieve a more flexible and responsive layout design. 
+The Blazor Media Query component can be globally reused across any Razor pages within a web application. This approach enables a more flexible and responsive layout design by allowing components on all pages to react to changes in the active media breakpoint.
 
-Define the Media Query component along with layout `Body` property within the `CascadingValue` component in **MainLayout.razor** page.
+To achieve this, define the `SfMediaQuery` component along with the layout `Body` property within a `CascadingValue` component in your **MainLayout.razor** page.
 
 {% tabs %}
 {% highlight razor %}

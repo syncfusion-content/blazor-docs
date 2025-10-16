@@ -7,13 +7,13 @@ control: Toolbar
 documentation: ug
 ---
 
-# Enabling Tab key navigation in Blazor Toolbar Component
+# Enabling Tab key Navigation in Blazor Toolbar Component
 
-The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item is used to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the Tab and Shift+Tab keys as well.
+The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item enables tab key navigation for the item. By default, navigation between items occurs using the arrow keys. The `TabIndex` property additionally allows switching between items using the Tab and Shift+Tab keys.
 
-To use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property, you need to set it for each Toolbar item that you want to enable tab key navigation. The [TabIndex] property should be set to a positive integer value. A value of 0 or a negative value will disable tab key navigation for the item.
+To utilize the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property, set it for each Toolbar item where tab key navigation is desired. The [TabIndex] property requires an integer value. A value of 0 or a negative value disables tab key navigation for the item.
 
-For example, to enable tab key navigation for two Toolbar items, you can use the following code:
+For example, to enable tab key navigation with an explicit order for two Toolbar items, use the following code:
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -24,8 +24,8 @@ For example, to enable tab key navigation for two Toolbar items, you can use the
     </ToolbarItems>
 </SfToolbar>
 ```
-With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values.
-If you set the  [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values. For example:
+With the preceding code, navigation between the two Toolbar items is possible using the Tab and Shift+Tab keys, in addition to arrow keys. Items are navigated in the explicit order specified by their [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values.
+If [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) is set to `0` for all Toolbar items, tab key navigation follows the element's natural source order, rather than a numerically explicit [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) order. For example:
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfToolbar Width="600">
@@ -66,4 +66,6 @@ If you set the  [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     </ToolbarItems>
 </SfToolbar>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSWXCDJtDTYouf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Toolbar with TabIndex](../images/blazor-toolbar-item-tabindex.gif)

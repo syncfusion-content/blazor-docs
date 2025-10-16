@@ -9,13 +9,13 @@ documentation: ug
 
 # Node in Blazor Diagram Component
 
-Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system, including how it interacts with external entities, providing a clear visual representation of complex processes and relationships.
+Nodes are graphical objects used to represent the geometric information, process flows, internal business procedures, entities, or any other kind of data and it represents the functions of a complete system, including how it interacts with external entities, providing a clear visual representation of complex processes and relationships.
 
 ![Node in Blazor Diagram](../images/blazor-diagram-node.png)
 
 ## How to Create a Node
 
-A node can be created and added to the diagram, either programmatically or interactively. In the diagram area, nodes are stacked from bottom-to-top in the order they are added.
+A node can be created and added to the diagram either programmatically or interactively. In the diagram area, nodes are stacked from bottom to top in the order they are added.
 
 To learn more about creating nodes and exploring different node shapes in a Blazor Diagram, refer to the below video link.
 
@@ -23,7 +23,7 @@ To learn more about creating nodes and exploring different node shapes in a Blaz
 
 ## How to Add a Node Using the Nodes Collection
 
-To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
+To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add it to the `Nodes` collection of the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -55,15 +55,17 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVeCXZGVWckeFbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
 
->**Note:** Node's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+![Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
+
+>**Note:** Node ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ## How to Add Nodes at Runtime
 
-You can add a Node at runtime by adding it to the nodes collection of the Diagram component. The following code explains how to add a node at runtime.
+A node can be added at runtime by adding it to the `Nodes` collection of the Diagram component. The following code explains how to add a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -112,13 +114,15 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNodeAtRuntime)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLoWtXQBWbVEBtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNodeAtRuntime)
 
 ## How to add node with annotations at runtime
 
-You can add node with annotation at runtime in the diagram component by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+A node with an annotation can be added at runtime in the diagram component by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
-The following code explains how to add an node with annotation  at runtime by using `AddDiagramElementsAsync` method.
+The following code explains how to add a node with an annotation at runtime by using the `AddDiagramElementsAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -179,29 +183,31 @@ The following code explains how to add an node with annotation  at runtime by us
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDreijNwLibcCWVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## How to Add a Node to the Palette
 
-Nodes can be predefined and added to the symbol palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
+Nodes can be predefined and added to the symbol palette, then dragged and dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
 
-* Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event gets triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters into the diagram from the symbol palette.
-* When a symbol is dragged over a diagram, the [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event gets triggered. [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html) notifies when an element drags over another diagram element.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event gets triggered. [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) notifies when the element is dropped on the diagram.
-* When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event gets triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
+* Once you drag a node/connector from the palette to the diagram, the following events for customization.
+* When a symbol is dragged into a diagram from the symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters the diagram from the symbol palette.
+* When a symbol is dragged over a diagram, the [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered. [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html) notifies when an element drags over another diagram element.
+* When a symbol is dragged and dropped from the symbol palette to the diagram area, the [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggered. [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) notifies when the element is dropped on the diagram.
+* When a symbol is dragged outside the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
 
-![Adding Nodes from Palette in Blazor Diagram](../images/blazor-diagram-add-node-from-palette.gif)
+![Adding nodes from the symbol palette in Blazor Diagram](../images/blazor-diagram-add-node-from-palette.gif)
 
 ## How to Draw Nodes Using Drawing Object
 
-Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
+Nodes can be drawn interactively by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
-For more information about drawing node, refer to the `Draw Nodes`.
+For more information about drawing nodes, refer to the [Draw Nodes](https://blazor.syncfusion.com/documentation/diagram/tools#how-to-draw-shapes-using-the-drawing-tool).
 
-![Drawing Node in Blazor Diagram](../images/blazor-diagram-node-drawing.gif)
+![Drawing a node on the diagram surface in Blazor Diagram](../images/blazor-diagram-node-drawing.gif)
 
 ## How to Create Nodes from DataSource
 
-Nodes can be generated automatically with the information provided through a data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../data-binding).
+Nodes can be generated automatically with the information provided through a data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to [DataSource](../data-binding).
 
 ## How to Remove Nodes at Runtime
 
@@ -247,9 +253,11 @@ The following code shows how to remove a node at runtime.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/RemoveNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXroCjZGVsEiiFIr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A node can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example to see how to remove the node at runtime.
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/RemoveNode)
+
+A node can also be removed from the diagram by using the native `RemoveAt` method. Refer to the following example to see how to remove the node at runtime.
 
 ```csharp
 public void RemoveNodes()
@@ -258,7 +266,7 @@ public void RemoveNodes()
 }
 ```
 ### How to Clone a Node at Runtime
-[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes. The following code demonstrates how to clone the nodes during runtime.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes. The following code demonstrates how to clone the nodes during runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -313,13 +321,15 @@ public void RemoveNodes()
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/CloneNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/CloneNode)
 ![Clonning Node](../images/CloneNode.gif)
 ## How to Update Nodes at Runtime
 
-You can change any node's properties at runtime.
+Node properties can be changed at runtime.
 
-The following code example explains how to change the node properties.
+The following code example explains how to change node properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -362,7 +372,9 @@ The following code example explains how to change the node properties.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/UpdateNode)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVSCDNmhWOaZNES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/UpdateNode)
 
 N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) methods allow you to stop the continuous update of control and resume it finally.
 
@@ -394,4 +406,4 @@ N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 * [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)
 * [How to Create Polygon and Circle Shapes in Blazor Diagram](https://support.syncfusion.com/kb/article/18054/how-to-create-polygon-and-circle-shapes-in-blazor-diagram)
 
-* [How to Provide IDs for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)
+* [How to Provide ID for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)
