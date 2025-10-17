@@ -11,8 +11,8 @@ documentation: ug
 
 The appearance of sorting indicators in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-- **Ascending and descending sort icons:** Visual indicators that appear in column headers to show the current sort direction.
-- **Multi-sorting order indicators:** Numeric badges that display the order of sorting when multiple columns are sorted.
+- **Ascending and descending sort icons:** Show the current sort direction in column headers.
+- **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
 
 N> - Enable sorting by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property.  
 - Ensure that the required theme stylesheet is referenced so that pager UI elements are displayed correctly.

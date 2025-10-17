@@ -11,8 +11,8 @@ documentation: ug
 
 The appearance of toolbar elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
-- **Toolbar root container:** The outer wrapper that holds all toolbar items.
-- **Toolbar buttons:** Interactive elements used for actions such as add, edit, delete, update, and cancel.
+- **Toolbar root container:** The outer wrapper that contains all toolbar items.
+- **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
 
 N> - Ensure that the required theme stylesheet is referenced so that toolbar UI elements are displayed correctly.
 - When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
@@ -33,7 +33,7 @@ Properties such as **background-color**, **padding**, **border**, and **box-shad
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
-## Customize the toolbar button elements
+# Customize the toolbar button elements
 
 The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize their styling:
 ```css

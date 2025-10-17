@@ -11,8 +11,8 @@ documentation: ug
 
 The appearance of selection elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-- **Row selection background:** The visual highlight applied to entire rows when selected.
-- **Cell selection background:** The visual highlight applied to individual cells when selected.
+- **Row selection background:** Highlights the entire row when selected.
+- **Cell selection background:** Highlights individual cells when selected.
 
 N> - Ensure that the required theme stylesheet is referenced so that selection-related UI elements are displayed correctly.
 - When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
