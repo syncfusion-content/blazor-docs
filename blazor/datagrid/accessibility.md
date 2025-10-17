@@ -9,20 +9,28 @@ documentation: ug
 
 # Accessibility in Blazor DataGrid
 
+<<<<<<< HEAD
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
+Supported guidelines include:
+=======
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and uses appropriate [ARIA roles](https://www.w3.org/TR/wai-aria/#roles) commonly referenced for accessibility evaluations.
+>>>>>>> 39e5f0bbcd45c94c50848d0fddc8e46bd8345a84
 
-The accessibility compliance for the Grid is outlined below.
+- [Americans with Disabilities Act (ADA)]((https://www.ada.gov/))
+- [Section 508](https://www.section508.gov/)
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+- [ARIA roles](https://www.w3.org/TR/wai-aria/#roles) for semantic structure and screen reader compatibility
 
-| Accessibility Criteria | Compatibility |
-| -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| Accessibility Criteria | Compatibility | Description |
+|-----------------------|---------------|-------------|
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Supports most WCAG 2.2 guidelines, such as color contrast (1.4.3) and keyboard accessibility (2.1.1), with some limitations in complex interactions. |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Complies with most Section 508 requirements, with minor gaps in advanced interactive elements. |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Implements ARIA roles (e.g., `role="grid"`, `aria-label`) for compatibility with screen readers like JAWS and NVDA. |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Supports right-to-left (RTL) layouts for languages like Arabic and Hebrew using the `EnableRtl` property. |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Meets WCAG 2.2 minimum contrast ratios for text and visual elements. |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Ensures touch-based navigation and compatibility with mobile screen readers. |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Supports standard keyboard interactions (e.g., Tab, Arrow keys), with limitations in some advanced features like filtering. |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Passes most Axe-core checks, with minor issues in specific ARIA configurations. |
 
 <style>
     .post .post-content img {
@@ -30,14 +38,65 @@ The accessibility compliance for the Grid is outlined below.
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+**Support Level Indicators:**
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features meet the accessibility requirement..</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features meet the requirement; others may need improvement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The feature does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
+<<<<<<< HEAD
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including `JAWS` and `NVDA`. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
+
+| Attribute | Purpose |
+|-----------|---------|
+| `role=grid` | Identifies the element as a grid container. |
+| `role=row` | Defines a row containing cells within the grid. |
+| `role=rowgroup` | Groups multiple rows, such as in grouped or hierarchical grids. |
+| `role=columnheader` | Specifies a header cell providing column information. |
+| `role=gridcell` | Indicates a data cell within the grid. |
+| `role=button` | Represents interactive elements that function as buttons. |
+| `role=search` | Identifies search regions, such as in the toolbar. |
+| `role=presentation` | Hides elements from assistive technologies when not relevant. |
+| `role=navigation` | Defines pager elements for page navigation. |
+| `aria-colindex` | Specifies the column index relative to the total number of columns. |
+| `aria-rowindex` | Specifies the row index relative to the total number of rows. |
+| `aria-rowspan` | Indicates the number of rows spanned by a cell. |
+| `aria-colspan` | Indicates the number of columns spanned by a cell. |
+| `aria-rowcount` | Specifies the total number of rows in the grid. |
+| `aria-colcount` | Specifies the total number of columns in the grid. |
+| `aria-selected` | Indicates the selection state of rows or cells. |
+| `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped grids. |
+| `aria-sort` | Indicates sorting order (ascending or descending) for columns. |
+| `aria-busy` | Signals that the grid is being updated, deferring assistive technology announcements. |
+| `aria-owns` | Defines relationships between elements for visual or functional context. |
+| `aria-hidden` | Hides elements from assistive technologies. |
+| `aria-labelledby` | Provides accessible names for elements like checkboxes in filters or dialogs. |
+| `aria-describedby` | Describes features enabled in a header cell when it receives focus. |
+
+The Grid uses a two-table structure for header and content. ARIA roles and attributes are applied to parent and child elements to enhance screen reader support. This structure may trigger warnings in automated accessibility tools, but it does not affect how screen readers interpret the content.
+
+Accessibility checker tools may report the following known issues:
+
+* **aria-required-children:** Appears when rendering the Grid without certain features or when toolbar and grouping are enabled. Ensure required child roles are present and suppress false positives if the structure is intentional.
+* **color-contrast:** Can occur when the search item is enabled in the toolbar. Adjust theme variables or apply custom CSS to meet WCAG 2.2 AA contrast requirements.
+* **Invalid explicit ARIA roles on <tr>, <th>, <td>:** These warnings result from applying roles like row, columnheader, and gridcell to support assistive technologies. Confirm that navigation remains functional and document exceptions for audits.
+* **Role inheritance conflicts (role="button" with rowgroup descendants):** May appear when toolbar cells contain buttons. Maintain DOM hierarchy and verify focus order manually.
+* **Content not within a landmark element:** Add page-level landmarks (<header>, <main>, <nav>) to scope interactive regions.
+* **Multiple elements with role="search" lacking unique labels:** Assign unique aria-label or aria-labelledby attributes to each search region.
+* **Text contrast 4.10:** Improve contrast ratio to at least 4.5:1 using CSS for standard text.
+*** Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main Grid container.
+* **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid".
+
+To improve accessibility, apply page landmarks, assign unique labels to search regions, and verify that color contrast meets WCAG 2.2 AA standards. When customizing styles, maintain visible focus indicators and a logical focus order.
+
+## Keyboard interaction
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidance, supporting efficient navigation for users relying on keyboard input or assistive technologies. The supported keyboard shortcuts are listed below.
+=======
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to meet accessibility requirements. The following ARIA roles and attributes are used in the Grid:
 
 | Attributes          | Purpose                                                                                                                       |
@@ -87,6 +146,7 @@ To address these, ensure appropriate landmarks (for example, header, main, nav) 
 ## Keyboard interaction
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows the [ARIA grid keyboard interaction guidance](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction), enabling efficient navigation for users of assistive technologies and those relying on keyboard input. The following keyboard shortcuts are supported by the Grid.
+>>>>>>> 39e5f0bbcd45c94c50848d0fddc8e46bd8345a84
 
 <b>Pager</b>
 
@@ -192,6 +252,18 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows the
 | <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Reorder the focused header column to the left or right. |
 <br>
 
+<<<<<<< HEAD
+> On Mac devices, the <kbd>Command</kbd> and <kbd>Control</kbd> keys can be interchanged based on system settings. When this switch is active, use the <kbd>Command</kbd> key in place of <kbd>Control</kbd>, and <kbd>Control</kbd> in place of <kbd>Command</kbd> for keyboard interactions.
+For example:
+
+- To group columns when a header is focused, use <kbd>Command + Space</kbd>.
+- To expand visible groups, use <kbd>Ctrl + Down Arrow</kbd>.
+
+## Ensuring accessibility
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
+Accessibility compliance can be evaluated using the interactive [sample](https://blazor.syncfusion.com/accessibility/datagrid), which demonstrates the Grid's behavior with accessibility tools and validation steps.
+=======
 > The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key and the <kbd>Control</kbd> key in place of the <kbd>Command</kbd> key for the above key interactions. For example, after switching the keys, to group columns when a header is focused, use <kbd>Command + Space</kbd>, and to expand visible groups use <kbd>Ctrl + Down Arrow</kbd>.
 
 ## Ensuring accessibility
@@ -199,6 +271,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid follows the
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid’s accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Grid is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datagrid) in a new window to evaluate the Grid with accessibility tools.
+>>>>>>> 39e5f0bbcd45c94c50848d0fddc8e46bd8345a84
 
 ## See also
 
