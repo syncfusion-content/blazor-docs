@@ -9,7 +9,7 @@ documentation: ug
 
 # Reversible Slider in Blazor Range Slider Component
 
-You can create a Range Slider rendered with values in reverse order by setting the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) property to the maximum value and the [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) property to the minimum value. An example of how to achieve a Reversible Slider is shown below
+Create a reversible slider (values displayed in descending order) by setting the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) property to the maximum value and the [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) property to the minimum value. The example below renders a vertical range slider that counts down from 100 to 0.ow
 
 ```cshtml
 @using System.Globalization;
@@ -40,4 +40,4 @@ You can create a Range Slider rendered with values in reverse order by setting t
 
 ![Blazor Reversible Slider](./../images/blazor-reversible-slider.gif)
 
-N> Reversible order can be achieved with horizontal orientation Slider by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_EnableRtl) as true.
+N> For a horizontal slider, a reversed visual order can be achieved by enabling right-to-left layout with [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_EnableRtl) set to `true`. 

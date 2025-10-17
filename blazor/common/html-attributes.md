@@ -1,17 +1,17 @@
 ---
 layout: post
-title: HTML Attributes in Blazor - Syncfusion
-description: Check out the documentation for HTML Attributes and supported Blazor components with equivalent properties
+title: HTML attributes and DOM events in Blazor - Syncfusion
+description: Learn how to use standard HTML attributes and DOM events with Syncfusion Blazor components on input and root elements, and see equivalent component APIs.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Default HTML Attributes and DOM Events
+# Default HTML attributes and DOM events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) for component implementation and customization. Apart from this public API, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) in the root element of its component.
 
-## Using HTML attributes and DOM events in the input element
+## Use HTML attributes and DOM events on input elements
 
 The following is a list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
@@ -30,7 +30,7 @@ The following is a list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 * [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
 * [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started)
 
-### Available Syncfusion<sup style="font-size:70%">&reg;</sup> properties equivalent to HTML attributes
+### Syncfusion<sup style="font-size:70%">&reg;</sup> properties equivalent to HTML attributes
 
 The following table illustrates the HTML attributes and their equivalent Syncfusion<sup style="font-size:70%">&reg;</sup> API.
 
@@ -101,7 +101,7 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefminlength">min</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefminlength">min</a></td>
 <td>Min</td>
 <td>
 <ul>
@@ -180,7 +180,7 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 </table>
 <!-- markdownlint-enable MD033 -->
 
-N> If you specify both HTML attribute and Syncfusion<sup style="font-size:70%">&reg;</sup> API in the component, then the Syncfusion<sup style="font-size:70%">&reg;</sup> API will get higher priority and will be applied to the DOM element.
+N> If both an HTML attribute and a Syncfusion<sup style="font-size:70%">&reg;</sup> API are specified, the Syncfusion API takes precedence and is applied to the DOM element.
 
 ```cshtml
 <SfTextBox ID="textbox" name="first-name" title="First name." minlength="15" Autocomplete="AutoComplete.Off"></SfTextBox>
@@ -194,7 +194,7 @@ The textbox will be rendered with the following output.
 </span>
 ```
 
-In some cases, you may need to add HTML attributes to the root/container element of the above input-based components. For this, you can use [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) Syncfusion<sup style="font-size:70%">&reg;</sup> API to add HTML attributes to the root/container element.
+In some cases, HTML attributes must be added to the root/container element instead of the input. Use the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) API to set attributes on the root/container element.
 
 ```cshtml
 <SfTextBox HtmlAttributes="@(new() { { "style", "background:aliceblue;" } })"></SfTextBox>
@@ -210,7 +210,7 @@ The textbox will be rendered with the following output.
 
 ### Input DOM events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI component supports binding the native [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) on the input element.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support binding native [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) on input elements.
 
 ```cshtml
 <div class="form-group">
@@ -237,7 +237,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI component support
 }
 ```
 
-## Using HTML attributes and DOM events in the root element
+## Use HTML attributes and DOM events on the root element
 
 The HTML attributes and DOM events can be applied directly to the component's root element.
 

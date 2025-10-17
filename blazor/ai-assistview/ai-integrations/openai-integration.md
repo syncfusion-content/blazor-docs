@@ -1,72 +1,91 @@
 ---
 layout: post
-title:  Open AI Integration with Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Open AI integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Open AI With Blazor AI AssistView component
+# Integrate Azure OpenAI with Blazor AI AssistView component
 
-The Syncfusion  AI AssistView supports integration with [OpenAI](https://platform.openai.com/docs/overview), enabling advanced conversational AI features in your applications.
+The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
-* OpenAI account to generate an API key for accessing the `OpenAI` API
-* Syncfusion AI AssistView for Blazor `Syncfusion.Blazor.InteractiveChat` installed in your project. 
+Before starting, ensure you have the following:
 
-## Getting Started with the AI AssistView Component
+* **An Azure account**: with access to [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
 
-Before integrating Open AI, ensure that the Syncfusion AI AssistView is correctly rendered in your application:
+* **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-[ Blazor Getting Started Guide](../getting-started)
+* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
+
+## Set Up the AI AssistView Component
+
+Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
-Install the Syncfusion Blazor package in the application.
+Install the required packages:
+
+* Install the `OpenAI` and `Azure` nuget packages in the application.
 
 ```bash
 
-Install-Package Syncfusion.Blazor.InteractiveChat
+NuGet\Install-Package OpenAI
+NuGet\Install-Package Azure.AI.OpenAI
+NuGet\Install-Package Azure.Core
 
 ```
 
-Install the Open AI AI package in the application.
+* Install the `Markdig` nuget packages in the application.
 
 ```bash
 
-Install-Package OpenAI
+Nuget\Install-Package Markdig
 
 ```
 
-## Generate API Key
+Note: The sample below uses HttpClient directly and does not require the Azure/OpenAI SDKs.
 
-1. Go to [Open AI](https://platform.openai.com/docs/overview) and sign in with your Google account. If you don’t have one, create a new account. 
+## Configure Azure OpenAI
 
-2. Once logged in, click on your profile icon in the top-right corner and select `API Keys` from the dropdown menu.  
+1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure OpenAI resource.
 
-3. Click the `+ Create new secret key` button. You’ll be prompted to name the key (optional). Confirm to generate the key. 
+2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL. 
 
-4. Your API key will be displayed once. Copy it and store it securely, as it won’t be shown again.
+3. Note the following values:
+   - API key
+   - Endpoint
+   - API version (must be supported by your resource)
+   - Deployment name (for example, gpt-4o-mini)
 
-> `Security Note`: Never commit the API key to version control. Use environment variables or a secret manager for production.
+4. Store these values securely, as they will be used in your application.
 
-##  Integration Open AI with AI AssistView
+> `Security Note`: expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-* Add your generated `API Key` at the line 
+## Azure OpenAI with AI AssistView
 
-```bash
+- Configure your Azure OpenAI endpoint, API key, and deployment name in your **Program.cs** (or using your preferred configuration mechanism).
 
-const string openaiApiKey  = 'Place your API key here';
+- Register the service for dependency injection.
 
-```
+- Inject and use the service in your Razor component.
+
+Modify the razor file to integrate the Azure OpenAI with the AI AssistView component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight c# tabtitle="razor" %}
 
-<div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">
+@using AIAssistView_AzureAI.Components.Services
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Navigations
+@inject AzureOpenAIService OpenAIService
+
+// Initialize AI AssistView component
+<div class="aiassist-container" style="height: 450px; width: 650px;">
+    <SfAIAssistView @ref="assistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest">
         <AssistViews>
             <AssistView>
                 <BannerTemplate>
@@ -86,47 +105,152 @@ const string openaiApiKey  = 'Place your API key here';
 </div>
 
 @code {
-    private SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    private SfAIAssistView assistView;
+    private string finalResponse { get; set; }
     private List<string> promptSuggestions = new List<string>
     {
         "What are the best tools for organizing my tasks?",
         "How can I maintain work-life balance effectively?"
     };
-    private string openaiApiKey = "";
-    private async Task OnPromptRequest(AssistViewPromptRequestedEventArgs args)
+    
+    // Handle user prompt: call Azure OpenAI Chat Completions
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
+        // Reset the response for this prompt
+        var lastIdx = assistView.Prompts.Count - 1;
+        assistView.Prompts[lastIdx].Response = string.Empty;
+        finalResponse = string.Empty;
         try
         {
-            var openAiClient = new OpenAIClient(openaiApiKey);
-            var chatClient = openAiClient.GetChatClient("gpt-4o-mini");
+            await foreach (var chunk in OpenAIService.GetChatResponseStreamAsync(args.Prompt))
+            {
+                await UpdateResponse(args, chunk);
+            }
 
-            OpenAI.Chat.ChatCompletion completion = await chatClient.CompleteChatAsync(args.Prompt);
-            string responseText = completion.Content[0].Text;
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
-            // Add the response to the AIAssistView
-            await Task.Delay(1000); // Simulate delay as in original code
-            args.Response = Markdown.ToHtml(responseText, pipeline);
+            args.Response = finalResponse;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error fetching Open AI response: {ex.Message}");
-            await Task.Delay(1000);
-            args.Response = "⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.";
+            args.Response = $"Error: {ex.Message}";
         }
+    }
+
+    private async Task UpdateResponse(AssistViewPromptRequestedEventArgs args, string response)
+    {
+        var lastIdx = assistView.Prompts.Count - 1;
+        await Task.Delay(10); // Small delay for UI updates
+        assistView.Prompts[lastIdx].Response += response.Replace("\n", "<br>");
+        finalResponse = assistView.Prompts[lastIdx].Response;
+        StateHasChanged();
     }
 
     private void ToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
     {
-        sfAIAssistView.Prompts.Clear();
+        assistView.Prompts.Clear();
         StateHasChanged();
     }
 }
 
 {% endhighlight %}
+{% highlight c# tabtitle="cs" %}
+
+using System.Text.Json;
+using Markdig;
+using System.Text.RegularExpressions;
+
+namespace AIAssistView_AzureAI.Components.Services
+{
+    public class AzureOpenAIService
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _endpoint;
+        private readonly string _apiKey;
+        private readonly string _deploymentName;
+
+        public AzureOpenAIService(HttpClient httpClient, string endpoint, string apiKey, string deploymentName)
+        {
+            _httpClient = httpClient;
+            _endpoint = endpoint;
+            _apiKey = apiKey;
+            _deploymentName = deploymentName;
+        }
+        
+        public async IAsyncEnumerable<string> GetChatResponseStreamAsync(string prompt)
+        {
+            var request = new
+            {
+                messages = new[] { new { role = "user", content = prompt } },
+                max_tokens = 500,
+            };
+
+            var url = $"{_endpoint}/openai/deployments/{_deploymentName}/chat/completions?api-version=2024-02-15-preview";
+            _httpClient.DefaultRequestHeaders.Add("api-key", _apiKey);
+
+            Stream responseStream = null;
+            List<string> results = new List<string>();
+
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync(url, request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    responseStream = await response.Content.ReadAsStreamAsync();
+                    using var jsonDocument = JsonDocument.Parse(responseStream);
+                    var choices = jsonDocument.RootElement.GetProperty("choices");
+                    if (choices.GetArrayLength() > 0)
+                    {
+                        var content = choices[0].GetProperty("message").GetProperty("content").GetString();
+                        var htmlContent = Markdown.ToHtml(content);
+                        htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
+                        // Collect each character to the results list before yielding
+                        foreach (var chunk in htmlContent)
+                        {
+                            results.Add(chunk.ToString());
+                        }
+                    }
+                    else
+                    {
+                        results.Add("Error: No choices returned in the response.");
+                    }
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    results.Add($"Error: {error}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Collect the error message to be yielded later
+                results.Add($"Error: {ex.Message}");
+            }
+            finally
+            {
+                if (responseStream != null)
+                {
+                    responseStream.Dispose();
+                }
+            }
+
+            // Now yield each collected result
+            foreach (var result in results)
+            {
+                yield return result;
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" %}
+
+// Initialize Azure OpenAI
+var endpoint = "https://azure-testresource.openai.azure.com";
+var apiKey = "<Your API Key>"; // Replace with your API key;
+var deploymentName = "gpt-4o-mini";
+
+{% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Open AI Integration](./images/openai-integration.png)
+![Blazor AI AssistView Azure OpenAI Integration](../images/openai-integration.png)
