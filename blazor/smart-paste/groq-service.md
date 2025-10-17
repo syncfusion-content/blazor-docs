@@ -28,7 +28,9 @@ Create a service class to manage interactions with the Groq API, including authe
 2. Add a new file named `GroqService.cs` in the `Services` folder.
 3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json` or environment variables).
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GroqService.cs" %}
+
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -91,7 +93,9 @@ public class GroqService
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Store the Groq API key in `appsettings.json` (e.g., `{ "Groq": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
@@ -102,7 +106,9 @@ Define C# classes to match the Groq API’s request and response format.
 1. Create a new file named `GroqModels.cs` in the `Services` folder.
 2. Add the following model classes:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GroqModels.cs" %}
+
 public class Choice
 {
     public Message Message { get; set; }
@@ -126,7 +132,9 @@ public class GroqResponseObject
     public string Model { get; set; }
     public List<Choice> Choices { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a Custom AI Service
 
@@ -135,7 +143,9 @@ Implement the `IChatInferenceService` interface to connect the Smart Paste Butto
 1. Create a new file named `GroqInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GroqInferenceService.cs" %}
+
 using Syncfusion.Blazor.AI;
 using System.Threading.Tasks;
 
@@ -153,7 +163,9 @@ public class GroqInferenceService : IChatInferenceService
         return await _groqService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure the Blazor App
 
@@ -161,7 +173,9 @@ Register the Groq service and `IChatInferenceService` implementation in the depe
 
 Update the **~/Program.cs** file as follows:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10 11" %}
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
@@ -178,13 +192,17 @@ builder.Services.AddSingleton<IChatInferenceService, GroqInferenceService>();
 
 var app = builder.Build();
 // ...
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add the Smart Paste Button
 
 Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test the Groq AI integration.
 
-```razor
+{% tabs %}
+{% highlight c# tabtitle="~/Pages/Home.razor" %}
+
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.SmartComponents
 @using System.ComponentModel.DataAnnotations
@@ -232,7 +250,9 @@ Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test 
         public string Address { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) package is installed for form integration.
 
