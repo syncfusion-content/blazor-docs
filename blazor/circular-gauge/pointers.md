@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pointers in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Pointers in Syncfusion Blazor Circular Gauge component and much more.
+description: Check out and learn how to configure and customize Pointers in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -9,33 +9,35 @@ documentation: ug
 
 # Pointers in Blazor Circular Gauge Component
 
-Pointers are used to indicate values on an axis. The value of a pointer can be modified using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property.
+Pointers indicate values on an axis. The value of a pointer is set using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
-                <CircularGaugePointer Value="90">
-                </CircularGaugePointer>
+                <CircularGaugePointer Value="90" />
             </CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrqshBwUVzsUfys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Pointer](./images/blazor-circulargauge-with-pointer.png)
 
-The Circular Gauge supports three types of pointers such as [Needle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_Needle), [RangeBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_RangeBar), and [Marker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_Marker). You can choose any pointer using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Type) property.
+The Circular Gauge supports three pointer types: [Needle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_Needle), [RangeBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_RangeBar), and [Marker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.PointerType.html#Syncfusion_Blazor_CircularGauge_PointerType_Marker). Select a type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Type) property.
 
 ## Needle pointer
 
-The circular gauge's default pointer type will be needle. A needle point contains three parts, a needle, a cap/knob, and a tail.
+The default pointer type is Needle. A needle pointer includes a needle, a cap/knob, and a tail.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -48,6 +50,7 @@ The circular gauge's default pointer type will be needle. A needle point contain
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgCVhcghfqMkfw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -55,23 +58,24 @@ The circular gauge's default pointer type will be needle. A needle point contain
 
 ### Customization
 
-The needle, tail and cap of the pointer can be customized with the following properties.
+The needle, tail, and cap of the pointer can be customized using the following properties.
 
-* [CircularGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html) - Customize the pointer's needle.
-    * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - sets the needle length.
-    * [PointerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_PointerWidth) - sets the needle width.
-    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) - sets the needle color.
-* [CircularGaugeNeedleTail](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html) -  Customize the pointer's tail.
-    * [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Length) - sets pointer's tail length.
-    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Color) - sets pointer's tail color.
-    * [CircularGaugeNeedleTailBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Border) -  Sets pointer's tail border.
-* [CircularGaugeCap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html) -  Customize the pointer's cap.
-    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Color) - sets pointer's cap color.
-    * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Radius) - sets pointer's cap radius.
-    * [CircularGaugeCapBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Border) - sets pointer's cap border.
-    * [Position`] - specifies the position of the Pointer. Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
+* [CircularGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html) – Customize the pointer's needle.
+    * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) – Sets the needle length.
+    * [PointerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_PointerWidth) – Sets the needle width.
+    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) – Sets the needle color.
+* [CircularGaugeNeedleTail](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html) – Customize the pointer's tail.
+    * [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Length) – Sets pointer's tail length.
+    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Color) – Sets pointer's tail color.
+    * [CircularGaugeNeedleTailBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeNeedleTail.html#Syncfusion_Blazor_CircularGauge_CircularGaugeNeedleTail_Border) – Sets pointer's tail border.
+* [CircularGaugeCap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html) – Customize the pointer's cap.
+    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Color) – Sets pointer's cap color.
+    * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Radius) – Sets pointer's cap radius.
+    * [CircularGaugeCapBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Border) – sets pointer's cap border.
+    * [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Position) – Specifies the position of the Pointer. Its possible values are `PointerRangePosition.Inside`, `PointerRangePosition.Outside` and `PointerRangePosition.Cross`.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Height="250px" Width="250px">
@@ -97,6 +101,7 @@ The needle, tail and cap of the pointer can be customized with the following pro
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBAMVBcgVpSKNFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -104,9 +109,10 @@ The needle, tail and cap of the pointer can be customized with the following pro
 
 <!-- markdownlint-disable MD010 -->
 
-The appearance of the needle pointer can be customized by using [NeedleStartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleStartWidth) and [NeedleEndWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleEndWidth).
+The appearance of the needle pointer can be modified using [NeedleStartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleStartWidth) and [NeedleEndWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleEndWidth) properties.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -145,20 +151,23 @@ The appearance of the needle pointer can be customized by using [NeedleStartWidt
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 <style type="text/css">
     .custom-annotation {
         color: #757575;
         font-family:Roboto; font-size:14px;padding-top: 26px;
     }
 </style>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBKMrrwqBTQnLVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Range bar pointer
 
-The range bar pointer is like a range in an axis that can be placed on gauge to mark the pointer value. The range bar starts from the beginning of the gauge and ends at the pointer value. You can set the pointer type using `Type` property in `CircularGaugePointer`.
+The range bar pointer functions like a range on an axis and marks the pointer value. The range bar starts at the beginning of the gauge and ends at the pointer value. Set the pointer type using the `Type` property in `CircularGaugePointer`.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -172,6 +181,7 @@ The range bar pointer is like a range in an axis that can be placed on gauge to 
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVgWLLQqLfubBRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -179,15 +189,16 @@ The range bar pointer is like a range in an axis that can be placed on gauge to 
 
 ### Customization
 
-You can customize the range bar using the following properties.
+Customize the range bar using the following properties.
 
-* [PointerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_PointerWidth) - Specifies the width of the range bar. 
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) - Specifies the color of the range bar.
-* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - Specifies the range bar radius
-* [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_RoundedCornerRadius) - Specifies the rounded corner of the range bar.
-* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - Specifies the border of the range bar.
+* [PointerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_PointerWidth) – Specifies the width of the range bar.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) – Specifies the color of the range bar.
+* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) – Specifies the range bar radius.
+* [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_RoundedCornerRadius) – Specifies the rounded corners of the range bar.
+* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) – Specifies the border of the range bar.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -207,6 +218,7 @@ You can customize the range bar using the following properties.
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUMhrwKBosYIXk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -214,9 +226,10 @@ You can customize the range bar using the following properties.
 
 ### Rounded corners
 
-The start and end pointers of a range bar in the Circular Gauge are rounded to form arc using the `RoundedCornerRadius` property.
+The start and end of a range bar can be rounded to form an arc using the `RoundedCornerRadius` property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -231,6 +244,7 @@ The start and end pointers of a range bar in the Circular Gauge are rounded to f
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgsrVGUhIpRJzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -238,7 +252,7 @@ The start and end pointers of a range bar in the Circular Gauge are rounded to f
 
 ## Marker pointer
 
-The different types of marker shapes can be used to mark the pointer value in an axis. You can change the marker shape using the [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) property in pointer. The Circular Gauge supports the following marker shapes:
+Marker shapes can be used to indicate the pointer value on an axis. Change the marker shape using the [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) property in the pointer. The Circular Gauge supports the following marker shapes:
 
 * Circle
 * Rectangle
@@ -247,6 +261,7 @@ The different types of marker shapes can be used to mark the pointer value in an
 * Diamond
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -263,6 +278,7 @@ The different types of marker shapes can be used to mark the pointer value in an
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBAshVGghyGCzzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -270,15 +286,16 @@ The different types of marker shapes can be used to mark the pointer value in an
 
 ### Customization
 
-You can customize the marker pointer using the following properties.
+Customize the marker pointer using the following properties.
 
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) - specifies marker pointer color.
-* [MarkerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerWidth)  - specifies marker pointer width.
-* [MarkerHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerHeight) - specifies marker pointer height.
-* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - specifies marker pointer radius.
-* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - specifies marker pointer's border color and width.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) – Specifies the marker color.
+* [MarkerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerWidth) – Specifies the marker width.
+* [MarkerHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerHeight) – Specifies the marker height.
+* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) – Specifies the marker radius.
+* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) – Specifies the marker border color and width.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -298,6 +315,7 @@ You can customize the marker pointer using the following properties.
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgCVhQUhRjXeXh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -305,9 +323,10 @@ You can customize the marker pointer using the following properties.
 
 ### Image marker pointer
 
-You can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) to 'GaugeShape.Image' and assigning image path to [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl) as shown in following example.
+An image can be used instead of a marker shape to denote the pointer value. This is achieved by setting [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) property to `GaugeShape.Image` and providing the image path using [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl).
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -326,6 +345,7 @@ You can use image instead of rendering marker shape to denote the pointer value.
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 
 ![Blazor Circular Gauge with Image Pointer](./images/blazor-circulargauge-pointer-with-image.png)
@@ -334,9 +354,10 @@ You can use image instead of rendering marker shape to denote the pointer value.
 
 ## Dragging pointer
 
-The pointers can be dragged over the axis values by clicking and dragging the same. To enable or disable the pointer drag, use the [EnablePointerDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
+Pointers can be dragged along the axis. Use the [EnablePointerDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property to enable or disable dragging.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true" Height="250px" Width="250px">
@@ -349,6 +370,7 @@ The pointers can be dragged over the axis values by clicking and dragging the sa
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthgCLBcqhdAvjZX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -356,9 +378,10 @@ The pointers can be dragged over the axis values by clicking and dragging the sa
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis using the [CircularGaugePointers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html) tag.
+Multiple pointers can be added to an axis using the [CircularGaugePointers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html) tag.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -391,6 +414,7 @@ In addition to the default pointer, you can add n number of pointers to an axis 
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgMBrGKBnvQyWB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -398,9 +422,10 @@ In addition to the default pointer, you can add n number of pointers to an axis 
 
 ## Pointer animation
 
-The pointers are animated on loading the gauge using the [CircularGaugePointerAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html) tag in pointer. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Enable) property in animation allows you to enable or disable the animation. The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Duration) property specifies the duration of the animation in milliseconds.
+Pointers can animate on load using the [CircularGaugePointerAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html) tag in the pointer. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Enable) property enables or disables the animation. The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Duration) property specifies the animation duration in milliseconds.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Height="250px" Width="250px">
@@ -415,6 +440,7 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVoNkWwhpogscSG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -422,18 +448,19 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
 
 ## Gradient color
 
-Gradient support allows to add multiple colors in the ranges and pointers of the circular gauge. The following gradient types are supported in the circular gauge.
+Gradient support allows multiple colors to be applied to the ranges and pointers of the Circular Gauge. The following gradient types are supported:
 
 * Linear Gradient
 * Radial Gradient
 
 ### Linear gradient
 
-Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property. The end value of the linear gradient will be set using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
+With a linear gradient, colors are applied in a linear progression. The start value is set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property, and the end value using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. Color stop values such as color, opacity, and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
 
-The linear gradient can be applied to all pointer types like marker, range bar, and needle. To do so, follow the below code sample.
+The linear gradient can be applied to all pointer types, including marker, range bar, and needle. The following example demonstrates this.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -490,16 +517,18 @@ The linear gradient can be applied to all pointer types like marker, range bar, 
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKMVVGKhQgPmGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Radial gradient
 
-Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property. The outer circle position of the radial gradient can be set using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
+With a radial gradient, colors are applied in a circular progression. The inner circle position is set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property, and the outer circle position using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. Color stop values such as color, opacity, and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
 
-The radial gradient can be applied to all pointer types like marker, range bar, and needle. To do so, follow the below code sample.
+The radial gradient can be applied to all pointer types, including marker, range bar, and needle. The following example demonstrates this.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -564,6 +593,7 @@ The radial gradient can be applied to all pointer types like marker, range bar, 
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhAWhLmghQyveia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

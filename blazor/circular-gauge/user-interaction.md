@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interaction in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about User Interaction in Syncfusion Blazor Circular Gauge component and more.
+description: Check out and learn how to enable and customize User Interaction in the Syncfusion Blazor Circular Gauge component.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -11,28 +11,29 @@ documentation: ug
 
 ## Tooltip for pointers
 
-The Circular Gauge displays the pointer details through [CircularGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html), when the mouse is hovered over a pointer.
+The Circular Gauge displays pointer details through [CircularGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html) when hovering over a pointer.
 
 ### Formatting the tooltip
 
-By default, the tooltip is not visible. You can enable the tooltip by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Enable) property to true. You can use following properties to customize the tooltip.
+By default, the tooltip is not visible. Enable it by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Enable) property to true. The following properties customize the tooltip:
 
 * [CircularGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html)
-    * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Fill) -  Specifies fill color for tooltip
-    * [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_EnableAnimation) - To enable or disable animation
-    * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Format) - To customize the tooltip content
+    * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Fill) - Specifies the tooltip fill color.
+    * [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_EnableAnimation) - Enables or disables tooltip animation.
+    * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Format) - Customizes the tooltip content.
 * [CircularGaugeTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipBorder.html)
-    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) - Specifies tooltip border color
-    * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) - Specifies tooltip border width
+    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipBorder.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipBorder_Color) - Specifies the tooltip border color.
+    * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipBorder.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipBorder_Width) - Specifies the tooltip border width.
 * [CircularGaugeTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html)
-    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) - Specifies tooltip text color
-    * [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) - Specifies font style for tooltip text
-    * [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies font weight for tooltip text
-    * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) - Specifies font family for tooltip
-    * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) -  Specifies opacity for tooltip text
-    * [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size) - Specifies size for tooltip text
+    * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_Color) - Specifies the tooltip text color.
+    * [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_FontStyle) - Specifies the font style for tooltip text.
+    * [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_FontWeight) - Specifies the font weight for tooltip text.
+    * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_FontFamily) - Specifies the font family for tooltip text.
+    * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_Opacity) - Specifies the opacity of the tooltip text.
+    * [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipTextStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipTextStyle_Size) - Specifies the font size for tooltip text.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -58,6 +59,7 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqsLVwAKXazbSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -65,9 +67,10 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
 
 ### Showing tooltip at mouse position
 
-By default tooltip will be shown on the axis, you can show the tooltip at the cursor position using [ShowAtMousePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_ShowAtMousePosition) property.
+By default, the tooltip appears near the axis. To position the tooltip at the cursor, set the [ShowAtMousePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_ShowAtMousePosition) property to true.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -82,6 +85,7 @@ By default tooltip will be shown on the axis, you can show the tooltip at the cu
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqMhVcKqCWBJms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -89,38 +93,39 @@ By default tooltip will be shown on the axis, you can show the tooltip at the cu
 
 ## Tooltip for ranges
 
-Circular gauge displays the information about the ranges through tooltip when hovering the mouse over the ranges. You can enable this feature by setting the type property of tooltip to ‘Range’ in the array collection.
+The Circular Gauge displays information about ranges through tooltips when hovering over a range. Enable this by setting the tooltip `Type` to `Range` in the array collection.
 
 ### Tooltip customization for ranges
 
-To customize the range tooltip, use the `CircularGaugeRangeTooltipSettings` property in tooltip. The following options are available to customize the range tooltip:
+To customize the range tooltip, use the `CircularGaugeRangeTooltipSettings` within the tooltip. The following options are available:
 
 * `Fill` - Specifies the range tooltip fill color.
 * `CircularGaugeRangeTooltipTextStyle` - Specifies the range tooltip text style.
-* `Format` - Specifies the range content format.
-* `Template` - Specifies the custom template for tooltip.
-* `EnableAnimation` - Animates as it moves from one point to another.
+* `Format` - Specifies the range tooltip content format.
+* `Template` - Specifies a custom template for the tooltip.
+* `EnableAnimation` - Animates the tooltip transition.
 * `CircularGaugeRangeTooltipBorder` - Specifies the tooltip border.
-* `showMouseAtPosition` - Displays the position of the tooltip on the cursor position.
+* `ShowAtMousePosition` - Displays the tooltip at the cursor position.
 
 ## Tooltip for annotations
 
-Circular gauge displays the information about the annotations through tooltip when hovering the mouse over the annotation. You can enable this feature by setting the `Type` property of tooltip to ‘Annotation’ in the array collection.
+The Circular Gauge displays information about annotations through tooltips when hovering over an annotation. Enable this by setting the tooltip `Type` to `Annotation` in the array collection.
 
 ### Tooltip customization for annotations
 
-To customize the annotation tooltip, use the `CircularGaugeAnnotationTooltipSettings` property in tooltip. The following options are available to customize the annotation tooltip:
+To customize the annotation tooltip, use the `CircularGaugeAnnotationTooltipSettings` within the tooltip. The following options are available:
 
 * `Fill` - Specifies the annotation tooltip fill color.
 * `CircularGaugeAnnotationTooltipTextStyle` - Specifies the annotation tooltip text style.
-* `Format` - Specifies the annotation content format.
-* `Template` - Specifies the tooltip content with custom template.
-* `EnableAnimation` - Animates as it moves from one point to another.
+* `Format` - Specifies the annotation tooltip content format.
+* `Template` - Specifies a custom template for the tooltip content.
+* `EnableAnimation` - Animates the tooltip transition.
 * `CircularGaugeAnnotationTooltipBorder` - Specifies the tooltip border.
 
 The following code example shows the tooltip for the pointers, ranges, and annotations.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true">
@@ -167,9 +172,11 @@ The following code example shows the tooltip for the pointers, ranges, and annot
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 @code {
-public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
+    public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 }
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVAiBrwUAiKegWH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -177,13 +184,14 @@ public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 
 ## Dragging pointer
 
-The pointers can be dragged over the axis values by clicking and dragging the pointer. To enable or disable the pointer drag, use the [EnablePointerDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
+Pointers can be dragged across axis values by clicking and dragging the pointer. To enable or disable pointer drag, use the [EnablePointerDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true">
-    <CircularGaugeAxes >
+    <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
                 <CircularGaugePointer Value="50">
@@ -192,6 +200,7 @@ The pointers can be dragged over the axis values by clicking and dragging the po
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBAirVGgqWoeGGU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -199,9 +208,10 @@ The pointers can be dragged over the axis values by clicking and dragging the po
 
 ## Dragging range
 
-The ranges can be dragged over the axis values by clicking and dragging the range. To enable or disable the range drag, use the `EnableRangeDrag` property.
+Ranges can be dragged across axis values by clicking and dragging the range. To enable or disable range drag, use the `EnableRangeDrag` property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnableRangeDrag="true">
@@ -218,6 +228,7 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUihrmgKWmfaRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
