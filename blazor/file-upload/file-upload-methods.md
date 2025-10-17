@@ -1,13 +1,13 @@
 ---
 layout: post
 title: File Upload Methods in Blazor File Upload Component | Syncfusion
-description: Learn about the various file upload methods in Syncfusion Blazor File Upload component, including GetFileDetails, GetFilesDataAsync, SortFileListAsync, UploadAsync, CancelAsync, ClearAllAsync, and RemoveAsync.
+description: Learn about file upload methods in Syncfusion Blazor, including GetFileDetails, UploadAsync, CancelAsync, and ClearAllAsync.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File Upload Methods
+# File Upload Methods in Syncfusion Blazor Uploader
 
 This section details the various methods available to interact with and manage the Syncfusion Blazor File Upload component programmatically.
 
@@ -163,7 +163,7 @@ The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 }
 ```
 
-> **Note:** When cancelling a specific file's upload, you typically need to pass an identifier (like a fileInfo[]) to the [`CancelAsync`](https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5) method. Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the `Uploader` component.
+> **Note:** When cancel a specific file's upload, you typically need to pass an identifier (like a fileInfo[]) to the [CancelAsync method](https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5). Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the `Uploader` component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
