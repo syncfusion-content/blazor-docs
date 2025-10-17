@@ -341,7 +341,7 @@ Select multiple rows in the Gantt Chart component by using the [SelectRowsAsync]
 To access selected row details in the Blazor Gantt Chart component:
 
 - [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRowIndexesAsync) – Returns an array of index positions of the selected rows.
-- [GetSelectedRecordsAsyn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRecordsAsync) – Returns an array of data objects corresponding to the selected rows.
+- [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRecordsAsync) – Returns an array of data objects corresponding to the selected rows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
