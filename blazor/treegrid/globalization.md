@@ -3,7 +3,7 @@ layout: post
 title: Globalization in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about Globalization in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
@@ -11,11 +11,11 @@ documentation: ug
 
 ## Localization
 
-[Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Syncfusion [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component supports full Localization. For setup and foundational concepts, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ### Loading translations
 
-The following example demonstrates the Tree Grid in **Deutsch** culture. Here use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
+The following example demonstrates the TreeGrid using the German (de-DE) culture. This example uses the **LoadLocaleData** method to load the **locale.json** file and the **SetCulture** method to apply the culture to the TreeGrid. Ensure that Syncfusion scripts are referenced and that locale.json is available in the app (for example, under wwwroot).
 
 {% tabs %}
 
@@ -148,7 +148,7 @@ public class TreeData
 
 ## Internationalization
 
-The **Internationalization** library is used to globalize number, date, and time values in Tree Grid component using format strings in the **Format**. In the below sample we set the culture and currency using the **SetCulture** and **SetCurrencyCode** methods.
+The **Internationalization** library globalize numeric, date, and time values in the TreeGrid through column **Format** strings. In this example, **SetCulture** and **SetCurrencyCode** are used to apply culture and currency. When formatting dates, numbers, or currency, ensure the required CLDR data (numbers, currencies, calendar) is available to the app and loaded before applying culture.
 
 {% tabs %}
 
@@ -2378,12 +2378,13 @@ public class TreeData
 
 ![Internationalization in Blazor TreeGrid](images/blazor-treegrid-internationalization.png)
 
-N> * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
-<br/> * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
+N>
+- In this example, the **Duration** column formatting is applied through **NumberFormatOptions** via the column Format setting.
+- The default locale is **en-US**. To use a different culture, call **SetCulture** with the desired culture or set the Locale property on SfTreeGrid.
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample **EnableRtl** method is used to enable RTL in the Tree Grid.
+RTL changes the text direction and layout of the TreeGrid component from left to right to right to left. This improves usability and accessibility for right-to-left languages such as Arabic, Farsi, and Urdu. In the following example, the **EnableRtl** method enables RTL in the TreeGrid. Set the component Locale to a right-to-left culture to align UI text with the layout direction.
 
 {% tabs %}
 

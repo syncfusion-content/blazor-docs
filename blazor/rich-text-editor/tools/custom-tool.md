@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Custom tool in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Custom tool in Syncfusion Blazor RichTextEditor component and more.
+title:  How to Add a Custom Tool in Blazor RichTextEditor | Syncfusion
+description: Checkout and learn here all about Custom tool in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Add custom tool to Toolbar
+# How to Add a Custom Toolbar Tool in Blazor Rich Text Editor
 
 The Rich Text Editor allows you to configure your own tools to its toolbar using the [RichTextEditorCustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) tag directive within a [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html). The tools can be plain text, icon, or HTML template. Also, define the order and group where the tool should be included.
 
-This sample shows how to add your tools to the toolbar of the Rich Text Editor. The `Ω` command is added to insert special characters in the editor.
+The following example demonstrates how to add a custom tool to the Rich Text Editor toolbar. In this example, a custom `Ω` symbol tool is added to insert special characters into the editor content.
 
-Refer to the following code sample for the custom tool with the tooltip text, which will be included in the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+Refer to the following code sample to configure a custom toolbar item with tooltip text using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -57,4 +57,4 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor customize toolbar](../images/blazor-richtexteditor-custom-tool.png)
+![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.png)

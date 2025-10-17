@@ -9,29 +9,35 @@ documentation: ug
 
 # User Interactions in Blazor Signature component
 
-The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly. Every changes occurred in signature can be taken as a snap and saved to collection for handling the above user interactions. 
+The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports the following interactions and states:
+- Undo/Redo: Revert the last action or the last undo.
+- Clear: Remove all strokes and reset the canvas.
+- Disabled: Prevent any interaction with the component.
+- Read-only: Prevent editing while keeping the existing signature visible.
+
+Internally, the component snapshots changes to support undo/redo. The helper methods [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync), and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) are used to determine availability of each action.
 
 ## Undo
 
-It reverts the last action of signature using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync) method. It removes the latest snap from the collection and load a previous snap to signature. Here, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method is used to ensure whether undo can be performed or not.
+Revert the most recent stroke or action using [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync). Use `CanUndoAsync` to check whether undo is available before invoking it.
 
 ## Redo
 
-It reverts the last undo action of the signature using the [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync) method. Here, [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method is used to ensure whether redo can be performed or not.
+Reapply the last undone action using [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync). Use `CanRedoAsync` to check whether redo is available.
 
 ## Clear
 
-It clears the signature and makes the canvas empty using the [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync) method. Here, [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method is used to ensure whether the signature is empty or not.
+Clear the canvas using [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync). Use `IsEmptyAsync` to determine if there is anything to clear.
 
 ## Disabled
 
-It disables the signature component using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property.
+Disable user interaction by setting the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property to true.
 
-## ReadOnly
+## Read-only
 
-It prevents the signature from editing using the [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) property.
+Prevent editing while keeping the content visible by setting [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) to true.
 
-The following sample explains about user interactions available in signature.
+The following sample demonstrates these interactions controlled by buttons and checkboxes. The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event is used to update the UI state after each stroke. Note: In the sample code, the button enable/disable logic should reflect the availability checks (for example, set undoBtn.Disabled to !canUndo). Also, consider awaiting async calls where appropriate.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
