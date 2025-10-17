@@ -1,78 +1,78 @@
 ---
 layout: post
-title: Downloading Syncfusion Blazor web installer - Syncfusion
-description: Learn here about the how to download Syncfusion Blazor web installer from our syncfusion website with license.
+title: Download the Syncfusion Blazor web installer - Syncfusion
+description: Learn how to download the Blazor web installer for trial or licensed use from your Syncfusion account, including links to Start trials and License & Downloads.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Downloading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer
+# Download the Syncfusion® Blazor web installer
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer can be downloaded from our [Syncfusion](https://www.syncfusion.com/blazor-components) website. You can either download the licensed installer or try our trial installer depending on your license.
+Download the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer from the [Syncfusion<sup style="font-size:70%">&reg;</sup> website](https://www.syncfusion.com/blazor-components). Download options depend on the account status: trial or licensed.
 
 * Trial Installer
 * Licensed Installer
 
-## Download Free Trial Version
+## Download the free trial version
 
-Our 30-day trial can be downloaded in two ways.
+A 30‑day trial can be downloaded in two ways.
 
 * Download Free Trial Setup
 * Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
-### Download Free Trial Setup
+### Download the free trial setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
 
 2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the Blazor trial installer from the confirmation page. (as shown in below screenshot.)
 
-   ![Trial Confirmation](images/blazor-web-trial.png)
+   ![Trial confirmation page showing the Blazor trial installer download](images/blazor-web-trial.png)
 
-3. After downloading, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer can be unlocked using Syncfusion<sup style="font-size:70%">&reg;</sup> registered login credential.
+3. After downloading, unlock the Blazor web installer by signing in with the registered Syncfusion credentials.
 
 4. Before the trial license expires, you can download the blazor installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
 
-5. Click the Download (element 1 in the screenshot below) button to download the blazor web installer.
+5. Click Download to get the Blazor web installer.
 
-   ![Trial Downlaod Online Installer](images/start-trial-download-installer-1.png)
+   ![Trials & Downloads page with Download button for the Blazor web installer](images/start-trial-download-installer-1.png)
 
-### Start Trials if using components through NuGet.org
+### Start trials if using components through NuGet.org
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+Start an evaluation if components were obtained through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-1. You can start your 30-day free trial for Blazor from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. Start a 30‑day Blazor trial from the [Start trials](https://www.syncfusion.com/account/manage-trials/start-trials) page.
 
-   ![Trial Download](images/start-trial-download.png)
+   ![Start trials page for Blazor](images/start-trial-download.png)
 
 2. To access this page, you must sign up/log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-3. Begin your trial by selecting the Blazor product.
+3. Begin the trial by selecting the Blazor product.
 
-   N> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) to get the latest trial installer. Generate the installer [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial period expires.
 
-   ![Start Trial download](images/start-trial-download-installer.png)
+   ![Trials & Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the Licensed Version
+## Download the licensed version
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+1. Licensed products are available from the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
 2. You can view all the licenses (both active and expired) associated with your account.
 
-3. Click the Download (element 1 in the screenshot below) button to download the blazor web installer.
+3. Click Download to get the Blazor web installer.
 
-   ![License Download Installer](images/blazor-license-download-installer.png)
+   ![License & Downloads page with Download button for the Blazor web installer](images/blazor-license-download-installer.png)
 
 4. Before the license expires, you can download the installer at any time from your registered account’s [License & Downloads](https://www.syncfusion.com/account/downloads) page (See the screenshot below.)
 
-   ![License Download Installer](images/blazor-web-installer-license.png)
+   ![License & Downloads page listing available Blazor installer versions](images/blazor-web-installer-license.png)
 
-5. After downloading, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer can be unlocked using Syncfusion<sup style="font-size:70%">&reg;</sup> registered login credential.
+5. After downloading, unlock the web installer by signing in with registered Syncfusion<sup style="font-size:70%">&reg;</sup> credentials.
 
 N> For Syncfusion<sup style="font-size:70%">&reg;</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup style="font-size:70%">&reg;</sup> trial or licensed products will be installed via web installer.
 
-You can also refer to the [web installer](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)  links for step-by-step installation guidelines.
+For step-by-step installation, see Web installer: https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install
