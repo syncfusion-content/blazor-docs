@@ -139,7 +139,7 @@ The [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CancelAsync_Syncfusion_Blazor_Inputs_FileInfo___) method allows you to programmatically cancel the upload of a specific file or all ongoing uploads within the File Upload component. This is useful for providing users with the ability to stop an upload that is in progress, for example, if they selected the wrong file or decide not to proceed.
 
-**Use Case:** Imagine a scenario where a large file is being uploaded, and the user realizes they picked the incorrect file. Providing a "Cancel" button that triggers [`CancelAsync`](https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5) for that specific file (or all uploads) would enhance the user experience by allowing them to halt the transfer.
+**Use Case:** Imagine a scenario where a large file is being uploaded, and the user realizes they picked the incorrect file. Providing a "Cancel" button that triggers [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CancelAsync_Syncfusion_Blazor_Inputs_FileInfo___) for that specific file (or all uploads) would enhance the user experience by allowing them to halt the transfer.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -163,7 +163,7 @@ The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 }
 ```
 
-> **Note:** When cancel a specific file's upload, you typically need to pass an identifier like a fileInfo[] to the [CancelAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CancelAsync_Syncfusion_Blazor_Inputs_FileInfo___). Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the Uploader component.
+> **Note:** To cancel a specific file's upload, you typically need to pass an identifier like a `fileInfo[]` to the CancelAsync method. Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the Uploader component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -193,7 +193,7 @@ The [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 }
 ```
 
-> **Note:** `ClearAllAsync` only affects the client-side representation in the File Upload component. It does not automatically delete files from the server if they have already been uploaded. Server-side deletion would require a separate call to your server-side API.
+> **Note:** [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ClearAllAsync)  only affects the client-side representation in the File Upload component. It does not automatically delete files from the server if they have already been uploaded. Server-side deletion would require a separate call to your server-side API.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVItErIihaDlaeE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
