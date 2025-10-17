@@ -9,22 +9,18 @@ documentation: ug
 
 # Aggregate customization in Syncfusion Blazor DataGrid
 
-Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows enhance data interpretation and can be styled using CSS to align with specific design requirements. Customization is supported for both the footer container and individual summary cells, allowing control over layout and visual presentation. Refer to the API documentation for configuration details:
+Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
 
-- [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html)
-- [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html)
-- [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
-- [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate)
-- [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
+- **Aggregate root container:** The outer wrapper of the footer row.
+- **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.
 
-N> - To show summary rows in the DataGrid footer, [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html) must be set up. The correct theme stylesheet should be included to apply styles properly. 
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control. 
-- Class names may change slightly depending on the theme or version, so check the DOM to confirm. 
-- Maintain strong color contrast for accessibility compliance.
+N> - To show summary rows in the DataGrid footer, [GridAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregates.html) must be set up. Ensure that the required theme stylesheet is referenced so that aggregate UI elements are displayed correctly.
+- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
+- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
+- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
 
-## Customizing the aggregate root element
-
-The **e-gridfooter** class is used to style the main container of the aggregate footer row in the DataGrid. To change its appearance, apply CSS:
+## Customize the aggregate root element
+The **.e-gridfooter** class styles the root container of the aggregate footer row. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-gridfooter {
@@ -32,13 +28,13 @@ The **e-gridfooter** class is used to style the main container of the aggregate 
 }
 ```
 
-Properties such as `font-family`, `font-size`, `padding`, and `border` can be modified to match the desired design.
+Properties like **font-family**, **font-size**, and **padding** can be changed to fit the grid layout design.
 
-![Blazor DataGrid aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
+![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
 
-## Customizing the aggregate cell elements
+## Customize the aggregate cell elements
 
-The **e-summaryrow** class is used to target the entire summary row, while the **e-summarycell** class applies styles to each individual cell within that row. To change the appearance of these cells, apply CSS:
+The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor DataGrid. Apply CSS to modify their look:
 
 ```css
 .e-grid .e-summaryrow .e-summarycell {
@@ -46,27 +42,25 @@ The **e-summaryrow** class is used to target the entire summary row, while the *
 }
 ```
 
-properties such as `background-color`, `color`, `text-align`, or `borders` can be modified to match the desired design.
+Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve clarity and interaction.
 
-![Blazor DataGrid aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.png)
+![Aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" >
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
+                            <div class="aggregate-chip">Sum: @aggregate.Sum</div>
                         }
                     </FooterTemplate>
                 </GridAggregateColumn>
@@ -78,9 +72,7 @@ properties such as `background-color`, `color`, `text-align`, or `borders` can b
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Max: @aggregate.Max</p>
-                            </div>
+                            <div class="aggregate-chip">Max: @aggregate.Max</div>
                         }
                     </FooterTemplate>
                 </GridAggregateColumn>
@@ -91,23 +83,19 @@ properties such as `background-color`, `color`, `text-align`, or `borders` can b
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="110"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    .e-grid .e-gridfooter {
-        font-family: cursive;
-    }
-    .e-grid .e-summaryrow .e-summarycell {
-        background-color: #deecf9;
-    }
+    .e-grid .e-gridfooter { font-family: cursive; background-color: #f5f8fc; }
+    .e-grid .e-summaryrow .e-summarycell { background-color: #deecf9; }
+    .aggregate-chip { padding: 4px 8px; border-radius: 6px; background-color: #fff; border: 1px solid #bcd3ea; display: inline-block; min-width: 120px; text-align: center; color: #0b3f73; font-weight: 600; }
+    .e-grid .e-summarycell:focus-visible { outline: 2px solid #005a9e; outline-offset: -2px; }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
+    private List<OrderData> Orders { get; set; }
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -118,44 +106,43 @@ properties such as `background-color`, `color`, `text-align`, or `borders` can b
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
-
-        return Orders;
+        return Data;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public DateTime OrderDate { get; set; }
+    public int OrderID { get; }
+    public string CustomerID { get; }
+    public double Freight { get; }
+    public DateTime OrderDate { get; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/BNLoXStLKgmIIyaI" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhIMNMcivWmiUmh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
