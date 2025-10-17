@@ -25,8 +25,6 @@ The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUplo
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjryjYhTgSOYvHEJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Unique ID](./images/UniqueID.gif)
-
 ---
 
 ## AllowedExtensions
@@ -42,8 +40,6 @@ The [`AllowedExtensions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 >Note: Multiple extensions should be separated by commas.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNryjOhzKHgiZDmV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![`AllowedExtensions`](./images/AllowedExtension.gif)
 
 ---
 
@@ -61,8 +57,6 @@ The [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVojOhTKxefALsN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![`AllowMultiple`](./images/AllowMultiple.gif)
-
 ---
 
 ## AutoUpload
@@ -79,7 +73,6 @@ If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStOhTKnuyPkKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![AutoUpload](./images/AutoUpload.gif)
 ---
 
 ## SequentialUpload
@@ -96,8 +89,6 @@ The [`SequentialUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSjkLpqQTZKrlg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![SequentialUpload](./images/SequentialUpload.gif)
-
 ---
 
 ## DirectoryUpload
@@ -113,8 +104,6 @@ The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 >Note: Browser support for directory upload may vary.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeDOBfgceWwSNY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![DirectoryUpload](./images/DirectoryUpload.gif)
 
 ---
 
@@ -150,8 +139,6 @@ The [`MaxFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVStkLpqlnsPFdX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![`MaxFileSize`](./images/MaxFileSize.gif)
-
 
 ---
 
@@ -166,8 +153,6 @@ The [`MinFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVotaVTUYsmdyXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![MinFileSize](./images/MinFileSize.gif)
 
 ---
 
@@ -212,8 +197,6 @@ The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhINEhJpCTkMvdI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![`EnableRtl`](./images/EnableRTL.gif)
-
 ---
 
 ## HtmlAttributes
@@ -248,8 +231,6 @@ The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBetuhfzUNEgeqP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![`InputAttributes`](./images/AllowedExtension.gif)
-
 ---
 
 ## TabIndex
@@ -268,7 +249,6 @@ The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhotYhzzqUHHLgt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![TabIndex](./images/Tabindex.gif)
 
 ## Preloaded files
 
