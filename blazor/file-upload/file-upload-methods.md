@@ -163,7 +163,7 @@ The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 }
 ```
 
-> **Note:** When cancel a specific file's upload, you typically need to pass an identifier like a fileInfo[] to the [CancelAsync method](https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5). Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the Uploader component.
+> **Note:** When cancel a specific file's upload, you typically need to pass an identifier like a fileInfo[] to the [CancelAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CancelAsync_Syncfusion_Blazor_Inputs_FileInfo___). Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the Uploader component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
