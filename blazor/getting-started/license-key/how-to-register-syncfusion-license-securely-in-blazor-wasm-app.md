@@ -1,47 +1,46 @@
 ---
 layout: post
-title: How to Register Syncfusion License Key Securely in Blazor WASM App?
-description: Learn how to securely register a Syncfusion license key in your Blazor WebAssembly (WASM) application.
+title: Securely register a Syncfusion license key in WASM App | Syncfusion
+description: Learn here about secure approaches for Syncfusion licensing in Blazor WebAssembly, including using licensed NuGet packages and package source mapping.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Secure Registration of Syncfusion<sup style="font-size:70%">&reg;</sup> License Keys in Blazor Wasm App
+# Secure registration of Syncfusion® license keys
 
 Registering a license key directly in the Program.cs file of a Blazor WebAssembly Client project can expose it through the compiled assemblies, making it accessible in the browser, creating security risks.
 
 ## Recommended Solution: Use Licensed NuGet Packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using licensed NuGet packages, distributed with the licensed Blazor Product in Volume and Service Pack (SP) releases. These packages eliminate the need to register the license key in the application code.
+Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using licensed NuGet packages distributed with licensed Blazor releases (volume and service pack). When these licensed packages are used, no license key registration is required in application code.
 
-### Benefits of Using Licensed NuGet Packages
+### Benefits of using licensed NuGet packages
 
 - **Enhanced Security:** Prevents license key exposure in the browser.
 - **Simplified Deployment:** Removes the need for manual license key registration.
 
-## Reference: Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Installer User Guide
+## Reference: Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer user guide
 
-Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> documentation to download and install the licensed Blazor Product:
+Refer to the documentation to download and install the licensed Blazor product:
 
-- [Download Instructions](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download)
-- [Installation Guide](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)
+- [Download instructions](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download)
+- [Installation guide](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)
 
-These steps ensure secure and compliant Blazor WASM applications, preventing license key exposure.
+These steps ensure Blazor WebAssembly applications secure and compliant by preventing license key exposure.
 
-## Using Licensed NuGet Packages
+## Using licensed NuGet packages
 
 Build your Blazor WASM application using licensed NuGet packages from these sources:
 
 - **Local Folder:** Store packages locally and configure your project for restoration.
-- **Private Repository Manager:** Host and manage packages using a private NuGet repository manager like Nexus, Azure DevOps artifact feed.
+- **Private repository manager:** Host and manage packages using a private NuGet repository manager such as Nexus or an Azure DevOps Artifacts feed.
 
 
->**Important Note:**  
-> When referencing both a local folder or private repository and `nuget.org` in your `NuGet.config`, and if both sources contain the same version of Syncfusion<sup style="font-size:70%">&reg;</sup> packages, the build may default to restoring from `nuget.org` (trial versions). This fallback can result in **license popup issues**.
+> Important: When referencing both a local folder or private repository and `nuget.org` in `NuGet.config`, and if both sources contain the same Syncfusion<sup style="font-size:70%">&reg;</sup> package version, restore may default to `nuget.org` (trial versions), which can cause license popup issues.
 
 ### Use Package Source Mapping
-To ensure your project always restores Syncfusion<sup style="font-size:70%">&reg;</sup> packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in your `NuGet.config`:
+To ensure the project always restores Syncfusion<sup style="font-size:70%">&reg;</sup> packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in `NuGet.config`.
 
 ```xml
 <configuration>
@@ -57,23 +56,23 @@ To ensure your project always restores Syncfusion<sup style="font-size:70%">&reg
 </configuration>
 ```
 
-### Verifying Assembly Licensing
+### Verifying assembly licensing
 
 To confirm whether your application is referencing licensed or trial assemblies:
 
-* Navigate to your build output directory and Locate the Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies.
+* Navigate to the build output directory and locate the Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies.
 
-* Right-click on each assemblies → Select Properties → Go to the Details tab.
+* Right-click each assembly → select Properties → Go to the Details tab.
 
 * Check the File Description:
 
-    * If it includes “LR”, it’s a trial version.
+    * If the File description includes "LR", it is a trial version.
 
-        ![trail dll preview](images/trial.png)
+        ![Trial DLL properties example](images/trial.png)
 
-    * If it does not include “LR”, it’s a licensed version.
+    * If it does not include "LR", it is a licensed version.
 
-        ![licensed dll](images/licensed.png)
+        ![Licensed DLL properties example](images/licensed.png)
 
 
 If trial assemblies are detected in your application, follow these steps to ensure a clean and licensed setup:
@@ -84,9 +83,9 @@ dotnet nuget locals all --clear
 ```
 
 
-Delete the **bin and obj**  folders from your project directories to remove any cached build artifacts.
+Delete the **bin** and **obj** folders from project directories to remove cached build artifacts.
 
-Uninstall and reinstall the Syncfusion<sup style="font-size:70%">&reg;</sup> packages, making sure they are restored only from your licensed NuGet source.
+Uninstall and reinstall the Syncfusion<sup style="font-size:70%">&reg;</sup> packages, ensuring restore pulls only from the licensed NuGet source.
 
 ## Securely manage Syncfusion<sup style="font-size:70%">&reg;</sup> license keys using Azure Key Vault
 
@@ -96,5 +95,4 @@ For enhanced security, especially in cloud-hosted environments, store and access
 
 Integrate Azure Key Vault to retrieve the license key at runtime, preventing browser exposure or storage in client-side code.
 
-For detailed steps, refer to:
-[Securely Store and Use Syncfusion<sup style="font-size:70%">&reg;</sup> License Keys in Azure Key Vault](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/how-to-securely-store-and-use-syncfusion-license-keys-in-azure-key-vault)
+For detailed steps, see [Securely store and use Syncfusion license keys in Azure Key Vault]( https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/how-to-securely-store-and-use-syncfusion-license-keys-in-azure-key-vault)
