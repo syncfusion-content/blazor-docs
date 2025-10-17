@@ -23,7 +23,7 @@ To enable data annotation in the Blazor DataGrid:
 
 The tables categorize supported attributes by display, formatting, metadata, and validation functionality.
 
-#### Display Attributes
+### Display Attributes
 
 Use **Display** attributes to control how column headers, ordering, and metadata appear in the grid interface.
 
@@ -36,7 +36,7 @@ Use **Display** attributes to control how column headers, ordering, and metadata
 | Display | Description | Sets tooltip text shown on column ellipsis hover |
 | Display | Order | Defines the display order of the column |
 
-#### DisplayFormat Attributes
+### DisplayFormat Attributes
 
 Apply **DisplayFormat** attributes when column values require specific formatting or null-handling behavior.
 
@@ -48,9 +48,9 @@ Apply **DisplayFormat** attributes when column values require specific formattin
 | DisplayFormat | ConvertEmptyStringToNull | Converts empty strings to null in the UI |
 | DisplayFormat | HtmlEncode | Enables or disables HTML encoding for display |
 
-#### Other Metadata Attributes
+### Other Metadata Attributes
 
-Use these attributes to manage column visibility, editability, and key definitions.
+Use these attributes to manage column visibility, editing behavior, and key definitions.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
@@ -58,7 +58,7 @@ Use these attributes to manage column visibility, editability, and key definitio
 | ReadOnlyAttribute | IsReadOnly | Prevents editing of the column |
 | Key | Key | Marks the column as the primary key |
 
-#### Validation Attributes
+### Validation Attributes
 
 Add validation attributes to enforce rules that display inline Blazor DataGrid validation messages during CRUD operations.
 
@@ -73,7 +73,7 @@ Add validation attributes to enforce rules that display inline Blazor DataGrid v
 
 > When both the `Display` attribute’s `Name` and the column’s `HeaderText` property are defined, the `HeaderText` value takes precedence and is shown in the column header.
 
-## Example: Applying Data Annotations with Enum Display
+### Example: Applying Data Annotations with Enum Display
 
 The `Display` attribute can be used to show user-friendly labels for enum values. This improves readability by replacing raw enum values with descriptive names.
 
