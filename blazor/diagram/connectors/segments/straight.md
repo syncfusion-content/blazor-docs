@@ -16,13 +16,12 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -36,7 +35,7 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-             //Specify the segment type as straight.
+            //Specify the segment type as straight.
             Type = ConnectorSegmentType.Straight,
             TargetDecorator = new DecoratorSettings()
             {
@@ -72,14 +71,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        { 
+        {
             ID = "Connector1",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
             SourcePoint = new DiagramPoint { X = 200, Y = 100 },
@@ -135,31 +134,34 @@ The following code example illustrates how to create a customized straight segme
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ConnectorSegmentThumb="@connectorSegmentThumb"></SfDiagramComponent>
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" ConnectorSegmentThumb="@connectorSegmentThumb">
+</SfDiagramComponent>
+
 @code {
-    
+
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define the segment shape
-    SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+    private SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
+        {
+            ID = "Connector",
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
+            SourcePoint = new DiagramPoint { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint { X = 250, Y = 250 },
+            Segments = new DiagramObjectCollection<ConnectorSegment>
             {
-                ID = "Connector",
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
-                SourcePoint = new DiagramPoint { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint { X = 250, Y = 250 },
-                  
-                Segments = new DiagramObjectCollection<ConnectorSegment>
+                new StraightSegment()
                 {
-                   new StraightSegment()
-                   {
-                       Type = ConnectorSegmentType.Straight,
-                       Point = new DiagramPoint { X = 180, Y = 180 }
-                   }
-                },
-            };
+                    Type = ConnectorSegmentType.Straight,
+                    Point = new DiagramPoint { X = 180, Y = 180 }
+                }
+            },
+        };
         connectors.Add(Connector);
     }
 }
@@ -175,32 +177,32 @@ The following code example illustrates how to create a customized straight segme
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ></SfDiagramComponent>
-@code {
-    
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-   
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
+        {
+            ID = "Connector",
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            SourcePoint = new DiagramPoint { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint { X = 250, Y = 250 },
+            Segments = new DiagramObjectCollection<ConnectorSegment>
             {
-                ID = "Connector",
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
-                SourcePoint = new DiagramPoint { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint { X = 250, Y = 250 },
-                  
-                Segments = new DiagramObjectCollection<ConnectorSegment>
+                new StraightSegment()
                 {
-                   new StraightSegment()
-                   {
-                       Type = ConnectorSegmentType.Straight,
-                       Point = new DiagramPoint { X = 180, Y = 180 }
-                   }
-                },
-                  SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square },
-           
-            };
+                    Type = ConnectorSegmentType.Straight,
+                    Point = new DiagramPoint { X = 180, Y = 180 }
+                }
+            },
+            SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square },
+        };
         connectors.Add(Connector);
     }
 }

@@ -20,7 +20,7 @@ A [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -38,7 +38,7 @@ A [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
             Shape = new BpmnGateway()
             {
                 //Sets gateway type to None.
-                GatewayType = BpmnGatewayType.None 
+                GatewayType = BpmnGatewayType.None
             }
         };
         nodes.Add(node);
