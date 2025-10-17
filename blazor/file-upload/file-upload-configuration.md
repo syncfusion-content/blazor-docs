@@ -121,8 +121,6 @@ The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.S
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLeNkVfKcOhxybv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Enabled](./images/Disabled.png)
-
 ---
 
 ## MaxFileSize
@@ -213,8 +211,6 @@ The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoDYrpTrbUcwZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![`HtmlAttributes`](./images/HtmlAttributes.png)
-
 ---
 
 ## InputAttributes
@@ -267,6 +263,4 @@ The FileUpload component supports displaying a list of files that are already av
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBytuBzpzikFnSt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Preloaded Files](./images/PreloadedFiles.png)
 
