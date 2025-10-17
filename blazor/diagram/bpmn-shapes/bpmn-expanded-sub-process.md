@@ -25,7 +25,7 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -68,34 +68,34 @@ The following code example explains how to add a BPMN node to an BPMN Expanded S
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
-            {
-                ID = "node1",
-                OffsetX = 300,
-                OffsetY = 300,
-                Width = 70,
-                Height = 70,
-                Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }
-            };
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 300,
+            Width = 70,
+            Height = 70,
+            Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }
+        };
         nodes.Add(node1);
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 300,
+            OffsetX = 500,
+            OffsetY = 300,
+            Height = 300,
+            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
+            Shape = new BpmnExpandedSubProcess()
             {
-                ID = "node2",
-                Width = 300,
-                OffsetX = 500,
-                OffsetY = 300,
-                Height = 300,
-                Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
-                Shape = new BpmnExpandedSubProcess()
-                {
-                    Children = new DiagramObjectCollection<string>() { "node1" }
-                }
-            };
+                Children = new DiagramObjectCollection<string>() { "node1" }
+            }
+        };
         nodes.Add(node2);
     }
 }
@@ -128,12 +128,12 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
-{       
+{
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -187,7 +187,7 @@ The following table describes the available loop types for an Expanded Sub-Proce
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -232,7 +232,7 @@ An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any orde
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -277,7 +277,7 @@ The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {

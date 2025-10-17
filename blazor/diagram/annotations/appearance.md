@@ -15,11 +15,13 @@ The annotation size can be customized using the [Height](https://help.syncfusion
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Connectors="@connectors" />
+
 @code
 {
     // Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
     protected override void OnInitialized()
     {
         connectors = new DiagramObjectCollection<Connector>();
@@ -31,13 +33,13 @@ The annotation size can be customized using the [Height](https://help.syncfusion
             Style = new TextStyle() { StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
-              new PathAnnotation 
-              { 
-                  Content = "Annotation length will be varied", 
-                  // Sets the size of the annotation.
-                  Width = 50, 
-                  Height = 50 
-              },
+                new PathAnnotation
+                {
+                    Content = "Annotation length will be varied",
+                    // Sets the size of the annotation.
+                    Width = 50,
+                    Height = 50
+                },
             }
         };
         connectors.Add(connector);
@@ -62,7 +64,7 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -78,12 +80,12 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 // Add text as hyperlink.
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Hyperlink = new HyperlinkSettings
-                    { 
+                    {
                         Url = "https://www.syncfusion.com"
-                    } 
+                    }
                 }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -110,7 +112,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -126,13 +128,13 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 // Add text as hyperlink.
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Hyperlink = new HyperlinkSettings
-                    { 
-                        Content = "Syncfusion", 
-                        Url = "https://www.syncfusion.com" 
-                    } 
+                    {
+                        Content = "Syncfusion",
+                        Url = "https://www.syncfusion.com"
+                    }
                 }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -159,7 +161,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -174,14 +176,14 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
             // Sets the annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Annotation Text Wrapping",
                     Style = new TextStyle()
-                    { 
+                    {
                         // Sets the text wrapping of the annotation as Wrap.
                         TextWrapping = TextWrap.Wrap
-                    } 
+                    }
                 }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -218,7 +220,7 @@ The following code sample demonstrates how the `TextOverflow` property works wit
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -237,10 +239,10 @@ The following code sample demonstrates how the `TextOverflow` property works wit
                 {
                     Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",
                     Style = new TextStyle()
-                    { 
+                    {
                         // Sets the text overflow of the annotation as Wrap.
                         TextOverflow = TextOverflow.Wrap,
-                        TextWrapping = TextWrap.NoWrap 
+                        TextWrapping = TextWrap.NoWrap
                     }
                 },
             },
@@ -290,7 +292,7 @@ The following code explains how to customize the visual appearance of an annotat
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -305,10 +307,10 @@ The following code explains how to customize the visual appearance of an annotat
             // Sets the annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Annotation Text",
-                    Style = new TextStyle() 
+                    Style = new TextStyle()
                     {
                         // Sets the style for the annotation.
                         Color="black",
@@ -316,8 +318,8 @@ The following code explains how to customize the visual appearance of an annotat
                         Italic = true,
                         TextDecoration = TextDecoration.Underline,
                         FontSize = 12,
-                        FontFamily = "TimesNewRoman"  
-                    } 
+                        FontFamily = "TimesNewRoman"
+                    }
                 }
             },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
@@ -340,18 +342,15 @@ The font style of annotations can be changed dynamically at runtime by modifying
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="UpdateStyle" OnClick="@UpdateStyle" />
-
 <SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
     // Reference of the diagram.
-    SfDiagramComponent Diagram;
-
+    private SfDiagramComponent Diagram;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -369,13 +368,13 @@ The font style of annotations can be changed dynamically at runtime by modifying
                 new ShapeAnnotation
                 {
                     Content = "Annotation Text",
-                    Style = new TextStyle() 
+                    Style = new TextStyle()
                     {
                         Color = "black",
                         Bold = true,
                         Italic = true,
                         TextDecoration = TextDecoration.Underline,
-                        FontSize = 12, 
+                        FontSize = 12,
                         FontFamily = "TimesNewRoman"
                     }
                 }
@@ -385,7 +384,7 @@ The font style of annotations can be changed dynamically at runtime by modifying
         nodes.Add(node);
     }
 
-    public void UpdateStyle()
+    private void UpdateStyle()
     {
         // Change the style of the annotation.
         Diagram.BeginUpdate();
@@ -423,7 +422,7 @@ Annotations can be set to read-only mode by configuring their [Constraints](http
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -437,10 +436,10 @@ Annotations can be set to read-only mode by configuring their [Constraints](http
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Annotation Text",
-                    // Sets the constraints as Read only.           
+                    // Sets the constraints as Read only.
                     Constraints = AnnotationConstraints.ReadOnly
                 }
             },
@@ -466,10 +465,9 @@ Multiple annotations can be added to a single node or connector. The following c
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> nodes;
     // Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -485,17 +483,17 @@ Multiple annotations can be added to a single node or connector. The following c
             // Sets the multiple annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Left",
                     Offset = new DiagramPoint(){ X = .12,Y = .1}
                 },
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Center",
                     Offset = new DiagramPoint(){ X = .5,Y = .5}
                 },
-                new ShapeAnnotation 
+                new ShapeAnnotation
                 {
                     Content = "Right",
                     Offset = new DiagramPoint(){ X = .82,Y = .9}
@@ -512,20 +510,20 @@ Multiple annotations can be added to a single node or connector. The following c
             Style = new TextStyle() { StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
-                new PathAnnotation 
-                { 
+                new PathAnnotation
+                {
                     Content = "Offset as 0",
-                    Offset = 0 
+                    Offset = 0
                 },
-                new PathAnnotation 
-                { 
+                new PathAnnotation
+                {
                     Content = "Offset as 0.5",
                     Offset = 0.5
                 },
-                new PathAnnotation 
+                new PathAnnotation
                 {
                     Content = "Offset as 1",
-                    Offset = 1 
+                    Offset = 1
                 },
             }
         };
@@ -581,7 +579,8 @@ The following code illustrates how to define a template for both a node's and a 
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
                             <g>
                                 <rect height="48" width="48" fill="#000000" rx="50%" ry="50%" />
-                                <path id="path1" transform="rotate(0,24,24) translate(11.1417800784111,11) scale(0.8125,0.8125)  " fill="#FFFFFF" d="M15.827007,0C20.406003,0 24.346007,3.1960449 24.346007,9.2930298 24.346007,13.259033 22.542005,17.289001 20.180997,19.791992L20.193005,19.791992C19.287,22.627014 20.736997,23.299011 20.966,23.376038 25.997008,25.090027 31.651002,28.317993 31.651002,31.626038L31.651002,32 0,32 0,31.626038C8.034749E-08,28.414001 5.6260008,25.161011 10.421,23.376038 10.766993,23.244995 12.422999,22.317017 11.497004,19.817993 9.1220035,17.321045 7.3279971,13.275024 7.3279971,9.2930298 7.3279971,3.1960449 11.245006,0 15.827007,0z" />
+                                <path id="path1" transform="rotate(0,24,24) translate(11.1417800784111,11) scale(0.8125,0.8125)  " fill="#FFFFFF" 
+                                      d="M15.827007,0C20.406003,0 24.346007,3.1960449 24.346007,9.2930298 24.346007,13.259033 22.542005,17.289001 20.180997,19.791992L20.193005,19.791992C19.287,22.627014 20.736997,23.299011 20.966,23.376038 25.997008,25.090027 31.651002,28.317993 31.651002,31.626038L31.651002,32 0,32 0,31.626038C8.034749E-08,28.414001 5.6260008,25.161011 10.421,23.376038 10.766993,23.244995 12.422999,22.317017 11.497004,19.817993 9.1220035,17.321045 7.3279971,13.275024 7.3279971,9.2930298 7.3279971,3.1960449 11.245006,0 15.827007,0z" />
                             </g>
                         </svg>
                         <div class="profile-name" style="font-size:12px;font-weight:bold;">Nicolas</div>
@@ -594,7 +593,8 @@ The following code illustrates how to define a template for both a node's and a 
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
                             <g>
                                 <rect height="48" width="48" fill="#000000" rx="50%" ry="50%" />
-                                <path id="path1" transform="rotate(0,24,24) translate(11,12.3588990783035) scale(0.812500048428777,0.812500048428777)  " fill="#FFFFFF" d="M21.576999,13.473151C26.414003,15.496185 30.259996,20.071221 31.999999,25.86432 15.448002,32.143386 0,25.86432 0,25.86432 1.7140042,20.158227 5.4690005,15.632174 10.202001,13.564156 11.338002,15.514191 13.444005,16.827195 15.862003,16.827195 18.317996,16.827195 20.455997,15.474182 21.576999,13.473151z M16.000003,0C19.617999,1.5323894E-07 22.550998,2.9330488 22.550998,6.5510722 22.550998,10.170134 19.617999,13.102144 16.000003,13.102144 12.381993,13.102144 9.4489957,10.170134 9.4489957,6.5510722 9.4489957,2.9330488 12.381993,1.5323894E-07 16.000003,0z" />
+                                <path id="path1" transform="rotate(0,24,24) translate(11,12.3588990783035) scale(0.812500048428777,0.812500048428777)  " fill="#FFFFFF"
+                                      d="M21.576999,13.473151C26.414003,15.496185 30.259996,20.071221 31.999999,25.86432 15.448002,32.143386 0,25.86432 0,25.86432 1.7140042,20.158227 5.4690005,15.632174 10.202001,13.564156 11.338002,15.514191 13.444005,16.827195 15.862003,16.827195 18.317996,16.827195 20.455997,15.474182 21.576999,13.473151z M16.000003,0C19.617999,1.5323894E-07 22.550998,2.9330488 22.550998,6.5510722 22.550998,10.170134 19.617999,13.102144 16.000003,13.102144 12.381993,13.102144 9.4489957,10.170134 9.4489957,6.5510722 9.4489957,2.9330488 12.381993,1.5323894E-07 16.000003,0z" />
                             </g>
                         </svg>
                         <div class="profile-name" style="font-size:12px;font-weight:bold;">Nicolas</div>
@@ -606,8 +606,8 @@ The following code illustrates how to define a template for both a node's and a 
 </SfDiagramComponent>
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -621,18 +621,16 @@ The following code illustrates how to define a template for both a node's and a 
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "black", Opacity = 1 },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                 new ShapeAnnotation()
-                 {
-                     ID = "NodeAnnotation1",
-                     UseTemplate = true,
-                     Height = 75,
-                     Width = 75,
-
-                 },
+                new ShapeAnnotation()
+                {
+                    ID = "NodeAnnotation1",
+                    UseTemplate = true,
+                    Height = 75,
+                    Width = 75,
+                },
             },
         };
         nodes.Add(node);
-
         Connector connector = new Connector()
         {
             ID = "connector1",
@@ -641,17 +639,16 @@ The following code illustrates how to define a template for both a node's and a 
             Type = ConnectorSegmentType.Orthogonal,
             Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
-                 new PathAnnotation()
-                 {
-                     ID = "ConnectorAnnotation1",
-                     UseTemplate = true,
-                     Height = 50,
-                     Width = 75,
-                     Alignment = AnnotationAlignment.Before,
-                     Offset = 0.3,
-                     Displacement = new DiagramPoint(){X = 0, Y = -0.5}
-
-                 },
+                new PathAnnotation()
+                {
+                    ID = "ConnectorAnnotation1",
+                    UseTemplate = true,
+                    Height = 50,
+                    Width = 75,
+                    Alignment = AnnotationAlignment.Before,
+                    Offset = 0.3,
+                    Displacement = new DiagramPoint(){X = 0, Y = -0.5}
+                },
             },
         };
         connectors.Add(connector);
@@ -671,10 +668,13 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
