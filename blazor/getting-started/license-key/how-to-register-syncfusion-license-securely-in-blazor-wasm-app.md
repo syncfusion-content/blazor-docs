@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Securely register a Syncfusion license key in a Blazor WebAssembly App | Syncfusion
+title: Securely register a Syncfusion license key in WASM App | Syncfusion
 description: Learn here about secure approaches for Syncfusion licensing in Blazor WebAssembly, including using licensed NuGet packages and package source mapping.
 platform: Blazor
 control: Common
@@ -40,7 +40,7 @@ Build your Blazor WASM application using licensed NuGet packages from these sour
 > Important: When referencing both a local folder or private repository and `nuget.org` in `NuGet.config`, and if both sources contain the same Syncfusion<sup style="font-size:70%">&reg;</sup> package version, restore may default to `nuget.org` (trial versions), which can cause license popup issues.
 
 ### Use Package Source Mapping
-To ensure the project always restores Syncfusion<sup style="font-size:70%">&reg;</sup> packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/nuget/consume-packages/package-source-mapping) in `NuGet.config`.
+To ensure the project always restores Syncfusion<sup style="font-size:70%">&reg;</sup> packages from the licensed source, configure [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) in `NuGet.config`.
 
 ```xml
 <configuration>
