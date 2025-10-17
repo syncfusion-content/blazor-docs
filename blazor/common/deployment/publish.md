@@ -1,35 +1,35 @@
 ---
 layout: post
-title: Deployment in Blazor | AOT | Syncfusion
-description: Learn how to publish and deploy Blazor Web App, Blazor WASM, Blazor Server Apps with Syncfusion Blazor components, including self-contained deployment and AOT.
+title: Publish and Deploy in Blazor | AOT | Syncfusion
+description: Learn here all about publish the Blazor application with Syncfusion Blazor Components and much more.
 platform: Blazor
-control: Common
+component: Common
 documentation: ug
 ---
 
-# Deployment in Blazor
+# Publish and Deploy in Blazor
 
-This section provides information about deploying Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section provides information about publishing and deploying Blazor applications with the Syncfusion Blazor components. 
 
-For more information, see [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy).
+Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
 ## Publish Blazor Application with Visual Studio
 
 * Right-click on the project in the `Solution Explorer` and select `Publish`.
 
-![Solution Explorer in Blazor](./images/publish.png)
+![Solution Explorer in Blazor](../images/publish.png)
 
 * Then, select the `Folder` option and select the publishing target location.
 
-![Publish Location in Blazor](./images/folder.png)
+![Publish Location in Blazor](../images/folder.png)
 
 * Check the configuration as Release by clicking the `Advanced...` option below the target location.
 
-![Release Configuration in Blazor](./images/config.png)
+![Release Configuration in Blazor](../images/config.png)
 
-* For Blazor Server App, consider setting Deployment mode to `Self-Contained` when the hosting environment doesn't have the required .NET runtime installed.
+* For `Blazor Server side application`, set Deployment Mode as `Self-Contained`. Because some dependencies are not loaded properly when the published folder is hosted.
 
-![Deploy Mode in Blazor](./images/deploy.png)
+![Deploy Mode in Blazor](../images/deploy.png)
 
 * Then, click `Save` and `Publish`.
 
@@ -37,9 +37,9 @@ For more information, see [Host and deploy ASP.NET Core Blazor](https://learn.mi
 
 ## Publish Blazor Application with CLI
 
-Package the application and its dependencies into a folder for deployment by using the `dotnet publish` command.
+Packing the application and its dependencies into a folder for deployment to a hosting system by using the `dotnet publish` command.
 
-Run the following command from the project directory.
+For CLI deployment, run the following command from your root directory.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -49,7 +49,7 @@ dotnet publish -c Release
 {% endhighlight %}
 {% endtabs %}
 
-For Blazor Server CLI deployment:
+For Blazor Server CLI deployment.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -59,7 +59,7 @@ dotnet publish -c Release --self-contained true -r win-x86
 {% endhighlight %}
 {% endtabs %}
 
-Refer to [dotnet publish arguments](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish#arguments) to learn about optional arguments. Use the following command to specify the output directory path.
+Refer to the [dotnet publish - arguments](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments) to learn about various optional arguments. Use the following command to specify the path for the output directory.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -75,7 +75,7 @@ If the path is relative, the output directory generated is relative to the proje
 
 ## Ahead-of-time (AOT) compilation in Blazor WebAssembly
 
-Blazor WebAssembly supports ahead-of-time (AOT) compilation, which improves runtime performance at the expense of a larger app size. For details and enable steps, see [Ahead-of-time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/?view=aspnetcore-8.0&tabs=windows#ahead-of-time-aot-compilation).
+Blazor WebAssembly supports ahead-of-time (AOT) compilation which provides improved runtime performance at the expense of a larger app size. Refer to [Ahead-of-time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-6.0#ahead-of-time-aot-compilation) topic to learn more about how it works and how to enable. 
 
 ### Enable AOT in the application
 
