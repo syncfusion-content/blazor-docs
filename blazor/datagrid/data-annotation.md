@@ -11,7 +11,7 @@ documentation: ug
 
 Data annotations define validation and display rules for model classes or properties in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
-When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) behaviors. This enables built-in validation and metadata display during CRUD operations.
+When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
 To enable data annotation in the Blazor DataGrid:
 
