@@ -46,7 +46,7 @@ You can also configure member sorting during initial rendering using the [PivotV
 
 N> By default the [Order](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotSortSetting.html#Syncfusion_Blazor_PivotView_PivotSortSetting_Order) property in the [PivotViewSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSortSetting.html) class set as [Sorting.Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Sorting.html). Meanwhile, we can arrange the field members as its order in data source by setting it as [Sorting.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Sorting.html#Syncfusion_Blazor_PivotView_Sorting_None) where the sort icons in grouping bar and field list buttons for the corresponding field will be removed.
 
-The following example demonstrates how to configure the Pivot Table to enable member sorting and set the "Year" field to sort in descending order:
+The following example demonstrates how to configure the Pivot Table to enable member sorting and set the "Country" field to sort in descending order:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -69,7 +69,7 @@ The following example demonstrates how to configure the Pivot Table to enable me
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
         <PivotViewSortSettings>
-            <PivotViewSortSetting Name="Year" Order=Sorting.Descending></PivotViewSortSetting>
+            <PivotViewSortSetting Name="Country" Order=Sorting.Descending></PivotViewSortSetting>
         </PivotViewSortSettings>
     </PivotViewDataSourceSettings>
 </SfPivotView>
