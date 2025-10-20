@@ -193,6 +193,33 @@ N> The default `layoutOption` property is set to `Inline`.
 {% endhighlight %}
 {% endtabs %}
 
+## Drag and drop audio insertion
+
+By default, the Rich Text Editor allows you to insert audios by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the audios to the server before inserting into the editor by configuring the saveUrl property.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/audio-draganddrop.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Disabling audio drag and drop
+
+You can prevent drag-and-drop action by setting the OnMediaDrop argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+```
+<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+@code{
+    private void OnMediaDrop(MediaDropEventArgs args)
+    {
+        if (args.MediaType == "Audio") {
+            args.Cancel = true;
+        }
+    }
+}
+```
 ## Rename audio before inserting
 
 Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you will receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.

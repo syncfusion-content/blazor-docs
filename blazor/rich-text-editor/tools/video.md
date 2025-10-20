@@ -215,6 +215,34 @@ N> The default `layoutOption` property is set to `Inline`.
 {% endhighlight %}
 {% endtabs %}
 
+## Drag and drop video insertion
+
+By default, the Rich Text Editor allows you to insert videos by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the videos to the server before inserting into the editor by configuring the saveUrl property.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/video-draganddrop.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Disabling videos drag and drop
+
+You can prevent drag-and-drop action by setting the OnMediaDrop argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+```
+<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+@code{
+    private void OnMediaDrop(MediaDropEventArgs args)
+    {
+        if (args.MediaType == "Video") {
+            args.Cancel = true;
+        }
+    }
+}
+```
+
 ## Resize video
 
 The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
