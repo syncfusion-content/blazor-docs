@@ -35,7 +35,7 @@ A 30‑day trial can be downloaded in two ways.
 
 5. Click Download to get the Blazor web installer.
 
-   ![Trials & Downloads page with Download button for the Blazor web installer](images/start-trial-download-installer-1.png)
+   ![Trials and Downloads page with Download button for the Blazor web installer](images/start-trial-download-installer-1.png)
 
 ### Start trials if using components through NuGet.org
 
@@ -53,7 +53,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) to get the latest trial installer. Generate the installer [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial period expires.
 
-   ![Trials & Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
+   ![Trials and Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
@@ -65,11 +65,11 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 3. Click Download to get the Blazor web installer.
 
-   ![License & Downloads page with Download button for the Blazor web installer](images/blazor-license-download-installer.png)
+   ![License and Downloads page with Download button for the Blazor web installer](images/blazor-license-download-installer.png)
 
 4. Before the license expires, you can download the installer at any time from your registered account’s [License & Downloads](https://www.syncfusion.com/account/downloads) page (See the screenshot below.)
 
-   ![License & Downloads page listing available Blazor installer versions](images/blazor-web-installer-license.png)
+   ![License and Downloads page listing available Blazor installer versions](images/blazor-web-installer-license.png)
 
 5. After downloading, unlock the web installer by signing in with registered Syncfusion<sup style="font-size:70%">&reg;</sup> credentials.
 

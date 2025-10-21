@@ -28,7 +28,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides a Blazor Mac installer
 
 5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-   ![Trials & Downloads page with Download button for the Blazor Mac installer](images/start-trial-download-installer.png)
+   ![Trials and Downloads page with Download button for the Blazor Mac installer](images/start-trial-download-installer.png)
 
 6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Offline trial installer which is available in DMG format.
 
@@ -50,7 +50,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) to get the latest trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot)
 
-   ![Trials & Downloads page showing trial installer and links to generate license key](images/start-trial-download-installer.png)
+   ![Trials and Downloads page showing trial installer and links to generate license key](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
@@ -62,7 +62,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 3. Select **More download options** to download the Blazor Mac licensed installer.
 
-   ![License & Downloads page showing More download options for the Blazor Mac installer](images/start-license-download-installer.png)
+   ![License and Downloads page showing More download options for the Blazor Mac installer](images/start-license-download-installer.png)
 
 4. An unlock key is not required to install the Blazor Mac licensed installer.
 

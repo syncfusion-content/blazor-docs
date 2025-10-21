@@ -35,7 +35,7 @@ A 30‑day trial can be downloaded in two ways.
 
 5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-   ![Trials & Downloads page with Download button for the Blazor offline installer](images/start-trial-download-installer.png)
+   ![Trials and Downloads page with Download button for the Blazor offline installer](images/start-trial-download-installer.png)
 
 6. Select **More download options** (element 2 in the above screenshot) to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline trial installer in EXE or ZIP format.
 
@@ -57,7 +57,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest trial installer. Generate the installer [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial period expires.
 
-   ![Trials & Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
+   ![Trials and Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
@@ -69,7 +69,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
 3. Select **More download options** to download the Blazor licensed offline installer.
 
-   ![License & Downloads page showing More download options for the Blazor offline installer](images/start-license-download-installer.png)
+   ![License and Downloads page showing More download options for the Blazor offline installer](images/start-license-download-installer.png)
 
 4. For Windows, EXE and ZIP formats are available for download. Both are offline installers.
 

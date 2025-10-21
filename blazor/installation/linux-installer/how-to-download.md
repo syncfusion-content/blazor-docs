@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Downloading Syncfusion Blazor Linux installer - Syncfusion
-description: Learn here about the how to download Syncfusion Blazor linux installer packages from syncfusion website.
+title: Download the Syncfusion Blazor Linux installer | Syncfusion
+description: Learn how to download Blazor Linux installer for trial or licensed use from your Syncfusion account, including Start trials and License and Downloads options.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Download Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux Installer
+# Download the Syncfusion® Blazor Linux installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
+Download the Syncfusion Blazor Linux installer from the Syncfusion website. Download options depend on the account status: trial or licensed.
 
-   -	Trial Installer
-   -	Licensed Installer
+- Trial installer
+- Licensed installer
 
-You can download the Syncfusion<sup style="font-size:70%">&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website 
+You can download the Syncfusion<sup style="font-size:70%">&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website.
 
-## Download the Trial Version
+## Download the trial version
 
 Our 30-day trial can be downloaded in two ways.
 
@@ -24,56 +24,56 @@ Our 30-day trial can be downloaded in two ways.
 * Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
 
-### Download Free Trial Setup
+### Download the free trial setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the product
-2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor product.
+2. Complete the form or sign in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account to download the Blazor trial installer from the confirmation page (as shown in below screenshot).
 
-   ![Trial and downloads of Syncfusion Blazor](images/trial-confirmation.png)
+   ![Trial confirmation page showing Blazor Linux installer download](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+4. An unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux trial installer.
+5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot).
  
-   ![Trial and downloads of Syncfusion Blazor](images/trial-download.png)
+   ![Trials & Downloads page with Download button for the Blazor Linux installer](images/trial-download.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Blazor Product Offline trial installer which is available in ZIP format.
+6. Select More download options (element 2 in the above screenshot) to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline trial installer (ZIP format).
 
-   ![License and downloads of Syncfusion Blazor](images/start-trial-download-offline-installer.png)
+   ![Trials & Downloads page showing offline installer download options](images/start-trial-download-offline-installer.png)
 
-### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start trials if using components through NuGet.org
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+Start an evaluation if components were obtained through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-1. You can start your 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. Start a 30‑day Blazor trial from the [Start trial](https://www.syncfusion.com/account/manage-trials/start-trials) page.
 
    N> You can generate the license key for your active trial products from [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key will be mandatory to use our trial products in your application. To know more about License key, refer this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview).
-	
-    ![Trial and downloads of Syncfusion Blazor](images/start-trial-download.png)
+
+   ![Start trials page for Blazor](images/start-trial-download.png)
    
-2. To access this page, you must sign up\log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
-3. Begin your trial by selecting the Syncfusion<sup style="font-size:70%">&reg;</sup> product. 
+2. To access this page, sign up or log in with a Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+3. Begin the trial by selecting the Syncfusion<sup style="font-size:70%">&reg;</sup> product.
 
-   N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) to get the latest trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
 
-   ![License and downloads of Syncfusion Blazor](images/start-trial-download-installer.png)
+   ![Trials & Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
-   
 
-## Download the License Version
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+## Download the licensed version
+
+1. Licensed products are available from the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 2. You can view all the licenses (both active and expired) associated with your account.
-3. You can download Blazor Linux licensed installer by going to More Downloads Options (element 3 in the screenshot below).
+3. Select More download options (element 3 in the screenshot below) to download the Blazor Linux licensed offline installer.
 
-   ![License and downloads of Syncfusion Blazor](images/license-download.png)
+   ![License & Downloads page showing More download options for the Blazor Linux installer](images/license-download.png)
    
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux trial installer.   
-5. For Linux OS, ZIP formats is available for download.
+4. An unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux licensed installer.
+5. For Linux, the installer is available in ZIP format (offline installer).
    
-   ![License and downloads of Syncfusion Blazor](images/Linux_Download.PNG)
+   ![License & Downloads page listing Blazor Linux ZIP download](images/Linux_Download.PNG)
 
-You can also refer to the [**Blazor Linux installer**](https://blazor.syncfusion.com/documentation/installation/linux-installer/how-to-install) links for step-by-step installation guidelines.	
+For step-by-step installation, see [Blazor Linux installer](https://blazor.syncfusion.com/documentation/installation/linux-installer/how-to-install).
