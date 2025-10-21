@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting customization in Syncfusion Blazor DataGrid
 
-The appearance of sorting indicators in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for:
+The appearance of sorting indicators in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
 
 - **Ascending and descending sort icons:** Show the current sort direction in column headers.
 - **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
