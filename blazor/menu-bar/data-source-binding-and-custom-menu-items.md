@@ -33,8 +33,8 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
         new CustomMenuItem{ Id = "parent1", Text = "Events" },
         new CustomMenuItem{ Id = "parent2", Text = "Movies" },
         new CustomMenuItem{ Id = "parent3", Text = "Directory" },
-        new CustomMenuItem{ Id = "parent4", Text = "Queries", ParentId = "null"  },
-        new CustomMenuItem{ Id = "parent5", Text = "Services", ParentId = "null" },
+        new CustomMenuItem{ Id = "parent4", Text = "Queries", ParentId = null  },
+        new CustomMenuItem{ Id = "parent5", Text = "Services", ParentId = null },
         new CustomMenuItem{ Id = "parent6", Text = "Conferences", ParentId = "parent1" },
         new CustomMenuItem{ Id = "parent7", Text = "Music", ParentId = "parent1" },
         new CustomMenuItem{ Id = "parent8", Text = "Workshops", ParentId = "parent1" },
@@ -69,7 +69,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrysjNKVhgmHQHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsZrssHctKuMX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
 N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
@@ -103,8 +103,8 @@ When using a custom generic type (`TValue="CustomMenuItem"`) with [`MenuTemplate
         new CustomMenuItem{ Id = "parent1", Text = "Events"},
         new CustomMenuItem{ Id = "parent2", Text = "Movies" },
         new CustomMenuItem { Id = "parent3", Text = "Directory" },
-        new CustomMenuItem { Id = "parent4", Text = "Queries", ParentId = "null" },
-        new CustomMenuItem { Id = "parent5", Text = "Services", ParentId = "null" },
+        new CustomMenuItem { Id = "parent4", Text = "Queries", ParentId = null },
+        new CustomMenuItem { Id = "parent5", Text = "Services", ParentId = null },
         new CustomMenuItem { Id = "parent6", Text = "Conferences", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent7", Text = "Music", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent8", Text = "Workshops", ParentId = "parent1" },
@@ -136,7 +136,7 @@ When using a custom generic type (`TValue="CustomMenuItem"`) with [`MenuTemplate
         foreach (var item in menuItems)
         {
             var clonedItem = menuDict[item.Id];
-            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != "null")
+            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != null)
             {
                 if (menuDict.ContainsKey(item.ParentId))
                 {
@@ -197,7 +197,7 @@ When using a custom generic type (`TValue="CustomMenuItem"`) with [`MenuTemplate
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhIijtKhVJJaFLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBeMjBiMnvjKgoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
 
 ## Custom Menu Bar Items
@@ -228,7 +228,7 @@ The following example demonstrates rendering a Menu Bar with extensively customi
                             @{
                                 if (MenuItems.Url != null)
                                 {
-                                    <img class="e-avatar e-avatar-small" src="@UriHelper.ToAbsoluteUri($"images/menu-bar/{MenuItems.Url}.png")" />
+                                    <img class="e-avatar e-avatar-small" src="@MenuItems.Url" />
                                 }
                                 <span style="width:100%;">@MenuItems.Value</span>
                                 if (MenuItems.Count != null)
@@ -266,10 +266,10 @@ The following example demonstrates rendering a Menu Bar with extensively customi
             Value = "Products",
             Options = new List<CategoryModel>
         {
-                new CategoryModel { Value= "JavaScript", Url= "javascript" },
-                new CategoryModel { Value= "Angular", Url= "angular" },
-                new CategoryModel { Value= "ASP.NET Core", Url= "core" },
-                new CategoryModel { Value= "ASP.NET MVC", Url= "mvc" }
+                new CategoryModel { Value= "JavaScript", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/javascript.png" },
+                new CategoryModel { Value= "Angular", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/angular.png" },
+                new CategoryModel { Value= "ASP.NET Core", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/core.png" },
+                new CategoryModel { Value= "ASP.NET MVC", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/mvc.png" }
             }
         },
         new CategoryModel {
