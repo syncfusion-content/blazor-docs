@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping customization in Syncfusion Blazor DataGrid
 
-The appearance of grouping elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the grouping interface:
+The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the grouping interface:
 
 - **Group header container and text:** Displays grouped column names and allows drag-and-drop grouping actions.
 - **Expand and collapse icons:** Controls used to toggle visibility of grouped rows.
@@ -99,7 +99,7 @@ Modify properties such as **background-color**, **padding**, and **border** to m
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridGroupSettings Columns="@InitialColumns"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>

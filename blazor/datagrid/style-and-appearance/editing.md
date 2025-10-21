@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing customization in Syncfusion Blazor DataGrid
 
-The appearance of editing elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
+The appearance of editing elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
 - **Edit form input fields:** Displays text boxes used to enter or update values during editing.
@@ -62,7 +62,7 @@ Modify properties such as **font-family**, **color**, or **padding** to improve 
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
@@ -161,9 +161,9 @@ Change properties such as **background-color** to visually separate the header f
 @using Syncfusion.Blazor.Grids
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="ToolbarItems">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog"></GridEditSettings>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
@@ -268,9 +268,9 @@ Style properties like **color**, **font-size**, and **font-weight** can be adjus
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="130"></GridColumn>
         <GridColumn HeaderText="Manage Records" Width="160">
             <GridCommandColumns>
