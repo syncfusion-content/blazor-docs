@@ -62,7 +62,7 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 }
 ```
 
-[SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) can be configured in various MCP clients. Below are setup instructions for popular environment:
+Below are setup instructions for popular MCP clients:
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio
 
@@ -70,11 +70,11 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 * Enter the Server Name as `blazor-mcp`, choose Server Type as npm package, and set the NPM Package name to `@syncfusion/blazor-assistant`.
 * Add an environment variable as `Syncfusion_API_Key` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
 * Once installed, the server will appear in the User Installed Server list, and will be added to the **config.yaml** file.
-* The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
+* The server is now ready for use in Code Studio. For more details, refer to the [Code Studio documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
 
 ### VS Code (GitHub Copilot MCP)
 
-1. To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
+* To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
 
 ```json
 {
@@ -94,14 +94,15 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 }
 ```
 
-2. After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) server directly from the settings interface without additional commands.
+* After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) server directly from the settings interface without additional commands.
 
-3. Confirm that [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
-    * `SyncfusionBlazorAssistant is running...` (in VS Code)
+* Confirm the server is active by checking for a message like: `SyncfusionBlazorAssistant is running...` in the output.
+
+* For additional guidance, refer to the [VS Code documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server).
 
 ### Cursor
 
-To configure an MCP server for a specific workspace, you can create a .cursor/mcp.json file in your workspace folder.
+To configure an MCP server for a specific workspace, you can create a `.cursor/mcp.json` file in your workspace folder.
 
 ```json
 {
@@ -121,11 +122,13 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 }
 ```
 
+For more details, refer to the [Cursor documentation](https://cursor.com/docs/context/mcp#using-mcp-json).
+
 ### JetBrains IDEs
 
-1. Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
-2. Click + Add to add a new MCP server configuration.
-3. In the New MCP Server dialog, switch the dropdown as `As JSON` and add the following config:
+* Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
+* Click + Add to add a new MCP server configuration.
+* In the New MCP Server dialog, switch the dropdown as `As JSON` and add the following config:
 
 ```json
 {
@@ -144,13 +147,10 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 }
 ```
 
-4. Click OK and Apply.
+* Click OK and Apply.
+* For further assistance, see the [JetBrains documentation](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server).
 
-> For more detailed information about configuring MCP servers in various clients, refer to the official documentations.
-  * [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
-  * [Cursor](https://cursor.com/docs/context/mcp#using-mcp-json)
-  * [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server)
-  * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
+> For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 
 ## Usage
 
@@ -164,9 +164,9 @@ To activate the SyncfusionBlazorAssistant MCP server:
     * '@ask_syncfusion_blazor'
     * 'ej2-blazor'
 
-   In VS Code, you can also use #SyncfusionBlazorAssistant to explicitly invoke the MCP server.
+   In VS Code, use `#SyncfusionBlazorAssistant` for direct invocation.
 
-2. Grant the SyncfusionBlazorAssistant MCP server a permission to run for this session, workspace, or always.
+2. Grant permission for the server to run (for the session, workspace, or always).
 3. For best results, start a new chat for each new topic to maintain clean context.
 
 ### Mode availability
@@ -184,9 +184,9 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Servers provide full access
 
 Here are some effective ways to use [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant):
 
- * "Create a Syncfusion Blazor Grid component with paging, sorting and filtering"
+ * "Create a Syncfusion Blazor Grid component with paging, sorting and filtering."
  * "How do I implement data binding with Syncfusion Blazor scheduler?"
- * "Show me how to create a dashboard with multiple Syncfusion components"
+ * "Show me how to create a dashboard with multiple Syncfusion components."
 
 ## Troubleshooting
 
