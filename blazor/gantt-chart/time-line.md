@@ -1,40 +1,23 @@
 ---
 layout: post
-title: Time Line in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Time Line in Syncfusion Blazor Gantt Chart component and much more.
+title: Timeline in Blazor Gantt Chart component | Syncfusion
+description: Learn how to configure timelines in the Syncfusion Blazor Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Time Line in Blazor Gantt Chart Component
+# Timeline in Blazor Gantt Chart component
 
-In the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, timeline is used to represent the project duration as individual cells with defined unit and formats.
+The timeline in the Blazor Gantt Chart component represents project durations as cells with defined units and formats, supporting in-built view modes like Hour-Minute, Day-Hour, Week-Day, Month-Week, Year-Month, and Minutes for flexible visualization. Configure modes using the [TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TimelineViewMode.html) property, with top and bottom tiers customized via [TopTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) and [BottomTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) in [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This enables detailed views, such as weekly overviews with daily breakdowns for projects, ensuring accurate timeline representation.
 
-## Timeline view modes
+## Configure timeline view modes
 
-Gantt Chart contains the following in-built timeline view modes:
-
-* Hour
-* Week
-* Month
-* Year
-
-Timescale mode in Gantt Chart can be defined by using [GanttTimelineSettings.TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TimelineViewMode) property and also you can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
-
-Following table explains how top tier and bottom tier unit changes as per `GanttTimelineSettings.TimelineViewMode` property.
-
-Timeline ViewMode | Top tier Unit | Bottom tier Unit
------|-----|-----
-Year | Year | Month
-Month | Month | Week
-Week | Week | Day
-Day | Day | Hour
-Hour | Hour | Minute
+Set the timeline view mode using the [TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TimelineViewMode.html) property, with top tier displaying broader units (e.g., weeks) and bottom tier finer ones (e.g., days), ideal for project schedules.
 
 ### Week timeline mode
 
-In the `Week` timeline mode, top tier of the schedule header displays the weeks, where as bottom tier of the header displays the days. Refer the following code example.
+In Week mode, the top tier shows weeks and the bottom tier days, suitable for short-term project tracking.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -88,7 +71,7 @@ In the `Week` timeline mode, top tier of the schedule header displays the weeks,
 
 ### Month timeline mode
 
-In the `Month` timeline mode, top tier of the schedule header displays the months, whereas bottom tier of the schedule header displays its corresponding weeks. Refer the following code example.
+In Month mode, the top tier shows months and the bottom tier show weeks, ideal for medium-term planning.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -140,11 +123,9 @@ In the `Month` timeline mode, top tier of the schedule header displays the month
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoXuheJyqkWrNI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Gantt Chart with Month Timeline Mode](images/blazor-gantt-chart-month-mode.png)
-
 ### Year timeline mode
 
-In the `Year` timeline mode, top tier of the schedule header displays the years, where as bottom tier of the schedule header displays its corresponding months. Refer the following code example.
+In Year mode, the top tier shows years and the bottom tier shows months, suitable for long-term projects.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -199,7 +180,7 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
 
 ### Day timeline mode
 
-In the `Day` timeline mode, top tier of the schedule header displays the days, where as the bottom tier of the schedule header displays its corresponding hours. Refer the following code example.
+In Day mode, the top tier shows days and the bottom tier hours, ideal for detailed daily scheduling.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -253,7 +234,7 @@ In the `Day` timeline mode, top tier of the schedule header displays the days, w
 
 ### Hour timeline mode
 
-An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top tier of the schedule header displays hour scale and the bottom tier of the header displays its corresponding minutes.
+In Hour mode, the top tier shows hours and the bottom tier minutes, perfect for minute-level task tracking.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -305,9 +286,9 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLStaBezSOKXmrc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Week start day customization
+## Customize week start day
 
-In the Gantt Chart component, you can customize the week start day using the `GanttTimelineSettings.WeekStartDay` property. By default,the `GanttTimelineSettings.WeekStartDay` is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
+In the Gantt chart component, you can customize the week start day using the [GanttTimelineSettings.WeekStartDay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_WeekStartDay) property. By default, the `GanttTimelineSettings.WeekStartDay` is set to **0**, which specifies the **Sunday** as a start day of the week. But, you can customize the week start day by using the following code example.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -362,7 +343,7 @@ In the Gantt Chart component, you can customize the week start day using the `Ga
 
 ## Customize automatic timescale update action
 
-In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the `GanttTimelineSettings.UpdateTimescaleView` property.
+In the Gantt component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [GanttTimelineSettings.UpdateTimescaleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_UpdateTimescaleView) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -418,7 +399,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 
 ## Timeline cells tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [GanttTimelineSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_ShowTooltip) property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [GanttTimelineSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_ShowTooltip) property. The default value of this property is **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -470,9 +451,17 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhotkVoJwAgwcxt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Template
+## Timeline Template
 
-Customizing the timeline cell tooltip in a Gantt Chart using [GanttTooltipSettings.TimelineCellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_TimelineCellTemplate) allows you to display additional information and elements in a more visually appealing and informative way. By combining data bindings and CSS styles, you can create custom templates that suit your specific needs and use cases. The following code example shows how to customize the timeline cell tooltip in Gantt Chart.
+In the Gantt component, you can customize timeline cells using the [GanttTooltipSettings.TimelineCellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_TimelineCellTemplate) property, allowing for the customization of HTML content within timeline cells. This feature enhances the visual appeal and enables personalized functionality.
+
+When designing the timeline cells, you can utilize the following context properties within the template:
+
+* `date`: Defines the date of the timeline cells.
+* `value`: Defines the formatted date value that will be displayed in the timeline cells.
+* `tier`: Defines whether the cell is part of the top or bottom tier.
+
+The following code example how to customize the top tier to display the week's weather details and the bottom tier to highlight working and non-working days, with formatted text for holidays. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -565,3 +554,8 @@ Customizing the timeline cell tooltip in a Gantt Chart using [GanttTooltipSettin
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXreXkrIfwyMRUqR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## See also
+- [How to configure taskbars?](https://blazor.syncfusion.com/documentation/gantt-chart/taskbar)
+- [How to zoom the timeline?](https://blazor.syncfusion.com/documentation/gantt-chart/zooming)
+- [How to configure non-working days?](https://blazor.syncfusion.com/documentation/gantt-chart/scheduling-tasks#weekend-or-non-working-days)

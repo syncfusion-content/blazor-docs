@@ -3,7 +3,7 @@ layout: post
 title: Event Markers in Blazor Gantt Chart Component | Syncfusion
 description: Checkout and learn here all about Event Markers in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
-control: Gantt Chart
+control: Eventmarkers
 documentation: ug
 ---
 
@@ -11,7 +11,31 @@ documentation: ug
 
 The event markers in the Gantt Chart component is used to highlight the important events in a project. Event markers can be initialized by using the [GanttEventMarkers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarkers.html) property, and you can define date and label for the event markers using the `Day` and `Label` properties. You can also customize it using the `CssClass` properties. The following code example shows how to add event markers in the Gantt Chart component.
 
-```cshtml
+Event markers highlight significant project events by displaying vertical timeline indicators that span across the entire Gantt chart. These markers identify critical dates, milestones, deadlines, or important project events that affect multiple tasks or the overall project timeline, providing visual reference points for project-wide activities.
+
+Understanding event markers implementation enables effective visualization of project-critical dates and enhances timeline awareness across all project phases.
+
+Event markers utilize specific properties to define their positioning, appearance, and identification within the project timeline:
+
+**Date positioning**: The [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_Day) property establishes the exact timeline date where the marker appears. This date value determines marker placement across the entire vertical timeline, ensuring accurate project event representation.
+
+**Descriptive labeling**: The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_Label) property provides descriptive text that identifies the marker's purpose or significance. Labels enhance user understanding by clearly indicating what project event the marker represents.
+
+**Visual customization**: The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_CssClass) property enables custom styling through CSS class applications. This property allows distinctive visual treatment for different marker types, supporting color coding, styling variations, and brand consistency.
+
+## Event marker configuration
+
+Event markers render as vertical lines positioned at specific dates across the entire Gantt timeline, distinguishing them from data markers which appear within individual task rows. This project-wide visibility ensures critical dates remain prominent regardless of the current view or task focus.
+
+**Timeline integration**: Event markers integrate seamlessly with the Gantt timeline, appearing as vertical indicators that extend from the top to the bottom of the chart area. This comprehensive visibility ensures important dates remain visible during scrolling, zooming, or filtering operations.
+
+**Multiple marker support**: The component supports multiple event markers simultaneously, allowing comprehensive tracking of various project-critical dates within the same timeline view. Each marker maintains independent configuration while sharing the common timeline space.
+
+The following implementation demonstrates event marker integration within a Gantt chart, showcasing timeline-wide event highlighting:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -64,7 +88,11 @@ The event markers in the Gantt Chart component is used to highlight the importan
         border-left: 2px red dotted;
     }
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreZOiRzZkruiZa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Gantt Chart with Event Markers](images/blazor-gantt-chart-event-markers.png)
 
