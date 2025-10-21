@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resizing the Image Before Sending to the Server | Syncfusion
+title: Resizing the image before sending to the server | Syncfusion
 description: Learn here all about Resizing the Image Before Sending to the Server in Blazor File Upload Component and more details.
 platform: Blazor
 control: File Upload

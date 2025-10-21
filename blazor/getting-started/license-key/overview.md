@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Overview of Syncfusion license and unlock keys - Syncfusion
-description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
+title: License and unlock keys overview | Syncfusion
+description: Understand Syncfusion license keys versus installer unlock keys, when license registration is required for NuGet, evaluation scenarios, build server guidance.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Licensing Overview
+# Syncfusion<sup style="font-size:70%">&reg;</sup> licensing overview
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> license key registration is applicable for all evaluators and only to paid customers who use NuGet packages from [NuGet.org](https://www.nuget.org/packages?q=syncfusion). So, if you use the evaluation installer or the NuGet feed to reference Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies, you must also include the corresponding platform and version license key in your projects
+Syncfusion<sup style="font-size:70%">&reg;</sup> license key registration applies to all evaluators and to paid customers who use Syncfusion<sup style="font-size:70%">&reg;</sup> packages from [NuGet.org](https://www.nuget.org/packages?q=syncfusion). When referencing Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies via the evaluation installer or the NuGet feed, register the corresponding platform and version-specific license key in each project.
 
-Following licensing error will be shown if the license key is not registered in your projects while using assemblies from evaluation installer or from the [nuget.org](https://www.nuget.org/packages?q=syncfusion).
+The following validation message appears if the license key is not registered when using assemblies from the evaluation installer or from [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-N> This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. Include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/licensing-errors#license-key-not-registered) for more information.
+N> This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. Include a valid license to permanently remove this license validation message. You can also obtain a free 30‑day evaluation license to temporarily remove this message during the evaluation period. See Licensing errors: [license key not registered](https://blazor.syncfusion.com/documentation/getting-started/license-key/licensing-errors#license-key-not-registered).
 
 ## Difference between unlock key and license key
 
-Note that this license key is different from the installer unlock key that you might have used in the past and needs to be separately generated from Syncfusion<sup style="font-size:70%">&reg;</sup> website.
+The license key is different from the installer unlock key and must be generated separately from the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
 
-* **Unlock Key** - Syncfusion<sup style="font-size:70%">&reg;</sup> Unlock Key is used to unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> installers alone.
+* **Unlock key** - Used only to unlock Syncfusion<sup style="font-size:70%">&reg;</sup> installers.
 
-* **License Key** - Syncfusion<sup style="font-size:70%">&reg;</sup> License Key is just a string that needs to be registered in your project to avoid licensing warning.
+* **License key** - A string registered in your project to avoid licensing warnings.
 
-N> Refer to [this](https://support.syncfusion.com/kb/article/7863/difference-between-the-unlock-key-and-licensing-key) KB article to know more about difference between the Syncfusion<sup style="font-size:70%">&reg;</sup> Unlock Key and the Syncfusion<sup style="font-size:70%">&reg;</sup> License Key.
+N> See difference between the [unlock key and licensing key](https://support.syncfusion.com/kb/article/7863/difference-between-the-unlock-key-and-licensing-key).
 
-## Registering Syncfusion<sup style="font-size:70%">&reg;</sup> license keys in Build server
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license keys on build servers
 
 | Source of Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies | Details | License Key needs to be registered? | Where to get license key from |
 | ------------- | ------------- | ------------- | ------------- |
@@ -35,8 +35,8 @@ N> Refer to [this](https://support.syncfusion.com/kb/article/7863/difference-bet
 
 You can [download](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download#download-the-licensed-version) and [install](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install) the licensed version of our installer.
 
-## See Also
+## See also
 
-* [How to Generate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor License Key?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
-* [How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in Blazor Application?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
-* [How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in Razor Class Library Application?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-a-razor-class-library)
+* [Generate a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
+* [Register a Syncfusion<sup style="font-size:70%">&reg;</sup> license key in a Blazor application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
+* [Register a Syncfusion<sup style="font-size:70%">&reg;</sup> license key in a Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-a-razor-class-library)

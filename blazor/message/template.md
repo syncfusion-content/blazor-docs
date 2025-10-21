@@ -9,10 +9,9 @@ documentation: ug
 
 # Template in Blazor Message
 
-The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be added directly to the `SfMessage` tags.
+The Message component supports templated content, allowing custom structure and elements. Place any valid Razor or HTML—such as headings, paragraphs, or buttons—between the `SfMessage` tags. Severity, icon visibility, and the close icon can still be configured when using templated content.
 
-
-In the following sample, the Message component content is customized with HTML elements and Blazor Buttons, which are directly added to the `SfMessage` tag.
+The following example customizes message content with HTML elements and Blazor Buttons, added directly inside the `SfMessage` tags. The example also demonstrates toggling visibility via a Show button and a Dismiss action.
 
 {% tabs %}
 {% highlight razor %}
@@ -81,4 +80,4 @@ In the following sample, the Message component content is customized with HTML e
 {% endhighlight %}
 {% endtabs %}
 
-![Message Template](./images/message-template.png)
+![Blazor Message with custom templated content and action buttons](./images/message-template.png)

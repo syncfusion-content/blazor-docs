@@ -9,15 +9,15 @@ documentation: ug
 
 # Phase in Blazor Diagram Component
 
- The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is a subprocess that splits each lane either horizontally or vertically based on the swimlane orientation. Multiple phases can be added to the swimlane.
+ The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) divides each lane horizontally or vertically based on the swimlane orientation. Multiple phases can be added to a swimlane.
 
 ## How to Create an Empty Phase
 
-You can create a [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add it to the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
+Create a [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add it to the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the swimlane.
 
->Note: For Horizontal Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Phase. For Vertical Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Phase.
+>Note: For a horizontal swimlane, set the phase [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width). For a vertical swimlane, set the phase [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height).
 
-The following code example explains how to add a phase at the swimlane.
+The following code example explains how to add a phase to a swimlane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -83,15 +83,15 @@ The following code example explains how to add a phase at the swimlane.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoWZDwgIxDznSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Phse](Swimlane-images/Swimlane_Phase.PNG).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
-
+![Phase](Swimlane-images/Swimlane_Phase.PNG).
 
 ## How to Dynamically Add and Remove Phase in Swimlane
 
- You can dynamically add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
+ Add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example shows how to add and remove phases at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -184,18 +184,19 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXroWXXQAIHdICLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
 
 ![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
-
 ## How to Create and Customize the Phase Header
 
-* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of the Phase allows you to describe the phase textually and customize the appearance of the description.
-* The size of the Phase header can be controlled by using the header's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
-* The appearance of the Phase header can be customized by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
+* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property describes the phase and provides appearance customization.
+* Control the header size using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
+* Customize header appearance using [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
-The following code example explains how to define a Phase header and its customization.
+The following code example shows how to define and customize a phase header.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -258,13 +259,15 @@ The following code example explains how to define a Phase header and its customi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVICNNmAenacKHW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
+
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
+Phase header annotations also support templates. Define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per phase, differentiate annotations by the ID property.
 
-The Phase header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define a separate template for each phase, differentiate the annotation by using the ID property.
-
-The following code example explains how to define a Phase header annotation template.
+The following code example explains how to define a phase header annotation template.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -338,24 +341,26 @@ The following code example explains how to define a Phase header annotation temp
     }
 }
 ```
-![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSMjNcKovfbQWR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
+
+![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
 
 ## How to Set the Orientation of a Phase
 
-The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Orientation) property in the Symbol Palette allows you to define whether a phase is displayed horizontally or vertically. This property is particularly relevant when the phase is part of a SymbolPalette.
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Orientation) property in the symbol palette defines whether a phase is displayed horizontally or vertically. This setting is particularly relevant when the phase is part of a symbol palette.
 
- * Horizontal Orientation: The phase will be aligned horizontally.
- * Vertical Orientation: The phase will be aligned vertically.
+* Horizontal orientation: The phase is aligned horizontally.
+* Vertical orientation: The phase is aligned vertically.
 
-Below is an example demonstrating how to set the orientation for phases in a SfSymbolPaletteComponent:
+Below is an example demonstrating how to set the orientation for phases in an SfSymbolPaletteComponent:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 <div class="control-section">
-    <div style="width:20%;">
+    <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -398,25 +403,27 @@ Below is an example demonstrating how to set the orientation for phases in a SfS
       }
 }
 ```
-![Phse](Swimlane-images/PhaseOrientation.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhSWDDwUHjXBppC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
 
+![Phase](Swimlane-images/PhaseOrientation.PNG).
+
 ## How to Select and Resize Phase Header
 
- * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 
+ * Select an individual phase header by clicking the header twice. The first click selects the phase, and the second click selects the header. 
 
- * You can resize the individual phase header. While resizing the phase, it will maintain a 20px distances from Lane children.
+ * Resize an individual phase header. While resizing a phase, a 20 pixels distance is maintained from the lane children.
 
-  * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
+  * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events are triggered.
 
- The following image shows how to select and resize the phase header.
+The following image shows how to select and resize the phase header.
 
-![Header Select and Resize](Swimlane-images/Header_Selection_Resize.gif).
+![Header Select and Resize](Swimlane-images/Header_Selection_Resize.gif)
 
 ## How to Edit Phase Header
 
-The diagram provides support for editing phase headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
+Phase headers support runtime editing. Double-click the header label to enable in-place editing for that specific header. 
 
 The following image shows how to edit the phase header.
 
@@ -431,7 +438,7 @@ Phase can be selected by clicking (tapping) the header of the phase.
 
 ### How to Resize a Phase
 
-* The phase can be resized by using its selector.
-* You must click the phase header to enable the phase selection.
-* Once the phase is resized, the lane size will be updated automatically.
+* Resize the phase by using the selector.
+* Click the phase header to enable phase selection.
+* After resizing a phase, the lane updates its size automatically.
 
