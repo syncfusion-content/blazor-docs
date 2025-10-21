@@ -88,10 +88,10 @@ The `Display` attribute can be used to show user-friendly labels for enum values
 <SfGrid TValue="Order" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="115"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="115"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="115"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="115"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Verified) Width="110">
             <EditTemplate>
