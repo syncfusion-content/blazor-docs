@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor Rating Component
 
-You can also customize the appearance of rating component.
+The appearance of the Blazor Rating component can be customized to match application design requirements.
 
 ## Items count
 
@@ -23,13 +23,13 @@ You can specify the number of rating items using the [ItemsCount](https://help.s
 
 ```
 
-In this example, the rating component will display `8` rating items. The `Value` property specifies the number of rating items that should be filled, so in this case `3` of the `8` rating items will be filled.
+In this example, the rating component displays 8 rating items. The `Value` property specifies how many items appear filled, so 3 of the 8 items are filled.
 
 ![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.png)
 
 ## Disabled
 
-You can disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+Disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 ```cshtml
 
@@ -43,7 +43,7 @@ You can disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rati
 
 ## Visible
 
-You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to control the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
+Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to control the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
 
 ```cshtml
 
@@ -57,7 +57,7 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Read only
 
-You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property of the Blazor Rating component to make the component non-interactive and prevent the user from changing the rating value.
+Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property of the Blazor Rating component to make the component non-interactive and prevent changes to the rating value via mouse or keyboard.
 
 ```cshtml
 
@@ -71,11 +71,11 @@ You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## CssClass
 
-You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property. 
+Customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property. 
 
 ### Changing rating symbol border color
 
-You can change the rating icon border color in Blazor Rating component, you can use the `CssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
+Change the rating icon border color in Blazor Rating component, you can use the `CssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ You can change the rating icon border color in Blazor Rating component, you can 
 
 ### Changing rated/un-rated symbol fill color 
 
-You can customize the fill colors of rated and un-rated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
+Customize the fill colors of rated and un-rated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
 
 ```cshtml
 
@@ -117,13 +117,13 @@ You can customize the fill colors of rated and un-rated icons in the Rating comp
 
 ```
 
-This will customize the rated fill color to `#ffe814` and un-rated fill color to `#d8d7d4`. `--rating-value` in the linear-gradient provides the current value of the rating item.
+This customizes the rated fill color to `#ffe814` and the unrated fill color to `#d8d7d4`. The `--rating-value` custom property in the gradient reflects the current value of the rating item.
 
 ![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
 
 ### Changing the item spacing
 
-You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `margin` / `padding` CSS property of `.e-rating-item-container` to your desired size. 
+To change the space between rating items in the Blazor Rating component, use the `CssClass` property and set the `margin` or `padding` of `.e-rating-item-container` to the desired size. 
 
 ```cshtml
 
@@ -144,7 +144,7 @@ You can change the space between the rating items in Blazor Rating component, by
 
 ## Changing icon using CssClass
 
-You can change the rating item icon in Blazor Rating component, you can use the `CssClass` property and set the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
+To change the rating item icon in the Blazor Rating component, use the `CssClass` property and set the `content` of `.e-icons.e-star-filled:before` to the desired font icon.
 
 ```cshtml
 
