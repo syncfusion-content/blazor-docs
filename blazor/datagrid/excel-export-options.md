@@ -1245,7 +1245,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding header and footer in the exported Excel document
 
