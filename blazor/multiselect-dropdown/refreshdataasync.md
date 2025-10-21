@@ -9,9 +9,9 @@ documentation: ug
 
 # RefreshDataAsync in Blazor MultiSelect Dropdown Component
 
-The Remote data source is dynamically updated using the **RefreshDataAsync** function. With the aid of this method, update the data source without the need for a [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query). To update the data source, call the URL link with the help of the RefreshDataAsync method.
+Use the [RefreshDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_RefreshDataAsync) method to refresh the remote data source dynamically without changing the configured [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query). This method re-requests data from the configured endpoint (URL) and updates the popup list.
 
-In the following example, the first render uses 5 data without using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query). The source is updated with 8 new data using the URL link.
+In the following example, the initial render loads five items without using Query. The data source is then refreshed to load eight items from the endpoint by calling RefreshDataAsync.
 
 {% highlight Razor %}
 
@@ -19,15 +19,15 @@ In the following example, the first render uses 5 data without using the [Query]
 
 {% endhighlight %}
 
-![Blazor MultiSelect with virtualization](./images/blazor-multiselect-refreshdata.gif)
+![Blazor MultiSelect Dropdown with RefreshDataAsync](./images/blazor-multiselect-refreshdata.gif)
 
-N>When utilizing the `RefreshDataAsync` method with the filter enabled, you must prevent the component's default actions before calling the URL link and the RefreshDataAsync function in the Filtering Event.
+N> When using `RefreshDataAsync` with filtering enabled, prevent the component’s default filtering action in the `Filtering` event (set the cancel flag) before invoking the endpoint and calling `RefreshDataAsync`. This ensures that custom refresh logic runs without conflicting with the built-in behavior.
 
-### Web API adaptor:
-You must use a customized controller in the `WebApiadaptor` to use the `RefreshDataAsync` method.
-In this case, the URL link is used to render and refresh the data source.
+### Web API adaptor
 
-The WebApiadaptor used with the controller and RefreshDataAsync function is denoted in the following code.
+When using `WebApiAdaptor`, implement a custom controller that handles OData-style query parameters for both initial loads and refresh requests. In this scenario, the endpoint URL is used for both rendering and refreshing the data source.
+
+The following example shows `WebApiAdaptor` usage with a controller and the `RefreshDataAsync` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.razor" %}
@@ -43,10 +43,11 @@ The WebApiadaptor used with the controller and RefreshDataAsync function is deno
 {% endhighlight %}
 ​​​​​​​{% endtabs %}
 
-### Url adaptor:
-When the `RefreshDataAsync` method is used in the Urladaptor, the query's `RequiresCount()` property is required to render the data source initially with the URL link. But the query property is not required to refresh the data source. Only the URL link is required.
+### URL adaptor
 
-The Urladaptor used with the controller and RefreshDataAsync function is denoted in the following code.
+When using `UrlAdaptor`, the initial load requires `Query.RequiresCount()` to render data from the endpoint. For subsequent refreshes with `RefreshDataAsync`, the query is not required; only the endpoint URL is needed.
+
+The following example shows `UrlAdaptor` usage with a controller and the `RefreshDataAsync` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.razor" %}
@@ -61,5 +62,3 @@ The Urladaptor used with the controller and RefreshDataAsync function is denoted
 
 {% endhighlight %}
 ​​​​​​​{% endtabs %}
-
-

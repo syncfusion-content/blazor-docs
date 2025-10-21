@@ -9,9 +9,9 @@ documentation: ug
 
 # Virtual Scrolling in Blazor Scheduler Component
 
-To achieve better performance in the Scheduler when loading a large number of resources and events, virtual scrolling support has been added in the timeline views to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in timeline view of the Scheduler by setting `true` to the [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property within the view specific settings. The virtual loading of events is possible in Agenda view, by setting [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property to `true` within the agenda view specific settings.
+To optimize performance in the Scheduler when loading numerous resources and events, virtual scrolling support has been implemented in timeline views. This feature allows for dynamically loading a large set of resources and events instantly as a user scrolls. Enable this functionality in the timeline view of the Scheduler by setting the [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property within the view specific settings. The virtual loading of events is possible in Agenda view, by setting [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property to `true` within the agenda view specific settings.
 
-To get start quickly about virtual scrolling in our Scheduler, you can check on this video:
+To get started quickly with virtual scrolling in the Scheduler, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=yAtUHA2CieI-0"%}
@@ -112,11 +112,12 @@ To get start quickly about virtual scrolling in our Scheduler, you can check on 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDroiDXcqFUEFMys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.gif)
 
-## Virtual scrolling with templates
+## Virtual Scrolling with Templates
 
-In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property is enabled. In the following code, templates were applied to resources and appointments.
+In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property is enabled. In the following code, templates are applied to resources and appointments.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -235,18 +236,20 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSWjNGUFJdqUOm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N>  For now, the virtual loading of resources and events is not supported in `Month Agenda`, `Year` and `TimelineYear` (Horizontal Orientation) views.
 By default Virtual scrolling displays only 30 resources. You can increase or decrease the number of resources by using [VirtualResourceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_VirtualResourceCount) property.
 
-## Enabling lazy loading for appointments
+## Enabling Lazy Loading for Appointments
 
-The lazy loading feature provides a convenient way to efficiently load resource appointments into the Scheduler using an on-demand approach. With this feature, you can seamlessly load a large volume of appointment data into the Scheduler without experiencing any performance degradation.
+The lazy loading feature efficiently loads resource appointments into the Scheduler using an on-demand approach. This feature enables seamless loading of large volumes of appointment data without performance degradation.
 
 By default, the Scheduler fetches all the relevant appointments from the server with in the current date range. However, enabling this feature will trigger query requests to the server for appointment retrieval whenever new resources are rendered due to scroll actions. These queries contain the resource IDs of currently displayed resources along with current date range, which can be passed as a comma-separated string. In the server controller, these resource IDs are parsed to filter the necessary appointments to render in the scheduler. 
 
-When you enable this feature, the Scheduler becomes capable of fetching events from remote services only for the current view port alone to optimize the data retrieval. The remaining appointment data is fetched form the server on-demand based on currently rendered view port resources as you scroll's through the scheduler content.
+When this feature is enabled, the Scheduler becomes capable of fetching events from remote services only for the current viewport to optimize data retrieval. The remaining appointment data is fetched from the server on-demand based on the currently rendered viewport resources as one scrolls through the Scheduler content.
 
-To enable this feature, you have to set the [`EnableLazyLoading`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_Enablelazyloading) property to `true` within the view specific settings.
+To enable this feature, set the [`EnableLazyLoading`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_Enablelazyloading) property to `true` within the view-specific settings.
 
 ```cshtml
 @using Syncfusion.Blazor

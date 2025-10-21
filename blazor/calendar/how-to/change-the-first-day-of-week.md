@@ -11,7 +11,7 @@ documentation: ug
 
 The Calendar provides an option to change the first day of the week by using the [FirstDayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_FirstDayOfWeek) property. Generally, the day of the week starts from 0 (Sunday) and ends with 6 (Saturday).
 
-N> By default, the first day of the week is culture specific.
+N> By default, the first day of the week is based on the current UI culture.
 
 The following code shows the Calendar with `Tuesday` as the first day of the week.
 

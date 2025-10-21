@@ -13,7 +13,7 @@ You can customize the icon and text of Blazor Floating Action Button(FAB) using 
 
 ## FAB with icon
 
-You can show icon only in Floating Action Button by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property. You can show tooltip on hover to show additional details to end-user by setting `title` attribute.
+Display an icon-only FAB by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_IconCss) property and omitting Content. The sample below also demonstrates including a custom icon font via @font-face.
 
 ```cshtml
 
@@ -99,7 +99,7 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 ### Icon position
 
-You can change the position of icon when showing along with content by setting [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon is positioned on the left side together with text.
+Change the icon position relative to the text using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon appears to the left of the text; set IconPosition to Right to place the icon after the text.
 
 Below example demonstrates a FAB with icon and text.
 

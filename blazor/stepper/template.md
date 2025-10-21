@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor Stepper Component
 
-The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) tag directive to set the template content for the steps.
+The Stepper component allows customization of each step's default appearance and content, providing a personalized user experience. Define custom content for the steps using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) tag directive.
 
 The `StepperStep` tag directive options and current step index are passed as `step` and `currentStep` properties in the template context for customization.
 
@@ -97,5 +97,6 @@ The `StepperStep` tag directive options and current step index are passed as `st
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDByiXjaKOkzdqER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Template](./images/Blazor-template.png)

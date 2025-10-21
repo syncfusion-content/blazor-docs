@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable/Disable ListBox in Blazor ListBox Component
 
-To enable or disable items in the listbox, [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems_System_Object_System_Boolean_) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default and by clicking `Enable Items` buttons, the disabled items will be enabled.
+Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems_System_Object_System_Boolean_) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default and by clicking `Enable Items` buttons, the disabled items will be enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -52,4 +52,4 @@ To enable or disable items in the listbox, [EnableItems](https://help.syncfusion
 
 ```
 
-![Disabling Items in Blazor ListBox](./../images/blazor-listbox-disable-items.png)
+![Disabled Items in Blazor ListBox](./../images/blazor-listbox-disable-items.png)

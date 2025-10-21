@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Overview of Syncfusion licensing errors - Syncfusion
-description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Blazor applications.
+title: Troubleshoot Syncfusion licensing errors | Syncfusion
+description: Learn how to diagnose and resolve common Syncfusion Blazor licensing errors, including unregistered, invalid, expired, platform mismatch, version mismatch keys.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Licensing Errors
+# Syncfusion<sup style="font-size:70%">&reg;</sup> licensing errors
 
-Licensing error popup is displayed with various messages under different circumstances. Here are some ways to resolve different issues.
+Licensing pop-ups can appear with different messages depending on the scenario. Use the guidance below to identify the message and apply the appropriate fix.
 
 ## Licensing errors 
 
-### License key not registered\Trial Expired 
+### License key not registered or trial expired
 
-The following error message will be shown if a Syncfusion<sup style="font-size:70%">&reg;</sup> license key has not been registered in your application or if the trial key has expired after 30 days. 
+This message appears when a license key is not registered in the application or a trial key has passed the 30‑day evaluation period.
 
-**Error message:** This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. You should include the valid license key to remove the license validation message permanently.
+**Error message:** This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. Include a valid license to permanently remove this license validation message.
 
 ![License key not registered](images/licensing-error-7.png)
 
 **Solution:**
 
-* If you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+* If using Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), use one of the following options.
 
 1. If you **have a valid Syncfusion<sup style="font-size:70%">&reg;</sup> license**, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -35,21 +35,21 @@ The following error message will be shown if a Syncfusion<sup style="font-size:7
 
 4. If you **do not already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account**, you can create one [here](https://www.syncfusion.com/account/register) and [purchase a license](https://www.syncfusion.com/sales/products) or start your 30-day free trial. Then you can **generate the trial license key for a specific version and platform** from [this page](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-5. Also, you can generate the license key from claim license key page by clicking the **"Claim your FREE account"** click from the licensing warning message. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
+5. You can also generate a license key from the Claim license key page by selecting “Claim your FREE account” in the warning dialog. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
 
-* In your application, register the generated license key. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for information on registering the license key.
+* Register the generated license key in the application. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for information on registering the license key.
 
 ### Invalid key
 
 If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application. 
 
-**Error Message:** The included Syncfusion<sup style="font-size:70%">&reg;</sup> license key is invalid.
+**Error message:** The included Syncfusion<sup style="font-size:70%">&reg;</sup> license key is invalid.
 
 ![License key not registered](images/licensing-error-6.png)
 
 **Solution:**
 
-* If you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+* If you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), use one of the following options:
 
 1. If you have a valid Syncfusion<sup style="font-size:70%">&reg;</sup> license, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -123,7 +123,7 @@ The following error message will be shown if the trial key has expired after 30 
 
 ![Trial Expired](images/licensing-error-3.png)
 
-**Solution:** <br /> Purchase from [here](https://www.syncfusion.com/sales/products) to get a valid Syncfusion<sup style="font-size:70%">&reg;</sup> license.
+**Solution:** <br /> Purchase a license [here](https://www.syncfusion.com/sales/products)
 
 ### Platform Mismatch
 
@@ -171,12 +171,12 @@ If the application is registered with another version’s license key, the follo
 
 ### Facing licensing error message even after registering proper license keys
 
-1. Ensure that respective version [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) nuget package or assembly is referred properly in the application.
+1. Ensure the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) NuGet package or assembly matches the version used by other Syncfusion<sup style="font-size:70%">&reg;</sup> packages in the application.
 
-2. Ensure that all the Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies referenced are of the same version and that the corresponding version and product's license key are registered in the application.
+2. Verify all referenced Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies are the same version and that a matching platform/version license key is registered in the application.
 
-3. The license key should be registered before initializing any Syncfusion<sup style="font-size:70%">&reg;</sup> controls in the application. Refer [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)  page for more information on registering license keys.
+3. Register the license key before initializing any Syncfusion<sup style="font-size:70%">&reg;</sup> component. Refer [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) page for more information on registering license keys.
 
-4. Same version Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies should be present in the application output folders or published folders.
+4. Ensure the same version of Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies are present in the application output and published folders.
 
-5. If you've upgraded the Syncfusion<sup style="font-size:70%">&reg;</sup> version and license keys in the application, try cleaning and rebuilding the application to see if that resolves the license error message.
+5. After upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> packages and updating the license key, clean bin/obj and rebuild the application to clear cached trial assemblies.

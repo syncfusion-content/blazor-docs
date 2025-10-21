@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Hierarchical Layout in Blazor Diagram Component | Syncfusion
+title: Hierarchical Layout in Blazor Diagram | Syncfusion
 description: Learn here all about how to create hierarchical layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Hierarchical Layout in Blazor Diagram Component
+# Hierarchical Layout in Diagram Component
 
-The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) as [HierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_HierarchicalTree). The following example shows how to arrange the nodes in a hierarchical structure.
+The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange nodes in a hierarchical structure, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to **HierarchicalTree**. The following example shows how to arrange nodes in a hierarchical structure.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -75,12 +75,14 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBICjDdzpLQdEPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Hierarchical Diagram](../images/blazor-hierarchical-diagram.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
+
+![Blazor hierarchical layout with manually defined nodes and connectors](../images/blazor-hierarchical-diagram.png)
 
 
-You can create a hierarchical layout with DataSource. The following code demonstrates how to render a Hierarchical layout using DataSource.
+A hierarchical layout can also be created from a data source. The following example demonstrates how to render a hierarchical layout using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -152,15 +154,17 @@ You can create a hierarchical layout with DataSource. The following code demonst
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVIsZNxJfPxIhga?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
->**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
+
+>**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties is string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
 ## Customizing the Properties
 
 ### How to Change Orientation 
 
-You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
+Use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
 <SfDiagramComponent Height="600px" Width="500px" >
@@ -179,7 +183,7 @@ public void UpdateOrientation()
 
 ### How to Update Spacing Between Nodes
 
-You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
+Adjust the horizontal and vertical spacing for the diagram layout using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -202,7 +206,7 @@ public void UpdateSpacing()
 
 ### How to Update Margin
 
-You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
+Use the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property to create padding around the layout within the viewport. This is useful to keep the tree away from the edges of the diagram.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >

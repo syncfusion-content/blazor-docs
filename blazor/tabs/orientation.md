@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientation in Blazor Tabs Component
 
-This section explains about modifying the position and modes of Tab header.
+This section explains how to modify the position and overflow modes of the Tab header.
 
 It allows placing the header section inside the Tabs component at different positions by using the [HeaderPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property. The available positions are as follows:
 
@@ -20,8 +20,8 @@ It allows placing the header section inside the Tabs component at different posi
 
 It is also adaptable to the available space when the tab items exceed the view space. The modes can be customized by using [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property. The available modes are as follows:
 
-* Scrollable
-* Popup
+*   **Scrollable**: When tab items exceed the available space, a scrollbar appears, allowing horizontal or vertical scrolling depending on the `HeaderPlacement`.
+*   **Popup**: When tab items exceed the available space, a "more" button appears (typically at the end of the header). Clicking this button opens a dropdown or popup displaying the hidden tab items.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -157,5 +157,7 @@ It is also adaptable to the available space when the tab items exceed the view s
     }
 </style>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBSWDMNWwjfHxnt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-orientation.gif)

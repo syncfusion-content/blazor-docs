@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder
 
-Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) property to display a small description of the expected value in the input. In the following sample demonstration, set the `Select a game` as the `Placeholder` property value, which will set the respective value to the `Placeholder` attribute of the input element in the DOM.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) property to display brief helper text that describes the expected input. In the following example, the placeholder is set to “Select a game,” which renders as the input element’s placeholder attribute.
 
 {% highlight cshtml %}
 
@@ -23,7 +23,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## Color of the placeholder text
 
-You can change the color of the placeholder by targeting its CSS class `input.e-multiselect::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
+Change the color of the placeholder by targeting its CSS class `input.e-multiselect::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
 
 {% highlight cshtml %}
 
@@ -31,11 +31,11 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 {% endhighlight %}
 
-![Blazor Multiselect DropDown with color placeholder](./images/style/blazor_multiselect_placeholder-color.png)
+![Blazor MultiSelect Dropdown with color placeholder](./images/style/blazor_multiselect_placeholder-color.png)
 
 ## Add mandatory indicator using placeholder
 
-The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
+Add a mandatory indicator “*” to the floating label by targeting the `.e-float-text::after` selector and setting the `content` style.
 
 {% highlight cshtml %}
 
@@ -43,21 +43,21 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
-![Blazor Multiselect DropDown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.png)
+![Blazor MultiSelect Dropdown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.png)
 
 ## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` is depends on `Placeholder`. Default value of `FloatLabelType` is `Never`.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FloatLabelType) property to control the floating label behavior of the MultiSelect. When enabled, the placeholder text moves above the input according to the specified mode. FloatLabelType applies only when a Placeholder is defined. The default value is `Never`.
 
 The floating label supports the types of actions as follow.
 
 Type     | Description
 ------------ | -------------
-  [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto)       | The floating label will float above the input after focusing, or entering a value in the input.
-  [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | The floating label will always float above the input.
-  [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | By default, never float the label in the input when the placeholder is available.
+[Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto) | The label floats above the input on focus or when a value is entered.
+[Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always) | The label always floats above the input.
+[Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never) | The label never floats when a placeholder is present.
 
-The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
+The following example demonstrates `FloatLabelType="Auto"`:
 
 {% highlight Razor %}
 
@@ -65,11 +65,11 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with FloatLabelType property](./images/style/blazor_multiselect_floatLabelType-property.gif)
+![Blazor MultiSelect Dropdown with FloatLabelType property](./images/style/blazor_multiselect_floatLabelType-property.gif)
 
 ## Customizing the float label element’s focusing color
 
-You can customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
+Customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
 
 {% highlight cshtml %}
 
@@ -77,4 +77,4 @@ You can customize the component color when it is focused by targeting its CSS cl
 
 {% endhighlight %}
 
-![Blazor Multiselect DropDown focus color](./images/style/blazor_multiselect_focus-color.png)
+![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.png)

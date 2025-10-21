@@ -9,7 +9,7 @@ documentation: ug
 
 # Types and Icons in Blazor ProgressButton Component
 
-This section explains the different types and icons of Progress Button.
+This section describes the available ProgressButton types and how to configure icons for the component.
 
 ## Types
 
@@ -21,7 +21,7 @@ The types of Blazor Progress Button are as follows:
 
 ### Outline Progress Button
 
-An outline Progress Button has a border with transparent background. To create an outline Progress Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-outline`.
+An outline ProgressButton has a border with transparent background. To create an outline Progress Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-outline`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -33,7 +33,7 @@ An outline Progress Button has a border with transparent background. To create a
 
 ### Round Progress Button
 
-A round Progress Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Progress Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-round`.
+A round ProgressButton is circular and typically displays an icon representing its action. To create a round ProgressButton, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-round`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -51,7 +51,7 @@ A round Progress Button is shaped like a circle. Usually, it contains an icon re
 
 ### Primary Progress Button
 
-The primary progress button is styled with background color and it is used to represent a primary action. To create a Primary Progress Button, set the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IsPrimary) property to `true`.
+A primary ProgressButton uses a solid background to emphasize a primary action. To create a primary ProgressButton, set the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IsPrimary) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -65,7 +65,7 @@ The primary progress button is styled with background color and it is used to re
 
 ### Progress Button with font icons
 
-The Progress Button can have an icon to provide the visual representation of the action. To place the icon on a Progress Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Progress Button. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconPosition) property.
+The ProgressButton can display an icon to visually represent the action. Assign the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconCss) property to `e-icons` plus the desired icon class. By default, the icon is positioned on the left. Use [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconPosition) to change the icon placement.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

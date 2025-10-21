@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Dropdown Menu component and much more.
+title: Item template in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn here all about Item template in Syncfusion Blazor Dropdown Menu component and much more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

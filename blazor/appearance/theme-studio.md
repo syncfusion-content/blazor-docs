@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Theme Studio in Blazor | Custom Themes |Syncfusion
-description: Check out and learn here all about creating custom themes using Theme Studio for Syncfusion Blazor Components.
+title: Theme Studio in Blazor | Custom Themes | Syncfusion
+description: Create custom themes for Syncfusion Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Theme Studio in Blazor Components
+# Theme Studio for Syncfusion Blazor components
 
 Theme Studio for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
 
-## Customizing theme color from theme studio
+## Customize theme colors from theme studio
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. All Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
@@ -19,11 +19,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are developed
 2. The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
 ![Theme Studio two-sections](images/two-pane.png)
 3. Click the color pickers in the theme customization section to select your desired colors.
-![Theme Studio colpr-picker](images/colorpicker.png)
-4. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will be rendered with the newly selected colors in the preview section after selecting a custom color form picker.
+![Theme Studio color picker](images/colorpicker.png)
+4. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are rendered with the newly selected colors in the preview section after selecting a custom color from the picker.
 ![Theme Studio customized](images/customized.png)
 
-### Filtering a specific list of controls
+### Filter a specific list of components
 
 Using the theme studio, you can apply custom themes to a list of specific controls. This option is used when you integrate a selective list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application. The theme studio will filter the selected controls and customize the final output for the controls’ styles alone by reducing the final output file size.
 
@@ -46,17 +46,17 @@ You can download the custom styles after customizing the theme colors.
 
 ![Theme Studio output-files](images/output-files.png)
 
-N> The Material and Tailwind themes use the online Roboto font. If your app is designed to work on a local network without an internet connection, you can use the customized folder, as it contains CSS files without online dependencies of Google Fonts. The lightweight theme files (e.g., fluent2-lite.css) were provided to optimize performance by excluding bigger size styles.
+N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS without Google Fonts dependencies. Lightweight theme files (for example, fluent2-lite.css) optimize performance by excluding larger styles. When using a customized CSS file, remove other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
-### Using customized theme in a web application
+### Use a customized theme in a web application
 
 You can directly use the customized CSS file in the web application.
 
 1. Copy and paste the customized CSS file from the download folder into any folder, e.g., `~/wwwroot/styles/{file-name}.css`.
-2. Refer the customized CSS file reference as follows,
+2. Reference the customized CSS file in the appropriate host page:
     * For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
-    * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
-    * For **Blazor Server application**, refer style sheet inside the `<head>` of
+    * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+    * For **Blazor Server App**, refer style sheet inside the `<head>` of
         * **~/Pages/_Host.cshtml** file for .NET 7.
         * **~/Pages/_Layout.cshtml**  file for .NET 6.
 
@@ -66,14 +66,14 @@ You can directly use the customized CSS file in the web application.
     </head>
     ```
 
-## Import previously changed settings into theme studio
+## Import previous settings into Theme Studio
 
 If you need to change your application theme and UI design in the future, do not customize the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
 
 1. Click the Import icon at the top-right corner.
 ![Theme Studio import-icon](images/import-icon.png)
 2. The Import Theme dialog will open. Click the Browse button and select the `settings.json` file you exported previously.
-![theme studio import-dialog](images/import-dialog.png)
+![Theme Studio import dialog](images/import-dialog.png)
 3. Click the Import button.
 ![Theme Studio imported-settings](images/imported-settings.png)
 4. The stored data will be reflected in the Theme Studio application. Now, you can change the theme colors based on your latest design and export the theme again.
@@ -264,7 +264,7 @@ The following list of common variables is used in the Syncfusion<sup style="font
             </td>
         </tr>
         <tr>
-            <td>--color-sf-on-tertiary-containe</td>
+<td>--color-sf-on-tertiary-container</td>
             <td>
                 <span class="circle-color-indicator" style="background: rgb(55, 11, 30)"></span> rgb(55, 11, 30)
             </td>
@@ -1173,7 +1173,7 @@ The following list of common variables is used in the Syncfusion<sup style="font
 
 ### Bootstrap Theme
 
-Design based on bootstrap 3 theme.
+Design based on Bootstrap 3 theme.
 
 <table>
     <style>

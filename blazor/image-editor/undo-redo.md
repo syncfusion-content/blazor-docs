@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Undo Redo with Blazor Image Editor Component | Syncfusion
-description: Checkout the Undo Redo available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Undo and Redo with Blazor Image Editor Component | Syncfusion
+description: Explore undo and redo features in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Undo Redo in the Blazor Image Editor component
+# Undo and redo in the Blazor Image Editor component
 
-The undo and redo functionalities provide a way to reverse and repeat editing actions performed on an image. These features are essential for maintaining control and flexibility during the editing process. 
+The undo and redo functionalities enable reversing and reapplying editing actions performed on an image. These capabilities are essential for maintaining control and flexibility during the editing process.
 
-In Blazor Image Editor component, the undo and redo history typically have a limited capacity, and the number of steps that can be stored is 16 steps, meaning that the editor keeps track of the most recent 16 actions performed on the image. Once the history reaches its maximum capacity, any new actions beyond the 16th step will result in the removal of the oldest action from the history.
+In the Blazor Image Editor component, the undo and redo history has a fixed capacity of 16 steps. The editor tracks the most recent 16 actions performed on the image. When the history reaches its maximum capacity, any new action removes the oldest action from the history.
 
-## Undo the action 
+## Undo the action
 
-The undo action in an image editor allows users to revert the most recent editing action or a series of actions back to their previous state. When the undo command is triggered, the image editor undoes the last applied modification, effectively restoring the image to its state before the action was performed. The undo action is useful for correcting mistakes, removing unwanted changes, or exploring different editing options without permanently altering the image.
+The undo action reverts the most recent editing action or a series of actions to their previous state. When the undo command is triggered, the image editor undoes the last applied modification, restoring the image to its prior state. The undo action is useful for correcting mistakes, removing unwanted changes, or testing different editing options without permanently altering the image.
 
 ## Redo the action
 
-The redo action in an image editor allows users to reapply previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, bringing the image back to the state it was in after the action was initially applied. The redo is useful when users want to repeat an action that was previously undone or restore changes that were temporarily reversed.
+The redo action reapplies previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, returning the image to the state it was in after the action was initially applied. The redo action is useful for repeating an action that was previously undone or restoring changes that were temporarily reversed.
 
-Here is an example of undoing and redoing the action using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UndoAsync) and [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RedoAsync) method.
+Here is an example of undoing and redoing the action using the [UndoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UndoAsync) and [RedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RedoAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -64,4 +64,4 @@ Here is an example of undoing and redoing the action using the [`UndoAsync`](htt
 }
 ```
 
-![Blazor Image Editor with Undo Redo an image](./images/blazor-image-editor-undo-redo.png)
+![Blazor Image Editor showing undo and redo actions](./images/blazor-image-editor-undo-redo.jpg)

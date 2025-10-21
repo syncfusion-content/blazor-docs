@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor Input Mask Component
 
-The following section explains the steps to include native events and pass data to event handler in MaskedTextBox component.
+This section describes how to bind native DOM events to the MaskedTextBox component and how to pass event data to event handlers.
 
 ## Bind native events to MaskedTextBox
 
-You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Bind native DOM events using the Blazor `@on{event}` syntax on the component. The attribute value is the event handler to invoke.
 
-In the following example, the KeyPressed method is called every time the key is pressed on input.
+In the following example, the KeyPressed method is called every time a key is pressed in the input.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
-Also, you can rewrite the previous example code as follows using Lambda expressions.
+Also, the previous example can be written using a lambda expression.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -39,16 +39,16 @@ Also, you can rewrite the previous example code as follows using Lambda expressi
 
 ## Pass event data to event handler
 
-Blazor provides set of argument types to map to native events. The list of event types and event arguments are:
+Blazor provides specific argument types for native events. Common mappings include:
 
-* Focus Events - FocusEventArgs
-* Mouse Events - MouseEventArgs
-* Keyboard Events - KeyboardEventArgs
-* Input Events - ChangeEventArgs/EventArgs
-* Touch Events – TouchEventArgs
-* Pointer Events – PointerEventArgs
+* Focus events – FocusEventArgs
+* Mouse events – MouseEventArgs
+* Keyboard events – KeyboardEventArgs
+* Input events – ChangeEventArgs/EventArgs
+* Touch events – TouchEventArgs
+* Pointer events – PointerEventArgs
 
-In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "m" key.
+In the following example, the KeyPressed method is invoked for every key press in the input, and a message is written only when the "m" key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

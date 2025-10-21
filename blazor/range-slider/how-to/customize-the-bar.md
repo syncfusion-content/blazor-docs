@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the bar in Blazor Range Slider Component
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the slider bar. The slider bar can be customized with different themes. By default, slider have class name `e-slider-track` for bar. The class can be overridden with our own color values like the following code snippet.
+The slider’s appearance can be customized with CSS. By overriding the slider CSS classes, the slider bar can be styled to match application design requirements. The slider bar supports theme-based styling and can be further customized. By default, the slider uses the `e-slider-track` class for the track. Override the class with custom color values as shown in the following example.
 
 ```css
 #gradient_slider.e-control.e-slider .e-range {
@@ -23,7 +23,7 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
 }
 ```
 
-In this code snippet, it can be seen that the dynamic color of the slider is being changed.
+In this example, the gradient background of the selection bar is customized to create a dynamic color effect.
 
 ```cshtml
 <SfSlider @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange">
@@ -31,7 +31,7 @@ In this code snippet, it can be seen that the dynamic color of the slider is bei
 </SfSlider>
 ```
 
-Color bar can be customized in quite a number of ways.
+The color of the bar can be customized in several ways, including height, gradients, and dynamic CSS classes based on the current value.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs;
@@ -184,16 +184,16 @@ Color bar can be customized in quite a number of ways.
 
 ```
 
-![Blazor RangeSlider with Bar](./../images/blazor-rangeslider-with-bar.gif)
+![Blazor Range Slider with customized bar styles](./../images/blazor-rangeslider-with-bar.gif)
 
 ## Customizing the Range Slider Track with Color Segments
 
 You can enhance the Blazor Range Slider by defining different track colors for specific value ranges. This is done using the [`ColorRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html) child elements within the [`SliderColorRanges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderColorRanges.html) tag.
 
-**How It Works:**
+**How it works:**
 
 * [``Start``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_Start): Defines where the color segment begins.
-* [``End``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_End): Defines where the color segment stops.
+* [``End``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_End): Defines where the color segment ends.
 * [``Color``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_Color): Specifies the color for the segment.
 
 ```cshtml
@@ -226,4 +226,4 @@ You can enhance the Blazor Range Slider by defining different track colors for s
 
 ```
 
-![Blazor RangeSlider with track color](./../images/blazor-rangeslider-track.png)
+![Blazor Range Slider with track color](./../images/blazor-rangeslider-track.png)

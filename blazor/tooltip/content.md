@@ -9,11 +9,11 @@ documentation: ug
 
 # Content in Blazor Tooltip Component
 
-The Blazor Tooltip component allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can explore and implement various content within your Tooltip to enhance its functionality and appearance.
+The Blazor Tooltip component displays supplemental information when users hover over or interact with elements on a web page. This article explains multiple options for defining tooltip content and when to use each approach to enhance clarity and appearance.
 
 ## Simple Text Content
 
-The simplest way to use a Tooltip is with a string of text using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) property. A text or a piece of information assigned to the Tooltip’s `Content` property will be displayed as the main text stream of the Tooltip.
+The simplest way to configure tooltip content is to provide a text string using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) property. The value assigned to the `Content` property is rendered as the primary text of the tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -29,13 +29,13 @@ The simplest way to use a Tooltip is with a string of text using the [Content](h
 }
 ```
 
-This displays a simple text message when users hover over the button.
+This configuration displays a plain text message when the button receives hover or focus. The example text is illustrative and can be replaced with task-specific content.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-string-content.gif)
+![Blazor Tooltip displaying simple text content](images/blazor-tooltip-string-content.gif)
 
 ## Using the Title Attribute
 
-You can also use the **title** attribute of the target element as the Tooltip content. By using the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property which allows the Tooltip to use the title attribute of the target element as its content.
+The tooltip can also derive its content from the title attribute of the target element. The [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property defines the elements to which the tooltip is applied, and when those elements include a title attribute, that value is used as the tooltip content.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -53,16 +53,16 @@ You can also use the **title** attribute of the target element as the Tooltip co
 
 ```
 
-This approach is useful when you want to enhance existing HTML title attributes with a more stylish Tooltip.
+This approach is effective for enhancing existing title attributes with a styled tooltip, especially when retrofitting existing markup. The example includes a placeholder hyperlink (href="#") for demonstration.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-title-content.gif)
+![Blazor Tooltip using title attribute content](images/blazor-tooltip-title-content.gif)
 
 
 ## Using Template
 
-The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
+The Tooltip's Template capability enables full customization and the inclusion of custom elements. Provide any content or HTML elements through the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property to compose rich content. The [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content.
 
-Check out the following code example to see how to include an HTML template inside the Tooltip.
+The following example shows how to include an HTML template inside the tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons;
@@ -176,14 +176,13 @@ The SfTooltip is used to display dynamic content generated using a RenderFragmen
 }
 ```
 
-This approach gives you full control over the Tooltip's content, allowing for interactive elements and dynamic data.
+This approach provides full control over the tooltip content and supports interactivity and dynamic data. When adding interactive elements, consider accessibility and focus behavior to ensure a predictable user experience.
 
-![Blazor Tooltip with Template](images/blazor-tooltip-renderfragment-content.gif)
+![Blazor Tooltip rendering dynamic content via RenderFragment](images/blazor-tooltip-renderfragment-content.gif)
 
 ##  Rendering HTML content using MarkupString
 
-By default, the Tooltip can show any kind of formatted content. To improve its layout or create a custom visual element, utilize the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property to establish the desired structure. You can also use [`@(MarkupString)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.markupstring?view=aspnetcore-7.0) to dynamically render HTML content.
-
+By default, the tooltip can show formatted content. To improve the layout or create a custom visual element, use the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property to define the structure. The [`@(MarkupString)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.markupstring?view=aspnetcore-7.0) type can also be used to render HTML content from a string dynamically.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -217,4 +216,4 @@ This is useful when you need to render HTML content that's stored as a string, p
 
 ![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)
 
-By using these different content options, you can create Tooltips that range from simple text hints to rich, interactive information displays, enhancing the user experience of your Blazor application.
+By selecting the appropriate approach—plain text via `Content`, title attribute content via `Target`, rich layouts via `ContentTemplate`, dynamic UI via `RenderFragment`, or string-based HTML via `MarkupString`—the tooltip can convey anything from simple hints to rich, interactive information to improve the user experience.

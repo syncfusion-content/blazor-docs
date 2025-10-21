@@ -9,15 +9,15 @@ documentation: ug
 
 # Cascading in ComboBox
 
-A cascading ComboBox allows you to select an item from a list of options, and the options in the second ComboBox are filtered based on the selection made in the first ComboBox. This allows you to create a hierarchy of comboBox options, where the options in the child ComboBox are dependent on the selection made in the parent ComboBox.
+A cascading ComboBox filters the options of a child ComboBox based on the selection made in the parent ComboBox. This enables a hierarchy of ComboBox options, where child options depend on the parent’s selected value.
 
-In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event handler of the first ComboBox, you can load the data for the second ComboBox based on the selected value of the first ComboBox. This process can be repeated between the second and third ComboBoxes to create a cascading effect.
+Use the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the parent ComboBox to load and bind data for the child ComboBox based on the selected value. This pattern can be repeated (parent → child → grandchild) to create multi-level cascading.
 
-To quickly get started with Cascading in the Blazor ComboBox component, you can watch the video below.
+To quickly get started with cascading in the Blazor ComboBox component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=zGGntfBPQNI" %}
 
-In the following example, when a country is selected in the first ComboBox, the list of states for that country is loaded in the second ComboBox. Similarly, when a state is selected in the second ComboBox, the list of cities for that state is loaded in the third ComboBox.
+In the following example, selecting a country in the first ComboBox loads its states in the second ComboBox. Selecting a state then loads the corresponding cities in the third ComboBox.
 
 {% highlight cshtml %}
 
@@ -31,9 +31,9 @@ In the following example, when a country is selected in the first ComboBox, the 
 
 ## Cascading with other form field 
 
-To populate other form fields (such as textboxes) based on the value selected in the ComboBox, you can use the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox. In the `ValueChange` event handler, you can retrieve the relevant data from your data source and use it to populate the other form fields.
+To populate other form fields (such as textboxes) based on the selected value in a ComboBox, handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event. In the handler, retrieve the related data from the source and assign it to the target fields.
 
-In the following example, the ComboBox displays a list of countries, and the textboxes display the state ID, country ID, and capital of the selected country. When the user selects a different country in the ComboBox, the `ValueChange` event handler is triggered, and the data for the selected country is retrieved from the data source
+In the following example, the ComboBox lists countries, and textboxes display the state ID, country ID, and capital for the selected country. When a different country is chosen, the `ValueChange` event triggers and updates the related fields.
 
 {% highlight cshtml %}
 
@@ -45,4 +45,4 @@ In the following example, the ComboBox displays a list of countries, and the tex
 
 ![Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)
 
-N> [View Sample in Demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).
+N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).

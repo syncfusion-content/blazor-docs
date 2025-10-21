@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to place Maps component inside other components | Syncfusion
-description: Learn here about how to place the Map inside other components like Dashboard Layout, Tab, Dialog and Accordion.
+description: Learn how to render the Maps component inside other components, including Dashboard Layout, Tab, Dialog and Accordion.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Render Maps component inside other components
 
-The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Maps component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Maps component.
+The Maps component can be rendered within other components such as Dashboard Layout, Tab, Dialog, and Accordion. Because Maps often initializes before its container finishes rendering, use a boolean flag to control when the Maps component starts rendering.
 
 ## Maps component inside Dashboard Layout
 
@@ -115,7 +115,6 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ma
         MapsTwo.Refresh();
         MapsThree.Refresh();
     }
-
 }
 
 ```
@@ -130,70 +129,71 @@ When the Maps component renders within the Tab component, its rendering begins c
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Maps
 
-    <SfTab CssClass="default-tab">
-        <TabEvents Created="Created"></TabEvents>
-        <TabItems>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Maps"></TabHeader>
-                </ChildContent>
+<SfTab CssClass="default-tab">
+    <TabEvents Created="Created"></TabEvents>
+    <TabItems>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Maps"></TabHeader>
+            </ChildContent>
+            <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                <SfMaps ID="Maps" Width="100%">
+                    <MapsLayers>
+                        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+                        </MapsLayer>
+                    </MapsLayers>
+                </SfMaps>                      
+                }   
+                </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Maps - OSM"></TabHeader>
+            </ChildContent>
                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                    <SfMaps ID="Maps" Width="100%">
-                        <MapsLayers>
-                            <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-                            </MapsLayer>
-                        </MapsLayers>
-                    </SfMaps>                      
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Maps - OSM"></TabHeader>
-                </ChildContent>
-                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 { 
-                    <SfMaps ID="OSM" Width="100%">
-                        <MapsLayers>
-                            <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string"></MapsLayer>
-                        </MapsLayers>
-                    </SfMaps> 
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Maps - SubLayer"></TabHeader>
-                </ChildContent>
-                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                    <SfMaps ID="SubLayer" Width="100%">
-                        <MapsLayers>
-                            <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-                                <MapsShapeSettings Fill="#E5E5E5">
-                                    <MapsShapeBorder Color="black" Width="0.1"></MapsShapeBorder>
-                                </MapsShapeSettings>
-                            </MapsLayer>
-                            <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
-	                    	        Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
-                                <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
-                                    <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
-                                </MapsShapeSettings>
-                            </MapsLayer>
-                        </MapsLayers>
-                    </SfMaps> 
-                 }   
-                 </ContentTemplate>
-            </TabItem>
-        </TabItems>
-    </SfTab>
+                @if (IsInitialRender)
+                { 
+                <SfMaps ID="OSM" Width="100%">
+                    <MapsLayers>
+                        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string"></MapsLayer>
+                    </MapsLayers>
+                </SfMaps> 
+                }   
+                </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Maps - SubLayer"></TabHeader>
+            </ChildContent>
+                <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                <SfMaps ID="SubLayer" Width="100%">
+                    <MapsLayers>
+                        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+                            <MapsShapeSettings Fill="#E5E5E5">
+                                <MapsShapeBorder Color="black" Width="0.1"></MapsShapeBorder>
+                            </MapsShapeSettings>
+                        </MapsLayer>
+                        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
+                                Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
+                            <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
+                                <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
+                            </MapsShapeSettings>
+                        </MapsLayer>
+                    </MapsLayers>
+                </SfMaps> 
+                }   
+                </ContentTemplate>
+        </TabItem>
+    </TabItems>
+</SfTab>
 
-@code{
+@code {
     public bool IsInitialRender { get; set; }
+
     public void Created()
     {
         IsInitialRender = true;
@@ -240,12 +240,14 @@ When you drag and resize the Dialog component, the Maps component is not notifie
         </DialogTemplates>
     </SfDialog>
 </div>
+
 <style>
     #target {
         min-height: 400px;
     }
    
 </style>
+
 @code {
     SfMaps Maps;
     public bool IsInitialRender { get; set; }
@@ -270,6 +272,7 @@ When you drag and resize the Dialog component, the Maps component is not notifie
         this.ShowButton = true;
         IsInitialRender = false;
     }
+
     private void OnClicked()
     {
         this.Visibility = true;
@@ -286,8 +289,8 @@ When the Maps component renders within the Accordion component, its rendering be
 
 When you expand the Accordion component, the Maps component is not notified, so the Maps are not properly rendered within the Accordion. To avoid this scenario, the Maps component's `Refresh` method must be called in the Accordion's [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event.
 
-
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 @using Syncfusion.Blazor.Navigations
 
@@ -348,6 +351,7 @@ When you expand the Accordion component, the Maps component is not notified, so 
         </AccordionItems>
     </SfAccordion>
 </div>
+
 <style>
     @@-moz-document url-prefix() {
         .e-accordion .e-content table {
@@ -381,7 +385,7 @@ When you expand the Accordion component, the Maps component is not notified, so 
     }
 </style>
 
-@code{
+@code {
     SfMaps MapsOne;
     SfMaps MapsTwo;
     SfMaps MapsThree;

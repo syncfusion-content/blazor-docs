@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Draggable in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about draggable in the predefined dialogs and much more details.
+description: Learn how to enable draggable behavior for predefined dialogs in Blazor, including alert, confirm, and prompt dialog examples.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Draggable in Predefined Dialogs
 
-The predefined dialogs supports dragging within its target container by grabbing the dialog header, which allows the user to reposition the dialog dynamically by using the [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
+Predefined dialogs support dragging by the dialog header, allowing users to reposition the dialog within its target container. Enable this behavior using the [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property. The default value is `false`. Dragging requires a visible header; if the header is hidden or replaced, dragging behavior may be affected.
+
+The following examples demonstrate enabling dragging for Alert, Confirm, and Prompt dialogs.
 
 {% tabs %}
 

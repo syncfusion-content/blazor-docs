@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Toolbar Component
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
+This document provides CSS structures for modifying the control’s appearance based on user preference. 
 
 ## Customizing Toolbar
 
@@ -23,7 +23,7 @@ Use the following CSS to customize the Toolbar.
 
 ```
 
-## Customizing the Toolbar items
+## Customizing the Toolbar Items
 
 Use the following CSS to customize the items of Toolbar.
 
@@ -47,7 +47,7 @@ Use the following CSS to customize the button in the items of Toolbar.
 
 ```
 
-## Customizing Toolbar's item icon
+## Customizing Toolbar's Item Icon
 
 Use the following CSS to customize the item icon of Toolbar control.
 
@@ -60,7 +60,7 @@ Use the following CSS to customize the item icon of Toolbar control.
 
 ```
 
-## Customizing the hover state of Toolbar control
+## Customizing the Hover State of Toolbar Control
 
 Use the following CSS to customize the toolbar item when hovering.
 
@@ -73,7 +73,7 @@ Use the following CSS to customize the toolbar item when hovering.
 
 ```
 
-## Customizing selected item of Toolbar control
+## Customizing Selected Item of Toolbar Control
 
 Use the following CSS to customize the selected toolbar item.
 

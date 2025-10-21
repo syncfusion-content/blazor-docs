@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resizing with Blazor Image Editor Component | Syncfusion
-description: Checkout the Resizing available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Explore the resizing support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,22 +9,22 @@ documentation: ug
 
 # Resize in the Blazor Image Editor component
 
-The resize feature in an Image Editor is a valuable tool that empowers users to modify the size or dimensions of an image to meet their specific requirements. Whether it's for printing, web display, or any other purpose, this feature allows users to tailor images to their desired specifications.
+The resize feature adjusts the size or dimensions of an image to match specific requirements for printing, web display, or other use cases.
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Int32_System_Int32_System_Boolean_) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The Image Editor control provides the [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Int32_System_Int32_System_Boolean_) method to change image size. This method accepts three parameters that define the resizing behavior:
 
-* width: Specifies the resizing width of the image.
+- width: Sets the target width of the image.
 
-* height: Specifies the resizing height of the image.
+- height: Sets the target height of the image.
 
-* isAspectRatio: Specifies a boolean value indicating whether the image should maintain its original aspect ratio during resizing.
-    * When set to `true`, the image maintains its original aspect ratio. The width is applied as specified, and the height is automatically adjusted to maintain the aspect ratio.
-    * When set to `false`, the image is resized according to the specified width and height, without maintaining the aspect ratio.
-    * The default value is `false`.
+- isAspectRatio: Indicates whether to preserve the original aspect ratio.
+  - When `true`, the image maintains its original aspect ratio. The specified width is applied, and the height adjusts automatically.
+  - When `false`, the image resizes to the specified width and height without preserving the aspect ratio.
+  - The default value is `false`.
 
-Here is an example of resizing the image using the `ImageResizeAsync` method.  
+Here is an example of resizing the image using the `ImageResizeAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -60,22 +60,22 @@ Here is an example of resizing the image using the `ImageResizeAsync` method.
 }
 ```
 
-![Blazor Image Editor with Resize an image](./images/blazor-image-editor-resize.png)
+![Blazor Image Editor with a resized image](./images/blazor-image-editor-resize.jpg)
 
 ## Resizing event
 
-The [`ImageResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ImageResizing) event is triggered when resizing the image. This event provides information encapsulated within an object, which includes details about the previous and current height and width of an image.
+The [`ImageResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ImageResizing) event triggers while an image is being resized and provides details about the previous and current dimensions.
 
-The parameter available in ResizeEventArgs is,
+Parameters available in [ImageResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html):
 
-* [`ImageResizeEventArgs.PreviousWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_PreviousWidth) - The width of the image before resizing is performed.
+- [`ImageResizeEventArgs.PreviousWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_PreviousWidth) – The width of the image before resizing.
 
-* [`ImageResizeEventArgs.PreviousHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_PreviousHeight) - The height of the image before resizing is performed.
+- [`ImageResizeEventArgs.PreviousHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_PreviousHeight) – The height of the image before resizing.
 
-* [`ImageResizeEventArgs.Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Width) - The width of the image after resizing is performed.
+- [`ImageResizeEventArgs.Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Width) – The width of the image after resizing.
 
-* [`ImageResizeEventArgs.Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Height) - The width of the image after resizing is performed.
+- [`ImageResizeEventArgs.Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Height) – The height of the image after resizing.
 
-* [`ImageResizeEventArgs.IsAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_IsAspectRatio) - The type of resizing performed such as aspect ratio or non-aspect ratio.
+- [`ImageResizeEventArgs.IsAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_IsAspectRatio) – Indicates whether the resizing preserved the aspect ratio.
 
-* [`ImageResizeEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Cancel) - Specifies a boolean value to cancel the resizing action.
+- [`ImageResizeEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageResizeEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageResizeEventArgs_Cancel) – A boolean value that cancels the resizing action when set to true.

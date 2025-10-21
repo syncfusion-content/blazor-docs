@@ -9,9 +9,9 @@ documentation: ug
 
 # Inline Rendering in Blazor Color Picker Component
 
-By default, the ColorPicker will be rendered using SplitButton and open the pop-up to access the ColorPicker. To render the ColorPicker container alone and to access it directly, render it as inline. It can be achieved by setting the [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Inline) property to `true`.
+By default, the Color Picker renders with a button that opens a popup to access the selector. To display the Color Picker directly on the page (without a popup), render it inline by setting the [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Inline) property to `true`.
 
-The following sample shows the inline type rendering of ColorPicker.
+The following sample shows inline rendering of the Color Picker.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -22,6 +22,6 @@ The following sample shows the inline type rendering of ColorPicker.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVrQgIVKJnGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.png)
+![Inline rendering in Blazor Color Picker](./images/blazor-colorpicker-inline-rendering.png)
 
-N> The `ShowButtons` property is disabled in this sample because the control buttons are not needed for inline type. To know about the control buttons functionality, refer to the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).
+N> The `ShowButtons` property is disabled in this sample because control buttons are not needed for inline rendering. For details about control buttons functionality, see [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).

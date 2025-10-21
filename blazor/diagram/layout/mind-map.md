@@ -9,13 +9,13 @@ documentation: ug
 
 # Mind Map Layout in Blazor Diagram Component
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap), set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to **MindMap**.
 
-To create a mind map layout using the Blazor Diagram, refer to the below video link,
+To see a quick walkthrough of creating a mind map layout, watch the following video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_EHmKNok4GQ" %}
 
- The following code example illustrates how to create a mind map layout.
+The following code example illustrates how to create a mind map layout using a data source.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -77,11 +77,13 @@ To create a mind map layout using the Blazor Diagram, refer to the below video l
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample1)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSiDNxJQsQKecM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample1)
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
-You can also decide the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for a mind map layout using the GetBranch method.
+You can also control the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following example demonstrates how to configure all branches to appear on the right side using this method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -160,11 +162,13 @@ You can also decide the branch for a mind map using the [GetBranch](https://help
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample2)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIiDXHJGLCZNgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample2)
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
->**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the `ID` and `ParentID` properties are string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
 Also, you can render a mind map layout without using a Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 
@@ -402,14 +406,15 @@ Also, you can render a mind map layout without using a Datasource. The following
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVIMtZRfwVSIPqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
 
 ## How to Change the Mind Map Orientation
 
-The [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the mind map layout specifies the direction in which nodes are arranged. By default, the layout is set to **Horizontal**, which means nodes are arranged from left to right. To change the layout to vertical, set the `Orientation` property to **Vertical**.
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property controls the direction in which the mind map expands. By default, the layout is set to **Horizontal**, which means nodes are arranged from left to right. To change the layout to vertical, set the `Orientation` property to **Vertical**.
 
-The following example demonstrates how to configure the mind map layout with vertical orientation during component initialization.
+The following example demonstrates configuring the mind map layout with a vertical orientation during component initialization.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -522,12 +527,13 @@ The following example demonstrates how to configure the mind map layout with ver
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeWNXxpmANjEaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation).
 
-![MindMapDiagram](../images/blazor-mind-map-diagram-with-orientation.png)
+![Blazor mind map with vertical orientation](../images/blazor-mind-map-diagram-with-orientation.png)
 
-The following code demonstrates how to update the layout's orientation dynamically at runtime using data binding and directly using methods.
+The following example demonstrates how to update the layout orientation dynamically at runtime using both data binding and direct method calls.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -655,7 +661,9 @@ The following code demonstrates how to update the layout's orientation dynamical
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhIWZXnfGJpthaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientationRuntime).
 
 The following table outlines the various orientation types available:
 

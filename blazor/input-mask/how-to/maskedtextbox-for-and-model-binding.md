@@ -9,9 +9,9 @@ documentation: ug
 
 # Model Binding in Blazor Input Mask Component
 
-This section demonstrates the Strongly typed extension support in MaskedTextBox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view, access model properties on that view, and use data associated with model to render the component.
+This section demonstrates how to use model binding and validation with the MaskedTextBox in a Blazor EditForm. Bind a model to the form, annotate its properties with data annotations, bind the component’s Value parameter to a model property, and display validation messages when the form is submitted. For reference, see SfMaskedTextBox, Mask, Placeholder, and Value in the API, and the Blazor EditForm and data annotations validation guidance.
 
-In this sample, first click the submit button to post the selected value in the MaskedTextBox. When posting the null value, validation error message will be shown below the MaskedTextBox.
+In this sample, click the submit button to post the value in the MaskedTextBox. When the bound value is null, empty, or otherwise invalid according to data annotations, a validation error message is shown below the MaskedTextBox.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -41,5 +41,4 @@ In this sample, first click the submit button to post the selected value in the 
 }
 ```
 
-
-![MaskedTextBox Sample](../images/validation.png)
+![Blazor Input Mask model binding validation error](../images/validation.png)

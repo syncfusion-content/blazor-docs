@@ -9,11 +9,11 @@ documentation: ug
 
 # Open and Save Signature
 
-The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
+The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports loading a pre-drawn signature from a hosted/online URL or a base64 string, and saving signatures in multiple formats such as image files, base64, and blob.
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image's base64.
+Load a pre-drawn signature from a base64 string or a hosted/online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. PNG, JPEG, and SVG base64 formats are supported. When loading from a different origin, ensure the hosting server allows cross-origin requests (CORS).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -60,15 +60,15 @@ The signature component opens a pre-drawn signature as either base64 or hosted/ 
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-open-image.png)
+![Load a signature from a URL or base64 into the Blazor Signature component](./images/blazor-signature-open-image.png)
 
 ## Save Signature
 
-The Signature component saves the signature as base64, blob, and image like PNG, JPEG, and SVG.
+Save the drawn signature as base64, blob, or an image (PNG, JPEG, SVG) according to application needs.
 
 ### Save as Base64
 
-The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the PNG, JPEG, and SVG format as base64.
+Retrieve the signature as a base64 string using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. PNG, JPEG, and SVG formats are supported. The base64 value can be stored, uploaded, or displayed as needed.
 
 ```cshtml
 
@@ -89,11 +89,11 @@ The Signature component gets the signature as base64 using the [`GetSignatureAsy
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-base.png)
+![Get the signature as a base64 string](./images/blazor-signature-save-base.png)
 
 ### Save as Blob
 
-The signature component saves the signature as Blob using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method.
+Save the signature as a Blob using the [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method for scenarios that require binary data handling.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -113,11 +113,11 @@ The signature component saves the signature as Blob using [`SaveAsBlobAsync`](ht
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-blob.png)
+![Save the signature as a Blob](./images/blazor-signature-save-blob.png)
 
 ### Save as Image
 
-The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is PNG.
+Save the signature as an image using the [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. Provide the file type and file name as parameters; the default file type is PNG. The example below uses a SplitButton to choose the output format.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -166,13 +166,13 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-image.png)
+![Save the signature as an image file](./images/blazor-signature-save-image.png)
 
 ## Save with Background
 
-The Signature component saves the signature with its background by using the [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property. Its default value is true.
+Control whether the signature background is included in the saved output using the [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property (default: true). Set this property based on whether a solid background should be preserved (for example, keep background for JPEG) or excluded (for transparency in PNG/SVG when set to false).
 
-In the following sample, the background color is set as ‘rgb(103, 58, 183)’ and save with background as true.
+In the following sample, the background color is set to rgb(103, 58, 183) and the signature is saved with the background.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -221,4 +221,4 @@ In the following sample, the background color is set as ‘rgb(103, 58, 183)’ 
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-bg.png)
+![Save the signature with a background color](./images/blazor-signature-save-bg.png)

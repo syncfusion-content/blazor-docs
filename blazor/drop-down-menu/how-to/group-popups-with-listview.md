@@ -9,9 +9,9 @@ documentation: ug
 
 # Group dropdown listview items in Blazor Dropdown Menu Component
 
-Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID) listview and provide it as a [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) for Dropdown Menu.
+Header sections within the Dropdown Menu popup can be created by templating the popup with the ListView component. Assign a ListView instance (identified by its [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID)) to the [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) property of the Dropdown Menu component, and configure field mappings to group the items.
 
-In the following example, ListView element is given as [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) to Dropdown Menu and header can be achieved by [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) property.
+In the following example, the ListView is provided as PopupContent for the Dropdown Menu, and the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) property of the ListView field settings generates grouped headers based on the `Category` field. The `ShowCheckBox` option enables multi-selection within each group.
 
 ```cshtml
 
@@ -52,4 +52,4 @@ In the following example, ListView element is given as [PopupContent](https://he
 
 
 
-![Grouping Popup Items in Blazor DropDownMenu](./../images/blazor-dropdownmenu-grouping-popup-item.png)
+![Grouped ListView items inside the Blazor Dropdown Menu popup](./../images/blazor-dropdownmenu-grouping-popup-item.png)

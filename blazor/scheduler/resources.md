@@ -13,9 +13,9 @@ documentation: ug
 
 It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
 
-The Scheduler groups the resources based on different criteria. It includes grouping appointments based on resources, grouping resources based on dates, and timeline scheduling. Also, the data for resources bind with Scheduler either as a local JSON collection or URL, retrieving data from remote data services.
+The Scheduler groups the resources based on different criteria. It includes grouping appointments based on resources, grouping resources based on dates, and timeline scheduling. Additionally, resource data can bind with the Scheduler either as a local JSON collection or via a URL, retrieving data from remote data services.
 
-## Resource fields
+## Resource Fields
 
 The default options available within the [`Resources`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html) collection are as follows,
 
@@ -37,11 +37,11 @@ The default options available within the [`Resources`](https://help.syncfusion.c
 | [`WorkDaysField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_WorkDaysField) | string | Binds the work days field name from the resources `DataSource`. It allows to provide different working days collection for the resources. |
 | [`CssClassField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_CssClassField) | string | Binds the custom CSS class field name from the resources `DataSource`. It maps the CSS class written for the specific resources and applies it to the events of those resources. |
 
-## Resource data binding
+## Resource Data Binding
 
-The data for resources can bind with Scheduler either as list of object collection or a service URL, retrieving resource data from remote data services. The `TItem` in the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html) holds the generic class model of resource DataSource and `TValue` holds the generic type of resource id which need to be in array when [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_AllowMultiple) is set to true.
+Resource data can bind with the Scheduler either as a list of object collections or a service URL, retrieving resource data from remote data services. The `TItem` in the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html) holds the generic class model of resource DataSource and `TValue` holds the generic type of resource id which need to be in array when [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_AllowMultiple) is set to true.
 
-The following code example depicts how to bind the list of object collection to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_DataSource) of Resource collection.
+The following code example demonstrates how to bind the list of object collection to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_DataSource) of Resource collection.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -91,7 +91,7 @@ The following code example depicts how to bind the list of object collection to 
 
 ### Binding ExpandoObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
+Scheduler is a generic component strongly bound to a model type. There are cases when the model type is unknown during compile-time. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
 
 **ExpandoObject** can be bound to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_DataSource) option of the scheduler within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
 
@@ -151,10 +151,11 @@ Scheduler is a generic component which is strongly bound to a model type. There 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrIWXZmAzAxczIM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding DynamicObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  [**DynamicObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-6.0).
+Scheduler is a generic component strongly bound to a model type. There are cases when the model type is unknown during compile-time. In such cases data can be bound to the scheduler as list of  [**DynamicObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-6.0).
 
 **DynamicObject** can be bound to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_DataSource) option of the scheduler within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html) tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
@@ -232,6 +233,9 @@ N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/sy
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVyWjDGKTJKtbfy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Editor Window with Custom Label in Blazor Scheduler](images/dynamic-object.png)
 
 ## Binding ObservableCollection
 
@@ -380,14 +384,15 @@ Here, ResourceData class implements the interface of **INotifyPropertyChanged** 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSMtjGAJIPghjg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Scheduler with multiple resources
+## Scheduler With Multiple Resources
 
 It is possible to display the Scheduler in default mode without visually showcasing all the resources in it, but allowing to assign the required resources to the appointments through the event editor resource options.
 
-The appointments belonging to the different resources will be displayed altogether on the default Scheduler, which will be differentiated based on the resource color assigned in the **Resources** (depicting to which resource that particular appointment belongs) collection.
+The appointments belonging to different resources will be displayed together on the default Scheduler, differentiated by the resource color assigned in the **Resources** collection (depicting to which resource that particular appointment belongs).
 
-To get start quickly about multiple resource on scheduler, you can check on this video:
+For a quick start regarding multiple resources in the Scheduler, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=ZJU73bqeoC0"%}
@@ -446,24 +451,26 @@ To get start quickly about multiple resource on scheduler, you can check on this
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhoijNcgpxpsMBd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 The following image shows the appointment rendering on the multiple resource Scheduler.
 
 ![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
 
 N> Setting [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_AllowMultiple) to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
-## Resource grouping
+## Resource Grouping
 
 Resource grouping support allows the Scheduler to group the resources in a hierarchical structure both as an expandable groups (Timeline views) and as vertical hierarchy displaying resources one after the other (Resources view).
 
-To get start quickly about grouping multiple resource on scheduler, you can check on this video:
+For a quick start regarding grouping multiple resources in the Scheduler, refer to this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=70qD6wycxAk"%}
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 
-### Vertical resource view
+### Vertical Resource View
 
 The following code example displays how the multiple resources are grouped and its events are portrayed in the default calendar views.
 
@@ -529,12 +536,13 @@ The following code example displays how the multiple resources are grouped and i
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtByWNNcKfQfCZuY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Vertical Resource View in Blazor Scheduler](images/blazor-scheduler-resources-verticalview.png)
 
-### Timeline resource view
+### Timeline Resource View
 
-The following code example depicts how to group the multiple resources on Timeline Scheduler views and its relevant events are displayed accordingly under those resources.
+The following code example depicts how to group multiple resources on Timeline Scheduler views, with relevant events displayed accordingly under those resources.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -596,11 +604,13 @@ The following code example depicts how to group the multiple resources on Timeli
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLysNDwgJvjkkVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 The following image shows the multiple resources rendering on the Timeline view Scheduler.
 
 ![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-resource-timeline.png)
 
-### Grouping single-level resources
+### Grouping Single-Level Resources
 
 This kind of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments mapped under resources will be displayed with the colors as per the [`ColorField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_ColorField) defined on the resources collection.
 
@@ -660,13 +670,15 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCNDQKzPlSXsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 The following image display the Scheduler with single level resource grouping.
 
 ![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-singlelevel.png)
 
 N> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the [`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html) property, in order to enable the grouping option with those resource levels on the Scheduler.
 
-### Grouping multi-level resources
+### Grouping Multi-Level Resources
 
 It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with [`GroupIDField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_GroupIDField) mapping to the first level resource's ID so as to establish the parent-child relationship between them.
 
@@ -744,11 +756,13 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSsZjmgfkxESqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 The following image displays the resources of Scheduler in multi levels.
 
 ![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-multiplelevel.png)
 
-### One-to-One grouping
+### One-to-One Grouping
 
 In multi-level grouping, Scheduler usually groups the resources on the child level based on the [`GroupIDField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_GroupIDField) that maps with the [`IdField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_IdField) field of parent level resources (as [`ByGroupID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByGroupID) set to true by default). There are also option which allows to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the [`ByGroupID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByGroupID) option within the [`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html) property. In the following code example, there are two levels of resources, on which all the resources at the child level is mapped one to one with each resource on the first level.
 
@@ -813,12 +827,13 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSiDDmgeXJBpcl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following image depicts how the scheduler will render when [`ByGroupID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByGroupID) sets as false.
 
 ![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.png)
 
-### Grouping resources by date
+### Grouping Resources By Date
 
 It groups the number of resources under each date and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set [`ByDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate) option to `true` within the [`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html) property.
 
@@ -877,12 +892,13 @@ It groups the number of resources under each date and is applicable only on the 
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSWZtcUIMjEwJx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-resource-by-date.png)
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
-## Working with shared events
+## Working with Shared Events
 
 Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set [`AllowGroupEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_AllowGroupEdit) option to `true` within the [`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html) property. With this property enabled, a single appointment will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment will be in array which hold the IDs of the multiple resources.
 
@@ -944,10 +960,11 @@ N> Any actions such as create, edit or delete held on any one of the shared even
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheiNtcKoWdKiXV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping Resources as shared events in Blazor Scheduler](images/blazor-scheduler-sharedevents.png)
 
-## Simple resource header customization
+## Simple Resource Header Customization
 
 It is possible to customize the resource header cells using built-in template option and change the look and appearance of it in both the vertical and timeline view modes. All the resource related fields and other information can be accessed within the resource header template option.
 
@@ -1054,6 +1071,7 @@ It is possible to customize the resource header cells using built-in template op
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyMjtQgoVWKBKq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
 
@@ -1061,7 +1079,7 @@ N> To customize the resource header in compact mode properly make use of the cla
 
 ![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
 
-## Customizing resource header with multiple columns
+## Customizing Resource Header with Multiple Columns
 
 It is possible to customize the resource headers to display with multiple columns such as Room, Type and Capacity. The following code example depicts the way to achieve it and is applicable only on timeline views.
 
@@ -1278,10 +1296,10 @@ It is possible to customize the resource headers to display with multiple column
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoWNjQqIVPNMqU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
 
-## Expand and collapse resource fields
+## Expand and Collapse Resource Fields
 
 It is possible to expand and collapse the resource field. By default, resource fields are expanded with their child fields. This behavior can be customized using the [`ExpandedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_ExpandedField) property. When [`ExpandedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_ExpandedField) property in resources dataSource is set to `false`, it restricts the resource fields from expanding. By default, [`ExpandedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_ExpandedField) value set to `true`.
 
@@ -1346,11 +1364,13 @@ It is possible to expand and collapse the resource field. By default, resource f
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVystDwqIKVcpEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expand-collapse.png)
 
-## Displaying tooltip for resource headers
+## Displaying Tooltip for Resource Headers
 
-It is possible to display tooltip over the resource headers showing the resource information. By default, there won't be any tooltip displayed on the resource headers, and to enable it, you need to assign the customized template design to the [`HeaderTooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HeaderTooltipTemplate) option within the [`ScheduleGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html).
+It is possible to display tooltips over resource headers showing resource information. By default, no tooltip is displayed on resource headers. To enable it, assign the customized template design to the [`HeaderTooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HeaderTooltipTemplate) option within the [`ScheduleGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1419,12 +1439,13 @@ It is possible to display tooltip over the resource headers showing the resource
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLesNZcAIzLVgKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-tooltip.png)
 
-## Choosing between resource colors for appointments
+## Choosing Between Resource Colors For Appointments
 
-By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining [`ResourceColorField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html#Syncfusion_Blazor_Schedule_IScheduleEventSettings_ResourceColorField) option within the [`EventSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html) property.
+By default, the colors defined on the top-level resources collection will be applied to the events. If a specific resource color needs to be applied to events irrespective of their top-level parent resource color, this can be achieved by defining the [`ResourceColorField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html#Syncfusion_Blazor_Schedule_IScheduleEventSettings_ResourceColorField) option within the [`EventSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1508,19 +1529,20 @@ By default, the colors defined on the top level resources collection will be app
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtroMNjcAyTYFrqI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resource-color.png)
+![Blazor Scheduler](images/blazor-schedule-resource-color.png)
 
 N> The value of the [`ResourceColorField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html#Syncfusion_Blazor_Schedule_IScheduleEventSettings_ResourceColorField) field should be mapped with the `Name` value given within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html).
 
-## Setting different working days and hours for resources
+## Setting Different Working Days and Hours For Resources
 
 Each resource in the Scheduler can have different working hours as well as different working days set to it. There are default options available within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html) collection, to customize the default working hours and days of the Scheduler.
 
 * [Using the work day field for different work days](#Set-different-work-days)
 * [Using the start hour and end hour fields for different work hours](#Set-different-work-hours)
 
-### Set different work days
+### Set Different Work Days
 
 Different working days can be set for the resources of Scheduler using the [`WorkDaysField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_WorkDaysField) property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
 
@@ -1575,10 +1597,11 @@ Different working days can be set for the resources of Scheduler using the [`Wor
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZryiDtwqyeYlLqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
 
-### Set different work hours
+### Set Different Work Hours
 
 Different `working Hours` can be set for the resources of Scheduler using the [`StartHourField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_StartHourField) and [`EndHourField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_EndHourField) property which maps the `startHourField` and `endHourField` field from the resource dataSource.
 
@@ -1638,102 +1661,17 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVSCjZQAoxIyHsJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
 
 ![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-different-workhour.png)
 
-### Hide non-working days when grouped by date
+### Hide Non-Working Days When Grouped By Date
 
-In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
-To use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property, you need to include it in the configuration options for your Scheduler component. Set the value of[HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) to `true` to enable this feature.
-**Example:** To display the Scheduler with resources grouped by date for custom working days,
- 
-```cshtml
-@using Syncfusion.Blazor.Schedule
-    <SfSchedule TValue="ResourceData" Width="100%" Height="650px">
-        <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
-        <ScheduleResources>
-            <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
-        </ScheduleResources>
-        <ScheduleEventSettings DataSource="@dataSource"></ScheduleEventSettings>
-    </SfSchedule>
-@code{
-    private bool HideNonWorkingDays { get; set; } = true;
-    private string[] groupData = new string[] { "Owners" };
-    private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
-        new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
-        new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
-    };
-    private List<ResourceData> dataSource = new List<ResourceData>()
-    {
-        new ResourceData
-        {
-            Id = 1,
-            Subject = "Workflow Analysis",
-            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 30, 0).AddDays(1),
-            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month,DateTime.Today.Day, 12, 0, 0).AddDays(1),
-            IsAllDay = false,
-            ProjectId = 1,
-            TaskId = 2
-        },
-        new ResourceData
-        {
-            Id = 2,
-            Subject = "Requirement planning",
-            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
-            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 14, 45, 0),
-            IsAllDay = false,
-            ProjectId = 1,
-            TaskId = 1
-        },
-        new ResourceData
-        {
-            Id = 1,
-            Subject = "Quality Analysis",
-            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0).AddDays(1),
-            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0).AddDays(1),
-            IsAllDay = false,
-            ProjectId = 1,
-            TaskId = 1
-        },
-        new ResourceData
-        {
-            Id = 1,
-            Subject = "Release planing",
-            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0).AddDays(-1),
-            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0).AddDays(-1),
-            IsAllDay = false,
-            ProjectId = 1,
-            TaskId = 1
-        }
-    };
-    public class ResourceData
-    {
-        public string Text { get; set; }
-        public int Id { get; set; }
-        public string Color { get; set; }
-        public int[] WorkDays { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public Nullable<bool> IsAllDay { get; set; }
-        public int ProjectId { get; set; }
-        public int TaskId { get; set; }
-    }
-}
-```
+In the Scheduler, custom workdays can be set for each resource, and the Scheduler can be grouped by date to display these workdays. By default, the Scheduler will show all days when grouped by date, even if they are not included in the custom workdays for the resources. However, the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property can be used to display only the custom workdays in the Scheduler.
 
-![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
-
-N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
-when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
-
-### Hide non-working days when grouped by date
-
-In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
-
-To use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) to `true` to enable this feature.
+To use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property, it needs to be included in the configuration options for the Scheduler component. Set the value of [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) to `true` to enable this feature.
 
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
  
@@ -1812,19 +1750,21 @@ To use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVoWXXGUSFIkgor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Hide Non-working Days in Blazor Scheduler](images/blazor-schedule-different-workhour.png)
 
 N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
 
-## Compact view in mobile
+## Compact View in Mobile
 
-Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, a new compact mode has been introduced specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on the mobile devices. If in case, you need to disable this compact mode, set `false` to the [`EnableCompactView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_EnableCompactView) option within the [`ScheduleGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html). Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
+Although the Scheduler views are designed with responsiveness for mobile devices in mind, when using the Scheduler with multiple resources, it can be challenging to view all resources and their relevant events simultaneously on mobile screens. Therefore, a new compact mode has been specifically introduced for displaying multiple resources of the Scheduler on mobile devices. By default, this mode is enabled when using the Scheduler with multiple resources on mobile devices. If this compact mode needs to be disabled, set `false` to the [`EnableCompactView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_EnableCompactView) option within the [`ScheduleGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html). Disabling this option will display the exact desktop mode of the Scheduler view on mobile devices.
 
-With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a TreeView at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
+With this compact view enabled on mobile, only a single resource can be viewed at a time. To switch to other resources, a TreeView on the left lists all other available resources; clicking on an item will display that particular resource and its related appointments.
 
 ![Blazor Scheduler Resources in Compact Mode](images/blazor-scheduler-resource-in-compact-mode.png)
 
-## Adaptive UI in desktop
+## Adaptive UI in Desktop
 
 By default, the Scheduler layout adapts automatically in the desktop and mobile devices with appropriate UI changes. In case, if the user wants to display the Adaptive scheduler in desktop mode with adaptive enhancements, then the property [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableAdaptiveUI) can be set to true. Enabling this option will display the exact mobile mode of Scheduler view on desktop devices.
 
@@ -1901,10 +1841,11 @@ To get start quickly about adaptive UI in our Scheduler, you can check on this v
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIiNZQASOELXtw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Scheduler Resources in Adaptive UI](images/blazor-schedule-adaptiveui.png)
 
-## See also
+## See Also
 
 [How to use blazor Scheduler to create an Airfare Calendar] (https://www.youtube.com/watch?v=QlzdcZTmOrU-0)
 [How to expand or collapse a resource programmatically](./how-to/expand-collapse-resource-dynamically)

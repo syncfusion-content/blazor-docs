@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about positioning in Syncfusion Blazor Toast component and much more details.
+description: Check out and learn here all about positioning in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -9,35 +9,26 @@ documentation: ug
 
 # Positioning in Blazor Toast Component
 
-The toast position can be updated based on predefined positions or customizable positions. The predefined position combinations are updated in the `X` and `Y` position properties.
+The Toast position can be configured using predefined alignments or customized using explicit offsets. Predefined positions are set through the **X** (horizontal: Left, Center, Right) and **Y** (vertical: Top, Bottom) properties of the [ToastPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ToastPosition.html) settings in the [Toast](https://blazor.syncfusion.com/documentation/toast/getting-started) component.
 
 ## Predefined
 
-`X` Positions
+- X positions: Left, Center, Right
+- Y positions: Top, Bottom
 
-* Left
-* Center
-* Right
-
-`Y` Positions
-
-* Top
-* Bottom
-
-N> In multiple toast display, the new toast position will not be updated on dynamic change of property values until the old toast messages removed. The toast occupies full width when the width is set to '100%', so the X positions will not affect the changes when the width is '100%'.
+N> When multiple toasts are shown, dynamic changes to position properties do not affect already displayed toasts; the new position is applied to subsequent toasts after previous messages are removed. If the Toast width is set to 100%, it stretches across the container and horizontal (**X**) alignment has no visible effect.
 
 ## Custom
 
-Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The number value is considered as pixels based on the top and left values updated in the toast.
+Custom **X** and **Y** positions can be provided as pixel values, numbers, or percentages. Numeric values are interpreted as pixels and are applied as offsets from the top and left of the target container (or the viewport when no target is set).
 
 ```cshtml
-
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Target="@ToastTarget" Title="Matt sent you a friend request" Height="@Height" Width="@Width" Content="@ToastContent">
+<SfToast @ref="ToastObj" Target="@ToastTarget" Title="Notification" Height="@Height" Width="@Width" Content="@ToastContent">
     <ToastPosition X="@PositionX" Y="@PositionY"></ToastPosition>
 </SfToast>
 
@@ -60,7 +51,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Custom" Name="toastPos" Value=@("Custom") ValueChange="@RadioButtonChange"   Checked=@("Custom")  TChecked="string"></SfRadioButton>
+                        <SfRadioButton Label="Custom" Name="toastPos" Value=@("Custom") ValueChange="@RadioButtonChange" Checked=@("Custom") TChecked="string"></SfRadioButton>
                     </div>
                 </td>
             </tr>
@@ -101,19 +92,12 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
 </div>
 
 <style>
-    #toast_default .e-meeting::before {
-        content: "\e705";
-        font-size: 17px;
-    }
-
     #toast_pos_property {
         width: 250px;
     }
-
-        #toast_pos_property td {
-            width: 50%;
-        }
-
+    #toast_pos_property td {
+        width: 50%;
+    }
     #toast_pos_target {
         margin: 50px 200px;
     }
@@ -133,7 +117,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     private string PositionY = "Bottom";
     private string DropDownDisplay { get; set; } = "";
     private string TextBoxDisplay { get; set; } = "none";
-    private string ToastContent = "You have a new friend request yet to accept";
+    private string ToastContent = "A new request is pending approval.";
 
     public class DropDownfields
     {
@@ -155,7 +139,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     {
         if (CustomFlag)
         {
-            this.SetCustomPosValue();
+            SetCustomPosValue();
         }
         await ToastObj.ShowAsync();
     }
@@ -165,7 +149,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
         await ToastObj.HideAsync("All");
     }
 
-    //Setting Toast Custom Position
+    // Set Toast custom position
     private void SetCustomPosValue()
     {
         PositionX = TextXpos.Value;
@@ -175,7 +159,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     private async Task DropDownChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> e)
     {
         await ToastObj.HideAsync("All");
-        this.SetToastPosition(e.Value.ToString());
+        SetToastPosition(e.Value.ToString());
     }
 
     private void SetToastPosition(string value)
@@ -186,27 +170,22 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
                 PositionX = "Left";
                 PositionY = "Top";
                 break;
-
             case "Top Right":
                 PositionX = "Right";
                 PositionY = "Top";
                 break;
-
             case "Top Center":
                 PositionX = "Center";
                 PositionY = "Top";
                 break;
-
             case "Bottom Left":
                 PositionX = "Left";
                 PositionY = "Bottom";
                 break;
-
             case "Bottom Right":
                 PositionX = "Right";
                 PositionY = "Bottom";
                 break;
-
             case "Bottom Center":
                 PositionX = "Center";
                 PositionY = "Bottom";
@@ -233,7 +212,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             await ToastObj.HideAsync("All");
             DropDownDisplay = "table-cell";
             TextBoxDisplay = "none";
-            this.SetToastPosition(ListObj.Value.ToString());
+            SetToastPosition(ListObj.Value.ToString());
             CustomFlag = false;
         }
         else if (e.Value == "Custom")
@@ -241,9 +220,11 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             await ToastObj.HideAsync("All");
             TextBoxDisplay = "table-cell";
             DropDownDisplay = "none";
-            this.SetCustomPosValue();
+            SetCustomPosValue();
             CustomFlag = true;
         }
     }
 }
 ```
+
+Preview of the code snippet: Selecting a predefined position (e.g., Top Right) aligns the Toast accordingly. Choosing Custom allows entering numeric or percentage offsets for X and Y; subsequent toasts render at those offsets relative to the target container (or the viewport when no target is set). The Target/Global toggle switches between positioning within the container area and the entire page.

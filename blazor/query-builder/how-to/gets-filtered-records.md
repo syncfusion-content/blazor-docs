@@ -9,7 +9,7 @@ documentation: ug
 
 # Gets the Filtered Records in Blazor QueryBuilder Component
 
-Gets the filtered datasource based on the defined condition in Query builder through the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetFilteredRecordsAsync) method.
+Retrieve the filtered data source based on the currently defined rules in the Query Builder by using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetFilteredRecordsAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder

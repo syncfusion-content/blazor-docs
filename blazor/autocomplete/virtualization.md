@@ -9,9 +9,11 @@ documentation: ug
 
 # Virtualization in Blazor AutoComplete Component
 
-The AutoComplete component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the AutoComplete intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
+The AutoComplete component includes a virtual scrolling feature designed to enhance UI performance when handling large data sets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the component renders only a window of items initially and loads additional items on demand as scroll, providing a smooth and efficient experience.
 
-This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the AutoComplete is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
+This feature applies to both local and remote data sources. For example, when the AutoComplete is bound to 150 items, only the items that fit within the popup height are rendered when the dropdown opens. As scroll through the list, more items are fetched and rendered incrementally, enabling efficient exploration of the entire data set.
+
+N> Virtualization accuracy depends on consistent item heights. Using templates that significantly change item height may affect the calculation of rendered items. The number of initially rendered items is based on the configured PopupHeight.
 
 ## Local data
 
@@ -23,7 +25,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqsLsJUSqMNRqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)
+![Blazor AutoComplete demonstrating virtualization with local data](./images/blazor_autocomplete_virtualization.gif)
 
 ## Remote data
 
@@ -33,11 +35,11 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-![Blazor AutoComplete with virtualization](./images/blazor_autocomplete_remote-data-virtualization.gif)
+![Blazor AutoComplete demonstrating virtualization with remote data](./images/blazor_autocomplete_remote-data-virtualization.gif)
 
 ## Grouping with Virtualization
 
-The AutoComplete component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization, enhancing performance and responsiveness.
+The AutoComplete component supports grouping with Virtualization. It allows elements to be organized into categories. Each item in the list can be classified using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_GroupBy) field in the data source. After grouping, virtualization behaves similarly to local data binding, providing a seamless user experience. When the data source is remote, an initial request retrieves the data required for grouping. Subsequently, grouped data is handled like local data binding with virtualization, improving performance and responsiveness.
 
 The following sample shows the example for Grouping with Virtualization.
 
@@ -90,11 +92,11 @@ The following sample shows the example for Grouping with Virtualization.
 
 ## Keyboard interaction
 
-Users can navigate through the scrollable content using keyboard keys. This feature loads the next or next set of items based on the key inputs in the popup.
+Users can navigate through the scrollable content using the keyboard. The component loads the next or previous set of items based on the key inputs within the popup.
 
 | Key | Action |
 |-----|-----|
-| `ArrowDown` | Loads the next virtual list item if the focus is present in last item of the current page. |
-| `ArrowUp` | Loads the previous virtual list item if the focus is present in first item of the current page. |
-| `PageDown` | Loads the next page and focus the last item in it. |
-| `PageUp` | Loads the previous page and focus the first item in it. |
+| `ArrowDown` | Loads the next virtual list item when focus is on the last item of the current page. |
+| `ArrowUp` | Loads the previous virtual list item when focus is on the first item of the current page. |
+| `PageDown` | Loads the next page and moves focus to its last item. |
+| `PageUp` | Loads the previous page and moves focus to its first item. |

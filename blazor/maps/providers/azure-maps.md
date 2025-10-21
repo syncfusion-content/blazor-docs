@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure Maps in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Azure Maps in the Syncfusion Blazor Maps component and much more details.
+description: Check out and learn how to use Azure Maps in the Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,15 +9,16 @@ documentation: ug
 
 # Azure Maps in Blazor Maps Component
 
-Azure Maps is yet another online Maps provider, owned by Microsoft. As like OSM and Bing Maps, it provides Maps tile images based on our requests and combines those images into a single one to display Maps area.
+Azure Maps is an online map tile provider from Microsoft. Similar to OSM and Bing Maps, it serves map tile images on request and composites them to display the map area.
 
 ## Adding Azure Maps
 
-The Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by online map providers. In the meantime, a subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then added the key to the URL.
+Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then add the key to the URL.
 
 N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -26,15 +27,17 @@ N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/lega
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
 ```
 
 ![Blazor Azure Maps](../images/MapProviders/blazor-azure-map.png)
 
 ## Enable zooming and panning
 
-The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
+The Azure Maps layer supports zooming and panning. Zooming provides a closer view of a specific area for detailed analysis, and panning moves the map to focus on a targeted area.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -50,15 +53,17 @@ The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer loo
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
 ```
 
 ![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.png)
 
 ## Adding markers and navigation line
 
-Markers can be added to the layers of Azure Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be added on top of the Azure Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to Azure Maps layers by providing latitude and longitude coordinates in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn over the Azure Maps layer to highlight paths between locations by providing latitude and longitude coordinates in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -81,27 +86,30 @@ Markers can be added to the layers of Azure Maps by setting the corresponding lo
     </MapsLayers>
 </SfMaps>
 
-@code{
+@code {
     public class City
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Name { get; set; }
     }
+
     private List<City> Cities = new List<City> {
         new City { Latitude = 34.060620, Longitude = -118.330491,  Name="California" },
         new City{ Latitude = 40.724546, Longitude = -73.850344,  Name="New York"}
     };
 }
+
 ```
 
 ![Blazor Azure Maps with markers and navigation line](../images/MapProviders/blazor-azure-map-marker-and-line.png)
 
 ## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer for highlighting a particular continent or country in Azure maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer over the Azure Maps layer to highlight a continent or country. Add another layer and set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -115,15 +123,17 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer f
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
 ```
 
 ![Blazor Azure Maps with sublayer](../images/MapProviders/blazor-azure-map-sublayer.png)
 
 ## Enable legend
 
-The legend can be added to the Azure Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+A legend can be added to Azure Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps Format="N0" EnableGroupingSeparator="true">
@@ -151,7 +161,7 @@ The legend can be added to the Azure Maps by setting the [Visible](https://help.
     </MapsLayers>
 </SfMaps>
 
-@code{
+@code {
     public class PopulationCityDetails
     {        
         public string Name { get; set; }
@@ -160,17 +170,18 @@ The legend can be added to the Azure Maps by setting the [Visible](https://help.
         public double Population { get; set; }
         public string Color { get; set; }
     };
+
     public List<PopulationCityDetails> PopulatedCities = new List<PopulationCityDetails> {
-        new PopulationCityDetails { Name ="Tokyo", Latitude= 35.6805245924747, Longitude= 139.76770396213337, Population= 37435191, Color="#2EB6C8"},
-        new PopulationCityDetails { Name ="Delhi", Latitude= 28.644800, Longitude= 77.216721, Population= 29399141, Color="#4A97F4"},
-        new PopulationCityDetails { Name ="Shanghai", Latitude= 31.224361, Longitude= 121.469170, Population= 26317104, Color="#498082"},
-        new PopulationCityDetails { Name ="Sao Paulo", Latitude= -23.550424484747914, Longitude= -46.646471636488315, Population= 21846507, Color="#FB9E67"},
-        new PopulationCityDetails { Name ="Mexico City", Latitude= 19.427402397418774, Longitude= -99.131123716666, Population= 21671908, Color="#8F9DE3"},
-        new PopulationCityDetails { Name ="Cairo ", Latitude= 30.033333, Longitude= 31.233334, Population= 20484965, Color="#7B9FB0"},
-        new PopulationCityDetails { Name ="Dhaka", Latitude= 23.777176, Longitude= 90.399452, Population= 20283552, Color="#4DB647"},
-        new PopulationCityDetails { Name ="Mumbai", Latitude= 19.08492049646163, Longitude= 72.87449446319248, Population= 20185064, Color="#30BEFF"},
-        new PopulationCityDetails { Name ="Beijing", Latitude= 39.90395970055848, Longitude= 116.38831272088059, Population= 20035455, Color="#Ac72AD"},
-        new PopulationCityDetails { Name ="Osaka", Latitude= 34.69024500601642, Longitude= 135.50746225677142, Population= 19222665, Color="#EFE23E"}
+        new PopulationCityDetails { Name = "Tokyo", Latitude = 35.6805245924747, Longitude = 139.76770396213337, Population = 37435191, Color = "#2EB6C8" },
+        new PopulationCityDetails { Name = "Delhi", Latitude = 28.644800, Longitude = 77.216721, Population = 29399141, Color = "#4A97F4" },
+        new PopulationCityDetails { Name = "Shanghai", Latitude = 31.224361, Longitude = 121.469170, Population = 26317104, Color = "#498082" },
+        new PopulationCityDetails { Name = "Sao Paulo", Latitude = -23.550424484747914, Longitude = -46.646471636488315, Population = 21846507, Color = "#FB9E67" },
+        new PopulationCityDetails { Name = "Mexico City", Latitude = 19.427402397418774, Longitude = -99.131123716666, Population = 21671908, Color = "#8F9DE3" },
+        new PopulationCityDetails { Name = "Cairo", Latitude = 30.033333, Longitude = 31.233334, Population = 20484965, Color = "#7B9FB0" },
+        new PopulationCityDetails { Name = "Dhaka", Latitude = 23.777176, Longitude = 90.399452, Population = 20283552, Color = "#4DB647" },
+        new PopulationCityDetails { Name = "Mumbai", Latitude = 19.08492049646163, Longitude = 72.87449446319248, Population = 20185064, Color = "#30BEFF" },
+        new PopulationCityDetails { Name = "Beijing", Latitude = 39.90395970055848, Longitude = 116.38831272088059, Population = 20035455, Color = "#Ac72AD" },
+        new PopulationCityDetails { Name = "Osaka", Latitude = 34.69024500601642, Longitude = 135.50746225677142, Population = 19222665, Color = "#EFE23E" }
     };
 }
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Timeline component
 
-The Blazor Timeline component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Timeline component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards. It incorporates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
 
 The accessibility compliance for the Blazor Timeline component is outlined below.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor Timeline component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
 The following ARIA attributes are used in the Timeline component:
 
@@ -46,12 +46,12 @@ The following ARIA attributes are used in the Timeline component:
 | `role=navigation` | Specified its purpose as a navigational element. |
 | `aria-label` | Provides an accessibile name for an element when a visible label is not present |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Timeline component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The accessibility levels of the Blazor Timeline component are verified through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor Timeline component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/timeline) in a new window to evaluate the accessibility of the Blazor Timeline component with accessibility tools.
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

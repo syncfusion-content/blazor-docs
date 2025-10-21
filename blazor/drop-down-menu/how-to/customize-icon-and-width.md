@@ -40,6 +40,6 @@ The following UI can be achieved by setting [IconPosition](https://help.syncfusi
 </style>
 ```
 
-Output be like
+The following image shows the Dropdown Menu with the icon positioned above the text and the button width constrained.
 
 ![Customizing Blazor DropDownMenu Icon](./../images/blazor-dropdownmenu-icon-customization.png)

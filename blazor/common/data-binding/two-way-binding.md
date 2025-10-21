@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Two-way Data Binding in Blazor | Syncfusion
-description: Check out the documentation for the two-way data binding support in the Syncfusion Blazor Components.
+title: Two-way data binding in Blazor | Syncfusion
+description: Learn here all about how Syncfusion Blazor components use the two-way data binding with @bind-Value and related patterns. Explore here to more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Blazor - Two-way Data Binding
+# Two-way data binding
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 
-To perform a two-way binding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, use the `bind-Value` attribute. In the below example, `SfTextBox` component value to the C# `textValue` property. When an `SfTextBox` component loses focus, its bound field or property is updated.
+To enable two-way binding on Syncfusion<sup style="font-size:70%">&reg;</sup> components, use `@bind-Value`. In the following example, the `SfTextBox` component is bound to the C# `textValue` property. When the textbox loses focus, the bound field is updated.
 
 ```cshtml
 
@@ -32,7 +32,7 @@ To perform a two-way binding Syncfusion<sup style="font-size:70%">&reg;</sup> Bl
 
 ```
 
-![Two-Way Binding in Blazor](../images/blazor-two-way-binding.gif)
+![Two-way data binding example in Blazor](../images/blazor-two-way-binding.gif)
 
 The following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support two-way binding:
 
@@ -52,9 +52,9 @@ The following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 * [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
 * [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
 
-## Bind component generated dynamically using RenderFragment
+## Bind a component generated dynamically using RenderFragment
 
-You can build Blazor render trees manually with `RenderTreeBuilder` which provides methods for building and manipulating components manually in C# code. The following code explains how to bind value for `DatePicker` component which is generated dynamically using `RenderFragment`. Refer sequence 3,4 where binding and call back is handled.
+Blazor render trees can be built manually with `RenderTreeBuilder`, which provides methods for creating and configuring components in C# code. The following example shows how to bind a value for a `DatePicker` component generated via `RenderFragment`. See steps 3 and 4 where the value binding and callback are handled.
 
 ```cshtml
 
@@ -95,6 +95,6 @@ You can build Blazor render trees manually with `RenderTreeBuilder` which provid
 }
 ```
 
-![Binding in Blazor when build a render tree](../images/blazor-date-picker.png)
+![Binding a dynamically generated Blazor DatePicker using RenderFragment](../images/blazor-date-picker.png)
 
-Refer [Manually build a render tree](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?#manually-build-a-render-tree-rendertreebuilder) topic for more details.
+For more information, see the Blazor documentation on [manually building a render tree](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?#manually-build-a-render-tree-rendertreebuilder).

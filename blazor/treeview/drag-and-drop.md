@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop in Blazor TreeView Component
 
-The Blazor TreeView component allows to drag and drop any node by setting [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
+The Blazor TreeView component supports drag and drop operations for reordering nodes. This functionality is enabled by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property to `true`. Nodes can be dragged and dropped at various levels within the same TreeView.
 
 The dragged nodes can be dropped at any level by indicator lines with **line**, **plus/minus**, and **restrict** icons. It represents the exact position where the node is to be dropped as sibling or child.
 
@@ -21,9 +21,9 @@ The following table explains the usage of indicator icons.
 | Minus or restrict icon |Indicates that the dragged node is not to be dropped at the hovered region. |
 | In between icon | Indicates that the dragged node is to be added as siblings of hovered region. |
 
-* In order to prevent dragging action for a particular node, the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event can be used which is triggered when the node drag is started. The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event is triggered when a node is being dragged.
-
-* The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event is triggered when the TreeView node is dropped on the target element successfully.
+*   The [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event triggers when a node drag operation begins. This event can be used to prevent specific nodes from being dragged.
+*   The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event triggers repeatedly while a node is being dragged. While this event does not provide an option to cancel the drag, its arguments can be accessed to perform actions (e.g., visual feedback based on the current drag position).
+*   The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event triggers when the TreeView node is successfully dropped onto a target element.
 
 N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event currently there is no option to cancel the event. However the other event arguments could be accessed.
 
@@ -113,12 +113,13 @@ N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
  ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhyMZsBJDLnhwpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.png)
 
-## Multiple-node drag and drop
+## Multiple-Node Drag and Drop
 
-To drag and drop more than one node, enable the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowMultiSelection) property along with the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property. To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
-
+To enable dragging and dropping of multiple nodes, enable both the [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowMultiSelection) property and the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property. Users can perform multi-selection by holding the <kbd>Ctrl</kbd> key and clicking individual nodes, or by holding the <kbd>Shift</kbd> key and clicking to select a range of nodes.
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true" AllowMultiSelection="true">
@@ -207,11 +208,12 @@ To drag and drop more than one node, enable the [AllowMultiSelection](https://he
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSsXsVfZUjOzRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.png)
 
 
-## Drag and drop within a TreeView
+## Drag and Drop within a TreeView
 
 The Blazor TreeView component has built-in support for drag and drop functionality. The [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property determines whether the TreeView allows for the drag and drop reordering of nodes. 
 
@@ -275,12 +277,13 @@ The default value of `AllowDragAndDrop` property is false.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLyitsLTjUePIsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.png)
 
-## Drag and drop between TreeViews
+## Drag and Drop Between TreeViews
 
-The Blazor TreeView component has built-in support for drag and drop functionality, allowing for nodes to be dragged and dropped on other nodes within the same or different trees using the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property. 
+The Blazor TreeView component includes built-in drag and drop support, allowing nodes to be dragged and dropped between different TreeView instances. This functionality is enabled by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property to `true` on both TreeViews.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -490,14 +493,15 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryiDsBftpsSWPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.png)
 
-## Restrict drag and drop to individual node
+## Restrict Drag and Drop for Individual node
 
-In the Blazor TreeView component, it is possible to restrict the drag and drop functionality for a specific node by setting the arguments [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DragAndDropEventArgs.html#Syncfusion_Blazor_Navigations_DragAndDropEventArgs_Cancel) value to true in the [OnNodeDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event. 
+In the Blazor TreeView component, the drag and drop functionality for a specific node is restricted by setting the [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DragAndDropEventArgs.html#Syncfusion_Blazor_Navigations_DragAndDropEventArgs_Cancel) argument to `true` within the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event.
 
-For example, in the following code snippet, the drag and drop is prevented for the **Inbox** TreeView node.
+For example, in the following code snippet, dragging is prevented for the "Inbox" TreeView node when its `ID` is "1".
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -566,7 +570,7 @@ For example, in the following code snippet, the drag and drop is prevented for t
 
 ```
 
-## Retrieve index of drop node 
+## Retrieve Index of Drop node 
 
 In the Blazor TreeView component, the index of the dropped node can be retrieved from the [DropIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DragAndDropEventArgs.html#Syncfusion_Blazor_Navigations_DragAndDropEventArgs_DropIndex) argument in the [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStop) event. 
 

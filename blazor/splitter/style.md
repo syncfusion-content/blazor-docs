@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Style and appearance in Blazor Splitter Component | Syncfusion
+title: Style and Appearance in Blazor Splitter Component | Syncfusion
 description: Checkout and learn here all about style and appearance in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Style and appearance in Blazor Splitter Component
+# Style and Appearance in Blazor Splitter Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the split bar
+## Customizing the Split Bar
 
 Use the following CSS to customize the split bar properties.
 
-### Horizontal split bar
+### Horizontal Split Bar
 
 ```css
 /* default split bar color */
@@ -30,7 +30,7 @@ Use the following CSS to customize the split bar properties.
 }
 ```
 
-### Vertical split bar
+### Vertical Split Bar
 
 ```css
 /* default split bar color */
@@ -45,11 +45,11 @@ Use the following CSS to customize the split bar properties.
 }
 ```
 
-## Customizing the split bar resize handle
+## Customizing the Split Bar Resize Handle
 
 Use the following CSS to customize the split bar resize handle.
 
-### Horizontal split bar resize handle
+### Horizontal Split Bar Resize Handle
 
 ```css
 /* default split bar resize handle color */
@@ -63,7 +63,7 @@ Use the following CSS to customize the split bar resize handle.
 }
 ```
 
-### Vertical split bar resize handle
+### Vertical Split Bar Resize Handle
 
 ```css
 /* default split bar resize handle color */
@@ -77,11 +77,11 @@ Use the following CSS to customize the split bar resize handle.
 }
 ```
 
-## Customizing the split bar arrows
+## Customizing the Split Bar Arrows
 
 Use the following CSS to customize the split bar arrows.
 
-### Horizontal split bar resize arrows
+### Horizontal Split Bar Resize Arrows
 
 ```css
 /* split bar arrows */
@@ -95,7 +95,7 @@ Use the following CSS to customize the split bar arrows.
 }
 ```
 
-### Vertical split bar resize arrows
+### Vertical Split Bar Resize Arrows
 
 ```css
 /* split bar arrows */
@@ -109,11 +109,11 @@ Use the following CSS to customize the split bar arrows.
 }
 ```
 
-## To hide the resize handle in Splitter
+## Hide the Resize Handle in Splitter
 
 Use the following CSS to hide the resize handler in the split bar
 
-### Hide the horizontal split bar resize arrow
+### Hide the Horizontal Split Bar Resize Arrow
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-horizontal .e-resize-handler {
@@ -121,7 +121,7 @@ Use the following CSS to hide the resize handler in the split bar
 }
 ```
 
-### Hide the vertical split bar resize arrow
+### Hide the Vertical Split Bar Resize Arrow
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-vertical .e-resize-handler {

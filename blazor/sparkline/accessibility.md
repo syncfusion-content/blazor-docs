@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Sparkline component and more.
+description: Learn about accessibility, keyboard navigation, and compliance in the Syncfusion Blazor Sparkline component.
 platform: Blazor
 control: Sparkline
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Sparkline Component
 
-The Blazor Sparkline component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Sparkline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Blazor Sparkline component is outlined below.
+The table below outlines accessibility compliance for the Blazor Sparkline component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -21,7 +21,7 @@ The accessibility compliance for the Blazor Sparkline component is outlined belo
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -30,6 +30,7 @@ The accessibility compliance for the Blazor Sparkline component is outlined belo
         margin: 0.5em 0;
     }
 </style>
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -37,9 +38,9 @@ The accessibility compliance for the Blazor Sparkline component is outlined belo
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
-The Blazor Sparkline component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Sparkline component:
+The component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns for accessibility. The following ARIA attributes are used:
 
 * img (role)
 * region (role)
@@ -47,26 +48,25 @@ The Blazor Sparkline component followed the [WAI-ARIA](https://www.w3.org/WAI/AR
 * aria-hidden (attribute)
 * aria-pressed (attribute)
 
-## Keyboard interaction
+## Keyboard Interaction
 
-The Blazor Sparkline component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Sparkline component.
+The component supports [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it accessible for users relying on assistive technologies (AT) or keyboard navigation. Supported keyboard shortcuts:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Sparkline. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Sparkline. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>ESC</kbd> | <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the Sparkline. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the Sparkline. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point right side from the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the data point right side from the selected point. |
+| <kbd>ESC</kbd> | <kbd>ESC</kbd> | Cancels the tooltip for the data point. |
 | <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Sparkline. |
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Sparkline component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor Sparkline component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Blazor Sparkline component with accessibility tools.
+Evaluate accessibility in the Blazor Sparkline component by opening the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window and using accessibility tools.
 
-
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

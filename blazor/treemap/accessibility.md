@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor TreeMap component and much more.
+description: Check out and learn here all about Accessibility in Syncfusion Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor TreeMap Component
 
-The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component adheres to widely adopted accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Blazor TreeMap component is outlined below.
+The accessibility compliance for the Blazor TreeMap component is summarized below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,28 +39,28 @@ The accessibility compliance for the Blazor TreeMap component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the TreeMap component:
+The Blazor TreeMap component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to support accessibility. The following ARIA attributes are used in the TreeMap component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | It specifies the TreeMap areas that do not support interactive functions like selection and highlight. |
-| `role=button` | It specifies the TreeMap areas where interactive functions such as selection and highlight are available. |
-| `aria-label` | Provides an accessible name for the title, subtitle, data labels, legend title, and legend item labels. |
+| `role=region` | Identifies TreeMap areas without interactive behavior such as selection or highlight. |
+| `role=button` | Identifies TreeMap areas where interactive behavior such as selection or highlight is available. |
+| `aria-label` | Provides accessible names for the title, subtitle, data labels, legend title, and legend item labels. |
 
 ## Screen reading in TreeMap
 
-Accessibility in the Blazor TreeMap component ensures that all users, regardless of ability or disability, can use screen reading. The following TreeMap elements will be read aloud using screen reading software, such as Narrator for Windows.
+Accessibility support in the Blazor TreeMap component enables screen readers to announce relevant content. The following TreeMap elements are read by screen readers such as Narrator on Windows.
 
 | Elements | Description |
 | --- | --- |
-| Data labels | Reads the labels displayed on leaf items of the TreeMap. |
-| Title | Reads the title in the TreeMap. |
-| Subtitle | Reads the title below the main title content in the TreeMap. |
-| Legend title | Reads the title of the legend in the TreeMap. |
-| Legend item label | Reads the label of the legend item in the TreeMap. |
+| Data labels | Announces the labels displayed on leaf items of the TreeMap. |
+| Title | Announces the TreeMap title. |
+| Subtitle | Announces the subtitle below the main title. |
+| Legend title | Announces the legend title in the TreeMap. |
+| Legend item label | Announces the label of each legend item in the TreeMap. |
 
 ## Ensuring accessibility
 
-The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor TreeMap component’s accessibility is validated using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
-The accessibility compliance of the TreeMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treemap) in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.
+The accessibility compliance of the TreeMap component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treemap) in a new window to evaluate TreeMap accessibility with testing tools.

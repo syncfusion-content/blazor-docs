@@ -9,20 +9,20 @@ documentation: ug
 
 # Dual ListBox in Blazor ListBox Component
 
-The dual ListBox allows the user to move items between two listbox by clicking the toolbar buttons. Dual ListBox can be created by listing items in the [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_ToolbarSettings) along with the [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) property.
+The dual ListBox enables moving items between two ListBoxes using toolbar buttons. Create a dual ListBox by configuring the[ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_ToolbarSettings) along with the [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) property.
 
 The following operations can be performed in dual ListBox,
 
 | Options | Description |
 |------|-------------|
-| MoveUp | Move the selected item in the upward direction within the listbox. |
-| MoveDown | Move the selected item in the downward direction within the listbox. |
-| MoveTo |  Move the selected item to the another listbox. |
-| MoveFrom | Move the selected item from one listbox to the another listbox. |
-| MoveAllTo | Move all the items to the another listbox. |
-| MoveAllFrom |  Move all the items from one listbox to the another listbox. |
+| MoveUp | Move the selected item up within the ListBox. |
+| MoveDown | Move the selected item down within the ListBox. |
+| MoveTo | Move the selected item to the other ListBox. |
+| MoveFrom | Move the selected item from the other ListBox to this ListBox. |
+| MoveAllTo | Move all items to the other ListBox. |
+| MoveAllFrom | Move all items from the other ListBox to this ListBox. |
 
-The following example illustrates how to move items from `Group A` to `Group B` listbox.
+The following example illustrates how to move items between the Group A and Group B ListBoxes using toolbar actions. Ensure both ListBoxes share the same Scope value to enable cross-list operations.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -94,4 +94,4 @@ The following example illustrates how to move items from `Group A` to `Group B` 
 
 ```
 
-![Blazor Dual ListBox](./images/blazor-dual-listbox.png)
+![Blazor dual ListBox with toolbar to move items between lists](./images/blazor-dual-listbox.png)

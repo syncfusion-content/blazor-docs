@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection and Nesting in Blazor ButtonGroup Component
 
-Blazor ButtonGroup component provided two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
+The Blazor ButtonGroup component supports two-way binding in both single and multiple selection modes through the `Selected` property of each `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the selected state of each button to stay synchronized between the UI and backing properties.
 
 ## Single selection
 
-ButtonGroup supports single selection type in which only one button can be selected.
+ButtonGroup supports a single selection mode in which only one button can be selected at a time.
 
 The following example illustrates the single selection behavior in ButtonGroup.
 
@@ -52,7 +52,7 @@ The following example illustrates the single selection behavior in ButtonGroup.
 
 ## Multiple selection
 
-ButtonGroup supports multiple selection type in which multiple button can be selected.
+ButtonGroup supports a multiple selection mode in which multiple buttons can be selected.
 
 The following example illustrates the multiple selection behavior in ButtonGroup.
 
@@ -91,13 +91,13 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 
 ## Nesting
 
-Nesting with other components can be possible in ButtonGroup. The following components can be nested in ButtonGroup.
+Nesting other components inside ButtonGroup is supported. The following components can be nested within ButtonGroup:
 * DropDownButton
 * SplitButton
 
 ### DropDownButton
 
-In the following example, the DropDownButton component can be added in ButtonGroup tag.
+In the following example, the `DropDownButton` component is added inside the ButtonGroup.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -122,7 +122,7 @@ In the following example, the DropDownButton component can be added in ButtonGro
 
 ### SplitButton
 
-In the following example, SplitButton component can be added in ButtonGroup tag.
+In the following example, the `SplitButton` component is added inside the ButtonGroup.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

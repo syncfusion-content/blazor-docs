@@ -9,7 +9,7 @@ documentation: ug
 
 # Ticks in Blazor Range Slider Component
 
-The Ticks in Slider supports to easily identify the current value/values of the Slider. It contains [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep). The value of the major ticks alone will be displayed in the slider. In order to enable/disable the small ticks, use the [`ShowSmallTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_ShowSmallTicks) property.
+Ticks in the slider help users quickly identify the current value or range. Configure tick intervals using [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep). By default, only major (large) tick labels are displayed. Use the [`ShowSmallTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_ShowSmallTicks) property to show or hide minor ticks.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -28,7 +28,7 @@ The Ticks in Slider supports to easily identify the current value/values of the 
 
 ## Step
 
-When the Slider is moved, it increases/decreases the value based on the step value. By default, the value is increased/decreased by 1. Use the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Step) property to change the increment step value.
+When the slider moves, its value increases or decreases by the step amount. By default, the step is 1. Use the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Step) property to change the increment.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -46,7 +46,7 @@ When the Slider is moved, it increases/decreases the value based on the step val
 
 ## Min and Max
 
-Enables the minimum/starting and maximum/ending value of the Slider, by using the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) and [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) property. By default, the minimum value is 1 and maximum value is 100. In the following sample the slider is rendered with the min value as 100 and max value as 1100.
+Set the minimum (start) and maximum (end) values using the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) and [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) properties. By default, the slider range is 1 to 100. The following example configures a range from 100 to 1100.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

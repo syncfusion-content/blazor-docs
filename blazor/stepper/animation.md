@@ -9,9 +9,9 @@ documentation: ug
 
 # Animation in Blazor Stepper Component
 
-The Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `Duration` and `Delay` by using the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive.
+The Stepper progress state can be animated, smoothly transitioning from one step to another. Customize the animation's `Duration` and `Delay` using the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive.
 
-You can disable the animation by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property to `false`. By default, the value is `true`.
+Animation can be disabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property to `false`. By default, its value is `true`.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -32,5 +32,7 @@ The example demonstrates the animation `Duration` and `Delay` settings for the S
     <StepperAnimationSettings Enable=true Delay="500" Duration="2000"></StepperAnimationSettings>
 </SfStepper>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryiZNaAbXodbvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Animation](./images/Blazor-animation.png)

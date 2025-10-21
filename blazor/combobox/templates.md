@@ -9,17 +9,17 @@ documentation: ug
 
 # Templates in Blazor ComboBox Component
 
-The ComboBox has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
+The ComboBox provides several options to customize the appearance and content of list items, group headers, the selected value, and the popup’s header and footer elements.
 
-To quickly get started with Templates in the Blazor ComboBox component, you can watch the video below.
+To quickly get started with templates in the Blazor ComboBox component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=Powq8aAGeAA" %}
 
 ## Item template
 
-The content of each list item within the ComboBox can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+Customize the content of each list item using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data.
+In the following example, each list item is split into two columns to display relevant data.
 
 {% highlight cshtml %}
 
@@ -33,9 +33,9 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customized with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+Customize the group header text under which sub-items are categorized using the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is applied to both inline and floating group headers.
 
-In the following sample, employees are grouped according to their country.
+In the following example, employees are grouped by country.
 
 {% highlight cshtml %}
 

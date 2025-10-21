@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor MultiSelect Component
 
-This section explains the list of events of the MultiSelect component which will be triggered for appropriate MultiSelect actions.
+This section lists the events available in the Blazor MultiSelect Dropdown component and when they are triggered during user interactions.
 
 ## Blur
 
-`Blur` event triggers when the input loses focus.
+The `Blur` event is triggered when the input loses focus. Typical uses include validation and committing changes.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -46,7 +46,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## ValueChange
 
-`ValueChange` event triggers when the MultiSelect value is changed.
+The `ValueChange` event is triggered when the MultiSelect value changes due to selection or removal actions.
 
 ```cshtml
 
@@ -81,7 +81,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Closed
 
-`Closed` event triggers after the popup has been closed.
+The `Closed` event is triggered after the popup is closed and is useful for post-close logic.
 
 ```cshtml
 
@@ -89,7 +89,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Created
 
-`Created` event triggers when the component is created.
+The `Created` event is triggered after the component has been initialized. Use it for one-time setup.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -122,7 +122,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The `Destroyed` event is triggered when the component is disposed. Use it for cleanup logic.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -155,7 +155,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The `Focus` event is triggered when the input gains focus. Use it to customize focus behavior.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -188,7 +188,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
+The `OnOpen` event is triggered before the popup opens. This event is cancelable; cancel it to keep the popup closed.
 
 ```cshtml
 
@@ -196,7 +196,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnClose
 
-`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
+The `OnClose` event is triggered before the popup closes. This event is cancelable; cancel it to keep the popup open.
 
 ```cshtml
 
@@ -205,7 +205,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## DataBound
 
-`DataBound` event triggers when the data source is populated in the popup list.
+The `DataBound` event is triggered when the data source has been populated in the popup list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -238,7 +238,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Filtering
 
-`Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
+The `Filtering` event is triggered while typing in the filter bar when `AllowFiltering` is enabled. Use it to customize filtering logic.
 
 ```cshtml
 
@@ -273,7 +273,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnActionBegin
 
-`OnActionBegin` event triggers before fetching data from the remote server.
+The `OnActionBegin` event is triggered before a remote data request is sent. Use it to modify queries or parameters.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -311,7 +311,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnActionFailure
 
-`OnActionFailure` event triggers when the data fetch request from the remote server fails.
+The `OnActionFailure` event is triggered when a remote data request fails. Use it for error handling and logging.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -349,7 +349,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnValueSelect
 
-`OnValueSelect` event triggers when a user selects an item in the popup using the mouse or keyboard navigation.
+The `OnValueSelect` event is triggered when a user selects an item in the popup using the mouse or keyboard.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -382,7 +382,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Opened
 
-`Opened` event triggers when the popup opens.
+The `Opened` event is triggered after the popup has opened. Use it to run logic that requires rendered popup content.
 
 ```cshtml
 
@@ -390,7 +390,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## ChipSelected
 
-`ChipSelected` event triggers when the chip is selected.
+The `ChipSelected` event is triggered when a value chip is selected in the input area (chip mode).
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -424,7 +424,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Cleared
 
-`Cleared` event triggers after clearing all items using the clear icon.
+The `Cleared` event is triggered after clearing all selected items using the clear icon.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -457,7 +457,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnChipTag
 
-`OnChipTag` event triggers before setting the selected item as chip in the component.
+The `OnChipTag` event is triggered before the selected item is displayed as a chip in the input area. Use it to customize tagging behavior.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -490,7 +490,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnValueRemove
 
-`OnValueRemove` event triggers before the selected item is removed from the widget.
+The `OnValueRemove` event is triggered before a selected item is removed from the component. Use it to intercept and optionally prevent removal.
 
 ```cshtml
 
@@ -524,7 +524,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## ValueRemoved
 
-`ValueRemoved` event triggers after the selected item is removed from the widget.
+The `ValueRemoved` event is triggered after a selected item is removed from the component.
 
 ```cshtml
 
@@ -558,7 +558,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## CustomValueSpecifier
 
-`CustomValueSpecifier` event triggers when the CustomValue is selected.
+The `CustomValueSpecifier` event is triggered when a custom value is selected while `AllowCustomValue` is enabled. Use it to provide custom item data.
 
 ```cshtml
 
@@ -592,7 +592,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## SelectedAll
 
-`SelectedAll` event triggers after the select all process is completed.
+The `SelectedAll` event is triggered after the select-all operation completes (CheckBox mode with ShowSelectAll).
 
 ```cshtml
 
@@ -624,4 +624,4 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-N> MultiSelect is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The MultiSelect currently provides the events listed above. Additional events may be added in future releases based on user requests. If a required event is missing, submit a request using the Syncfusion Blazor feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).

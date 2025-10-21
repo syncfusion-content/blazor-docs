@@ -7,7 +7,7 @@ control: Toolbar
 documentation: ug
 ---
 
-# Customize the Scrolling distance in Blazor Toolbar Component
+# Customize the Scrolling Distance in Blazor Toolbar Component
 
 The toolbar `ScrollStep` property supports to customize the scrolling distance, by clicking the left and right side navigation icons. A required value can be passed through the `ScrollStep` property to customize toolbar scrolling distance.
 
@@ -50,5 +50,6 @@ The toolbar `ScrollStep` property supports to customize the scrolling distance, 
 </SfToolbar>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMZCNAknqZPUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.gif)

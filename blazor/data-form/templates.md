@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in DataForm component
 
-In DataForm component we can customize the specific editor field or the entire form components using template feature. 
+The DataForm component supports templating to customize either a specific field editor or the entire form layout and validation experience.
 
 ## Customization of specific field editor
 
-We can customize the particular field editor with required UI customization using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.Template.html) `RenderFragment` inside `FormItem` tag.
+Customize an individual field editor using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.Template.html) `RenderFragment` inside a `FormItem`. This enables full control over the rendering, styling, and behavior of a single editor while retaining DataForm features such as validation and labels.
 
 {% tabs %}
 {% highlight razor tabtitle="Template"  %}
@@ -23,14 +23,13 @@ We can customize the particular field editor with required UI customization usin
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_template.png)
+![Blazor DataForm field customized using FormItem.Template](images/blazor_dataform_template.png)
 
-We can also utilize the above `Template` combination with [FormAutoGenerateItems](./form-items.md) which will generate the items except the specified `Formitem`.
-
+The above `Template` approach can also be used alongside [FormAutoGenerateItems](./form-items.md) to auto-generate all items except those explicitly customized with a `FormItem` template.
 
 ## Customization of entire form
 
-`DataForm` have the ability to customize the entire structure of the form, incorporating necessary components within it, and we can also personalize the messages displayed for validation errors.
+The `DataForm` supports customizing the entire form structure using a full-form template. This allows arranging editors, labels, buttons, and validation messages as required and customizing the appearance and text of validation errors.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -50,9 +49,9 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_template.png)
+![Blazor DataForm with a fully customized form template](images/blazor_dataform_template.png)
 
-We can also integrate the `FormTemplate` renderer along with `FormItem` as showcased in the below example.
+The `FormTemplate` renderer can also be integrated together with `FormItem` elements, as shown in the following example.
 
 {% tabs %}
 {% highlight razor tabtitle="Form Template"  %}
@@ -64,7 +63,7 @@ We can also integrate the `FormTemplate` renderer along with `FormItem` as showc
 
 ## Tooltip validation message with template
 
-When using the `Template` renderer, we can also customize the validation message with the help of `Tooltip` component by setting `ID` field to the custom editor component similar to the form item's `ID` property.
+When using the `Template` renderer, validation messages can be displayed using a tooltip component. Assign an `ID` to the custom editor that matches the form item's `ID` so that validation messages can be targeted correctly.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -80,11 +79,11 @@ When using the `Template` renderer, we can also customize the validation message
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_tooltip_with_templates.png)
+![Blazor DataForm showing validation messages in tooltips for templated editors](images/blazor_dataform_tooltip_with_templates.png)
 
 ## Validation summary 
 
-The [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0) tag can be utilized to present a summary of validation messages, and it should be positioned within the `FormValidator` tag to function correctly.The below example demonstrates the usage of it.
+Use the [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0) tag to display a consolidated list of validation messages. It must be placed within the `FormValidator` tag to function correctly. The example below demonstrates its usage.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -100,4 +99,4 @@ The [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.a
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_validation_summary.png)
+![Blazor DataForm displaying a ValidationSummary with aggregated error messages](images/blazor_dataform_validation_summary.png)

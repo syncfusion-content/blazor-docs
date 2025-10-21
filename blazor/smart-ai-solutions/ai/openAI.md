@@ -24,6 +24,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
 - An [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) is obtained from the OpenAI platform.
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - The API key is stored securely using environment variables or user secrets (see [Microsoft’s guide on user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
@@ -51,7 +52,7 @@ builder.Services.AddChatClient(openAiChatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 ```
 
-## Anomaly Detection with OpenAI and Syncfusion Blazor Grid
+## Anomaly Detection with OpenAI and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid
 
 This example demonstrates using the Syncfusion Blazor AI library with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid. The grid displays machine data (MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with inconsistent production rates based on operational factors, updating the grid with anomaly descriptions and visual styling.
 
@@ -68,7 +69,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
-- Add the following to `App.razor` for Syncfusion themes and scripts:
+- Add the following to `App.razor` for Syncfusion<sup style="font-size:70%">&reg;</sup> themes and scripts:
   
 ```html
 <head>
@@ -372,4 +373,5 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Op
 - **Network Issues**: Handle connectivity errors by implementing retry logic or displaying user-friendly messages.
 
 ## See Also
+
 - [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Lane Interaction in Blazor Diagram Component
 
-The diagram provides support to select, resize, or swap the lane interactively. 
+The diagram supports interactive lane operations, including selecting, resizing, and swapping lanes, as well as working with child elements inside lanes. 
 
 ## How to Select a Lane
 
@@ -20,8 +20,8 @@ A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.ht
 * A lane can be resized in the bottom and right direction.
 * A lane can be resized by using the resize selector of the lane.
 * A lane can be resized by dragging the bottom and right border of the lane without making a selection.
-* When a lane is resized, the swimlane will automatically adjust its size.
-* A lane can be resized either by resizing the selector or the tight bounds of the child object. If the child node moves to the edge of the lane, it can be automatically resized.
+* When a lane is resized, the parent swimlane will automatically adjust its size.
+* A lane can resized either by resizing the selector or the tight bounds of the child objects. If a child node moves to the edge of the lane, it can be automatically resized.
 
 The following image shows how to resize the lane.
 
@@ -29,18 +29,18 @@ The following image shows how to resize the lane.
 
 ## How to Swap Lanes
 
-* Lanes can be swapped by dragging the lanes over another lane.
-* The helper will indicate the insertion point during lane swapping.
+* Lanes can be swapped by dragging a lane over another lane.
+* A helper indicator appears to show the insertion position during lane swapping.
 The following image shows how to swap lanes.
 
 ![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
 
 ## How to Interact with Child Nodes in Lanes
 
-* You can resize the child node within swimlanes.
+* Resize child nodes within swimlanes.
 * You can drag the child nodes within the lane.
-* You can interchange the child nodes from one lane to another.
-* Drag and drop the child nodes from lane to the diagram.
+* Drag child nodes within the same lane to reposition them.
+* Drag and drop the child nodes from a lane to the diagram.
 * Drag and drop the child nodes from diagram to the lane.
 * Based on the child node interactions, the lane size will be updated.
 

@@ -7,12 +7,11 @@ control: Toggle Switch Button
 documentation: ug
 ---
 
-# Model binding in Blazor Toggle Switch Button Component
+# Model Binding in Blazor Toggle Switch Button Component
 
 This section demonstrates the strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. The model properties can be accessed on that view. The data associated with model can be used to render the component.
 
-In this sample, first check the option and click the submit button to post the selected value in the Toggle Switch Button. When value is not checked, validation error message will be shown below the Toggle Switch Button.
-
+In this sample, select the option and click the Submit button to post the value bound to the model. If the value is not checked, a validation error message is displayed below the toggle switch, enforced by the `Range` attribute configured to require `true`. The text content inside the `SfSwitch` acts as its label. To handle form submission logic, use `OnValidSubmit` and `OnInvalidSubmit` on the `EditForm` as needed. The `SfButton` is configured as a submit button using `HtmlAttributes` with `type="submit"`.
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
@@ -44,4 +43,4 @@ In this sample, first check the option and click the submit button to post the s
 
 ```
 
-![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.png)
+![Model binding and validation in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.png)

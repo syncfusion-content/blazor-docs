@@ -654,7 +654,7 @@ The `HideKeyTipsAsync` method removes all visible keytips from the Ribbon dynami
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon show and hide keytips](./images/keytip/show-hide-keytip.png)
+![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.png)
 
 ## Guidelines for adding keytips
 

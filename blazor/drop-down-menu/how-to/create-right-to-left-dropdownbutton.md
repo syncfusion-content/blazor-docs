@@ -45,5 +45,4 @@ The following example illustrates how to enable right-to-left support in Dropdow
 
 ```
 
-
 ![Right to Left in Blazor DropDownMenu](./../images/blazor-dropdownmenu-right-to-left.png)

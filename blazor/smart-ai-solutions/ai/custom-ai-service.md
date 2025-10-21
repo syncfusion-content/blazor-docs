@@ -15,6 +15,7 @@ The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) 
 
 To integrate a custom AI service with a Blazor application, ensure the following:
 - The following NuGet package is installed:
+
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
@@ -22,6 +23,7 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
 - An API key is obtained from the chosen AI provider (e.g., DeepSeek via the [DeepSeek API documentation](https://platform.deepseek.com)).
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - Familiarity with HTTP client usage and JSON serialization in .NET applications.

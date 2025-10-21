@@ -9,7 +9,7 @@ documentation: ug
 
 # How to upgrade Syncfusion® Blazor Components to 18.1.0.36 version
 
-This guide explains the one-time migration required when upgrading from EJ2-based Syncfusion Blazor packages to version 18.1.0.36 and later.
+This guide explains the one-time migration required when upgrading from Syncfusion Blazor packages to version 18.1.0.36 and later.
 
 ## NuGet changes
 

@@ -9,13 +9,14 @@ documentation: ug
 
 # Bing Maps in Blazor Maps Component
 
-Bing Maps is an online Maps provider, owned by Microsoft, for accessing the external geospatial imagery services for deep-zoom satellite view which is supported in the Blazor Maps component. This provides the ability to visualize satellite, aerial, and street Maps without using any external shape files. As like OSM, it provides Maps tile images based on the requests and combines those images into a single one to display Maps area.
+Bing Maps is an online map provider from Microsoft that offers external geospatial imagery services for deep-zoom satellite views supported by the Blazor Maps component. It enables visualization of satellite, aerial, and street maps without external shapefiles. Similar to OSM, it supplies map tile images based on requests and combines them to display the required map area.
 
 ## Adding Bing Maps
 
-The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, a built-in `GetBingUrlTemplate` method has been included that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/bing-maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
+Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The required Bing Maps URL format differs from other providers; therefore, the built-in `GetBingUrlTemplate` method returns a URL in a generic format. A subscription key is required for Bing Maps. Follow the steps in the Bing Maps key creation page to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be assigned to the `UrlTemplate` property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -26,11 +27,13 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 
 @code {
     public string UrlTemplate;
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");
     }
 }
+
 ```
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
@@ -39,18 +42,19 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Types of Bing Maps
 
-Bing Maps provides different types of Maps and it can be viewed in the Maps component.
+Bing Maps provides multiple map types that can be displayed in the Maps component.
 
-* **Aerial** - Displays satellite images to highlight roads and major landmarks for easy identification.
-* **AerialWithLabelsOnDemand** - Displays aerial Maps with labels for the continent, country, ocean, etc.
-* **Road** - Displays the default Maps view of roads, buildings, and geography.
-* **CanvasDark** - Displays dark version of the road Maps.
-* **CanvasLight** - Displays light version of the road Maps.
-* **CanvasGray** - Displays grayscale version of the road Maps.
+* **Aerial** - Displays satellite imagery highlighting roads and major landmarks for easy identification.
+* **AerialWithLabelsOnDemand** - Displays aerial maps with labels for continents, countries, oceans, and more.
+* **Road** - Displays the default view of roads, buildings, and geography.
+* **CanvasDark** - Displays a dark-themed version of the road map.
+* **CanvasLight** - Displays a light-themed version of the road map.
+* **CanvasGray** - Displays a grayscale version of the road map.
 
-The above types can also be rendered in the Maps component by specifying their URL in the `UrlTemplate` property in the `MapsLayer` class. You can learn more about the available types and the URL for it by visiting the official websites of Bing Maps.
+These types can be rendered by specifying their URLs in the `UrlTemplate` property of the `MapsLayer` class. For available types and corresponding URLs, refer to the official Bing Maps documentation.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -61,11 +65,13 @@ The above types can also be rendered in the Maps component by specifying their U
 
 @code {
     public string UrlTemplate;
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasGray?output=json&uriScheme=https&key=");
     }
 }
+
 ```
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
@@ -74,9 +80,10 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Enable zooming and panning
 
-Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
+The Bing Maps layer supports zooming and panning. Zooming provides a closer view of a specific region for detailed analysis. Panning moves the map to focus on the target area.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -94,11 +101,13 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 
 @code {
     public string UrlTemplate;
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");
     }
 }
+
 ```
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
@@ -107,9 +116,10 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Adding markers and navigation line
 
-Markers can be added to the layers of Bing Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be added on top of an Bing Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to Bing Maps layers by setting the location coordinates (latitude and longitude) using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn on top of a Bing Maps layer to highlight a path between locations by setting the location coordinates in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -133,22 +143,27 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 </SfMaps>
 
 @code {
+    public string UrlTemplate;
+
     public class City
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Name { get; set; }
     }
+
     private List<City> Cities = new List<City> {
         new City { Latitude = 34.060620, Longitude = -118.330491,  Name="California" },
         new City{ Latitude = 40.724546, Longitude = -73.850344,  Name="New York"}
     };
-    public string UrlTemplate;
+
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");
     }
 }
+
 ```
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
@@ -157,9 +172,10 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer for highlighting a particular continent or country in Bing Maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer to highlight a specific continent or country by adding another layer and setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -175,11 +191,13 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer fo
 
 @code {
     public string UrlTemplate;
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasGray?output=json&uriScheme=https&key=");
     }
 }
+
 ```
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
@@ -188,9 +206,10 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Enable legend
 
-The legend can be added to the tile Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+A legend can be added to tile maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps Format="N0" EnableGroupingSeparator="true">
@@ -218,7 +237,9 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
     </MapsLayers>
 </SfMaps>
 
-@code{
+@code {
+    public string UrlTemplate;
+
     public class PopulationCityDetails
     {        
         public string Name { get; set; }
@@ -227,19 +248,20 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
         public double Population { get; set; }
         public string Color { get; set; }
     };
+
     public List<PopulationCityDetails> PopulatedCities = new List<PopulationCityDetails> {
-        new PopulationCityDetails { Name ="Tokyo", Latitude= 35.6805245924747, Longitude= 139.76770396213337, Population= 37435191, Color="#2EB6C8"},
-        new PopulationCityDetails { Name ="Delhi", Latitude= 28.644800, Longitude= 77.216721, Population= 29399141, Color="#4A97F4"},
-        new PopulationCityDetails { Name ="Shanghai", Latitude= 31.224361, Longitude= 121.469170, Population= 26317104, Color="#498082"},
-        new PopulationCityDetails { Name ="Sao Paulo", Latitude= -23.550424484747914, Longitude= -46.646471636488315, Population= 21846507, Color="#FB9E67"},
-        new PopulationCityDetails { Name ="Mexico City", Latitude= 19.427402397418774, Longitude= -99.131123716666, Population= 21671908, Color="#8F9DE3"},
-        new PopulationCityDetails { Name ="Cairo ", Latitude= 30.033333, Longitude= 31.233334, Population= 20484965, Color="#7B9FB0"},
-        new PopulationCityDetails { Name ="Dhaka", Latitude= 23.777176, Longitude= 90.399452, Population= 20283552, Color="#4DB647"},
-        new PopulationCityDetails { Name ="Mumbai", Latitude= 19.08492049646163, Longitude= 72.87449446319248, Population= 20185064, Color="#30BEFF"},
-        new PopulationCityDetails { Name ="Beijing", Latitude= 39.90395970055848, Longitude= 116.38831272088059, Population= 20035455, Color="#Ac72AD"},
-        new PopulationCityDetails { Name ="Osaka", Latitude= 34.69024500601642, Longitude= 135.50746225677142, Population= 19222665, Color="#EFE23E"}
+        new PopulationCityDetails { Name = "Tokyo", Latitude = 35.6805245924747, Longitude = 139.76770396213337, Population = 37435191, Color = "#2EB6C8" },
+        new PopulationCityDetails { Name = "Delhi", Latitude = 28.644800, Longitude = 77.216721, Population = 29399141, Color = "#4A97F4" },
+        new PopulationCityDetails { Name = "Shanghai", Latitude = 31.224361, Longitude = 121.469170, Population = 26317104, Color = "#498082" },
+        new PopulationCityDetails { Name = "Sao Paulo", Latitude = -23.550424484747914, Longitude = -46.646471636488315, Population = 21846507, Color = "#FB9E67" },
+        new PopulationCityDetails { Name = "Mexico City", Latitude = 19.427402397418774, Longitude = -99.131123716666, Population = 21671908, Color = "#8F9DE3" },
+        new PopulationCityDetails { Name = "Cairo", Latitude = 30.033333, Longitude = 31.233334, Population = 20484965, Color = "#7B9FB0" },
+        new PopulationCityDetails { Name = "Dhaka", Latitude = 23.777176, Longitude = 90.399452, Population = 20283552, Color = "#4DB647" },
+        new PopulationCityDetails { Name = "Mumbai", Latitude = 19.08492049646163, Longitude = 72.87449446319248, Population = 20185064, Color = "#30BEFF" },
+        new PopulationCityDetails { Name = "Beijing", Latitude = 39.90395970055848, Longitude = 116.38831272088059, Population = 20035455, Color = "#Ac72AD" },
+        new PopulationCityDetails { Name = "Osaka", Latitude = 34.69024500601642, Longitude = 135.50746225677142, Population = 19222665, Color = "#EFE23E" }
     };
-    public string UrlTemplate;
+
     protected override async Task OnInitializedAsync()
     {
         UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");

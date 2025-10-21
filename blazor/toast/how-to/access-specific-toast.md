@@ -9,23 +9,32 @@ documentation: ug
 
 # Access specific toast in Blazor Toast Component
 
-In the toast, the particular toast can be accessed by passing the `Key` value in `ShowModes`, and the `Key` should be unique in `ShowModels`. To close the specific toast, you also need to pass the corresponding toast `Key` value in the `Hide` method. The added `Key` value can be got in the toast `Opened` and `Closed` event.
+This section describes how to address an individual toast instance in the Syncfusion Blazor Toast component by assigning a unique key when showing a toast, and how to close that specific toast programmatically by passing the same key to the hide method.
 
-In the following example, Toast is closed by calling the `Hide` method with the key value that is returned in the `Opened` event
+A unique identifier can be provided via the Toast model’s **Key** when calling **ShowAsync**. The same key can be supplied to **HideAsync** to close a specific toast. The assigned key is available in the **Opened** and **Closed** events through their event arguments for event-driven control. For more information, refer to:
+- SfToast component: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html
+- ToastModel: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ToastModel.html
 
 ```cshtml
-
 @using Syncfusion.Blazor.Notifications
 
 <div id="target">
-    <SfToast @ref="toast" ShowCloseButton="true" Height="150px" Width="200px" Timeout="60" Target="@target" Icon="e-meeting" Title="@title" >
-        <ToastEvents Opened="OnOpen"></ToastEvents>
+    <SfToast @ref="toast"
+             ShowCloseButton="true"
+             Height="150px"
+             Width="200px"
+             Timeout="6000"
+             Target="@target"
+             Icon="e-meeting"
+             Title="@title">
+        <ToastEvents Opened="OnOpened"></ToastEvents>
     </SfToast>
+
     <div class="col-lg-12 col-sm-12 col-md-12 center">
-        <div id="toastBtnDefault" style="margin: auto;text-align: center">
-            <button class="e-btn" id="toastBtnShow" @onclick="showOnclick">Show Toasts</button>
-            <button class="e-btn" id="toastBtnHide" @onclick="hideOnclick">Hide All</button>
-            <button class="e-btn" id="toastBtnHide" @onclick="HideOnclick">Hide</button>
+        <div id="toastBtnContainer" style="margin: auto; text-align: center">
+            <button class="e-btn" id="toastBtnShow" @onclick="ShowOnClick">Show Toast</button>
+            <button class="e-btn" id="toastBtnHideAll" @onclick="HideAllOnClick">Hide All</button>
+            <button class="e-btn" id="toastBtnHideOne" @onclick="HideOneOnClick">Hide Last Created</button>
         </div>
     </div>
 </div>
@@ -37,32 +46,51 @@ In the following example, Toast is closed by calling the `Hide` method with the 
     }
 </style>
 
-@code{
-        SfToast toast;
+@code {
+    private SfToast toast;
 
-        private string target = "#target";
-        private string title = "This is Toast Title";
+    private string target = "#target";
+    private string title = "This is Toast Title";
 
-        private int key { get; set; } = 0;
-        private async Task showOnclick()
-        {
-            await this.toast.ShowAsync( new ToastModel {Key = key , Content = key.ToString() , Timeout = 10000 });
-            key++;
-        }
+    // Monotonically increasing key for each toast instance created via ShowAsync
+    private int key = 0;
 
-        private async Task OnOpen(ToastOpenArgs args)
-        {
-            await this.toast.HideAsync(args.Key);
-        }
+    // Stores the last created key for demonstration of targeted hide
+    private int? lastCreatedKey = null;
 
-    private async Task HideOnclick()
+    private async Task ShowOnClick()
     {
-        await this.toast.HideAsync();
+        await toast.ShowAsync(new ToastModel { Key = key, Content = $"Toast Key: {key}", Timeout = 10000 });
+        lastCreatedKey = key;
+        key++;
     }
-    private async Task hideOnclick()
+
+    // Event-driven example: close the toast immediately after it opens using the event's key
+    private async Task OnOpened(ToastOpenArgs args)
     {
-        await this.toast.HideAsync("All");
+        // Demonstrates closing a specific toast via its assigned key
+        await toast.HideAsync(args.Key);
+    }
+
+    // Hides all toasts
+    private async Task HideAllOnClick()
+    {
+        await toast.HideAsync();
+    }
+
+    // Hides the most recently created toast (if tracked)
+    private async Task HideOneOnClick()
+    {
+        if (lastCreatedKey.HasValue)
+        {
+            await toast.HideAsync(lastCreatedKey.Value);
+        }
     }
 }
-
 ```
+
+Preview of the code snippet:
+- Clicking “Show Toast” displays a toast with the content “Toast Key: N”, where N is the unique key assigned to that instance.
+- Because the Opened event immediately calls HideAsync with the event’s key, each toast closes as soon as it opens (demonstrating targeted close).
+- Clicking “Hide All” closes all active toasts.
+- Clicking “Hide Last Created” attempts to close only the most recently created toast using the stored key.

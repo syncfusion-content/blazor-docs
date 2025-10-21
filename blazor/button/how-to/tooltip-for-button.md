@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip for Button in Blazor Button Component
 
-Tooltip can be shown on Button hover and it can be achieved by title attribute.
+A tooltip can be shown on hover or focus by using the native `title` attribute on the Button. The browser renders this default tooltip without additional scripts or services.
 
 ```csharp
 
@@ -25,4 +25,4 @@ Tooltip can be shown on Button hover and it can be achieved by title attribute.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqMVVLsbtDTzCr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Button displays ToolTip](./../images/blazor-button-tooltip.png)
+![Blazor Button displaying a tooltip via the title attribute](./../images/blazor-button-tooltip.png)

@@ -9,19 +9,19 @@ documentation: ug
 
 # Drag And Drop in Blazor ListBox Component
 
-The ListBox has support to drag an item or a group of selected items and drop it within the same listbox or into another listbox.
+The ListBox supports dragging a single item or a group of selected items and dropping them within the same ListBox or into another ListBox.
 
-The elements can be customized on drag and drop by using the following events.
+Customize drag-and-drop behavior using the following events.
 
 | Events | Description |
 |------|------|
-| [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_DragStart) | Triggers when the selected element's drag starts. |
-| [OnDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_OnDrop) | Triggers before the selected element is dropped. |
-| [Dropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_Dropped) | Triggers when the selected element is dropped. |
+| [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_DragStart) | Triggers when dragging starts for the selected item(s). |
+| [OnDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_OnDrop) | Triggers before the selected item(s) are dropped. |
+| [Dropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_Dropped) | Triggers after the selected item(s) are dropped. |
 
 ## Single ListBox
 
-To drag and drop an item or group of item within the listbox can achieved by setting [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true`.
+Drag and drop within a single ListBox can be achieved by setting the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -56,7 +56,7 @@ To drag and drop an item or group of item within the listbox can achieved by set
 
 ## Multiple ListBox
 
-To drag and drop an item or group of item between two listbox can achieved by setting [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true` and [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) should be set as `combined-list` in both the listbox.
+Drag and drop between two ListBoxes can be achieved by setting the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true` and assigning the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value (for example, `combined-list`) to both ListBoxes. The Scope value enables cross-list drag-and-drop; element IDs should remain unique and are independent of Scope.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -121,11 +121,11 @@ To drag and drop an item or group of item between two listbox can achieved by se
 </style>
 ```
 
-![Dragging Item between Multiple Blazor ListBox](./images/blazor-listbox-multiple-drag-item.png)
+![Dragging items between multiple Blazor ListBoxes](./images/blazor-listbox-multiple-drag-item.png)
 
 ## Dual ListBox with drag and drop
 
-The toolbar and drag and drop actions between two listboxes can be enabled by setting a listbox unique id and the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) property value.
+The toolbar and drag-and-drop actions between two ListBoxes can be enabled by assigning unique element IDs and the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value to both instances. Toolbar actions operate across ListBoxes that share the same Scope.
 
 ```
 @using Syncfusion.Blazor.DropDowns
