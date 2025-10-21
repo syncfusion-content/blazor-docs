@@ -266,10 +266,10 @@ The following example demonstrates rendering a Menu Bar with extensively customi
             Value = "Products",
             Options = new List<CategoryModel>
         {
-                new CategoryModel { Value= "JavaScript", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/javascript.png" },
-                new CategoryModel { Value= "Angular", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/angular.png" },
-                new CategoryModel { Value= "ASP.NET Core", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/core.png" },
-                new CategoryModel { Value= "ASP.NET MVC", Url= "https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/menu-bar/mvc.png" }
+                new CategoryModel { Value= "JavaScript", Url= "https://ej2.syncfusion.com/demos/src/menu/images/javascript.png" },
+                new CategoryModel { Value= "Angular", Url= "https://ej2.syncfusion.com/demos/src/menu/images/angular.png" },
+                new CategoryModel { Value= "ASP.NET Core", Url= "https://ej2.syncfusion.com/demos/src/menu/images/core.png" },
+                new CategoryModel { Value= "ASP.NET MVC", Url= "https://ej2.syncfusion.com/demos/src/menu/images/mvc.png" }
             }
         },
         new CategoryModel {
@@ -380,5 +380,5 @@ The following example demonstrates rendering a Menu Bar with extensively customi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtreijXUVhyRIyrJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryiDLMBRagHDoZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)
