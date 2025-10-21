@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging customization in Syncfusion Blazor DataGrid
 
-The appearance of paging elements in the Syncfusion Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
+The appearance of paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
 
 - **Root container:** The outermost wrapper that holds all pager content.
 - **Pager container:** The inner layout that positions the controls.
@@ -39,7 +39,7 @@ Properties like **font-family**, **background-color**, and spacing-related style
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Syncfusion Blazor DataGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. Apply CSS to modify its look:
 
 ```css
 .e-grid .e-pagercontainer {
@@ -118,10 +118,10 @@ Change properties like **background-color** and **color** to highlight the activ
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 

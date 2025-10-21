@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The Syncfusion Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **DataGrid root element:** Defines the overall appearance of the grid container.
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
@@ -184,9 +184,9 @@ Adjust properties like **background-color**,**font-family**, and **border** to m
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsFrozen="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsFrozen="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -254,7 +254,7 @@ internal sealed class OrderData
 
 ## Customize the color of grid lines
 
-The Syncfusion Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
