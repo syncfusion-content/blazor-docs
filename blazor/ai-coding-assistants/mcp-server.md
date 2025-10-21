@@ -100,6 +100,33 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 3. Confirm that [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
     * `SyncfusionBlazorAssistant is running...` (in VS Code)
 
+### VS (GitHub Copilot MCP)
+
+* To configure an MCP server for a specific workspace, you can create a `.vs/mcp.json` file in your workspace folder.
+
+```json
+{
+  "servers": {
+    "syncfusion-blazor-assistant": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@syncfusion/blazor-assistant@latest"
+      ],
+      "env": {
+        "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+```
+
+* After updating the mcp.json configuration, open the GitHub Copilot Chat window. Click the Ask arrow, then select Agent.
+* Select the [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) from the tools section.
+* For more details, refer to the official [Visual Studio documentation](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022).
+
+
 ### Cursor
 
 To configure an MCP server for a specific workspace, you can create a .cursor/mcp.json file in your workspace folder.
