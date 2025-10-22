@@ -134,7 +134,7 @@ For more details, refer to the [Cursor documentation](https://cursor.com/docs/co
 {
   "mcpServers": {
     "syncfusion-blazor-assistant": {
-      "command": "npx",
+      "command": "npx.cmd",
       "args": [
         "-y",
         "@syncfusion/blazor-assistant@latest"
@@ -148,7 +148,8 @@ For more details, refer to the [Cursor documentation](https://cursor.com/docs/co
 ```
 
 * Click OK and Apply.
-* For further assistance, see the [JetBrains documentation](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server).
+
+For further assistance, see the [JetBrains documentation](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server).
 
 > For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 
