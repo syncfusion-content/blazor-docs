@@ -9,10 +9,10 @@ documentation: ug
 
 # Build your first Blazor App with UI Kit blocks
 
-This tutorial guides you through building a Blazor Web App using blocks from the Syncfusion Essential UI Kit for Blazor. It demonstrates how to create a new project, choose Tailwind CSS or Bootstrap 5.3 themes, and add a Sign in block. The goal is to help developers quickly build responsive, modern web apps using prebuilt blocks with minimal effort.
+This tutorial guides you through building a Blazor Web App using blocks from the Syncfusion Essential UI Kit for Blazor. It demonstrates how to create a new project, choose Tailwind CSS or Bootstrap 5.3 themes, and add a Sign in block. The goal is to help developers quickly build responsive, modern web apps using pre-built blocks with minimal effort.
 
 ## Create a new Blazor App
-A Blazor Web App is used for this example. To create a new app, follow the Microsoft setup guide [here](https://learn.microsoft.com/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through adding a simple Sign in block to the newly created app named **MyBlazorApp**.
+A Blazor Web App is used for this example. To create a new app, follow the Microsoft setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through adding a simple Sign in block to the newly created app named **MyBlazorApp**.
 
 > This tutorial focuses on using Blazor Server rendering mode rather than Blazor WebAssembly.
 
