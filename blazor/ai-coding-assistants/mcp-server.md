@@ -100,7 +100,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 3. Confirm that [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
     * `SyncfusionBlazorAssistant is running...` (in VS Code)
 
-### VS (GitHub Copilot MCP)
+### Visual Studio (GitHub Copilot MCP)
 
 * To configure an MCP server for a specific workspace, you can create a `.vs/mcp.json` file in your workspace folder.
 
