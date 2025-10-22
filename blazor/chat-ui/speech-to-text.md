@@ -11,21 +11,9 @@ documentation: ug
 
 The Syncfusion Blazor Chat UI component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the Chat UI through voice input.
 
-## Prerequisites
-
-Before integrating `Speech-to-Text`, ensure the following:
-
-* **Syncfusion Chat UI**: Package [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
-
-* **Syncfusion Speech to Text**: Package [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) installed.
-
-## Set Up the Chat UI Component
-
-Follow the Syncfusion Chat UI [Getting Started](./getting-started) guide to configure and render the Chat UI component in your Blazor application.
-
 ## Configure Speech-to-Text
 
-To enable Speech-to-Text functionality in the Angular Chat UI component, update the `Home.razor` file to incorporate the Web Speech API.
+To enable Speech-to-Text functionality in the Blazor Chat UI component, update the `Home.razor` file to incorporate the Web Speech API.
 
 The [SpeechToText](https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app) component listens to audio input from the device’s microphone, transcribes spoken words into text, and updates the Chat UI’s editable footer with the recognized text. Once the transcription appears in the footer, users can send it as a message to others.
 
@@ -221,3 +209,7 @@ The `SpeechToText` component provides events to handle errors that may occur dur
 ## Browser Compatibility
 
 The `SpeechToText` component relies on the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition), which has limited browser support. Refer to the [Browser Compatibility](https://blazor.syncfusion.com/documentation/speech-to-text/speech-recognition#browser-support) section for detailed information.
+
+## See Also
+
+* [Messages](./messages)
