@@ -10,6 +10,7 @@ documentation: ug
 # Sorting in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes built-in support for sorting data-bound columns in **ascending** or **descending** order. Enable sorting by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to `true`.
+
 An overview of **sorting** functionality is available in this video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=P3VO_vd0Ev0" %}
