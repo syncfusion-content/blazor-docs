@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Editor Modes in Blazor RichTextEditor Component | Syncfusion
+title: Editor Modes in Blazor Rich Text Editor Component | Syncfusion
 description: Checkout and learn here all about Editor Modes in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Editor Modes in Blazor RichTextEditor Component
+# Editor Modes in Syncfusion Blazor Rich Text Editor
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component is used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formations:
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component allows users to create and edit content, returning valid HTML markup or Markdown (MD). It supports two editing modes:
 
 * HTML Editor
 * Markdown Editor
 
 ## HTML editor
 
-Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component for formatting the word content as HTML. The HTML editing mode is the default mode in Rich Text Editor to format the content through the available toolbar items to return the valid HTML markup. Set the `EditorMode` property to `HTML`.
+The Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) that enables users to format content as HTML. This is the default editing mode, allowing content formatting through toolbar options and returning valid HTML markup.
+
+To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html) property to `HTML`.
 
 ```cshtml
 
@@ -41,10 +43,16 @@ Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-compone
 
 ## Markdown editor
 
-Set the `EditorMode` property to `Markdown` to create or edit the content and apply formatting to view markdown formatted content. The third-party library such as `Marked` or any other library is used to convert markdown into HTML content.
+To enable Markdown editing, set the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#Syncfusion_Blazor_RichTextEditor_EditorMode_Markdown) property to `Markdown`. This mode allows users to create and format content using Markdown syntax. A third-party library such as `Marked` is used to convert Markdown into HTML.
 
-* The Supported Tags are  `h6`,`h5`,`h4`,`h3`,`h2`,`h1`,`blockquote`,`pre`,`p`,`OL`,`UL`.
-* The Supported Selection Tags are `Bold`, `Italic`, `StrikeThrough`, `InlineCode`, `SubScript`, `SuperScript`, `UpperCase` and `LowerCase`.
+**Supported Tags:**
+
+- Headings: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
+- Block elements: `blockquote`, `pre`, `p`, `OL`, `UL`
+
+**Supported Selection Tags:**
+
+- `Bold`, `Italic`, `StrikeThrough`, `InlineCode`, `SubScript`, `SuperScript`, `UpperCase`, `LowerCase`
 
 ```cshtml
 
@@ -70,7 +78,7 @@ Set the `EditorMode` property to `Markdown` to create or edit the content and ap
 
 For further details on Markdown editing, refer to the [Markdown](./markdown) section.
 
-N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
+N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
 
 ## See also
 

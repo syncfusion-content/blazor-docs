@@ -37,9 +37,9 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 ## Grouping with Virtualization
 
-The Combobox component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization, enhancing performance and responsiveness.
+The ComboBox supports grouping with virtualization. Items can be organized into categories by mapping the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field. After grouping, virtualization behaves like local data binding for a seamless experience. When the data source is remote, an initial request retrieves all data required for grouping; afterward, the grouped data is virtualized similarly to local data.
 
-The following sample shows the example for Grouping with Virtualization.
+The following sample shows grouping with virtualization.
 
 {% highlight cshtml %}
 
@@ -49,11 +49,11 @@ The following sample shows the example for Grouping with Virtualization.
 
 ## Keyboard interaction
 
-Users can navigate through the scrollable content using keyboard keys. This feature loads the next or next set of items based on the key inputs in the popup.The ComboBox supports the following keyboard shortcuts.
+Users can navigate through the virtualized list using the keyboard. Based on key inputs, the next or previous set of items is loaded within the popup. The ComboBox supports the following keyboard shortcuts.
 
 | Key | Action |
 |-----|-----|
-| `ArrowDown` | Loads the next virtual list item if the selection is present in last item of the current page. |
-| `ArrowUp` | Loads the previous virtual list item if the selection is present in first item of the current page. |
+| `ArrowDown` | Loads the next virtual list item if the selection is on the last item of the current page. |
+| `ArrowUp` | Loads the previous virtual list item if the selection is on the first item of the current page. |
 | `PageDown` | Loads the next page and selects the last item in it. |
 | `PageUp` | Loads the previous page and selects the first item in it. |

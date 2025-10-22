@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in Blazor Tooltip Component
 
-The Tooltip can be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
+The Tooltip can be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, which applies one or more custom CSS class names. These classes allow defining user-specific styles and themes that are applied to the tooltip wrapper and its elements.
 
 ## Tip pointer customization
 
-Styling the tip pointer's size, background, and border colors can be done using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, as given below.
+Style the tip pointer size, background, and border colors using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property as shown below. The selectors target the generated tooltip wrapper and pointer elements that are set at runtime based on placement.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -80,11 +80,11 @@ Styling the tip pointer's size, background, and border colors can be done using 
 </style>
 ```
 
-![Blazor Tooltip with Custom Tip Pointer](images/blazor-tooltip-custom-tip-pointer.png)
+![Customized tooltip pointer size and colors](images/blazor-tooltip-custom-tip-pointer.png)
 
 ## Tooltip customization
 
-The complete look and feel of the Tooltip can be customized by changing it's background color, opacity, content font, etc.
+The complete look and feel of the Tooltip can be customized by changing its background color, opacity, content font, and related styles. The following example demonstrates overriding theme styles by scoping CSS to a custom class applied through `CssClass`.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups

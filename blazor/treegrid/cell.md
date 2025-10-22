@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Cell in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about cell in Syncfusion Blazor TreeGrid component and much more details.
+description: Learn about cell customization features in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Cell in Blazor TreeGrid Component
+# Cell in Syncfusion Blazor TreeGrid Component
 
-## Displaying the HTML content
+## Displaying HTML Content
 
-The HTML tags can be displayed in the Tree Grid header and content by enabling the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property.
+HTML tags can be rendered in the TreeGrid header and content by enabling the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property.
 
 {% tabs %}
 
@@ -73,9 +73,9 @@ public class TreeData
 
 ![Displaying HTML Content in Blazor TreeGrid Cell](images/blazor-treegrid-cell-with-html-content.png)
 
-## Customize cell styles
+## Customize Cell Styles
 
-The appearance of cells can be customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) event. The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) event triggers for every cell. In that event handler, you can get **QueryCellInfoEventArgs** that contains the details of the cell.
+Cell appearance can be customized using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) event. This event triggers for every cell and provides access to **QueryCellInfoEventArgs**.
 
 {% tabs %}
 
@@ -83,6 +83,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents QueryCellInfo="querycellinfo" TValue="TreeData"></TreeGridEvents>
@@ -169,11 +170,11 @@ public class TreeData
 
 ![Blazor TreeGrid with Custom Cell Styles](images/blazor-treegrid-custom-cell-style.png)
 
-## Auto wrap
+## Auto Wrap
 
-The auto wrap allows the cell content of the tree grid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words. To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
+Auto wrap allows cell content to wrap to the next line when it exceeds the cell width. Wrapping behavior depends on whitespace between words. Enable this feature by setting [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) to **true**.
 
-Note: When a column width is not specified, then auto wrap of columns will be adjusted with respect to the tree grid's width.
+> Note: If column width is not specified, auto wrap adjusts based on the TreeGrid's overall width.
 
 {% tabs %}
 
@@ -315,13 +316,13 @@ public class TreeData
 
 ![Blazor TreeGrid with Grid Lines](images/blazor-treegrid-with-grid-lines.png)
 
-N> By default, the tree grid renders with **Default** mode.
+N> By default, the TreeGrid renders with **Default** mode.
 
 ## Clip Mode
 
-The clip mode provides options to display its overflow cell content and it can be defined by the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) property.
+Clip mode controls how overflow cell content is displayed. Configure it using the [ClipMode](ttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) property.
 
-There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode). They are:
+Available options:
 
 * **Clip**: Truncates the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.

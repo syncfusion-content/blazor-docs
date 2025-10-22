@@ -7,15 +7,15 @@ control: Timeline
 documentation: ug
 ---
 
-# Customization in Blazor Timeline component
+# Customization in Blazor Timeline Component
 
-You can customize the Timeline items dot size, connectors, dot borders, dot outer space and more to personalize its appearance. This section explains the different ways for styling the items.
+Customize the Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
 
-## Connector styling
+## Connector Styling
 
-### Common styling
+### Common Styling
 
-You can define the styles applicable to the all the Timeline item connectors.
+Define styles applicable to all Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
 
 ```cshtml
 
@@ -59,11 +59,13 @@ You can define the styles applicable to the all the Timeline item connectors.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSsXCtVJSVQymc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.png)
 
-### Individual styling
+### Individual Styling
 
-You can also apply unique styles to individual connectors, to differentiate specific items within the Timeline.
+Apply unique styles to individual connectors to differentiate specific items within the Timeline. 
 
 ```cshtml
 
@@ -111,13 +113,15 @@ You can also apply unique styles to individual connectors, to differentiate spec
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVIijCXVzSGcbwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.png)
 
-## Dot styling
+## Dot Styling
 
-### Dot color
+### Dot Color
 
-You can modify the color of the dots to highlight the specific Timeline items.
+Modify the color of the dots to highlight specific Timeline items. The `.e-dot` class targets the circular indicator for each item.
 
 ```cshtml
 
@@ -173,11 +177,13 @@ You can modify the color of the dots to highlight the specific Timeline items.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBosDWNVzniYHpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Customized Dot color](./images/Blazor-custom-dot-color.png)
 
-### Dot size
+### Dot Size
 
-You can adjust the size of the dot to make it larger or smaller by using the `--dot-size` variable.
+Adjust the dot size using the `--dot-size` CSS variable, making it larger or smaller. This variable primarily controls the dimensions of the `e-dot` element.
 
 ```cshtml
 
@@ -237,11 +243,13 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhoMDCZhJdwIyCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Customized Dot size](./images/Blazor-custom-dot-size.png)
 
-### Dot shadow
+### Dot Shadow
 
-You can add shadow effects to the Timeline dots to make it feel visually engaging by using the `--dot-outer-space` & `--dot-border` variables.
+Add shadow effects to Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables. These variables define the spacing and border around the dot, contributing to the shadow effect.
 
 ```cshtml
 
@@ -292,11 +300,13 @@ You can add shadow effects to the Timeline dots to make it feel visually engagin
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIsDWZVzchTIyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Customized Dot shadow](./images/Blazor-custom-dot-shadow.png)
 
-### Dot variant
+### Dot Variant
 
-You can achieve the desired dot variant by customizing the border, outline and background colors of the Timeline dots.
+Achieve desired dot variants by customizing the border, outline, and background colors of Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
 
 ```cshtml
 
@@ -368,11 +378,13 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMjWjrJQutWVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Timeline Component with Customized Dot variant](./images/Blazor-custom-dot-variant.png)
 
-### Dot outline
+### Dot Outline
 
-By adding the `e-outline` class to the Timeline [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property it enables the dots to have an outline state.
+Adding the `e-outline` class to the Timeline's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property enables dots to have a distinct outline style, visually emphasizing each item.
 
 ```cshtml
 
@@ -415,5 +427,7 @@ By adding the `e-outline` class to the Timeline [`CssClass`](https://help.syncfu
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryCZitBflzyNaY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Timeline Component with Customized Dot outline](./images/Blazor-custom-dot-outline.png)

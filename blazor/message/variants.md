@@ -9,14 +9,14 @@ documentation: ug
 
 # Variants in Blazor Message
 
-The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
+The Message component provides predefined appearance variants for different visual emphasis. Configure the variant using the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property on SfMessage. Variant affects colors, borders, and background styling; severity styling (color/icon) is applied within each variant.
 
-The available variants are **Text**, **Outlined** and **Filled**. The default variant type for messages is **Text**.
-* **Text** - The severity is differentiated using a text color and a light background color.
-* **Outlined** - The severity is differentiated using a text color and a border without a background.
-* **Filled** - The severity is differentiated using a text color and a dark background color.
+The available variants are Text, Outlined, and Filled. The default variant is Text.
+* Text – Differentiates severity with a text color and a light background.
+* Outlined – Differentiates severity with a text color and a border, without a background.
+* Filled – Differentiates severity with a text color and a dark background.
 
-The following example demonstrates the default message with different variant types.
+The following example demonstrates messages rendered with each variant type.
 
 {% tabs %}
 {% highlight razor %}
@@ -69,8 +69,8 @@ The following example demonstrates the default message with different variant ty
 {% endhighlight %}
 {% endtabs %}
 
-![Message Filled Variant](./images/variants-filled.png)
+![Blazor Message with Filled variant across severities](./images/variants-filled.png)
 
-![Message Outlined Variant](./images/variants-outlined.png)
+![Blazor Message with Outlined variant across severities](./images/variants-outlined.png)
 
-![Message Text Variant](./images/variants-text.png)
+![Blazor Message with Text variant across severities](./images/variants-text.png)
