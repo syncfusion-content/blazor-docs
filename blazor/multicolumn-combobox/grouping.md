@@ -9,9 +9,9 @@ documentation: ug
 
 # Grouping in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox supports wrapping of the nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupByField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_GroupByField) field in the data table. 
+The Blazor MultiColumn ComboBox supports grouping items by a specified category. Use the [GroupByField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_GroupByField) property to map the data field that provides the group key for each item.
 
-In the following sample, the product names are grouped according to their category using the [GroupByField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_GroupByField) field.
+In the following example, product names are grouped by their category using the `GroupByField` property.
 
 {% highlight cshtml %}
 
@@ -21,4 +21,4 @@ In the following sample, the product names are grouped according to their catego
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLftOhUpZaoRSjs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor MultiColumn ComboBox with Grouping](./images/grouping/blazor_multicolumn_combobox_grouping.gif)
+![Blazor MultiColumn ComboBox with grouping](./images/grouping/blazor_multicolumn_combobox_grouping.gif)

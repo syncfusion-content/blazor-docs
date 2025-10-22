@@ -9,11 +9,13 @@ documentation: ug
 
 # Style and appearance in Blazor Spinner Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+This topic outlines the CSS structure that can be used to modify the Spinner’s appearance to match application requirements.
+
+N> To avoid global changes, scope custom styles to a specific instance by assigning a custom class via the component’s CssClass property (for example, .e-spinner-pane.my-spinner …). Theme-specific CSS classes vary; use the selector that matches the active theme or the Spinner Type.
 
 ## Customizing the spinner
 
-Use the following CSS to customize the spinner stroke color.
+Use the following CSS to customize the spinner stroke color. Choose the selector that corresponds to the active theme.
 
 ### Material theme
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Number Formats in Blazor Numeric TextBox Component
 
-You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxModel-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxModel_1_Format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the standard numeric format string and custom numeric format string.
+Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxModel-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxModel_1_Format) property to control how the NumericTextBox value is displayed when the input is not focused. Formatting affects only the rendered text; the underlying value remains numeric. The component supports both standard and custom numeric format strings and respects the current culture for symbols and separators.
 
 ## Standard formats
 
-From the standard numeric format, you can use the numeric related format specifiers such as `n`,`p`, and `c` in the NumericTextBox component. By using these format specifiers, you can achieve the percentage and currency textbox behavior also.
+Use standard numeric format specifiers such as `N`, `P`, and `C` to display numbers with culture-aware formatting (group separators, decimal separators, currency symbol, and percentage). For example, with a value of 0.5 and `P2`, the display shows 50.00% in most cultures. Currency (`C`) displays the symbol and number formatting based on the active culture. Format specifiers are case-insensitive.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -22,13 +22,11 @@ From the standard numeric format, you can use the numeric related format specifi
 <SfNumericTextBox TValue="int?" Value=10 Format="c2" Placeholder="Currency format" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
 ```
 
-![Blazor NumericTextBox with Standard Format](./images/blazor-numerictextbox-standard-format.png)
+![Blazor Numeric TextBox with standard format](./images/blazor-numerictextbox-standard-format.png)
 
 ## Custom formats
 
-From the custom numeric format string, you can provide any custom format by combining one or more custom specifiers.
-
-The following examples demonstrate format the value by using currency format string `#` and `0`.
+Combine custom numeric format specifiers to create tailored display patterns. The `#` specifier displays a digit only if one is present (optional digit), while `0` enforces a digit and pads with zeros if necessary (zero placeholder). The following examples illustrate using `#` and `0` to format values.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -37,4 +35,4 @@ The following examples demonstrate format the value by using currency format str
 <SfNumericTextBox TValue="int?" Value=10 Format="000.00" Placeholder="Custom format string 0" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>
 ```
 
-![Blazor NumericTextBox with Custom Format](./images/blazor-numerictextbox-custom-format.png)
+![Blazor Numeric TextBox with custom format](./images/blazor-numerictextbox-custom-format.png)

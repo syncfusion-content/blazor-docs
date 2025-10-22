@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Sidebar for specific content in Blazor Sidebar Component
+# Sidebar for Specific Content in Blazor Sidebar Component
 
 By default, [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) initializes context to the body element. Using the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Target) property, set context element to initialize Sidebar inside any HTML element apart from the body element.
 
@@ -125,4 +125,5 @@ In the following sample, click the toggle button to expand or collapse the Sideb
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhyiZZPJWXQVUGU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.png)

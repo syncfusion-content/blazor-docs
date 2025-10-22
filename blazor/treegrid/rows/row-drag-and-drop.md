@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Row Drag and Drop in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Row Drag and Drop in Syncfusion Blazor Tree Grid component and much more details.
+title: Row Drag and Drop in Blazor TreeGrid Component | Syncfusion
+description: Learn how to enable and use row drag-and-drop in the Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Row Drag and Drop in Blazor Tree Grid Component
 
-The Tree Grid rows can be reordered, dropped to another Tree Grid or custom control by enabling the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true.
+Rows can be reordered within a TreeGrid, or dragged and dropped to another TreeGrid or custom control, by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true.
 
 ## Drag and drop within Tree Grid
 
-The Tree Grid row drag and drop allows to drag and drop Tree Grid rows on the same Tree Grid using drag icon. To enable row drag and drop, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true. It provides the way to drop the row above, below or child to the target row with respective to the target row position.
+Row drag-and-drop enables moving rows within the same TreeGrid using the drag icon. To enable this, set [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true. Rows can be dropped above, below, or as a child of the target row, based on the drop indicator.
 
 {% tabs %}
 
@@ -530,15 +530,15 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and Drop within Blazor Tree Grid Rows](../images/blazor-treegrid-drag-and-drop-rows.png)
+![Drag and Drop within Blazor TreeGrid Rows](../images/blazor-treegrid-drag-and-drop-rows.png)
 
-N> Selection feature must be enabled for row drag and drop.
-<br/> For multiple row selection, the type property must be set to multiple.
-<br/>[IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform row drag and drop operation.
+N> - Enable selection to use row drag-and-drop.  
+- For multiple-row drag, set SelectionSettings.Type to Multiple.  
+- [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) must be set on a column to perform row drag-and-drop operations.
 
 ## Drag and drop to another Tree Grid
 
-To drag and drop between two Tree Grid, enable the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) property and specify the target Tree Grid ID in [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridRowDropSettings_TargetID) property of [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html).
+To drag and drop between two TreeGrids, enable [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) on both grids and set the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridRowDropSettings_TargetID) in [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html) to the other grid’s ID.
 
 {% tabs %}
 
@@ -1066,14 +1066,14 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and Drop Row between Different Blazor Tree Grid](../images/blazor-treegrid-drag-drop-row.png)
+![Drag and Drop Row between Different Blazor TreeGrid](../images/blazor-treegrid-drag-drop-row.png)
 
-N> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform RowDragandDrop operations.
+N> - Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) on a column to enable row drag-and-drop operations across grids.
 
 ## Drag and drop events
 
-The following events are triggered while drag and drop the tree grid rows.
+The following events are triggered while dragging and dropping TreeGrid rows.
 
-[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnRowDragStart) -Triggers when starts to drag the tree grid row.
+[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting) - Triggers when a row drag operation starts.
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when a drag element is dropped on the target element.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when the dragged row is dropped on the target element.

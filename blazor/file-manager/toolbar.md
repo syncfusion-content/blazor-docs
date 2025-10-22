@@ -11,9 +11,9 @@ documentation: ug
 
 The Toolbar in the File Manager provides a user-friendly interface for performing various file operations. It contains pre-defined items that correspond to specific actions. Here are some key points about the toolbar.
 
-## Built-in Toolbar items
+## Built-in Toolbar Items
 
-By default, the File Manager includes several pre-defined toolbar items. These items are ready to use and come with associated actions. This collection can be modified by defining the required items in [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html).
+By default, the File Manager includes several pre-defined toolbar items that are ready to use and come with associated actions. This collection can be modified by defining the required items in [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html).
 
 Some common built-in toolbar items include:
 
@@ -24,9 +24,9 @@ Some common built-in toolbar items include:
 * `View` - Specifies the array of string that is used to configure folder items.
 * `Details` - Specifies the array of string that is used to configure layout items.
 
-## Control Toolbar visibility
+## Control Toolbar Visibility
 
-The Toolbar visibility can also be controlled by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Visible) property. Set this property as false to hide the toolbar. You can also toggle this property dynamically based on your application logic.
+The Toolbar visibility can be controlled using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Visible) property. Set this property to `false` to hide the toolbar. This property can also be toggled dynamically based on application logic.
 
 ```cshtml
 
@@ -42,16 +42,19 @@ The Toolbar visibility can also be controlled by using the [Visible](https://hel
 </SfFileManager>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreiXDqgrHomyEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![File Manager Toolbar Visibility](images/toolbar-visible.png)
 
 ## Events
 
 The Blazor File Manager Toolbar component has a [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) and [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
-N> All the events should be provided in a single **FileManagerEvents** component.
+N> All events should be provided within a single **FileManagerEvents** component.
 
 ### ToolbarCreated
 
-The [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) event of the Blazor File Manager component is triggered before creating the toolbar items.
+The [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) event of the Blazor File Manager component is triggered before the toolbar items are created.
 
 ```cshtml
 
@@ -77,7 +80,7 @@ The [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fil
 
 ### ToolbarItemClicked
 
-The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) event of the Blazor File Manager component is triggered when the toolbar item is clicked.
+The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) event of the Blazor File Manager component is triggered when a toolbar item is clicked.
 
 ```cshtml
 
