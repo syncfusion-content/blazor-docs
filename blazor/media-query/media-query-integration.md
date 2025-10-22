@@ -7,9 +7,9 @@ control: Media Query
 documentation: ug
 ---
 
-# Blazor Media Query with other component integration
+# Blazor Media Query with Other Component Integration
 
-The Blazor Media Query component enhances the responsiveness of web application, allowing you to perform conditional rendering or styling to achieve a dynamic UI adaptable for various screen sizes.
+The Blazor Media Query component enhances the responsiveness of web applications by enabling conditional rendering or styling to achieve a dynamic UI. This adaptability ensures optimal user experience across various screen sizes.
 
 In the following code example, showcasing the Data Grid to demonstrate the dynamic updating of adaptive functionalities based on the matched media breakpoint using [ActiveBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) property.
 
@@ -81,6 +81,7 @@ Active media name: <b>@activeBreakpoint</b>
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLSCtDiJCERmDpc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ActiveBreakPoint as `Large`:
 

@@ -1,107 +1,79 @@
 ---
 layout: post
-title: Gemini AI Service with Smart Components in Blazor App | Syncfusion
-description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart Components in a Blazor App.
+title: Gemini AI Integration with Blazor Smart Paste Button | Syncfusion
+description: Learn how to implement a custom AI service using Google's Gemini API with the Syncfusion Blazor Smart Paste Button component in a Blazor App.
+platform: Blazor
 control: Smart Paste Button
 documentation: ug
 ---
 
-# Getting Started with Smart Components using Gemini AI Service
+# Gemini AI Integration with Blazor Smart Paste Button
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Gemini AI services in your Blazor App.
+The Syncfusion Blazor SmartPaste Button component enables AI-powered, context-aware content pasting into forms, typically using OpenAI or Azure OpenAI.  This guide explains how to integrate the Google Gemini AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
-## Prerequisites
+## Setting Up Gemini
 
-Before you begin, ensure you have:
+1. **Obtain a Gemini API Key**  
+   Visit [Google AI Studio](https://ai.google.dev/gemini-api/docs/api-key), sign in, and generate an API key.
+2. **Review Model Specifications**  
+   Refer to [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models) for details on available models.
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key) - Obtain an API key from Google AI Studio
+## Create a Gemini AI Service
 
+Create a service class to manage interactions with the Gemini API, including authentication, request/response handling, and safety settings for the Smart Paste Button.
 
-## Models
-
-For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
-
-## Getting Started for Gemini AI with SmartPasteButton
-
-After completing this setup, you can:
-
-1. [Add Smart Components to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
-2. [Configure form annotations for better AI understanding](https://blazor.syncfusion.com/documentation/smart-paste/annotation)
-3. [Customize the appearance and behavior of Smart Components](https://blazor.syncfusion.com/documentation/smart-paste/customization)
-
----
-
-## Step 1: Create a Gemini AI Service
-
-The `GeminiService` class serves as the foundation for integrating Gemini AI into your Blazor application. This service manages:
-
-* API communication with Gemini endpoints
-* Request/response handling
-* Message formatting
-* Safety settings configuration
-
-### Implementation Steps
-
-1. Create a new class file named `GeminiService.cs` in your project
-2. Add the following implementation:
+1. Create a `Services` folder in your project.
+2. Add a new file named `GeminiService.cs` in the `Services` folder.
+3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
 
 ```csharp
+using System.Net;
+using System.Text;
+using System.Text.Json;
+using Microsoft.Extensions.AI;
+
 public class GeminiService
 {
-    // HTTP client configuration for optimal performance
-    private static readonly Version _httpVersion = HttpVersion.Version30;
-    private static readonly HttpClient HttpClient = new HttpClient(new SocketsHttpHandler
+    private readonly string _apiKey;
+    private readonly string _modelName = "gemini-1.5-flash"; // Example model
+    private readonly string _endpoint = "https://generativelanguage.googleapis.com/v1beta/models/";
+    private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
     {
         PooledConnectionLifetime = TimeSpan.FromMinutes(30),
-        EnableMultipleHttp2Connections = true,
+        EnableMultipleHttp2Connections = true
     })
     {
-        DefaultRequestVersion = _httpVersion
+        DefaultRequestVersion = HttpVersion.Version20 // Fallback to HTTP/2 for compatibility
     };
-
-    // Configuration settings
-    private const string ApiKey = "YOUR_API_KEY_HERE";
-    private const string ModelName = "YOUR_MODEL_NAME"; 
-
-    // JSON serialization settings
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public GeminiService()
+    public GeminiService(IConfiguration configuration)
     {
-        // Set up authentication headers
+        _apiKey = configuration["Gemini:ApiKey"] ?? throw new ArgumentNullException("Gemini API key is missing.");
         HttpClient.DefaultRequestHeaders.Clear();
-        HttpClient.DefaultRequestHeaders.Add("x-goog-api-key", ApiKey);
+        HttpClient.DefaultRequestHeaders.Add("x-goog-api-key", _apiKey);
     }
 
-    // Main method for interacting with Gemini API
     public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
-        // Construct the API endpoint URL
-        var requestUri = $"https://generativelanguage.googleapis.com/v1beta/models/{ModelName}:generateContent";
-        
-        // Prepare the request parameters
+        var requestUri = $"{_endpoint}{_modelName}:generateContent";
         var parameters = BuildGeminiChatParameters(chatMessages);
         var payload = new StringContent(
-            JsonSerializer.Serialize(parameters, JsonOptions), 
-            Encoding.UTF8, 
+            JsonSerializer.Serialize(parameters, JsonOptions),
+            Encoding.UTF8,
             "application/json"
         );
 
         try
         {
-            // Send request and process response
             using var response = await HttpClient.PostAsync(requestUri, payload);
             response.EnsureSuccessStatusCode();
-
             var json = await response.Content.ReadAsStringAsync();
             var result = JsonSerializer.Deserialize<GeminiResponseObject>(json, JsonOptions);
-
-            // Extract and return the generated text
-            return result?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text 
+            return result?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text
                 ?? "No response from model.";
         }
         catch (Exception ex) when (ex is HttpRequestException or JsonException)
@@ -112,22 +84,20 @@ public class GeminiService
 
     private GeminiChatParameters BuildGeminiChatParameters(IList<ChatMessage> messages)
     {
-        // Convert chat messages to Gemini's format
         var contents = messages.Select(m => new ResponseContent(
-            m.Text, 
+            m.Text,
             m.Role == ChatRole.User ? "user" : "model"
         )).ToList();
 
-        // Configure request parameters including safety settings
         return new GeminiChatParameters
         {
             Contents = contents,
             GenerationConfig = new GenerationConfig
             {
                 MaxOutputTokens = 2000,
-                StopSequences = new() { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
+                StopSequences = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" } // Configurable stop sequences
             },
-            SafetySettings = new()
+            SafetySettings = new List<SafetySetting>
             {
                 new() { Category = "HARM_CATEGORY_HARASSMENT", Threshold = "BLOCK_ONLY_HIGH" },
                 new() { Category = "HARM_CATEGORY_HATE_SPEECH", Threshold = "BLOCK_ONLY_HIGH" },
@@ -139,43 +109,40 @@ public class GeminiService
 }
 ```
 
-## Step 2: Define Request and Response Models
+N> Store the Gemini API key in `appsettings.json` (e.g., `{ "Gemini": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security. The `SafetySettings` filter harmful content; adjust thresholds based on your application’s needs.
 
-To efficiently communicate with the Gemini AI API, we need to define a set of C# classes that map to Gemini's JSON request and response format. These models ensure type safety and provide a clean interface for working with the API.
+## Define Request and Response Models
 
-1. Create a new file named `GeminiModels.cs` in your project
+Define C# classes to match the Gemini API’s JSON request and response format.
+
+1. Create a new file named `GeminiModels.cs` in the `Services` folder.
 2. Add the following model classes:
 
 ```csharp
-// Represents a text segment in the API communication
 public class Part
 {
     public string Text { get; set; }
 }
 
-// Contains an array of text parts
 public class Content
 {
     public Part[] Parts { get; init; } = Array.Empty<Part>();
 }
 
-// Represents a generated response candidate
 public class Candidate
 {
     public Content Content { get; init; } = new();
 }
 
-// The main response object from Gemini API
 public class GeminiResponseObject
 {
     public Candidate[] Candidates { get; init; } = Array.Empty<Candidate>();
 }
 
-// Represents a message in the chat conversation
 public class ResponseContent
 {
     public List<Part> Parts { get; init; }
-    public string Role { get; init; }  // "user" or "model"
+    public string Role { get; init; }
 
     public ResponseContent(string text, string role)
     {
@@ -184,99 +151,157 @@ public class ResponseContent
     }
 }
 
-// Configuration for text generation
 public class GenerationConfig
 {
-    // Controls randomness (0.0 to 1.0)
     public int Temperature { get; init; } = 0;
-    
-    // Limits token consideration (1 to 40)
     public int TopK { get; init; } = 0;
-    
-    // Nucleus sampling threshold (0.0 to 1.0)
     public int TopP { get; init; } = 0;
-    
-    // Maximum tokens in response
     public int MaxOutputTokens { get; init; } = 2048;
-    
-    // Sequences that stop generation
     public List<string> StopSequences { get; init; } = new();
 }
 
-// Controls content filtering
 public class SafetySetting
 {
-    // Harm category to filter
     public string Category { get; init; } = string.Empty;
-    
-    // Filtering threshold level
     public string Threshold { get; init; } = string.Empty;
 }
 
-// Main request parameters for Gemini API
 public class GeminiChatParameters
 {
-    // Chat message history
     public List<ResponseContent> Contents { get; init; } = new();
-    
-    // Generation settings
     public GenerationConfig GenerationConfig { get; init; } = new();
-    
-    // Content safety filters
     public List<SafetySetting> SafetySettings { get; init; } = new();
 }
 ```
 
+## Create a Custom AI Service
 
-## Step 3: Create a Custom AI Service
+Implement the `IChatInferenceService` interface to connect the Smart Paste Button to the Gemini service, acting as a bridge for AI-generated responses.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart Components to the Gemini AI service.
-
-### Understanding the Interface
-
-The `IChatInferenceService` interface is the bridge between Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components and AI services:
-
-1. Create a new file named `MyCustomService.cs`
+1. Create a new file named `GeminiInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
 ```csharp
 using Syncfusion.Blazor.AI;
+using System.Threading.Tasks;
 
-public class MyCustomService : IChatInferenceService
+public class GeminiInferenceService : IChatInferenceService
 {
     private readonly GeminiService _geminiService;
 
-    public MyCustomService(GeminiService geminiService)
+    public GeminiInferenceService(GeminiService geminiService)
     {
         _geminiService = geminiService;
     }
 
-    public Task<string> GenerateResponseAsync(ChatParameters options)
+    public async Task<string> GenerateResponseAsync(ChatParameters options)
     {
-        // Forward the chat parameters to our Gemini service
-        return _geminiService.CompleteAsync(options.Messages);
+        return await _geminiService.CompleteAsync(options.Messages);
     }
 }
 ```
 
-## Step 4: Configure the Blazor App
+## Configure the Blazor App
 
-Configure your Blazor application to use the Gemini AI service with Syncfusion<sup style="font-size:70%">&reg;</sup> Smart Components. This involves registering necessary services and setting up the dependency injection container.
+Register the Gemini service and `IChatInferenceService` implementation in the dependency injection container.
 
-```CSharp
+Update the **~/Program.cs** file as follows:
 
-using Syncfusion.Blazor.SmartComponents;
+```csharp
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
+
 var builder = WebApplication.CreateBuilder(args);
 
-....
-
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GeminiService>();
-builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, GeminiInferenceService>();
 
 var app = builder.Build();
-....
-
+// ...
 ```
+
+## Add the Smart Paste Button
+
+Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test the Groq AI integration.
+
+```cshtml
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.SmartComponents
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm" Model="@EventRegistrationModel">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(EventRegistration.Name)" ID="firstname"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Email)" ID="email"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Phone)" ID="phonenumber"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Address)" ID="address"></FormItem>
+    </FormItems>
+    <FormButtons>
+        <SfSmartPasteButton IsPrimary="true" Content="Smart Paste" IconCss="e-icons e-paste"></SfSmartPasteButton>
+    </FormButtons>
+</SfDataForm>
+
+<br>
+<h4 style="text-align:center;">Sample Content</h4>
+<div>
+    Hi, my name is Jane Smith. You can reach me at example@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001.
+</div>
+
+@code {
+    private EventRegistration EventRegistrationModel = new();
+
+    public class EventRegistration
+    {
+        [Required(ErrorMessage = "Please enter your name.")]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address.")]
+        [Display(Name = "Email ID")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Please enter your mobile number.")]
+        [Display(Name = "Phone Number")]
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Please enter your address.")]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+    }
+}
+```
+
+N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) package is installed for form integration.
+
+## Testing the Integration
+
+1. Configure the Blazor Web App with the Groq AI service and Smart Paste Button as described above.
+2. Add the code to **~/Pages/Home.razor**, **Program.cs**, and the `Services` folder.
+3. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
+4. Copy the sample content provided in the Razor file.
+5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
+
+![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste.gif)
+
+N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
+
+## Troubleshooting
+
+If the Gemini AI integration does not work, try the following:
+- **No Suggestions Displayed**: Verify that the Gemini API key and model name are correct in the configuration. Check the `GeminiService` implementation for errors.
+- **HTTP Request Failures**: Ensure a stable internet connection and that the Gemini API endpoint (`https://generativelanguage.googleapis.com/v1beta/models/`) is accessible. Test with HTTP/2 if compatibility issues arise.
+- **Service Registration Errors**: Confirm that `GeminiService` and `GeminiInferenceService` are registered in **Program.cs**.
+
+## See Also
+
+- [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+- [Customizing Smart Paste Button Suggestions](https://blazor.syncfusion.com/documentation/smart-paste/customization)

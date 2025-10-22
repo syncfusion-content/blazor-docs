@@ -7,11 +7,11 @@ control: ComboBox
 documentation: ug
 ---
 
-# Globalization and Localization in Blazor ComboBox Component
+# Localization and Globalization in Blazor ComboBox Component
 
 ## Localization
 
-[Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) supports localization of built-in text such as “No records found” and “Action failure.” To localize component texts, add the required culture resources as described in the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic. Ensure the application culture (CurrentCulture/CurrentUICulture) is set appropriately so localized strings are displayed.
 
 ## Globalization
 
@@ -27,4 +27,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor ComboBox with EnableRtl](./images/localization/blazor_combobox_enableRtl.png)
+![Blazor ComboBox with RTL enabled](./images/localization/blazor_combobox_enableRtl.png)

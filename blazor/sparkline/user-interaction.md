@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interaction in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about user interaction in Syncfusion Blazor Sparkline component and more.
+description: Check out and learn here all about user interaction in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -9,13 +9,14 @@ documentation: ug
 
 # User Interaction in Blazor Sparkline Component
 
-The Sparkline's user interaction features include the tooltip and the tracker line.
+User interaction features in the Sparkline include the tooltip and the tracker line.
 
 ## Tooltip
 
-When the mouse is hovered over a data point, the Sparkline provides the option to display details about the value of the data point via a tooltip. The following code example shows how to enable Sparkline's tooltip with a custom format.
+When the mouse hovers over a data point, the Sparkline can display details about the value of the data point via a tooltip. The following example shows how to enable the Sparkline tooltip with a custom format.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline Width="500" Height="200" TValue="WorkLog" DataSource="WorkLogs" XName="Day" YName="Hour" Fill="blue" ValueType="SparklineValueType.Category">
@@ -31,14 +32,16 @@ When the mouse is hovered over a data point, the Sparkline provides the option t
         public string Day { get; set; }
         public double Hour { get; set; }
     };
+
     public List<WorkLog> WorkLogs = new List<WorkLog> {
-        new WorkLog {Day= "Mon", Hour= 3 },
-        new WorkLog {Day= "Tue", Hour= 5 },
-        new WorkLog {Day= "Wed", Hour= 2 },
-        new WorkLog {Day= "Thu", Hour= 4 },
-        new WorkLog {Day= "Fri", Hour= 6 }
+        new WorkLog { Day = "Mon", Hour = 3 },
+        new WorkLog { Day = "Tue", Hour = 5 },
+        new WorkLog { Day = "Wed", Hour = 2 },
+        new WorkLog { Day = "Thu", Hour = 4 },
+        new WorkLog { Day = "Fri", Hour = 6 }
     };
 }
+
 ```
 
 ![Blazor Sparkline Chart with Tooltip](images/UserInteraction/blazor-sparkline-tooltip.png)
@@ -47,14 +50,15 @@ When the mouse is hovered over a data point, the Sparkline provides the option t
 
 The following properties can be used to customize the Sparkline tooltip:
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Fill) - Specifies fill color for the tooltip.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Format) - Specifies custom content of tooltip by assigning the properties from the datasource.
-* [SparklineTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipTextStyle.html) - Specifies font family, font style, font weight, color, opacity and size of the tooltip content.
-* [SparklineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipBorder.html) - To customize border width and color of the tooltip.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Fill) – Specifies fill color for the tooltip
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Format) – Specifies custom content of the tooltip by assigning the properties from the datasource.
+* [SparklineTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipTextStyle.html) – Specifies font family, font style, font weight, color, opacity and size of the tooltip content
+* [SparklineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipBorder.html) – Customize border width and color of the tooltip.
 
-The following code example shows customizing tooltip format, text color and fill color.
+The following example shows customizing tooltip format, text color, and fill color.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline Width="500" Height="200" TValue="WorkLog" DataSource="WorkLogs" XName="Day" YName="Hour" Fill="blue" ValueType="SparklineValueType.Category">
@@ -65,17 +69,19 @@ The following code example shows customizing tooltip format, text color and fill
         <SparklineTooltipBorder Color="red" Width="1"></SparklineTooltipBorder>
     </SparklineTooltipSettings>
 </SfSparkline>
+
 ```
 
-N> Refer to the [code block](#tooltip) to know about the property value of **WorkLogs**.
+N> Refer to the [code block](#tooltip) for the **WorkLogs** property value.
 
 ![Blazor Sparkline Chart with Custom Tooltip](images/UserInteraction/blazor-sparkline-custom-tooltip.png)
 
 ### Tooltip Template
 
-The tooltip can be rendered as a custom component by specifying the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Template) property in the [SparklineTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html) that accepts one or more UI elements as an input and renders them as a part of the tooltip rendering.
+The tooltip can be rendered as a custom component by specifying the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Template) property in [SparklineTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html), which accepts one or more UI elements as input and renders them as part of the tooltip.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline Width="500" Height="200" TValue="WorkLog" DataSource="WorkLogs" XName="Day" YName="Hour" Fill="blue" ValueType="SparklineValueType.Category">
@@ -99,17 +105,19 @@ The tooltip can be rendered as a custom component by specifying the [Template](h
         </Template>
     </SparklineTooltipSettings>
 </SfSparkline>
+
 ```
 
-N> Refer to the [code block](#tooltip) to know about the property value of the **WorkLogs**.
+N> Refer to the [code block](#tooltip) for the **WorkLogs** property value.
 
 ![Blazor Sparkline Chart with Tooltip Template](images/UserInteraction/blazor-sparkline-tooltip-template.png)
 
 ## Track Line
 
-The track line tracks data points that are closest to the mouse position or touch interaction, and it can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Visible) property to **true** in the [SparklineTrackLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html). The track line color and width can be customized using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Color) and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Width) properties in the [SparklineTrackLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html).
+The track line highlights data points closest to the mouse position or touch interaction. Enable it by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Visible) property to **true** in [SparklineTrackLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html). The track line color and width can be customized using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Color) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_Width) properties.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline Width="500px" Height="200px"
@@ -121,6 +129,7 @@ The track line tracks data points that are closest to the mouse position or touc
         </SparklineTrackLineSettings>
     </SparklineTooltipSettings>
 </SfSparkline>
+
 ```
 
 ![Blazor Sparkline Chart with Track Line](images/UserInteraction/blazor-sparkline-with-track-line.png)

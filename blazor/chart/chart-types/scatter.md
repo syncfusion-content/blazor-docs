@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Scatter in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Scatter Chart in Syncfusion Blazor Charts component and much more.
+title: Scatter Chart in Blazor Charts Component | Syncfusion
+description: Check out and learn how to configure and customize the Scatter Chart in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Scatter in Blazor Charts Component
+# Scatter Chart in Blazor Charts Component
 
-## Scatter
+## Scatter Chart
 
-[Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) is used to visualize the relationship between two Cartesian parameters. To render a [scatter](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter) in your chart configuration. This indicates that the data should be displayed as individual points scattered across the chart.
+The Scatter Chart visualizes relationships between two Cartesian parameters by displaying data points as individual markers. To configure a scatter chart, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart DataSource="@ChartDataList">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" YName="YValue" Type="ChartSeriesType.Scatter">
@@ -28,7 +28,7 @@ documentation: ug
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -38,34 +38,34 @@ documentation: ug
 	
     public List<ChartData> ChartDataList = new List<ChartData>
 	{
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfXFhZrfpVHHMy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.png)
 
-N> Refer to our [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap5) to know how to plot data with two numeric parameters.
+Refer to the [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page for additional feature details. Explore the [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap5) to learn how to plot data with two numeric parameters.
 
 ## Binding data with series
 
-You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
+Bind data to the scatter chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The chart supports both local and remote data binding through [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Map data fields to the series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart DataSource="@ChartDataList">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" YName="YValue" Type="ChartSeriesType.Scatter">
@@ -75,7 +75,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -85,14 +85,14 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 	
     public List<ChartData> ChartDataList = new List<ChartData>
 	{
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -101,18 +101,18 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 ## Series customization
 
-The following properties can be used to customize the [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter) series.
+Customize the [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter) series using the following properties:
 
 **Fill**
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property determines the color applied to the series.
+Set the color of scatter points using the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property. Accepts named colors, hexadecimal codes, or RGB values.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Fill="green" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -132,28 +132,28 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrfXbhXVJoqDDfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the scatter series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+Apply gradient colors to scatter points by referencing a gradient definition in the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Fill="url(#grad1)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -193,14 +193,14 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -209,14 +209,14 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 **Opacity**
 
-The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property controls the transparency of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) color, allowing adjustment of the series' appearance.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart DataSource="@ChartDataList">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 	
     <ChartSeriesCollection>
         <ChartSeries XName="X" YName="YValue" Type="ChartSeriesType.Scatter" Fill="blue" Opacity="0.5">
@@ -230,7 +230,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -240,14 +240,14 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 	
     public List<ChartData> ChartDataList = new List<ChartData>
 	{
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -256,14 +256,14 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 **Shape**
 
-The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property allows you to customize the appearance of the markers by specifying different shapes.
+Customize marker appearance using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -285,14 +285,14 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -301,18 +301,18 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ## Empty points
 
-Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN`, or `undefined` values are treated as empty and are not plotted.
 
 **Mode**
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to specify how empty or missing data points are handled. The default mode is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -336,14 +336,14 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= double.NaN,  YValue1=double.NaN },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = double.NaN,  YValue1 = double.NaN },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -352,14 +352,14 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Fill**
 
-Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+Customize the fill color of empty points using the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -383,30 +383,30 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= double.NaN,  YValue1=double.NaN },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = double.NaN,  YValue1 = double.NaN },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBJDbBjrelxszvS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrojEVeCPGbxAhp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
-Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
+Customize the border width and color of empty points using the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property, including [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
@@ -434,14 +434,14 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= double.NaN,  YValue1=double.NaN },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = double.NaN,  YValue1 = double.NaN },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -452,15 +452,15 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event enables customization of series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
+    <ChartEvents OnSeriesRender="SeriesRender" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
         <ChartSeries DataSource="@ChartDataList" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
@@ -490,14 +490,14 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -506,14 +506,14 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows customization of each data point before rendering.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartDataList" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter"> 
@@ -541,14 +541,14 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public List<ChartData> ChartDataList = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+        new ChartData { X = "USA", YValue = 46, YValue1 = 56 },
+        new ChartData { X = "GBR", YValue = 27, YValue1 = 17 },
+        new ChartData { X = "CHN", YValue = 26, YValue1 = 36 },
+        new ChartData { X = "UK", YValue = 56,  YValue1 = 16 },
+        new ChartData { X = "AUS", YValue = 12, YValue1 = 46 },
+        new ChartData { X = "IND", YValue = 26, YValue1 = 16 },
+        new ChartData { X = "DEN", YValue = 26, YValue1 = 12 },
+        new ChartData { X = "MEX", YValue = 34, YValue1 = 32 }
     };
 }
 
@@ -559,5 +559,5 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data Label](../data-labels)
+* [Data label](../data-labels)
 * [Tooltip](../tool-tip)
