@@ -28,15 +28,13 @@ The following code example demonstrates how to get the selection change event in
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
-                    SelectionChanging="OnSelectionChanging"
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionChanging="OnSelectionChanging"
                     SelectionChanged="OnSelectionChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -51,10 +49,10 @@ The following code example demonstrates how to get the selection change event in
             Width = 100,
             Height = 100,
             // Appearance of the node
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
             }
         };
         // Add node.
@@ -62,14 +60,14 @@ The following code example demonstrates how to get the selection change event in
     }
 
     // Event to notify the selection changing event before selecting/unselecting the diagram elements.
-    public void OnSelectionChanging(SelectionChangingEventArgs args)
+    private void OnSelectionChanging(SelectionChangingEventArgs args)
     {
         // Sets true to cancel the selection.
         args.Cancel = true;
     }
 
     // Event to notify the selection changed event after selecting/unselecting the diagram elements.
-    public void OnSelectionChanged(SelectionChangedEventArgs args)
+    private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -92,15 +90,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes"
-                    PositionChanging="OnPositionChanging"
+<SfDiagramComponent Height="600px" Nodes="@nodes" PositionChanging="OnPositionChanging"
                     PositionChanged="OnPositionChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -114,26 +110,26 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
             },
-            Shape = new Shape() { Type = NodeShapes.Basic}
+            Shape = new Shape() { Type = NodeShapes.Basic }
         };
         // Add node.
         nodes.Add(node);
     }
 
     // Event to notify the position changing event while dragging the elements in diagram.
-    public void OnPositionChanging(PositionChangingEventArgs args)
+    private void OnPositionChanging(PositionChangingEventArgs args)
     {
         // Sets true to cancel the action.
         args.Cancel = true;
     }
 
     //Event to notify the position changed event when the node's or connector's position is changed.
-    public void OnPositionChanged(PositionChangedEventArgs args)
+    private void OnPositionChanged(PositionChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -156,15 +152,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
-                    SizeChanged="OnSizeChanged" 
-                    SizeChanging="OnSizeChanging"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SizeChanged="OnSizeChanged"
+                    SizeChanging="OnSizeChanging" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -178,10 +172,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
             }
         };
         // Add node.
@@ -189,14 +183,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 
     // Event to notify the Size changing event before the diagram elements size is changed.
-    public void OnSizeChanging(SizeChangingEventArgs args)
+    private void OnSizeChanging(SizeChangingEventArgs args)
     {
         // Sets true to cancel the resize action
         args.Cancel = true;
     }
 
     // Event to notify the Size change event after the diagram elements size is changed.
-    public void OnSizeChanged(SizeChangedEventArgs args)
+    private void OnSizeChanged(SizeChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -219,15 +213,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
-                    RotationChanging="OnRotateChanging"
+<SfDiagramComponent Height="600px" Nodes="@nodes" RotationChanging="OnRotateChanging"
                     RotationChanged="OnRotateChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -241,10 +233,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
             }
         };
         // Add node.
@@ -252,14 +244,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 
     // Event to notify the rotation changing event before the node is rotated.
-    public void OnRotateChanging(RotationChangingEventArgs args)
+    private void OnRotateChanging(RotationChangingEventArgs args)
     {
         // Sets true to cancel the rotation
         args.Cancel = true;
     }
 
     // Event to notify the rotation changed event after the node is rotated.
-    public void OnRotateChanged(RotationChangedEventArgs args)
+    private void OnRotateChanged(RotationChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -276,9 +268,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
-                    NodeCreating="OnNodeCreating" />
+<SfDiagramComponent Height="600px" Nodes="@nodes" NodeCreating="OnNodeCreating" />
 
 @code
 {
@@ -297,18 +287,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
             }
         };
         // Add node.
         nodes.Add(node);
     }
 
-    public void OnNodeCreating(IDiagramObject obj)
-    { 
+    private void OnNodeCreating(IDiagramObject obj)
+    {
         Node node = obj as Node;
         node.Style.Fill = "#357BD2";
         node.Style.StrokeColor = "White";
@@ -326,15 +316,15 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" 
-                    Width="100%" 
-                    Height="700px" 
-                    Nodes="nodes" 
-                    PropertyChanged="OnNodePropertyChanged">
-</SfDiagramComponent>
-@code {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+<SfDiagramComponent @ref="@diagram" Width="100%" Height="700px" Nodes="nodes"
+                    PropertyChanged="OnNodePropertyChanged" />
+
+@code
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -348,6 +338,7 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         };
         nodes.Add(node);
     }
+
     // Method to handle Node Property Changed event
     private void OnNodePropertyChanged(PropertyChangedEventArgs args)
     {
@@ -377,15 +368,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Nodes="nodes"
-                    CollectionChanged="OnCollectionChanged">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Nodes="nodes"
+                    CollectionChanged="OnCollectionChanged" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -397,7 +387,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         };
         nodes.Add(node);
     }
-     //  Notify the Collection Changed event while changing the collection of the node at run time.
+
+    //  Notify the Collection Changed event while changing the collection of the node at run time.
     private void OnCollectionChanged(CollectionChangedEventArgs args)
     {
         //Action to be performed.
@@ -416,15 +407,14 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Nodes="nodes"
-                    MouseEnter="OnMouseEnter">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Nodes="nodes" MouseEnter="OnMouseEnter" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -436,6 +426,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         };
         nodes.Add(node);
     }
+
     private void OnMouseEnter(DiagramElementMouseEventArgs args)
     {
     }
@@ -453,15 +444,14 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Nodes="nodes"
-                    MouseLeave="OnMouseLeave">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Nodes="nodes" MouseLeave="OnMouseLeave" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -473,6 +463,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         };
         nodes.Add(node);
     }
+
     private void OnMouseLeave(DiagramElementMouseEventArgs args)
     {
     }
@@ -490,15 +481,14 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Nodes="nodes"
-                    MouseHover="OnMouseHover">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Nodes="nodes" MouseHover="OnMouseHover" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -510,6 +500,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         };
         nodes.Add(node);
     }
+
     private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
     }

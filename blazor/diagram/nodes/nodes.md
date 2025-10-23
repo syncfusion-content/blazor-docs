@@ -33,23 +33,23 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
         nodes.Add(node);
     }
@@ -71,45 +71,45 @@ A node can be added at runtime by adding it to the `Nodes` collection of the Dia
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Add Node" OnClick="@AddNode" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
         nodes.Add(node);
     }
+
     //Method to add node at runtime
-    public void AddNode()
+    private void AddNode()
     {
         Node NewNode = new Node()
-            {
-                ID = "node2",
-                // Position of the node
-                OffsetX = 450,
-                OffsetY = 450,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED" }
-            };
+        {
+            ID = "node2",
+            // Position of the node
+            OffsetX = 450,
+            OffsetY = 450,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
         nodes.Add(NewNode);
     }
 }
@@ -128,20 +128,16 @@ The following code explains how to add a node with an annotation at runtime by u
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddLabel" OnClick="@AddLabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
 {
     // Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
-
-    DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -158,9 +154,9 @@ The following code explains how to add a node with an annotation at runtime by u
     }
 
     // Method to add node with annotation at runtime.
-    public async void  AddLabel()
+    private async void AddLabel()
     {
-         Node NewNode = new Node()
+        Node NewNode = new Node()
         {
             ID = "node2",
             // Position of the node.
@@ -170,7 +166,7 @@ The following code explains how to add a node with an annotation at runtime by u
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" },
-             Annotations= new DiagramObjectCollection<ShapeAnnotation>()
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation()
                 {
@@ -179,7 +175,7 @@ The following code explains how to add a node with an annotation at runtime by u
             },
         };
         NodeCollection.Add(NewNode);
-       await diagram.AddDiagramElementsAsync(NodeCollection);
+        await diagram.AddDiagramElementsAsync(NodeCollection);
     }
 }
 ```
@@ -220,33 +216,32 @@ The following code shows how to remove a node at runtime.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Remove Node" OnClick="@RemoveNodes" />
-
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
 @code
 {
     //Defines diagram's Node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
         nodes.Add(node);
     }
 
-    public void RemoveNodes()
+    private void RemoveNodes()
     {
         // Remove Node at runtime
         nodes.Remove(nodes[0]);
@@ -260,7 +255,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 A node can also be removed from the diagram by using the native `RemoveAt` method. Refer to the following example to see how to remove the node at runtime.
 
 ```csharp
-public void RemoveNodes()
+private void RemoveNodes()
 {
     nodes.RemoveAt(0);
 }
@@ -279,30 +274,31 @@ public void RemoveNodes()
 
 @functions
 {
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
 
-    SfDiagramComponent diagram;
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 200,
+            Height = 100,
+            Width = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 200,
-                Height = 100,
-                Width = 100,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                    {
-                        new ShapeAnnotation()
-                        {
-                            Content = "node1"
-                        },
-                    },
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process }
-            };
+                new ShapeAnnotation()
+                {
+                    Content = "node1"
+                },
+            },
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process }
+        };
         NodeCollection.Add(node1);
     }
-    public async Task CloneNode()
+
+    private async Task CloneNode()
     {
         Node node = NodeCollection[0].Clone() as Node;
         node.ID = RandomId();
@@ -318,7 +314,6 @@ public void RemoveNodes()
         return new string(Enumerable.Repeat(chars, 5)
           .Select(s => s[random.Next(s.Length)]).ToArray());
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -336,34 +331,34 @@ The following code example explains how to change node properties.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Update Node" OnClick="@UpdateNodes" />
-
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" />
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         nodes.Add(node);
     }
+
     //Method to Update node's width and height at runtime
-    public async void UpdateNodes()
+    private async void UpdateNodes()
     {
         Diagram.BeginUpdate();
         Diagram.Nodes[0].Width = 50;

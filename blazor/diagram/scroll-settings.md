@@ -54,11 +54,12 @@ Programmatically change the scroll offsets at runtime by using the external butt
     </ScrollSettings>
 </SfDiagramComponent>
 
-@code {
-    public double horizontalOffset { get; set; } = 100;
-    public double verticalOffset { get; set; } = 100;
+@code
+{
+    private double horizontalOffset { get; set; } = 100;
+    private double verticalOffset { get; set; } = 100;
 
-    public void updateScrollValues()
+    private void updateScrollValues()
     {
         //Update scroll settings.
         verticalOffset = 400;
@@ -90,21 +91,22 @@ The Diagram control provides the following event for scroll settings.
     </ScrollSettings>
 </SfDiagramComponent>
 
-@code{
-    public double horizontalOffset { get; set; } = 100;
-    public double verticalOffset { get; set; } = 100;
+@code
+{
+    private double horizontalOffset { get; set; } = 100;
+    private double verticalOffset { get; set; } = 100;
 
-    public void updateScrollValues()
+    private void updateScrollValues()
     {
         //Update the scroll settings.
         verticalOffset = 400;
         horizontalOffset = 200;
     }
+
     private void ScrollChanged(ScrollChangedEventArgs args)
     {
 
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthesDXvffnSfzKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -126,48 +128,50 @@ The auto-scroll behavior in the diagram can be enabled or disabled by using the 
     <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@scrollLimit">
     </ScrollSettings>
 </SfDiagramComponent>
+
 @code
 {
-    ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    private ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
         nodes.Add(node);
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight,
+            Style = new ShapeStyle()
             {
-                ID = "connector1",
-                // Set the source and target point of the connector.
-                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
-                // Type of the connector segments.
-                Type = ConnectorSegmentType.Straight,
-                Style = new ShapeStyle()
-                {
-                    StrokeColor = "#6495ED",
-                    StrokeWidth = 1
-                },
-            };
+                StrokeColor = "#6495ED",
+                StrokeWidth = 1
+            },
+        };
         connectors.Add(Connector);
     }
 }
@@ -192,34 +196,37 @@ The following example illustrates how to set auto scroll padding.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes">
     @* Sets the ScrollSettings for the diagram *@
     <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder">
     </ScrollSettings>
 </SfDiagramComponent>
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
         nodes.Add(node);
     }
@@ -250,7 +257,8 @@ The following example illustrates how to specify the scroll limit.
      <ScrollSettings @bind-ScrollLimit="@scrollLimit" ></ScrollSettings>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
 }
 
@@ -275,34 +283,37 @@ The following example illustrates how to sets scroll padding.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes">
     @* Sets the ScrollSettings for the diagram *@
     <ScrollSettings ScrollPadding="@ScrollBorder">
     </ScrollSettings>
 </SfDiagramComponent>
+
 @code
 {
-    DiagramMargin ScrollBorder = new DiagramMargin() { Left = 100, Right = 100, Top = 100, Bottom = 100 };
-    DiagramObjectCollection<Node> nodes;
+    private DiagramMargin ScrollBorder = new DiagramMargin() { Left = 100, Right = 100, Top = 100, Bottom = 100 };
+    private DiagramObjectCollection<Node> nodes;
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
         nodes.Add(node);
     }
@@ -319,32 +330,35 @@ Scrolling beyond any particular rectangular area can be restricted using the [Sc
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="70%" Height="300px" Nodes="@nodes">
     <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
     </ScrollSettings>
 </SfDiagramComponent>
+
 @code
 {
-    DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
-    DiagramObjectCollection<Node> nodes;
+    private DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+    private DiagramObjectCollection<Node> nodes;
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 300,
+            OffsetY = 50,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 300,
-                OffsetY = 50,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
         nodes.Add(node);
     }

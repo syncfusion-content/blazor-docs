@@ -27,10 +27,9 @@ To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -85,17 +84,15 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddConnector" OnClick="@AddConnector" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -150,17 +147,16 @@ Create a text Node by click on the diagram page. The following code illustrates 
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddNode" OnClick="@AddNode" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
 
     //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -217,7 +213,6 @@ The following code illustrates how to draw a polygon shape.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Polygon" OnClick="@Polygon" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
@@ -226,9 +221,9 @@ The following code illustrates how to draw a polygon shape.
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -286,17 +281,18 @@ The following code illustrates how to draw a polyline connector.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Polyline" OnClick="@Polyline" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     //Reference to the diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -322,6 +318,7 @@ The following code illustrates how to draw a polyline connector.
         };
         nodes.Add(node);
     }
+
     private void Polyline()
     {
         //Draw an object once and activate the draw once.
@@ -372,9 +369,9 @@ The following code illustrates how to enable a single interaction controller:
 @code
 {
     //Enable the single tool.
-    public DiagramInteractions tool = DiagramInteractions.DrawOnce;
+    private DiagramInteractions tool = DiagramInteractions.DrawOnce;
     //Defines diagram's connectors collection.
-    public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```
 
@@ -388,11 +385,11 @@ The following code illustrates how to enable multiple interaction controllers:
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Enable the multiple tools.
-    public DiagramInteractions tool = DiagramInteractions.DrawOnce | DiagramInteractions.ZoomPan;
+    private DiagramInteractions tool = DiagramInteractions.DrawOnce | DiagramInteractions.ZoomPan;
     //Defines diagram's connectors collection.
-    public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```
 
@@ -406,16 +403,19 @@ The following code illustrates how to draw a freehand drawing.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <input Type="button" value="Freehand" @onclick="Freehand" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     //Reference to the diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -441,6 +441,7 @@ The following code illustrates how to draw a freehand drawing.
         };
         nodes.Add(node);
     }
+    
     private void Freehand()
     {
         //Draw an object once and activate the draw once.

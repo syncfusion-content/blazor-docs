@@ -33,17 +33,14 @@ The following code shows how to add lanes and phases to a palette.
 @code
 {
     //Reference the symbolnpreview.
-    DiagramSize SymbolPreview;
+    private DiagramSize SymbolPreview;
     //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-
-    SfSymbolPaletteComponent symbolpalette;
-
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent symbolpalette;
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Define the palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -58,43 +55,55 @@ The following code shows how to add lanes and phases to a palette.
 
         //Create a horizontal lane.
         Lane horizontalLane = new Lane()
+        {
+            ID = "HorizontalSwimlane",
+            Orientation = Orientation.Horizontal,
+            Height = 100,
+            Width = 150,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "HorizontalSwimlane",
-                Orientation = Orientation.Horizontal,
-                Height = 100,
-                Width = 150,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 25,
-                    Height = 100
-                },
-            };
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                Width = 25,
+                Height = 100
+            },
+        };
 
         //Create a vertical lane.
         Lane verticalLane = new Lane()
+        {
+            ID = "VerticalSwimlane",
+            Orientation = Orientation.Vertical,
+            Height = 150,
+            Width = 100,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "VerticalSwimlane",
-                Orientation = Orientation.Vertical,
-                Height = 150,
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
                 Width = 100,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 100,
-                    Height = 25
-                },
-            };
+                Height = 25
+            },
+        };
 
         //Create a horizontal phase.
-        Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        Phase horizontalPhase = new Phase() 
+        { 
+            ID = "HorizontalPhase", 
+            Orientation = Orientation.Horizontal, 
+            Width = 80, Height = 1, 
+            Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } 
+        };
 
         //Create a vertical phase.
-        Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        Phase verticalPhase = new Phase()
+        {
+            ID = "VerticalPhase", 
+            Orientation = Orientation.Vertical,
+            Width = 1, Height = 80, 
+            Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
+        };
 
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
         {
@@ -108,7 +117,7 @@ The following code shows how to add lanes and phases to a palette.
         {
             new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
         };
-      }
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeWZXcKcyuCrTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

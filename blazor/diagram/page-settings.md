@@ -41,26 +41,27 @@ To learn more about customization of diagram page, refer to the below video link
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Set the page orientation as landscape.
+    private PageOrientation orientation = PageOrientation.Landscape;
+
     protected override void OnInitialized()
     {
         Node node = new Node()
+        {
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 150,
+            OffsetY = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node6",
-                Width = 50,
-                Height = 50,
-                OffsetX = 150,
-                OffsetY = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         nodes.Add(node);
     }
-    //Set the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVyCZNFzDEIdtnt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -93,8 +94,9 @@ Based on the diagramming element position, the size of the page dynamically incr
 @code
 {
     //Sets the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private PageOrientation orientation = PageOrientation.Landscape;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -149,7 +151,10 @@ Customize page appearance using the `PageSettings` properties:
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Set the page orientation as landscape.
+    private PageOrientation orientation = PageOrientation.Landscape;
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -167,8 +172,6 @@ Customize page appearance using the `PageSettings` properties:
         };
         nodes.Add(node);
     }
-    //Set the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSCXXlzWrgqfQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -198,11 +201,8 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
 <SfDiagramComponent Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="500"
-                  Width="500"
-                  MultiplePage="true"
-                  ShowPageBreaks="true">
-                  <PageMargin Left="50" Right="50" Top="50" Bottom="50"></PageMargin>
+    <PageSettings Height="500" Width="500" MultiplePage="true" ShowPageBreaks="true">
+        <PageMargin Left="50" Right="50" Top="50" Bottom="50"></PageMargin>
     </PageSettings>
 </SfDiagramComponent>
 ```
@@ -221,12 +221,9 @@ The area between the maintain content of a page and the page edges can be change
 
 <SfDiagramComponent Height="600px">
     @*Initialize the page settings with page margin*@
-    <PageSettings Height="300" 
-                  Width="300" 
-                  MultiplePage="true"                  
-                  ShowPageBreaks="true">
-        <BackgroundStyle Background="lightblue"/>
-        <PageMargin Left="50" Right="50" Top="50" Bottom="50"/> 
+    <PageSettings Height="300" Width="300" MultiplePage="true" ShowPageBreaks="true">
+        <BackgroundStyle Background="lightblue" />
+        <PageMargin Left="50" Right="50" Top="50" Bottom="50" />
     </PageSettings>
 </SfDiagramComponent>
 ```
@@ -245,30 +242,25 @@ The following code example illustrates how to define boundary constraints with r
 
 <SfDiagramComponent Nodes="@NodeCollection" Height="600px">
     <SnapSettings>
-        <HorizontalGridLines LineColor="gray"/>
-        <VerticalGridLines LineColor="gray"/>
+        <HorizontalGridLines LineColor="gray" />
+        <VerticalGridLines LineColor="gray" />
     </SnapSettings>
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300" 
-                  Width="300" 
-                  MultiplePage="true" 
-                  Orientation="@orientation" 
-                  BoundaryConstraints="@boundaryConstraints" 
+    <PageSettings Height="300" Width="300" MultiplePage="true" Orientation="@orientation" BoundaryConstraints="@boundaryConstraints"
                   ShowPageBreaks="true">
-        <BackgroundStyle Background="lightblue"/>
-        <PageMargin Left="10" Top="10" Bottom="10"/>        
+        <BackgroundStyle Background="lightblue" />
+        <PageMargin Left="10" Top="10" Bottom="10" />
     </PageSettings>
 </SfDiagramComponent>
 
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
-    public PageOrientation orientation = PageOrientation.Landscape;
-    public BoundaryConstraints boundaryConstraints = BoundaryConstraints.Page;
+    private SfDiagramComponent diagram;
+    private PageOrientation orientation = PageOrientation.Landscape;
+    private BoundaryConstraints boundaryConstraints = BoundaryConstraints.Page;
     //Define diagram's nodes collection.
-    public DiagramObjectCollection<Node>
-    NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -290,10 +282,10 @@ The following code example illustrates how to define boundary constraints with r
                     }
                 }
             },
-            Style = new ShapeStyle() 
-            { 
-                Fill = "cornflowerblue", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "cornflowerblue",
+                StrokeColor = "white"
             }
         };
         NodeCollection.Add(node);
@@ -314,13 +306,16 @@ The following code example illustrates how to set width and height in percentage
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
+
 <div style="width:700px; height:700px;">
-    <SfDiagramComponent @ref="@diagram" Width="100%" Height="100%" Nodes="nodes"></SfDiagramComponent>
+    <SfDiagramComponent @ref="@diagram" Width="100%" Height="100%" Nodes="nodes" />
 </div>
+
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    
     protected override void OnInitialized()
     {
         nodes.Add(new Node()

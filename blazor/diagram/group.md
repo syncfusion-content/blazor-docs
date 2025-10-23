@@ -42,8 +42,8 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -115,8 +115,9 @@ The following code illustrates how to ungroup at runtime.
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
@@ -129,7 +130,7 @@ The following code illustrates how to ungroup at runtime.
         nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offsetX, double offsetY, string content)
+    private Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
@@ -185,54 +186,55 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @inject IJSRuntime js
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="CloneGroup" OnClick="@CloneGroup" />
 <SfDiagramComponent @ref="diagram" Width="80%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 
 @functions
 {
 
-    SfDiagramComponent diagram;
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-            {
-                OffsetX = 100,
-                OffsetY = 150,
-                Height = 100,
-                Width = 100,
-                ID = "node1",
+        {
+            OffsetX = 100,
+            OffsetY = 150,
+            Height = 100,
+            Width = 100,
+            ID = "node1",
 
-            };
+        };
         NodeCollection.Add(node1);
         Node node2 = new Node()
-            {
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 100,
-                Width = 100,
-                ID = "node2",
-               
-            };
+        {
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 100,
+            Width = 100,
+            ID = "node2",
+            
+        };
         NodeCollection.Add(node2);
         NodeGroup group1 = new NodeGroup()
+        {
+            ID = "group1",
+            Children = new string[] { "node1", "node2" },
+            OffsetX = 300,
+            OffsetY = 300,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "group1",
-                Children = new string[] { "node1", "node2" },
-                OffsetX = 300,
-                OffsetY = 300,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                        {
-                            new ShapeAnnotation()
-                            {
-                            Content = "Group1"
-                            }
-                        },
-            };
+                new ShapeAnnotation()
+                {
+                Content = "Group1"
+                }
+            },
+        };
         NodeCollection.Add(group1);
     }
-    public async Task CloneGroup()
+
+    private async Task CloneGroup()
     {
         Node node2 = NodeCollection[0].Clone() as Node;
         node2.ID = RandomId();
@@ -256,7 +258,6 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
           .Select(s => s[random.Next(s.Length)]).ToArray());
 #pragma warning restore CA5394 // Do not use insecure randomness
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -279,8 +280,8 @@ The following code illustrates how to add padding to a node group.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
@@ -294,7 +295,7 @@ The following code illustrates how to add padding to a node group.
         nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offsetX, double offsetY, string content)
+    private Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
@@ -340,15 +341,14 @@ The following code illustrates how a node group is added at runtime.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddGroup" OnClick="@AddGroup" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
@@ -360,7 +360,7 @@ The following code illustrates how a node group is added at runtime.
         nodes.Add(node2);
     }
 
-    public Node createNode(string id, double offsetX, double offsetY, string content)
+    private Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
@@ -403,16 +403,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddChildToGroup" OnClick="@AddChildToGroup" />
 @* Initialize the diagram with nodes *@
 <SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes"/>
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
@@ -425,7 +424,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offsetX, double offsetY, string content)
+    private Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
@@ -495,15 +494,14 @@ Change the position of the node group similar to a node. For more information ab
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="UpdatePosition" OnClick="@UpdatePosition" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
@@ -517,7 +515,7 @@ Change the position of the node group similar to a node. For more information ab
         nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offsetX, double offsetY, string content)
+    private Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {

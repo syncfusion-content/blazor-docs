@@ -48,13 +48,13 @@ The code below demonstrates how the diagram ruler can be customized.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" >
-	<RulerSettings>
-        <HorizontalRuler  IsVisible="true" Interval="@RulerInterval" 
-                            TickAlignment="@RulerTickAlignment" MarkerColor="@RulerMarkerColor">
-     </HorizontalRuler>
-        <VerticalRuler IsVisible="false"  Interval="@RulerInterval" 
-                        TickAlignment="@RulerTickAlignment" MarkerColor="@RulerMarkerColor">
+<SfDiagramComponent @ref="@diagram" Height="600px">
+    <RulerSettings>
+        <HorizontalRuler IsVisible="true" Interval="@RulerInterval"
+                         TickAlignment="@RulerTickAlignment" MarkerColor="@RulerMarkerColor">
+        </HorizontalRuler>
+        <VerticalRuler IsVisible="false" Interval="@RulerInterval"
+                       TickAlignment="@RulerTickAlignment" MarkerColor="@RulerMarkerColor">
         </VerticalRuler>
     </RulerSettings>
 </SfDiagramComponent>
@@ -62,16 +62,14 @@ The code below demonstrates how the diagram ruler can be customized.
 @code
 {
     //Reference to diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Defining Ruler Interval of Rulers
-    public int RulerInterval = 20;
+    private int RulerInterval = 20;
     //Defining Tick Alignment of Rulers
-    public TickAlignment RulerTickAlignment = TickAlignment.RightAndBottom;
+    private TickAlignment RulerTickAlignment = TickAlignment.RightAndBottom;
     //Defining Marker color of Rulers
-    public string RulerMarkerColor = "green";
-
+    private string RulerMarkerColor = "green";
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBostNPTCvJUslQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

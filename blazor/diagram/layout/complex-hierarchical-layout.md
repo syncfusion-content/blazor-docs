@@ -25,16 +25,16 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
+    private int left = 40;
+    private int top = 50;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -43,7 +43,7 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
         node.Width = 50;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "#6CA0DC", StrokeColor = "#6CA0DC" };
-       node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
+        node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -71,7 +71,6 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
         };
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -86,7 +85,6 @@ Line distribution arranges connectors without overlapping in automatic layout. I
 The following code example shows how to create a complex hierarchical tree with line distribution.
 
 ```csharp
-
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
@@ -98,8 +96,8 @@ The following code example shows how to create a complex hierarchical tree with 
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -113,7 +111,7 @@ The following code example shows how to create a complex hierarchical tree with 
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
-         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
         (connector as Connector).CornerRadius = 7;
         (connector as Connector).Style.StrokeWidth = 1;
         (connector as Connector).TargetDecorator.Height = 7;
@@ -124,29 +122,29 @@ The following code example shows how to create a complex hierarchical tree with 
         (connector as Connector).TargetDecorator.Style.StrokeColor = "#6BA5D7";
     }
 
-    public class ComplexHierarchical
+    private class ComplexHierarchical
     {
         public string Id { get; set; }
-        public List<string>ReportingPerson { get; set; }
+        public List<string> ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+
+    private object DataSource = new List<object>()
     {
         new ComplexHierarchical() { Id= "node11" },
         new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},     
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },    
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
         new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -163,7 +161,7 @@ The following code illustrates how to arrange the nodes in a non linear manner.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
- <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings ID="Id" ParentID="ReportingPerson" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.ComplexHierarchicalTree" LinearArrangement="false" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
@@ -172,8 +170,8 @@ The following code illustrates how to arrange the nodes in a non linear manner.
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -187,7 +185,7 @@ The following code illustrates how to arrange the nodes in a non linear manner.
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
-         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
         (connector as Connector).CornerRadius = 7;
         (connector as Connector).Style.StrokeWidth = 1;
         (connector as Connector).TargetDecorator.Height = 7;
@@ -198,24 +196,25 @@ The following code illustrates how to arrange the nodes in a non linear manner.
         (connector as Connector).TargetDecorator.Style.StrokeColor = "#6BA5D7";
     }
 
-    public class ComplexHierarchical
+    private class ComplexHierarchical
     {
         public string Id { get; set; }
-        public List<string>ReportingPerson { get; set; }
+        public List<string> ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+
+    private object DataSource = new List<object>()
     {
         new ComplexHierarchical() { Id= "node11" },
         new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},       
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },      
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
         new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };
@@ -231,7 +230,8 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
 
 ```csharp
  @using Syncfusion.Blazor.Diagram
- <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+
+<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings ID="Id" ParentID="ReportingPerson" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.ComplexHierarchicalTree" LinearArrangement="true" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
@@ -240,8 +240,8 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -255,7 +255,7 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
-         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
         (connector as Connector).CornerRadius = 7;
         (connector as Connector).Style.StrokeWidth = 1;
         (connector as Connector).TargetDecorator.Height = 7;
@@ -266,24 +266,25 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
         (connector as Connector).TargetDecorator.Style.StrokeColor = "#6BA5D7";
     }
 
-    public class ComplexHierarchical
+    private class ComplexHierarchical
     {
         public string Id { get; set; }
-        public List<string>ReportingPerson { get; set; }
+        public List<string> ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+
+    private object DataSource = new List<object>()
     {
         new ComplexHierarchical() { Id= "node11" },
         new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},   
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },       
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
         new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };

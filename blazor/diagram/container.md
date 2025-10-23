@@ -21,14 +21,13 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -56,41 +55,40 @@ To add child elements to a container, define the child nodes and assign their ID
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 60,
+            Width = 100,
+            OffsetX = 400,
+            OffsetY = 300,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node1",
-                Height = 60,
-                Width = 100,
-                OffsetX = 400,
-                OffsetY = 300,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                {
-                    new ShapeAnnotation(){ Content = "Process"}
-                }
-            };
+                new ShapeAnnotation(){ Content = "Process"}
+            }
+        };
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 60,
+            Width = 100,
+            OffsetX = 600,
+            OffsetY = 300,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node2",
-                Height = 60,
-                Width = 100,
-                OffsetX = 600,
-                OffsetY = 300,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                {
-                    new ShapeAnnotation(){ Content = "Process"}
-                }
-            };
+                new ShapeAnnotation(){ Content = "Process"}
+            }
+        };
         Container container = new Container()
         {
             ID = "container",
@@ -116,64 +114,63 @@ The following example shows how to define a container header and customize its a
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 60,
+            Width = 100,
+            OffsetX = 400,
+            OffsetY = 300,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                Height = 60,
-                Width = 100,
-                OffsetX = 400,
-                OffsetY = 300,
-                Style = new ShapeStyle()
-                {
-                    Fill = "CornflowerBlue",
-                }
-            };
+                Fill = "CornflowerBlue",
+            }
+        };
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 60,
+            Width = 100,
+            OffsetX = 600,
+            OffsetY = 300,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                Height = 60,
-                Width = 100,
-                OffsetX = 600,
-                OffsetY = 300,
-                Style = new ShapeStyle()
-                {
-                    Fill = "CornflowerBlue",
-                }
-            };
+                Fill = "CornflowerBlue",
+            }
+        };
         Container container = new Container()
+        {
+            ID = "container",
+            Header = new ContainerHeader()
             {
-                ID = "container",
-                Header = new ContainerHeader()
+                ID = "containerHeader",
+                Height = 40,
+                Annotation = new ShapeAnnotation()
                 {
-                    ID = "containerHeader",
-                    Height = 40,
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "Container Title",
-                        Style = new TextStyle() { FontSize = 18, Bold = true, Color = "#343434" }
-                    },
-                    Style = new TextStyle()
-                    {
-                        Fill = "CornflowerBlue"
-                    }
+                    Content = "Container Title",
+                    Style = new TextStyle() { FontSize = 18, Bold = true, Color = "#343434" }
                 },
-                Height = 300,
-                Width = 500,
-                OffsetX = 500,
-                OffsetY = 300,
-                Children = new string[] { "node1", "node2" }
-            };
+                Style = new TextStyle()
+                {
+                    Fill = "CornflowerBlue"
+                }
+            },
+            Height = 300,
+            Width = 500,
+            OffsetX = 500,
+            OffsetY = 300,
+            Children = new string[] { "node1", "node2" }
+        };
         nodes.Add(node1);
         nodes.Add(node2);
         nodes.Add(container);
@@ -201,8 +198,8 @@ The following code example shows how to define containers and add them to the sy
 <div class="control-section">
     <div style="width:254px;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="250px"
-                                      Palettes="@Palettes" SymbolHeight="100" SymbolWidth="100" SymbolMargin="@SymbolMargin">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="250px" Palettes="@Palettes"
+                                      SymbolHeight="100" SymbolWidth="100" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
@@ -210,13 +207,13 @@ The following code example shows how to define containers and add them to the sy
 
 @code
 {
-    SfSymbolPaletteComponent symbolpalette;
+    private SfSymbolPaletteComponent symbolpalette;
     //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
     //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's container-shape collection.
-    DiagramObjectCollection<NodeBase> ContainerNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> ContainerNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -226,7 +223,6 @@ The following code example shows how to define containers and add them to the sy
     private void InitPaletteModel()
     {
         Palettes = new DiagramObjectCollection<Palette>();
-
         ContainerNodes = new DiagramObjectCollection<NodeBase>();
 
         // Create container with header
@@ -273,7 +269,7 @@ The following code example shows how to define containers and add them to the sy
         {
             new Palette(){Symbols = ContainerNodes, Title="Container Shapes", ID="ContainerShapes" },
         };
-      }
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtreMNtcpzlVcyaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

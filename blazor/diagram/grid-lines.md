@@ -31,11 +31,11 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @code
 {
     //Sets the snap interval.
-    public double[] SnapInterval { get; set; } = new double[]
+    private double[] SnapInterval { get; set; } = new double[]
     {
         10
     };
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -107,10 +107,10 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 
 @code
 {
-    public double[] HDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20 };
-    public double[] VDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20, 1, 20, 1, 20 };
-    public double[] HInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
-    public double[] VInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+    private double[] HDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20 };
+    private double[] VDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20, 1, 20, 1, 20 };
+    private double[] HInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+    private double[] VInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
 }
 
 ```
@@ -143,7 +143,7 @@ The following code example illustrates how to customize the thickness of lines a
 @code
 {
     //Sets the line intervals for the gridlines.
-    public double[] LineInterval { get; set; } = new double[] 
+    private double[] LineInterval { get; set; } = new double[]
     {
         1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
     };
@@ -174,8 +174,8 @@ Snapping to gridlines can be enabled or disabled with the [SnapConstraints](http
 @code
 {
     //Sets the snap constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -220,11 +220,11 @@ By default, objects snapped towards the nearest gridline. The gridline or positi
 @code
 {
     //Sets the snap interval.
-    public double[] SnapInterval { get; set; } = new double[]
+    private double[] SnapInterval { get; set; } = new double[]
     {
         10
     };
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -266,8 +266,8 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 @code
 {
     //Sets the Snap to objects constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -307,18 +307,20 @@ The following code example illustrates how to customize the snap line style.
 
 
 ```cshtml
-@page "/"
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes">
     <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapDistance="10" SnapLineStyle="snapLineStyle">
     </SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     //Sets the Snap to objects constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject | SnapConstraints.SnapToLines;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    ShapeStyle snapLineStyle = new ShapeStyle() { StrokeColor = "green", StrokeWidth = 3 };
+    private SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject | SnapConstraints.SnapToLines;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private ShapeStyle snapLineStyle = new ShapeStyle() { StrokeColor = "green", StrokeWidth = 3 };
+    
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();

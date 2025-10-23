@@ -36,29 +36,28 @@ The following code shows how to change the pivot value.
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                ID = "node",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                // Pivot of the node
-                Pivot = new DiagramPoint() { X = 0, Y = 0 }
-            };
+        {
+            ID = "node",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Pivot of the node
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
+        };
         nodes.Add(node);
     }
 
@@ -88,8 +87,8 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -104,9 +103,9 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
                 StrokeColor = "white"
             },
             // RotationAngle of the node.
@@ -132,9 +131,9 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
- {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -155,10 +154,10 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
             //Maximum Size of the node.
             MaxHeight = 200,
             MaxWidth = 200,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
             },
         };
         nodes.Add(node);

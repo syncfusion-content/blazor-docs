@@ -589,19 +589,18 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Connectors="@connectors"
-                    MouseHover="OnMouseHover">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Connectors="@connectors" MouseHover="OnMouseHover" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-         Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -612,6 +611,7 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
         };
         connectors.Add(Connector);
     }
+
     private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
     }
@@ -627,19 +627,18 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" 
-                    Width="100%" 
-                    Height="700px" 
-                    Connectors="@connectors"
-                    PropertyChanged="OnNodePropertyChanged">
-</SfDiagramComponent>
-@code {
-    SfDiagramComponent diagram;
+
+<SfDiagramComponent @ref="@diagram" Width="100%" Height="700px" Connectors="@connectors" PropertyChanged="OnNodePropertyChanged" />
+
+@code
+{
+    private SfDiagramComponent diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-          Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -650,6 +649,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         };
         connectors.Add(Connector);
     }
+
     // Method to handle Property Changed event
     private void OnNodePropertyChanged(PropertyChangedEventArgs args)
     {

@@ -26,15 +26,15 @@ The following code example illustrates how to create an organizational chart.
     </Layout>
 </SfDiagramComponent>
 
-@code 
+@code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
 
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -75,7 +75,7 @@ The following code example illustrates how to create an organizational chart.
             new Node() { ID = "node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Interaction" } } },
             new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and Maintenance" } } },
             new Node() { ID = "node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Task Coordination" } } }
-        };        
+        };
         connectors = new DiagramObjectCollection<Connector>()
         {
             new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2" },
@@ -134,13 +134,19 @@ The layout can be aligned anywhere within the layout bounds or viewport using th
 The following code illustrates how to align the layout at the bottom within the layout bounds.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
 </SfDiagramComponent>
 
-int HorizontalSpacing = 40;
-int VerticalSpacing = 40;
-VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+@code
+{
+    private SfDiagramComponent diagram;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+}
 ```
 
 The following table illustrates the different chart orientations and chart types.
@@ -176,8 +182,8 @@ The following code example illustrates how to set the vertical right arrangement
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //To configure every subtree of the organizational chart.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
@@ -209,13 +215,14 @@ The following code example illustrates how to set the vertical right arrangement
         };
     }
 
-    public class OrgChartDataModel
+    private class OrgChartDataModel
     {
         public string Id { get; set; }
         public string Team { get; set; }
         public string Role { get; set; }
     }
-    public object DataSource = new List<object>()
+
+    private object DataSource = new List<object>()
     {
         new OrgChartDataModel() { Id= "1", Role= "General Manager" },
         new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
@@ -240,17 +247,21 @@ The layout supports adding space horizontally and vertically between nodes. Use 
 The layout supports adding some blank space between the layout bounds (or viewport) and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 //Initialize the organizational chart layout with Margin.
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
-  <Layout Type="LayoutType.HierarchicalTree">
-     <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
-  </Layout>
+    <Layout Type="LayoutType.HierarchicalTree">
+        <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
+    </Layout>
 </SfDiagramComponent>
+
 @code
 {
     //Initializing the Margin Top and Left value.
-    int left = 40;
-    int top = 50;
+    private int left = 40;
+    private int top = 50;
+    private SfDiagramComponent diagram;
 }
 ```
 
@@ -261,14 +272,17 @@ The layout supports customizing the `Orientation`. Set the desired orientation u
 The following code illustrates arranging nodes in a **TopToBottom** orientation.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 //Initialize the layout with layout orientation as BottomToTop in page.
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
+
 @code
 {
     //Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 }
 ```
 
@@ -277,19 +291,21 @@ The following code illustrates arranging nodes in a **TopToBottom** orientation.
 The layout supports arranging nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 //Initialize the organizational chart layout with FixedNode.
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
+
 @code
 {
     //Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private LayoutOrientation orientation = LayoutOrientation.TopToBottom;
     //Initializing the Horizontal and Vertical value.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 }
-
 ```
 
 ## How to Add Assistant
@@ -304,32 +320,32 @@ The following code example illustrates how to add assistants to the layout.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
+<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
-        <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-            <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
-        </Layout>
-        <SnapSettings></SnapSettings>
+    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>
+    </Layout>
+    <SnapSettings></SnapSettings>
 </SfDiagramComponent>
 
 @code {
-    SfDiagramComponent diagram;
-    double top = 50;
-    double bottom = 50;
-    double right = 50;
-    double left = 50;
-    LayoutType type = LayoutType.OrganizationalChart;
-    LayoutOrientation oreintation = LayoutOrientation.BottomToTop;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
+    private SfDiagramComponent diagram;
+    private double top = 50;
+    private double bottom = 50;
+    private double right = 50;
+    private double left = 50;
+    private LayoutType type = LayoutType.OrganizationalChart;
+    private LayoutOrientation oreintation = LayoutOrientation.BottomToTop;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
     private string pattern;
-    Orientation subTreeOrientation = Orientation .Vertical;
-    SubTreeAlignmentType subTreeAlignment= SubTreeAlignmentType.Left;
+    private Orientation subTreeOrientation = Orientation.Vertical;
+    private SubTreeAlignmentType subTreeAlignment = SubTreeAlignmentType.Left;
     private string FixedNode = null;
 
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
@@ -337,6 +353,7 @@ The following code example illustrates how to add assistants to the layout.
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
+
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         Node node = obj as Node;
@@ -347,7 +364,8 @@ The following code example illustrates how to add assistants to the layout.
         }
         return options;
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },

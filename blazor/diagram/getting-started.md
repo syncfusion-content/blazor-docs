@@ -338,9 +338,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-    //Blazor Diagram Component script reference.
-    
+    //Blazor Diagram Component script reference.   
 </body>
 ```
 
@@ -392,12 +390,12 @@ Create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code
 {
-    SfDiagramComponent diagram;
-    int connectorCount = 0;
+    private SfDiagramComponent diagram;
+    private int connectorCount = 0;
     //Defines Diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Defines Diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -541,8 +539,8 @@ A built-in automatic layout algorithm is designed specifically for organizationa
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //To configure every subtree of the organizational chart.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
@@ -580,6 +578,7 @@ A built-in automatic layout algorithm is designed specifically for organizationa
         public string Team { get; set; }
         public string Role { get; set; }
     }
+
     public object DataSource = new List<object>()
     {
         new OrgChartDataModel() { Id= "1", Role= "General Manager" },
@@ -593,7 +592,7 @@ A built-in automatic layout algorithm is designed specifically for organizationa
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDsrYqBZBcmEv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)" %}
 

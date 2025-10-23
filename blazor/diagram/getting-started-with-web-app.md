@@ -475,12 +475,12 @@ Create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code
 {
-    SfDiagramComponent diagram;
-    int connectorCount = 0;
+    private SfDiagramComponent diagram;
+    private int connectorCount = 0;
     //Defines Diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Defines Diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -624,8 +624,8 @@ A built-in automatic layout algorithm is designed specifically for organizationa
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //To configure every subtree of the organizational chart.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
@@ -663,6 +663,7 @@ A built-in automatic layout algorithm is designed specifically for organizationa
         public string Team { get; set; }
         public string Role { get; set; }
     }
+    
     public object DataSource = new List<object>()
     {
         new OrgChartDataModel() { Id= "1", Role= "General Manager" },
