@@ -11,6 +11,8 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are native Blazor components and not wrappers over EJ2 components.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
+
 ## How to best read this user guide
 
 * The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives information that is to known before starting to write code. This is the only section that is recommended to be read end-to-end before starting to write code, all other information can be referred to as needed.
