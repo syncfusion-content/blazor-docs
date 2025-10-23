@@ -408,7 +408,7 @@ You can edit the group and its children at runtime. We able to interact the grou
 
 ## See Also
 
-* [How to add annotations to the node](./labels)
+* [How to add annotations to the node](https://blazor.syncfusion.com/documentation/introduction)
 * [How to add ports to the node](./ports)
 * [How to enable/disable the behavior of the node](./constraints)
 * [How to add nodes to the symbol palette](./symbol-palette)
