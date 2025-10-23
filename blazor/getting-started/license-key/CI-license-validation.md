@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Overview of Syncfusion license validation in CI services - Syncfusion
-description: Learn here about how to register Syncfusion license key for Syncfusion application for license validation.
+title: Validate Syncfusion license keys in CI services - Syncfusion
+description: Learn how to validate Syncfusion Blazor license keys in CI or CD pipelines using the LicenseKeyValidator utility, secure variables, and automated tests.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
@@ -16,16 +16,14 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 }
 </style>
 
-
-# Syncfusion<sup style="font-size:70%">&reg;</sup> license key validation in CI services
+# Validate Syncfusion® license keys in CI services
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> license key validation in CI services ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. Set up the continuous integration process to fail in case the license key validation fails. Validate the passed parameters and the registered license key again to resolve the issue.
 
-The following section shows how to validate the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in CI services.
+Follow these steps to validate the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in CI services.
 
-* Download and extract the LicenseKeyValidator.zip utility from the following link: [LicenseKeyValidator](https://s3.amazonaws.com/files2.syncfusion.com/Installs/LicenseKeyValidation/LicenseKeyValidator.zip).
-
-* Open the LicenseKeyValidation.ps1 PowerShell script in a text\code editor as shown in the below example.
+* Download and extract the LicenseKeyValidator.zip utility: [LicenseKeyValidator](https://s3.amazonaws.com/files2.syncfusion.com/Installs/LicenseKeyValidation/LicenseKeyValidator.zip)
+* Open the LicenseKeyValidation.ps1 PowerShell script in a text\code editor and update the parameters as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="PowerShell" %}
@@ -37,19 +35,16 @@ Write-Host $result
 {% endhighlight %}
 {% endtabs %}
 
-![LicenseKeyValidation script](images/license-validation.png)
+![PowerShell license validation output](images/license-validation.png)
 
-* Update the parameters in the LicenseKeyValidation.ps1 script file as described below. 
-
-  **Platform:** Modify the value for /platform: to the actual platform "Blazor". 
-  
-  **Version:**  Change the value for /version: to the required version (e.g., "26.2.4").
-  
-  **License Key:** Replace the value for /licensekey: with your actual license key (e.g., "Your License Key"). 
+* Update the parameters in the script:
+   * **Platform:** Set /platform:"Blazor" (use the relevant Syncfusion platform as needed).
+   * **Version:** Set /version:"26.2.4" (match the Syncfusion package version used in the build).
+   * **License key:** Set /licensekey:"Your License Key" (inject via secure variable or secret).
 
 ## Azure Pipelines (YAML)
 
-* Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the LicenseKeyValidation.ps1 script file as a value (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
+* Create a [user-defined variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure pipeline. Set it to the path of the LicenseKeyValidation.ps1 script (for example, D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
 * Integrate the PowerShell task in the pipeline and execute the script to validate the license key. 
 
@@ -61,7 +56,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-
 - task: PowerShell@2
   inputs:
     targetType: filePath
@@ -77,13 +71,13 @@ steps:
 
 * Include the PowerShell task in the pipeline and execute the script to validate the license key. 
 
-![LicenseKeyValidation script](images/license-validation-classic.png)
+![Classic pipeline PowerShell task for license validation](images/license-validation-classic.png)
 
 ## GitHub actions
 
 * To execute the script in PowerShell as part of a GitHub Actions workflow, include a step in the configuration file and update the path of the LicenseKeyValidation.ps1 script file (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
-The following example shows the syntax for validating the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in GitHub actions.
+The following example validates the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in GitHub Actions.
 
 {% tabs %}
 {% highlight c# tabtitle="YAML" %}
@@ -114,9 +108,9 @@ pipeline {
 		stage('Syncfusion License Validation') {
 			steps {
 				sh 'pwsh ${LICENSE_VALIDATION}'
-			}
-		}
-	}
+            }
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -131,10 +125,10 @@ pipeline {
 {% highlight c# %}
 using Syncfusion.Licensing;
 
-//Register Syncfusion license key 
+// Register the Syncfusion license key
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
-//Validate the registered license key
+// Validate the registered license key
 bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 {% endhighlight %}
 {% endtabs %}
