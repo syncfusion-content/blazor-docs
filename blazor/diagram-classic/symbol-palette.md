@@ -27,7 +27,7 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 
 ## Add palettes to SymbolPalette
 
-A palette allows to display a group of related symbols and it textually annotates the group with its header. A [Palettes](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html) can be added as a collection of symbol groups.
+A palette allows to display a group of related symbols and it textually annotates the group with its header. A [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) can be added as a collection of symbol groups.
 
 The collection of predefined symbols can be added in palettes using the [Symbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property. To initialize a palette, define a JSON object with the property [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
 
