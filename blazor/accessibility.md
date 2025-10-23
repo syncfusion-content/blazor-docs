@@ -26,7 +26,7 @@ Keyboard navigation support enables users to interact with controls using keyboa
 * [Grid](./grid/accessibility)
 * [LinearGauge](./linear-gauge/accessibility)
 * [ListView](./listview/accessibility)
-* [NumericTextBox](./numerictextbox/accessibility)
+* [NumericTextBox](https://blazor.syncfusion.com/documentation/introduction)
 * [TimePicker](./timepicker/accessibility)
 * [Toolbar](./toolbar/accessibility)
 * [ToolTip](./tooltip/accessibility)
