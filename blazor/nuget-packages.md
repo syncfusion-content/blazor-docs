@@ -1282,7 +1282,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li><a href="https://blazor.syncfusion.com/documentation/accordion/getting-started-with-web-app">Accordion</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app">AppBar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started-with-web-app">Breadcrumb</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/context-menu">ContextMenu</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/context-menu/getting-started-with-web-app">ContextMenu</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started-with-web-app">DropDown Tree</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/menu-bar/getting-started-webapp">Menu Bar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/sidebar/getting-started-webapp">Sidebar</a></li>
