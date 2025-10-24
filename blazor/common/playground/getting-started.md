@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Getting Started with Blazor Playground | Syncfusion
-description: Explore real-time Blazor component development with Syncfusion Blazor Playground. Write, edit, compile, and share effortlessly in your browser!
+description: Learn here about how to write, edit, compile, build, run, and share Blazor and Syncfusion Blazor components directly in the browser using Blazor Playground.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
@@ -11,17 +11,17 @@ documentation: ug
 
 The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-To get start quickly with Blazor Playground, you can check on this video.
+To get started quickly with Blazor Playground, watch the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=tMu19E-xkyk" %}
 
-## Blazor Component
+## Blazor component
 
 You can create a Blazor component in Blazor playground by following the given steps below:
 
-* Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser. 
-* Add the code in **__Index.razor**,
+* Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
+* In the editor, add the following code:
 
 ```cshtml
 <!-- ColorPicker.razor -->
@@ -73,15 +73,15 @@ You can create a Blazor component in Blazor playground by following the given st
     
 </style>
 ```
-* Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 ![Syncfusion Blazor Playground](images/blazor_component.png)
 
-## Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component
+## Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-As Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render Syncfusion<sup style="font-size:70%">&reg;</sup> components in Blazor playground, follow the steps given below:
+Blazor Playground is preconfigured with the `Syncfusion.Blazor` package, stylesheets, and scripts. To render Syncfusion<sup style="font-size:70%">&reg;</sup> components in the Playground, import the required namespaces and add the component as shown below:
 
-* Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace on top of the code editor.
+* Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces at the top of the editor.
 
 
 ```cshtml
@@ -91,7 +91,7 @@ As Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor playground comes pre-
 
 ```
 
-* Add the Blazor Calendar component in the code editor.
+* Add the Blazor Calendar component in the editor.
 
 ```cshtml
 
@@ -99,6 +99,6 @@ As Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor playground comes pre-
 
 ```
 
-* Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the Result view.
 
 ![Syncfusion Blazor Playground with Calendar component](images/syncfusion_component.png)

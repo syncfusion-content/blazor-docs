@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Use Blazor Themes - Bootstrap, Fluent, Tailwind, Material | Syncfusion
-description: Check out the documentation for built-in-themes in Blazor and learn here about how to use it in Blazor
+title: Blazor themes | Bootstrap, Fluent, Tailwind, Material | Syncfusion
+description: Learn how to use Syncfusion Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Blazor Themes in Syncfusion® Components
+# Blazor themes in Syncfusion® components
 
-The following list of themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
+The following themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
 
 |Theme	|Style Sheet Name|
 |--------|--------|
@@ -36,27 +36,29 @@ The following list of themes are included in the Syncfusion<sup style="font-size
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
+The Bootstrap 3 theme is designed based on Bootstrap v3.
 
-## Optimized CSS Themes
+N> The Bootstrap 4 theme is designed based on Bootstrap v4, specifically version 4.3. It remains compatible with Bootstrap v4.6 applications. There are no significant differences between v4.3 and v4.6 that affect Syncfusion<sup style="font-size:70%">&reg;</sup> components. Therefore, using Bootstrap v4.3 will not impact functionality, as it performs equivalently to Bootstrap v4.6.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available in two variants to help optimize application's performance:
+## Optimized CSS themes
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available in two variants to help optimize application performance:
  
 **Standard Theme Files:**
 
 * The default theme files (<theme_name>.css) include comprehensive styling for both normal and bigger size modes, ensuring full UI flexibility but with a larger file size.
  
-**Lite Theme Files:**
+**Lite theme files:**
 
-For improved performance, we offer optimized lite theme files (<theme_name>-lite.css) that:
+Optimized lite theme files (<theme_name>-lite.css):
 
 * Include styles exclusively for normal size mode
 * Omit bigger size mode styles
-* Reduce file size by approximately 30%, so improve application load times
+* Reduce file size by approximately 30%, improving load times
 
-**When to Use Lite Themes:**
+**When to use lite themes:**
 
-* Choose the lite theme variant when your application doesn't require the bigger size mode. To implement a lite theme, simply reference the -lite.css version instead of the standard theme file in your application.
+* Choose the lite theme variant when the application doesn't require the bigger size mode. Reference the `-lite.css` version instead of the standard theme file.
 
 Comparison of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Component in **normal** and **bigger** size modes:
 
@@ -87,17 +89,17 @@ Refer to the comparison below for the default and optimized theme file sizes:
 | Microsoft Office Fabric Dark | Microsoft Office Fabric Dark Lite |
 | High Contrast | High Contrast Lite |
 
-## Reference themes in Blazor application
+## Reference themes in a Blazor application
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes can be used in your Blazor application by referencing the style sheet.
 
-*  For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
+* For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
 * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 
-Using the below approaches the themes can be referenced in the Blazor application,
+Using the following approaches, themes can be referenced in a Blazor application:
 
-1. [Static Web assets](#static-web-assets) - Used to reference complete css via static web assests.
-2. [CDN](#cdn-reference) - Used to reference complete css via static web assests.
+1. [Static web assets](#static-web-assets) - Reference CSS from local static web assets.
+2. [CDN](#cdn-reference) - Reference CSS from the Syncfusion CDN.
 3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components.
 4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
 5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
@@ -108,7 +110,7 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
+To use static web assets, ensure the [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called in the app's **~/Program.cs** file.
 
 N> For **Blazor Web App with interaction mode as Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
 
@@ -116,7 +118,7 @@ N> For **Blazor Web App with interaction mode as Auto & Blazor WASM App**, call 
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
-*  For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
+* For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
 
 * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 
@@ -559,7 +561,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-l
 
 ## LibMan
 
-Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-7.0)) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
+Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs)) is a client-side library acquisition tool that downloads popular libraries and frameworks from a file system or a CDN.
 
 LibMan offers the following advantages,
 

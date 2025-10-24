@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Configure Syncfusion Blazor Client Resources in Production
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+description: Migrate a Blazor application from EJ2-based package to Syncfusion Blazor 18.1.0.36, including NuGet, namespace, component prefix, resource, DataManager changes.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components to 18.1.0.36 version
+# How to upgrade Syncfusion® Blazor Components to 18.1.0.36 version
 
-To upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components to 18.1.0.36 version, you need to check the following:
+This guide explains the one-time migration required when upgrading from Syncfusion Blazor packages to version 18.1.0.36 and later.
 
 ## NuGet changes
 
-Previous versions of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package name is `Syncfusion.EJ2.Blazor`. From version 18.1.0.36, it will be `Syncfusion.Blazor`. Other Blazor packages will also have the same name changes.
+In previous versions, the primary Syncfusion Blazor NuGet package name was `Syncfusion.EJ2.Blazor`. Starting with version 18.1.0.36, the package name is `Syncfusion.Blazor`. Other Blazor packages follow the same naming change.
 
-For example, refer to the following table for changes in the Blazor packages name.
+The following table shows example package ID changes:
 
 | Before 18.1.0.36 version | From 18.1.0.36 version |
 | ------------- | ------------- |
@@ -27,7 +27,7 @@ For example, refer to the following table for changes in the Blazor packages nam
 
 ## Namespace changes
 
-The previous version of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor contains the namespace `Syncfusion.EJ2.Blazor` followed by component package names such as Buttons, Charts, Grids, and Inputs. After 18.1.0.36 version, this has been modified to `Syncfusion.Blazor` followed by its package name. Check the following table for examples.
+Earlier versions used the root namespace `Syncfusion.EJ2.Blazor` followed by component package names such as Buttons, Charts, Grids, and Inputs. From version 18.1.0.36, the root namespace is `Syncfusion.Blazor` followed by the package name. The following table provides examples:
 
 | Before 18.1.0.36 version | From 18.1.0.36 version |
 | ------------- | ------------- |
@@ -39,7 +39,7 @@ The previous version of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 
 
 ## Component name changes
 
-In the previous version, the component names are prefixed with Ejs (example: EjsGrid, EjsChart) which has been changed to the prefix Sf (example: SfGrid, SfChart). Check the following examples for your reference.
+In earlier versions, component names were prefixed with Ejs (for example, EjsGrid, EjsChart). Starting with 18.1.0.36, the prefix is Sf (for example, SfGrid, SfChart). See the following examples:
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -87,7 +87,7 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 ## Resource changes
 
-Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-interop.min.js` manually in the application, which is not required from 18.1.0.36 version. The script will be loaded from NuGet through static web assets for the components loaded on the page. We have also provided styles as static web assets to load in the application.
+In earlier versions, the application manually referenced the `ej2.min.js` and `ejs-interop.min.js` scripts. Starting with 18.1.0.36, scripts are loaded automatically via static web assets from the NuGet package for the components used on the page. Styles are also provided as static web assets to reference in the application.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -129,11 +129,11 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 </tr>
 </table>
 
-Still, you can load the resource from CRG by disabling default script loading from static web assets by passing arguments to `AddSyncfusionBlazor` service in the `~/Program.cs` file.
+If needed, resources can be loaded from the Custom Resource Generator (CRG) by disabling default script loading from static web assets using options passed to the `AddSyncfusionBlazor` service in the `~/Program.cs` file.
 
 ## DataManager changes
 
-In the previous version, Query's initialization was made as `new ej.data.Query()`. From version 18.0.1.36, it has been changed to `new sf.data.Query()`. Check the following table for examples.
+In previous versions, Query initialization used `new ej.data.Query()`. From version 18.1.0.36, it uses `new sf.data.Query()`. See the following examples:
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -191,4 +191,4 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 </tr>
 </table>
 
-N> To downgrade the project from 18.1.0.36 version, you need to do the reverse process of the previous steps.
+N> To downgrade a project from version 18.1.0.36, reverse the steps outlined above.

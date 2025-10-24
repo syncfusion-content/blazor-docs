@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Configuration and new services in Blazor Playground | Syncfusion
-description: Blazor Playground supports configuration and new services, making it easier to develop and maintain complex Blazor components.
+title: Configure services in Blazor Playground | Syncfusion
+description: Learn here all about how to configure services and dependency injection in Blazor Playground by updating register source file via the Services button.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
-# Configuring Services in Blazor Playground
+# Configure services in Blazor Playground
 
-You can add or modify services in Blazor Playground using the `Services` button in the app bar.
-* Access the ConfigureServices method in Program.cs for adding new injectable services or overriding existing service configurations.
-* Register the created service class in the ConfigureServices method.
-* Inject the service into components as needed using dependency injection.
+You can add or modify services in Blazor Playground using the Services button in the app bar.
 
-For example 
+* Open the Services button to edit Program.cs and the `ConfigureServices` method.
+* Add or update service registrations in `ConfigureServices`.
+* Inject the service into components as needed.
+
+For example:
 
 * Add a class file by clicking '+' button and include the following code snippet.
 
@@ -44,7 +45,7 @@ namespace Playground.User
     }
 }
 ```
-* Click the "Services" button to configure the created class in the Program.cs file. Then, register the services in `ConfigureServices` method.
+* Click the Services button to open Program.cs and register the service in the `ConfigureServices` method.
 
 ```csharp
 using System;
@@ -74,7 +75,7 @@ namespace Playground.User
 }
 ```
 
-* Include the dependency injection in the **__Index.razor** file.
+* Inject the service in the `_Index.razor` file.
 
 ```csharp
 
@@ -101,4 +102,6 @@ namespace Playground.User
 }
 
 ```
+* Press the Run button to execute the code. The output appears in the result view.
+
 ![Syncfusion Blazor Playground with adding services](images/add_services.gif)
