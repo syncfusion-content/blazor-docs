@@ -1,42 +1,40 @@
 ---
 layout: post
-title: Installing Syncfusion Blazor Linux installer - Syncfusion
-description: Learn here about how to install Syncfusion Blazor linux installer after downloading from our Syncfusion website. 
+title: Install the Syncfusion Blazor Linux installer | Syncfusion
+description: Learn here about how to install the Syncfusion Blazor Linux offline installer (ZIP), review included content, and register license keys in sample projects.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux installer
+# Install the Syncfusion® Blazor Linux installer
 
-## Step-by-Step Installation
+## Install on Linux
 
-The steps below show how to install Blazor Linux installer.
+The steps below show how to install and use the Syncfusion Blazor Linux offline installer (ZIP).
 
-1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux installer(.zip) file. The files are extracted in your machine.
+N> Prerequisites: Supported Linux distribution, .NET SDK installed, unzip tool, and sufficient disk space.
 
-   ![Welcome wizard](images/Linux_Installer1.png)
-   
+1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux installer ZIP to a folder.
 
-2. The Linux zip file contains the following folders.
+   ![Extract the Syncfusion Blazor Linux installer ZIP to a folder](images/Linux_Installer1.png)
 
-   ![License Agreement](images/Linux_Installer2.png)   
-   
-   N> The Unlock key is not required to install the Linux installer.
+2. Review the extracted contents. The package includes demo source, offline NuGet packages, and supporting files.
 
+   ![Extracted contents of the Blazor Linux offline installer](images/Linux_Installer2.png)
 
-4. You can launch the demo source and use the NuGet packages included in the Linux installer.
+N> An unlock key is not required to install or use the Blazor Linux offline installer.
 
-
+3. Launch the demo projects from the extracted folder and reference the included NuGet packages as needed.
 
 ## License key registration in samples
 
 After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the Blazor Linux installer, please refer to this.
 
-* For server side application register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
-* For client side application register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
+* **Blazor Server App**: Register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
+* **Blazor WASM App**: Register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
 
 You can also find the steps for getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Linux,
 
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Linux.
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Linux.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Linux.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac) using Visual Studio for Linux.

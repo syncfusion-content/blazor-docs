@@ -1,78 +1,78 @@
 ---
 layout: post
-title: Downloading Syncfusion Blazor installer - Syncfusion
-description: Learn here about the how to download Syncfusion Blazor offline installer from our syncfusion website.
+title: Download the Syncfusion Blazor offline installer | Syncfusion
+description: Learn here about how to download the Syncfusion Blazor offline installer for trial or licensed use, including Start trials and License & Downloads options.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Downloading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer
+# Download the Syncfusion® Blazor offline installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/blazor-components) website. You can either download the licensed installer or try our trial installer depending on your license.
+Download the offline installer from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. Download options depend on the account status: trial or licensed.
 
 * Trial Installer
 * Licensed Installer
 
-## Download the Trial Version
+## Download the trial version
 
-Our 30-day trial can be downloaded in two ways.
+A 30‑day trial can be downloaded in two ways.
 
 * Download Free Trial Setup
 * Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
-### Download Free Trial Setup
+### Download the free trial setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
 
-2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the Blazor trial installer from the confirmation page. (as shown in below screenshot.)
+2. Complete the form or sign in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account to download the Blazor trial installer from the confirmation page.
 
-   ![Trial Confirmation](images/blazor_windows.PNG)
+   ![Trial confirmation page showing Blazor offline installer download](images/blazor_windows.PNG)
 
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 
-4. After downloading, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup style="font-size:70%">&reg;</sup> registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
+4. After downloading, unlock the installer by using either the trial unlock key or by signing in with registered Syncfusion credentials. See [How to generate an unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) for more information.
 
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-   ![Start Trial download](images/start-trial-download-installer.png)
+   ![Trials and Downloads page with Download button for the Blazor offline installer](images/start-trial-download-installer.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Offline trial installer which is available in EXE and ZIP format.
+6. Select **More download options** (element 2 in the above screenshot) to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline trial installer in EXE or ZIP format.
 
    ![Trial Downlaod Offline Installer](images/start-trial-download-offline-installer.PNG)
 
-### Start Trials if using components through NuGet.org
+### Start trials if using components through NuGet.org
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+Start an evaluation if components were obtained through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-1. You can start your 30-day free trial for Blazor from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. Start a 30‑day Blazor trial from the [Start trials](https://www.syncfusion.com/account/manage-trials/start-trials) page.
 
-   ![Trial Download](images/start-trial-download.PNG)
+   ![Start trials page for Blazor](images/start-trial-download.PNG)
 
 2. To access this page, you must sign up/log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-3. Begin your trial by selecting the Blazor product.
+3. Begin the trial by selecting the Blazor product.
 
-   N> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest trial installer. Generate the installer [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial period expires.
 
-   ![Start Trial download](images/start-trial-download-installer.png)
+   ![Trials and Downloads page showing trial installer and key generation options](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the License Version
+## Download the licensed version
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+1. Licensed products are available from the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the Syncfusion account.
 
 2. You can view all the licenses (both active and expired) associated with your account.
 
-3. You can download Blazor licensed offline installer by going to More Downloads Options (element 3 in the screenshot below).
+3. Select **More download options** to download the Blazor licensed offline installer.
 
-   ![License Download Installer](images/start-license-download-installer.png)
+   ![License and Downloads page showing More download options for the Blazor offline installer](images/start-license-download-installer.png)
 
-4. For Windows OS, EXE and Zip formats are available for download. They are both Offline Installers.
+4. For Windows, EXE and ZIP formats are available for download. Both are offline installers.
 
    ![License Download Installer](images/start-trial-download-offline-installer.png)
 
-You can also refer to the [Offline installer](https://blazor.syncfusion.com/documentation/installation/offline-installer/how-to-install) link for step-by-step installation guidelines.
+For step-by-step installation, see [Offline installer](https://blazor.syncfusion.com/documentation/installation/offline-installer/how-to-install).

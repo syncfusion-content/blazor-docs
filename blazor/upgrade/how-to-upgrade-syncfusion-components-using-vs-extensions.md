@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Upgrade Syncfusion® Blazor components
+# Upgrade Syncfusion® Blazor components to latest version
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio updates an existing Syncfusion Blazor application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another. This reduces the amount of manual work required when migrating the Syncfusion<sup style="font-size:70%">&reg;</sup> version.
 
