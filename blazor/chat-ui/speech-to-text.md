@@ -15,7 +15,7 @@ The Syncfusion Blazor Chat UI component integrates `Speech-to-Text` functionalit
 
 To enable Speech-to-Text functionality in the Blazor Chat UI component, update the `Home.razor` file to incorporate the Web Speech API.
 
-The [SpeechToText](https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app) component listens to audio input from the device’s microphone, transcribes spoken words into text, and updates the Chat UI’s editable footer with the recognized text. Once the transcription appears in the footer, users can send it as a message to others.
+The [SpeechToText](https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app) component listens to audio input from the device’s microphone, transcribes spoken words into text, and updates the Chat UI’s editable footer using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_FooterTemplate) tag directive to display the transcribed text. Once the transcription appears in the footer, users can send it as a message to others.
 
 ### Configuration Options
 
