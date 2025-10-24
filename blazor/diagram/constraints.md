@@ -47,15 +47,14 @@ The following example shows how to disable the `PageEditable` constraint from th
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" 
-Constraints="@DiagramConstraints" />
+<SfDiagramComponent Height="600px" Nodes="@nodes" Constraints="@DiagramConstraints" />
 
 @code
 {
     //Sets the Diagram constraints.
-    DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
+    private DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
     //Initialize the Nodes Collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -152,7 +151,7 @@ The following example shows how to disable the `Rotate` constraint from the defa
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -265,7 +264,7 @@ The following code shows how to disable the `Select` constraint from the default
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -420,7 +419,7 @@ The following code shows how to enable read-only mode for annotations.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -500,8 +499,8 @@ The following code shows how to hide the rotator.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    public DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() 
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() 
     { 
         Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate 
     };
@@ -533,17 +532,21 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
+
 <p>Selector Constraints</p>
- <input type="checkbox" value="Tooltip" @onchange="@constraintschange" />Tooltip
+<input type="checkbox" value="Tooltip" @onchange="@constraintschange" />Tooltip
+
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    bool selector=true;
-    public DiagramSelectionSettings selection = new DiagramSelectionSettings() 
+    private DiagramObjectCollection<Node> nodes;
+    private bool selector=true;
+    private DiagramSelectionSettings selection = new DiagramSelectionSettings() 
     { 
         Constraints = SelectorConstraints.All 
     };
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -564,7 +567,8 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
         };
         nodes.Add(node);
     }
-     private void constraintschange(object value)
+
+    private void constraintschange(object value)
     {
         var obj = value as ChangeEventArgs;
 
@@ -578,7 +582,6 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
               selection.Constraints &= ~SelectorConstraints.Tooltip;
               selector = false;
         }
-
     }
 }
 ```
@@ -646,7 +649,7 @@ The following code shows how to display only horizontal gridlines.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -712,7 +715,7 @@ The following code shows how to limit interaction within a page.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -749,16 +752,13 @@ The following code example shows how to inherit line bridging behavior from the 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagramComponent Height="600px"
-                    Connectors="@connectors"
-                    Constraints="@diagramConstraints">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" Constraints="@diagramConstraints" />
 
 @code
 {
     //Sets the diagram constraints.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -804,7 +804,7 @@ The following code shows how to add bridging constraints into the default diagra
 @code
 {
     //To add line routing constraint with default contraints.
-    DiagramConstraints diagramConstraint = DiagramConstraints.Default | DiagramConstraints.Bridging;
+    private DiagramConstraints diagramConstraint = DiagramConstraints.Default | DiagramConstraints.Bridging;
 }
 ```
 
@@ -823,7 +823,7 @@ The following code shows to remove zoom and pan constraints from the default con
 {
     //To remove zoom and panning constraints from the default constraints.
     //It has disabled zoom and panning functionality for the diagram.
-    DiagramConstraints diagramConstraint = DiagramConstraints.Default &~ (DiagramConstraints.Zoom | DiagramConstraints.Pan);
+    private DiagramConstraints diagramConstraint = DiagramConstraints.Default &~ (DiagramConstraints.Zoom | DiagramConstraints.Pan);
 }
 ```
 

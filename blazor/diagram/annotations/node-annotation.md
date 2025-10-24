@@ -32,7 +32,7 @@ The following code demonstrates how to set an annotation's `Offset`.
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -44,11 +44,11 @@ The following code demonstrates how to set an annotation's `Offset`.
             OffsetX = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
-                    Content = "Offset(0,0)", 
+                new ShapeAnnotation
+                {
+                    Content = "Offset(0,0)",
                     // Sets the offset for an annotation's content.
-                    Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                    Offset = new DiagramPoint() { X = 0, Y = 0 }
                 }
             },
             OffsetY = 100,
@@ -109,7 +109,7 @@ The following code demonstrates how to align an annotation.
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -123,8 +123,8 @@ The following code demonstrates how to align an annotation.
             OffsetY = 250,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Content = "Annotation",
                     // Sets the HorizontalAlignment and VerticalAlignment for the content.
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -158,7 +158,7 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ann
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -172,8 +172,8 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ann
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Content = "Task1",
                     // Sets the margin for the content.
                     Margin = new DiagramThickness() { Top = 10},
@@ -205,7 +205,7 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -219,14 +219,14 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Content = "Text align is set as Left",
                     Style = new TextStyle()
-                    { 
+                    {
                         // Sets the textAlign as left for the content.
                         TextAlign = TextAlign.Left
-                    } 
+                    }
                 }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },

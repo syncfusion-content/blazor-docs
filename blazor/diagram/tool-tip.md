@@ -27,10 +27,12 @@ The following code example illustrates how to customize the tooltip for nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -65,10 +67,12 @@ The following code example illustrates how to customize the tooltip for connecto
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
+
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
@@ -119,10 +123,11 @@ The following code example sets the tooltip position for the nodes.
 
 <SfButton Content="Node Position" OnClick="@PositionChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -130,22 +135,23 @@ The following code example sets the tooltip position for the nodes.
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "NodeTooltip", Position = Position.TopCenter },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "NodeTooltip", Position = Position.TopCenter },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
+
     //Change position at run time.
     private void PositionChange()
     {
@@ -166,26 +172,27 @@ The following code example sets the tooltip position for the connectors.
 
 <SfButton Content="Connector Position" OnClick="@PositionChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
-
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", Position = Position.TopCenter },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
+            Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", Position = Position.TopCenter },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
     }
+
     //Change position at run time.
     private void PositionChange()
     {
@@ -210,32 +217,34 @@ The following code example sets the tooltip content for the nodes.
 
 <SfButton Content="Node Content" OnClick="@ContentChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "NodeTooltip" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "NodeTooltip" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
+
     //Change Content at run time.
     private void ContentChange()
     {
@@ -256,23 +265,25 @@ The following code example sets the tooltip content for the connectors.
 
 <SfButton Content="Connector Content" OnClick="@ContentChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip" },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
+            Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
     }
+
     //Change Content at run time.
     private void ContentChange()
     {
@@ -297,33 +308,35 @@ The following code example is used to set the tooltip tip pointer for nodes.
 
 <SfButton Content="Node TipPointer" OnClick="@TipPointerChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                //Set tooltip
-                Tooltip = new DiagramTooltip() { Content = "NodeTooltip", ShowTipPointer = true },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            //Set tooltip
+            Tooltip = new DiagramTooltip() { Content = "NodeTooltip", ShowTipPointer = true },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
+
     //Change TipPointer at run time.
     private void TipPointerChange()
     {
@@ -344,26 +357,28 @@ The following code example is used to set the tooltip tip pointer for connectors
 
 <SfButton Content="Connector TipPointer" OnClick="@TipPointerChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                //Set tooltip
-                Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", ShowTipPointer = true },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
+            //Set tooltip
+            Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", ShowTipPointer = true },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
     }
+
     //Change the TipPointer at run time.
     private void TipPointerChange()
     {
@@ -396,30 +411,31 @@ The following code example illustrates how to add formatted template content to 
         </TooltipTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip(),
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip(),
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
 }
@@ -448,24 +464,24 @@ The following code example illustrates how to add formatted template content to 
         </TooltipTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
-
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                Tooltip = new DiagramTooltip(),
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
+            Tooltip = new DiagramTooltip(),
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
     }
 }
@@ -489,48 +505,50 @@ The following code example illustrates how to set animation for tooltip on nodes
 
 <SfButton Content="Node Animation" OnClick="@AnimationChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Initialize the diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip()
+            {
+                Content = "NodeTooltip",
+                AnimationSettings = new AnimationModel()
                 {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip()
-                {
-                    Content = "NodeTooltip",
-                    AnimationSettings = new AnimationModel()
-                    {
-                        Open = new TooltipAnimationSettings() { Effect = Effect.None },
-                        Close = new TooltipAnimationSettings() { Effect = Effect.None }
-                    }
-                },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                    Open = new TooltipAnimationSettings() { Effect = Effect.None },
+                    Close = new TooltipAnimationSettings() { Effect = Effect.None }
+                }
+            },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
+
     //Change the Animation at run time.
     private void AnimationChange()
     {
         nodes[0].Tooltip.AnimationSettings = new AnimationModel()
-            {
-                Open = new TooltipAnimationSettings() { Effect = Effect.FadeZoomIn, Duration = 100 },
-                Close = new TooltipAnimationSettings() { Effect = Effect.FadeZoomOut, Duration = 50 }
-            };
+        {
+            Open = new TooltipAnimationSettings() { Effect = Effect.FadeZoomIn, Duration = 100 },
+            Close = new TooltipAnimationSettings() { Effect = Effect.FadeZoomOut, Duration = 50 }
+        };
     }
 }
 ```
@@ -547,41 +565,43 @@ The following code example illustrates how to set animation for tooltips on conn
 
 <SfButton Content="Connector Animation" OnClick="@AnimationChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
 
     protected override void OnInitialized()
     {
         //Initialize diagram's connectors collection
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
+            Tooltip = new DiagramTooltip()
             {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                Tooltip = new DiagramTooltip()
+                Content = "ConnectorTooltip",
+                AnimationSettings = new AnimationModel()
                 {
-                    Content = "ConnectorTooltip",
-                    AnimationSettings = new AnimationModel()
-                    {
-                        Open = new TooltipAnimationSettings() { Effect = Effect.None },
-                        Close = new TooltipAnimationSettings() { Effect = Effect.None }
-                    }
-                },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+                    Open = new TooltipAnimationSettings() { Effect = Effect.None },
+                    Close = new TooltipAnimationSettings() { Effect = Effect.None }
+                }
+            },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
     }
+
     //Change the Animation at run time.
     private void AnimationChange()
     {
         connector[0].Tooltip.AnimationSettings = new AnimationModel()
-            {
-                Open = new TooltipAnimationSettings() { Effect = Effect.ZoomIn, Duration = 500 },
-                Close = new TooltipAnimationSettings() { Effect = Effect.ZoomOut, Duration = 500 }
-            };
+        {
+            Open = new TooltipAnimationSettings() { Effect = Effect.ZoomIn, Duration = 500 },
+            Close = new TooltipAnimationSettings() { Effect = Effect.ZoomOut, Duration = 500 }
+        };
     }
 }
 ```
@@ -612,86 +632,90 @@ The following code example illustrates how to set the open mode for tooltips on 
 <SfButton Content="Hide CustomTooltip" OnClick="@hide" />
 
 <SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
+    
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "Auto", OpensOn = "Auto", Position = Position.BottomCenter },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "Auto", OpensOn = "Auto", Position = Position.BottomCenter },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         Node node1 = new Node()
+        {
+            ID = "node2",
+            OffsetX = 250,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                OffsetX = 250,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "Hover", OpensOn = "Hover" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "Hover", OpensOn = "Hover" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         Node node2 = new Node()
+        {
+            ID = "node3",
+            OffsetX = 400,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node3",
-                OffsetX = 400,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "Custom", OpensOn = "Custom" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "Custom", OpensOn = "Custom" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         Node node3 = new Node()
+        {
+            ID = "node4",
+            OffsetX = 550,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node4",
-                OffsetX = 550,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
         nodes.Add(node1);
         nodes.Add(node2);
         nodes.Add(node3);
     }
+
     //Method to show tooltip
     private void show()
     {
         diagram.ShowTooltipAsync(diagram.Nodes[2] as NodeBase);
     }
+    
     //Method to hide tooltip
     private void hide()
     {
@@ -715,58 +739,62 @@ The following code example illustrates how to set the open mode for tooltips on 
 <SfButton Content="Show CustomTooltip" OnClick="@show" />
 <SfButton Content="Hide CustomTooltip" OnClick="@hide" />
 <SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connector" />
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> connector;
     //Refrence the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
+
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         connector = new DiagramObjectCollection<Connector>();
         Connector connectors = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
-                TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
-                Tooltip = new DiagramTooltip() { Content = "Auto", OpensOn = "Auto" },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
+            Tooltip = new DiagramTooltip() { Content = "Auto", OpensOn = "Auto" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         Connector connectors1 = new Connector()
-            {
-                ID = "Connector2",
-                SourcePoint = new DiagramPoint() { X = 300, Y = 200 },
-                TargetPoint = new DiagramPoint() { X = 400, Y = 100 },
-                Tooltip = new DiagramTooltip() { Content = "Hover", OpensOn = "Hover" },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector2",
+            SourcePoint = new DiagramPoint() { X = 300, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 400, Y = 100 },
+            Tooltip = new DiagramTooltip() { Content = "Hover", OpensOn = "Hover" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         Connector connectors2 = new Connector()
-            {
-                ID = "Connector3",
-                SourcePoint = new DiagramPoint() { X = 500, Y = 200 },
-                TargetPoint = new DiagramPoint() { X = 600, Y = 100 },
-                Tooltip = new DiagramTooltip() { Content = "Custom", OpensOn = "Custom" },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector3",
+            SourcePoint = new DiagramPoint() { X = 500, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 600, Y = 100 },
+            Tooltip = new DiagramTooltip() { Content = "Custom", OpensOn = "Custom" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         Connector connectors3 = new Connector()
-            {
-                ID = "Connector4",
-                SourcePoint = new DiagramPoint() { X = 700, Y = 200 },
-                TargetPoint = new DiagramPoint() { X = 800, Y = 100 },
-                Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector4",
+            SourcePoint = new DiagramPoint() { X = 700, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 800, Y = 100 },
+            Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connector.Add(connectors);
         connector.Add(connectors1);
         connector.Add(connectors2);
         connector.Add(connectors3);
     }
+
     //Method to show tooltip
     private void show()
     {
         diagram.ShowTooltipAsync(diagram.Connectors[2] as NodeBase);
     }
+
     //Method to hide tooltip
     private void hide()
     {
@@ -792,32 +820,35 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
+
 <SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
+
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+        };
         nodes.Add(node);
     }
 }
@@ -834,25 +865,28 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
+
 <SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connectors" />
+
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
     //Refrence the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
+    
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
-            {
-                ID = "Connector1",
-                SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
-                TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
-                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true  },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
-            };
+        {
+            ID = "Connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
+            Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true  },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+        };
         connectors.Add(connector);
     }
 }
@@ -874,16 +908,14 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectionSettings="@SelectedModel">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    
     protected override void OnInitialized()
     {
         UserHandle cloneHandle = new UserHandle()
@@ -935,16 +967,14 @@ The following code example demonstrates how to set `IsSticky` property to **true
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectionSettings="@SelectedModel">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    
     protected override void OnInitialized()
     {
         UserHandle cloneHandle = new UserHandle()
@@ -994,7 +1024,7 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -1043,7 +1073,7 @@ The following code example demonstrates how to set `IsSticky` property to true f
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -1090,10 +1120,12 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes"  />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     
     protected override void OnInitialized()
     {
@@ -1172,34 +1204,38 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
+
 <SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
+    
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            Tooltip = new DiagramTooltip() { Content = "NodeContent", IsSticky = true },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
                 {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                Tooltip = new DiagramTooltip() { Content = "NodeContent", IsSticky = true },
-                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
-                Ports = new DiagramObjectCollection<PointPort>()
-                {
-                new PointPort(){
                     ID="Port1",
                     Style = new ShapeStyle(){ Fill = "gray" },
                     Offset = new DiagramPoint() { X = 1, Y = 0.5 },
@@ -1207,8 +1243,8 @@ The following code example demonstrates how to set `IsSticky` property to **true
                     Tooltip = new DiagramTooltip(){ Content = "PortContent" , IsSticky = true},
                     Constraints = PortConstraints.Default | PortConstraints.Draw
                 }
-                },
-            };
+            },
+        };
         nodes.Add(node);
     }
 }

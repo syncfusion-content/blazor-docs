@@ -20,7 +20,6 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Select" OnClick="@OnSelect" />
 <SfButton Content="UnSelect" OnClick="@UnSelect" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
@@ -28,35 +27,35 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
         nodes.Add(node);
     }
 
-    public void OnSelect()
+    private void OnSelect()
     {
         // Select the node
         diagram.Select(new ObservableCollection<IDiagramObject> { diagram.Nodes[0] });
     }
 
-    public void UnSelect()
+    private void UnSelect()
     {
         // clear selection in the diagram
         diagram.ClearSelection();
@@ -83,36 +82,35 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Drag" OnClick="@OnDrag" />
 <SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
         nodes.Add(node);
     }
 
-    public void OnDrag()
+    private void OnDrag()
     {
         // Drag the node
         Diagram.Drag(Diagram.Nodes[0], 10, 10);
@@ -138,36 +136,35 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Resize" OnClick="@OnResize" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
         nodes.Add(node);
     }
 
-    public void OnResize()
+    private void OnResize()
     {
         // Resize the node
         diagram.Scale(diagram.Nodes[0], 0.5, 0.5, new DiagramPoint() { X = 0, Y = 0 });
@@ -194,16 +191,15 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Rotate" OnClick="@OnRotate" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -223,7 +219,7 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
         nodes.Add(node);
     }
 
-    public void OnRotate()
+    private void OnRotate()
     {
         // Rotate the node
         diagram.Rotate(diagram.Nodes[0], diagram.Nodes[0].RotationAngle + 10);
@@ -251,10 +247,13 @@ Use this property when you want to specify the node’s rotation at the time of 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node = new Node()

@@ -24,7 +24,7 @@ Undo and redo commands can be executed through shortcut keys. Shortcut key for u
 The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) methods allow you to programmatically revert or restore changes. The following code example illustrates how to undo/redo the changes through code.
 
 ```cshtml
-SfDiagramComponent Diagram;
+private SfDiagramComponent Diagram;
 
 // Reverts the last action performed.
 diagram.Undo();
@@ -43,7 +43,7 @@ To implement this feature, use the [StartGroupAction](https://help.syncfusion.co
  The following code illustrates how to undo/redo to change multiple elements at a time.
 
 ```cshtml
-SfDiagramComponent diagram;
+private SfDiagramComponent diagram;
 
 //Starts grouping the changes.
 diagram.StartGroupAction();
@@ -63,14 +63,13 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600px" HistoryChanged="@OnHistoryChange">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" HistoryChanged="@OnHistoryChange" />
 
 @code
- {
-    SfDiagramComponent diagram;
+{
+    private SfDiagramComponent diagram;
 
-    public void OnHistoryChange(HistoryChangedEventArgs args)
+    private void OnHistoryChange(HistoryChangedEventArgs args)
     {
         //Causes of history change.
         HistoryChangedAction ActionTrigger = args.ActionTrigger;
@@ -87,17 +86,15 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-<DiagramHistoryManager StackLimit="@stackLimit"></DiagramHistoryManager>
+    <DiagramHistoryManager StackLimit="@stackLimit"></DiagramHistoryManager>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
-    int stackLimit = 3;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private int stackLimit = 3;
 
     protected override void OnInitialized()
     {
@@ -137,18 +134,17 @@ The following code shows how to get the current entry from the diagram history:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
+
 <SfButton Content="GetCurrentEntry" OnClick="@GetCurrentEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
-
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -168,7 +164,8 @@ The following code shows how to get the current entry from the diagram history:
         // Add node.
         nodes.Add(node);
     }
-    public void GetCurrentEntry()
+
+    private void GetCurrentEntry()
     {
         Console.WriteLine(diagram.HistoryManager.CurrentEntry);
     }
@@ -190,13 +187,12 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 <SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">    
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
- {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -246,8 +242,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 @code
  {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -289,7 +285,6 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Diagr
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
@@ -299,12 +294,11 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Diagr
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Intialize diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    string EventValue = string.Empty;
-
-    int stackLimit = 3;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private string EventValue = string.Empty;
+    private int stackLimit = 3;
 
     protected override void OnInitialized()
     {
@@ -312,17 +306,17 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Diagr
         NodeInfo.Add("nodeInfo", "Central Node");
         // A node is created and stored in the nodes collection.
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                AdditionalInfo = NodeInfo
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            AdditionalInfo = NodeInfo
+        };
         // Add node
         nodes.Add(node);
     }
@@ -379,13 +373,12 @@ This feature is useful when want to temporarily restrict users from performing u
 <SfButton Content="Enable Undo/Redo" OnClick="@EnableUndoRedo" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {

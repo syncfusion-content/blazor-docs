@@ -44,9 +44,9 @@ Different flowchart symbols have different meanings that are used to represent v
 @code
 {
     //Initialize diagram component.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize flowchart layout settings.
-    FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
+    private FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchDirection = BranchDirection.LeftInFlow,
         NoBranchDirection = BranchDirection.RightInFlow
@@ -78,6 +78,7 @@ Different flowchart symbols have different meanings that are used to represent v
             }
         }
     }
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -86,6 +87,7 @@ Different flowchart symbols have different meanings that are used to represent v
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -109,8 +111,10 @@ Different flowchart symbols have different meanings that are used to represent v
             };
         }
     }
+
     //Initialize data source collection.
-    public List<ItemInfo> DataSource = new List<ItemInfo>(){
+    private List<ItemInfo> DataSource = new List<ItemInfo>()
+    {
         new ItemInfo()
         {
             Id = "1",
@@ -193,7 +197,8 @@ Different flowchart symbols have different meanings that are used to represent v
                 _Color = "#6CA0DC"
         },
     };
-    public class ItemInfo
+
+    private class ItemInfo
     {
         public string Name { get; set; }
         public string Id { get; set; }
@@ -288,9 +293,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 @code
 {
     //Initialize diagram component.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize flowchart layout settings.
-    FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
+    private FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchValues = new List<string> { "Accept", "Yes" },
         NoBranchValues = new List<string> { "Reject", "No" },
@@ -322,6 +327,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             }
         }
     }
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -330,6 +336,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -353,8 +360,10 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             };
         }
     }
+
     //Initialize data source collection.
-    public List<ItemInfo> DataSource = new List<ItemInfo>(){
+    private List<ItemInfo> DataSource = new List<ItemInfo>()
+    {
         new ItemInfo()
         {
             Id = "1",
@@ -407,7 +416,8 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             _Color = "#6CA0DC"
         },
     };
-    public class ItemInfo
+
+    private class ItemInfo
     {
         public string Name { get; set; }
         public string Id { get; set; }

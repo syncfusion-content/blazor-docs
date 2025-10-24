@@ -25,14 +25,14 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int left = 40;
+    private int top = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -41,7 +41,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
         node.Width = 100;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
-       node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
+        node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -73,7 +73,6 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
         };
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBICjDdzpLQdEPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -88,8 +87,8 @@ A hierarchical layout can also be created from a data source. The following exam
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-  <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing" >
+    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -99,14 +98,14 @@ A hierarchical layout can also be created from a data source. The following exam
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int left = 40;
+    private int top = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -122,7 +121,7 @@ A hierarchical layout can also be created from a data source. The following exam
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
     }
 
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
@@ -130,7 +129,8 @@ A hierarchical layout can also be created from a data source. The following exam
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
@@ -167,17 +167,22 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 Use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
-<SfDiagramComponent Height="600px" Width="500px" >
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Width="500px">
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
 
-// Initializing the orientation value.
-LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-
-public void UpdateOrientation()
+@code
 {
-    // Update LayoutOrientation in runtime.
-    orientation = LayoutOrientation.BottomToTop;
+    // Initializing the orientation value.
+    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+
+    private void UpdateOrientation()
+    {
+        // Update LayoutOrientation in runtime.
+        orientation = LayoutOrientation.BottomToTop;
+    }
 }
 ```
 
@@ -186,21 +191,27 @@ public void UpdateOrientation()
 Adjust the horizontal and vertical spacing for the diagram layout using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
 
-// Initializing the Horizontal and Vertical value.
-int HorizontalSpacing = 40;
-int VerticalSpacing = 50;
-
-// Update the spacing.
-public void UpdateSpacing()
+@code
 {
-    Diagram.BeginUpdate();
-    HorizontalSpacing += 10;
-    VerticalSpacing += 10;
-    Diagram.EndUpdateAsync();
+    // Initializing the Horizontal and Vertical value.
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
+    private SfDiagramComponent diagram;
+
+    // Update the spacing.
+    private void UpdateSpacing()
+    {
+        diagram.BeginUpdate();
+        HorizontalSpacing += 10;
+        VerticalSpacing += 10;
+        diagram.EndUpdateAsync();
+    }
 }
 ```
 
@@ -209,23 +220,29 @@ public void UpdateSpacing()
 Use the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property to create padding around the layout within the viewport. This is useful to keep the tree away from the edges of the diagram.
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
-  <Layout Type="LayoutType.HierarchicalTree">
-     <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
-  </Layout>
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+    <Layout Type="LayoutType.HierarchicalTree">
+        <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
+    </Layout>
 </SfDiagramComponent>
 
-// Initializing the Margin Top and Left value.
-int left = 40;
-int top = 50;
-
-// Update the margin values.
-public void UpdateMargin()
+@code
 {
-    Diagram.BeginUpdate();
-    left += 10;
-    top += 10;
-    Diagram.EndUpdateAsync();
+    // Initializing the Margin Top and Left value.
+    private int left = 40;
+    private int top = 50;
+    private SfDiagramComponent diagram;
+
+    // Update the margin values.
+    private void UpdateMargin()
+    {
+        diagram.BeginUpdate();
+        left += 10;
+        top += 10;
+        diagram.EndUpdateAsync();
+    }
 }
 ```
 

@@ -29,12 +29,14 @@ The following code example shows how to register and get notifications from the 
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+
     // Triggered when the node and connector's labels change in the diagram.
-   private void OnLabelTextChanging(TextChangeEventArgs args)
-   {
-      args.Cancel = true;
-   }
+    private void OnLabelTextChanging(TextChangeEventArgs args)
+    {
+        args.Cancel = true;
+    }
+
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
     private void OnTextChanged(TextChangeEventArgs args)
     {

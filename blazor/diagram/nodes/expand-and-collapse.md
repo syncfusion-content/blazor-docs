@@ -26,8 +26,8 @@ The following code example illustrates how to create icons of various shapes on 
 
 @code
 {
-    DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -76,7 +76,7 @@ The following code example illustrates how to create icons of various shapes on 
                 Fill = "#6BA5D7",
                 StrokeColor = "white"
             },
-             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation()
                 {
@@ -126,24 +126,26 @@ The following code example illustrates how to create an icon of various shapes i
     </Layout>
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
-@code {
 
-    SfDiagramComponent diagram;
-    double top = 50;
-    double bottom = 50;
-    double right = 50;
-    double left = 50;
-    LayoutType type = LayoutType.OrganizationalChart;
-    LayoutOrientation oreintation = LayoutOrientation.TopToBottom;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
-    Orientation subTreeOrientation = Orientation.Vertical;
-    SubTreeAlignmentType subTreeAlignment = SubTreeAlignmentType.Left;
+@code
+{
+    private SfDiagramComponent diagram;
+    private double top = 50;
+    private double bottom = 50;
+    private double right = 50;
+    private double left = 50;
+    private LayoutType type = LayoutType.OrganizationalChart;
+    private LayoutOrientation oreintation = LayoutOrientation.TopToBottom;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
+    private Orientation subTreeOrientation = Orientation.Vertical;
+    private SubTreeAlignmentType subTreeAlignment = SubTreeAlignmentType.Left;
     private string FixedNode = null;
+
     //private DiagramRect bounds = new Rect(200, 200, 500, 500);
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
@@ -151,7 +153,8 @@ The following code example illustrates how to create an icon of various shapes i
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
@@ -173,6 +176,7 @@ The following code example illustrates how to create an icon of various shapes i
         new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
         new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
     };
+
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         if (rows == 0)
@@ -205,7 +209,9 @@ The following code example illustrates how to create an icon of various shapes i
         }
         return options;
     }
+
     private int rows = 0;
+
     private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -226,18 +232,19 @@ The following code example illustrates how to create an icon of various shapes i
             }
         };
         node.ExpandIcon = new DiagramExpandIcon()
-            {
-                Shape = DiagramExpandIcons.Minus,
-                Height = 20,
-                Width = 20,
-            };
+        {
+            Shape = DiagramExpandIcons.Minus,
+            Height = 20,
+            Width = 20,
+        };
         node.CollapseIcon = new DiagramCollapseIcon()
-            {
-                Shape = DiagramCollapseIcons.Plus,
-                Height = 20,
-                Width = 20,
-            };
+        {
+            Shape = DiagramCollapseIcons.Plus,
+            Height = 20,
+            Width = 20,
+        };
     }
+
     private void ConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
@@ -274,9 +281,9 @@ The following code explains how to initialize the icon with a path shape.
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -337,11 +344,11 @@ The following code explains how to initialize the icon with a path shape.
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }
@@ -366,9 +373,9 @@ The following code explains how to change the appearance of the Icon using `Fill
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -398,7 +405,7 @@ The following code explains how to change the appearance of the Icon using `Fill
                 Width = 20,
                 PathData = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z",
                 CornerRadius = 10,
-                Fill = "Gray",             
+                Fill = "Gray",
             },
             CollapseIcon = new DiagramCollapseIcon()
             {
@@ -444,11 +451,11 @@ The following code explains how to change the appearance of the Icon using `Fill
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }
@@ -468,8 +475,9 @@ The following code explains how to change the icon appearance using the `CornerR
 
 @code
 {
-    DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -520,7 +528,7 @@ The following code explains how to change the icon appearance using the `CornerR
                 Fill = "#6BA5D7",
                 StrokeColor = "white"
             },
-             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation()
                 {
@@ -595,9 +603,10 @@ The following table shows the relationship between the Icon position and Icon Of
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -674,11 +683,11 @@ The following table shows the relationship between the Icon position and Icon Of
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }
@@ -698,30 +707,31 @@ To implement a custom template for expand and collapse icons, please refer to th
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
     <DiagramTemplates>
-            <DiagramExpandIconTemplate>
-                    @{
-                    <div style="height: 100%; width: 100%">
-                        <input type="button" value="Collapse" />
-                    </div>
-                    } 
-            </DiagramExpandIconTemplate>
-            <DiagramCollapseIconTemplate>
-                    @{
-                    <div style="height: 100%; width: 100%">
-                        <input type="button" value="Expand" />
-                    </div>
-                    } 
-            </DiagramCollapseIconTemplate>
-        </DiagramTemplates>
-    </SfDiagramComponent>
-        
-    @code {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+        <DiagramExpandIconTemplate>
+            @{
+                <div style="height: 100%; width: 100%">
+                    <input type="button" value="Collapse" />
+                </div>
+             }
+        </DiagramExpandIconTemplate>
+        <DiagramCollapseIconTemplate>
+            @{
+                <div style="height: 100%; width: 100%">
+                    <input type="button" value="Expand" />
+                </div>
+             }
+        </DiagramCollapseIconTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
+
+@code
+{
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>(){};
+        nodes = new DiagramObjectCollection<Node>() { };
         Node node1 = new Node()
         {
             ID = "node1",
@@ -775,8 +785,8 @@ To implement a custom template for expand and collapse icons, please refer to th
                 }
             },
             ExpandIcon = new DiagramExpandIcon()
-            { 
-                
+            {
+
                 Shape = DiagramExpandIcons.Template,
                 Height = 20,
                 Width = 20,
@@ -790,11 +800,11 @@ To implement a custom template for expand and collapse icons, please refer to th
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }
@@ -819,9 +829,10 @@ The following code shows how to set the `Padding` property of expand or collapse
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -850,12 +861,13 @@ The following code shows how to set the `Padding` property of expand or collapse
                 Height = 20,
                 Width = 20,
                 Fill = "Gray",
-                   Padding = new DiagramThickness(){
-                Top = 1,
-                Bottom = 1,
-                Left = 1,
-                Right = 1,
-                },  
+                Padding = new DiagramThickness()
+                {
+                    Top = 1,
+                    Bottom = 1,
+                    Left = 1,
+                    Right = 1,
+                },
                 BorderColor = "Blue",
                 BorderWidth = 3,
             },
@@ -866,12 +878,13 @@ The following code shows how to set the `Padding` property of expand or collapse
                 Width = 20,
                 Fill = "Gray",
                 BorderColor = "Blue",
-                   Padding = new DiagramThickness(){
-                Top = 1,
-                Bottom = 1,
-                Left = 1,
-                Right = 1,
-                },   
+                Padding = new DiagramThickness()
+                {
+                    Top = 1,
+                    Bottom = 1,
+                    Left = 1,
+                    Right = 1,
+                },
                 BorderWidth = 3,
             },
         };
@@ -910,11 +923,11 @@ The following code shows how to set the `Padding` property of expand or collapse
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }
@@ -935,9 +948,10 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -966,13 +980,13 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
                 Height = 20,
                 Width = 20,
                 Fill = "Gray",
-               Margin = new DiagramThickness()
+                Margin = new DiagramThickness()
                 {
                     Top = 5,
                     Bottom = 5,
                     Left = 5,
                     Right = 5,
-                }, 
+                },
                 BorderColor = "Blue",
                 BorderWidth = 3,
             },
@@ -983,13 +997,13 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
                 Width = 20,
                 Fill = "Gray",
                 BorderColor = "Blue",
-               Margin = new DiagramThickness()
+                Margin = new DiagramThickness()
                 {
                     Top = 5,
                     Bottom = 5,
                     Left = 5,
                     Right = 5,
-                },    
+                },
                 BorderWidth = 3,
             },
         };
@@ -1028,11 +1042,11 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
         };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            }; 
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
 }

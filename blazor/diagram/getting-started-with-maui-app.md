@@ -87,7 +87,6 @@ namespace MauiBlazorWindow;
             builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
-
             return builder.Build();
         }
     }
@@ -131,12 +130,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 @code
 {
-    SfDiagramComponent diagram;
-    int connectorCount = 0;
+    private SfDiagramComponent diagram;
+    private int connectorCount = 0;
     //Defines Diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Defines Diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -349,7 +348,6 @@ namespace MauiBlazorWindow;
             builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
-
             return builder.Build();
         }
     }
@@ -393,12 +391,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 @code
 {
-    SfDiagramComponent diagram;
-    int connectorCount = 0;
+    private SfDiagramComponent diagram;
+    private int connectorCount = 0;
     //Defines Diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Defines Diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {

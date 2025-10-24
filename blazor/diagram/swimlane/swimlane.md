@@ -25,23 +25,27 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
         {
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
         };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
@@ -86,12 +90,12 @@ The following code example explains how to define the swimlane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -106,28 +110,32 @@ The following code example explains how to define the swimlane header.
                 },
                 Height = 50,
             },
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
         };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
-             swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-             foreach (Phase phase in swimlane.Phases)
-             {
-                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
-             foreach (Lane lane in swimlane.Lanes)
-             {
-                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
         }
     }
 }
@@ -152,7 +160,7 @@ The following code example explains how to customize a swimlane header.
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -164,7 +172,7 @@ The following code example explains how to customize a swimlane header.
                 Annotation = new ShapeAnnotation()
                 {
                     Content = "SALES PROCESS FLOW CHART",
-                    Style = new TextStyle(){Color = "White", FontSize = 12, Bold = true, Italic = true, TextDecoration = TextDecoration.Underline}
+                    Style = new TextStyle() { Color = "White", FontSize = 12, Bold = true, Italic = true, TextDecoration = TextDecoration.Underline }
                 },
                 Height = 50,
                 Style = new TextStyle()
@@ -172,22 +180,26 @@ The following code example explains how to customize a swimlane header.
                     Fill = "Teal"
                 }
             },
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
         };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
             foreach (Phase phase in swimlane.Phases)
             {
-               phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
             }
             foreach (Lane lane in swimlane.Lanes)
             {
-               lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
             }
         }
     }
@@ -232,7 +244,7 @@ The following code example explains how to define a Swimlane header annotation t
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -294,14 +306,17 @@ The following code example explains how to set the orientation of the swimlane.
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private iagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
         {
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
             Orientation = Orientation.Horizontal,
         };
         // Add swimlane.
@@ -329,14 +344,17 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <!-- Diagram component rendering a swimlane layout -->
-<SfDiagramComponent Height="600px" Width="90%" Swimlanes="@swimlaneCollections">
-</SfDiagramComponent>
-@code {
+<SfDiagramComponent Height="600px" Width="90%" Swimlanes="@swimlaneCollections" />
+
+@code
+{
     /// <summary>
     /// Collection of swimlanes used in the SfDiagramComponent.
     /// </summary>
-    DiagramObjectCollection<Swimlane> swimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> swimlaneCollections = new DiagramObjectCollection<Swimlane>();
+
     /// <summary>
     /// Initializes the swimlane, phases, lanes, and child nodes for the diagram.
     /// </summary>
@@ -344,22 +362,22 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
     {
         // Define the first node
         Node node1 = new Node()
-            {
-                ID = "node1",
-                Height = 100,
-                Width = 100,
-                OffsetX = 100,
-                OffsetY = 100,
-            };
+        {
+            ID = "node1",
+            Height = 100,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+        };
         // Define the second node
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Height = 100,
-                Width = 100,
-                OffsetX = 300,
-                OffsetY = 100,
-            };
+        {
+            ID = "node2",
+            Height = 100,
+            Width = 100,
+            OffsetX = 300,
+            OffsetY = 100,
+        };
         // Create swimlane structure
         swimlaneCollections = new DiagramObjectCollection<Swimlane>()
         {
@@ -380,7 +398,7 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
                 {
                     new Phase()
                     {
-                        
+
                         Header = new SwimlaneHeader()
                         {
                             Annotation = new ShapeAnnotation()
@@ -393,7 +411,7 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
                 },
                 Lanes = new DiagramObjectCollection<Lane>()
                 {
-                    
+
                     new Lane()
                     {
                         Header = new SwimlaneHeader()
