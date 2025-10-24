@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Dropdown Menu component and much more.
+title: Item template in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn here all about Item template in Syncfusion Blazor Dropdown Menu component and much more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -54,16 +54,12 @@ The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
         new DropDownMenuItem { Separator = true },
         new DropDownMenuItem { Text = "Syncfusion", IconCss = "e-icons e-mouse-pointer", Url = "http://www.syncfusion.com" }
     };
-<<<<<<< HEAD
-=======
 
->>>>>>> 01bf62499b5e13b5b729ee669b8eefc73611b136
     private void ItemSelected(MenuEventArgs args)
     {
         var selectedItem = args.Item;
     }
 }
-
 
 ```
 
