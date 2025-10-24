@@ -72,7 +72,6 @@ Enables user-driven control through filtering, toolbar actions, drag-and-drop, c
 **8. Performance**
 Optimizes rendering and responsiveness through virtual scrolling, loading animations, and read-only configurations for handling large datasets effectively.
   * [Virtual Scrolling](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization): Enhances rendering efficiency by loading only the visible rows during scroll operations, which significantly improves responsiveness when handling large datasets.
-  * [Shimmer Effect](https://ej2.syncfusion.com/angular/documentation/gantt/loading-animation): Displays a loading animation while data is being fetched or rendered. 
 
 **9. Globalization**
 Supports internationalization and accessibility through localization, right-to-left layout rendering, and compliance with accessibility standards like WCAG and ADA.
@@ -85,5 +84,5 @@ Enables structured data export to Excel, CSV, and PDF formats, and provides even
   * **Export:**  
     * [Excel and CSV](https://blazor.syncfusion.com/documentation/gantt-chart/excel-export): Enables exporting Gantt chart data to Excel and CSV formats, simplifying structured data handling for reporting and offline analysis.  
     * [PDF](https://blazor.syncfusion.com/documentation/gantt-chart/pdf-export): Allows exporting the chart as a PDF document, with support for single-page layout to generate compact and printable visual summaries.
-  * [Event Hooks](https://blazor.syncfusion.com/documentation/gantt-chart/events): Provides lifecycle events that enable customization of chart behavior during rendering, editing, and user interactions (e.g., dataBound, taskbarEdited).
+  * [Event Hooks](https://blazor.syncfusion.com/documentation/gantt-chart/events): Provides lifecycle events that enable customization of chart behavior during rendering, editing, and user interactions (e.g., DataBound, TaskbarEdited).
 
