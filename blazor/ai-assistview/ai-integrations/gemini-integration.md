@@ -61,7 +61,7 @@ Nuget\Install-Package Markdig
 
 Modify the razor file to integrate the Gemini AI with the AI AssistView component.
 
-* update your Gemini API key securely in the configuration:
+* Update your Gemini API key securely in the configuration:
 
 ```bash
 
