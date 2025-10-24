@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart Performance Optimization Guide
+title: Syncfusion Blazor Gantt Chart Performance Optimization Guide
 description: Learn how to optimize the loading and rendering performance of the Syncfusion Blazor Gantt Chart component, especially when working with large datasets.
 platform: Blazor
 control: Gantt Chart
