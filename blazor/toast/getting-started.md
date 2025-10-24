@@ -79,14 +79,20 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open `~/_Imports.razor` and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Notifications` namespaces:
 
-```razor
+{% tabs %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in `~/Program.cs` of the Blazor WebAssembly app:
 
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
+
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
@@ -99,7 +105,10 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
-```
+....
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
@@ -119,7 +128,9 @@ N> See the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearanc
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toast component to `~/Pages/Index.razor`:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <div class="col-lg-12 control-section toast-default-section">
     <SfToast ID="toast_default" @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
         <ToastPosition X="@ToastPosition"></ToastPosition>
@@ -159,7 +170,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toast component 
         await ToastObj.HideAsync("All");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Launch the application with <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS). The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toast component renders in the default web browser.
 
