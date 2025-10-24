@@ -309,3 +309,139 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 
 {% endtabs %}
+
+## Ignore accents and Ignore case in search
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid search functionality enables precise control over case and accent sensitivity for enhanced search accuracy. By default, searches are case-sensitive and accent-sensitive, requiring exact matches for diacritic characters (e.g., "José" vs. "Jose"). To simplify searching in multilingual or varied-case datasets, enable IgnoreCase with the [TreeGridSearchSettings.IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property set to `true`. Similarly, enable IgnoreAccent search by setting the [TreeGridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreAccent) property to `true`, which ignores diacritic characters for non-ASCII text. These properties apply only to the search bar functionality and can be combined for fully insensitive searches.
+
+The following example demonstrates how to configure the `IgnoreAccent` and `IgnoreCase` property within the `TreeGridSearchSettings` of the TreeGrid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<PageTitle>TreeGrid Accent-Insensitive Filtering</PageTitle>
+<div class="container mt-4">
+    <SfButton OnClick="CaseSensitivity">Ignore Case</SfButton>
+    <SfButton OnClick="IgnoreAccentCase">Ignore Accent</SfButton><br />
+    <br />
+    <span>Ignore Case : <b>@CaseSensitive</b></span> -----
+    <span>Ignore Accent : <b>@IgnoreAccent</b></span>
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true" AllowSorting="true" AllowReordering AllowResizing
+                Toolbar="@(new List<string>() { "Search" })">
+        <TreeGridSearchSettings IgnoreAccent="@IgnorAeccent" IgnoreCase="@CaseSensitive"></TreeGridSearchSettings>
+        <TreeGridColumns>
+            <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" IsPrimaryKey />
+            <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+            <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+            <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+            <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="d" Width="130" />
+            <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140" />
+        </TreeGridColumns>
+        <TreeGridEditSettings AllowAdding AllowDeleting AllowEditing></TreeGridEditSettings>
+    </SfTreeGrid>
+</div>
+@code {
+    private List<TreeTask> TreeData = new();
+    public bool CaseSensitive = true;
+    public bool IgnoreAccent = false;
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = GetTreeTasks();
+    }
+    public void CaseSensitivity()
+    {
+        CaseSensitive = !CaseSensitive;
+    }
+    public void IgnoreAccentCase()
+    {
+        IgnoreAccent = !IgnoreAccent;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+{% endhighlight %}
+{% highlight c# tabtitle="TreeTask.cs" %}
+public class TreeTask
+{
+    public int TaskID { get; set; }
+    public string TaskName { get; set; } = string.Empty;
+    public string ResourceName { get; set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
+    public DateTime StartDate { get; set; }
+    public int Duration { get; set; }
+    public int? ParentID { get; set; }
+    public static List<TreeTask> GetTreeTasks() => new()
+    {
+        new TreeTask
+        {
+            TaskID = 1,
+            TaskName = "Market Analysis",
+            ResourceName = "José Álvarez",
+            City = "Sevilla",
+            StartDate = new DateTime(2024, 1, 2),
+            Duration = 5,
+            ParentID = null
+        },
+        new TreeTask
+        {
+            TaskID = 2,
+            TaskName = "Competitor Review",
+            ResourceName = "Zoë Brontë",
+            City = "São Paulo",
+            StartDate = new DateTime(2024, 1, 3),
+            Duration = 3,
+            ParentID = 1
+        },
+        new TreeTask
+        {
+            TaskID = 3,
+            TaskName = "Focus Group",
+            ResourceName = "François Dœuf",
+            City = "Montréal",
+            StartDate = new DateTime(2024, 1, 4),
+            Duration = 2,
+            ParentID = 1
+        },
+        new TreeTask
+        {
+            TaskID = 4,
+            TaskName = "Product Design",
+            ResourceName = "Mårten Šedý",
+            City = "Göteborg",
+            StartDate = new DateTime(2024, 1, 5),
+            Duration = 6,
+            ParentID = null
+        },
+        new TreeTask
+        {
+            TaskID = 5,
+            TaskName = "UX Workshop",
+            ResourceName = "Anaïs Löhn",
+            City = "München",
+            StartDate = new DateTime(2024, 1, 6),
+            Duration = 4,
+            ParentID = 4
+        },
+        new TreeTask
+        {
+            TaskID = 6,
+            TaskName = "Prototype Testing",
+            ResourceName = "Renée Faßbinder",
+            City = "Zürich",
+            StartDate = new DateTime(2024, 1, 8),
+            Duration = 3,
+            ParentID = 4
+        }
+    };
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhyWDrKzehSGMkz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * This feature ignores accents for both searching and filtering operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid when using an `IEnumerable` data source.
+> * This feature works only for characters outside the ASCII range.
