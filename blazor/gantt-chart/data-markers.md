@@ -13,13 +13,13 @@ Data markers are visual indicators that highlight significant events, milestones
 
 Data markers utilize specific properties to define their appearance, positioning, and interactive behavior within task timelines:
 
-**Date specification**: The [date](https://ej2.syncfusion.com/angular/documentation/api/gantt/iIndicator/#date) property establishes the exact timeline position where the marker appears. This date value determines marker placement relative to the task's start and end dates, ensuring accurate event representation.
+**Date specification**: The [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html#Syncfusion_Blazor_Gantt_GanttIndicator_Date) property establishes the exact timeline position where the marker appears. This date value determines marker placement relative to the task's start and end dates, ensuring accurate event representation.
 
-**Visual styling**: The [iconClass](https://ej2.syncfusion.com/angular/documentation/api/gantt/iIndicator/#iconclass) property defines the CSS class that controls marker visual appearance. This property enables custom styling through icon fonts, background images, or CSS-based graphics to distinguish different marker types.
+**Visual styling**: The [IconClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html#Syncfusion_Blazor_Gantt_GanttIndicator_IconClass) property defines the CSS class that controls marker visual appearance. This property enables custom styling through icon fonts, background images, or CSS-based graphics to distinguish different marker types.
 
-**Identification**: The [name](https://ej2.syncfusion.com/angular/documentation/api/gantt/iIndicator/#name) property provides unique identification for each marker. This name serves as an internal reference and can be used for programmatic marker manipulation or event handling.
+**Identification**: The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html#Syncfusion_Blazor_Gantt_GanttIndicator_Name) property provides unique identification for each marker. This name serves as an internal reference and can be used for programmatic marker manipulation or event handling.
 
-**Interactive content**: The [tooltip](https://ej2.syncfusion.com/angular/documentation/api/gantt/iIndicator/#tooltip) property supplies descriptive text that displays when users hover over markers. This property enhances user experience by providing detailed context about marker significance and related event information.
+**Interactive content**: The [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html#Syncfusion_Blazor_Gantt_GanttIndicator_Tooltip) property supplies descriptive text that displays when users hover over markers. This property enhances user experience by providing detailed context about marker significance and related event information.
 
 **Tooltip Rendering Requirements**: Data marker tooltips render only when the tooltip property contains valid content values. Empty or undefined tooltip properties result in no tooltip display, maintaining clean visual presentation for markers without additional descriptions.
 
@@ -29,23 +29,10 @@ Data markers represent schedule events for specific tasks through visual indicat
 
 **Data structure requirements**: Data markers are defined in the data source as arrays of objects containing marker specifications. Each marker object includes date information, visual styling, identification details, and optional tooltip content for enhanced user interaction.
 
-**Mapping configuration**: The marker array connects to the Gantt component through the [taskFields.indicators](https://ej2.syncfusion.com/angular/documentation/api/gantt/taskFields/#indicators) property mapping. This configuration establishes the relationship between data source marker definitions and component rendering logic.
+**Mapping configuration**: The marker array connects to the Gantt component through the [GanttTaskFields.Indicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Indicators) property mapping. This configuration establishes the relationship between data source marker definitions and component rendering logic.
 
 **Multiple marker support**: Tasks can display multiple data markers simultaneously, allowing comprehensive event tracking within individual task contexts. Each marker maintains independent configuration while sharing the same task timeline space.
 The following implementation demonstrates comprehensive data marker integration within a Gantt chart, showcasing multiple markers per task with varied styling and tooltip configurations:
-
-[Data markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html) are a set of events used to represent the schedule events for a task. Data markers are defined in data source as array of objects, and this value is mapped to the Gantt Chart component using the `GanttTaskFields.Indicators` property. You can represent more than one data marker in a task.
-
-Data markers can be defined using the following properties:
-
-* `Date` : Defines the date of indicator.
-* `IconClass` : Defines the icon class of indicator.
-* `Name` : Defines the name of indicator.
-* `Tooltip` : Defines the tooltip of indicator.
-
-N> Data Marker `Tooltip` will be rendered only if tooltip property has value.
-
-The following code example demonstrates how to implement data markers in the Gantt chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
