@@ -362,8 +362,6 @@ The following example demonstrates how to configure the `IgnoreAccent` and `Igno
     }
 
 {% endhighlight %}
-{% endtabs %}
-{% endhighlight %}
 {% highlight c# tabtitle="TreeTask.cs" %}
 public class TreeTask
 {
