@@ -22,7 +22,7 @@ Keyboard navigation support enables users to interact with controls using keyboa
 * [Combobox](./combobox/accessibility)
 * [DatePicker](./datepicker/accessibility)
 * [Dialog](./dialog/accessibility)
-* [DropDownList](./drop-down-list/accessibility)
+* [DropDownList](./dropdown-list/getting-started)
 * [Grid](./datagrid/accessibility)
 * [LinearGauge](./linear-gauge/accessibility)
 * [ListView](./listview/accessibility)
