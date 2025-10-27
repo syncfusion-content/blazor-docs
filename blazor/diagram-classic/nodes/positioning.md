@@ -77,7 +77,7 @@ The following code shows how to change the `Pivot` value.
 
 The diagram Provides support to flip the node. [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Flip) is performed to give the mirrored image of the original element.
 
-* [The Flip is also applicable for connectors](../connectors#flip)
+* [The Flip is also applicable for connectors](./flip)
 
 The flip types are as follows:
 
