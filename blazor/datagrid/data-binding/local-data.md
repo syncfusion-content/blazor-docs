@@ -1852,5 +1852,4 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 ## See also
 
-* [How to import data from Excel sheet and bind to Blazor Grid](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
 * [How to clear all Data from Grid](https://www.syncfusion.com/forums/150965/how-to-clear-all-data-from-grid)
