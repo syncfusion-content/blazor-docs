@@ -315,10 +315,6 @@ Custom sorting in this TreeGrid example enhances project management by allowing 
     .e-treegrid .e-rowcell {
         border-bottom: 1px solid #e0e0e0;
     }
-
-    .e-rowcell[aria-colindex="7"] {
-        font-weight: 500;
-    }
 </style>
 
 @code {

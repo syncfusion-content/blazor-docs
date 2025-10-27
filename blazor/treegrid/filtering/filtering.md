@@ -419,7 +419,7 @@ namespace TreeGridComponent.Data {
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid provides precise control over filtering behavior. to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property of [TreeGridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows filtering to ignore diacritic characters or accents by setting the [IgnoreAccent] property to **true**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows filtering to ignore diacritic characters or accents by setting the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
 
 Below is an example code demonstrating how to enable or disable case sensitivity during filtering operations:
 
