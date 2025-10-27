@@ -1496,4 +1496,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to add the symbol to the diagram](./nodes)
+* [How to add the symbol to the diagram](./symbol-palette)

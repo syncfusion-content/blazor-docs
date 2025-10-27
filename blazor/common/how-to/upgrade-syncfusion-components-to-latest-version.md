@@ -37,7 +37,7 @@ N> For production purpose and minimal requirement, Syncfusion<sup style="font-si
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/?type=breaking-changes) for our Blazor components.
+Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/28.1.33?type=all) for our Blazor components.
 
 ## Cache problem
 
