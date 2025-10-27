@@ -187,7 +187,7 @@ The following code explains how to add a node with an annotation at runtime by u
 
 ## How to Add a Node to the Palette
 
-Nodes can be predefined and added to the symbol palette, then dragged and dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
+Nodes can be predefined and added to the symbol palette, then dragged and dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette/symbol-palette).
 
 * Once you drag a node/connector from the palette to the diagram, the following events for customization.
 * When a symbol is dragged into a diagram from the symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters the diagram from the symbol palette.

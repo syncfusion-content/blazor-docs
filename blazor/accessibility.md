@@ -15,7 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript UI controls foll
 
 Keyboard navigation support enables users to interact with controls using keyboard shortcuts. Each control has its own set of shortcuts, refer the following documents to get the details of each control.
 
-* [AutoComplete](./auto-complete/accessibility)
+* [AutoComplete](./autocomplete/accessibility)
 * [Calendar](./calendar/accessibility)
 * [Chart](./chart/accessibility)
 * [CircularGauge](./circular-gauge/accessibility)
