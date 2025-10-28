@@ -852,7 +852,7 @@ You can customize the backstage menu items and their content using the [Template
     {
         if (backstageMenus.TryGetValue(id, out var menuItem))
         {
-            selectedContent = menuItem.name;
+            selectedContent = menuItem.name.ToLowerInvariant();
         }
     }
 
@@ -863,16 +863,22 @@ You can customize the backstage menu items and their content using the [Template
         new DropDownMenuItem{ Text = "Keep Text Only" }
     };
 
-        RenderFragment GetBackstageContent(string item) => item switch
+     private RenderFragment RenderWrapperContent(string icon, string name, string description) => @<div class="section-content">
+        <span class="e-icons @icon doc_icon"></span>
+        <span>@name</span>
+        <div class="desc" style="font-size:12px;color:#555;margin-left:26px;">@description</div>
+    </div>;
+
+        RenderFragment GetBackstageContent(string item) => (item ?? string.Empty).ToLowerInvariant() switch
     {
-        "New" => @<div class="new-wrapper" style="padding: 20px;">
+        "new" => @<div class="new-wrapper" style="padding: 20px;">
         <div class="section-title">New</div>
         <div class="category_container">
             <div class="doc_category_image"></div>
             <span class="doc_category_text">New document</span>
         </div>
     </div>,
-        "Open" => @<div class="block-wrapper">
+        "open" => @<div class="block-wrapper">
         <div class="section-title">Recent</div>
         @{
     var recentDocuments = new List<(string icon, string name, string description)>
@@ -886,7 +892,7 @@ You can customize the backstage menu items and their content using the [Template
         @RenderWrapperContent(doc.icon, doc.name, doc.description)
     }
     </div>,
-        "Save" => @<div class="block-wrapper">
+        "save" => @<div class="block-wrapper">
         <div class="section-title">Save</div>
         @{
     var saveItems = new List<(string icon, string name, string description)>
