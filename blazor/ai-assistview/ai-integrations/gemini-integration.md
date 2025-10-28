@@ -23,7 +23,7 @@ Before starting, ensure you have the following:
 
 ## Set Up the AI AssistView Component
 
-Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
+Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
