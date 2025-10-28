@@ -7,9 +7,9 @@ control: Common
 documentation: ug
 ---
 
-# Download and Installation
+# Download and Installation in VS Code Extension
 
-Syncfusion publishes the Visual Studio Code extension in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions). Install it directly from Visual Studio Code or download it from the Marketplace and install locally.
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions). Install it directly from Visual Studio Code or download it from the Marketplace and install locally.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Install the following prerequisites to install the Syncfusion<sup style="font-si
 
 - [Visual Studio Code 1.29.0 or later](https://code.visualstudio.com/download)
 - [Visual Studio 2022 ](https://visualstudio.microsoft.com/vs/) or later
-- [.NET SDK 8.0 or 9.0](https://dotnet.microsoft.com/download)
+- [.NET SDK 8.0 or 9.0](https://dotnet.microsoft.com/en-us/download)
 - [C# extension]((https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)).
 
 ## Install through the Visual Studio Code Extensions
@@ -37,7 +37,7 @@ The steps below describe how to install the Syncfusion<sup style="font-size:70%"
 
 6. Now, you can create a new Syncfusion® Blazor application by using the Syncfusion® Blazor extensions from the Visual Studio Code Palette Find the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio: Launch** from Visual Studio Code commands to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
-     ![Command Palette showing Syncfusion Blazor Template Studio: Launch](images/CreateProjectPalette.png)
+     ![Command Palette showing Syncfusion Blazor Template Studio](images/CreateProjectPalette.png)
 
 ## Install from the Visual Studio Code Marketplace
 
@@ -52,7 +52,7 @@ The steps below describe how to download and install the extension from the Visu
 
 5. Now, you can create a new Syncfusion® Blazor application by using the Syncfusion® Blazor extensions from the Visual Studio Code Palette Find the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio: Launch** from Visual Studio Code commands to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
-     ![Command Palette showing Syncfusion Blazor Template Studio: Launch](images/CreateProjectPalette.png)
+     ![Command Palette showing Syncfusion Blazor Template Studio](images/CreateProjectPalette.png)
 
 ## Manually Installing an Extension in Visual Studio Code
 

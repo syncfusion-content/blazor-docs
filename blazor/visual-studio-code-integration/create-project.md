@@ -92,7 +92,7 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
      ![Configuration panel showing interactivity options for Blazor Web App](images/WebApp.png)
 
-     For the **Blazor WebAssembly App** appllication type, the Progressive Web Application option can be enabled or disabled.
+     For the **Blazor WebAssembly App** application type, the Progressive Web Application option can be enabled or disabled.
 
      ![Configuration panel showing PWA option for Blazor WebAssembly](images/WebAssembly.png)
 
