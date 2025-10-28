@@ -75,7 +75,7 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
     private void OnClick(ClickEventArgs args)
     {
-
+        // Actions to be performed
     }
 }
 ```
@@ -113,7 +113,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 
     private void OnKeyDown(KeyEventArgs args)
     {
-
+        // Actions to be performed
     }
 }
 ```
@@ -150,7 +150,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
     private void OnKeyUp(KeyEventArgs args)
     {
-
+        // Actions to be performed
     }
 }
 ```
@@ -196,7 +196,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         TNodes.Add(TNode2);
         Palettes = new DiagramObjectCollection<Palette>()
         {
-        new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+            new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
         };
     }
 

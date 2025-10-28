@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Connector Events in Diagram Component
 
 ## How to Handle Selection Change Event
 

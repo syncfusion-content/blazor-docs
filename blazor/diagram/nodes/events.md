@@ -427,8 +427,10 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         nodes.Add(node);
     }
 
+    //Notify the mouse enter event.
     private void OnMouseEnter(DiagramElementMouseEventArgs args)
     {
+        // Actions to be performed
     }
 }
 ```
@@ -464,8 +466,10 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         nodes.Add(node);
     }
 
+    //Notify the mouse leave event.
     private void OnMouseLeave(DiagramElementMouseEventArgs args)
     {
+        // Actions to be performed
     }
 }
 ```
@@ -501,8 +505,10 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         nodes.Add(node);
     }
 
+    //Notify the mouse hover event.
     private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
+        // Actions to be performed
     }
 }
 ```

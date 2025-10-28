@@ -326,7 +326,7 @@ The DiagramSelectionSettings provides access to:
         ConnectorCollection.Add(connector1);
     }
 
-    //Event to notify selection changing event after selected the nodes/conenctors in diagram.
+    //Event to notify selection changed event after selected the nodes/conenctors in diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         if (diagram.SelectionSettings.Nodes.Count > 0)
@@ -345,8 +345,7 @@ The DiagramSelectionSettings provides access to:
     private void GetSelectionInfo()
     {
         // Get selected nodes
-        var selectedNodes = diagram.SelectionSettings.Nodes;
-        foreach (var node in selectedNodes)
+        foreach (Node node in diagram.SelectionSettings.Nodes)
         {
             Console.WriteLine($"Selected Node ID: {node.ID}");
             Console.WriteLine($"Node OffsetX: {node.OffsetX}");
@@ -357,8 +356,7 @@ The DiagramSelectionSettings provides access to:
         }
 
         // Get selected connectors
-        var selectedConnectors = diagram.SelectionSettings.Connectors;
-        foreach (var connector in selectedConnectors)
+        foreach (Connector connector in diagram.SelectionSettings.Connectors)
         {
             Console.WriteLine($"Selected Connector ID: {connector.ID}");
             Console.WriteLine($"Connector SourcePoint: X={connector.SourcePoint.X}, Y={connector.SourcePoint.Y}");
@@ -1053,6 +1051,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
         nodes.Add(node);
     }
 
+    //Event to notify when a mouse button is clicked on the diagram.
     private void OnClick(ClickEventArgs args)
     {
         Console.WriteLine("Button", args.Button);

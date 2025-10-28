@@ -780,9 +780,9 @@ The diagram component offers a search functionality within the symbol palette. B
         CreateConnector("link6", ConnectorSegmentType.Bezier, DecoratorShape.Arrow);
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
-           new Palette(){Symbols = FlowShapes,Title = "Flow Shapes", ID = "Flow Shapes" },
-            new Palette(){Symbols = Connectors,Title = "Connector", ID = "Connector" },
+            new Palette(){ Symbols = PaletteNodes, Title = "Basic Shapes", ID = "Basic Shapes" },
+            new Palette(){ Symbols = FlowShapes, Title = "Flow Shapes", ID = "Flow Shapes" },
+            new Palette(){ Symbols = Connectors, Title = "Connector", ID = "Connector" },
         };
     }
 
@@ -881,7 +881,7 @@ The [SearchTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         CreatePaletteNode(NodeBasicShapes.Star, "Star");
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+           new Palette(){ Symbols = PaletteNodes, Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
         
@@ -963,7 +963,7 @@ Use the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+           new Palette(){Symbols = PaletteNodes, Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
         
@@ -1038,7 +1038,7 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+           new Palette(){ Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
 
@@ -1191,7 +1191,7 @@ Customize the appearance of symbols using [SymbolPaletteTemplates](https://help.
 
         Palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =Symbols, Title="Template Shape" },
+            new Palette() { Symbols = Symbols, Title = "Template Shape" },
         };
     }
 }

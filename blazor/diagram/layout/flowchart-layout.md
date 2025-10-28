@@ -65,7 +65,7 @@ Different flowchart symbols have different meanings that are used to represent v
                 {
                     if (itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id) != -1)
                     {
-                        var parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
+                        int parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
                         if (itemInfo.Label.Count > parentIndex)
                         {
                             connector.Annotations = new DiagramObjectCollection<PathAnnotation>()
@@ -314,7 +314,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
                 {
                     if (itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id) != -1)
                     {
-                        var parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
+                        int parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
                         if (itemInfo.Label.Count > parentIndex)
                         {
                             connector.Annotations = new DiagramObjectCollection<PathAnnotation>()
