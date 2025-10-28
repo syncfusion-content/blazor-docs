@@ -23,7 +23,7 @@ Before starting, ensure you have the following:
 
 ## Set Up the Chat UI component
 
-Follow the Syncfusion Chat UI Getting Started guide to configure and render the Chat UI component in the application and that prerequisites are met.
+Follow the [Getting Started](../getting-started) guide to configure and render the Chat UI component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
@@ -125,17 +125,17 @@ Add the project ID to `appsettings.json` (extract from the JSON key file if need
 
 ## Configure Message Send
 
-Use the `MessageSend` event of the `SfChatUI` component to handle message exchanges. Each time a user sends a message, this event will be invoked with details of the sent message.
+Use the [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageSend) event of the `SfChatUI` component to handle message exchanges. Each time a user sends a message, this event will be invoked with details of the sent message.
 
 ### Forward Message to Backend
 
-In the `MessageSend` event handler, send a POST request to your backend API endpoint (`/api/chat/message`). The backend forwards the message to Dialogflow and returns the response.
+In the [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageSend) event handler, send a POST request to your backend API endpoint (`/api/chat/message`). The backend forwards the message to Dialogflow and returns the response.
 
 ### Displaying Bot Response
 
 * Use the `AddMessageAsync` method (via a reference to the component) to programmatically add the bot's reply to the Chat UI.
 
-* Create or modify a Razor component (`e.g., Pages/Chat.razor`) to integrate the Syncfusion Chat UI with the Dialogflow backend:
+* Create or modify a Razor component (`e.g., Pages/Chat.razor`) to integrate the Chat UI with the Dialogflow backend:
 
 {% tabs %}
 {% highlight razor %}
