@@ -1084,8 +1084,6 @@ The following table illustrates those commands with the associated key values.
 
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
 
-* [How to Drag and Drop Node in a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16307/how-to-drag-and-drop-node-in-a-layout-in-blazor-diagram)
-
 * [How to Drag and Drop of Listbox Element into Blazor Diagram Control](https://support.syncfusion.com/kb/article/17895/how-to-drag-and-drop-of-listbox-element-into-blazor-diagram-control)
 
 * [How to Create a Blazor Application for Dragging and Dropping Symbols from a Palette into Multiple Diagrams](https://support.syncfusion.com/kb/article/18717/how-to-create-a-blazor-application-for-dragging-and-dropping-symbols-from-a-palette-into-multiple-diagrams)

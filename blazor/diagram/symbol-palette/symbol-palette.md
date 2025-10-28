@@ -1099,7 +1099,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to add the symbol to the diagram](./nodes)
+* [How to add the symbol to the diagram](./symbol-palette)
 
 * [How to Add Image Node in Symbol Palette in Blazor](https://support.syncfusion.com/kb/article/10090/how-to-add-image-node-in-symbol-palette-in-blazor)  
 * [How to Add Custom HTML Nodes in Symbol Palette for Blazor Diagram](https://support.syncfusion.com/kb/article/18737/how-to-add-custom-html-nodes-in-symbol-palette-for-blazor-diagram)  
