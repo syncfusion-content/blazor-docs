@@ -23,7 +23,7 @@ Before starting, ensure you have the following:
 
 ## Set Up the Chat UI component
 
-Follow the Syncfusion Chat UI [Getting Started](../getting-started) guide to configure and render the Chat UI component in the application and that prerequisites are met.
+Follow the [Getting Started](../getting-started) guide to configure and render the Chat UI component in the application and that prerequisites are met.
 
 ## Install Dependencies
 
@@ -120,12 +120,12 @@ Add the Direct Line secret to `Web.config`:
 
 ## Configure Chat UI
 
-Use the `MessageSend`event of the `SfChatUI` component to handle message exchanges. This event is triggered before a message is sent, allowing you to forward it to the bot via the Direct Line API. Use the `AddMessageAsync` method (via a reference to the component) to programmatically add the bot's reply to the Chat UI.
+Use the [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageSend) event to handle message exchanges. This event is triggered before a message is sent, allowing you to forward it to the bot via the Direct Line API. Use the `AddMessageAsync` method (via a reference to the component) to programmatically add the bot's reply to the Chat UI.
 
-Create or modify a Razor component (e.g., `Pages/Chat.razor`) to integrate the Syncfusion Chat UI with the Direct Line API:
+Create or modify a Razor component (e.g., `Pages/Chat.razor`) to integrate the Chat UI with the Direct Line API:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor
@@ -172,7 +172,7 @@ Create or modify a Razor component (e.g., `Pages/Chat.razor`) to integrate the S
 
                 // Use JSInterop to initialize Direct Line (client-side for real-time updates)
                 var directLine = await JS.InvokeAsync<IJSObjectReference>("eval", 
-                    $"new BotFramework.DirectLine.DirectLine({{ token: '{data.token}' }})");
+                    `new BotFramework.DirectLine.DirectLine({ token: '${data.token}' })`);
 
                 isConnected = true;
 
@@ -181,14 +181,14 @@ Create or modify a Razor component (e.g., `Pages/Chat.razor`) to integrate the S
             }
             catch (Exception ex)
             {
-                await ChatUI.AddMessageAsync(new ChatMessage { Text = "Sorry, I couldn’t connect to the bot.", Author = BotUserModel });
+                await ChatUI.AddMessageAsync(new ChatMessage { Text = "Sorry, I couldn't connect to the bot.", Author = BotUserModel });
                 Console.WriteLine($"Connection error: {ex.Message}");
                 return;
             }
         }
 
         // Send message to bot via JSInterop
-        await JS.InvokeVoidAsync("sendToBot", /* directLine ref or global */, args.Message.Text, currentUserId);
+        await JS.InvokeVoidAsync("sendToBot", directLine, args.Message.Text, currentUserId);
         args.Cancel = true; // Prevent default send
     }
 
