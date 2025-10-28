@@ -180,6 +180,21 @@ Apply custom styling to a gallery item by setting its [CssClass](https://help.sy
     };
 }
 
+<style>
+
+    .e-ribbon-gallery-item.bad {
+        background: #ffb6b6;
+    }
+
+    .e-ribbon-gallery-item.good {
+        background: #c7ebc9;
+    }
+
+    .e-ribbon-gallery-item.neutral {
+        background: #eedd9d;
+    }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
