@@ -49,20 +49,21 @@ The following code example illustrates how to print the region occupied by the d
     </PageSettings>
 </SfDiagramComponent>
 
-@code {
-
+@code
+{
     //Reference the diagram
-    SfDiagramComponent diagram;
-    double left = 10;
-    double top = 10;
-    double right = 10;
-    double bottom = 10;
-    double width = 410;
-    double height = 550;
-    bool multiplePage = true;
-    bool showPageBreak = true;
-    DiagramPrintExportRegion region = DiagramPrintExportRegion.PageSettings;
-    PageOrientation orientation = PageOrientation.Portrait;
+    private SfDiagramComponent diagram;
+    private double left = 10;
+    private double top = 10;
+    private double right = 10;
+    private double bottom = 10;
+    private double width = 410;
+    private double height = 550;
+    private bool multiplePage = true;
+    private bool showPageBreak = true;
+    private DiagramPrintExportRegion region = DiagramPrintExportRegion.PageSettings;
+    private PageOrientation orientation = PageOrientation.Portrait;
+    
     //Method to prin the diagram
     private async Task OnPrint()
     {
@@ -99,21 +100,32 @@ The following code example illustrates how to print a selected region in the dia
     <SnapSettings></SnapSettings>
 </SfDiagramComponent>
 
-@code {
-
+@code
+{
     //Reference the diagram
-    SfDiagramComponent diagram;
-    double left = 10;
-    double top = 10;
-    double right = 10;
-    double bottom = 10;
-    double width = 410;
-    double height = 550;
-
-    bool multiplePage = true;
-    bool showPageBreak = true;
-    DiagramPrintExportRegion region = DiagramPrintExportRegion.ClipBounds;
-    PageOrientation orientation = PageOrientation.Landscape;
+    private SfDiagramComponent diagram;
+    private double left = 10;
+    private double top = 10;
+    private double right = 10;
+    private double bottom = 10;
+    private double width = 410;
+    private double height = 550;
+    private bool multiplePage = true;
+    private bool showPageBreak = true;
+    private DiagramPrintExportRegion region = DiagramPrintExportRegion.ClipBounds;
+    private PageOrientation orientation = PageOrientation.Landscape;
+    private double lTop = 50;
+    private double lBottom = 50;
+    private double lRight = 50;
+    private double lLeft = 50;
+    private LayoutType type = LayoutType.OrganizationalChart;
+    private LayoutOrientation oreintation = LayoutOrientation.TopToBottom;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
+    private string FixedNode = null;
+    
     //Method to prin the diagram
     private async Task OnPrint()
     {
@@ -125,17 +137,6 @@ The following code example illustrates how to print a selected region in the dia
         await diagram.PrintAsync(print);
     }
 
-    double lTop = 50;
-    double lBottom = 50;
-    double lRight = 50;
-    double lLeft = 50;
-    LayoutType type = LayoutType.OrganizationalChart;
-    LayoutOrientation oreintation = LayoutOrientation.TopToBottom;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
-    private string FixedNode = null;
     public class HierarchicalDetails
     {
         public string Id { get; set; }
@@ -144,28 +145,28 @@ The following code example illustrates how to print a selected region in the dia
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
+
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
-            new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
-            new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
-            new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
-            new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-            new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
-            new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-            new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-            new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
-            new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
-
+        new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
     };
 
     private void NodeCreating(IDiagramObject obj)
@@ -181,14 +182,15 @@ The following code example illustrates how to print a selected region in the dia
         node.Style.Fill = hierarchicalData.Color;
         // node.IsVisible = false;
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
-        new ShapeAnnotation()
         {
-            Content = hierarchicalData.Role,
-            Style =new TextStyle(){Color = "white"}
-        }
-    };
+            new ShapeAnnotation()
+            {
+                Content = hierarchicalData.Role,
+                Style =new TextStyle(){Color = "white"}
+            }
+        };
     }
+
     private void ConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;

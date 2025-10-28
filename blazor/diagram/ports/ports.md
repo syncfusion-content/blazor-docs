@@ -40,7 +40,7 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -58,13 +58,13 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
             // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
-               new PointPort()
-               {
-                   Style = new ShapeStyle(){ Fill = "gray" },
-                   // Sets the position for the port.
-                   Offset = new DiagramPoint() { X = 0.5, Y = 0.5 }, 
-                   Visibility = PortVisibility.Visible
-               }
+                new PointPort()
+                {
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    // Sets the position for the port.
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
+                    Visibility = PortVisibility.Visible
+                }
             }
         };
         nodes.Add(node);
@@ -88,26 +88,25 @@ The following code example demonstrates how to connect connectors to ports on no
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
     // Initialize node and connector collections
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-            {
-                ID = "node1",
-                OffsetX = 200,
-                OffsetY = 200,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                Ports = new DiagramObjectCollection<PointPort>()
+        {
+            ID = "node1",
+            OffsetX = 200,
+            OffsetY = 200,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
                 {
@@ -117,17 +116,16 @@ The following code example demonstrates how to connect connectors to ports on no
                     Shape = PortShapes.Circle,
                 }
             }
-            };
-
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                OffsetX = 400,
-                OffsetY = 200,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                Ports = new DiagramObjectCollection<PointPort>()
+        {
+            ID = "node2",
+            OffsetX = 400,
+            OffsetY = 200,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
                 {
@@ -137,20 +135,18 @@ The following code example demonstrates how to connect connectors to ports on no
                     Shape = PortShapes.Circle,
                 }
             }
-            };
-
+        };  
         // Connector connecting node1's port1 to node2's port1
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                SourcePortID = "port1",
-                TargetID = "node2",
-                TargetPortID = "port1",
-                Type = ConnectorSegmentType.Straight,
-                Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 }
-            };
-
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            SourcePortID = "port1",
+            TargetID = "node2",
+            TargetPortID = "port1",
+            Type = ConnectorSegmentType.Straight,
+            Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 }
+        };
         nodes.Add(node1);
         nodes.Add(node2);
         connectors.Add(connector1);
@@ -170,13 +166,12 @@ The following code example demonstrates how to create a connector port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -217,13 +212,12 @@ The following code example demonstrates how to connect one connector to a port o
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     // Initialize connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -243,7 +237,6 @@ The following code example demonstrates how to connect one connector to a port o
                 }
             }
         };
-
         Connector connector2 = new Connector()
         {
             ID = "connector2",
@@ -290,13 +283,12 @@ If an `ID` is not set, then default `ID` is assigned automatically.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddPorts" OnClick="@AddPorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -315,12 +307,12 @@ If an `ID` is not set, then default `ID` is assigned automatically.
         nodes.Add(node);
     }
 
-    public void AddPorts()
+    private void AddPorts()
     {
         PointPort port = new PointPort()
         {
             ID = "port",
-            Style = new ShapeStyle(){ Fill = "gray" }, 
+            Style = new ShapeStyle() { Fill = "gray" },
             Offset = new DiagramPoint() { X = 0, Y = 0.5 },
             Visibility = PortVisibility.Visible
         };
@@ -328,7 +320,6 @@ If an `ID` is not set, then default `ID` is assigned automatically.
         nodes[0].Ports.Add(port);
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSCjtcVJmUjDyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -340,7 +331,7 @@ The following code explains how to add ports to a node at runtime by using the `
 
 ```csharp
 //Method to add port at runtime
-public async void AddPorts()
+private async void AddPorts()
 {
     PointPort port = new PointPort()
     {
@@ -370,7 +361,7 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -384,42 +375,43 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
             //Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
             },
         };
         nodes.Add(node);
     }
 
-   public void AddPorts()
+    private void AddPorts()
     {
-        PointPort port1 = new PointPort() 
-        { 
-            ID = "port1", 
-            Offset = new DiagramPoint() { X = 0, Y = 0.5 }, 
+        PointPort port1 = new PointPort()
+        {
+            ID = "port1",
+            Offset = new DiagramPoint() { X = 0, Y = 0.5 },
             Visibility = PortVisibility.Visible,
             Style = new ShapeStyle() { Fill = "gray" }
         };
-        PointPort port2 = new PointPort() 
-        { 
-            ID = "port2", 
-            Offset = new DiagramPoint() { X = 1, Y = 0.5 }, 
-            Visibility = PortVisibility.Visible, 
+        PointPort port2 = new PointPort()
+        {
+            ID = "port2",
+            Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+            Visibility = PortVisibility.Visible,
             Style = new ShapeStyle() { Fill = "gray" }
         };
         PointPort port3 = new PointPort()
-        { 
-            ID = "port3", 
-            Offset = new DiagramPoint() { X = 0.5, Y = 0 }, 
-            Visibility = PortVisibility.Visible, 
+        {
+            ID = "port3",
+            Offset = new DiagramPoint() { X = 0.5, Y = 0 },
+            Visibility = PortVisibility.Visible,
             Style = new ShapeStyle() { Fill = "gray" }
         };
-        PointPort port4 = new PointPort() 
-        { 
-            ID = "port4", Offset = new DiagramPoint() { X = 0.5, Y = 1 }, 
-            Visibility = PortVisibility.Visible, 
+        PointPort port4 = new PointPort()
+        {
+            ID = "port4",
+            Offset = new DiagramPoint() { X = 0.5, Y = 1 },
+            Visibility = PortVisibility.Visible,
             Style = new ShapeStyle() { Fill = "gray" }
         };
         // Add multiple ports in the port collection.
@@ -449,7 +441,7 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -474,12 +466,12 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style= new ShapeStyle()
-                    { 
+                    {
                         Fill = "red",
-                        StrokeColor = "black", 
+                        StrokeColor = "black",
                         StrokeWidth = 2
                     },
-                    Width = 12, 
+                    Width = 12,
                     Height = 12,
                     // Sets the shape of the port as Circle .
                     Shape = PortShapes.Circle
@@ -489,7 +481,7 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
         nodes.Add(node);
     }
 
-    public void RemovePorts()
+    private void RemovePorts()
     {
         (nodes[0].Ports as DiagramObjectCollection<PointPort>).RemoveAt(0);
     }
@@ -509,46 +501,45 @@ The following code example explains how to change port properties at runtime.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Update Port" OnClick="@UpdatePort" />
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
-protected override void OnInitialized()
-{
-    // Initialize port collection.
-    DiagramObjectCollection<PointPort> ports = new DiagramObjectCollection<PointPort>();
-    ports.Add(new PointPort() 
-    { 
-        ID = "port", 
-        Offset = new DiagramPoint() 
-        { 
-            X = 0, 
-            Y = 0.5 
-        }, 
-        Visibility = PortVisibility.Visible
-    });
-    // A node is created and stored in nodes array.
-    nodes = new DiagramObjectCollection<Node>();
-    Node node = new Node()
+    protected override void OnInitialized()
     {
-        // Position of the node.
-        OffsetX = 250,
-        OffsetY = 250,
-        // Size of the node.
-        Width = 100,
-        Height = 100,
-        Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-        Ports = ports
-    };
-    nodes.Add(node);
-}
+        // Initialize port collection.
+        DiagramObjectCollection<PointPort> ports = new DiagramObjectCollection<PointPort>();
+        ports.Add(new PointPort()
+        {
+            ID = "port",
+            Offset = new DiagramPoint()
+            {
+                X = 0,
+                Y = 0.5
+            },
+            Visibility = PortVisibility.Visible
+        });
+        // A node is created and stored in nodes array.
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Ports = ports
+        };
+        nodes.Add(node);
+    }
 
-    public async void UpdatePort()
+    private async void UpdatePort()
     {
         //Update ports at run time.
         diagram.BeginUpdate();
@@ -570,10 +561,7 @@ The following code example shows how to set the connection direction for a port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-
-<SfDiagramComponent Width="600px" Height="600px" Nodes="@nodes" Connectors="@connectors" >
-</SfDiagramComponent>
-
+<SfDiagramComponent Width="600px" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
@@ -585,59 +573,61 @@ The following code example shows how to set the connection direction for a port.
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 450,
+            OffsetY = 200,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7" },
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 450,
-                OffsetY = 200,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6BA5D7" },
-                Ports = new DiagramObjectCollection<PointPort>()
-                {
-                    new PointPort()
-                    { ID="port1",
-                      Offset = new DiagramPoint() { X = 0, Y = 0 },
-                      Visibility = PortVisibility.Visible,
-                    }
+                new PointPort()
+                {   
+                    ID="port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0 },
+                    Visibility = PortVisibility.Visible,
                 }
-            };
+            }
+        };
         nodes.Add(node1);
         Node node2 = new Node()
+        {
+            ID = "node2",
+            // Position of the node.
+            OffsetX = 270,
+            OffsetY = 300,
+            // Size of the node.
+            Style = new ShapeStyle() { Fill = "#6BA5D7" },
+            Width = 100,
+            Height = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node2",
-                // Position of the node.
-                OffsetX = 270,
-                OffsetY = 300,
-                // Size of the node.
-                Style = new ShapeStyle() { Fill = "#6BA5D7" },
-                Width = 100,
-                Height = 100,
-                Ports = new DiagramObjectCollection<PointPort>()
-                {
-                    new PointPort()
-                    { ID="port2",
-                      Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
-                      Visibility = PortVisibility.Visible,
-                      //Sets the connection direction as Left
-                      ConnectionDirection = PortConnectionDirection.Left
-                    }
+                new PointPort()
+                {   
+                    ID="port2",
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Sets the connection direction as Left
+                    ConnectionDirection = PortConnectionDirection.Left
                 }
-            };
+            }
+        };
         // Add node.
         nodes.Add(node2);
         Connector Connector1 = new Connector()
-            {
-                ID = "connector1",
-                // Set the source and target point of the connector.
-                SourceID = "node2",
-                TargetID = "node1",
-                SourcePortID = "port2",
-                TargetPortID = "port1",
-                // Type of the connector segments.
-                Type = ConnectorSegmentType.Orthogonal
-            };
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourceID = "node2",
+            TargetID = "node1",
+            SourcePortID = "port2",
+            TargetPortID = "port1",
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Orthogonal
+        };
         connectors.Add(Connector1);
     }
 }
@@ -657,15 +647,14 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="GetInEdges" OnClick="@GetInEdges" />
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
-    SfDiagramComponent diagram;
-     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -676,7 +665,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
             Height = 100,
             OffsetX = 300,
             OffsetY = 300,
-             // Initialize port collection.
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
@@ -686,18 +675,17 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style= new ShapeStyle()
-                    { 
+                    {
                         Fill = "red",
-                        StrokeColor = "black", 
+                        StrokeColor = "black",
                         StrokeWidth = 2
                     },
-                    Width = 12, 
+                    Width = 12,
                     Height = 12,
-                  // Sets the shape of the port as a Circle.
+                    // Sets the shape of the port as a Circle.
                     Shape = PortShapes.Circle
                 }
             },
-            
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -707,7 +695,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
             Height = 100,
             OffsetX = 300,
             OffsetY = 500,
-             // Initialize port collection.
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
@@ -717,12 +705,12 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style= new ShapeStyle()
-                    { 
+                    {
                         Fill = "red",
-                        StrokeColor = "black", 
+                        StrokeColor = "black",
                         StrokeWidth = 2
                     },
-                    Width = 12, 
+                    Width = 12,
                     Height = 12,
                     // Sets the shape of the port as Circle .
                     Shape = PortShapes.Circle
@@ -734,15 +722,16 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
         {
             ID = "connector1",
             SourceID = "node1",
-            SourcePortID="port1",
-            TargetPortID="port1",
+            SourcePortID = "port1",
+            TargetPortID = "port1",
             TargetID = "node2",
         };
         connectors.Add(connector1);
     }
+
     private void GetInEdges()
     {
-        List<string> Inedges= new List<string>();
+        List<string> Inedges = new List<string>();
         foreach (string inedge in diagram.Nodes[1].Ports[0].InEdges)
         {
             Inedges.Add(inedge);

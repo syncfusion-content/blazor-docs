@@ -69,17 +69,16 @@ The following code example shows how to add custom context menu items along with
 @using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="diagram" Height="600px" Width="90%" @bind-Nodes="nodes" @bind-Connectors="connectors">
-    <ContextMenuSettings Show="true"
-                         ShowCustomMenuOnly="false"
-                         Items="@Items">
+    <ContextMenuSettings Show="true" ShowCustomMenuOnly="false" Items="@Items">
     </ContextMenuSettings>
 </SfDiagramComponent>
 
-@code {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
-    DiagramObjectCollection<Connector> connectors;
-    List<ContextMenuItem> Items; 
+@code
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Connector> connectors;
+    private List<ContextMenuItem> Items; 
 
     protected override void OnInitialized()
     {
@@ -88,20 +87,19 @@ The following code example shows how to add custom context menu items along with
 
         Items = new List<ContextMenuItem>()
         {
-                new ContextMenuItem()
-                {
-                    Text = "Save As...",
-                    ID = "save",
-                    IconCss = "e-save",
-                },
-                new ContextMenuItem()
-                {
-                    Text = "Delete",
-                    ID = "delete",
-                    IconCss = "e-delete"
-                }
+            new ContextMenuItem()
+            {
+                Text = "Save As...",
+                ID = "save",
+                IconCss = "e-save",
+            },
+            new ContextMenuItem()
+            {
+                Text = "Delete",
+                ID = "delete",
+                IconCss = "e-delete"
+            }
         };
-
         Node node1 = new Node()
         {
             ID = "node1",
@@ -178,39 +176,36 @@ Diagram provides template support for the context menu. The context menu items c
 @using System.Collections.ObjectModel
 
 
-<SfDiagramComponent @ref="diagram" Height="600px" Width="90%" @bind-Nodes="nodes"
-                    @bind-Connectors="connectors">
-    <ContextMenuSettings @bind-Show="@show"
-                        @bind-ShowCustomMenuOnly="customMenuOnly"
-                        @bind-Items="@Items">
-    <ContextMenuTemplate>
-        @context.Text
-        <span class="shortcut">@((@context.Text == "Save As...") ? "Ctrl + S" : "")</span>
-    </ContextMenuTemplate>
+<SfDiagramComponent @ref="diagram" Height="600px" Width="90%" @bind-Nodes="nodes" @bind-Connectors="connectors">
+    <ContextMenuSettings @bind-Show="@show" @bind-ShowCustomMenuOnly="customMenuOnly" @bind-Items="@Items">
+        <ContextMenuTemplate>
+            @context.Text
+            <span class="shortcut">@((@context.Text == "Save As...") ? "Ctrl + S" : "")</span>
+        </ContextMenuTemplate>
     </ContextMenuSettings>
 </SfDiagramComponent>
 
-@code {
+@code
+{
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Define diagram nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     //Define diagram connectors collection
-    DiagramObjectCollection<Connector> connectors;
-
-    List<ContextMenuItem> Items;
-    bool customMenuOnly = false;
-    bool show = true;
+    private DiagramObjectCollection<Connector> connectors;
+    private List<ContextMenuItem> Items;
+    private bool customMenuOnly = false;
+    private bool show = true;
 
     protected override void OnInitialized()
     {
-    //Initialize diagram nodes collection
-    nodes = new DiagramObjectCollection<Node>();
-    //Initialize diagram connectors collection
-    connectors = new DiagramObjectCollection<Connector>();
+        //Initialize diagram nodes collection
+        nodes = new DiagramObjectCollection<Node>();
+        //Initialize diagram connectors collection
+        connectors = new DiagramObjectCollection<Connector>();
 
-    Items = new List<ContextMenuItem>()
-    {
+        Items = new List<ContextMenuItem>()
+        {
             new ContextMenuItem()
             {
                 Text = "Save As...",
@@ -223,9 +218,9 @@ Diagram provides template support for the context menu. The context menu items c
                 ID = "delete",
                 IconCss = "e-delete"
             }
-    };
+        };
 
-    Node node1 = new Node()
+        Node node1 = new Node()
         {
             ID = "node1",
             Height = 100,
@@ -239,7 +234,7 @@ Diagram provides template support for the context menu. The context menu items c
                 StrokeWidth = 1
             }
         };
-    Node node2 = new Node()
+        Node node2 = new Node()
         {
             ID = "node2",
             Height = 100,
@@ -253,10 +248,10 @@ Diagram provides template support for the context menu. The context menu items c
                 StrokeWidth = 1
             }
         };
-    nodes.Add(node1);
-    nodes.Add(node2);
+        nodes.Add(node1);
+        nodes.Add(node2);
 
-    Connector connector1 = new Connector()
+        Connector connector1 = new Connector()
         {
             ID = "connector1",
             SourceID = "node1",
@@ -268,7 +263,7 @@ Diagram provides template support for the context menu. The context menu items c
                 StrokeWidth = 2
             }
         };
-    connectors.Add(connector1);
+        connectors.Add(connector1);
     }
 }
 ```
@@ -295,7 +290,7 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
 
 @code
 {
-    public void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
+    private void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
     {
         //Action to be performed
     }
@@ -318,7 +313,7 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 
 @code
 {
-    public void ContextMenuItemClickHandler(DiagramMenuClickEventArgs arg)
+    private void ContextMenuItemClickHandler(DiagramMenuClickEventArgs arg)
     {
         //Action to be performed
     }
@@ -330,10 +325,7 @@ The following code example shows how to add separate custom context menu items f
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" Height="600px"
-           Nodes="@NodeCollection"
-           Connectors="@ConnectorCollection">
-    
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
     <ContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="true" ContextMenuOpening="@OnContextMenuOpen">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -341,11 +333,11 @@ The following code example shows how to add separate custom context menu items f
 @code
 {
     //Reference to diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Defines diagram's nodes collection
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
     //Defines diagram's connector collection
-    public DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -365,19 +357,19 @@ The following code example shows how to add separate custom context menu items f
             }
         };
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 100,
+            Width = 100,
+            OffsetX = 300,
+            OffsetY = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                Height = 100,
-                Width = 100,
-                OffsetX = 300,
-                OffsetY = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6BA5D7",
-                    StrokeColor = "white",
-                    StrokeWidth = 1
-                }
-            };
+                Fill = "#6BA5D7",
+                StrokeColor = "white",
+                StrokeWidth = 1
+            }
+        };
         //Add node into node's collection
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
@@ -396,7 +388,8 @@ The following code example shows how to add separate custom context menu items f
         };
         ConnectorCollection.Add(connector1);
     }
-    List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
+
+    private List<ContextMenuItem> contextMenuItemModels = new List<ContextMenuItem>()
     {
         new ContextMenuItem()
         {
@@ -422,7 +415,7 @@ The following code example shows how to add separate custom context menu items f
         },
     };
 
-    public void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
+    private void OnContextMenuOpen(DiagramMenuOpeningEventArgs arg)
     {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {

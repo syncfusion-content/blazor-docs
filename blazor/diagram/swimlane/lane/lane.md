@@ -30,7 +30,7 @@ The following code example explains how to define a swimlane with lane.
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -45,7 +45,10 @@ The following code example explains how to define a swimlane with lane.
                 },
                 Height = 50,
             },
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
             Lanes = new DiagramObjectCollection<Lane>()
             {
                 new Lane(){Height = 100},
@@ -56,22 +59,22 @@ The following code example explains how to define a swimlane with lane.
     }
     private void OnNodeCreating(IDiagramObject obj)
     {
-       if (obj is Swimlane swimlane)
-       {
-         swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-         foreach (Phase phase in swimlane.Phases)
-         {
-             phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-         }
-         foreach (Lane lane in swimlane.Lanes)
-         {
-             lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-         }
-       }
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
     }
 }
 ``` 
@@ -92,56 +95,58 @@ The following code example shows how to define and customize a lane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections"  NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
+                Annotation = new ShapeAnnotation()
+                {
+                    Content = "SALES PROCESS FLOW CHART"
+                },
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane(){Height = 100,
                 Header = new SwimlaneHeader()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
-                },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 120,
-                Width = 450,
-                Lanes = new DiagramObjectCollection<Lane>()
-                {
-                    new Lane(){Height = 100,
-                    Header = new SwimlaneHeader(){
-                        Width = 30,
-                        Style = new TextStyle(){ Fill = "Teal"},
-                        Annotation = new ShapeAnnotation(){ Content = "Consumer", Style = new TextStyle(){ Color = "White", TextDecoration = TextDecoration.Underline, Italic = true, Bold = true} }
-                    } },
-                }
-            };
-    // Add swimlane.
-    SwimlaneCollections.Add(swimlane);
+                    Width = 30,
+                    Style = new TextStyle(){ Fill = "Teal"},
+                    Annotation = new ShapeAnnotation(){ Content = "Consumer", Style = new TextStyle(){ Color = "White", TextDecoration = TextDecoration.Underline, Italic = true, Bold = true} }
+                } },
+            }
+        };
+        // Add swimlane.
+        SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
-       if (obj is Swimlane swimlane)
-       {
-           swimlane.Header.Style = new TextStyle()
-           {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+            {
                 Fill = "#5b9bd5",
                 StrokeColor = "#5b9bd5"
-           };
-           foreach (Phase phase in swimlane.Phases)
-           {
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-           }
+            }
         }
     }
 }
@@ -176,7 +181,7 @@ The following code example explains how to define a lane header annotation templ
                         </svg>
                         <div class="profile-name" style="font-size:12px;font-weight:bold;">Users</div>
                     </div>
-                }              
+                }
             }
         </AnnotationTemplate>
     </DiagramTemplates>
@@ -185,7 +190,7 @@ The following code example explains how to define a lane header annotation templ
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -206,18 +211,22 @@ The following code example explains how to define a lane header annotation templ
             Width = 450,
             Lanes = new DiagramObjectCollection<Lane>()
             {
-                new Lane(){Height = 100,
-                Header = new SwimlaneHeader(){
-                    Width = 30,
-                    Style = new TextStyle(){ Fill = "Teal"},
-                    Annotation = new ShapeAnnotation(){ 
-                        ID="Lane 1",
-                        Content = "Lane 1",
-                        UseTemplate = true,
-                        Height = 50,
-                        Width = 75,
-                    },
-                } },
+                new Lane()
+                {
+                    Height = 100,
+                    Header = new SwimlaneHeader()
+                    {
+                        Width = 30,
+                        Style = new TextStyle(){ Fill = "Teal"},
+                        Annotation = new ShapeAnnotation(){
+                            ID="Lane 1",
+                            Content = "Lane 1",
+                            UseTemplate = true,
+                            Height = 50,
+                            Width = 75,
+                        },
+                    } 
+                },
             }
         };
         // Add swimlane.
@@ -241,50 +250,53 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
 
 <SfButton Content="Add Lane" OnClick="@AddLane" />
 <SfButton Content="Remove Lane" OnClick="@RemoveLane" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
-        protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 120,
-                Width = 450,
-                Lanes = new DiagramObjectCollection<Lane>()
-                {
-                    new Lane(){Height = 100,
-                    Header = new SwimlaneHeader(){
-                        Width = 30,
-                        Annotation = new ShapeAnnotation(){ Content = "Consumer" }
-                    } },
-                }
-            };
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane(){Height = 100,
+                Header = new SwimlaneHeader(){
+                    Width = 30,
+                    Annotation = new ShapeAnnotation(){ Content = "Consumer" }
+                } },
+            }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 
     private void AddLane()
     {
-        Lane newLane = new Lane() { Height = 100, 
+        Lane newLane = new Lane()
+        {
+            Height = 100,
             Header = new SwimlaneHeader()
             {
-                 Annotation = new ShapeAnnotation() { Content = "Lane title" }, Width = 30,
-                  Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
+                Annotation = new ShapeAnnotation() { Content = "Lane title" },
+                Width = 30,
+                Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
             }
         };
         SwimlaneCollections[0].Lanes.Add(newLane);
@@ -295,23 +307,24 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
         Lane lane = SwimlaneCollections[0].Lanes[^1];
         SwimlaneCollections[0].Lanes.Remove(lane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-             foreach (Phase phase in swimlane.Phases)
-             {
-                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
-             foreach (Lane lane in swimlane.Lanes)
-             {
-                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
         }
     }
 }
@@ -335,73 +348,74 @@ The following code example shows how to add nodes to a lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 120,
-                Width = 450,
-                Lanes = new DiagramObjectCollection<Lane>()
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane(){Height = 100,
+                Header = new SwimlaneHeader(){
+                    Width = 30,
+                    Annotation = new ShapeAnnotation(){ Content = "Consumer" }
+                },
+                Children = new DiagramObjectCollection<Node>()
                 {
-                    new Lane(){Height = 100,
-                    Header = new SwimlaneHeader(){
-                        Width = 30,
-                        Annotation = new ShapeAnnotation(){ Content = "Consumer" }
-                    },
-                    Children = new DiagramObjectCollection<Node>()
-                    {
-                        new Node(){Height = 50, Width = 50, LaneOffsetX = 100, LaneOffsetY = 30},
-                        new Node(){Height = 50, Width = 50, LaneOffsetX = 250, LaneOffsetY = 30},
-                    }
-                    },
+                    new Node(){Height = 50, Width = 50, LaneOffsetX = 100, LaneOffsetY = 30},
+                    new Node(){Height = 50, Width = 50, LaneOffsetX = 250, LaneOffsetY = 30},
                 }
-            };
+                },
+            }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
-             swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-             foreach (Phase phase in swimlane.Phases)
-             {
-                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
-             foreach (Lane lane in swimlane.Lanes)
-             {
-                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
         }
         else if (obj is Node node)
         {
-             node.Style = new ShapeStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
+            node.Style = new ShapeStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
         }
     }
 }
@@ -422,8 +436,9 @@ The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 Below is an example demonstrating how to set the orientation for lanes in an SfSymbolPaletteComponent:
 
 ```cshtml
-   @using Syncfusion.Blazor.Diagram
-   @using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
 <div class="control-section">
     <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -433,57 +448,60 @@ Below is an example demonstrating how to set the orientation for lanes in an SfS
         </div>
     </div>
 </div>
+
 @code
 {
     //Reference the symbolpreview.
-    DiagramSize SymbolPreview;
+    private DiagramSize SymbolPreview;
     //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    SfSymbolPaletteComponent symbolpalette;
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent symbolpalette;
     //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
+
     private void InitPaletteModel()
     {
         Palettes = new DiagramObjectCollection<Palette>();
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
         //create a horizontal lane.
         Lane horizontalLane = new Lane()
+        {
+            ID = "HorizontalSwimlane",
+            Orientation = Orientation.Horizontal,
+            Height = 100,
+            Width = 150,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "HorizontalSwimlane",
-                Orientation = Orientation.Horizontal,
-                Height = 100,
-                Width = 150,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 25,
-                    Height = 100
-                },
-            };
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                Width = 25,
+                Height = 100
+            },
+        };
         //create a vertical lane.
         Lane verticalLane = new Lane()
+        {
+            ID = "VerticalSwimlane",
+            Orientation = Orientation.Vertical,
+            Height = 150,
+            Width = 100,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "VerticalSwimlane",
-                Orientation = Orientation.Vertical,
-                Height = 150,
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
                 Width = 100,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 100,
-                    Height = 25
-                },
-            };
+                Height = 25
+            },
+        };
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
         {
             horizontalLane,
@@ -493,8 +511,8 @@ Below is an example demonstrating how to set the orientation for lanes in an SfS
         {
             new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
         };
-      }
     }
+}
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjheCXNmVyYiGoHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

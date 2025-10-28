@@ -39,10 +39,10 @@ The following code example explains how to create participants in sequence diagr
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel" />
 
-@code {
+@code
+{
     private SfDiagramComponent Diagram;
     private UmlSequenceDiagramModel DiagramModel;
 
@@ -68,9 +68,9 @@ The following code example explains how to create participants in sequence diagr
 
         // Initialize the Uml sequence diagram model
         DiagramModel = new UmlSequenceDiagramModel()
-            {
-                Participants = participants
-            };
+        {
+            Participants = participants
+        };
     }
 }
 ```
@@ -122,10 +122,10 @@ The following code example explains how to create messages in sequence diagram.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel" />
 
-@code {
+@code
+{
     private SfDiagramComponent Diagram;
     private UmlSequenceDiagramModel DiagramModel;
 
@@ -217,10 +217,10 @@ The following code example explains how to create messages in sequence diagram.
 
         // Initialize Uml Sequence Diagram model
         DiagramModel = new UmlSequenceDiagramModel()
-            {
-                Participants = participants,
-                Messages = messages
-            };
+        {
+            Participants = participants,
+            Messages = messages
+        };
     }
 }
 
@@ -254,10 +254,10 @@ The following code example explains how to create activation boxes in sequence d
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel" />
 
-@code {
+@code
+{
     private SfDiagramComponent Diagram;
     private UmlSequenceDiagramModel DiagramModel;
 
@@ -313,10 +313,10 @@ The following code example explains how to create activation boxes in sequence d
 
         // Initialize the model
         DiagramModel = new UmlSequenceDiagramModel()
-            {
-                Participants = participants,
-                Messages = messages
-            };
+        {
+            Participants = participants,
+            Messages = messages
+        };
     }
 }
 ```
@@ -361,10 +361,10 @@ Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Height="700px" Model="@DiagramModel">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Height="700px" Model="@DiagramModel" />
 
-@code {
+@code
+{
     private SfDiagramComponent Diagram;
     private UmlSequenceDiagramModel DiagramModel;
 
@@ -444,12 +444,12 @@ Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](
 
         // Assign model
         DiagramModel = new UmlSequenceDiagramModel()
-            {
-                SpaceBetweenParticipants = 300,
-                Participants = participants,
-                Messages = messages,
-                Fragments = fragments
-            };
+        {
+            SpaceBetweenParticipants = 300,
+            Participants = participants,
+            Messages = messages,
+            Fragments = fragments
+        };
     }
 }
 ```
@@ -484,10 +484,10 @@ Customize this value to increase or decrease the spacing based on the diagram’
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel" />
 
-@code {
+@code
+{
     private SfDiagramComponent Diagram;
     private UmlSequenceDiagramModel DiagramModel;
 
@@ -579,11 +579,11 @@ Customize this value to increase or decrease the spacing based on the diagram’
 
         // Initialize Uml Sequence Diagram model
         DiagramModel = new UmlSequenceDiagramModel()
-            {
-                SpaceBetweenParticipants = 200,
-                Participants = participants,
-                Messages = messages
-            };
+        {
+            SpaceBetweenParticipants = 200,
+            Participants = participants,
+            Messages = messages
+        };
     }
 }
 

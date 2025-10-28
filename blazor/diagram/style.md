@@ -15,9 +15,10 @@ To customize the visual appearance of the connector endpoint handle in a diagram
 
 ```cshtml
 <style>
-    .e-diagram-endpoint-handle {
-        fill: red;
-        stroke: green;
+    .e-diagram-endpoint-handle
+    {
+      fill: red;
+      stroke: green;
     }
 </style>
 ```
@@ -31,10 +32,11 @@ To customize the visual appearance of the connector endpoint handle in a connect
 
 ```cshtml
 <style>
-    .e-diagram-endpoint-handle.e-connected {
-    fill: red;
-    stroke: green;
-   }
+    .e-diagram-endpoint-handle.e-connected
+    {
+      fill: red;
+      stroke: green;
+    }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -47,10 +49,11 @@ To customize the visual appearance of the connector endpoint handle when it is i
 
 ```cshtml
 <style>
-   .e-diagram-endpoint-handle.e-disabled {
-    fill: red;
-    opacity: 1;
-    stroke: green;
+   .e-diagram-endpoint-handle.e-disabled
+   {
+      fill: red;
+      opacity: 1;
+      stroke: green;
    }
 </style>
 ```
@@ -64,7 +67,8 @@ To customize the appearance of the Bezier connector handle, apply the following 
 
 ```cshtml
 <style>
-  .e-diagram-bezier-handle {
+  .e-diagram-bezier-handle
+  {
     fill: red;
     stroke: green;
   }
@@ -80,9 +84,10 @@ To customize the appearance of the Bezier connector line, apply the following CS
 
 ```cshtml
 <style>
- .e-diagram-bezier-line {
-  stroke: red;
-}
+ .e-diagram-bezier-line
+ {
+    stroke: red;
+ }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -95,10 +100,11 @@ To customize the appearance of the resize handle, apply the following CSS code t
 
 ```cshtml
 <style>
-    .e-diagram-resize-handle {
-        fill: white;
-        opacity: 1;
-        stroke: white;
+    .e-diagram-resize-handle
+    {
+      fill: white;
+      opacity: 1;
+      stroke: white;
     }
 </style>
 ```
@@ -112,7 +118,8 @@ To customize the appearance of the selector pivot line, apply the following CSS 
 
 ```cshtml
 <style>
-  .e-diagram-pivot-line {
+  .e-diagram-pivot-line
+  {
     stroke: red;
   }
 </style>
@@ -127,9 +134,10 @@ To customize the appearance of the selector border, apply the following CSS styl
 
 ```cshtml
 <style>
- .e-diagram-border {
+ .e-diagram-border
+ {
     stroke: red;
-  }
+ }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -142,10 +150,12 @@ To customize the appearance of the highlighter for selected diagram elements, ap
 
 ```cshtml
 <style>
- .e-diagram-first-selection-indicator {
+ .e-diagram-first-selection-indicator
+  {
     stroke: red !important;
   }
-  .e-diagram-selection-indicator {
+  .e-diagram-selection-indicator
+  {
     stroke: red !important;
   }
 </style>
@@ -160,7 +170,8 @@ To customize the appearance of the rotation handle, apply the following CSS code
 
 ```cshtml
 <style>
-.e-diagram-rotate-handle {
+  .e-diagram-rotate-handle
+  {
     fill: red;
     stroke: green;
   }
@@ -176,7 +187,8 @@ To customize the visual appearance of symbols in the symbol palette during mouse
 
 ```cshtml
 <style>
-.e-symbolpalette .e-symbol-hover:hover {
+  .e-symbolpalette .e-symbol-hover:hover 
+  {
     background: red;
   }
 </style>
@@ -191,7 +203,8 @@ To customize the visual appearance of the symbol palette when a symbol is select
 
 ```cshtml
 <style>
-.e-symbolpalette .e-symbol-selected {
+  .e-symbolpalette .e-symbol-selected
+  {
     background: blue;
   }
 </style>
@@ -206,7 +219,8 @@ To customize the visual appearance of ruler properties, apply the following CSS 
 
 ```cshtml
 <style>
-.e-diagram .e-ruler {
+  .e-diagram .e-ruler
+  {
     background-color: red;
     font-size: 13px;
   }
@@ -222,7 +236,8 @@ To customize the visual appearance of ruler overlap properties, apply the follow
 
 ```cshtml
 <style>
-.e-diagram .e-ruler-overlap {
+  .e-diagram .e-ruler-overlap
+  {
     background-color: red;
   }
 </style>
@@ -237,7 +252,8 @@ To customize the appearance of the text edit properties, apply the following CSS
 
 ```cshtml
 <style>
- .e-diagram .e-diagram-text-edit {
+ .e-diagram .e-diagram-text-edit
+ {
     background: white;
     border-color: red;
     border-style: dashed;
@@ -258,7 +274,8 @@ To customize the appearance of the text edit control when selected, apply the fo
 
 ```cshtml
 <style>
- .e-diagram-text-edit::selection {
+ .e-diagram-text-edit::selection
+ {
     background: red;
     color: green;
   }
@@ -274,10 +291,11 @@ To customize the appearance of the highlighter, use the following CSS code:
 
 ```cshtml
 <style>
-.e-diagram-highlighter {
-  stroke:red;
-  stroke-width: 7;
-}
+  .e-diagram-highlighter
+  {
+    stroke:red;
+    stroke-width: 7;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -290,8 +308,9 @@ To customize the background color of the diagram, apply the following CSS rule:
 
 ```cshtml
 <style>
-  .e-diagram {
-      background-color: green;
+  .e-diagram 
+  {
+    background-color: green;
   }
 </style>
 ```
@@ -305,10 +324,10 @@ To customize the appearance of the overview resize handle, apply the following C
 
 ```cshtml
 <style>
-    .overviewresizer
-    {
-          fill:blue;
-    }
+  .overviewresizer
+  {
+    fill:blue;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -321,11 +340,11 @@ To customize the appearance of the helper element, apply the following CSS rules
 
 ```cshtml
 <style>
-   .e-diagram-helper {
-      stroke: red;
-      stroke-width: 5px;
+  .e-diagram-helper
+  {
+    stroke: red;
+    stroke-width: 5px;
   }
-
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -338,10 +357,10 @@ To customize the visual appearance of the diagram grid, apply the following CSS 
 
 ```cshtml
 <style>
-     .e-diagram-thin-grid {
-       stroke: red;
-   }
-
+  .e-diagram-thin-grid
+  {
+    stroke: red;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -352,10 +371,10 @@ To customize the appearance of the thick grid lines in the diagram, apply the fo
 
 ```cshtml
 <style>
-     .e-diagram-thick-grid {
-       stroke: red;
-   }
-
+  .e-diagram-thick-grid
+  {
+    stroke: red;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -368,10 +387,10 @@ To customize the background color of symbols in the symbol palette, apply the fo
 
 ```cshtml
 <style>
-     .e-symbol-draggable {
-       stroke: red;
-   }
-
+  .e-symbol-draggable
+  {
+    stroke: red;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
@@ -386,11 +405,12 @@ To customize the visual appearance of the orthogonal segment thumb, apply the fo
 
 ```cshtml
 <style>
-     .e-diagram-ortho-segment-handle {
-       stroke: red;
-       stroke-width: 1px;
-       fill: green;
-   }
+  .e-diagram-ortho-segment-handle 
+  {
+    stroke: red;
+    stroke-width: 1px;
+    fill: green;
+  }
 </style>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/OrthogonalThumbStyle)
@@ -402,7 +422,8 @@ To customize the visual appearance of Bezier and Straight connector segments, ap
 
 ```cshtml
 <style>
-  .e-diagram-bezier-segment-handle {
+  .e-diagram-bezier-segment-handle
+  {
     fill: red;
     stroke: green;
   }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction in Syncfusion Blazor Diagram Component | Syncfusion
+title: Interactions in Syncfusion Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about connector interaction in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -22,13 +22,12 @@ At runtime, a connector can be selected by using the [Select](https://help.syncf
 
 <SfButton Content="Select" OnClick="@OnSelect" />
 <SfButton Content="UnSelect" OnClick="@UnSelect" />
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -68,13 +67,13 @@ At runtime, a connector can be selected by using the [Select](https://help.syncf
         connectors.Add(Connector);
     }
 
-    public void OnSelect()
+    private void OnSelect()
     {
         // Select the Connector.
         Diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.GetObject(Diagram.Connectors[0].ID) as IDiagramObject });
     }
 
-    public void UnSelect()
+    private void UnSelect()
     {
         // Clear selection in the diagram.
         Diagram.ClearSelection();
@@ -99,13 +98,12 @@ A connector can be programmatically moved at runtime by using the [Drag](https:/
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Drag" OnClick="@OnDrag" />
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -145,7 +143,7 @@ A connector can be programmatically moved at runtime by using the [Drag](https:/
         connectors.Add(Connector);
     }
 
-    public void OnDrag()
+    private void OnDrag()
     {
         // Drag the connector.
         Diagram.Drag(Diagram.Connectors[0], 10, 10);
@@ -170,13 +168,12 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -232,17 +229,17 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
-</SfDiagramComponent>
-@code 
-{    
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints" />
+
+@code
+{
     // Enable routing constraints for diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     // Intialize the node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Intialize the connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -283,19 +280,20 @@ The [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ro
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
-    <LineRoutingSettings RoutingType ="@routingTypes"></LineRoutingSettings>
+    <LineRoutingSettings RoutingType="@routingTypes"></LineRoutingSettings>
 </SfDiagramComponent>
-@code 
+
+@code
 {
     // Set the type of the routing
-    RoutingTypes routingTypes = RoutingTypes.Classic;
+    private RoutingTypes routingTypes = RoutingTypes.Classic;
     // Enable routing constraints for diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     // Intialize the node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Intialize the connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -327,21 +325,22 @@ The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.R
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
-    <LineRoutingSettings RoutingType ="@routingTypes" ObstaclePadding="@padding"></LineRoutingSettings>
+    <LineRoutingSettings RoutingType="@routingTypes" ObstaclePadding="@padding" />
 </SfDiagramComponent>
-@code 
+
+@code
 {
     // Set the type of the routing
-    RoutingTypes routingTypes = RoutingTypes.Advanced;
+    private RoutingTypes routingTypes = RoutingTypes.Advanced;
     // Set the padding for the obstable
-    double padding = 20;
+    private double padding = 20;
     // Enable routing constraints for diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     // Intialize the node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Intialize the connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -377,14 +376,16 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 <SfDiagramComponent Width="1000px" Height="500px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     // Enable routing constraints for the diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     // Intialize the node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Intialize the connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -403,6 +404,7 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
             }
         };
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Node node)
@@ -410,16 +412,17 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
             node.Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" };
         }
     }
+
     private void OnConnectorCreating(IDiagramObject obj)
     {
         if (obj is Connector connector)
         {
             connector.Style = new ShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 };
             connector.TargetDecorator = new DecoratorSettings()
-                {
-                    Shape = DecoratorShape.Arrow,
-                    Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
-                };
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
+            };
         }
     }
 }
@@ -440,14 +443,16 @@ By default, connector routing behavior is inherited based on the value of the di
 <SfDiagramComponent Width="1000px" Height="500px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     // Enable routing constraints for the diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     //Intialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Intialize the connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -458,7 +463,8 @@ By default, connector routing behavior is inherited based on the value of the di
             new Node() { ID = "Target2", OffsetX = 490, OffsetY = 250, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target2" } } },
             new Node() { ID = "Obstacle", OffsetX = 291, OffsetY = 300, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Obstacle" } }, },
         };
-        connectors = new DiagramObjectCollection<Connector>(){
+        connectors = new DiagramObjectCollection<Connector>()
+        {
             new Connector()
             {
                 ID = "connector1",
@@ -479,6 +485,7 @@ By default, connector routing behavior is inherited based on the value of the di
             }
         };
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Node node)
@@ -486,16 +493,17 @@ By default, connector routing behavior is inherited based on the value of the di
             node.Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" };
         }
     }
+
     private void OnConnectorCreating(IDiagramObject obj)
     {
         if (obj is Connector connector)
         {
             connector.Style = new ShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 };
             connector.TargetDecorator = new DecoratorSettings()
-                {
-                    Shape = DecoratorShape.Arrow,
-                    Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
-                };
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
+            };
         }
     }
 }
@@ -514,21 +522,22 @@ The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
-    <LineRoutingSettings RoutingType ="@routingTypes" ObstaclePadding="@padding"></LineRoutingSettings>
+    <LineRoutingSettings RoutingType="@routingTypes" ObstaclePadding="@padding"></LineRoutingSettings>
 </SfDiagramComponent>
-@code 
+
+@code
 {
     // Set the type of the routing
-    RoutingTypes routingTypes = RoutingTypes.Advanced;
+    private RoutingTypes routingTypes = RoutingTypes.Advanced;
     // Set the padding for the obstable
-    double padding = 20;
+    private double padding = 20;
     // Enable routing constraints for diagram.
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
     // Intialize the node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Intialize the connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
@@ -537,9 +546,9 @@ The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
              new Node() { ID = "node2", OffsetX = 430, OffsetY = 130, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target" } } },
              new Node() { ID = "node3", OffsetX = 430, OffsetY = 250, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Obstacle 1" } } },
              new Node() { ID = "node4", OffsetX = 150, OffsetY = 90, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Obstacle 2" } } }
-      
         };
-        connectors = new DiagramObjectCollection<Connector>(){
+        connectors = new DiagramObjectCollection<Connector>()
+        {
             new Connector()
             {
                 ID = "connector1",
@@ -571,20 +580,19 @@ Enable this behavior by adding the [AvoidLineOverlapping](https://help.syncfusio
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Height="700px" Width="100%" @bind-Nodes="@nodes" LineRoutingSettings="@LineRoutingSettings" @bind-Connectors="@connectors" Constraints="@diagramConstraints">
 </SfDiagramComponent>
 
-@code {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    SnapConstraints snapConstraints = SnapConstraints.All;
-    DiagramInteractions DiagramInteractions = DiagramInteractions.ZoomPan;
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing | DiagramConstraints.AvoidLineOverlapping;
-    LineRoutingSettings LineRoutingSettings = new LineRoutingSettings()
-    {
-        RoutingType = RoutingTypes.Classic
-    };
+@code
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SnapConstraints snapConstraints = SnapConstraints.All;
+    private DiagramInteractions DiagramInteractions = DiagramInteractions.ZoomPan;
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing | DiagramConstraints.AvoidLineOverlapping;
+    private LineRoutingSettings LineRoutingSettings = new LineRoutingSettings(){ RoutingType = RoutingTypes.Classic };
 }
 ```
 ![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.gif)
@@ -599,22 +607,19 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
 
 
 ```cshtml
-
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="diagram" Height="700px" Width="100%" @bind-Nodes="@nodes" LineRoutingSettings="@LineRoutingSettings" @bind-Connectors="@connectors" Constraints="@diagramConstraints">
 
-</SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Height="700px" Width="100%" @bind-Nodes="@nodes" LineRoutingSettings="@LineRoutingSettings" @bind-Connectors="@connectors" Constraints="@diagramConstraints" />
 
-@code {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing | DiagramConstraints.AvoidLineOverlapping;
-    LineRoutingSettings LineRoutingSettings = new LineRoutingSettings()
-    {
-        RoutingType = RoutingTypes.Classic
-    };
+@code
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing | DiagramConstraints.AvoidLineOverlapping;
+    private LineRoutingSettings LineRoutingSettings = new LineRoutingSettings(){ RoutingType = RoutingTypes.Classic };
+    
     protected override void OnInitialized()
     {
         InitDiagramModel();
@@ -642,13 +647,11 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         CreateConnector("connector06", "node3", "node5", 4, 8);
         CreateConnector("connector07", "node5", "node4", 4, 8, "lightGreen");
         CreateConnector("connector08", "node4", "node6", 4, 8);
-
         CreateConnector("connector1", "node1", "node3", 0, 0);
         CreateConnector("connector2", "node1", "node3", 1, 1);
         CreateConnector("connector3", "node1", "node3", 2, 2);
         CreateConnector("connector4", "node1", "node3", 3, 3);
         CreateConnector("connector5", "node1", "node5", 4, 0, "lightGreen");
-
         CreateConnector("connector6", "node1", "node5", 5, 1);
         CreateConnector("connector7", "node1", "node5", 6, 2);
         CreateConnector("connector8", "node1", "node5", 7, 3, "lightGreen");
@@ -656,7 +659,6 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         CreateConnector("connector10", "node1", "node4", 9, 1, "lightGreen");
         CreateConnector("connector11", "node1", "node4", 10, 2);
         CreateConnector("connector12", "node1", "node4", 11, 3, "lightGreen");
-
         CreateConnector("connector13", "node1", "node6", 12, 0);
         CreateConnector("connector14", "node1", "node6", 13, 1, "lightGreen");
         CreateConnector("connector15", "node1", "node6", 14, 2, "lightGreen");
@@ -695,27 +697,29 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         CreateConnector("connector48", "node6", "node7", 3, 15, "lightGreen");
     }
 
-    public void Create1to16Node(string id, double x, double y, double width, double height)
+    private void Create1to16Node(string id, double x, double y, double width, double height)
     {
         Node node = CreateNode(id, x, y, width, height);
         AddShape(node, 1, 16);
-        var inPorts = AddPorts(node, 1, "in");
-        var outPorts = AddPorts(node, 16, "out");
+
+        DiagramObjectCollection<PointPort> inPorts = AddPorts(node, 1, "in");
+        DiagramObjectCollection<PointPort> outPorts = AddPorts(node, 16, "out");
+
         AddPortsLabels(node, 16, "out");
     }
 
-    public void Create16to1Node(string id, double x, double y, double width, double height)
+    private void Create16to1Node(string id, double x, double y, double width, double height)
     {
         Node node = CreateNode(id, x, y, width, height);
         AddShape(node, 16, 1);
 
-        var inPorts = AddPorts(node, 16, "in");
-        var outPorts = AddPorts(node, 1, "out");
+        DiagramObjectCollection<PointPort> inPorts = AddPorts(node, 16, "in");
+        DiagramObjectCollection<PointPort> outPorts = AddPorts(node, 1, "out");
 
         AddPortsLabels(node, 16, "in");
     }
 
-    public void Create9to5Node(string id, double x, double y, double width, double height)
+    private void Create9to5Node(string id, double x, double y, double width, double height)
     {
         List<string> leftLabels = new List<string> { "A_0", "A_1", "A_2", "A_3", "B_0", "B_1", "B_2", "B_3", "Cin" };
         List<string> rightLabels = new List<string> { "S_0", "S_1", "S_2", "S_3", "Cout" };
@@ -723,24 +727,23 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         Node node = CreateNode(id, x, y, width, height, "4 Bit\nRCA");
         AddShape(node, 9, 5);
 
-        var inPorts = AddPorts(node, 9, "in");
-        var outPorts = AddPorts(node, 5, "out", 9);
-
+        DiagramObjectCollection<PointPort> inPorts = AddPorts(node, 9, "in");
+        DiagramObjectCollection<PointPort> outPorts = AddPorts(node, 5, "out", 9);
 
         AddPortsLabels(node, 9, "in", leftLabels);
         AddPortsLabels(node, 5, "out", rightLabels, 9);
     }
 
-    public void CreateInputNode(string id, double x, double y, double width, double height, string label)
+    private void CreateInputNode(string id, double x, double y, double width, double height, string label)
     {
         Node node = CreateNode(id, x, y, width, height, label);
         AddShape(node, 0, 1);
 
-        var outPorts = AddPorts(node, 1, "out");
+        DiagramObjectCollection<PointPort> outPorts = AddPorts(node, 1, "out");
 
         if (node.Annotations.Count > 0)
         {
-            var annotation = node.Annotations[0];
+            ShapeAnnotation annotation = node.Annotations[0];
             annotation.Offset = new DiagramPoint
             {
                 X = (width - 25) / (2 * width),
@@ -749,16 +752,16 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         }
     }
 
-    public void CreateOutputNode(string id, double x, double y, double width, double height, string label)
+    private void CreateOutputNode(string id, double x, double y, double width, double height, string label)
     {
         Node node = CreateNode(id, x, y, width, height, label);
         AddShape(node, 1, 0);
 
-        var inPorts = AddPorts(node, 1, "in");
+        DiagramObjectCollection<PointPort> inPorts = AddPorts(node, 1, "in");
 
         if (node.Annotations.Count > 0)
         {
-            var annotation = node.Annotations[0];
+            ShapeAnnotation annotation = node.Annotations[0];
             annotation.Offset = new DiagramPoint
             {
                 X = 1 - ((width - 25) / (2 * width)),
@@ -767,7 +770,7 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         }
     }
 
-    public void AddShape(Node node, int inCount, int outCount)
+    private void AddShape(Node node, int inCount, int outCount)
     {
         int maxCount = Math.Max(inCount, outCount);
         double? rightX = outCount == 0 ? node.Width : node.Width - 25;
@@ -804,24 +807,22 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
 
         pathData += $"L {leftX} 0 Z";
         node.Shape = new PathShape { Type = NodeShapes.Path, Data = pathData };
-
     }
 
-    public DiagramObjectCollection<PointPort> AddPorts(Node node, int count, string side, double factor = 0)
+    private DiagramObjectCollection<PointPort> AddPorts(Node node, int count, string side, double factor = 0)
     {
-
         if (factor == 0)
         {
             factor = count;
         }
+        
         DiagramObjectCollection<PointPort> Ports = new DiagramObjectCollection<PointPort>();
-
 
         if (count > 1)
         {
             for (int i = 1; i <= count; i++)
             {
-                var port = new PointPort
+                PointPort port = new PointPort
                 {
                     ID = $"{node.ID}{side}{i - 1}",
                     Offset = new DiagramPoint
@@ -840,7 +841,7 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         }
         else
         {
-            var port = new PointPort
+            PointPort port = new PointPort
             {
                 ID = $"{node.ID}{side}0",
                 Offset = new DiagramPoint
@@ -853,28 +854,26 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
                 Style = new ShapeStyle { Fill = "black" },
                 Width = 8,
                 Height = 8,
-
             };
             node.Ports.Add(port);
         }
-
         return Ports;
     }
 
-    public void AddPortsLabels(Node node, int count, string side, List<string> labels = null, double factor = 0)
+    private void AddPortsLabels(Node node, int count, string side, List<string> labels = null, double factor = 0)
     {
         if (factor == 0)
         {
             factor = count;
         }
-        DiagramObjectCollection<ShapeAnnotation> Annotations = new DiagramObjectCollection<ShapeAnnotation>();
 
+        DiagramObjectCollection<ShapeAnnotation> Annotations = new DiagramObjectCollection<ShapeAnnotation>();
         double width = node.Width ?? 0.0; // Provide a default value to avoid null
         double x = side == "out" ? (width - 25 * 0.5) / width : (25 * 0.5) / width;
 
         for (int i = 1; i <= count; i++)
         {
-            var label = new  ShapeAnnotation
+            ShapeAnnotation label = new ShapeAnnotation
             {
                 Content = labels != null ? labels[i - 1] : $"{i - 1}",
                 Offset = new DiagramPoint
@@ -884,17 +883,17 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
                 },
                 Style = new TextStyle { FontSize = 7 },
                 VerticalAlignment = VerticalAlignment.Bottom,
-                Margin = new DiagramThickness  { Bottom = 2 }
+                Margin = new DiagramThickness { Bottom = 2 }
             };
             node.Annotations.Add(label);
         }
     }
 
-    public Node CreateNode(string id, double x, double y, double width, double height, string label = null)
+    private Node CreateNode(string id, double x, double y, double width, double height, string label = null)
     {
-        var shapeStyle = new ShapeStyle { StrokeColor = "black", StrokeWidth = 2 };
+        ShapeStyle shapeStyle = new ShapeStyle { StrokeColor = "black", StrokeWidth = 2 };
 
-        var diagramNode = new Node
+        Node diagramNode = new Node
         {
             ID = id,
             OffsetX = x,
@@ -907,7 +906,7 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
 
         if (!string.IsNullOrEmpty(label))
         {
-            var annotation = new ShapeAnnotation
+            ShapeAnnotation annotation = new ShapeAnnotation
             {
                 Content = label,
                 Style = new TextStyle { FontSize = 14 }
@@ -919,9 +918,10 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         return diagramNode;
     }
 
-    public void CreateConnector(string id, string sourceId, string targetId, int sourcePortIndex, int targetPortIndex, string strokeColor = null)
+    private void CreateConnector(string id, string sourceId, string targetId, int sourcePortIndex, int targetPortIndex, string strokeColor = null)
     {
         string color = !string.IsNullOrEmpty(strokeColor) ? strokeColor : "green";
+
         if (color == "lightGreen")
         {
             color = "#1AD81A";
@@ -931,7 +931,7 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
             color = "#005100";
         }
 
-        var diagramConnector = new Connector
+        Connector diagramConnector = new Connector
         {
             ID = id,
             CornerRadius = 5,
@@ -945,7 +945,6 @@ The following example demonstrates enabling the `AvoidLineOverlapping` feature i
         };
         connectors.Add(diagramConnector);
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSsjjxpKTfTUFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

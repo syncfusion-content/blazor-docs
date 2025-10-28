@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Syncfusion Blazor Diagram Component | Syncfusion
+title: Event in Syncfusion Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Connector Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Events in Diagram Component
+# Connector Events in Diagram Component
 
 ## How to Handle Selection Change Event
 
@@ -24,15 +24,14 @@ The following code example explains how to get the selection change event in the
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChanging="@OnSelectionChanging" SelectionChanged="@OnSelectionChanged"  Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChanging="@OnSelectionChanging" SelectionChanged="@OnSelectionChanged" Height="500px" Connectors="@connectors" />
 
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -70,10 +69,10 @@ The following code example explains how to get the selection change event in the
     }
 
     // To notify the selection changing event before selecting/unselecting the diagram elements.
-    public void OnSelectionChanging(SelectionChangingEventArgs args)
+    private void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-    //Sets true to cancel the selection.
-    args.Cancel = true;
+        //Sets true to cancel the selection.
+        args.Cancel = true;
     }
 
     // To notify the selection is changed in the diagram.
@@ -99,15 +98,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChanging="@OnPositionChanging" PositionChanged="@OnPositionChanged" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChanging="@OnPositionChanging" PositionChanged="@OnPositionChanged" Height="500px" Connectors="@connectors" />
 
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -145,10 +143,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 
     // To notify the position changing event before dragging the diagram elements.
-    public void OnPositionChanging(PositionChangingEventArgs args)
+    private void OnPositionChanging(PositionChangingEventArgs args)
     {
-    //Sets true to cancel the dragging.
-    args.Cancel = true;
+        //Sets true to cancel the dragging.
+        args.Cancel = true;
     }
 
     // To notify the position changed event after dragging the diagram elements.
@@ -174,30 +172,29 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChanging="@OnConnectionChanging" ConnectionChanged="@OnConnectionChange" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChanging="@OnConnectionChanging" ConnectionChanged="@OnConnectionChange" Height="500px" Connectors="@connectors" Nodes="@nodes" />
 
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-      //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Initialize the diagram's nodes collection
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>()
-       {
-          new Node() 
-          {
+        {
+            new Node()
+            {
             OffsetX = 100,
             OffsetY = 100,
             Height = 50,
             Width = 100,
             ID = "node1",
-          },
+            }
         };
         Connector Connector = new Connector()
         {
@@ -257,17 +254,16 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" SourcePointChanging="@OnSourcePointChanging" SourcePointChanged="@OnSourcePointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" SourcePointChanging="@OnSourcePointChanging" SourcePointChanged="@OnSourcePointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes" />
 
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -318,43 +314,42 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" TargetPointChanging="@OnTargetPointChanging" TargetPointChanged="@OnTargetPointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="Diagram" Width="1000px" TargetPointChanging="@OnTargetPointChanging" TargetPointChanged="@OnTargetPointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes" />
 
 @code
 {
     //Reference the diagram.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint()
             {
-                ID = "connector1",
-                SourcePoint = new DiagramPoint()
-                {
-                    X = 200,
-                    Y = 200
-                },
-                TargetPoint = new DiagramPoint()
-                {
-                    X = 300,
-                    Y = 400,
-                }
-            };
+                X = 200,
+                Y = 200
+            },
+            TargetPoint = new DiagramPoint()
+            {
+                X = 300,
+                Y = 400,
+            }
+        };
         connectors.Add(Connector);
     }
-
 
     // Notify the target point changed event before the target point has changed.
     private void OnTargetPointChanging(EndPointChangingEventArgs args)
     {
         //Action to be performed.
     }
+
     // Notify the target point changed event after the target point has changed.
     private void OnTargetPointChanged(EndPointChangedEventArgs args)
     {
@@ -374,14 +369,12 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Connectors="@connectors" 
-                    ConnectorCreating="OnConnectorCreating" />
+<SfDiagramComponent Height="600px" Connectors="@connectors" ConnectorCreating="OnConnectorCreating" />
 
 @code
 {
     // Define the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -404,8 +397,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         connectors.Add(Connector);
     }
 
-    public void OnConnectorCreating(IDiagramObject args)
-    { 
+    private void OnConnectorCreating(IDiagramObject args)
+    {
         Connector connector = args as Connector;
         connector.Style.Fill = "black";
         connector.Style.StrokeColor = "black";
@@ -426,14 +419,12 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" 
-                    Connectors="@connectors" 
-                    SegmentCollectionChange="SegmentCollectionChange" />
+<SfDiagramComponent Height="600px" Connectors="@connectors" SegmentCollectionChange="SegmentCollectionChange" />
 
 @code
 {
     // Define the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -456,9 +447,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         connectors.Add(Connector);
     }
 
-    public void SegmentCollectionChange(SegmentCollectionChangeEventArgs args)
-    { 
-       
+    private void SegmentCollectionChange(SegmentCollectionChangeEventArgs args)
+    {
+
     }
 }
 ```
@@ -479,19 +470,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Connectors="@connectors"
-                    CollectionChanged="OnCollectionChanged">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Connectors="@connectors" CollectionChanged="OnCollectionChanged" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-          Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -502,7 +492,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         };
         connectors.Add(Connector);
     }
-     //  Notify the Collection Changed event while changing the collection of the connector at run time.
+
+    //  Notify the Collection Changed event while changing the collection of the connector at run time.
     private void OnCollectionChanged(CollectionChangedEventArgs args)
     {
         //Action to be performed.
@@ -520,19 +511,18 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Connectors="@connectors"
-                    MouseEnter="OnMouseEnter">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Connectors="@connectors" MouseEnter="OnMouseEnter" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-          Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -543,6 +533,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         };
         connectors.Add(Connector);
     }
+
     private void OnMouseEnter(DiagramElementMouseEventArgs args)
     {
     }
@@ -559,19 +550,18 @@ The [MouseLeave](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Connectors="@connectors"
-                    MouseLeave="OnMouseLeave">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Connectors="@connectors" MouseLeave="OnMouseLeave" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-          Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -582,6 +572,7 @@ The [MouseLeave](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
         };
         connectors.Add(Connector);
     }
+
     private void OnMouseLeave(DiagramElementMouseEventArgs args)
     {
     }
@@ -598,19 +589,18 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@Diagram"
-                    Width="100%"
-                    Height="700px"
-                    Connectors="@connectors"
-                    MouseHover="OnMouseHover">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
+
+<SfDiagramComponent @ref="@Diagram" Width="100%" Height="700px" Connectors="@connectors" MouseHover="OnMouseHover" />
+
+@code
+{
+    private SfDiagramComponent Diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-         Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -621,6 +611,7 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
         };
         connectors.Add(Connector);
     }
+
     private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
     }
@@ -636,19 +627,18 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" 
-                    Width="100%" 
-                    Height="700px" 
-                    Connectors="@connectors"
-                    PropertyChanged="OnNodePropertyChanged">
-</SfDiagramComponent>
-@code {
-    SfDiagramComponent diagram;
+
+<SfDiagramComponent @ref="@diagram" Width="100%" Height="700px" Connectors="@connectors" PropertyChanged="OnNodePropertyChanged" />
+
+@code
+{
+    private SfDiagramComponent diagram;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-          Connector Connector = new Connector()
+        Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector.
@@ -659,6 +649,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         };
         connectors.Add(Connector);
     }
+
     // Method to handle Property Changed event
     private void OnNodePropertyChanged(PropertyChangedEventArgs args)
     {

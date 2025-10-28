@@ -20,7 +20,7 @@ A [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {

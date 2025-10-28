@@ -27,7 +27,7 @@ Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -104,13 +104,12 @@ The following code example demonstrates how to set path position for a connector
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -166,11 +165,11 @@ The following code shows how to align ports.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -186,18 +185,18 @@ The following code shows how to align ports.
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             // Initialize port collection.
-            Ports = new DiagramObjectCollection<PointPort>() 
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                new PointPort() 
+                new PointPort()
                 {
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0, Y = 0 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style = new ShapeStyle(){ Fill="gray", StrokeColor="black"},
-                    Width = 12, 
-                    Height = 12, 
-                    // Sets the shape of the port as Square.                    
+                    Width = 12,
+                    Height = 12,
+                    // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
@@ -224,11 +223,11 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -244,9 +243,9 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             // Initialize port collection.
-            Ports = new DiagramObjectCollection<PointPort>() 
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                new PointPort() 
+                new PointPort()
                 {
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0.5, Y = 1 },
@@ -254,7 +253,7 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
                     //Set the style for the port.
                     Style= new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
                     Width = 12,
-                    Height = 12, 
+                    Height = 12,
                     // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Left,

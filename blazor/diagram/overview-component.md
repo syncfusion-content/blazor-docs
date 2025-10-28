@@ -34,69 +34,76 @@ The following code illustrates how to create an overview.
     <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="30" Orientation="LayoutOrientation.TopToBottom" VerticalSpacing="30" HorizontalAlignment="HorizontalAlignment.Auto" VerticalAlignment="VerticalAlignment.Auto" GetLayoutInfo="GetLayoutInfo">
         <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"></LayoutMargin>
-    </Layout>            
+    </Layout>
 </SfDiagramComponent>
 <SfDiagramOverviewComponent Height="150px" SourceID="element"></SfDiagramOverviewComponent>
-@code {
-SfDiagramComponent Diagram;
-private void ConnectorCreating(IDiagramObject connector)
+
+@code
 {
-    (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
-    (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
-    (connector as Connector).Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
-    (connector as Connector).Constraints = 0;
-    (connector as Connector).CornerRadius = 5;
-}
-private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
-{
-    options.EnableSubTree = true;
-    options.Orientation = Orientation.Horizontal;
-    return options;
-}
-private void NodeCreating(IDiagramObject obj)
-{
-    Node node = obj as Node;
-    if (node.Data is System.Text.Json.JsonElement)
+    private SfDiagramComponent Diagram;
+    
+    private void ConnectorCreating(IDiagramObject connector)
     {
-        node.Data = System.Text.Json.JsonSerializer.Deserialize<HierarchicalDetails>(node.Data.ToString());
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
+        (connector as Connector).Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
+        (connector as Connector).Constraints = 0;
+        (connector as Connector).CornerRadius = 5;
     }
-    HierarchicalDetails hierarchicalData = node.Data as HierarchicalDetails;
-    node.Style = new ShapeStyle() { Fill = "#659be5", StrokeColor = "none", StrokeWidth = 2, };
-    node.BackgroundColor = "#659be5";
-    node.Width = 150;
-    node.Height = 50;
-    node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-        new ShapeAnnotation()
+        options.EnableSubTree = true;
+        options.Orientation = Orientation.Horizontal;
+        return options;
+    }
+
+    private void NodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        if (node.Data is System.Text.Json.JsonElement)
         {
-            Content = hierarchicalData.Name,
-            Style =new TextStyle(){Color = "white"}
+            node.Data = System.Text.Json.JsonSerializer.Deserialize<HierarchicalDetails>(node.Data.ToString());
         }
+        HierarchicalDetails hierarchicalData = node.Data as HierarchicalDetails;
+        node.Style = new ShapeStyle() { Fill = "#659be5", StrokeColor = "none", StrokeWidth = 2, };
+        node.BackgroundColor = "#659be5";
+        node.Width = 150;
+        node.Height = 50;
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
+                Content = hierarchicalData.Name,
+                Style =new TextStyle(){Color = "white"}
+            }
+        };
+    }
+
+    //Create the hierarchical details with needed properties.
+    public class HierarchicalDetails
+    {
+        public string Name { get; set; }
+        public string FillColor { get; set; }
+        public string Category { get; set; }
+    }
+
+    //Create the data source with node name and fill color values.
+    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    {
+        new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Organizational chart", Category="Layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Radial tree", Category="Tree layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Mind map", Category="Hierarchical tree",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Family tree", Category="Hierarchical tree",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Management", Category="Organizational chart",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Human resources", Category="Management",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="University", Category="Management",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Business", Category="#Management",FillColor="#659be5"}
     };
-}
- //Create the hierarchical details with needed properties.
-public class HierarchicalDetails
-{
-    public string Name { get; set; }
-    public string FillColor { get; set; }
-    public string Category { get; set; }
-}
-//Create the data source with node name and fill color values.
-public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
-{
-    new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Organizational chart", Category="Layout",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Radial tree", Category="Tree layout",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Mind map", Category="Hierarchical tree",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Family tree", Category="Hierarchical tree",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Management", Category="Organizational chart",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Human resources", Category="Management",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="University", Category="Management",FillColor="#659be5"},
-    new HierarchicalDetails(){ Name ="Business", Category="#Management",FillColor="#659be5"}
-};
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoitXvqgxOfTzQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -148,8 +155,13 @@ The following example shows how to disable the zoom constraint from the default 
 <SfDiagramComponent @ref="diagram" Height="600px" Width="90%" ID="element" @bind-Nodes="nodes" @bind-Connectors="connectors">
 </SfDiagramComponent>
 <SfDiagramOverviewComponent Height="150px" SourceID="element" Constraints="DiagramOverviewConstraints.Default &~ DiagramOverviewConstraints.Zoom"></SfDiagramOverviewComponent>
-@code {
-    SfDiagramComponent diagram; DiagramObjectCollection<Node> nodes; DiagramObjectCollection<Connector> connectors;
+
+@code
+{
+    private SfDiagramComponent diagram; 
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Connector> connectors;
+
     protected override void OnInitialized()
     {
         //Initialize the node and connector collections

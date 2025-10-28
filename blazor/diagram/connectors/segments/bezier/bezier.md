@@ -16,13 +16,12 @@ Bezier segments are used to create curved connectors. The curve can be configure
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Defines diagram's connector collection.
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -55,7 +54,7 @@ Bezier segments are used to create curved connectors. The curve can be configure
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNreiNjHgpdAoFCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier/Bezier).
 
 ![Connector with Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-connector-with-bezier.png)
 
@@ -94,8 +93,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         };
         //Add the connector into connectors's collection.
         connectors.Add(Connector1);
-         Connector Connector2 = new Connector()
-         {
+        Connector Connector2 = new Connector()
+        {
             ID = "Connector2",
             Type = ConnectorSegmentType.Bezier,
             SourcePoint = new DiagramPoint { X = 200, Y = 100 },
@@ -138,57 +137,56 @@ By default, when there are no segments defined for a bezier connector, the bezie
 
 @code {
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define the diagram's node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes.Add(
-            new Node()
-                {
-                    ID = "node1",
-                    OffsetX = 300,
-                    OffsetY = 100,
-                    Width = 100,
-                    Height = 100,
-                    Ports = new DiagramObjectCollection<PointPort>()
-                    {
-                    new PointPort()
-                    {
-                        ID="Port1",
-                        Visibility = PortVisibility.Visible,
-                        Offset = new DiagramPoint() { X = 1, Y = 0.5 },
-                    },
-                    }
-                });
         nodes.Add(new Node()
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node2",
-                OffsetX = 300,
-                OffsetY = 350,
-                Width = 100,
-                Height = 100,
-                Ports = new DiagramObjectCollection<PointPort>()
+                new PointPort()
                 {
-                    new PointPort()
-                    {
-                        ID="Port1",
-                        Visibility = PortVisibility.Visible,
-                        Offset = new DiagramPoint() { X = 0, Y = 0.5 },
-                    },
-                }
-            });
-        Connector connector1 = new Connector()
+                    ID="Port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                },
+            }
+        });
+        nodes.Add(new Node()
+        {
+            ID = "node2",
+            OffsetX = 300,
+            OffsetY = 350,
+            Width = 100,
+            Height = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-                SourcePortID = "Port1",
-                TargetPortID = "Port1",
-                Type = ConnectorSegmentType.Bezier,
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
-            };
+                new PointPort()
+                {
+                    ID="Port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                },
+            }
+        });
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+            SourcePortID = "Port1",
+            TargetPortID = "Port1",
+            Type = ConnectorSegmentType.Bezier,
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
+        };
         connectors.Add(connector1);
     }
 }
@@ -203,71 +201,71 @@ Also, if you provide segments during the initial rendering, the segment collecti
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors" />
 
-@code {
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define the diagram's node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes.Add(
-            new Node()
-                {
-                    ID = "node1",
-                    OffsetX = 300,
-                    OffsetY = 100,
-                    Width = 100,
-                    Height = 100,
-                    Ports = new DiagramObjectCollection<PointPort>()
-                    {
-                    new PointPort()
-                    {
-                        ID="Port1",
-                        Visibility = PortVisibility.Visible,
-                        Offset = new DiagramPoint() { X = 1, Y = 0.5 },
-                    },
-                    }
-                });
         nodes.Add(new Node()
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node2",
-                OffsetX = 300,
-                OffsetY = 350,
-                Width = 100,
-                Height = 100,
-                Ports = new DiagramObjectCollection<PointPort>()
+                new PointPort()
                 {
-                    new PointPort()
-                    {
-                        ID="Port1",
-                        Visibility = PortVisibility.Visible,
-                        Offset = new DiagramPoint() { X = 0, Y = 0.5 },
-                    },
-                }
-            });
-        Connector connector1 = new Connector()
+                    ID="Port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                },
+            }
+        });
+        nodes.Add(new Node()
+        {
+            ID = "node2",
+            OffsetX = 300,
+            OffsetY = 350,
+            Width = 100,
+            Height = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-                SourcePortID = "Port1",
-                TargetPortID = "Port1",
-                Type = ConnectorSegmentType.Bezier,
-                Segments = new DiagramObjectCollection<ConnectorSegment>(){new BezierSegment(){Type = ConnectorSegmentType.Bezier}},
-                //Define whether to reset the current segments collection in response to change in the connector ends.
-                BezierConnectorSettings = new BezierConnectorSettings() { AllowSegmentsReset = false },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
-            };
+                new PointPort()
+                {
+                    ID="Port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                },
+            }
+        });
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+            SourcePortID = "Port1",
+            TargetPortID = "Port1",
+            Type = ConnectorSegmentType.Bezier,
+            Segments = new DiagramObjectCollection<ConnectorSegment>() { new BezierSegment() { Type = ConnectorSegmentType.Bezier } },
+            //Define whether to reset the current segments collection in response to change in the connector ends.
+            BezierConnectorSettings = new BezierConnectorSettings() { AllowSegmentsReset = false },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
+        };
         connectors.Add(connector1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBSCDNnASCfNrtt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/BezierAllowSegmentsReset/BezierAllowSegmentsReset).
 
 ![Avoid overlapping with bezier](../../../images/bezierOverlap.png)
 
@@ -301,35 +299,36 @@ The following code example illustrates how to create a customized bezier segment
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ConnectorSegmentThumb="@connectorSegmentThumb"></SfDiagramComponent>
-@code {
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" ConnectorSegmentThumb="@connectorSegmentThumb" />
+
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Define the segment shape 
-    SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Define the segment shape
+    private SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+
     protected override void OnInitialized()
     {
         Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
+            SourceDecorator = new DecoratorSettings() { Shape = DecoratorShape.Diamond },
+            Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
-                ID = "connector",
-                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint() { X = 300, Y =300 },
-                SourceDecorator = new DecoratorSettings() { Shape = DecoratorShape.Diamond },
-                Segments = new DiagramObjectCollection<ConnectorSegment>()
-                {
-                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 200, Y = 100}
-                ,
-                },
-                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 260, Y = 150}}
-                },
-                Type = ConnectorSegmentType.Bezier,
-                BezierConnectorSettings = new BezierConnectorSettings()
-                {
-                    ControlPointsVisibility = ControlPointsVisibility.All
-                },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
-                
-            };
+               new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 200, Y = 100}},
+               new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 260, Y = 150}}
+            },
+            Type = ConnectorSegmentType.Bezier,
+            BezierConnectorSettings = new BezierConnectorSettings()
+            {
+                ControlPointsVisibility = ControlPointsVisibility.All
+            },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
+        };
         connectors.Add(connector);
     }
 }
@@ -345,33 +344,35 @@ The following code example illustrates how to create a customized bezier segment
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ></SfDiagramComponent>
-@code {
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
+            SourceDecorator = new DecoratorSettings() { Shape = DecoratorShape.Diamond },
+            Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
-                ID = "connector",
-                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint() { X = 300, Y =300 },
-                SourceDecorator = new DecoratorSettings() { Shape = DecoratorShape.Diamond },
-                Segments = new DiagramObjectCollection<ConnectorSegment>()
-                {
-                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 200, Y = 100}
-                ,
-                },
+                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 200, Y = 100}},
                 new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 260, Y = 150}}
-                },
-                Type = ConnectorSegmentType.Bezier,
-                BezierConnectorSettings = new BezierConnectorSettings()
-                {
-                    ControlPointsVisibility = ControlPointsVisibility.All
-                },
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
-                SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square},
-            };
+            },
+            Type = ConnectorSegmentType.Bezier,
+            BezierConnectorSettings = new BezierConnectorSettings()
+            {
+                ControlPointsVisibility = ControlPointsVisibility.All
+            },
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square },
+        };
         connectors.Add(connector);
     }
 }
