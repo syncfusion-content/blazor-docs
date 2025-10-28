@@ -1,33 +1,28 @@
 ---
 layout: post
 title: Editing tasks in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Editing tasks in Syncfusion Blazor Gantt Chart component and more.
+description: Learn how to edit tasks dynamically in the Syncfusion Blazor Gantt Chart component using cell editing, dialog, taskbar, or programmatic methods for project updates.
 platform: Blazor
-control: Gantt Chart
+control: Editing tasks
 documentation: ug
 ---
 
 # Editing tasks in Blazor Gantt Chart Component
 
-The editing feature can be enabled in the Gantt Chart component by enabling the [GanttEditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [GanttEditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) properties.
+Editing tasks in the Blazor Gantt Chart component enables dynamic project updates, such as modifying task durations, names, or dependencies, using cell editing, dialog, taskbar interactions, or programmatic methods. Enable editing by setting [GanttEditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [GanttEditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) to **true**, ensuring task data aligns with [TaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) mappings (e.g., id, name, startDate). Cell editing allows direct updates in the TreeGrid pane, dialog editing provides a comprehensive interface, taskbar dragging adjusts durations or dates, and connector lines manage dependencies via drag-and-drop. Use the [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) property to control editing behavior (**Auto** or **Dialog**). Customize dialog fields with [AddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogFields.html#Syncfusion_Blazor_Gantt_GanttAddDialogFields_AddDialogFields) and [EditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogFields.html#Syncfusion_Blazor_Gantt_GanttEditDialogFields_EditDialogFields) for tailored forms. The [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method enables programmatic updates, except for task IDs. Ensure valid data to prevent issues and maintain dependency integrity.
 
-The following editing options are available to update the tasks in the Gantt chart:
-* Cell
-* Dialog
-* Taskbar
+## Edit tasks via cell editing
 
-## Cell editing
+Enable cell editing by setting [GanttEditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) to **true**, [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) to **Auto**. Double-click a TreeGrid cell to edit fields like task name or duration directly, ideal for quick updates. Ensure `GanttTaskFields` mappings are valid for seamless editing.
 
-By setting the edit mode to auto using the [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) property, the tasks can be edited by double-clicking the Tree Grid cells.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-The following code example shows you how to enable the cell editing in Gantt Chart component.
-
-```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttEditSettings AllowEditing="true" Mode="EditMode.Auto"></GanttEditSettings>
+    <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -39,49 +34,49 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
         };
         return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBeCNiDVodpLcuW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
 
-double click action on Tree Grid or chart side
+## Edit tasks via dialog
 
-![Blazor Gantt Chart displays Editing in Chart](images/blazor-gantt-chart-editing-in-chart.png)
+Enable dialog editing by setting [GanttEditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) to **true** and [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) to **Dialog**. Double-click a row on the TreeGrid or chart side to open a dialog for editing task details, such as start date or dependencies, suitable for comprehensive updates. In **Auto** mode, double-clicking the chart side opens the dialog, while the TreeGrid side enables cell editing.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrKZcibioUFqasP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-## Dialog editing
-
-Modify the task details through the edit dialog by setting the `GanttEditSettings.Mode` as `Dialog`.
-
-```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog"></GanttEditSettings>
 </SfGantt>
@@ -95,50 +90,54 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
         };
         return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBeMDWXLyuhTais?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> In dialog editing mode, the edit dialog appears when the Tree Grid or Gantt chart sides are double-clicked.
 
-![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-dialog-editing.png)
+## Sections or tabs in Dialog
 
-### Sections or tabs in Dialog
+Customize the edit dialog by defining tabs with [GanttAddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogFields.html) and [GanttEditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogFields.html), using the [GanttAddDialogField.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogField.html#Syncfusion_Blazor_Gantt_GanttAddDialogField_Type) and [GanttEditDialogField.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogField.html#Syncfusion_Blazor_Gantt_GanttEditDialogField_Type) property (e.g., General, Dependency). This organizes fields into tabs for focused editing, such as task details or dependencies.
 
-In the Gantt Chart dialog, you can define the required tabs or editing sections using the [GanttAddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogFields.html) and [GanttEditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogFields.html) properties. Every tab is defined using the `GanttAddDialogField.Type` or `GanttEditDialogField.Type` property.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
- @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId" Notes="Notes"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentID" Notes="Notes"
                      Dependency="Predecessor">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" TValue="TaskInfoModel" TAssignment="AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskID" ResourceID="ResourceID" TValue="TaskInfoModel" TAssignment="AssignmentModel">
     </GanttAssignmentFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog">
     </GanttEditSettings>
@@ -168,13 +167,13 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
 
     public class TaskInfoModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Notes { get; set; }
         public string Predecessor { get; set; }
     }
@@ -186,8 +185,8 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
     public class AssignmentModel
     {
         public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
+        public int TaskID { get; set; }
+        public int ResourceID { get; set; }
     }
 
     public static List<ResourceInfoModel> GetResourceCollections()
@@ -206,12 +205,12 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
     {
         List<AssignmentModel> assignments = new List<AssignmentModel>()
         {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2, ResourceId=1},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 3, ResourceId=2},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3, ResourceId=3},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 6, ResourceId=4},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 8, ResourceId=1},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 8, ResourceId=5}
+            new AssignmentModel(){ PrimaryId=1, TaskID = 2, ResourceID=1},
+            new AssignmentModel(){ PrimaryId=2, TaskID = 3, ResourceID=2},
+            new AssignmentModel(){ PrimaryId=3, TaskID = 3, ResourceID=3},
+            new AssignmentModel(){ PrimaryId=4, TaskID = 6, ResourceID=4},
+            new AssignmentModel(){ PrimaryId=5, TaskID = 8, ResourceID=1},
+            new AssignmentModel(){ PrimaryId=6, TaskID = 8, ResourceID=5}
         };
         return assignments;
     }
@@ -220,43 +219,43 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
         {
-            new TaskInfoModel() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskInfoModel() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Notes = "Measure the total property area alloted for construction", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Predecessor = "2", Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskInfoModel() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", Notes = "Develop floor plans and obtain a materials list for estimations", ParentId = 5 },
-            new TaskInfoModel() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Predecessor = "6", Notes = "", ParentId = 5 },
-            new TaskInfoModel() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Predecessor = "7", Notes = "", ParentId = 5 }
+            new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Notes = "Measure the total property area alloted for construction", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Predecessor = "2", Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 11), EndDate = new DateTime(2022, 04, 18), },
+            new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 11), Duration = "3", Progress = 30, Predecessor = "4", Notes = "Develop floor plans and obtain a materials list for estimations", ParentID = 5 },
+            new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 14), Duration = "3", Predecessor = "6", Notes = "", ParentID = 5 },
+            new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 18), Duration = "0", Predecessor = "7", Notes = "", ParentID = 5 }
         };
         return Tasks;
     }
 }
-```
 
-Tabs in Edit or Add Dialog
+{% endhighlight %}
+{% endtabs %}
 
-![Adding New DialogTabs in Blazor Gantt Chart](images/blazor-gantt-chart-add-dialogtab.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVSWZiDBQDQDzvd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqjcCbixMhewQb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+### Limit fields in general tab
 
-### Limiting data fields in general tab
+Restrict fields in the dialog’s General tab using [GanttAddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogFields.html) and [GanttEditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogFields.html) with the [GanttAddDialogField.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogField.html#Syncfusion_Blazor_Gantt_GanttAddDialogField_Type) and [GanttEditDialogField.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogField.html#Syncfusion_Blazor_Gantt_GanttEditDialogField_Type) properties set to **General** and [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogField.html#Syncfusion_Blazor_Gantt_GanttEditDialogField_Fields) specifying visible fields (e.g., TaskName, Duration). This streamlines editing by showing only relevant fields.
 
-In the Gantt Chart dialog, you can make only specific data source fields visible for editing by using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. The data fields are defined with `GanttEditDialogField.Type` and `GanttEditDialogField.Fields` properties.
+> You can also define the custom fields in the add/edit dialog General tab using the `Fields` property.
 
-`Note:` You can also define the custom fields in the add/edit dialog General tab using the `Fields` property.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
- @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId" Notes="Notes"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentID" Notes="Notes"
                      Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog">
     </GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName"></GanttColumn>
         <GanttColumn Field="StartDate"></GanttColumn>
         <GanttColumn Field="Duration"></GanttColumn>
@@ -264,12 +263,12 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
     </GanttColumns>
     <GanttEditDialogFields>
         <GanttEditDialogField Type="GanttDialogFieldType.General" HeaderText="General"
-                              Fields="@(new string[]{ "TaskId", "TaskName", "Duration" })"></GanttEditDialogField>
+                              Fields="@(new string[]{ "TaskID", "TaskName", "Duration" })"></GanttEditDialogField>
         <GanttEditDialogField Type="GanttDialogFieldType.Notes"></GanttEditDialogField>
     </GanttEditDialogFields>
     <GanttAddDialogFields>
         <GanttAddDialogField Type="GanttDialogFieldType.General" HeaderText="General Tab"
-                             Fields="@(new string[]{ "TaskId", "TaskName", "Duration" })"></GanttAddDialogField>
+                             Fields="@(new string[]{ "TaskID", "TaskName", "Duration" })"></GanttAddDialogField>
         <GanttAddDialogField Type="GanttDialogFieldType.Dependency"></GanttAddDialogField>
     </GanttAddDialogFields>
 </SfGantt>
@@ -283,13 +282,13 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
 
     public class TaskInfoModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Notes { get; set; }
         public string Predecessor { get; set; }
     }
@@ -298,40 +297,46 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
         {
-            new TaskInfoModel() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskInfoModel() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Notes = "Measure the total property area alloted for construction", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Predecessor = "2", Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
-            new TaskInfoModel() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskInfoModel() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", Notes = "Develop floor plans and obtain a materials list for estimations", ParentId = 5 },
-            new TaskInfoModel() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Predecessor = "6", Notes = "", ParentId = 5 },
-            new TaskInfoModel() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Predecessor = "7", Notes = "", ParentId = 5 }
+            new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Notes = "Measure the total property area alloted for construction", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Predecessor = "2", Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentID = 1 },
+            new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 11), EndDate = new DateTime(2022, 04, 18), },
+            new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", Notes = "Develop floor plans and obtain a materials list for estimations", ParentID = 5 },
+            new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Predecessor = "6", Notes = "", ParentID = 5 },
+            new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Predecessor = "7", Notes = "", ParentID = 5 }
         };
         return Tasks;
     }
 }
-```
 
-The following screenshot show the output of above code example.
+{% endhighlight %}
+{% endtabs %}
 
-![Blazor Gantt Chart with Custom Fields](images/blazor-gantt-chart-custom-fields.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSWXiyWEIoOWHT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Edit task dependencies
 
-## Task dependencies
+Enable dependency editing by mapping the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency)  property in `GanttTaskFields`, setting [GanttEditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [GanttEditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) to **true**. Update dependencies via:
 
-In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property.
+- **Mouse interactions**: Drag connector points on taskbars to create or modify links.
 
-You can update the task dependencies using the following ways:
+    ![Updating task dependency with mouse drag and drop action](images/user-interaction.png)
 
-* Edit dialog: Create or remove the task dependencies using the `Dependency` tab in the edit dialog.
-* Cell editing: Create or remove the task links using cell editing.
+- **Dialog**: Edit the Dependency tab in the edit dialog.
 
-The following code example demonstrates how to enable task dependency editing in the Gantt chart using the `EditSettings` property.
+    ![Updating task dependency in dialog Dependency tab](images/editing-dialog.png)
 
-```cshtml
+- **Cell editing**: Update the dependency field in the TreeGrid. Ensure valid dependency strings to avoid circular references.
+
+    ![Updating task dependency via cell editing in TreeGrid](images/cell-edit.png)
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
@@ -345,49 +350,49 @@ The following code example demonstrates how to enable task dependency editing in
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>();
-        Tasks.Add(new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), });
-        Tasks.Add(new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 });
-        Tasks.Add(new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 });
-        Tasks.Add(new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 });
-        Tasks.Add(new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), });
-        Tasks.Add(new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", ParentId = 5 });
-        Tasks.Add(new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 });
-        Tasks.Add(new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Predecessor = "7", ParentId = 5 });
+        Tasks.Add(new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), });
+        Tasks.Add(new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 11), EndDate = new DateTime(2022, 04, 18), });
+        Tasks.Add(new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", ParentID = 5 });
+        Tasks.Add(new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentID = 5 });
+        Tasks.Add(new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Predecessor = "7", ParentID = 5 });
         return Tasks;
     }
 }
-```
 
-Updating with cell Edit or Dialog
+{% endhighlight %}
+{% endtabs %}
 
-![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-edit-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBIWDWeiYcZSwrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhKNGilsGWIOHHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+## Edit tasks programmatically
 
-## Update task values using method
+Update tasks programmatically using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method, specifying the task ID and updated data. This method supports automation, such as updating durations via a button, but cannot modify the task ID. Ensure `GanttTaskFields` mappings are valid for successful updates.
 
-Tasks' value can be dynamically updated by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
+> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
-N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="UpdateRecord">Update Task 3</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
@@ -396,7 +401,7 @@ N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value
     public SfGantt<TaskData> Gantt;
     public void UpdateRecord()
     {
-        this.Gantt.UpdateRecordByIDAsync(new TaskData() { TaskId = 3, TaskName = "Updated by ID value", Progress = 60});
+        this.Gantt.UpdateRecordByIDAsync(new TaskData() { TaskID = 3, TaskName = "Updated by ID value", Progress = 60});
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -406,30 +411,37 @@ N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
         };
         return Tasks;
     }
 }
-```
 
-![Updating Record in Blazor Gantt Chart](images/blazor-gantt-chart-update-record.png)
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBoiXWysOvZYpeG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## See also
+- [How to add new tasks?](https://blazor.syncfusion.com/documentation/gantt-chart/adding-new-tasks)
+- [How to manage task dependencies?](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
+- [How to configure critical path?](https://blazor.syncfusion.com/documentation/gantt-chart/criticalpath)
