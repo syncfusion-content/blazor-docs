@@ -215,6 +215,6 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid renders each row and cell as individual component and loading large number of rows and cells in view will have performance impact on both memory consumption and CPU processing.
 
-To use Grid without such performance impacts, you can load reduced set of rows in the Grid using [Paging](./paging) and [Virtualization](./virtualization) features.
+To use Grid without such performance impacts, you can load reduced set of rows in the Grid using [Paging](./paging) and [Virtualization](./virtual-scrolling) features.
 
 N> Even though with `Paging` or `Virtualization` feature enabled, having hundreds of rows in single Grid page will again introduce performance lag in the application, so you need to set reasonable page size.
