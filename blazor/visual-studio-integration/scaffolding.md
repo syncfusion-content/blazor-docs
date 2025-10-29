@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides Visual Studio scaffolding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor platform to quickly add code that interacts with data models, reducing development time for data operations. Scaffolding simplifies creating Razor pages and controller action methods for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer.
 
-N> Ensure that at least one Entity Framework Core model exists and that the application has been built once. If a model does not exist, see the Microsoft documentation for creating an [Entity Framework Core model](https://learn.microsoft.com/ef/core/modeling/). After adding the model, verify that the required DbContext and properties are present. Build the application before running scaffolding. If model properties change, rebuild the application before scaffolding again.
+N> Ensure that at least one Entity Framework Core model exists and that the application has been built once. If a model does not exist, see the Microsoft documentation for creating an [Entity Framework Core model](https://learn.microsoft.com/en-us/ef/core/modeling/). After adding the model, verify that the required DbContext and properties are present. Build the application before running scaffolding. If model properties change, rebuild the application before scaffolding again.
 
 <!-- markdownlint-disable MD026 -->
 
