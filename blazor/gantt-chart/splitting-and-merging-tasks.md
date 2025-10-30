@@ -1,23 +1,27 @@
 ---
 layout: post
-title: Split task in Blazor Gantt Chart component | Syncfusion
-description: Checkout and learn here all about split task in Syncfusion Blazor Gantt Chart component and much more.
+title: Splitting and merging tasks in Syncfusion Blazor Gantt Chart component
+description: Learn how to split and merge tasks in the Syncfusion Blazor Gantt Chart component for flexible task management in project timelines.
 platform: Blazor
-control: Gantt Chart
+control: Splitting and merging tasks
 documentation: ug
 ---
 
-# Split task in Blazor Gantt Chart component
+# Splitting and merging tasks in Blazor Gantt Chart component
 
-In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the split task feature enables you to divide a task or pause work when necessary, whether it's planned or unexpected. This feature adds dynamism and interactivity to the view, enhancing the visualization of project tasks on the timeline. The divided parts of a task's bar in the Gantt Chart are referred to as **segments**. You have the flexibility to both split and merge multiple segments within a taskbar.
+Splitting and merging tasks in the Blazor Gantt Chart component enhances project management by allowing tasks to be divided into segments or recombined, representing breaks or continuous work periods. This feature enables dividing a task or pausing work when necessary, whether planned or unexpected, and adds dynamism to the timeline view for better visualization.
 
-![Split task](images/blazor-gantt-chart-split-task.png)
+The divided parts of a taskbar are referred to as **segments**. Tasks can be split at load time using [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html), ensuring segments fit within the task's start and end dates. Dynamic splitting is supported via the dialog's Segments tab or the context menu's Split Task option, which requires valid [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) mappings.
+
+Merging can be done using the context menu's Merge Task option or by dragging segments together in the UI. To enable these actions, set the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property to **true**. Tasks must have sufficient width relative to the timeline unit and must not be parent or milestone tasks. Avoid using split tasks with multi-taskbar features to maintain compatibility.
 
 ## Binding segments data source
 
-In the Blazor Gantt chart, the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html) component plays a vital role in managing segmented tasks. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_DataSource) property of `GanttSegmentFields` determines the segment data source collection. It is essential that this collection be structured in such a way that the [ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_ForeignKey) property of `GanttSegmentFields` and the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) act as a foreign key relationship between the task collection [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) and the segment collection `DataSource`. Additionally, the start date, end date, and duration field mappings of the segment collection can be defined in `GanttSegmentFields`.
+In the Blazor Gantt Chart, the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html) component plays a vital role in managing segmented tasks. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_DataSource) property of `GanttSegmentFields` defines the segment data source collection.
+This collection must be structured so that the [ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_ForeignKey) property of `GanttSegmentFields` and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) form a foreign key relationship between the task collection `DataSource` and the segment collection `DataSource`.
+Additionally, the start date, end date, and duration field mappings of the segment collection can be defined using the corresponding properties in `GanttSegmentFields`.
 
-The below code snippet visualizes the task's segments in gantt chart.
+The following code snippet demonstrates how to visualize task segments in the Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -118,15 +122,15 @@ The below code snippet visualizes the task's segments in gantt chart.
 
 ## Split and merge tasks dynamically
 
-In the Gantt Chart, you can enable dynamic splitting or merging of segments by setting the [AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) and [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to true in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. Tasks or segments can be dynamically split into multiple segments, and also the existing segments can be merged together. Segments can be merged by simply dragging a segment of taskbar and dropping it over another segment of same task. Additionally, the split and merge actions can be performed in the Gantt Chart in the following three ways:
+In the Gantt Chart, dynamic splitting and merging of segments can be enabled by setting the [AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) and [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to true in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. Tasks or segments can be dynamically split into multiple segments, and existing segments can be merged. Merging can be performed by dragging a segment and dropping it over another segment of the same task. Additionally, split and merge actions can be performed in the Gantt Chart using the following three methods:
 
 ### Through context menu
 
-To split and merge tasks using the context menu, set the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property to true in the `SfGantt` component. By using the context menu items, such as **Split Task** and **Merge Task** the taskbar can be split and merged respectively.
+To split and merge tasks using the context menu, set the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property to **true** in the `SfGantt` component. Once enabled, context menu items such as **Split Task** and **Merge Task** allow taskbars to be split and merged directly from the UI.
 
-When you right-click on a taskbar or segment element in the Gantt chart, the context menu will display the **Split Task** option. Clicking on it will divide the taskbar or segment at the timeline cell where the right-click occurred.
- 
-The segmented taskbars can be merged together using **Merge Task** context menu item. The sub context menu of **Merge Task**  item includes options for **Right** and **Left**. When the **Right** submenu item is selected, the current segment and the segment to the right of the selected segment gets merged. Similarly, when the **Left** submenu item is selected, the current segment and the segment to the left of the selected segment gets merged.
+Right-clicking on a taskbar or segment element in the Gantt Chart displays the context menu with the **Split Task** option. Selecting this option divides the taskbar or segment at the timeline cell where the right-click occurred.
+
+Segmented taskbars can be merged using the **Merge Task** context menu item. Its sub-menu includes **Right** and **Left** options. Selecting **Right** merges the current segment with the one to its right, while selecting **Left** merges it with the segment to its left.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -228,7 +232,7 @@ The segmented taskbars can be merged together using **Merge Task** context menu 
 
 ### Through dialog box
 
-In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing the segments details such as the start date, end date, and duration. However, it's important to note that the segment start date and end date cannot exceed the task's start date and end date.
+In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing segments details such as the start date, end date, and duration. However, It is important to note that a segment's start and end dates must fall within the task's overall start and end dates..
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -335,9 +339,9 @@ In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/docum
 
 ### Through method 
 
-You can split or merge taskbars externally by using the methods [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync_System_Int32_System_Collections_Generic_List_System_DateTime__) and [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync_System_Int32_System_Collections_Generic_List_System_ValueTuple_System_Int32_System_Int32___) respectively. These methods provide a way to manipulate taskbars programmatically, allowing for efficient splitting and merging operations.
+Taskbars can be split or merged externally using the [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync_System_Int32_System_Collections_Generic_List_System_DateTime__) and [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync_System_Int32_System_Collections_Generic_List_System_ValueTuple_System_Int32_System_Int32___) methods. These provide a programmatic way to perform efficient splitting and merging operations on taskbars.
 
-In the following code snippet, upon external button click, segments of the 1st index record are merged into a single taskbar, and the taskbar in the 2nd index record is split into two segments.
+In the following code snippet, clicking an external button merges the segments of the taskbar at index 1 into a single segment and splits the taskbar at index 2 into two segments.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -454,8 +458,6 @@ In the following code snippet, upon external button click, segments of the 1st i
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXresXZYqLhJtdVC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Editing split task using method](images/blazor-gantt-chart-split-task-method.gif) 
 
 ## Segment event
 
@@ -590,7 +592,7 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
 
 ## Segment customization with template
 
-The segments appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. By passing the template context to the `GetRowTaskModel`, the collection of [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IGanttTaskModel-1.html#Syncfusion_Blazor_Gantt_IGanttTaskModel_1_Segments) are obtained which holds the details like left position, width, and progress width for each segment. The segments can be rendered at the required timeline position and dimensions within the template container using these details.
+In the Blazor Gantt Chart, the appearance of segments can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. By passing the template context to the `GetRowTaskModel`, the collection of [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IGanttTaskModel-1.html#Syncfusion_Blazor_Gantt_IGanttTaskModel_1_Segments) is obtained, which contains details  like left position, width, and progress width for each segment. The segments can be rendered at the appropriate timeline position and dimensions within the template container using these details.
 
 In the code snippet below, the segments are customized based on template context data, and the segment count text is added inside each segment. 
 
@@ -747,4 +749,11 @@ In the code snippet below, the segments are customized based on template context
 
 ## Limitation
 
-* Parent and milestone tasks cannot be split into segments.
+1. Parent and milestone tasks cannot be split into segments.
+2. The task must have a width greater than the timeline unit cell in order to be split.
+3. Split task is not supported with `Multi taskbar`.
+
+## See also
+- [How to bind data in Gantt?](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding)
+- [How to configure task editing?](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks)
+- [How to manage task dependencies?](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
