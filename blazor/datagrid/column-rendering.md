@@ -582,7 +582,7 @@ In the below example, we have used the `Expand` query to load the nested Employe
 
 ### Complex data generation using ExpandoObject 
 
-Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#expandoobject-binding). You can achieve ExpandoObject complex data binding in the Grid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/local-data#expandoobject-binding). You can achieve ExpandoObject complex data binding in the Grid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -635,7 +635,7 @@ Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncf
 
 ### Complex data generation using DynamicObject
 
-Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding). You can achieve DynamicObject complex data binding in the Grid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/local-data#dynamicobject-binding). You can achieve DynamicObject complex data binding in the Grid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
