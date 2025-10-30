@@ -1,22 +1,19 @@
 ---
 layout: post
-title: Syncfusion Blazor Extension for Visual Studio Code | Syncfusion
-description: Learn here all about introduction on Syncfusion Blazor extension for Visual Studio Code which made integration made ease.
+title: Blazor extension for Visual Studio Code | Syncfusion
+description: Overview of Blazor extension for Visual Studio Code that simplifies project setup, code snippets, project conversion, and upgrades for Syncfusion Blazor apps.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Overview of Blazor Extension for Visual Studio Code
 
-The [Syncfusion® Blazor Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) simplifies the use of the Syncfusion® Blazor components by configuring the Syncfusion® Blazor NuGet packages and themes.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) streamlines the use of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required NuGet packages and themes.
 
-The Syncfusion® Blazor Extension provides the following support in Visual Studio Code:
+The extension provides the following capabilities in Visual Studio Code:
 
-[Project-Template](create-project):  Creates Syncfusion® Blazor applications with required configuration for development with Syncfusion® Blazor component.
-
-[Code Snippet](code-snippet):  Adds a Syncfusion® Blazor component with various features to the Blazor Application's Razor code editor.
-
-[Convert project](convert-project):  Converts an existing Blazor Web Application to a Syncfusion® Blazor Web Application by importing the necessary Syncfusion® NuGet packages.
-
-[Upgrade project](upgrade-project):  Upgrades the existing Syncfusion® Blazor Web Application from one Essential Studio® version to another version.
+- [Create project template](create-project): Creates a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application with the required configuration and dependencies for development.
+- [Code snippets](code-snippet): Inserts Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component snippets and common scenarios into the Razor editor.
+- [Convert project](convert-project): Converts an existing Blazor application to use Syncfusion Blazor by adding the necessary NuGet packages and resources.
+- [Upgrade project](upgrade-project): Upgrades an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
