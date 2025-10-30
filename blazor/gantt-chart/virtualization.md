@@ -364,7 +364,7 @@ N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
 
 ## Configure Timeline Virtualization
 
-Timeline virtualization, enabled by setting [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to **true**, initially renders three times the width of the Gantt element and loads additional timeline cells on demand during horizontal scrolling. This improves performance for wide timelines, such as multi-year projects, by rendering only the visible segments. The rendering behavior depends on `TimelineSettings`, which defines the scale (e.g., monthly or daily tiers).
+Timeline virtualization, enabled by setting [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to **true**, initially renders twice times the width of the Gantt element and loads additional timeline cells on demand during horizontal scrolling. This improves performance for wide timelines, such as multi-year projects, by rendering only the visible segments. The rendering behavior depends on `TimelineSettings`, which defines the scale (e.g., monthly or daily tiers).
 
 The following example enables timeline virtualization for a wide timeline:
 
