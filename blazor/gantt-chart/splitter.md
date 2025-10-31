@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Splitter in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Splitter in Syncfusion Blazor Gantt Chart component and much more details.
+description: Learn how to configure the splitter in the Syncfusion Blazor Gantt Chart component for flexible TreeGrid and Chart panel sizing.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,15 +9,13 @@ documentation: ug
 
 # Splitter in Blazor Gantt Chart Component
 
-## Splitter
+The splitter in the Blazor Gantt Chart component divides the TreeGrid (task data table) and Chart (timeline with taskbars) panels, enabling flexible width allocation for project visualization. Configured via the [GanttSplitterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSplitterSettings.html) property, the splitter supports pixel or percentage-based positioning, column-based alignment, and predefined view modes. The [SetSplitterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SetSplitterPositionAsync_System_Int32_) method adjusts positioning dynamically, while the [SplitterResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterResizeStart), [SplitterResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterResizing), and [SplitterResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterResized) events handle resize interactions. The splitter includes ARIA labels for accessibility, ensuring screen reader compatibility, and adapts to responsive designs, though narrow screens may limit visible columns or timeline segments. By default, both panels are visible with equal width.
 
-Gantt Chart component consists of both Tree Grid part and Chart part. Splitter is used to resize the Tree Grid section from the Chart section. You can change the position of the Splitter when loading the Gantt Chart component using the [SplitterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) property. The following list defines possible values for this property:
+## Configure splitter position
 
-| **Splitter Properties** | **Description** |
-| --- | --- |
-| `GanttSplitterSettings.Position` | This property denotes the percentage of the Tree Grid section’s width to be rendered and this property supports both pixels and percentage values |
-| `GanttSplitterSettings.ColumnIndex` | This property defines the splitter position as column index value |
-| `GanttSplitterSettings.View` | * `Default`: Shows Grid side and Gantt Chart side. <br /> * `Grid`: Shows Grid side alone in Gantt Chart. <br /> * `Chart`: Shows chart side alone in Gantt Chart. |
+Set the splitter position using [GanttSplitterSettings.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSplitterSettings.html#Syncfusion_Blazor_Gantt_GanttSplitterSettings_Position) with pixel (e.g., "300px") or percentage (e.g., "30%") values to define the TreeGrid pane width, or align to a column edge with [GanttSplitterSettings.ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSplitterSettings.html#Syncfusion_Blazor_Gantt_GanttSplitterSettings_ColumnIndex).
+
+The following example sets a percentage-based splitter position. This configuration allocates 80% width to the TreeGrid panel.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -71,11 +69,11 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBIWNNaArlKXynp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Change splitter position dynamically
+## Adjust splitter position dynamically
 
-In Gantt Chart, you can change the splitter position dynamically by using `SetSplitterPositionAsync` method. You can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. 
+Change the splitter position using the [SetSplitterPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SetSplitterPositionAsync_System_Int32_) method with pixel, percentage, or column index values, triggered by events like window resizing or button clicks.
 
-The following code example shows how to use this method.
+The following example adjusts the splitter dynamically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
