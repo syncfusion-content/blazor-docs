@@ -9,21 +9,21 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Gantt Component
 
-This section provides performance guidelines for using the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component efficiently in the Blazor WebAssembly application. The general framework Blazor WebAssembly performance guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
+This guide outlines performance optimization strategies for using the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component efficiently in the Blazor WebAssembly application. The general framework Blazor WebAssembly performance guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> Refer to the Getting Started with [Blazor Server-Side Gantt](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Gantt](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
-During Blazor diffing algorithm, every cell of the Gantt Chart component and its child component will be checked for re-rendering. For instance, having [EventCallBack](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.eventcallback?view=aspnetcore-6.0) on the application or Gantt Chart will check every child component once the event callback is completed.
+During Blazor's diffing algorithm, every cell of the Gantt Chart component and its child components is evaluated for re-rendering. For example, using [EventCallBack](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.eventcallback?view=aspnetcore-6.0) in the application or Gantt Chart causes all child components to be checked once the callback completes.
 
-You can have fine-grained control over Gantt Chart component rendering. The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method helps you to avoid unnecessary re-rendering of the Gantt Chart component. This method internally overrides the [ShouldRender](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender?view=aspnetcore-6.0) method of the Gantt Chart to prevent rendering.
+To avoid unnecessary re-rendering, use the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method. This method internally overrides [ShouldRender](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender?view=aspnetcore-6.0) to control the rendering process.
 
 In the following example:
 
 * The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method is called in the **IncrementCount** method which is a click callback.
 
-* Now, Gantt Chart component will not be a part of the rendering which happens because of the click event and **currentCount** alone will get updated.
+* As a result, the Gantt Chart component will be excluded from the rendering triggered by the click event and **currentCount** alone will get updated.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -96,7 +96,9 @@ This method can be used only after the Gantt component completed the initial ren
 
 ## Avoid unnecessary initial auto-scheduling validation
 
-The Blazor Gantt chart default scheduling is [auto-scheduling](https://blazor.syncfusion.com/documentation/gantt-chart/scheduling-tasks#automatically-scheduled-tasks) which has initial auto-scheduling validation of the data source. When you are using the validated data source in the Gantt chart, then it is not necessary to validate again on load time and this improves loading time performance of Gantt Chart Hence, it is possible to skip the load time scheduling validation by using  [AutoCalculateDateScheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) property as false and to skip dependency validation by using [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) property as false. Later, you can enable these validations for dynamic actions in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Created) event.
+The Blazor Gantt Chart uses [auto-scheduling](https://blazor.syncfusion.com/documentation/gantt-chart/scheduling-tasks#automatically-scheduled-tasks) by default, which includes initial validation of the data source. If the data source is already validated, repeating this validation during load is unnecessary and affects performance.
+
+To improve load time, set [AutoCalculateDateScheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) to **false** to disable date scheduling validation, and [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) to **false** to disable dependency validation. These validations can be enabled later during dynamic actions using the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Created) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
