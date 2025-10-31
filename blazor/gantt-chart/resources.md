@@ -179,7 +179,7 @@ namespace BlazorGanttChart.Data
 When defining the resource unit within the resource collection, it specifies the amount of work a resource performs per day for a task. This concept is represented by the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`.
 
 * **Units**: Defines the work amount done per day by a resource for a specific task.
-* **MaxUnits**: Sets the resourcess maximum capacity or availability for any task.
+* **MaxUnits**: Sets the resources maximum capacity or availability for any task.
 
 When defining the resource unit within the resource collection, it indicates the amount of work that a specific resource will perform per day for a task. This concept is reflected in both the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in `GanttAssignmentFields` and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`. The `Units` property specifies the work amount done per day by a resource for a task, while `MaxUnits` sets the resource's maximum capacity or availability for any task.
 
