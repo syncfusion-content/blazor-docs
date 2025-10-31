@@ -1,63 +1,63 @@
 ---
 layout: post
-title: Accessibility with ADA compliance in Syncfusion Blazor components
-description: The Syncfusion Blazor UI components are compliant with section 508, ADA, WAI-ARIA, WCAG, and keyboard accessibility standards.
+title: Accessibility in Syncfusion Blazor components
+description: Syncfusion Blazor components support WCAG 2.2, Section 508, WAI-ARIA, ADA, and keyboard accessibility standards.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Accessibility with ADA Compliance in Blazor Components
+# Accessibility in Syncfusion® Blazor components
 
-All the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow WAI-ARIA by default, enabling accessible web applications that are fully navigable with assistive technologies.
 
 ## Accessibility overview
 
-Accessibility in components refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high-contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
+Accessibility in components refers to designing and building user interface elements so that users with disabilities can perceive, operate, and understand them. Examples include sufficient color contrast, alternative text for images, and keyboard-operable controls and interactions.
 
 ## Accessibility standards
 
-The component is said to be accessible when it is constructed in accordance with certain standards that are required to make it accessible.
+A component is accessible when it is implemented in accordance with recognized accessibility standards.
 
 The accessibility of the components consists of the following standards and aspects:
 
 [ADA](https://www.ada.gov/) - A law to ensure that people with disabilities have the same opportunities and access as people without disabilities.
 
-[WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) - The Web Content Accessibility Guidelines (WCAG) provide guidelines developed by the World Wide Web Consortium (W3C) to ensure web content is accessible to people with disabilities. WCAG 2.2 establishes a framework of accessibility principles and their associated success criteria. The level of accessibility conformance achieved by a web application is determined by the extent to which it meets these success criteria, categorized into three levels: A, AA, and AAA.
+[WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) - Guidelines from the W3C to ensure web content is accessible to people with disabilities, organized by success criteria at levels A, AA, and AAA.
 
-[Section 508](https://www.section508.gov/) - It is a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
+[Section 508](https://www.section508.gov/) - U.S. federal standards for making electronic and information technology accessible, aligned with WCAG.
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/) - WAI-ARIA stands for “Web Accessibility Initiative - Accessible Rich Internet Applications.” It is a set of technical specifications and guidelines developed by the World Wide Web Consortium (W3C) as part of the Web Accessibility Initiative (WAI). WAI-ARIA is designed to enhance the accessibility of dynamic web content, particularly web applications and rich internet applications (RIAs), for people with disabilities. WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/) - Roles, states, and properties that enhance accessibility of dynamic web content and applications for assistive technologies.
 
-[Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
+[Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - The ability to use a keyboard to interact with and navigate a user interface.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components adhere to these established standards.
 
 ## Accessibility compliance
 
-The accessibility support provided by Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components is based on a collection of methodologies for adhering to and [applying recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
+Accessibility support in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components is based on adhering to and [applying recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
 
 There are several methodologies of accessibility validation that can be performed on the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, such as:
 
 The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to enable appreciable accessibility.
 
-Each Blazor component is subjected to manual testing with a screen reader and also automated test cases to ensure the component’s required attributes.
+Each Blazor component is evaluated with manual screen reader testing and automated tests to ensure required attributes and behaviors are present.
 
-Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
+Attributes are assigned and updated correctly during interaction. Each component has an appropriate `role` and ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
 
 In addition to the methodologies mentioned above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are constructed to support the following accessibility aspects.
 
 ### Screen reader support
 
-A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow [WAI-ARIA](https://www.w3.org/WAI/ARIA/) to work properly with screen readers such as [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS.
 
-### Right-To-Left support
+### Right-to-left support
 
 Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://blazor.syncfusion.com/documentation/common/right-to-left) to learn more about this support.
 
 ### Color contrast
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components come equipped with [predefined themes](https://blazor.syncfusion.com/documentation/appearance/themes) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components include [predefined themes](https://blazor.syncfusion.com/documentation/appearance/themes) that provide sufficient color contrast to benefit users with visual impairments.
 
 ### Mobile device support
 
@@ -71,15 +71,15 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support keybo
 
 Ensuring the accessibility of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing, including:
 
-* **Automated testing**: The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+* **Automated testing**: Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-* **Manual testing**: This type of testing involves manually evaluating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. During manual accessibility testing, testers will ensure accessibility using the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+* **Manual testing**: Manual evaluation using screen readers such as [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components continually improve based on standards updates and user feedback to enhance accessibility.
 
 ## Accessibility support for specific components
 
-Consult the component-specific documents below for detailed information about how Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
+Consult the component-specific documents below for details on how Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components ensure compliance with accessibility standards, including Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more. The table uses the legend shown below.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -252,7 +252,7 @@ AI AssistView
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
----
+<a href="https://blazor.syncfusion.com/accessibility/ai-assistview" target="_blank">Demo</a>
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/ai-assistview/accessibility" target="_blank">Documentation</a>
@@ -536,6 +536,41 @@ Chart
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/chart/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Chat UI
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/chat-ui" target="_blank">Demo</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/chat-ui/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>

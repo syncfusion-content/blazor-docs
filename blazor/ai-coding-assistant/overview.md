@@ -65,5 +65,5 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is desi
 
 ## See also
 
-* Add the [SyncfusionBlazorAssistant MCP Server](https://blazor.syncfusion.com/documentation/ai-coding-assistants/mcp-server) to an MCP-enabled client
+* Add the [SyncfusionBlazorAssistant MCP Server](https://blazor.syncfusion.com/documentation/ai-coding-assistant/mcp-server) to an MCP-enabled client
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Documentation](https://blazor.syncfusion.com/documentation)

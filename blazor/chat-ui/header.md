@@ -89,6 +89,12 @@ You can use the [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion
     };
 }
 
+<style>
+    #chatui-header .e-header .e-header-icon {
+        display: flex;
+    }
+</style>
+
 ```
 
 ![Blazor Chat UI HeaderIconCss](./images/header-iconCss.png)
