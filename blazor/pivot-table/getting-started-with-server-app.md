@@ -192,12 +192,22 @@ To include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Tab
 
 N> If your app uses global interactivity with the **Server** render mode, this is configured by default in the **App.razor** file.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @* Specify the render mode for the page *@
 @rendermode InteractiveServer
 
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor %}
+
 <SfPivotView TValue="ProductDetails"></SfPivotView>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Assigning sample data to the Blazor pivot table
 
