@@ -139,7 +139,7 @@ await builder.Build().RunAsync();
 If the **Interactive Render Mode** is set to `Server`, the project contains a single **~/Program.cs** file. In this case, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service only in that file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="1 9" %}
 
 using Syncfusion.Blazor;
 
