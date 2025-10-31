@@ -306,23 +306,6 @@ To handle scenarios where the model type is unknown at compile time, the Gantt C
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVyWNrfUFwbmcnX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> To avoid conflicts, you are recommended not to use the following reserved properties, which are internally used by the Gantt Chart.
-
-| Reserved Keyword   | Purpose                                      |
-|--------------------|----------------------------------------------|
-| ganttProperties     | The task data details used internally.      |
-| TaskMode            | The mode of the task.                       |
-| childRecords        | The child records of a parent item.         |
-| hasChildRecords     | Indicates if a record contains child items. |
-| expanded            | Indicates if child records are expanded.    |
-| parentRecord        | The parent item of child records.           |
-| index               | The index of the current record.            |
-| level               | The hierarchy level of the record.          |
-| uniqueID            | The unique identifier of a record.          |
-| parentUniqueID      | The unique identifier of the parent record. |
-| checkboxState       | The checkbox selection state of a record.   |
-
-
 ## Observable collection and INotifyPropertyChanged
 
 The Gantt chart supports to automatically update data based on `INotifyCollectionChanged` and `INotifyPropertyChanged` interface.
