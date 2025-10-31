@@ -91,7 +91,7 @@ Open `~/_Imports.razor` and import the `Syncfusion.Blazor` and `Syncfusion.Blazo
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in `~/Program.cs` of the Blazor WebAssembly app:
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -105,6 +105,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
+....
 
 {% endhighlight %}
 {% endtabs %}
