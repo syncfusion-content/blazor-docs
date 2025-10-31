@@ -217,19 +217,21 @@ N> The default `layoutOption` property is set to `Inline`.
 
 ## Drag and drop video insertion
 
-By default, the Rich Text Editor allows you to insert videos by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the videos to the server before inserting into the editor by configuring the saveUrl property.
+Default upload: Insert video directly from your local file system (e.g., File Explorer, Finder) into the editor.
+
+Server upload: Use the `SaveUrl` property to upload video files to your server before inserting them into the editor.
 
 {% tabs %}
 {% highlight cshtml %}
 
-{% include_relative code-snippet/video-draganddrop.razor %}
+{% include_relative code-snippet/video-drag-and-drop.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Disabling videos drag and drop
 
-You can prevent drag-and-drop action by setting the OnMediaDrop argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
 
 ```
 <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>

@@ -195,19 +195,21 @@ N> The default `layoutOption` property is set to `Inline`.
 
 ## Drag and drop audio insertion
 
-By default, the Rich Text Editor allows you to insert audios by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the audios to the server before inserting into the editor by configuring the saveUrl property.
+Default upload: Insert audio directly from your local file system (e.g., File Explorer, Finder) into the editor.
+
+Server upload: Use the `SaveUrl` property to upload audio files to your server before inserting them into the editor.
 
 {% tabs %}
 {% highlight cshtml %}
 
-{% include_relative code-snippet/audio-draganddrop.razor %}
+{% include_relative code-snippet/audio-drag-and-drop.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Disabling audio drag and drop
 
-You can prevent drag-and-drop action by setting the OnMediaDrop argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
 
 ```
 <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
