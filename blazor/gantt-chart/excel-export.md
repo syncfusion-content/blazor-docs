@@ -80,6 +80,224 @@ You can trigger export operations using the [ExportToExcelAsync](https://help.sy
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLSWtCyhZLeNCwH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Binding custom data source while exporting
+
+You can bind a custom data source for Excel or CSV export in the Blazor Gantt component by assigning it dynamically before the export begins. To achieve this, set the required data to the `DataSource` property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) configuration.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })"
+DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+    Dependency="Predecessor" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = GetTaskCollection();
+    }
+
+    private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "GanttContainer_excelexport")
+        {
+            ExcelExportProperties exportProperties = new ExcelExportProperties
+            {
+                DataSource = TaskCollection.Take(4).ToList()
+            };
+            await Gantt.ExportToExcelAsync(exportProperties);
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentID { get; set; }
+        public int[] ResourceId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, Predecessor="2", },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, Predecessor="3", },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, Predecessor="4", },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, Predecessor="6", },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, Predecessor="7", }
+        };
+        return Tasks;
+    }
+}   
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBIsjBvUszGyDBd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+## Export Gantt Chart Data
+
+To export either the records visible on the current page or all records from the Gantt Chart to Excel or CSV, set the `ExcelExportProperties.ExportType` property.
+
+- **CurrentPage**: Exports only the records displayed on the current Gantt page.
+- **AllPages**: Exports all records from the Gantt Chart.
+
+In the following example, [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) is enabled, and the export type is applied based on the selected value from a dropdown.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.DropDowns
+
+
+<div style="display: flex; align-items: center; margin-bottom: 15px;font-weight: bold">
+    <label style="padding-right: 10px;">Change export type:</label>
+    <SfDropDownList TValue="string" TItem="DropDownOrder" @bind-Value="SelectedExportType" DataSource="@DropDownValue" Width="150px">
+        <DropDownListFieldSettings Text="Text" Value="Value" />
+    </SfDropDownList>
+</div>
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" EnableRowVirtualization="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })"
+DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttColumns>
+    <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    <GanttColumn Field="TaskName" HeaderText="TaskName"></GanttColumn>
+    <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+    <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+    <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+    <GanttColumn Field="Assignee" HeaderText="Assignee"></GanttColumn>
+    <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
+    <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+    private string SelectedExportType = "CurrentPage"; 
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder { Text = "CurrentPage", Value = "CurrentPage" },
+        new DropDownOrder { Text = "AllPages", Value = "AllPages" },
+    };
+
+    private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "GanttContainer_excelexport")
+        {
+            ExcelExportProperties exportProperties = new ExcelExportProperties
+            {
+                ExportType = SelectedExportType == "AllPages" ? Syncfusion.Blazor.Grids.ExportType.AllPages : Syncfusion.Blazor.Grids.ExportType.CurrentPage
+            };
+
+            await Gantt.ExportToExcelAsync(exportProperties);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData(500);
+    }
+    
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData(int count)
+        {
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random rand = new Random();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 5);
+            DateTime endDate = new DateTime(2000, 1, 12);
+            string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
+            string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
+            for (var i = 1; i <= count / 5; i++)
+            {
+                var name = rand.Next(0, 100);
+                TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Assignee = "Mark Bridges",
+                        Reporter = "Kobe Bryant",
+                        Progress = 50,
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    startDate = startDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    DataCollection.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = startDate,
+                            EndDate = startDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Assignee = assignee[j - 1],
+                            Reporter = reporter[j - 1],
+                            Progress = 50,
+                            ParentID = Parent.ID,
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    
+    public class TaskData
+    {
+        public int ID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public string Assignee { get; set; }
+        public string Reporter { get; set; }
+        public int Progress { get; set; }
+        public int? ParentID { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+}   
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBIiNBPgdsTpwjo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customize the excel export
 
 You can customize the Excel or CSV export functionality in the Gantt Chart component using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) configuration object.
@@ -158,6 +376,304 @@ To include hidden columns during Excel or CSV export in the Gantt Chart componen
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVoMtWIBjILrMBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Add header and footer to export
+
+To add header and footer content to exported Excel or CSV files in the Gantt component, configure the `Header` and `Footer` properties within [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) during the [OnToolbarClick](https://blazor.syncfusion.com/documentation/gantt-chart/events#ontoolbarclick) event. This allows you to define custom content that appears at the top and bottom of the exported document.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })"
+DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+    Dependency="Predecessor" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = GetTaskCollection();
+    }
+
+    private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "GanttContainer_excelexport")
+        {
+             var exportProperties = new ExcelExportProperties();
+            var header = new ExcelHeader { HeaderRows = 8 };
+
+           // Initialize the list of rows for the header.
+            header.Rows = new List<ExcelRow>
+            {
+                // Add a new row to the header with specific cells.
+                new ExcelRow
+                {
+                    // Define the cells within this row.
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Northwind Traders",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 20,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "2501 Aerial Center Parkway",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Suite 200 Morrisville, NC 27560 USA",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign =ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Tel +1 888.936.8638 Fax +1 919.573.0306",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Hyperlink = new Hyperlink { Target = "https://www.northwind.com/", DisplayText = "www.northwind.com" },
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Hyperlink = new Hyperlink { Target = "mailto:support@northwind.com" },
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
+                        }
+                    }
+                },
+                new ExcelRow { }, 
+                new ExcelRow { }
+            };
+
+            
+            var footer = new ExcelFooter { FooterRows = 4 };
+
+            // Initialize the list of footer rows.
+            footer.Rows = new List<ExcelRow>
+            {
+                new ExcelRow { }, 
+                new ExcelRow { },
+                new ExcelRow
+                {   
+                    // Define the cells within this row.
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Thank you for your business!",
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "!Visit Again!",
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
+                        }
+                    }
+                }
+            };
+            exportProperties.Header = header;
+            exportProperties.Footer = footer;
+            await Gantt.ExportToExcelAsync(exportProperties);
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentID { get; set; }
+        public int[] ResourceId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, Predecessor="2", },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, Predecessor="3", },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, Predecessor="4", },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, Predecessor="6", },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, Predecessor="7", }
+        };
+        return Tasks;
+    }
+}  
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLeMDVlqgbyewep?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Add additional worksheets to Excel document while exporting
+
+To add additional worksheets during export, follow the steps below:
+
+- Create a new instance of the **Workbook** class and assign it to the `Workbook` property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) .
+- Use `Worksheets.Add` to append new worksheets to the workbook.
+- Set the `GridSheetIndex` property to specify the worksheet index where the Gantt data should be placed.
+- Trigger the export operation using [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.ExcelExport
+
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })"
+DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+    Dependency="Predecessor" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = GetTaskCollection();
+    }
+
+    private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "GanttContainer_excelexport")
+        {
+            ExcelExportProperties exportProperties = new ExcelExportProperties();
+            // Add a new workbook to the Excel document that contains only 1 worksheet.
+            exportProperties.Workbook = new Workbook();
+            // Add additional worksheets.
+            exportProperties.Workbook.Worksheets.Add();
+            exportProperties.Workbook.Worksheets.Add();
+            // Define the Gridsheet index where Grid data must be exported.
+            exportProperties.GridSheetIndex = 0;
+            await Gantt.ExportToExcelAsync(exportProperties);
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentID { get; set; }
+        public int[] ResourceId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, Predecessor="2", },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, Predecessor="3", },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, Predecessor="4", },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, Predecessor="6", },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, Predecessor="7", }
+        };
+        return Tasks;
+    }
+}  
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCjhPgJqqEzmg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Apply font and color themes
 
