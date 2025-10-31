@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion TreeGrid Component in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor TreeGrid Components in Blazor Web App.
+description: Learn how to set up and integrate Syncfusion Blazor TreeGrid in a Blazor Web App using Visual Studio, VS Code, and .NET CLI.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeGrid in Blazor Web App
 
-This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
+This guide explains how to integrate the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
 
 {% tabcontents %}
 
@@ -31,7 +31,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor TreeGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -74,7 +74,7 @@ cd BlazorWebApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -134,7 +134,7 @@ This command creates new Blazor Web App and places it in a new directory called 
 
 Here's an example of how to add **Blazor TreeGrid** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -203,7 +203,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Include Syncfusion Styles and Scripts
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
@@ -282,7 +282,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.png)" %}
+{% previewsample alt="Blazor TreeGrid Getting Started Sample" "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid/BlazorWebApp).
 
@@ -291,9 +291,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 The Tree Grid has an option to define columns using the [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) directive. In the `TreeGridColumn` directive there are properties to customize columns.
 
 Let’s check the properties used here:
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) to map with a property name in datasource is been added.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) to change the title of columns is been added.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_TextAlign) to change the alignment of columns is been used. By default, columns will be left aligned. To change columns to right align, define **TextAlign** as *Right*.
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) to map with a property name in datasource has been added.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) to change the title of columns has been added.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_TextAlign) to change the alignment of columns is used. By default, columns will be left aligned. To change columns to right align, define **TextAlign** as *Right*.
 
 {% tabs %}
 {% highlight razor %}
@@ -441,7 +441,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
+{% previewsample alt="Blazor TreeGrid Paging and Sorting Sample" "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
 
 ## Handling exceptions
 
@@ -531,7 +531,7 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVztHsLJVPJfMvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample alt="Blazor TreeGrid Exception Handling Sample" "https://blazorplayground.syncfusion.com/embed/BXBIMtXaTweQwBMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
@@ -545,3 +545,5 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue documentation](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
+
+
