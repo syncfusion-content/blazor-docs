@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource View in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Resource view in Syncfusion Blazor Gantt Chart component and more.
+description: Learn how to configure resource view in the Syncfusion Blazor Gantt Chart component for hierarchical task visualization and resource allocation.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,13 @@ documentation: ug
 
 # Resource view in Blazor Gantt Chart Component
 
-To visualize tasks assigned to each resource in a hierarchical manner, you can set the [ViewType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ViewType) property to [ResourceView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ViewType.html#Syncfusion_Blazor_Gantt_ViewType_ResourceView) during initialization of the Gantt Chart. This view represents resources as parent records and their corresponding tasks as child records. You can refer to this [link](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html) for detailed instructions on binding resources data within a Gantt Chart.
+The resource view in theBlazor Gantt Chart component organizes tasks hierarchically by resource, displaying resources as parent nodes and their assigned tasks as child taskbars in a timeline. Enabled by setting [ViewType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ViewType) property to [ResourceView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ViewType.html#Syncfusion_Blazor_Gantt_ViewType_ResourceView), this view visualizes workloads, such as multiple tasks per resource, with taskbars showing duration, progress, and dependencies. Unassigned tasks group under an **Unassigned Task** node. Taskbars include ARIA labels for accessibility, ensuring screen reader compatibility, and adapt to responsive designs, though narrow screens may truncate resource names. Parent tasks are not supported, and tasks require scheduling (start date and duration).
+
+## Configure resource view
+
+Enable resource view by setting [ViewType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ViewType) property to [ResourceView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ViewType.html#Syncfusion_Blazor_Gantt_ViewType_ResourceView) and mapping resources via [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html) and [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html).
+
+The following example configures resource view:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -143,15 +149,17 @@ namespace BlazorGanttChart.Data
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyCDZqqMPafknB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+This configuration groups tasks by resources, displaying them as child nodes.
+
 > * In the resource view, records are ordered based on the assigning of task resources. If a task does not have any assigned resources, it is placed under the **Unassigned Tasks** parent record. 
 > * The delete operation in the resource view functions differently: if you delete any task under a resource, the task is first moved under the **Unassigned Tasks** parent record. If you subsequently delete the same record again, it is completely removed from the task collection. 
 > * There is not support for Indent/Outdent in resource view Gantt Chart.
 
-## Resource overallocation
+## Visualize resource overallocation
 
-When a resource is assigned more work than they can complete within their available time in a day, it is referred to as overallocation. The available working time for resources to complete tasks in a day is calculated based on the [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property and the [resource unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit).
+Overallocation occurs when tasks exceed a resource’s daily capacity, calculated from [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) and [resource unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit). Enable indicators with [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) set to **true** (default: **false**), highlighting affected date ranges with square brackets.
 
-You can indicate overallocation date ranges with square brackets by enabling the feature through the [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) property.
+The following example toggles overallocation visibility:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -285,9 +293,11 @@ namespace BlazorGanttChart.Data
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBesjDUULLCVRCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Unassigned task
+## Manage unassigned tasks
 
-Unassigned tasks in the Gantt Chart refer to tasks that have not been assigned to any particular resource. These tasks are categorized under the parent row **Unassigned Tasks** and appears at the bottom of the Gantt Chart's data collection.
+Tasks not assigned to any resource are termed unassigned tasks. These tasks are automatically grouped under a node labeled **Unassigned Task** and displayed at the bottom of the Gantt data collection.
+
+When a resource is subsequently assigned to an unassigned task, the task automatically moves to become a child of the respective resource node.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -598,9 +608,7 @@ namespace BlazorGanttChart.Data
 
 ## Taskbar drag and drop between resources
 
-You can smoothly move taskbars vertically, enabling the seamless transfer of tasks between different resources. This capability simplifies task scheduling and enhances overall resource management. Whether you're reassigning tasks to different resources or optimizing resource allocation, you can achieve these tasks effortlessly.
-
-Within the Gantt chart, taskbar repositioning tasks among different resources can be enabled by setting the [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) property within `GanttTaskbarSettings` to **true**.
+Enable taskbar drag-and-drop between resources with [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) set to **true**. This allows vertical taskbar movement for reassignment, triggered by the [RowDragStarting](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdragstarting) and [RowDropping](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1079,7 +1087,8 @@ namespace BlazorGanttChart.Data
 
 ## Limitations
 
-* The resource view in the Gantt Chart does not support assigning multiple resources to a single task.
+* Resource view does not support parent tasks; all tasks must be child tasks under resources or the **Unassigned Task** node.
+* Unscheduled tasks (lacking start date or duration) are not supported in resource view.
 * Editing of resource records(parent record) is not supported in the resource view of the Gantt Chart.
 * CRUD operations are not supported when the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskMode) is set to [Manual](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ScheduleMode.html#Syncfusion_Blazor_Gantt_ScheduleMode_Manual) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ScheduleMode.html#Syncfusion_Blazor_Gantt_ScheduleMode_Custom) in the resource view.
 
@@ -1088,5 +1097,3 @@ namespace BlazorGanttChart.Data
 * [Resource Unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit)
 * [Configure task duration using Work](https://blazor.syncfusion.com/documentation/gantt-chart/work)
 * [Custom taskbar styling using template](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#binding-data-source-for-resource-collection-and-assigning-resource-to-tasks)
-
-

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resources in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Resources in Syncfusion Blazor Gantt Chart component and much more.
+description: Learn how to configure resources in the Syncfusion Blazor Gantt Chart component for task allocation and utilization visualization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,17 +9,30 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, and so on. It allows for the allocation of resources, such as human resources, to each task.
+Resources in the Angular Gantt component represent people, equipment, or materials allocated to tasks, visualized in taskbars and labels for clear utilization tracking. Assigned via the [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html) property, resources map to tasks using [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) for ID, name, unit, and group. This enables display of resource names in columns or labels with [GanttLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html), highlighting workloads and overallocation. Resources include ARIA labels for accessibility, ensuring screen reader compatibility, and adapt to responsive designs, though narrow screens may truncate names for multiple assignments. By default, resources allocate 100% unit if unspecified.
 
-## Binding data source for resource collection and assigning resource to tasks
+## Configure Resource Collection
 
-Resources are a list of `TResources` objects, mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html). To link the resource collection with task collection, the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) component is essential to use. It is crucial to structure this collection thoughtfully to establish a strong foreign key relationship. This involves linking the [TaskID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_TaskID) and [ResourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceID) properties of `GanttAssignmentFields` with the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id) property of `GanttResource` for resources.
+The resource collection in Blazor Gantt Chart defines available resources as a list of objects with fields such as ID, Name, MaxUnits, and Group. These fields are mapped using the [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html) property:
 
-Also, the following properties of `GanttResource` component needs to be configured
-1. [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Name) - Maps the resource name
-2. [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) - resource’s maximum capacity or availability per day.
+* [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id): Maps to a unique identifier for resource assignment.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Name): Maps to the resource name displayed in labels or columns.
+* [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits): Maps to the work capacity percentage (0–100%) per day.
+* [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Group): Maps to categories for grouping resources.
 
-The following code snippets show resource collection and how it is assigned to the Gantt Chart component. 
+The following code demonstrates resource collection setup:
+
+```cs
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+```
+
+This configuration maps resources for assignment and display.
+
+## Assign resources to tasks
+
+Resources are represented as a list of `TResources` objects and mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html). To link the resource collection with the task collection, you must configure the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) component. It is important to structure this collection carefully to establish a strong foreign key relationship. This involves mapping the [TaskID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_TaskID) and [ResourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceID) properties of `GanttAssignmentFields` to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id) property of `GanttResource` for resources.
+
+The following code snippets show the resource collection and how it is assigned to the Gantt Chart component.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -163,9 +176,14 @@ namespace BlazorGanttChart.Data
 
 ## Resource unit
 
+When defining the resource unit within the resource collection, it specifies the amount of work a resource performs per day for a task. This concept is represented by the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`.
+
+* **Units**: Defines the work amount done per day by a resource for a specific task.
+* **MaxUnits**: Sets the resourcess maximum capacity or availability for any task.
+
 When defining the resource unit within the resource collection, it indicates the amount of work that a specific resource will perform per day for a task. This concept is reflected in both the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in `GanttAssignmentFields` and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`. The `Units` property specifies the work amount done per day by a resource for a task, while `MaxUnits` sets the resource's maximum capacity or availability for any task.
 
-To illustrate this concept, the following code snippet demonstrates how to assign resources to specific tasks and map them in the Gantt chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more detailed information about work and resource units, you can refer to the [link](https://blazor.syncfusion.com/documentation/gantt-chart/work).
+The following code snippet demonstrates how to assign resources to tasks and map them in the Gantt Chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more details about work and resource units, refer to the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/work).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -309,12 +327,11 @@ namespace BlazorGanttChart.Data
 
 ## Managing resources assignments in project view
 
-In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
+In the Gantt Chart, you can enable dynamic resource assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) property to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
 
 ### Through cell edit
 
 To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The following code snippet demonstrates the cell edit functionality in the Gantt chart.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -458,7 +475,7 @@ namespace BlazorGanttChart.Data
 
 ### Through dialog box
 
-In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Clicking on a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Also, the resource tab allows editing the unit value for individual resources.
+In the resource tab of the [Add/Edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Selecting a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Additionally, the resource tab allows editing the unit value for individual resources.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -607,7 +624,7 @@ namespace BlazorGanttChart.Data
 
 ### Through method
 
-You can manipulate task resources programmatically by using the following methods:
+You can manage task resources programmatically by using the following methods:
 
 * [AddResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddResourceAssignmentAsync__1___0_): This method adds a new resource to a specific task in the Gantt chart.
 * [DeleteResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteResourceAssignmentAsync__1___0_): Use this method to remove a resource from an existing task in the Gantt chart.
@@ -616,9 +633,10 @@ You can manipulate task resources programmatically by using the following method
 Additionally, you can retrieve assigned resources and resource assignments through the following methods:
 
 * [GetResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResources__1__0_): Retrieves the list of resources.
+
 * [GetResourceAssignments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResourceAssignments__1__0_): Retrieves the list of resource assignments.
 
-* [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_) - This method is utilized to add a new task to the Gantt chart. The fourth argument in this method is used for adding resources to the task.
+* [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_) - This method is used to add a new task to the Gantt chart. The fourth argument in this method is used for adding resources to the task.
 
 These methods offer a convenient way to add, remove, and update task resources in your Gantt chart efficiently. In the code snippet below, upon clicking an external button, the following actions are performed:
 
@@ -813,9 +831,9 @@ namespace BlazorGanttChart.Data
 
 ## Resource event
 
-The [ResourceAssignmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceAssignmentChanging) event is triggered in the Blazor Gantt chart when resource add, remove, and update actions occur. This event allows for custom actions to be performed, and it also provides the ability to cancel add, remove, or update actions by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ResourceAssignmentChangeEventArgs-1.html#Syncfusion_Blazor_Gantt_ResourceAssignmentChangeEventArgs_1_Cancel) property of the event argument to **true**.
+The [ResourceAssignmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceAssignmentChanging) event is triggered in the Blazor Gantt Chart when resources are added, removed, or updated. This event allows you to perform custom actions and provides the ability to cancel these operations by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ResourceAssignmentChangeEventArgs-1.html#Syncfusion_Blazor_Gantt_ResourceAssignmentChangeEventArgs_1_Cancel) property of the event argument to **true**.
 
-In the code snippet below, the `ResourceAssignmentChanging` event is used to display a customized message when performing resource add, remove, and update actions. Additionally, it prevents resource deletion for the 1st index task.
+In the following code snippet, the `ResourceAssignmentChanging` event is used to display a custom message when adding, removing, or updating resources. Additionally, it prevents resource deletion for the 1st index task.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -982,7 +1000,7 @@ namespace BlazorGanttChart.Data
 
 ## Custom taskbar styling using template
 
-The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the code snippet below, the child tasks are customized based on template context data, with the resource name added inside each child taskbar, and the taskbar colors are changed based on task resources.
+The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the following code snippet, child tasks are customized based on the template context data. The resource name is added inside each child taskbar, and the taskbar colors are changed based on the assigned resources.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
