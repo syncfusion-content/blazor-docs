@@ -1,17 +1,19 @@
 ---
 layout: post
 title: Deleting tasks in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Deleting tasks in Syncfusion Blazor Gantt Chart component and more.
+description: Learn how to delete tasks dynamically in the Syncfusion Blazor Gantt Chart component using toolbar or programmatic methods for efficient project management.
 platform: Blazor
-control: Gantt Chart
+control: Deleting tasks
 documentation: ug
 ---
 
 # Deleting Tasks in Blazor Gantt Chart Component
 
-## Deleting Tasks
+Deleting tasks in the Blazor Gantt Chart component streamlines project management by removing tasks, such as outdated milestones or subtasks, using the toolbar or programmatic methods. Enabled by setting the [GanttEditSettings.AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting) property to **true** and tasks can be deleted after selecting a row, ensuring seamless updates to dependencies and critical path calculations. A confirmation dialog, activated via [GanttEditSettings.ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_ShowDeleteConfirmDialog), prompts to verify deletions, preventing accidental removals. The [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteRecordAsync_System_Nullable_System_Int32__) method allows programmatic deletion, requiring a selected record with valid `GanttTaskFields` mappings (e.g., id, name). Ensure tasks are selected and `GanttTaskFields` are properly configured to avoid issues during deletion.
 
-A task delete option in the Gantt Chart component can be enabled by enabling the [GanttEditSettings.AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting) property. Tasks can be deleted by clicking the delete toolbar item or using the `[DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteRecordAsync_System_Nullable_System_Int32__) method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
+## Delete tasks via toolbar
+
+Enable task deletion through the toolbar by setting [GanttEditSettings.AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting) to **true**. Select a row and click the toolbar’s **Delete** icon to remove the task, with an optional confirmation dialog if [GanttEditSettings.ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_ShowDeleteConfirmDialog) is enabled. This method is ideal for quickly removing tasks like completed activities.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -73,11 +75,9 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
 
 N> You should set the `AllowDeleting` value to `true` to delete the record dynamically.
 
-## Delete confirmation message
+## Delete tasks with confirmation dialog
 
-Delete confirmation message is used to get confirmation from users before deleting a task. This confirmation message can be enabled by setting the [GanttEditSettings.ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_ShowDeleteConfirmDialog) property to true.
-
-The following code snippet explains how to enable the delete confirmation message in Gantt Chart.
+Enable a confirmation dialog for task deletion by setting [GanttEditSettings.ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_ShowDeleteConfirmDialog) to **true**, alongside [GanttEditSettings.AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting) . After selecting a row, deleting via the toolbar or [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteRecordAsync_System_Nullable_System_Int32__) method prompts a dialog to confirm the action, ensuring intentional removals. This is useful for critical tasks where accidental deletion must be avoided.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
