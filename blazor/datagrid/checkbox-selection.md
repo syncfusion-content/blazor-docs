@@ -320,6 +320,106 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhytpWmqAXcGldO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Prevent Row Selection via Keyboard Navigation
+
+Usually, when navigating the grid using arrow keys while a [cell](https://blazor.syncfusion.com/documentation/datagrid/cell) is focused, the row below or above gets selected automatically as the focus moves. This sample demonstrates how to prevent row selection triggered by keyboard navigation, ensuring that rows can only be selected or deselected via mouse clicks. The behavior is achieved by canceling the selection logic in the [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting) and [RowDeselecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeselecting) events when the action originates from keyboard input.
+
+Here is an example demonstrates how to restrict row selection in the Syncfusion Blazor DataGrid when navigating with keyboard arrow keys.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" AllowSelection="true" DataSource="@OrderData" Height="315">
+    <GridEvents RowSelecting="RowSelectingHandler" RowDeselecting="RowDeselectingHandler" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Type="Syncfusion.Blazor.Grids.ColumnType.CheckBox" Width="50"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"   Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+
+    private void RowSelectingHandler(Syncfusion.Blazor.Grids.RowSelectingEventArgs<OrderDetails> args)
+    {
+        //Prevent selection when navigating to the next row using keyboard actions
+        if (args.Event == null)
+        {
+            args.Cancel = true;
+        }
+    }
+
+    private void RowDeselectingHandler(Syncfusion.Blazor.Grids.RowDeselectEventArgs<OrderDetails> args)
+    {
+        //Prevent selection when navigating to the next row using keyboard actions
+        if (args.Event == null)
+        {
+            args.Cancel = true;
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhyiDqWqtTwgUgN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+
 ## Allow selection only through checkbox click
 
 By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection so that it can only be performed by clicking the checkboxes, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
