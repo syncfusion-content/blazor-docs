@@ -89,6 +89,12 @@ The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
     };
 }
 
+<style>
+    #chatui-header .e-header .e-header-icon {
+        display: flex;
+    }
+</style>
+
 ```
 
 ![Blazor Chat UI HeaderIconCss](./images/header-iconCss.png)

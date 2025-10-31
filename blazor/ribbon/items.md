@@ -86,6 +86,7 @@ This example shows how to configure Checkbox items and handle their events.
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Ribbon
+@using Syncfusion.Blazor.Buttons
 
 <div style="width:30%">
     <SfRibbon>
@@ -122,7 +123,7 @@ This example shows how to configure Checkbox items and handle their events.
 @code {
     private void Created() { /* your actions here */ }
 
-    private void ValueChange(ChangeEventArgs args) { /* your actions here */ }
+    private void ValueChange(ChangeEventArgs<bool> args) { /* your actions here */ }
 }
 
 {% endhighlight %}
@@ -444,6 +445,7 @@ This example shows how to configure a ColorPicker item and handle its events.
 
 @using Syncfusion.Blazor.Ribbon
 @using Syncfusion.Blazor.SplitButtons
+@using Syncfusion.Blazor.Inputs
 
 <div style="width:30%">
     <SfRibbon>

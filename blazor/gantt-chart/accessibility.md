@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Gantt Chart Component
 
-The Syncfusion Blazor Gantt Chart component adheres to accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) standards, ensuring usability for all users, including those relying on assistive technologies.
+The Syncfusion Blazor Gantt Chart component adheres to accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) standards, ensuring compatibility with assistive technologies, including those relying on assistive technologies.
 
 ## Accessibility Compliance
 
@@ -50,15 +50,15 @@ The Blazor Gantt Chart component implements [WAI-ARIA](https://www.w3.org/WAI/AR
 | `dialog (role)` | Applied to the `e-dialog` element for pop-up dialogs in the Gantt. |
 | `toolbar (role)` | Assigned to the `e-gantt-toolbar` element to indicate the toolbar. |
 | `aria-label` | Provides descriptive information for UI elements, such as timeline cells, taskbars, labels, dependency lines, and event markers. |
-| `aria-selected` | Indicates selection state for chart rows, set to `false` by default and `true` when a cell or task is selected. |
-| `aria-expanded` | Used for parent task rows, set to `true` when expanded and `false` when collapsed. |
+| `aria-selected` | Indicates selection state for chart rows, set to **false** by default and `true` when a cell or task is selected. |
+| `aria-expanded` | Used for parent task rows, set to `true` when expanded and **false** when collapsed. |
 | `aria-grabbed` | Applied to taskbars during editing to indicate drag-and-drop interaction. |
 
 ## Keyboard navigation
 
 The Blazor Gantt Chart component supports comprehensive [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) for users relying on keyboards or assistive technologies. Below are the supported keyboard shortcuts, organized by functionality.
 
-<b>Focus Elements</b>
+### Focus elements
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -73,7 +73,7 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the cell to the left. |
 | <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Focuses the Gantt content element. |
 
-<b>Expand/Collapse</b>
+### Expand/Collapse
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -82,7 +82,7 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapses the selected row. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Expands the selected row. |
 
-<b>Selection</b>
+### Selection
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -99,14 +99,14 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears all selections. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all rows or cells on the current page. |
 
-<b>Clipboard</b>
+### Clipboard
 
 | Windows | Mac | Action |
 |---------|-----|--------|
 | <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies selected rows or cells to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> | Copies selected rows or cells with headers to the clipboard. |
 
-<b>Context Menu</b>
+### Context menu
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -117,7 +117,7 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>←</kbd> | <kbd>←</kbd> | Closes the current submenu and navigates to the parent menu. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Opens the next submenu. |
 
-<b>Cell Editing</b>
+### Cell editing
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -129,25 +129,25 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Saves the current cell and moves to the previous editable cell. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Saves the current cell and edits the cell in the previous row. |
 
-<b>Filtering</b>
+### Filtering
 
 | Windows | Mac | Action |
 |---------|-----|--------|
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the filter menu for the focused header. |
 
-<b>Column Menu</b>
+### Column Menu
 
 | Windows | Mac | Action |
 |---------|-----|--------|
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the column menu for the focused header. |
 
-<b>Reordering</b>
+### Reordering
 
 | Windows | Mac | Action |
 |---------|-----|--------|
 | <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Moves the focused column to the left or right. |
 
-<b>Sorting</b>
+### Sorting
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -155,7 +155,7 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Applies multi-column sorting. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Clears sorting for the focused column. |
 
-<b>Toolbar</b>
+### Toolbar
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -163,14 +163,14 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Activates the focused toolbar element. |
 
-<b>Tooltip</b>
+### Tooltip
 
 | Windows | Mac | Action |
 |---------|-----|--------|
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the tooltip. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Opens the tooltip on focus and closes it on focus out. |
 
-<b>Dialog Editing</b>
+### Dialog editing
 
 | Windows | Mac | Action |
 |---------|-----|--------|
@@ -182,11 +182,11 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Saves the current cell and moves to the next editable cell in the dialog. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Saves the current cell and moves to the previous editable cell in the dialog. |
 
-## Ensuring Accessibility
+## Validate Accessibility Compliance
 
 Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests to ensure compliance with WCAG 2.2 and other standards. Evaluate the accessibility of the Blazor Gantt Chart component using the [sample](https://blazor.syncfusion.com/accessibility/gantt-chart) in a new window with accessibility tools.
 
-## See Also
+## Related Resources
 
 - [Accessibility in Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
 - [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)

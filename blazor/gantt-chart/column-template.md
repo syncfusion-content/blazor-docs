@@ -7,11 +7,15 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Column template in Blazor Gantt Chart Component
+# Column template in Blazor Gantt Chart component
 
-A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports column templates, allowing custom content to be displayed in a column instead of the default field value. You can render custom components or HTML elements using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property to include elements such as images, buttons, or other UI controls within a column.
 
-N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+> When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for gantt actions like sorting, filtering, editing unless [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) property of the column is specified.
+
+## Render Button in a column
+
+You can render the Syncfusion<sup style="font-size:70%">&reg;</sup> [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) component inside a Gantt column by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property.. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

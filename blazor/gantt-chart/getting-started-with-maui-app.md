@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor GanttChart component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -21,7 +21,7 @@ This section explains you through the step-by-step process of integrating the Sy
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new Blazor MAUI app in Visual Studio
 
 You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
@@ -48,11 +48,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Create a new Blazor MAUI App in Visual Studio Code
+## Create a new Blazor MAUI app in Visual Studio code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+You can create a Blazor MAUI app using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
-## Install Blazor Gantt and Themes NuGet in the App
+## Install Blazor Gantt and Themes NuGet in the app
 
 To add **Blazor Gantt Chart**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -87,9 +87,9 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
@@ -150,15 +150,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-    </GanttColumns>
 </SfGantt>
 
 @code{
@@ -170,21 +163,27 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -192,6 +191,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### How to Run the Sample on Windows
 
@@ -207,7 +208,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-## Binding Gantt Chart with Data and Mapping Task Fields
+## Binding Gantt Chart with Data and mapping task fields
 
 Bind data with the Gantt Chart component by using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. It accepts the list objects or the DataManager instance. 
 
@@ -218,64 +219,13 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 {% tabs %}
 {% highlight razor %}
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-</SfGantt>
-
-@code{
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
-        };
-        return Tasks;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Defining columns
-
-Gantt Chart has an option to define columns as an array. You can manage the order and customize the Gantt Chart columns using the following properties:
-
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field): Maps the data source fields to the columns.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText): Changes the title of columns.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign): Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format): Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
-* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Visible): Show or hide a particular column. By default, columns are visible. Set this property to **false** to hide the column or **true** to make it visible.
-* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width): To specify the width of the column, which can be defined in **pixels** or as a **percentage** of the total column width.
-
-{% tabs %}
-{% highlight razor %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" TextAlign="TextAlign.Right" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="250"></GanttColumn>
@@ -293,21 +243,27 @@ Gantt Chart has an option to define columns as an array. You can manage the orde
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -316,17 +272,90 @@ Gantt Chart has an option to define columns as an array. You can manage the orde
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeWDVzBAiIgBkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeMZLfLAFkPmGF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Defining columns
+
+The Gantt Chart has an option to define columns using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) component. To configure each column, use the following properties:
+
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field): Maps the data source fields to the columns.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText): Changes the title of columns.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign): Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format): Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Visible): Show or hide a particular column. By default, columns are visible. Set this property to **false** to hide the column or **true** to make it visible.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width): To specify the width of the column, which can be defined in **pixels** or as a **percentage** of the total column width.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="250"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Format="@NumberFormat" Width="250"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+@code{
+    private List<TaskData> TaskCollection { get; set; }
+    private string NumberFormat = "C";
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentID { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+        };
+        return Tasks;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeWDVzBAiIgBkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 For further details regarding columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns).
 
 ## Enable editing
 
-The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the [EditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [EditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) properties.
+The editing feature enables you to edit the tasks in the Gantt Chart component. To activate this functionality, set both [EditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [EditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing)  properties to **true**.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
@@ -340,21 +369,27 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -362,6 +397,8 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeWDVzBAiIgBkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
@@ -369,13 +406,13 @@ You can find the full information regarding Editing from [here](https://blazor.s
 
 ## Enable filtering
 
-The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to `true`. Filtering feature can also be customized using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterSettings) property.
+The filtering feature enables you to view the reduced amount of records based on filter criteria. The Gantt Chart supports column-wise menu filtering. To enable this feature, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to **true**. The filtering behavior can be customized using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterSettings) property.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
@@ -388,21 +425,27 @@ The filtering feature enables you to view the reduced amount of records based on
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -410,18 +453,20 @@ The filtering feature enables you to view the reduced amount of records based on
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjheMNhfrqtjOYfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering)
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to `true`. The sorting feature can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property.
+The sorting feature enables you to order the records. To enable sorting in the Gantt Chart, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to **true**. The sorting behavior can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property to define the sorting configuration.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
@@ -434,21 +479,27 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -457,23 +508,26 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeCZLJVrvlKPai?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting)
 
-## Enabling Predecessors or Task Relationships
+## Enabling Predecessors or task relationships
 
-Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between the tasks.
+The Gantt Chart component supports task dependencies to define the logical sequence of task execution. These relationships control the scheduling behavior between tasks based on their start and finish times.
 
-* Start to Start (SS): You cannot start a task until the dependent task starts.
-* Start to Finish (SF): You cannot finish a task until the dependent task finishes.
-* Finish to Start (FS): You cannot start a task until the dependent task completes.
-* Finish to Finish (FF): You cannot finish a task until the dependent task completes.
-You can show the relationship in tasks by using the `Dependency` property as shown in the following code example.
+- **Start to Start (SS)**: The successor task begins when the predecessor task begins.
+- **Start to Finish (SF)**: The successor task finishes when the predecessor task begins.
+- **Finish to Start (FS)**: The successor task begins when the predecessor task finishes.
+- **Finish to Finish (FF)**: The successor task finishes when the predecessor task finishes.
+
+These relationships can be configured using the [Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property in the task data.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
 </SfGantt>
 
@@ -486,22 +540,22 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1, Predecessor = "2" }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentID = 1, Predecessor = "2" }
         };
         return Tasks;
     }
@@ -510,15 +564,13 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrSsXrzhfcIfBtG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
 ## Handling exceptions
-Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
 
-The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event contains the error details returned from the server.
-
-N> We recommend you bind the `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get a solution as early as possible.
-
+Exceptions triggered during Gantt operations can be handled effectively without interrupting the application. These errors are captured using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event, which provides detailed information returned from the server. This allows for appropriate handling, logging, or user notification without affecting the overall workflow.
 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
 
@@ -530,35 +582,29 @@ The following sample code demonstrates notifying user when server-side exception
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
-<span class="error">@ErrorDetails</span>
+<label class="error" style="display:block; color: red; margin-bottom: 20px;">@ErrorDetails</label>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
      <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
 </SfGantt>
-
-<style>
-    .error {
-        color: red;
-    }
-</style>
 
 @code{
     private string ErrorDetails = "";
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
-    public void ActionFailure(FailureEventArgs args)
+    public void ActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
     {
         this.ErrorDetails = args.Error.Message.ToString();
         StateHasChanged();
@@ -567,6 +613,8 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrosNrTBJxCLRgJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 
