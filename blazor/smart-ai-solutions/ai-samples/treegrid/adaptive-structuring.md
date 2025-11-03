@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Data Restructuring with Blazor TreeGrid and AI Models | Syncfusion
-description: Learn how to use Syncfusion Blazor TreeGrid with AI service to automatically organize hierarchical data.
+title: Data restructuring with Blazor TreeGrid and AI models | Syncfusion
+description: Learn how to use the Syncfusion Blazor TreeGrid with OpenAI, Azure OpenAI, or Ollama to automatically organize hierarchical data. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
 keywords: Blazor TreeGrid, AI data restructuring, Syncfusion Blazor AI
 ---
 
-# Data Restructuring with Blazor TreeGrid and Ollama
+# Data restructuring with Blazor TreeGrid and AI models
 
-This guide demonstrates how to use the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically organize hierarchical data in a Syncfusion Blazor TreeGrid component. The [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. In this example, the application assigns appropriate `ParentId` values based on `CategoryName` relationships, dynamically updating the TreeGrid to reflect the corrected hierarchical structure.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically organize hierarchical data in a Syncfusion Blazor TreeGrid component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. In the example below, the application assigns appropriate `ParentId` values based on `CategoryName` relationships and dynamically updates the TreeGrid to reflect the corrected hierarchical structure.
 
 ## Prerequisites
 
-Ensure the following NuGet packages are installed based on your chosen AI service:
+Ensure the following NuGet packages are installed based on the selected AI service.
 
 ### For OpenAI
-- **Microsoft.Extensions.AI**
-- **Microsoft.Extensions.AI.OpenAI**
+- Microsoft.Extensions.AI
+- Microsoft.Extensions.AI.OpenAI
 
 ### For Azure OpenAI
-- **Microsoft.Extensions.AI**
-- **Microsoft.Extensions.AI.OpenAI**
-- **Azure.AI.OpenAI** 
+- Microsoft.Extensions.AI
+- Microsoft.Extensions.AI.OpenAI
+- Azure.AI.OpenAI
 
 ### For Ollama
-- **Microsoft.Extensions.AI**
-- **OllamaSharp**
+- Microsoft.Extensions.AI
+- OllamaSharp
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -43,9 +43,9 @@ Install-Package OllamaSharp  # For Ollama
 {% endhighlight %}
 {% endtabs %}
 
-## Add Stylesheet and Script Resources
+## Add stylesheet and script resources
 
-Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of your main page:
+Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of the main page:
 
 - For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
 - For **.NET 8 or .NET 9** Blazor Server apps, add to **~/Components/App.razor**.
@@ -61,18 +61,18 @@ Include the theme stylesheet and script from NuGet via [Static Web Assets](https
 
 N> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
 
-## Configure AI Service
+## Configure AI service
 
-Choose one of the following AI services (OpenAI, Azure OpenAI, or Ollama) based on your requirements:
-- **OpenAI**: Best for cloud-based, general-purpose AI models with minimal setup.
-- **Azure OpenAI**: Ideal for enterprise-grade deployments with enhanced security and scalability.
-- **Ollama**: Suitable for self-hosted, privacy-focused AI models.
+Choose one of the following AI services (OpenAI, Azure OpenAI, or Ollama) based on requirements:
+- **OpenAI**: Cloud-based, general-purpose AI models with minimal setup.
+- **Azure OpenAI**: Enterprise-grade deployment with enhanced security and scalability.
+- **Ollama**: Self-hosted, privacy-focused AI models.
 
-Follow the instructions for your selected service to register the AI model in your application.
+Follow the instructions for the selected service to register the AI model in the application.
 
 ### OpenAI
 
-Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (e.g., `gpt-3.5-turbo`, `gpt-4`) in `openAIModel`.
+Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (for example, `gpt-3.5-turbo`, `gpt-4`) in `openAIModel`.
 
 - Install the required NuGet packages:
 
@@ -85,7 +85,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in your Blazor WebApp:
+- Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
@@ -110,7 +110,7 @@ var app = builder.Build();
 
 ### Azure OpenAI
 
-Deploy an Azure OpenAI Service resource and model as described in [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
+Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
 
 - Install the required NuGet packages:
 
@@ -124,7 +124,7 @@ Install-Package Azure.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in your Blazor WebApp:
+- Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
@@ -156,9 +156,9 @@ var app = builder.Build();
 
 To use Ollama for self-hosted AI models:
 
-1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for your operating system.
-2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`).
-3. **Configure the application**: Provide the `Endpoint` URL (e.g., `http://localhost:11434`) and `ModelName` (e.g., `llama2:13b`).
+1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for the operating system.
+2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `mistral:7b`).
+3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `ModelName` (for example, `llama2:13b`).
 
 - Install the required NuGet packages:
 
@@ -171,7 +171,7 @@ Install-Package OllamaSharp
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in your Blazor WebApp:
+- Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
@@ -192,14 +192,14 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (e.g., `http://localhost:11434`) before starting the application.
+- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion Blazor service
 
-Add the Syncfusion Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
+Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
 
-- **Server Mode**: Register the service in the single **~/Program.cs** file.
-- **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
+- **Server mode**: Register the service in the single **~/Program.cs** file.
+- **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
 
 {% tabs %}
 {% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
@@ -228,9 +228,9 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component (`Home.razor`)
+## Razor component (`Home.razor`)
 
-This section implements the Syncfusion Blazor TreeGrid with AI-driven data restructuring using the AI model to assign `ParentId` values based on `CategoryName` relationships.
+This section implements the Syncfusion Blazor TreeGrid with AI-driven data restructuring, using the AI model to assign `ParentId` values based on `CategoryName` relationships.
 
 ```csharp
 @page "/"
@@ -362,20 +362,20 @@ namespace AISamples.Components.Pages
 }
 ```
 
-## Error Handling and Troubleshooting
+## Error handling and troubleshooting
 
-If the AI service fails to return a valid response, the TreeGrid will display an error message ("Oops! Please try again!"). Common issues include:
+If the AI service fails to return a valid response, the TreeGrid displays an error message (“Oops! Please try again!”). Common issues include:
 
-- **Invalid API Key or Endpoint**: Verify that the `openAIApiKey`, `azureOpenAIKey`, or Ollama `Endpoint` is correct and the service is accessible.
-- **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
-- **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
-- **Large Datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt for efficiency.
+- **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama `Endpoint` is correct and the service is accessible.
+- **Model unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
+- **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
+- **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
-## Performance Considerations
+## Performance considerations
 
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
-## Sample Code
+## Sample code
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 

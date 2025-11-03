@@ -1,51 +1,51 @@
 ---
 layout: post
-title: Notifications | Blazor | Syncfusion
-description: For displaying the notifications about trial and newer version update information for Syncfusion applications.
+title: Syncfusion notifications in Blazor | Syncfusion
+description: Configure and understand Syncfusion notifications in Blazor applications, including trial license alerts, newer NuGet package updates, ES build notifications.
 platform: Blazor
 control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Syncfusion® Notifications
+# Syncfusion® notifications
 
 Syncfusion® enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when using Syncfusion® trial assemblies, updates about the availability of the latest Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet package, and notifications about newer releases of Essential Studio®. By keeping users informed, Syncfusion® ensures that developers stay up to date with the latest features and enhancements.
 
-N> The Syncfusion® Notification feature is available from Essential Studio® v22.1.34.
+N> The Syncfusion® notifications feature is available starting with Essential Studio® v22.1.34.
 
-## Notification Configuration
+## Notification configuration
 
-The Syncfusion® Options page allows you to configure notification settings. Customise trial and newer version notifications with a simple true or false toggle.
+Notification behavior is configured in Visual Studio on the Syncfusion® Options page. Use the toggles to true or false trial and newer version notifications.
 
-It can be accessed by clicking **Tools -> Options -> Syncfusion -> Blazor**
+To access the settings, go to **Tools -> Options -> Syncfusion -> Blazor**.
 
-   ![Option Page](images/blazor_optionPage.png)
+   ![Visual Studio Options page for Syncfusion Blazor notifications](images/blazor_optionPage.png)
 
-## Notification Types
+## Notification types
 
-**1. Syncfusion® Trial Application Notification**
+**1. Syncfusion® trial application notification**
 
-When you utilize Syncfusion® trial assemblies in your Blazor application, you will receive a notification stating, **This application uses a trial Syncfusion<sup style="font-size:70%">&reg;</sup> license.** This notification encourages you to obtain a valid license key, enabling you to fully explore and experience the extensive features and capabilities offered by Syncfusion®.
+When trial licensing is detected in a Blazor application, a message is shown: **This application uses a trial Syncfusion<sup style="font-size:70%">&reg;</sup> license.** This notification encourages you to obtain a valid license key, enabling you to fully explore and experience the extensive features and capabilities offered by Syncfusion®.
 
-   ![Trial Notification](images/blazor_trial.png)
+   ![In-app banner indicating the application uses a trial Syncfusion license](images/blazor_trial.png)
 
-**2. Newer Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet Package Notification**
+**2. Newer Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet package notification**
 
-If you have installed lower versions of Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in your application, you will be notified about the availability of higher versions of Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages on nuget.org. This empowers you to easily identify opportunities to upgrade and gain access to new features, performance enhancements, and bug fixes.
+If older Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages are referenced, a notification indicates that newer versions are available on NuGet.org. Upgrading provides access to new features, performance improvements, and bug fixes.
 
-   ![NuGet Notification](images/blazor_nuget.png)
+   ![Notification indicating newer Syncfusion NuGet packages are available](images/blazor_nuget.png)
 
-**3. Newer Essential Studio® Build Notification**
+**3. Newer Essential Studio® build notification**
 
-If you use older versions of Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies or NuGet packages from **Essential Studio® Blazor,** Syncfusion® will notify you about new releases for the latest Essential Studio® build. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion® in your Blazor development projects.
+When using older Essential Studio® assemblies or NuGet packages, a notification announces the availability of a newer Essential Studio® build for Blazor. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion® in your Blazor development projects.
 
-   ![Build Notification](images/blazor_build.png)
+   ![Notification announcing a newer Essential Studio build is available](images/blazor_build.png)
 
-**4. Invalid License Key Notification**
+**4. Invalid license key notification**
 
 If you have mistakenly used an incorrect license key or a license from another version or platform in your Blazor application, Syncfusion® will display a notification message stating, **The provided Syncfusion<sup style="font-size:70%">&reg;</sup> license key is invalid**. This message serves as a reminder to obtain a valid license key and ensure proper licensing for Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-   ![Invalid Notification](images/blazor_invalid.png)
+   ![Notification indicating the provided Syncfusion license key is invalid](images/blazor_invalid.png)
 
   
 
