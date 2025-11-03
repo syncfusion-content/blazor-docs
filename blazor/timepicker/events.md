@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor TimePicker Component
 
-This section describes the TimePicker events that are raised for user and programmatic interactions. The following table maps legacy event names to current event names.
+This section explains the list of events of the TimePicker component which will be triggered for appropriate TimePicker actions.
 
 | Event Name(`v17.1.*`) |Event Name(`v17.2.*`) |
 | ----- | ----- |
@@ -20,7 +20,7 @@ This section describes the TimePicker events that are raised for user and progra
 
 ## Blur
 
-The `Blur` event triggered when the input loses the focus.
+`Blur` event triggers when the input loses the focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -40,7 +40,7 @@ The `Blur` event triggered when the input loses the focus.
 
 ## ValueChange
 
-The `ValueChange` event triggered when the Calendar value is changed.
+`ValueChange` event triggers when the Calendar value is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +60,7 @@ The `ValueChange` event triggered when the Calendar value is changed.
 
 ## OnClose
 
-The `OnClose` event triggered when the popup is closed.
+`OnClose` event triggers when popup is closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -80,7 +80,7 @@ The `OnClose` event triggered when the popup is closed.
 
 ## Created
 
-The `Created` event triggered when the component is created.
+`Created` event triggers when the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -100,7 +100,7 @@ The `Created` event triggered when the component is created.
 
 ## Destroyed
 
-The `Destroyed` event triggered when the component is destroyed.
+`Destroyed` event triggers when the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -119,7 +119,7 @@ The `Destroyed` event triggered when the component is destroyed.
 
 ## Focus
 
-The `Focus` event triggered when the input gets focus.
+`Focus` event triggers when the input gets focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -140,7 +140,7 @@ The `Focus` event triggered when the input gets focus.
 
 ## OnItemRender
 
-The `OnItemRender` event triggered while rendering the each popup list item.
+`OnItemRender` event triggers while rendering the each popup list item.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -159,7 +159,7 @@ The `OnItemRender` event triggered while rendering the each popup list item.
 
 ## OnOpen
 
-The `OnOpen` event triggered when the popup is opened.
+`OnOpen` event triggers when the popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -177,4 +177,4 @@ The `OnOpen` event triggered when the popup is opened.
 }
 ```
 
-N> The TimePicker currently exposes the events listed above. Additional events may be introduced based on user feedback. If an event needed for a scenario is not available, submit a request in the [Syncfusion Blazor feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+N> TimePicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

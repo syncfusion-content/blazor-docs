@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Range Selector Component | Syncfusion
-description: Check out and learn how to utilize the print and export functionality in Syncfusion Blazor Range Selector component.
+description: Checkout and learn here all about print and export in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-Print the rendered Range Selector directly from the browser by calling the public method `PrintAsync`.
+The rendered Range Selector can be printed directly from the browser by calling the public method `PrintAsync`.
 
 ```cshtml
 
@@ -59,11 +59,11 @@ Print the rendered Range Selector directly from the browser by calling the publi
 
 ## Export
 
-Export the rendered Range Selector to **JPEG**, **PNG**, **SVG**, **PDF**, **XLSX**, or **CSV** formats using the `ExportAsync` method. This method accepts the following parameters:
+The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, **PDF**, **XLSX**, or **CSV** format by using the `ExportAsync` method in the Range Selector. This method contains the following parameters:
 
-* **Type** – Specifies the export type (JPEG, PNG, SVG, PDF, XLSX, or CSV).
-* **File name** – Specifies the file name for export.
-* **Orientation** – Specifies the orientation type (applicable only for PDF export; optional).
+* **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, **PDF**, **XLSX**, or **CSV** format.
+* **File name** - To specify the file name to export.
+* **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
 
 ```cshtml
 
@@ -93,12 +93,12 @@ Export the rendered Range Selector to **JPEG**, **PNG**, **SVG**, **PDF**, **XLS
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
         new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
-        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
-        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
-        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24  },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36  },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38  },
         new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
-        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
-        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57  },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70  }
     };
 
     public async Task Click(MouseEventArgs args)

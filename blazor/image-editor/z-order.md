@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Z-order with Blazor Image Editor Component | Syncfusion
-description: Explore the Z-order support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+description: Checkout the Z-order in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,16 +9,20 @@ documentation: ug
 
 # Z-order in the Blazor Image Editor Component
 
-The Image Editor supports z-order control to manage the stacking order of annotations. This capability is useful when designing templates such as greeting cards or posters, where arranging multiple annotations in the correct order is essential.
+We are excited to introduce `z-order` support in the Image Editor. It's a powerful tool that allows users to adjust the positioning of annotations. This feature is particularly useful for designing personalized templates like greeting cards or posters, where managing the layering of multiple annotations is crucial for a polished final product.
 
-The following z-order actions are available:
+Types of adjustment in the Image Editor `z-order` support.
 
-- [Bring forward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringForwardAsync_System_String_) – Swap the selected annotation with the one directly above it.
-- [Send backward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendBackwardAsync_System_String_) – Swap the selected annotation with the one directly below it.
-- [Bring to front](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringToFrontAsync_System_String_) – Move the selected annotation in front of all other annotations.
-- [Send to back](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendToBackAsync_System_String_) – Move the selected annotation behind all other annotations.
+* [Bring forward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringForwardAsync_System_String_) - Switch the selected annotation with the annotation one layer ahead of it.
 
-The following example demonstrates z-order support:
+* [Sent Backward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendBackwardAsync_System_String_) - Switch the selected annotation with the annotation one layer behind it.
+
+* [Bring to Front](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringToFrontAsync_System_String_) - Move the selected annotation to ahead of all other annotations.
+
+* [Send to Back](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendToBackAsync_System_String_) - Move the selected annotation to behind all other annotations.
+
+
+In the following example, you can use the `z-order` support.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -75,4 +79,4 @@ The following example demonstrates z-order support:
 }
 ```
 
-![Blazor Image Editor z-order example](./images/blazor-image-editor-z-order.jpg)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-z-order.jpg)

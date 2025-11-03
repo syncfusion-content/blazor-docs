@@ -9,7 +9,7 @@ documentation: ug
 
 # Right to Left in Blazor QueryBuilder Component
 
-Right-to-left (RTL) support mirrors the text direction and layout of the Query Builder for languages that read right to left, improving usability and accessibility for Arabic, Persian (Farsi), Urdu, Hebrew, and similar locales. To enable RTL for a Query Builder instance, set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnableRtl) property to `true`.
+RTL provides an option to switch the text direction and layout of the Query Builder component from right-to-left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable this feature, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnableRtl) to true.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -52,4 +52,4 @@ Right-to-left (RTL) support mirrors the text direction and layout of the Query B
 
 ```
 
-![Right to left in Blazor Query Builder](./../images/blazor-querybuilder-right-to-left.png)
+![Right to Left in Blazor QueryBuilder](./../images/blazor-querybuilder-right-to-left.png)

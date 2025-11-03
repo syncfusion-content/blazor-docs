@@ -11,7 +11,7 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 
-## Customizing the TreeView Nodes
+## Customizing the TreeView nodes
 
 Use the following CSS to customize the TreeView nodes.
 
@@ -24,7 +24,7 @@ Use the following CSS to customize the TreeView nodes.
 }
 ```
 
-## Customizing the text of TreeView Nodes
+## Customizing the text of TreeView nodes
 
 Use the following CSS to customize the text of TreeView nodes.
 
@@ -35,7 +35,7 @@ Use the following CSS to customize the text of TreeView nodes.
 } 
 ```
 
-## Customizing the TreeView Expand and Collapse icons
+## Customizing the TreeView expand and collapse icons
 
 Use the following CSS to customize the TreeView expand and collapse icons.
 
@@ -48,7 +48,7 @@ Use the following CSS to customize the TreeView expand and collapse icons.
 }
 ```
 
-## Customizing the TreeView Checkboxes
+## Customizing the TreeView checkboxes
 
 Use the following CSS to customize the TreeView checkboxes.
 
@@ -63,7 +63,7 @@ Use the following CSS to customize the TreeView checkboxes.
 }
 ```
 
-## Customizing the TreeView Nodes based on levels
+## Customizing the TreeView nodes based on levels
 
 Use the following CSS to customize the TreeView nodes based on levels.
 

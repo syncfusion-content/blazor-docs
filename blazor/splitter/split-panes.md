@@ -9,11 +9,11 @@ documentation: ug
 
 # Split Panes in Blazor Splitter Component
 
-This section explains the configuration and behavior of split panes within the Syncfusion Blazor Splitter component.
+This section explains split-panes behaviors.
 
-## Horizontal Layout
+## Horizontal layout
 
-By default, the Splitter renders in a horizontal orientation. The splitter container splits into panes flowing horizontally, with vertical separators between them.
+By default, splitter will be rendered in horizontal orientation. Splitter container will be split as panes in horizontal flow direction with vertical separator.
 
 ```cshtml
 
@@ -62,13 +62,11 @@ By default, the Splitter renders in a horizontal orientation. The splitter conta
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLSCDtPpuqUaXQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Splitter with Horizontal Orientation](./images/blazor-splitter-horizontal-orientation.png)
 
-## Vertical Layout
+## Vertical layout
 
-By setting the `Orientation` property to `Orientation.Vertical`, the Splitter renders in a vertical orientation. The splitter container then splits into panes flowing vertically, with horizontal separators between them.
+By setting value to `Orientation` API as `Vertical`, splitter will be rendered in vertical orientation. Splitter container will be split as panes in vertical flow direction with horizontal separator.
 
 ```cshtml
 
@@ -116,8 +114,6 @@ By setting the `Orientation` property to `Orientation.Vertical`, the Splitter re
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthoiZNFzYUPHZGg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Splitter with Vertical Orientation](./images/blazor-splitter-vertical-orientation.png)
 
@@ -176,15 +172,13 @@ N> For horizontal orientation, it will be considered as separator width. For ver
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBIWjXPTETUitEK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Splitter with Separator](./images/blazor-splitter-separator.png)
 
 ## Nested Splitter
 
 Splitter provides support to render the nested pane to achieve the complex layouts. The same `SplitterPane` tag can be used for splitter pane and nested splitter.
 
-N> When rendering a nested splitter as a direct child of a splitter pane, the nested splitter should have `100%` width and height to match the parent pane's dimensions.
+N> Also the nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 ```cshtml
 
@@ -254,17 +248,15 @@ N> When rendering a nested splitter as a direct child of a splitter pane, the ne
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVIMtZlzOfchmHU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Nested Splitter](./images/blazor-nested-splitter.png)
 
-## Add or Remove Panes
+## Add or remove pane
 
-For dynamic addition and removal of panes, use the `AddPaneAsync` and `RemovePaneAsync` methods to manage panes gracefully in the splitter.
+The panes can be added programmatically but it will be complex. For this, use the `AddPane/RemovePane` methods to add and remove the panes dynamically in the splitter.
 
-### Add Pane
+### Add pane
 
-Panes can be added dynamically to the splitter by passing `SplitterPane` properties along with an index to the `AddPaneAsync` method.
+The panes can be added dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method.
 
 ```cshtml
 
@@ -322,11 +314,10 @@ Panes can be added dynamically to the splitter by passing `SplitterPane` propert
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhSWtDbJEehtKiQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Remove Pane
+### Remove pane
 
-Split panes can be removed dynamically by passing the pane index to the `RemovePaneAsync` method.
+The split panes can be removed dynamically by passing the pane index to `RemovePane` method.
 
 ```cshtml
 
@@ -386,8 +377,6 @@ Split panes can be removed dynamically by passing the pane index to the `RemoveP
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBysttlfYewBMuS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See Also
 

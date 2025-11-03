@@ -2,7 +2,6 @@
 layout: post
 title: Customize the Spinner in Blazor Spinner Component | Syncfusion
 description: Checkout and learn here all about how to customize the Spinner in Syncfusion Blazor Spinner component and more.
-
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -10,11 +9,11 @@ documentation: ug
 
 # Customize the Spinner in Blazor Spinner Component
 
-The Spinner component can be customized during initialization or after it is rendered.
+The Spinner component can be customized when initializing or after rendering it.
 
 ## Customize when initializing the Spinner component
 
-Change the default Spinner appearance at initialization using the following properties:
+Provided support to change the default Spinner appearance when initializing Spinner component using the following properties.
 
 * CssClass
 * Label
@@ -23,7 +22,7 @@ Change the default Spinner appearance at initialization using the following prop
 
 ### CssClass
 
-Add a custom class name to the Spinner root element to modify the UI styles. The following example shows how to initialize a Spinner with a custom class in a Blazor Razor page.
+Add the customized `Class` name to a Spinner root element to customize the Blazor Spinner component UI styles. The following code explains how to initialize a Spinner with the custom class name in the Blazor Razor page.
 
 ```cshtml
 
@@ -63,7 +62,7 @@ Add a custom class name to the Spinner root element to modify the UI styles. The
 
 #### Modal Spinner
 
-Create a modal (overlay) spinner by adding the `e-spin-overlay` class to the `CssClass` property.
+A modal spinner can be initialized by adding the class `e-spin-overlay` to the `CssClass` property of the spinner.
 
 ```cshtml
 
@@ -100,7 +99,9 @@ Create a modal (overlay) spinner by adding the `e-spin-overlay` class to the `Cs
 
 ### Label
 
-Display a custom label text below the Spinner by setting the `Label` property.
+Add the customize label text in Blazor Spinner component at the bottom.
+
+The following code explains how to set the `Label` on Spinner in Blazor Razor page.
 
 ```cshtml
 
@@ -133,7 +134,7 @@ Display a custom label text below the Spinner by setting the `Label` property.
 
 ### Type
 
-By default, `Type` is `None`, which renders a theme-based Spinner. Customize the visual style explicitly by setting the `Type` property. Available types:
+By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. The type can also be customized and shown on Spinner using the `Type` property. The available types are:
 
 * None
 * Material
@@ -141,6 +142,8 @@ By default, `Type` is `None`, which renders a theme-based Spinner. Customize the
 * Bootstrap
 * HighContrast
 * Bootstrap4
+
+The following code explains how to use the `Type` property when initializing Spinner in Blazor Razor page.
 
 ```cshtml
 
@@ -173,7 +176,9 @@ By default, `Type` is `None`, which renders a theme-based Spinner. Customize the
 
 ### Size
 
-The default Spinner size is `30px`. Change the size using the `Size` property.
+By default, the Spinner size is `30px`. The size of the Spinner can be changed based on the application using the `Size` property.
+
+The following code explains how to use the `Size` property when initializing Spinner in Blazor Razor page.
 
 ```cshtml
 
@@ -206,14 +211,16 @@ The default Spinner size is `30px`. Change the size using the `Size` property.
 
 ## Customize after creating the Spinner component
 
-Customize the Spinner dynamically after initialization using the following properties:
+The Spinner component can be customized dynamically after initialize the Spinner component by using the following properties:
 
 * Type
 * CssClass
 
 ### Type
 
-Change the Spinner type dynamically by updating the `Type` property.
+The type of the Spinner can dynamically be changed using the `Type` property.
+
+The following code explains how to use the `Type` property after creating the Spinner in Blazor Razor page.
 
 ```cshtml
 
@@ -253,7 +260,9 @@ Change the Spinner type dynamically by updating the `Type` property.
 
 ### CssClass
 
-Add or change a custom class on the Spinner after it is rendered by updating the `CssClass` property.
+Add the custom class name to Spinner after creating the Spinner component.
+
+The following code explains how to dynamically add the `CssClass` property after creating the Spinner in Blazor Razor page.
 
 ```cshtml
 

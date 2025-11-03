@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Sending context as additional parameters from events in Blazor DataGrid
+# Sending context as additional parameters in Blazor DataGrid events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flexibility to pass additional context information during events. This capability is especially useful for dynamically updating Grid data based on interactions with other components, enabling seamless, real-time data modifications within the Grid.
 
@@ -51,7 +51,7 @@ Height="600" @ref="Grid">
           <SfComboBox TValue="string" TItem="Customer" DataSource="@Customers" @bind-Value="order.CustomerID"
           Placeholder="Select Customer" FloatLabelType="FloatLabelType.Always" AllowFiltering="true">
             <ComboBoxFieldSettings Value="CustomerID" Text="CustomerName"></ComboBoxFieldSettings>
-            <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="@(args => OnCustomerChange(args, order)" >
+           <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="args => OnCustomerChange(args, order)"></ComboBoxEvents>
           </SfComboBox>
         </div>
       </div>

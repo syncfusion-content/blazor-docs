@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Show/Hide Tab Item in Blazor Tabs Component | Syncfusion
+title: Show/Hide Tab item in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about how to show or hide tab item in Syncfusion Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Show/Hide Tab Item in Blazor Tabs Component
+# Show/Hide Tab item in Blazor Tabs Component
 
-The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Visible) property of a `TabItem` is used to show or hide the item. Setting it to `true` displays the item, while setting it to `false` hides it.
-
-In the following demo, the first tab item is dynamically shown or hidden when the **Show/Hide Item** button is clicked.
+The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Visible) property of the Tab item is used to show or hide the item by setting true or false value to the property. In the following demo, specified tab item is show or hide dynamically when the **Show/Hide Item** button is clicked.
 
 ```cshtml
 
@@ -51,7 +49,5 @@ In the following demo, the first tab item is dynamically shown or hidden when th
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBIWXXYzQBkNHHR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Showing or Hiding TabItem in Blazor Tabs](../images/blazor-tabs-hide-show-tabitem.gif)

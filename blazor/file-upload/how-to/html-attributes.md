@@ -7,11 +7,11 @@ control: File Upload
 documentation: ug
 ---
 
-# Adding HTML attributes in Blazor File Upload component
+# Adding HTML Attributes in Blazor File Upload Component
 
-Add additional HTML attributes (such as disabled, value, name, and more) to the uploader element by using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property. When both a component property and an equivalent HTML attribute are configured, the component property value takes precedence. Use this approach to set native input attributes or boolean flags (for example, “disabled”) directly on the underlying element.
+You can add the additional HTML attributes such as disabled, value, name, and more to the element using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property. If you configure both the property and equivalent HTML attribute, then the component will consider the property value.
 
-The following example demonstrates how to set attributes through the HtmlAttributes property in the uploader.
+The following example demonstrates how to set attributes in the HtmlAttributes property in the Uploader.
 
 ```cshtml
 

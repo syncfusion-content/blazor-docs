@@ -9,18 +9,16 @@ documentation: ug
 
 # Close the toast with click/tap in Blazor Toast Component
 
-By default, toasts automatically close based on the **TimeOut** value. To close a toast when it is clicked or tapped, handle the **OnClick** event and set **ClickToClose** to true in the **ToastClickEventArgs**. To require user-initiated dismissal only, set **TimeOut** to 0 to create a sticky toast and use click or tap to close it.
+By default, the toasts are expired based on the `Timeout` value. The toast hiding process can be customized with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.
 
-- Component overview: https://blazor.syncfusion.com/documentation/toast/
-- API reference (SfToast): https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfToast.html
-- API reference (ToastEvents): https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ToastEvents.html
-- API reference (ToastClickEventArgs): https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ToastClickEventArgs.html
+The following sample demonstrates the click or tap action in toast.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Title="Alert" Content="@ToastContent" TimeOut="0">
+<SfToast @ref="ToastObj" Title="Alert" Content="@ToastContent">
     <ToastEvents OnClick="@OnClickHandler"></ToastEvents>
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
 </SfToast>
@@ -35,8 +33,8 @@ By default, toasts automatically close based on the **TimeOut** value. To close 
     SfToast ToastObj;
 
     private int ToastFlag = 0;
-    private string ToastContent = string.Empty;
-    private readonly string[] Contents = new string[] {
+    private string ToastContent = "";
+    private string[] Contents = new string[] {
         "Welcome User",
         "Upload in progress",
         "Upload success",
@@ -47,10 +45,10 @@ By default, toasts automatically close based on the **TimeOut** value. To close 
 
     private async Task ShowToast()
     {
-        ToastContent = Contents[ToastFlag];
+        this.ToastContent = this.Contents[this.ToastFlag];
         await Task.Delay(100);
-        await ToastObj.ShowAsync();
-        ToastFlag = (ToastFlag != Contents.Length - 1) ? (ToastFlag + 1) : 0;
+        await this.ToastObj.ShowAsync();
+        this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
     }
     
     public void OnClickHandler(ToastClickEventArgs args)
@@ -58,9 +56,5 @@ By default, toasts automatically close based on the **TimeOut** value. To close 
         args.ClickToClose = true;
     }
 }
-```
 
-Preview of the code snippet:
-- Clicking the “Show Toast” button displays a sticky toast (TimeOut = 0) at the bottom-right of the page.
-- Each click cycles through predefined messages (for example: “Welcome User”, “Upload in progress”, “Upload success”).
-- Clicking or tapping the toast closes it immediately because **ClickToClose** is enabled via the **OnClick** event.
+```

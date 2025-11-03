@@ -110,7 +110,7 @@ Here’s an example that demonstrates how to use group footer aggregates in the 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKCXUDfMsXaMrj?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKCXUDfMsXaMrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group caption aggregates
 

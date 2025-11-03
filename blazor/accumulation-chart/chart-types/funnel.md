@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funnel in Blazor Accumulation Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Funnel Chart in Syncfusion Blazor Accumulation Chart component.
+description: Checkout and learn here all about Funnel in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Funnel in Blazor Accumulation Chart Component
 
-[Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) is used to represent stages in a sales process and show the amount of potential revenue for each stage. To render the Funnel Chart, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as Funnel.
+[Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) is often used to represent stages in a sales process and to show the amount of potential revenue for each stage. To render the [Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as [Funnel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel).
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -25,7 +25,7 @@ documentation: ug
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -39,7 +39,7 @@ documentation: ug
        new Statistics { Browser = "iPhone", Users = 19 },
        new Statistics { Browser = "Others", Users = 4  },
        new Statistics { Browser = "Opera", Users = 11 },
-       new Statistics { Browser = "Android", Users = 12 }
+       new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -50,9 +50,9 @@ documentation: ug
 
 ## Funnel Size
 
-Customize the funnel chart size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
+The size of the funnel chart can be customized by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -66,7 +66,7 @@ Customize the funnel chart size using the [Width](https://help.syncfusion.com/cr
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -80,7 +80,7 @@ Customize the funnel chart size using the [Width](https://help.syncfusion.com/cr
        new Statistics { Browser = "iPhone", Users = 19 },
        new Statistics { Browser = "Others", Users = 4  },
        new Statistics { Browser = "Opera", Users = 11 },
-       new Statistics { Browser = "Android", Users = 12 }
+       new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -93,9 +93,9 @@ N> The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) e
 
 ## Funnel neck size
 
-Customize the neck size using the [NeckWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [NeckHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
+The neck size of the funnel chart can be customized by using the [NeckWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [NeckHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -109,7 +109,7 @@ Customize the neck size using the [NeckWidth](https://help.syncfusion.com/cr/bla
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser  { get; set; }
@@ -123,7 +123,7 @@ Customize the neck size using the [NeckWidth](https://help.syncfusion.com/cr/bla
        new Statistics { Browser = "iPhone", Users = 19 },
        new Statistics { Browser = "Others", Users = 4  },
        new Statistics { Browser = "Opera", Users = 11 },
-       new Statistics { Browser = "Android", Users = 12 }
+       new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -134,9 +134,9 @@ Customize the neck size using the [NeckWidth](https://help.syncfusion.com/cr/bla
 
 ## Gap between funnel segments
 
-Customize the space between segments using the [GapRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property. It accepts the values ranging from 0 to 1.
+[Funnel chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel) provides options to customize the space between the segments by using the [GapRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the series. It accepts the values ranging from 0 to 1.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -150,7 +150,7 @@ Customize the space between segments using the [GapRatio](https://help.syncfusio
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser  { get; set; }
@@ -164,7 +164,7 @@ Customize the space between segments using the [GapRatio](https://help.syncfusio
        new Statistics { Browser = "iPhone", Users = 19 },
        new Statistics { Browser = "Others", Users = 4  },
        new Statistics { Browser = "Opera", Users = 11 },
-       new Statistics { Browser = "Android", Users = 12 }
+       new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -175,9 +175,9 @@ Customize the space between segments using the [GapRatio](https://help.syncfusio
 
 ## Funnel explode
 
-Explode points on mouse click by setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. Use [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex) and [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) for further customization.
+Points can be exploded on mouse click by setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. The point on load can be exploded using [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -191,7 +191,7 @@ Explode points on mouse click by setting the [Explode](https://help.syncfusion.c
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -205,7 +205,7 @@ Explode points on mouse click by setting the [Explode](https://help.syncfusion.c
        new Statistics { Browser = "iPhone", Users = 19 },
        new Statistics { Browser = "Others", Users = 4  },
        new Statistics { Browser = "Opera", Users = 11 },
-       new Statistics { Browser = "Android", Users = 12 }
+       new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -216,9 +216,9 @@ Explode points on mouse click by setting the [Explode](https://help.syncfusion.c
 
 ## Smart Data Label
 
-Labels are automatically arranged on the left side of the funnel and pyramid chart when they overlap.
+Labels will be arranged automatically on the left side of the funnel and pyramid chart when they overlap with each other.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -235,7 +235,7 @@ Labels are automatically arranged on the left side of the funnel and pyramid cha
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Country { get; set; }
@@ -259,7 +259,7 @@ Labels are automatically arranged on the left side of the funnel and pyramid cha
         new Statistics { Country = "Philippines", Users = 104918090 },
         new Statistics { Country = "Egypt", Users = 97553151 },
         new Statistics { Country = "Vietnam", Users = 95540800 },
-        new Statistics { Country = "Germany", Users = 82114224 }
+        new Statistics { Country = "Germany", Users = 82114224 },
     };
 }
 ```
@@ -269,10 +269,9 @@ Labels are automatically arranged on the left side of the funnel and pyramid cha
 
 ## Border radius
 
-Round the corners of the first and last data points using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property.
+The corners of the first data point and last data point in the funnel chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
  <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
@@ -288,26 +287,24 @@ Round the corners of the first and last data points using the [BorderRadius](htt
  </SfAccumulationChart>
 
 @code {
+    public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
+    {
+        new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName="Hired: 55"},
+        new FunnelData { InterviewProcess = "Personal Interview", Candidates = 58, DataLabelMappingName="Personal Interview: 58"},
+        new FunnelData { InterviewProcess = "Telephonic Interview", Candidates = 85, DataLabelMappingName="Telephonic Interview: 85"},
+        new FunnelData { InterviewProcess = "Screening", Candidates = 105, DataLabelMappingName="Screening: 105"},
+        new FunnelData { InterviewProcess = "Initial Validation", Candidates = 145, DataLabelMappingName="Initial Validation: 145"},
+        new FunnelData { InterviewProcess = "Candidates Applied", Candidates = 250, DataLabelMappingName="Candidates Applied: 250"},
+    };
+
     public class FunnelData
     {
         public string InterviewProcess { get; set; }
         public double Candidates { get; set; }
         public string DataLabelMappingName { get; set; }
     }
-
-    public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
-    {
-        new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName = "Hired: 55" },
-        new FunnelData { InterviewProcess = "Personal Interview", Candidates = 58, DataLabelMappingName = "Personal Interview: 58" },
-        new FunnelData { InterviewProcess = "Telephonic Interview", Candidates = 85, DataLabelMappingName = "Telephonic Interview: 85" },
-        new FunnelData { InterviewProcess = "Screening", Candidates = 105, DataLabelMappingName = "Screening: 105" },
-        new FunnelData { InterviewProcess = "Initial Validation", Candidates = 145, DataLabelMappingName = "Initial Validation: 145" },
-        new FunnelData { InterviewProcess = "Candidates Applied", Candidates = 250, DataLabelMappingName = "Candidates Applied: 250" }
-    };
 }
-
 ```
-
 ![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjheDHBnqcxEcNgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

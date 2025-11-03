@@ -9,9 +9,9 @@ documentation: ug
 
 # Model Binding in Blazor Numeric TextBox Component
 
-This section demonstrates binding the SfNumericTextBox value to a model using EditForm, along with data annotation–based validation. The example binds to a nullable integer (int?) model property to allow an empty state and shows how validation messages are displayed for the bound field.
+This section demonstrates the strongly typed extension support in NumericTextBox. The view which binds with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render components.
 
-In this sample, select a value in the Numeric TextBox and click Submit to trigger form validation. When the bound value is null, a validation error message is displayed below the Numeric TextBox based on the Required attribute. The form uses EditForm with DataAnnotationsValidator to enable validation, and ValidationMessage to display field-specific errors.
+In this sample, first click the submit button to post the selected value in the MaskedTextBox. When posting the null value, validation error message will be shown below the NumericTextBox.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations
@@ -41,4 +41,5 @@ In this sample, select a value in the Numeric TextBox and click Submit to trigge
 }
 ```
 
-![Validation in Blazor Numeric TextBox](../images/blazor-numerictextbox-validation.png)
+
+![Validation in Blazor NumericTextBox](../images/blazor-numerictextbox-validation.png)

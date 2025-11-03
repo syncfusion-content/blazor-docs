@@ -7,9 +7,9 @@ control: QueryBuilder
 documentation: ug
 ---
 
-# Read-only in Blazor QueryBuilder component
+# Readonly in Blazor QueryBuilder Component
 
-The Readonly property disables user interactions in the QueryBuilder, preventing actions such as adding or removing groups and rules, and editing fields, operators, and values. Set the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_Readonly) property to `true`.
+The readonly property in the query builder disables the user interactions on the component. You can enable this feature by setting the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Readonly) property to `true`.
 
 ```cshtml
 
@@ -43,4 +43,4 @@ The Readonly property disables user interactions in the QueryBuilder, preventing
 
 ```
 
-![Readonly mode in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.png)
+![Readonly in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.png)

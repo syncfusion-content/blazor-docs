@@ -9,11 +9,11 @@ documentation: ug
 
 # Radial Menu in Blazor Speed Dial Component
 
-Display Speed Dial action items in a circular pattern like a radial menu by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to radial. Customize the `Direction`, `StartAngle`, `EndAngle`, and `Offset` using the [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive.
+The action items in Blazor Speed Dial can be displayed in a circular patter like a radial menu by setting [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property. You can customize the `Direction`, `StartAngle`, `EndAngle` and `Offset` by setting [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive.
 
 ## Radial Menu direction
 
-Open the action items in either a clockwise or an anticlockwise direction by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_Direction) property. The default value is `Auto`, which determines the arc based on the Speed Dial `Position`.
+You can open the action items in either clockwise or anticlockwise by setting [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_Direction) property. The default value is `Auto` where the action items are displayed based on the `Position` property of the Speed Dial.
 
 ```cshtml
 
@@ -30,15 +30,15 @@ Open the action items in either a clockwise or an anticlockwise direction by set
 
 ```
 
-![Blazor SpeedDial radial mode](./images/Blazor-SpeedDial-RadialMenu.png)
+![Blazor Speed Dial Radial Mode](./images/Blazor-SpeedDial-RadialMenu.png)
 
 ## Start and end angle
 
-Modify the start and end angles of the action items using the [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_EndAngle) properties (in degrees). If angles are not defined, the arc is determined by the Speed Dial `Position`.
+You can modify the start and end angle of action items by setting [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_EndAngle) properties. If the angle is not defined, the action items are displayed based on the `Position` property of the Speed Dial.
 
-The Speed Dial angle origin is 0° at the right side and increases in the clockwise direction.
+The SpeedDial angle starts with `0` degree in the right side and increases in the clockwise direction.
 
-![Blazor SpeedDial radial angles](./images/Blazor-RadialAngle.png)
+![Blazor Speed Dial Radial Angle](./images/Blazor-RadialAngle.png)
 
 
 ```cshtml
@@ -56,11 +56,11 @@ The Speed Dial angle origin is 0° at the right side and increases in the clockw
 
 ```
 
-![Blazor Speed Dial angles](./images/Blazor-SpeedDial-Angles.png)
+![Blazor Speed Dial Angles](./images/Blazor-SpeedDial-Angles.png)
 
 ## Offset
 
-Adjust the distance between the Speed Dial button and its action items using the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_OffSet) property.
+You can modify the offset distance between action items and Speed Dial button using [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_OffSet) property.
 
 ```cshtml
 
@@ -77,4 +77,4 @@ Adjust the distance between the Speed Dial button and its action items using the
 
 ```
 
-![Blazor SpeedDial radial offset](./images/Blazor-SpeedDial-Offset.png)
+![Blazor Speed Dial Offset](./images/Blazor-SpeedDial-Offset.png)
