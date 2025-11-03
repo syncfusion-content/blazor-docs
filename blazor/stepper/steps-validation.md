@@ -269,8 +269,8 @@ You can validate the fields within the stepper component. In the below shared ex
     private bool ValidateCurrentStep()
     {
         bool isStepValid = true;
-        var context = new ValidationContext(model);
-        var validationResults = new List<ValidationResult>();
+        var context = new System.ComponentModel.DataAnnotations.ValidationContext(model);
+        var validationResults = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
         isStepValid = Validator.TryValidateObject(model, context, validationResults, true);
 
         if (currentStep == 1)

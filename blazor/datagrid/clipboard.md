@@ -93,7 +93,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyNfMKeqJnkwxE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhIMNVlTrSTfkKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Copy to clipboard by external buttons
