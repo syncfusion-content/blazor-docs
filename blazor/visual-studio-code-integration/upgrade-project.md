@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Upgrading Syncfusion® Blazor application to latest version
+# Upgrading Syncfusion® Blazor application to updated version
 
 The Syncfusion® Blazor Migration is an add-in for Visual Studio Code allows you to migrate an existing Syncfusion® Blazor Web Application from one Essential Studio® version to another.
 
