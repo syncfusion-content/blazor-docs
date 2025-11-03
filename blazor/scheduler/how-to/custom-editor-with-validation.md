@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Custom Editor with Validation in Blazor Scheduler | Syncfusion
+title: Custom Editor With Validation in Blazor Scheduler | Syncfusion
 description: Learn here all about custom editor with validation in Syncfusion Blazor Scheduler component using Data Annotations and Syncfusion Blazor Dialog.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Custom Editor with Validation in Blazor Scheduler Component
+# Custom Editor With Validation in Blazor Scheduler Component
 
-By default, the Blazor Scheduler offers field validation for its built-in appointment properties. To implement validation for custom fields within the Scheduler or to enhance existing validations, a custom editor can be leveraged. This can be achieved effectively using Data Annotations to define validation rules on your model properties, coupled with a custom UI for the editor.
+By default, in Blazor Scheduler field validation is available for built-in fields, if in case you want to validate a custom field you can go with custom editor and achieve validation using Data Annotations. Data Annotations helps you to define rules to the model classes or properties to perform data validation and display suitable messages to end users.
 
-Data Annotations enable defining validation rules directly on model classes or their properties, facilitating data validation and displaying informative messages to end-users. This mechanism is enabled by referencing the `System.ComponentModel.DataAnnotations` namespace. In the following example, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component is used to render a custom editor, allowing for the saving or updating of appointments with integrated validation.
+The Data Annotation can be enabled by referencing the `System.ComponentModel.DataAnnotations` namespace which maps the data annotations to the corresponding appointment fields. In the following code example, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog is used to render the custom editor and save/update the appointments using public methods.
 
 ```cshtml
 @using Newtonsoft.Json
@@ -227,7 +227,6 @@ Data Annotations enable defining validation rules directly on model classes or t
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBIMZDUJNAFfQNV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The validation is applied on clicking the save button with empty fields as in the following image.
 

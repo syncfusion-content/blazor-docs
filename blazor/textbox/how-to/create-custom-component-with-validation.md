@@ -13,7 +13,7 @@ Custom component allows to reuse the defined components in a razor page anywhere
 
 ## Defining Blazor TextBox component
 
-The TextBox is defined in a Razor component along with the required parameters and event bindings. The following code is placed in a Razor file named CustomTextBox.
+The TextBox component is defined in the razor page along with the required properties and event binding. The following code snippets are added in a razor file with name as CustomTextBox.
 
 {% tabs %}
 {% highlight razor tabtitle="CustomTextBox.razor" %}
@@ -21,13 +21,13 @@ The TextBox is defined in a Razor component along with the required parameters a
 {% endhighlight %}
 {% endtabs %}
 
-T> In the above component, parameters and events can be implemented in the same file using the `@code` block or in a partial class. 
+T> In the above code, the properties and events are added to the razor page, and the definition for the respective properties can be done on the same page using the `@code` block or on a partial class page. 
 
-N> For full EditForm integration, a custom input component must expose `Value`, `ValueChanged` (EventCallback<T>), and `ValueExpression` parameters. This allows the form to track value changes and perform validation. To surface the validation message inside the component, include a `ValidationMessage` element targeting the same field expression used for `ValueExpression`.
+N> It is necessary to bind `Value`, `ValueExpression`, and native `ValueChanged` event for accessing the value changes and triggering validation. To retrieve the validation message from the custom component, it is required to add the `ValidationMessage` tag in the textbox component.
 
 ## Adding the custom TextBox component in the EditForm
 
-An `EditForm` with a bound model is declared in the main Razor page. Inside the form, add `DataAnnotationsValidator` to enable attribute-based validation and use the `CustomTextBox` wrapped with an `SfTooltip` to show error text in a tooltip. The `CustomTextBox` binds to the model’s `Text` property, which contains data annotation attributes. For details on the tooltip component, see the getting started guide for Syncfusion Blazor Tooltip.
+The EditForm with the bound model is declared on the main razor page. Inside the EditForm, the `DataAnnotationsValidator` and `CustomTextBox` with wrapped `SfTooltip` component are added. The DataAnnotationsValidator is added to enable form validation based on validation attributes declared in the model. The CustomTextBox component is then bound with the "Text" property from the model and the "Text" property contains DataAnnotations attributes used for validation. To learn more about `SfTooltip` component refer [here](https://blazor.syncfusion.com/documentation/tooltip/getting-started) 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -35,8 +35,8 @@ An `EditForm` with a bound model is declared in the main Razor page. Inside the 
 {% endhighlight %}
 {% endtabs %}
 
-The `SfTooltip` wraps the `CustomTextBox`, and the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) is set to the `id` of an element within the custom component so that the tooltip anchors to that input. Place `ValidationMessage` inside the [`TooltipTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.TooltipTemplates.html) to display validation errors within the tooltip for the same bound property.
+The SfTooltip component is wrapped around the CustomTextBox and the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property is set to the ID attribute of the CustomTextBox to display tooltip for that particular component. The `ValidationMessage` tag is placed inside the [`TooltipTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.TooltipTemplates.html) to display the validation error messages inside the tooltip. 
 
 ![Custom Component with Tooltip Validation Using Blazor TextBox](../images/blazor-textBox-custom-component-with-validation.png)
 
-T> To avoid empty tooltips, conditionally show the tooltip only when there is validation content (for example, by checking text content in the `OnOpen` event). Also ensure errors are conveyed to all users: do not rely on color or tooltip alone; consider setting `aria-invalid="true"` on the input and keeping a `ValidationMessage` visible for screen readers.
+T> To avoid empty tooltips, tooltips can be restricted based on the presence of text content in the `OnOpen` event callback.

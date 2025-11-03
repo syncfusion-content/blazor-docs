@@ -16,11 +16,11 @@ The ComboBox also supports different kinds of data services such as OData, OData
 | Fields | Type | Description |
 |------|------|-------------|
 | Text |  `string` | Specifies the display text of each list item. |
-| Value |  `int or string` | Specifies the hidden data value mapped to each list item; the type is determined by the component’s TValue and should be unique. |
-| GroupBy |  `string` | Specifies the category under which the list item is grouped. |
-| IconCss |  `string` | Specifies the icon CSS class for each list item. |
+| Value |  `int or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| GroupBy |  `string` | Specifies the category under which the list item has to be grouped. |
+| IconCss |  `string` | Specifies the icon class of each list item. |
 
-N> When binding complex data to the ComboBox, fields must be mapped correctly. Otherwise, the selected item remains undefined.
+N> When binding complex data to the ComboBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
@@ -28,9 +28,9 @@ Local data can be represented in two ways as described below.
 
 ### Array of JSON data
 
-The ComboBox can generate its list items from an array or list of objects. Map the appropriate properties to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
-In the following example, the Name property is mapped to the Text field and the Code property is mapped to the Value field.
+In the following example, `Name` column from complex data has been mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -78,9 +78,9 @@ In the following example, the Name property is mapped to the Text field and the 
 
 ### Array of complex data
 
-The ComboBox can generate its list items from complex objects. Map nested properties to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) by using dot notation.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
-In the following example, Code.ID is mapped to the Value field and Country.CountryID is mapped to the Text field.
+In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -129,7 +129,7 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 
 The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property, which is used to fetch data from the database and bind it to the ComboBox.
 
-In the following sample, the first six records are retrieved from the Orders entity of the Northwind OData V4 service and display CustomerID as text and OrderID as value.
+In the following sample, First 6 contacts are displayed from the **Customers** table of `Northwind` Data Service.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -165,7 +165,7 @@ In the following sample, the first six records are retrieved from the Orders ent
 
 ### Web API Adaptor
 
-Use the WebApiAdaptor to bind the ComboBox to a Web API endpoint (including services built with OData).
+Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -194,11 +194,11 @@ Use the WebApiAdaptor to bind the ComboBox to a Web API endpoint (including serv
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) supports custom adaptors, which allow performing manual operations on the data. This is useful for implementing custom data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
 
-For custom data binding in the ComboBox, the DataAdaptor class is used as the base class for a custom adaptor.
+For implementing custom data binding in ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
-The DataAdaptor abstract class provides synchronous and asynchronous methods that can be overridden in the custom adaptor. The following methods are available:
+The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
 ```csharp
 public abstract class DataAdaptor
@@ -215,9 +215,9 @@ public abstract class DataAdaptor
 }
 ```
 
-Custom data binding can be performed by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+The custom data binding can be performed in the ComboBox component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
-The following sample demonstrates implementing custom data binding using a custom adaptor:
+The following sample code demonstrates implementing custom data binding using custom adaptor,
 
 ```cshtml
 <SfComboBox TValue="string" TItem="Orders">
@@ -276,9 +276,9 @@ The following sample demonstrates implementing custom data binding using a custo
 
 ### Offline mode
 
-To avoid a server round trip for every action, load all data during initialization and process subsequent actions on the client. Enable this behavior by setting the Offline property on the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-The following example demonstrates remote data binding with offline mode enabled:
+The following example for remote data binding and enabled offline mode,
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -304,11 +304,11 @@ The following example demonstrates remote data binding with offline mode enabled
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBACrBQKGCrmiJb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox using offline mode with Web API data](./images/blazor-combobox-web-api-data.png)
+![Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.png)
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
+You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
 
 ```csharp
 
@@ -322,11 +322,11 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKihrcgcMdJUXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox bound using ValueTuple for enum display/value](./images/blazor_combobox_valuetuple.png)
+![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -353,11 +353,13 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
+
+
 ![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.png)
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -403,11 +405,12 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor ComboBox bound to DynamicObject data](./images/blazor_combobox_dynamic-object.png)
+
+![Blazor ComboBox with dynamic object data binding](./images/blazor_combobox_dynamic-object.png)
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -448,7 +451,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgCBVcAmhLLFOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-![Blazor ComboBox bound to an ObservableCollection of colors](./images/blazor_combobox_observable-collection.png)
+![Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.png)
 
 ## Entity Framework
 
@@ -456,7 +459,7 @@ You need to follow the below steps to consume data from the **Entity Framework**
 
 ### Create DBContext class
 
-The first step is to create a DbContext class called **OrderContext** to connect to a Microsoft SQL Server database.
+The first step is to create a DBContext class called **OrderContext** to connect to a Microsoft SQL Server database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -485,7 +488,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now, create a class named **OrderDataAccessLayer**, which acts as the data access layer for retrieving records from the database table.
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -519,7 +522,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Creating Web API Controller
 
-Create a Web API controller to allow the ComboBox to consume data from Entity Framework directly.
+ A Web API Controller has to be created which allows ComboBox directly to consume data from the Entity framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -566,7 +569,7 @@ namespace EFDropDown.Controllers
 
 ### Configure ComboBox component using Web API adaptor
 
-Now, configure the ComboBox using the **SfDataManager** to interact with the created Web API and consume data. To interact with a Web API, use WebApiAdaptor.
+Now, you can configure the ComboBox using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data

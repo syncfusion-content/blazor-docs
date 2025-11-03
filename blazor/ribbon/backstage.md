@@ -9,17 +9,17 @@ documentation: ug
 
 # Backstage in Blazor Ribbon component
 
-The Ribbon component supports a backstage view as an enhancement to the traditional file menu. The backstage view displays options such as application settings, user details, and more. It is configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
+The Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
 
-Backstage menu options appear on the left panel, and the corresponding content is shown on the right panel.
+Backstage menu options are displayed on the left panel, and the corresponding content is shown on the right panel.
 
 ## Visibility
 
-Set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Visible) property of the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive to `true` to show the backstage view. By default, the backstage view is hidden.
+You can make the backstage view visible by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Visible) property of the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive to `true`. By default, the backstage view is hidden.
 
 ## Adding backstage items
 
-Add menu items to the backstage view using the [BackstageMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItems.html) tag directive. Each menu item can define properties such as [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_ID), [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_Text), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_IconCss), and content templates.
+You can add menu items to the backstage view using the [BackstageMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItems.html) tag directive. Each menu item can be defined with properties such as [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_ID), [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_Text), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_IconCss), and content templates.
 
 {% tabs %}
 {% highlight razor %}
@@ -209,7 +209,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 
 ## Adding footer items
 
-Add footer items to the backstage view by setting the [IsFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_IsFooter) property in the [BackstageMenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html) tag directive to `true`. Footer items are displayed at the bottom of the menu. By default, the value is `false`.
+You can add the footer items in the backstage view by setting the [IsFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_IsFooter) property in the [BackstageMenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html) tag directive to `true`. These items are displayed at the bottom of the menu. By default, the value is `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -413,7 +413,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 
 ## Adding separator
 
-Separators are horizontal lines used to visually divide backstage menu items. Use the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_Separator) property to separate menu items.
+The separators are horizontal lines used to visually divide backstage menu items. You can use the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageMenuItem.html#Syncfusion_Blazor_Ribbon_BackstageMenuItem_Separator) property to split the menu items.
 
 {% tabs %}
 {% highlight razor %}
@@ -618,7 +618,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 
 ## Back button
 
-Use the [BackButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_BackButtonSettings) property in the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive to customize the text and icon of the back button using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_Text) and [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_IconCss) properties. Show the back button by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_Visible) property to `true`.
+You can use the [BackButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_BackButtonSettings) property in the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive to customize the text and icon of the close button using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_Text) and [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_IconCss) property. You can show the back button by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.BackstageBackButtonSettings.html#Syncfusion_Blazor_Ribbon_BackstageBackButtonSettings_Visible) property to `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -761,11 +761,11 @@ Use the [BackButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Back button](./images/backstage/backstage_backbutton.png)
+![Ribbon Backstage Backbutton](./images/backstage/backstage_backbutton.png)
 
 ## Template
 
-Customize backstage menu items and their content using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Template) property in the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
+You can customize the backstage menu items and their content using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Template) property in the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -1006,11 +1006,11 @@ Customize backstage menu items and their content using the [Template](https://he
 
 ## Setting width and height
 
-Customize the height and width of the backstage view using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Width) properties. By default, the dimensions adjust to fit the content.
+The height and width of the backstage view can be customized using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html#Syncfusion_Blazor_Ribbon_RibbonBackstageMenuSettings_Width) properties. By default, the dimensions are adjusted to fit the content.
 
 ## Events
 
-The following event is available in the backstage view.
+The following event is available in the Ribbon Backstage.
 
 |Name|Args|Description|
 |---|---|---|

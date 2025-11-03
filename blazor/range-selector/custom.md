@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Range Selector Component | Syncfusion
-description: Check out and learn here all about customization in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about customization in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Navigator Appearance
 
-Customize the Range Selector using [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). Use [SelectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) to set the color for the selected region and [UnselectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) for the unselected region.
+The Range Selector can be customized by using the [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). The [SelectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for the selected region, whereas the [UnselectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for the unselected region.
 
 ```cshtml
 
@@ -26,23 +26,21 @@ Customize the Range Selector using [RangeNavigatorStyleSettings](https://help.sy
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
     public class StockDetails
     {
         public double Date { get; set; }
         public double Close { get; set; }
     }
-
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date = 12, Close = 28 },
-        new StockDetails { Date = 34, Close = 44 },
-        new StockDetails { Date = 45, Close = 48 },
-        new StockDetails { Date = 56, Close = 50 },
-        new StockDetails { Date = 67, Close = 66 },
-        new StockDetails { Date = 78, Close = 78 },
-        new StockDetails { Date = 89, Close = 84 }
+        new StockDetails {  Date = 12, Close = 28 },
+        new StockDetails {  Date = 34, Close = 44 },
+        new StockDetails {  Date = 45, Close = 48 },
+        new StockDetails {  Date = 56, Close = 50 },
+        new StockDetails {  Date = 67, Close = 66 },
+        new StockDetails {  Date = 78, Close = 78 },
+        new StockDetails {  Date = 89, Close = 84 },
     };
-
     public int[] Value = new int[] { 45, 78 };
 }
 
@@ -52,7 +50,7 @@ Customize the Range Selector using [RangeNavigatorStyleSettings](https://help.sy
 
 ## Thumb
 
-Customize the thumb's border, fill color, size, and type using [RangeNavigatorThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html), [RangeNavigatorThumbBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbBorder.html), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Fill), [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Height), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Width), and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Type). Thumbs can be **Circle** or **Rectangle**.
+The [RangeNavigatorThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html) allows to customize the border, fill color, size, and type of thumb using the [RangeNavigatorThumbBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbBorder.html), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Fill), [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Height), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Width), and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Type) properties. Thumbs can be of two shapes: **Circle** and **Rectangle**.
 
 ```cshtml
 
@@ -71,7 +69,8 @@ Customize the thumb's border, fill color, size, and type using [RangeNavigatorTh
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
+
     public class StockDetails
     {
         public double Date { get; set; }
@@ -79,13 +78,13 @@ Customize the thumb's border, fill color, size, and type using [RangeNavigatorTh
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date = 12, Close = 28 },
-        new StockDetails { Date = 34, Close = 44 },
-        new StockDetails { Date = 45, Close = 48 },
-        new StockDetails { Date = 56, Close = 50 },
-        new StockDetails { Date = 67, Close = 66 },
-        new StockDetails { Date = 78, Close = 78 },
-        new StockDetails { Date = 89, Close = 84 }
+        new StockDetails {  Date = 12, Close = 28 },
+        new StockDetails {  Date = 34, Close = 44 },
+        new StockDetails {  Date = 45, Close = 48 },
+        new StockDetails {  Date = 56, Close = 50 },
+        new StockDetails {  Date = 67, Close = 66 },
+        new StockDetails {  Date = 78, Close = 78 },
+        new StockDetails {  Date = 89, Close = 84 },
     };
 
     public int[] Value = new int[] { 45, 78 };
@@ -97,7 +96,7 @@ Customize the thumb's border, fill color, size, and type using [RangeNavigatorTh
 
 ## Border
 
-Customize the Range Selector border using [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html). Set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Color) properties.
+Using the [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Width) and the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Color) of the Range Selector border can be customized.
 
 ```cshtml
 
@@ -112,23 +111,21 @@ Customize the Range Selector border using [RangeNavigatorBorder](https://help.sy
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
     public class StockDetails
     {
         public double Date { get; set; }
         public double Close { get; set; }
     }
-
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date = 12, Close = 28 },
-        new StockDetails { Date = 34, Close = 44 },
-        new StockDetails { Date = 45, Close = 48 },
-        new StockDetails { Date = 56, Close = 50 },
-        new StockDetails { Date = 67, Close = 66 },
-        new StockDetails { Date = 78, Close = 78 },
-        new StockDetails { Date = 89, Close = 84 }
+        new StockDetails {  Date = 12, Close = 28 },
+        new StockDetails {  Date = 34, Close = 44 },
+        new StockDetails {  Date = 45, Close = 48 },
+        new StockDetails {  Date = 56, Close = 50 },
+        new StockDetails {  Date = 67, Close = 66 },
+        new StockDetails {  Date = 78, Close = 78 },
+        new StockDetails {  Date = 89, Close = 84 },
     };
-
     public int[] Value = new int[] { 45, 78 };
 }
 
@@ -138,7 +135,7 @@ Customize the Range Selector border using [RangeNavigatorBorder](https://help.sy
 
 ## Snapping
 
-Enable the [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AllowSnapping) property to snap the slider to the nearest interval.
+The [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AllowSnapping) property toggles the placement of the slider exactly to the left or right at the nearest interval.
 
 ```cshtml
 
@@ -152,7 +149,7 @@ Enable the [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
     public class StockDetails
     {
         public double Date { get; set; }
@@ -160,15 +157,14 @@ Enable the [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     }
 
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date = 12, Close = 28 },
-        new StockDetails { Date = 34, Close = 44 },
-        new StockDetails { Date = 45, Close = 48 },
-        new StockDetails { Date = 56, Close = 50 },
-        new StockDetails { Date = 67, Close = 66 },
-        new StockDetails { Date = 78, Close = 78 },
-        new StockDetails { Date = 89, Close = 84 }
+        new StockDetails {  Date = 12, Close = 28 },
+        new StockDetails {  Date = 34, Close = 44 },
+        new StockDetails {  Date = 45, Close = 48 },
+        new StockDetails {  Date = 56, Close = 50 },
+        new StockDetails {  Date = 67, Close = 66 },
+        new StockDetails {  Date = 78, Close = 78 },
+        new StockDetails {  Date = 89, Close = 84 },
     };
-
     public int[] Value = new int[] { 45, 78 };
 }
 
@@ -176,7 +172,7 @@ Enable the [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Animation
 
-Animation is enabled by default. Control the speed using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default is **500** milliseconds.
+Animation for the Range Selector is enabled by default. The speed of the animation can be controlled using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default value of the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property is **500** milliseconds.
 
 ```cshtml
 
@@ -190,23 +186,21 @@ Animation is enabled by default. Control the speed using the [AnimationDuration]
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
     public class StockDetails
     {
         public double Date { get; set; }
         public double Close { get; set; }
     }
-
     public List<StockDetails> StockInfo = new List<StockDetails> {
-        new StockDetails { Date = 12, Close = 28 },
-        new StockDetails { Date = 34, Close = 44 },
-        new StockDetails { Date = 45, Close = 48 },
-        new StockDetails { Date = 56, Close = 50 },
-        new StockDetails { Date = 67, Close = 66 },
-        new StockDetails { Date = 78, Close = 78 },
-        new StockDetails { Date = 89, Close = 84 }
+        new StockDetails {  Date = 12, Close = 28 },
+        new StockDetails {  Date = 34, Close = 44 },
+        new StockDetails {  Date = 45, Close = 48 },
+        new StockDetails {  Date = 56, Close = 50 },
+        new StockDetails {  Date = 67, Close = 66 },
+        new StockDetails {  Date = 78, Close = 78 },
+        new StockDetails {  Date = 89, Close = 84 },
     };
-
     public int[] Value = new int[] { 45, 78 };
 }
 
@@ -214,5 +208,5 @@ Animation is enabled by default. Control the speed using the [AnimationDuration]
 
 ## See Also
 
-* [Grid and Tick Lines](./grid-tick)
-* [Labels](./labels)
+* [Grid and Tick Lines](./grid-tick/)
+* [Labels](./labels/)

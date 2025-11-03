@@ -9,21 +9,19 @@ documentation: ug
 
 # Customization in Blazor Chip Component
 
-This section explains how to customize the Chip component, including predefined styles, leading icons and avatars, trailing icons, and templates.
+This section explains the customization of styles, leading icons, avatar, and trailing icons in Chip control.
 
 ## Styles
 
-The Chip component provides predefined visual styles that can be applied using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property. Apply `CssClass` on:
-- SfChip: to affect all chips in the list
-- ChipItem: to style a specific chip
+The Chip control has the following predefined styles that can be defined using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
 
 | Class | Description |
 | -------- | -------- |
 | e-primary | Represents a primary chip. |
 | e-success | Represents a positive chip. |
-| e-info | Represents an informative chip. |
-| e-warning | Represents a chip that requires caution. |
-| e-danger | Represents a negative or destructive chip. |
+| e-info |  Represents an informative chip. |
+| e-warning | Represents a chip with caution. |
+| e-danger | Represents a negative chip. |
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -42,13 +40,11 @@ The Chip component provides predefined visual styles that can be applied using t
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsrBcBIwnwbXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Blazor Chip styles with predefined variants](./images/blazor-chip-style.png)
-
-N> Multiple style classes can be combined (for example, `e-outline e-primary`) to achieve the desired appearance.
+![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
 
 ## Leading icon
 
-Add and customize a leading icon for a chip using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
+You can add and customize the leading icon of chip using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -83,13 +79,11 @@ Add and customize a leading icon for a chip using the [`LeadingIconCss`](https:/
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeDksEzbMVhnKc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing the leading icon in a Blazor Chip](./images/blazor-chip-leading-icon.gif)
-
-N> Ensure that each icon has clear text content in the chip (`Text`) for accessible names. When using decorative icons, consider appropriate CSS background images and contrast.
+![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
 ## Avatar
 
-Display an avatar as the leading visual using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
+You can add and customize the avatar of chip using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
 
 ```csharp
 
@@ -124,11 +118,11 @@ Display an avatar as the leading visual using the [`LeadingIconCss`](https://hel
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrItusapbhiLdgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Avatars are typically circular thumbnails. Provide meaningful chip text or an `aria-label` if the avatar conveys essential context.
+
 
 ## Leading content
 
-Show text content inside the leading avatar area using the [`LeadingText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingText) property (for example, user initials).
+You can add and customize the avatar content of chip using the [`LeadingText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingText) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -144,11 +138,12 @@ Show text content inside the leading avatar area using the [`LeadingText`](https
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrqCLrQrovxnFxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing avatar text for a Blazor Chip](./images/blazor-chip-avatar-content.gif)
+
+![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
 
 ## Trailing icon
 
-Add and customize a trailing icon for a chip using the [`TrailingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_TrailingIconCss) property (commonly used for secondary actions, such as delete).
+You can add and customize the trailing icon of chip using the [`TrailingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_TrailingIconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -165,13 +160,12 @@ Add and customize a trailing icon for a chip using the [`TrailingIconCss`](https
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUiBhwBekjUuOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing the trailing icon in a Blazor Chip](./images/blazor-chip-trailing-icon.png)
 
-N> Deletable chips can also be configured using `EnableDelete="true"`. Ensure the trailing icon and delete affordance do not conflict.
+![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
 
 ## Outline chip
 
-An outline chip has a visible border and a transparent background. Apply the outline style using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
+Outline chip has the border with the background transparent. It can be set using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -187,13 +181,15 @@ An outline chip has a visible border and a transparent background. Apply the out
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVgshrQrokgrCJD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor outline chips with transparent background](./images/blazor-outline-chip-transparent-background.gif)
+
+
+![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)
 
 ## Template
 
-The ChipItem `Template` property enables full control over the chip’s layout and content. Custom HTML elements, icons, links, or additional content can be provided via the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_Template) property or as direct child content of the [ChipItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem).
+The Chips Template property allows users to customize the layout and design of each chip. Users can include any custom HTML elements, icons, links, or additional content by specifying them in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_Template) or as direct child content inside the [ChipItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem) of the SfChip component.
 
-The following example customizes the layout and design by adding direct child content inside each `ChipItem`.
+The following code example demonstrates how to customize the layout and design of chips by adding direct child content inside the `ChipItem`.
 
 ```cshtml
 
@@ -252,6 +248,4 @@ The following example customizes the layout and design by adding direct child co
 
 ```
 
-![Using a custom template in the Blazor Chip component](./images/blazor-chip-template.png)
-
-N> When adding interactive elements (links, buttons) inside chip templates, ensure keyboard focus order, accessible names, and sufficient contrast are maintained.
+![Template in Blazor Chip component](./images/blazor-chip-template.png)

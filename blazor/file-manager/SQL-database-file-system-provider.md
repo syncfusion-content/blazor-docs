@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQL Database Provider in Blazor File Manager Component | Syncfusion
+title: SQL database provider in Blazor File Manager Component | Syncfusion
 description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
@@ -9,7 +9,7 @@ documentation: ug
 
 # SQL database file system provider
 
-The SQL database file system provider allows users to manage a file system maintained in a SQL database table. Unlike other file system providers, this provider operates on an ID basis, where each file and folder has a unique ID used for all file operations. To begin, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command:
+The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
 
 ```json
 
@@ -17,7 +17,7 @@ The SQL database file system provider allows users to manage a file system maint
 
 ```
 
-After cloning, open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (e.g., FileManager.mdf), specify the connection string in the `web.config` file as follows:
+After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: FileManager.mdf), you need to specify the connection string in the web config file as shown below.
 
 ```json
 
@@ -25,7 +25,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 ```
 
-Then, add an entry for the connection string in `appsettings.json` file as shown below.
+Then, make an entry for the connection string in `appsettings.json` file as shown below.
 
 ```json
 
@@ -35,7 +35,7 @@ Then, add an entry for the connection string in `appsettings.json` file as shown
 
 ```
 
-To configure the database connection, set the connection name, table name, and root folder ID by passing these values to the `SetSQLConnection` method:
+Now, to configure the database connection, you need to set the connection name, table name and root folder ID value by passing these values to the SetSQLConnection method.
 
 ```csharp
 
@@ -63,8 +63,8 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SQL database file system provider, initialize the SQL database file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
 
-To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SQLProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/Controllers/SQLProviderController.cs). Additionally, all necessary file operation method details for this provider can be found in the same GitHub repository.
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SQLProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/Controllers/SQLProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
 N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider#key-features)

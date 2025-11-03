@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in Blazor TextBox Component
 
-The TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the CssClass API reference.
+The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the input parent element.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -28,7 +28,7 @@ The TextBox supports three types of validation styles, namely `error`, `warning`
 
 ## Limit no of character count
 
-Limit the number of characters by setting the `maxlength` attribute using the HtmlAttributes property. This enforces a client-side input limit and complements (but does not replace) server-side or model validation.
+You can limit the number of characters by setting `maxlength` attribute using `HtmlAttributes` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

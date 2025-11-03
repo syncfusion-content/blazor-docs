@@ -9,8 +9,6 @@ documentation: ug
 
 # Size and Color with Blazor AppBar Component
 
-The AppBar component offers extensive customization options for its visual `Size` (height) and `Color` scheme. 
-
 ## Size
 
 The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. The available types of the Blazor AppBar are as follows:
@@ -126,7 +124,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 ![Blazor AppBar with Dense Size](./images/dense_appbar.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthKirWTrCLzRlMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## AppBar ColorMode
+## Color
 
 The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for the Blazor AppBar are as follows:
 
@@ -137,7 +135,7 @@ The background and font colors can be set using the [ColorMode](https://help.syn
 
 ### Light AppBar
 
-This is the default color mode, displaying the AppBar with a light background and corresponding dark text/icon colors for high contrast and readability.
+This color mode is the default one in which the AppBar can be displayed with a light background and its corresponding font color.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

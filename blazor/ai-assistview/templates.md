@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in Blazor AI AssistView component
 
-The AI AssistView supports templates to customize the banner, prompt, response, suggestion, and footer areas.
+The AI AssistView provides several template options to customize the banner, prompt, response, suggestions and footer items.
 
 ## Banner template
 
-Use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_BannerTemplate) tag directive to display additional contextual content (for example, a welcome note) at the top of the prompt and response conversation area in the AI AssistView.
+You can use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_BannerTemplate) tag directive to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
 
 ```cshtml
 
@@ -66,7 +66,7 @@ Use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Prompt item template
 
-Use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptItemTemplate) tag directive to customize how prompt items are rendered. The template context exposes `Prompt`, `ToolbarItems`, and `Index`.
+You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptItemTemplate) tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
 
 ```cshtml
 
@@ -136,7 +136,7 @@ Use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Response item template
 
-Use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ResponseItemTemplate) tag directive to customize response items. The template context exposes `Prompt`, `Response`, `Index`, `ToolbarItems`, and `Output`.
+You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ResponseItemTemplate) tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
 
 ```cshtml
 
@@ -207,7 +207,7 @@ Use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Prompt suggestion item template
 
-Use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptSuggestionItemTemplate) tag directive to customize the appearance of prompt suggestions. The template context provides `Index` and `PromptSuggestion`.
+You can use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptSuggestionItemTemplate) tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -269,7 +269,7 @@ Use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/blazor/Syn
 
 ## Footer template
 
-Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_FooterTemplate) tag directive to customize the default footer area and control prompt submission behavior in the AI AssistView. This enables building tailored input experiences while integrating with prompt request actions.
+You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_FooterTemplate) tag directive to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat

@@ -1,64 +1,41 @@
 ---
 layout: post
-title: Date Format in Blazor DatePicker Component | Syncfusion
+title:  Date Format in Blazor DatePicker Component | Syncfusion
 description: Checkout and learn here all about Date Format in Syncfusion Blazor DatePicker component and much more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Date Format in Blazor DatePicker Component
-
-This article describes how to control the display and input formats in the Blazor DatePicker component using the Format and InputFormats properties, along with .NET standard and custom date-time format strings.
+#  Date Format in Blazor DatePicker Component
 
 ## Display Format
 
-The display format specifies how a date value is rendered in the DatePicker input. This controls the visual representation of the selected value (for example, dd-MM-yyyy, MM/dd/yyyy, or MMM dd, yyyy).
+The display format can be used to specify how the date value is displayed or entered in a `DatePicker` control
 
-By default, the DatePicker display format is based on the current culture. A custom or standard .NET date and time format string can be applied using the [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) options via the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
+The string format of the date value specifies how the date value should be represented as a string. Different countries and regions have different conventions for representing the date value in a string format. In addition to representing the date value in different string formats, it is also possible to specify the order in which the day, month, and year values appear in the string. For example, the day/month/year format could be written as `28-12-2022` or `28.12.2022`
 
-Note: When a display format is set, it consistently controls how the value is shown, regardless of culture-specific date order or separators. The underlying value type remains DateTime/DateTime?, and localized month/day names still follow the active culture where applicable.
+By default, the DatePicker's format is based on the culture. You can also set the own [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
 
-```cshtml
-@using Syncfusion.Blazor.Calendars
+> Once the display format property has been defined, it will be applied consistently to all cultures, regardless of their conventions for representing the date value. In other words, the display format property serves as a standardized way of representing the date value, ensuring that it is displayed and entered consistently regardless of the culture or region in which the application is used.
 
-<p>Selected date (display format): @DateValue</p>
+{% highlight Razor %}
 
-<SfDatePicker TValue="DateTime?"
-              Value="@DateValue"
-              Format="MMM dd, yyyy">
-</SfDatePicker>
+{% include_relative code-snippet/DatePicker.razor %}
 
-@code {
-    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15);
-}
-```
+{% endhighlight %}
 
-Preview:
-- The input renders the selected date in the form “Sep 15, 2025” (based on the chosen format), while the bound value remains a DateTime?.
 
 ![Date Format in Blazor DatePicker](./images/DatePicker.png)
 
 ## Input Formats
 
-The input format defines how typed dates are parsed into a valid DatePicker value. Typed input is interpreted according to the current culture and any configured input patterns. After input is confirmed (for example, by pressing Enter or Tab, or when the input loses focus), the value is reformatted using the display format.
+The input format can be used to specify how the date value is entered in a `DatePicker` control.
 
-Multiple input patterns can be accepted by specifying [.NET custom](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [standard](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) patterns in the [InputFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_InputFormats) property (for example, d-M-yy, d/M/yyyy, yyyy-MM-dd).
+The string format of the date value specifies how the date should be represented as a string when entered by the user. When the user types the date in the input format, it will be automatically converted to the display format after pressing enter, tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats. You can also set your own [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) by using [InputFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_InputFormats) property.
 
-```cshtml
-@using Syncfusion.Blazor.Calendars
+{% highlight Razor %}
 
-<p>Selected date (input formats): @DateValue</p>
+{% include_relative code-snippet/InputFormat.razor %}
 
-<SfDatePicker TValue="DateTime?"
-              Value="@DateValue"
-              Format="dd-MM-yyyy"
-              InputFormats="@(new string[] { "d-M-yy", "d/M/yyyy", "yyyy-MM-dd" })">
-</SfDatePicker>
-
-@code {
-    public DateTime? DateValue { get; set; } = DateTime.Today;
-}
-```
-Preview:
-- The input accepts dates typed as “1-9-25”, “01/09/2025”, or “2025-09-01”. After confirmation, the value is reformatted and displayed as “01-09-2025” according to the configured Format “dd-MM-yyyy”.
+{% endhighlight %}

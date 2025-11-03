@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Syncfusion Blazor Gantt Chart Performance Optimization Guide
-description: Learn how to optimize the loading and rendering performance of the Syncfusion Blazor Gantt Chart component, especially when working with large datasets.
+title: Performance tips for Blazor Gantt Chart Component | Syncfusion
+description: Check out and learn here all about how to improve the loading performance of Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Performance tips for Blazor Gantt Chart component
+# Performance tips for Blazor Gantt Chart Component
 
-This guide provides practical strategies to enhance the loading performance of the Blazor Gantt Chart component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
+This article is a comprehensive guide on enhancing the loading performance of the Blazor Gantt Chart component, particularly when managing large datasets and numerous columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. Through detailed explanations and actionable tips, this resource aims to equip users with the knowledge needed to optimize the performance of the Gantt Chart component during data binding, ensuring a smooth and responsive user experience.
 
-## How to improve loading performance by binding large dataset?
+## How to improve loading performance by binding large dataset
 
 A Gantt chart consists of rows, columns, and taskbars. For example, binding 10 rows and 10 columns results in rendering 100 elements in the Document Object Model (DOM) of Grid area and 10 elements in the Document Object Model (DOM) of chart area. To ensure optimal loading performance for the component, it is recommended to limit the number of rows and columns rendered. This approach helps in efficiently managing large datasets and enhancing the overall user experience.
 
@@ -29,7 +29,7 @@ To enhance the efficiency of the Blazor Gantt Chart, particularly when handling 
 
 For the most comprehensive performance optimization, combining row, column, and timeline virtualization in the Blazor Gantt Chart allows efficient management of extensive datasets and timelines. By dynamically loading only the visible rows, columns, and timeline cells, this approach minimizes memory usage and ensures smooth scrolling and interaction across large projects. This combined strategy significantly improves performance, reduces initial load times, and enhances the overall user experience by maintaining a responsive and efficient Gantt Chart.
 
-## How to improve performance of Gantt chart in Blazor WASM application?
+## How to improve performance of Gantt chart in Blazor WASM application
 
 This section provides performance guidelines for using the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
@@ -40,21 +40,20 @@ This section provides performance guidelines for using the Syncfusion<sup style=
 
 In the Blazor Gantt Chart component, the start and end dates of tasks are automatically calculated by default based on various factors, including working times, holidays, weekends, and task dependencies (predecessors). While this feature ensures accurate scheduling, it can lead to performance issues when rendering large datasets due to the intensive calculations involved in data validation.
 
-To improve performance when working with large datasets, you can disable this automatic date calculation by setting the [AutoCalculateDateScheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) property to **false**. Disabling this feature stops the Gantt Chart from recalculating dates based on the aforementioned factors, thus reducing the processing load and enhancing performance.
-
+To improve performance when working with large datasets, you can disable this automatic date calculation by setting the [AutoCalculateDateScheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) property to `false`. Disabling this feature stops the Gantt Chart from recalculating dates based on the aforementioned factors, thus reducing the processing load and enhancing performance.
 ```csharp
     <SfGantt DataSource="@TaskCollection" AutoCalculateDateScheduling="false">  
     </SfGantt>
 ```
-N> When setting `AutoCalculateDateScheduling` property to **false**, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
+N> When setting `AutoCalculateDateScheduling` property to `false`, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
 
-## How to improve loading performance by binding large data by showing custom text or element?
+## How to improve loading performance by binding large data by showing custom text or element
 
 When integrating images or custom template elements into Gantt chart columns in the Blazor Gantt Chart, it is recommended to use the [Column Template](https://blazor.syncfusion.com/documentation/gantt-chart/column-template) feature rather than customizing data through event handlers such as [RowDataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) or [QueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events#querycellinfo). These events are triggered for every row and cell during rendering, which can significantly slow down the component’s rendering process, especially with large datasets. Additionally, using these events for custom element rendering can lead to performance degradation over time due to the accumulation of rendered elements.
 
 By utilizing the Column Template feature, you can efficiently render custom content without experiencing rendering delays, ensuring a smoother and more responsive user experience.
 
-## How to improve loading performance by binding data from service?
+## How to improve loading performance by binding data from service
 
 1. Instead of fetching and binding data directly in the `OnInitializedAsync` method, it is advisable to set the data source in the Gantt Chart's [Created](https://blazor.syncfusion.com/documentation/gantt-chart/events#created) event. Fetching data within `OnInitializedAsync` can delay the application's startup time and affect the rendering of the Gantt Chart, especially if the service call is slow. By assigning the data inside the `Created` event, the Gantt Chart will have already been created/rendered. This way, you are only assigning the data that was previously fetched and stored in a variable, rather than making a service call during the component’s initialization.
 
@@ -63,7 +62,7 @@ By utilizing the Column Template feature, you can efficiently render custom cont
 * [Custom binding](https://blazor.syncfusion.com/documentation/gantt-chart/custom-binding)
 * [Injecting service into CustomAdaptor](https://blazor.syncfusion.com/documentation/gantt-chart/custom-binding#inject-service-into-custom-adaptor)
 
-## How to improve loading performance by referring individual script and CSS?
+## How to improve loading performance by referring individual script and CSS
 
 Instead of using the consolidated `Syncfusion.Blazor` package, which includes all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and can result in a larger package size, you should use the specific NuGet package for the Gantt Chart component, such as `Syncfusion.Blazor.Gantt`. This approach ensures that only the necessary components and dependencies for the Gantt Chart are included, leading to improved performance and reduced load times.
 
@@ -73,9 +72,9 @@ Refer the below documentation
 * [Individual nuget package](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app#install-syncfusion-blazor-gantt-and-themes-nuget-in-the-blazor-web-app)
 * [Adding script and CSS](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app#add-stylesheet-and-script-resources)
 
-These strategies help improve initial rendering performance and deliver a smoother user experience.
+By adopting these strategies, you can significantly improve the performance of the Blazor Gantt Chart during initial rendering and ensure a more responsive user experience.
 
-## How to optimize server-side data operations with adaptors?
+## How to optimize server-side data operations with adaptors
 
 The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, etc.) to facilitate server-side data operations and CRUD functionalities. By utilizing these adaptors along with the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component, you can seamlessly bind remote data sources to the Gantt Chart and execute actions. During data operations such as filtering and sorting, the corresponding action queries are generated according to the adaptor’s requirements. It is crucial to handle these actions on the application side and return the processed data back to the Gantt Chart. For efficient data processing, the suggested order for returning processed data to the Gantt Chart is as follows:
 
@@ -86,9 +85,9 @@ The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, e
 
 Understanding the concerns related to latency in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
 
-### Potential solutions to mitigate delay
+### Potential Solutions to Mitigate Delay
 
-**Network latency**: Increased distance between the client and server can result in higher latency, affecting the responsiveness of client-server communication.
+**Network Latency**: Increased distance between the client and server can result in higher latency, affecting the responsiveness of client-server communication.
 
 **Solution**: Host the server in a region closer to the majority of your users to reduce network latency. Selecting a server location nearer to your target audience can significantly enhance response times.
 

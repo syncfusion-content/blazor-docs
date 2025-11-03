@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Tooltip in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Tooltip and its customization in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,15 +11,15 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-Tooltips in Blazor Charts provide contextual information when hovering over data points, enhancing data interpretation and user interaction.
+When the mouse is moved over a point on the chart, the tooltip will provide information about that point.
 
-Watch the following video to learn how to add tooltips to Blazor Charts.
+You can learn how to add tooltips to Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4g8JTwHuTz4" %}
 
 ## Enable tooltip
 
-Tooltips are useful when space constraints limit the use of data labels. Enable tooltips by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
+When space constraints prevent displaying information using data labels, the tooltip comes in useful. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) can be set to **true** to enable the tooltip.
 
 ```cshtml
 
@@ -28,9 +28,11 @@ Tooltips are useful when space constraints limit the use of data labels. Enable 
 <SfChart Title="Product Sales">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryYAxis LabelFormat="{value}M" />
+    <ChartPrimaryYAxis LabelFormat="{value}M"  >
 
-    <ChartTooltipSettings Enable="true" />
+    </ChartPrimaryYAxis>
+
+    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" Name="Text" XName="X" YName="Y" Type="ChartSeriesType.Column">
@@ -38,7 +40,7 @@ Tooltips are useful when space constraints limit the use of data labels. Enable 
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -48,10 +50,10 @@ Tooltips are useful when space constraints limit the use of data labels. Enable 
 
     public List<Data> SalesReports = new List<Data>
 	{
-       new Data { X = "Jan", Y = 3, Text = "January" },
-       new Data { X = "Feb", Y = 3.5, Text = "February" },
-       new Data { X = "Mar", Y = 7, Text = "March" },
-       new Data { X = "Apr", Y = 13.5, Text = "April" }
+       new Data{ X= "Jan", Y= 3, Text= "January" },
+       new Data{ X= "Feb", Y= 3.5, Text= "February" },
+       new Data{ X= "Mar", Y= 7, Text= "March" },
+       new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 
@@ -63,7 +65,7 @@ Tooltips are useful when space constraints limit the use of data labels. Enable 
 
 <!-- markdownlint-disable MD013 -->
 
-By default, tooltips display x and y values for each point. You can customize the tooltip to show additional information, such as series name and point values, using the **Format** property.
+By default, the tooltip displays information in points for the x and y values. In addition, further information can be displayed in the tooltip. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
 
 ```cshtml
 
@@ -72,7 +74,7 @@ By default, tooltips display x and y values for each point. You can customize th
 <SfChart Title="Product Sales">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryYAxis LabelFormat="{value}M" />
+    <ChartPrimaryYAxis LabelFormat="{value}M"></ChartPrimaryYAxis>
 
     <ChartTooltipSettings Enable="true" Header="Sales" Format="<b>${series.name} : ${point.y}</b>"></ChartTooltipSettings>
 
@@ -82,7 +84,7 @@ By default, tooltips display x and y values for each point. You can customize th
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -92,10 +94,10 @@ By default, tooltips display x and y values for each point. You can customize th
 
     public List<Data> SalesReports = new List<Data>
 	{
-       new Data { X = "Jan", Y = 3, Text = "January" },
-       new Data { X = "Feb", Y = 3.5, Text = "February" },
-       new Data { X = "Mar", Y = 7, Text = "March" },
-       new Data { X = "Apr", Y = 13.5, Text = "April" }
+       new Data{ X= "Jan", Y= 3, Text= "January" },
+       new Data{ X= "Feb", Y= 3.5, Text= "February" },
+       new Data{ X= "Mar", Y= 7, Text= "March" },
+       new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 
@@ -107,7 +109,7 @@ By default, tooltips display x and y values for each point. You can customize th
 
 ## Tooltip template
 
-Display custom HTML elements in the tooltip using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property. Use **data.X** and **data.Y** placeholders to show corresponding data point values.
+Any HTML elements can be displayed within the tooltip by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property of the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point.
 
 ```cshtml
 
@@ -135,13 +137,7 @@ Display custom HTML elements in the tooltip using the [Template](https://help.sy
     </ChartTooltipSettings>
 </SfChart>
 
-@code {
-    public class StepChartData
-    {
-        public string Year { get; set; }
-        public double YValue { get; set; }
-    }
-
+@code{
     public List<StepChartData> StepChartValues = new List<StepChartData>
     {
         new StepChartData { Year = "1975", YValue = 16 },
@@ -153,6 +149,12 @@ Display custom HTML elements in the tooltip using the [Template](https://help.sy
         new StepChartData { Year = "2005", YValue = 10 },
         new StepChartData { Year = "2010", YValue = 16 }
     };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double YValue { get; set; }
+    }
 }
 
 ```
@@ -161,26 +163,21 @@ Display custom HTML elements in the tooltip using the [Template](https://help.sy
 
 ## Shared Tooltip template
 
-To display tooltips for multiple series, enable the [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property. Use the **Template** property to customize the shared tooltip content for all series.
+Any HTML elements can be displayed within the tooltip by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property of the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point. To show the tooltip for more than one series, enable the [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html)
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartArea>
-        <ChartAreaBorder Width="0" />
-    </ChartArea>
-
+    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="yyyy" IntervalType="IntervalType.Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
     </ChartPrimaryXAxis>
-
     <ChartPrimaryYAxis LabelFormat="{value}%" RangePadding="ChartRangePadding.None" Minimum="0" Maximum="100" Interval="20">
         <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
     </ChartPrimaryYAxis>
-
     <ChartTooltipSettings Enable="true" Shared="true">
         <Template>
             @{
@@ -203,8 +200,7 @@ To display tooltips for multiple series, enable the [Shared](https://help.syncfu
             }
         </Template>
     </ChartTooltipSettings>
-
-    <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical" />
+    <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical"></ChartCrosshairSettings>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartData" Name="Germany" XName="Period" Width="2"
                      Opacity="1" YName="ENG_InflationRate" Type="ChartSeriesType.Line">
@@ -220,13 +216,6 @@ To display tooltips for multiple series, enable the [Shared](https://help.syncfu
 </SfChart>
 
 @code {
-    public class LineChartData
-    {
-        public DateTime Period { get; set; }
-        public double ENG_InflationRate { get; set; }
-        public double GER_InflationRate { get; set; }
-    }
-
     public List<LineChartData> ChartData = new List<LineChartData>
     {
         new LineChartData { Period = new DateTime(2005, 01, 01), ENG_InflationRate = 21, GER_InflationRate = 28 },
@@ -237,6 +226,12 @@ To display tooltips for multiple series, enable the [Shared](https://help.syncfu
         new LineChartData { Period = new DateTime(2010, 01, 01), ENG_InflationRate = 57, GER_InflationRate = 78 },
         new LineChartData { Period = new DateTime(2011, 01, 01), ENG_InflationRate = 70, GER_InflationRate = 84 }
     };
+    public class LineChartData
+    {
+        public DateTime Period { get; set; }
+        public double ENG_InflationRate { get; set; }
+        public double GER_InflationRate { get; set; }
+    }
 }
 
 ```
@@ -245,7 +240,7 @@ To display tooltips for multiple series, enable the [Shared](https://help.syncfu
 
 ## Tooltip customization
 
-Customize the tooltip background and border using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Border) properties. Adjust tooltip text style with [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html) and highlight points using the [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightColor) property.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Border) properties are used to customize the background color and the border of the tooltip respectively. The [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html) is used to customize the tooltip text. The [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightColor) property is used to customize the point color while hovering for tooltip.
 
 ```cshtml
 
@@ -254,7 +249,9 @@ Customize the tooltip background and border using the [Fill](https://help.syncfu
 <SfChart Title="Product Sales" HighlightColor="red">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
-    <ChartPrimaryYAxis LabelFormat="{value}M"/>
+    <ChartPrimaryYAxis LabelFormat="{value}M" >
+
+    </ChartPrimaryYAxis>
 
     <ChartTooltipSettings Enable="true" Fill="gray">
         <ChartTooltipBorder Color="#FF0000"  Width="2"></ChartTooltipBorder>
@@ -266,7 +263,7 @@ Customize the tooltip background and border using the [Fill](https://help.syncfu
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -276,10 +273,10 @@ Customize the tooltip background and border using the [Fill](https://help.syncfu
 
     public List<Data> SalesReports = new List<Data>
 	{
-       new Data { X = "Jan", Y = 3, Text = "January" },
-       new Data { X = "Feb", Y = 3.5, Text = "February" },
-       new Data { X = "Mar", Y = 7, Text = "March" },
-       new Data { X = "Apr", Y = 13.5, Text = "April" }
+       new Data{ X= "Jan", Y= 3, Text= "January" },
+       new Data{ X= "Feb", Y= 3.5, Text= "February" },
+       new Data{ X= "Mar", Y= 7, Text= "March" },
+       new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 
@@ -289,7 +286,7 @@ Customize the tooltip background and border using the [Fill](https://help.syncfu
 
 ## Enabling highlight for series with tooltip
 
-Enable the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_EnableHighlight) property to highlight all points in the hovered series and dim other series, improving focus and clarity.
+By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_EnableHighlight) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This feature enhances focus and clarity by drawing attention to the selected series.
 
 ```cshtml
 
@@ -310,18 +307,11 @@ Enable the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
-    <ChartTooltipSettings Enable="true" EnableHighlight="true" />
+    <ChartTooltipSettings Enable="true" EnableHighlight="true">
+    </ChartTooltipSettings>
 </SfChart>
 
 @code {
-    public class StepChartData
-    {
-        public string Year { get; set; }
-        public double Y { get; set; }
-        public double Y1 { get; set; }
-        public double Y2 { get; set; }
-    }
-
     public List<StepChartData> StepChartValues = new List<StepChartData>
     {
         new StepChartData { Year = "1975", Y = 16, Y1 = 10, Y2 = 4.5 },
@@ -333,6 +323,14 @@ Enable the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         new StepChartData { Year = "2005", Y = 10, Y1 = 3.5, Y2 = 2.5 },
         new StepChartData { Year = "2010", Y = 16, Y1 = 7, Y2 = 3.7 }
     };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+    }
 }
 
 ```
@@ -342,9 +340,9 @@ Enable the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Displaying tooltip for nearest data point
 
-The [ShowNearestTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_ShowNearestTooltip) property displays tooltips for the data point closest to the cursor, improving usability in charts with dense or overlapping data.
+The [ShowNearestTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_ShowNearestTooltip) property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltips for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
 
-N> By default, `ShowNearestTooltip` is set to **true** for all series. Disable this property in a specific `ChartSeries` to prevent tooltips for the nearest data point in that series.
+N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to **true** for all series. By disabling this property in a specific `ChartSeries`, you can prevent the tooltip from appearing for the nearest data point in that series.
 
 ```cshtml
 
@@ -370,14 +368,6 @@ N> By default, `ShowNearestTooltip` is set to **true** for all series. Disable t
 </SfChart>
 
 @code {
-    public class StepChartData
-    {
-        public string Year { get; set; }
-        public double Y { get; set; }
-        public double Y1 { get; set; }
-        public double Y2 { get; set; }
-    }
-
     public List<StepChartData> StepChartValues = new List<StepChartData>
     {
         new StepChartData { Year = "1975", Y = 16, Y1 = 10, Y2 = 4.5 },
@@ -389,6 +379,14 @@ N> By default, `ShowNearestTooltip` is set to **true** for all series. Disable t
         new StepChartData { Year = "2005", Y = 10, Y1 = 3.5, Y2 = 2.5 },
         new StepChartData { Year = "2010", Y = 16, Y1 = 7, Y2 = 3.7 }
     };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+    }
 }
 
 ```

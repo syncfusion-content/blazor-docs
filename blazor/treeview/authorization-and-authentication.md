@@ -9,13 +9,13 @@ documentation: ug
 
 # Authorization and Authentication in Blazor TreeView Component
 
-**Authentication** involves verifying the identity of a user or system. This typically occurs through methods such as user names and passwords, biometrics, or security tokens.
+**Authentication** is the process of verifying the identity of a user or system. This is typically done by requiring a username and password, but can also include other forms of verification such as biometric data or security tokens.
 
-**Authorization** determines whether an authenticated user or system possesses the necessary permissions to access a specific resource or perform a particular action. After a user's identity is authenticated, the system evaluates their credentials or permissions against a set of established rules or policies to grant or deny access.
+**Authorization**, on the other hand, is the process of determining whether a user or system has access to a particular resource or action. Once a user's identity has been authenticated, the system can then determine whether they are authorized to perform a specific action or access a specific resource. This is often done by comparing the user's credentials or permissions against a set of rules or policies.
 
-This section provides an example of implementing authorization and authentication to restrict access to the Blazor TreeView component to authorized users. The provided blog post details the steps for creating a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), facilitating easy setup and configuration for this example.
+Provides a sample of Authorization and Authentication that explains how authorized users can access the TreeView. The below blog also includes steps to create a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), ensuring easy setup and configuration.
 
-The following example demonstrates a Blazor Server App configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
+In the below example, the Blazor Server App is equipped with authentication, which ensures that only authorized users can access the TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
