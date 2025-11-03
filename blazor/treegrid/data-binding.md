@@ -835,6 +835,7 @@ N> * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding
 <br/> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors) for more details.
 <br/> * Filtering and searching server-side data operations are not supported in load on demand.
 <br/> * Only Self-Referential type data is supported with remote data binding in TreeGrid
+<br/> * The **ALL** mode of **PageSizeMode** is not supported with remote data binding in the TreeGrid.
 
 ### Enable Offline Mode for Remote Data
 

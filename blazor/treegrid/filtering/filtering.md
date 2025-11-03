@@ -415,3 +415,136 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
+## Filtering with case sensitivity and ignore accent
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid provides precise control over filtering behavior. to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property of [TreeGridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows filtering to ignore diacritic characters or accents by setting the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
+
+Below is an example code demonstrating how to enable or disable case sensitivity during filtering operations:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.TreeGrid
+<PageTitle>TreeGrid Accent-Insensitive Filtering</PageTitle>
+<div class="container mt-4">
+    <SfButton OnClick="CaseSensitivity">Case Sensitivity</SfButton>
+    <SfButton OnClick="IgnoreAccentCase">Ignore Accent</SfButton>
+    <span>Case Sensitivity : <b>@CaseSensitive</b></span> -----
+    <span>Ignore Accent : <b>@IgnoreAccent</b></span>
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+        <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="@IgnoreAccent" EnableCaseSensitivity="@CaseSensitive"> </TreeGridFilterSettings>
+        <TreeGridColumns>
+            <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90" IsPrimaryKey />
+            <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+            <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+            <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+            <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="ColumnType.Date" Format="d" Width="130" />
+            <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="TextAlign.Right" Width="140" />
+        </TreeGridColumns>
+    </SfTreeGrid>
+</div>
+@code {
+    private List<TreeTask> TreeData = new();
+    public bool CaseSensitive = true;
+    public bool IgnoreAccent = true;
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = GetTreeTasks();
+    }
+    public void CaseSensitivity()
+    {
+        CaseSensitive = !CaseSensitive;
+    }
+    public void IgnoreAccentCase()
+    {
+        IgnoreAccent = !IgnoreAccent;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="TreeTask.cs" %}
+
+public class TreeTask
+{
+    public int TaskID { get; set; }
+    public string TaskName { get; set; } = string.Empty;
+    public string ResourceName { get; set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
+    public DateTime StartDate { get; set; }
+    public int Duration { get; set; }
+    public int? ParentID { get; set; }
+    public static List<TreeTask> GetTreeTasks() => new()
+    {
+        new TreeTask
+        {
+            TaskID = 1,
+            TaskName = "Market Analysis",
+            ResourceName = "José Álvarez",
+            City = "Sevilla",
+            StartDate = new DateTime(2024, 1, 2),
+            Duration = 5,
+            ParentID = null
+        },
+        new TreeTask
+        {
+            TaskID = 2,
+            TaskName = "Competitor Review",
+            ResourceName = "Zoë Brontë",
+            City = "São Paulo",
+            StartDate = new DateTime(2024, 1, 3),
+            Duration = 3,
+            ParentID = 1
+        },
+        new TreeTask
+        {
+            TaskID = 3,
+            TaskName = "Focus Group",
+            ResourceName = "François Dœuf",
+            City = "Montréal",
+            StartDate = new DateTime(2024, 1, 4),
+            Duration = 2,
+            ParentID = 1
+        },
+        new TreeTask
+        {
+            TaskID = 4,
+            TaskName = "Product Design",
+            ResourceName = "Mårten Šedý",
+            City = "Göteborg",
+            StartDate = new DateTime(2024, 1, 5),
+            Duration = 6,
+            ParentID = null
+        },
+        new TreeTask
+        {
+            TaskID = 5,
+            TaskName = "UX Workshop",
+            ResourceName = "Anaïs Löhn",
+            City = "München",
+            StartDate = new DateTime(2024, 1, 6),
+            Duration = 4,
+            ParentID = 4
+        },
+        new TreeTask
+        {
+            TaskID = 6,
+            TaskName = "Prototype Testing",
+            ResourceName = "Renée Faßbinder",
+            City = "Zürich",
+            StartDate = new DateTime(2024, 1, 8),
+            Duration = 3,
+            ParentID = 4
+        }
+    };
+}
+
+    
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoCXrgTHELklLt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
