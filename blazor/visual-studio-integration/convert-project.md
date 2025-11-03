@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convert a Blazor project to Syncfusion Blazor | Syncfusion
-description: Learn how to convert an existing Blazor application to a Syncfusion Blazor application using the Syncfusion Blazor Extension for Visual Studio 2022, including NuGet package installation and theme integration.
+description: Learn how to convert an existing Blazor application to a Blazor application using the Blazor Extension for VS 2022, including NuGet package installation.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Converting Blazor application to Syncfusion® Blazor application
 
-The Syncfusion® Blazor project conversion is a Visual Studio add-in that transforms an existing Blazor application into a Syncfusion® Blazor application by installing the required NuGet packages and adding the corresponding theme styles to the layout.
+The Syncfusion® Blazor conversion is a Visual Studio add-in that transforms an existing Blazor application into a Syncfusion® Blazor application by installing the required NuGet packages and adding the corresponding theme styles to the layout.
 
 The steps below describe how to convert a Blazor application to a Syncfusion® Blazor application using Visual Studio 2022.
 
@@ -35,7 +35,7 @@ N> Before using the Syncfusion® Blazor Project Conversion, verify that the Sync
 
     ![Syncfusion Blazor Project Conversion wizard with version and theme selection](images/Conversion.png)
 
-    N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on NuGet.org and require an active internet connection.
+    N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and require an active internet connection.
 
 4. Select the **Enable a backup before converting** checkbox to create a project backup, and then choose the backup location.
 
@@ -47,6 +47,6 @@ N> Before using the Syncfusion® Blazor Project Conversion, verify that the Sync
 
     ![Backup location for the original project created during conversion](images/Backuplocation.png)
 
-6. The selected Blazor application is converted to a Syncfusion® Blazor application by installing the appropriate Syncfusion® Blazor NuGet packages for the chosen version and adding the selected theme styles to the project’s layout file. Static web assets are used where applicable.
+6. The selected Blazor application is converted to a Syncfusion® Blazor application by installing the appropriate Syncfusion® Blazor NuGet packages for the chosen version and adding the selected theme styles to the project’s layout file.
 
 7. If using a trial setup or packages from NuGet.org, a Syncfusion® license key must be registered with the application. Syncfusion® introduced license registration starting with the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Refer to the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key. For details about the licensing changes introduced in Essential Studio®, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).
