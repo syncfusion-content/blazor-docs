@@ -201,6 +201,8 @@ The complete pack of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ico
 
 <!-- markdownlint-disable MD033 -->
 
+<!-- markdownlint-disable MD033 -->
+
 ### Bootstrap 5
 
 <iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/bootstrap5/demo.html" style="height:1000px;width:100%;"></iframe>
