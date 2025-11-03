@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Labels in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Axis Labels in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about the Axis Labels in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Axis Labels in Blazor 3D Chart Component
 
-Axis labels are displayed adjacent to the y-axis and beneath the x-axis, providing descriptive information for each axis.
+Axis labels are the labels that are positioned adjacent to the y-axis and beneath the x-axis. It provides descriptive information about the axis.
 
 ## Smart axis labels
 
-When axis labels overlap, the `LabelIntersectAction` property can be used to manage their placement.
+When the axis labels overlap with each other, `LabelIntersectAction` property in the axis can be used to place them smartly.
 
-**Case 1:** Setting `LabelIntersectAction` to **Hide** hides overlapping labels.
+**Case 1:** When setting `LabelIntersectAction` as **Hide**.
 
 ```cshtml
 
@@ -29,7 +29,7 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -59,7 +59,7 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
 
 ![Hiding Smart Axis Label in Blazor Column 3D Chart](images/axis-labels/blazor-column-chart-hide-smart-axis-label.png)
 
-**Case 2:** Setting `LabelIntersectAction` to **Rotate45** rotates overlapping labels by 45 degrees.
+**Case 2:** When setting `LabelIntersectAction` as **Rotate45**.
 
 ```cshtml
 
@@ -73,7 +73,7 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -102,7 +102,7 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
 
 ![Blazor Column 3D Chart with Smart Axis Label in Rotate45](images/axis-labels/blazor-column-chart-axis-label-in-rotate45.png)
 
-**Case 3:** Setting `LabelIntersectAction` to **Rotate90** rotates overlapping labels by 90 degrees.
+**Case 3:** When setting `LabelIntersectAction` as **Rotate90**.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -147,7 +147,8 @@ When axis labels overlap, the `LabelIntersectAction` property can be used to man
 
 ## Edge label placement
 
-Labels with long text at the edges of an axis may appear partially in the 3D chart. The `EdgeLabelPlacement` property moves the label inside the chart area or hides it for improved appearance.
+Labels with long text at the edges of an axis may appear partially in the 3D chart. To avoid this,
+use the `EdgeLabelPlacement` property in axis, which moves the label inside the chart area for better appearance or hides it.
 
 ```cshtml
 
@@ -163,7 +164,7 @@ Labels with long text at the edges of an axis may appear partially in the 3D cha
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -190,7 +191,7 @@ Labels with long text at the edges of an axis may appear partially in the 3D cha
 
 ## Maximum labels
 
-Labels are rendered based on the count specified in the `MaximumLabels` property per 100 pixels. If both the range (minimum, maximum, interval) and `MaximumLabels` are set, the range takes priority. If the range is not set, the `MaximumLabels` property is used.
+The labels will be rendered based on the count in the `MaximumLabels` property per 100 pixel. If the range (minimum, maximum, interval) and `MaximumLabels` are set, then the priority goes to range. If the range is not set, then the priority goes to `MaximumLabels` property.
 
 ```cshtml
 
@@ -206,22 +207,15 @@ Labels are rendered based on the count specified in the `MaximumLabels` property
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code
+{
     private Random randomNum = new Random();
     private double PriceY = 80;
     public List<ChartData> ChartPoints { get; set; } = new List<ChartData>();
-    
-    public class ChartData
-    {
-        public double Period { get; set; }
-        public double Price { get; set; }
-    }
-
     protected override void OnInitialized()
     {
         GetChartPoints(50);
     }
-
     private void GetChartPoints(int value)
     {
         if (ChartPoints.Count > 0)
@@ -245,6 +239,11 @@ Labels are rendered based on the count specified in the `MaximumLabels` property
                 }
             );
         }
+    }
+    public class ChartData
+    {
+        public double Period { get; set; }
+        public double Price { get; set; }
     }
 }
 

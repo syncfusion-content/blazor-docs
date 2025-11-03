@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lazy Loading in Blazor Charts Component | Syncfusion
-description: Check out and learn here all about Lazy Loading in Syncfusion Blazor Charts component and much more.
+description: Checkout and Checkout and learn here all about Lazy Loading in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,10 +9,10 @@ documentation: ug
 
 # Lazy Loading in Blazor Charts Component
 
-Lazy loading enables charts to load data on demand, improving performance and responsiveness. The [OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event is triggered by the chart, allowing retrieval of the minimum and maximum axis ranges to update the chart data accordingly.
+The lazy loading loads data for the chart on demand. The  [OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event will be fired by the chart, allowing us to get the minimum and maximum ranges of the axes and then upload the data to the chart.
 
 ```cshtml
-<ChartEvents OnScrollChanged="@ScrollChange" />
+<ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
 
 private void ScrollChange(ScrollEventArgs e)
 {
@@ -22,7 +22,7 @@ private void ScrollChange(ScrollEventArgs e)
 
 ```
 
-The following code demonstrates lazy loading in Blazor Charts.
+The complete code snippet is available below.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -47,6 +47,7 @@ else
 }
 
 @code {
+
     int count = 1;
     Random random = new Random();
     public ObservableCollection < ColumnChartData > dataSource;
@@ -91,18 +92,17 @@ else
         }
     }
 }
-
 ```
 
 ![LazyLoad Line](../images/lazyload-line.png)
 
-### Line
+### Line 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![LazyLoad Column](../images/lazyload-column.png)
 
-### Column
+### Column 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTXBLdpqQSSsSy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

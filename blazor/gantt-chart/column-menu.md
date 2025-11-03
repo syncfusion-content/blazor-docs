@@ -9,20 +9,22 @@ documentation: ug
 
 # Column Menu in Blazor Gantt Chart Component
 
-The column menu in the Blazor Gantt component offers built-in actions including sorting, filtering, column chooser, and autofit. It appears when the column header icon is clicked.
+The column menu feature in the Syncfusion Blazor Gantt Chart enables sorting, filtering, and autofit options through a menu accessed by clicking a column's icon. Enable it by setting the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnMenu) property to `true`. This guide covers enabling and using the column menu.
 
-To enable this feature, set [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnMenu) to **true** in the Gantt configuration. Also enable [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering), and [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) to support the corresponding actions.
+## Column Menu
 
-The following built-in column menu items are available:
+Enable the column menu by setting `ShowColumnMenu` to `true`, along with [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering), and [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) for respective features. Clicking the column header icon displays a menu with options based on the column type.
+
+The default menu items are:
 
 | Item | Description |
 |------|-------------|
-| Sort Ascending | Sort the current column in ascending order. |
-| Sort Descending | Sort the current column in descending order. |
-| Auto Fit | Auto fit the current column. |
-| Auto Fit All | Auto fit all columns. |
-| Column Chooser | Choose column visibility. |
-| Filter | Displays filtering options based on [FilterSettings.FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_FilterType). |
+| `Sort Ascending` | Sort the current column in ascending order. |
+| `Sort Descending` | Sort the current column in descending order. |
+| `Auto Fit` | Auto fit the current column. |
+| `Auto Fit All` | Auto fit all columns. |
+| `Column Chooser` | Choose column visibility. |
+| `Filter` | Show the filter menu based on column type. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -74,7 +76,7 @@ The following built-in column menu items are available:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoMXiticGodFzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> **Note**: Disable the column menu for a specific column by setting [GanttColumn.ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ShowColumnMenu) to **false**.
+> **Note**: Disable the column menu for a specific column by setting [GanttColumn.ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ShowColumnMenu) to `false`.
 
 ## See also
 

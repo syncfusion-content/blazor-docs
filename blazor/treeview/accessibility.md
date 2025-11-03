@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) specifications, and applies WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation.
 
-The Blazor TreeView component aligns with established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards. It implements [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) to achieve high accessibility compliance.
+The Blazor TreeView component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor TreeView component is outlined below.
 
@@ -39,9 +39,9 @@ The accessibility compliance for the Blazor TreeView component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA Attributes
+## WAI-ARIA attributes
 
-The Blazor TreeView component implements the [WAI-ARIA Tree View pattern](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) to ensure comprehensive accessibility. The following ARIA attributes are used within the TreeView component's structure:
+The Blazor TreeView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeView component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -51,9 +51,9 @@ The Blazor TreeView component implements the [WAI-ARIA Tree View pattern](https:
 | aria-grabbed | Indicates the selected state on drag-and-drop of node. |
 | aria-level | Indicates the level of node in TreeView. |
 
-## Keyboard Interaction
+## Keyboard interaction
 
-The Blazor TreeView component adheres to the [WAI-ARIA keyboard interaction guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction), providing robust keyboard navigation. This enables efficient use for individuals who rely on assistive technologies or prefer keyboard-only interaction. The component supports the following keyboard shortcuts:
+The Blazor TreeView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the TreeView component.
 
 | Windows | Mac | Description |
 |------|----|-----|
@@ -69,12 +69,12 @@ The Blazor TreeView component adheres to the [WAI-ARIA keyboard interaction guid
 | <kbd>Space</kbd> | <kbd>space</kbd> | Checks the current node. |
 | <kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbb>A</kbd> | Selects all nodes. |
 
-## Ensuring Accessibility
+## Ensuring accessibility
 
-The accessibility levels of the Blazor TreeView component are verified through regular automated testing using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool.
+The Blazor TreeView component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the TreeView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treeview) in a new window to evaluate the accessibility of the TreeView component with accessibility tools.
 
-## See Also
+## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

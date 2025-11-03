@@ -1,19 +1,19 @@
 ---
 layout: post
-title: BPMN Event in Syncfusion Blazor Diagram Component | Syncfusion
+title: BPMN Event in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the BPMN event and event trigger in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Event in Diagram Component
+# BPMN Event in Blazor Diagram Component
 
 An [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html) is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
 
-* **Start** - Indicates the beginning of the process and every business process start with an event.
-* **Intermediate** - Indicates the middle of the process.
-* **End** - Indicates the end of the process, and every business process ends with an event.
+* Start - Indicates the beginning of the process and every business process start with an event.
+* Intermediate - Indicates the middle of the process.
+* End - Indicates the end of the process, and every business process ends with an event.
 
 The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html#Syncfusion_Blazor_Diagram_BpmnEvent_EventType) property of the node allows you to define the type of the event. The default value of the event is [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEventType.html#Syncfusion_Blazor_Diagram_BpmnEventType_Start). The following code example explains how to create a BPMN event.
 
@@ -52,9 +52,7 @@ The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoWZZdracaAiTe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventType)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventType)
 
 ![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.png)
 
@@ -99,9 +97,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtresttdBOFpnepH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventType)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventType)
 
 ![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png)
 

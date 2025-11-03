@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor Menu bar component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor Menu Bar component incorporates [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to ensure comprehensive accessibility. The following ARIA attributes are utilized within the component:
+The Blazor Menu bar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Menu bar component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,9 +49,9 @@ The Blazor Menu Bar component incorporates [WAI-ARIA](https://www.w3.org/WAI/ARI
 | `aria-label` | Indicates the menu item text. |
 | `aria-disabled` | Indicates the state of menu item whether it is disabled. |
 
-## Keyboard Interaction
+## Keyboard interaction
 
-The Blazor Menu Bar component adheres to the [keyboard interaction guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction), facilitating effortless navigation for users who rely on assistive technologies and keyboard-only interaction. The following keyboard shortcuts are supported to provide a seamless user experience:
+The Blazor Menu bar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Menu Bar component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -64,14 +64,14 @@ The Blazor Menu Bar component adheres to the [keyboard interaction guidelines](h
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first item. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last item.
 
-## Ensuring Accessibility
+## Ensuring accessibility
 
-The accessibility levels of the Blazor Menu Bar component are rigorously validated through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests. This automated testing approach helps maintain high accessibility standards.
+The Blazor Menu Bar component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Menu Bar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/menu) in a new window to evaluate the accessibility of the Blazor Menu Bar component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/menu.html" %}
 
-## See Also
+## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

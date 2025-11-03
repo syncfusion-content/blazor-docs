@@ -11,7 +11,7 @@ documentation: ug
 
 ## Add or Remove Menu Items
 
-Menu items can be dynamically added or removed from the Menu Bar by directly manipulating the `Items` collection bound to the `SfMenu` component. If the `Items` collection is an `ObservableCollection<T>`, changes will be automatically reflected.
+Menu items can be added or removed directly by using Add or Remove methods.
 
 In the following example, the `Corporate` menu items are added and the `Company` items are removed from menu.
 
@@ -69,12 +69,12 @@ In the following example, the `Corporate` menu items are added and the `Company`
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVSsNtArMJKzvqj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.png)
 
 ## Enable or Disable Menu Items
 
-Menu items can be enabled or disabled by setting the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property to `true` or `false` respectively for the individual `MenuItem` component.
+You can enable and disable the menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in Menu items. To disable menuItems, set the `Disabled` property to true and vice-versa.
 
 In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
 
@@ -130,12 +130,12 @@ In the following example, the Directory header item, Conferences, and Music sub 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSCDjgBiyZzCar?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.png)
 
 ## Show or Hide Menu Items
 
-Menu items can be shown or hidden by setting the [`Hidden`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property to `true` or `false` respectively for the individual `MenuItem` component.
+You can show or hide the menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property in Menu items. To hide the menuItems, set the `Hidden` property to true and vice-versa.
 
 In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
 
@@ -192,5 +192,5 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVesNDqriFJYazL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.png)

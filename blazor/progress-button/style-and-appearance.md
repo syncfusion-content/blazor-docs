@@ -9,11 +9,11 @@ documentation: ug
 
 # Styles and Appearances in Blazor ProgressButton Component
 
-Customize the appearance of the ProgressButton by overriding the built-in CSS selectors of the component. Use scoped styles (for example, by adding a custom class via the CssClass parameter) to limit changes to specific instances. To create a consistent look-and-feel across the application, consider using built-in themes or generating a custom theme with the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the ProgressButton appearance, you need to override the default CSS of ProgressButton component. Find the list of CSS classes and its corresponding section in ProgressButton. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-| .e-progress-btn | Customize the ProgressButton root element. |
-| .e-progress-btn:hover | Customize the ProgressButton on hover. |
-| .e-progress-btn:focus | Customize the ProgressButton when focused (keyboard or programmatic focus). |
-| .e-progress-btn .e-spinner-pane .e-spinner-inner svg .e-path-circle | Customize the spinner visuals within the ProgressButton. |
+| .e-progress-btn | To customize the progress button. |
+| .e-progress-btn:hover | To customize the progress button on hover. |
+| .e-progress-btn:focus | To customize the progress button on focus. |
+| .e-progress-btn .e-spinner-pane .e-spinner-inner svg .e-path-circle | To customize the progress button spinner. |

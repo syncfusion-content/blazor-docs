@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nodes for Blazor Sankey Diagram | Syncfusion
-description: Learn how to define, configure and style nodes in the Syncfusion Blazor Sankey Diagram, including IDs, labels, and appearance settings.
+description: Explore how to define and configure nodes in the Blazor Sankey Diagram to create meaningful and visually appealing flow diagrams.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -11,17 +11,17 @@ documentation: ug
 
 ## Overview
 
-Nodes are fundamental elements in a Sankey Diagram, representing entities or stages in a process flow. This topic describes how to define, customize, and work with nodes in the Blazor Sankey Diagram.
+Nodes are fundamental elements in a Sankey Diagram, representing entities or stages in a process flow. This topic covers how to define, customize, and work with nodes in the Blazor Sankey Diagram.
 
 ## Basic Node Configuration
 
-To add nodes to a Sankey Diagram, define a collection of `SankeyDataNode` objects. Each node requires a unique identifier and optional properties for display and layout.
+To add nodes to your Sankey Diagram, you need to define a collection of `SankeyDataNode` objects. Each node requires a unique ID and can have additional properties for customization.
 
-- Each node must include a unique `Id` property.
-- The `Label` property is of type `SankeyDataLabel` and specifies the text displayed for the node.
-- Node positions are determined automatically based on connections defined in the `Links` collection.
+- Each node must have a unique `Id` property.
+- The `Label` property is of type `SankeyDataLabel` and defines the text displayed for the node.
+- Nodes are automatically positioned based on their connections defined in the `Links` collection.
 
-Here is an example of configuring nodes in the Sankey Diagram:
+Here's an example of how to configure nodes in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -35,13 +35,10 @@ Here is an example of configuring nodes in the Sankey Diagram:
     <SankeyLabelSettings Color="#FFFFFF" FontWeight="400" ></SankeyLabelSettings>
     <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
 </SfSankey>
-
 @code {
     string _backgroundColor = "#0b1320";
-
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
     public List<SankeyDataLink> Links = new List<SankeyDataLink>();
-
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -105,25 +102,25 @@ Here is an example of configuring nodes in the Sankey Diagram:
 {% endtabs %}
 
 
-In this example, nodes represent categories such as sources, energy types, and usage groups.
+In this example, we define multiple nodes representing different categories such as source, energy types, and usage groups.
 
 ![Blazor Sankey Node Customization](images/nodes/sankey-node-basic.png)
 
 ## Customizing Node Appearance
 
-Nodes represent the primary entities in a Sankey Diagram, and their appearance can be tailored to improve clarity and style. Using `SankeyNodeSettings`, properties such as width, alignment, padding, and spacing can be configured to avoid overlap and enhance readability.
+The nodes in a Sankey Diagram represent the primary entities or data points, and their appearance can be tailored to enhance the clarity and style of your visualization. Using the `SankeyNodeSettings` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram, you can configure properties like width, alignment, padding, and more to make the diagram visually distinct and avoid overlap between elements.
 
-- `Width`: Sets the node width. The default value is `20`; increase or decrease to adjust emphasis.
-- `Alignment`: Controls node alignment options:
-  - Left: Aligns nodes to the left edge of the layout.
-  - Top: Aligns nodes to the top edge of the layout.
-  - Stretch: Stretches nodes to fill available space.
-- `Offset`: Applies an additional offset relative to the alignment to fine‑tune placement.
-- `Padding`: Defines spacing around nodes to prevent overlap with other elements.
-- `Color`: Customizes the fill color of nodes (configurable).
-- `Opacity`: Adjusts node transparency (configurable).
+- **`Width`**: Specifies the width of the nodes. The default value is `20`, but it can be increased or decreased to adjust the visual prominence of nodes in the diagram.
+- **`Alignment`**: Determines the alignment of nodes. Options include:
+  - **Left**: Aligns nodes to the left edge of the layout.
+  - **Top**: Aligns nodes to the top edge of the layout.
+  - **Stretch**: Stretches the nodes across the layout to fill available space.
+- **`Offset`**: Sets an additional offset for nodes based on their alignment, allowing fine-grained control over node placement.
+- **`Padding`**: Defines the spacing around nodes to prevent overlapping with other elements.
+- **`Color`**: Lets you customize the fill color of the nodes (not shown in the example but configurable).
+- **`Opacity`**: Adjusts the transparency level of the nodes (not shown in the example but configurable).
 
-Example:
+Below is an example demonstrating the customization of node appearance:
 
 {% tabs %}
 {% highlight razor %}
@@ -139,12 +136,12 @@ Example:
 
 ## Key Considerations
 
-- Use meaningful IDs and labels to improve diagram readability.
-- Adjust node width, padding, and alignment to maintain visual hierarchy and spacing.
-- Define links to accurately represent relationships and flow between nodes.
-- Leverage `SankeyLinkSettings` and `SankeyLabelSettings` to style links and labels consistently.
+- Use meaningful IDs and labels for nodes to improve diagram readability.
+- Adjust node width, padding, and alignment to create clear and visually appealing Sankey diagrams.
+- Consider the relationships between nodes when defining links to accurately represent data flow.
+- Utilize the `SankeyLinkSettings` and `SankeyLabelSettings` to further customize the appearance of links and labels in the diagram.
 
-Mastering node configuration enables creation of rich, informative flow diagrams that communicate complex processes and relationships effectively. The example demonstrates a comprehensive visualization of energy usage patterns across sectors.
+By mastering node configuration in the Blazor Sankey Diagram, you can create rich, informative flow diagrams that effectively communicate complex processes or relationships in your data. The example provided demonstrates how to create a comprehensive visualization of device usage patterns across different demographic groups.
 
 ## See also
 

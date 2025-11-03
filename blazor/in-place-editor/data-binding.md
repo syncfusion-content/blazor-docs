@@ -3,7 +3,7 @@ layout: post
 title: Data Binding in Blazor In-place Editor Component | Syncfusion
 description: Checkout and learn here all about Data Binding in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
-control: In-place Editor 
+control: In Place Editor 
 documentation: ug
 ---
 

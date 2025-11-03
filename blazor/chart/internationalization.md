@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internationalization in Blazor Charts Component | Syncfusion
-description: Check out and learn here all about Internationalization in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Internationalization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,27 +9,28 @@ documentation: ug
 
 # Internationalization in Blazor Charts Component
 
-Internationalization enables the Blazor Charts component to adapt for users from any culture, region, or language. The following [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) elements display content based on internationalization settings:
+Internationalization is the process of designing and developing a component that can be easily adapted for users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 
-* Data label
-* Axis label
-* Tooltip
+* Data label.
+* Axis label.
+* Tooltip.
 
 <!-- markdownlint-disable MD036 -->
 ## Globalization
 
-The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property in the axis globalize number, date, and time values for [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
+[LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property in axis is used to globalize the number, date and time value of the elements such as [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
 
-In the example below, axis, point and tooltip labels are globalized to EUR.
+In the below example, axis, point and tooltip labels are globalized to EUR.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Average Sales Comparison">
-    <ChartPrimaryXAxis Title="Year" />
+    <ChartPrimaryXAxis Title="Year"></ChartPrimaryXAxis>
 
-    <ChartPrimaryYAxis LabelFormat="c" Title="Sales Amount in Millions" />
+    <ChartPrimaryYAxis LabelFormat="c" Title="Sales Amount in Millions">
+    </ChartPrimaryYAxis>
 
     <ChartTooltipSettings Enable="true" Format="${series.name} <br>${point.x} : ${point.y}">
     </ChartTooltipSettings>
@@ -48,7 +49,7 @@ In the example below, axis, point and tooltip labels are globalized to EUR.
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -58,12 +59,12 @@ In the example below, axis, point and tooltip labels are globalized to EUR.
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 1900, Y = 4, Y1 = 2.6 },
-        new ChartData { X = 1920, Y = 3.0, Y1 = 2.8 },
-        new ChartData { X = 1940, Y = 3.8, Y1 = 2.6},
-        new ChartData { X = 1960, Y = 3.4, Y1 = 3 },
-        new ChartData { X = 1980, Y = 3.2, Y1 = 3.6 },
-        new ChartData { X = 2000, Y = 3.9, Y1 = 3 }
+        new ChartData {X= 1900, Y= 4, Y1= 2.6 },
+        new ChartData{ X= 1920, Y= 3.0, Y1= 2.8 },
+        new ChartData{ X= 1940, Y= 3.8, Y1= 2.6},
+        new ChartData{ X= 1960, Y= 3.4, Y1= 3 },
+        new ChartData{ X= 1980, Y= 3.2, Y1= 3.6 },
+        new ChartData{ X= 2000, Y= 3.9, Y1= 3 }
     };
 }
 
@@ -74,7 +75,7 @@ In the example below, axis, point and tooltip labels are globalized to EUR.
 
 ## Label format
 
-Learn more about axis label formats for different axis types:
+Learn more about axis label format in-relation to axis types from the pages below.
 
 * [Numeric Label Format](./numeric-axis#label-format)
 * [DateTime Label Format](./date-time-axis#label-format)

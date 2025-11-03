@@ -7,20 +7,20 @@ control: Accordion
 documentation: ug
 ---
 
-# Prevent Expand or Collapse Actions in Blazor Accordion Items
+# Prevent the Expand or Collapse Item in Blazor Accordion Component
 
-The Syncfusion Blazor Accordion component allows you to control the expand and collapse behavior of its items under specific conditions. This functionality is crucial when you have interactive elements within the Accordion item headers, such as buttons or dropdowns, and you want their interaction to prevent the Accordion item itself from changing its expanded state. 
+You can prevent the expand and collapse actions of an accordion item for specific conditions. For example, if there is a button in the accordion header, clicking on it should prevent the accordion item from expanding or collapsing. 
 
-This controlled behavior is achieved by utilizing the Accordion component's [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events. These events provide an `EventArgs` object with a `Cancel` property. Setting `args.Cancel = true;` within these event handlers will effectively stop the Accordion item from expanding or collapsing.
+This can be achieved by adding conditional logic in the Accordion's [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events.
 
-The following code example demonstrates how to prevent expand and collapse actions when interacting with controls embedded directly inside the Accordion item headers:
+The following code example demonstrates how to prevent expand and collapse actions when interacting with controls inside the accordion header:
 
-*   **DropDownList**: The Accordion item's expand/collapse is prevented when:
-    *   The dropdown is opened using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event.
-    *   The dropdown is closed using the [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event.
-    *   An item is selected using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event.
+* **DropDownList** - Prevents accordion item expand/collapse when:
+  * Opening the dropdown using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event
+  * Closing the dropdown using the [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event
+  * Selecting an item using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event
 
-*   **Button**: The Accordion item's expand/collapse is prevented when clicking the button using its `onclick` event.
+* **Button** - Prevents accordion item expand/collapse when clicking the button using the `onclick` event
 
 
 ```cshtml

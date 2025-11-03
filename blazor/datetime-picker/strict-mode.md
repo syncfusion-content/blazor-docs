@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strict Mode in Blazor Datetime Picker Component | Syncfusion
-description: Learn how StrictMode works in the Syncfusion Blazor DateTimePicker, including behavior for invalid and out-of-range input with Min and Max date-time limits.
+description: Checkout and learn here all about Strict Mode in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
@@ -9,12 +9,13 @@ documentation: ug
 
 # Strict Mode in Blazor Datetime Picker Component
 
-The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) property controls how typed input is validated against the configured `Min` and `Max` range. When enabled, only valid date and time values within the specified range are accepted. If the entered value is invalid, the component retains the previous valid value. If the entered value is out of range, the component clamps the value to the nearest boundary (`Min` or `Max`).
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) is an act, that allows the users to enter only the valid date and time within the specified `Min/Max` range in text box. If the input entered is invalid, then the component will stay with the previous value. Else, if the datetime is out of range, then the component will set the datetime to the Min/Max value.
 
-The following example demonstrates the DateTimePicker in `StrictMode` with a `Min`/`Max` range of `5/5/2019 2:00 AM` to `5/25/2019 2:00 AM`. Only valid values within the range are accepted.
+The following example demonstrates the DateTimePicker in `StrictMode` with Min/Max range of `5/5/2019 2:00 AM` to `5/25/2019 2:00 AM`. Here, it allows to enter only the valid date and time within the specified range.
 
-- If an out-of-range value such as `5/28/2019` is entered, the value is set to the `Max` value (`5/25/2019 2:00 AM`).
-- If an invalid date is entered, the value remains at the previous valid value.
+* If you are trying to enter the out-of-range value like `5/28/2019`, then the value will set to the `Max` value as `5/25/2019 2:00 AM` since the value 28 is greater than the `Max` value of 25.
+
+* If you are trying to enter the invalid date, then the Value will stay with the previous value.
 
 The following code demonstrates the DateTimePicker with StrictMode `true`.
 
@@ -32,12 +33,13 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 
 ![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
 
-By default, `StrictMode` is `false`. In this state, the textbox allows invalid or out-of-range date and time values to be entered.
+By default, the DateTimePicker act in `StrictMode` as `false` state, that allows you to enter the invalid or out-of-range datetime in text box.
 
-- If the value is invalid, the model becomes `null`.
-- If the value is out of range, the model can hold the out-of-range value. The input is highlighted with an `error` class to indicate an invalid or out-of-range entry.
+If the datetime is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicate the datetime is out of range or invalid.
 
-The following code demonstrates `StrictMode` as `false`. In this mode, valid and invalid values can be entered in the textbox.
+The following code demonstrates the `StrictMode` as `false`. Here, it allows to enter the valid or invalid value in textbox.
+
+If you are entering the out-of-range or invalid datetime value, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicate the datetime is out of range or invalid.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -51,6 +53,8 @@ The following code demonstrates `StrictMode` as `false`. In this mode, valid and
 }
 ```
 
+
+
 ![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
 
-N> If the values of `Min` or `Max` are changed through code-behind, update the `Value` property to ensure it remains within the defined range. Calendar/time list selection always respects `Min` and `Max`; disabled dates and times cannot be selected from the popup.
+N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
