@@ -36,7 +36,7 @@ documentation: ug
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -85,7 +85,7 @@ The following code example represents how to create a TextAnnotation and connect
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -101,9 +101,9 @@ The following code example represents how to create a TextAnnotation and connect
             // Unique Id of the node.
             ID = "node1",
             // Sets the type of shape to Bpmn and shape to activity.
-            Shape = new BpmnActivity() 
-            { 
-                ActivityType = BpmnActivityType.Task 
+            Shape = new BpmnActivity()
+            {
+                ActivityType = BpmnActivityType.Task
             },
         };
         nodes.Add(node1);
@@ -134,7 +134,6 @@ The following code example represents how to create a TextAnnotation and connect
         nodes.Add(node2);
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIWNXnKpTiBXyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

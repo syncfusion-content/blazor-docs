@@ -33,12 +33,12 @@ The following code example explains how to create an association.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -48,8 +48,8 @@ The following code example explains how to create an association.
             // Unique Id of the connector.
             ID = "connector1",
             // Start and end point of the connector
-            SourcePoint = new DiagramPoint () { X = 100, Y = 200 },
-            TargetPoint = new DiagramPoint () { X = 300, Y = 300 },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
             // Sets the type to Bpmn, flow to AssociationFlow.
             Shape = new BpmnFlow()
             {
@@ -90,12 +90,12 @@ The following code example explains how to create a sequence flow.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -149,12 +149,12 @@ The following code example explains how to define a message flow.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {

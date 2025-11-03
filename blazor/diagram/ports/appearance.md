@@ -28,7 +28,7 @@ The following code shows how to change the appearance of the port.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -53,9 +53,9 @@ The following code shows how to change the appearance of the port.
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style = new ShapeStyle()
-                    { 
-                        Fill = "red", 
-                        StrokeColor = "black", 
+                    {
+                        Fill = "red",
+                        StrokeColor = "black",
                         StrokeWidth = 2
                     },
                     Width = 12,
@@ -106,7 +106,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -131,7 +131,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style = new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
-                    Width = 12, 
+                    Width = 12,
                     Height = 12,
                     // Sets the shape of the port as Custom .
                     Shape = PortShapes.Custom,
@@ -171,10 +171,13 @@ The following code shows how to set the `AdditionalInfo` value for a port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -183,25 +186,25 @@ The following code shows how to set the `AdditionalInfo` value for a port.
         PortInfo.Add("portInfo", "Port A");
         // Create a port with additional info.
         PointPort port = new PointPort()
-            {
-                Offset = new DiagramPoint { X = 0.5, Y = 0.5 },
-                Visibility=PortVisibility.Visible,
-                AdditionalInfo = PortInfo
-            };
+        {
+            Offset = new DiagramPoint { X = 0.5, Y = 0.5 },
+            Visibility = PortVisibility.Visible,
+            AdditionalInfo = PortInfo
+        };
         // A node is created and stored in nodes collection.
         Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                OffsetX = 250,
-                OffsetY = 250,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6BA5D7",
-                    StrokeColor = "white"
-                },
-                Ports = new DiagramObjectCollection<PointPort>  { port }
-            };
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Ports = new DiagramObjectCollection<PointPort> { port }
+        };
         // Add node.
         nodes.Add(node);
     }

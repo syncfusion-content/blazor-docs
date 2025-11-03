@@ -23,7 +23,7 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -37,15 +37,14 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Content = "Node1",
                     RotationReference = AnnotationRotationReference.Parent,
                 }
             },
-           
         };
-         Node node2 = new Node()
+        Node node2 = new Node()
         {
             ID = "node2",
             Width = 100,
@@ -54,13 +53,12 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     Content = "Node2",
                     RotationReference = AnnotationRotationReference.Page,
                 }
             },
-           
         };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -85,10 +83,13 @@ The following code examples illustrate how to configure `RotationAngle` for an a
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -98,15 +99,15 @@ The following code examples illustrate how to configure `RotationAngle` for an a
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
-    { 
-        new ShapeAnnotation 
-        { 
-            Content = "Node",
-            ID = "Annotation",
-            RotationAngle = 30,    
-        }
-    },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Content = "Node",
+                    ID = "Annotation",
+                    RotationAngle = 30,
+                }
+            },
         };
         nodes.Add(node);
     }

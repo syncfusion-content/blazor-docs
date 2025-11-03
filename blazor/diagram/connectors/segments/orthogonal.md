@@ -22,7 +22,7 @@ documentation: ug
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -36,7 +36,7 @@ documentation: ug
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-             //Specify the segments type as Orthogonal.
+            //Specify the segments type as Orthogonal.
             Type = ConnectorSegmentType.Orthogonal,
             TargetDecorator = new DecoratorSettings()
             {
@@ -70,7 +70,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -88,18 +88,18 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
             //Create a new segment with length and direction.
             Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
-                new OrthogonalSegment 
+                new OrthogonalSegment
                 {
                     Length = 100,
                     Type = ConnectorSegmentType.Orthogonal,
                     Direction = Direction.Right
                 },
-                new OrthogonalSegment 
+                new OrthogonalSegment
                 {
                     Length = 100,
                     Type = ConnectorSegmentType.Orthogonal,
                     Direction = Direction.Bottom,
-                } 
+                }
             },
             TargetDecorator = new DecoratorSettings()
             {
@@ -130,20 +130,20 @@ N> Ensure the connector type and each segment type are both set to **Orthogonal*
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     //Initialize the diagram's node collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
         // Enable the segment editing.
+        Connector Connector = new Connector()
         {
             ID = "Connector2",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
@@ -191,12 +191,15 @@ The following code example illustrates how to customize the orthogonal segment t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
+
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
@@ -206,7 +209,7 @@ The following code example illustrates how to customize the orthogonal segment t
             Type = ConnectorSegmentType.Orthogonal,
             SourcePoint = new DiagramPoint { X = 400, Y = 100 },
             TargetPoint = new DiagramPoint { X = 500, Y = 200 },
-            SegmentThumbSettings = new SegmentThumbSettings() {Shape = SegmentThumbShapes.IndentedArrow}
+            SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.IndentedArrow }
         };
         connectors.Add(Connector);
     }
@@ -224,13 +227,15 @@ The following code example illustrates how to customize the orthogonal segment t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors" ConnectorSegmentThumb="@segmentThumbSettings">
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors" ConnectorSegmentThumb="@segmentThumbSettings">
 </SfDiagramComponent>
+
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    SegmentThumbSettings segmentThumbSettings = new SegmentThumbSettings(){Shape = SegmentThumbShapes.Fletch};
+    private SfDiagramComponent Diagram;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SegmentThumbSettings segmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Fletch };
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()

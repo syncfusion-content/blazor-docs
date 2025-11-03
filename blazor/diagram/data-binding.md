@@ -36,8 +36,8 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-  <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing" >
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -47,14 +47,14 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int left = 40;
+    private int top = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -70,7 +70,7 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
     }
 
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
@@ -78,7 +78,8 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", ParentId= "parent", ChartType= "right", Color= "#71AF17" },
@@ -99,34 +100,34 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" 
+<SfDiagramComponent @ref="@Diagram"
                     Height="499px"
-                    InteractionController="DiagramInteractions.ZoomPan" 
-                    ConnectorCreating="@ConnectorDefaults" 
+                    InteractionController="DiagramInteractions.ZoomPan"
+                    ConnectorCreating="@ConnectorDefaults"
                     NodeCreating="@NodeDefaults">
-    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
-    <Layout @bind-Type="type" 
-            @bind-HorizontalSpacing="@HorizontalSpacing" 
-            @bind-Orientation="@orientation" 
-            @bind-VerticalSpacing="@VerticalSpacing" 
-            @bind-HorizontalAlignment="@horizontalAlignment" 
-            @bind-VerticalAlignment="@verticalAlignment" 
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource" />
+    <Layout @bind-Type="type"
+            @bind-HorizontalSpacing="@HorizontalSpacing"
+            @bind-Orientation="@orientation"
+            @bind-VerticalSpacing="@VerticalSpacing"
+            @bind-HorizontalAlignment="@horizontalAlignment"
+            @bind-VerticalAlignment="@verticalAlignment"
             GetLayoutInfo="GetLayoutInfo">
-        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50" />
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     // Specify the layout type.
-    LayoutType type = LayoutType.HierarchicalTree;
+    private LayoutType type = LayoutType.HierarchicalTree;
     // Specify the orientation of the layout.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
+    private LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
 
     // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
@@ -172,7 +173,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     }
 
     // Create the hierarchical details with needed properties.
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Name { get; set; }
         public string FillColor { get; set; }
@@ -180,7 +181,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     }
 
     // Create the data source with node name and fill color values.
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
@@ -218,42 +219,37 @@ The following code example illustrates how to bind ExpandoObject data with the d
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" 
-                    Height="499px"
-                    InteractionController="DiagramInteractions.ZoomPan" 
-                    ConnectorCreating="@ConnectorDefaults" 
-                    NodeCreating="@NodeDefaults">
-    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
-    <Layout @bind-Type="type" 
-            @bind-HorizontalSpacing="@HorizontalSpacing" 
-            @bind-Orientation="@orientation" 
-            @bind-VerticalSpacing="@VerticalSpacing" 
-            @bind-HorizontalAlignment="@horizontalAlignment" 
-            @bind-VerticalAlignment="@verticalAlignment" 
-            GetLayoutInfo="GetLayoutInfo">
-        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
+<SfDiagramComponent @ref="@Diagram" Height="499px" InteractionController="DiagramInteractions.ZoomPan"
+                    ConnectorCreating="@ConnectorDefaults" NodeCreating="@NodeDefaults">
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource" />
+    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-Orientation="@orientation"
+            @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment"
+            @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50" />
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     // Specify the layout type.
-    LayoutType type = LayoutType.HierarchicalTree;
+    private LayoutType type = LayoutType.HierarchicalTree;
     // Specify the orientation of the layout.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
-    public List<ExpandoObject> DataSource { get; set; }
-    public List<ExpandoObject> ExpandoData = new List<ExpandoObject>();
+    private LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
+    private List<ExpandoObject> DataSource { get; set; }
+    private List<ExpandoObject> ExpandoData = new List<ExpandoObject>();
+
     public class ExpandoObject
-    {   
+    {
         public string Name { get; set; }
         public string Category { get; set; }
         public string FillColor { get; set; }
     }
+
     // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
     {
@@ -294,14 +290,15 @@ The following code example illustrates how to bind ExpandoObject data with the d
                 Content = hierarchicalData.Name,
                 Style =new TextStyle(){Color = "white"}
             }
-        };     
+        };
     }
 
-     protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         this.DataSource = GetData();
     }
-    public List<ExpandoObject> GetData()
+
+    private List<ExpandoObject> GetData()
     {
         ExpandoData.Clear();
         dynamic Member1 = new ExpandoObject();
@@ -406,36 +403,29 @@ The following code example illustrates how to bind DynamicObject data with the d
 @using Syncfusion.Blazor.Diagram
 @using System.Dynamic
 
-<SfDiagramComponent @ref="@Diagram" 
-                    Height="499px"
-                    InteractionController="DiagramInteractions.ZoomPan" 
-                    ConnectorCreating="@ConnectorDefaults" 
-                    NodeCreating="@NodeDefaults">
-    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
-    <Layout @bind-Type="type" 
-            @bind-HorizontalSpacing="@HorizontalSpacing" 
-            @bind-Orientation="@orientation" 
-            @bind-VerticalSpacing="@VerticalSpacing" 
-            @bind-HorizontalAlignment="@horizontalAlignment" 
-            @bind-VerticalAlignment="@verticalAlignment" 
-            GetLayoutInfo="GetLayoutInfo">
-        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
+<SfDiagramComponent @ref="@Diagram" Height="499px" InteractionController="DiagramInteractions.ZoomPan"
+                    ConnectorCreating="@ConnectorDefaults" NodeCreating="@NodeDefaults">
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource" />
+    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-Orientation="@orientation"
+            @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment"
+            @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50" />
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     // Specify the layout type.
-    LayoutType type = LayoutType.HierarchicalTree;
+    private LayoutType type = LayoutType.HierarchicalTree;
     // Specify the orientation of the layout.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
-    public List<HierarchicalDetails> DataSource { get; set; }
-    public List<HierarchicalDetails> ExpandoData = new List<HierarchicalDetails>();
+    private LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    private int HorizontalSpacing = 30;
+    private int VerticalSpacing = 30;
+    private List<HierarchicalDetails> DataSource { get; set; }
+    private List<HierarchicalDetails> ExpandoData = new List<HierarchicalDetails>();
 
     // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
@@ -477,10 +467,10 @@ The following code example illustrates how to bind DynamicObject data with the d
                 Content = hierarchicalData.Name,
                 Style =new TextStyle(){Color = "white"}
             }
-        };     
+        };
     }
 
-    public class HierarchicalDetails:DynamicObject
+    public class HierarchicalDetails : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
@@ -489,6 +479,7 @@ The following code example illustrates how to bind DynamicObject data with the d
             string name = binder.Name;
             return dictionary.TryGetValue(name, out result);
         }
+
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
             dictionary[binder.Name] = value;
@@ -499,31 +490,30 @@ The following code example illustrates how to bind DynamicObject data with the d
         {
             return this.dictionary?.Keys;
         }
-
     }
+
     protected override void OnInitialized()
     {
         this.DataSource = GetData();
     }
-    public List<HierarchicalDetails> GetData()
+
+    private List<HierarchicalDetails> GetData()
     {
         ExpandoData.Clear();
-        dynamic Member1 = new HierarchicalDetails();
 
+        dynamic Member1 = new HierarchicalDetails();
         Member1.Name = "Diagram";
         Member1.Category = "";
         Member1.FillColor = "#71AF17";
         ExpandoData.Add(Member1);
 
         dynamic Member2 = new HierarchicalDetails();
-
         Member2.Name = "Layout";
         Member2.Category = "Diagram";
         Member2.FillColor = "#659be5";
         ExpandoData.Add(Member2);
 
         dynamic Member3 = new HierarchicalDetails();
-
         Member3.Name = "Tree layout";
         Member3.Category = "Layout";
         Member3.FillColor = "#659be5";
@@ -537,49 +527,42 @@ The following code example illustrates how to bind DynamicObject data with the d
         ExpandoData.Add(Member7);
 
         dynamic Member8 = new HierarchicalDetails();
-
         Member8.Name = "Hierarchical tree";
         Member8.Category = "Tree layout";
         Member8.FillColor = "#659be5";
         ExpandoData.Add(Member8);
 
         dynamic Member14 = new HierarchicalDetails();
-
         Member14.Name = "Radial tree";
         Member14.Category = "Tree layout";
         Member14.FillColor = "#659be5";
         ExpandoData.Add(Member14);
 
         dynamic Member9 = new HierarchicalDetails();
-
         Member9.Name = "Mind map";
         Member9.Category = "Hierarchical tree";
         Member9.FillColor = "#659be5";
         ExpandoData.Add(Member9);
 
         dynamic Member10 = new HierarchicalDetails();
-
         Member10.Name = "Family tree";
         Member10.Category = "Hierarchical tree";
         Member10.FillColor = "#659be5";
         ExpandoData.Add(Member10);
 
         dynamic Member4 = new HierarchicalDetails();
-
         Member4.Name = "Management";
         Member4.Category = "Organizational chart";
         Member4.FillColor = "#659be5";
         ExpandoData.Add(Member4);
 
         dynamic Member11 = new HierarchicalDetails();
-
         Member11.Name = "Human resources";
         Member11.Category = "Management";
         Member11.FillColor = "#659be5";
         ExpandoData.Add(Member11);
 
         dynamic Member12 = new HierarchicalDetails();
-
         Member12.Name = "University";
         Member12.Category = "Management";
         Member12.FillColor = "#659be5";
@@ -603,8 +586,7 @@ The following sample code demonstrates binding local data through SfDataManager 
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                    NodeCreating="NodeDefaults" SetNodeTemplate="SetTemplate">
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" NodeCreating="NodeDefaults" SetNodeTemplate="SetTemplate">
     <DataSourceSettings ID="Name" ParentID="Category">
         <SfDataManager Json="DataSource" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
     </DataSourceSettings>
@@ -613,13 +595,13 @@ The following sample code demonstrates binding local data through SfDataManager 
 
 @code
 {
-    SfDiagramComponent Diagram;
-    float x = 100;
-    float y = 100;
-    Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
+    private SfDiagramComponent Diagram;
+    private float x = 100;
+    private float y = 100;
+    private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
     // Create the hierarchical details with needed properties.
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Name { get; set; }
         public string FillColor { get; set; }
@@ -627,7 +609,7 @@ The following sample code demonstrates binding local data through SfDataManager 
     }
 
     // Create the data source with node name and fill color values.
-    public HierarchicalDetails[] DataSource = new HierarchicalDetails[]
+    private HierarchicalDetails[] DataSource = new HierarchicalDetails[]
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
@@ -635,7 +617,7 @@ The following sample code demonstrates binding local data through SfDataManager 
         new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
     };
-    
+
     // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
@@ -679,23 +661,25 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 @using Syncfusion.Blazor.Data
 @inject HttpClient Http
 
-
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramOData" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramOData" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor">
+            </SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
     </SfDiagramComponent>
 </div>
 
-@code {
-    SfDiagramComponent Diagrams;
+@code
+{
+    private SfDiagramComponent Diagrams;
     private float x = 100;
     private float y = 100;
 
-    public class Employee {
+    private class Employee
+    {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public int? ReportsTo { get; set; }
@@ -703,7 +687,8 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 
     private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
-    private void OnNodeCreating(IDiagramObject obj) {
+    private void OnNodeCreating(IDiagramObject obj)
+    {
         Node node = obj as Node;
         node.OffsetX = x;
         node.OffsetY = y;
@@ -712,16 +697,18 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 8 };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
-
         Dictionary<string, object> data = node.Data as Dictionary<string, object>;
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation() {
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
                 Content = data["FirstName"].ToString(),
                 Style = new TextStyle() { Color = "white" }
             }
         };
 
-        switch (data["FirstName"].ToString()) {
+        switch (data["FirstName"].ToString())
+        {
             case "Andrew":
                 node.Style.Fill = "#3A4857";
                 break;
@@ -746,7 +733,8 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
         }
     }
 
-    private void OnConnectorCreating(IDiagramObject obj) {
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
         Connector connector = obj as Connector;
         connector.Style.StrokeColor = "#048785";
         connector.Type = ConnectorSegmentType.Orthogonal;
@@ -754,7 +742,6 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeWZNQpRDIabQI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -770,23 +757,25 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
 @using Syncfusion.Blazor.Data
 @inject HttpClient Http
 
-
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramODataV4" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramODataV4" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor">
+            </SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
     </SfDiagramComponent>
 </div>
 
-@code {
-    SfDiagramComponent Diagrams;
+@code
+{
+    private SfDiagramComponent Diagrams;
     private float x = 100;
     private float y = 100;
 
-    public class Employee {
+    private class Employee
+    {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public int? ReportsTo { get; set; }
@@ -794,7 +783,8 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
 
     private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
-    private void OnNodeCreating(IDiagramObject obj) {
+    private void OnNodeCreating(IDiagramObject obj)
+    {
         Node node = obj as Node;
         node.OffsetX = x;
         node.OffsetY = y;
@@ -803,16 +793,18 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 8 };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
-
         Dictionary<string, object> data = node.Data as Dictionary<string, object>;
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation() {
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation() 
+            {
                 Content = data["FirstName"].ToString(),
                 Style = new TextStyle() { Color = "white" }
             }
         };
 
-        switch (data["FirstName"].ToString()) {
+        switch (data["FirstName"].ToString())
+        {
             case "Andrew":
                 node.Style.Fill = "#3A4857";
                 break;
@@ -837,7 +829,8 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
         }
     }
 
-    private void OnConnectorCreating(IDiagramObject obj) {
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
         Connector connector = obj as Connector;
         connector.Style.StrokeColor = "#048785";
         connector.Type = ConnectorSegmentType.Orthogonal;
@@ -845,7 +838,6 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXreWtNmTdMAJWbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -865,23 +857,25 @@ The following sample code demonstrates how to bind remote data to the Diagram co
 @using Syncfusion.Blazor.Data
 @inject HttpClient Http
 
-
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/EmployeeDetails" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/EmployeeDetails" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
+            </SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
     </SfDiagramComponent>
 </div>
 
-@code {
-    SfDiagramComponent Diagrams;
+@code
+{
+    private SfDiagramComponent Diagrams;
     private float x = 100;
     private float y = 100;
 
-    public class Employee {
+    private class Employee
+    {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public int? ReportsTo { get; set; }
@@ -889,7 +883,8 @@ The following sample code demonstrates how to bind remote data to the Diagram co
 
     private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
-    private void OnNodeCreating(IDiagramObject obj) {
+    private void OnNodeCreating(IDiagramObject obj)
+    {
         Node node = obj as Node;
         node.OffsetX = x;
         node.OffsetY = y;
@@ -898,16 +893,18 @@ The following sample code demonstrates how to bind remote data to the Diagram co
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 8 };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
-
         Dictionary<string, object> data = node.Data as Dictionary<string, object>;
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation() {
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
                 Content = data["FirstName"].ToString(),
                 Style = new TextStyle() { Color = "white" }
             }
         };
 
-        switch (data["FirstName"].ToString()) {
+        switch (data["FirstName"].ToString())
+        {
             case "Andrew":
                 node.Style.Fill = "#3A4857";
                 break;
@@ -932,7 +929,8 @@ The following sample code demonstrates how to bind remote data to the Diagram co
         }
     }
 
-    private void OnConnectorCreating(IDiagramObject obj) {
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
         Connector connector = obj as Connector;
         connector.Style.StrokeColor = "#048785";
         connector.Type = ConnectorSegmentType.Orthogonal;
@@ -940,7 +938,6 @@ The following sample code demonstrates how to bind remote data to the Diagram co
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSsDXwpHLVLxIu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -961,19 +958,22 @@ The following sample code demonstrates how to bind data to the Diagram component
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/DiagramRemoteAPI" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/DiagramRemoteAPI" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
+            </SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
     </SfDiagramComponent>
 </div>
 
-@code {
-    SfDiagramComponent Diagrams;
+@code
+{
+    private SfDiagramComponent Diagrams;
     private float x = 100;
     private float y = 100;
 
-    public class Employee {
+    private class Employee
+    {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public int? ReportsTo { get; set; }
@@ -981,7 +981,8 @@ The following sample code demonstrates how to bind data to the Diagram component
 
     private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
-    private void OnNodeCreating(IDiagramObject obj) {
+    private void OnNodeCreating(IDiagramObject obj)
+    {
         Node node = obj as Node;
         node.OffsetX = x;
         node.OffsetY = y;
@@ -990,7 +991,6 @@ The following sample code demonstrates how to bind data to the Diagram component
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 8 };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
-
         Dictionary<string, object> data = node.Data as Dictionary<string, object>;
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
             new ShapeAnnotation() {
@@ -999,7 +999,8 @@ The following sample code demonstrates how to bind data to the Diagram component
             }
         };
 
-        switch (data["FirstName"].ToString()) {
+        switch (data["FirstName"].ToString())
+        {
             case "Andrew":
                 node.Style.Fill = "#3A4857";
                 break;
@@ -1024,7 +1025,8 @@ The following sample code demonstrates how to bind data to the Diagram component
         }
     }
 
-    private void OnConnectorCreating(IDiagramObject obj) {
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
         Connector connector = obj as Connector;
         connector.Style.StrokeColor = "#048785";
         connector.Type = ConnectorSegmentType.Orthogonal;
@@ -1032,7 +1034,6 @@ The following sample code demonstrates how to bind data to the Diagram component
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
     }
-
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSMZjmfnrvrKJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -1061,16 +1062,20 @@ The following sample code demonstrates implementing custom data binding using cu
         </div>
     </div>
 </div>
-@functions{
-    SfDiagramComponent? diagram;
-    public static List<EmployeeDetails> employeeDetails { get; set; }
-    Layout LayoutValue = new Layout() { };
+
+@functions
+{
+    private SfDiagramComponent? diagram;
+    private static List<EmployeeDetails> employeeDetails { get; set; }
+    private Layout LayoutValue = new Layout() { };
+
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         options.EnableSubTree = true;
         options.Orientation = Orientation.Horizontal;
         return options;
     }
+
     private void NodeCreating(IDiagramObject obj)
     {
         Node? node = obj as Node;
@@ -1094,6 +1099,7 @@ The following sample code demonstrates implementing custom data binding using cu
             node.Style = new ShapeStyle() { Fill = data.Color, StrokeColor = "none", StrokeWidth = 2, };
         }
     }
+
     private void ConnectorCreating(IDiagramObject connector)
     {
         Connector? newConnector = connector as Connector;
@@ -1120,24 +1126,18 @@ The following sample code demonstrates implementing custom data binding using cu
         };
     }
 
-    public class EmployeeDetails
+    private class EmployeeDetails
     {
         public string EmployeeID { get; set; }
-
         public string ReportsTo { get; set; }
-
         public string FirstName { get; set; }
-
         public string Designation { get; set; }
-
         public string Country { get; set; }
-
         public string Color { get; set; }
     }
 
-
     // Implementing custom adaptor by extending the DataAdaptor class
-    public class CustomAdaptor : DataAdaptor
+    private class CustomAdaptor : DataAdaptor
     {
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
@@ -1209,6 +1209,7 @@ The following sample code demonstrates implementing CRUD operations for custom b
         </div>
     </div>
 </div>
+
 <div class="row" id="diagram">
     <div class="col-md-10">
         <div id="diagram-space" class="content-wrapper">
@@ -1221,18 +1222,21 @@ The following sample code demonstrates implementing CRUD operations for custom b
         </div>
     </div>
 </div>
-@functions{
-    SfDiagramComponent? diagram;
-    public static List<EmployeeDetails> employeeDetails { get; set; }
-    public static List<EmployeeDetails> Details { get; set; } = new List<EmployeeDetails>();
 
-    Layout LayoutValue = new Layout() { };
+@functions
+{
+    private SfDiagramComponent? diagram;
+    private static List<EmployeeDetails> employeeDetails { get; set; }
+    private static List<EmployeeDetails> Details { get; set; } = new List<EmployeeDetails>();
+    private Layout LayoutValue = new Layout() { };
+
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         options.EnableSubTree = true;
         options.Orientation = Orientation.Horizontal;
         return options;
     }
+
     private void NodeCreating(IDiagramObject obj)
     {
         Node? node = obj as Node;
@@ -1256,6 +1260,7 @@ The following sample code demonstrates implementing CRUD operations for custom b
             node.Style = new ShapeStyle() { Fill = data.Color, StrokeColor = "none", StrokeWidth = 2, };
         }
     }
+
     private void ConnectorCreating(IDiagramObject connector)
     {
         Connector? newConnector = connector as Connector;
@@ -1282,24 +1287,18 @@ The following sample code demonstrates implementing CRUD operations for custom b
         };
     }
 
-    public class EmployeeDetails
+    private class EmployeeDetails
     {
         public string EmployeeID { get; set; }
-
         public string ReportsTo { get; set; }
-
         public string FirstName { get; set; }
-
         public string Designation { get; set; }
-
         public string Country { get; set; }
-
         public string Color { get; set; }
     }
 
-
     // Implementing custom adaptor by extending the DataAdaptor class
-    public class CustomAdaptor : DataAdaptor
+    private class CustomAdaptor : DataAdaptor
     {
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
@@ -1364,19 +1363,19 @@ The following sample code demonstrates implementing CRUD operations for custom b
         }
     }
 
-    public void Read()
+    private void Read()
     {
         Details = new List<EmployeeDetails>();
         Details = diagram.ReadDataAsync().Result as List<EmployeeDetails>;
     }
 
-    public async void Update()
+    private async void Update()
     {
         EmployeeDetails employeeDetails = new EmployeeDetails { EmployeeID = "1", FirstName = "AndrewSimonds", Designation = "CEO", Country = "Australia", ReportsTo = "", Color = "Red" };
         await diagram.UpdateDataAsync("EmployeeID", employeeDetails);
     }
 
-    public async void Insert()
+    private async void Insert()
     {
         EmployeeDetails employeeDetails = new EmployeeDetails()
         {
@@ -1388,10 +1387,9 @@ The following sample code demonstrates implementing CRUD operations for custom b
             Color = "Purple"
         };
         await diagram.InsertDataAsync(employeeDetails);
-
     }
 
-    public async void Delete()
+    private async void Delete()
     {
         await diagram.DeleteDataAsync("EmployeeID", "6");
     }
@@ -1412,43 +1410,46 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 
 <div class="content-wrapper" style="width:100%">
     <div>
-        <SfDiagramComponent @ref="@diagram"  Height="400px" InteractionController="@DiagramInteractions.ZoomPan" 
-                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" >
+        <SfDiagramComponent @ref="@diagram" Height="400px" InteractionController="@DiagramInteractions.ZoomPan"
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
             <DataSourceSettings Id="OrderID" ParentId="CustomerID">
-            <SfDataManager Url="https://localhost:7131/graphql" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+                <SfDataManager Url="https://localhost:7131/graphql" GraphQLAdaptorOptions=@adaptorOptions 
+                               Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
             </DataSourceSettings>
-            <SnapSettings Constraints ="SnapConstraints.ShowLines"></SnapSettings>
+            <SnapSettings Constraints="SnapConstraints.ShowLines"></SnapSettings>
             <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
         </SfDiagramComponent>
     </div>
 </div>
-@code{
-    public SfDiagramComponent diagram;
+
+@code
+{
+    private SfDiagramComponent diagram;
     private float x = 100;
     private float y = 100;
     private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
-        {
-            Query = @"
-            query ordersData($dataManager: DataManagerRequestInput!){
-                ordersData(dataManager: $dataManager) {
-                    count, result { OrderID, CustomerID, EmployeeID, } , aggregates
-                }
-            }",
-            ResolverName = "OrdersData"
-        };
+    {
+        Query = @"
+        query ordersData($dataManager: DataManagerRequestInput!){
+            ordersData(dataManager: $dataManager) {
+                count, result { OrderID, CustomerID, EmployeeID, } , aggregates
+            }
+        }",
+        ResolverName = "OrdersData"
+    };
 
-    public class Order
+    private class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string EmployeeID { get; set; } 
+        public string EmployeeID { get; set; }
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
-
         node.Width = 80;
-        node.Height = 45;        
+        node.Height = 45;
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "#2084c4" };
         Dictionary<string, object> data = node.Data as Dictionary<string, object>;
@@ -1459,27 +1460,27 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
             {
                 if (kvp.Key == "EmployeeID")
                 {
-                    content = kvp.Value.ToString(); 
+                    content = kvp.Value.ToString();
                 }
             }
         }
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            // Annotation is created and stored in the Annotations collection of Node.
+            new ShapeAnnotation
             {
-                // Annotation is created and stored in the Annotations collection of Node.
-                new ShapeAnnotation 
+                Content = content,
+                Style = new TextStyle()
                 {
-                    Content = content,
-                    Style = new TextStyle() 
-                    {
-                        Color = "White",
-                        Bold = true,
-                        FontSize = 12, 
-                        FontFamily = "TimesNewRoman"
-                    }
+                    Color = "White",
+                    Bold = true,
+                    FontSize = 12,
+                    FontFamily = "TimesNewRoman"
                 }
-            };
-      
+            }
+        };
     }
+
     @*End:Hidden*@
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -1567,41 +1568,44 @@ The following variables are passed as a parameter to the mutation method written
         </SfDiagramComponent>
     </div>
 </div>
-@code{
-    public SfDiagramComponent diagram;
+
+@code
+{
+    private SfDiagramComponent diagram;
     private float x = 100;
     private float y = 100;
+
     private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
-    {
-        Query = @"
-        query ordersData($dataManager: DataManagerRequestInput!){
-            ordersData(dataManager: $dataManager) {
-                count, result { OrderID, CustomerID, EmployeeID, } , aggregates
-            }
-        }",
-        Mutation = new GraphQLMutation
         {
-            Insert = @"
+            Query = @"
+            query ordersData($dataManager: DataManagerRequestInput!){
+                ordersData(dataManager: $dataManager) {
+                    count, result { OrderID, CustomerID, EmployeeID, } , aggregates
+                }
+            }",
+            Mutation = new GraphQLMutation
+            {
+                Insert = @"
             mutation create($record: OrderInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
               createOrder(order: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
                 OrderID, CustomerID, EmployeeID
               }
             }",
-            Update = @"
+                Update = @"
             mutation update($record: OrderInput!, $action: String!, $primaryColumnName: String! , $primaryColumnValue: Int!, $additionalParameters: Any) {
               updateOrder(order: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
                 OrderID, CustomerID, EmployeeID
               }
             }",
-            Delete = @"
+                Delete = @"
             mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
               deleteOrder(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
                 OrderID, CustomerID, EmployeeID
               }
             }"
-        },
-        ResolverName = "OrdersData"
-    };
+            },
+            ResolverName = "OrdersData"
+        };
 
     public class Order
     {
@@ -1610,10 +1614,10 @@ The following variables are passed as a parameter to the mutation method written
         public string EmployeeID { get; set; }
 
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
-
         node.Width = 80;
         node.Height = 45;
         node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle };
@@ -1633,20 +1637,20 @@ The following variables are passed as a parameter to the mutation method written
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
                 // Annotation is created and stored in Annotations collection of Node.
-                new ShapeAnnotation
+            new ShapeAnnotation
+            {
+                Content = content,
+                Style = new TextStyle()
                 {
-                    Content = content,
-                    Style = new TextStyle()
-                    {
-                        Color = "White",
-                        Bold = true,
-                        FontSize = 12,
-                        FontFamily = "TimesNewRoman"
-                    }
+                    Color = "White",
+                    Bold = true,
+                    FontSize = 12,
+                    FontFamily = "TimesNewRoman"
                 }
-            };
-
+            }
+        };
     }
+
     @*End:Hidden*@
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -1660,25 +1664,28 @@ The following variables are passed as a parameter to the mutation method written
 
     //CRUD operations
     //To fetch data from the remote service
-    public async void Read()
+    private async void Read()
     {
         var data = await diagram.ReadDataAsync();
     }
+
     //To update data in the remote service
-    public async void Update()
+    private async void Update()
     {
         Order employeeDetails = new Order() { OrderID = 9, EmployeeID = "Craft updated", CustomerID = "5" };
 
         await diagram.UpdateDataAsync("OrderID", employeeDetails);
     }
+
     //To push data to the remote service
-    public async void Insert()
+    private async void Insert()
     {
         Order employeeDetails = new Order() { OrderID = 10, EmployeeID = "Craft new ", CustomerID = "5" };
         await diagram.InsertDataAsync(employeeDetails);
     }
+
     //To delete data in the remote service
-    public async void Delete()
+    private async void Delete()
     {
         await diagram.DeleteDataAsync("OrderID", 5);
     }
@@ -1700,6 +1707,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
             GraphQLQuery.Orders.Insert(index, order);
             return order;
         }
+
         public Order UpdateOrder(Order order, string action, string primaryColumnName, int primaryColumnValue,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
@@ -1711,6 +1719,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
             updatedOrder.OrderDate = order.OrderDate;
             return updatedOrder;
         }
+
         public Order DeleteOrder(int primaryColumnValue, string action, string primaryColumnName,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
@@ -1718,6 +1727,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
             GraphQLQuery.Orders.Remove(deletedOrder);
             return deletedOrder;
         }
+
         public List<Order> BatchUpdate(List<Order>? changed, List<Order>? added,
             List<Order>? deleted, string action, String primaryColumnName,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters, int? dropIndex)
@@ -1755,10 +1765,8 @@ namespace ASPNetCoreGraphQlServer.GraphQl
             }
             return GraphQLQuery.Orders;
         }
-
     }
 }
-
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptorCRUD)
 
@@ -1927,18 +1935,21 @@ Configure the Diagram using the 'SfDataManager' to interact with the created Web
         </DataSourceSettings>
         <Layout Type="Syncfusion.Blazor.Diagram.LayoutType.HierarchicalTree" VerticalSpacing="75" HorizontalSpacing="75" GetLayoutInfo="GetLayoutInfo"></Layout>
     </SfDiagramComponent>
-
 </div>
-@functions{
-    SfDiagramComponent? diagram;
-    public static List<EmployeeDetails> employeeDetails { get; set; }
-    Layout LayoutValue = new Layout() { };
+
+@functions
+{
+    private SfDiagramComponent? diagram;
+    private static List<EmployeeDetails> employeeDetails { get; set; }
+    private Layout LayoutValue = new Layout() { };
+    
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         options.EnableSubTree = true;
         options.Orientation = Orientation.Horizontal;
         return options;
     }
+
     private void NodeCreating(IDiagramObject obj)
     {
         Node? node = obj as Node;
@@ -1956,6 +1967,7 @@ Configure the Diagram using the 'SfDataManager' to interact with the created Web
             };
         }
     }
+
     private void ConnectorCreating(IDiagramObject connector)
     {
         Connector? newConnector = connector as Connector;
@@ -1969,13 +1981,9 @@ Configure the Diagram using the 'SfDataManager' to interact with the created Web
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
-
         public string ReportsTo { get; set; }
-
         public string Name { get; set; }
-
         public string Designation { get; set; }
-
         public string Colour { get; set; }
     }
 }
@@ -1988,7 +1996,7 @@ The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations u
 The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server, which is then visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
 ```csharp
     //To fetch data from the remote service
-    public async void Read()
+    private async void Read()
     {
         var data = await diagram.ReadDataAsync();
     }
@@ -1998,7 +2006,7 @@ The SfDiagramComponent can fetch and display data from remote sources using the 
 The UpdateDataAsync method updates the data on the remote server through an API call. Once the data is updated, the diagram automatically refreshes and displays the latest data from the server.
 ```csharp
     //To update data in the remote service
-    public async void Update()
+    private async void Update()
     {
         EmployeeDetails employeeDetails = new EmployeeDetails()
         {
@@ -2016,7 +2024,7 @@ The UpdateDataAsync method updates the data on the remote server through an API 
 The InsertDataAsync method adds new data to the remote server via an API. Once the data is inserted, the diagram updates itself to include the new nodes and connectors.
 ```csharp
    //To push data to the remote service
-    public async void Insert()
+    private async void Insert()
     {
         EmployeeDetails employeeDetails = new EmployeeDetails()
         {
@@ -2034,7 +2042,7 @@ The InsertDataAsync method adds new data to the remote server via an API. Once t
 The DeleteDataAsync method removes data from the remote server. Once the data is deleted, the diagram refreshes itself to reflect the removal of nodes and connectors.
 ```csharp
     //To delete data in the remote service
-    public async void Delete()
+    private async void Delete()
     {
         await diagram.DeleteDataAsync("EmployeeID", 5);
     }

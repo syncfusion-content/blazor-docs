@@ -28,13 +28,12 @@ To learn more about connector customization, watch the following video:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -87,12 +86,11 @@ The following code example illustrates how to customize the decorator appearance
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -135,7 +133,6 @@ The following code example illustrates how to customize the decorator appearance
                     StrokeWidth = 3
                 }
             }
-
         };
         connectors.Add(Connector);
     }
@@ -160,22 +157,21 @@ Padding adds space between the connector’s end point and the object to where i
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" />
 
 @code
 {
     //Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>() 
+        nodes = new DiagramObjectCollection<Node>()
         {
-          new Node() 
-          {
+            new Node()
+            {
                 OffsetX = 100,
                 OffsetY = 100,
                 Height = 50,
@@ -183,9 +179,9 @@ Padding adds space between the connector’s end point and the object to where i
                 ID = "node1",
                 Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" },
                 Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-          },
-          new Node() 
-          {   
+            },
+            new Node()
+            {
                 OffsetX = 300,
                 OffsetY = 300,
                 Height = 50,
@@ -193,7 +189,7 @@ Padding adds space between the connector’s end point and the object to where i
                 ID = "node2",
                 Style = new ShapeStyle(){ Fill = "#6BA5D7", StrokeColor = "#6BA5D7" },
                 Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-          }
+            }
         };
         Connector Connector = new Connector()
         {
@@ -238,13 +234,12 @@ The following code example illustrates how to enable line bridging.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px"@bind-Constraints="@diagramConstraints" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" @bind-Constraints="@diagramConstraints" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -261,7 +256,8 @@ The following code example illustrates how to enable line bridging.
             },
             SourcePoint = new DiagramPoint()
             {
-                X = 200 , Y = 200
+                X = 200,
+                Y = 200
             },
             TargetPoint = new DiagramPoint()
             {
@@ -271,7 +267,7 @@ The following code example illustrates how to enable line bridging.
             Type = ConnectorSegmentType.Orthogonal,
             TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShape.Arrow ,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
@@ -335,12 +331,11 @@ Corner radius rounds the corners of connectors. Set the radius using the [Corner
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px"  Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -404,12 +399,11 @@ The following code example illustrates how to customize the segment appearance.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -463,12 +457,11 @@ The following code illustrates how to disable selection.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -519,12 +512,11 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" />
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -587,9 +579,9 @@ The following code illustrates how to render a connector based on stack order.
 
 @code
 {
-    SnapConstraints snapConstraints = SnapConstraints.None;
+    private SnapConstraints snapConstraints = SnapConstraints.None;
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -632,9 +624,9 @@ The following code illustrates how to set hit padding for a connector.
 
 @code
 {
-    SnapConstraints snapConstraints = SnapConstraints.None;
+    private SnapConstraints snapConstraints = SnapConstraints.None;
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -670,8 +662,8 @@ The following code example illustrates how to leave space between the connection
 
 @code
 {
-     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -682,7 +674,7 @@ The following code example illustrates how to leave space between the connection
             Height = 100,
             OffsetX = 300,
             OffsetY = 300,
-            
+
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -700,7 +692,7 @@ The following code example illustrates how to leave space between the connection
             SourceID = "node1",
             TargetID = "node2",
             TargetPadding = 10,
-             SourcePadding = 10,
+            SourcePadding = 10,
         };
         connectors.Add(connector1);
     }
@@ -723,8 +715,8 @@ The following code example illustrates how to set connection padding for a conne
 
 @code
 {
-     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -735,7 +727,7 @@ The following code example illustrates how to set connection padding for a conne
             Height = 100,
             OffsetX = 300,
             OffsetY = 300,
-            
+
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -752,7 +744,7 @@ The following code example illustrates how to set connection padding for a conne
             ID = "connector1",
             SourceID = "node1",
             TargetID = "node2",
-           ConnectionPadding = 50,
+            ConnectionPadding = 50,
         };
         connectors.Add(connector1);
     }
@@ -770,71 +762,77 @@ When a node is dropped on a point-to-point connection, it connects as the source
 The following code illustrates how to enable connector splitting and create connections with a new node.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors" EnableConnectorSplitting="true">
 
-</SfDiagramComponent>
-@code {
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors" EnableConnectorSplitting="true" />
+
+@code
+{
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent Diagram;
     // Initialize diagram's connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     // Initialize diagram's node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>() {
-          new Node() {  OffsetX = 100,
-            OffsetY = 100,
-            Height = 50,
-            Width = 100,
-            ID = "node1",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-          },
-          new Node() {  OffsetX = 300,
-            OffsetY = 300,
-            Height = 50,
-            Width = 100,
-            ID = "node2",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-           Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-          },
-          new Node() {  OffsetX = 300,
-            OffsetY = 100,
-            Height = 50,
-            Width = 100,
-            ID = "node3",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-           Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-          }
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node()
+            {
+                OffsetX = 100,
+                OffsetY = 100,
+                Height = 50,
+                Width = 100,
+                ID = "node1",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED",},
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            },
+            new Node()
+            {
+                OffsetX = 300,
+                OffsetY = 300,
+                Height = 50,
+                Width = 100,
+                ID = "node2",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED",},
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            },
+            new Node()
+            {
+                OffsetX = 300,
+                OffsetY = 100,
+                Height = 50,
+                Width = 100,
+                ID = "node3",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED",},
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            }
         };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            //Source node id of the connector.
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                //Source node id of the connector.
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                //Target node id of the connector.
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                // Type of the connector
-                Type = ConnectorSegmentType.Straight,
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
-            };
+                }
+            },
+            //Target node id of the connector.
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            // Type of the connector
+            Type = ConnectorSegmentType.Straight,
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
+        };
         connectors.Add(Connector);
     }
 }
@@ -854,13 +852,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors"/>
 
-@code {
+@code
+{
     private SfDiagramComponent? diagram;
     private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+
     protected override void OnInitialized()
     {
         // Create orthogonal connector with custom segments and styling.
@@ -915,17 +913,17 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
     <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
         <SfButton Content="Update Selected Connectors (Max 5)" IsPrimary="true" OnClick="UpdateSelectedConnectorThumbs" CssClass="btn-selected">
         </SfButton>
-        <SfButton Content="Update All Connectors (Max 6)" OnClick="UpdateAllConnectorThumbs"CssClass="btn-all">
+        <SfButton Content="Update All Connectors (Max 6)" OnClick="UpdateAllConnectorThumbs" CssClass="btn-all">
         </SfButton>
     </div>
-    <SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors">
-    </SfDiagramComponent>
+    <SfDiagramComponent @ref="diagram" id="diagram" Width="1400px" Height="600px" @bind-Connectors="connectors" />
 </div>
 
-@code {
+@code
+{
     private SfDiagramComponent? diagram;
     private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
+
     protected override void OnInitialized()
     {
         // Create orthogonal connector with custom segments and styling.
@@ -963,7 +961,7 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
         };
         connectors.Add(orthogonalConnector);
     }
-    
+
     // Updates MaxSegmentThumbs to 5 for all currently selected connectors at runtime.
     private void UpdateSelectedConnectorThumbs()
     {
@@ -976,7 +974,7 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
             }
         }
     }
-    
+
     // Updates MaxSegmentThumbs to 6 for all connectors in the diagram at runtime.
     private void UpdateAllConnectorThumbs()
     {
@@ -990,7 +988,6 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
         }
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoCDtRUlyaTMHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

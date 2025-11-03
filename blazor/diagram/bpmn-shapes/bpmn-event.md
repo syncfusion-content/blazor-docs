@@ -26,7 +26,7 @@ The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -63,7 +63,6 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [Trigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html#Syncfusion_Blazor_Diagram_BpmnEvent_Trigger) property of the node allows you to set the type of trigger and by default, it is set to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEventTrigger.html#Syncfusion_Blazor_Diagram_BpmnEventTrigger_None). The following code example explains how to create a BPMN trigger.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -72,7 +71,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -101,7 +100,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtresttdBOFpnepH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventType)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnEvent/BpmnEventTrigger)
 
 ![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png)
 

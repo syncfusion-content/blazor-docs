@@ -27,58 +27,59 @@ The following code example explains how to add a phase to a swimlane.
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 150,
-                Width = 450,
-                Phases = new DiagramObjectCollection<Phase>()
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 150,
+            Width = 450,
+            Phases = new DiagramObjectCollection<Phase>()
+            {
+                new Phase()
                 {
-                    new Phase()
+                    Width = 450,
+                    Header = new SwimlaneHeader()
                     {
-                        Width = 450,
-                        Header = new SwimlaneHeader()
-                        {
-                            Annotation = new ShapeAnnotation(){Content = "Phase 1"},
-                            Height = 30
-                        }
+                        Annotation = new ShapeAnnotation(){Content = "Phase 1"},
+                        Height = 30
                     }
                 }
-            };
+            }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
-             swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-             foreach (Phase phase in swimlane.Phases)
-             {
-                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
-             foreach (Lane lane in swimlane.Lanes)
-             {
-                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
         }
     }
 }
@@ -104,38 +105,38 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 150,
-                Width = 450,
-                Phases = new DiagramObjectCollection<Phase>()
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 150,
+            Width = 450,
+            Phases = new DiagramObjectCollection<Phase>()
+            {
+                new Phase()
                 {
-                    new Phase()
+                    Width = 450,
+                    Header = new SwimlaneHeader()
                     {
-                        Width = 450,
-                        Header = new SwimlaneHeader()
-                        {
-                            Annotation = new ShapeAnnotation(){Content = "Phase 1"},
-                            Height = 30
-                        }
+                        Annotation = new ShapeAnnotation(){Content = "Phase 1"},
+                        Height = 30
                     }
                 }
-            };
+            }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
@@ -144,15 +145,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     {
         Swimlane swimlane = SwimlaneCollections[0];
         Phase newPhase = new Phase()
+        {
+            Width = 100,
+            Header = new SwimlaneHeader()
             {
-                Width = 100,
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Phase " + (swimlane.Phases.Count + 1) },
-                    Height = 30
-                },
-                 Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
-            };
+                Annotation = new ShapeAnnotation() { Content = "Phase " + (swimlane.Phases.Count + 1) },
+                Height = 30
+            },
+            Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
+        };
         swimlane.Phases.Add(newPhase);
     }
 
@@ -162,26 +163,26 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
         if (swimlane.Phases.Count > 1)
             swimlane.Phases.RemoveAt(swimlane.Phases.Count - 1);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
         {
-             swimlane.Header.Style = new TextStyle()
-             {
-                 Fill = "#5b9bd5",
-                 StrokeColor = "#5b9bd5"
-             };
-             foreach (Phase phase in swimlane.Phases)
-             {
-                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
-             foreach (Lane lane in swimlane.Lanes)
-             {
-                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
-             }
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
         }
-    } 
-
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXroWXXQAIHdICLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -201,47 +202,48 @@ The following code example shows how to define and customize a phase header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 150,
-                Width = 450,
-                Phases = new DiagramObjectCollection<Phase>()
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 150,
+            Width = 450,
+            Phases = new DiagramObjectCollection<Phase>()
+            {
+                new Phase()
                 {
-                    new Phase()
+                    Width = 450,
+                    Header = new SwimlaneHeader()
                     {
-                        Width = 450,
-                        Header = new SwimlaneHeader()
-                        {
-                            Annotation = new ShapeAnnotation(){Content = "Phase 1", Style = new TextStyle(){ Color = "White", TextDecoration = TextDecoration.Underline, Italic = true, Bold = true} },
-                            Height = 30
-                        },
-                        Style = new TextStyle(){Fill = "Teal"},
-                    }
+                        Annotation = new ShapeAnnotation(){Content = "Phase 1", Style = new TextStyle(){ Color = "White", TextDecoration = TextDecoration.Underline, Italic = true, Bold = true} },
+                        Height = 30
+                    },
+                    Style = new TextStyle(){Fill = "Teal"},
                 }
-            };
+            }
+        };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+
     private void OnNodeCreating(IDiagramObject obj)
     {
         if (obj is Swimlane swimlane)
@@ -289,7 +291,7 @@ The following code example explains how to define a phase header annotation temp
                         </svg>
                         <div class="profile-name" style="font-size:12px;font-weight:bold;">Users</div>
                     </div>
-                }              
+                }
             }
         </AnnotationTemplate>
     </DiagramTemplates>
@@ -298,7 +300,7 @@ The following code example explains how to define a phase header annotation temp
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -319,22 +321,24 @@ The following code example explains how to define a phase header annotation temp
             Width = 450,
             Phases = new DiagramObjectCollection<Phase>()
             {
-                    new Phase()
+                new Phase()
+                {
+                    Width = 450,
+                    Header = new SwimlaneHeader()
                     {
-                        Width = 450,
-                        Header = new SwimlaneHeader()
-                        {
-                            Annotation = new ShapeAnnotation(){ ID="Phase 1", 
-                                Content = "Phase 1",
-                                UseTemplate = true,
-                                Height = 50,
-                                Width = 75,
-                            },
-                            Height = 30,
+                        Annotation = new ShapeAnnotation()
+                        { 
+                            ID="Phase 1",
+                            Content = "Phase 1",
+                            UseTemplate = true,
+                            Height = 50,
+                            Width = 75,
                         },
-                        Style = new TextStyle(){Fill = "Teal"},
-                    }
+                        Height = 30,
+                    },
+                    Style = new TextStyle(){Fill = "Teal"},
                 }
+            }
         };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
@@ -359,6 +363,7 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
+
 <div class="control-section">
     <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -371,18 +376,20 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 @code
 {
     //Reference the symbolpreview.
-    DiagramSize SymbolPreview;
+    private DiagramSize SymbolPreview;
     //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    SfSymbolPaletteComponent symbolpalette;
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent symbolpalette;
     //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
+
     private void InitPaletteModel()
     {
         Palettes = new DiagramObjectCollection<Palette>();
@@ -400,7 +407,7 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
         {
             new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
         };
-      }
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhSWDDwUHjXBppC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

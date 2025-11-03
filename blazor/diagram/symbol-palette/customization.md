@@ -58,21 +58,20 @@ The following code example illustrates how to change the size of a symbol and up
     </div>
 </div>
 
-@code {
+@code
+{
     //Define symbolpreview
-    DiagramSize SymbolPreview;
+    private DiagramSize SymbolPreview;
     //Define symbolmargin
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    double symbolwidth = 60;
-    double symbolheight = 60;
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private double symbolwidth = 60;
+    private double symbolheight = 60;
     //Reference the symbolpalette
-    SfSymbolPaletteComponent symbolpalette;
-
+    private SfSymbolPaletteComponent symbolpalette;
     //Define palattes collection
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -82,32 +81,34 @@ The following code example illustrates how to change the size of a symbol and up
     private void InitPaletteModel()
     {
         Node node1 = new Node()
-            {
-                ID = "Rectangle",
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            };
+        {
+            ID = "Rectangle",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
         Node node2 = new Node()
-            {
-                ID = "Ellipse",
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            };
+        {
+            ID = "Ellipse",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
         Node node3 = new Node()
-            {
-                ID = "Diamond",
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Diamond },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            };
+        {
+            ID = "Diamond",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Diamond },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+
         PaletteNodes.Add(node1);
         PaletteNodes.Add(node2);
         PaletteNodes.Add(node3);
 
         Palettes = new DiagramObjectCollection<Palette>()
-    {
-           new Palette(){Symbols =PaletteNodes,Title="Basic Shapes",ID="Basic Shapes" },
+        {
+                new Palette(){Symbols =PaletteNodes,Title="Basic Shapes",ID="Basic Shapes" },
         };
     }
+
     //Method to update symbol width and symbol height
     private void UpdateSize()
     {
@@ -154,22 +155,22 @@ The following code example illustrates how to change the preview size of a palet
 
 @code
 {
-    DiagramSize symbolDragPreviewSize;
-    SymbolMargin SymbolMargin = new SymbolMargin 
-    { 
-        Left = 15, 
-        Right = 15, 
-        Top = 15, 
+    private DiagramSize symbolDragPreviewSize;
+    private SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
         Bottom = 15
-     };
-    SfDiagramComponent diagram;
-    SfSymbolPaletteComponent SymbolPalette;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    };
+    private SfDiagramComponent diagram;
+    private SfSymbolPaletteComponent SymbolPalette;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -236,26 +237,27 @@ The following code example illustrates how to use the selectionChanged event.
     <div style="width:20%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
-                                    Palettes="@Palettes" SymbolHeight="@symbolwidth" SymbolWidth="@symbolheight" 
-                                    SymbolMargin="@SymbolMargin" SelectionChanged="SelectionChanged">
+                                      Palettes="@Palettes" SymbolHeight="@symbolwidth" SymbolWidth="@symbolheight"
+                                      SymbolMargin="@SymbolMargin" SelectionChanged="SelectionChanged">
             </SfSymbolPaletteComponent>
         </div>
     </div>
 </div>
 
-@code {
+@code
+{
     // Define symbol properties
-    DiagramSize SymbolPreview;
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    double symbolwidth = 60;
-    double symbolheight = 60;
-    
+    private DiagramSize SymbolPreview;
+    private SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private double symbolwidth = 60;
+    private double symbolheight = 60;
+
     // Reference the symbol palette
-    SfSymbolPaletteComponent symbolpalette;
-    
+    private SfSymbolPaletteComponent symbolpalette;
+
     // Define palettes collection
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -297,17 +299,17 @@ The following code example illustrates how to use the selectionChanged event.
     private void SelectionChanged(PaletteSelectionChangedEventArgs args)
     {
         // Check if Rectangle was previously selected
-        if(args.OldValue.Contains("Rectangle"))
+        if (args.OldValue.Contains("Rectangle"))
         {
             // Perform actions when Rectangle is deselected
         }
-        
+
         // Check if Ellipse is newly selected
-        if(args.NewValue.Contains("Ellipse"))
+        if (args.NewValue.Contains("Ellipse"))
         {
             // Perform actions when Ellipse is selected
         }
-        
+
         // You can also perform general selection tracking
         Console.WriteLine($"Selection changed from: {args.OldValue} to: {args.NewValue}");
     }
@@ -353,36 +355,36 @@ These default settings can be customized to enhance the user experience and matc
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
-<div class="control-section">   
-    <div style="width: 100%">  
+<div class="control-section">
+    <div style="width: 100%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@SymbolPalette" EnableAnimation=true Height="300px" Width="200px" 
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" EnableAnimation=true Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
-        </div>
+    </div>
 </div>
 
 @code
 {
-    SymbolMargin SymbolMargin = new SymbolMargin 
-    { 
-        Left = 15, 
-        Right = 15, 
-        Top = 15, 
-        Bottom = 15 
-    };       
-    SfSymbolPaletteComponent SymbolPalette;
+    private SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
+    };
+    private SfSymbolPaletteComponent SymbolPalette;
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
-        
+
     private void InitPaletteModel()
     {
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
@@ -393,7 +395,7 @@ These default settings can be customized to enhance the user experience and matc
            new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
-        
+
     private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
     {
         Node node = new Node()
@@ -419,36 +421,36 @@ The following code is an example to set a symbol description for symbols in the 
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
-<div class="control-section">   
-    <div style="width: 100%">  
+<div class="control-section">
+    <div style="width: 100%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px" GetSymbolInfo="GetSymbolInfo"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
-        </div>
+    </div>
 </div>
 
 @code
 {
-    SymbolMargin SymbolMargin = new SymbolMargin 
-    { 
-        Left = 15, 
-        Right = 15, 
-        Top = 15, 
-        Bottom = 15 
-    };       
-    SfSymbolPaletteComponent SymbolPalette;
+    private SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
+    };
+    private SfSymbolPaletteComponent SymbolPalette;
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
-        
+
     private void InitPaletteModel()
     {
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
@@ -457,7 +459,7 @@ The following code is an example to set a symbol description for symbols in the 
            new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
-        
+
     private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
     {
         Node node = new Node()
@@ -544,11 +546,11 @@ The following code is an example to change the style of a symbol description for
 
 @code
 {
-    SfSymbolPaletteComponent SymbolPalette;
+    private SfSymbolPaletteComponent SymbolPalette;
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's basic-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -569,11 +571,11 @@ The following code is an example to change the style of a symbol description for
     private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
     {
         Node node = new Node()
-            {
-                ID = id,
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            };
+        {
+            ID = id,
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
         PaletteNodes.Add(node);
     }
 
@@ -584,11 +586,12 @@ The following code is an example to change the style of a symbol description for
         text = (symbol as NodeBase).ID;
         SymbolInfo.Width = 75;
         SymbolInfo.Height = 40;
-        SymbolInfo.Description = new SymbolDescription() { 
+        SymbolInfo.Description = new SymbolDescription()
+        {
             Text = text,
             // Customize the style of the symbol description
-            Style = new TextStyle() 
-            { 
+            Style = new TextStyle()
+            {
                 Bold = true,
                 Italic = true,
                 Color = "red",
@@ -599,7 +602,7 @@ The following code is an example to change the style of a symbol description for
                 TextOverflow = TextOverflow.Ellipsis,
                 TextWrapping = TextWrap.WrapWithOverflow
             },
-            Margin = new DiagramThickness(){ Top = 10, Bottom = 10 }
+            Margin = new DiagramThickness() { Top = 10, Bottom = 10 }
         };
         return SymbolInfo;
     }
@@ -635,7 +638,7 @@ The following code example demonstrates how to enable or disable the default too
             </SfCheckBox>
         </div>
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px" GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60" 
+            <SfSymbolPaletteComponent @ref="symbolPalette" Height="1000px" Width="300px" GetSymbolInfo="GetSymbolInfo" Palettes="Palettes" SymbolHeight="60"
                                       SymbolWidth="60" SymbolMargin="symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
@@ -645,7 +648,8 @@ The following code example demonstrates how to enable or disable the default too
     </div>
 </div>
 
-@code {
+@code 
+{
     // Controls tooltip visibility for symbols at runtime.
     private bool showTooltip = false;
     private SfSymbolPaletteComponent? symbolPalette;
@@ -657,7 +661,6 @@ The following code example demonstrates how to enable or disable the default too
         Top = 15,
         Bottom = 15
     };
-
     public DiagramObjectCollection<Palette> Palettes { get; set; } = new DiagramObjectCollection<Palette>();
     public DiagramObjectCollection<NodeBase> FlowShapesPalette { get; set; } = new DiagramObjectCollection<NodeBase>();
     public DiagramObjectCollection<NodeBase> BasicShapesPalette { get; set; } = new DiagramObjectCollection<NodeBase>();
@@ -728,13 +731,13 @@ The following code example demonstrates how to enable or disable the default too
         // Add tooltip for even-indexed shapes only.
         if (index % 2 == 0)
         {
-            node.Tooltip = new DiagramTooltip 
-            { 
-                Content = $"This is {id} (Flow)", 
-                ShowTipPointer = true, 
-                Position = Position.RightCenter 
+            node.Tooltip = new DiagramTooltip
+            {
+                Content = $"This is {id} (Flow)",
+                ShowTipPointer = true,
+                Position = Position.RightCenter
             };
-        }  
+        }
         FlowShapesPalette.Add(node);
     }
 
@@ -757,11 +760,11 @@ The following code example demonstrates how to enable or disable the default too
         // Add tooltip for even-indexed shapes only.
         if (index % 2 == 0)
         {
-            node.Tooltip = new DiagramTooltip 
-            { 
-                Content = $"This is {id} (Basic)", 
-                ShowTipPointer = true, 
-                Position = Position.RightCenter 
+            node.Tooltip = new DiagramTooltip
+            {
+                Content = $"This is {id} (Basic)",
+                ShowTipPointer = true,
+                Position = Position.RightCenter
             };
         }
         BasicShapesPalette.Add(node);
@@ -786,11 +789,11 @@ The following code example demonstrates how to enable or disable the default too
         // Add tooltip for even-indexed connectors only.
         if (index % 2 == 0)
         {
-            connector.Tooltip = new DiagramTooltip 
-            { 
-                Content = $"This is {id} (Connector)", 
-                Position = Position.RightCenter, 
-                ShowTipPointer = true 
+            connector.Tooltip = new DiagramTooltip
+            {
+                Content = $"This is {id} (Connector)",
+                Position = Position.RightCenter,
+                ShowTipPointer = true
             };
         }
         ConnectorsPalette.Add(connector);
@@ -815,6 +818,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using Syncfusion.Blazor.Popups
+
 <div class="control-section">
     <div style="width:80%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -827,8 +831,8 @@ The following code example illustrates how to provide the custom tooltip for nod
 
 @code
 {
-    SfSymbolPaletteComponent SymbolPalette;
-    SymbolMargin SymbolMargin = new SymbolMargin
+    private SfSymbolPaletteComponent SymbolPalette;
+    private SymbolMargin SymbolMargin = new SymbolMargin
     {
         Left = 15,
         Right = 15,
@@ -836,10 +840,9 @@ The following code example illustrates how to provide the custom tooltip for nod
         Bottom = 15
     };
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -854,6 +857,7 @@ The following code example illustrates how to provide the custom tooltip for nod
            new Palette(){Symbols =PaletteNodes, Title="Flow Shapes", ID="Flow Shapes" },
         };
     }
+
     private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
@@ -872,7 +876,6 @@ The following code example illustrates how to provide the custom tooltip for nod
         PaletteNodes.Add(node);
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLIsZDQAOTMXzzj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -888,14 +891,15 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using Syncfusion.Blazor.Popups
-<div class="control-section">    
+
+<div class="control-section">
     <div style="width: 100%">
         <div class="sb-mobile-palette-bar">
             <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
         </div>
         <div id="palette-space" class="sb-mobile-palette">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="700px"
-                                      Palettes="@Palettes"  SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
         <div id="diagram-space" class="sb-mobile-diagram">
@@ -909,24 +913,24 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
 
 @code
 {
-    SymbolMargin SymbolMargin = new SymbolMargin 
-    { 
-        Left = 15, 
-        Right = 15, 
-        Top = 15, 
-        Bottom = 15 
+    private SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
     };
-    SfDiagramComponent diagram;
-    SfSymbolPaletteComponent SymbolPalette;
+    private SfDiagramComponent diagram;
+    private SfSymbolPaletteComponent SymbolPalette;
     //Define nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Define connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
-    
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         SymbolPalette.Targets = new DiagramObjectCollection<SfDiagramComponent>() { };
@@ -940,7 +944,7 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
 
     private void InitPaletteModel()
     {
-        CreatePaletteNode(NodeFlowShapes.Terminator, "Terminator");        
+        CreatePaletteNode(NodeFlowShapes.Terminator, "Terminator");
         Palettes = new DiagramObjectCollection<Palette>()
         {
             new Palette(){Symbols = PaletteNodes,Title = "Flow Shapes", ID = "Flow Shapes" },
@@ -953,14 +957,14 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
         {
             ID = id,
             Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = flowShape },
-            Style = new ShapeStyle() { Fill= "#6495ED", StrokeColor = "#6495ED" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
             Tooltip = new DiagramTooltip()
             {
                 Content = "This is Terminator",
                 Position = Position.RightCenter,
                 ShowTipPointer = true
             },
-            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip        
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
         };
         PaletteNodes.Add(node);
     }
@@ -996,13 +1000,12 @@ The following code example illustrates how to provide the tooltip template for n
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
-               <SymbolPaletteTemplates>
+                <SymbolPaletteTemplates>
                     <TooltipTemplate>
                         @{
                             if (context is Node node)
                             {
                                 <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip</p><p>ID:@node.ID</p></div>
-
                             }
                         }
                     </TooltipTemplate>
@@ -1014,13 +1017,11 @@ The following code example illustrates how to provide the tooltip template for n
 
 @code
 {
-    SfSymbolPaletteComponent SymbolPalette;
-
+    private SfSymbolPaletteComponent SymbolPalette;
     //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-
+    private DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
-    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -1035,6 +1036,7 @@ The following code example illustrates how to provide the tooltip template for n
            new Palette(){Symbols =PaletteNodes, Title="Flow Shapes", ID="Flow Shapes" },
         };
     }
+
     private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
@@ -1052,7 +1054,6 @@ The following code example illustrates how to provide the tooltip template for n
         PaletteNodes.Add(node);
     }
 }
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBICZNmJjWhgbhB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -1093,12 +1094,12 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
 
 <SfSymbolPaletteComponent Width="100%" Height="700px" EnableChunkMessages="true" Palettes="@palettes" SymbolHeight="@symbolHeight" SymbolWidth="@symbolWidth" SymbolDragPreviewSize="@symbolDragPreviewSize" />
 
-@code{
-
-    DiagramSize symbolDragPreviewSize;
-    public DiagramObjectCollection<Palette> palettes;
-    double symbolHeight = 75;
-    double symbolWidth = 75;
+@code
+{
+    private DiagramSize symbolDragPreviewSize;
+    private DiagramObjectCollection<Palette> palettes;
+    private double symbolHeight = 75;
+    private double symbolWidth = 75;
 
     protected override void OnInitialized()
     {
@@ -1114,7 +1115,6 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
         DiagramObjectCollection<NodeBase> DiningRoomSymbols = new DiagramObjectCollection<NodeBase>();
         DiagramObjectCollection<NodeBase> KitchenSymbols = new DiagramObjectCollection<NodeBase>();
         
-
         DoorSymbols = new DiagramObjectCollection<NodeBase>()
         {
             new Node()
@@ -1499,11 +1499,11 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
                 }
             },
         };
-        
+
         Palette Door = new Palette() { Symbols = DoorSymbols, Title = "Doors and Walls", ID = "Door", IconCss = "e-ddb-icons e-flow" };
         Palette DiningRoom = new Palette() { Symbols = DiningRoomSymbols, Title = "Dining Room", ID = "DiningRoom", IconCss = "e-ddb-icons e-flow" };
         Palette Kitchen = new Palette() { Symbols = KitchenSymbols, Title = "Kitchen", ID = "Kitchen", IconCss = "e-ddb-icons e-flow" };
-        
+
         palettes = new DiagramObjectCollection<Palette>();
         palettes.Add(Door);
         palettes.Add(DiningRoom);

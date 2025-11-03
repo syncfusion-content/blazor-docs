@@ -41,12 +41,12 @@ The following code illustrates how to configure an automatic layout:
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    LayoutType type = LayoutType.ComplexHierarchicalTree;
-    int HorizontalSpacing = 50;
-    int VerticalSpacing = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private LayoutType type = LayoutType.ComplexHierarchicalTree;
+    private int HorizontalSpacing = 50;
+    private int VerticalSpacing = 50;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -120,6 +120,8 @@ The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. Modify these to achieve the required layout density.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
@@ -127,16 +129,17 @@ Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. M
 @code
 {
     // Initializing the Horizontal and Vertical value.
-    int HorizontalSpacing = 60;
-    int VerticalSpacing = 70;
+    private int HorizontalSpacing = 60;
+    private int VerticalSpacing = 70;
+    private SfDiagramComponent diagram;
 
     // Update the spacing.
-    public void UpdateSpacing()
+    private void UpdateSpacing()
     {
-        Diagram.BeginUpdate();
+        diagram.BeginUpdate();
         HorizontalSpacing += 10;
         VerticalSpacing += 10;
-        Diagram.EndUpdateAsync();
+        diagram.EndUpdateAsync();
     }
 }
 ```
@@ -155,14 +158,17 @@ Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. M
 | [RightToLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_RightToLeft) | Aligns the layout from right to left. The root node is placed on the right side of the diagram. |
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-Orientation="@orientation"/>
 </SfDiagramComponent>
 
 @code
 {
+    private SfDiagramComponent diagram;
     // Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.LeftToRight;
+    private LayoutOrientation orientation = LayoutOrientation.LeftToRight;
 }
 ```
 
@@ -187,16 +193,19 @@ The possible values for HorizontalAlignment are:
 | [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment"></Layout>
 </SfDiagramComponent>
 
 @code
 {
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
     // Initializing the HorizontalAlignment value.
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Center;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Center;
+    private SfDiagramComponent diagram;
 }
 ```
 ![Blazor Diagram layout horizontal alignment centered](../images/LayoutAlignmentCenter.png)
@@ -214,16 +223,19 @@ The possible values for VerticalAlignment are:
 | [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
 </SfDiagramComponent>
 
 @code
 {
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
     // Initializing the VerticalAlignment value.
-    VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+    private SfDiagramComponent diagram;
 }
 ```
 ![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.png)
@@ -234,6 +246,8 @@ The [LayoutMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 You can customize the margin for each side (top, right, bottom, left) using the `LayoutMargin` object:
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px">
     <Layout Type="LayoutType.OrganizationalChart">
         <LayoutMargin Top="@top" Bottom="@bottom" Right="@right" Left="@left"></LayoutMargin>
@@ -259,6 +273,8 @@ The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 Here’s an example of how to use this property:
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" SamePoint="false"></Layout>
 </SfDiagramComponent>

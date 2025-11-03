@@ -22,7 +22,7 @@ The following code example demonstrates how to create a simple BPMN Task shape.
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -38,9 +38,9 @@ The following code example demonstrates how to create a simple BPMN Task shape.
             // Unique Id of the node.
             ID = "node1",
             // Sets the shape to activity.
-            Shape = new BpmnActivity() 
-            { 
-                ActivityType = BpmnActivityType.Task 
+            Shape = new BpmnActivity()
+            {
+                ActivityType = BpmnActivityType.Task
             },
         };
         nodes.Add(node);

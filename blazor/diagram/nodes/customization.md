@@ -25,23 +25,23 @@ The following code shows how to customize the appearance of a shape.
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                //Sets the style for the node
-                Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            //Sets the style for the node
+            Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+        };
         // Add node
         nodes.Add(node);
     }
@@ -69,33 +69,34 @@ The following code shows how to customize the appearance of a shape.
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node1 = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Shape of the Node
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Shape of the Node
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+        };
         Node node2 = new Node()
-            {
-                // Position of the node
-                OffsetX = 100,
-                OffsetY = 100,
-                // Shape of the Node
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse }
-            };
+        {
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Shape of the Node
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse }
+        };
         nodes.Add(node1);
         nodes.Add(node2);
     }
+
     //Method to define nodecreating event
     private void NodeCreating(IDiagramObject obj)
     {
@@ -158,15 +159,15 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
                         <input type="button" value="Button2" @onclick="@OnClick" />
                     </div>
                 </div>
-            }
+             }
         </NodeTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -183,7 +184,7 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
         nodes.Add(node);
     }
 
-    public void OnClick()
+    private void OnClick()
     {
         nodes[0].BackgroundColor = "cornflowerblue";
         StateHasChanged();
@@ -212,7 +213,7 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
 @code
 {
     // Initialize node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -282,17 +283,17 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
         }
         else
         {
-            (node as Node).Style = new ShapeStyle() 
-            { 
-                Fill = "#6F409F", 
-                StrokeColor = "#6F409F", 
-                StrokeWidth = 2 
+            (node as Node).Style = new ShapeStyle()
+            {
+                Fill = "#6F409F",
+                StrokeColor = "#6F409F",
+                StrokeWidth = 2
             };
-            (node as Node).Shape = new BasicShape() 
-            { 
-                Type = NodeShapes.Basic, 
-                Shape = NodeBasicShapes.Rectangle, 
-                CornerRadius = 10 
+            (node as Node).Shape = new BasicShape()
+            {
+                Type = NodeShapes.Basic,
+                Shape = NodeBasicShapes.Rectangle,
+                CornerRadius = 10
             };
         }
         return null;
@@ -321,11 +322,14 @@ The diagram provides the ability to customize the border color of a node using t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
     // Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -360,11 +364,13 @@ The diagram allows customizing the border width of a node using the [BorderWidth
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
+
 @code
 {
     // Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -403,30 +409,30 @@ Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfus
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
+            Shadow = new Shadow()
             {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
-                Shadow = new Shadow()
-                {
-                    Angle = 50,
-                    Color = "gray",
-                    Opacity = 0.8,
-                    Distance = 10
-                }
-            };
+                Angle = 50,
+                Color = "gray",
+                Opacity = 0.8,
+                Distance = 10
+            }
+        };
         nodes.Add(node);
     }
 }
@@ -448,7 +454,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -462,10 +468,10 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
             },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node.
@@ -508,7 +514,7 @@ There are two types of gradients:
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -537,7 +543,7 @@ There are two types of gradients:
                     {
                         new GradientStop(){ Color = "white", Offset = 0},
                         new GradientStop(){ Color = "#6495ED", Offset = 100}
-                    },                    
+                    },
                 }
             },
         };
@@ -562,7 +568,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -575,10 +581,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             // Size of the node.
             Width = 100,
             Height = 100,
-            Shape = new BasicShape() 
-            { 
-                Type = NodeShapes.Basic, 
-                Shape = NodeBasicShapes.Ellipse 
+            Shape = new BasicShape()
+            {
+                Type = NodeShapes.Basic,
+                Shape = NodeBasicShapes.Ellipse
             },
             Style = new ShapeStyle()
             {
@@ -596,7 +602,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
                     {
                         new GradientStop() { Color = "#00555b", Offset = 45 },
                         new GradientStop() { Color= "#37909A", Offset= 90 }
-                    },                    
+                    }
                 }
             },
         };
@@ -624,7 +630,7 @@ The following code shows how to set the `AdditionalInfo` value.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -640,9 +646,9 @@ The following code shows how to set the `AdditionalInfo` value.
             // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
                 StrokeColor = "white"
             },
             AdditionalInfo = NodeInfo
@@ -673,47 +679,47 @@ The following code illustrates how to render nodes based on the stack order.
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // nodes are created and stored in nodes array.
         Node node1 = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+        };
         nodes.Add(node1);
 
         Node node2 = new Node()
+        {
+            ID = "node2",
+            // Position of the node.
+            OffsetX = 300,
+            OffsetY = 300,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 1,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                // Position of the node.
-                OffsetX = 300,
-                OffsetY = 300,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 1,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+        };
         nodes.Add(node2);
     }
 }
@@ -737,31 +743,31 @@ The following code illustrates how to set the Pivot value.
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle()
             {
-                ID = "node",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                // Pivot of the node.
-                Pivot = new DiagramPoint() { X = 0, Y = 0 }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            // Pivot of the node.
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
+        };
         nodes.Add(node);
     }
 }
@@ -785,25 +791,25 @@ The following code illustrates how to set the background color for the node.
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                ID = "node",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                BackgroundColor = "red",
-                Shape = new BasicShape(){Shape = NodeBasicShapes.Star}
-            };
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            BackgroundColor = "red",
+            Shape = new BasicShape() { Shape = NodeBasicShapes.Star }
+        };
         nodes.Add(node);
     }
 }
@@ -822,7 +828,7 @@ The following code illustrates how to set the auto layout property for nodes.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"  Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
@@ -833,14 +839,14 @@ The following code illustrates how to set the auto layout property for nodes.
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int left = 40;
+    private int top = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -851,10 +857,10 @@ The following code illustrates how to set the auto layout property for nodes.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation 
-            { 
+            new ShapeAnnotation
+            {
                 Content = node.Annotations[0].Content,
-                Style = new TextStyle() { Color = "white", Bold = true }, 
+                Style = new TextStyle() { Color = "white", Bold = true },
             }
         };
     }
@@ -905,39 +911,40 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-            {
-                ID = "node1",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 300,
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
 
-            };
+        };
         nodes.Add(node1);
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 500,
-            };
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
+
     private void GetInEdges()
     {
         List<string> Inedges = new List<string>();
@@ -963,8 +970,8 @@ The following code illustrates how to get data source settings details.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-  <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing" >
+    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -974,14 +981,14 @@ The following code illustrates how to get data source settings details.
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int left = 40;
+    private int top = 50;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -1005,7 +1012,7 @@ The following code illustrates how to get data source settings details.
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
     }
 
-    public class HierarchicalDetails
+    private class HierarchicalDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
@@ -1013,7 +1020,8 @@ The following code illustrates how to get data source settings details.
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    private List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },

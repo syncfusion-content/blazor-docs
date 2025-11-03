@@ -23,7 +23,7 @@ The following code explains how to draw a connector by using port constraints.
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -48,12 +48,12 @@ The following code explains how to draw a connector by using port constraints.
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style = new ShapeStyle()
-                    { 
-                        Fill = "gray", 
+                    {
+                        Fill = "gray",
                         StrokeColor = "black"
-                     }, 
-                    Width = 12, 
-                    Height = 12, 
+                        },
+                    Width = 12,
+                    Height = 12,
                     // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
                     // Enable draw operation for Port.
@@ -79,13 +79,12 @@ The following code explains how to draw a connector by using port constraints.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
@@ -135,13 +134,14 @@ The following code explains how to draw the connector by using port constraints.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" DrawingObject="DrawingObject"/>
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" DrawingObject="DrawingObject" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    public SfDiagramComponent diagram;
-    IDiagramObject DrawingObject;
+    private DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent diagram;
+    private IDiagramObject DrawingObject;
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -203,7 +203,7 @@ The following code explains how to draw the connector by using port constraints.
         DrawingObject = new Connector()
         {
             ID = "connector1",
-            Type = ConnectorSegmentType.Bezier,            
+            Type = ConnectorSegmentType.Bezier,
         };
     }
 }

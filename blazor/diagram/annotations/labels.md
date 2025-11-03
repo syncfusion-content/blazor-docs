@@ -30,10 +30,9 @@ The following code example demonstrates how to create an annotation for a node a
 @code
 {
     // Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors;
-
+    private DiagramObjectCollection<Connector> connectors;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -91,16 +90,14 @@ The following code explains how to add an annotation to a node at runtime by usi
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Addlabel" OnClick="@AddLabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
 {
     // Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -117,7 +114,7 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 
     // Method to add annotation at runtime.
-    public void AddLabel()
+    private void AddLabel()
     {
         ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
         (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).Add(annotation);
@@ -134,7 +131,7 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 ```csharp
 //Method to add annotation at runtime.
-public async void AddLabel()
+private async void AddLabel()
 {
     ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
     await(diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
@@ -152,18 +149,15 @@ An annotation can be removed from a node or connector's `Annotations` collection
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Removelabel" OnClick="@RemoveLabel" />
-
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
 {
     // Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -184,7 +178,7 @@ An annotation can be removed from a node or connector's `Annotations` collection
     }
 
     // Method to remove annotation at runtime.
-    public void RemoveLabel()
+    private void RemoveLabel()
     {
         (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).RemoveAt(0);
     }
@@ -198,7 +192,7 @@ Also, The `Remove` method can also be used to remove a specific annotation objec
 
 ```cshtml
     // Method to remove annotation at runtime using Remove method.
-    public void RemoveLabel()
+    private void RemoveLabel()
     {
         ShapeAnnotation annotation = (diagram.Nodes[0].Annotations[0]) as ShapeAnnotation;
         (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).Remove(annotation);
@@ -218,18 +212,15 @@ The following code sample shows how to change the content of a node's annotation
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="Updatelabel" OnClick="@UpdateLabel" />
-
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
 {
     // Reference to diagram.
-    SfDiagramComponent diagram;
-
+    private SfDiagramComponent diagram;
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
@@ -239,9 +230,9 @@ The following code sample shows how to change the content of a node's annotation
             Width = 100,
             Height = 100,
             OffsetX = 100,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
-            { 
-                new ShapeAnnotation { Content = "Node" } 
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation { Content = "Node" }
             },
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -250,7 +241,7 @@ The following code sample shows how to change the content of a node's annotation
     }
 
     // Method to update the annotation at runtime.
-    public void UpdateLabel()
+    private void UpdateLabel()
     {
         diagram.Nodes[0].Annotations[0].Content = "Updated Annotation";
     }

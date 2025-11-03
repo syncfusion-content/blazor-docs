@@ -27,8 +27,8 @@ The following code example illustrates how to create a mind map layout using a d
     </Layout>
 </SfDiagramComponent>
 
-@code 
-{    
+@code
+{
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -39,7 +39,7 @@ The following code example illustrates how to create a mind map layout using a d
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
         node.Shape = new BasicShape() { Type = NodeShapes.Basic }; ;
     }
-    
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
@@ -52,7 +52,7 @@ The following code example illustrates how to create a mind map layout using a d
         };
     }
 
-    public class MindMapDetails
+    private class MindMapDetails
     {
         public string Id { get; set; }
         public string Label { get; set; }
@@ -61,7 +61,7 @@ The following code example illustrates how to create a mind map layout using a d
         public string Fill { get; set; }
     }
 
-    public object DataSource = new List<object>()
+    private object DataSource = new List<object>()
     {
         new MindMapDetails() { Id= "1",Label="Creativity", ParentId ="", Branch = "Root"},
         new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1", Branch = "Right" },
@@ -95,7 +95,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
     </Layout>
 </SfDiagramComponent>
 
-@code 
+@code
 {
     //Set all branches on the right side for mind map layout.
     private BranchType GetBranch(IDiagramObject obj)
@@ -106,7 +106,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
         }
         return BranchType.Right;
     }
-    
+
     //Creates connectors with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -124,7 +124,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
             }
         };
     }
-    
+
     //Creates node with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
@@ -137,7 +137,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
         };
     }
 
-    public class MindMapDetails
+    private class MindMapDetails
     {
         public string Id { get; set; }
         public string Label { get; set; }
@@ -146,7 +146,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
         public string Fill { get; set; }
     }
 
-    public object DataSource = new List<object>()
+    private object DataSource = new List<object>()
     {
         new MindMapDetails() { Id= "1",Label="Creativity", ParentId =""},
         new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1"},
@@ -184,11 +184,12 @@ Also, you can render a mind map layout without using a Datasource. The following
 @code
 {
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    string root = "node4";
-    //Creates connectors with some default values.
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private string root = "node4";
+
+    //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -198,182 +199,181 @@ Also, you can render a mind map layout without using a Datasource. The following
         node.Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse };
     }
 
-    //Creates node with some default values.
+    //Creates connector with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
         Connector connectors = connector as Connector;
         connectors.Type = ConnectorSegmentType.Bezier;
         connectors.Style = new TextStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 };
         connectors.TargetDecorator = new DecoratorSettings
-            {
-                Shape = DecoratorShape.None,
-            };
+        {
+            Shape = DecoratorShape.None,
+        };
     }
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 70,
+            Height = 70,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node1",
-                Width = 70,
-                Height = 70,
-                Ports = new DiagramObjectCollection<PointPort>()
-{
                 new PointPort()
                 {
                     ID="left",
                     Offset = new DiagramPoint() { X = 1, Y = 0.5},
-                },new PointPort()
+                },
+                new PointPort()
                 {
                     ID="right",
                     Offset = new DiagramPoint() { X = 0, Y = 0.5},
                 }
             },
-            };
+        };
         nodes.Add(node1);
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 70,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node2",
-                Width = 70,
-                Ports = new DiagramObjectCollection<PointPort>()
-{
                 new PointPort()
                 {
                     ID="left",
                     Offset = new DiagramPoint() { X = 0, Y = 0.5},
                 }
             },
-                Height = 70
-            };
+            Height = 70
+        };
         nodes.Add(node2);
         Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node3",
-                Width = 70,
-                Ports = new DiagramObjectCollection<PointPort>()
-{
                 new PointPort()
                 {
                     ID="right",
                     Offset = new DiagramPoint() { X = 1, Y = 0.5},
                 }
             },
-                Height = 70
-            };
+            Height = 70
+        };
         nodes.Add(node3);
         Node node4 = new Node()
-            {
-                ID = "node4",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node4",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node4);
         Node node5 = new Node()
-            {
-                ID = "node5",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node5",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node5);
         Node node6 = new Node()
-            {
-                ID = "node6",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node6",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node6);
         Node node7 = new Node()
-            {
-                ID = "node7",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node7",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node7);
         Node node8 = new Node()
-            {
-                ID = "node8",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node8",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node8);
         Node node9 = new Node()
-            {
-                ID = "node9",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node9",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node9);
         Node node10 = new Node()
-            {
-                ID = "node10",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node10",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node10);
         Node node11 = new Node()
-            {
-                ID = "node11",
-                Width = 70,
-                Height = 70,
-            };
+        {
+            ID = "node11",
+            Width = 70,
+            Height = 70,
+        };
         nodes.Add(node11);
         Node node12 = new Node()
-            {
-                ID = "node12",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node12",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node12);
         Node node13 = new Node()
-            {
-                ID = "node13",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node13",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node13);
         Node node14 = new Node()
-            {
-                ID = "node14",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node14",
+            Width = 70,
+            Height = 70
+        };
         Node node15 = new Node()
-            {
-                ID = "node15",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node15",
+            Width = 70,
+            Height = 70
+        };
         Node node16 = new Node()
-            {
-                ID = "node16",
-                Width = 70,
-                Height = 70
-            };
+        {
+            ID = "node16",
+            Width = 70,
+            Height = 70
+        };
         nodes.Add(node14);
         Node node17 = new Node()
+        {
+            ID = "node17",
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                ID = "node17",
-                Ports = new DiagramObjectCollection<PointPort>()
-{
                 new PointPort()
                 {
                     ID="right",
                     Offset = new DiagramPoint() { X = 1, Y = 0.5},
                 }
             },
-                Width = 70,
-                Height = 70,
-            };
+            Width = 70,
+            Height = 70,
+        };
         nodes.Add(node15);
         nodes.Add(node16);
         nodes.Add(node17);
 
         Connector connector1 = new Connector() { ID = "connector1", SourceID = "node1", SourcePortID = "left", TargetID = "node2", TargetPortID = "left", Type = ConnectorSegmentType.Straight };
         connectors.Add(connector1);
-
         Connector connector2 = new Connector() { ID = "connector2", SourceID = "node1", SourcePortID = "right", TargetID = "node3", TargetPortID = "right", Type = ConnectorSegmentType.Straight };
         connectors.Add(connector2);
-
         Connector connector3 = new Connector() { ID = "connector3", SourceID = "node2", TargetID = "node4", Type = ConnectorSegmentType.Straight };
         connectors.Add(connector3);
         Connector connector4 = new Connector() { ID = "connector4", SourceID = "node2", TargetID = "node5", Type = ConnectorSegmentType.Straight };
@@ -402,7 +402,6 @@ Also, you can render a mind map layout without using a Datasource. The following
         connectors.Add(connector15);
         Connector connector16 = new Connector() { ID = "connector16", SourceID = "node8", TargetID = "node17", Type = ConnectorSegmentType.Straight };
         connectors.Add(connector16);
-
     }
 }
 ```
@@ -431,10 +430,12 @@ The following example demonstrates configuring the mind map layout with a vertic
     </Layout>
 </SfDiagramComponent>
 
-@code {
+@code
+{
     private SfDiagramComponent? diagram;
-    public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
-    public List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
+    private LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
+
+    private List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
     {
         new OrientationItem { Text = "Vertical", Value = LayoutOrientation.Vertical },
         new OrientationItem { Text = "Horizontal", Value = LayoutOrientation.Horizontal },
@@ -442,7 +443,7 @@ The following example demonstrates configuring the mind map layout with a vertic
         new OrientationItem { Text = "Right to Left", Value = LayoutOrientation.RightToLeft }
     };
 
-    public List<MindMapDetails> DataSource { get; set; } = new()
+    private List<MindMapDetails> DataSource { get; set; } = new()
     {
         new MindMapDetails { Id = "1", Label = "Project Planning", ParentId = "", Branch = "Root" },
         new MindMapDetails { Id = "2", Label = "Requirements", ParentId = "1", Branch = "Right" },
@@ -459,30 +460,28 @@ The following example demonstrates configuring the mind map layout with a vertic
             return BranchType.Left;
         if (node.Data is not MindMapDetails mindMapData || string.IsNullOrWhiteSpace(mindMapData.Branch))
             return BranchType.Left;
-        return Enum.TryParse(mindMapData.Branch, out BranchType branchType) 
-            ? branchType 
-            : BranchType.SubLeft;
+        return Enum.TryParse(mindMapData.Branch, out BranchType branchType)? branchType: BranchType.SubLeft;
     }
 
     // Method triggered by button click at runtime to set diagram orientation to vertical.
     private void ChangeLayoutOrientation()
     {
-       diagram.Layout.Orientation = LayoutOrientation.Vertical;
+        diagram.Layout.Orientation = LayoutOrientation.Vertical;
     }
 
     private void OnNodeCreating(IDiagramObject obj)
     {
-        if (obj is not Node node) 
+        if (obj is not Node node)
             return;
         // Apply default node styling.
         node.Height = 100;
         node.Width = 100;
         node.BackgroundColor = "#6BA5D7";
-        node.Style = new ShapeStyle 
-        { 
-            Fill = "#6495ED", 
-            StrokeWidth = 1, 
-            StrokeColor = "white" 
+        node.Style = new ShapeStyle
+        {
+            Fill = "#6495ED",
+            StrokeWidth = 1,
+            StrokeColor = "white"
         };
         node.Shape = new BasicShape { Type = NodeShapes.Basic };
         // Add annotation with label from data.
@@ -497,13 +496,13 @@ The following example demonstrates configuring the mind map layout with a vertic
 
     private void OnConnectorCreating(IDiagramObject obj)
     {
-        if (obj is not Connector connector) 
+        if (obj is not Connector connector)
             return;
         connector.Type = ConnectorSegmentType.Bezier;
-        connector.Style = new ShapeStyle 
-        { 
-            StrokeColor = "#6495ED", 
-            StrokeWidth = 2 
+        connector.Style = new ShapeStyle
+        {
+            StrokeColor = "#6495ED",
+            StrokeWidth = 2
         };
         connector.TargetDecorator = new DecoratorSettings
         {
@@ -511,13 +510,13 @@ The following example demonstrates configuring the mind map layout with a vertic
         };
     }
 
-    public class OrientationItem
+    private class OrientationItem
     {
         public string Text { get; set; } = string.Empty;
         public LayoutOrientation Value { get; set; }
     }
 
-    public class MindMapDetails
+    private class MindMapDetails
     {
         public string Id { get; set; } = string.Empty;
         public string Label { get; set; } = string.Empty;
@@ -562,13 +561,13 @@ The following example demonstrates how to update the layout orientation dynamica
     </div>
 </div>
 
-@code {
+@code
+{
     private SfDiagramComponent? diagram;
-    
     // Property bound to dropdown and diagram layout, updated at runtime by user interaction.
-    public LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
+    private LayoutOrientation SelectedOrientation { get; set; } = LayoutOrientation.Vertical;
     
-    public List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
+    private List<OrientationItem> LayoutOrientationOptions { get; set; } = new()
     {
         new OrientationItem { Text = "Vertical", Value = LayoutOrientation.Vertical },
         new OrientationItem { Text = "Horizontal", Value = LayoutOrientation.Horizontal },
@@ -576,7 +575,7 @@ The following example demonstrates how to update the layout orientation dynamica
         new OrientationItem { Text = "Right to Left", Value = LayoutOrientation.RightToLeft }
     };
 
-    public List<MindMapDetails> DataSource { get; set; } = new()
+    private List<MindMapDetails> DataSource { get; set; } = new()
     {
         new MindMapDetails { Id = "1", Label = "Project Planning", ParentId = "", Branch = "Root" },
         new MindMapDetails { Id = "2", Label = "Requirements", ParentId = "1", Branch = "Right" },
@@ -593,9 +592,7 @@ The following example demonstrates how to update the layout orientation dynamica
             return BranchType.Left;
         if (node.Data is not MindMapDetails mindMapData || string.IsNullOrWhiteSpace(mindMapData.Branch))
             return BranchType.Left;
-        return Enum.TryParse(mindMapData.Branch, out BranchType branchType) 
-            ? branchType 
-            : BranchType.SubLeft;
+        return Enum.TryParse(mindMapData.Branch, out BranchType branchType) ? branchType : BranchType.SubLeft;
     }
 
     // Method triggered by button click at runtime to set diagram orientation to vertical.
@@ -645,13 +642,13 @@ The following example demonstrates how to update the layout orientation dynamica
         };
     }
 
-    public class OrientationItem
+    private class OrientationItem
     {
         public string Text { get; set; } = string.Empty;
         public LayoutOrientation Value { get; set; }
     }
 
-    public class MindMapDetails
+    private class MindMapDetails
     {
         public string Id { get; set; } = string.Empty;
         public string Label { get; set; } = string.Empty;

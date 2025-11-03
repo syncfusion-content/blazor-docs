@@ -18,7 +18,7 @@ Serialization is the process of saving and loading the persistent state of a dia
 When saving and loading the diagram, we must use two-way binding (such as @bind) for nodes and connectors.
 
 ```cshtml
-<SfDiagramComponent @ref="@diagram" @bind-Connectors="@connectors" @bind-Nodes="@nodes"></SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" @bind-Connectors="@connectors" @bind-Nodes="@nodes" />
 ```
 
 ## How to Save the Diagram as String
@@ -50,11 +50,11 @@ Load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 
 ```cshtml
-SfDiagram ClassicDiagram;
+private SfDiagram ClassicDiagram;
 //returns the serialized string of the SfDiagram
-string data = ClassicDiagram.SaveDiagram(); 
+private string data = ClassicDiagram.SaveDiagram(); 
 
-SfDiagramComponent Diagram;
+private SfDiagramComponent Diagram;
 //Loads the SfDiagramComponent from saved data of the SfDiagram
 await Diagram.LoadDiagramAsync(data, true);
 ```
@@ -64,26 +64,26 @@ await Diagram.LoadDiagramAsync(data, true);
 The diagram support to save and load the diagram using a file stream. The below code illustrates how to download the saved diagram as a file.
 
 ```cshtml
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     private string fileName;
     private string ExtensionType = ".json";
 
     //Method to save the diagram
-    public async Task SaveDiagram()
+    private async Task SaveDiagram()
     {
         fileName = await jsRuntime.InvokeAsync<string>("getDiagramFileName", "");
         await DownloadDiagram(fileName);
     }
 
     //Method to download the diagram
-    public async Task DownloadDiagram(string fileName)
+    private async Task DownloadDiagram(string fileName)
     {
         string data = diagram.SaveDiagram();
         await FileUtil.SaveAs(jsRuntime, data, fileName);
     }
 
     //Method to load the diagram
-    public async Task LoadDiagram()
+    private async Task LoadDiagram()
     {
         diagram.BeginUpdate();
         ExtensionType = ".json";
@@ -91,7 +91,7 @@ The diagram support to save and load the diagram using a file stream. The below 
         await diagram.EndUpdateAsync();
     }
 
-    public async static Task SaveAs(IJSRuntime js, string data, string fileName)
+    private async static Task SaveAs(IJSRuntime js, string data, string fileName)
     {
         await js.InvokeAsync<object>(
         "saveDiagram",
@@ -100,7 +100,7 @@ The diagram support to save and load the diagram using a file stream. The below 
         // Specify IFormatProvider
     }
 
-    public async static Task Click(IJSRuntime js)
+    private async static Task Click(IJSRuntime js)
     {
         await js.InvokeAsync<object>(
             "click").ConfigureAwait(true);
@@ -117,22 +117,26 @@ The diagram support to save and load the diagram using a file stream. The below 
     }
 
     function saveDiagram(data, filename) {
-    if (window.navigator.msSaveBlob) {
-        let blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
-        window.navigator.msSaveOrOpenBlob(blob, filename + '.json');
-    } else {
-        let dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
-        let a = document.createElement('a');
-        a.href = dataStr;
-        a.download = filename + '.json';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-    }
+        if (window.navigator.msSaveBlob)
+        {
+            let blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
+            window.navigator.msSaveOrOpenBlob(blob, filename + '.json');
+        } 
+        else
+        {
+            let dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
+            let a = document.createElement('a');
+            a.href = dataStr;
+            a.download = filename + '.json';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        }
     }
 
-    function click() {
-    document.getElementById('UploadFiles').click();
+    function click()
+    {
+        document.getElementById('UploadFiles').click();
     }
 ```
 

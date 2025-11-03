@@ -30,9 +30,10 @@ Create a radial tree layout with a `DataSource`. The following code example illu
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
-@code 
-{    
-    SfDiagramComponent diagram;
+@code
+{
+    private SfDiagramComponent diagram;
+
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -43,14 +44,14 @@ Create a radial tree layout with a `DataSource`. The following code example illu
         if (radialData.Id == "parent")
         {
             size = 20;
-            color="white";
+            color = "white";
         }
         else
         {
             size = 10;
             color = "black";
         }
-        ShapeAnnotation annotation = new ShapeAnnotation() { Content = radialData.Name, Style = new TextStyle() { Color = color, FontSize=size } };
+        ShapeAnnotation annotation = new ShapeAnnotation() { Content = radialData.Name, Style = new TextStyle() { Color = color, FontSize = size } };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>() { annotation };
 
         if (radialData.Designation == "Managing Director")
@@ -74,24 +75,24 @@ Create a radial tree layout with a `DataSource`. The following code example illu
         else
         {
             node.Shape = new BasicShape()
-                {
-                    Type = NodeShapes.Basic,
-                    Shape = NodeBasicShapes.Ellipse,
-                    CornerRadius = 10
-                };
+            {
+                Type = NodeShapes.Basic,
+                Shape = NodeBasicShapes.Ellipse,
+                CornerRadius = 10
+            };
             node.Style.Fill = "#afeeee";
             node.Width = 50;
             node.Height = 50;
         }
     }
-    
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Straight;
     }
 
-    public class RadialTreeDetails
+    private class RadialTreeDetails
     {
         public string Id { get; set; }
         public string Name { get; set; }
@@ -99,7 +100,7 @@ Create a radial tree layout with a `DataSource`. The following code example illu
         public string ReportingPerson { get; set; }
     }
 
-    public List<RadialTreeDetails> RadialSource = new List<RadialTreeDetails>()
+    private List<RadialTreeDetails> RadialSource = new List<RadialTreeDetails>()
     {
         new RadialTreeDetails()   { Id = "parent", Name = "Maria Anders", Designation = "Managing Director" },
         new RadialTreeDetails()   { Id = "1", Name = "Ana Trujillo", Designation = "Project Manager",
@@ -163,13 +164,12 @@ Render a radial tree layout without using a `Datasource`. The following example 
 
 @code
 {
-    SfDiagramComponent diagram;
+    private SfDiagramComponent diagram;
     //Initialize the diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    string root = "node1";
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private string root = "node1";
 
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -185,19 +185,19 @@ Render a radial tree layout without using a `Datasource`. The following example 
     private void OnConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Straight;
-        (connector as Connector).TargetDecorator=new DecoratorSettings
-            {
+        (connector as Connector).TargetDecorator = new DecoratorSettings
+        {
             Shape = DecoratorShape.None,
         };
     }
 
     protected override void OnInitialized()
     {
-        for(int i = 1;i < 18;i++)
+        for (int i = 1; i < 18; i++)
         {
             Node node1 = new Node()
             {
-                ID = "node"+i,
+                ID = "node" + i,
                 Width = 70,
                 Height = 70,
             };
@@ -206,25 +206,18 @@ Render a radial tree layout without using a `Datasource`. The following example 
 
         Connector connector1 = new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2", };
         connectors.Add(connector1);
-
         Connector connector2 = new Connector() { ID = "connector2", SourceID = "node1", TargetID = "node3", };
         connectors.Add(connector2);
-
         Connector connector3 = new Connector() { ID = "connector3", SourceID = "node1", TargetID = "node4", };
         connectors.Add(connector3);
-
         Connector connector4 = new Connector() { ID = "connector4", SourceID = "node2", TargetID = "node5", };
         connectors.Add(connector4);
-
         Connector connector5 = new Connector() { ID = "connector5", SourceID = "node3", TargetID = "node6", };
         connectors.Add(connector5);
-
         Connector connector6 = new Connector() { ID = "connector6", SourceID = "node4", TargetID = "node7", };
         connectors.Add(connector6);
-
         Connector connector7 = new Connector() { ID = "connector7", SourceID = "node1", TargetID = "node8", };
         connectors.Add(connector7);
-
         Connector connector8 = new Connector() { ID = "connector8", SourceID = "node8", TargetID = "node9", };
         connectors.Add(connector8);
         Connector connector9 = new Connector() { ID = "connector9", SourceID = "node2", TargetID = "node10", };
@@ -243,7 +236,6 @@ Render a radial tree layout without using a `Datasource`. The following example 
         connectors.Add(connector15);
         Connector connector16 = new Connector() { ID = "connector16", SourceID = "node8", TargetID = "node17", };
         connectors.Add(connector16);
-
     }
 }
 ```
