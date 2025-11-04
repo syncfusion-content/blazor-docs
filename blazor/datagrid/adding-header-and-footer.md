@@ -382,7 +382,7 @@ You can choose from the following [PageNumberType](https://help.syncfusion.com/c
 
 To add page numbers to the header and footer of the exported PDF document:
 
-* Access the `Header.Contents` and `Footer.Content`s properties of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) and [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) sections in the `PdfExportProperties`.
+* Access the `Header.Contents` and `Footer.Content`s properties of the `Header` and `Footer` sections in the `PdfExportProperties`.
 
 * Set the ContentType to `PageNumber` and define the desired page number format using `PageNumberType`.
 
@@ -668,7 +668,7 @@ public class OrderData
 
 When exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a PDF document, you have an option to repeat the column headers on every page. This feature ensures that the column headers remains visible and easily identifiable, even when the data spans multiple pages in the exported PDF document.
 
-By default, the column headers is occurs only on the first page of the PDF document. However, you can enable the  [IsRepeatHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class to display the column headers on every page. This can be achieved using the [PdfHeaderQueryCellInfo](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfheaderquerycellinfo) event of the Grid.
+By default, the column headers is occurs only on the first page of the PDF document. However, you can enable the  [IsRepeatHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class to display the column headers on every page. This can be achieved using the [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo) event of the Grid.
 
 The following example demonstrates how to repeat the column headers on every page of the exported PDF document using the `PdfHeaderQueryCellInfo` event:
 

@@ -9,7 +9,9 @@ documentation: ug
 
 # Context Menu in Blazor Gantt Chart Component
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component allows you to perform quick actions by using the context menu. When right-clicking the context menu, the context menu options will be shown. To enable this feature, set the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) to “true”. The default context menu options are enabled using the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) property. The context menu options can be customized using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) property.
+The Blazor Gantt Chart component provides quick access to actions through a context menu. On right-click, context menu options are displayed based on the clicked element.
+
+To enable this feature, set the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) to **true**.  The context menu options can be customized using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) property.
 
 The default items are listed in the following table:
 
@@ -33,6 +35,7 @@ Items| Description
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" Height="450px" EnableContextMenu="true" AllowSorting="true" AllowResizing="true" Width="900px" HighlightWeekends="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
         Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
@@ -41,10 +44,12 @@ Items| Description
 
 @code {
     private List<TaskData> TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     public class TaskData
     {
         public int TaskID { get; set; }
@@ -80,16 +85,15 @@ Items| Description
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
-
-The following sample code demonstrates defining a custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
+You can configure custom context menu items by assigning a collection of `ContextMenuItemModel` to the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) property. To define actions for these items, use the [ContextMenuItemClicked](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuitemclicked) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
+
+<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEvents ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData"></GanttEvents>
@@ -97,20 +101,23 @@ The following sample code demonstrates defining a custom context menu item and i
 
 @code {
     public List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> Gantt;
+    private SfGantt<TaskData> GanttInstance;
+
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="Refresh"}
     };
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
         if(args.Item.Id == "Refresh")
         {
-            await Gantt.RefreshAsync();
+            await  GanttInstance.RefreshAsync();
         }
     }
 
@@ -148,17 +155,16 @@ The following sample code demonstrates defining a custom context menu item and i
 
 ## Built-in and custom context menu items
 
-Gantt Chart has an option to use both built-in and custom context menu items at the same time.
-
-The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event,
+You can configure built-in and custom context menu items at the same time in the Gantt Chart by assigning a collection of `ContextMenuItemModel` to the `[ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) property. The corresponding actions for custom items are handled through the [ContextMenuItemClicked](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuitemclicked) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" 
-    ContextMenuItems="@(new List<Object>() { "Add", new ContextMenuItemModel { Text = "Refresh", Target = ".e-content", Id = "Refresh" } })">
+
+<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="700px" 
+    ContextMenuItems="@(new List<Object>() { "Add", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
         Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -166,18 +172,21 @@ The following sample code demonstrates defining built-in and custom context menu
     <GanttEvents ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData">
     </GanttEvents>
 </SfGantt>
+
 @code {
     public List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> Gantt;
+    private SfGantt<TaskData> GanttInstance;
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "Refresh")
+        if (args.Item.Id == "copywithheader")
         {
-            await Gantt.RefreshAsync();
+            await GanttInstance.CopyAsync(true);
         }
     }
     public class TaskData
@@ -209,13 +218,17 @@ The following sample code demonstrates defining built-in and custom context menu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSiZDEUogRNlUf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoWNWHhsckRdfz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sub context menu items
 
-The sub-context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
+To configure nested context menu items (sub-menus) in the Blazor Gantt Chart, follow these steps:
 
-The following sample code demonstrates defining the sub-context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event,
+1. Define a list of `ContextMenuItemModel` objects using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) property.
+2. Add sub-items by assigning a collection of `MenuItems` to the `Items` property within each `ContextMenuItemModel`.
+3. Use the [ContextMenuItemClicked](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuitemclicked) event to handle actions for individual menu items.
+
+The following example demonstrates how to configure a sub-context menu titled **Gantt Action**, which includes the sub-items **Copy with headers** and **Edit**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -236,19 +249,25 @@ The following sample code demonstrates defining the sub-context menu item and it
     private SfGantt<TaskData> Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
-        new ContextMenuItemModel{Text="Gantt Action",Target=".e-content",Id="GanttAction",
-            Items=new List<MenuItem>(){new MenuItem {Text="Refresh",Id= "Refresh"},new MenuItem {Text="Edit",Id= "Edit"} } }
+        new ContextMenuItemModel{
+            Text="Gantt Action",Target=".e-content",Id="GanttAction",
+            Items=new List<MenuItem>(){
+                new MenuItem {Text="Copy with headers",Id= "copywithheader"},
+                new MenuItem {Text="Edit",Id= "Edit"} 
+            } 
+        }
     };
 
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     public async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "Refresh")
+        if (args.Item.Id == "copywithheader")
         {
-            await Gantt.RefreshAsync();
+            await Gantt.CopyAsync(true);
         }
         if (args.Item.Id == "Edit")
         {
@@ -286,13 +305,13 @@ The following sample code demonstrates defining the sub-context menu item and it
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthyDaCuziCqRiFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSMDsnBVFIKLRF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable the context menu for specific columns
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of ContextMenuOpen to **false**.
+To disable the context menu for specific columns in the Gantt Chart, use the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuopen) event. This event is triggered before the context menu is displayed, and setting the `Cancel` argument to **false** will disable the menu for the targeted columns.
 
-The following sample code demonstrates how to disable the context for specific column using event arguments of ContextMenuOpen event,
+The following sample code demonstrates how to disable the context menu for the **Duration** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -314,17 +333,20 @@ The following sample code demonstrates how to disable the context for specific c
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="refresh"}
     };
+
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
         if (Args.Column != null && Args.Column.Field == "Duration")
         {
-            Args.Cancel = true; // To prevent the context menu from opening
+            Args.Cancel = true; // To prevent the context menu from opening.
         }
     }
+
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
         if (args.Item.Id == "refresh")
@@ -365,11 +387,12 @@ The following sample code demonstrates how to disable the context for specific c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVeXaiOJCAcXLUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+
 ## Disable context menu items dynamically 
 
-You can enable or disable the context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuOpen) event of Gantt. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
+To dynamically disable specific context menu items based on conditions, set the `Disabled` property to **true** within the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuopen) event of the Gantt Chart.
 
-The following sample code demonstrates how to enable or disable context menu items dynamically in Gantt using event arguments of [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuOpen) event,
+The following sample code demonstrates how to disable the context menu items for the **Duration** column, while keeping it enabled for the remaining columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -391,13 +414,18 @@ The following sample code demonstrates how to enable or disable context menu ite
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel{Text="Gantt Action",Target=".e-content",Id="GanttAction",
-            Items=new List<MenuItem>(){new MenuItem{Text="Refresh",Id="Refresh"},new MenuItem{Text="Edit",Id= "Edit"}}}
+            Items=new List<MenuItem>(){
+                new MenuItem{Text="Refresh",Id="Refresh"},
+                new MenuItem{Text="Edit",Id= "Edit"}
+            }
+        }
     };
 
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     public async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
         if (args.Item.Id == "Refresh")
@@ -409,18 +437,17 @@ The following sample code demonstrates how to enable or disable context menu ite
             await Gantt.OpenEditDialogAsync();
         }
     }
+    
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
-#pragma warning disable BL0005
-        if (Args.Column != null && Args.Column.Field == "Duration")  // You can check condition based on your requirement
+        if (Args.Column != null && Args.Column.Field == "Duration")  
         {
-            Args.ContextMenu.Items[0].Disabled = true; // To disable edit context menu item
+            Args.ContextMenu.Items[0].Disabled = true; // To disable edit context menu item.
         }
         else
         {
-            Args.ContextMenu.Items[0].Disabled = false; // To enable edit context menu item
+            Args.ContextMenu.Items[0].Disabled = false; // To enable edit context menu item.
         }
-#pragma warning restore BL0005
     }
 
     public class TaskData
