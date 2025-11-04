@@ -13,7 +13,7 @@ Cell selection in the Gantt Chart component enables interactive selection of spe
 
 ## Single cell selection
 
-Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) to **Cell** and [selectionSettings.type](https://ej2.syncfusion.com/angular/documentation/api/gantt/selectionSettings/#type) to **Single**. This allows selecting only one cell at a time.
+Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) to **Cell** and [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) to **Single**. This allows selecting only one cell at a time.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -70,7 +70,7 @@ Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSe
   
 ## Multiple cell selection
 
-Multiple cell selection in the Gantt Chart is enabled by setting [selectionSettings.mode](https://ej2.syncfusion.com/angular/documentation/api/gantt/selectionSettings/#mode) to **Cell** and [selectionSettings.type](https://ej2.syncfusion.com/angular/documentation/api/gantt/selectionSettings/#type) to **Multiple**. This allows selecting multiple cells at a time by holding the <kbd>Ctrl</kbd> key while clicking on each desired cell.
+Multiple cell selection in the Gantt Chart is enabled by setting [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) to **Cell** and [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) to **Multiple**. This allows selecting multiple cells at a time by holding the <kbd>Ctrl</kbd> key while clicking on each desired cell.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -194,7 +194,7 @@ Select a specific cell in the Gantt Chart by calling the  [SelectCellAsync](http
 
 ## Customize cell selection action
 
-You may customize cell selection behavior in the Gantt Chart using [cellSelecting](https://ej2.syncfusion.com/angular/documentation/api/gantt/events/#cellselecting), [cellSelected](https://ej2.syncfusion.com/angular/documentation/api/gantt/events/#cellselected), [cellDeselecting](https://ej2.syncfusion.com/angular/documentation/api/gantt/events/#celldeselecting), and [cellDeselected](https://ej2.syncfusion.com/angular/documentation/api/gantt/events/#celldeselected) events.
+You may customize cell selection behavior in the Gantt Chart using [CellSelecting](https://blazor.syncfusion.com/documentation/gantt-chart/events#cellselecting), [CellSelected](https://blazor.syncfusion.com/documentation/gantt-chart/events#cellselected), [CellDeselecting](https://blazor.syncfusion.com/documentation/gantt-chart/events#celldeselecting), and [CellDeselected](https://blazor.syncfusion.com/documentation/gantt-chart/events#celldeselected) events.
 
 The following sample demonstrates selection is canceled in the `cellSelecting` event when the **TaskName** is **Perform Soil test**. 
 
