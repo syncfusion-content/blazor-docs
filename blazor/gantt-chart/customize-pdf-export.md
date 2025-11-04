@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize PDF exporting in Blazor Gantt Chart component | Syncfusion
+title: Customize PDF exporting in Syncfusion Blazor Gantt Chart
 description: Learn here all about Customize PDF exporting in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Customize pdf export
