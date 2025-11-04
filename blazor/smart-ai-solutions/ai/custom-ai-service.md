@@ -95,16 +95,16 @@ builder.Services.AddSingleton<IChatInferenceService, DeepSeekAIService>();
 This example illustrates how the Syncfusion Blazor AI library integrates with a custom AI service (DeepSeek):
 
 1. **Setup**: Implement and register the custom AI service in `Program.cs` using secure credentials.
-2. **Component Integration**: Inject `IChatInferenceService` to process AI requests within Syncfusion components like Smart TextArea.
+2. **Component integration**: Inject `IChatInferenceService` into components (for example, Smart TextArea or other Syncfusion controls) to send AI prompts and receive responses.
 3. **Request Formatting**: Convert Syncfusion AI parameters into the custom provider’s API format (e.g., DeepSeek’s JSON structure).
 4. **Response Processing**: Parse the provider’s response and update the component (e.g., displaying text suggestions).
 
 ### Key Components
-- **IChatInferenceService**: Interface for interacting with custom AI providers.
-- **AIServiceCredentials**: Syncfusion class for managing API keys, endpoints, and model names.
-- **GenerateResponseAsync**: Sends asynchronous requests to the custom AI provider and retrieves responses.
+- `IChatInferenceService`: Interface used by Syncfusion Blazor AI to interact with custom AI providers through a unified contract.
+- `AIServiceCredentials`: Class for managing API keys, endpoints, and model names through configuration.
+- `GenerateResponseAsync`: Method that sends asynchronous requests to the custom AI provider and retrieves responses.
 
 ## Error Handling
-- **Invalid API Key**: Ensure the API key is valid and stored securely in environment variables or a configuration service.
-- **Rate Limits**: Check the custom AI provider’s documentation (e.g., [DeepSeek API docs](https://platform.deepseek.com)) for rate limit details.
+- **Invalid API key**: Verify the API key and scope, and load it from configuration or a secure secret store.
+- **Rate limits**: Review provider-specific rate limits and implement backoff or retries where appropriate (see the provider’s documentation, such as the [DeepSeek API docs](https://platform.deepseek.com)).
 - **Network or Parsing Errors**: Handle HTTP or JSON errors gracefully, as shown in the `DeepSeekAIService` implementation.
