@@ -9,22 +9,23 @@ documentation: ug
 
 # Events in Blazor Dropdown Menu Component
 
-You can define the dropdown menu event using on [DropDownButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.
+Attach event handlers to the Dropdown Menu using the [DropDownButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) component. Each event accepts a handler whose parameter (if any) provides event-specific data through event arguments.
 
 ## List of events supported
 
-We have provided the following event support to the DropDownButton component. The different event argument types for each event are,
+The DropDownButton component supports the following events and argument types:
 
-* [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) - BeforeOpenCloseMenuEventArgs
-* [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Opened) - OpenCloseMenuEventArgs
-* [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) - MenuEventArgs
-* [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) – BeforeOpenCloseMenuEventArgs
-* [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnItemRender) – MenuEventArgs
-* [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Closed) – OpenCloseMenuEventArgs
+
+* [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) - BeforeOpenCloseMenuEventArgs; raised before the dropdown menu opens.
+* [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Opened) - OpenCloseMenuEventArgs; raised after the dropdown menu opens.
+* [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) - MenuEventArgs; raised when a menu item is selected.
+* [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) – BeforeOpenCloseMenuEventArgs; raised before the dropdown menu closes.
+* [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnItemRender) – MenuEventArgs; raised while rendering each menu item.
+* [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Closed) – OpenCloseMenuEventArgs; raised after the dropdown menu closes.
 
 ## How to bind event to Dropdown Menu
 
-Above defined events are bind the Dropdown Menu component. Here, we have explained about the sample code snippets of Dropdown Menu.
+Bind the above events to the Dropdown Menu by specifying handlers in the DropDownButtonEvents tag. Ensure each handler matches the expected delegate signature for the corresponding event. The following example demonstrates wiring all supported events:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

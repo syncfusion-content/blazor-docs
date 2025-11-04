@@ -1,15 +1,26 @@
 ---
 layout: post
 title: Task Labels in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Taskbar editing in Syncfusion Blazor Gantt Chart component and more.
+description: Learn how to configure taskbar labels in the Syncfusion Blazor Gantt Chart component for enhanced data visualization and project management.
 platform: Blazor
-control: Gantt Chart
+control:  Task labels
 documentation: ug
 ---
 
 # Task Labels in Blazor Gantt Chart Component
 
-The Gantt Chart component maps any data source fields to [GanttLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html) task labels using the `GanttLabelSettings.LeftLabel`, `GanttLabelSettings.RightLabel`, and `GanttLabelSettings.TaskLabel` properties. You can customize the task labels with templates using `GanttLabelSettings.LeftLabelTemplate`, `GanttLabelSettings.RightLabelTemplate` and `GanttLabelSettings.TaskLabelTemplate`
+Task labels in the Blazor Gantt Chart component display key task information directly on or near taskbars, enhancing project visualization without requiring task interaction. Configured via the [GanttLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html) property, labels show details like task names, IDs, or progress, streamlining workflows for resource management and status tracking. Labels support three positions: left labels outside the taskbar for identifiers like **TaskName**, right labels after the taskbar for metrics like **Progress**, and task labels overlaid on taskbars for prominent data like task titles. Left and right labels remain visible regardless of taskbar width, while task labels may clip for short tasks. Labels improve readability and provide immediate context, reducing the need for hovers or dialogs in large projects.
+
+## Configure task labels
+
+Task labels are configured using the [GanttLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html) property, mapping fields from the data source defined in [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) (e.g., id to TaskID, name to TaskName). The component supports three label positions with specific use cases:
+- [LeftLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_LeftLabel): Displays content like task names or resource assignments to the left of taskbars, ideal for identifiers.
+- [RightLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_RightLabel): Shows metrics like progress percentages or durations to the right, suitable for completion data.
+- [TaskLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_TaskLabel): Overlays content like task titles or progress on taskbars, prominent but limited by taskbar width.
+
+Use template literals for formatted labels, such as **${Progress}%** for progress percentages. Ensure valid `GanttTaskFields` mappings to reference fields accurately.
+
+The following example configures labels for task names, IDs, and progress:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

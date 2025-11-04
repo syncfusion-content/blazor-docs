@@ -7,21 +7,21 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Work Breakdown Structure (WBS) in Blazor Gantt component
+# Work Breakdown Structure (WBS) in Blazor Gantt Component
 
-The Work Breakdown Structure (WBS) organizes project tasks hierarchically in the Gantt component by assigning unique codes to each task. This system enhances visualization and management by clearly reflecting task relationships and levels through a structured numbering scheme (1, 1.1, 1.1.1, etc.). It proves especially valuable in complex environments like construction projects or enterprise-scale software development.
+The Work Breakdown Structure (WBS) organizes tasks hierarchically by assigning structured codes to each item. This improves task visibility and management by clearly representing relationships and levels using a numbering format (e.g., 1, 1.1, 1.1.1). It is especially useful in complex scenarios such as construction or enterprise-scale software projects.
 
 WBS provides a structured coding system for tasks, enabling clear hierarchy and predecessor relationships. The automatic code generation ensures efficient task organization, while auto-updates maintain accuracy during sorting, filtering, editing, and row operations. This enhances project tracking in hierarchical structures with event-driven control for performance optimization.
 
-## Configuration and implementation
+## Configuration and Implementation
 
-To enable WBS in the Blazor Gantt component, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to `true`. This displays the WBS column in the treegrid area of the Gantt chart. 
+To display the WBS column in the Gantt treegrid, set the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property to **true**.
 
-The [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property handles WBS code generation automatically. When enabled, the component creates WBS codes based on the task hierarchy and maintains updated codes when tasks are added, deleted, moved, edited, indented, outdented, sorted, filtered, or searched.
+To automatically generate and maintain WBS codes based on task hierarchy, enable the [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property. WBS codes are updated when tasks are added, deleted, moved, edited, indented, outdented, sorted, filtered, or searched.
 
-To render the WBS and WBS Predecessor columns, you need to bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields`.
+To render WBS and WBS Predecessor columns, bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields`.
 
-The WBS code generation follows a hierarchical numbering pattern where parent tasks receive sequential numbers (1, 2, 3), and child tasks append decimal notation (1.1, 1.2, 1.1.1). This automatic generation recalculates codes whenever the task hierarchy changes through operations like indenting, outdenting, or reordering tasks.
+WBS codes follow a hierarchical structure: parent tasks use sequential numbers (e.g., 1, 2, 3), and child tasks use decimal notation (e.g., 1.1, 1.2, 1.1.1). Codes are recalculated automatically when the task hierarchy changes due to operations like indenting, outdenting, or reordering.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -92,11 +92,11 @@ The WBS code generation follows a hierarchical numbering pattern where parent ta
 ```
 > The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
-## Performance optimization with conditional updates
+## Performance Optimization with Conditional Updates
 
-For enhanced performance in large datasets, controlling when WBS codes are recalculated by through the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) and [RowDropped](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events. This approach optimizes performance during intensive operations like drag-and-drop by enabling auto-update only when necessary.
+To improve performance with large datasets, control WBS code recalculation using the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) and [RowDropped](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events. This approach ensures updates occur only when necessary, such as during drag-and-drop operations.
 
-The following example demonstrates conditional WBS auto-update activation specifically during row drag and drop operations, preventing unnecessary recalculations during other interactions.
+The example below demonstrates how WBS auto-update is conditionally triggered during row drag-and-drop, avoiding unnecessary recalculations during other interactions.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -199,9 +199,9 @@ The WBS feature has a few limitations in the Gantt component:
 * WBS Code and WBS Predecessor fields cannot be mapped directly from the data source as they are generated dynamically by the component based on task hierarchy.
 
 ## See Also
-- [How to define columns manually in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column)
-- [How to customize column headers in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-headers)
-- [How to use the column menu in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-menu)
-- [How to reorder columns in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-reorder)
-- [How to resize columns in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-resizing)
-- [How to use column templates in Blazor Gantt Chart](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-template)
+- [How to define columns manually in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column)
+- [How to customize column headers in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-headers)
+- [How to use the column menu in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-menu)
+- [How to reorder columns in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-reorder)
+- [How to resize columns in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-resizing)
+- [How to use column templates in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-template)

@@ -9,7 +9,20 @@ documentation: ug
 
 # Hyperlink in Blazor Pivot Table Component
 
-The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. It can be configured through the code behind, during initial rendering and the settings available to show the hyperlink are:
+The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation.
+
+Hyperlinks can be selectively enabled for various cell types, including:
+
+- Row headers
+- Column headers
+- Value cells
+- Summary cells
+
+You can control hyperlink behavior using the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class, which can be defined during the initial rendering through the code-behind.
+
+## Available Hyperlink Settings
+
+The following properties are available in PivotViewHyperlinkSettings:
 
 * [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink): It allows to set the visibility of hyperlink in all cells.
 * [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink): It allows to set the visibility of hyperlink in row headers.
@@ -20,34 +33,36 @@ The pivot table supports to show hyperlink option to link data for individual ce
 * [ConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html): It allows to set the visibility of hyperlink based on specific condition.
 
 <!-- markdownlint-disable MD028 -->
-N> By default, the hyperlink options are disabled for all cells in the pivot table.
+N> By default, the hyperlink options are disabled for all cells in the Pivot Table.
 
 N> User defined style can be applied to hyperlink using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) property in [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
 
 ## Hyperlink for all cells
 
-The pivot table has an option to show hyperlink option for all cells that are currently in display. To do so, user need to set [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) to **true**.
+The Pivot Table provides an option to display hyperlinks across **all cells** currently visible in the table. To enable this functionality, set the [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html).
+
+Once enabled, hyperlinks will be shown consistently in row headers, column headers, value cells, and summary cells.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true">
     <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings ShowHyperlink="true" CssClass="e-custom-class">
     </PivotViewHyperlinkSettings>
 </SfPivotView>
@@ -75,28 +90,28 @@ The pivot table has an option to show hyperlink option for all cells that are cu
 
 ## Hyperlink for row headers
 
-The pivot table has an option to show hyperlink option for row header cells alone that are currently in display. To do so, user need to set [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink) to **true**.
+The Pivot Table provides a way to display hyperlinks specifically in **row header cells** that are currently visible. To enable this functionality, set the [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html). This ensures that only the row headers will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings ShowRowHeaderHyperlink="true" CssClass="e-custom-class">
     </PivotViewHyperlinkSettings>
 </SfPivotView>
@@ -124,30 +139,30 @@ The pivot table has an option to show hyperlink option for row header cells alon
 
 ## Hyperlink for column headers
 
-The pivot table has an option to show hyperlink option for column header cells alone that are currently in display. To do so, the user need to set [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) to **true**.
+The Pivot Table provides an option to display hyperlinks specifically in column header cells that are currently visible. To enable this functionality, set the [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the column headers will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-        <PivotViewHyperlinkSettings ShowColumnHeaderHyperlink="true" CssClass="e-custom-class">
-        </PivotViewHyperlinkSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewHyperlinkSettings ShowColumnHeaderHyperlink="true" CssClass="e-custom-class">
+    </PivotViewHyperlinkSettings>
 </SfPivotView>
 
 <style>
@@ -173,30 +188,30 @@ The pivot table has an option to show hyperlink option for column header cells a
 
 ## Hyperlink for value cells
 
-The pivot table has an option to show hyperlink option for value cells alone that are currently in display. To do so, the user need to set [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) to **true**.
+The Pivot Table provides support for displaying hyperlinks specifically in value cells that are currently visible. To enable this option, set the [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the value cells will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-        <PivotViewHyperlinkSettings ShowValueCellHyperlink="true" CssClass="e-custom-class">
-        </PivotViewHyperlinkSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewHyperlinkSettings ShowValueCellHyperlink="true" CssClass="e-custom-class">
+    </PivotViewHyperlinkSettings>
 </SfPivotView>
 
 <style>
@@ -222,30 +237,30 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 
 ## Hyperlink for summary cells
 
-The pivot table has an option to show hyperlink option for summary cells alone that are currently in display. To do so, the user need to set [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) to **true**.
+The Pivot Table provides support for displaying hyperlinks specifically in summary cells that are currently visible. To enable this option, set the [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the summary cells will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-        <PivotViewHyperlinkSettings ShowSummaryCellHyperlink="true" CssClass="e-custom-class">
-        </PivotViewHyperlinkSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewHyperlinkSettings ShowSummaryCellHyperlink="true" CssClass="e-custom-class">
+    </PivotViewHyperlinkSettings>
 </SfPivotView>
 
 <style>
@@ -271,34 +286,36 @@ The pivot table has an option to show hyperlink option for summary cells alone t
 
 ## Condition based hyperlink
 
-The pivot table has an option to show hyperlink in the cells based on specific conditions. It can be configured using the [PivotViewConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html) class through code behind, during initial rendering. The settings required are:
+The Pivot Table supports displaying hyperlinks in specific cells based on defined conditions. This functionality can be configured through code-behind during initial rendering using the [PivotViewConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html) class.
 
-* [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Measure): Specifies the value field name, in-order to set the visibility of hyperlink for the same when condition is met.
+* [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Measure): Specifies the value field name for which the hyperlink should be shown when the condition is met.
 * [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Conditions): Specifies the operator type such as [Condition.Equals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), [Condition.GreaterThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), [Condition.LessThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), etc.
-* [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value1): Specifies the start value.
-* [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value2): Specifies the end value.
+* [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value1): Sets the starting value for the condition.
+* [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value2): Sets the ending value for the condition (used in range-based comparisons).
+
+In the example below, the Pivot Table is configured to display hyperlinks only in cells where the "Units Sold" field value is between **100** and **200**. This highlights specific aggregated values that meet the given condition.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings CssClass="e-custom-class">
         <PivotViewConditionalSettings>
             <PivotViewConditionalSetting Measure="Sold" Conditions=Condition.Between Value1="100" Value2="200"></PivotViewConditionalSetting>
@@ -316,12 +333,12 @@ The pivot table has an option to show hyperlink in the cells based on specific c
 }
 </style>
 @code{
-	public List<ProductDetails> data { get; set; }
-	protected override void OnInitialized()
-	{
-		this.data = ProductDetails.GetProductData().ToList();
-		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-	}
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
 }
 ```
 
@@ -329,28 +346,30 @@ The pivot table has an option to show hyperlink in the cells based on specific c
 
 ## Header based hyperlink
 
-The pivot table has an option to show hyperlink in the cells based on specific row or column header. It can be configured using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText) option through code behind, during initial rendering.
+The Pivot Table supports displaying hyperlinks in cells based on specific row or column headers. This functionality can be enabled using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText) property, which is configured through code-behind during initial rendering.
+
+In the below code example, the value **FY 2015** is assigned to [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText), which means the Pivot Table will show hyperlinks only in cells that match this specific header combination.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-            <PivotViewFormatSettings>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings HeaderText="FY 2015" CssClass="e-custom-class"></PivotViewHyperlinkSettings>
 </SfPivotView>
 
@@ -378,75 +397,83 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 
 ## Event
 
-The event [HyperlinkCellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_HyperlinkCellClicked) fires on every hyperlink cell click.
+The Pivot Table triggers the [`HyperlinkCellClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_HyperlinkCellClicked) event whenever a hyperlink cell is clicked. This event allows you to either customize the clicked cell or retrieve information about it.
 
-It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) and [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell). The parameter [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell) is used to customize the host cell element by any means. Meanwhile, when the parameter [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) is set to **true**, applied customization will not be updated to the host cell element.
+It provides two parameters:
+
+* [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell): Refers to the clicked cell element, which can be modified as needed.
+* [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel): If set to **true**, prevents any changes from being applied to the cell.
+* [`Data`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Data): Contains detailed information about the clicked cell, including its value, row and column headers, position, and whether it’s a summary cell.
+* [`NativeEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_NativeEvent): Represents the original browser event triggered by the click, useful for advanced event handling.
+
+In the example below, when a hyperlink cell is clicked, the cell is checked to determine if it is a row header. If it is a row header (e.g., 'France'), the user is redirected to the corresponding Wikipedia page (e.g., 'https://en.wikipedia.org/wiki/France'). If the clicked cell is a column header, value cell, or summary cell, the user is redirected to 'https://syncfusion.com/'. The [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) property is set to **false** to enable this interaction.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 @inject IJSRuntime JSRuntime
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true">
-    <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
-    <PivotViewHyperlinkSettings ShowHyperlink="true" CssClass="e-custom-class">
-    </PivotViewHyperlinkSettings>
-    <PivotViewEvents TValue="ProductDetails"  HyperlinkCellClicked="hyperlink"></PivotViewEvents>
+	<PivotViewDataSourceSettings DataSource="@data">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+	</PivotViewDataSourceSettings>
+	<PivotViewHyperlinkSettings ShowHyperlink="true" CssClass="e-custom-class">
+	</PivotViewHyperlinkSettings>
+	<PivotViewEvents TValue="ProductDetails" HyperlinkCellClicked="OnHyperLinkClick"></PivotViewEvents>
 </SfPivotView>
 
 <script type="text/javascript">
-function navigateFromPivotCellCoordinates(rowIndex, colIndex, baseUrl) {
-    const element = document.querySelector('[index="' + rowIndex + '"][aria-colindex="' + (colIndex + 1) + '"]');
-    const cellcontent =  element.innerText;
-    if (element && element.classList.contains('e-rowsheader') && cellcontent != "Grand Total")
-    {
-        const finalUrl = `${baseUrl}${encodeURIComponent(cellcontent)}`;
-        console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
-        window.location.href = finalUrl;
-    }
-    else
-    {
-        const finalUrl = "https://syncfusion.com/";
-        console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
-        window.location.href = finalUrl;
-    }
-}
+	function navigateFromPivotCellCoordinates(rowIndex, colIndex, baseUrl) {
+		const element = document.querySelector('[index="' + rowIndex + '"][aria-colindex="' + (colIndex + 1) + '"]');
+		const cellcontent =  element.innerText;
+		if (element && element.classList.contains('e-rowsheader') && cellcontent != "Grand Total")
+		{
+			const finalUrl = `${baseUrl}${encodeURIComponent(cellcontent)}`;
+			console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
+			window.location.href = finalUrl;
+		}
+		else
+		{
+			const finalUrl = "https://syncfusion.com/";
+			console.log(`Navigating from DOM element at [${rowIndex}, ${colIndex}] to: ${finalUrl}`);
+			window.location.href = finalUrl;
+		}
+	}
 </script>
 
 <style>
-.e-custom-class,.e-custom-class:hover {
-    text-decoration: underline !important;
-    color: blue !important;
-}
-.e-custom-class:hover {
-    color: red !important;
-}
+	.e-custom-class, .e-custom-class:hover {
+		text-decoration: underline !important;
+		color: blue !important;
+	}
+
+	.e-custom-class:hover {
+		color: red !important;
+	}
 </style>
-@code{
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
-    {
-       	int row= (args.Data as AxisSet).RowIndex;
-       	int col= (args.Data as AxisSet).ColIndex;
-       	string baseUrl = "https://en.wikipedia.org/wiki/";
-       	await JSRuntime.InvokeVoidAsync("navigateFromPivotCellCoordinates", row, col, baseUrl);
-    }
+@code {
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
+	public async Task OnHyperLinkClick(HyperCellClickEventArgs args)
+	{
+		int row = (args.Data as AxisSet).RowIndex;
+		int col = (args.Data as AxisSet).ColIndex;
+		string baseUrl = "https://en.wikipedia.org/wiki/";
+		await JSRuntime.InvokeVoidAsync("navigateFromPivotCellCoordinates", row, col, baseUrl);
+	}
 }
 ```
 
