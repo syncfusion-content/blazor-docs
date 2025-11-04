@@ -85,4 +85,3 @@ Enables structured data export to Excel, CSV, and PDF formats, and provides even
     * [Excel and CSV](https://blazor.syncfusion.com/documentation/gantt-chart/excel-export): Enables exporting Gantt chart data to Excel and CSV formats, simplifying structured data handling for reporting and offline analysis.  
     * [PDF](https://blazor.syncfusion.com/documentation/gantt-chart/pdf-export): Allows exporting the chart as a PDF document, with support for single-page layout to generate compact and printable visual summaries.
   * [Event Hooks](https://blazor.syncfusion.com/documentation/gantt-chart/events): Provides lifecycle events that enable customization of chart behavior during rendering, editing, and user interactions (e.g., DataBound, TaskbarEdited).
-
