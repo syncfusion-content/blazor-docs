@@ -216,8 +216,6 @@ N> If an Interactivity Location is set to `Global` and the **Render Mode** is se
 
 @using Syncfusion.Blazor.Grids
 
-@using Syncfusion.Blazor.Grids
-
 <SfGrid DataSource="@Orders" />
 
 @code{
