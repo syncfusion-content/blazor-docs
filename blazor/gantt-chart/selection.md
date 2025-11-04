@@ -11,6 +11,11 @@ documentation: ug
 
 Selection provides an option to highlight a row or a cell. It can be done using arrow keys or by scrolling down the mouse. To disable selection in the Gantt Chart component, set the `AllowSelection` to false.
 
+To learn more about the selection feature in the Blazor Gantt Chart component, you can check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=3DRbWtyDd1U"%}
+
 The Gantt Chart component supports two types of selection that can be set by using the [SelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionType.html) property. They are:
 
 * `Single`: Sets a single value by default and allows only selection of a single row or a cell.

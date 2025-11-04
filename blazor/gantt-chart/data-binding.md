@@ -15,6 +15,10 @@ It supports the following kinds of data binding method:
 * List binding
 * Remote data
 
+To learn about how to bind local or remote data to Gantt chart, check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=lJ_q_s-j8Fg" %}
+
 N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the Gantt component.
 
 ## List binding

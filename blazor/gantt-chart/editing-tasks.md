@@ -16,6 +16,11 @@ The following editing options are available to update the tasks in the Gantt cha
 * Dialog
 * Taskbar
 
+To know more about editing feature in Blazor Gantt chart component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=yEtTrM6RkyM"%}
+
 ## Cell editing
 
 By setting the edit mode to auto using the [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) property, the tasks can be edited by double-clicking the Tree Grid cells.
