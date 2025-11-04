@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Different Work Hours for Each Day in Blazor Scheduler | Syncfusion
+title: Different work hours for each days in blazor schedule | Syncfusion
 description: Learn here all about Set different work hours for each days of the each resource in Syncfusion Blazor Scheduler component using methods and events.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Different Work Hours for Each Day in Blazor Scheduler Component
+# Different work hours for each days in Blazor Scheduler Component
 
-The Blazor Scheduler component allows for the customization of work hours, visually highlighting specific cell ranges to represent available working times. To implement custom work hours, the `SetWorkHoursAsync` method is used. Before applying new custom work hours, it is often necessary to clear any previously defined default work hours using the `ResetWorkHoursAsync` method.
-
-In the following example, custom work hours are set for individual days of the week and for different doctor resources. This demonstrates how the Scheduler can reflect complex scheduling requirements.
+In Blazor, you can set the required work hours on Scheduler, thus visually highlighting the cells underlying the given work hour range. In the following code example, you can set the different work hours for scheduler cells based on the day of the week by using the `SetWorkHoursAsync` method. Before setting up the custom work hours we need to reset the default work hours by using the `ResetWorkHoursAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -115,6 +113,3 @@ In the following example, custom work hours are set for individual days of the w
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLICXXgJeqHgyuP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scheduler Different Work Hours](../images/work-hours.png)

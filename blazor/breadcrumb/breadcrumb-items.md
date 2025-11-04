@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Breadcrumb Items in Blazor Breadcrumb component | Syncfusion
+title: Breadcrumb Items with Blazor Breadcrumb component | Syncfusion
 description: Checkout and learn here all about data binding with Blazor Breadcrumb component of Syncfusion and more.
 platform: Blazor
 control: Breadcrumb
@@ -9,15 +9,15 @@ documentation: ug
 
 # Breadcrumb Items in Blazor Breadcrumb Component
 
-The Syncfusion [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component supports to generate items based on the current URL by default. Alternatively, breadcrumb items can be manually defined using the[BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive or by setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property.
+The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) supports to generate items based on the current URL by default. You can set the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive or [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property to generate the items.
 
 [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) has the following properties for navigation and its customizations.
 
-* [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - Sets the URL of the Breadcrumb item, which is used for navigation when the item is clicked. This can be an absolute or relative URL.
+* [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - Sets the URL of the Breadcrumb item and it will navigate when clicked.
 
-* [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) - Assigns a CSS class string to include an icon next to the breadcrumb item's text.
+* [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) - Sets CSS class string to include an icon for the Breadcrumb item.
 
-* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Text) - Specifies the display text content for the breadcrumb item.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Text) - Sets the text content of the Breadcrumb item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -35,17 +35,16 @@ The Syncfusion [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
 
-## Items Based on Current URL
+## Items based on current URL
 
-The Breadcrumb component can automatically generate its items based on the segments of the current page's URL. This provides a convenient way to create dynamic breadcrumbs without manual item definition. When the `SfBreadcrumb` is instantiated without any [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) directives, it inspects the current URL and generates breadcrumb items accordingly. Each segment of the URL becomes a breadcrumb item, and the text is typically derived from the URL segment
+The Breadcrumb items can be generated based on the current URL of the page when the user does not specify the Breadcrumb items using the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive. The following example shows the Breadcrumb items that are auto generated based on the current URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb></SfBreadcrumb>
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUWVWJzVObSwiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
 
@@ -53,7 +52,7 @@ N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion
 
 ## Absolute URL
 
-The Breadcrumb component can also be instructed to generate its items by parsing a specific URL provided via the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property property of the `<SfBreadcrumb>` component as like the below example.
+You can generate the Breadcrumb items by providing the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property in the component as like the below example.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -65,9 +64,9 @@ The Breadcrumb component can also be instructed to generate its items by parsing
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
 
-## Add or Remove the Breadcrumb Items
+## Add or remove the Breadcrumb items
 
-The Breadcrumb component allows programmatic manipulation of its items using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of Breadcrumb, so items in the breadcrumb can be dynamically add or remove from the Breadcrumb.
+Using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of Breadcrumb, we can dynamically add or remove the items of Breadcrumb.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -107,4 +106,4 @@ The Breadcrumb component allows programmatic manipulation of its items using the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSjuVgKFaADUnm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBStMNFgGHPMWew?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}

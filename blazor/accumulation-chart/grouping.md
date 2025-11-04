@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor Accumulation Chart Component | Syncfusion
-description: Check out and learn how to group and visualize data points in Syncfusion Blazor Accumulation Chart component.
+description: Checkout and learn here all about Grouping in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -11,16 +11,14 @@ documentation: ug
 
 # Grouping in Blazor Accumulation Chart Component
 
-## Grouping
+The value set to the [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) property can be used to club/group a few points in the series. Points with a value less than [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) are grouped together and displayed as a single point with the label **Others**. In addition, the property value can be set in percentage (percentage of total data points value).
 
-The [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) property can be used to group points in the series. Points with a value less than `GroupTo` are grouped and displayed as a single point labeled **Others**. The property value can also be set as a percentage of the total data points value.
-
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false" />
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" Name="Sales" GroupTo="10">
@@ -30,7 +28,7 @@ The [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class ChartData
     {
         public string XValue { get; set; }
@@ -62,18 +60,18 @@ The [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 
 ## Pie Grouping
 
-### Broken Slice
+**Broken Slice**
 
-Grouped points appear as a single slice labeled **Others**, which explodes and breaks into separate slices when clicked.
+The points that have been grouped together will appear as a single slice with the label **Others**, which will explode and break into separate slices when clicked.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
-    <AccumulationChartTooltipSettings Enable="true" />
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 
-    <AccumulationChartLegendSettings Visible="false" />
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" Explode="true" Radius="70%" GroupTo="15">
@@ -85,7 +83,7 @@ Grouped points appear as a single slice labeled **Others**, which explodes and b
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class ChartData
     {
         public string XValue { get; set; }
@@ -113,20 +111,20 @@ Grouped points appear as a single slice labeled **Others**, which explodes and b
 ```
 
 ![Blazor Accumulation Chart with Broken Slice](images/grouping/blazor-accumulation-chart-with-broken-slice.png)
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqihMUfoqzKvcp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+**Group Mode**
 
-### Group Mode
+ When the [GroupMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupMode) property is set to [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.GroupMode.html#Syncfusion_Blazor_Charts_GroupMode_Point), the points are displayed as separate slices according to the [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) value. The remaining points will be grouped into a single slice and displayed.
 
-When [GroupMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupMode) is set to [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.GroupMode.html#Syncfusion_Blazor_Charts_GroupMode_Point), points are displayed as separate slices according to the `GroupTo` value. Remaining points are grouped into a single slice.
-
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
-    <AccumulationChartTooltipSettings Enable="true" />
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 
-    <AccumulationChartLegendSettings Visible="false" />
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" GroupTo="9" GroupMode=GroupMode.Point>
@@ -138,7 +136,7 @@ When [GroupMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class ChartData
     {
         public string XValue { get; set; }
@@ -170,6 +168,6 @@ When [GroupMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
-* [Data label](./data-labels)
+* [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

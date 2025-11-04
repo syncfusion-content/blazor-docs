@@ -11,7 +11,7 @@ documentation: ug
 
 Dropdown Menu with rounded corner can be achieved by adding the `border-radius` CSS property to button element.
 
-In the following example, the `e-round-corner` class sets a `5px` `border-radius`, which is applied to the DropDownButton via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. Adjust the radius value as needed to align with your design system, and apply similar styling to `.e-dropdown-popup` if you want the menu panel to share the same rounded appearance.
+In the following example, `e-round-corner` class is defined with `5px` `border-radius` property and added that class to button element using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -31,5 +31,7 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
 </style>
 
 ```
+
+
 
 ![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.png)

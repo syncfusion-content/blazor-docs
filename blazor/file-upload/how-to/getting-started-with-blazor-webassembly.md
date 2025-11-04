@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor File Upload in WebAssembly | Syncfusion
+title: Getting Stared with Blazor File Upload in WebAssembly | Syncfusion
 description: Checkout and learn about getting started with Blazor WebAssembly App and Blazor File Upload Component in Visual Studio and much more.
 platform: Blazor
 control: File Upload
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor File Upload Component in WebAssembly App using Visual Studio
 
-This article provides step-by-step instructions for building a Blazor WebAssembly app with the Blazor File Upload component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor File Upload component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -17,11 +17,11 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the App
 
-To add the Blazor File Upload component to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can use the following Package Manager commands:
+To add Blazor File Upload component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -33,11 +33,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -48,7 +48,7 @@ Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor WebAssembly app.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -74,7 +74,7 @@ await builder.Build().RunAsync();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For Blazor WebAssembly app, include them in the **~/index.html** file.
+* For Blazor WebAssembly app, include it in the **~/index.html** file.
 
 ```html
 <head>
@@ -83,7 +83,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> See [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for multiple ways to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script references, see [Adding script references](https://blazor.syncfusion.com/documentation/common/adding-script-references). references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor File Upload component
 
@@ -97,17 +97,17 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload comp
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component in your default web browser.
 
-![Blazor Uploader rendered in a WebAssembly app](../images/blazor-fileupload-component.png)
+![Blazor Upload](../images/blazor-fileupload-component.png)
 
 ## Without server-side API endpoint
 
-Upload files (and folder contents) in a Blazor application without specifying a server-side API endpoint by configuring [AsyncSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html).
+You can upload the files and files of folders in the Blazor application without specifying the server-side API end point using [AsyncSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html).
 
 ### Save and Remove actions
 
-Uploaded files as streams in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event arguments. Implement the save logic within the `ValueChange` handler to process files as needed. The concept is illustrated below.
+You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Find the save action code below.
 
 {% tabs %}
 {% highlight razor %}
@@ -140,9 +140,9 @@ Uploaded files as streams in the [ValueChange](https://help.syncfusion.com/cr/bl
 {% endhighlight %}
 {% endtabs %}
 
-![Uploader showing an updated file list after selection](../images/blazor-fileupload-with-updated-files.png)
+![Blazor FileUpload displays Updated Files](../images/blazor-fileupload-with-updated-files.png)
 
-When clicking the remove icon in the file list, the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event provides the file name(s) being removed. Implement the remove logic in the `OnRemove` handler to remove files from the target location as needed in your application.
+While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Find the remove action code below.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -163,16 +163,16 @@ Private void onRemove(RemovingEventArgs args)
 
 ## With server-side API endpoint
 
-The upload process can use server endpoints for save and remove actions.
+The upload process requires save and remove action URL to manage the upload process in the server.
 
-N> * The save action is required to handle the upload operation.
-<br/> * The remove action is optional for deleting files on the server.
+N> * The save action is necessary to handle the upload operation.
+<br/> * The remove action is optional, one can handle the removed files from server.
 
-Specify the save action URL with the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_SaveUrl) property.
+The save action handler upload the files that needs to be specified in the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_SaveUrl) property.
 
-The save handler receives the submitted files and manages the save process on the server. After uploading files to the server location, the color of the selected file name changes to green and the remove icon switches to a bin icon.
+The save handler receives the submitted files and manages the save process in server. After uploading the files to server location, the color of the selected file name changes to green and the remove icon is changed as bin icon.
 
-Specify the remove action URL with the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) property to handle server-side deletes.
+The remove action is optional. The remove action handler removes the files that needs to be specified in the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) property.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -253,20 +253,20 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 ## Configure allowed file types
 
-Allow only specific file types to be uploaded using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions) property. Provide extensions as a comma-separated list. The uploader filters selected or dropped files against the specified file types and proceeds with the upload operation. Validation also applies when specifying the native input’s accept attribute.
+You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfUploader AllowedExtensions=".doc, .docx, .xls, .xlsx"></SfUploader>
+<SfUploader AllowedExtensions=".doc, docx, .xls, xlsx"></SfUploader>
 
 {% endhighlight %}
 {% endtabs %}
 
-![Uploader filtering to allow only specific file types](../images/blazor-fileupload-allow-specific-file.png)
+![Allowing Specific Files in Blazor FileUpload](../images/blazor-fileupload-allow-specific-file.png)
 
 ## See Also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](../../getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](../../getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio](../../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](../../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](../../getting-started/blazor-web-app)

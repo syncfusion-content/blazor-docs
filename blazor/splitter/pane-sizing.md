@@ -9,11 +9,11 @@ documentation: ug
 
 # Pane Sizing in Blazor Splitter Component
 
-The Splitter allows providing pane sizes in either `Pixel` or `Percentage` formats.
+Splitter allows to provide pane sizes either in `Pixel` or `Percentage` formats.
 
-## Auto Size Panes
+## Auto size panes
 
-Splitter panes adjust automatically during resizing if an explicit size is not specified, as panes are designed with a flex layout by default. When panes are added, removed, shown, or hidden, they auto-align within the container.
+The splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When you add/remove or show/hide the panes, the panes are auto aligned within its container.
 
 ```cshtml
 
@@ -62,13 +62,11 @@ using Syncfusion.Blazor.Layouts
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLoMttlJlnRCjnx?appbar=false&editor=false&result=true&errorlist=false&theme=tailwind" %}
-
 ![Blazor Splitter with Auto sizing Panes](./images/auto-sizing-panes.png)
 
-## Fixed Panes
+## Fixed pane
 
-Split panes can be rendered with a fixed size in both `Horizontal` and `Vertical` modes. Even if a fixed size is provided to all panes, the last pane is considered a flexible pane and will absorb any remaining space or overflow.
+The split panes can be rendered with fixed size in both `Horizontal` and `Vertical` mode. Even if a fixed size is provided to all the panes, the last pane is considered as a flexible pane.
 
 ```cshtml
 
@@ -104,11 +102,9 @@ Split panes can be rendered with a fixed size in both `Horizontal` and `Vertical
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htryWjZlfFclnAqF?appbar=false&editor=false&result=true&errorlist=false&theme=tailwind" %}
-
 ![Blazor Splitter with Fixed Pane Size in Pixel](./images/blazor-splitter-fixed-pane-size-in-pixel.png)
 
-### Splitter Pane Size in Percentage
+Splitter pane Size in `Percentage`.
 
 ```cshtml
 
@@ -135,7 +131,5 @@ Split panes can be rendered with a fixed size in both `Horizontal` and `Vertical
 </SfSplitter>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSCDtPTllceCgf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Splitter with Fixed Pane Size in Percentage](./images/blazor-splitter-fixed-pane-size-in-percentage.png)

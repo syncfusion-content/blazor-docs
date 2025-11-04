@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor Numeric TextBox Component
 
-This section explains how to attach native DOM events to the Numeric TextBox and how to pass event data to handlers.
+This section explains the steps to include native events and pass data to event handler in the NumericTextBox component.
 
 ## Bind native events to NumericTextBox
 
-Attach native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler method.
+You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
-In the following example, the KeyPressed method is invoked every time a key is pressed in the input.
+In the following example, the KeyPressed method is called every time the key is pressed on input.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is invoked every time a key is p
 }
 ```
 
-The same behavior can be expressed with a lambda expression.
+Also, you can rewrite the previous example code as follows using Lambda expressions.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -39,13 +39,14 @@ The same behavior can be expressed with a lambda expression.
 
 ## Pass event data to event handler
 
-Blazor provides strongly typed event argument classes that map to native events. Common examples include:
-- Focus events: FocusEventArgs
-- Mouse events: MouseEventArgs
-- Keyboard events: KeyboardEventArgs
-- Input/change events: ChangeEventArgs
-- Touch events: TouchEventArgs
-- Pointer events: PointerEventArgs
+Blazor provides set of argument types to map to native events. The list of event types and event arguments are:
+
+* Focus Events - FocusEventArgs
+* Mouse Events - MouseEventArgs
+* Keyboard Events - KeyboardEventArgs
+* Input Events - ChangeEventArgs/EventArgs
+* Touch Events – TouchEventArgs
+* Pointer Events – PointerEventArgs
 
 In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "n" key.
 
@@ -65,7 +66,7 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using a lambda expression, event data can be forwarded to the handler as shown above.
+Using Lambda expression also, you can pass the event data to the event handler.
 
 ## List of Native events supported
 

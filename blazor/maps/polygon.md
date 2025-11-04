@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polygon shape in Blazor Maps Component | Syncfusion
-description: Check out and learn how to add, configure and customize polygon shape in the Syncfusion Blazor Maps component.
+description: Checkout and learn here all about polygon shape in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,26 +9,25 @@ documentation: ug
 
 # Polygon shape in Blazor Maps Component
 
-The Maps component supports adding polygon shapes to a geometry map or an online map using the properties of the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag. This section explains how to add polygon shapes to the map and customize them.
+The Maps component allows you to add polygon shape to a geometry map or an online map by using the properties in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag. This section describes how to add polygon shape to the map and customize them.
 
 ## Adding polygon shape
 
-A polygon shape can be rendered over the map layer by defining the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag in the Maps component. The `Points` property uses a collection of latitude and longitude values to define the polygon shape.
+The polygon shape can be rendered over the map layer by defining the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag in the Maps component. The `Points` property uses a collection of latitude and longitude values to define the polygon shape.
 
-The `MapsPolygon` tag provides the following properties for customizing polygon shapes in the Maps component.
+The `MapsPolygon` tag provides the following properties for customizing the polygon shape of the Maps component.
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Fill) - Changes the color of the polygon shape.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Opacity) - Changes the opacity of the polygon shape.
-* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderColor) - Changes the color of the polygon border.
-* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderWidth) - Changes the width of the polygon border.
-* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderOpacity) - Changes the opacity of the polygon border.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Fill) - It is used to change the color of the polygon shape.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Opacity) - It is used to change the opacity of the polygon shape.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderColor) - It is used to change the color of the border in the polygon shape.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderWidth) - It is used to change the width of the border in the polygon shape.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderOpacity) - It is used to change the opacity of the border in the polygon shape.
 
-> Multiple polygon shapes can be included inside the [MapsPolygons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygons.html) tag.
+> You can also include **"n"** polygon shapes inside the [MapsPolygons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygons.html) tag.
 
-The following example shows how to customize a polygon shape on a geometry map.
+The following example shows how to customize the polygon shape over the geometry map.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -43,7 +42,6 @@ The following example shows how to customize a polygon shape on a geometry map.
 
 @code {
     List<Coordinate> Points = new List<Coordinate>();
-
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -94,31 +92,30 @@ The following example shows how to customize a polygon shape on a geometry map.
         Points.Add(new Coordinate() { Longitude = 34.88539587371454, Latitude = 28.181421087099537 });
     }
 }
-
 ```
 ![Blazor Maps with polygon shape](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.png)
 
 ## Tooltip
 
-A tooltip displays additional information about a polygon shape during mouse or touch interaction. Enable the tooltip or tooltip template by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_Visible) property to `true` in [MapsPolygonTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html). Additionally, set the desired content to the [TooltipText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_TooltipText) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag to show the tooltip. When multiple polygon shapes are added, the `TooltipText` property can be set for each polygon to display the corresponding tooltip.
+Tooltip is used to display more information about a polygon shape during a mouse or touch interaction. Tooltip and tooltip template can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_Visible) property to **true** in the [MapsPolygonTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html). Additionally, you need to set the desired content as a value to the [TooltipText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_TooltipText) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag to show the tooltip. If you add 'n' numbers of polygon shapes, you can add the `TooltipText` property to each polygon, which will display the tooltip for the associated polygon shape.
 
 ### Tooltip customization
 
-The following properties in [MapsPolygonTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html) customize the appearance of the tooltip.
+The following properties are available in the [MapsPolygonTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html) to customize the appearance of the tooltip.
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_Fill) - Applies the tooltip background color.
-* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderColor) - Changes the tooltip border color.
-* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderWidth) - Changes the tooltip border width.
-* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderOpacity) - Changes the tooltip border opacity.
-* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontFamily) - Changes the tooltip text font family.
-* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontWeight) - Changes the tooltip text weight.
-* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontStyle) - Changes the tooltip text style.
-* [FontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontColor) - Changes the tooltip text color.
-* [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontSize) - Changes the tooltip text size.
-* [FontOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontOpacity) - Changes the tooltip text opacity.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_Fill) - Applies the color of the tooltip in the polygon shape.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderColor) - To change the color of the border of the tooltip in the polygon shape.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderWidth) - To change the width of the border of the tooltip in the polygon shape.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_BorderOpacity) - To change the opacity of the border of the tooltip in the polygon shape.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontFamily) - To change the font family of the text in the tooltip of the polygon shape.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontWeight) - To change the font weight of the text in the tooltip of the polygon shape.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontStyle) - To change the font style of the text in the tooltip of the polygon shape.
+* [FontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontColor) - To change the font color of the text in the tooltip of the polygon shape.
+* [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontSize) - To change the font size of the text in the tooltip of the polygon shape.
+* [FontOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonTooltipSettings.html#Syncfusion_Blazor_Maps_MapsPolygonTooltipSettings_FontOpacity) - To change the opacity of the text in the tooltip of the polygon shape.
+
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -136,7 +133,6 @@ The following properties in [MapsPolygonTooltipSettings](https://help.syncfusion
 
 @code {
     List<Coordinate> Points = new List<Coordinate>();
-
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -194,10 +190,9 @@ The following properties in [MapsPolygonTooltipSettings](https://help.syncfusion
 
 ### Tooltip template
 
-Any HTML element can be rendered in the tooltip of polygon shapes using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_TooltipTemplate) property of [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html). When multiple polygon shapes are added, the `TooltipTemplate` property can be set for each polygon to display the corresponding tooltip.
+Any HTML element can be rendered in the tooltip of the polygon shapes using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_TooltipTemplate) property of the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html). If you add 'n' numbers of polygon shapes, you can add the `TooltipTemplate` property to each polygon, which will display the tooltip for the associated polygon shape.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -273,12 +268,11 @@ Any HTML element can be rendered in the tooltip of polygon shapes using the [Too
 
 ## Changing a Polygon Shape to a Line
 
-A rendered polygon shape can be changed to a line shape by setting the [ShapeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_ShapeType) property to [LineString](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.PolygonShapeType.html#Syncfusion_Blazor_Maps_PolygonShapeType_LineString).
+The rendered polygon shape can be changed to a line shape by setting the [ShapeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_ShapeType) property to [LineString](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.PolygonShapeType.html#Syncfusion_Blazor_Maps_PolygonShapeType_LineString).
 
-The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight it, and select it on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property within the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag.
+The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight the line shape, and select the line shape on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property within the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 @inject NavigationManager NavigationManager
 @inject HttpClient Http;
@@ -311,11 +305,11 @@ The following example demonstrates how to customize a line shape on an online ma
             </MapsLayer>
         </MapsLayers>
     </SfMaps>
+
 }
 
 @code {
     public List<Coordinate> Coordinates = new List<Coordinate>();
-
     protected override async Task OnInitializedAsync()
     {
         string path = NavigationManager.BaseUri + "line.json";
@@ -348,8 +342,7 @@ The following example demonstrates how to customize a line shape on an online ma
         public List<List<double>> Coordinates { get; set; }
     }
 }
-
 ```
-> Note: Refer to the content of the JSON file [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043).
+> Note: Refer the content of the JSON file [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043) here.
 
 ![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)

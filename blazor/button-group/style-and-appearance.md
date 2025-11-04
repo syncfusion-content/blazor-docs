@@ -9,12 +9,11 @@ documentation: ug
 
 # Styles and Appearances in Blazor ButtonGroup Component
 
-To modify the ButtonGroup appearance, override the default CSS of the ButtonGroup component. The following table lists common CSS classes and their purposes. To scope changes to a specific instance, add a custom class via the component’s CssClass property and target that class in your styles. A custom theme can also be created using the Syncfusion Theme Studio.
+To modify the ButtonGroup appearance, you need to override the default CSS of ButtonGroup component. Find the list of CSS classes and its corresponding section in ButtonGroup. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|-----|
-| .e-btn-group | Customizes the ButtonGroup container (layout, spacing, borders, orientation). |
-| .e-btn | Customizes individual buttons within the group. |
-| .e-btn:hover | Customizes buttons on hover. |
-| .e-btn:focus | Customizes buttons when focused. |
-| .e-btn:active | Customizes buttons in the active/pressed state. |
+|.e-btn|To customize the ButtonGroup.|
+|.e-btn:hover|To customize the ButtonGroup on hover.|
+|.e-btn:focus|To customize the ButtonGroup on focus.|
+|.e-btn:active|To customize the ButtonGroup on active.|

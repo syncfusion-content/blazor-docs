@@ -9,11 +9,11 @@ documentation: ug
 
 # Open Numeric Keyboard in Numeric TextBox Component
 
-On mobile and touch devices, providing a numeric keyboard improves data entry for number inputs. This topic explains how to hint supported browsers to show a numeric keypad while keeping the Numeric TextBox behavior intact.
+When implementing a Numeric TextBox in a web application, it is often desirable to restrict input to numeric values and to display the numeric keyboard on devices that support it. This can enhance the user experience by providing an appropriate keyboard for data entry.
 
 ## Enabling the Numeric Keyboard
 
-A practical way to suggest a numeric keypad on many mobile browsers is to set the input type to "tel", which often triggers a number-centric keypad. Behavior varies by device and browser.
+To configure the Numeric TextBox to use the numeric keyboard, you can set the `type` attribute to `"tel"`. This instructs the browser to display the numeric keyboard on devices where it is available.
 
 Here is an example code snippet using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Numeric TextBox component:
 
@@ -35,7 +35,7 @@ It is important to note that not all browsers support the `type="tel"` attribute
 
 ## Live Sample
 
-To see a live example of the Numeric TextBox configured for the numeric keyboard, visit the following link:
+To see a live example of the Numeric Textbox configured for the numeric keyboard, visit the following link:
 
 [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
 

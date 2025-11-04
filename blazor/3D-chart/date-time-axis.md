@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DateTime Axis in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn about configuring the DateTime and DateTimeCategory Axes in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about DateTime Axis in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 # DateTime Axis in Blazor 3D Chart Component
 
-## DateTime Axis
+## DateTime axis
 
-The `DateTime` axis uses a date-time scale and displays date-time values as axis labels in the specified format.
+`DateTime` axis uses date time scale and displays the date time values as axis labels in the specified format.
 
 ```cshtml
 
@@ -29,22 +29,22 @@ The `DateTime` axis uses a date-time scale and displays date-time values as axis
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set;}
         public double YValue {get; set;}
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-    {
-        new Chart3DData { XValue = new DateTime(2000, 4, 1), YValue = 10 },
-        new Chart3DData { XValue = new DateTime(2002, 5, 1), YValue = 30 },
-        new Chart3DData { XValue = new DateTime(2004, 6, 1), YValue = 15 },
-        new Chart3DData { XValue = new DateTime(2006, 7, 1), YValue = 65 },
-        new Chart3DData { XValue = new DateTime(2008, 8, 1), YValue = 90 },
-        new Chart3DData { XValue = new DateTime(2010, 9, 1), YValue = 85 }
-    };
+	{
+		new Chart3DData { XValue = new DateTime(2000, 4, 1), YValue = 10 },
+		new Chart3DData { XValue = new DateTime(2002, 5, 1), YValue = 30 },
+		new Chart3DData { XValue = new DateTime(2004, 6, 1), YValue = 15 },
+		new Chart3DData { XValue = new DateTime(2006, 7, 1), YValue = 65 },
+		new Chart3DData { XValue = new DateTime(2008, 8, 1), YValue = 90 },
+		new Chart3DData { XValue = new DateTime(2010, 9, 1), YValue = 85 }
+	};
 }
 
 ```
@@ -52,9 +52,9 @@ The `DateTime` axis uses a date-time scale and displays date-time values as axis
 
 ![Blazor 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-datetime-axis.png)
 
-## DateTimeCategory Axis
+## DateTime category axis
 
-The `DateTimeCategory` axis displays date-time values with non-linear intervals, such as business days within a week.
+The `DateTimeCategory` axis is used to display the date time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
 
 ```cshtml
 
@@ -70,20 +70,20 @@ The `DateTimeCategory` axis displays date-time values with non-linear intervals,
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set;}
         public double YValue {get; set;}
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-    {
+	{
         new Chart3DData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
-        new Chart3DData { XValue = new DateTime(2006, 02, 01), YValue = 24 },
-        new Chart3DData { XValue = new DateTime(2007, 03, 01), YValue = 36 },
-        new Chart3DData { XValue = new DateTime(2008, 04, 01), YValue = 38 }
-    };
+		new Chart3DData { XValue = new DateTime(2006, 02, 01), YValue = 24 },
+		new Chart3DData { XValue = new DateTime(2007, 03, 01), YValue = 36 },
+		new Chart3DData { XValue = new DateTime(2008, 04, 01), YValue = 38 }
+	};
 }
 
 ```
@@ -91,9 +91,9 @@ The `DateTimeCategory` axis displays date-time values with non-linear intervals,
 
 ![Blazor Column 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-with-datetime-axis.png)
 
-## Range
+### Range
 
-The range of an axis is calculated automatically based on the provided data, but can be customized using the `Minimum`, `Maximum`, and `Interval` properties.
+Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using `Minimum`, `Maximum`, and `Interval` properties.
 
 ```cshtml
 
@@ -111,7 +111,6 @@ The range of an axis is calculated automatically based on the provided data, but
 @code {
     public DateTime minimum = new DateTime(2000, 3, 1);
     public DateTime maximum = new DateTime(2010, 10, 1);
-
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
@@ -134,17 +133,17 @@ The range of an axis is calculated automatically based on the provided data, but
 
 ![Changing Blazor Column 3D Chart DateTime Axis based on Range](images/datetime/blazor-column-chart-axis-based-on-range.png)
 
-## Interval Customization
+### Interval customization
 
-Date-time intervals can be customized using the `Interval` and `IntervalType` properties. For example, setting `Interval` to **2** and `IntervalType` to **Years** uses a 2-year interval. Supported interval types:
+Date time intervals can be customized by using the `Interval` and `IntervalType` properties of the `Axis`. For example, when you set `Interval` as **2** and `IntervalType` as **Years**, it considers 2 years as interval. DateTime axis supports following interval types,
 
-- Auto
-- Years
-- Months
-- Days
-- Hours
-- Minutes
-- Seconds
+* Auto
+* Years
+* Months
+* Days
+* Hours
+* Minutes
+* Seconds
 
 ```cshtml
 
@@ -159,22 +158,22 @@ Date-time intervals can be customized using the `Interval` and `IntervalType` pr
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set;}
         public double YValue {get; set;}
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-    {
-        new Chart3DData { XValue = new DateTime(2016, 4, 1), YValue = 21 },
-        new Chart3DData { XValue = new DateTime(2016, 5, 1), YValue = 24 },
-        new Chart3DData { XValue = new DateTime(2016, 6, 1), YValue = 36 },
-        new Chart3DData { XValue = new DateTime(2016, 7, 1), YValue = 38 },
-        new Chart3DData { XValue = new DateTime(2016, 8, 1), YValue = 46 },
-        new Chart3DData { XValue = new DateTime(2016, 9, 1), YValue = 28 }
-    };
+	{
+		new Chart3DData { XValue = new DateTime(2016, 4, 1), YValue = 21 },
+		new Chart3DData { XValue = new DateTime(2016, 5, 1), YValue = 24 },
+		new Chart3DData { XValue = new DateTime(2016, 6, 1), YValue = 36 },
+		new Chart3DData { XValue = new DateTime(2016, 7, 1), YValue = 38 },
+		new Chart3DData { XValue = new DateTime(2016, 8, 1), YValue = 46 },
+		new Chart3DData { XValue = new DateTime(2016, 9, 1), YValue = 28 }
+	};
 }
 
 ```
@@ -182,17 +181,17 @@ Date-time intervals can be customized using the `Interval` and `IntervalType` pr
 
 ![Changing Blazor Column 3D Chart DateTime Axis based on Interval](images/datetime/blazor-column-chart-axis-based-on-interval.png)
 
-**Range Padding**
+**Applying padding to the Range**
 
-The `RangePadding` property applies padding to the minimum and maximum extremes of the range. Supported types for the DateTime axis:
+The `RangePadding` property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the DateTime axis:
 
-- None
-- Round
-- Additional
+* None
+* Round
+* Additional
 
 **DateTime - None**
 
-When `RangePadding` is set to **None**, the minimum and maximum of the axis are based on the data.
+When the `RangePadding` is set to **None**, the minimum and maximum of the axis is based on the data.
 
 ```cshtml
 
@@ -233,7 +232,8 @@ When `RangePadding` is set to **None**, the minimum and maximum of the axis are 
 
 **DateTime - Round**
 
-When `RangePadding` is set to **Round**, the minimum and maximum are rounded to the nearest value divisible by the interval. For example, if the minimum is January 15, the interval is 1, and the interval type is Month, the axis minimum will be January 1.
+When the `RangePadding` is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
+
 
 ```cshtml
 
@@ -249,22 +249,22 @@ When `RangePadding` is set to **Round**, the minimum and maximum are rounded to 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
         public double YValue { get; set; }
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-    {
-        new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
+	{
+		new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
         new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 22), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
         new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 },
         new Chart3DData { XValue = new DateTime(2017, 11, 29), YValue = 82 }
-    };
+    };                                             
 }
 
 ```
@@ -274,7 +274,7 @@ When `RangePadding` is set to **Round**, the minimum and maximum are rounded to 
 
 **DateTime - Additional**
 
-When `RangePadding` is set to **Additional**, the interval of an axis is padded to the minimum and maximum.
+When the `RangePadding` property is set to **Additional**, the interval of an axis will be padded to the minimum and maximum of the axis.
 
 ```cshtml
 
@@ -290,13 +290,13 @@ When `RangePadding` is set to **Additional**, the interval of an axis is padded 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
         public double YValue { get; set; }
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
     {
         new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
@@ -305,7 +305,7 @@ When `RangePadding` is set to **Additional**, the interval of an axis is padded 
         new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
         new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 },
         new Chart3DData { XValue = new DateTime(2017, 11, 29), YValue = 82 }
-    };
+    };                                            
 }
 
 ```
@@ -313,9 +313,9 @@ When `RangePadding` is set to **Additional**, the interval of an axis is padded 
 
 ![Blazor Column 3D Chart with Additional RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-Additional.png)
 
-## Label Format
+## Label format
 
-Date values can be formatted using the `LabelFormat` property in an axis. All globalize formats are supported.
+The date can be formatted and parsed to all globalize format using the `LabelFormat` property in an axis.
 
 ```cshtml
 
@@ -331,26 +331,26 @@ Date values can be formatted using the `LabelFormat` property in an axis. All gl
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
         public double YValue { get; set; }
     }
-
+	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-    {
-        new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
-        new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
+	{
+		new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
+		new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 22), YValue = 24 },
-        new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
-        new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 }, 
-        new Chart3DData { XValue = new DateTime(2017, 12, 02), YValue = 82 },
-        new Chart3DData { XValue = new DateTime(2017, 12, 03), YValue = 53 }, 
-        new Chart3DData { XValue = new DateTime(2017, 12, 04), YValue = 54 },
-        new Chart3DData { XValue = new DateTime(2017, 12, 05), YValue = 53 }, 
-        new Chart3DData { XValue = new DateTime(2017, 12, 08), YValue = 45 }
-    };
+		new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
+		new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 }, 
+		new Chart3DData { XValue = new DateTime(2017, 12, 02), YValue = 82 },
+		new Chart3DData { XValue = new DateTime(2017, 12, 03), YValue = 53 }, 
+		new Chart3DData { XValue = new DateTime(2017, 12, 04), YValue = 54 },
+		new Chart3DData { XValue = new DateTime(2017, 12, 05), YValue = 53 }, 
+		new Chart3DData { XValue = new DateTime(2017, 12, 08), YValue = 45 }
+    };                                             
 }
 
 ```

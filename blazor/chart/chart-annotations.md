@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Annotation in Syncfusion Blazor Charts component.
+description: Checkout and learn here all about using Annotation in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,20 +9,21 @@ documentation: ug
 
 # Annotation in Blazor Charts Component
 
-Annotations are texts, shapes, or images used to highlight specific regions of interest in a chart.
+Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 
-Learn how to add Annotations to Blazor Charts by watching the video below.
+You can learn how to add annotations to Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=TpUoXrYlCkU" %}
 
-The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) allows annotations to be added to the chart. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property specifies the element to display in the chart area.
+ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the ID of the element that needs to be displayed in the chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of the annotation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 	
     <ChartAnnotations>
         <ChartAnnotation X="@data" Y="65" CoordinateUnits="Units.Point">
@@ -38,7 +39,7 @@ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     string data = "France";
 	
     public class ChartData
@@ -48,15 +49,15 @@ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     }
 	
     public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { Country = "USA", Gold = 50 },
-        new ChartData { Country = "China", Gold = 40 },
-        new ChartData { Country = "Japan", Gold = 70 },
-        new ChartData { Country = "Australia", Gold = 60},
-        new ChartData { Country = "France", Gold = 50 },
-        new ChartData { Country = "Germany", Gold = 40 },
-        new ChartData { Country = "Italy", Gold = 40 },
-        new ChartData { Country = "Sweden", Gold = 30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 
@@ -66,14 +67,15 @@ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## Region
 
-Use the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Region) property to position annotations relative to a series or the chart. By default, annotations are positioned with respect to the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart).
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Region) property can be used to insert annotations in relation to a series or a chart. By default, it is positioned with respect to a [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 
     <ChartAnnotations>
         <ChartAnnotation X="@Country" Y="65" Region="Regions.Series" CoordinateUnits="Units.Point">
@@ -89,7 +91,7 @@ Use the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     string Country = "Australia";
 	
     public class ChartData
@@ -99,15 +101,15 @@ Use the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     }
 	
     public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { Country = "USA", Gold = 50 },
-        new ChartData { Country = "China", Gold = 40 },
-        new ChartData { Country = "Japan", Gold = 70 },
-        new ChartData { Country = "Australia", Gold = 60},
-        new ChartData { Country = "France", Gold = 50 },
-        new ChartData { Country = "Germany", Gold = 40 },
-        new ChartData { Country = "Italy", Gold = 40 },
-        new ChartData { Country = "Sweden", Gold = 30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 
@@ -115,16 +117,17 @@ Use the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ![Inserting Annotations using Region in Blazor Column Chart](images/annotation/blazor-column-chart-annotation-using-region.png)
 
-## Coordinate units
+## Co-ordinate units
 
-Set the annotation's coordinate units using the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_CoordinateUnits) property. Choose between [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
+The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_CoordinateUnits) property allows to specify the annotation's coordinate units either in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 
     <ChartAnnotations>
         <ChartAnnotation X="250" Y="100" CoordinateUnits="Units.Pixel">
@@ -140,7 +143,7 @@ Set the annotation's coordinate units using the [CoordinateUnits](https://help.s
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public string Country { get; set; }
@@ -148,15 +151,15 @@ Set the annotation's coordinate units using the [CoordinateUnits](https://help.s
     }
 	
     public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { Country = "USA", Gold = 50 },
-        new ChartData { Country = "China", Gold = 40 },
-        new ChartData { Country = "Japan", Gold = 70 },
-        new ChartData { Country = "Australia", Gold = 60},
-        new ChartData { Country = "France", Gold = 50 },
-        new ChartData { Country = "Germany", Gold = 40 },
-        new ChartData { Country = "Italy", Gold = 40 },
-        new ChartData { Country = "Sweden", Gold = 30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 

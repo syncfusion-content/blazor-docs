@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor TextBox Component
 
-The following section explains how to bind native DOM events and pass event data to an event handler in the TextBox component.
+The following section explains the steps to include native events and pass data to event handler in textbox component.
 
 ## Bind native events to textbox
 
-Native browser events can be handled by adding the @on<event> attribute to the component. The attribute value is an event handler that runs when the corresponding DOM event occurs.
+Any native event can be accessed by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
-In the following example, the KeyPressed method is called every time a key is pressed in the TextBox.
+In the following example, the KeyPressed method is called every time the key is pressed on textbox.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time a key is pr
 }
 ```
 
-The same behavior can be expressed with a lambda expression.
+Also, the above example code can be rewritten as follows using Lambda expressions.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -40,16 +40,16 @@ The same behavior can be expressed with a lambda expression.
 
 ## Pass event data to event handler
 
-Blazor provides strongly typed event argument classes that map to native events. Common event categories and their corresponding argument types include:
+Blazor provides set of argument types for map to native events. The list of event types and event arguments are:
 
-* Focus events – FocusEventArgs
-* Mouse events – MouseEventArgs
-* Keyboard events – KeyboardEventArgs
-* Input/change events – ChangeEventArgs/EventArgs
-* Touch events – TouchEventArgs
-* Pointer events – PointerEventArgs
+* Focus Events - FocusEventArgs
+* Mouse Events - MouseEventArgs
+* Keyboard Events - KeyboardEventArgs
+* Input Events - ChangeEventArgs/EventArgs
+* Touch Events – TouchEventArgs
+* Pointer Events – PointerEventArgs
 
-In the following example, the KeyPressed method is invoked on every key press in the TextBox, and a message is written only when the "s" key is pressed.
+In the following example, the KeyPressed method is called every time any key is pressed inside textbox. But the message will be printed when the "s" key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -65,13 +65,13 @@ In the following example, the KeyPressed method is invoked on every key press in
 }
 ```
 
-Event argument types are defined in the Microsoft.AspNetCore.Components.Web namespace. Event handlers can also be async (returning Task) when asynchronous work is required.
+Using Lambda expression also, the event data can be passed to the event handler.
 
 ## List of Native events supported
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown |
-| onmouseup | ondblclick | onkeydown | onkeyup |
-| onkeypress | onfocusin | oninput | onchange |
+| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| ondblclick | onkeydown | onkeyup | onkeypress |
+| ontouchend | onfocusin | onmouseup | ontouchstart |

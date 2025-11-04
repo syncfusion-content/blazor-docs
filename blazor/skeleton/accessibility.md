@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Skeleton component
 
-The Blazor Skeleton component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Skeleton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Skeleton component is outlined below.
 
@@ -37,25 +37,20 @@ The accessibility compliance for the Blazor Skeleton component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-N> The Skeleton is a non-interactive, visual placeholder indicating loading content. Because it does not receive focus or support interaction, keyboard navigation is not applicable.
-
 ## WAI-ARIA attributes
 
-The Blazor Skeleton component follows [WAI-ARIA](https://www.w3.org/TR/wai-aria/#live_region_roles) guidance for communicating loading status to assistive technologies. Use the following attributes based on your scenario:
+The Blazor Skeleton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Skeleton component:
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| `aria-busy="true"` | Applied to the container of the content being loaded to indicate a busy state; set to `false` when loading completes. |
-| `aria-live="polite"` | Announces updates non-disruptively when the loading state changes (use on a status region if announcing is needed). |
-| `role="status"` | Optional role for a live region that provides advisory information such as “Loading…”. |
-| `aria-label` | Provides an accessible name if the Skeleton needs to be announced (for example, “Loading profile picture”). |
-| `aria-hidden="true"` | Use for decorative Skeletons to hide them from assistive technologies when no announcement is necessary. |
-
-N> Avoid using `role="alert"` for Skeletons. Prefer `role="status"` with `aria-live="polite"` when announcements are required to minimize unnecessary interruptions.
+| `role=alert` | Used to convey important, time-sensitive or contextual message to the user. |
+| `aria-label` | Attribute provides the text label for the Skeleton. |
+| `aria-live` | Attributes which indicates the content changes which are not interactable are live regions. |
+| `aria-busy` | Set to true until loading is complete, then set to false. |
 
 ## Ensuring accessibility
 
-The Blazor Skeleton component’s accessibility levels are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor Skeleton component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Skeleton component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/skeleton) in a new window to evaluate the accessibility of the Blazor Skeleton component with accessibility tools.
 

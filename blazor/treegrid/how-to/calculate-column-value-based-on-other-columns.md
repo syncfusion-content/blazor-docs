@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Calculate Column Value in Blazor TreeGrid | Syncfusion
-description: Learn how to calculate column value from other columns in the Syncfusion Blazor TreeGrid using column templates and the row context.
+title: Calculate column value in Blazor TreeGrid | Syncfusion
+description: Learn here all about how to calculate column value based on other columns in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Calculate column value based on other columns in Blazor TreeGrid
 
-A TreeGrid column value can be calculated from other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template), access the current row via the implicit context parameter and compute the value for the new column as needed.
+The values for a Tree Grid column can be calculated based on other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template), the column values can be accessed using the implicit named parameter **context** and then calculate the values for the new column as required.
 
-The following example calculates the value of the **Resources** column based on the values of the **Duration** and **Progress** columns.
+This is demonstrated in the following sample code where the value for **Resources** column is calculated based on the values of **Duration** and **Progress** columns.
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientation in Blazor Range Slider Component
 
-The slider can be displayed in either horizontal or vertical orientation using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Orientation) property. By default, the slider renders in a horizontal orientation.
+The Slider can be displayed, either in horizontal or vertical orientation by using [**Orientation**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ShowButtons) property. By default, the Slider renders in horizontal orientation.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

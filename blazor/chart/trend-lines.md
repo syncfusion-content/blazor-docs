@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and utilize the Trendlines in Syncfusion Blazor Charts component.
+description: Checkout and learn here all about the Trendlines in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 # Trendlines in Blazor Charts Component
 
-Trendlines display the direction and pace of price movement. Trendlines can be generated for Cartesian series such as Line, Column, Scatter, Area, Candle, Hilo, and more (except bar series). Multiple trendlines can be added to a series. Six types of trendlines are available:
+Trendlines are used to show the price's direction and pace. Except for bar series, trendlines can be generated for Cartesian series like Line, Column, Scatter, Area, Candle, Hilo, and so on. In addition, a series can have multiple trendlines. There are six different types of trendlines that can be used on the chart. They are as follows:
 
 ## Linear
 
-A linear trendline is a best-fit straight line for simpler data sets. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Linear).
+A linear trendline is a best-fit straight line used with simpler data sets. To render a linear trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Linear).
 
 ```cshtml
 
@@ -43,7 +43,7 @@ A linear trendline is a best-fit straight line for simpler data sets. Set the [T
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -64,7 +64,7 @@ A linear trendline is a best-fit straight line for simpler data sets. Set the [T
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -74,7 +74,7 @@ A linear trendline is a best-fit straight line for simpler data sets. Set the [T
 
 ## Exponential
 
-Exponential trendlines are curved lines for data that rises or falls at increasing rates. Cannot be created for data with zero or negative values. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Exponential](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Exponential).
+Exponential trendline is a curved line that is most useful when data values rise or fall at increasingly higher rates. If the data contains zero or negative values, an exponential trendline cannot be created. To render a exponential trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Exponential](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Exponential).
 
 ```cshtml
 
@@ -102,7 +102,7 @@ Exponential trendlines are curved lines for data that rises or falls at increasi
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -123,7 +123,7 @@ Exponential trendlines are curved lines for data that rises or falls at increasi
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -133,7 +133,7 @@ Exponential trendlines are curved lines for data that rises or falls at increasi
 
 ## Logarithmic
 
-Logarithmic trendlines are best-fit curved lines for data with rapid change that levels out. Supports negative and positive numbers. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Logarithmic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Logarithmic).
+A logarithmic trendline is a best-fit curved line that is most useful when the rate of change in the data increases or decreases quickly and then levels out. Negative and positive numbers can be used in a logarithmic trendline. To render a logarithmic trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Logarithmic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Logarithmic).
 
 ```cshtml
 
@@ -161,7 +161,7 @@ Logarithmic trendlines are best-fit curved lines for data with rapid change that
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -182,7 +182,7 @@ Logarithmic trendlines are best-fit curved lines for data with rapid change that
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -192,7 +192,7 @@ Logarithmic trendlines are best-fit curved lines for data with rapid change that
 
 ## Polynomial
 
-Polynomial trendlines are curved lines for fluctuating data. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Polynomial](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Polynomial).
+A polynomial trendline is a curved line that is used when data fluctuates. To render a polynomial trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Polynomial](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Polynomial).
 
 ```cshtml
 
@@ -220,7 +220,7 @@ Polynomial trendlines are curved lines for fluctuating data. Set the [Type](http
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -241,7 +241,7 @@ Polynomial trendlines are curved lines for fluctuating data. Set the [Type](http
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -251,7 +251,7 @@ Polynomial trendlines are curved lines for fluctuating data. Set the [Type](http
 
 ## Power
 
-Power trendlines are curved lines for data sets with measurements that increase at a specific rate. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Power](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Power).
+A power trendline is a curved line that is best used with data sets that compare measurements that increase at a specific rate. To render a power trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [Power](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Power).
 
 ```cshtml
 
@@ -279,7 +279,7 @@ Power trendlines are curved lines for data sets with measurements that increase 
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -300,7 +300,7 @@ Power trendlines are curved lines for data sets with measurements that increase 
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -310,7 +310,7 @@ Power trendlines are curved lines for data sets with measurements that increase 
 
 ## Moving Average
 
-Moving average trendlines smooth out data fluctuations to reveal patterns or trends. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [MovingAverage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_MovingAverage). Use the [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Period) property to specify the calculation period.
+A moving average trendline smoothen out fluctuations in data to show a pattern or trend more clearly. To render a moving average trendline, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [MovingAverage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_MovingAverage). The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Period) property specifies how long the moving average should be calculated over.
 
 ```cshtml
 
@@ -338,7 +338,7 @@ Moving average trendlines smooth out data fluctuations to reveal patterns or tre
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -359,7 +359,7 @@ Moving average trendlines smooth out data fluctuations to reveal patterns or tre
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -369,11 +369,11 @@ Moving average trendlines smooth out data fluctuations to reveal patterns or tre
 
 ## Forecasting
 
-Trendlines forecasting predicts future or past situations. Two types are available: forward and backward forecasting.
+Trendlines forecasting is the prediction of future/past situations. There are two types of forecasting available: forward forecasting and backward forecasting.
 
 ### Forward forecasting
 
-Set [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_ForwardForecast) to calculate the distance between current and future trends.
+The value set to [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_ForwardForecast) property is used to calculate the distance between the current trend and the future trend.
 
 ```cshtml
 
@@ -401,7 +401,7 @@ Set [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -422,7 +422,7 @@ Set [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -432,7 +432,7 @@ Set [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Backward forecasting
 
-Set [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_BackwardForecast) to determine historical trends.
+The value set to [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_BackwardForecast) property is used to determine historical trends.
 
 ```cshtml
 
@@ -460,7 +460,7 @@ Set [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -481,7 +481,7 @@ Set [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
@@ -491,11 +491,13 @@ Set [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## Trendlines customization
 
-Customize trendline appearance using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Fill) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Width) properties.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Fill) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Width) properties are used to customize the appearance of the trendline.
+
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## Show or hide a trendline
 
-Show or hide a trendline by setting the `Visible` property.
+You can show or hide the trendline by setting trendline `visible` property.
 
 ```cshtml
 
@@ -523,7 +525,7 @@ Show or hide a trendline by setting the `Visible` property.
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -544,15 +546,13 @@ Show or hide a trendline by setting the `Visible` property.
         new ChartData { XValue = new DateTime(2009, 9, 6), YValue = 31 },
         new ChartData { XValue = new DateTime(2010, 2, 11), YValue = 39},
         new ChartData { XValue = new DateTime(2011, 9, 11), YValue = 50 },
-        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 }
+        new ChartData { XValue = new DateTime(2012, 2, 11), YValue = 24 },
     };
 }
 
 ```
 
 ![Hide Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-hide-trendlines.png)
-
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

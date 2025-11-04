@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent Event Creation and Deletion in Blazor Scheduler | Syncfusion
+title: Prevent EventCreation and Deletion in Blazor Scheduler | Syncfusion
 description: Learn here all about preventing specific CRUD actions instead of setting read only in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
@@ -9,9 +9,7 @@ documentation: ug
 
 # Prevent Event Creation and Deletion in Blazor Scheduler Component
 
-By default, the Blazor Scheduler allows users to perform all standard CRUD (Create, Read, Update, Delete) actions on appointments. To restrict specific actions while allowing others, the corresponding properties within `ScheduleEventSettings` can be set to `false`. This provides more granular control than a global read-only setting.
-
-In the following example, only edit actions are permitted, as both the [`AllowAdding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowAdding) and [`AllowDeleting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowDeleting) properties are explicitly set to `false`. The `AllowEditing` property, which controls modification of existing appointments, remains `true` by default on `ScheduleEventSettings`.
+By default, Scheduler allows the user to perform all the CRUD actions. The particular action can be prevented by setting `false` to the respective property. In the following code example, only edit actions are allowed as `AllowAdding` and `AllowDeleting` properties are set to `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -49,5 +47,3 @@ In the following example, only edit actions are permitted, as both the [`AllowAd
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVSCDZgffZMFYhT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

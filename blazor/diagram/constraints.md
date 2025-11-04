@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Constraints in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Constraints in Syncfusion Blazor Diagram component and much more details.
+title: Constraints in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Constraints in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Constraints in Diagram Component
+# Constraints in Blazor Diagram Component
 
-Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
+Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
-To learn more about bitwise operators, refer to [Bitwise Operations](constraints#bitwise-operations).
+To know more about Bitwise operators, refer to the [Bitwise Operations](constraints#bitwise-operations).
 
 ## How to Enable or Disable Diagram Constraints
 
-[DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints) allow enabling or disabling the following behaviors:
+[DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints) allow you to enable or disable the following behaviors. 
 
 * PageEditable
 * Bridging
@@ -41,7 +41,7 @@ To learn more about bitwise operators, refer to [Bitwise Operations](constraints
 |[Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_Routing)|Determines if automatic line routing is enabled or disabled for connectors. When enabled, lines are automatically routed to avoid overlapping with nodes and other obstacles.|
 |[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_Default)|Enables or disables all constraints in diagram.|
 
-The following example shows how to disable the `PageEditable` constraint from the default diagram constraints.
+The following example shows how to disable PageEditable constraint from default diagram constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -72,22 +72,21 @@ Constraints="@DiagramConstraints" />
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeWtDcpKCfcxTa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following example shows how to add the Bridging constraint to the default constraints of the diagram.
+The following example shows how to add Bridging constraint to the default constraints of diagram.
 
 ```csharp
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 ```
 
-Diagram constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations) in the diagram.
+The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations) in the diagram.
 
 ```csharp
 //Removing multiple constraints from default.
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramConstraints.PageEditable|DiagramConstraints.Zoom);
 ```
 
-For more information about diagram constraints, refer to [Diagram constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html).
+For more information about diagram constraints, refer to the [Diagram constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html).
 
 N> By default, the following constraints are enabled in the diagram,
 <br/>* ApiUpdate
@@ -101,7 +100,7 @@ N> By default, the following constraints are enabled in the diagram,
 
 ## How to Enable or Disable Node Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property of the node enables or disables the following behaviors: 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property of the Node allows you to enable or disable the following behaviors. 
 
 * Select
 * Drag
@@ -142,7 +141,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |[RoutingObstacle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_RoutingObstacle)|Enables or disables the node to be treated as obstacle while in routing.|
 |[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default)|Enables all default constraints for the node.|
 
-The following example shows how to disable the `Rotate` constraint from the default node constraints.
+The following example shows how to disable rotate constraint from the default node constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -172,32 +171,30 @@ The following example shows how to disable the `Rotate` constraint from the defa
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSsDtQTUBrDCxW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/NodeConstraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/NodeConstraints)
 
 ![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
-The following example shows how to add the `Shadow` constraint to the default constraints of a node.
+The following example shows how to add Shadow constraint to the default constraints of node.
 
 ```csharp
 NodeConstraints NodeConstraints = NodeConstraints.Default | NodeConstraints.Shadow;
 ```
 
-Node constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
 
 ```csharp
  //Removing multiple constraints from default.
 NodeConstraints NodeConstraints = NodeConstraints.Default & ~ (NodeConstraints.Select | NodeConstraints.Drag);
 ```
-The following code example shows how to enable the tooltip for a node.
+The following code example shows how the tooltip can be enabled for the node.
 
 ```csharp
 //Enabled the tooltip constraints for the node.
 node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 ```
 
-For more information about node constraints, refer to [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
+For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
 
 N>By default, the following constraints are enabled for the node,
 <br/>* Shadow
@@ -219,7 +216,7 @@ N>By default, the following constraints are enabled for the node,
 
 ## How to Enable or Disable Connector Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the connector enables or disables the following behaviors: 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the Connector allows you to enable or disable the following behaviors of connectors. 
 
 * Select
 * Drag
@@ -232,7 +229,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 | Constraints | Description |
 | -------- | -------- |
-|[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_None)|Disables all connector constraints.|
+|[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_None)|Disable all connector Constraints.|
 |[Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Select)|Enables or disables connector to be selected.|
 |[Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Delete)|Enables or disables connector to be deleted.|
 |[Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Drag)|Enables or disables connector to be dragged.|
@@ -255,7 +252,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |[ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_ReadOnly)|Enables or disables readonly for the connector.|
 |[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Default)|Enables all constraints for the connector.|
 
-The following code shows how to disable the `Select` constraint from the default connector constraints.
+The following code shows how to disable select constraint from the default constraints of connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -283,31 +280,29 @@ The following code shows how to disable the `Select` constraint from the default
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIMZXGzUrueWNG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/ConnectorConstraints)
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/ConnectorConstraints)
-
-The following example shows how to add the `Bridging` constraint to the default constraints of a connector.
+The following example shows how to add Bridging constraint to the default constraints of a connector.
 
 ```csharp
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
 ```
 
-Connector constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
 
 ```csharp
 //Removing multiple constraints from default.
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
 ```
 
-The following code example shows how to enable the tooltip for a connector.
+The following code example shows how the tooltip can be enabled for the connector.
 
 ```csharp
 //Enabled the tooltip constraints for the connector.
 connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip;
 ```
 
-For more information about connector constraints, refer to [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
+For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
 
 N>By default, the following constraints are enabled for the connector,
 <br/>* DragSegmentThumb
@@ -323,7 +318,7 @@ N>By default, the following constraints are enabled for the connector,
 
 ## How to Enable or Disable Port Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Constraints) property of a port enables or disables the following behaviors: 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Constraints) property of the Port allows you to enable or disable the following behaviors of port. 
 
 * InConnect
 * OutConnect
@@ -376,25 +371,23 @@ The following code shows how to disable creating connections with a port.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCNXQfqqgQgXk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/PortConstraints)
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/PortConstraints)
-
-The following code example shows how to modify the port constraints to accept only a target connection.
+The following code example shows how to modify the port constraints to accept target connection alone.
 
 ```csharp
 //Enable to create target connection alone.
 port.Constraints = PortConstraints.InConnect;
 ```
 
-Port constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
 
 ```csharp
 //Enable to create target connection alone.
 port.Constraints = PortConstraints.Default | PortConstraints.Draw;
 ```
 
-For more information about port constraints, refer to [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
+For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
 N> By default, the following constraints are enabled for the port,
 <br/>* Draw
@@ -402,7 +395,7 @@ N> By default, the following constraints are enabled for the port,
 
 ## How to Enable or Disable Annotation Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of annotations enables or disables read-only mode using annotation constraints.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the Annotations allows you to enable or disable read-only mode for the annotations by using the annotation constraints.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -410,7 +403,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |[InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly)|Enables or disables to inherit the ReadOnly option from the parent object.|
 |[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None)|Disables all constraints for the annotation.|
 
-The following code shows how to enable read-only mode for annotations.
+The following code shows how to enable read-only mode for the annotations.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -457,15 +450,13 @@ The following code shows how to enable read-only mode for annotations.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWZjcfAgQkhDE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/AnnotationConstraints)
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/AnnotationConstraints)
-
-For more details about annotation constraints, refer to [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
+For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
 
 ## How to Enable or Disable Selector Constraints
 
-Selector visually represents the selected elements with certain editable thumbs. The visibility of the thumbs can be controlled with selector [constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_Constraints). The parts of the selector are categorized as follows:
+Selector visually represents the selected elements with certain editable thumbs. The visibility of the thumbs can be controlled with selector [constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_Constraints). The part of selector is categorized as follows:
 
 * ResizeAll
 * UserHandle
@@ -491,7 +482,7 @@ Selector visually represents the selected elements with certain editable thumbs.
 |[ResizeAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_ResizeAll)|Shows or hides all resize handles of the selector.|
 |[All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_All)|Shows all handles of the selector.|
 
-The following code shows how to hide the rotator.
+The following code shows how to hide rotator.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -522,28 +513,22 @@ The following code shows how to hide the rotator.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeCXNwpgTUNJnP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SelectorConstraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SelectorConstraints)
 
 ![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
-The following code illustrates how to show or hide the tooltip for drag, resize, and rotate operations on nodes.
+The following code illustrates how to show or hide the tooltip for the drag, resize and rotate operation of the nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 <p>Selector Constraints</p>
- <input type="checkbox" value="Tooltip" @onchange="@constraintschange" />Tooltip
+ <input type="checkbox" value="Tooltip" @onchange="@constraintschange"checked="@check5" />Tooltip
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 @code
 {
     DiagramObjectCollection<Node> nodes;
     bool selector=true;
-    public DiagramSelectionSettings selection = new DiagramSelectionSettings() 
-    { 
-        Constraints = SelectorConstraints.All 
-    };
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -582,9 +567,7 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeCXjwJAaYcwxx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
 
 |![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
 
@@ -597,7 +580,7 @@ The following code example shows how to disable the userhandle functionality for
 selectedItems.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserHandle;
 ```
 
-For more information about selector constraints, refer to [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
+For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
 
 N> By default, the following constraints are enabled for the selected items,
 <br/>* ConnectorSourceThumb
@@ -613,14 +596,14 @@ N> By default, the following constraints are enabled for the selected items,
 
 ## How to Enable or Disable Snap Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the `SnapConstraints` controls the visibility of gridlines and enables or disables snapping. Snap constraints allow the following behaviors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the SnapConstraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
 
 * Show only horizontal or vertical gridlines.
 * Show both horizontal and vertical gridlines.
 * Snap to either horizontal or vertical gridlines.
 * Snap to both horizontal and vertical gridlines.
 
-The following snapping constraints enable or disable snapping features:
+The following list of snapping constraints are used to enable or disable certain features of snapping.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -634,7 +617,7 @@ The following snapping constraints enable or disable snapping features:
 |[SnapToObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html#Syncfusion_Blazor_Diagram_SnapConstraints_SnapToObject)|Enables the object to snap with the other objects in the diagram.|
 |[All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html#Syncfusion_Blazor_Diagram_SnapConstraints_All)|Shows gridlines and enables snapping.|
 
-The following code shows how to display only horizontal gridlines.
+The following code shows how to show only horizontal gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -664,17 +647,15 @@ The following code shows how to display only horizontal gridlines.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXheiNXwJzZyzJDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
-
-Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
 
 ```csharp
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;
 ```
 
-For more information about snap constraints, refer to [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
+For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
 N> By default, the following constraints are enabled for the snap functionality in the diagram,
 <br/>* ShowLines
@@ -686,13 +667,13 @@ N> By default, the following constraints are enabled for the snap functionality 
 
 ## How to Use Boundary Constraints
 
-[BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html) defines a boundary for the diagram inside that the interaction should be done. Boundary constraints allow the following behaviors:
+Boundary [constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html) defines a boundary for the diagram inside that the interaction should be done. Boundary constraints allow to set the following behaviors.
 
 * Infinity
 * Diagram
 * Page
 
-The following constraints enable or disable certain boundary interaction features:
+The following list of constraints are used to enable or disable certain features of boundary interactions of the diagram.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -700,7 +681,7 @@ The following constraints enable or disable certain boundary interaction feature
 |[Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html#Syncfusion_Blazor_Diagram_BoundaryConstraints_Diagram)|Allow the interactions to take place around the diagram height and width.|
 |[Page](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html#Syncfusion_Blazor_Diagram_BoundaryConstraints_Page)|Allow the interactions to take place around the page height and width.|
 
-The following code shows how to limit interaction within a page.
+The following code shows how to limit the interaction done inside a diagram within a page.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -730,9 +711,7 @@ The following code shows how to limit interaction within a page.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSiDNGJpWtaRbJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/BoundaryConstraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/BoundaryConstraints)
 
 For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
@@ -741,9 +720,9 @@ N> By default, the following boundary constraints are enabled for the snap funct
 
 ## How to Inherit Behaviors
 
-Some behaviors can be defined at both the specific object (node or connector) and diagram. When the behaviors are contradictorily defined through both, the actual behavior is set through inherit options.
+Some of the behaviors can be defined through both the specific object (node or connector) and diagram. When the behaviors are contradictorily defined through both, the actual behavior is set through inherit options.
 
-The following code example shows how to inherit line bridging behavior from the diagram.
+The following code example shows how to inherit the line bridging behavior from the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -782,17 +761,15 @@ The following code example shows how to inherit line bridging behavior from the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoWXNQTzWHHdvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/InheritBehaviors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/InheritBehaviors)
 
 ## How to Use Bitwise Operations
 
-Bitwise operations are used to manipulate flagged enumerations `enum`. In this section, Bitwise operations are shown by using the node constraints. The same is applicable when working with node constraints, connector constraints, or port constraints.
+Bitwise operations are used to manipulate the flagged enumerations `enum`. In this section, Bitwise operations are shown by using the node constraints. The same is applicable when working with node constraints, connector constraints, or port constraints.
 
 ### How to Add Constraints Using Bitwise OR Operator
 
-Add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
+You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
 The following code shows how to add bridging constraints into the default diagram constraints to enable bridging functionality in the diagram.
 
@@ -810,7 +787,7 @@ The following code shows how to add bridging constraints into the default diagra
 
 ### How to Remove Constraints Using Bitwise AND NOT Operator
 
-Remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
+You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
 The following code shows to remove zoom and pan constraints from the default constraints to disable zoom and panning functionality in the diagram.
 
@@ -829,7 +806,7 @@ The following code shows to remove zoom and pan constraints from the default con
 
 ### How to Check Constraint Values Using Bitwise AND
 
-Check any value by using the Bitwise ‘&’ (AND) operator.
+You can check any value by using the Bitwise ‘&’ (AND) operator.
 
 ```csharp
 if ((node.constraints & (NodeConstraints.Rotate)) == (NodeConstraints.Rotate));

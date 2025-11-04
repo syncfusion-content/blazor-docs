@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Events in Blazor DateTimePicker Component | Syncfusion
-description: Learn about events in the Syncfusion Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
+title: Events in Blazor Datetime Picker Component | Syncfusion
+description: Checkout and learn here all about Events in Syncfusion Blazor Datetime Picker component and much more.
 platform: Blazor
-control: DateTimePicker
+control: Datetime Picker 
 documentation: ug
 ---
 
 # Events in Blazor Datetime Picker Component
 
-This section lists and describes the events raised by the DateTimePicker component for user interactions and lifecycle actions.
-
-N> Starting with `v17.2.*`, the DateTimePicker exposes a streamlined set of events. Event names were changed from previous releases, and several events were removed. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
+This section explains the list of events of the DateTimePicker component which will be triggered for appropriate DateTimePicker actions.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -22,7 +20,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Blur
 
-The `Blur` event is triggered when the input loses focus.
+`Blur` event triggers when the input loses the focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -42,7 +40,7 @@ The `Blur` event is triggered when the input loses focus.
 
 ## ValueChange
 
-The `ValueChange` event is triggered when the DateTimePicker value (date and time) changes.
+`ValueChange` event triggers when the Calendar value is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -62,7 +60,7 @@ The `ValueChange` event is triggered when the DateTimePicker value (date and tim
 
 ## OnClose
 
-The `OnClose` event is triggered when the popup is closed.
+`OnClose` event triggers when popup is closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -82,7 +80,7 @@ The `OnClose` event is triggered when the popup is closed.
 
 ## Created
 
-The `Created` event is triggered when the component is created.
+`Created` event triggers when DateTimePicker is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -102,7 +100,7 @@ The `Created` event is triggered when the component is created.
 
 ## Destroyed
 
-The `Destroyed` event is triggered when the component is destroyed.
+`Destroyed` event triggers when DateTimePicker is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -122,7 +120,7 @@ The `Destroyed` event is triggered when the component is destroyed.
 
 ## Focus
 
-The `Focus` event is triggered when the input gains focus.
+`Focus` event triggers when the input gets focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -143,7 +141,7 @@ The `Focus` event is triggered when the input gains focus.
 
 ## Navigated
 
-The `Navigated` event is triggered when navigating between calendar views (such as month, year, or decade) or within the same view.
+`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -164,7 +162,7 @@ The `Navigated` event is triggered when navigating between calendar views (such 
 
 ## OnOpen
 
-The `OnOpen` event is triggered when the popup is opened.
+`OnOpen` event triggers when popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -185,7 +183,7 @@ The `OnOpen` event is triggered when the popup is opened.
 
 ## OnRenderDayCell
 
-The `OnRenderDayCell` event is triggered when each day cell of the calendar is rendered.
+`OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -203,4 +201,4 @@ The `OnRenderDayCell` event is triggered when each day cell of the calendar is r
 }
 ```
 
-N> The DateTimePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+N> DateTimePicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

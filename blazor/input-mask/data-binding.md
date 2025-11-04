@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Input Mask Component
 
-Use the @bind-Value attribute to enable two-way data binding with the MaskedTextBox. The Value parameter is of type string. When the user edits the input, the bound field is updated; when the bound field changes in code, the component reflects the new value. For reference, see SfMaskedTextBox, Value, and Mask in the API, and the Blazor data binding guidance.
+Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If the component value is changed, it will affect all the places where you bind the variable for the **bind-Value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -25,7 +25,7 @@ Use the @bind-Value attribute to enable two-way data binding with the MaskedText
 
 ## Dynamic value binding
 
-The value can also be updated programmatically at runtime. Updating the bound field triggers the component to display the new value, as shown in the following example.
+You can bind the value to the MaskedTextBox component dynamically for `bind-Value` attribute as mentioned in the following code.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
