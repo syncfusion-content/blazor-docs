@@ -106,5 +106,5 @@ This example illustrates how the Syncfusion Blazor AI library integrates with a 
 
 ## Error Handling
 - **Invalid API key**: Verify the API key and scope, and load it from configuration or a secure secret store.
-- **Rate limits**: Review provider-specific rate limits and implement backoff or retries where appropriate (see the provider’s documentation, such as the [DeepSeek API docs](https://platform.deepseek.com)).
+- **Rate limits**: Review provider-specific rate limits and implement back off or retries where appropriate (see the provider’s documentation, such as the [DeepSeek API docs](https://platform.deepseek.com)).
 - **Network or Parsing Errors**: Handle HTTP or JSON errors gracefully, as shown in the `DeepSeekAIService` implementation.
