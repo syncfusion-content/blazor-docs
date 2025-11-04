@@ -9,11 +9,13 @@ documentation: ug
 
 # Node Selection in Blazor TreeView Component
 
-Node selection in the Blazor TreeView component occurs by clicking the corresponding nodes. The [**Selected**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Selected) field or [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property is used to perform node selection.
+You can select a node in the Blazor TreeView component by clicking on the corresponding nodes. In the TreeView component, the [**Selected**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Selected) field or [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property is used to perform node selection.
 
-When using the `Selected` field, you can directly map it within your data source. The `SelectedNodes` property further offers two-way binding for more dynamic control over selection.
+If you use the **Selected** field, you can map it directly in the data source.
 
-## Select Nodes through Data Binding
+In the TreeView component, the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property provides two-way binding.
+
+## Select nodes through data binding
 
 The Blazor TreeView component enables the selection of specific nodes during initialization by utilizing the [**Selected**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Selected) field, where setting it to true for a node in the data source will select the corresponding node in the user interface. 
 
@@ -102,13 +104,12 @@ The Blazor TreeView component enables the selection of specific nodes during ini
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthIWNWKhiiVUngi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Select nodes through data binding](./images/data-binding.png)
+![Select nodes through data binding](./images/blazor-treeview-select-nodes-through-data-binding.png)
 
-## Select Nodes through API
+## Select nodes through API
 
-The Blazor TreeView component provides the capability to select specific nodes dynamically or during initialization through the two-way bound [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property. To select particular nodes, pass an array of their corresponding string IDs to this property. 
+The Blazor TreeView component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property. This property allows for the selection of particular nodes by passing in an array collection of the corresponding node IDs as strings. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -193,12 +194,10 @@ The Blazor TreeView component provides the capability to select specific nodes d
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVysDiALMMnYUXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select nodes through API](./images/data-binding.png)
 
-## Select all Nodes Programmatically
+## Select all nodes programmatically
 
-All nodes in the Blazor TreeView component can be selected using a button click. Based on the requirement, the necessary TreeView node IDs are added to an empty List and assigned to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property.
+In the Blazor TreeView component, you can select all the nodes using a button click. Based on the requirement, you can add the needed selected TreeView nodes in an empty List and assign them to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property.
 
 ### Parent nodes
 
@@ -304,13 +303,12 @@ Here, selected all TreeView parent nodes by clicking a button. If the nodes have
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByCjMABihnMnxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Parent nodes](./images/blazor-treeview-parent-node-selection.png)
 
-### Child Nodes
+### Child nodes
 
-To select only child nodes in the TreeView, retrieve all nodes and add the IDs of nodes that do not have children (leaf nodes) to a `SelectedItems` list. Then, assign this list to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property.
+Here, selected all TreeView child nodes by clicking a button. If the nodes do not have child nodes, added those node IDs in the SelectedItems list and assigned that value to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -412,11 +410,10 @@ To select only child nodes in the TreeView, retrieve all nodes and add the IDs o
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLIMjCUrigsqVBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Child nodes](./images/child-nodes.png)
+![Child nodes](./images/blazor-treeview-child-node-selection.png)
 
-## Get Selected Nodes
+## Get selected nodes
 
 The Blazor TreeView component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property. This property allows for the selection of particular nodes by passing in an array collection of the corresponding node IDs as strings.  Additionally, the component offers the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, which allows for retrieval of the updated data source of the TreeView. By passing the SelectedNodes of specific TreeView nodes as arguments to this method, the updated data source of only those nodes will be returned. If no arguments are passed, the entire updated data source of the TreeView will be returned.
 
@@ -570,7 +567,6 @@ The Blazor TreeView component provides the capability to select specific nodes d
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVyCZsALsQJGdJR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Get selected nodes](./images/blazor-treeview-get-selected-nodes.png)
 
@@ -674,12 +670,12 @@ In the Blazor TreeView component, you can select all TreeView nodes on initial r
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSCtsqhCFWilwv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select all nodes on load](./images/select-allnode.png)
 
-## Select all Nodes Programmatically
+![Select all nodes on load](./images/blazor-treeview-select-all-nodes-onload.png)
 
-To select all TreeView nodes on initial rendering, utilize the TreeView component's `Created` event. This event fires upon successful component creation. Within this event, add all TreeView node IDs to a `TreeData` list and then assign this list to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property to select all the nodes on the button click operation.
+## Select all nodes programmatically
+
+In the Blazor TreeView component, you can select all TreeView nodes using a button click. In this button click, you can add all the TreeView nodes IDs in the TreeData list and assign that to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property to select all the nodes on the button click operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -779,12 +775,11 @@ To select all TreeView nodes on initial rendering, utilize the TreeView componen
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLesjiUBBWsNrVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select all nodes programmatically](./images/select-allnode.png)
+![Select all nodes programmatically](./images/blazor-treeview-select-all-nodes-programmatically.png)
 
-## Select Individual Node Programmatically
+## Select individual node programmatically
 
-To select a specific TreeView node programmatically, use a button click or other event to update the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property with an array containing the ID of the desired node as a string..
+In the Blazor TreeView component, you can select particular TreeView nodes using a button click. In this button click, you can select a particular node by passing the corresponding node IDs as strings in the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -875,13 +870,12 @@ To select a specific TreeView node programmatically, use a button click or other
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWXiAhhWdEIWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Select individual node programmatically](./images/blazor-treeview-select-individual-node-programmatically.png)
 
-## Retrieve Indices of Selected Nodes
+## Retrieve indices of selected nodes
 
-In the Blazor TreeView component, you can display the index value of selected TreeView nodes in the UI. The index of selected items can be obtained using the TreeView's [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method in the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event.
+In the Blazor TreeView component, you can show the index value of the selected TreeView nodes in the UI. You can obtain the index of selected items values with the help of the TreeView's [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method in the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1048,11 +1042,10 @@ In the Blazor TreeView component, you can display the index value of selected Tr
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLysNiqrLVLrOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Retrieve indices of selected nodes](./images/blazor-treeview-retrieve-indices-of-selected-nodes.png)
 
-## Disable Full Row Selection
+## Disable full row selection
 
 The Blazor TreeView component offers the [FullRowSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_FullRowSelect) property to control the selection of the entire row of a node by clicking on it.
 
@@ -1142,9 +1135,8 @@ By default, the value of this property is true. When set to false, full-row sele
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhoMXMAVLKNrzCc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Get Path of Selected Node
+## Get path of selected node
 
 In the Blazor TreeView component, you can get the parent node details when selecting child nodes by passing the selected nodes IDs and parent nodes IDs in the TreeView [GetNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetNode_System_String_) method in the [NodeSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelected) event. 
 
@@ -1261,7 +1253,7 @@ In the Blazor TreeView component, you can get the parent node details when selec
 
 ```
 
-## Cancel the Node Selection
+## Cancel the node selection
 
 The Blazor TreeView component offers the ability to cancel the selection action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeSelectEventArgs.html#Syncfusion_Blazor_Navigations_NodeSelectEventArgs_Cancel) argument value as true within the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event. This will prevent the select action from occurring within the TreeView component.
 

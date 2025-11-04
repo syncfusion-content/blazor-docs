@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding for Blazor Sankey Diagram | Syncfusion
-description: Learn how to bind nodes and links to the Syncfusion Blazor Sankey Diagram, including data models, REST API binding and JSON response format.
+description: Checkout and learn about data binding with Blazor Sankey Diagram and how to implement it effectively.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,35 +9,35 @@ documentation: ug
 
 # Data Binding in the Blazor Sankey Diagram
 
-The Blazor Sankey Diagram visualizes relationships and flows between categories using nodes and links. Data binding supplies the node and link information required to render the diagram effectively.
+The Blazor Sankey Diagram is designed to visualize relationships and flows between categories using nodes and links. Data binding allows you to easily provide the necessary information for the sankey diagram to render effectively. Below, we explore how to bind data to the sankey diagram in Blazor.
 
 ## Overview of Data Binding
 
 The Sankey Diagram accepts data for:
 
-1. **Nodes**: Entities or categories in the flow.
-2. **Links**: Connections between nodes, including the magnitude of each flow.
+1. **Nodes**: Represent entities or categories in the flow.
+2. **Links**: Represent the connections and their magnitude between the nodes.
 
-Bind data using collections of objects that define node and link properties. The component generates the diagram based on this data.
+The data can be bound using collections of objects that define the properties of nodes and links. The component dynamically generates the diagram based on this data.
 
 ## Understanding Data Models
-The Blazor Sankey Diagram uses predefined data models for nodes and links available in the `Syncfusion.Blazor.Sankey` namespace. Key properties include:
+The Blazor Sankey Diagram uses predefined data models for nodes and links. These models are already available in the `Syncfusion.Blazor.Sankey` namespace. Here's an overview of their key properties:
 
 ### SankeyDataNode
-- `Id`: Unique identifier for the node.
-- `Label`: An instance of `SankeyDataLabel` to customize the node label.
+- `Id`: A string property that serves as a unique identifier for the node.
+- `Label`: An object of type `SankeyDataLabel` that can be used to customize the node's label.
 
 ### SankeyDataLink
-- `SourceId`: Identifier of the source node.
-- `TargetId`: Identifier of the target node.
-- `Value`: Weight or magnitude of the connection.
+- `SourceId`: A string property identifying the source node of the link.
+- `TargetId`: A string property identifying the target node of the link.
+- `Value`: A double property representing the weight or magnitude of the connection.
 
-These types are provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> library; custom class definitions are not required.
+There's no need to define these classes yourself as they are provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> library.
 
 ## Binding Data to the Sankey Diagram
-Create collections of `SankeyDataNode` and `SankeyDataLink` and assign them to the component.
+To use the Sankey Diagram, you need to create collections of `SankeyDataNode` and `SankeyDataLink` objects and bind them to the component. Here's how you can do this.
 
-Below is an example of binding data to the Sankey Diagram in a Blazor application:
+Below is an example of how to bind data to the Sankey Diagram in a Blazor application:
 
 {% tabs %}
 {% highlight razor %}
@@ -61,7 +61,7 @@ Below is an example of binding data to the Sankey Diagram in a Blazor applicatio
             new SankeyDataNode() { Id = "Green Coffee" },
             new SankeyDataNode() { Id = "North America" },
             new SankeyDataNode() { Id = "Europe" },
-            new SankeyDataNode() { Id = "Asia Pacific" }
+            new SankeyDataNode() { Id = "Asia Pacific" },
         };
         Links = new List<SankeyDataLink>()
         {
@@ -81,7 +81,7 @@ Below is an example of binding data to the Sankey Diagram in a Blazor applicatio
             new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "Asia Pacific", Value = 15 },
             new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "North America", Value = 10 },
             new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Europe", Value = 8 },
-            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Asia Pacific", Value = 7 }
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Asia Pacific", Value = 7 },
         };
         base.OnInitialized();
     }
@@ -94,16 +94,16 @@ Below is an example of binding data to the Sankey Diagram in a Blazor applicatio
 
 ### Key Points
 
-- `Nodes` expects a collection of `SankeyDataNode` objects.
-- `Links` expects a collection of `SankeyDataLink` objects.
-- `SourceId` and `TargetId` values in `SankeyDataLink` must match the corresponding `Id` values in `SankeyDataNode`.
+- The `Nodes` parameter expects a collection of `SankeyDataNode` objects.
+- The `Links` parameter expects a collection of `SankeyDataLink` objects.
+- Ensure that `SourceId` and `TargetId` in `SankeyDataLink` match the `Id` values in `SankeyDataNode`.
 
 ## Advanced Binding Scenarios
 
-Data can be sourced from:
-- REST APIs: Fetch data dynamically via HTTP requests.
-- Databases: Load data using Entity Framework or another ORM.
-- JSON files: Deserialize JSON into node and link models.
+You can bind data from various sources such as:
+- REST APIs: Fetch data dynamically using HTTP requests.
+- Databases: Load data using Entity Framework or similar ORM tools.
+- JSON Files: Deserialize JSON data into the node and link models.
 
 ### Example: Binding Data from a REST API
 
@@ -138,7 +138,7 @@ Data can be sourced from:
 
 
 ### Updated REST API Example
-The API endpoint should return a JSON response in the following format:
+Ensure that your API endpoint provides a JSON response in the following format:
 
 {% tabs %}
 {% highlight json %}

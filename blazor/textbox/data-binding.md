@@ -9,16 +9,16 @@ documentation: ug
 
 # Data Binding in Blazor TextBox Component
 
-This section describes how to bind values to the TextBox component using the following approaches:
+This section briefly explains how to bind the value to the TextBox component in the following different ways.
 
-- One-way data binding
-- Two-way data binding
-- Dynamic value binding
-- Complex data binding
+* One-way data binding
+* Two-way data binding
+* Dynamic value binding
+* Complex data binding
 
 ## One-way binding
 
-Bind a value to the TextBox by assigning a property to the `Value` parameter. In one-way binding, pass the property or variable name with `@` (for example, `@Name`). UI updates occur when the bound property changes during a render (for example, inside an event handler).
+The value can be bound to the TextBox component directly for `Value` property as mentioned in the following code example. In one-way binding, pass the property or variable name along with `@` (For Ex: "@Name").
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -40,7 +40,7 @@ public string Name { get; set; } = "Hello, World!";
 
 ## Two-way data binding
 
-Use the `@bind-Value` attribute for two-way binding. Supported types include `string`, `int`, `enum`, `DateTime`, and `bool`. When the component value changes, the bound variable is updated, and vice versa.
+Two-way binding can be achieved by using `bind-Value` attribute and its support string, int, Enum, DateTime, and bool types. If the component value has been changed, it will affect all places where you bind the variable for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -58,8 +58,9 @@ public string Name { get; set; } = "Syncfusion";
 
 ## Dynamic value binding
 
-The component can update styles or other parameters dynamically in response to events. Calling `StateHasChanged()` notifies the component to re-render; event callbacks typically trigger re-render automatically, so this call may be optional depending on the scenario.
+The property value can be changed dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor TextBox component** only. This method notifies the component that its state has changed and queues a re-render.
 
+There is no need to call this method for native events since it’s called after any life cycle method and can also be invoked manually to trigger a re-render.
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
@@ -84,7 +85,7 @@ The component can update styles or other parameters dynamically in response to e
 
 ## Complex data binding
 
-Bind nested (complex) data by referencing the property path in the `Value` parameter.
+The complex data values can be bound to the TextBox component.The following code demonstrates how to bind complex data values to the TextBox component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs; 

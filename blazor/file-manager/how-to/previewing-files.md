@@ -7,15 +7,15 @@ control: File Manager
 documentation: ug
 ---
 
-# Previewing Files in Blazor File Manager Component
+# Previewing files in Blazor File Manager component
 
-The Blazor File Manager component supports file previewing by integrating with other Syncfusion components. It can preview PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component, DOCX files using the [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) component, and play videos within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
+In the Blazor File Manager component, you can preview PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component, docx files using the [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) component, and play videos within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
 
-## Previewing PDF and Word Files in Dialog
+## Previewing PDF and Word File in Dialog
 
-The Blazor File Manager component can display PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component and docx files using the DocumentEditor component by setting the proper file path in these components.
+In the Blazor File Manager component, you can view PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component and docx files using the DocumentEditor component by setting the proper file path in these components.
 
-The following example demonstrates how to preview PDF and DOCX files by utilizing the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) and [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) components within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
+The following example demonstrates how to preview PDF and docx files by utilizing the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) and [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) components within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
 
 ```cshtml
 

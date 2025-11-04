@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Dashboard Layout Panel Header
+## Customizing the Dashboard Layout panel header
 
-Use the following CSS to customize the header section of the Dashboard Layout panels.
+Use the following CSS to customize the Dashboard Layout panel header.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
@@ -23,9 +23,9 @@ Use the following CSS to customize the header section of the Dashboard Layout pa
 }
 ```
 
-## Customizing the Dashboard Layout Panel Content
+## Customizing the Dashboard Layout panel content
 
-Apply the following CSS to customize the main content area of the Dashboard Layout panels.
+Use the following CSS to customize the Dashboard Layout panel content.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-content {
@@ -34,9 +34,9 @@ Apply the following CSS to customize the main content area of the Dashboard Layo
 }
 ```
 
-## Customizing the Dashboard Layout Panel Resize Icon
+## Customizing the Dashboard Layout panel resize icon
 
-The resize icon that appears in the corner of resizable panels can also be customized. Use the following CSS to modify its appearance.
+Use the following CSS to customize the Dashboard Layout resize icon.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-resize.e-double{
@@ -47,9 +47,9 @@ The resize icon that appears in the corner of resizable panels can also be custo
 }
 ```
 
-## Customizing the Dashboard Layout Background
+## Customizing the Dashboard Layout panel background
 
-Modify the overall background of the Dashboard Layout component using the CSS below. This targets the main container of the dashboard.
+Use the following CSS to customize the Dashboard Layout panel background.
 
 ```css
 .e-dashboardlayout.e-control.e-responsive {

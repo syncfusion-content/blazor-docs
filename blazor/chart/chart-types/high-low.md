@@ -1,72 +1,23 @@
 ---
 layout: post
-title: Hilo Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the Hilo Chart in Syncfusion Blazor Charts component.
+title: Hilo in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Hilo Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Hilo Chart in Blazor Charts Component
+# Hilo in Blazor Charts Component
 
-## Hilo Chart
+## Hilo
 
-The [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series illustrates price movements in stocks using higher and lower values. Render the series by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo).
+[Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series illustrates the price movements in stock using the higher and lower values and it can be rendered by specifying the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo).
 
-Learn how to create a Hilo chart using Blazor Charts by watching the following video.
+To learn how to create a Hilo chart, you can watch this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 
-This chart type displays high and low values for each data point, providing a clear visualization of price ranges. The Hilo series requires two y-values for each data point: high (maximum price) and low (minimum price).
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" /> 
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Type="ChartSeriesType.Hilo">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class Data
-    {
-        public string X { get; set; }
-        public double High { get; set; }
-        public double Low { get; set; }
-    }
-
-    public List<Data> StockDetails = new List<Data> 
-	{
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
-	};
-}
-
-``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrzNPLjzSqgHuAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.png)
-
-Refer to the [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page for more feature details. Explore the [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to learn how to render and configure the Hilo series with interactive examples.
-
-## Binding data with series
-
-Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property in the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or a list of business objects. For more information, see [Working with Data](../working-with-data). Map the data fields to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_High), and [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Low) properties.
+This indicates that the data should be represented as a hilo chart, which shows the high and low values for each data point, illustrating price movements in stocks and providing a clear visualization of price ranges. The [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series requires two y-values for each data point, you need to specify both the high and low values. The high value represents the maximum price, while the low value represents the minimum price of the stock.
 
 ```cshtml
 
@@ -81,7 +32,7 @@ Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/b
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -91,18 +42,67 @@ Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/b
 
     public List<Data> StockDetails = new List<Data> 
 	{
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+		new Data{ X= "Jan", Low= 87, High= 200 },
+		new Data{ X= "Feb", Low= 45, High= 135 },
+		new Data{ X= "Mar", Low= 19, High= 85 },
+		new Data{ X= "Apr", Low= 31, High= 108 },
+		new Data{ X= "May", Low= 27, High= 80 },
+		new Data{ X= "June",Low= 84, High= 130 },
+		new Data{ X= "Jul", Low= 77, High=150 },
+		new Data{ X= "Aug", Low= 54, High= 125 },
+		new Data{ X= "Sep", Low= 60, High= 155 },
+		new Data{ X= "Oct", Low= 60, High= 180 },
+		new Data{ X= "Nov", Low= 88, High= 180 },
+		new Data{ X= "Dec", Low= 84, High= 230 }
+	};
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrzNPLjzSqgHuAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.png)
+
+N> Refer to our [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
+
+## Binding data with series
+
+You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_High) and [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Low) properties.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/> 
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Type="ChartSeriesType.Hilo">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double High { get; set; }
+        public double Low { get; set; }
+    }
+
+    public List<Data> StockDetails = new List<Data> 
+	{
+		new Data{ X= "Jan", Low= 87, High= 200 },
+		new Data{ X= "Feb", Low= 45, High= 135 },
+		new Data{ X= "Mar", Low= 19, High= 85 },
+		new Data{ X= "Apr", Low= 31, High= 108 },
+		new Data{ X= "May", Low= 27, High= 80 },
+		new Data{ X= "June",Low= 84, High= 130 },
+		new Data{ X= "Jul", Low= 77, High=150 },
+		new Data{ X= "Aug", Low= 54, High= 125 },
+		new Data{ X= "Sep", Low= 60, High= 155 },
+		new Data{ X= "Oct", Low= 60, High= 180 },
+		new Data{ X= "Nov", Low= 88, High= 180 },
+		new Data{ X= "Dec", Low= 84, High= 230 }
 	};
 }
 
@@ -111,11 +111,11 @@ Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/b
 
 ## Series customization
 
-Customize the [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series using the following properties:
+The following properties can be used to customize the [Hilo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series.
 
 **Fill**
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property sets the color for the series.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property determines the color applied to the series.
 
 ```cshtml
 
@@ -140,25 +140,25 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= 84, High= 130 },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpjPVXpydPcQUK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Apply a gradient color to the hilo series by configuring the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property with gradient values.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the hilo series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -192,18 +192,18 @@ Apply a gradient color to the hilo series by configuring the [Fill](https://help
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= 84, High= 130 },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -212,7 +212,7 @@ Apply a gradient color to the hilo series by configuring the [Fill](https://help
 
 **Opacity**
 
-The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property controls the transparency of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) color, allowing adjustment of the series' appearance.
+The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
 
 ```cshtml
 
@@ -238,18 +238,18 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= 84, High= 130 },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -258,11 +258,11 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ## Empty points
 
-Data points with `null`, `double.NaN`, or `undefined` values are considered empty and are not plotted.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to specify how empty or missing data points are handled. The default mode is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
 ```cshtml
 
@@ -289,18 +289,18 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = double.NaN, High = double.NaN },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= double.NaN, High= double.NaN },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -309,7 +309,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Fill**
 
-Customize the fill color of empty points using the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property.
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
 
 ```cshtml
 
@@ -336,18 +336,18 @@ Customize the fill color of empty points using the [`Fill`](https://help.syncfus
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = double.NaN, High = double.NaN },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= double.NaN, High= double.NaN },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -358,7 +358,7 @@ Customize the fill color of empty points using the [`Fill`](https://help.syncfus
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event enables customization of series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
 
 ```cshtml
 
@@ -388,18 +388,18 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= 84, High= 130 },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -408,15 +408,15 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows customization of each data point before rendering.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnPointRender="PointRender" />
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Hilo" />
     </ChartSeriesCollection>
@@ -438,18 +438,18 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public List<Data> StockDetails = new List<Data>
     {
-        new Data { X = "Jan", Low = 87, High = 200 },
-        new Data { X = "Feb", Low = 45, High = 135 },
-        new Data { X = "Mar", Low = 19, High = 85 },
-        new Data { X = "Apr", Low = 31, High = 108 },
-        new Data { X = "May", Low = 27, High = 80 },
-        new Data { X = "June", Low = 84, High = 130 },
-        new Data { X = "Jul", Low = 77, High = 150 },
-        new Data { X = "Aug", Low = 54, High = 125 },
-        new Data { X = "Sep", Low = 60, High = 155 },
-        new Data { X = "Oct", Low = 60, High = 180 },
-        new Data { X = "Nov", Low = 88, High = 180 },
-        new Data { X = "Dec", Low = 84, High = 230 }
+        new Data{ X= "Jan", Low= 87, High= 200 },
+        new Data{ X= "Feb", Low= 45, High= 135 },
+        new Data{ X= "Mar", Low= 19, High= 85 },
+        new Data{ X= "Apr", Low= 31, High= 108 },
+        new Data{ X= "May", Low= 27, High= 80 },
+        new Data{ X= "June",Low= 84, High= 130 },
+        new Data{ X= "Jul", Low= 77, High=150 },
+        new Data{ X= "Aug", Low= 54, High= 125 },
+        new Data{ X= "Sep", Low= 60, High= 155 },
+        new Data{ X= "Oct", Low= 60, High= 180 },
+        new Data{ X= "Nov", Low= 88, High= 180 },
+        new Data{ X= "Dec", Low= 84, High= 230 }
     };
 }
 
@@ -460,5 +460,5 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hiding Axis in Blazor Charts Component | Syncfusion
-description: Check out and learn here all about Hiding Axis in Syncfusion Blazor Charts component and much more details.
+description: Checkout and learn here all about Hiding Axis in Syncfusion Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,14 +11,13 @@ documentation: ug
 
 # Hiding Axis in Blazor Charts Component
 
-The axis associated with a series can be hidden by toggling the legend item of the relevant series. Follow these steps to hide the measure axis associated with a series.
+The axis associated with the series can be hidden by toggling the legend item of the relevant series. Follow the steps below to hide the measure axis associated with the series.
 
-## Step 1: Render Chart Series and Axes
+**Step 1:**
 
-Render a chart with three series and three axes using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) and [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxes.html). Map each series to a measure axis using the [YAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YAxisName) property.
+Render a chart with three series and three axis using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) and [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxes.html) properties of the chart. Map each series to a measure axis using [YAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YAxisName) property of the [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
 ```cshtml
-
 <SfChart>
     <ChartAxes>
         <ChartAxis Name="yAxis1" />
@@ -35,29 +34,25 @@ Render a chart with three series and three axes using [ChartSeriesCollection](ht
     </ChartSeriesCollection>
     
 </SfChart>
-
 ```
 
-## Step 2: Configure Legend Settings
+**Step 2:**
 
-In [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html), set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to display the legend and [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) to enable legend item toggling.
+In the [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html), configure the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to display the legend and the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property to enable legend item toggling to control the visibility of the associated series.
 
 ```cshtml
-
 <SfChart>
     ...
     <ChartLegendSettings Visible="true" ToggleVisibility="true" />
     ...
 </SfChart>
-
 ```
 
-## Action
+**Action:**
 
-Clicking legend items toggles the visibility of the associated series. When a series is hidden, its axis is removed from the chart. Toggling the legend item again restores the series and its axis. The following code demonstrates this behavior.
+By clicking the legend items, one can now toggle the visibility of the associated series. Once the series has been removed, the associated axis will be removed from the chart. If the legend item is toggled again to show the series, the associated axis with the series will be added to the chart. The complete code snippet for the preceding steps is available below.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
@@ -78,7 +73,7 @@ Clicking legend items toggles the visibility of the associated series. When a se
 </SfChart>
 
 
-@code {
+@code{
 
     public List<ChartData> DataPoints = new List<ChartData>
     {
@@ -98,7 +93,6 @@ Clicking legend items toggles the visibility of the associated series. When a se
     }
 
 }
-
 ```
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

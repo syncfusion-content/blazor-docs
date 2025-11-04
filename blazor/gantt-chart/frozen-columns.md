@@ -9,17 +9,15 @@ documentation: ug
 
 # Frozen columns in Blazor Gantt Component
 
-The frozen columns feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart allows specific columns to stay fixed on the left side while scrolling horizontally. This enhances readability and simplifies navigation across wide dataset
+The frozen columns feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart provides the ability to fix certain columns on the left-hand side of the grid in gantt chart while the user scrolls horizontally. This feature improves the readability and allows for easier navigation.
 
-To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) property in the Gantt component. 
-
-The following example demonstrates setting the `FrozenColumns` value to 2, which keeps the first two columns fixed during horizontal scrolling.
+To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) property of the Gantt component. In the example code provided, the FrozenColumns value is set to 2, which means that the first two columns of the grid will remain fixed while the user scrolls horizontally.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@using Syncfusion.Blazor.Gantt
 
+@using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" FrozenColumns="2">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -28,7 +26,6 @@ The following example demonstrates setting the `FrozenColumns` value to 2, which
 
 @code {
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -68,15 +65,14 @@ The following example demonstrates setting the `FrozenColumns` value to 2, which
 
 ## Freeze particular column
 
-To freeze a specific column in the Gantt Chart, set the[IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property to **true** on the corresponding [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
+To freeze a specific column in the Gantt Chart, you can use the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
 
-The following example demonstrates that the **TaskID** and **TaskName** columns are frozen.
+In the following code snippet, the columns with the field names `TaskID` and `TaskName` are frozen by setting the IsFrozen property of the corresponding GanttColumn to true:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" >
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -93,7 +89,6 @@ The following example demonstrates that the **TaskID** and **TaskName** columns 
 
 @code {
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -133,20 +128,18 @@ The following example demonstrates that the **TaskID** and **TaskName** columns 
 
 ## Freeze direction
 
-You can freeze a column on either the left or right side of the grid while the remaining columns remain movable by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) property in the `GanttColumn` component. To apply this, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property must also be set to **true**.
+The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) property in the `GanttColumn` allows you to freeze the column either the left or right side of the grid while the remaining columns remain movable. The `IsFrozen` property should be set to true for the frozen columns.
 
-The following two freeze direction options are supported:
+The [FreezeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html) property has two values: [FreezeDirection.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left) allows you to freeze columns on the left side, while [FreezeDirection.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right) allows you to freeze columns on the right side.
 
-- [FreezeDirection.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left) – Freezes the column on the left side.
-- [FreezeDirection.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right) – Freezes the column on the right side.
+To use `FreezeDirection` in the Blazor Gantt chart, you need to set `IsFrozen` property of GanttColumn in addition to the `Freeze` property. In the below code sample , the `TaskID` column is frozen on the left side of the grid, while the `TaskName` column is frozen on the right side.
 
-The following example demonstrates that the **TaskID** column is frozen on the left and the **TaskName** column is frozen on the right.
+The following is the sample code for using `FreezeDirection` in the Blazor Gantt chart:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" >
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -163,7 +156,6 @@ The following example demonstrates that the **TaskID** column is frozen on the l
 
 @code {
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -203,15 +195,14 @@ The following example demonstrates that the **TaskID** column is frozen on the l
 
 ## Add or remove frozen columns by dragging the column separator
 
-Frozen columns can be added or removed by dragging the column separator in the Gantt Chart.This separator is a draggable vertical line that separates frozen columns from non-frozen ones.
+The Gantt Chart allows users to add or remove frozen columns by dragging and dropping the column separator. The column separator is a draggable line that separates the frozen columns from the non-frozen columns in the Gantt Chart. It is displayed as a vertical line between the columns.
 
-To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFreezeLineMoving) property to **true**.  If no columns are configured as frozen, the separator appears at both the left and right edges of the grid.
+To enable this feature, you need to set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFreezeLineMoving) property to true. If no columns are specified as frozen, the frozen column separator will be displayed at the left and right ends of the grid in Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFreezeLineMoving=true>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -228,7 +219,6 @@ To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.
 
 @code {
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -267,22 +257,18 @@ To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLeMZZKfMsDAtUw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change default frozen line color
-  
-You can customize the color of the default frozen line in the Gantt Chart by applying custom CSS styles.
 
-The following example demonstrates how to change the frozen line color to blue.
+The following code example shows how to change the color of the default frozen line in the Gantt Chart by customizing the CSS styles. The following demo provides an example of how to change the default frozen line color to blue.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" FrozenColumns="2" AllowFreezeLineMoving=true>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttSplitterSettings Position="60%"></GanttSplitterSettings>
 </SfGantt>
-
 <style>
     .e-grid .e-frozenrow-border {
         background-color: blue;
@@ -292,10 +278,8 @@ The following example demonstrates how to change the frozen line color to blue.
         border-right-color: blue;
     }
 </style>
-
 @code {
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();

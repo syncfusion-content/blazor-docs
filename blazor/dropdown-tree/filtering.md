@@ -7,13 +7,13 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Filtering in Blazor Dropdown Tree Component
+# Filtering in Dropdown Tree
 
-The Blazor Dropdown Tree offers built-in support for filtering data items, allowing users to quickly find specific entries within the tree structure. Filtering is enabled by setting the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) property to `true`. The filter operation typically begins as soon as characters are typed into the component's search box. By default, `AllowFiltering` is `false`.
+The Dropdown Tree has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is `false`.
 
-## Filtering Local Data
+## List data
 
-The following example demonstrates how to enable and utilize the filtering functionality with local data in the Dropdown Tree component.
+The following code demonstrates the filtering functionality with local data in the Dropdown Tree component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -48,14 +48,12 @@ The following example demonstrates how to enable and utilize the filtering funct
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjByjurxqedjxoQc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+
 ![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-local-filter.png)
 
-## Filtering Remote Data
+## Remote data
 
-The Dropdown Tree component also supports filtering with remote data sources. This involves configuring `SfDataManager` and `Query` objects to fetch filtered data from a service, similar to how data binding works.
-
-The following example demonstrates filtering functionality with remote data in the Dropdown Tree component:
+The following code demonstrates the filtering functionality with remote data in the Dropdown Tree component.
 
 ```cshtml
 
@@ -84,9 +82,9 @@ The following example demonstrates filtering functionality with remote data in t
 }
 ```
 
-## Filter Type
+## Filter type
 
-The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterType) property specifies the type of filter operation performed during the component's search action. The available `FilterType` options and their descriptions are:
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
@@ -130,93 +128,20 @@ In the following example, `Contains` filter type has been mapped to the [FilterT
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNryZuVnUyOHYgYn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dropdown Tree](./images/contains-filter.png)
 
 ## Case sensitive filtering
 
-Data items can be filtered with or without case sensitivity using the [`IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_IgnoreCase) property. By default, `IgnoreCase` is set to `true`, meaning filtering is not case-sensitive. To enforce case-sensitive filtering, set this property to `false`.
+The Data items can be filtered with or without case sensitivity using the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_IgnoreCase) property. By default, the `IgnoreCase` is set to false.
 
-```cshtml
-@using Syncfusion.Blazor.Navigations
+## Filter textbox placeholder 
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Filter case-sensitively" Width="500px" AllowFiltering="true" FilterType="FilterType.Contains" IgnoreCase="false">
-    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
+You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is used as `true`. `FilterBarPlaceholder` is depends on [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) property.
 
-@code {
-    public List<EmployeeData> Data = new List<EmployeeData>
-    {
-        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
-        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
-        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
-        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
-        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
-        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
-    };
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.png)
 
-    public class EmployeeData
-    {
-        public string? Id { get; set; }
-        public string? Name { get; set; }
-        public string? Job { get; set; }
-        public bool HasChild { get; set; }
-        public bool Expanded { get; set; }
-        public string? PId { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBojahRARseYbVJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dropdown Tree](./images/case-filter.png)
+## Minimum filter length
 
-## Filter Textbox Placeholder
-
-Use the [`FilterBarPlaceholder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) property to display watermark text in the filter bar textbox. This property is applicable only when [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is set to `true`.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowFiltering="true" FilterBarPlaceholder="Search employees...">
-    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
-
-@code {
-    public List<EmployeeData> Data = new List<EmployeeData>
-    {
-        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
-        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
-        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
-        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
-        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
-        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
-    };
-
-    public class EmployeeData
-    {
-        public string? Id { get; set; }
-        public string? Name { get; set; }
-        public string? Job { get; set; }
-        public bool HasChild { get; set; }
-        public bool Expanded { get; set; }
-        public string? PId { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLItOVnARreyrzU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-
-![Blazor Dropdown Tree](./images/filter/blazor-dropdowntree-placeholder.png)
-
-## Minimum Filter Length
-
-When filtering tree items, can able to specify the minimum number of characters that must be typed before the filtering operation is triggered.  This can be done by checking the text length using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtFilteringEventArgs.html#Syncfusion_Blazor_Navigations_DdtFilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event handler.
+When filtering the tree items, you can set the minimum characters after which the filtering must occur. This can be done by checking the text length using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtFilteringEventArgs.html#Syncfusion_Blazor_Navigations_DdtFilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event handler.
 
 In the following example, the limit is set to 2.
 
@@ -273,5 +198,3 @@ In the following example, the limit is set to 2.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoZkLRgnTPwPNH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dropdown Tree](./images/length-filter.png)

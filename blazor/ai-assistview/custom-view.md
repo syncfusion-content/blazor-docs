@@ -11,11 +11,11 @@ documentation: ug
 
 ## Adding custom views
 
-The Blazor AI AssistView supports multiple views for user interaction, including the built-in AssistView and customizable CustomView types.
+The Blazor AI AssistView allows you to add different views available for user interaction.
 
 #### Setting view type
 
-Set the view type by using the [AssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html) and [CustomView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.CustomView.html) tag directives.
+You can set the type of view by using the [AssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html) and [CustomView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.CustomView.html) tag directive.
 
 ```cshtml
 
@@ -49,7 +49,7 @@ Set the view type by using the [AssistView](https://help.syncfusion.com/cr/blazo
 
 ### Setting name
 
-Use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_Header) property to specify the header text for the `AssistView` or `CustomView` in the AI AssistView.
+You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_Header) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
 
 ```cshtml
 
@@ -83,7 +83,7 @@ Use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interac
 
 ### Setting iconCss
 
-Customize the view icon by using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_IconCss) property. By default, the `e-assistview-icon` class is added as the built-in header icon for the AI AssistView.
+You can customize the view icons by using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_IconCss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ Customize the view icon by using the [IconCss](https://help.syncfusion.com/cr/bl
 
 ### Setting view template 
 
-Use the [ViewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ViewTemplate) tag directive to define the content template for each view added to the AI AssistView.
+You can use the [ViewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ViewTemplate) tag directive to add the view content of the multiple views added in the AI AssistView.
 
 ```cshtml
 
@@ -154,7 +154,7 @@ Use the [ViewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 #### Show or hide clear button
 
-Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ShowClearButton) property on the `AssistView` tag to show or hide the clear button. The default value is `false`. When enabled and clicked, it clears the prompt text entered in the input area.
+You can use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ShowClearButton) property using the `AssistView` tag directive to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
 
 ```cshtml
 
@@ -183,7 +183,7 @@ Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Setting active view
 
-Use the [ActiveView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ActiveView) property to set the initially active view in the AI AssistView. By default, the value is `0`.
+You can use the [ActiveView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ActiveView) property set the active view in the AI AssistView. By default, the value is `0`.
 
 ```cshtml
 

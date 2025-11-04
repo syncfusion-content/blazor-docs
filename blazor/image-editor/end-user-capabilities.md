@@ -1,7 +1,7 @@
 ---
 layout: post
 title: End-user capabilities with Blazor Image Editor Component | Syncfusion
-description: Explore end-user capabilities in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+description: Checkout the end-user capabilities available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,177 +9,174 @@ documentation: ug
 
 # End-user capabilities in the Blazor Image Editor component
 
-The following operations are available for end users and are outlined in the sections below.
+The following operations are available for end-users and the same is explained briefly in these sections.
 
 ## Open an image
 
-To open an image in the image editor, follow these steps:
+To open an image in the image editor, do the following steps.
 
-* Click the Open icon on the left side of the toolbar.
+* Click the Open icon from the left side of the toolbar.
 
-* The file explorer lists only JPEG, PNG, JPG, WEBP, and BMP files.
+* The file explorer lists only JPEG, PNG, JPG, WEBP and BMP format files.
 
-* Select an image from the file explorer to load it in the editor.
+* Select the image from the list of the images from the file explorer window.
 
 ![Blazor Image Editor with Opening an image showcase](./images/blazor-image-editor-open.gif)
 
 ## Zooming
 
-Image zooming can be performed in the following ways:
+Image zooming can be performed in the following ways.
 
-* Using the toolbar
+* Using toolbar.
 
-* Using pinch zoom on touch-enabled devices
+* Using pinch zoom in touch enabled devices.
 
-* Using the mouse wheel
+* Using mouse wheel.
 
-* Using the keyboard
+* Using keyboard.
 
 ![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-end-zoom.jpg)
 
 ### Using toolbar
 
-To zoom the image using the toolbar:
+To zoom in or out the image in the image editor, do the following steps.
 
-* Zoom In/Out options are enabled after opening an image.
+* The Zoom In/ Out option only enabled after opening the image.
 
 ### Using pinch
 
-To zoom the image using touch gestures:
+To zoom in or out the image in the image editor, do the following steps.
 
-* Perform a two-finger pinch gesture to zoom in or out.
+* Touch with two fingers to perform zooming.
 
-* Zoom level is controlled by the pinch distance.
+* Zoom in and out controlled by touch gestures.
 
 ### Using mouse wheel
 
-To zoom the image using the mouse:
+To zoom in or out the image in the image editor, do the following steps.
 
-* Press Ctrl and scroll the mouse wheel to zoom in or out.
+* Press the ctrl key and scroll the mouse wheel to perform zooming.
 
-* Zoom level is adjusted based on the scroll direction.
+* The zoom in and out controlled by the mouse wheel.
 
 ### Using keyboard
 
-To zoom the image using keyboard shortcuts:
+To zoom in or out the image in the image editor, do the following steps.
 
-* Press Ctrl + ‘+’ to zoom in.
+* Press the ctrl key with ‘+’ button from the keyboard to zoom in an image.
 
-* Press Ctrl + ‘−’ to zoom out.
+* Press the ctrl key with ‘-’ button from the keyboard to zoom out an image.
 
 ## Panning
 
-To pan the image in the editor:
+To pan an image in the image editor, do the following steps.
 
-* Click and drag on the image to move it within the canvas.
+* Click on the image and do dragging to move or pan the image.
 
-* Panning is enabled in the following cases:
+* Panning option will be enabled in the following two cases.
 
-  * When a selection is active for cropping.
+    * If the selection is applied for cropping an image.
 
-  * When the image size exceeds the canvas size due to zooming.
+    * If the image size exceeds the canvas size while zooming an image.
 
 ![Blazor Image Editor with Panning an image showcase](./images/blazor-image-editor-pan.gif)
 
 ## Cropping and image transformation
 
-To crop and transform an image:
+To crop an image in the image editor, do the following steps.
 
-* Cropping is based on a selection within the editor.
+* Cropping can be performed based on the selection in an image editor.
 
-* Click the Crop button on the toolbar to open the contextual toolbar with crop selection, rotate, flip, and straighten options.
+* To perform selection, click the crop button in the toolbar which opens the contextual toolbar that shows crop selection options, rotate options, flip options, and straightening options.
 
-* Click the crop selection button and choose a selection type: custom, circle, square, or ratio.
+* Click the crop selection button and select the type of selection such as custom, circle, square, and ratio selection from the popup.
 
-* After creating a selection, pan the image to position the desired crop region.
+* Once selection is completed, do panning to move the image to get the cropped region.
 
-* Use rotate and flip buttons and the straighten slider to apply transformations, including to inserted annotations.
+* Utilize the rotate and flip buttons along with the straighten slider to perform image transformations, including any inserted annotations.
 
-* When the crop region is finalized, click the tick icon at the top-right of the toolbar to apply the crop.
+* Once the cropping region is finalized in the image click the tick icon at the top right of the toolbar to crop the image.
 
 ![Blazor Image Editor with Cropping and Image Transformation showcase](./images/blazor-image-editor-end-crop.jpg)
 
 ## Image annotation
 
-To add and modify annotations:
+To add annotations to an image in the image editor, do the following steps.
 
-* Click the annotation button on the toolbar and choose an annotation type: Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand Drawing.
+* To add annotation, click the annotation button in the toolbar and select the type of annotations such as Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand drawing to be inserted to the image editor.
 
-* Click and drag on the image to draw the selected annotation.
+* Once the annotation is added to the image, that can be repositioned by clicking and dragging the annotations using mouse as well as resized by clicking and resizing the selection circle to be placed around the annotations.
 
-* After insertion, annotations can be repositioned by clicking and dragging with the mouse, and resized by interacting with the selection circle placed around the annotation.
+* To rotate annotations, you can simply grab the circle located at the bottom of the annotation. The rotation can be applicable to all the annotations except text annotation.
 
-* To rotate an annotation, drag the circle at the bottom of the annotation.
+* Customize the annotations by changing their color, stroke width, font family, and font size through the contextual toolbar. The contextual toolbar will be enabled whenever the annotations are selected.
 
-* Customize annotations using the contextual toolbar: color, stroke width, font family, and font size. The contextual toolbar appears when an annotation is selected.
-
-* When annotations are selected, the quick access toolbar enables common actions such as duplicate, delete, and edit text to streamline editing.
+* When annotations are selected in the image editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
 
 ![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-end-annotation.jpg)
 
-## Fine-tune
+## Filtering and fine-tune
 
-To apply fine-tuning adjustments:
+To perform fine-tuning on an image in the image editor, do the following steps.
 
-* Click the Fine-tune button to display available adjustments.
+* Click the fine-tune button which displays the list of fine-tuning available in the image editor.
 
-* Choose an adjustment to display a slider for control.
+* Click one of the fine-tune options from the list of options which shows a slider to adjust the corresponding filter.
 
-* Click on the canvas or the tick icon at the right corner of the toolbar to apply changes.
+* Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
 ![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-finetune.jpg)
 
-## Filter
+To apply filters on an image in the image editor, do the following steps.
 
-To apply filters:
+* Click the filter button which displays the list of filters available in the image editor.
 
-* Click the Filter button to display available filters.
+* Click the filter from list of options to apply the corresponding filter to an image.
 
-* Select a filter to apply it to the image.
-
-* Click on the canvas or the tick icon at the right corner of the toolbar to apply changes.
+* Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
 ![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-filter.jpg)
 
 ## Undo and redo the operations
 
-To undo and redo actions in the editor:
+To undo and redo the actions performed in an image editor, do the following steps.
 
-* The Undo button is enabled after an action is performed.
+* The undo button will be enabled once the action is performed in an image editor.
 
-* The Redo button is enabled after an undo action is performed.
+* The redo button will be enabled once the undo action is performed in an image editor.
 
-* Click the Undo or Redo button on the left side of the toolbar.
+* Click the undo or redo button at the left side of the toolbar to perform undo and redo operation.
 
-* Keyboard shortcuts: Ctrl + Z (undo) and Ctrl + Y (redo).
+* Ctrl + Z and Ctrl + Y facilitates this process by allowing users to undo and redo actions, respectively.
 
 ![Blazor Image Editor with Undo and redo showcase](./images/blazor-image-editor-undo-redo.gif)
 
 ## Reset an image
 
-To revert all changes in the editor:
+To revert all the changes done in an image editor, do the following steps.
 
-* Click the Reset button on the right side of the toolbar.
+* Click the reset button which is located on the right side of the toolbar.
 
-* This action reverts all modifications applied in the editor.
+* This will revert all the changes performed in the image editor.
 
 ## Export an image
 
 To save the modified image in the Image Editor, follow these steps:
 
-* Click the Save button
-  * Locate the Save button on the right side of the toolbar and click it.
+* Click the Save Button
+    * Locate the Save button on the right side of the toolbar and click it.
 
-* Select the file format
-  * In the export popup, choose the preferred file format (PNG, JPEG, SVG, or WEBP) to save the image with all applied modifications.
+* Select the File Format
+    * In the export popup, choose your preferred file format (PNG, JPEG, SVG, or WEBP) to save the image with all 
+applied modifications.
 
-* Adjust image quality (JPEG only)
-  * If saving as JPEG, use predefined settings (Good, Great, Highest) or use the Image Quality slider (0–100). Higher values retain more detail and increase file size.
+* Adjust Image Quality (JPEG Format Only)
+    * If saving in JPEG, use the Image Quality slider to set the desired quality level (0-100). A higher value retains more detail but increases file size.
 
-* Download the image
-  * Click Download to save the modified image.
+* Download the Image
+    * Click Download to save the modified image to your device.
 
-* Use keyboard shortcut (Ctrl + S)
-  * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
+* Use Keyboard Shortcut (Ctrl + S)
+    * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
 
 ![Blazor Image Editor with Export an image showcase](./images/blazor-image-editor-end-save.jpg)

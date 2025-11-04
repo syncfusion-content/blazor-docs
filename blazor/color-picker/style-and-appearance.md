@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor Color Picker Component
 
-Customize the Color Picker appearance by overriding its default CSS. The following table lists key CSS classes and the corresponding UI sections in the Color Picker. For broader, theme-level changes, create a custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the ColorPicker appearance, you need to override the default CSS of ColorPicker component. Find the list of CSS classes and its corresponding section in ColorPicker component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class|
 |-----|-----|

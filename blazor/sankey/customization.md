@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization for Blazor Sankey Diagram | Syncfusion
-description: Explore various customization options available for enhancing the Syncfusion Blazor Sankey Diagram with background style, layout, and orientation configuration.
+description: Explore various customization options available for enhancing the Blazor Sankey Diagram with background style, layout, and orientation configuration.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor Sankey Diagram: Customization
 
-The Blazor Sankey Diagram includes extensive options to tailor appearance and behavior. This guide covers background styling, dimensions, right-to-left (RTL) layout, and orientation.
+The Blazor Sankey Diagram offers extensive customization options to tailor its appearance and behavior to your specific needs.  This guide covers customizing the background, dimensions, orientation, and right-to-left (RTL) support.
 
 ## Setting Background
 
-Customize the diagram background using `BackgroundColor` and `BackgroundImage`. `BackgroundColor` accepts any valid CSS color (hex, named color, rgb/rgba). `BackgroundImage` applies an image by specifying its URL or file path.
+You can customize the background of the Sankey Diagram using the `BackgroundColor` and `BackgroundImage` properties. The `BackgroundColor` property allows you to set a solid background color for the chart.  You can use any valid CSS color string, including hex codes, named colors, and RGB/RGBA values. The `BackgroundImage` property lets you set a background image for the sankey diagram. Specify the URL or path to the image file.
 
 {% tabs %}
 {% highlight razor %}
@@ -27,7 +27,6 @@ Customize the diagram background using `BackgroundColor` and `BackgroundImage`. 
     <SankeyLabelSettings Color="#FFFFFF" FontWeight="400" ></SankeyLabelSettings>
     <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
 </SfSankey>
-
 @code {
     string _backgroundColor = "#0b1320";
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
@@ -111,7 +110,7 @@ Customize the diagram background using `BackgroundColor` and `BackgroundImage`. 
 
 ## Dimensions (Width and Height)
 
-Control diagram size using `Width` and `Height`. Values can be specified in pixels or percentages.
+Control the sankey diagram's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
 
 {% tabs %}
 {% highlight razor %}
@@ -121,7 +120,6 @@ Control diagram size using `Width` and `Height`. Values can be specified in pixe
 
 <SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links>
 </SfSankey>
-
 @code {
     string _width = "800px";
     string _height = "450px";
@@ -192,15 +190,15 @@ Control diagram size using `Width` and `Height`. Values can be specified in pixe
 
 ## Right-to-Left (RTL) Support
 
-Enable RTL by setting `EnableRTL` to `true`. The entire layout—including nodes, links, labels, and legend—adapts to right‑to‑left flow.
+The Blazor Sankey diagram offers built-in support for Right-to-Left (RTL) languages. To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
 
-**Effects of enabling RTL**
+**When you enable RTL support**
 
-1. Node order is reversed, placing the first node on the right.
-2. Link direction flows right‑to‑left.
-3. Labels align for RTL reading.
-4. Tooltips, if enabled, position appropriately for RTL.
-5. Legend layout and order are mirrored.
+1. **Node Order**: The order of nodes will be reversed, with the first node appearing on the right side of the diagram.
+2. **Link Direction**: Links between nodes will flow from right to left.
+3. **Labels**: Node and link labels will be aligned to support RTL reading.
+4. **Tooltips**: If enabled, tooltips will be positioned appropriately for RTL layout.
+5. **Legend**: If a legend is present, its layout and order will also be reversed.
 
 {% tabs %}
 {% highlight razor %}
@@ -210,7 +208,6 @@ Enable RTL by setting `EnableRTL` to `true`. The entire layout—including nodes
 
 <SfSankey Nodes=@Nodes Links=@Links EnableRTL="true">
 </SfSankey>
-
 @code {
     string _width = "800px";
     string _height = "450px";
@@ -280,24 +277,37 @@ Enable RTL by setting `EnableRTL` to `true`. The entire layout—including nodes
 
 ## Orientation
 
-Control the flow direction using the `Orientation` property. Values include `Horizontal`, `Vertical`, and `Auto` (default). Vertical orientation can be effective for tall layouts or to emphasize top‑down relationships.
+The `Orientation` property controls the flow direction of the Sankey Diagram. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey diagram's aspect ratio. Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
 
-**Changes in vertical orientation**
+**When you switch the Sankey Diagram to vertical orientation, several aspects of the Sankey Diagram change:**
 
-1. Nodes are arranged from top to bottom.
-2. Links flow downward between nodes.
-3. Labels align with the vertical flow (node labels typically to the right).
-4. Space can be used more efficiently for many nodes or longer labels.
-5. A top‑down arrangement can imply hierarchical or sequential relationships.
-6. Vertical layouts can be more responsive on narrow screens.
-7. Large diagrams scroll vertically instead of horizontally.
+1. **Node Placement**: Nodes are arranged vertically from top to bottom, instead of left to right.
+
+2. **Link Direction**: Links flow downward, connecting nodes from top to bottom.
+
+3. **Label Positioning**: 
+   - Node labels are typically positioned to the right of each node.
+   - Link labels, if enabled, are oriented to align with the vertical flow.
+
+4. **Space Utilization**: 
+   - Vertical orientation often allows for better use of space when dealing with many nodes or long node labels.
+   - It can be particularly effective for tall, narrow layouts.
+
+5. **Data Interpretation**: 
+   - The top-down flow can imply a hierarchical or sequential relationship between nodes.
+   - It may be more intuitive for certain types of data, such as organizational charts or process flows.
+
+6. **Responsiveness**: 
+   - Vertical layouts can sometimes be more responsive on mobile devices or narrow screen widths.
+
+7. **Scrolling Behavior**: 
+   - For large diagrams, users will scroll vertically instead of horizontally, which can be more natural on most devices.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links Orientation="SankeyOrientation.Vertical">
 </SfSankey>
-
 @code {
     string _width = "650px";
     string _height = "650px";
@@ -368,10 +378,10 @@ Control the flow direction using the `Orientation` property. Values include `Hor
 
 ## Key Points
 
-* Background color and image can be combined for richer visuals.
-* Percentage values for `Width` and `Height` support responsive layouts.
-* `EnableRTL` provides right‑to‑left language support.
-* `Orientation` determines horizontal or vertical layout.
+* Combining background customizations can create visually appealing charts.
+* Using percentage values for `Width` and `Height` makes the chart responsive to different screen sizes.
+* `EnableRTL` is crucial for supporting right-to-left languages.
+* `Orientation` determines the layout direction of the sankey diagram, either horizontal or vertical.
 
 ## See also
 

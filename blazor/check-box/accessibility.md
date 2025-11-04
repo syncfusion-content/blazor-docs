@@ -3,13 +3,13 @@ layout: post
 title: Accessibility in Blazor CheckBox Component | Syncfusion
 description: Checkout and learn here all about Accessibility in Syncfusion Blazor CheckBox component and much more.
 platform: Blazor
-control: CheckBox
+control: Checkbox
 documentation: ug
 ---
 
 # Accessibility in Blazor CheckBox Component
 
-The Blazor CheckBox component follows established accessibility standards, including ADA, Section 508, and WCAG 2.2 guidelines. It supports screen readers, keyboard navigation, right-to-left (RTL) layouts, and high-contrast themes. For component details, see the CheckBox overview in the documentation (https://blazor.syncfusion.com/documentation/checkbox/) and the SfCheckBox API reference (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html). For enabling RTL at the component level, refer to Right-to-left support (./how-to/right-to-left).
+The Blazor CheckBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor CheckBox component is outlined below.
 
@@ -38,35 +38,25 @@ The accessibility compliance for the Blazor CheckBox component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor CheckBox component follows the WAI-ARIA Authoring Practices for checkboxes to ensure compatibility with assistive technologies. The following ARIA roles and attributes are used:
+The Blazor CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor CheckBox component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role="checkbox"` | Identifies the element as a checkbox control to assistive technologies. |
-| `aria-checked` | Conveys the current state of the checkbox: `true`, `false`, or `mixed` (for indeterminate state). |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
-| `aria-readonly` | Indicates that the value cannot be changed by the user (read-only state). |
-| `aria-labelledby` / `aria-label` | Provides an accessible name. When the `Label` parameter is used, it associates a visible label with the checkbox. |
-| `tabindex` | Ensures the checkbox is focusable via keyboard navigation in the expected order. |
-
-For guidance on ARIA usage, see the ARIA checkbox pattern (https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/).
 
 ## Keyboard interaction
 
-The Blazor CheckBox component follows the keyboard interaction guidance, making it accessible to users who rely on keyboards or assistive technologies. The following keyboard shortcuts are supported:
+The Blazor CheckBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor CheckBox component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | Moves focus to the checkbox or away from it following the tab sequence. |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | When the CheckBox has focus, pressing Space toggles its state. |
-
-For detailed keyboard recommendations, see the ARIA checkbox keyboard interaction guidance (https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction).
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key changes the state of the CheckBox. |
 
 ## Ensuring accessibility
 
-The Blazor CheckBox component's accessibility levels are validated using axe-core with Playwright tests to catch common issues such as missing names, incorrect ARIA states, and insufficient color contrast. Results can vary based on theme customization; ensure color contrast meets WCAG minimum ratios.
+The Blazor CheckBox component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor CheckBox component is shown in the following sample. Open the sample in a new window to evaluate the component with accessibility tools.
+The accessibility compliance of the Blazor CheckBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/checkbox) in a new window to evaluate the accessibility of the Blazor CheckBox component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/checkbox.html" %}
 

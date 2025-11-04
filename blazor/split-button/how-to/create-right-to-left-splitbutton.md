@@ -9,9 +9,9 @@ documentation: ug
 
 # Create right-to-left Blazor SplitButton Component
 
-The SplitButton component supports right-to-left (RTL) rendering. Enable RTL by setting the [EnableRtl property (SfSplitButton)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_EnableRtl) to `true`.
+Split Button component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_EnableRtl) as `true`.
 
-The following example demonstrates how to enable right-to-left support in the SplitButton component.
+The following example illustrates how to enable right-to-left support in Split Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

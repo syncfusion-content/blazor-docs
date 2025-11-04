@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Range Slider inside Dialog in Blazor Range Slider | Syncfusion
+title: Range Slider inside Dialog popup in Blazor Range Slider Component | Syncfusion
 description: Checkout and learn here all about Slider inside Dialog popup in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Render the Blazor Range Slider Inside a Dialog Popup
+# Render Blazor Range Slider Inside Dialog Popup
 
-When the dialog is initially hidden, the Blazor Range Slider may be initialized before layout information is available. As a result, the slider cannot size and position itself correctly, and the initial value may not render accurately. To resolve this, capture the slider instance using `@ref` and call the slider’s [RepositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_RepositionAsync) method in the dialog’s [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event so the component recalculates its layout after the dialog is visible.
+The Blazor Slider component will be created before the Dialog popup is opened, and the Slider component will not be adapted to the parent element during dynamic rendering. As a result, the Slider does not render with the accurate initial value. To address this case, you must invoke the Slider's [RepositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_RepositionAsync) method when the Dialog component is opened, utilizing the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event.
 
 ```cshtml
 

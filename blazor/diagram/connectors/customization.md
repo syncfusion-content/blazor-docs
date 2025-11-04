@@ -1002,7 +1002,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to interact with the connector](./interactions)
 
-* [How to change the segments](./segments)
+* [How to change the segments](./segments/straight)
 
 * [How to get the connector events](./events)
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Numeric TextBox Component
 
-This section lists the events raised by the Numeric TextBox component and when they occur. Events are wired using the nested NumericTextBoxEvents tag inside the SfNumericTextBox.
+This section explains the list of events of the Numeric TextBox component which will be triggered for appropriate Numeric TextBox actions.
 
 ## Blur
 
-The `Blur` event occurs when the NumericTextBox loses focus.
+`Blur` event triggers when the NumericTextBox got focus out.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -32,7 +32,7 @@ The `Blur` event occurs when the NumericTextBox loses focus.
 
 ## Created
 
-The `Created` event fires after the NumericTextBox component has been initialized and rendered.
+`Created` event triggers when the NumericTextBox component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -51,7 +51,7 @@ The `Created` event fires after the NumericTextBox component has been initialize
 
 ## Destroyed
 
-The `Destroyed` event fires when the NumericTextBox component is disposed.
+`Destroyed` event triggers when the NumericTextBox component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -70,7 +70,7 @@ The `Destroyed` event fires when the NumericTextBox component is disposed.
 
 ## Focus 
 
-The `Focus` event occurs when the NumericTextBox receives focus.
+`Focus` event triggers when the NumericTextBox got focus in.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -106,4 +106,4 @@ The `ValueChange` event triggers when the value changes or the component loses f
 }
 ```
 
-N> Numeric TextBox is limited to these events. Additional events may be added in the future based on user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Numeric TextBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

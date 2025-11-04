@@ -3,7 +3,7 @@ layout: post
 title: Events in Blazor Toggle Switch Button Component | Syncfusion
 description: Checkout and learn here all about events in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
-control: Toggle Switch Button
+control: Toggle Switch Button 
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 ## ValueChange Event
 
-The ValueChange event triggers when the switch state changes due to user interaction. The event argument type is [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html). [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) provides the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Checked) and [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Event) properties.
+The ValueChange event will trigger when switch state has been changed by user interaction. ValueChange event argument type is [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html). [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) contains [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Checked) and [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Event) properties.
 
 ```csharp
 
@@ -33,9 +33,10 @@ N> Toggle Switch Button has support for nullable boolean
 
 ## Native Events
 
-The native event can be defined using `event` attributes (for example, @onfocus, @onkeydown). The value of the attribute is an event handler method, and event-specific data is exposed through the corresponding event argument type.
+The native event can be defined using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
-The event argument types are:
+The different event argument types for each event are,
+
 * Focus Events - UIFocusEventArgs
 * Mouse Events - UIMouseEventArgs
 * Keyboard Events - UIKeyboardEventArgs
@@ -50,11 +51,11 @@ The following native event support has been provided to the Toggle Switch Button
 * onfocusin
 * onkeydown
 * onkeyup
-* onkeypress
+* Onkeypress
 
 ## How to bind focus event to Toggle Switch Button
 
-The `onfocus` attribute is used to bind the focus event for Toggle Switch Button. The following example shows how to bind the focus event to the Toggle Switch Button.
+The `onfocus` attribute is used to bind the focus event for Toggle Switch Button. Here, we have explained about the sample code snippets of Toggle Switch Button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Icons in Blazor Message Component | Syncfusion
+title: Icons with Blazor Message Component | Syncfusion
 description: Checkout and learn about Icons with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Message
@@ -9,13 +9,13 @@ documentation: ug
 
 # Icons in Blazor Message
 
-This topic explains how to control icons in the Message component: hide default severity icons, add a custom severity icon with CSS, and show or hide the close icon.
+This section explains the message with no icons, how to show or hide the close icon and add the custom severity icon to the message.
 
 ## No Icon
 
-By default, the Message component displays a severity icon that matches the configured severity to provide clear visual context. To hide severity icons, set the [ShowIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ShowIcon) property to false. Severity styling (color/background) still applies even when the icon is hidden.
+By default, severity icons can be displayed according to the severity types to make it more understandable to the user by visual information rather than text. To hide the severity icons, set the [ShowIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ShowIcon) property to `false`.
 
-The following example demonstrates different severity messages without severity icons.
+The following example demonstrates the different severity messages without the severity icons.
 
 {% tabs %}
 {% highlight razor %}
@@ -51,13 +51,13 @@ The following example demonstrates different severity messages without severity 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Message severities rendered without icons](./images/message-severity.png)
+![Message Severity with No Icons](./images/message-severity.png)
 
 ## Custom Icon
 
-To replace the default severity icon, apply a custom CSS class with [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_CssClass) and target the icon element (for example, .e-msg-icon::before). A custom glyph font (as shown) or an SVG-based approach can be used to provide a custom icon.
+By default, the severity icons can be displayed according to the severity type to make it more understandable to the user by visual information rather than text. If the user wants to customize these icons, it can be achieved through the `CssClass` property.
 
-The following example demonstrates a message rendered with a custom severity icon.
+The following example demonstrates how the default message is rendered with a custom severity icon.
 
 {% tabs %}
 {% highlight razor %}
@@ -98,13 +98,15 @@ The following example demonstrates a message rendered with a custom severity ico
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Message with a custom severity icon](./images/message-custom-icon.png)
+![Message Custom Icon](./images/message-custom-icon.png)
 
 ## Close Icon
 
-The Message component can render with or without a close icon. The close icon dismisses the message via click or keyboard activation. By default, the close icon is not shown. To render a close icon, set [ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ShowCloseIcon) to true. Use @bind-Visible to toggle visibility and handle the Closed callback to respond when the message is dismissed.
+The message can be rendered with or without the close icon. The close icon is used to hide the message, either by manually clicking the close icon or through keyboard interaction.
 
-In the following example, messages are rendered with a close icon.
+By default, the close icon is not rendered in the message. To show the close icon, set the [ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ShowCloseIcon) property to `true`.
+
+In the following example, the messages are rendered with the close icon.
 
 {% tabs %}
 {% highlight razor %}
@@ -221,4 +223,4 @@ In the following example, messages are rendered with a close icon.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Messages rendered with close icons and dismiss behavior](./images/message-close-icon.png)
+![Message Close Icon](./images/message-close-icon.png)

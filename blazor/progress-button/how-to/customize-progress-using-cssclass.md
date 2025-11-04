@@ -9,12 +9,12 @@ documentation: ug
 
 # Customize progress using cssClass in Blazor ProgressButton Component
 
-Customize the progress indicator (filler) by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
+You can customize the background filler UI using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
-* Adding `e-vertical` to `CssClass` displays vertical progress.
-* Adding `e-progress-top` to `CssClass` places the progress at the top of the button.
+* Adding `e-vertical` to `CssClass` shows vertical progress.
+* Adding `e-progress-top` to `CssClass` shows progress at the top.
 
-Reverse progress can also be shown by adding a custom class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
+You can also show reverse progress by adding custom class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

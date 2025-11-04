@@ -9,11 +9,12 @@ documentation: ug
 
 # Accessibility in Blazor MultiColumn ComboBox Component
 
-The [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) is designed in accordance with WAI-ARIA specifications and applies appropriate roles, states, and properties, along with robust keyboard support. The component offers complete keyboard interaction and ARIA support to assist users who rely on assistive technologies (AT) or keyboard navigation.
+The [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component has been designed with the `WAI-ARIA` specifications in mind, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
+by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 The Blazor ComboBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor MultiColumn ComboBox component is outlined below.
+The accessibility compliance for the Blazor ComboBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -32,32 +33,30 @@ The accessibility compliance for the Blazor MultiColumn ComboBox component is ou
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Meets requirement"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partially meets requirement"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="Does not meet requirement"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
-The Blazor MultiColumn ComboBox uses the combobox pattern with an input (textbox), a popup listbox, and list options. The input applies the combobox role, the popup uses the listbox role, and each list item uses the option role. The following ARIA attributes denote the component state and relationships:
+The Blazor MultiColumn ComboBox component uses the `combobox` role, and each list item has an `option` role. The following `ARIA attributes` denotes the ComboBox state:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| `aria-haspopup` | Indicates that the input element opens a popup list. |
-| `aria-expanded` | Indicates whether the popup list is expanded. |
-| `aria-selected` | Indicates the selected option in the list. |
-| `aria-readonly` | Indicates the read-only state of the input element. |
-| `aria-disabled` | Indicates whether the component is disabled. |
-| `aria-activedescendant` | Holds the ID of the active list item to convey focus within the popup list. |
-| `aria-owns` | Identifies the popup element associated with the input when it is not a DOM descendant. |
-| `aria-autocomplete`  | Indicates the autocomplete behavior (for example, “both” to show a list of options and inline completion). |
-
-Screen readers announce expanded and collapsed states, the active option while navigating, and the selected value when committed.
+| `aria-haspopup` | Indicates whether the ComboBox input element has a popup list or not. |
+| `aria-expanded` | Indicates whether the popup list has expanded or not. |
+| `aria-selected` | Indicates the selected option. |
+| `aria-readonly` | Indicates the readonly state of the ComboBox element. |
+| `aria-disabled` | Indicates whether the ComboBox component is in a disabled state or not. |
+| `aria-activedescendent` | This attribute holds the ID of the active list item to focus its descendant child element. |
+| `aria-owns` | This attribute contains the ID of the popup list to indicate popup as a child element. |
+| `aria-autocomplete`  | This attribute contains the ‘both’ to a list of options shows and the currently selected suggestion also shows inline. |
 
 ## Keyboard interaction
 
-Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox:
+You can use the following key shortcuts to access the Blazor MultiColumn ComboBox without interruptions:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -66,20 +65,19 @@ Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox
 |**Input Navigation**| | |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor to the beginning of the input. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor to the end of the input. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Cursor moves before the first character in the input. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Cursor moves before the last character in the input. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. When the popup is open, confirms selection and closes the list; otherwise, toggles the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item, and when it is in open state, the popup list closes. Otherwise, toggles the popup list. |
 |**Popup Navigation** | | |
-| <kbd>Esc(Escape)</kbd> | <kbd>Escape</kbd> | Closes the popup when open and preserves the current selection. |
-
+| <kbd>Esc(Escape)</kbd> | <kbd>Escape</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
 
 ## Ensuring accessibility
 
-The Blazor MultiColumn ComboBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
+The Blazor MultiColumn ComboBox component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the MultiColumn ComboBox component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the MultiColumn ComboBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate the accessibility of the MultiColumn ComboBox component with accessibility tools.
 
 ## See also
 

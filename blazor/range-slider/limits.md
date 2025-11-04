@@ -9,11 +9,11 @@ documentation: ug
 
 # Limits in Blazor Range Slider Component
 
-Slider limits restrict the movement of the slider thumb(s) within a specified range. This is useful when higher or lower values would negatively affect a process or product where the slider is used.
+The slider limits restrict the slider thumb between a particular range. This is used if higher or lower value affects the process or product where the slider is being used.
 
-The following options are available in the slider’s limits object. Each API in the limits object is optional.
+The following are the six options in the slider's limits object. Each API in the limits object is optional.
 
-* [``Enabled``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_Enabled): Enables the limits in the slider.
+* [``Enabled``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_Enabled): Enables the limits in the Slider.
 * [``MinStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinStart): Sets the minimum limit for the first handle.
 * [``MinEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinEnd): Sets the maximum limit for the first handle.
 * [``MaxStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MaxStart): Sets the minimum limit for the second handle.
@@ -21,11 +21,11 @@ The following options are available in the slider’s limits object. Each API in
 * [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed): Locks the first handle.
 * [``EndHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_EndHandleFixed): Locks the second handle.
 
-## Default and MinRange slider limits
+## Default and MinRange Slider limits
 
-In Default and MinRange sliders, there is only one handle, so the [``MinStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinStart), [``MinEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinEnd), and [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed) options are applicable. When limits are enabled, the restricted area is darkened, making it easy to distinguish allowed and disallowed regions.
+There is only one handle in the Default and MinRange Slider, so [``MinStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinStart), [``MinEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinEnd), and [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed) options can be used. When the limits are enabled in the Slider, the limited area becomes darken. So you can differentiate the allowed and restricted area. 
 
-Refer to the following snippet to enable limits in the slider.
+Refer to the following snippet to enable the limits in the Slider.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -37,9 +37,9 @@ Refer to the following snippet to enable limits in the slider.
 
 ![Blazor Range Slider with Minimum Range Limits](images/blazor-rangeslider-min-range-limit.gif)
 
-## Range slider limits
+## Range Slider limits
 
-In the Range slider, both handles can be restricted and locked using the limits object. In this example, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
+In the Range Slider, both handles can be restricted and locked from the limit's object. In this sample, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -57,7 +57,7 @@ In the Range slider, both handles can be restricted and locked using the limits 
 
 ## Handle lock
 
-The movement of slider handles can be locked by enabling the [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed) and [``EndHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_EndHandleFixed) properties in the limits object.
+The movement of slider handles can be locked by enabling the [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed) and [``EndHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_EndHandleFixed) properties in the limit's object.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

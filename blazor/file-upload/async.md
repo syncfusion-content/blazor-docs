@@ -9,9 +9,9 @@ documentation: ug
 
 # Asynchronous Upload in Blazor File Upload Component
 
-The Uploader component supports asynchronous file uploads. The upload workflow uses Save and Remove action URLs to communicate with server endpoints that handle file persistence and deletion.
-* The Save action is required to receive and store uploaded files on the server.
-* The Remove action is optional and is used to delete files from the server.
+The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
+*  The save action is necessary to handle the upload operation.
+*  The remove action is optional, one can handle the removed files from server.
 
 N>The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-8.0#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute differs from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
 
@@ -19,7 +19,7 @@ The file can be uploaded automatically or manually. For more information, you ca
 
 ## Multiple file upload
 
-By default, the uploader component allows you to select and upload multiple files simultaneously. The selected files are organized in a list for every file selection until you clear it by clicking clear button that is shown in footer. You can add multiple attributes to the original input element of file by enabling the multiple file selection. The following example explains about [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file upload settings. The [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Progressing) event is triggered during the file uploading process.
+By Default, the uploader component allows you to select and upload multiple files simultaneously. The selected files are organized in a list for every file selection until you clear it by clicking clear button that is shown in footer. You can add multiple attributes to the original input element of file by enabling the multiple file selection. The following example explains about [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file upload settings. The [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Progressing) event is triggered during the file uploading process.
 
 ### With server-side API endpoint
 
@@ -41,8 +41,6 @@ By default, the uploader component allows you to select and upload multiple file
 }
 ```
 ### Without server-side API endpoint
-
-The following pattern processes selected files without calling server endpoints. This approach writes files directly from the application process and is suitable only for controlled or sample scenarios. In production, validate file types and sizes, generate unique file names, and write to a dedicated, secure directory.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -76,9 +74,9 @@ The following pattern processes selected files without calling server endpoints.
 
 ## Single file upload
 
-Select and upload a single file by disabling the [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file selection property. The file list item is removed for every selection and it always maintain a single file to upload. You can remove multiple attributes from the original input element of file by enabling the single file upload property.
+You can select and upload a single file by disabling the [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file selection property. The file list item is removed for every selection and it always maintain a single file to upload. You can remove multiple attributes from the original input element of file by enabling the single file upload property.
 
-The following example demonstrates single file upload settings.
+The following example explains about single file upload settings.
 
 ### With server-side API endpoint
 
@@ -94,8 +92,6 @@ The following example demonstrates single file upload settings.
 ```
 
 ### Without server-side API endpoint
-
-Use this approach for local processing only (e.g., demos). In production, validate inputs, limit file size, and sanitize file names and paths.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -147,8 +143,6 @@ By default, the uploader processes the files to upload once the files are select
 }
 ```
 ### Without server-side API endpoint
-
-This example shows manual upload without calling backend endpoints. Ensure proper validation and storage practices when adapting for real applications.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -204,8 +198,6 @@ By default, the uploader component process multiple files to upload simultaneous
 
 ### Without server-side API endpoint
 
-This example uploads files sequentially without calling backend endpoints. Apply size limits, validate file types, and handle errors when adapting for production.
-
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 <SfUploader ID="UploadFiles" SequentialUpload=true AutoUpload=false>
@@ -259,8 +251,6 @@ The uploader component allows you to pre-load the list of files that are uploade
 ```
 
 ### Without server-side API endpoint
-
-This example shows how to render preloaded files without server endpoints. In practical scenarios, ensure that preloaded entries accurately reflect files available on the server and that removal operations are handled securely.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

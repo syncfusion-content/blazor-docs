@@ -964,7 +964,7 @@ For more information, refer to [Connector Flip](../flip#how-to-flip-the-connecto
 
 * [How to customize the connector properties](./customization)
 
-* [How to change the segments](./segments)
+* [How to change the segments](./segments/straight)
 
 * [How to get the connector events](./events)
 

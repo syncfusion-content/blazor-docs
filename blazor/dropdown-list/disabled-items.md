@@ -9,9 +9,9 @@ documentation: ug
 
 # Disabled Items in Blazor DropDownList Component
 
-The [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) supports disabling individual items for scenario-specific control. Map a boolean field in your data model to the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_Disabled) property of the field settings to render items as non-interactive. Disabled items cannot be selected or focused through keyboard navigation.
+The [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `DropDownListFieldSettings.Disabled` property.
 
-In the following sample, items are rendered as disabled based on the value of the `Disabled` field.
+In the following sample, State are grouped according on its category using `Disabled` field.
 
 {% highlight cshtml %}
 
@@ -23,12 +23,12 @@ In the following sample, items are rendered as disabled based on the value of th
 
 ## Disable Item Method
 
-Use the disable item API to change the disabled state of an item at runtime (for example, in response to user actions or data changes). This method updates the disabled state for a single item; iterate your item set to disable multiple entries. If the currently selected item is disabled dynamically, the selection is cleared automatically. The underlying [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) should also reflect the updated disabled state to keep UI and data in sync.
+The disableItem method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource), when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
 
 | Parameter | Type | Description |
 |------|------|------|
-| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | The value of the item to disable. |
-| itemIndex | <code>number</code> | The zero-based index of the item to disable. |
+| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | It accepts the string, number, boolean and object type value of the item to be removed. |
+| itemIndex | <code>number</code> | It accepts the index of the item to be removed. |
 
 ## Enabled
 

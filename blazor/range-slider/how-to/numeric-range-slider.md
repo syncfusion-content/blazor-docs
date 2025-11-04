@@ -9,34 +9,30 @@ documentation: ug
 
 # Numeric Range Slider in Blazor Range Slider Component
 
-The Blazor Range Slider can display numeric values with custom formatting using the `Format` property on `SliderTicks` and `SliderTooltip`. Formatting options include appending units, controlling decimal precision, and adding leading zeros. The examples below demonstrate three common scenarios.
+The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
 
-- Units: Append units such as “km” to tick labels and tooltips
-- Decimal places: Control the number of decimal digits displayed
-- Leading zeros: Pad values with zeros to a fixed width
-
-The first example formats values with a unit suffix (km).
+There are Numeric Range Sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
 
 ```cshtml
 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
             <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
 ```
 
-The second example shows values with a specific decimal format.
+The second example showcases the use of decimal point in the Slider's ticks and tooltip placement.
 
 ```cshtml
 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
 ```
 
-The third example pads values with leading zeros to achieve a fixed width.
+And in the third example, the formatting involves the placement of zeros before the required values.
 
 ```cshtml
 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
             <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
 ```
 
-The complete code for the numeric formatting examples is shown below.
+The complete code for the above Numeric Range Slider can be found below.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs;

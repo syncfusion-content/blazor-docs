@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Rating Component
 
-The Blazor Rating component lets users choose a value using a visual scale. Selection can be changed by clicking or tapping the icons, or programmatically. Key options include the current value, minimum value, single-selection behavior, and an optional reset button.
+The Blazor Rating component allows users to rate something using a visual scale, and the selection state can be changed by the user clicking or tapping on the stars in the rating scale or through code. The Rating component has a minimum value and a reset button, and provides customization options for the selected rating value and selection behavior.
 
 
 ```cshtml
@@ -20,11 +20,11 @@ The Blazor Rating component lets users choose a value using a visual scale. Sele
 
 ```
 
-![Blazor Rating component with selection](./images/blazor-rating-selection.png)
+![Blazor Rating Component with Selction](./images/blazor-rating-selection.png)
 
 ## Selected value
 
-Use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property to get or set the currently selected rating. The value is a double and can be updated with two-way binding or by setting it programmatically. The selected value determines which items are rendered as selected and respects the configured precision, minimum, and item count.
+You can use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property of the Blazor Rating component to determine the currently selected rating value and update it using two-way binding or by setting the value programmatically. The current rating value can also be used to identify the selected items.
 
 ```cshtml
 
@@ -43,7 +43,7 @@ Rated Value : @value
 
 ## Min value
 
-Use the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Min) property to set the lowest selectable rating. For example, if `Min` is 2, selecting a value lower than 2 is not permitted. If the current `Value` is below `Min`, it snaps to the minimum.
+You can use the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Min) property of the Blazor Rating component to set the minimum possible rating value the user can select. If you set the `Min` property to 2, then you will not be able to select a rating lower than 2.
 
 ```cshtml
 
@@ -53,11 +53,11 @@ Use the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfR
 
 ```
 
-![Blazor Rating component with a minimum value enforced](./images/blazor-rating-min.png)
+![Blazor Rating Component with Minimum Value](./images/blazor-rating-min.png)
 
 ## Single selection
 
-Use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EnableSingleSelection) property to visually select only one item at a time. When set to `true`, only the chosen item appears selected while the others appear unselected. The `Value` still reflects the selected item index according to the configured precision.
+You can use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EnableSingleSelection) property of the Blazor Rating component to select only one item at a time. When the `EnableSingleSelection` property is set to `true`, only the selected item will be considered to be in the selected state, while all other items will be unselected.
 
 ```cshtml
 
@@ -67,11 +67,11 @@ Use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Rating component with single-selection](./images/blazor-rating-single-selection.png)
+![Blazor Rating Component with Single Selection](./images/blazor-rating-single-selection.png)
 
 ## Show or hide reset button
 
-Use the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property to display a reset button. When `AllowReset` is `true`, a reset control appears that resets the rating to the `Min` value. By default, `AllowReset` is `false`.
+You can reset the rating value to its default by using the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property of the Blazor Rating component. When the `AllowReset` property is set to `true`, a reset button will be shown that allows the user to reset the rating value to its default.
 
 ```cshtml
 
@@ -81,4 +81,4 @@ Use the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inp
 
 ```
 
-![Blazor Rating component with reset button](./images/blazor-rating-allow-reset.png)
+![Blazor Rating Component with Reset button](./images/blazor-rating-allow-reset.png)

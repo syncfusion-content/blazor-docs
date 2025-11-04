@@ -9,7 +9,7 @@ documentation: ug
 
 # CSS Structure in Blazor ListView Component
 
-This section provides the core CSS structure and examples that can be used to modify the appearance of the Syncfusion Blazor ListView component according to specific design preferences.
+The following content provides the exact CSS structure that can be used to modify the component's appearance based on user preference.
 
 ## Customizing ListView
 
@@ -50,7 +50,7 @@ Use the following CSS to customize the header of ListView component.
 
 ```
 
-## Customizing Group Header of ListView
+## Customizing group header of ListView
 
 Use the following CSS to customize the category of the group items.
 
@@ -68,7 +68,7 @@ Use the following CSS to customize the category of the group items.
 
 Use the following CSS to customize the list item when hovering.
 
-### Customizing ListView Hover State with the Checkbox Checked
+### Customizing ListView hover state with the checkbox checked
 
 ```CSS
 
@@ -79,7 +79,7 @@ Use the following CSS to customize the list item when hovering.
 
 ```
 
-### Customizing ListView Hover State
+### Customizing ListView hover state
 
 ```CSS
 
@@ -90,11 +90,11 @@ Use the following CSS to customize the list item when hovering.
 
 ```
 
-## Customizing Selected Item of ListView Component
+## Customizing selected item of ListView component
 
 Use the following CSS to customize the selected list item.
 
-### Customizing ListView's Selected Item with the Checkbox Checked
+### Customizing ListView's selected item with the checkbox checked
 
 ```CSS
 
@@ -105,7 +105,7 @@ Use the following CSS to customize the selected list item.
 
 ```
 
-### Customizing ListView's Selected Item
+### Customizing ListView's selected item
 
 ```CSS
 
