@@ -151,31 +151,31 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Carousel compone
     <SfCarousel>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/bridge.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                <img src="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/carousel/bridge.png" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/trees.jpg" alt="Spring Flower Trees" style="height:100%;width:100%;" />
+                <img src="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/carousel/trees.png" alt="Spring Flower Trees" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Spring Flower Trees</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/waterfall.jpg" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
+                <img src="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/carousel/waterfall.png" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Oddadalen Waterfalls, Norway</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/sea.jpg" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
+                <img src="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/carousel/sea.png" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Anse Source d'Argent, Seychelles</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/rocks.jpg" alt="Stonehenge, England" style="height:100%;width:100%;" />
+                <img src="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/carousel/rocks.png" alt="Stonehenge, England" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Stonehenge, England</figcaption>
             </figure>
         </CarouselItem>
