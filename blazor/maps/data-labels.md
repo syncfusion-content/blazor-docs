@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Labels in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure and customize data labels in the Syncfusion Blazor Maps component.
+description: Checkout and learn here all about data labels in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,14 +9,13 @@ documentation: ug
 
 # Data labels in Blazor Maps Component
 
-Data labels display text for shapes in the Maps component. Enable them by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to **true**.
+Data labels provide information to users about the shapes of the Maps component. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property of the [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to **true**.
 
 ## Adding data labels
 
-Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to specify the field used for label text. The value can come from a field in the shape data or from the layer’s data source. In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property value is taken from the shape data of the Maps layer.
+To display data labels in the Maps, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) must be used. The value of the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property can be taken from the field name in the shape data or data source. In the following example, the value of the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property is the field name in the shape data of the Maps layer.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -28,15 +27,13 @@ Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
 ![Blazor Maps with Data Label](./images/DataLabel/blazor-maps-data-label.png)
 
-In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property value is taken from the field in the layer’s data source.
+In the following example, the value of [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property is set from the field name in the data source of the layer settings.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps ID="Maps">
@@ -50,10 +47,7 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
     </MapsLayers>
 </SfMaps>
 
-@code {
-    public string[] ShapePropertyPath = { "name" };
-    public string ShapeDataPath = "Name";
-
+@code{
     public class PopulationDetail
     {
         public string Code { get; set; }
@@ -64,18 +58,19 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
         public string Color { get; set; }
         public string Continent { get; set; }
     };
-
     public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
-            Code = "AF", Value = 53, Name = "Afghanistan", Population = 29863010, Density = 119, Color = "Red", Continent = "Asia"
+            Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
         },
         new PopulationDetail {
-            Code = "AL", Value = 117, Name = "Albania", Population = 3195000, Density = 111, Color = "Blue", Continent = "Europe"
+            Code= "AL", Value= 117, Name= "Albania", Population= 3195000, Density= 111, Color = "Blue", Continent = "Europe"
         },
         new PopulationDetail {
-            Code = "DZ", Value = 15, Name = "Algeria", Population = 34895000, Density = 15, Color = "Green", Continent = "Africa"
+            Code= "DZ", Value= 15, Name= "Algeria", Population= 34895000, Density= 15, Color = "Green", Continent = "Africa"
         }
     };
+    public string[] ShapePropertyPath = { "name" };
+    public string ShapeDataPath = "Name";
 }
 ```
 
@@ -83,15 +78,14 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
 
 ## Customization
 
-The following options in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) customize the appearance of data labels:
+The following properties and classes are available in the [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to customize the data label of the Maps component.
 
-- [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html): Configures label border color and width.
-- [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Fill): Sets the label background color.
-- [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Opacity): Controls label transparency.
-- [MapsLayerDataLabelTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelTextStyle.html): Configures label text style.
+* [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html) - To customize the color and width for the border of the data labels in Maps.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Fill) - To apply the color of the data labels in Maps.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Opacity) - To customize the transparency of the data labels in Maps.
+* [MapsLayerDataLabelTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelTextStyle.html) - To customize the text style of the data labels in Maps.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -107,17 +101,15 @@ The following options in [MapsDataLabelSettings](https://help.syncfusion.com/cr/
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
 ![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.PNG)
 
 ## Label animation
 
-Animate data labels on initial render by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in `MapsDataLabelSettings`. The duration is specified in milliseconds.
+The data labels can be animated during the initial rendering of the Maps. This can be enabled by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in the `MapsDataLabelSettings` of the Maps. The duration of the animation is specified in milliseconds.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -130,21 +122,19 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
 ![Blazor Maps with data label animation](./images/DataLabel/blazor-maps-data-label-animation.gif)
 
 ## Smart labels
 
-Handle labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. Available options:
+The Maps component provides an option to handle the labels when they intersect with the corresponding shape borders using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. The following options are available in the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property.
 
-- None
-- Hide
-- Trim
+* None
+* Hide
+* Trim
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -157,20 +147,19 @@ Handle labels that intersect shape borders by using the [SmartLabelMode](https:/
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
 ![Blazor Maps with Smart Data Label](./images/DataLabel/blazor-maps-smart-data-label.png)
 
 ## Intersect action
 
-Handle labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. Available options:
+The Maps component provides an option to handle the labels when a label intersects with another label using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. The following options are available in the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property.
 
-- None
-- Hide
-- Trim
+* None
+* Hide
+* Trim
+
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -183,19 +172,17 @@ Handle labels that intersect with other labels by using the [IntersectionAction]
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
 ![Blazor Maps Label with Intersect Action](./images/DataLabel/blazor-maps-data-label-trim.png)
 
 ## Adding data label as a template
 
-Add data labels using a template by setting the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html). Any text or HTML element can be used within the template.
+The data label can be added as a template in the Maps component. The [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) is used to set the data label as a template. Any text or HTML element can be added as the template in data labels.
 
-N> The data label customization properties [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration), and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) do not apply to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate). Style the template using CSS on the template elements.
+N>The customization properties of data label, [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) properties are not applicable to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property. The styles can be applied to the label template using the CSS styles of the template element.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -216,10 +203,7 @@ N> The data label customization properties [SmartLabelMode](https://help.syncfus
     </MapsLayers>
 </SfMaps>
 
-@code {
-    public string[] ShapePropertyPath = { "name" };
-    public string ShapeDataPath = "Name";
-
+@code{
     public class PopulationDetail
     {
         public string Code { get; set; }
@@ -230,14 +214,20 @@ N> The data label customization properties [SmartLabelMode](https://help.syncfus
         public string Color { get; set; }
         public string Continent { get; set; }
     };
-
     public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
-        new PopulationDetail { Code = "AF", Value = 53, Name = "Afghanistan", Population = 29863010, Density = 119, Color = "Red", Continent = "Asia" },
-        new PopulationDetail { Code = "AL", Value = 117, Name = "Albania", Population = 3195000, Density = 111, Color = "Blue", Continent = "Europe" },
-        new PopulationDetail { Code = "DZ", Value = 15, Name = "Algeria", Population = 34895000, Density = 15, Color = "Green", Continent = "Africa" }
+        new PopulationDetail {
+            Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
+        },
+        new PopulationDetail {
+            Code= "AL", Value= 117, Name= "Albania", Population= 3195000, Density= 111, Color = "Blue", Continent = "Europe"
+        },
+        new PopulationDetail {
+            Code= "DZ", Value= 15, Name= "Algeria", Population= 34895000, Density= 15, Color = "Green", Continent = "Africa"
+        }
     };
+    public string[] ShapePropertyPath = { "name" };
+    public string ShapeDataPath = "Name";
 }
-
 ```
 
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)

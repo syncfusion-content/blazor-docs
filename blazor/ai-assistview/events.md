@@ -13,7 +13,7 @@ This section describes the AI AssistView events that will be triggered when appr
 
 ## Created
 
-The AI AssistView component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Created) event after the component has completed its initial rendering.
+The AI AssistView component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Created) event when the component rendering is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -38,7 +38,7 @@ The AI AssistView component triggers the [Created](https://help.syncfusion.com/c
 
 ## PromptRequested
 
-The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event is triggered when a prompt is submitted in the AI AssistView component.
+The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event is triggered when the prompt request is made in the AI AssistView component.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -59,7 +59,7 @@ The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 ## PromptChanged
 
-The [PromptChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptChanged) event is triggered when the prompt text changes in the AI AssistView component.
+The [PromptChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptChanged) event is triggered when the prompt text is changed in the AI AssistView component.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -117,7 +117,7 @@ The [AttachmentUploadStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## AttachmentUploadSuccess
 
-The [AttachmentUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadSuccess) event is triggered when an attached file is successfully uploaded in the AI AssistView.
+The [AttachmentUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadSuccess) event is triggered when the attached file is successfully uploaded in the AI AssistView.
 
 ```cshtml
 
@@ -150,7 +150,7 @@ The [AttachmentUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## AttachmentUploadFailed
 
-The [AttachmentUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadFailed) event is triggered when an attached file upload fails in the AI AssistView.
+The [AttachmentUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadFailed) event is triggered when the attached file upload fails in the AI AssistView.
 
 ```cshtml
 

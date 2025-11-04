@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor File Upload Component | Syncfusion
-description: Learn how to customize the Syncfusion Blazor File Upload component's appearance using templates, including how to add a progress bar.
+description: Checkout and learn here about Template in Syncfusion Blazor File Upload component and much more details.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor File Upload Component
 
-The Blazor File Upload component allows for the customization of the file list items by using a template. This provides the flexibility to define the structure and styling of individual file elements, such as the file name, size, and status. A custom template can create a tailored and visually appealing file upload interface that aligns with an application's design and user experience requirements.
+The template in the code snippet allows for the customization of how file details are displayed in the uploader's UI. It provides flexibility to define the structure and styling of individual file elements, such as file name, size, and status. This allows to create a tailored and visually appealing file upload interface that aligns with their application's design and user experience requirements.
 
 ### With server-side API endpoint
 
@@ -20,12 +20,10 @@ The Blazor File Upload component allows for the customization of the file list i
     <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
                            RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
     <UploaderTemplates>
-        <Template Context="context">
-            <div style="padding: 10px;">
-                <div class="name file-name" title="@context.Name">File Name : @context.Name</div>
-                <div class="file-size">File Size : @context.Size</div>
-                <div class="e-file-status">File Status : @context.Status</div>
-            </div>
+        <Template>
+            <div class="name file-name" title="@(context.Name)">File Name : @(context.Name)</div>
+            <div class="file-size">File Size : @(context.Size)</div>
+            <div class="e-file-status">File Status : @(context.Status)</div>
         </Template>
     </UploaderTemplates>
 </SfUploader>
@@ -37,33 +35,28 @@ The Blazor File Upload component allows for the customization of the file list i
 
 <SfUploader ID="Files" AutoUpload="false">
     <UploaderTemplates>
-        <Template Context="context">
-            <div style="padding: 10px;">
-                <div class="name file-name" title="@context.Name">File Name : @context.Name</div>
-                <div class="file-size">File Size : @context.Size</div>
-                <div class="e-file-status">File Status : @context.Status</div>
-            </div>
+        <Template>
+            <div class="name file-name" title="@(context.Name)">File Name : @(context.Name)</div>
+            <div class="file-size">File Size : @(context.Size)</div>
+            <div class="e-file-status">File Status : @(context.Status)</div>
         </Template>
     </UploaderTemplates>
 </SfUploader>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrSZOLhhmAhbeZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+### Adding progressbar using template
 
-## Adding a progress bar using a template
-
-When using a file upload template, the default progress bar is not displayed in the UI. A progress bar can be added within the template, and its progress can be updated by reading and writing to the stream in the `ValueChange` event. The following code snippet demonstrates how to add a progress bar to a Blazor File Upload component using a custom template. The custom template includes elements to display the file name, size, progress bar, and file status.
+When using the file upload template, the progress bar does not display in the UI. We can add the progress bar using template and then show the progress while reading and writing to the stream in the ValueChange event. The code snippet below demonstrates a Blazor file upload example with a progress bar using a custom template. The custom template includes elements to display the file name, size, progress bar, and file status.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.ProgressBar
-
-<SfUploader @ref="@uploaderObj" ID="UploadFiles" MaxFileSize="100000000000" ShowProgressBar="false">
-    <UploaderEvents BeforeUpload="OnBeforeUpload" Success="OnSuccess" ValueChange="OnChange"></UploaderEvents>
+<SfUploader @ref="@uploderObj" ID="UploadFiles" MaxFileSize="100000000000" ShowProgressBar = "false">
+    <UploaderEvents BeforeUpload="onBeforeUpload" Success="onSuccess" ValueChange="onChange"></UploaderEvents>
     <UploaderTemplates>
-        <Template Context="context">
+        <Template>
             <span class="e-file-container">
-                <span class="e-file-name" title="@context.Name">@GetFileName(context.Name)</span>
+                <span class="e-file-name" title="@(context.Name)">@this.GetFileName(context.Name)</span>
                 <span class="e-file-type">@("." + context.Type)</span>
                 @if (context.Size > 0)
                 {
@@ -74,9 +67,9 @@ When using a file upload template, the default progress bar is not displayed in 
                 {
                     <span class="e-upload-progress-wrap">
                         <span class="e-progress-inner-wrap">
-                            <progress class="@("e-upload-progress-bar" + " " + "e-upload-progress")" value="0" max="100" style="width: @(ProgressValue + "%")"></progress>
+                            <progressbar class="@("e-upload-progress-bar" + " " + "e-upload-progress")" value="0" max="100" style="width: @(ProgressValue.ToString() + "%")"></progressbar>
                         </span>
-                        <span class="e-progress-bar-text">@(ProgressValue + "%")</span>
+                        <span class="e-progress-bar-text">@(ProgressValue.ToString() + "%")</span>
                     </span>
                 }
                 @if (fileStates.ContainsKey(context.Name) && fileStates[context.Name] && context.Status == "File uploaded successfully")
@@ -93,50 +86,52 @@ When using a file upload template, the default progress bar is not displayed in 
                 }
                 @if (fileStates.ContainsKey(context.Name) && fileStates[context.Name] && context.Status == "File uploaded successfully")
                 {
-                    <span class="e-icons e-file-delete-btn @RemoveIconDisable" id="deleteIcon" title="Delete" @onclick="(args) => ClickHandler(context)"></span>
+                    <span class="e-icons e-file-delete-btn @this.RemoveIconDisable" id="deleteIcon" title="Delete" @onclick="(args) => ClickHandler(context)"></span>
                 }
                 else
                 {
-                    <span class="e-icons e-file-remove-btn @RemoveIconDisable" id="removeIcon" title="Remove" @onclick="(args) => ClickHandler(context)"></span>
+                    <span class="e-icons e-file-remove-btn @this.RemoveIconDisable" id="removeIcon" title="Remove" @onclick="(args) => ClickHandler(context)"></span>
                 }
             </span>
+            
         </Template>
     </UploaderTemplates>
 </SfUploader>
-
 @code {
-    private SfUploader uploaderObj;
-    private FileInfo CurrentFile { get; set; }
+    private SfUploader uploderObj;
+    public bool isVisible { get; set; } = false;
+    private FileInfo CurrentFile {get; set;}
     public string fileSize { get; set; } = "0";
     public string RemoveIconDisable = string.Empty;
+#pragma warning disable CA2213 // Disposable fields should be disposed
     private readonly SemaphoreSlim FileSemaphore = new SemaphoreSlim(1);
+#pragma warning restore CA2213 // Disposable fields should be disposed
     private decimal ProgressValue { get; set; } = 0;
     private Dictionary<string, bool> fileStates = new Dictionary<string, bool>();
-
     public string CalculateFileSize(double size)
     {
+        string fileSizeStr = "";
         if (size >= 1024 * 1024)
         {
-            return $"{size / (1024f * 1024f):0.00} MB";
+            return fileSizeStr = $"{size / (1024f * 1024f):0.00} MB";
         }
         else if (size >= 1024)
         {
-            return $"{size / 1024f:0.00} KB";
+            return fileSizeStr = $"{size / 1024f:0.00} KB";
         }
         else
         {
-            return $"{size} bytes";
+            return fileSizeStr = $"{size} bytes";
         }
     }
-
     private string GetFileName(string fileName)
     {
         string type = GetFileType(fileName);
         string[] names = fileName.Split(new string[] { "." + type }, StringSplitOptions.None);
         return names[0];
     }
-
     private string GetFileType(string name)
+#pragma warning restore CA1822 // Mark members as static
     {
         string extension = string.Empty;
         int index = name.LastIndexOf('.');
@@ -144,45 +139,51 @@ When using a file upload template, the default progress bar is not displayed in 
         {
             extension = name.Substring(index + 1);
         }
-        return !string.IsNullOrEmpty(extension) ? extension : string.Empty;
-    }
 
+        return (!string.IsNullOrEmpty(extension)) ? extension : string.Empty;
+    }
+    private async Task onFileRemove()
+    {
+        await uploderObj.RemoveAsync();
+    }
     public async Task ClickHandler(FileInfo context)
     {
-        await uploaderObj.RemoveAsync(new FileInfo[] { context });
+        await uploderObj.RemoveAsync(new FileInfo[] { context });
     }
-
-    public void OnBeforeUpload(BeforeUploadEventArgs args)
+    public void onBeforeUpload(BeforeUploadEventArgs args)
     {
         foreach (var file in args.FilesData)
         {
             fileStates[file.Name] = false;
         }
     }
-
-    public void OnSuccess(SuccessEventArgs args)
+    public void onSuccess(SuccessEventArgs args)
     {
-        ProgressValue = 0;
+        //fileStates[args.File.Name] = false;
+        isVisible = false;
+        this.ProgressValue = 0;
     }
-
-    public async Task OnChange(UploadChangeEventArgs args)
+   
+    public async Task onChange(UploadChangeEventArgs args)
     {
         await FileSemaphore.WaitAsync();
         try
         {
             foreach (var file in args.Files)
             {
-                var path = Path.Combine(Path.GetTempPath(), file.FileInfo.Name);
+                var path = @"" + file.FileInfo.Name;
                 CurrentFile = file.FileInfo;
                 CurrentFile.Status = "Uploading";
                 await using FileStream writeStream = new(path, FileMode.Create);
                 using var readStream = file.File.OpenReadStream(file.File.Size);
                 var bytesRead = 0;
+                var totalRead = 0;
                 var buffer = new byte[1024 * 10];
 
                 while ((bytesRead = await readStream.ReadAsync(buffer)) != 0)
                 {
                     RemoveIconDisable = "e-disabled";
+                    totalRead += bytesRead;
                     await writeStream.WriteAsync(buffer, 0, bytesRead);
                     ProgressValue = (long)((decimal)readStream.Position * 100) / readStream.Length;
                     StateHasChanged();
@@ -190,6 +191,7 @@ When using a file upload template, the default progress bar is not displayed in 
                 CurrentFile.Status = "File uploaded successfully";
                 RemoveIconDisable = string.Empty;
                 fileStates[file.FileInfo.Name] = true;
+
             }
         }
         catch (Exception ex)
@@ -205,6 +207,4 @@ When using a file upload template, the default progress bar is not displayed in 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLytYhhLmmEGpkj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.gif)
+![Blazor FileUpload with Chunk Upload](./images/blazor-template-progressbar.gif)

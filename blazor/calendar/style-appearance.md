@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Blazor Calendar Component
 
-The following content shows the Calendar’s CSS structure that can be overridden to change the component’s appearance based on user preferences. These examples are theme-agnostic overrides; depending on the selected theme, additional selector specificity may be required.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
 ## Customizing the background color for the Calendar
 
-Use the following CSS to customize the Calendar container’s background color and border. This affects the overall widget surface.
+Use the following CSS to customize the background color and border for the Calendar.
 
 ```css
 /* To specify background color and border */
@@ -25,7 +25,7 @@ Use the following CSS to customize the Calendar container’s background color a
 
 ## Customizing the Calendar date elements on hovering
 
-Use the following CSS to customize day cells on hover and focus states in the Calendar’s month view. This helps emphasize interactive feedback.
+Use the following CSS to customize the date elements on hovering in the Calendar.
 
 ```css
 /* To specify background color, color, and border */
@@ -38,7 +38,7 @@ Use the following CSS to customize day cells on hover and focus states in the Ca
 
 ## Customizing the border of date cell grid
 
-Use the following CSS to add borders around individual day cells in the month grid for clearer separation.
+Use the following CSS to add the border to the date cell grid.
 
 ```css
 /* To specify border */
@@ -49,7 +49,7 @@ Use the following CSS to add borders around individual day cells in the month gr
 
 ## Customizing the Calendar title
 
-Use the following CSS to style the Calendar title (month/year text) in the header.
+Use the following CSS to customize the Calendar title.
 
 ```css
 /* To specify color and font size  */
@@ -61,7 +61,7 @@ Use the following CSS to style the Calendar title (month/year text) in the heade
 
 ## Customizing the previous and next icon
 
-Use the following CSS to customize the appearance of the previous and next navigation icons in the header.
+Use the following CSS to customize the previous and next icon.
 
 ```css
 /* To specify color and border  */
@@ -73,7 +73,7 @@ Use the following CSS to customize the appearance of the previous and next navig
 
 ## Customizing the footer button
 
-Use the following CSS to customize the Today footer button’s background, text color, and border color (when the button is visible).
+Use the following CSS to customize the footer button.
 
 ```css
 /* To specify background color, color, and border-color  */
@@ -86,7 +86,7 @@ Use the following CSS to customize the Today footer button’s background, text 
 
 ## Customizing the selected date cell grid
 
-Use the following CSS to style the currently selected day cell in the Calendar for stronger visual emphasis.
+Use the following CSS to customize the selected date cell grid in Calendar.
 
 ```css
 /* To specify background color and color  */
@@ -98,7 +98,7 @@ Use the following CSS to style the currently selected day cell in the Calendar f
 
 ## Customizing the content header in Calendar
 
-Use the following CSS to customize the weekday header row above the month grid.
+Use the following CSS to customize the content header in Calendar.
 
 ```css
 /* To specify background */

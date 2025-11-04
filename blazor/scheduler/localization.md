@@ -11,7 +11,7 @@ documentation: ug
 
 [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-## Setting Date Format
+## Setting date format
 
 Scheduler can be used with all valid date formats and by default it follows the universal date format "MM/dd/yyyy". If the [`DateFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DateFormat) property is not specified particularly, then it will work based on the system's local culture. As the system's local culture is "en-US", this makes it to follow the "MM/dd/yyyy" pattern.
 
@@ -43,11 +43,10 @@ Scheduler can be used with all valid date formats and by default it follows the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBosttmhrOFrwLT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Date Format in Blazor Scheduler](images/blazor-scheduler-dateformat.png)
 
-## Time Mode
+## Time mode
 
 The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the system's local culture and also the Scheduler supported to customize the time mode using the [`TimeFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_TimeFormat) property.
 
@@ -80,11 +79,10 @@ The time mode of the Scheduler can be either 12 or 24 hours format which is comp
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhICZjwVgtKPLLD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Time Format in Blazor Scheduler](images/blazor-scheduler-timeformat.png)
 
-## Displaying Scheduler in RTL Mode
+## Displaying Scheduler in RTL mode
 
 The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableRtl) to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
 
@@ -117,10 +115,9 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVyCXNQLKWXTXRn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![RTL Mode in Blazor Scheduler](images/blazor-scheduler-rtl.png)
 
-## See Also
+## See also
 
 * [How to change first day of the week in the Scheduler](./working-hours#setting-start-day-of-the-week)

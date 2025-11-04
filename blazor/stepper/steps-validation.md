@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Steps Validation in Blazor Stepper Component | Syncfusion
+title: Validation in Blazor Stepper Component | Syncfusion
 description: Checkout and learn about Validation with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
 documentation: ug
 ---
 
-# Steps Validation in Blazor Stepper Component
+# Steps validation in Blazor Stepper Component
 
-The Stepper component allows setting the validation state for each step, displaying either a success or error icon. Define the success state of a step by setting the [`IsValid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to `true`. If set to `false`, the step displays an error state. By default, the `IsValid` property is `null`.
+The Stepper component allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to `true`. If set to `false`, the step will display an error state. By default, the `IsValid` property is `null`.
 
 > Based on the `StepType`, the validation state icon will be displayed either as an indicator or as part of the step label/text.
 
@@ -68,12 +68,11 @@ The Stepper component allows setting the validation state for each step, display
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSCtZEKlxWOZBs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor Stepper Component with Validation](./images/Blazor-validation.png)
 
-## Validating Fields
+## Validating fields
 
-Validate fields within the stepper component. In the below shared example, as the user progress through steps they enter information, receive feedback, and confirm submission. Validation messages will appear for errors, and a success message confirms the completion.
+You can validate the fields within the stepper component. In the below shared example, as the user progress through steps they enter information, receive feedback, and confirm submission. Validation messages will appear for errors, and a success message confirms the completion.
 
 ```cshtml
 
@@ -270,8 +269,8 @@ Validate fields within the stepper component. In the below shared example, as th
     private bool ValidateCurrentStep()
     {
         bool isStepValid = true;
-        var context = new ValidationContext(model);
-        var validationResults = new List<ValidationResult>();
+        var context = new System.ComponentModel.DataAnnotations.ValidationContext(model);
+        var validationResults = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
         isStepValid = Validator.TryValidateObject(model, context, validationResults, true);
 
         if (currentStep == 1)
@@ -378,7 +377,5 @@ Validate fields within the stepper component. In the below shared example, as th
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLyCXtuAvQVIiww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Validation using editform](./images/edit-form.png)

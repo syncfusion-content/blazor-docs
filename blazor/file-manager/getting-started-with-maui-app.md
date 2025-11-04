@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor FileManager component
 
-This section explains how to integrate the Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor FileManager component into a Blazor MAUI application using both Visual Studio or Visual Studio Code.
+This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -17,7 +17,7 @@ This section explains how to integrate the Syncfusion <sup style="font-size:70%"
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
@@ -48,7 +48,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor FileManager and Themes NuGet in the App
 
@@ -66,7 +66,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a list of available NuGet packages with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -123,7 +123,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Add Stylesheet and Script Resources
+## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
 
@@ -158,13 +158,13 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager comp
 
 ### How to Run the Sample on Windows
 
-Run the sample in Windows Machine mode to run Blazor MAUI in Windows.
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ![Blazor File Manager Component](images/blazor-filemanager-maui-app.png)
 
 ### How to Run the Sample on Android
 
-To run the Blazor FileManager in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 

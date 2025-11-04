@@ -9,11 +9,11 @@ documentation: ug
 
 # Rows in Blazor Gantt Chart Component
 
-Each row in the Blazor Gantt Chart Component represents a record from the data source and displays its associated field values in both tabular and timeline views. Rows support various interactions such as selection, cell editing, taskbar manipulation, sorting, filtering, and event triggering.
+Row represents task information from the data source, and it is possible to perform the following actions in Gantt Chart rows.
 
 ## Row height
 
-You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IGantt.html#Syncfusion_Blazor_Gantt_IGantt_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
+It is possible to change the height of the row in Gantt Chart by setting row height in pixels to the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IGantt.html#Syncfusion_Blazor_Gantt_IGantt_RowHeight) property. The following code example explains how to change the row height in Gantt Chart at load time.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -69,11 +69,11 @@ You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</
 
 ## Expand or collapse row
 
-You can expand or collapse parent tasks in the Gantt Chart using expand/collapse icons, toolbar actions like Expand All or Collapse All, or public methods. By default, all tasks are rendered in an expanded state.
+In Gantt Chart, parent tasks are expanded/collapsed by using expand/collapse icons, expand all/collapse all toolbar items, and public methods. By default, all tasks in Gantt Chart are rendered in expanded state, but you can change this status using the properties below.
 
-### Render parent rows in collapsed state
+### Collapse all tasks at Gantt chart load
 
-You can collapse all parent rows during initial rendering by setting the [CollapseAllParentTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CollapseAllParentTasks)  property in the Gantt Chart component.
+All tasks available in Gantt Chart are rendered in collapsed state by setting the [CollapseAllParentTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CollapseAllParentTasks) property as `true`. The following code example shows how to use this property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -127,9 +127,9 @@ You can collapse all parent rows during initial rendering by setting the [Collap
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrIsNXEVMOywXCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Retain expand/collapse state on initial load
+### Define Expand/Collapse Status of Tasks
 
-You can retain the expand or collapse state of parent rows in the Gantt Chart during initial rendering by specifying the expand status in the data source and assigning it to [GanttTaskFields.ExpandState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ExpandState) property. This property defines whether a parent row is displayed as expanded or collapsed when the component loads.
+In Gantt Chart, you can render some tasks in collapsed state and some tasks in expanded state by defining expand status of the task in the data source. This value was mapped to Gantt Chart component by using [GanttTaskFields.ExpandState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ExpandState) property. The following code example shows how to use this property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -186,11 +186,7 @@ You can retain the expand or collapse state of parent rows in the Gantt Chart du
 
 ### Customize expand and collapse action
 
-You can customize expand and collapse behavior in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component using the [expanding](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanding), [expanded](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanded), [collapsing](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsing), and [collapsed](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsed) events.
-
-The following example demonstrates how to:
-- Cancel the expand action when the **TaskID** column value is 1.
-- Cancel the collapse action when the **TaskID** column value is 5.
+You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html) to handle on expand action, `Expanding` and `Expanded` events will be triggered with current expanding row’s information. Similarly, on collapse action, `Collapsing` and `Collapsed` events will be triggered. Using these events and their arguments, you can customize the expand/collapse action. The following code example shows how to prevent the particular row from expand/collapse action using the `Expanding` and `Collapsing` events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -262,22 +258,9 @@ The following example demonstrates how to:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthIWDZOLVCYxrbg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize rows style
+## Customize rows and cells
 
-You can customize the appearance of rows in the Blazor Gantt Chart using either events or CSS.
-
-### Using event
-
-To modify the appearance of rows in the grid portion, use the [RowDataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event. This event allows styling or other row-level customizations based on the data or specific logic.
-
-To customize rows in the chart portion, use the [QueryChartRowInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events#querychartrowinfo) event. This event provides access to chart row elements and enables styling based on task data.
-
-To customize grid cells, use the [QueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events#querycellinfo) event. It is triggered for each cell in the grid and can be used to apply styles or logic based on specific condition.
-
-The following example demonstrates how to apply custom styles to rows and cells in the Gantt Chart component:
-
-- If **TaskID** is 4, a custom background style is applied to both the grid row and chart row.
-- If the **Progress** column value is 30, a custom style is applied to the grid cell.
+While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDataBound) and [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo) events trigger for every row and cell. Using these events, you can customize the rows and cells. To customize the appearance of a row on the chart side by using the [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event. The following code example shows how to customize the cell and row elements using these events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -286,7 +269,8 @@ The following example demonstrates how to apply custom styles to rows and cells 
 @using Syncfusion.Blazor.Grids
  
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskID" Width="150"></GanttColumn>
@@ -307,11 +291,10 @@ The following example demonstrates how to apply custom styles to rows and cells 
         background-color: #FFFF00;
     }
 
-    .green-cell {
+    .red-cell {
         background-color: #20B2AA;
     }
 </style>
-
 @code{
     public void QueryCellInfo(Syncfusion.Blazor.Grids.QueryCellInfoEventArgs<TaskData> args)
     {
@@ -323,11 +306,10 @@ The following example demonstrates how to apply custom styles to rows and cells 
             }
             else
             {
-                args.Cell.AddClass(new string[] { "green-cell" });
+                args.Cell.AddClass(new string[] { "red-cell" });
             }
         }
     }
-
     public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
     {
         if (args.Data.TaskID == 4)
@@ -335,7 +317,6 @@ The following example demonstrates how to apply custom styles to rows and cells 
             args.Row.AddClass(new string[] { "custom-row" });
         }
     }
-
     public void queryChart(QueryChartRowInfoEventArgs<TaskData> args)
     {
         if (args.Data.TaskID == 4)
@@ -343,7 +324,6 @@ The following example demonstrates how to apply custom styles to rows and cells 
             args.Row.AddClass(new string[] { "custom-row" });
         }
     }
-
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -384,23 +364,9 @@ The following example demonstrates how to apply custom styles to rows and cells 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIsDNuLVgNyliS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Using CSS
+## Styling alternate rows
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows row-level customization through CSS. Each row is assigned specific class names, enabling precise styling to improve readability and visual presentation.
-
-**Customize selected row:**
-
-To highlight the currently selected row, override the default styles using the following CSS:
-
-```css
- .e-gantt .e-selectionbackground, .e-gantt .e-active  {
-    background-color: #f9920b !important;
-  }
-```
-
-**Alternate row customization:**
-
-To create visual separation between consecutive rows, style alternate rows using the following class.
+ You can change the background color of alternative rows in Gantt chart by overriding the class as shown below.
 
 ```css
 .e-altrow, tr.e-chart-row:nth-child(odd)  {
@@ -418,20 +384,13 @@ To create visual separation between consecutive rows, style alternate rows using
                      ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
-
 <style>
     .e-altrow, tr.e-chart-row:nth-child(odd) {
         background-color: #f2f2f2;
     }
-
-    .e-gantt .e-selectionbackground, .e-gantt .e-active  {
-      background-color: #f9920b !important;
-    }
 </style>
-
 @code{
     private List<TaskData> TaskCollection { get; set; }
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -468,20 +427,21 @@ To create visual separation between consecutive rows, style alternate rows using
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBoMDWQfWWUnwjT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIsXXELhxiOcmv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
 
 ## Accessing row task model information programmatically
 
-You can access task model information in the Blazor Gantt Chart using the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method. It returns details such as task level, expand status, task width, left position, progress width, and other related values.
+The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
 
-The following example demonstrates how the `GetRowTaskModel` method is used within the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowselected) event to retrieve task model details for the selected record.
+This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method is called on selecting the row, which returns the value of the task model details of the selected record. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids;
-
 <div>
     <div style="font-weight:bold;">Task Model Properties:</div>
     <div style="display:flex;visibility:@Visible">
@@ -567,36 +527,23 @@ The following example demonstrates how the `GetRowTaskModel` method is used with
 
 ## Row hover
 
-To highlight the current row when the mouse hovers over it, set the [EnableRowHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowHover) property to **true**.
+The `EnableRowHover` feature allows users to easily identify the current row by highlighting it when the mouse hovers over it. This feature can be activated by setting the [EnableRowHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowHover) property to true. The following code example explains how to enable row hover selection in Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Buttons
 
-<div style="margin-bottom:10px">
-<SfButton CssClass="e-primary" @onclick="ToggleRowHover">
-    @(IsRowHoverEnabled ? "Disable Row Hover" : "Enable Row Hover")
-</SfButton>
-</div>
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" EnableRowHover="@IsRowHoverEnabled">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" EnableRowHover="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
     private List<TaskData> TaskCollection { get; set; }
-    private bool IsRowHoverEnabled { get; set; } = true;
-
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-    }
-
-    private void ToggleRowHover()
-    {
-        IsRowHoverEnabled = !IsRowHoverEnabled;
     }
 
     public class TaskData
@@ -630,28 +577,29 @@ To highlight the current row when the mouse hovers over it, set the [EnableRowHo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIsDCwzLfDBScV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrSCjDuBzJJpeHj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Clip mode
 
-The clip mode provides options to display its overflow cell content and it can be defined by the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property.
+The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
 
 The following are three types of `ClipMode`:
 
-* **Clip**: Truncates the cell content when it overflows its area.
-* **Ellipsis**: Displays ellipsis when content of the cell overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
+* `Clip`: Truncates the cell content when it overflows its area.
+* `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
+* `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
+
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
 ### Cell tooltip
 
-You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property to **EllipsisWithTooltip**.
+You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property to `EllipsisWithTooltip`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentID">

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Filter Blazor ListBox Data Using TextBox Component
 
-This example shows how to filter Syncfusion<sup style="font-size:70%">&reg;</sup> ListBox data based on input from a TextBox. Bind an input event listener to the TextBox to capture user input and filter the items in the ListBox. Within the event handler, use the [`FilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_FilterAsync_System_Collections_Generic_IEnumerable__1__Syncfusion_Blazor_Data_Query_Syncfusion_Blazor_DropDowns_FieldSettingsModel_) method to update the ListBox items, ensuring that only those matching the input text are included.
+This example demonstrates how to filter Syncfusion<sup style="font-size:70%">&reg;</sup> ListBox data based on input from a TextBox. Bind an input event listener to the TextBox to capture user input and filter the items in the ListBox. Within the event handler, use the [`FilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_FilterAsync_System_Collections_Generic_IEnumerable__1__Syncfusion_Blazor_Data_Query_Syncfusion_Blazor_DropDowns_FieldSettingsModel_) method to update the ListBox items, ensuring that only those matching the input text are included.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -53,4 +53,4 @@ This example shows how to filter Syncfusion<sup style="font-size:70%">&reg;</sup
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthJMjgtfQYiRtee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Filtering items in Blazor ListBox using a TextBox](./../images/blazor-listbox-filter.png)
+![Adding Items in Blazor ListBox](./../images/blazor-listbox-filter.png)

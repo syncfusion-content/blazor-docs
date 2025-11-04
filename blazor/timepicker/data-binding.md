@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor TimePicker Component
 
-This section explains how to bind a value to the TimePicker component in the following ways.
+This section briefly explains how to bind the value to the TimePicker component in the below different ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -38,7 +38,7 @@ We can bind the value to the TimePicker component directly for `Value` property 
 
 ## Two-Way Data Binding
 
-Two-way binding is achieved using the `bind-Value` attribute and its support string, int, Enum, DateTime, bool types. If component value has been changed, it will affect all the places where we bind the variable for the **bind-value** attribute.
+Two-way binding can be achieved by using `bind-Value` attribute and its support string, int, Enum, DateTime, bool types. If component value has been changed, it will affect all the places where we bind the variable for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

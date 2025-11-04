@@ -9,9 +9,9 @@ documentation: ug
 
 # Attachments in Blazor AI AssistView component
 
-`Attachment` support in the AI AssistView allows users to include files with their prompts, providing additional context to improve responses. Configure this behavior using the `AttachmentSettings` property, which controls enabling, allowed file types, size limits, and the server endpoints used for upload and removal.
+The `Attachment` support in AI AssistView specifies user to include file attachments along with their prompts in the AI AssistView. This enhances the interaction by allowing users to provide additional context through files. You can enable and customize this feature and its behavior using the `AttachmentSettings` configuration.
 
-The `AttachmentSettings` property can be used to configure attachments in the AI AssistView component.
+You can use the `AttachmentSettings` property to configure the attachments in the AI AssistView.
 
 ### Enabling attachment
 
@@ -71,7 +71,7 @@ You can use the `SaveUrl` and `RemoveUrl` property to add the save and remove th
 
 ### Setting file type
 
-Use the AllowedFileTypes property to restrict uploads to specific file extensions. Provide one or more extensions (for example, ".png" or ".png,.jpg,.pdf").
+You can use the `AllowedFileTypes` property to upload the specific file types in the attachment.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -100,7 +100,7 @@ Use the AllowedFileTypes property to restrict uploads to specific file extension
 
 ### Setting file size
 
-Use the MaxFileSize property to define the maximum allowed upload size in bytes. By default, the value is 2000000 bytes (approximately 2 MB).
+You can use the `MaxFileSize` property to allow the maximum file size of the upload file in the AI AssistView. By default, its value is `2000000` bytes.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat

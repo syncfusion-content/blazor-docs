@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor ListView Component
 
-The ListView component provides capabilities to load and display data from various sources, including local data arrays (or lists) and remote data services. This is configured through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property, which supports either an array/list of data objects or a [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) instance. The ListView supports diverse data services like OData, OData V4, and Web API, and data formats (XML, JSON) when leveraging `DataManager Adaptors`.
+ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property that supports the data type of array or [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started). ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -25,13 +25,13 @@ The ListView component provides capabilities to load and display data from vario
 
 N> When complex data bind to ListView, you should map the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) properly. Otherwise, the ListView properties remains as undefined or null.
 
-## Bind to Local Data
+## Bind to local data
 
 Local data can be represented in Array of JSON data:
 
-### Array of JSON Data
+### Array of JSON data
 
-ListView can generate its list items from a array of complex data. For correct functioning, it is important to map the appropriate properties of your data model to the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html).
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -67,12 +67,12 @@ ListView can generate its list items from a array of complex data. For correct f
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhIWNNiAolSSAhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Data Binding in Blazor ListView](./images/list/blazor-listview-data-binding.png)
 
-## Bind to Remote Data
+## Bind to remote data
 
-The ListView supports retrieving data from remote data services using the [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component. The [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_Query) property allows for constructing specific queries to fetch and return data to the ListView from the database or API.
+The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component. The [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_Query) property allows to fetch data and return it to the ListView from the database.
 
 In the following sample, `first 6 products` from the **Product** table of **NorthWind** data service are displayed.
 
@@ -99,17 +99,18 @@ In the following sample, `first 6 products` from the **Product** table of **Nort
     }
 }
 ```
+
 ![Data Binding in Blazor ListView](./images/list/blazor-listview-binding-data.png)
 
 ## Entity Framework
 
-This section explains how to consume data from **Entity Framework** within the ListView component.
+You need to follow the steps below to consume data from the **Entity Framework** in the ListView component.
 
-To easily bind data in the Blazor ListView component using Entity Framework, check out this video.
+To easily bind data in the Blazor ListView component using Entity Framework, you can check out this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=iEM_W4HP9pk" %}
 
-### Handle CRUD in Data Access Layer Class
+### Handle CRUD in data access layer class
 
 Now, add methods **AddProduct** and **DeleteProduct** in the **DataAccessLayer.cs** to handle the insert and remove operations, respectively. The **CRUD** list items are bound to the **Products** parameter.
 
@@ -169,7 +170,7 @@ namespace EFListView.Shared.DataAccess
 
 ### Enable CRUD in Web API
 
-Next, need to create new **Post** and **Delete** methods in the Web API controller, which will perform the CRUD operations and return the appropriate result. The **SfDataManager** will make requests to these actions based on the route name.
+Now you need to create new **Post** and **Delete** methods in the Web API controller, which will perform the CRUD operations and return the appropriate result. The **SfDataManager** will make requests to these actions based on the route name.
 
 ```csharp
 
@@ -223,9 +224,9 @@ namespace EFListView.Server.Controllers
 
 ```
 
-### Configure the ListView to Perform CRUD Operations
+### Configure the ListView to perform CRUD operations
 
-The ListView component can be configured in a Blazor component to perform CRUD operations. Use `SfButton` components to trigger `Add` and `Delete` actions.
+You can perform CRUD operations like Add and Delete using the `Add` and `Delete the selected item` buttons.
 
 * `Add button` – Adds a new list item to the ListView using the ListView component's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property.
 * `Delete the selected item button` - Deletes a selected list item in the ListView using the ListView component's [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_RemoveItems_System_Collections_Generic_IEnumerable__0__) method.
@@ -307,5 +308,5 @@ The ListView component can be configured in a Blazor component to perform CRUD o
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
-The following GIF represents the ListView with Add and Delete list items.
+The following GIF represents the ListView with Add and Delete the list items.
 ![Blazor ListView with CRUD Operations](./images/blazor-listview-crud-operation.gif)

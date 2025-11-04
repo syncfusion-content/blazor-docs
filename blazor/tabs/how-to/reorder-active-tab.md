@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Prevent Reordering of Active Tab in Blazor Tabs Component | Syncfusion
+title: Reorder Active Tab in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about Reorder Active Tab in Syncfusion Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Prevent Reordering of Active Tab in Blazor Tabs Component
+# Prevent reorder active tab in Blazor Tabs Component
 
-By default, the active tab reorders when a tab item is clicked from the popup or when the browser is resized in popup mode. If the [`ReorderActiveTab`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ReorderActiveTab) property is set to `false`, the active tab item will not reorder. Instead, the active item is highlighted inside the popup itself, and its content is displayed without changing the main tab header order.
-
-The following code example demonstrates how to prevent the active tab item from reordering when clicked from the popup.
+By default, the active tab will reorder when you click the tab items from the popup or resize the browser on popup mode. If we set `false` to [ReorderActiveTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ReorderActiveTab) property, the active tab item from the popup will not be reordered and an active item is highlighted inside the popup itself and the content of the selected tab will display. The following code example depicts how to prevent the reorder active tab item inside the popup.
 
 ```cshtml
 
@@ -62,5 +60,3 @@ The following code example demonstrates how to prevent the active tab item from 
     </TabItems>
 </SfTab>
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLeWDjEzmrjKSdD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

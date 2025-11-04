@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Bar in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize 100% Stacked Bar Chart in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about 100% Stacked Bar Chart in Syncfusion Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## 100% Stacked bar chart
 
-To render a 100% stacked bar chart, set the series `Type` property to `StackingBar100`.
+To render a `100% Stacked Bar Chart` series, use series `Type` as `StackingBar100`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.StackingBar100">
@@ -28,7 +28,7 @@ To render a 100% stacked bar chart, set the series `Type` property to `StackingB
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -49,21 +49,21 @@ To render a 100% stacked bar chart, set the series `Type` property to `StackingB
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTtxCUBNtIGBRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Bar100 3D Chart](../images/chart-types-images/blazor-stacked-bar-100-chart.png)
 
 ## 100% Cylindrical Stacked Bar chart
 
-To render a 100% cylindrical stacked bar chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
+To render a 100% cylindrical Stacked Bar chart, set the `ColumnFacet`  property to `Cylinder` in the chart series.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" ColumnFacet="Chart3DShapeType.Cylinder" Type="Chart3DSeriesType.StackingBar100"></Chart3DSeries>
@@ -72,7 +72,7 @@ To render a 100% cylindrical stacked bar chart, set the `ColumnFacet` property t
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -101,17 +101,17 @@ To render a 100% cylindrical stacked bar chart, set the `ColumnFacet` property t
 
 ## Series customization
 
-The following properties are available to customize the `100% Stacked Bar` series:
+The following properties can be used to customize the `100% Stacked Bar` series.
 
 * `Fill` – Specifies the color of the series.
-* `Opacity` – Specifies the opacity of the fill color.
+* `Opacity` – Specifies the opacity of `Fill`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" Fill="#A1650A" Type="Chart3DSeriesType.StackingBar100"></Chart3DSeries>
@@ -142,7 +142,7 @@ The following properties are available to customize the `100% Stacked Bar` serie
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJNnsqhNsRoHio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Bar100 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-100-chart-custom-series.png)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor File Manager Component
 
-The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component is designed to meet [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, implementing `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support. This ensures seamless navigation for users relying on assistive technologies or keyboard-only interaction.
+The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
-The component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
+The Blazor File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor File Manager component is outlined below.
 
@@ -39,9 +39,9 @@ The accessibility compliance for the Blazor File Manager component is outlined b
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA Attributes
+## WAI-ARIA attributes
 
-The Blazor File Manager component utilizes [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to ensure accessibility. The following ARIA attributes are implemented:
+The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -68,9 +68,9 @@ The Blazor File Manager component utilizes [WAI-ARIA](https://www.w3.org/WAI/ARI
 | aria-busy | This attribute is set to false when grid content is loaded. |
 | aria-multiselectable | Defines more than one item has been selected. |
 
-## Keyboard Interaction
+## Keyboard interaction
 
-The following key shortcuts enable full keyboard accessibility in the File Manager component:
+You can use the following key shortcuts to access the File Manager without interruptions.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -84,12 +84,12 @@ The following key shortcuts enable full keyboard accessibility in the File Manag
 | <kbd>Ctrl+Shift+1</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1</kbd> | Changes the File Manager layout to Grid view. |
 | <kbd>Ctrl+Shift+2</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>2</kbd> | Changes the File Manager layout to Details view. |
 
-## Ensuring Accessibility
+## Ensuring accessibility
 
-Accessibility levels are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) during automated testing.
+The Blazor File Manager component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
 
-## See Also
+## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
