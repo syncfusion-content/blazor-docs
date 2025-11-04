@@ -293,7 +293,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
         {
             OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
+            Freight = 2 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
