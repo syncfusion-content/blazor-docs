@@ -1,70 +1,71 @@
 ---
 layout: post
-title: Installing Syncfusion Blazor Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion Blazor mac installer after downloading from our Syncfusion website. 
+title: Install the Syncfusion Blazor Mac installer - Syncfusion
+description: Learn here about how to install the Syncfusion Blazor Mac installer (DMG), handle macOS Gatekeeper prompts, and register license keys in sample projects.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mac Installer
+# Install the Syncfusion® Blazor Mac installer
 
-The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Syncfusion Blazor product on macOS (DMG) and integrates with Visual Studio for Mac. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
 
-## Steps to resolve the warning message in Catalina OS or later
+## Resolve Gatekeeper warning on macOS Catalina or later
 
-   While running Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+   When running the installer on macOS Catalina or later, a Gatekeeper alert may appear.
 
-   ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
+   ![macOS Gatekeeper alert for the Syncfusion DMG](images/Mac_Catalina_MacOS_Alert1.png)  
      
-   If you receive this alert, follow the below steps for the easiest solution.   
+   If this appears, follow these steps:
 
-   1.	Right-click the downloaded dmg file.
-   2.	Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
-   
-		![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
-   
-   3.	When you click "Open" the installer window will be opened.
+   1. Right‑click the downloaded DMG file.
+   2. Select Open option and choose **DiskImageMounter (Default)**. The following prompt appears.
 
-## Step-by-Step Installation
+      ![macOS prompt to open the DMG with DiskImageMounter](images/Mac_Catalina_MacOS_Alert2.png)
 
-The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
+   3. Select Open to mount the DMG and continue.
 
-1. Locate the downloaded dmg file and open the file by double click on it.
+## Install on macOS
 
-   ![Installer Wizard](images/Mac_Installer1.png)
+Follow these steps to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
-2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
+1. Locate the downloaded DMG file and double‑click it to open.
 
-   ![Software License Agreement Wizard](images/Mac_Installer2.png)
+   ![Open the downloaded Syncfusion Blazor DMG](images/Mac_Installer1.png)
+
+2. The disk image mounts and a virtual drive appears on the desktop or in the Finder sidebar.
+
+   ![Mounted DMG drive visible in Finder](images/Mac_Installer2.png)
 
 3. Copy the mounted disk file.
 
-   ![License Agreements Confirmation](images/Mac_Installer3.png)
+   ![Drag the Syncfusion app to Applications](images/Mac_Installer3.png)
 
-   N> The Unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
+   N> An unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
-4. And paste it in “Applications” folder shortcut.
+4. And paste it in “Applications” folder.
 
-   ![Destination select wizard](images/Mac_Installer4.png)
+   ![Copying the app into the Applications folder](images/Mac_Installer4.png)
 
-5. Now you can open the folder to explore the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Mac installer.
+5. Open the Applications folder and launch the Syncfusion installer app.
 
-   ![Installation Type wizard](images/Mac_Installer5.png)
+   ![Launch the Syncfusion Blazor installer app from Applications](images/Mac_Installer5.png)
 
-6. To remove the DMG file, Right-click on the virtual drive on your desktop or in the Finder sidebar and select “Eject.” Also delete the folder from the Applications.
+6. To remove the DMG, right‑click the virtual drive (desktop or Finder sidebar) and select Eject. Also delete the folder from the Applications.
 
-   ![Authentication window](images/Mac_Installer6.png)
+   ![Eject the mounted DMG from Finder](images/Mac_Installer6.png)
 
 
-## License key registration in samples
+## Register the license key in sample projects
 
 After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the Blazor Mac installer, please refer to this.
 
-* For server side application register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
-* For client side application register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
+- **Blazor Server App**: Register the license key in [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
+- **Blazor WebAssembly App**: Register the license key in [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
 
+For development on macOS, see:
 You can also find the steps for getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Mac,
 
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) using Visual Studio for Mac.
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) using Visual Studio for Mac.
+- Getting started with Syncfusion Blazor components in a [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
+- Getting started with Syncfusion Blazor components in a [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac) using Visual Studio for Mac.

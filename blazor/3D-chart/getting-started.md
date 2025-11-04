@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3D Chart Component | Syncfusion
+title: Getting Stared with Blazor 3DChart Component | Syncfusion
 description: Checkout and learn about getting started with Blazor 3D Chart component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: 3D Chart
