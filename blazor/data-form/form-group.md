@@ -37,7 +37,7 @@ The DataForm component provides the functionality to organize various form group
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet/form-group/multiple-form-group.razor %}
+{% include_relative code-snippet/form-group/multiple-form-group.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +56,7 @@ This section explains how to configure the DataForm component on dividing the co
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet/form-group/column-layout.razor %}
+{% include_relative code-snippet/form-group/column-layout.cs %}
 
 {% endhighlight %}
 {% endtabs %}
