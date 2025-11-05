@@ -9,8 +9,6 @@ documentation: ug
 
 # Appearance in Blazor AI AssistView component
 
-Customize the AI AssistView appearance by configuring width and height and by applying custom styles through the CssClass property.
-
 ## Setting width
 
 You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Width) property to set the width of the AI AssistView. The default value is `100%`.

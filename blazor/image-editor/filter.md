@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter with Blazor Image Editor Component | Syncfusion
-description: Explore image filter options in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+description: Checkout the Filter available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,11 +9,13 @@ documentation: ug
 
 # Filters in the Blazor Image Editor component
 
-Filters are predefined effects that modify an image’s appearance or mood. They can add visual emphasis or enhance specific elements of an image. Common filters include cold, warm, chrome, sepia, and invert.
+Filters are pre-defined effects that can be applied to an image to alter its appearance or mood. Image filters can be used to add visual interest or to enhance certain features of the image. Some common types of image filters include cold, warm, chrome, sepia, and invert.
 
 ## Apply filter effect
 
-The [ApplyImageFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method applies a filter to the image. Provide the desired filter as the first parameter using the [ImageFilterOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterOption.html) enumeration.
+The [`ApplyImageFilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method is utilized to apply filters to an image. By passing the desired filter type as the first parameter of the method, specified as [`ImageFilterOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterOption.html) the method applies the corresponding filter to the image. This allows for easy and convenient application of various filters to enhance or modify the image based on the chosen filter type.
+
+The `ApplyImageFilterAsync` method is used to perform filtering by specifying the type of filter as `ImageFilterOption` and send it a first parameter of the method.
 
 Here is an example of filtering using the `ApplyImageFilterAsync` method.
 
@@ -75,14 +77,14 @@ Here is an example of filtering using the `ApplyImageFilterAsync` method.
 }
 ```
 
-![Blazor Image Editor showing a filter applied to an image](./images/blazor-image-editor-filter.jpg)
+![Blazor Image Editor with Filter an image](./images/blazor-image-editor-filter.jpg)
 
-## Image filtering event
+### Image filtering event
 
-The [ImageFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ImageFiltering) event is triggered when a filter is applied to the image. The event provides details about the action.
+The [`ImageFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ImageFiltering) event is triggered when applying filtering on the image. This event is passed an object that contains information about the filtering event, such as the type of filtering.
 
-Parameters available in [ImageFilterEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterEventArgs.html):
+The parameter available in the [`ImageFilterEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterEventArgs.html) event is,
 
-- [ImageFilterEventArgs.Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageFilterEventArgs_Filter) - The filter type, as an `ImageFilterOption`, to be applied.
+ImageFilterEventArgs.Filter - The type of filtering as ImageFilterOption to be applied in the image editor.
 
-- [ImageFilterEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterEventArgs.html#Syncfusion_Blazor_ImageEditor_ImageFilterEventArgs_Cancel) - Indicates whether the filtering action should be canceled.
+ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action.

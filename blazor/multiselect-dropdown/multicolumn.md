@@ -9,16 +9,16 @@ documentation: ug
 
 # Multicolumn MultiSelect Dropdown
 
-Display two or more columns in the popup by applying the `e-multi-column` class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) property. This organizes item content into a grid-like layout within each list item.
+Provide two or more columns in the popup by using the class name `e-multi-column` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) property  and the column will be aligned like grid.
 
-- [ItemTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#item-template) – Use `ItemTemplate` to define the columns rendered for each item in the popup.
-- [ValueTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#value-template) – Use `ValueTemplate` to control how the selected value (chips/input) is displayed based on the defined columns.
+* [ItemTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#item-template) – Using `ItemTemplate`, add the columns in the popup.
+* [ValueTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#value-template) – Using `ValueTemplate`, display the value of which columns to be updated.
 
-Use the built-in utility classes below to control text alignment within each column:
+Display the custom text alignment in each column using a built-in class like in the following code example:
 
-- `e-text-center`: Centers the text in the column.
-- `e-text-right`: Right-aligns the text in the column.
-- `e-text-left`: Left-aligns the text in the column.
+* `e-text-center`: Displays the text in the center of the column.
+* `e-text-right`: Displays the text in the right side of the column.
+* `e-text-left`: Displays the text in the left side of the column.
 
 {% highlight cshtml %}
 
@@ -26,11 +26,11 @@ Use the built-in utility classes below to control text alignment within each col
 
 {% endhighlight %}
 
-![Blazor MultiSelect with multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.png)
+![Blazor MultiSelect with Multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.png)
 
-## How to display multicolumn item and CheckBox inline
+## How to Display MultiColumn Item and CheckBox Inline
 
-To align the checkbox and item details on the same line within a templated item, apply the following CSS. These styles position the checkbox so it appears inline with the item content:
+To ensure the checkbox and item details are aligned perfectly on the same line, you can apply the following CSS styles. These styles position the checkbox within the template, making it inline with the item details:
 
  ```css
     .e-popup.e-multi-select-list-wrapper .e-list-item .e-checkbox-wrapper {
@@ -40,7 +40,6 @@ To align the checkbox and item details on the same line within a templated item,
    }
 ```
 
-## Limitations of multicolumn layout
+## Limitation of multicolumn multiselect dropdown
 
-- Column-level features such as filtering and sorting are not supported.
-- The multicolumn layout visually aligns fields in a grid-like manner but does not provide a full data grid feature set.
+The component will not support column filtering and sorting, and the column will be aligned as same as grid.

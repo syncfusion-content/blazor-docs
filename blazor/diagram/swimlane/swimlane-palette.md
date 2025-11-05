@@ -8,20 +8,20 @@ documentation: ug
 ---
 
 # Swimlane-Palette in Blazor Diagram Component
-Diagram supports adding lanes and phases to the symbol palette. 
+  Diagram provides support to add lanes and phases to the symbol palette. 
 
 ## How to Add Lanes and Phases to the Symbol Palette
 
 Swimlane elements such as [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) can be used to visualize the symbols.
 
-The following code shows how to add lanes and phases to a palette.
+The following code sample shows how to add the lanes and phases to palette.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:80%;">
+    <div style="width:20%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -32,17 +32,17 @@ The following code shows how to add lanes and phases to a palette.
 
 @code
 {
-    //Reference the symbolnpreview.
+    //Reference the symbolpreview.
     DiagramSize SymbolPreview;
     //Define symbol margin.
     SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
 
     SfSymbolPaletteComponent symbolpalette;
 
-    //Define palettes collection.
+    //Define palattes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
 
-    // Define the palette's swimlane-shape collection.
+    // Defines palette's swimlane-shape collection.
     DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
@@ -56,7 +56,7 @@ The following code shows how to add lanes and phases to a palette.
 
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
-        //Create a horizontal lane.
+        //create a horizontal lane.
         Lane horizontalLane = new Lane()
             {
                 ID = "HorizontalSwimlane",
@@ -73,7 +73,7 @@ The following code shows how to add lanes and phases to a palette.
                 },
             };
 
-        //Create a vertical lane.
+        //create a vertical lane.
         Lane verticalLane = new Lane()
             {
                 ID = "VerticalSwimlane",
@@ -90,10 +90,10 @@ The following code shows how to add lanes and phases to a palette.
                 },
             };
 
-        //Create a horizontal phase.
+        //create a horizontal phase.
         Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
-        //Create a vertical phase.
+        //create a vertical phase.
         Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
@@ -111,18 +111,18 @@ The following code shows how to add lanes and phases to a palette.
       }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeWZXcKcyuCrTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlanePalette)
 
 ![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlanePalette)
+
+
 ## How to Drag and Drop Swimlane Shapes from the Symbol Palette
 
-* Drag-and-drop is supported for swimlane symbols.
-* When a lane symbol is dropped, if the diagram already contains a swimlane with the same orientation, the lane is added and stacked inside the swimlane based on order. Otherwise, a new swimlane is created.
+* Drag and drop support for swimlane shapes is provided.
+* When you drag and drop a lane shape, if the diagram already contains a swimlane with the same orientation, the lane will be added and stacked inside the swimlane based on the order. Otherwise, it will be added as a new swimlane.
 * A phase will only drop on a swimlane shape with the same orientation.
 
-The following image shows dragging a symbol from the palette.
+The following image shows how to drag a symbol from the palette.
 
 ![Drag Symbol from Palette](Swimlane-images/Symbol_palette.gif)

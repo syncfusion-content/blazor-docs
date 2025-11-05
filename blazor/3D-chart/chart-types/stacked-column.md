@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Column in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Stacked Column Chart in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about Stacked Column Chart in Syncfusion Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## Stacked column chart
 
-To render a stacked column series, set the series `Type` property to `StackingColumn`.
+To render a stacked column series, use series `Type` as `StackingColumn`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.StackingColumn">
@@ -28,7 +28,7 @@ To render a stacked column series, set the series `Type` property to `StackingCo
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -49,21 +49,21 @@ To render a stacked column series, set the series `Type` property to `StackingCo
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBftRMAVjJALNDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-column-chart.png)
 
 ## Stacking group
 
-To group stacked columns, use the `StackingGroup` property. Columns with the same group name are stacked together.
+To group the stacked column, the `StackingGroup` property can be used. The columns with same group name are stacked on top of each other.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue" Type="Chart3DSeriesType.StackingColumn"></Chart3DSeries>
@@ -72,7 +72,7 @@ To group stacked columns, use the `StackingGroup` property. Columns with the sam
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -94,7 +94,7 @@ To group stacked columns, use the `StackingGroup` property. Columns with the sam
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpZnCUhDzupZKQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)
@@ -108,7 +108,7 @@ To render a cylindrical stacked column chart, set the `ColumnFacet` property to 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" ColumnFacet="Chart3DShapeType.Cylinder" Type="Chart3DSeriesType.StackingColumn"></Chart3DSeries>
@@ -117,7 +117,7 @@ To render a cylindrical stacked column chart, set the `ColumnFacet` property to 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -146,10 +146,10 @@ To render a cylindrical stacked column chart, set the `ColumnFacet` property to 
 
 ## Series customization
 
-The following properties are available to customize the `Stacked Column` series:
+The following properties can be used to customize the `Stacked Column` series.
 
 * `Fill` – Specifies the color of the series.
-* `Opacity` – Specifies the opacity of the fill color.
+* `Opacity` – Specifies the opacity of the `Fill` color.
 
 ```cshtml
 
@@ -187,7 +187,7 @@ The following properties are available to customize the `Stacked Column` series:
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJXHMqLXoxCjlL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Column 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.png)

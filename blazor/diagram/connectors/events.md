@@ -682,6 +682,6 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to interact with the connector](./interactions)
 
-* [How to change the segments](./segments)
+* [How to change the segments](./segments/straight)
 
 * [How to Connect Visio While Dropping Node in Existing Blazor Diagram](https://support.syncfusion.com/kb/article/11181/how-to-connect-visio-while-dropping-node-in-existing-blazor-diagram)

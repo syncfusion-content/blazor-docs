@@ -120,28 +120,28 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
         Orders = OrderData.GetAllRecords();
     }
 
-    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+      private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
         if (args.Checked)
         {
-            this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, false);
+            await this.Grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Expand", "Grid_Collapse" }, false);
         }
         else
         {
-            this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, true);
+            await this.Grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Expand", "Grid_Collapse" }, true);
         }
 
     }
-
+    
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Expand")
         {
-            await this.Grid.GroupExpandAll();
+            await this.Grid.ExpandAllGroupAsync();
         }
         if (args.Item.Text == "Collapse")
         {
-            await this.Grid.GroupCollapseAll();
+            await this.Grid.CollapseAllGroupAsync();
         }
     }
 }

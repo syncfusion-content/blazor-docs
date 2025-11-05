@@ -9,9 +9,9 @@ documentation: ug
 
 # Render palette alone in Blazor Color Picker Component
 
-Render only the palette in the Color Picker by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property to `Palette` and disabling the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) to prevent switching to the picker view.
+To render the `Palette` alone in Color Picker, specify the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property as `Palette`, and set the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) property to `false`.
 
-In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property is set to `false` to hide the control buttons, so only the palette area is displayed and color selection applies immediately.
+In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property is set to `false` to hide the control buttons and it renders only the `Palette` area.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -21,6 +21,6 @@ In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Render palette alone in Blazor Color Picker](./../images/blazor-colorpicker-with-palette-alone.png)
+![Rendering Palette Alone in Blazor ColorPicker](./../images/blazor-colorpicker-with-palette-alone.png)
 
-N> To display the palette embedded in the page instead of in a popup, set `Inline="true"`. To render `Picker` alone, specify the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property as 'Picker'.
+N> To render `Picker` alone, specify the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property as 'Picker'.

@@ -11,7 +11,8 @@ documentation: ug
 
 ## Height and width
 
-Configure the outer dimensions of the tooltip using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) properties. The default for both properties is `auto`. These properties accept values in pixels (for example, "200px") as strings or numbers. Choose values that maintain readability across different screen sizes.
+The Tooltip can either be assigned with auto height and width values or specific pixel values. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) properties are used to set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -31,7 +32,7 @@ Configure the outer dimensions of the tooltip using the [`Width`](https://help.s
 
 ### Scroll mode
 
-When a specific pixel value is set for [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) and the tooltip content exceeds that height, vertical scrolling is automatically enabled within the tooltip container.
+When [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -54,6 +55,6 @@ When a specific pixel value is set for [`Height`](https://help.syncfusion.com/cr
 }
 ```
 
-![Blazor Tooltip showing vertical scrolling when content overflows fixed height](images/blazor-tooltip-scrolling.gif)
+![Scrolling in Blazor Tooltip](images/blazor-tooltip-scrolling.gif)
 
-N> Sticky mode is not required for scrolling but can help demonstrate overflow behavior. To enable sticky mode, set the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property to `true`.
+N> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property to true.

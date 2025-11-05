@@ -9,11 +9,11 @@ documentation: ug
 
 # Task Dependencies in Blazor Gantt Chart Component
 
-Task Dependencies are a crucial feature in project management that define relationships between tasks, ensuring they are executed in a logical sequence. In the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, task dependencies provide a powerful way to visualize and manage the interconnections between various project activities.
+Task dependencies define the logical order in which tasks must be executed, helping ensure accurate scheduling and streamlined project workflows. In the Blazor Gantt Chart component, task relationships are represented visually to support structured planning and coordination across the project timeline.
 
 ## Understanding task dependencies
 
-Task dependencies establish the order in which tasks should be completed, creating a structured workflow within your project. By implementing dependencies, you can:
+Task dependencies determine the execution sequence of tasks, forming a structured workflow that enhances project clarity and coordination. By implementing dependencies, you can:
 
 1. Ensure tasks are executed in the correct sequence
 2. Automatically adjust schedules when related tasks change
@@ -22,39 +22,31 @@ Task dependencies establish the order in which tasks should be completed, creati
 
 ## Types of task relationships
 
-The Blazor Gantt Chart supports four types of task relationships, each serving a specific purpose in project scheduling:
-
-1. **Finish-to-start (FS)**: The most common type, where a task can only begin after its predecessor is completed.
-   
-   Example: In software development, coding (Task B) can only start after the design phase (Task A) is finished.
-   ![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
-
-2. **Start-to-start (SS)**: Tasks begin simultaneously or with a specified lag.
-   
+Task relationships are categorized into four types based on start and finish dates:
+- **Start to Start (SS)**: Successor starts with predecessor.
    Example: In event planning, venue decoration (Task B) can start as soon as venue setup (Task A) begins.
    ![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.png)
 
-3. **Finish-to-finish (FF)**: Tasks must finish together or with a specified lag.
-   
-   Example: In publishing, proof reading (Task B) must finish when or shortly after content writing (Task A) is completed.
-   ![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
-
-4. **Start-to-finish (SF)**: A task can't finish until its predecessor starts.
-   
-   Example: In shift work, the night shift (Task B) can't end until the day shift (Task A) begins.
+- **Start to Finish (SF)**: Successor finishes when predecessor starts.
+    Example: In shift work, the night shift (Task B) can't end until the day shift (Task A) begins.
    ![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.png)
+
+- **Finish to Start (FS)**: Successor starts after predecessor finishes (default).
+   Example: In software development, coding (Task B) can only start after the design phase (Task A) is finished.
+   ![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
+
+- **Finish to Finish (FF)**: Successor finishes with predecessor.
+    Example: In publishing, proof reading (Task B) must finish when or shortly after content writing (Task A) is completed.
+   ![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
 
 ## Implementing task dependencies
 
-To implement task dependencies in your Blazor Gantt Chart, follow these steps:
+To implement task dependencies in the Blazor Gantt Chart, follow these steps:
 
-1. **Define the dependency field**: In your data source, create a field to hold dependency information.
-
-2. **Map the dependency field**: Use the [Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) to map your dependency field.
-
-3. **Specify dependencies**: For each task, specify its dependencies by indicating the **Predecessor's Task ID** followed by the **Dependency Type** (e.g., Finish-to-Start, Start-to-Start).
-
-4. **Predecessor configuration**: The [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property manages task dependencies, using [DependencyType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.DependencyType.html) enums to define relationships. You can configure the order of predecessor types such as FS, SS, FF, and SF.
+- **Define the dependency field**: Add a field in the data source to store task dependency values.
+- **Map the dependency field**: Use the [Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property in [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) to bind the dependency field.
+- **Specify dependencies**: Assign values using the predecessor's Task ID followed by the dependency type (e.g., `2FS`, `6SS`, `7SF`, `3FF`).
+- **Predecessor configuration**: Use the [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property to define relationships between tasks using supported types such as `FS`, `SS`, `SF`, and `FF` through [DependencyType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.DependencyType.html) enums.
 
 The following code snippets demonstrate how to define and configure task dependencies in the Gantt Chart component.
 
@@ -196,7 +188,7 @@ A negative offset allows a task to start before its predecessor completes, creat
 
 ## Understanding dependency string structure
 
-The dependency string in the Gantt Chart follows a specific structure to define relationships between tasks. Let's break down an example:
+Dependency strings in the Gantt Chart follow a structured format to define task relationships and scheduling offsets. Let's break down an example:
 
 **2FS+3d**
 
@@ -297,8 +289,6 @@ In this example:
 
 Tasks can have multiple dependencies, allowing for complex project structures. Specify multiple dependencies by separating them with commas.
 
-The following code snippets demonstrate how to define and configure multiple dependencies:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -358,9 +348,12 @@ The Gantt Chart automatically renders dependency lines between related tasks. Th
 
 ## Customizing dependency appearance
 
-The Gantt Chart includes styling options that enable you to customize the appearance of dependency lines. The [ConnectorLineBackground](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineBackground) property allows you to set the color of the connector lines using CSS color values, such as "#ff00ff". Additionally, the [ConnectorLineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineWidth) property lets you adjust the thickness of these lines in pixels, defaulting to 1 pixel. These properties are designed to enhance the visual clarity and appeal of task dependencies within the chart.
+To customize the appearance of dependency lines in the Gantt Chart:
 
-Here is a code snippet that shows how to modify the color of dependency lines:
+- Use the [ConnectorLineBackground](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineBackground) property to set the line color using CSS values (e.g., `#ff00ff`).
+- Use the [ConnectorLineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineWidth) property to define the line thickness in pixels (default is `1`).
+
+These properties help visually distinguish task relationships and improve chart readability.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

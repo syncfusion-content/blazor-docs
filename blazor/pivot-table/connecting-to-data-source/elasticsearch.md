@@ -1,40 +1,24 @@
 ---
-layout: post
-title: "Elasticsearch Data Binding in Blazor Pivot Table | Syncfusion"
+title: "Elasticsearch Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from an Elasticsearch database to the Syncfusion Blazor Pivot Table and more."
-platform: Blazor
-documentation: ug
+description: "Learn how to bind data from a Elasticsearch database in the Syncfusion Blazor Pivot Table and more."
 ---
 
-# Elasticsearch Data Binding in Blazor Pivot Table
+# Elasticsearch Data Binding
 
-This guide explains how to connect an Elasticsearch database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [NEST](https://www.nuget.org/packages/Nest) library. It describes two approaches: directly retrieving and binding data to the Pivot Table, and using a Web API service to fetch and display Elasticsearch data efficiently.
+This section describes how to use [Nest](https://www.nuget.org/packages/Nest) to retrieve data from a Elasticsearch database and bind it to the Blazor Pivot Table.
 
-## Connecting an Elasticsearch Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+## Connecting a Elasticsearch to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
-This section explains how to connect the Pivot Table component to an Elasticsearch database by directly retrieving data using the [NEST](https://www.nuget.org/packages/Nest) library.
+**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-### Step 1: Create a Pivot Table in Blazor
-1. Set up a Blazor Pivot Table as described in the [Getting Started](../getting-started) documentation.
+**2.** To connect a Elasticsearch database using the Nest in our application, we need to install the [Nest](https://www.nuget.org/packages/Nest) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Nest** and install it.
 
-### Step 2: Install the NEST NuGet Package
-1. Open the **NuGet Package Manager** in your project solution.
-2. Search for the **NEST** package and install it to enable connectivity with the Elasticsearch server.
+![Add the NuGet package "Nest" to the project](../images/Elasticsearch-nuget-package-install.png)
 
-![Add the NuGet package Nest to the project](../images/next-nuget-package-install.png)
+**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to Elasticsearch database. You can get the specified database by using the **ElasticClient**. Following that, the **Search** method of the **ElasticClient** is used to retrieve results from the database. Then populate the data collection from the **Hits** of the **SearchResponse** into a list using the **JTokenReader**.
 
-### Step 3: Configure Elasticsearch Connection
-1. In the **Index.razor** page, within the `OnInitialized` method, use the **ElasticClient** class from the NEST library to establish a connection to the Elasticsearch database.
-2. Use the **Search** method to query an Elasticsearch index and retrieve data.
-3. Convert the retrieved data from the `Hits` collection of the `SearchResponse` into a list using `JTokenReader`.
-
-### Step 4: Bind Data to the Pivot Table
-1. Assign the populated list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
-2. Configure the Pivot Table report to structure the data retrieved from the Elasticsearch database.
-3. Add fields to the [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Filters) properties of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to define the report structure, specifying how data fields are organized and aggregated in the Pivot Table.
-
-Below is the sample code to bind and configure the Pivot Table with Elasticsearch data.
+**4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the Elasticsearch data.
 
 ```cshtml
 @using System.Data
@@ -44,7 +28,7 @@ Below is the sample code to bind and configure the Pivot Table with Elasticsearc
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ElasticSearchService" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ElasticSearchService" DataSource="dataList" ExpandAll="false" EnableSorting="true">
+    <PivotViewDataSourceSettings TValue="ElasticSearchService" DataSource="dataList" ExpandAll=false EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Product"></PivotViewColumn>
         </PivotViewColumns>
@@ -61,7 +45,7 @@ Below is the sample code to bind and configure the Pivot Table with Elasticsearc
 </SfPivotView>
 
 @code {
-    private static List<ElasticSearchService> dataList = new List<ElasticSearchService>();
+     private static List<ElasticSearchService> dataList = new List<ElasticSearchService>();
 
     protected override void OnInitialized()
     {
@@ -98,45 +82,55 @@ Below is the sample code to bind and configure the Pivot Table with Elasticsearc
 }
 ```
 
-### Step 5: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the data fetched from the Elasticsearch database, structured according to the defined report.
-3. The resulting Pivot Table will appear as follows:
+When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with Elasticsearch data](../images/blazor-pivottable-Elasticsearch-databinding.png)
 
-## Connecting an Elasticsearch Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API Service
+## Connecting a Elasticsearch to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
-This section explains how to create a Web API service to retrieve data from an Elasticsearch database and connect it to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table).
+### Create a Web API service to fetch Elasticsearch data
 
-### Create a Web API Service to Fetch Elasticsearch Data
-
-Follow these steps to create a Web API service that retrieves data from an Elasticsearch database and prepares it for the Pivot Table.
-
-#### Step 1: Create an ASP.NET Core Web Application
-1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
-2. Follow the instructions in the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) to set up the project.
+**1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
 ![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
-#### Step 2: Install the NEST NuGet Package
-1. Install the **NEST** package using the **NuGet Package Manager** to enable Elasticsearch connectivity.
+**2.** To connect a Elasticsearch using the **Nest** in our application, we need to install the [Nest](https://www.nuget.org/packages/Nest) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Nest** and install it.
 
-![Add the NuGet package Nest to the project](../images/next-nuget-package-install.png)
+![Add the NuGet package "Nest" to the project](../images/Elasticsearch-nuget-package-install-in-web-service-app.png)
 
-#### Step 3: Create a Web API Controller
-1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
-2. This controller will facilitate data communication between the Elasticsearch database and the Pivot Table.
+**3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
 
-#### Step 4: Configure Elasticsearch Connection
-1. In the **PivotController.cs** file, use the **ElasticClient** class from the NEST library to establish a connection to the Elasticsearch database.
-2. Use the **Search** method to query an Elasticsearch index and retrieve data.
+**4.** In the Web API controller (aka, PivotController), **ElasticClient** helps to connect the Elasticsearch database. Next, using **Search** method of the **ElasticClient** you can query your Elasticsearch index and retrieve results from the database.
 
-#### Step 5: Implement Data Retrieval Logic
-1. In the **PivotController.cs** file, define a **Get()** method that calls the **FetchElasticsearchData** method to retrieve data from Elasticsearch.
-2. Serialize the retrieved data into JSON format using **JsonConvert.SerializeObject()**.
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Nest;
+using Newtonsoft.Json;
 
-Here’s the sample code for the **PivotController.cs** file:
+namespace MyWebService.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class PivotController : ControllerBase
+    {
+        private static object FetchElasticsearchData()
+        {
+            // Replace with your own connection string.
+            var connectionString = "<Enter your valid connection string here>";
+            var uri = new Uri(connectionString);
+            var connectionSettings = new ConnectionSettings(uri);
+            var client = new ElasticClient(connectionSettings);
+            var searchResponse = client.Search<object>(s => s
+                .Index("australian_weather")
+                .Size(1000)
+            );
+            return searchResponse.Documents;
+        }
+    }
+}
+```
+
+**5.** In the **Get()** method of the **PivotController.cs** file, the **FetchElasticsearchData** method is used to retrieve the Elasticsearch data as a object, which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -172,56 +166,23 @@ namespace MyWebService.Controllers
 }
 ```
 
-#### Step 6: Run the Web Application
-1. Build and run the web application.
-2. The application will be hosted at the URL `https://localhost:44323`.
+**6.** Run the application and it will be hosted within the URL `https://localhost:44323`.
 
-#### Step 7: Verify the Data
-1. Access the Web API endpoint at `https://localhost:44323/Pivot` to view the JSON data retrieved from the Elasticsearch database.
-2. The browser will display the JSON data, as shown below.
+**7.** Finally, the retrieved data from Elasticsearch which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:44323/Pivot`, as shown in the browser page below.
 
 ![Hosted Web API URL](../images/Elasticsearch-data.png)
 
-### Connecting the Pivot Table to an Elasticsearch Database Using the Web API Service
+### Connecting the Pivot Table to a Elasticsearch using the Web API service
 
-This section explains how to connect the Pivot Table component to an Elasticsearch database by retrieving data from the Web API service created in the previous section.
+**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-#### Step 1: Create a Pivot Table in Blazor
-1. Set up a Blazor Pivot Table as described in the [Getting Started](../getting-started) documentation.
-
-#### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **Index.razor** file, map the Web API URL (`https://localhost:44323/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property facilitates deserializing Elasticsearch data into instances of your model data class (i.e., TValue="ElasticSearchService") for binding to the Pivot Table.
+**2.** Map the hosted Web API's URL link `https://localhost:44323/Pivot` to the Pivot Table in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html?&_ga=2.200411303.844585580.1677740066-2135459383.1677740066#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.200411303.844585580.1677740066-2135459383.1677740066). This [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property aids in the de-serialization of Elasticsearch data into instances of your model data class (aka, TValue="ElasticSearchService") while bound to the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ElasticSearchService" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ElasticSearchService" Url="https://localhost:44323/Pivot" ExpandAll="false" EnableSorting="true">
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-@code {
-    public class ElasticSearchService
-    {
-        public int Quantity { get; set; }
-        public string Product { get; set; }
-        public string Date { get; set; }
-        public string Country { get; set; }
-        public double Amount { get; set; }
-    }
-}
-```
-
-#### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table report in the **Index.razor** file to structure the data retrieved from the Elasticsearch database.
-2. Add fields to the [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Filters) properties to organize data in the Pivot Table.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-
-<SfPivotView TValue="ElasticSearchService" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ElasticSearchService" Url="https://localhost:44323/Pivot" ExpandAll="false" EnableSorting="true">
+    <PivotViewDataSourceSettings TValue="ElasticSearchService" Url="https://localhost:44323/Pivot" ExpandAll=false EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Product"></PivotViewColumn>
         </PivotViewColumns>
@@ -238,22 +199,20 @@ This section explains how to connect the Pivot Table component to an Elasticsear
 </SfPivotView>
 
 @code {
-    public class ElasticSearchService
+    public class PostgreSQLService
     {
-        public int Quantity { get; set; }
-        public string Product { get; set; }
-        public string Date { get; set; }
-        public string Country { get; set; }
-        public double Amount { get; set; }
+        public TimeSpan openinghours_practice { get; set; }
+        public TimeSpan closinghours_practice { get; set; }
+        public string servicetype { get; set; }
+        public string servicecategory { get; set; }
+        public int revenue { get; set; }
     }
 }
 ```
 
-#### Step 4: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the data fetched from the Elasticsearch database via the Web API, structured according to the defined report.
-3. The resulting Pivot Table will appear as follows:
+
+When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with Elasticsearch data](../images/blazor-pivottable-Elasticsearch-databinding.png)
 
-N> In [this](https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from an Elasticsearch database using the Web API service.
+> In [this](https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from a Elasticsearch using the Web API service.

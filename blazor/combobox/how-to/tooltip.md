@@ -7,11 +7,11 @@ control: ComboBox
 documentation: ug
 ---
 
-# Show tooltip for ComboBox items in Blazor
+# DropDownList options with tooltip in Blazor ComboBox Component
 
-Display a tooltip for ComboBox list items by using the SfTooltip component. When the user hovers over an item in the ComboBox popup, a tooltip appears with information about the hovered item.
+You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 
-The following example shows how to display a tooltip when hovering over ComboBox list items.
+The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
 
 ```cshtml
 <SfTooltip @ref="TooltipObj" ID="Tooltip" Target=".e-list-item .name[title]">
@@ -66,4 +66,4 @@ The following example shows how to display a tooltip when hovering over ComboBox
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrqMBVwKYqDMxaA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox showing tooltip for list items on hover](../images/blazor-combobox-tooltip.png)
+![Blazor Combobox displays Tooltip for Dropdown Items](../images/blazor-combobox-tooltip.png)

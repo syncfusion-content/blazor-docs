@@ -9,13 +9,13 @@ documentation: ug
 
 # Grouping in Blazor MultiSelect Dropdown Component
 
-The MultiSelect supports grouping list items by category. Map the category field of each item to the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) property. Group headers appear inline and also as fixed headers. The fixed group header updates dynamically while scrolling to reflect the current group.
+The MultiSelect supports wrapping of the nested elements into a group based on different categories. The category of each list item can be mapped through the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 
-To get started quickly with grouping in the Blazor MultiSelect Dropdown component, refer to the following video:
+To get started quickly with grouping in the Blazor MultiSelect Dropdown component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=9PRq4u-t2Yw" %}
 
-In the following sample, vegetables are grouped by category using the `MultiSelectFieldSettings.GroupBy` field.
+In the following sample, vegetables are grouped according to their category using the `MultiSelectFieldSettings.GroupBy` field.
 
 {% highlight cshtml %}
 
@@ -23,18 +23,18 @@ In the following sample, vegetables are grouped by category using the `MultiSele
 
 {% endhighlight %}
 
-![Grouping in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-grouping.png)
+![Grouping in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-grouping.png)
 
 ## Fixed group header
 
-Classify items by mapping a category field to [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy). Group headers remain fixed at the top of the popup while scrolling through their corresponding group items and update when the next group begins.
+Classify the items based on the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) field mapped to the control. The headers of group items will be fixed at the top till their belonging items ends up on scrolling.
 
 ## Group header template
 
-Customize the group header title (used for both inline and floating headers) with the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_GroupTemplate) property. The same template content is used for the floating group [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_HeaderTemplate).
+The group header title under which appropriate sub-items are categorized is customize with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_GroupTemplate) property. This template is common for both inline and floating group [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_HeaderTemplate).
 
 ## Limitations of grouping
 
-Grouping has the following limitation:
+Grouping feature has some limitations. These are:
 
-* Only a single level of grouping is supported (nested or hierarchical grouping, as in TreeView, is not available).
+* The component will support only single level of grouping, and you cannot specify it as like TreeView component.

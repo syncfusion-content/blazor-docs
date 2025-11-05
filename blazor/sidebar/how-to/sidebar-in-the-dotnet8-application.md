@@ -9,9 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Render the Sidebar within the MainLayout of the .NET 8 Blazor Web App
+# Render the Sidebar within the MainLayout of the .NET 8 Blazor Web app
 
-Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application. Specifying `InteractiveServer` as the render mode for the `Routes` component enables interactive server-side rendering (SSR) for the entire Blazor application.
+Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application. When you specify InteractiveServer as the render mode for the Routes component, you are enabling interactive server-side rendering (SSR) for your entire Blazor application.
 
 ```cshtml
 

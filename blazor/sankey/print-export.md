@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export for Blazor Sankey Diagram | Syncfusion
-description: Learn how to configure print and export functionalities in the Syncfusion Blazor Sankey Diagram to generate high-quality outputs.
+description: Learn how to configure print and export functionalities in the Blazor Sankey Diagram to generate high-quality outputs.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor Sankey Diagram: Printing and Exporting
 
-This guide explains how to print and export the Blazor Sankey Diagram using built-in methods. These features enable high-quality output generation for presentations, reports, or further analysis.
+This guide explains how to print and export the Blazor Sankey Diagram using its built-in functionalities. These features allow you to generate high-quality output for presentations, reports, or further analysis.
 
 ## Printing the Sankey Diagram
 
-The Sankey Diagram provides a convenient way to print its contents from the browser. The `PrintAsync` method invokes the browser’s print dialog, allowing users to select print settings and send the diagram to a printer. The appearance and availability of print options are determined by the user's browser and operating system.
+The Sankey Diagram offers a convenient way to print its contents directly from the browser. The `PrintAsync` method triggers the browser's print dialog, allowing users to select printing options and target printers. Note that the availability and appearance of print options depend on the user's browser and operating system.
 
 {% tabs %}
 {% highlight razor %}
@@ -34,7 +34,6 @@ The Sankey Diagram provides a convenient way to print its contents from the brow
         <button class="btn btn-secondary" @onclick="PrintSankey">Print Sankey</button>
     </div>
 </div>
-
 @code {
     SfSankey sankey;
     string _backgroundColor = "#0b1320";
@@ -45,7 +44,6 @@ The Sankey Diagram provides a convenient way to print its contents from the brow
     {
         await sankey.PrintAsync();
     }
-
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -111,7 +109,7 @@ The Sankey Diagram provides a convenient way to print its contents from the brow
 
 ## Exporting the Sankey Diagram
 
-The diagram can be exported to multiple formats, including PNG, JPEG, SVG, and PDF. The `ExportAsync` method handles this process, accepting a file format and name. The exported image reflects the current state of the chart, including all customizations and user interactions.
+The Sankey Diagram can be exported to various image formats, including PNG, JPEG, SVG, and PDF. The `ExportAsync` method handles the export process.  You provide the desired file name and format as arguments. The exported image will reflect the current state of the chart, including any customizations or user interactions.
 
 {% tabs %}
 {% highlight razor %}
@@ -132,7 +130,6 @@ The diagram can be exported to multiple formats, including PNG, JPEG, SVG, and P
         <button class="btn btn-secondary" @onclick="ExportSankey">Export Sankey</button>
     </div>
 </div>
-
 @code {
     SfSankey sankey;
     string _backgroundColor = "#0b1320";
@@ -210,10 +207,13 @@ The diagram can be exported to multiple formats, including PNG, JPEG, SVG, and P
 
 ## Key Considerations
 
-*   **Print Functionality**: Printing depends on browser capabilities. Ensure users have correctly configured printer drivers and settings.
-*   **Export Formats**: Select an appropriate format. PNG and JPEG are raster formats suitable for bitmaps, while SVG and PDF are vector formats that support lossless scaling.
-*   **File Naming**: Use descriptive filenames for exported charts to aid organization.
-*   **Event Handling**: `PrintCompleted` and `ExportCompleted` events can be used to provide feedback or trigger actions after an operation concludes. Refer to the Events section for more information.
+* **Print Functionality:** The print feature relies on the browser's print capabilities. Ensure users have the necessary printer drivers and browser settings configured.
+
+* **Export Formats:** Choose the appropriate export format based on your needs.  PNG and JPEG are suitable for raster images, while SVG and PDF are vector formats that offer scalability without loss of quality.
+
+* **File Names:** Provide meaningful file names to help users organize and identify exported charts.
+
+* **Event Handling:** The  `PrintCompleted` and `ExportCompleted` events can be used to notify the user or perform actions after the respective operations finish. See the Events section of the Sankey Diagram documentation for more details.
 
 ## See also
 

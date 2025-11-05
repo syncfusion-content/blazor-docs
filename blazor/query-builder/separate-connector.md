@@ -9,9 +9,7 @@ documentation: ug
 
 # Separate Connector in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports separate connectors between rules or groups within the same parent group. When enabled, each rule (or nested group) can specify its own connector (AND/OR), allowing more precise control over complex logic than using a single group-level connector.
-
-Use the [`EnableIndividualConditions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_EnableIndividualConditions) property to enable separate connectors. 
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) provides the functionality to integrate standalone connectors between rules or groups within the same group. This allows for greater flexibility, as users can connect rules or groups using different connectors, enhancing the complexity and precision of query construction. You can use [EnableIndividualConditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderEnableIndividualConditions.html) to perform separate connector functionality.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -63,6 +61,6 @@ Use the [`EnableIndividualConditions`](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![EnableIndividualConditions in Blazor Query Builder](./images/separate-connector.png)
+![EnableIndividualConditions in Blazor QueryBuilder](./images/separate-connector.png)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

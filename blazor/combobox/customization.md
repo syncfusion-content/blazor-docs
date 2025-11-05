@@ -9,9 +9,9 @@ documentation: ug
 
 # Customization in Blazor ComboBox
 
-## Open ComboBox dropdown on focus
+## Open combobox dropdown on focus
 
-Automatically open the ComboBox dropdown when the input receives focus by handling the [Focus event](https://blazor.syncfusion.com/documentation/combobox/events#focus) and calling the [ShowPopupAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) (inherited from the base DropDownList). ShowPopupAsync programmatically opens the popup displaying the list of items.
+You can automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on [Focus](https://blazor.syncfusion.com/documentation/combobox/events#focus) event. The `ShowPopupAsync()` method opens the popup that displays the list of items.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -43,4 +43,5 @@ Automatically open the ComboBox dropdown when the input receives focus by handli
 }
 ```
 
-![Blazor ComboBox opening dropdown on focus](./images/blazor-combobox-customization.png)
+
+![Blazor ComboBox Customization](./images/blazor-combobox-customization.png)

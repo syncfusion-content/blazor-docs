@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor RadioButton Component
 
-Attach native DOM events to the RadioButton component using the @on{event} attribute (for example, @onchange, @onclick). The attribute value is an event handler method, and the event-specific data is provided via the event argument parameter.
+You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
 The different event argument types for each event are,
 
@@ -20,16 +20,16 @@ The different event argument types for each event are,
 
 ## List of Native events supported
 
-The following native event support has been provided to the RadioButton component:
+The following native event support have been provided to the Radio Button component:
 
-| List of native events |  |  |  |  |
+| List of Native events |  |  | | |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocus | onfocusout |
-| onfocusin | onclick | onkeydown | onkeyup | onkeypress |
+|onfocusin|onclick|onkeydown|onkeyup|onkeypress |
 
 ## How to bind onchange event to Radio Button
 
-Use the `onchange` attribute to bind the change event for a radio button. The following example shows how to access the event arguments in the handler.
+The `onchange` attribute is used to bind the onchange event for Radio Button. Here, we have explained about the sample code snippets of Radio Button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

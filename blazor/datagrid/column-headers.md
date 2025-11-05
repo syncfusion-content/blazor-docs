@@ -928,6 +928,7 @@ Here's an example of how to use the `HeaderTemplate` to add a custom tooltip to 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Popups
     
 <SfGrid ID="Grid" DataSource="@OrderData" AllowPaging="true">            
     <GridColumns>

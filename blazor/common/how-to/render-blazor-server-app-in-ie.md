@@ -45,4 +45,4 @@ N> This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/tag/3.0.8
 ## See Also
 
 * [Blazor supported platforms and browsers](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms)
-* [Blazor browser support updated (.NET 5)](https://learn.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated)
+* [Blazor Browser Support](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range in Blazor Range Selector Component | Syncfusion
-description: Check out and learn here all about ranges in Syncfusion Blazor Range Selector component and much more.
+description: Checkout and learn here all about range in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,24 +9,24 @@ documentation: ug
 
 # Range in Blazor Range Selector Component
 
-The Range Selector's left and right thumbs indicate the selected range in a large data collection. A range can be selected in the following ways:
+The Range Selector's left and right thumbs are used to indicate the selected range in the large collection of data. A range can be selected in the following ways:
 
-* Dragging the thumbs
-* Tapping on the labels
-* Setting the start and end through the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property
+* By dragging the thumbs.
+* By tapping on the labels.
+* By setting the start and the end through the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property.
 
 <!-- markdownlint-disable MD036 -->
 
 ## Value Binding
 
-This section describes how to bind values to the Range Selector component:
+This section describes how to bind the value to the Range Selector component in the following ways:
 
 * One-way binding
 * Two-way binding
 
-### One-way Binding
+### One-way binding
 
-Use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property directly as an object or from code-behind for the Range Selector.
+As shown in the following example, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
 
 ```cshtml
 
@@ -42,6 +42,7 @@ Use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime Date { get; set; }
@@ -66,9 +67,9 @@ Use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 
 ![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.png)
 
-### Two-way Binding
+### Two-way binding
 
-Use the **@bind-Value** attribute in the Range Selector to achieve two-way binding. The following example demonstrates two-way binding for the Range Selector.
+The **@bind-Value** code-behind attribute in the Range Selector can be used to achieve two-way binding. The following example shows how to achieve two-way binding for the Range Selector.
 
 ```cshtml
 
@@ -84,6 +85,7 @@ Use the **@bind-Value** attribute in the Range Selector to achieve two-way bindi
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime Date { get; set; }

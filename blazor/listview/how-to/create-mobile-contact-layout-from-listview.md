@@ -7,11 +7,11 @@ control: Listview
 documentation: ug
 ---
 
-# Create Mobile Contact Layout using Blazor ListView
+# Create mobile contact layout using Blazor ListView
 
-The ListView component can be customized using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) property to create a mobile-style contact view, complete with avatars.
+You can customize the ListView using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) property. Refer to the following steps to customize ListView as mobile contact view with our `avatar`.
 
-* Render the ListView with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) that has avatar data. This data can be text (e.g., initials) for an `e-avatar` or a direct image URL for a background.
+* Render the ListView with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) that has avatar data. You can set avatar data as either text or class names.
 
 ```C#
 new ListDataModel {
@@ -41,9 +41,9 @@ ListDataModel item = context as ListDataModel;
 </div>
 ```
 
-* Use the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property of the ListView to sort the contact names in ascending or descending order.
+* Sort the contact names using the [`SortOder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property of ListView.
 
-* Enable the [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property and set the [`HeaderTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTitle) to `Contacts`.
+* Enable the [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property, and set the [`HeaderTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTitle) as `Contacts`.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -184,5 +184,5 @@ ListDataModel item = context as ListDataModel;
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVIMtZMKUBJEwRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap4" %}
+
 ![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.png)

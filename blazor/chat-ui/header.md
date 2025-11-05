@@ -7,11 +7,11 @@ control: Chat UI
 documentation: ug
 ---
 
-# Header in Blazor Chat UI Component
+# Header in Blazor Chat UI component
 
 ## Show or hide header
 
-The [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowHeader) property allows you to control the visibility of the chat header. When enabled, the header can display text and an icon, which are configured using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderText) and [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss) properties, respectively.
+You can use [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowHeader) property to enable or disable the chat header. It contains the following options [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderText) and [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss).
 
 ```cshtml
 
@@ -39,7 +39,7 @@ The [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interac
 
 ### Setting header text
 
-Use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderText) property to set the text that appears in the header. This typically displays the current username or group name to provide context for the conversation.
+You can use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderText) property to display the text that appears in the header, which indicates the current username or the group name providing the context for the conversation.
 
 ```cshtml
 
@@ -67,7 +67,7 @@ Use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Int
 
 ### Setting header icon CSS
 
-The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss) property allows you to customize the styling of the header icon.allows customization of the header icon's styling in the Blazor Chat UI component by applying custom CSS classes.
+You can use the [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_HeaderIconCss) property to customize the styling of the header icon.
 
 ```cshtml
 
@@ -89,21 +89,27 @@ The [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
     };
 }
 
+<style>
+    #chatui-header .e-header .e-header-icon {
+        display: flex;
+    }
+</style>
+
 ```
 
 ![Blazor Chat UI HeaderIconCss](./images/header-iconCss.png)
 
 ## Toolbar
 
-Items can be rendered in the Chat UI header's toolbar using the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html) and [HeaderToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html) tag directives.
+You can render the Chat UI toolbar items by using the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html), [HeaderToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html) tag directives.
 
 ### Setting items
 
-Items can be configured using built-in command types or a custom item template, as detailed in the following sections.
+Items can be constructed with the following built-in command types or item template.
 
 #### Adding icon CSS
 
-Customize the header toolbar icons by using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_IconCss) property.
+You can customize the header toolbar icons by using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_IconCss) property.
 
 ```cshtml
 
@@ -137,9 +143,9 @@ Customize the header toolbar icons by using the [IconCss](https://help.syncfusio
 
 #### Setting item type
 
-To change the header toolbar item type, use the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Type) property. The `Type` property supports four item types: `Button`, `Separator`, `Spacer`, and `Input`. The default type is `Button`.
+You can change the header toolbar item type by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Type) property. The `Type` supports four types of items such as `Button`, `Separator`, `Spacer` and `Input`. By default, the type is `Button`.
 
-In the following example, a header toolbar item type is set to `Button`.
+In the following example, header toolbar item type is set as `Button`.
 
 ```cshtml
 
@@ -173,7 +179,7 @@ In the following example, a header toolbar item type is set to `Button`.
 
 #### Setting text
 
-The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Text) property sets the display text for a header toolbar item.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Text) property to set the text for the header toolbar item.
 
 ```cshtml
 
@@ -207,7 +213,7 @@ The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveCh
 
 #### Show or hide toolbar item
 
-Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Visible) property to specify whether a header toolbar item is shown or hidden. Its default value is `true`.
+You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Visible) property to specify whether to show or hide the header toolbar item. By default, its value is `true`.
 
 ```cshtml
 
@@ -242,7 +248,7 @@ Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 #### Setting disabled
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Disabled) property is used to disable a header toolbar item in the Blazor Chat UI component. Its default value is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Disabled) property to disable the header toolbar item. By default, its value is `false`.
 
 ```cshtml
 
@@ -277,7 +283,7 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 #### Setting tooltip text
 
-Use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Tooltip) property to specify the tooltip text that displays when hovering over a header toolbar item.
+You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Tooltip) property to specify the tooltip text to be displayed on hovering the header toolbar item.
 
 ```cshtml
 
@@ -311,7 +317,7 @@ Use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 #### Setting CSS Class
 
-The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_CssClass) property allows applying a custom CSS class to a header toolbar item for styling purposes.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_CssClass) property to customize the header toolbar item.
 
 ```cshtml
 
@@ -356,11 +362,11 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 #### Enabling tab key navigation in toolbar
 
-Set the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_TabIndex) property of a header toolbar item to enable tab key navigation. By default, navigation between items is handled using arrow keys, but the TabIndex property allows switching between items using the `Tab` and `Shift+Tab` keys.
+You can use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_TabIndex) property of a header toolbar item to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the `Tab` and `Shift+Tab` keys as well.
 
 To use the `TabIndex` property, set it for each Toolbar item which you want to enable tab key navigation. The `TabIndex` property should be set to a positive integer value. A value of `0` or a negative value will disable tab key navigation for the item.
 
-To enable `Tab` key navigation for two toolbar items, use the following code:
+For example, to enable tab key navigation for two Toolbar items you can use the following code:
 
 ```cshtml
 
@@ -378,9 +384,9 @@ To enable `Tab` key navigation for two toolbar items, use the following code:
 
 ```
 
-With the above configuration, the user can switch between the two toolbar items using the `Tab` and `Shift+Tab` keys, and the items will be navigated in the order specified by their `TabIndex` values.
+With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `TabIndex` values.
 
-If the `TabIndex` is set to 0 for all toolbar items, tab key navigation will be based on the element order in the DOM.
+If you set the `TabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `TabIndex` values. For example:
 
 ```cshtml
 
@@ -398,11 +404,11 @@ If the `TabIndex` is set to 0 for all toolbar items, tab key navigation will be 
 
 ```
 
-In this case, the user can navigate between the two items using the `Tab` and `Shift+Tab` keys in the order they appear in the DOM.
+In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
 
 #### Setting template
 
-Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Template) tag directive to render a custom component or HTML element as a header toolbar item. Template property can be given as the `HTML element` or `RenderFragment`.
+You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_Template) tag directive to add custom header toolbar item in the Chat UI component. Template property can be given as the `HTML element` or `RenderFragment`.
 
 ```cshtml
 
@@ -454,7 +460,7 @@ Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inter
 
 ### Item clicked
 
-Define the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbar_ItemClicked) event handle for the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html) tag directive which will be triggered when the header toolbar item is clicked.
+You can define [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbar_ItemClicked) event in the [HeaderToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbar.html) tag directive which will be triggered when the header toolbar item is clicked.
 
 ```cshtml
 
