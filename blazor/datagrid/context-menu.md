@@ -136,8 +136,6 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIsjrEUXtJazSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Context menu interaction](images/context-menu/blazor-datagrid-context-menu.gif)
-
 ## Custom context menu items
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding custom context menu items along with default options.
@@ -233,8 +231,6 @@ public class EmployeeData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoMjLaVOKOJFCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Custom menu item](images/context-menu/blazor-datagrid-context-menu-custom-item.gif)
 
 ## Built-in and Custom context menu items
 
@@ -332,8 +328,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSiXBaVEwxOsiX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Built-in and Custom Context Menu Items](images/context-menu/blazor-datagrid-context-menu-built-in-custom.gif)
 
 ## Sub context menu items in DataGrid
 
@@ -450,8 +444,6 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLIiNhEqQfJGczz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Sub Context Menu Items](images/context-menu/blazor-datagrid-context-menu-sub-items.gif)
-
 ## Disable the context menu for specific columns in DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
@@ -561,8 +553,6 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBSCNrOqOXtBomQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Disable Context Menu for Specific Columns](images/context-menu/blazor-datagrid-disable-context-menu-specific-columns.gif)
-
 ## Enable or disable context menu items
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamic control over the availability of context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature is useful for conditionally restricting actions such as **Edit** or **Delete**, based on the column, row data, or custom logic.
@@ -662,8 +652,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIiiZySUQfOieR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enable or Disable Context Menu Items](images/context-menu/blazor-datagrid-enable-disable-context-menu-items.gif)
 
 ## Show or hide context menu 
 
@@ -766,8 +754,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBIMWXIIKutSiPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Show or Hide Context Menu Items](images/context-menu/blazor-datagrid-show-hide-context-menu-items.gif)
 
 ### Access specific row details on context menu click
 
@@ -877,7 +863,5 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSMXVazHjnCzPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Fetch Row Details on Context Menu Click](images/context-menu/blazor-datagrid-context-menu-fetch-row-details.gif)
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
