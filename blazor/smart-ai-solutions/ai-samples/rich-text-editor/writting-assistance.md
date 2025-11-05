@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Powered Content Assistance in Blazor Rich Text Editor | Syncfusion
-description: Learn how to integrate AI services with the Syncfusion Blazor Rich Text Editor to enhance content creation with grammar correction, summarization, translation, and more.
+description: Enhance content creation in Blazor Rich Text Editor using AI for grammar correction, summarization, translation, and more.
 platform: Blazor
 control: AI Integration
 documentation: ug

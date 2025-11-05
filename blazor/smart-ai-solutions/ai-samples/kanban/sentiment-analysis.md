@@ -230,7 +230,7 @@ await builder.Build().RunAsync();
 
 ## Razor Component
 
-This section demonstrates how to implement sentiment analysis in the Syncfusion Blazor Kanban component using AI. The AI Assistant evaluates the emotional tone of each task description and displays a corresponding emoji (😊, 😐, 😞) to help teams quickly assess the mood or urgency of tasks. This can be especially useful in agile workflows where emotional context can influence prioritization and team communication.
+This section demonstrates how to implement sentiment analysis in the Syncfusion Blazor Kanban component using AI. The AI Assistant evaluates the emotional tone of each task description and displays a corresponding emoji (😊, 😐, 😞) to help teams quickly assess the mood or urgency of tasks. This can be especially useful in agile workflows where emotional context can influence task priority and team communication.
 
 (`Home.razor`)
 
