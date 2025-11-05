@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides information about deploying a Blazor Web applications with the Syncfusion Blazor components to Linux server using NGINX as a reverse proxy.
 
-Refer to [Host ASP.NET Core on Linux with Nginx](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0&tabs=linux-ubuntu) topic for more information.
+Refer to [Host ASP.NET Core on Linux with NGINX](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0&tabs=linux-ubuntu) topic for more information.
 
 ## Prerequisites
 
@@ -106,5 +106,5 @@ You should now see your Blazor Web app running successfully with Syncfusion comp
 
 ## See also
 
-* [Host ASP.NET Core on Linux with Nginx](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0)
+* [Host ASP.NET Core on Linux with NGINX](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0)
 * [Configure NGINX for ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0#configure-nginx)
