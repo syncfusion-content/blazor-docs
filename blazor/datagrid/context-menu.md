@@ -9,14 +9,14 @@ documentation: ug
 
 # Context menu in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a context menu that appears when right-clicking any part of the Grid. This menu provides quick access to actions and operations related to the Grid’s data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, enhancing interactivity and usability.
 
 To enable the context menu, configure the Grid's [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property. Use default items for built-in menu options or add custom items for tailored functionality. This feature improves interactivity by offering context-sensitive actions.
 
 The context menu appears when right-clicking in these Grid areas:
-* **Header:** Right-click the header for column-specific actions.
-* **Content:** Right-click the main content for row-specific actions.
-* **Pager:** Right-click the pager for navigation options.
+* **Header:** Displays column-specific actions.
+* **Content:** Shows row-related options.
+* **Pager:** Offers navigation controls.
 
 The default context menu items include:
 
@@ -53,7 +53,6 @@ The default context menu items include:
 | `LastPage`  | Navigate to the last page of the Grid.     |
 | `NextPage`  | Navigate to the next page of the Grid.     |
 
-**Example: Enable the context menu feature in the Grid**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -148,8 +147,6 @@ To configure custom context menu items:
 1. Define the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
 2. Specify properties such as **Text**, **Target**, and **Id** for each custom item.
 3. Handle actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
-
-**Example: Add a custom context menu item to copy data with headers**
 
 The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to copy selected rows or cells, including headers, to the clipboard.
 
@@ -249,8 +246,6 @@ To configure **built-in** and **custom** context menu items:
 2. For custom items, specify properties such as **Text**, **Target**, and **Id**.
 3. Handle custom actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
-**Example: Combine built-in and custom context menu items**
-
 The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells, including headers, to the clipboard.
 
 {% tabs %}
@@ -342,15 +337,13 @@ public class OrderData
 
 ## Sub context menu items in DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports hierarchical context menu structures, allowing sub-context menu items to appear as child options under a parent item. This feature helps organize multiple related actions under a single top-level context menu item.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
 
 To configure sub-context menu items:
 
 1. Define the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property with a list of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
-2. Add sub-items by specifying the collection for the Items property in ContextMenuItemModel.
+2. Add sub-items by specifying the collection for the Items property in `ContextMenuItemModel`.
 3. Handle actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
-
-**Example: Sub Context Menu Items**
 
 This example creates a sub-context menu titled **Clipboard**, which includes the sub-items **Copy** and **Copy With Header**. When the `ContextMenuItemClicked` event is triggered, the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method runs to copy data with or without headers.
 
@@ -461,19 +454,19 @@ public class OrderData
 
 ## Disable the context menu for specific columns in DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid allows restricting the context menu on specific columns—particularly when those columns contain `sensitive` or `read-only` data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
 
-This behavior can be controlled using the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. This event is triggered before the context menu is displayed and provides access to the column details. By checking the column field, the menu can be conditionally cancelled.
+This behavior is controlled using the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu appears and provides access to column details. By checking the column's **Field** property, the context menu can be conditionally disabled.
 
 To disable the context menu for a specific column:
 
 1. Handle the [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event of the Grid.
-2. Use the **Column.Field** property to identify the column.
-3. Set **args.Cancel** to `true` to prevent the menu from opening for that column.
+2. Use the **args.Column.Field** property to identify the target column.
+3. Set **args.Cancel = true** to prevent the context menu from opening for that column.
 
-**Example: Disable Context Menu for Specific Columns**
-
-The [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event handles actions triggered by context menu item clicks. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method executes for all columns except **Freight**, where the context menu is disabled.
+In this example:
+- The context menu is disabled for the **Freight** column.
+- The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method executes for all other columns when the **Copy with headers** option is selected.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -572,15 +565,13 @@ public class OrderData
 
 ## Enable or disable context menu items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamically enabling or disabling specific context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature is useful when certain actions, such as **Edit** or **Delete** should be restricted based on the column, row data, or custom logic.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamic control over the availability of context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature is useful for conditionally restricting actions such as **Edit** or **Delete**, based on the column, row data, or custom logic.
 
 To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu is displayed and allows enabling or disabling menu items dynamically based on conditions.
 
 1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the grid.
-2. Use the **Args.ContextMenuObj.Items** collection to access the menu items.
-3. Set the **Disabled** property of the required item(s) to `true` or `false` based on the defined logic.
-
-**Example: Enable or Disable Context Menu Items Dynamically**
+2. Use the **args.ContextMenu.Items** collection to access the menu items.
+3. Set the **Disabled** property of the required item(s) to **true** or **false** based on the defined logic.
 
 The **Copy** menu item is disabled for the **ShipCity** column and remains enabled for all other columns.
 
@@ -611,7 +602,13 @@ The **Copy** menu item is disabled for the **ShipCity** column and remains enabl
 
     private void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> args)
     {
-        args.ContextMenu.Items[0].Disabled = args.Column.Field == nameof(OrderData.ShipCity);
+        foreach (var item in args.ContextMenu.Items)
+        {
+            if (item.Text == "Copy")
+            {
+                item.Disabled = args.Column.Field == nameof(OrderData.ShipCity);
+            }
+        }
     }
 }
 
@@ -664,23 +661,21 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXreWNBkTWeKfahW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLoWMXeysxsYYwF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Enable or Disable Context Menu Items](/images/context-menu/blazor-datagrid-enable-disable-context-menu-items.gif)
 
 ## Show or hide context menu 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature is useful when certain actions, such as Edit or Delete, should be hidden based on the column, row data, or custom logic.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature is useful for conditionally restricting actions such as **Edit** or **Delete**, based on the column, row data, or custom logic.
 
-To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu is displayed and allows modifying the visibility of menu items dynamically based on conditions.
+To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu is displayed and allows dynamic modification of menu item visibility based on defined conditions.
 
 To control the visibility of context menu items:
 
 1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the grid.
-2. Use the **Args.ContextMenuObj.Items** collection to access the menu items.
-3. Set the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property of the required item(s) to `true` or `false` based on the defined logic.
-
-**Example: Show or Hide Context Menu Items Dynamically**
+2. Use the **args.ContextMenu.Items** collection to access the menu items.
+3. Set the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property of the required item(s) to **true** or **false** based on the defined logic.
 
 The **Edit** menu item is hidden for the **CustomerID** column and remains visible for all other columns.
 
@@ -711,7 +706,13 @@ The **Edit** menu item is hidden for the **CustomerID** column and remains visib
 
     private void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> args)
     {
-        args.ContextMenu.Items[1].Hidden = args.Column.Field == nameof(OrderData.CustomerID);
+        foreach (var item in args.ContextMenu.Items)
+        {
+            if (item.Text == "Edit Record")
+            {
+                item.Hidden = args.Column.Field == nameof(OrderData.CustomerID);
+            }
+        }
     }
 }
 
@@ -779,10 +780,6 @@ To access row data on context menu click:
 1. Define a custom context menu item using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
 2. Handle the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event of the grid.
 3. Use the **RowInfo.RowData** property from the event arguments to access the full details of the selected row.
-
-**Example: Fetch Row Details on Context Menu Click**
-
-The **Fetch Data** menu item retrieves the details of the selected row and displays them below the grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
