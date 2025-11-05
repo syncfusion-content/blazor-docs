@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Two-way Binding in Blazor Splitter Component | Syncfusion
+title: Two way Binding in Blazor Splitter Component | Syncfusion
 description: Checkout and learn here all about two way binding in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Two-way Binding in Blazor Splitter Component
+# Two way Binding in Blazor Splitter Component
 
-The `Collapsed` property of a `SplitterPane` supports two-way binding, which can be achieved using the `@bind-Collapsed` attribute. When the value of the bound variable changes, it automatically updates all elements linked via that variable.
+The splitter `SplitterPane` `Collapsed` property supports the two-way binding and it can be achieved by using the `bind-Collapsed` attribute. If the component value has been changed, it will affect all the places where we bind the variable for the bind-value attribute.
 
 In the following example, if either the value is changed in checkbox or splitter first pane collapsed state, it will reflect in both the checkbox and splitter pane.
 
@@ -47,8 +47,6 @@ In the following example, if either the value is changed in checkbox or splitter
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDresDZFpYnFGNWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Data Binding in Blazor Splitter](./images/blazor-splitter-data-binding.png)
 

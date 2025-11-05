@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor ListView Component
 
-The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance status for the Blazor ListView component is summarized below:
+The accessibility compliance for the Blazor ListView component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,18 +37,18 @@ The accessibility compliance status for the Blazor ListView component is summari
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA Attributes
+## WAI-ARIA attributes
 
-The Blazor ListView component incorporates [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) to enhance its accessibility. The following ARIA attributes are used in the ListView component:
+The Blazor ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the ListView component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
 | aria-selected | It indicates the selected list from the whole list. |
 | aria-level | It defines the hierarchical structure of a list item. |
 
-## Keyboard Interaction
+## Keyboard interaction
 
-The Blazor ListView component follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction), ensuring ease of use for individuals who rely on assistive technologies (AT) or prioritize keyboard navigation. The following keyboard shortcuts are supported:
+The Blazor ListView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListView component.
 
 | Windows | Mac | Actions |
 |------------|------ | -------------|
@@ -242,15 +242,13 @@ The Blazor ListView component follows [keyboard interaction](https://www.w3.org/
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVyijXiUostgsYD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Keyboard Interaction](./images/keyboard.png)
 
-## Ensuring Accessibility
+## Ensuring accessibility
 
-The accessibility levels of the Blazor ListView component are verified through the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor ListView component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the ListView component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the ListView component with accessibility tools.
+The accessibility compliance of the ListView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the ListView component with accessibility tools.
 
-## See Also
+## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

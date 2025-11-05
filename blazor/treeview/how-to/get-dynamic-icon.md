@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Retrieve Node IconCss Dynamically in Blazor TreeView | Syncfusion
-description: Learn how to dynamically retrieve the IconCss class bound to a TreeView node upon user interaction in the Syncfusion Blazor TreeView component.
+title: Get iconCss dynamically in Blazor TreeView Component | Syncfusion
+description: Learn here all about how to get iconCss dynamically in TreeView in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Retrieve Node IconCss Dynamically in Blazor TreeView Component
+# Get iconCss dynamically in Blazor TreeView Component
 
-bound `IconCss` class dynamically. Using the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method. For this method, if the id of the tree node is passed, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. This method can be used to get the bound IconCss class in the [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event.
+In the TreeView component, get the original bound data using the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method. For this method, if the id of the tree node is passed, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. This method can be used to get the bound IconCss class in the [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event.
 
 ```csharp
 
@@ -97,7 +97,5 @@ bound `IconCss` class dynamically. Using the [`GetTreeData`](https://help.syncfu
     }
 </style>
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMNCBAPAkNGNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor TreeView with Dynamic Icon](../images/blazor-treeview-dynamic-icon.png)

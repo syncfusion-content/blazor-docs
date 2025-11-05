@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Charts Component | Syncfusion
-description: Check out and learn how to utilize Print and Export functionalities in Syncfusion Blazor Charts component.
+description: Checkout and learn here all about Print and Export in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-Use the `PrintAsync` method to print a rendered chart directly from the browser.
+The `PrintAsync` method can be used to print a rendered chart directly from the browser.
 
 ```cshtml
 
@@ -19,7 +19,8 @@ Use the `PrintAsync` method to print a rendered chart directly from the browser.
 @using Syncfusion.Blazor.Buttons
 
 <SfChart @ref="ChartObj" Title="Inflation - Consumer Price">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column">
@@ -29,7 +30,8 @@ Use the `PrintAsync` method to print a rendered chart directly from the browser.
 
 <SfButton Id="button" Content="Print" @onclick="Print"  IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code {
+@code{
+
     SfChart ChartObj;
 
     private async Task Print(MouseEventArgs args)
@@ -45,14 +47,14 @@ Use the `PrintAsync` method to print a rendered chart directly from the browser.
 
     public List<ChartData> ConsumerDetails = new List<ChartData>
 	{
-        new ChartData { X = "USA", YValue = 46 },
-        new ChartData { X = "GBR", YValue = 27 },
-        new ChartData { X = "CHN", YValue = 26 },
-        new ChartData { X = "UK", YValue = 36 },
-        new ChartData { X = "AUS", YValue = 15 },
-        new ChartData { X = "IND", YValue = 55 },
-        new ChartData { X = "DEN", YValue = 40 },
-        new ChartData { X = "MEX", YValue = 30 }
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
     };
 }
 
@@ -62,7 +64,7 @@ Use the `PrintAsync` method to print a rendered chart directly from the browser.
 
 ### Print - Multiple Charts
 
-Print all charts on a page by passing the element reference of the parent container to the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_) method.
+Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_) method can be used to print all of the charts on a page by passing the element reference of the parent for all of the charts.
 
 ```cshtml
 
@@ -94,9 +96,7 @@ Print all charts on a page by passing the element reference of the parent contai
          <div align="center" class="col-sm-1"  style="height:500px; width:600px" > 
            <div class="p-5"> 
               <SfChart @ref="chartInstance">
-                        <ChartArea>
-                            <ChartAreaBorder Width="0" />
-                        </ChartArea>
+                        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
                         <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
                             <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
                         </ChartPrimaryXAxis>
@@ -133,7 +133,8 @@ Print all charts on a page by passing the element reference of the parent contai
                     <AccumulationChartLegendSettings Width="130px" ShapePadding="10" Padding="10">
                         <AccumulationChartLegendFont Size="10px"></AccumulationChartLegendFont>
                     </AccumulationChartLegendSettings>
-                </SfAccumulationChart>          
+                </SfAccumulationChart>
+                 
              </div>
          </div>
     </div>
@@ -164,11 +165,11 @@ Print all charts on a page by passing the element reference of the parent contai
   </div>
 </div>
 
-@code {
+@code{
     private SfChart chartInstance;
     private ElementReference Element;
 
-    private string[] palettes = new string[] { "#61EFCD", "#CDDE1F", "#FEC200", "#CA765A", "#2485FA", "#F57D7D", "#C152D2",
+     private string[] palettes = new string[] { "#61EFCD", "#CDDE1F", "#FEC200", "#CA765A", "#2485FA", "#F57D7D", "#C152D2",
     "#8854D9", "#3D4EB8", "#00BCD7","#4472c4", "#ed7d31", "#ffc000", "#70ad47", "#5b9bd5", "#c1c1c1", "#6f6fe2", "#e269ae", "#9e480e", "#997300" };
 
     public async Task PrintChart(MouseEventArgs args)
@@ -185,15 +186,15 @@ Print all charts on a page by passing the element reference of the parent contai
 
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
-        new ExportData { Manager = "John", SalesInfo = 10, DataLabelMappingName = "$10k"},
-        new ExportData { Manager = "Jake", SalesInfo = 12, DataLabelMappingName = "$12k"},
-        new ExportData { Manager = "Peter", SalesInfo = 18, DataLabelMappingName = "$18k"},
-        new ExportData { Manager = "James", SalesInfo = 11, DataLabelMappingName = "$11k"},
-        new ExportData { Manager = "Mary", SalesInfo = 9.7, DataLabelMappingName = "$9.7k"}
+        new ExportData { Manager = "John", SalesInfo = 10, DataLabelMappingName="$10k"},
+        new ExportData { Manager = "Jake", SalesInfo = 12, DataLabelMappingName="$12k"},
+        new ExportData { Manager = "Peter", SalesInfo = 18, DataLabelMappingName="$18k"},
+        new ExportData { Manager = "James", SalesInfo = 11, DataLabelMappingName="$11k"},
+        new ExportData { Manager = "Mary", SalesInfo = 9.7, DataLabelMappingName="$9.7k"}
     };
 
-    public class ChartData
-    {
+     public class ChartData
+     {
         public string Product { get; set; }
         public double Percentage { get; set; }
         public string TextMapping { get; set; }
@@ -208,7 +209,7 @@ Print all charts on a page by passing the element reference of the parent contai
         new ChartData { Product = "Laptop : 16%",  Percentage = 16, TextMapping = "Laptop"},
         new ChartData { Product = "Mobile : 36%", Percentage = 36, TextMapping = "Mobile"},
         new ChartData { Product = "Camera : 11%", Percentage = 11, TextMapping = "Camera"}
-    };
+     };
 
     public class SplineAreaChartData
     {
@@ -236,12 +237,12 @@ Print all charts on a page by passing the element reference of the parent contai
 
 ## Export
 
-Export charts using the `ExportAsync` method to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF), [XLSX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_XLSX), or [CSV](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_CSV) formats. Specify the file format with [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) and the file name with `FileName`.
+Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF), [XLSX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_XLSX) or [CSV](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_CSV) format. The [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the file format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
-Optional parameters:
-* `Orientation`: Portrait or landscape for PDF
-* `AllowDownload`: Enable browser download prompt
-* `IsBase64`: Get the exported chart as a base64 string
+The optional parameters for this method are,
+* `Orientation`: Specifies the portrait or landscape orientation in the PDF document.
+* `AllowDownload`: Set this parameter to **true** to enable the browser's download prompt to download the chart in the specified format, and **false** to get the chart as a `DataUrl` string.
+* `IsBase64`: Set this parameter to **true** to indicate that you want the exporting content in the form of a `base64` string. 
 
 ```cshtml
 
@@ -249,7 +250,8 @@ Optional parameters:
 @using Syncfusion.Blazor.Buttons
 
 <SfChart @ref="ChartObj" Title="Inflation - Consumer Price">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column">
@@ -259,7 +261,8 @@ Optional parameters:
 
 <SfButton Id="button" Content="Export" @onclick="Export"  IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code {
+@code{
+
     SfChart ChartObj;
 
     private async Task Export(MouseEventArgs args)
@@ -275,14 +278,14 @@ Optional parameters:
 
     public List<ChartData> ConsumerDetails = new List<ChartData>
     {
-        new ChartData { X = "USA", YValue = 46 },
-        new ChartData { X = "GBR", YValue = 27 },
-        new ChartData { X = "CHN", YValue = 26 },
-        new ChartData { X = "UK", YValue = 36 },
-        new ChartData { X = "AUS", YValue = 15 },
-        new ChartData { X = "IND", YValue = 55 },
-        new ChartData { X = "DEN", YValue = 40 },
-        new ChartData { X = "MEX", YValue = 30 }
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
     };
 }
 
@@ -290,7 +293,7 @@ Optional parameters:
 
 ### Export chart as base64 string
 
-Set `IsBase64` to **true** in [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) to convert the chart to a base64 string, accessible in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument.
+If you set `IsBase64` parameter to **true** while calling the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, the chart will be converted into a base64 string, and you will be able to get the `base64` string in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument.
 
 ```cshtml
  
@@ -306,9 +309,7 @@ Set `IsBase64` to **true** in [ExportAsync](https://help.syncfusion.com/cr/blazo
 
 <div id="chart">
     <SfChart @ref="@chartInstance">
-        <ChartArea>
-            <ChartAreaBorder Width="0" />
-        </ChartArea>
+        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
         <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1" LabelIntersectAction="@Label" LabelRotation="-45">
             <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
             <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
@@ -332,7 +333,8 @@ Set `IsBase64` to **true** in [ExportAsync](https://help.syncfusion.com/cr/blazo
     </SfChart>
 </div>
 
-@code {
+
+@code{
     private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value} GW";
@@ -340,16 +342,16 @@ Set `IsBase64` to **true** in [ExportAsync](https://help.syncfusion.com/cr/blazo
 
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
-        new ExportData { Country = "India", GigaWatts = 35.5 },
-        new ExportData { Country = "China", GigaWatts = 18.3 },
-        new ExportData { Country = "Italy", GigaWatts = 17.6 },
-        new ExportData { Country = "Japan", GigaWatts = 13.6 },
-        new ExportData { Country = "United state", GigaWatts = 12 },
-        new ExportData { Country = "Spain", GigaWatts = 5.6 },
-        new ExportData { Country = "France", GigaWatts = 4.6 },
-        new ExportData { Country = "Australia", GigaWatts = 3.3 },
-        new ExportData { Country = "Belgium", GigaWatts = 3 },
-        new ExportData { Country = "United Kingdom", GigaWatts = 2.9 }
+        new ExportData { Country="India", GigaWatts = 35.5 },
+        new ExportData { Country="China", GigaWatts = 18.3 },
+        new ExportData { Country="Italy", GigaWatts = 17.6 },
+        new ExportData { Country="Japan", GigaWatts = 13.6 },
+        new ExportData { Country="United state", GigaWatts = 12 },
+        new ExportData { Country="Spain", GigaWatts = 5.6 },
+        new ExportData { Country="France", GigaWatts = 4.6 },
+        new ExportData { Country="Australia", GigaWatts = 3.3 },
+        new ExportData { Country="Belgium", GigaWatts = 3 },
+        new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
     };
 
     public async Task ExportChart(MouseEventArgs args)
@@ -373,19 +375,20 @@ Set `IsBase64` to **true** in [ExportAsync](https://help.syncfusion.com/cr/blazo
 
 ## Customizing the exported chart using Exporting event
 
-Customize the exported chart before generation using the [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Exporting) event. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides options:
+The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Exporting) event allows users to customize the exported chart before it is generated. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options for customizing the exported chart:
 
-* `Cancel`: Cancel the export process
-* `Height`: Set exported chart height (not applicable for XLSX/CSV)
-* `Width`: Set exported chart width (not applicable for XLSX/CSV)
-* `Workbook`: Customize Excel/CSV export
+* `Cancel`: This property cancels the export process when set to **true**.
+* `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
+* `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
+* `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
 
 ### Customizing the exported Excel documents
 
-Use the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Workbook) property in the event argument of [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Exporting) event to modify Excel sheet properties before file generation. For non-Excel formats, set chart width as needed.
+The [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Workbook) property in the event argument of [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Exporting) event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
+
+In the code example below, the chart is exported to Excel format. The exported Excel document is customized using the `Exporting` event. If the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) parameter in the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_System_Boolean_) method is set to something other than **XLSX** or **CSV**, the `Workbook` property will be **null**, and the chart's width will be set to **500px**.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts;
 @using Microsoft.AspNetCore.Components.Web;
 @using Syncfusion.PdfExport;
@@ -421,13 +424,11 @@ Use the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         <ChartEvents Exporting="BeforeExport"></ChartEvents>
     </SfChart>
 </div>
-
 @code {
     private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value} GW";
     public Syncfusion.Blazor.Charts.LabelIntersectAction Label { get; set; } = Syncfusion.Blazor.Charts.LabelIntersectAction.Trim;
-
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
         new ExportData { Country="India", GigaWatts = 35.5 },
@@ -441,12 +442,10 @@ Use the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         new ExportData { Country="Belgium", GigaWatts = 3 },
         new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
     };
-
     public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         await chartInstance.ExportAsync(Syncfusion.Blazor.Charts.ExportType.XLSX, FileName);
     }
-
     public void BeforeExport(ChartExportEventArgs args)
     {
         if (args.Workbook != null)
@@ -475,7 +474,6 @@ Use the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
             args.Width = 500;
         }
     }
-
     public class ExportData
     {
         public string Country { get; set; }
@@ -484,12 +482,12 @@ Use the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLyjEBxLVpWyfSL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStfNGMaalzwin?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](./data-labels)
+* [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

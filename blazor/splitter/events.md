@@ -13,7 +13,7 @@ This section explains the list of events of the splitter component which will be
 
 ## Created
 
-The `Created` event triggers after the Splitter component and its panes are rendered.
+`Created` event triggers after creating the splitter component with its panes.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ The `Created` event triggers after the Splitter component and its panes are rend
 
 ## OnResizeStart
 
-The `OnResizeStart` event triggers when a split pane begins to resize.
+`OnResizeStart` event triggers when the split pane is started to resize.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ The `OnResizeStart` event triggers when a split pane begins to resize.
 
 ## OnResizeStop
 
-The `OnResizeStop` event triggers when a split pane finishes resizing.
+`OnResizeStop` event triggers when the resizing of split pane is stopped.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ The `OnResizeStop` event triggers when a split pane finishes resizing.
 
 ## Resizing
 
-The `Resizing` event triggers while a split pane is actively being resized.
+`Resizing` event triggers when a split pane is being resized.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ The `Resizing` event triggers while a split pane is actively being resized.
 
 ## OnExpand
 
-The `OnExpand` event triggers before a pane expands.
+`OnExpand` event triggers before the panes get expanded.
 
 ```cshtml
 
@@ -139,7 +139,7 @@ The `OnExpand` event triggers before a pane expands.
 
 ## Collapsed
 
-The `Collapsed` event triggers after a pane has collapsed.
+`Collapsed` event triggers after the panes get collapsed.
 
 ```cshtml
 
@@ -160,7 +160,7 @@ The `Collapsed` event triggers after a pane has collapsed.
 
 ## Expanded
 
-The `Expanded` event triggers after a pane has expanded.
+`Expanded` event triggers after the panes get expanded.
 
 ```cshtml
 

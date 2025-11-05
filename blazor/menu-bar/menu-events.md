@@ -3,45 +3,45 @@ layout: post
 title: Menu Bar Events in Blazor Menu Bar | Syncfusion
 description: Checkout and learn here all about Events in the Syncfusion Blazor MenuBar component and much more details.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
 # Events in Blazor Menu Bar Component
 
-The Blazor Menu Bar component provides a comprehensive set of events that can be triggered at various stages of its lifecycle and during user interactions.
+The Blazor Menu Bar component has a list of events that can be triggered for certain actions.
 
 The events should be provided to the menu using **MenuEvents** component. When using events of menu, **TValue** must be provided in the **MenuEvents** component.
 
-N> All event handlers should be specified within a single `<MenuEvents>` component instance.
+N> All the events should be provided in a single **MenuEvents** component.
 
 ## Created
 
-The Blazor Menu Bar component's [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) event triggers once the Menu Bar component has been successfully rendered and initialized. 
+The Blazor Menu Bar component’s [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) event is triggered once the Menu Bar has been successfully created.
 
 ## OnItemRender
 
-The Blazor Menu Bar component's [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnItemRender) event triggers while each individual menu item is being rendered.
+The Blazor Menu Bar component’s [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnItemRender) is triggered while rendering each menu item.
 
 ## OnOpen
 
-The Blazor Menu Bar component's [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) event triggers immediately *before* a sub-menu opens. 
+The Blazor Menu Bar component’s [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) is triggered before opening the menu item.
 
 ## OnClose
 
-The Blazor Menu Bar component’s [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnClose) event triggers immediately *before* a sub-menu closes.
+The Blazor Menu Bar component’s [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnClose) is triggered before closing the sub menu.
 
 ## Opened
 
-The Blazor Menu Bar component’s [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Opened) event triggers *after* a sub-menu has fully opened.
+The Blazor Menu Bar component’s [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Opened) is triggered after opening the menu item.
 
 ## Closed
 
-The Blazor Menu Bar component’s [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Closed) event triggers *after* a sub-menu has fully closed.
+The Blazor Menu Bar component’s [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Closed) is triggered after closing the menu.
 
 ## ItemSelected
 
-The Blazor Menu Bar component’s [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event triggers after a menu item has been selected.
+The Blazor Menu Bar component’s [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) is triggered after selecting menu item.
 
 ```cshtml
 
@@ -135,5 +135,4 @@ The Blazor Menu Bar component’s [ItemSelected](https://help.syncfusion.com/cr/
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoWNZgBqhMfRUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-events.png)

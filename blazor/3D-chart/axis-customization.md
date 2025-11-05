@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn here all about Axis Customization in Syncfusion Blazor 3D Chart component and more.
+description: Checkout and learn here all about Axis Customization in Syncfusion Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Title
 
-The axis title can be added using the `Title` property. This provides quick information about the data plotted on the axis. The title style is customizable with the `Chart3DAxisTitleStyle` property.
+The title for the axis can be added by using the `Title` property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using `Chart3DAxisTitleStyle` property of the axis.
 
 ```cshtml
 
@@ -29,7 +29,7 @@ The axis title can be added using the `Title` property. This provides quick info
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -56,7 +56,7 @@ The axis title can be added using the `Title` property. This provides quick info
 
 ## Title rotation
 
-The axis title can be rotated from 0 to 360 degrees using the `TitleRotationAngle` property.
+The title can be rotated from 0 to 360 degree by using the `TitleRotationAngle` property.
 
 ```cshtml
 
@@ -73,7 +73,7 @@ The axis title can be rotated from 0 to 360 degrees using the `TitleRotationAngl
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -100,7 +100,7 @@ The axis title can be rotated from 0 to 360 degrees using the `TitleRotationAngl
 
 ## Tick lines customization
 
-The width, color, and height of minor and major tick lines are customizable using the `Chart3DMajorTickLines` and `Chart3DMinorTickLines` properties.
+The width, color, and height of the minor and major tick lines can be customized using `Chart3DMajorTickLines` and `Chart3DMinorTickLines` properties in the axis.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ The width, color, and height of minor and major tick lines are customizable usin
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -143,7 +143,7 @@ The width, color, and height of minor and major tick lines are customizable usin
 
 ## Grid lines customization
 
-The width and color of minor and major grid lines can be customized using the `Chart3DMajorGridLines` and `Chart3DMinorGridLines` properties.
+The width and color of the minor and major grid lines can be customized by using the `Chart3DMajorGridLines` and `Chart3DMinorGridLines` properties in the axis.
 
 ```cshtml
 
@@ -159,7 +159,7 @@ The width and color of minor and major grid lines can be customized using the `C
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -186,7 +186,7 @@ The width and color of minor and major grid lines can be customized using the `C
 
 ## Multiple Axis
 
-In addition to the primary X and Y axes, multiple axes can be added to the chart. Series can be associated with an axis by mapping to the axis's unique name.
+In addition to primary X and Y axis, n number of axis can be added to the chart. Series can be associated with this axis, by mapping with axis's unique name.
 
 ```cshtml
 
@@ -204,7 +204,7 @@ In addition to the primary X and Y axes, multiple axes can be added to the chart
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -233,7 +233,7 @@ In addition to the primary X and Y axes, multiple axes can be added to the chart
 ## Inversed Axis
 
 <!-- markdownlint-disable MD033 -->
-When an axis is inversed, the highest value appears closer to the origin. To invert an axis, set the `IsInversed` property to **true**.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the `IsInversed` property to **true**.
 
 ```cshtml
 
@@ -249,7 +249,7 @@ When an axis is inversed, the highest value appears closer to the origin. To inv
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -275,7 +275,7 @@ When an axis is inversed, the highest value appears closer to the origin. To inv
 
 ## Opposed position
 
-To place an axis opposite its original position, set the `OpposedPosition` property to **true**.
+To place an axis opposite from its original position, set the `OpposedPosition` property to **true**.
 
 ```cshtml
 
@@ -291,7 +291,7 @@ To place an axis opposite its original position, set the `OpposedPosition` prope
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -314,3 +314,4 @@ To place an axis opposite its original position, set the `OpposedPosition` prope
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBzZHWhJZuVFHfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
+

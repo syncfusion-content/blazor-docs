@@ -14,7 +14,7 @@ documentation: ug
 
 ## Getting started
 
-This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started) guide, which covers the initial setup and configuration steps.
+This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
 
 ### Adding the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component package
 

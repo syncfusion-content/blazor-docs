@@ -9,14 +9,7 @@ documentation: ug
 
 # Drag and drop in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports drag-and-drop reordering of rules and groups for a more intuitive query-building experience. Enable this per instance by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowDragAndDrop) property to `true` (default is `false`). Rules and groups can be dragged within the same group or across groups; items retain their type (a rule cannot be dropped as a group and vice versa).
-
-Drag-and-drop events provide hooks to monitor and customize behavior:
-- [`DragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDragStart.html): Fires when a drag begins (access the source item and cancel if needed).
-- [`Drag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrag.html): Fires during dragging (track current target and position).
-- [`Drop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrop.html): Fires when the item is dropped (determine target group and insert index, or cancel to enforce business rules).
-
-Touch input is supported on mobile and tablet devices. For accessibility, consider offering parallel UI actions (such as add/remove buttons) for users who rely on keyboard navigation.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) provides the functionality to reposition rules or groups within the component effortlessly. This enhancement provides a more intuitive and flexible way to construct and modify queries. You can use [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderAllowDragAndDrop.html) to perform drag and drop functionality. And we have events support for drag and drop features that, indicates the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDragStart.html), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrag.html) and [Drop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrop.html) actions.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -68,6 +61,6 @@ Touch input is supported on mobile and tablet devices. For accessibility, consid
 
 ```
 
-![Dragging a rule to reorder within a group in the Blazor Query Builder](./images/drag-and-drop.png)
+![Drag and Drop in Blazor QueryBuilder](./images/drag-and-drop.png)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

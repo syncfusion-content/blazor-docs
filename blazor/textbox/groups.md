@@ -9,11 +9,11 @@ documentation: ug
 
 # Groups in Blazor TextBox Component
 
-The following section describes how to configure the TextBox component with icons, floating labels, clear buttons, and multiline input by combining the relevant APIs.
+The following section explains the steps required to create TextBox with `icon` and `floating label`.
 
-**TextBox**
+**TextBox:**
 
-Create a basic TextBox component.
+Create a TextBox component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -21,9 +21,9 @@ Create a basic TextBox component.
 <SfTextBox Placeholder="Enter your name"></SfTextBox>
 ```
 
-**Floating label**
+**Floating label:**
 
-Create a floating label TextBox by enabling the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
+Create a Floating label TextBox using [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -33,9 +33,9 @@ Create a floating label TextBox by enabling the [FloatLabelType](https://help.sy
 
 Refer to the following sections to add the icons to the TextBox.
 
-## TextBox with icon and floating label
+## With icon and floating label
 
-Create a TextBox with icons so users can display the icon on either side of the input. Use the AddIconAsync method to append or prepend the icon. The argument value (`append` or `prepend`) determines whether the icon appears as a suffix or prefix. When invoking AddIconAsync inside lifecycle events, await the method within an asynchronous handler.
+Create a TextBox with icon and the users can place the icon in either side of the TextBox by using `AddIcon` method append the icon before or after the input. Based on the argument prepend or append, it will act as prefix or suffix icon.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -83,11 +83,13 @@ Create a TextBox with icons so users can display the icon on either side of the 
 </style>
 ```
 
-![Blazor TextBox with icon and floating label](./images/blazor-textbox-float-label-and-icons.png)
+![Blazor TextBox with Icon and Floating Label](./images/blazor-textbox-float-label-and-icons.png)
 
 ### Binding events to icons
 
-Bind events to icons by passing event attributes as a parameter to the AddIconAsync method. Multiple event handlers can be associated with the icon by providing a dictionary of event names and callbacks. Ensure the callbacks are created with EventCallback to maintain component lifecycle integrity.
+You can bind the event to the icons by passing events as a parameter to the `AddIcon` method. You can bind the single or multiple events to the icons.
+
+The following sample demonstrates binding events to the icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -147,9 +149,11 @@ Bind events to icons by passing event attributes as a parameter to the AddIconAs
 </style>
 ```
 
-## TextBox with clear button and floating label
+## With clear button and floating label
 
-Add a clear button to remove the current value from the TextBox. The button is visible only when the input contains text. Enable the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API to display the clear icon, and combine it with FloatLabelType for floating label support.
+The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
+
+The clear button can be added to the TextBox by enabling the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -160,11 +164,11 @@ Add a clear button to remove the current value from the TextBox. The button is v
 <SfTextBox Placeholder="FirstName" ShowClearButton=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![Blazor TextBox with clear button and floating label](./images/blazor-textbox-clear-icon.png)
+![Blazor TextBox with Clear Icon](./images/blazor-textbox-clear-icon.png)
 
-## Multiline input with floating label
+## Multi-line input with floating label
 
-Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) to transform the TextBox into a multi-line editor. Combine Multiline with FloatLabelType to keep the floating label behavior for longer text input.
+The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with the float label structure.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -172,4 +176,4 @@ Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![Blazor multiline TextBox with floating label](./images/blazor-multiline-textbox-with-floating-label.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-multiline-textbox-with-floating-label.png)

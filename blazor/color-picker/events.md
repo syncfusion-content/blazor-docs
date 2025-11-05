@@ -7,13 +7,13 @@ control: Colorpicker
 documentation: ug
 ---
 
-# Events in Blazor Color Picker Component
+# Events in Blazor ColorPicker Component
 
-This section lists the events in the Color Picker component and when they are triggered during user interaction.
+This section explains the list of events of the Colorpicker component which will be triggered for appropriate Colorpicker actions.
 
 ## Closed
 
-`Closed` triggers after the popup has been closed.
+`Closed` event triggers after the popup has been closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -31,7 +31,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## Opened
 
-`Opened` triggers when the popup Open.
+`Opened` event triggers when the popup Open.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -49,7 +49,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## OnClose
 
-`OnClose` triggers before the popup closed.
+`OnClose` event triggers before the popup closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -67,7 +67,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## OnOpen
 
-`OnOpen` triggers when the popup is Opened.
+`OnOpen` event triggers when the popup is Opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -85,7 +85,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## ValueChange
 
-`ValueChange` triggers when changing the colors.
+`ValueChange` event triggers when changing the colors.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -103,7 +103,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## Created
 
-`Created` triggers when the component is created.
+`Created` event triggers when the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -121,7 +121,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## OnModeSwitch
 
-`OnModeSwitch` triggers before the mode is switched in the component.
+`OnModeSwitch` event triggered before the mode switching is performed in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -139,7 +139,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## ModeSwitched
 
-`ModeSwitched` triggers after the mode switching is completed.
+`ModeSwitched` event triggered after the mode switching is performed in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -157,7 +157,7 @@ This section lists the events in the Color Picker component and when they are tr
 
 ## OnTileRender
 
-`OnTileRender` triggers after rendering of each color tile is completed.
+`OnTileRender` event triggered after the rendering of each color tile in the component is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

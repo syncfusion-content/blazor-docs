@@ -656,7 +656,7 @@ Move operation triggers on the server side and find the related code details.
 
 ## Sorting Files and Folders 
 
-Sort files and folders using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties, or the Sort By toolbar button available in the File Manager component to perform sorting operations.
+In the Blazor File Manager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the File Manager component to perform sorting operations.
 
 **SortBy** - A field name used to sort the folders and files in the File Manager component. The default value is Name.
 **SortOrder** - sort order for the files and folders in the File Manager component.
@@ -681,10 +681,7 @@ The available options for the sort order are:
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSWNXgUiEgHxKb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![File Manager Sorting](./images/sorting.png)
-
-## Custom Sorting
+## Custom sorting
 
 The File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
@@ -1233,9 +1230,9 @@ Download operation triggers on the server side and find the related code details
 
 ```
 
-You can also download selected files dynamically using [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
+In the Blazor File Manager component, you are able to download the selected files dynamically using our [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
 
-To use this method, need to pass the selected files or folders as parameters.
+To use this method, you need to pass the selected files or folders as parameters.
 
 ```cshtml
 
@@ -1264,7 +1261,7 @@ To use this method, need to pass the selected files or folders as parameters.
 
 ### Prevent Downloading File
 
-Prevent download actions for specific files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** in the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event.
+In the Blazor File Manager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
 
 The following example demonstrates how to prevent the download actions for all types of files in the Blazor File Manager component.
 

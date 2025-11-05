@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Bar in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Stacked Bar Chart in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about Stacked Bar Chart in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## Stacked bar chart
 
-To render a stacked bar series, set the series `Type` property to `StackingBar`.
+To render a stacked bar series, use series `Type` as `StackingBar`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.StackingBar">
@@ -28,7 +28,7 @@ To render a stacked bar series, set the series `Type` property to `StackingBar`.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -56,14 +56,14 @@ To render a stacked bar series, set the series `Type` property to `StackingBar`.
 
 ## Stacking group
 
-To group stacked bars, use the `StackingGroup` property. Bars with the same group name are stacked together.
+To group the stacked bar, the `StackingGroup` property can be used. The columns with same group name are stacked on top of each other.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue" Type="Chart3DSeriesType.StackingBar"></Chart3DSeries>
@@ -72,7 +72,7 @@ To group stacked bars, use the `StackingGroup` property. Bars with the same grou
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -94,7 +94,7 @@ To group stacked bars, use the `StackingGroup` property. Bars with the same grou
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVpZnsgsuHovTcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-bar-chart-with-grouping.png)
@@ -108,7 +108,7 @@ To render a cylindrical stacked bar chart, set the `ColumnFacet` property to `Cy
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" ColumnFacet="Chart3DShapeType.Cylinder" Type="Chart3DSeriesType.StackingBar"></Chart3DSeries>
@@ -117,7 +117,7 @@ To render a cylindrical stacked bar chart, set the `ColumnFacet` property to `Cy
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -146,17 +146,17 @@ To render a cylindrical stacked bar chart, set the `ColumnFacet` property to `Cy
 
 ## Series customization
 
-The following properties are available to customize the `Stacked Bar` series:
+The following properties can be used to customize the `Stacked Bar` series.
 
 * `Fill` – Specifies the color of the series.
-* `Opacity` – Specifies the opacity of the fill color.
+* `Opacity` – Specifies the opacity of the `Fill` color.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" Fill="#A1650A" Type="Chart3DSeriesType.StackingBar"></Chart3DSeries>
@@ -187,7 +187,7 @@ The following properties are available to customize the `Stacked Bar` series:
     };
 }
 
-```
+``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVpDnMqCYcOWHOq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-chart-custom-series.png)

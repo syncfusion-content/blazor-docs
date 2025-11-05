@@ -11,7 +11,7 @@ documentation: ug
 
 ## Icons
 
-Popup action items can display an icon or image to visually represent the action. To add an icon to a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
+The popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
 
 In the following sample, the icons for edit, delete, mark as read and like message menu items are added using the `IconCss` property.
 
@@ -47,11 +47,13 @@ In the following sample, the icons for edit, delete, mark as read and like messa
 
 ```
 
-![Blazor dropdown menu shows icons in popup items](./images/blazor-dropdownmenu-with-popup-icon.png)
+
+
+![Blazor DropDownMenu displays Icon in Popup Items](./images/blazor-dropdownmenu-with-popup-icon.png)
 
 ## Separator
 
-Separators are horizontal lines used to group and visually separate the popup items. Separators are not selectable. You can enable separators to group the popup items using the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) property.
+The Separators are the horizontal lines that are used to separate the popup items. You `cannot` select the separators. You can enable separators to group the popup items using the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) property.
 
 In the following sample, cut, copy, and paste popup items are grouped using the separator property:
 
@@ -72,11 +74,13 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.png)
+
+
+![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
 
 ## Navigations
 
-Actions in Dropdown Menu can navigate to another web page when an action item is clicked. This can be achieved by providing a link to the action item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Url) property.
+Actions in Dropdown Menu can be used to navigate to the other web page when action item is clicked. This can be achieved by providing link to the action item using [url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Url) property.
 
 In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal action items are added using the url property:
 
@@ -102,13 +106,15 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.png)
+
+
+![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
 
 ## Template
 
 ### Item Templating
 
-Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. The following example demonstrates customizing items with CSS:
+Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. We have customize the items using CSS style.
 
 ```cshtml
 
@@ -132,11 +138,13 @@ Popup items can be customized using the [CssClass](https://help.syncfusion.com/c
 
 ```
 
-![Blazor dropdown menu with customized popup items](./images/blazor-dropdownmenu-with-popup-items.png)
+
+
+![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)
 
 ## Populate multilevel sub menu items
 
-Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu component within the [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) directive tag. This approach requires the Syncfusion.Blazor.Navigations package to use SfContextMenu.
+You can populate multilevel sub menu items in DropDown menu by using context menu in [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) directive tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -220,6 +228,6 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
 
 ```
 
-![Blazor dropdown menu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
+![Blazor DropDownMenu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

@@ -1,37 +1,37 @@
 ---
 layout: post
 title: Context Menu in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and customize context menu options in the Syncfusion Blazor TreeGrid component and much more.
+description: Checkout and learn here all about context menu in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Context Menu in Syncfusion Blazor TreeGrid Component
+# Context Menu in Blazor TreeGrid Component
 
-The TreeGrid supports displaying a context menu on right-click. To enable this feature, define default or custom items using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
+The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
 
-## Default Context Menu Items
+The following table lists the default context menu items,
 
-| Item | Description |
-|------|-------------|
-| `AutoFit` | Auto fit the current column |
-| `AutoFitAll` | Auto fit all columns |
-| `Edit` | Edit the current record |
-| `Delete` | Delete the current record |
-| `Save` | Save the edited record |
-| `Cancel` | Cancel the edited state |
-| `Copy` | Copy the selected records |
-| `PdfExport` | Export TreeGrid data as PDF |
-| `ExcelExport` | Export TreeGrid data as Excel |
-| `CsvExport` | Export TreeGrid data as CSV |
-| `SortAscending` | Sort the current column in ascending order |
-| `SortDescending` | Sort the current column in descending order |
-| `FirstPage` | Navigate to the first page |
-| `PrevPage` | Navigate to the previous page |
-| `LastPage` | Navigate to the last page |
-| `NextPage` | Navigate to the next page |
-| `AddRow` | Add a new row to the TreeGrid |
+Items |Description
+-----|-----
+`AutoFit` | Auto fit the current column.
+`AutoFitAll` | Auto fit all columns.
+`Edit` | Edit the current record.
+`Delete` | Delete the current record.
+`Save` | Save the edited record.
+`Cancel` | Cancel the edited state.
+`Copy` | Copy the selected records.
+`PdfExport` | Export the Tree Grid data as Pdf document.
+`ExcelExport` | Export the Tree Grid data as Excel document.
+`CsvExport` | Export the Tree Grid data as CSV document.
+`SortAscending` | Sort the current column in ascending order.
+`SortDescending` | Sort the current column in descending order.
+`FirstPage` | Go to the first page.
+`PrevPage` | Go to the previous page.
+`LastPage` | Go to the last page.
+`NextPage` | Go to the next page.
+`AddRow` | Add new row to the Tree Grid.
 
 The following sample code demonstrates enabling context menu with its default items,
 
@@ -60,7 +60,7 @@ The following sample code demonstrates enabling context menu with its default it
         public int Progress { get; set; }
         public string Priority { get; set; }
         public int? ParentId { get; set; }
-        public bool Approved { get; set; }
+        public Boolean Approved { get; set; }
     }
 
     public List<BusinessObject> TreeData = new List<BusinessObject>();
@@ -82,9 +82,9 @@ The following sample code demonstrates enabling context menu with its default it
 
 ![Blazor TreeGrid with Context Menu](images/blazor-treegrid-context-menu.png)
 
-## Custom Context Menu Items
+## Custom context menu items
 
-Add custom context menu items by setting [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) to a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects, and handle their actions in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event.
+The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event.
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event,
 

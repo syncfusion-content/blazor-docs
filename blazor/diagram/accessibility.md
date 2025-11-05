@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility Features in Blazor Diagram Component
 
-Accessibility in the Blazor Diagram component is achieved through compliance with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and supports keyboard navigation. This ensures that users can effectively interact with diagram features using assistive technologies such as screen readers.
+Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
 
-The accessibility compliance for the Blazor Diagram component is outlined below:
+The accessibility compliance for the Blazor diagram component is outlined below:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,14 +39,14 @@ The accessibility compliance for the Blazor Diagram component is outlined below:
 
 ## WAI-ARIA Attributes
 
-The Blazor Diagram component follows WAI-ARIA patterns to support accessibility. The following ARIA attributes are used in the Blazor Diagram component:
+The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Provides an accessible name for diagram objects. |
+| `aria-label` | Provides an accessible name for the Diagram Objects. |
 
 ### Aria-label
-The `aria-label` attribute provides a text label with a default description for the following elements in the diagram.
+The aria-label attribute provides the text label with some default description for below elements in diagram.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -96,20 +96,20 @@ The `aria-label` attribute provides a text label with a default description for 
 </tr>
 <tr>
 <td>RotateThumb</td>
-<td>Thumb to rotating the selected object.</td>
+<td>Thumb to rotate the selected object.</td>
 </tr>
 </table>
 
 ## Keyboard Shortcuts and Navigations
 
-The Blazor Diagram component supports the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported.
+The Blazor Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Diagram component.
 
 | Windows | Mac | Description |
 |-----|-----| ---- |
 |<kbd>Ctrl+C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected diagram elements to the clipboard.|
 |<kbd>Ctrl+X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected diagram elements to the clipboard.|
 |<kbd>Ctrl+V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste the diagram elements from the clipboard.|
-|<kbd>Ctrl+A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Select all diagram elements.|
+|<kbd>Ctrl+A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Select all the diagram elements.|
 |<kbd>Delete</kbd> | <kbd>Delete</kbd> | Delete the selected diagram elements.|
 |<kbd>Ctrl+P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Print the diagram page.|
 |<kbd>Ctrl+Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the last action.|
@@ -135,8 +135,8 @@ The Blazor Diagram component supports the [keyboard interaction](https://www.w3.
 |<kbd>Ctrl+Shift+V</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> | Align the selected text to the bottom vertically.|
 |<kbd>Ctrl+G</kbd> or <kbd>Ctrl+Shift+G</kbd> | <kbd>⌘</kbd> + <kbd>G</kbd> or <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>G</kbd> | Group selected shapes together, treating them as a single shape.|
 |<kbd>Ctrl+Shift+U</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> | Ungroup shapes within a previously grouped selection.|
-|<kbd>Ctrl+Shift+F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> | Bring the selected element forward in the stacking order.|
-|<kbd>Ctrl+Shift+B</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd>| Send the selected element backward in the stacking order.|
+|<kbd>Ctrl+Shift+F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> | Bring the selected shape forward in the stacking order.|
+|<kbd>Ctrl+Shift+B</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd>| Send the selected shape backward in the stacking order.|
 |<kbd>Ctrl+]</kbd> | <kbd>⌘</kbd> + <kbd>]</kbd> | Move the selected node, connector, and group over the nearest overlapping node, connector, or group.|
 |<kbd>Ctrl+[</kbd> | <kbd>⌘</kbd> + <kbd>[</kbd> | Move the selected node, connector, and group behind the underlying node, connector, or group.|
 |<kbd>Ctrl+L</kbd> | <kbd>⌘</kbd> + <kbd>L</kbd> | Rotate the selected nodes counterclockwise.|
@@ -159,9 +159,9 @@ N> You can download a complete working sample for keyboard navigation from [GitH
 
 ## How to Ensure Accessibility
 
-The Blazor Diagram component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor diagram component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Diagram component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/diagram) in a new window to evaluate its accessibility of the Blazor diagram component with accessibility tools.
+The accessibility compliance of the Blazor diagram component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/diagram) in a new window to evaluate the accessibility of the Blazor diagram component with accessibility tools.
 
 ## See also
 

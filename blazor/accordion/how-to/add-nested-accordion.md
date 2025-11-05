@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Nested Accordion in Blazor Accordion Component | Syncfusion
-description: Learn the straightforward method for implementing nested Accordions within the Syncfusion Blazor Accordion component using the ContentTemplate property, with code examples and best practices.
+description: Checkout and learn here all about how to add Nested Accordion in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,14 +9,8 @@ documentation: ug
 
 # Add Nested Accordion in Blazor Accordion Component
 
-The Accordion component supports to render the nested level of Accordion by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property.
-## Implementing Nested Accordions
+The Accordion component supports to render the nested level of Accordion by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. To render the nested Accordion, define the nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
 
-To achieve nesting, you simply include a complete `<SfAccordion>` component inside the `<ContentTemplate>` of an `AccordionItem` that belongs to a parent `SfAccordion`. Each nested `SfAccordion` functions independently, allowing for distinct content and structure at each level.
-
-### Example: Multiple Levels of Nesting
-
-This example demonstrates how to create a two-level nested Accordion structure.
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
@@ -24,7 +18,6 @@ This example demonstrates how to create a two-level nested Accordion structure.
     <AccordionItems>
         <AccordionItem Header="Video">
             <ContentTemplate>
-                <!-- First level nested Accordion -->
                 <SfAccordion>
                     <AccordionItems>
                         <AccordionItem Header="Video Track1"></AccordionItem>
@@ -35,14 +28,12 @@ This example demonstrates how to create a two-level nested Accordion structure.
         </AccordionItem>
         <AccordionItem Header="Music">
             <ContentTemplate>
-                <!-- First level nested Accordion -->
                 <SfAccordion>
                     <AccordionItems>
                         <AccordionItem Header="Music Track1"></AccordionItem>
                         <AccordionItem Header="Music Track2"></AccordionItem>
                         <AccordionItem Header="Music New">
                             <ContentTemplate>
-                                 <!-- Second level nested Accordion -->
                                 <SfAccordion>
                                     <AccordionItems>
                                         <AccordionItem Header="New Track1"></AccordionItem>
@@ -57,7 +48,6 @@ This example demonstrates how to create a two-level nested Accordion structure.
         </AccordionItem>
         <AccordionItem Header="Images">
             <ContentTemplate>
-                <!-- First level nested Accordion -->
                 <SfAccordion>
                     <AccordionItems>
                         <AccordionItem Header="Track1"></AccordionItem>

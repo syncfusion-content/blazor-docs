@@ -15,9 +15,7 @@ N> All the events should be provided in a single **TreeViewEvents** component.
 
 ## Created 
 
-## Created Event
-
-The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the TreeView component has been successfully created and rendered.
+The Blazor TreeView component's [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the TreeView has been successfully created
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -82,9 +80,9 @@ The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 
 ```
 
-## DataBound Event
+## DataBound
 
-The [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event is triggered after the data source has been fully populated within the TreeView.
+The Blazor TreeView's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event is triggered once the data source has been populated within the TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -149,9 +147,9 @@ The [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ```
 
-## DataSourceChanged Event
+## DataSourceChanged
 
-The [`DataSourceChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataSourceChanged) event fires whenever changes occur in the TreeView's data source. This includes modifications resulting from drag-and-drop operations, node editing, adding new nodes, or removing nodes.
+The [DataSourceChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataSourceChanged) event in the Blazor TreeView is triggered whenever there is a change in the data source, such as through drag and drop, node editing, adding or removing a node in the TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -216,9 +214,9 @@ The [`DataSourceChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-## Destroyed Event
+## Destroyed
 
-The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Destroyed) event is triggered when the TreeView component is completely disposed of.
+The Blazor TreeView's [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Destroyed) event is triggered when the TreeView component is completely destroyed, allowing you to confirm its destruction.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -283,9 +281,9 @@ The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ```
 
-## NodeChecked Event
+## NodeChecked
 
-The [`NodeChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecked) event fires whenever a TreeView node's checkbox state changes (checked or unchecked).
+The Blazor TreeView [NodeChecked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecked) event is triggered whenever a TreeView node is successfully checked or unchecked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -350,9 +348,9 @@ The [`NodeChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navi
 
 ```
 
-## NodeChecking Event
+## NodeChecking 
 
-The [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event is triggered *before* a TreeView node's checkbox state changes.
+The Blazor TreeView [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event is triggered before a TreeView node is checked or unchecked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -417,7 +415,7 @@ The [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 ```
 
-## NodeClicked Event
+## NodeClicked 
 
 The Blazor TreeView component's [NodeClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event is triggered when a TreeView node is successfully clicked.
 
@@ -484,9 +482,9 @@ The Blazor TreeView component's [NodeClicked](https://help.syncfusion.com/cr/bla
 
 ```
 
-## NodeCollapsed Event
+## NodeCollapsed 
 
-The [`NodeCollapsed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsed) event is triggered after a TreeView node has successfully collapsed.
+The Blazor TreeView component's [NodeCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsed) event is triggered when a node collapses successfully.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -551,9 +549,10 @@ The [`NodeCollapsed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-## NodeCollapsing Event
+## NodeCollapsing
 
-The [`NodeCollapsing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsing) event is triggered *before* a TreeView node collapses.
+
+The Blazor TreeView component's [NodeCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsing) event is triggered before the TreeView node collapses.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -618,9 +617,9 @@ The [`NodeCollapsing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
 
 ```
 
-## NodeDropped Event
+## NodeDropped
 
-The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event fires upon the successful completion of a drag-and-drop operation, meaning a node has been dropped onto a target element.
+The Blazor TreeView component's [NodeDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event is triggered upon successful dropping of a TreeView node onto a target element.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -685,9 +684,9 @@ The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navi
 
 ```
 
-## NodeEdited Event
+## NodeEdited
 
-The [`NodeEdited`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEdited) event is triggered after a TreeView node's text has been successfully renamed. 
+The [NodeEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEdited) event in the Blazor TreeView component is triggered once the TreeView node has been successfully renamed.
 
 ```cshtml 
 @using Syncfusion.Blazor.Navigations
@@ -752,9 +751,9 @@ The [`NodeEdited`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
 
 ```
 
-## NodeEditing Event
+## NodeEditing
 
-The [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event is triggered *before* a TreeView node is renamed.
+The Blazor TreeView component's [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event is triggered before the TreeView node is renamed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -819,9 +818,9 @@ The [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navi
 
 ```
 
-## NodeExpanded Event
+## NodeExpanded
 
-The [`NodeExpanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanded) event fires after a TreeView node has successfully expanded.
+The Blazor TreeView component's [NodeExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanded) event is triggered upon successful expansion of a TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -886,9 +885,9 @@ The [`NodeExpanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 ```
 
-## NodeExpanding Event
+## NodeExpanding
 
-The [`NodeExpanding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanding) event is triggered *before* a TreeView node is expanded. 
+The Blazor TreeView component [NodeExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanding) event is triggered before the TreeView node is to be expanded.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -953,9 +952,9 @@ The [`NodeExpanding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-## NodeSelected Event
+## NodeSelected
 
-The [`NodeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelected) event fires when a TreeView node is successfully selected or deselected.
+The Blazor TreeView component [NodeSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelected) event is triggered when the TreeView node is selected/unselected successfully.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1020,9 +1019,9 @@ The [`NodeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 ```
 
-## NodeSelecting Event
+## NodeSelecting
 
-The [`NodeSelecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event is triggered *before* a TreeView node is selected or deselected.
+The Blazor TreeView component [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event is triggered  before the TreeView node is selected/unselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1087,7 +1086,7 @@ The [`NodeSelecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-## OnActionFailure Event
+## OnActionFailure
 
 The Blazor TreeView component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnActionFailure) event is triggered when any TreeView action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample provided, an incorrect URL has been given, causing the `OnActionFailure` event to be thrown.
 
@@ -1144,9 +1143,9 @@ The Blazor TreeView component's [OnActionFailure](https://help.syncfusion.com/cr
 
 ```
 
-## OnKeyPress Event
+## OnKeyPress
 
-The [`OnKeyPress`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnKeyPress) event is triggered whenever a key is pressed while the TreeView has focus.
+The [OnKeyPress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnKeyPress) event of the Blazor TreeView component is triggered upon successful key press.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1211,9 +1210,9 @@ The [`OnKeyPress`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
 
 ```
 
-## OnNodeDragged Event
+## OnNodeDragged
 
-The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event is triggered continuously while a node is being dragged within the TreeView.
+The [OnNodeDragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event in the Blazor TreeView component is triggered whenever a node in the TreeView is dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1278,9 +1277,9 @@ The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-## OnNodeDragStart Event
+## OnNodeDragStart 
 
-The [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event is triggered just before a dragging (movement) action begins for a node within the TreeView.
+The [OnNodeDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event of the Blazor TreeView component is triggered when the dragging (movement) of a node within the TreeView begins.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1345,9 +1344,9 @@ The [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-## OnNodeDragStop Event
+## OnNodeDragStop
 
-The [`OnNodeDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStop) event is triggered when the dragging of a TreeView node has concluded (i.e., the node has been dropped).
+The [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStop) event of the Blazor TreeView component is triggered when the dragging of a TreeView node has stopped.
 
 ```cshtml 
 @using Syncfusion.Blazor.Navigations
@@ -1412,7 +1411,7 @@ The [`OnNodeDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
 
 ```
 
-## OnNodeRender Event
+## OnNodeRender
 
 The [OnNodeRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeRender) event of the Blazor TreeView component triggers before the TreeView node is appended to the TreeView element.
 

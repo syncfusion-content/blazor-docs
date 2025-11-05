@@ -395,7 +395,7 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 
 ### Spacer
 
-N> Refer [Align Items Using Spacer](./align-items-using-spacer.md) to integrate the spacer in the Toolbar component.
+N> Refer [Align Items Using Spacer](./align-items-using-spacer) to integrate the spacer in the Toolbar component.
 
 ## Visible
 

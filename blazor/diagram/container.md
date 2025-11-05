@@ -9,14 +9,14 @@ documentation: ug
 
 # Container in Blazor Diagram Component
 
-Containers provide a structured way to organize and manage collections of diagram elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
+Containers provide a powerful way to organize and manage collections of diagram elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
 
 ## How to Create a Container
-A container can be created and added to the diagram either programmatically or interactively.
+A container can be created and added to the diagram, either programmatically or interactively.
 
 ### How to Add a Container
 
-To create a container, define a [Container](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html) object and add it to the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) collection of the diagram. The following code illustrates how to create a container node.
+To create a container, you have to define the [Container](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html) object and add it to the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) collection of the diagram. The following code illustrates how to create a Container Node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -42,12 +42,10 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBICtDmzpHBjmkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
 
 
->**Note:** The container ID should be unique, begin with a letter, and not contain spaces or special characters (such as underscores or symbols).
+>**Note:** Container's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ### How to Add Elements to a Container
 
@@ -103,15 +101,14 @@ To add child elements to a container, define the child nodes and assign their ID
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLeijXGTpdvrBys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerSample).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerSample).
 
 ### How to Customize Container Header
 
-Containers can include descriptive text to identify their purpose or contents through the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html#Syncfusion_Blazor_Diagram_Container_Header) property. This enhances readability by providing clear labels for grouped elements. The header's visual presentation is fully customizable using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContainerHeader.html#Syncfusion_Blazor_Diagram_ContainerHeader_Style) property.  
+Containers can include descriptive text to identify their purpose or contents through the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html#Syncfusion_Blazor_Diagram_Container_Header) property. This feature enhances diagram readability by providing clear labels for grouped elements. The header's visual presentation is fully customizable using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContainerHeader.html#Syncfusion_Blazor_Diagram_ContainerHeader_Style) property.  
 
-The following example shows how to define a container header and customize its appearance.
+The following code example explains how to define a container header and its customization:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -180,19 +177,18 @@ The following example shows how to define a container header and customize its a
     }
 } 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIMXZmTTwgGvNM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerHeaderSample).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerHeaderSample).
 
 ![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
 
->Note: Edit the header by double-clicking the header region, or by pressing F2.
+>Note: You can edit the header by double-clicking the region of the container’s header, or by pressing F2.
 
 ### How to Add Containers to the Symbol Palette
 
-Container nodes can be predefined and added to the symbol palette for quick and consistent reuse throughout diagrams. Drag the predefined containers from the palette and drop them into the diagram to instantiate them.
+Container nodes can be predefined and added to the symbol palette, allowing for quick and consistent reuse throughout your diagrams. When needed, you can simply drag these predefined containers from the palette and drop them directly into your diagram. 
 
-The following code example shows how to define containers and add them to the symbol palette.
+The following code example explains how to define a container and add it to the symbol palette:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -276,24 +272,22 @@ The following code example shows how to define containers and add them to the sy
       }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreMNtcpzlVcyaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerPalette).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerPalette).
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
 ## How to Interactively Add or Remove Diagram Elements into Container
 
-Diagram elements can be added to or removed from a container at runtime. When an element is dropped onto the container's edges, the container automatically adjusts its size to accommodate the new element.
+Diagram elements can be added or removed from a container at runtime. When an element is dropped onto the container's edges, the container automatically adjusts its size to accommodate the new element.
 
 ![Blazor Diagram Container Interaction](images/ContainerImages/ContainerInteraction.gif)
 
 ## Interaction
 
-Diagram supports selecting, dragging, and resizing containers interactively.. 
+Diagram provides support to select, drag or resize the container interactively. 
 
 ### How to Select a Container 
-A container can be selected by clicking (or tapping) it. It can also be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method, and selection can be cleared by using [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
+Container can be selected by clicking (tapping) on it. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
 ![Blazor Diagram Container Selection](images/ContainerImages/ContainerSelection.png)
 
@@ -308,8 +302,8 @@ A container can be selected by clicking (or tapping) it. It can also be selected
 ### How to Resize a Container
 
 * A selected container is surrounded by eight resize thumbs. Dragging these thumbs adjusts the container’s size.
-* When one corner is dragged, the opposite corner remains fixed.
+* When dragging one corner, the opposite corner remains fixed.
 * To maintain the container's aspect ratio during resizing, enable the [AspectRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AspectRatio) constraint in NodeConstraints.
-* A container can be resized by using the selector or by moving child nodes toward the container edge. If a child node reaches the container edge, the container is resized automatically.
+* A container can be resized either by resizing the selector or the tight bounds of the child object. If the child node moves to the edge of the container, it will be automatically resized.
 
 ![Blazor Diagram Resize Container](images/ContainerImages/ContainerResize.gif)

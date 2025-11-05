@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Types in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn about all the available axis types in the Syncfusion Blazor Stock Chart component.
+description: Checkout and learn here all about axis types in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -13,10 +13,9 @@ documentation: ug
 
 ## DateTime Axis
 
-The DateTime axis uses a time-based scale and renders date-time values as axis labels in the specified format. Set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to DateTime.
+Date time axis uses date time scale and displays the date time values as axis labels in the specified format and set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to DateTime.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -29,37 +28,34 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
     </StockChartSeriesCollection>
 </SfStockChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime Date { get; set; }
         public Double Y { get; set; }
     }
-
     public List<ChartData> StockDetails = new List<ChartData>
-    {
-        new ChartData { Date = new DateTime(2012, 04, 02), Y = 100 },
-        new ChartData { Date = new DateTime(2012, 04, 09), Y = 10 },
-        new ChartData { Date = new DateTime(2012, 04, 16), Y = 500 },
-        new ChartData { Date = new DateTime(2012, 04, 23), Y = 80 },
-        new ChartData { Date = new DateTime(2012, 04, 30), Y = 200 },
-        new ChartData { Date = new DateTime(2012, 05, 07), Y = 600 },
-        new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
-        new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
-        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90}
+{
+        new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
+        new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
+        new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
+        new ChartData { Date = new DateTime(2012, 04, 23), Y= 80},
+        new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
+        new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
+        new ChartData { Date = new DateTime(2012, 05, 14), Y= 50},
+        new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
+        new ChartData { Date = new DateTime(2012, 05, 28), Y= 90}
    };
 }
-
 ```
 
 ![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.png)
 
 ## DateTimeCategory Axis
 
-The DateTimeCategory axis displays only business days by skipping non-trading dates. To enable it, set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory).
+DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory).
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 @using System.Dynamic
 
@@ -78,17 +74,16 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
 
 @code {
     private List<DateTime> Dates = new List<DateTime> 
-    {  
-        new DateTime(2021, 01, 11), new DateTime(2021, 01, 12), new DateTime(2021, 01, 13), new DateTime(2021, 01, 14), new DateTime(2021, 01, 15), 
-        new DateTime(2021, 01, 19), new DateTime(2021, 01, 20), new DateTime(2021, 01, 21), new DateTime(2021, 01, 22), new DateTime(2021, 03, 01), 
-        new DateTime(2021, 03, 02), new DateTime(2021, 04, 01),new DateTime(2021, 04, 05), new DateTime(2021, 04, 06),new DateTime(2021, 04, 07), 
-        new DateTime(2021, 04, 11), new DateTime(2021, 04, 13), new DateTime(2021, 04, 15), new DateTime(2021, 04, 16), new DateTime(2021, 04, 17), 
-        new DateTime(2021, 04, 18), new DateTime(2021, 04, 20), new DateTime(2021, 04, 21), new DateTime(2021, 04, 23), new DateTime(2021, 04, 25), 
-        new DateTime(2021, 05, 01), new DateTime(2021, 05, 02), new DateTime(2021, 05, 06), new DateTime(2021, 05, 07),new DateTime(2021, 05, 08), 
-        new DateTime(2021, 05, 11), new DateTime(2021, 05, 15), new DateTime(2021, 05, 18), new DateTime(2021, 05, 20), new DateTime(2021, 05, 25), 
-        new DateTime(2021, 06, 01), new DateTime(2021, 06, 02), new DateTime(2021, 06, 03), new DateTime(2021, 06, 04),new DateTime(2021, 06, 05), 
-        new DateTime(2021, 06, 10), new DateTime(2021, 06, 11), new DateTime(2021, 06, 12), new DateTime(2021, 06, 13), new DateTime(2021, 06, 15), 
-        new DateTime(2021, 06, 16), new DateTime(2021, 06, 17), new DateTime(2021, 06, 18), new DateTime(2021, 06, 19), new DateTime(2021, 06, 20)
+    {   new DateTime(2021, 01, 11),new DateTime(2021, 01, 12),new DateTime(2021, 01, 13),new DateTime(2021, 01, 14),new DateTime(2021, 01, 15), 
+        new DateTime(2021, 01, 19),new DateTime(2021, 01, 20),new DateTime(2021, 01, 21),new DateTime(2021, 01, 22),new DateTime(2021, 03, 01),
+        new DateTime(2021, 03, 02),new DateTime(2021, 04, 01),new DateTime(2021, 04, 05),new DateTime(2021, 04, 06),new DateTime(2021, 04, 07),
+        new DateTime(2021, 04, 11),new DateTime(2021, 04, 13),new DateTime(2021, 04, 15),new DateTime(2021, 04, 16),new DateTime(2021, 04, 17),
+        new DateTime(2021, 04, 18),new DateTime(2021, 04, 20),new DateTime(2021, 04, 21),new DateTime(2021, 04, 23),new DateTime(2021, 04, 25),
+        new DateTime(2021, 05, 01),new DateTime(2021, 05, 02),new DateTime(2021, 05, 06),new DateTime(2021, 05, 07),new DateTime(2021, 05, 08),
+        new DateTime(2021, 05, 11),new DateTime(2021, 05, 15),new DateTime(2021, 05, 18),new DateTime(2021, 05, 20),new DateTime(2021, 05, 25),
+        new DateTime(2021, 06, 01),new DateTime(2021, 06, 02),new DateTime(2021, 06, 03),new DateTime(2021, 06, 04),new DateTime(2021, 06, 05),
+        new DateTime(2021, 06, 10),new DateTime(2021, 06, 11),new DateTime(2021, 06, 12),new DateTime(2021, 06, 13),new DateTime(2021, 06, 15),
+        new DateTime(2021, 06, 16),new DateTime(2021, 06, 17),new DateTime(2021, 06, 18),new DateTime(2021, 06, 19),new DateTime(2021, 06, 20)
     };
 
     public DateTime[] Value = new DateTime[] { new DateTime(2021, 01, 01), new DateTime(2022, 01, 01) };
@@ -119,7 +114,6 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
         }
     }
 }
-
 ```
 
 ![Blazor Stock Chart with DateTimeCategory Axis](images/common/blazor-stock-chart-datetimecategory-axis.png)
@@ -128,10 +122,9 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
 
 <!-- markdownlint-disable MD033 -->
 
-The Logarithmic axis uses a logarithmic scale and is useful when data spans multiple orders of magnitude (e.g., 10<sup>-6</sup> to 10<sup>6</sup>). Set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to `Logarithmic`.
+Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>) and set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to `Logarithmic`.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -145,26 +138,25 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
     </StockChartSeriesCollection>
 </SfStockChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime Date { get; set; }
         public Double Y { get; set; }
     }
     public List<ChartData> StockDetails = new List<ChartData>
-    {
-        new ChartData { Date = new DateTime(2012, 04, 02), Y = 100 },
-        new ChartData { Date = new DateTime(2012, 04, 09), Y = 10 },
-        new ChartData { Date = new DateTime(2012, 04, 16), Y = 500 },
-        new ChartData { Date = new DateTime(2012, 04, 23), Y = 80 },
-        new ChartData { Date = new DateTime(2012, 04, 30), Y = 200 },
-        new ChartData { Date = new DateTime(2012, 05, 07), Y = 600 },
-        new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
-        new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
-        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
+{
+        new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
+        new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
+        new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
+        new ChartData { Date = new DateTime(2012, 04, 23), Y= 80},
+        new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
+        new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
+        new ChartData { Date = new DateTime(2012, 05, 14), Y= 50},
+        new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
+        new ChartData { Date = new DateTime(2012, 05, 28), Y= 90}
    };
 }
-
 ```
 
 ![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.png)

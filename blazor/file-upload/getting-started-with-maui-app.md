@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor File Upload Component
 
-This section guides you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
+This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -25,7 +25,7 @@ You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](h
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the app
 
-To add **Blazor File Upload** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor File Upload**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}

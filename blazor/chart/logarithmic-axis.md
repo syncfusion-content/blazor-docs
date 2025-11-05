@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logarithmic Axis in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize logarithmic axis in the Syncfusion Blazor Charts component.
+description: Checkout and learn here all about Logarithmic Axis in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-Use a logarithmic axis when data spans several orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). This scale helps visualize both small and large values on the same chart.
+When data contains numeric values in both the lower order of magnitude (eg: 10<sup>-6</sup>) and the upper order of magnitude (eg: 10<sup>6</sup>), a logarithmic axis is highly useful in visualizing it.
 
-Logarithmic axis customization in the Syncfusion Blazor Charts component can also be explored through the video linked below.
+You can learn how to customize the logarithmic axis by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_67hCchVOu4" %}
 
@@ -22,12 +22,12 @@ Logarithmic axis customization in the Syncfusion Blazor Charts component can als
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" />
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
     </ChartSeriesCollection>
 </SfChart>
 
@@ -38,7 +38,7 @@ Logarithmic axis customization in the Syncfusion Blazor Charts component can als
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -46,30 +46,30 @@ Logarithmic axis customization in the Syncfusion Blazor Charts component can als
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSZYVBgIGRCwEf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLAMLhHLhczYuye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Logarithmic Axis](images/logarithmic-axis/blazor-chart-logarithmic-axis.png)
 
 ## Range
 
-The axis range is calculated automatically based on the data. You can also customize it using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
+The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
     
-    <ChartPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" />
+    <ChartPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue"/>
     </ChartSeriesCollection>
 </SfChart>
 
@@ -80,7 +80,7 @@ The axis range is calculated automatically based on the data. You can also custo
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -88,30 +88,30 @@ The axis range is calculated automatically based on the data. You can also custo
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthyDkBBUHWqIFjh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrqChBHBgilgqlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Line Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
 
 ## Logarithmic base
 
-Customize the logarithmic base using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LogBase) property of the axis. For example, when the base is b, labels appear at b<sup>-2</sup>, b<sup>-1</sup>, b<sup>0</sup>, b<sup>1</sup>, b<sup>2</sup>, and so on.
+Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LogBase) property of the axis. When the LogBase is 5, the axis values are 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> and so on.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" />
+    <ChartPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
     </ChartSeriesCollection>
 </SfChart>
 
@@ -122,7 +122,7 @@ Customize the logarithmic base using the [LogBase](https://help.syncfusion.com/c
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -130,30 +130,30 @@ Customize the logarithmic base using the [LogBase](https://help.syncfusion.com/c
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVStarrqHLexrXV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVKWVLHhgBMKubZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-line-chart-logarithmic-axis-with-base.png)
 
 ## Logarithmic interval
 
-Customize the interval using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) property. For example, when the logarithmic base is **10** and the interval is **2**, labels are placed at powers of 10<sup>2</sup>. The default interval value is **1**.
+The interval can be customized using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) property of the logarithmic axis. When the logarithmic base is **10** and logarithmic interval is **2**, then the axis labels are placed at an interval of **10<sup>2</sup>**. The default value of the interval is **1**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" />
+    <ChartPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
     </ChartSeriesCollection>
 </SfChart>
 
@@ -164,7 +164,7 @@ Customize the interval using the [Interval](https://help.syncfusion.com/cr/blazo
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -172,30 +172,30 @@ Customize the interval using the [Interval](https://help.syncfusion.com/cr/blazo
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLyNkhVqxzKfiiT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqMhVdrUVPPtnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Changing Blazor Line Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-line-chart-axis-based-on-interval.png)
+![Changing Blazor Line Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
 
 ## Label format
 
-Use the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property to format logarithmic labels using standard .NET globalization formats.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format the logarithmic labels to all globalize formats.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis LabelFormat="P1" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" />
+    <ChartPrimaryYAxis LabelFormat="P1" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
     </ChartSeriesCollection>
 </SfChart>
 
@@ -206,7 +206,7 @@ Use the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -214,15 +214,15 @@ Use the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVoNEhhqnQneEcH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Line Chart Logarithmic Axis with Label Format](images/logarithmic-axis/blazor-line-chart-axis-with-label-format.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBUWrVHBqKsJuuA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The table below shows the results of applying some commonly used label formats to logarithmic values.
 
@@ -257,49 +257,47 @@ The table below shows the results of applying some commonly used label formats t
 <td>0.01</td>
 <td>p1</td>
 <td>1.0%</td>
-<td>The value is converted to a percentage with 1 decimal place.</td>
+<td>The value is converted to percentage with 1 decimal place.</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p2</td>
 <td>1.00%</td>
-<td>The value is converted to a percentage with 2 decimal places.</td>
+<td>The value is converted to percentage with 2 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p3</td>
 <td>1.000%</td>
-<td>The value is converted to a percentage with 3 decimal places.</td>
+<td>The value is converted to percentage with 3 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c1</td>
 <td>$1000.0</td>
-<td>The currency symbol is appended and the number is rounded to 1 decimal place.</td>
+<td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c2</td>
 <td>$1000.00</td>
-<td>The currency symbol is appended and the number is rounded to 2 decimal places.</td>
+<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
 </tr>
 </table>
 
 ## Custom label format
 
-The axis also supports custom label formats using placeholders such as {value}K, where value represents the axis label (for example, 200K).
+Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
 
 ```cshtml
 
-@using Syncfusion.Blazor.Charts
-
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" LabelFormat="${value}K" RangePadding="ChartRangePadding.Auto" />
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" LabelFormat="${value}K" RangePadding="ChartRangePadding.Auto"/> 
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />
+        <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
     </ChartSeriesCollection>
 </SfChart>
 
@@ -310,7 +308,7 @@ The axis also supports custom label formats using placeholders such as {value}K,
         public double YValue { get; set; }
     }
 
-    public List<ChartData> Data = new List<ChartData>
+    public List<ChartData> Data = new List<ChartData> 
 	{
 		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 100   },
 		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 200   },
@@ -318,12 +316,12 @@ The axis also supports custom label formats using placeholders such as {value}K,
 		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 1000  },
 		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 8000  },
 		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 90000 },
-		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 }
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 99000 },
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVyDarLAGtUafbP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrAMhrnBgqGAVip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart Logarithmic Axis with Custom Label Format](images/logarithmic-axis/blazor-line-chart-axis-custom-label-format.png)
 

@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Clipboard in Blazor TreeGrid Component | Syncfusion
-description: Learn how to use clipboard features in the Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about clipboard in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Clipboard in Syncfusion Blazor TreeGrid Component
+# Clipboard in Blazor TreeGrid Component
 
-The clipboard feature allows copying selected rows or cell data from the TreeGrid. 
+The clipboard provides an option to copy selected rows or cells data into the clipboard.
 
 The following list of keyboard shortcuts is supported in the Tree Grid to copy selected rows or cells data into the clipboard.
 
@@ -189,14 +189,15 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-The TreeGrid supports multiple copy hierarchy modes using the [CopyHierarchMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property.
+Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the Tree Grid.
 
-| Mode | Description |
-|------|-------------|
-| **Parent** | Copies selected records along with their parent records |
-| **Child** | Copies selected records along with their child records |
-| **Both** | Copies selected records with both parent and child records |
-| **None** | Copies only the selected records |
+* **Parent** : This is the default copy hierarchy mode in the Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
+
+* **Child** : Clipboard value will have the selected records with its child record. If the selected records do not have any child record then the selected records will be in clipboard.
+
+* **Both** : Clipboard value will have the selected records with its both parent and child record. If the selected records do not have any parent and child record then the selected records alone are copied to the clipboard.
+
+* **None** : Only the selected records will be in the clipboard.
 
 {% tabs %}
 
@@ -383,18 +384,14 @@ namespace TreeGridComponent.Data {
 
 ### Limitations of Paste Functionality
 
-- String values pasted into number-type cells will display as **NaN**
-- String values pasted into date-type cells will display as **empty cells**
-- Sequential data generation is not supported
+* Since the string values are not pasted to number and date type, so when the copied string type cells are pasted to number type cells, then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells, then it will be displayed as an **empty cell**.
 
-## Clipboard Events
+## Clipboard events
 
-The following events are triggered during clipboard operations:
+Events are triggered when performing a copy or paste action on TreeGrid.
 
-* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : Triggered before copying or pasting; can cancel the action.
+* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : This event is triggered before the cell is copied or pasted in the tree grid cell, and you can cancel the entire copy or paste action by using this event.
 
-* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered before pasting each cell; can cancel or modify the value.
+* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : This event is triggered before pasting the copied cell value for each cell, and you can cancel the pasting action for a particular cell or change the value by using this event.
 
-> For more details, refer to:
-> - [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste)
-> - [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste)
+> To know more, you can refer the [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste) and [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste) events.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Accumulation Chart Component | Syncfusion
-description: Check out and learn how to configure and control Animation in Syncfusion Blazor Accumulation Chart component.
+description: Checkout and learn here all about Animation in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,10 +9,9 @@ documentation: ug
 
 # Animation in Blazor Accumulation Chart Component
 
-Customize series animation using the [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html) property. Enable or disable series animation with the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Enable) property. The [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Duration) property sets the animation duration, and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Delay) specifies when the animation should start.
+You can customize animation for a series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Enable) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Duration) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Delay) allows us to start the animation at desire time.
 
-```cshtml
-
+```cshtml 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -27,7 +26,7 @@ Customize series animation using the [`Animation`](https://help.syncfusion.com/c
 
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser;
@@ -41,18 +40,16 @@ Customize series animation using the [`Animation`](https://help.syncfusion.com/c
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
-
 ```
 
-## Disable Animation on Programmatic Refresh
+## Disable animation on programmatic refresh
 
-Refresh the chart programmatically using the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Refresh_System_Boolean_) method. Control animation by passing a boolean parameter to the `Refresh` method.
+You can programmatically refrsh chart using [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Refresh_System_Boolean_) method. You can enable or disable animation by passing boolean parameter to `Refresh` method. 
 
-```cshtml
-
+```cshtml 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart @ref=accumulationChart Title="Mobile Browser Statistics">
@@ -64,7 +61,7 @@ Refresh the chart programmatically using the [Refresh](https://help.syncfusion.c
 </SfAccumulationChart>
 <button  @onclick="ButtonClick">Click me</button>
 
-@code {
+@code{
     SfAccumulationChart accumulationChart;
     public class Statistics
     {
@@ -87,9 +84,6 @@ Refresh the chart programmatically using the [Refresh](https://help.syncfusion.c
       accumulationChart.Refresh(false);
     }         
 }
-
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAWrMgzIuHCzXH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
