@@ -616,11 +616,11 @@ public class OrderData
 
 For remote data, sorting is supported when the foreign key column is bound to a remote service using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The sorting behavior depends on the capabilities of the remote service:
 
-- If the remote service (e.g., OData) supports sorting on the display field (e.g., FirstName), the grid will sort based on that field when the column header is clicked.
-- Ensure that the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) is correctly mapped to the display field.
+- If the remote service (e.g., OData) supports sorting on the display text field (such as FirstName), the grid will sort based on that text when the column header is clicked.
+- Ensure that the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property is correctly mapped to the display text field.
 - Sorting works best with single-column sorting and may require server-side support for complex sorting scenarios.
 
-In this configuration, the **FirstName** field is used as the display text for the **EmployeeID** foreign key column:
+In this configuration, the **FirstName** field is used as the display text for the **EmployeeID** foreign key column, so sorting will occur based on **FirstName**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -644,8 +644,8 @@ In this configuration, the **FirstName** field is used as the display text for t
             </SfDataManager>
         </GridForeignColumn>
 
-        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
