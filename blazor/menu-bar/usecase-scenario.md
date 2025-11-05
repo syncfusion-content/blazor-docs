@@ -11,9 +11,7 @@ documentation: ug
 
 ## Scrollable Menu Bar
 
-The Blazor Menu Bar component supports both horizontal and vertical scrolling, allowing for the display of extensive menus or sub-menus within a constrained space. This adaptive behavior is achieved by enabling the [`EnableScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html) property and explicitly defining the dimensions of the Menu Bar or its sub-menus using CSS.
-
-When `EnableScrolling` is set to `true`, scrolling will activate if the content exceeds the defined width (for horizontal) or height (for vertical) of the menu container.
+The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
 
 ```cshtml
 
@@ -75,12 +73,9 @@ When `EnableScrolling` is set to `true`, scrolling will activate if the content 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhoiXjqBqzzFbSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Scroller](./images/blazor-menubar-scroller.png)
 
 ## Hamburger Menu
-
-The Menu Bar can transform into a compact hamburger icon, typically used in responsive designs to save space. Enabling the [`HamburgerMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) property activates this behavior. The menu will render as a hamburger icon, and when clicked, it will open the menu items as an overlay.
 
 The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) mode.
 
@@ -145,12 +140,11 @@ The following example demonstrates the use case of [HamburgerMenu](https://help.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBesttKLgyPaDiS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Hamburger Menu](./images/blazor-menubar-with-hamburger-menu.png)
 
 ## Mobile View
 
-To effectively demonstrate the Menu Bar component's responsive behavior in a mobile context, the following example wraps the component within a simulated mobile device frame. This allows for visualizing how the `HamburgerMode` property adapts the menu for smaller screens, making it ideal for mobile applications.
+The following example demonstrates the use case of Menu Bar in Mobile mode with hamburger.
 
 ```cshtml
 
@@ -290,5 +284,4 @@ To effectively demonstrate the Menu Bar component's responsive behavior in a mob
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhSCNjKBgmWCByw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ![Blazor MenuBar with Mobile View](./images/blazor-menubar-mobile-view.png)

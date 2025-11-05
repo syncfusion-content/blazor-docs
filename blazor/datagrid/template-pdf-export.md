@@ -353,17 +353,21 @@ In the following example:
         <GridColumn Field=@nameof(ProductData.Status) HeaderText="Status" Width="180"></GridColumn>
     </GridColumns>
 </SfGrid>
-<style type="text/css" class="cssStyles">.detailtable td {
-  font-size: 13px;
-  padding: 4px;
-  max-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: normal;
-}
 
-</style>@code {
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+
+</style>
+
+@code {
 
   SfGrid<ProductData>DefaultGrid;
 

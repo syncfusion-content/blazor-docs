@@ -9,10 +9,11 @@ documentation: ug
 
 # Formatting in Blazor Range Slider Component
 
-The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) feature is used to customize the units and appearance of slider values. Formatted values are also applied to the ARIA attributes of the slider to ensure accessible output. There are two ways to apply formatting in the slider.
+The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 
-* Use the `Format` API of the slider, which leverages the built-in internationalization and .NET standard format strings.
-* Customize formatting using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events.
+* Use the `Format` API of slider which utilizes our **Internationalization** to format values.
+
+* Customize using the events namely [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -27,11 +28,11 @@ The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sl
 }
 ```
 
-![Formatting values in the Blazor Range Slider](images/blazor-rangeslider-format.gif)
+![Formating in Blazor RangeSlider](images/blazor-rangeslider-format.gif)
 
 ## Using format API
 
-Slider provides predefined formatting styles such as Numeric (`N`), Percentage (`P`), Currency (`C`), and custom numeric format strings (for example, `#`). These formats are culture-aware and use the application’s current culture for symbols and separators.
+Slider provides different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and # specifiers.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -47,11 +48,11 @@ Slider provides predefined formatting styles such as Numeric (`N`), Percentage (
 
 ```
 
-![Blazor Range Slider format API](images/blazor-rangeslider-format-api.gif)
+![Blazor Range Slider Format API](images/blazor-rangeslider-format-api.gif)
 
 ## Using Events
 
-For custom scenarios, use event handlers like [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange). The following example formats tick labels as weekday names and tooltips as day numbers.
+For custom formatting use event handlers like [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange). Below is an example where slider values are formatted into weekdays and corresponding tooltip values are formatted as days of the week.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -81,4 +82,4 @@ For custom scenarios, use event handlers like [`TicksRendering`](https://help.sy
 
 ```
 
-![Blazor Range Slider events](images/blazor-rangeslider-format-using-events.png)
+![Blazor Range Slider Events](images/blazor-rangeslider-format-using-events.png)

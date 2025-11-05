@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TextBox component
 
-This guide walks through integrating the Syncfusion® Blazor TextBox component into a .NET MAUI Blazor app using both Visual Studio and Visual Studio Code.
+This section explains you through the step-by-step process of integrating the Syncfusion® Blazor TextBox component to your Blazor Maui app using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -17,19 +17,15 @@ This guide walks through integrating the Syncfusion® Blazor TextBox component i
 
 ## Prerequisites
 
-To use the .NET MAUI project templates, install the Mobile development with .NET workload in Visual Studio. For details, see the Microsoft installation guide and the Syncfusion® Blazor Extension resources:
-- Microsoft: Get started with .NET MAUI on Visual Studio
-- Syncfusion: Visual Studio integration and Template Studio
-
-For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the app
 
-To add the Blazor TextBox component to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install Syncfusion.Blazor.Inputs and Syncfusion.Blazor.Themes.
+To add **Blazor TextBox**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -40,7 +36,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. Refer to the NuGet packages topic for the list of available packages and component details: [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor) and [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -70,7 +66,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. Refer to the NuGet packages topic for the list of available packages and component details: [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor) and [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -78,7 +74,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -89,9 +85,9 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the ~/MauiProgram.cs file. Ensure that Syncfusion licensing is registered in the app startup before using any Syncfusion components. For licensing details, see the Syncfusion Blazor licensing documentation.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
@@ -163,17 +159,17 @@ Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ### How to Run the Sample on Android
 
-To run the Blazor TextBox in an Android .NET MAUI Blazor app using the Android emulator, follow the Microsoft guidance to set up and launch an Android virtual device.
+To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
-N> If any errors occur while using the Android Emulator, see Troubleshooting Android Emulator for common resolutions: [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor TextBox Component](./images/blazor-textbox.png)
 
 ## Adding icons to the Blazor TextBox
 
-Add an icon to the TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. Below is an example of how to implement this in your Blazor application:
+You can add an icon to the TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. Below is an example of how to implement this in your Blazor application:
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -201,7 +197,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 }
 ```
 
-![Blazor TextBox with icon in .NET MAUI Blazor](./images/blazor-textbox-icons.png)
+![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
 
 ## Floating label
 
@@ -215,9 +211,9 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with floating label in .NET MAUI Blazor](./images/blazor-textbox-float-label.png)
+![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
 ## See Also
 
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly app in Visual Studio or .NET CLI: [../getting-started/blazor-webassembly-app](../getting-started/blazor-webassembly-app)
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI: [../getting-started/blazor-web-app](../getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)

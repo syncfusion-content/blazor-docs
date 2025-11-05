@@ -9,7 +9,7 @@ documentation: ug
 
 # Scheduler Dimensions in Blazor Scheduler Component
 
-The dimensions of the Syncfusion Blazor Scheduler component, encompassing both height and width of its entire layout, can be defined using three types of values:
+The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.
 
 * auto
 * pixel
@@ -17,7 +17,7 @@ The dimensions of the Syncfusion Blazor Scheduler component, encompassing both h
 
 ## Auto Height and Width
 
-When the height and width of the Scheduler are set to `auto`, the component attempts to match the width of its parent container. In this configuration, the parent container's width or height will be the cumulative size of its children. By default, the Scheduler component is assigned `auto` values for both its `Height` and `Width` properties.
+When height and width of the Scheduler are set to `auto`, it will try hard to keep an element the same width as its parent container. In other words, for the parent container that holds Scheduler, it's width or height will be the sum of its children. By default, Scheduler is assigned with `auto` values for both height and width properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -47,11 +47,10 @@ When the height and width of the Scheduler are set to `auto`, the component atte
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBesjtcsURMTcIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Height and Width in Pixel
+## Height and Width in pixel
 
-The Scheduler's height and width render precisely according to the specified pixel values. Both string and number values are accepted for these properties.
+The Scheduler height and width will be rendered exactly as per the given pixel values. It accepts both string and number values.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -81,13 +80,10 @@ The Scheduler's height and width render precisely according to the specified pix
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZByiNjQWKmhecik?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Height and width in pixel in Blazor Scheduler](images/height-width-inpixel.png)
+## Height and Width in percentage
 
-## Height and Width in Percentage
-
-When the height and width of the Scheduler are provided as percentage values, the component will expand to occupy the specified percentage of its parent container's dimensions.
+When height and width of the Scheduler are given as percentage, it will make the Scheduler as wide as the parent container.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -117,11 +113,10 @@ When the height and width of the Scheduler are provided as percentage values, th
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLSstjwCqYbFnCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to set the full height of the viewport
+## How to set the full height of the view port
 
-Setting the Scheduler's height using the CSS unit of Viewport Height (vh) allows the component to occupy the full height within the viewport.
+When the height of the Scheduler is set in the CSS unit of Viewport Height(vh), it will make the Scheduler to occupy the full height within the viewport.
 
 In the following example, the application header height (4.6rem) is reduced from the total viewport.
 
@@ -153,4 +148,5 @@ In the following example, the application header height (4.6rem) is reduced from
     }
 }
 ```
+
 ![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.png)

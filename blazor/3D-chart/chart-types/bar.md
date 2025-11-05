@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Bar Chart in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Bar Charts in the Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about the Bar Charts in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
-control: 3D Chart
+control: 3D Chart 
 documentation: ug
 ---
 
@@ -11,14 +11,15 @@ documentation: ug
 
 ## Bar chart
 
-To render a bar series, set the series `Type` property to `Bar`.
+To render a bar series, set series `Type` as `Bar`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Bar">
@@ -26,7 +27,7 @@ To render a bar series, set the series `Type` property to `Bar`.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -53,14 +54,15 @@ To render a bar series, set the series `Type` property to `Bar`.
 
 ## Bar space and width
 
-The `ColumnSpacing` and `ColumnWidth` properties customize the space and width between bars.
+The `ColumnSpacing` and `ColumnWidth` properties are used to customize the space between bars.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Bar" />
@@ -68,7 +70,7 @@ The `ColumnSpacing` and `ColumnWidth` properties customize the space and width b
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -96,15 +98,15 @@ The `ColumnSpacing` and `ColumnWidth` properties customize the space and width b
 
 ## Grouped bar
 
-Data points can be grouped in bar charts using the `GroupName` property. Data points with the same group name are grouped together.
+The data points can be grouped in the bar type charts by using the `GroupName` property. Data points with same group name are grouped together.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D EnableSideBySidePlacement="false" RotationAngle="-12" Depth="250" TiltAngle="15">
-    <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category" />
-
+    <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Total" GroupName="USA" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2" Fill="#CB3587"></Chart3DSeries>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Gold" GroupName="USA" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2"></Chart3DSeries>
@@ -124,7 +126,6 @@ Data points can be grouped in bar charts using the `GroupName` property. Data po
         public double China_Total { get; set; }
         public double China_Gold { get; set; }
     }
-
     public List<ColumnData> Chart3DPoints { get; set; } = new List<ColumnData>
     {
         new ColumnData { Year = "2012", USA_Total = 104, USA_Gold = 46, UK_Total = 65, UK_Gold = 29, China_Total = 91, China_Gold = 38},
@@ -140,29 +141,21 @@ Data points can be grouped in bar charts using the `GroupName` property. Data po
 
 ## Cylindrical column chart
 
-To render a cylindrical bar chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
+To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" RotationAngle="7" TiltAngle="10" Depth="100" Title="Passenger Car Production in Selected Countries – 2021">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1" />
-    <Chart3DPrimaryYAxis Maximum="4" Interval="1" />
-
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryYAxis Maximum="4" Interval="1"></Chart3DPrimaryYAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="X" YName="Y" ColumnWidth="0.9" Type="Chart3DSeriesType.Bar" ColumnFacet="Chart3DShapeType.Cylinder"></Chart3DSeries>
     </Chart3DSeriesCollection>
     <Chart3DTooltipSettings Enable="true" Header="${point.x}" Format="Car Production : <b>${point.y}M"></Chart3DTooltipSettings>
 </SfChart3D>
-
 @code {
-    public class ColumnChart3DData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
     public List<ColumnChart3DData> Chart3DPoints { get; set; } = new List<ColumnChart3DData>
     {
         new ColumnChart3DData { X = "Czechia", Y = 1.11 },
@@ -174,33 +167,40 @@ To render a cylindrical bar chart, set the `ColumnFacet` property to `Cylinder` 
         new ColumnChart3DData { X = "South Korea", Y = 3.16 },
         new ColumnChart3DData { X = "France", Y = 0.92 }
     };
+
+    public class ColumnChart3DData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhICXNGBzdWJrIr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBfDdMAilBDiXzS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-bar-chart.png)
 
 ## Series customization
 
-The following properties are available to customize the `Bar` series:
+The following properties can be used to customize the `Bar` series.
 
 * `Fill` – Specifies the color of the series.
-* `Opacity` – Specifies the opacity of the fill color.
+* `Opacity` – Specifies the opacity of the `Fill` color.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="#0364DE" Type="Chart3DSeriesType.Bar" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }

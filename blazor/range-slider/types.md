@@ -9,15 +9,16 @@ documentation: ug
 
 # Types in Blazor Range Slider Component
 
-The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Type) options for the slider are:
+The [**Type**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Type) of Slider are as follows:
 
 | **Types** | **Usage** |
 | --- | --- |
-| Default | Selects a single value. |
-| MinRange | Selects a single value and displays a filled selection from the start to the current value. |
-| Range | Selects a range of values using two handles and displays a filled selection between them. |
+| Default | Allows to select a single value in the Slider. |
+| MinRange | Allows to select a single value in the Slider. Its display’s a shadow from the start to the current value. |
+| Range | Allows to select a range of values in the Slider. It displays shadow in-between the selection range. |
 
-N> Default and MinRange both select a single value. MinRange visually fills the track from the start value to the current handle position. Range uses two handles to select a span of values and fills the area between them.
+N> Both the Default Slider and Min-Range Slider have same behavior that is used to select a single value.
+In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -37,4 +38,4 @@ N> Default and MinRange both select a single value. MinRange visually fills the 
 }
 ```
 
-![Displaying different Blazor Range Sliders](images/blazor-rangeslider-types.png)
+![Displaying Different Blazor RangeSliders](images/blazor-rangeslider-types.png)

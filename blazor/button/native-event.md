@@ -9,29 +9,29 @@ documentation: ug
 
 # Native Events in Blazor Button Component
 
-Define native events on components using Blazor’s `@on...` event attributes. The attribute value is treated as an event handler, and event-specific data is provided through event argument types from the `Microsoft.AspNetCore.Components.Web` namespace.
+You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
-Common event argument types include:
+The different event argument types for each event are,
 
-* Focus events – `FocusEventArgs`
-* Mouse events – `MouseEventArgs`
-* Keyboard events – `KeyboardEventArgs`
-* Touch events – `TouchEventArgs`
+* Focus Events - UIFocusEventArgs
+* Mouse Events - UIMouseEventArgs
+* Keyboard Events - UIKeyboardEventArgs
+* Touch Events – UITouchEventArgs
 
 ## List of native events supported
 
-The following native events are supported by the Button component:
+The following native event support has been provided to the Button component:
 
-| List of native events |  |  | |
+| List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown |
-| onmouseup | ondblclick | onkeydown | onkeyup |
-| onkeypress | ontouchend | onfocusin | ontouchstart |
+|onmousemove|onmouseover|onmouseout|onmousedown|onmouseup|
+|ondblclick|onkeydown|onkeyup|onkeypress|
+|ontouchend|onfocusin|onmouseup|ontouchstart|
 
 ## How to bind click event to Button
 
-Use the `onclick` attribute to bind the click event for a button. The following example shows a toggle button that switches content when clicked.
+The `onclick` attribute is used to bind the click event for button. Here, we have explained about the sample code snippets of toggle button.
 
 ```csharp
 
@@ -58,4 +58,4 @@ Use the `onclick` attribute to bind the click event for a button. The following 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqMVBhCcqcrEoi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Button handling a native click event](images/blazor-native-event-button.png)
+![Blazor Native Event Button.](images/blazor-native-event-button.png)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Styles and Appearance in Blazor Sidebar Component
 
-This section provides the CSS structure that can be used to modify the component's appearance based on user preferences.
+The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 
-## Customizing the Sidebar
+## Customizing the sidebar
 
 Use the below CSS to customize the Sidebar root element.
 
@@ -23,7 +23,7 @@ Use the below CSS to customize the Sidebar root element.
 
 ```
 
-## Customizing the Sidebar based on the Positions
+## Customizing the Sidebar based on the positions
 
 Use the below CSS to customize the left positioned sidebar.
 
@@ -87,7 +87,7 @@ Use the below CSS to customize the closed state of the right positioned sidebar.
 
 ```
 
-## Customizing the Sidebar with Dock State
+## Customizing the Sidebar with dock state
 
 When the Dock support is enabled, the "e-dock" class will be added to the root element. Based on that class, all the above stated customization can also be done. Use the following CSS to customize the Sidebar element with a dock state.
 
@@ -99,7 +99,7 @@ When the Dock support is enabled, the "e-dock" class will be added to the root e
 
 ```
 
-## Customizing the Different types of Sidebar
+## Customizing the different types of sidebar
 
 Use the below CSS to customize the auto type sidebar.
 
@@ -141,7 +141,7 @@ Use the below CSS to customize the slide type sidebar.
 
 ```
 
-## Customizing the Backdrop of the Sidebar
+## Customizing the backdrop of the sidebar
 
 Use the below CSS to customize the backdrop of the sidebar.
 
@@ -153,7 +153,7 @@ Use the below CSS to customize the backdrop of the sidebar.
 
 ```
 
-## Customizing the Sidebar in the RTL Direction
+## Customizing the Sidebar in the RTL direction
 
 When the RTL (right to left direction) support is enabled, the "e-rtl" class will be added to the root element. Based on that class, all the above stated customization can also be done. Use the following CSS to customize the Sidebar element in the RTL (right to left direction) mode.
 

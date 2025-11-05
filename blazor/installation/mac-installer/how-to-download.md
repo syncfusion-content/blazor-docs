@@ -1,73 +1,73 @@
 ---
 layout: post
-title: Downloading Syncfusion Blazor Mac installer - Syncfusion
-description: Learn here about the how to download Syncfusion Blazor mac installer packages from syncfusion website.
+title: Download the Syncfusion Blazor Mac installer - Syncfusion
+description: Learn here about how to download the Syncfusion Blazor Mac installer for trial or licensed use, including Start trials and License & Downloads options.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Downloading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mac installer
+# Download the Syncfusion® Blazor Mac installer
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides Blazor Mac installer for both evaluation and paid customers. You can either download the licensed installer or try our trial installer depending on your license.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides a Blazor Mac installer for both evaluation and paid customers. Download options depend on the account status: trial or licensed.
 
 * Trial Installer
 * Licensed Installer
 
-## Download the Trial Version
+## Download the trial version
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
 
 2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the Blazor trial installer from the confirmation page. (as shown in below screenshot.)
 
-   ![Trial Confirmation](images/blazor_mac_trial.PNG)
+   ![Trial confirmation page showing Blazor Mac installer download](images/blazor_mac_trial.PNG)
 
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mac trial installer.
+4. An unlock key is not required to install the Blazor Mac trial installer.
 
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-   ![Start Trial download](images/start-trial-download-installer.png)
+   ![Trials and Downloads page with Download button for the Blazor Mac installer](images/start-trial-download-installer.png)
 
 6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Offline trial installer which is available in DMG format.
 
    ![Trial Downlaod Offline Installer](images/blazor_mac.png)
 
-### Start Trials if using components through NuGet.org
+### Start trials if using components through NuGet.org
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+Start an evaluation if components were obtained through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-1. You can start your 30-day free trial for Blazor from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. Start a 30‑day Blazor trial from the [Start trials](https://www.syncfusion.com/account/manage-trials/start-trials) page.
 
-   ![Trial Download](images/start-trial-download.PNG)
+   ![Start trials page for Blazor](images/start-trial-download.PNG)
 
 2. To access this page, you must sign up/log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-3. Begin your trial by selecting the Blazor product.
+3. Begin the trial by selecting the Blazor product.
 
-   N> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After starting the trial, go to [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) to get the latest trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot)
 
-   ![Start Trial download](images/start-trial-download-installer.png)
+   ![Trials and Downloads page showing trial installer and links to generate license key](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the License Version
+## Download the licensed version
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+1. Licensed products are available from the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
 2. You can view all the licenses (both active and expired) associated with your account.
 
-3. You can download Blazor Mac licensed installer by going to More Downloads Options (element 3 in the screenshot below).
+3. Select **More download options** to download the Blazor Mac licensed installer.
 
-   ![License Download Installer](images/start-license-download-installer.png)
+   ![License and Downloads page showing More download options for the Blazor Mac installer](images/start-license-download-installer.png)
 
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mac trial installer.
+4. An unlock key is not required to install the Blazor Mac licensed installer.
 
-5. For Mac OS, DMG formats is available for download.
+5. For macOS, the installer is available in DMG format.
 
    ![License Download Installer](images/blazor_mac.png)
 
-You can also refer to the [Blazor Mac installation](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-install) link for step-by-step installation guidelines.
+For step-by-step installation, see [Blazor Mac installation](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-install).

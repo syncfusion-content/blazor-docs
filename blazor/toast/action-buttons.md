@@ -9,27 +9,26 @@ documentation: ug
 
 # Action Buttons in Blazor Toast Component
 
-Add action buttons to the Blazor Toast component by defining the **ToastButtons** collection with one or more **ToastButton** items. Each button can include its own **OnClick** callback to perform actions such as dismissing the toast or triggering custom logic.
+Action buttons can be included to the toast control by adding the `ToastButton` property. The click event callback function can also be included for each button.
 
-For more details, see:
-- Blazor Toast overview: https://blazor.syncfusion.com/documentation/toast/
-- Toast events: https://blazor.syncfusion.com/documentation/toast/events/
+In the following code, toast buttons are configured using `ToastButton` property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
 <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Icon="e-laura" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastButtons>
-        <ToastButton Content="Ignore" OnClick="@(args => HideToast())"></ToastButton>
-        <ToastButton Content="Reply"  OnClick="@(args => HideToast())"></ToastButton>
+        <ToastButton  Content = "Ignore" OnClick="@HideToast"></ToastButton>
+        <ToastButton  Content = "reply" OnClick="@HideToast"></ToastButton>
     </ToastButtons>
 </SfToast>
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
-        <SfButton OnClick="@(args => ShowToast())">Show Toast</SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
@@ -43,27 +42,32 @@ For more details, see:
         margin: 0 10px 0 0;
         width: 60px;
     }
+
+    #elementToastTime .e-toast-message {
+        padding: 10px;
+    }
 </style>
 
 @code {
-    private SfToast ToastObj;
+    SfToast ToastObj;
 
     private string ToastContent { get; set; } = "Thanks for the update!";
 
     private async Task ShowToast()
     {
-        await ToastObj.ShowAsync();
+      await this.ToastObj.ShowAsync();
     }
 
     private async Task HideToast()
     {
-        await ToastObj.HideAsync();
+       await this.ToastObj.HideAsync();
     }
 }
+
 ```
 
 ![Blazor Toast with Action button](./images/blazor-toast-action-button.png)
 
 ## See Also
 
-- [Configuring options](./config)
+* [Configuring options](./config)

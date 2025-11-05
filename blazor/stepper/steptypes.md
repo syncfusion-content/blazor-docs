@@ -7,11 +7,11 @@ control: Stepper
 documentation: ug
 ---
 
-# Step Types in Blazor Stepper Component
+# Step types in Blazor Stepper Component
 
 The Stepper component provides support for displaying steps with the following step types.
 
-## Default Type
+## Default type
 
 In default type, the Stepper displays steps with a combination of both indicators and labels by setting the [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property as `Default`. By default, the Stepper displays steps in the `Default` type.
 
@@ -59,15 +59,14 @@ In default type, the Stepper displays steps with a combination of both indicator
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhyiZNkgueNLWQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Default type](./images/Blazor-default-type.png)
 
-## Label Type
+## Label type
 
-In label type, the Stepper displays steps with only the step labels by setting the [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property to `Label`.
+In label type, the Stepper displays the steps with only the step labels by setting the [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property as `Label`.
 
-> When both `Label` and `Text` are defined for a step, the `Label` takes priority for display in this `StepType`.
+> When both label and text are defined, the label takes priority in displaying the steps.
 
 ```cshtml
 
@@ -114,13 +113,11 @@ In label type, the Stepper displays steps with only the step labels by setting t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDheMXNuqkGtoGBq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with Label type](./images/Blazor-label-type.png)
 
-### Label Positions
+### Label positions
 
-Display the label on the top, bottom, left, or right side of the steps using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property.
+You can display the label on the top, bottom, left, or right side of the steps using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property.
 
 The following label positions are supported in Stepper:
 
@@ -202,11 +199,10 @@ The following label positions are supported in Stepper:
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBeWjtkAYmROuvX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with LabelPosition](./images/Blazor-labelposition.png)
 
-## Indicator Type
+## Indicator type
 
 In indicator type, the Stepper displays steps with only the step indicators  by setting the [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property as `Indicator`.
 
@@ -245,7 +241,5 @@ In indicator type, the Stepper displays steps with only the step indicators  by 
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSsXZEAabvouRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Indicator type](./images/Blazor-indicator.png)

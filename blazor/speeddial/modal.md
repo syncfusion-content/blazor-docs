@@ -9,7 +9,7 @@ documentation: ug
 
 # Modal in Blazor SpeedDial Component
 
-Use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to enable modal behavior for the SpeedDial. When enabled, the component displays an overlay while the action items are open, preventing interaction with background content and keeping focus on the speed dial actions.
+You can use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
 
 {% tabs %}
 {% highlight razor %}

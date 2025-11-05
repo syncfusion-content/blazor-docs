@@ -7,15 +7,15 @@ control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Form validation in MultiColumn ComboBox
+# Form Validation in MultiColumn ComboBox
 
-This article demonstrates how to use the Blazor MultiColumn ComboBox in a validated form with Blazor’s `EditForm`. It covers binding to a model, applying data annotations, and showing validation messages so the form submits only when required fields are valid.
+This demonstrates the creation of a form that includes a MultiColumn ComboBox, allowing the user to select an option from a list of items. The form also includes validation, which verifies that all required fields are filled out before the form can be submitted.
 
 ## MultiColumn ComboBox inside edit form
 
 The MultiColumn ComboBox component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
 
-When the MultiColumn ComboBox input is valid, the form is ready to be submitted; if invalid, a validation message is shown until a valid value is selected.
+When the MultiColumn ComboBox input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
 * The EditForm component wraps the entire form, has the Model attribute set to the model variable of type, and triggers the OnValidSubmit() method when the form is submitted.
 * The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the model properties.

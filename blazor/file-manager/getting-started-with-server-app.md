@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component in Server App
 
-This section explains how to integrate the Syncfusion [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component into a Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
+This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio, Visual Studio Code and .NET CLI.
 
 {% tabcontents %}
 
@@ -23,7 +23,7 @@ This section explains how to integrate the Syncfusion [Blazor FileManager](https
 
 ## Create a new Blazor App in Visual Studio
 
-Create a **Blazor Server App** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+You can create a **Blazor Server App** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the App
 
@@ -48,11 +48,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a New Blazor Server App in Visual Studio Code
+## Create a new Blazor App in Visual Studio Code
 
-A **Blazor Server App** can be created using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
-Alternatively, a Server application can be created using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+Alternatively, you can create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
@@ -68,7 +68,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure the current directory is the project root directory where the `.csproj` file is located.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
 * Run the following command to install a [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
@@ -91,7 +91,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If the SDK was previously installed, the installed version can be determined by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -114,7 +114,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor Server App and places it in a new directory called `BlazorApp` inside the current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates new Blazor Server App and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
 
@@ -130,7 +130,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -151,7 +151,7 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
@@ -172,9 +172,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add Stylesheet and Script Resources
+## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script reference at the end of the `<body>` in the **App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script in the `<head>` and the script reference at the end of the `<body>` in the **App.razor** file as shown below:
 
 ```html
 <head>
@@ -191,11 +191,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in a Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor File Manager Component
+## Add Blazor File Manager component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the **~/Components/Pages/Home.razor** file. If an interactivity location is set to `per page/component`, define a render mode at the top of the `Home.razor` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the **~/Components/Pages/Home.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Home.razor` page.
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
@@ -228,7 +228,7 @@ Create a new folder named `Models` in the server project. Add the necessary mode
 
 To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
 
-Make sure the controller `FileManagerController.cs` uses the model classes that were created. Import the model namespace at the top of the controller file.
+Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
 
 File Manager's base functions are available in the below namespace.
 ```cshtml
@@ -327,7 +327,7 @@ app.UseRouting();
 app.MapControllers();
 ```
 
-This configures and maps the controller in the Blazor App.
+This will configure and map the controller in your Blazor App.
 
 ## Create Web Server App
 
@@ -349,9 +349,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager com
 {% endhighlight %}
 {% endtabs %}
 
-Add required files and folders under the `wwwroot\Files` directory.
-*   In the project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of the server project.
-*   Inside the `wwwroot` directory, create a new folder named `Files`. This is used to store static files like images, documents, or other resources that are served directly.
+Add your required files and folders under the `wwwroot\Files` directory.
+* In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
+* Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in your default web browser.
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.png)
