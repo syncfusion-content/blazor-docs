@@ -9,21 +9,21 @@ documentation: ug
 
 # Working Days and Hours in Blazor Scheduler Component
 
-The Scheduler offers extensive customization for various aspects, inheriting almost all calendar-specific features, such as options for:
+The Scheduler can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,
 
-*   Customizing the time range display on the Scheduler.
-*   Setting different working hours.
-*   Setting different working days.
-*   Setting a different first day of the week.
-*   Showing/hiding weekend days.
-*   Showing the week number.
+- To set custom time range display on Scheduler
+- To set different working hours
+- To set different working days
+- To set different first day of week
+- To show/hide weekend days
+- To show the week number
 
-To get started quickly with customizing the working days and hours in the Scheduler, refer to this video:
+To get start quickly about customize the working days and hours in our Scheduler, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PcFr6bc_yhE-0"%}
 
-## Set Working Days
+## Set working days
 
 By default, Scheduler considers the week days from Monday to Friday as `WorkDays` and therefore defaults to [1,2,3,4,5] - where 1 represents Monday, 2 represents Tuesday and so on. The days which are not defined in this working days collection are considered as non-working days. Therefore, when the weekend days are set to hide from Scheduler, all those non-working days too get hidden from the layout.
 
@@ -63,17 +63,15 @@ The following example code depicts how to set the Scheduler to display Monday, W
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCNZQAFHpczJK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
 
-## Dynamically Setting Work Days
+## Dynamically setting work days
 
 The `SetWorkDaysAsync` and `ResetWorkDaysAsync` methods can be used to dynamically set and reset work days in the Scheduler. The `SetWorkDaysAsync` method accepts a list of dates to be set as working days, whereas `ResetWorkDaysAsync` resets specified work days when dates are passed and resets all the days in the current view to non-working days when called without passing any dates.
 
-Before setting up custom working days, reset the default work days using the `ResetWorkDaysAsync` method. Note that both methods do not accept dates with an unspecified `DateTimeKind`.
+Before setting up custom working days, you need to reset the default work days using the `ResetWorkDaysAsync` method. Note that both methods do not accept dates with an unspecified kind.
 
-In this example, the code first retrieves the current view dates during initial rendering, date, and view navigations. Then, it resets all days to non-working days using `ResetWorkDaysAsync`. Next, it removes common holiday dates from the current view dates. Finally, it loops through each resource, excludes resource-specific leave dates from the working dates, and sets the available days for each resource as working days using the `SetWorkDaysAsync` method.
+In this example, we retrieve the current view dates during initial rendering, date and view navigations and reset all days to non-working days using `ResetWorkDaysAsync`. Then we remove common holiday dates from the current view dates. Then we loop through each resource and for each resource we exclude resource specific leave dates from the working dates and set their available days as working days using `SetWorkDaysAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -176,12 +174,9 @@ In this example, the code first retrieves the current view dates during initial 
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDryCNXQgFcDQbms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.png)
 
-## Hiding Weekend Days
+## Hiding weekend days
 
 The [`ShowWeekend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowWeekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
 
@@ -217,11 +212,9 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIsNZmKbwvTnyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Hiding Weekend Days in Blazor Scheduler](images/blazor-scheduler-hide-weekend.png)
 
-## Show Week Numbers
+## Show week numbers
 
 It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to the [`ShowWeekNumber`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowWeekNumber) property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
 
@@ -254,11 +247,9 @@ N> The [`ShowWeekNumber`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNroMjtQgFvUlIFu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Week Numbers in Blazor Scheduler](images/blazor-scheduler-weeknumber.png)
 
-### Different Options in Showing Week Numbers
+### Different options in showing week numbers
 
 By default, week numbers are shown in the Scheduler based on the first day of the year. However, the week numbers can be determined based on the following criteria by setting the `WeekRule` property with `CalendarWeekRule` enumeration.
 
@@ -298,7 +289,7 @@ For more details refer to [this link](https://learn.microsoft.com/en-us/dotnet/a
 }
 ```
 
-## Set Working Hours
+## Set working hours
 
 Working hours indicates the work hour limit within the Scheduler, which is visually highlighted with an active color on work cells. The working hours can be set on Scheduler using the [`ScheduleWorkhours`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleWorkHours.html) which includes the following sub-options,
 
@@ -333,13 +324,11 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrIWZZwqFuILIyZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Set Working Hours in Blazor Scheduler](images/blazor-scheduler-workhours.png)
 
-## Scheduler Displaying Custom Hours
+## Scheduler displaying custom hours
 
-The Scheduler layout can display specific time durations by hiding unwanted hours. To do so, set the start and end hour for the Scheduler using the [`StartHour`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_StartHour) and [`EndHour`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EndHour) properties respectively.
+It is possible to display the event Scheduler layout with specific time durations by hiding the unwanted hours. To do so, set the start and end hour for the Scheduler using the [`StartHour`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_StartHour) and [`EndHour`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EndHour) properties respectively.
 
 The following code example displays the Scheduler starting from the time range 7.00 AM to 6.00 PM and the remaining hours are hidden on the UI.
 
@@ -369,11 +358,9 @@ The following code example displays the Scheduler starting from the time range 7
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNroMNDmKutBWZxP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Displaying Custom Hours in Blazor Scheduler](images/blazor-scheduler-displayhours.png)
 
-## Setting Start Day of the Week
+## Setting start day of the week
 
 By default, Scheduler defaults to `Sunday` as its first day of a week. To change the Scheduler's start day of a week with different day, set the [`FirstDayOfWeek`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstDayOfWeek) property with the values ranging from 0 to 6.
 
@@ -406,13 +393,11 @@ N> Here, Sunday is always denoted as 0, Monday as 1 and so on.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyCDtwAaXFKHPc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Start Day of Week in Blazor Scheduler](images/blazor-scheduler-week-firstday.png)
 
-## Scroll to Specific Time and Date
+## Scroll to specific time and date
 
-Manually scroll to a specific time on the Scheduler by using the [`ScrollToAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ScrollToAsync_System_String_System_Nullable_System_DateTime__) method as depicted in the following code example.
+You can manually scroll to a specific time on Scheduler by making use of the [`ScrollToAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ScrollToAsync_System_String_System_Nullable_System_DateTime__) method as depicted in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -463,9 +448,7 @@ Manually scroll to a specific time on the Scheduler by using the [`ScrollToAsync
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroCXtQAYioVhwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## See Also
+## See also
 
 - [To display the current time indicator](./timescale#highlighting-current-date-and-time)
 - [To set different working hours for each resources](./resources#set-different-work-hours)

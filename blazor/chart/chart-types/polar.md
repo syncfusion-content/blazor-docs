@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Polar Chart in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize the Polar Chart in Syncfusion Blazor Charts component.
+title: Polar in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Polar Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Polar Chart in Blazor Charts Component
+# Polar in Blazor Charts Component
 
-## Polar Chart
+## Polar
 
-The [Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series visualizes data using values and angles, providing options for visual comparison between quantitative or qualitative aspects.
+[Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series visualizes data in terms of values and angles. It provides options for visual comparison between several quantitative or qualitative aspects of a situation.
 
-You can also learn how to create a Polar chart using Blazor Charts by watching the video below.
+You can learn how to create a Polar chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Q5odgrcbSO0" %}
 
-To render a [polar](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Polar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) in the chart configuration. This displays data points on a circular graph.
+To render a [polar](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series in your chart, Define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Polar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) in your chart configuration. This indicates that the data should be represented as a polar chart, which is ideal for plotting data points on a circular graph.
 
 ```cshtml
 
@@ -40,26 +40,26 @@ To render a [polar](https://www.syncfusion.com/blazor-components/blazor-charts/c
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Polar Chart](../images/polar-radar/blazor-polar-chart.png)
 
-Refer to the [Blazor Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) feature tour page for more feature details. Explore the [Blazor Polar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to learn how to render and configure polar charts with interactive examples.
+N> Refer to our [Blazor Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Polar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Polar type chart.
 
 ## Binding data with series
 
-Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property in the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or a list of business objects. For more information, see [Working with Data](../working-with-data). Map the data fields to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
+You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
 
 ```cshtml
 
@@ -82,26 +82,26 @@ Bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/b
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Draw types
 
-Change the series plotting type using the [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property. Supported types include [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line), [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column), [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area), [RangeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn), [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline), [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter), [StackingArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea), and [StackingColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn). The default is [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line).
+ To change the series plotting type to  [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line),  [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column),  [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area),  [RangeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn),  [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline), [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter), [StackingArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea), and [StackingColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn), use the Polar's [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property. [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) is set to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) by default.
 
 ### Line
 
-Render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in Polar Chart by setting the [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). The [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property determines whether to join the start and end points to form a closed path. The default value is **true**.
+To render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in  [Polar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property specifies whether to join start and end point of a line series used in [Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) to form a closed path. The default value of [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property is **true**.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ Render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -125,22 +125,22 @@ Render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzDbVjfMVssote?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzDbVjfMVssote?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Spline
 
-Render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline). This displays a polar spline chart with smooth, curved lines.
+To render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) draw type, Define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) in your chart configuration. This indicates that the data should be represented as a polar spline chart, with smooth, curved lines connecting each data point.
 
 ```cshtml
 
@@ -155,7 +155,7 @@ Render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set;}
@@ -164,22 +164,22 @@ Render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthpNlLZTCqugtIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthpNlLZTCqugtIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Area
 
-Render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area). This displays a polar area chart with filled areas below the lines.
+To render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) in your chart configuration. This indicates that the data should be represented as a polar area chart, with filled areas below the lines connecting each data point.
 
 ```cshtml
 
@@ -194,7 +194,7 @@ Render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -203,22 +203,22 @@ Render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzjlBXTWSRXqYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzjlBXTWSRXqYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Stacked Area
 
-Render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [StackingArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea). This displays a polar stacked area chart, showing cumulative values of multiple series.
+To render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) draw type, Define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [StackingArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) in your chart configuration. This indicates that the data should be represented as a polar stacked area chart, with areas stacked on top of each other, displaying the cumulative value of multiple series.
 
 ```cshtml
 
@@ -243,7 +243,7 @@ Render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -254,31 +254,31 @@ Render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2000, Y = 0.61, Y1 = 0.03, Y2 = 0.48},
-        new ChartData { X = 2001, Y = 0.81, Y1 = 0.05, Y2 = 0.53 },
-        new ChartData { X = 2002, Y = 0.91, Y1 = 0.06, Y2 = 0.57 },
-        new ChartData { X = 2003, Y = 1, Y1 = 0.09, Y2 = 0.61 },
-        new ChartData { X = 2004, Y = 1.19, Y1 = 0.14, Y2 = 0.63 },
-        new ChartData { X = 2005, Y = 1.47, Y1 = 0.20, Y2 = 0.64 },
-        new ChartData { X = 2006, Y = 1.74, Y1 = 0.29, Y2 = 0.66 },
-        new ChartData { X = 2007, Y = 1.98, Y1 = 0.46, Y2 = 0.76 },
-        new ChartData { X = 2008, Y = 1.99, Y1 = 0.64, Y2 = 0.77 },
-        new ChartData { X = 2009, Y = 1.70, Y1 = 0.75, Y2 = 0.55 }
+        new ChartData{ X=2000, Y= 0.61, Y1= 0.03, Y2= 0.48},
+        new ChartData{ X=2001, Y= 0.81, Y1= 0.05, Y2= 0.53 },
+        new ChartData{ X=2002, Y= 0.91, Y1= 0.06, Y2= 0.57 },
+        new ChartData{ X=2003, Y= 1, Y1= 0.09, Y2= 0.61 },
+        new ChartData{ X=2004, Y= 1.19, Y1= 0.14, Y2= 0.63 },
+        new ChartData{ X=2005, Y= 1.47, Y1= 0.20, Y2= 0.64 },
+        new ChartData{ X=2006, Y= 1.74, Y1= 0.29, Y2= 0.66 },
+        new ChartData{ X=2007, Y= 1.98, Y1= 0.46, Y2= 0.76 },
+        new ChartData{ X=2008, Y= 1.99, Y1= 0.64, Y2= 0.77 },
+        new ChartData{ X=2009, Y= 1.70, Y1= 0.75, Y2= 0.55 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJNvrtTiQtUrwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJNvrtTiQtUrwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Column
 
-Render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column). This displays a polar column chart for comparing values across categories.
+To render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) in your chart configuration. This indicates that the data should be represented as a polar column chart, allowing for the comparison of values across categories.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart>
+<SfChart >
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y"
                      Type="ChartSeriesType.Polar" DrawType="ChartDrawType.Column">
@@ -287,7 +287,7 @@ Render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -296,22 +296,22 @@ Render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJZbhZfivRPCTM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJZbhZfivRPCTM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Stacked column
 
-Render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [StackingColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn). This displays a polar stacked column chart with multiple segments stacked in each column.
+To render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [StackingColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) in your chart configuration. This indicates that the data should be represented as a polar stacked column chart, with each column consisting of multiple segments stacked on top of each other.
 
 ```cshtml
 
@@ -333,7 +333,7 @@ Render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -344,32 +344,33 @@ Render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2000, Y = 0.61, Y1 = 0.03, Y2 = 0.48},
-        new ChartData { X = 2001, Y = 0.81, Y1 = 0.05, Y2 = 0.53 },
-        new ChartData { X = 2002, Y = 0.91, Y1 = 0.06, Y2 = 0.57 },
-        new ChartData { X = 2003, Y = 1, Y1 = 0.09, Y2 = 0.61 },
-        new ChartData { X = 2004, Y = 1.19, Y1 = 0.14, Y2 = 0.63 },
-        new ChartData { X = 2005, Y = 1.47, Y1 = 0.20, Y2 = 0.64 },
-        new ChartData { X = 2006, Y = 1.74, Y1 = 0.29, Y2 = 0.66 },
-        new ChartData { X = 2007, Y = 1.98, Y1 = 0.46, Y2 = 0.76 },
-        new ChartData { X = 2008, Y = 1.99, Y1 = 0.64, Y2 = 0.77 },
-        new ChartData { X = 2009, Y = 1.70, Y1 = 0.75, Y2 = 0.55 }
+        new ChartData{ X=2000, Y= 0.61, Y1= 0.03, Y2= 0.48},
+        new ChartData{ X=2001, Y= 0.81, Y1= 0.05, Y2= 0.53 },
+        new ChartData{ X=2002, Y= 0.91, Y1= 0.06, Y2= 0.57 },
+        new ChartData{ X=2003, Y= 1, Y1= 0.09, Y2= 0.61 },
+        new ChartData{ X=2004, Y= 1.19, Y1= 0.14, Y2= 0.63 },
+        new ChartData{ X=2005, Y= 1.47, Y1= 0.20, Y2= 0.64 },
+        new ChartData{ X=2006, Y= 1.74, Y1= 0.29, Y2= 0.66 },
+        new ChartData{ X=2007, Y= 1.98, Y1= 0.46, Y2= 0.76 },
+        new ChartData{ X=2008, Y= 1.99, Y1= 0.64, Y2= 0.77 },
+        new ChartData{ X=2009, Y= 1.70, Y1= 0.75, Y2= 0.55 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJXbBDTLZKLCRn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJXbBDTLZKLCRn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Range column
 
-Render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [RangeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn). This displays a polar range column chart, where each column spans a range of values.
+To render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [RangeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) in your chart configuration. This indicates that the data should be represented as a polar range column chart, where each column spans a range of values.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low"
@@ -378,7 +379,7 @@ Render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public string X { get; set; }
@@ -388,34 +389,35 @@ Render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
     public List<ChartData> WeatherReports = new List<ChartData>
 	{
-        new ChartData { X = "Jan", Low = 0.7, High = 6.1 },
-        new ChartData { X = "Feb", Low = 1.3, High = 6.3 },
-        new ChartData { X = "Mar", Low = 1.9, High = 8.5 },
-        new ChartData { X = "Apr", Low = 3.1, High = 10.8 },
-        new ChartData { X = "May", Low = 5.7, High = 14.40 },
-        new ChartData { X = "Jun", Low = 8.4, High = 16.90 },
-        new ChartData { X = "Jul", Low = 10.6,High = 19.20 },
-        new ChartData { X = "Aug", Low = 10.5,High = 18.9 },
-        new ChartData { X = "Sep", Low = 8.5, High = 16.1 },
-        new ChartData { X = "Oct", Low = 6.0, High = 12.5 },
-        new ChartData { X = "Nov", Low = 1.5, High = 6.9  },
-        new ChartData { X = "Dec", Low = 5.1, High = 12.1 }
+        new ChartData{ X="Jan", Low= 0.7, High= 6.1 },
+        new ChartData{ X="Feb", Low=1.3, High=6.3 },
+        new ChartData{ X="Mar", Low= 1.9, High= 8.5 },
+        new ChartData{ X= "Apr", Low= 3.1, High= 10.8 },
+        new ChartData{ X="May", Low= 5.7, High= 14.40 },
+        new ChartData { X= "Jun", Low= 8.4, High= 16.90 },
+        new ChartData { X= "Jul", Low= 10.6,High= 19.20 },
+        new ChartData { X= "Aug", Low= 10.5,High= 18.9 },
+        new ChartData { X= "Sep", Low= 8.5, High= 16.1 },
+        new ChartData { X= "Oct", Low= 6.0, High= 12.5 },
+        new ChartData { X= "Nov", Low= 1.5, High= 6.9  },
+        new ChartData { X= "Dec", Low= 5.1, High= 12.1 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLpjlhZfVAjIYyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLpjlhZfVAjIYyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Scatter
-
-Render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) draw type by setting the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) to [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter). This displays a polar scatter chart.
+  
+To render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) in your chart configuration. This indicates that the data should be represented as a polar scatter chart.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y"
@@ -424,7 +426,7 @@ Render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -433,31 +435,32 @@ Render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthfNlrDfBJUztOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthfNlrDfBJUztOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Series customization
 
 ### Start angle
 
-Customize the start angle of the Polar Chart using the [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_StartAngle) property. The default value is **0**.
+To customize the start angle of the [Polar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), use [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_StartAngle) property. By default, [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_StartAngle) value is **0**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis StartAngle="270" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis StartAngle="270" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
 	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y"
@@ -466,7 +469,7 @@ Customize the start angle of the Polar Chart using the [StartAngle](https://help
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double X { get; set; }
@@ -475,22 +478,22 @@ Customize the start angle of the Polar Chart using the [StartAngle](https://help
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Radius
 
-Customize the radius of the Polar Chart using the [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) property. The default value is **100**.
+To customize the radius of the [Polar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), use [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) property. By default, [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) value is **100**.
 
 ```cshtml
 
@@ -516,26 +519,26 @@ Customize the radius of the Polar Chart using the [Coefficient](https://help.syn
 
     public List<ChartData> SalesReports = new List<ChartData>
 	{
-        new ChartData { X = 2005, Y = 28 },
-        new ChartData { X = 2006, Y = 25 },
-        new ChartData { X = 2007, Y = 26 },
-        new ChartData { X = 2008, Y = 27 },
-        new ChartData { X = 2009, Y = 32 },
-        new ChartData { X = 2010, Y = 35 },
-        new ChartData { X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJjFLZfLwTKJNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJjFLZfLwTKJNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Empty points
 
-Data points with `null`, `double.NaN`, or `undefined` values are considered empty and are not plotted.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to specify how empty or missing data points are handled. The default mode is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
 ```cshtml
 
@@ -560,13 +563,13 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData{ X = 2005, Y = 28 },
-        new ChartData{ X = 2006, Y = 25 },
-        new ChartData{ X = 2007, Y = 26 },
-        new ChartData{ X = 2008, Y = double.NaN },
-        new ChartData{ X = 2009, Y = 32 },
-        new ChartData{ X = 2010, Y = 35 },
-        new ChartData{ X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= double.NaN },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
@@ -575,7 +578,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 **Fill**
 
-Customize the fill color of empty points using the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property.
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
 
 ```cshtml
 
@@ -600,13 +603,13 @@ Customize the fill color of empty points using the [`Fill`](https://help.syncfus
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData{ X = 2005, Y = 28 },
-        new ChartData{ X = 2006, Y = 25 },
-        new ChartData{ X = 2007, Y = 26 },
-        new ChartData{ X = 2008, Y = double.NaN },
-        new ChartData{ X = 2009, Y = 32 },
-        new ChartData{ X = 2010, Y = 35 },
-        new ChartData{ X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= double.NaN },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
@@ -615,7 +618,7 @@ Customize the fill color of empty points using the [`Fill`](https://help.syncfus
 
 **Border**
 
-Customize the border width and color of empty points using the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property, including [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color).
+Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
 
 ```cshtml
 
@@ -642,13 +645,13 @@ Customize the border width and color of empty points using the [`Border`](https:
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData{ X = 2005, Y = 28 },
-        new ChartData{ X = 2006, Y = 25 },
-        new ChartData{ X = 2007, Y = 26 },
-        new ChartData{ X = 2008, Y = double.NaN },
-        new ChartData{ X = 2009, Y = 32 },
-        new ChartData{ X = 2010, Y = 35 },
-        new ChartData{ X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= double.NaN },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
@@ -659,7 +662,7 @@ Customize the border width and color of empty points using the [`Border`](https:
 
 ### Series render
 
-The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event enables customization of series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering.
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
 
 ```cshtml
 
@@ -667,7 +670,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 <SfChart>
     <ChartSeriesCollection>
-        <ChartEvents OnSeriesRender="SeriesRender" />
+        <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
         <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
                      Type="Syncfusion.Blazor.Charts.ChartSeriesType.Polar" />
     </ChartSeriesCollection>
@@ -687,13 +690,13 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData{ X = 2005, Y = 28 },
-        new ChartData{ X = 2006, Y = 25 },
-        new ChartData{ X = 2007, Y = 26 },
-        new ChartData{ X = 2008, Y = 27 },
-        new ChartData{ X = 2009, Y = 32 },
-        new ChartData{ X = 2010, Y = 35 },
-        new ChartData{ X = 2011, Y = 30 }
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
     };
 }
 
@@ -703,7 +706,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows customization of each data point before rendering.
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
 
 ```cshtml
 
@@ -711,7 +714,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 <SfChart>
     <ChartSeriesCollection>
-        <ChartEvents OnPointRender="PointRender" />
+        <ChartEvents OnPointRender="PointRender"></ChartEvents>
         <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
                      Type="Syncfusion.Blazor.Charts.ChartSeriesType.Polar">
             <ChartMarker Visible="true" Width="10" Height="10"></ChartMarker>
@@ -750,5 +753,5 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor ContextMenu Component
 
-To bind a local data source to the Context Menu, menu items are populated from a data collection and mapped to `Items` property. In the following example, a custom data model (`CustomItem`) is used, and its properties are mapped to the Context Menu's display fields.
+To bind local data source to the Context Menu, menu items are populated from data source and mapped to `Items` property. In the following example, custom data with different data type is mapped to `Items` property.
 
 ```cshtml
 

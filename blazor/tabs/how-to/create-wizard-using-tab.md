@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create Wizard in Blazor Tabs Component | Syncfusion
+title: Create wizard in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about how to create wizard in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Create Wizard in Blazor Tabs Component
+# Create wizard in Blazor Tabs Component
 
-Tab items can be disabled during initial control rendering by passing the tab index and a boolean value to the [EnableTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
+Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [EnableTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
 
 In the below Wizard sample, each tab is integrated with required components to complete the reservation. Each field is provided with validation for all mandatory option to proceed to next tabs. Using tab item's template property the components are added into content.
 
@@ -23,7 +23,7 @@ Create the following contents for each tab in the wizard.
 4. **Payment tab:**
    Calculate the ticket cost and generate data for Grid with passenger details, train number and ticket cost summary.
 
-Users can navigate back to previous tabs using dedicated buttons within each content section. Navigation via tab headers is initially disabled to enforce linear progression.
+You can go back on each tab using buttons available in it and tabs are disabled to navigate through tab header click actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -515,6 +515,5 @@ Users can navigate back to previous tabs using dedicated buttons within each con
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBeWXZaJnBqEgLl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Tabs with Wizard](../images/blazor-tabs-wizard.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor Range Selector Component | Syncfusion
-description: Check out and learn how to configure and customize labels in Syncfusion Blazor Range Selector component.
+description: Checkout and learn here all about labels in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Labels in Blazor Range Selector Component
 
-## Multi-level Labels
+## Multi-level labels
 
-Enable multi-level labels by setting the [EnableGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableGrouping) property to **true**. This feature is available only for the DateTime axis.
+The multi-level labels for the Range Selector can be enabled by setting the [EnableGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableGrouping) property to **true**. This is restricted to the DateTime axis alone.
 
 ```cshtml
 
@@ -48,7 +48,7 @@ Enable multi-level labels by setting the [EnableGrouping](https://help.syncfusio
 
 ## Grouping
 
-Group multi-level labels using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_GroupBy) property. Supported interval types:
+The multi-level labels can be grouped using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_GroupBy) property with the following interval types:
 
 * Auto
 * Years
@@ -71,6 +71,7 @@ Group multi-level labels using the [GroupBy](https://help.syncfusion.com/cr/blaz
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime X { get; set; }
@@ -94,9 +95,9 @@ Group multi-level labels using the [GroupBy](https://help.syncfusion.com/cr/blaz
 
 ![Grouping in Blazor RangeNavigator](images/labels/blazor-rangenavigator-grouping.png)
 
-## Smart Labels
+## Smart labels
 
-Use the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property to avoid label overlap. For example, set it to **Hide** to hide overlapping labels.
+The [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property is used to avoid overlapping of labels. The following code sample shows the setting of [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property to **Hide**.
 
 ```cshtml
 
@@ -111,6 +112,7 @@ Use the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfRangeNavigator>
 
 @code {
+
     public class SampleData
     {
         public DateTime X { get; set; }
@@ -136,7 +138,7 @@ Use the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Position
 
-Labels are placed **outside** the Range Selector by default. Use the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property to place them inside if needed.
+By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property.
 
 ```cshtml
 
@@ -150,6 +152,7 @@ Labels are placed **outside** the Range Selector by default. Use the [LabelPosit
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime X { get; set; }
@@ -175,7 +178,7 @@ Labels are placed **outside** the Range Selector by default. Use the [LabelPosit
 
 ## Labels Customization
 
-Customize label font size, color, family, and more using the [RangeNavigatorLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
+The font size, color, family, etc. can be customized using the [RangeNavigatorLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
 
 ```cshtml
 
@@ -187,6 +190,7 @@ Customize label font size, color, family, and more using the [RangeNavigatorLabe
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime X { get; set; }

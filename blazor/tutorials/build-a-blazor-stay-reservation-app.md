@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Build a Blazor Stay Reservation App - Syncfusion
-description: Step by step tutorial to build a Blazor Stay Reservation Application using Syncfusion Blazor components.
+title: Build a Blazor stay reservation app - Syncfusion
+description: Learn here about step-by-step tutorial to build a Blazor stay reservation application using Syncfusion Blazor components like Scheduler, Sidebar, and Toast.
 platform: Blazor
-component: Tutorials
+control: Tutorials
 documentation: ug
 ---
 
-# Build a Blazor Stay Reservation App with Syncfusion® Blazor Components
+# Build a Blazor stay reservation app with Syncfusion® Blazor components
 
-In this tutorial, we'll walk through the process of building a "Stay Reservation" application. This demonstrates how to use the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler** component as the centerpiece of a booking system, complete with filtering, booking form and a responsive layout.
+This tutorial explains how to build a stay reservation application. It demonstrates how to use the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler** component as the centerpiece of a booking system, with filtering, a booking form, and a responsive layout.
 
-By the end of this tutorial, you will have learned how to:
-*   Set up a Blazor project with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
-*   Configure the Blazor Scheduler for a reservation system.
-*   Manage application state using a dependency-injected service.
-*   Build a filterable sidebar with Checkboxes and Accordions.
-*   Combine multiple components to create a polished, final application.
+By the end of this tutorial, the reader will be able to:
+* Set up a Blazor project with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+* Configure the Blazor Scheduler for a reservation system.
+* Manage application state using a dependency-injected service.
+* Build a filterable sidebar with checkboxes and accordions.
+* Combine multiple components to create a polished application.
 
-Let's get started!
+
 
 ## Prerequisites
 
@@ -26,18 +26,18 @@ Let's get started!
 
 ## Create the Blazor Web App
 
-First, let's create a new Blazor Web App.
+Create a new Blazor Web App.
 
 ```bash
 dotnet new blazor -o StayReservation
 cd StayReservation
 ```
 
-Choose the "Blazor Web App" template. For this project, we'll use the **Interactive Server** render mode for simplicity.
+Choose the "Blazor Web App" template. For this project, use the **Interactive Server** render mode for simplicity.
 
-## Add and Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+## Add and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
-Next, we need to add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to our project. We'll need packages for the Scheduler, navigation elements (like the Sidebar and Accordion), and various input components.
+Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
 
 Install the essential Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages:
 
@@ -47,20 +47,20 @@ dotnet add package Syncfusion.Blazor.Notifications
 dotnet add package Syncfusion.Blazor.Themes
 ```
 
-Now, let's configure the app to recognize and style the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Configure the app to recognize and style the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-1.  **Register Syncfusion<sup style="font-size:70%">&reg;</sup> Services**
+1.  **Register Syncfusion<sup style="font-size:70%">&reg;</sup> services**
 
-    In your `Program.cs` file, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service.
+    In `Program.cs`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service.
 
     ```csharp
     // Add the following line before builder.Build()
     builder.Services.AddSyncfusionBlazor();
     ```
 
-2.  **Add Theme and Script References**
+2.  **Add theme and script references**
 
-    Open `Components/App.razor`. We need to add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the necessary script reference for component interactivity. We'll use the modern `tailwind.css` theme.
+    Open `Components/App.razor`. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the script reference for component interactivity. The example uses the `tailwind.css` theme.
 
     ```html
     <!DOCTYPE html>
@@ -86,9 +86,9 @@ Now, let's configure the app to recognize and style the Syncfusion<sup style="fo
     </html>
     ```
 
-3.  **Add Namespace Imports**
+3.  **Add namespace imports**
 
-    To avoid having to add `@using` directives in every component, add the most common Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces to your `_Imports.razor` file.
+    To avoid adding `@using` directives in each component, add the commonly used Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces to the `_Imports.razor` file.
 
     ```csharp
     @using StayReservation
@@ -101,7 +101,9 @@ Now, let's configure the app to recognize and style the Syncfusion<sup style="fo
     @using Syncfusion.Blazor.DropDowns
     ```
 
-## Define the Data and State Management Service
+## Define the data and state management service
+
+A real-world app needs a way to manage its data and state. Create an `AppointmentService` to act as a central hub for reservation data and UI state. Inject this service into components that need to share information.
 
 A real-world app needs a way to manage its data and state. For this, we'll create an `AppointmentService` to act as a central hub for our reservation data and UI state. This service will be injected into the components that need to share information.
 
@@ -141,7 +143,7 @@ public class AppointmentData
 }
 ```
 
-Now, create the `AppointmentService.cs` in the `Data` folder. This service will hold the appointment list and references to our components.
+Create `AppointmentService.cs` in the `Data` folder. This service holds the appointment list and references to components.
 
 The complete code for `AppointmentService.cs` is available in the GitHub repository at the following link: [`AppointmentService.cs`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Data/AppointmentService.cs). You may reuse the full code as needed.
 
@@ -169,14 +171,13 @@ Register this service as a singleton in `Program.cs`:
 builder.Services.AddSingleton<AppointmentService>();
 ```
 
-## Build the UI Components
+## Build the UI components
 
-Our application has three main UI parts: the sidebar for calendar date navigation and filtering the rooms (`Sidebar.razor`), the scheduler view (`Schedule.razor`), and the main page (`Index.razor`) that puts it all together.
+The application has three main UI parts: the sidebar for calendar date navigation and filtering rooms (`Sidebar.razor`), the scheduler view (`Schedule.razor`), and the main page (`Index.razor`) that assembles them.
 
 ### The Filtering Sidebar (`Sidebar.razor`)
 
-This component uses an `<SfSidebar>` to contain calendar and filters. An `<SfCalendar>`allows the user to select the date desired date in scheduler.
-An `<SfAccordion>` organizes the filters, `<SfCheckBox>` component used to controls which floors are displayed. `<SfSlider>` is used to filter the price range.
+This component uses an `<SfSidebar>` to contain the calendar and filters. An `<SfCalendar>` allows the user to select the desired date in the scheduler. An `<SfAccordion>` organizes the filters, `<SfCheckBox>` component which floors are displayed. `<SfSlider>` filters the price range.
 
 ```html
 @using StayReservation.Data
@@ -242,15 +243,15 @@ When a checkbox is clicked, its state is updated in the `AppointmentService`. We
 
 ### The Scheduler View (`Schedule.razor`)
 
-This is the core of our application. Here, we'll configure the `<SfSchedule>` component to display reservations grouped by floor.
+This is the core of the application. Configure the `<SfSchedule>` component to display reservations grouped by floor.
 
-First, let's create a new file: `Components/Pages/Schedule.razor`.
+Create a new file: `Components/Pages/Schedule.razor`.
 
 The Scheduler needs two main pieces of data:
 1.  A list of **resources**—in our case, the hotel floors.
 2.  A list of **events** (or appointments)—the actual reservations.
 
-The appointment and resource data will come from `AppointmentService`.
+The appointment and resource data come from `AppointmentService`.
 
 The complete code for `Schedule.razor` is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
 
@@ -311,14 +312,14 @@ The complete code for `Schedule.razor` is available in the GitHub repository at 
 ```
 
 Key configuration points:
-*   `<ScheduleEventSettings>`: Binds the scheduler's events to the list in our `AppointmentService`.
-*   `<ScheduleGroup>`: We tell the scheduler to group by the resource named "Floors".
-*   `<ScheduleResource>`: We define our "Floors" resource. This maps the `FloorId` field in our `AppointmentData` to the `FloorId` in our `floorData` list, automatically assigning colors and text to the resource groups headers.
-*   `<ScheduleTemplates>`: We use templates to customize the date header, cell, and resource header.
+* `<ScheduleEventSettings>`: Binds the scheduler's events to the list in `AppointmentService`.
+* `<ScheduleGroup>`: Groups by the resource named "Floors".
+* `<ScheduleResource>`: Defines the "Floors" resource. This maps the `FloorId` field in `AppointmentData` to the `FloorId` in the `floorData` list, assigning colors and text to resource group headers.
+* `<ScheduleTemplates>`: Uses templates to customize the date header, cell, and resource header.
 
 ## Assemble the Main Page
 
-Now, let's bring it all together in the main `Index.razor` page. This component will host the sidebar and the schedule, along with a header to control the UI.
+Bring it together in the main `Index.razor` page. This component hosts the sidebar and the schedule, along with a header to control the UI.
 
 Update `Components/Pages/Index.razor` with the following code:
 
@@ -346,11 +347,11 @@ Update `Components/Pages/Index.razor` with the following code:
  </div>
 ```
 
-## Implement the Filtering Logic
+## Implement the filtering logic
 
-We need to connect the checkboxes in the sidebar to the data displayed in the scheduler. Since we're using our `AppointmentService` to hold the state, we can detect changes to the checkbox values and re-filter the scheduler's resource data. Can bind the change event to checkbox and sliders to form the filter query and update the resource data.
+Connect the checkboxes in the sidebar to the data displayed in the scheduler. Since `AppointmentService` holds the state, detect changes to the checkbox and slider values, form the filter query, and update the resource data.
 
-Refer the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
+Use the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
 
 The complete code for `Sidebar.razor` is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
 
@@ -425,16 +426,16 @@ The complete code for `Sidebar.razor` is available in the GitHub repository at t
     }
 ```
 
-Now, whenever a user clicks a checkbox, it triggers the `OnChange` event, which calls the `FloorHandler` method. This method updates the `ResourceQuery` property on the `Service` object, which is used to filter the resources in the scheduler. The `StateChanged` method is called to refresh the scheduler with the new resource data.
+When a user clicks a checkbox, it triggers the `OnChange` event, which calls the `FloorHandler` method. This method updates the `ResourceQuery` property on the `Service` object to filter resources in the scheduler. The `StateChanged` method refreshes the scheduler with the new resource data.
 
-Build and run the app by executing the `dotnet watch run`command in the command shell from the `StayReservation` folder.
+Build and run the app by executing the `dotnet watch run` command in the command shell from the `StayReservation` folder.
 
-## Implement the Appointment Booking form
-Bind the Scheduler's Editor Template to a custom form for creating and editing appointments. This form will include fields for the appointment's subject, start and end times, and a dropdown list for selecting the room. The form will be displayed when a user double clicks on an empty cell in the scheduler or on an existing appointment. The form will be displayed in a popup window.
+## Implement the appointment booking form
+Bind the Scheduler's Editor Template to a custom form for creating and editing appointments. This form includes fields for the appointment subject, start and end times, and a drop-down list for selecting the room. The form is displayed when a user double-clicks an empty cell in the scheduler or an existing appointment, in a popup window.
 
-We can validate the form fields using the `ValidationMessage` component. The `ValidationMessage` component displays an error message when the validation fails. The `ValidationMessage` component is bound to the `Subject` property of the `AppointmentData` object. The `Subject` property is required, so the `ValidationMessage` component displays an error message when the `Subject` property is empty.
+Validate the form fields using the `ValidationMessage` component. The `ValidationMessage` component displays an error message when validation fails. It is bound to the `Subject` property of the `AppointmentData` object, which is required, so an error message appears when the `Subject` property is empty.
 
-We can apply the following code to the `Schedule.razor` file to create the custom form.
+Apply the following code to the `Schedule.razor` file to create the custom form.
 
 ```html
 <SfSchedule>
@@ -555,11 +556,11 @@ We can apply the following code to the `Schedule.razor` file to create the custo
     </ScheduleTemplates>
 </SfSchedule>
 ```
-More details about editor template can be found in the [Editor Template](https://blazor.syncfusion.com/documentation/scheduler/editor-template#customizing-event-editor-using-template) documentation.
+More details about the editor template are available in the [Editor Template](https://blazor.syncfusion.com/documentation/scheduler/editor-template#customizing-event-editor-using-template) documentation.
 
-## Adding Toast Notifications
+## Add toast notifications
 
-Integrate `SfToast` for user notifications throughout the application. When a user creates or deletes a reservation, a toast notification will appear.
+Integrate `SfToast` for user notifications throughout the application. When a user creates or deletes a reservation, a toast notification appears.
 
 ```csharp
     <SfToast ID="toast_default" @ref="Service.ToastObj" Content="@Service.ToastContent" Timeout="5000" Icon="e-meeting" ShowCloseButton="true" Height="70px" Width="400px">
@@ -567,7 +568,7 @@ Integrate `SfToast` for user notifications throughout the application. When a us
     </SfToast>
 ```
 
-The `OnActionBegin` event of the `SfSchedule` component can be bound to a method that will handle the toast notifications.
+Bind the `OnActionBegin` event of the `SfSchedule` component to a method that handles toast notifications.
 
 ```csharp
     public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
@@ -620,12 +621,12 @@ The `OnActionBegin` event of the `SfSchedule` component can be bound to a method
 
 ## GitHub and demo references
 
-The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
+The complete code for this example is available in the GitHub repository: https://github.com/syncfusion/blazor-showcase-stay-reservation
 
-A demo of this example can be tried in [this link](https://blazor.syncfusion.com/showcase/stay-reservation).
+Try the live demo: https://blazor.syncfusion.com/showcase/stay-reservation
 
 ## Summary
 
-This guide has demonstrated how to build a functional and interactive stay reservation application. It has shown how to compose a complex UI by combining multiple Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components like the **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **Dropdowns**.
+This guide demonstrates how to build a functional and interactive stay reservation application. It shows how to compose a complex UI by combining Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **DropDowns**.
 
-Most importantly, a clean state management pattern has been implemented using a singleton service, allowing the components to communicate and share data seamlessly. This architecture is scalable and makes the application easy to maintain and extend with new features.
+A clean state management pattern is implemented using a singleton service, allowing the components to communicate and share data seamlessly. This architecture is scalable and makes the application easier to maintain and extend with new features.

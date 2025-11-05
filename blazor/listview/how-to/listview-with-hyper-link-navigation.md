@@ -7,9 +7,9 @@ control: Listview
 documentation: ug
 ---
 
-# Blazor ListView Component with Hyperlink Navigation
+# Blazor ListView Component with hyper-link navigation
 
-The `<a>` (anchor) HTML tag, in conjunction with its `href` attribute, can be embedded directly within the ListView's [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html#Syncfusion_Blazor_Lists_ListViewTemplates_1_Template) property to enable navigation links for each list item.
+The `anchor` tag can be used along with `href` attribute in the ListView [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html#Syncfusion_Blazor_Lists_ListViewTemplates_1_Template) property for navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -93,5 +93,5 @@ The `<a>` (anchor) HTML tag, in conjunction with its `href` attribute, can be em
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoWDNigJRsvYDF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.png)

@@ -7,13 +7,13 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Cell Selection in Blazor Gantt Chart Component
+# Cell selection in Blazor Gantt Chart component
 
-Cell selection in the Syncfusion Blazor Gantt Chart allows users to select individual cells in the Tree Grid section, enabling interactions like data inspection or editing. Enable this feature by setting the [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) property to [SelectionMode.Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html#Syncfusion_Blazor_Grids_SelectionMode_Cell). The data model must include fields like `TaskId`, `TaskName`, `StartDate`, `EndDate`, `Duration`, `Progress`, and optionally `ParentId` for hierarchical tasks. Use the [GetSelectedRowCellIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRowCellIndexes) method to retrieve selected cell information, which returns an object collection with `CellIndexes` and `RowIndex`. This guide covers single cell selection, multiple cell selection, dynamic selection, and customizing selection actions.
+Cell selection in the Gantt Chart component enables interactive selection of specific cells or ranges of cells within the grid. You may select cells using mouse clicks or arrow keys (up, down, left, right). This is useful for highlighting, manipulating, or performing operations on particular gantt chart cells.
 
-## Select single cell
+## Single cell selection
 
-Enable single cell selection by setting `GanttSelectionSettings.Mode` to `Cell`. Click a cell in the Tree Grid section to select it. The selected cell is highlighted, and its details can be accessed programmatically.
+Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) to **Cell** and [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) to **Single**. This allows selecting only one cell at a time.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -24,7 +24,7 @@ Enable single cell selection by setting `GanttSelectionSettings.Mode` to `Cell`.
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Single"></GanttSelectionSettings>
 </SfGantt>
 
 @code {
@@ -68,9 +68,9 @@ Enable single cell selection by setting `GanttSelectionSettings.Mode` to `Cell`.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htreNkhJUikAkJWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
   
-## Select multiple cells
+## Multiple cell selection
 
-Enable multiple cell selection by setting `GanttSelectionSettings.Mode` to `Cell` and `GanttSelectionSettings.Type` to `Syncfusion.Blazor.Grids.SelectionType.Multiple`. Hold the <kbd>Ctrl</kbd> key and click cells to select multiple cells in the Tree Grid section.
+Multiple cell selection in the Gantt Chart is enabled by setting [GanttSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode) to **Cell** and [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) to **Multiple**. This allows selecting multiple cells at a time by holding the <kbd>Ctrl</kbd> key while clicking on each desired cell.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -126,9 +126,9 @@ Enable multiple cell selection by setting `GanttSelectionSettings.Mode` to `Cell
   
 > **Note**: Multiple cell selection requires <kbd>Ctrl</kbd> + click on Windows or <kbd>Cmd</kbd> + click on Mac. Ensure selections are visible on smaller screens for mobile responsiveness.
 
-## Select cell dynamically
+## Single cell selection dynamically
 
-Programmatically select a cell using the [SelectCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectCellAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_Boolean__) method, specifying the row and column index. Use a reference to the Gantt component and handle potential errors for invalid indices.
+Select a specific cell in the Gantt Chart by calling the  [SelectCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectCellAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_Boolean__) method and providing the desired row and column indexes as arguments.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -192,9 +192,11 @@ Programmatically select a cell using the [SelectCellAsync](https://help.syncfusi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVyZaVTqLCPsIEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize cell selection
+## Customize cell selection action
 
-Control cell selection behavior using the [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelecting) and [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) events. The `CellSelecting` event triggers before selection, allowing cancellation of specific cell selections based on conditions (e.g., task ID). The `CellSelected` event triggers after selection, providing access to selected cell details.
+You may customize cell selection behavior in the Gantt Chart using [CellSelecting](https://blazor.syncfusion.com/documentation/gantt-chart/events#cellselecting), [CellSelected](https://blazor.syncfusion.com/documentation/gantt-chart/events#cellselected), [CellDeselecting](https://blazor.syncfusion.com/documentation/gantt-chart/events#celldeselecting), and [CellDeselected](https://blazor.syncfusion.com/documentation/gantt-chart/events#celldeselected) events.
+
+The following sample demonstrates selection is canceled in the `cellSelecting` event when the **TaskName** is **Perform Soil test**. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -202,27 +204,63 @@ Control cell selection behavior using the [CellSelecting](https://help.syncfusio
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
+@if (showMessage)
+{
+    <div style="margin-top:10px; font-weight:bold;color:red">@message</div>
+}
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GanttSelectionSettings>
-    <GanttEvents CellSelecting="CellSelectingAsync" TValue="TaskData"></GanttEvents>
+ <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttEvents TValue="TaskData" CellSelecting="CellSelectingAsync" CellSelected="CellSelectedAsync" CellDeselecting="CellDeselectingAsync" CellDeselected="CellDeselectedAsync">
+    </GanttEvents>
 </SfGantt>
 
 @code {
-    public async Task CellSelectingAsync(Syncfusion.Blazor.Grids.CellSelectingEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskID == 2)
-        {
-            args.Cancel = true;
-        }
-    }
-
     private List<TaskData> TaskCollection { get; set; }
+    private string message;
+    private bool showMessage;
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
+    }
+
+    public Task CellSelectedAsync(CellSelectEventArgs<TaskData> args)
+    {
+        showMessage = true;
+        message = $"CellSelected: RowIndex={args.RowIndex}, CellIndex={args.CellIndex}";
+        return Task.CompletedTask;
+    }
+
+    public Task CellSelectingAsync(CellSelectingEventArgs<TaskData> args)
+    {
+        showMessage = true;
+        message = $"CellSelecting: RowIndex={args.RowIndex}, CellIndex={args.CellIndex}";
+
+        if (args.Data?.TaskName == "Perform soil test")
+        {
+            args.Cancel = true;
+            message += " Selection canceled for 'Perform soil test'";
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public Task CellDeselectingAsync(CellDeselectEventArgs<TaskData> args)
+    {
+        showMessage = true;
+        message = $"CellDeselecting: RowIndex={args.RowIndex}, CellIndex={args.CellIndex}";
+
+        return Task.CompletedTask;
+    }
+
+    public Task CellDeselectedAsync(CellDeselectEventArgs<TaskData> args)
+    {
+        showMessage = true;
+        message = $"CellDeselected: RowIndex={args.RowIndex}, CellIndex={args.CellIndex}";
+
+        return Task.CompletedTask;
     }
 
     public class TaskData
@@ -238,24 +276,24 @@ Control cell selection behavior using the [CellSelecting](https://help.syncfusio
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>()
+        return new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
             new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
             new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
             new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08) },
             new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
             new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
             new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
         };
-        return Tasks;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBotkrfqVhnDqaK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSWZiNfkwAecQJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > **Note**: Use `CellSelecting` to restrict selections based on task properties. Log selected cell details with `CellSelected` for custom actions. Ensure selections are accessible via keyboard (e.g., <kbd>Shift</kbd> + arrow keys for range selection).
 

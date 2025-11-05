@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Disable the Blazor DateTimePicker Component | Syncfusion
-description: Learn how to disable the Syncfusion Blazor DateTimePicker component using the Enabled property to prevent focus, typing, and opening the popup.
+description: Checkout and learn here all about disabling the Syncfusion Blazor DateTimePicker Component and much more.
 platform: Blazor
-control: DateTimePicker
+control: Datetime Picker 
 documentation: ug
 ---
 
 # Disable the Blazor DateTimePicker Component
 
-To disable the DateTimePicker, set its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerModel-1.html#Syncfusion_Blazor_Calendars_DateTimePickerModel_1_Enabled) property to `false`. When disabled, the input cannot receive focus, typing is blocked, and the popup cannot be opened. The default value of `Enabled` is `true`, and this property can be data-bound to toggle the disabled state at runtime.
+To disable the DateTimePicker, set its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerModel-1.html#Syncfusion_Blazor_Calendars_DateTimePickerModel_1_Enabled) property to `false`.
 
 The following code demonstrates the disabled component.
 
@@ -23,4 +23,5 @@ The following code demonstrates the disabled component.
 }
 ```
 
-![Blazor DateTimePicker shown in a disabled state](../images/blazor-datetimepicker-disable-state.png)
+
+![Disable State in Blazor DateTimePicker](../images/blazor-datetimepicker-disable-state.png)

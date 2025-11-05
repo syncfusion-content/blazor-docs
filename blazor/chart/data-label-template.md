@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Label Template in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure Data Label Template in Syncfusion Blazor Charts component to display custom content on chart data points.
+title: Datalabel Template in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Datalabel Template in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,12 +9,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Data Label Template in Blazor Charts Component
+# Datalabel Template in Blazor Charts Component
 
-Text and additional information for a data point can be bound from a datasource beyond the x and y values. Use the implicit named parameter context to access aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). You can also modify the name of this implicit parameter using the context attribute.
+Text and interior information for a point can be bound from a datasource other than the x and y values. The implicit named parameter context can be used to access the aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). The context attribute can also be used to modify the name of this implicit parameter. For example, the data label information can be accessed using context in the template as shown below.
 
 ```cshtml
-
 <ChartDataLabel Visible="true" Name="Text">
     <Template>
         @{
@@ -56,7 +55,7 @@ Text and additional information for a data point can be bound from a datasource 
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -66,10 +65,10 @@ Text and additional information for a data point can be bound from a datasource 
 
     public List<Data> SalesReports = new List<Data>
 	{
-       new Data{ X = "Jan", Y = 3, Text = "January" },
-       new Data{ X = "Feb", Y = 3.5, Text = "February" },
-       new Data{ X = "Mar", Y = 7, Text = "March" },
-       new Data{ X = "Apr", Y = 13.5, Text = "April" }
+       new Data{ X= "Jan", Y= 3, Text= "January" },
+       new Data{ X= "Feb", Y= 3.5, Text= "February" },
+       new Data{ X= "Mar", Y= 7, Text= "March" },
+       new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 

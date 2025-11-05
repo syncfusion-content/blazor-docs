@@ -626,7 +626,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <SfGrid @ref="grid" TValue="OrderData" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
     <GridColumnChooserSettings>

@@ -1,41 +1,24 @@
 ---
-layout: post
 title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to connect a MySQL database to the Syncfusion Blazor Pivot Table using the MySql.Data library."
-platform: Blazor
-documentation: ug
+description: "Learn how to bind data from a MySQL in the Syncfusion Blazor Pivot Table and more."
 ---
 
-# MySQL Data Binding in Blazor Pivot Table Component
+# MySQL Data Binding
 
-This guide explains how to connect a MySQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display MySQL data.
+This section describes how to use [MySQL data](https://www.nuget.org/packages/MySql.Data) to retrieve data from a MySQL server and bind it to the Blazor Pivot Table.
 
-## Connecting a MySQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+## Connecting a MySQL database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
-This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to a MySQL database by directly retrieving data using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library.
+**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-### Step 1: Set Up a Blazor Pivot Table
-1. Create a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) by following the [Getting Started](../getting-started) guide.
+**2.** To connect a MySQL using the MySQL driver in our application, we need to install the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MySQL.Data** and install it.
 
-### Step 2: Install the MySql.Data NuGet Package
-1. Open the **NuGet Package Manager** in your project solution and search for **MySql.Data**.
-2. Install the **MySql.Data** package to add MySQL database support.
+![Add the NuGet package "MySQL.Data" to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
 
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to MySQL. **MySqlConnection** helps to connect the MySQL database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired query string and retrieve data from the MySQL database. The **Fill** method of the **MySqlDataAdapter** is used to populate the retrieved data into a **DataTable**,  which is then converted to a List.
 
-### Step 3: Connect to MySQL
-In the **Index.razor** file, under the `OnInitialized` method, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and retrieve data for the Pivot Table.
-
-1. **Establish Connection**: Use **MySqlConnection** with a valid connection string (e.g., `Server=localhost;Database=mydb;Uid=myuser;Pwd=mypassword;`) to connect to the MySQL database.
-2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM orders`) using **MySqlCommand** to retrieve data for the Pivot Table.
-3. **Structure the Data**: Use **MySqlDataAdapter**'s **Fill** method to populate the query results into a **DataTable**, which is then converted to a list for binding to the Pivot Table.
-
-### Step 4: Bind Data to the Pivot Table
-1. Assign the retrieved list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property of the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) to organize and format the data.
-
-The following code connects to a MySQL database, retrieves data, and binds it to the Pivot Table.
+**4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the MySQL data.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -97,42 +80,25 @@ The following code connects to a MySQL database, retrieves data, and binds it to
 }
 ```
 
-### Step 5: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MySQL data, organized according to the defined configuration.
-3. The resulting Pivot Table will look like this:
+When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
 
 ## Connecting a MySQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
-This section explains how to create a Web API service to fetch data from a MySQL database and connect it to the Blazor Pivot Table.
+### Create a Web API service to fetch MySQL data
 
-### Create a Web API Service to Fetch MySQL Data
-
-Follow these steps to set up a Web API service that retrieves MySQL data for the Pivot Table.
-
-#### Step 1: Create an ASP.NET Core Web Application
-1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
-2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
+**1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
 ![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
-#### Step 2: Install the MySql.Data NuGet Package
-1. Install the [MySql.Data](https://www.nuget.org/packages/MySql.Data) package using the **NuGet Package Manager** to enable MySQL connectivity.
+**2.** To connect a MySQL using the **MySQL data** in our application, we need to install the [MySQL.Data](https://www.nuget.org/packages/MySQL.Driver) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MySQL.Data** and install it.
 
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package "MySQL.Data" to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
 
-#### Step 3: Create a Web API Controller
-1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
-2. This controller manages data communication between the MySQL database and the Pivot Table.
+**3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
 
-#### Step 4: Connect to MySQL and Retrieve Data
-In the **PivotController.cs** file, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and fetch data for the Pivot Table.
-
-1. **Establish Connection**: Use **MySqlConnection** with a valid connection string to access the MySQL database.
-2. **Fetch Data**: Run a SQL query (e.g., `SELECT * FROM orders`) using **MySqlCommand** to retrieve data.
-3. **Prepare Data**: Use **MySqlDataAdapter**'s **Fill** method to store the query results in a **DataTable** for JSON serialization.
+**4.** In the Web API controller (aka, PivotController), ***MySqlConnection** helps to connect the MySQL database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired query string and retrieve data from the MySQL database. The **Fill** method of the **MySqlDataAdapter** is used to populate the retrieved data into a **DataTable** as shown in the following code snippet.
 
 ```csharp
     using Microsoft.AspNetCore.Mvc;
@@ -163,13 +129,7 @@ In the **PivotController.cs** file, use the [MySql.Data](https://www.nuget.org/p
 
 ```
 
-#### Step 5: Serialize Data to JSON
-1. In the **PivotController.cs** file, create a **Get** method that calls **FetchMySQLResult** to retrieve MySQL data.
-2. Use **JsonConvert.SerializeObject** from the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) library to serialize the **DataTable** into JSON format.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project.
-
-The following code sets up the Web API controller to fetch and serialize MySQL data.
+**5.** In the **Get()** method of the **PivotController.cs** file, the **GetMySQLResult** method is used to retrieve the MySQL data as a list, which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
 
 ```csharp
     using Microsoft.AspNetCore.Mvc;
@@ -206,39 +166,24 @@ The following code sets up the Web API controller to fetch and serialize MySQL d
 
 ```
 
-#### Step 6: Run the Web API Service
-1. Build and run the application.
-2. The application will be hosted at `https://localhost:7146/` (the port number may vary).
+**6.** Run the application and it will be hosted within the URL `https://localhost:7146`.
 
-#### Step 7: Verify the JSON Data
-1. Access the Web API endpoint at `https://localhost:7146/Pivot` to view the JSON data retrieved from MySQL.
-2. The browser will display the JSON data, as shown below.
+**7.** Finally, the retrieved data from MySQL database which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:7146/Pivot`, as shown in the browser page below.
 
 ![Hosted Web API URL](../images/mysql-data.png)
 
-### Connecting the Pivot Table to MySQL Using the Web API Service
+### Connecting the Pivot Table to a MySQL using the Web API service
 
-This section explains how to connect the Blazor Pivot Table to MySQL data retrieved via the Web API service.
+**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-#### Step 1: Set Up a Blazor Pivot Table
-1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
-
-#### Step 2: Configure the Web API URL
-1. In the **Index.razor** file, map the Web API URL (`https://localhost:7146/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property facilitates deserializing MySQL data into instances of your model data class (i.e., TValue="OrderDetails") for binding to the Pivot Table.
-
-#### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.
-2. Enable the field list by setting [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) to **true** for interactive field management.
-
-The following code connects the Pivot Table to the Web API and configures the report.
+**2.** Map the hosted Web API's URL link `https://localhost:7146/Pivot` to the Pivot Table in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html?&_ga=2.200411303.844585580.1677740066-2135459383.1677740066#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.200411303.844585580.1677740066-2135459383.1677740066). This [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property aids in the de-serialization of MySQL data into instances of your model data class (aka, TValue="ProductDetails") while bound to the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="OrderDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="OrderDetails" Url="https://localhost:7146/Pivot" ExpandAll="false" EnableSorting="true">
-        <PivotViewColumns>
+    <PivotViewDataSourceSettings TValue="OrderDetails" Url="https://localhost:7146/Pivot" ExpandAll=false EnableSorting=true>
+         <PivotViewColumns>
             <PivotViewColumn Name="ShipName"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
@@ -266,12 +211,9 @@ The following code connects the Pivot Table to the Web API and configures the re
 }
 ```
 
-#### Step 4: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MySQL data fetched via the Web API, structured according to the defined configuration.
-3. The resulting Pivot Table will look like this:
+
+When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
 
-### Additional Resources
-Explore a complete example of the Blazor Pivot Table integrated with MySQL using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/tree/master/Blazor).
+> In [this](https://github.com/SyncfusionExamples/how-to-bind-MySQL-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from a MySQL using the Web API service.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Accumulation Chart Component | Syncfusion
-description: Check out and learn how to configure and customize Legend in Syncfusion Blazor Accumulation Chart component.
+description: Checkout and learn here all about Legend in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Legend in Blazor Accumulation Chart Component
 
-Legends in accumulation charts provide information about data points, similar to standard charts. If the chart's width is large, the legend appears on the right; if the height is large, the legend appears at the bottom. To collapse a legend for a point, assign an empty string to the point's x value.
+The legend is available for accumulation charts, just like it is for charts, and it provides information about the points. If the chart's width is large, the legend will be placed on the right, and if the chart's height is large, the legend will be placed on the bottom. The legend for a point can be collapsed by assigning an empty string to the point's x value.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -25,7 +25,7 @@ Legends in accumulation charts provide information about data points, similar to
     <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -39,7 +39,7 @@ Legends in accumulation charts provide information about data points, similar to
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -48,11 +48,11 @@ Legends in accumulation charts provide information about data points, similar to
 ![Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKCBWfsHSGQTvG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Position and Alignment
+## Position and alignment
 
-Place the legend at the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom), or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property. Align the legend with the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property: [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far), or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near).
+The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top) or [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom)  [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property. The [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property can also be used to align the legend to the chart's [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far) or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near).
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -66,7 +66,7 @@ Place the legend at the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.
     <AccumulationChartLegendSettings Visible="true" Position="LegendPosition.Top"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -80,7 +80,7 @@ Place the legend at the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -91,7 +91,7 @@ Place the legend at the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Legend Reverse
 
-Reverse the order of legend items using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Reverse) property. By default, the legend for the first series appears first.
+You can reverse the order of the legend items by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Reverse) property. By default, legend for the first series in the collection will be placed first.
 
 ```cshtml
 
@@ -108,7 +108,7 @@ Reverse the order of legend items using the [Reverse](https://help.syncfusion.co
     <AccumulationChartLegendSettings Visible="true" Reverse="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -122,7 +122,7 @@ Reverse the order of legend items using the [Reverse](https://help.syncfusion.co
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -131,11 +131,11 @@ Reverse the order of legend items using the [Reverse](https://help.syncfusion.co
 ![Changing Legend Reverse in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-reverse.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthqMVCpMRRynnnl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Legend Shape
+## Legend shape
 
-Change the legend icon shape using the [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#properties). The default icon shape is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
+The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#properties) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -150,7 +150,7 @@ Change the legend icon shape using the [LegendShape](https://help.syncfusion.com
     <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -164,7 +164,7 @@ Change the legend icon shape using the [LegendShape](https://help.syncfusion.com
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -173,11 +173,11 @@ Change the legend icon shape using the [LegendShape](https://help.syncfusion.com
 ![Changing Legend Shape in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-shape.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUMhiJMxnkMBtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Legend Size
+## Legend size
 
-Customize the legend size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
+The legend size can be customized by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -193,7 +193,7 @@ Customize the legend size using the [Width](https://help.syncfusion.com/cr/blazo
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -207,7 +207,7 @@ Customize the legend size using the [Width](https://help.syncfusion.com/cr/blazo
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -216,11 +216,11 @@ Customize the legend size using the [Width](https://help.syncfusion.com/cr/blazo
 ![Changing Legend Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-size.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqsrMpixGVWbxO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Legend Shape Size
+## Legend shape size
 
-Adjust the legend shape dimensions using the [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties.
+The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -235,7 +235,7 @@ Adjust the legend shape dimensions using the [ShapeHeight](https://help.syncfusi
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser { get; set; }
@@ -249,7 +249,7 @@ Adjust the legend shape dimensions using the [ShapeHeight](https://help.syncfusi
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -260,9 +260,9 @@ Adjust the legend shape dimensions using the [ShapeHeight](https://help.syncfusi
 
 ## Paging for Legend
 
-When legend items exceed the legend bounds, paging is enabled by default. Users can navigate between legend pages using navigation buttons.
+When the legend items exceed legend bounds, paging will be enabled by default. End user can view each legend item using the navigation buttons to navigate between pages.
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -277,7 +277,7 @@ When legend items exceed the legend bounds, paging is enabled by default. Users 
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code {
+@code{
     public class Statistics
     {
         public string Browser{ get; set; }
@@ -291,7 +291,7 @@ When legend items exceed the legend bounds, paging is enabled by default. Users 
         new Statistics { Browser = "iPhone", Users = 19 },
         new Statistics { Browser = "Others", Users = 4  },
         new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 }
+        new Statistics { Browser = "Android", Users = 12 },
     };
 }
 
@@ -300,11 +300,11 @@ When legend items exceed the legend bounds, paging is enabled by default. Users 
 ![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVKWVWTiRwuHWFS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Paging Customization
+### Paging customization
 
-Customize legend pager arrow elements using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html). Customize page numbers with [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
+In legend pager, the arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html) and the page numbers can be customized by using the [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
 
-```cshtml
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -330,38 +330,37 @@ Customize legend pager arrow elements using the [ArrowSize](https://help.syncfus
     public Syncfusion.Blazor.Charts.LegendPosition position { get; set; } = Syncfusion.Blazor.Charts.LegendPosition.Right;
     public double MaxLabel { get; set; } = 100;
 
+    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
+    {
+         new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
+         new PieData { ExpenseCategory =  "Chrome", ExpensePercentage = 37.28, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Firefox", ExpensePercentage = 20, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Safari", ExpensePercentage = 4.73, DataLabelMappingName = "4.73%" },
+         new PieData { ExpenseCategory =  "QQ", ExpensePercentage = 5.96, DataLabelMappingName = "5.96%" },
+         new PieData { ExpenseCategory =  "UC Browser", ExpensePercentage = 4.37, DataLabelMappingName = "4.37%" },
+         new PieData { ExpenseCategory =  "Edge", ExpensePercentage = 7.48, DataLabelMappingName = "7.48%" },
+         new PieData { ExpenseCategory =  "Opera", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Brave", ExpensePercentage = 2.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Maxthon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "UC", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+    };
+
     public class PieData
     {
         public string ExpenseCategory { get; set; }
         public double ExpensePercentage { get; set; }
         public string DataLabelMappingName { get; set; }
     }
-
-    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
-    {
-         new PieData { ExpenseCategory = "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
-         new PieData { ExpenseCategory = "Chrome", ExpensePercentage = 37.28, DataLabelMappingName = "57.28%" },
-         new PieData { ExpenseCategory = "Firefox", ExpensePercentage = 20, DataLabelMappingName = "57.28%" },
-         new PieData { ExpenseCategory = "Safari", ExpensePercentage = 4.73, DataLabelMappingName = "4.73%" },
-         new PieData { ExpenseCategory = "QQ", ExpensePercentage = 5.96, DataLabelMappingName = "5.96%" },
-         new PieData { ExpenseCategory = "UC Browser", ExpensePercentage = 4.37, DataLabelMappingName = "4.37%" },
-         new PieData { ExpenseCategory = "Edge", ExpensePercentage = 7.48, DataLabelMappingName = "7.48%" },
-         new PieData { ExpenseCategory = "Opera", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
-         new PieData { ExpenseCategory = "Brave", ExpensePercentage = 2.06, DataLabelMappingName = "14.06%" },
-         new PieData { ExpenseCategory = "Maxthon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
-         new PieData { ExpenseCategory = "UC", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
-         new PieData { ExpenseCategory = "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" }
-    };
 }
 
 ```
-
 ![Blazor Accumulation Chart Legend Pager Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthTZnrTBvLmyjUM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Legend Text Wrap
+## Legend text wrap
 
-Wrap legend text that exceeds the container using the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) property. Wrap legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth) property.
+When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth) property.
 
 ```cshtml
 
@@ -375,24 +374,23 @@ Wrap legend text that exceeds the container using the [TextWrap](https://help.sy
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
 
-@code {
+@code{
+   public List<PieData> PieChartPoints { get; set; } = new List<PieData>
+    {
+         new PieData { ExpenseCategory =  "Net-tution", ExpensePercentage = 21, DataLabelMappingName = "21%" },
+         new PieData { ExpenseCategory =  "Private Gifts", ExpensePercentage = 8, DataLabelMappingName = "8%" },
+         new PieData { ExpenseCategory =  "All Other", ExpensePercentage = 9, DataLabelMappingName = "9%" },
+         new PieData { ExpenseCategory =  "Local Revenue", ExpensePercentage = 4, DataLabelMappingName = "4%" },
+         new PieData { ExpenseCategory =  "State Revenue", ExpensePercentage = 21, DataLabelMappingName = "21%" },
+         new PieData { ExpenseCategory =  "Federal Revenue", ExpensePercentage = 16, DataLabelMappingName = "16%" },
+         new PieData { ExpenseCategory =  "Self-supporting Operations", ExpensePercentage = 21, DataLabelMappingName = "21%" },
+    };
     public class PieData
     {
         public string ExpenseCategory { get; set; }
         public double ExpensePercentage { get; set; }
         public string DataLabelMappingName { get; set; }
     }
-
-   public List<PieData> PieChartPoints { get; set; } = new List<PieData>
-    {
-         new PieData { ExpenseCategory = "Net-tution", ExpensePercentage = 21, DataLabelMappingName = "21%" },
-         new PieData { ExpenseCategory = "Private Gifts", ExpensePercentage = 8, DataLabelMappingName = "8%" },
-         new PieData { ExpenseCategory = "All Other", ExpensePercentage = 9, DataLabelMappingName = "9%" },
-         new PieData { ExpenseCategory = "Local Revenue", ExpensePercentage = 4, DataLabelMappingName = "4%" },
-         new PieData { ExpenseCategory = "State Revenue", ExpensePercentage = 21, DataLabelMappingName = "21%" },
-         new PieData { ExpenseCategory = "Federal Revenue", ExpensePercentage = 16, DataLabelMappingName = "16%" },
-         new PieData { ExpenseCategory = "Self-supporting Operations", ExpensePercentage = 21, DataLabelMappingName = "21%" }
-    };
 }
 
 ```

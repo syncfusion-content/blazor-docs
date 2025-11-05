@@ -7,9 +7,9 @@ control: Split Button
 documentation: ug
 ---
 
-# Icons and separator in Blazor Split Button component
+# Icons And Separator in Blazor SplitButton Component
 
-## Split Button icons
+## Split Button Icons
 
 [Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) can have an icon to provide the visual representation of the action. To place the icon on a Split Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Split Button. The icon's position can be customized by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconPosition) property.
 
@@ -41,11 +41,11 @@ documentation: ug
 
 ![Blazor SplitButton with Icon](./images/blazor-splitbutton-icon.png)
 
-Third-party or custom icons can also be applied by assigning the appropriate class name to the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property. Ensure the corresponding icon font or stylesheet is referenced in the application.
+The third party icons on the Split Button can be used by the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property.
 
-## Vertical button
+## Vertical Button
 
-A vertical layout for the Split Button can be achieved by adding the `e-vertical` class via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_CssClass) property. This stacks the icon and text vertically within the primary button.
+Vertical Button in Split Button can be achieved by adding `e-vertical` class using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -70,7 +70,9 @@ A vertical layout for the Split Button can be achieved by adding the `e-vertical
 
 ## Separator
 
-Separators are horizontal lines used to group items in the popup menu. Separators are non-selectable and serve only as visual dividers. Enable a separator between items by setting the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) property to `true` on a `DropDownMenuItem`.
+The Separators are the horizontal lines that are used to separate the popup items. You cannot select the separators. You can enable separators to group the popup items using the separator property.
+
+The following example illustrates how to enable [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) support in Split Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

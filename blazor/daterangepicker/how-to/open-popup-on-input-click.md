@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open the Blazor DateRangePicker popup on Focus | Syncfusion
-description: Learn how to open the Syncfusion Blazor DateRangePicker popup when the input receives focus by enabling the OpenOnFocus property.
+description: Learn here all about opening the Syncfusion Blazor DateRangePicker popup upon focusing input and much more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Open the Blazor DateRangePicker popup on Focus
 
-Open the DateRangePicker popup when the input receives focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_OpenOnFocus) property to `true`.
+You can also open the DateRangePicker popup on input focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_OpenOnFocus) property to true.
 
 The following example demonstrates how to open the DateRangePicker popup when the input is focused.
 
@@ -20,4 +20,6 @@ The following example demonstrates how to open the DateRangePicker popup when th
 
 ```
 
-![Opening the Blazor DateRangePicker popup when the input is focused](../images/blazor-daterangepicker-open-focus.gif)
+![Opening Blazor DateRangePicker Popup](../images/blazor-daterangepicker-open-focus.gif)
+
+

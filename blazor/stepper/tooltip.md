@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltips in Blazor Stepper Component
 
-The Stepper component supports displaying tooltips to show additional information for steps. Enable this feature by setting the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`.
+The Stepper component supports tooltip to show additional information in the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`. 
 
-The tooltip appears when a user hovers over a step, providing information such as the step's label or text. By default, the `ShowTooltip` property is `false`.
+The tooltip appears when the user hovers over the step, providing the information such as the label or text. By default, the `ShowTooltip` property is `false`.
 
 ```cshtml
 
@@ -54,15 +54,14 @@ The tooltip appears when a user hovers over a step, providing information such a
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLesDtkJNtBGYph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Tooltip](./images/Blazor-tooltip.png)
 
-## Tooltip Template
+## Tooltip template
 
-Use the [`TooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_TooltipTemplate) tag directive to specify a custom template for the tooltips, providing detailed and dynamic information about the steps.
+You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_TooltipTemplate) tag directive to specify a custom template for the tooltips, providing detailed information about the steps.
 
-When hovering over a step, the current step's model (the `StepperStep` instance) is passed as the `@context` object to the template, allowing dynamic information to be included.
+When hovering over the step, the current step model is passed in the template context, allowing you to include dynamic information about the step.
 
 ```cshtml
 
@@ -138,7 +137,5 @@ When hovering over a step, the current step's model (the `StepperStep` instance)
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLIMDtkJZDvetoA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stepper Component with Tooltip Template](./images/Blazor-tooltip-template.png)

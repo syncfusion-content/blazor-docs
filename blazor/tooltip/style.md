@@ -13,7 +13,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the tooltip
 
-Apply the following CSS to customize the overall tooltip wrapper.
+Use the following CSS to customize the tooltip.
 
 ```css
 .e-tooltip-wrap {
@@ -24,7 +24,8 @@ Apply the following CSS to customize the overall tooltip wrapper.
 
 ## Customizing the Tooltip popup
 
-Use the following CSS to style the tooltip popup container (background and border).
+Use the following CSS to customize the Tooltip popup properties.
+
 ```css
 .e-tooltip-wrap.e-popup {
     background-color: #fff;
@@ -34,7 +35,7 @@ Use the following CSS to style the tooltip popup container (background and borde
 
 ## Customizing the Tooltip content
 
-Use the following CSS to customize tooltip content typography and spacing. Ensure sufficient color contrast for accessibility.
+Use the following CSS to customize the Tooltip content.
 
 ```css
 .e-tooltip-wrap .e-tip-content {
@@ -46,7 +47,7 @@ Use the following CSS to customize tooltip content typography and spacing. Ensur
 
 ## Customizing the Tooltip arrow tip
 
-Use the following CSS to position and size the outer arrow tip for each placement.
+Use the following CSS to customize the Tooltip arrow tip.
 
 ```css
 /* To customize the arrow tip at bottom */
@@ -84,7 +85,7 @@ Use the following CSS to position and size the outer arrow tip for each placemen
 
 ## Customizing the Tooltip inner tip
 
-Use the following CSS to style the inner arrow tip that overlays the outer tip.
+Use the following CSS to customize the Tooltip inner tip.
 
 ```css
 .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
@@ -95,7 +96,7 @@ Use the following CSS to style the inner arrow tip that overlays the outer tip.
 
 ## Customizing the Tooltip outer tip
 
-Use the following CSS to style the outer arrow tip borders for each placement.
+Use the following CSS to customize the Tooltip outer tip.
 
 ```css
 /* To customize the arrow tip at bottom */

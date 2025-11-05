@@ -7,7 +7,7 @@ control: Accordion
 documentation: ug
 ---
 
-# Create Wizard Interface with Blazor Accordion Component
+# Create Wizard in Blazor Accordion Component
 
 You can create a wizard-like interface using the Accordion component by dynamically controlling the expansion and disabled states of accordion items. This is accomplished through the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) properties.
 
@@ -223,9 +223,7 @@ The following example demonstrates a simple payment module that enables or disab
 </style>
 ```
 
-In this example, we've created a three-step wizard using the Syncfusion Blazor Accordion component. Each step corresponds to an accordion item, providing a guided user experience for sequential data entry or process flow.
-
-### Wizard Flow:
+In this example, we've created a three-step wizard using the Accordion component:
 
 1. **Sign In** - Collects user credentials
 2. **Delivery Address** - Gathers shipping information 
@@ -239,6 +237,6 @@ The wizard functions by:
 - Providing back navigation between steps
 - Displaying a confirmation dialog upon successful completion
 
-This pattern can be customized to create multi-step forms, registration processes, or any sequential workflow in your Blazor applications using Syncfusion Accordion components.
+This pattern can be customized to create multi-step forms, registration processes, or any sequential workflow in your Blazor applications.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBgWVMgUGQmZvwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

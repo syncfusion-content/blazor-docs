@@ -9,11 +9,9 @@ documentation: ug
 
 # Template in Blazor File Upload Component
 
-The template feature customizes how each file item is rendered in the uploader UI. It enables full control over layout and styling for file details such as name, size, and status, so the interface can match application design requirements and provide a tailored user experience.
+The template in the code snippet allows for the customization of how file details are displayed in the uploader's UI. It provides flexibility to define the structure and styling of individual file elements, such as file name, size, and status. This allows to create a tailored and visually appealing file upload interface that aligns with their application's design and user experience requirements.
 
 ### With server-side API endpoint
-
-Use a template with server endpoints when uploads are processed by a backend. The template controls only the display of file items; the upload flow still uses SaveUrl and RemoveUrl.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -32,8 +30,6 @@ Use a template with server endpoints when uploads are processed by a backend. Th
 ```
 ### Without server-side API endpoint
 
-Use a template without server endpoints when handling files locally (for example, demos or trusted environments). The template syntax and available context properties are the same as the server-backed example.
-
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
@@ -50,7 +46,7 @@ Use a template without server endpoints when handling files locally (for example
 
 ### Adding progressbar using template
 
-When using a custom file template, the built-in progress bar is not shown. The following example disables the default progress indicator (ShowProgressBar=false), renders a custom progress element in the template, and updates it during stream read/write in the ValueChange event. The template displays file name, size, progress, and status, and toggles remove/delete icons based on item state. In browser-only environments (such as WebAssembly), write streams to appropriate storage or a server API; writing directly to the local file system is supported in server/desktop contexts.
+When using the file upload template, the progress bar does not display in the UI. We can add the progress bar using template and then show the progress while reading and writing to the stream in the ValueChange event. The code snippet below demonstrates a Blazor file upload example with a progress bar using a custom template. The custom template includes elements to display the file name, size, progress bar, and file status.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Publish and Deploy in Blazor | AOT | Syncfusion
-description: Learn here all about publish the Blazor application with Syncfusion Blazor Components and much more.
+description: Learn how to publish and deploy Blazor Web App, Blazor WASM, Blazor Server Apps with Syncfusion Blazor components, including self-contained deployment and AOT.
 platform: Blazor
 component: Common
 documentation: ug
@@ -93,10 +93,10 @@ To enable AOT compilation in the application, add `RunAOTCompilation` options wi
 
 ## See also
 
-* [Host and Deploy Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio)
-* [Host and deploy Blazor Server](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/server?view=aspnetcore-7.0)
-* [Host and deploy ASP.NET Core Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-7.0)
-* [Publish a Web app to Azure App Service using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=vs-2022&tabs=azure)
-* [Deploy ASP.NET Core apps to Azure App Service](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-7.0&tabs=visual-studio)
-* [Deploy Blazor WASM App to Cloudflare](https://www.syncfusion.com/blogs/post/easily-deploy-a-blazor-webassembly-app-to-cloudflare.aspx)
-* [Publish a Blazor WebAssembly app and .NET API with Azure Static Web Apps](https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api-dotnet/)
+* [Host and deploy Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy)
+* [Host and deploy Blazor Server](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/server/)
+* [Host and deploy ASP.NET Core Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
+* [Publish a Web App to Azure App Service using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=vs-2022&tabs=azure)
+* [Deploy ASP.NET Core apps to Azure App Service](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps)
+* [Deploy Blazor WASM App to Cloudflare](https://www.syncfusion.com/blogs/post/easily-deploy-a-blazor-webassembly-app-to-cloudflare)
+* [Publish a Blazor WebAssembly App and .NET API with Azure Static Web Apps](https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api-dotnet/)

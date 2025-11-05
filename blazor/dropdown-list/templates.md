@@ -3,13 +3,14 @@ layout: post
 title: Templates in Blazor DropDown List Component | Syncfusion
 description: Checkout and learn here all about Templates in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
-control: DropDownList
+control: DropDown List
 documentation: ug
 ---
 
 # Templates in DropDown List
 
-The DropDownList provides several templates to customize the appearance of individual list items, group headers, the selected value, and the popup’s header and footer.
+The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
+
 
 To get started quickly with Templates in the Blazor DropDown List component, you can check the video below.
 
@@ -17,9 +18,9 @@ To get started quickly with Templates in the Blazor DropDown List component, you
 
 ## Value template
 
-Customize the display of the currently selected value in the input using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) property.
+The currently selected value that is displayed by default on the DropDownList input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) property.
 
-In the following sample, the selected value shows a combined text of `FirstName` and `Designation`, separated by a hyphen.
+In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation` in the DropDownList input, which is separated by a hyphen.
 
 {% highlight cshtml %}
 
@@ -31,9 +32,9 @@ In the following sample, the selected value shows a combined text of `FirstName`
 
 ## Item template
 
-Customize the content of each list item using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+The content of each list item within the DropDownList can be customized with the help of the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
-In the following sample, each list item is arranged into two columns to present additional details.
+In the following sample, each list item is split into two columns to display relevant data.
 
 {% highlight cshtml %}
 
@@ -45,9 +46,9 @@ In the following sample, each list item is arranged into two columns to present 
 
 ## Group template
 
-Customize the group header under which items are categorized using the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. The same template applies to both inline and floating group headers.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
-In the following sample, employees are grouped by city.
+In the following sample, employees are grouped according to their cities.
 
 {% highlight cshtml %}
 
@@ -59,9 +60,9 @@ In the following sample, employees are grouped by city.
 
 ## Header template
 
-Display a static custom header at the top of the popup using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) property.
+The header element is shown statically at the top of the popup list items within DropDownList, and any custom element can be placed as a header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) property.
 
-In the following sample, the header and items are presented in two columns, similar to a grid layout.
+In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
 {% highlight cshtml %}
 
@@ -73,9 +74,9 @@ In the following sample, the header and items are presented in two columns, simi
 
 ## Footer template
 
-Show a custom element at the bottom of the popup using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FooterTemplate) property.
+The DropDownList has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FooterTemplate) property.
 
-In the following sample, the footer displays the total number of items in the DropDownList.
+In the following sample, footer element displays the total number of list items present in the DropDownList.
 
 {% highlight cshtml %}
 
@@ -87,9 +88,9 @@ In the following sample, the footer displays the total number of items in the Dr
 
 ## No records template
 
-Provide custom content for the popup when no data is available or when a search returns no matches using the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
+The DropDownList is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
 
-In the following sample, the popup displays a “no data available” message.
+In the following sample, popup list content displays the notification of no data available.
 
 {% highlight cshtml %}
 
@@ -101,9 +102,9 @@ In the following sample, the popup displays a “no data available” message.
 
 ## Action failure template
 
-Customize the popup content shown when a remote data request fails using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
+There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
-In the following sample, the DropDownList displays a notification when data retrieval fails.
+In the following sample, when the data fetch request fails, the DropDownList displays the notification.
 
 {% highlight cshtml %}
 

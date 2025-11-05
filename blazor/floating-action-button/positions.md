@@ -9,9 +9,9 @@ documentation: ug
 
 # Positions in Blazor Floating Action Button Component
 
-The Floating Action Button (FAB) can be positioned anywhere within the specified [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property. If `Target` is not defined, the FAB is positioned relative to the browser viewport. When using `Target`, ensure the container is positioned (for example, `position: relative`) so the FAB aligns within its bounds.
+The floating action button can be positioned anywhere on the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property. If the `Target` is not defined, then FAB is positioned based on the browser viewport.
 
-The available position values for the Floating Action Button are:
+The position values of Floating Action Button are as follows:
 
 * TopLeft
 * TopCenter
@@ -23,7 +23,7 @@ The available position values for the Floating Action Button are:
 * BottomCenter
 * BottomRight
 
-The following example demonstrates the Bottom Left position of the FAB.
+Below example demonstrates Bottom Left position of FAB.
 
 ```cshtml
 
@@ -62,9 +62,9 @@ The following example demonstrates the Bottom Left position of the FAB.
 
 ```
 
-![Blazor FAB component at bottom-left position](./images/BottomLeftPosition.png)
+![Blazor FAB Component with Bottom Left Position](./images/BottomLeftPosition.png)
 
-The following example demonstrates multiple supported positions of the FAB.
+Below example demonstrates different supported positions of FAB.
 
 ```cshtml
 
@@ -111,11 +111,11 @@ The following example demonstrates multiple supported positions of the FAB.
 
 ```
 
-![Blazor FAB component demonstrating all built-in positions](./images/FabPositions.png)
+![Blazor FAB Component with different positions](./images/FabPositions.png)
 
 ## Custom position
 
-Define a custom position for the Floating Action Button by overriding the `top`, `left`, `right`, and `bottom` CSS properties using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_CssClass) property.
+You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properities using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass).
 
 ```cshtml
 
@@ -136,4 +136,4 @@ Define a custom position for the Floating Action Button by overriding the `top`,
 
 ```
 
-![Blazor FAB component with custom position](./images/CustomPosition.png)
+![Blazor FAB Component with Custom position](./images/CustomPosition.png)

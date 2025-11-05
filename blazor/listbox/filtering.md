@@ -9,9 +9,9 @@ documentation: ug
 
 # Filtering in ListBox
 
-The ListBox provides built-in filtering when the [AllowFiltering property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowFiltering) is enabled. A search box is rendered automatically, and filtering begins as the user types. The default value of AllowFiltering is `false`. Filtering is case-insensitive by default and affects only the visible items; existing selections remain unchanged.
+The ListBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of AllowFiltering is `false`.
 
-The following code demonstrates the filtering functionality in the ListBox component.
+The following code demonstrates the filtering functionality in ListBox component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -40,20 +40,20 @@ The following code demonstrates the filtering functionality in the ListBox compo
 
 ```
 
-![Blazor ListBox with filtering enabled](images/blazor-listbox-filtering.png)
+![Blazor ListBox with filtering](images/blazor-listbox-filtering.png)
 
 
 ## Filter type
 
-Use the [FilterType property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) to specify the matching behavior used during search. The available options are:
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
-  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether the item text begins with the specified value.
-  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether the item text ends with the specified value.
-  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether the item text contains the specified value.
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contained with specified value.
 
-In the following example, the `EndsWith` filter type is assigned to the `FilterType` property.
+In the following example, `EndsWith` filter type has been mapped to the `FilterType` property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -83,4 +83,4 @@ In the following example, the `EndsWith` filter type is assigned to the `FilterT
 
 ```
 
-![Blazor ListBox using the EndsWith filter type](images/blazor-listbox-filter-type.png)
+![Blazor ListBox with Filter Type](images/blazor-listbox-filter-type.png)
