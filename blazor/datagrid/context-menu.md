@@ -136,7 +136,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIsjrEUXtJazSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Context menu interaction](/images/context-menu/blazor-datagrid-context-menu.gif)
+![Context menu interaction](images/context-menu/blazor-datagrid-context-menu.gif)
 
 ## Custom context menu items
 
@@ -234,7 +234,7 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoMjLaVOKOJFCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Custom menu item](/images/context-menu/blazor-datagrid-context-menu-custom-item.gif)
+![Custom menu item](images/context-menu/blazor-datagrid-context-menu-custom-item.gif)
 
 ## Built-in and Custom context menu items
 
@@ -333,7 +333,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSiXBaVEwxOsiX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Built-in and Custom Context Menu Items](/images/context-menu/blazor-datagrid-context-menu-built-in-custom.gif)
+![Built-in and Custom Context Menu Items](images/context-menu/blazor-datagrid-context-menu-built-in-custom.gif)
 
 ## Sub context menu items in DataGrid
 
@@ -450,7 +450,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLIiNhEqQfJGczz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Sub Context Menu Items](/images/context-menu/blazor-datagrid-context-menu-sub-items.gif)
+![Sub Context Menu Items](images/context-menu/blazor-datagrid-context-menu-sub-items.gif)
 
 ## Disable the context menu for specific columns in DataGrid
 
@@ -561,7 +561,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBSCNrOqOXtBomQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Disable Context Menu for Specific Columns](/images/context-menu/blazor-datagrid-disable-context-menu-specific-columns.gif)
+![Disable Context Menu for Specific Columns](images/context-menu/blazor-datagrid-disable-context-menu-specific-columns.gif)
 
 ## Enable or disable context menu items
 
@@ -663,7 +663,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIiiZySUQfOieR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Enable or Disable Context Menu Items](/images/context-menu/blazor-datagrid-enable-disable-context-menu-items.gif)
+![Enable or Disable Context Menu Items](images/context-menu/blazor-datagrid-enable-disable-context-menu-items.gif)
 
 ## Show or hide context menu 
 
@@ -767,7 +767,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBIMWXIIKutSiPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Show or Hide Context Menu Items](/images/context-menu/blazor-datagrid-show-hide-context-menu-items.gif)
+![Show or Hide Context Menu Items](images/context-menu/blazor-datagrid-show-hide-context-menu-items.gif)
 
 ### Access specific row details on context menu click
 
@@ -878,6 +878,6 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSMXVazHjnCzPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Fetch Row Details on Context Menu Click](/images/context-menu/blazor-datagrid-context-menu-fetch-row-details.gif)
+![Fetch Row Details on Context Menu Click](images/context-menu/blazor-datagrid-context-menu-fetch-row-details.gif)
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
