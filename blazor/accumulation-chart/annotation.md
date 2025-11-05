@@ -152,6 +152,6 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data Label](./data-labels)
+* [Data Label](./data-label)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

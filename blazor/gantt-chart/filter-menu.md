@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter in Blazor Gantt Chart | Syncfusion
-description: Checkout and learn here all about how to use an Excel like filter in the Syncfusion Blazor Gantt Chart and much more details. Explore to more details.
+title: Excel Like Filter in Blazor Gantt Chart | Syncfusion
+description: Checkout and learn here all about Excel like filter in Syncfusion Blazor Gantt Chart and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -281,4 +281,3 @@ The following sample demonstrates how to disable the autofill feature by setting
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhosZjKTkWPUTuQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
