@@ -13,6 +13,12 @@ This section provides information about deploying a Blazor Web applications with
 
 Refer to [Host ASP.NET Core on Linux with Nginx](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0&tabs=linux-ubuntu) topic for more information.
 
+## Prerequisites
+
+* Linux Server – Ubuntu 20.04, Red Hat Enterprise (RHEL) 8.0 and SUSE Linux Enterprise Server 12.
+* [.NET runtime](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk) installed on the server.
+* An existing Blazor Web App with Syncfusion components or create a new one.
+
 ## Install and Start NGINX
 
 Install NGINX on your Linux system and enable it to start automatically:
@@ -26,9 +32,11 @@ sudo systemctl status nginx
 
 **Verification**: Open `http://your-server-ip` in a browser — you should see the NGINX welcome page.
 
-## Publish Your Blazor Web App with Syncfusion Components
+## Create and publish Your Blazor Web App with Syncfusion Components
 
-Publish your Blazor Web application in Release configuration and run it:
+* You can create a Blazor Web App using the .NET CLI commands with Syncfusion components by referring [here](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
+
+* Publish your Blazor Web application in Release configuration using the following command and run it:
 
 ```bash
 dotnet publish -c Release -o publish
