@@ -32,7 +32,7 @@ Visual Studio provides the **.NET MAUI Blazor App** template to create .NET MAUI
 
 ## Create a new .NET MAUI Blazor App in Visual Studio
 
-Create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0).
+Create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0).
 
 ## BlazorWebView in .NET MAUI Blazor App
 
