@@ -409,7 +409,7 @@ You can edit the group and its children at runtime. We able to interact the grou
 ## See Also
 
 * [How to add annotations to the node](./node-annotation)
-* [How to add ports to the node](./ports)
+* [How to add ports to the node](./ports/ports)
 * [How to enable/disable the behavior of the node](./constraints)
 * [How to add nodes to the symbol palette](./symbol-palette)
 * [How to create diagram nodes using drawing tools](./tools)

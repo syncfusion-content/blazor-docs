@@ -151,7 +151,7 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
 
-`TableCell` item should be configured in the Table [quickToolbarSettings](../api/rich-text-editor/quickToolbarSettings/#table) property to show the merge/split icons while selecting the table cells.
+`TableCell` item should be configured in the Table [quickToolbarSettings](../cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) property to show the merge/split icons while selecting the table cells.
 
 ### Table cell merge
 
