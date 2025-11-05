@@ -23,7 +23,9 @@ To render WBS and WBS Predecessor columns, bind the `WbsCode` and `WbsPredecesso
 
 WBS codes follow a hierarchical structure: parent tasks use sequential numbers (e.g., 1, 2, 3), and child tasks use decimal notation (e.g., 1.1, 1.2, 1.1.1). Codes are recalculated automatically when the task hierarchy changes due to operations like indenting, outdenting, or reordering.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" 
@@ -31,20 +33,19 @@ WBS codes follow a hierarchical structure: parent tasks use sequential numbers (
          Width="100%" 
          ShowWbsColumn="true"
          AutoGenerateWbs="true">
-    <GanttTaskFields Id="TaskId" 
+    <GanttTaskFields Id="TaskID" 
                      Name="TaskName" 
                      StartDate="StartDate" 
-                     EndDate="EndDate" 
                      Duration="Duration" 
                      Progress="Progress" 
-                     ParentID="ParentId"
+                     ParentID="ParentID"
                      Dependency="Predecessor"
                      WbsCode="WbsCode"
                      WbsPredecessor="WbsPredecessor">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="WbsCode" HeaderText="WBS" Width="100"></GanttColumn>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="80"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="80"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="100"></GanttColumn>
@@ -65,31 +66,35 @@ WBS codes follow a hierarchical structure: parent tasks use sequential numbers (
     {
         return new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project Management", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentId = null },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1, Predecessor = "3FS" },
-            new TaskData() { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentId = null },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 40, ParentId = 5, Predecessor = "6FS" }
+            new TaskData() { TaskID = 1, TaskName = "Project Management", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentID = null },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1, Predecessor = "3FS" },
+            new TaskData() { TaskID = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentID = null },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 40, ParentID = 5, Predecessor = "6FS" }
         };
     }
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public int Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
-        public string? WbsCode { get; set; }
-        public string? WbsPredecessor { get; set; }
+        public string WbsCode { get; set; }
+        public string WbsPredecessor { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoDEroBqxKFzeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 > The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
 ## Performance Optimization with Conditional Updates
@@ -98,7 +103,9 @@ To improve performance with large datasets, control WBS code recalculation using
 
 The example below demonstrates how WBS auto-update is conditionally triggered during row drag-and-drop, avoiding unnecessary recalculations during other interactions.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
@@ -109,19 +116,18 @@ The example below demonstrates how WBS auto-update is conditionally triggered du
          ShowWbsColumn="true"
          AutoGenerateWbs="@EnableAutoUpdate"
          AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
-                     EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
-                     ParentID="ParentId"
+                     ParentID="ParentID"
                      WbsCode="WbsCode"
                      WbsPredecessor="WbsPredecessor">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="WbsCode" HeaderText="WBS" Width="100"></GanttColumn>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="80"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="80"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="100"></GanttColumn>
@@ -165,30 +171,33 @@ The example below demonstrates how WBS auto-update is conditionally triggered du
     {
         return new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project Management", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentId = null },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentId = null },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 40, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project Management", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentID = null },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = 4, Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), Duration = 5, Progress = 40, ParentID = null },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 40, ParentID = 5 }
         };
     }
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public int Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public string? WbsCode { get; set; }
-        public string? WbsPredecessor { get; set; }
+        public int? ParentID { get; set; }
+        public string WbsCode { get; set; }
+        public string WbsPredecessor { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZryNEBeVUcysGjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Limitations
 

@@ -890,4 +890,3 @@ The following example demonstrates a Gantt chart where the **Job Name** column i
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhyiNDuKAHMJvWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-
