@@ -601,12 +601,12 @@ The **Copy** menu item is disabled for the **ShipCity** column and remains enabl
     }
 
     private void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> args)
-    {
+    {    
         foreach (var item in args.ContextMenu.Items)
         {
-            if (item.Text == "Copy")
+            if (item.Text == "Copy" && args.Column.Field == nameof(OrderData.ShipCity))
             {
-                item.Disabled = args.Column.Field == nameof(OrderData.ShipCity);
+                item.Disabled = true;
             }
         }
     }
@@ -661,7 +661,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLoWMXeysxsYYwF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIiiZySUQfOieR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Enable or Disable Context Menu Items](/images/context-menu/blazor-datagrid-enable-disable-context-menu-items.gif)
 
@@ -708,9 +708,9 @@ The **Edit** menu item is hidden for the **CustomerID** column and remains visib
     {
         foreach (var item in args.ContextMenu.Items)
         {
-            if (item.Text == "Edit Record")
+            if (item.Text == "Edit Record" && args.Column.Field == nameof(OrderData.CustomerID))
             {
-                item.Hidden = args.Column.Field == nameof(OrderData.CustomerID);
+                item.Hidden = true;
             }
         }
     }
@@ -765,7 +765,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIZfXYKSwAiUpU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBIMWXIIKutSiPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Show or Hide Context Menu Items](/images/context-menu/blazor-datagrid-show-hide-context-menu-items.gif)
 
