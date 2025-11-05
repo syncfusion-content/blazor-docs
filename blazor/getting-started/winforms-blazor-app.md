@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with WinForms Blazor App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with WinForms Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
+description: Check out the documentation for getting started with WinForms Blazor App and Syncfusion Blazor Components in Visual Studio and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
