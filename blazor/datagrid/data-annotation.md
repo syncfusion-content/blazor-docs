@@ -15,7 +15,7 @@ When the DataGrid is bound to a model, data annotations automatically map to cor
 
 To enable data annotation in the Blazor DataGrid:
 
-1. Add the `System.ComponentModel.DataAnnotations` namespace in the Blazor application.
+1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
 2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
@@ -72,8 +72,6 @@ Add validation attributes to enforce rules that display inline Blazor DataGrid v
 - CompareAttribute
 
 > When both the `Display` attribute’s `Name` and the column’s `HeaderText` property are defined, the `HeaderText` value takes precedence and is shown in the column header.
-
-### Example: Applying Data Annotations with Enum Display
 
 The `Display` attribute can be used to show user-friendly labels for enum values. This improves readability by replacing raw enum values with descriptive names.
 
