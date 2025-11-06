@@ -797,8 +797,7 @@ The [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 {% highlight c# tabtitle="OrderData.cs" %}
 public class OrderData
 {
-    private static readonly List<OrderData> Orders = new List<OrderData>();.
-    v
+    private static readonly List<OrderData> Orders = new List<OrderData>();
 
     public OrderData(int? orderID, string customerID, double? freight, string shipName)
     {
