@@ -581,4 +581,4 @@ When handling large text content, ensure the Ollama server has sufficient resour
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
-![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.gif)
+![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.png)
