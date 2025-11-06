@@ -234,7 +234,7 @@ This section demonstrates how to implement sentiment analysis in the Syncfusion 
 
 (`Home.razor`)
 
-```razor
+```csharp
 @using Syncfusion.Blazor.Kanban
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Calendars
