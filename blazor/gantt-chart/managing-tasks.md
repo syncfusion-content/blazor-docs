@@ -3,42 +3,90 @@ layout: post
 title: Managing Tasks in Blazor Gantt Chart Component | Syncfusion
 description: Checkout and learn here all about Managing Tasks in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
-control: Gantt Chart
+control:  Managing tasks
 documentation: ug
 ---
 
 # Managing Tasks in Blazor Gantt Chart Component
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `GanttColumn.IsPrimaryKey` property to `true` in the column.
+Managing tasks in the Blazor Gantt Chart component enables dynamic project updates, such as inserting, deleting, or editing tasks and dependencies, by enabling [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowAdding), [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting), [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing), and [AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing). A primary key column, defined by [GanttColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) set to **true** (e.g., on id), ensures reliable CRUD operations and task identification. Editing modes include cell editing for quick TreeGrid updates, dialog editing for comprehensive changes, taskbar dragging for duration or date adjustments, and connector line dragging for dependencies. Customize dialogs with templates or fields using [AddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddDialogFields) and [EditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EditDialogFields). Methods like [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_), [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteRecordAsync_System_Nullable_System_Int32__), and [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) support programmatic management. Ensure valid [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) mappings and a primary key to enable editing seamlessly.
+
+The following code example demonstrates editing in the Gantt component.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
+</SfGantt>
+
+@code{
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentID { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>();
+        Tasks.Add(new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), });
+        Tasks.Add(new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentID = 1 });
+        Tasks.Add(new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 11), EndDate = new DateTime(2022, 04, 18), });
+        Tasks.Add(new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", ParentID = 5 });
+        Tasks.Add(new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentID = 5 });
+        Tasks.Add(new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Predecessor = "7", ParentID = 5 });
+        return Tasks;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBIWDWeiYcZSwrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property, it is mandatory that any one of the columns, must be a primary column. By default, the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) column will be the primary key column.  If `Id` column is not defined, we need to enable [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) for any one of the columns defined in the `GanttColumns` property.
 
 ## Cell edit type and its params
 
-The `GanttColumn.EditType` is used to customize the edit type of the particular column. You can set the `GanttColumn.EditType` based on data type of the column.
+The [GanttColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditType) is used to define the edit type for any particular column. You can set the `GanttColumn.editType` based on data type of the column.
 
-* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component for integers, double, and decimal data types.
+Below is the combined content from the provided markdown sections in bullet points, as requested, ensuring clarity and conciseness while preserving the original information:
 
-* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) component for string data type.
+- **Cell edit types and components**:
+  - **numericedit**: Uses the [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component for editing integers, doubles, and decimals.
+  - **defaultedit**: Uses the [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) component for editing string data.
+  - **dropdownedit**: Uses the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to display all unique values for a field.
+  - **booleanedit**: Uses the [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started) component for editing boolean data.
+  - **datepickeredit**: Uses the [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) component for editing date data.
+  - **datetimepickeredit**: Uses the [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for editing date-time data.
 
-* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component for list data type.
+- **Customization**:
+  - You can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
 
-* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) component for date values.
-
-* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for datetime type.
-
-* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started) component for boolean type.
-
-Also, you can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
-
-The following table describes cell edit type component and their corresponding edit params of the column.
-
-Component |Example
------|-----
-[NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | @(new { @params = new { format = "n"} })
-[TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) | -
-[DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) | @(new { @params = new { value = "Germany"} })
-[DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | @(new { @params = new { strictMode = true} })
-[Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started) | @(new { @params = new { checked = true} })
+- **Edit type parameters**:
+  - **numericedit**: Supports parameters like `Decimals: 2`, `Value: 5`.
+  - **dropdownedit**: Supports parameters like `Value: 'Germany'`.
+  - **booleanedit**: Supports parameters like `Checked: true`.
+  - **datepickeredit**: Supports parameters like `Format: 'dd.MM.yyyy'`.
+  - **datetimepickeredit**: Supports parameters like `Value: new Date()`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -106,13 +154,13 @@ Component |Example
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVIsNjUCkvqfHQC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
+> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
 ## Cell edit template
 
-The cell edit template is used to add a custom component for a particular column when the column is edited.
+The cell edit template feature in Syncfusion Blazor Gantt Chart component allows you to customize the editing interface of individual cells by embedding custom components or HTML elements. Instead of using the default editor such as a textbox, you can define a template that provides a tailored editing experience such as a dropdown, date picker, or checkbox based on your application's requirements. This is especially useful when you need more control over how data is entered or displayed during editing.
 
-The following code example describes, how to define the Edit template for a particular column.
+The following code example demonstrates how to define an edit template for a specific column, where the **TaskName** field is rendered using a dropdown.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -194,9 +242,9 @@ The following code example describes, how to define the Edit template for a part
 
 ## Disable editing for particular column
 
-You can disable editing for particular columns by using the [GanttColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_AllowEditing) property.
+You can disable editing for particular columns, by using the [GanttColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_AllowEditing) property.
 
-In the following demo, editing is disabled for the `TaskName` column.
+In the following demo, editing is disabled for the **TaskName** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -257,7 +305,9 @@ In the following demo, editing is disabled for the `TaskName` column.
 
 ## Troubleshoot: Editing works only when primary key column is defined
 
-Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the `GanttColumns` property, any one of the columns must be a primary column. By default, the `Id` column will be the primary key column. If `Id` column is not defined, you need to enable `IsPrimaryKey` for any one of the columns defined in the `GanttColumns` property.
+The editing feature in the Syncfusion Blazor Gantt Chart component requires a primary key column to perform CRUD operations. When defining columns using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property, at least one column must be marked as the primary key.
+
+By default, the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) column is considered the primary key. If the `Id` column is not defined, you must explicitly set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) property to true for one of the columns in the `GanttColumns` collection to enable editing functionality.
 
 ## Touch interaction
 
@@ -273,19 +323,24 @@ Action |Description
 
 ### Task dependency editing
 
-Tap the taskbar to initiate the taskbar editing for predecessors. Once it enters the edited state, `tap` the left or right connector point to initiate the task [dependencies](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks#task-dependency-editing) editing. The dialog will be rendered with the message `Choose another task` and `Cancel` button.
+You can tap the left/right connector point to initiate task [dependencies](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks#task-dependency-editing) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
 
-![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing-touch.png)
-
-Click the `Cancel` button to cancel the edit action and to continue editing, tap another taskbar to establish the dependency line between the two taskbars.
-
-Once the second taskbar is tapped, the dialog will display a message `Select the connector position` and `Cancel` button. A tooltip is also displayed near the second taskbar with the `Left` and `Right` buttons. Click any button to establish a dependency relationship between the two tasks.
+Once the dependency edit mode is initiated, a dialog appears with the message **Choose another task** and a **Cancel** button. Tapping another taskbar will prompt a second dialog with the message **Select the connector position** and a tooltip near the second taskbar showing **Left** and **Right** buttons. Selecting one of these buttons establishes the dependency relationship between the two tasks. You can click the **Cancel** button at any time to exit the edit mode.
 
 ![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing.png)
 
-## Editing tooltip
+The following table explains the taskbar state in dependency edit mode.
 
-It is possible to enable or disable the tooltip while performing editing actions on the taskbar like left resizing, right resizing, dragging, and progress resizing by using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to 'true.'
+Taskbar state |Description
+-----|-----
+Parent taskbar | You cannot create dependency relationship to parent tasks. <br> ![Parent taskbar](images/parent-taskbar.PNG)
+Taskbar without dependency |  If you tap a valid child taskbar, it will create `FS` type dependency line between tasks, otherwise exits from task dependency edit mode. <br> ![Valid taskbar](images/valid-taskbar.PNG)
+Taskbar with dependency | If you tap the second taskbar, which has already been directly connected, it will ask to remove it. <br> ![Invalid taskbar](images/invalid-taskbar.PNG)
+Removing dependency | Once you tap the taskbar with direct dependency, then confirmation dialog will be shown for removing dependency. <br> ![Confirm dialog](images/confirm-dialog.PNG)
+
+## Taskbar editing tooltip
+
+The taskbar editing tooltip can be customized using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to **true**. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -423,3 +478,9 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthoiDjqLVZxPYek?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## See also
+- [How to add new tasks?](https://blazor.syncfusion.com/documentation/gantt-chart/adding-new-tasks)
+- [How to delete tasks?](https://blazor.syncfusion.com/documentation/gantt-chart/deleting-tasks)
+- [How to manage task dependencies?](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
+- [How to configure critical path?](https://blazor.syncfusion.com/documentation/gantt-chart/criticalpath)
