@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Creating Razor Class Library (RCL) using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+# Creating Razor Class Library (RCL) using Syncfusion® Blazor components
 
 This guide explains how to create a Razor Class Library (RCL) that includes Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
@@ -83,7 +83,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Razor class library in Visual Studio Code
 
-You can create a Razor class library using visual studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-9.0&tabs=net-cli).
+You can create a Razor class library using Visual Studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-9.0&tabs=net-cli).
 
 {% tabs %}
 
