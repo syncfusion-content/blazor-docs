@@ -16,11 +16,6 @@ The appearance of editing elements in the Syncfusion<sup style="font-size:70%">&
 - **Edit dialog header:** Shows the title or context of the current editing operation.
 - **Command column buttons:** Displays action buttons such as Edit, Delete, Update, and Cancel.
 
-> - Enable editing using  [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) to include actions such as add, edit, delete, and update.  
-- Customize dialog headers when [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to `Dialog`.
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 ## Customize edited and added row elements
 
 The **.e-editedrow** and **.e-addedrow** classes style edited and newly added rows. Apply CSS to make these rows stand out:

@@ -15,10 +15,6 @@ The appearance of header elements in the Syncfusion<sup style="font-size:70%">&r
 - **Header cells**: Individual containers for each column title and associated icons.
 - **Header text container**: The inner element that holds the header text content.
 
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 ## Customize the Blazor DataGrid header
 
 The **.e-gridheader** class styles the header container in the Blazor DataGrid. Use CSS to adjust its appearance:

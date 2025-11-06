@@ -16,12 +16,6 @@ The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">
 - **Group caption row:** Shows summary information for each group, such as group key and item count.
 - **Grouping indent cell:** Adds visual indentation to grouped rows to indicate hierarchy.
 
-N> - Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property. Ensure that the required theme stylesheet is referenced so that grouping UI elements are displayed correctly.  
-> - Icon glyph codes (such as `\e7a2`, `\e7a3`) vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.  
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 ## Customize the group header
 
 The **.e-groupdroparea** class styles the group header area in the Blazor DataGrid. Use CSS to adjust its appearance:
