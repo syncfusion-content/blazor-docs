@@ -14,11 +14,6 @@ The appearance of selection elements in the Syncfusion<sup style="font-size:70%"
 - **Row selection background:** Highlights the entire row when selected.
 - **Cell selection background:** Highlights individual cells when selected.
 
-N> - Ensure that the required theme stylesheet is referenced so that selection-related UI elements are displayed correctly.
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 ## Customize row selection background
 
 The **.e-selectionbackground** class styles the background of selected rows in the DataGrid. Use CSS to modify its appearance:

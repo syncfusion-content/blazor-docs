@@ -15,12 +15,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports vi
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
 - **Grid lines:** Controls the color and visibility of horizontal and vertical lines between cells.
 
-> - When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Use component-level styles for production scenarios. Inline styles are suitable for quick demonstrations.
-- Avoid using `!important` for hover styles. Increase selector specificity instead.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 **Override Default Styles:**
 
 Default styles such as **colors**, **typography**, **spacing**, and **borders** can be customized using CSS. Use browser developer tools to inspect the rendered HTML and identify relevant selectors. Where possible, use CSS variables or theme tokens to maintain consistency across components.

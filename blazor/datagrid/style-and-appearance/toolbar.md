@@ -14,12 +14,6 @@ The appearance of toolbar elements in the Syncfusion<sup style="font-size:70%">&
 - **Toolbar root container:** The outer wrapper that contains all toolbar items.
 - **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
 
-N> - Ensure that the required theme stylesheet is referenced so that toolbar UI elements are displayed correctly.
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-- For configuring toolbar functionality (e.g., add, edit, delete, or custom actions), refer to the [Blazor DataGrid Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) documentation.
-
 ## Customize the toolbar root element
 
 The **.e-toolbar-items** class styles the toolbar root container in the Blazor DataGrid. This container holds all toolbar items and can be styled using CSS:

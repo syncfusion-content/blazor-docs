@@ -14,13 +14,6 @@ The appearance of sorting indicators in the Syncfusion<sup style="font-size:70%"
 - **Ascending and descending sort icons:** Show the current sort direction in column headers.
 - **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
 
-N> - Enable sorting by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property.  
-- Ensure that the required theme stylesheet is referenced so that pager UI elements are displayed correctly.
-- Icon glyph codes (such as `\e7a2`, `\e7a3`) vary depending on the theme and version. Confirm the correct glyph values by inspecting the icon font used in the current setup.
-- When using CSS isolation (.razor.css), use the **::deep** selector to reach internal parts of the DataGrid, or place the grid inside a custom wrapper class and apply styles to that wrapper for better control.
-- Class names may change slightly depending on the theme or version. Inspect the DOM to confirm selectors before applying styles.
-- Maintain strong color contrast and clear focus indicators to support accessibility and improve readability.
-
 ## Customize sorting icons
 
 The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the DataGrid header when a column is sorted in `ascending` or `descending` order. Use CSS to adjust its appearance:
