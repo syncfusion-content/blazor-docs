@@ -22,7 +22,7 @@ Most templates used in the Gantt Chart are of type `RenderFragment<T>` and are p
 
 For example, the data in a column template can be accessed using `context` as shown below:
 
-```razor
+```cs
 <GanttColumn Field="TaskName" HeaderText="Task">
     <Template Context="context">
         @context.TaskName
