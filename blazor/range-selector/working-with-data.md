@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Range Selector Component | Syncfusion
-description: Check out and learn how to bind and manage data Syncfusion Blazor Range Selector Component and much more.
+description: Checkout and learn here all about Working with Data in Syncfusion Blazor Range Selector Component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,15 +11,15 @@ documentation: ug
 
 # Working with Data in Blazor Range Selector Component
 
-The Range Selector uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), supporting both RESTful JSON data services and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) can be set using either the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property or a list of business objects.
+The Range Selector uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property value or a list of business objects.
 
-Supported data binding methods:
+It supports the following data binding methods:
 * List binding
 * Remote data
 
-## List Binding
+## List binding
 
-To bind a list to the Range Selector, assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The data source can also be provided as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To do list binding to the Range Selector, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ```cshtml
 
@@ -33,6 +33,7 @@ To bind a list to the Range Selector, assign an IEnumerable object to the [DataS
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime Date { get; set; }
@@ -57,11 +58,11 @@ To bind a list to the Range Selector, assign an IEnumerable object to the [DataS
 
 ![Blazor Range Navigator with List](images/working-data/blazor-range-list-binding.png)
 
-N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data binding.
+N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
-### ExpandoObject Binding
+### ExpandoObject binding
 
-Range Selector is a generic component strongly bound to a model type. When the model type is unknown at compile time, data can be bound as a list of **ExpandoObject**. Assign the **ExpandoObject** list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
+Range Selector is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Range Selector as a list of **ExpandoObject**. The **ExpandoObject** can be bound to Range Selector by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```cshtml
 
@@ -75,14 +76,12 @@ Range Selector is a generic component strongly bound to a model type. When the m
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+@code{
     private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
         new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
     public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
-
     public List<ExpandoObject> StockInfo { get; set; } = new List<ExpandoObject>();
     private Random randomNum = new Random();
-
     protected override void OnInitialized()
     {
         StockInfo = Enumerable.Range(0, 6).Select((x) =>
@@ -92,16 +91,16 @@ Range Selector is a generic component strongly bound to a model type. When the m
             d.Y = randomNum.Next(20, 70);
             return d;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-    }   
+    }
+        
 }
-
 ```
 
 ![Blazor Range Navigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
 
-### DynamicObject Binding
+### DynamicObject binding
 
-Range Selector supports **DynamicObject** as a data source when the model type is unknown. Assign the **DynamicObject** list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
+Range Selector supports **DynamicObject** data source when the model type is unknown. The **DynamicObject** can be bound to Range Selector by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```cshtml
 
@@ -115,14 +114,14 @@ Range Selector supports **DynamicObject** as a data source when the model type i
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
-@code {
+
+@code{
+    
     private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
         new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
     public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
-
     private Random randomNum = new Random();
     public List<DynamicDictionary> MedalDetails = new List<DynamicDictionary>() { };
-
     protected override void OnInitialized()
     {
         MedalDetails = Enumerable.Range(0, 5).Select((x) =>
@@ -133,7 +132,6 @@ Range Selector supports **DynamicObject** as a data source when the model type i
             return d;
         }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
     }
-
     public class DynamicDictionary : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -143,7 +141,6 @@ Range Selector supports **DynamicObject** as a data source when the model type i
             string name = binder.Name;
             return dictionary.TryGetValue(name, out result);
         }
-
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
             dictionary[binder.Name] = value;
@@ -155,17 +152,18 @@ Range Selector supports **DynamicObject** as a data source when the model type i
             return this.dictionary?.Keys;
         }
     }
+
 }
 
 ```
 
 ![Blazor Range Navigator with DynamicObject](images/working-data/blazor-range-dynamic-object.png)
 
-## Remote Data
+## Remote data
 
-### Binding with OData Services
+### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. Retrieve data from an OData service using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The following example demonstrates remote data binding using an OData service.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 
@@ -184,9 +182,9 @@ Range Selector supports **DynamicObject** as a data source when the model type i
 
 ![Blazor Range Navigator with OData Adaptor](images/working-data/blazor-range-remote-data.png)
 
-### Binding with OData v4 Services
+### Binding with OData v4 services
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services. For more information, see the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the **ODataV4Adaptor**.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the  [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
 ```cshtml
 
@@ -207,10 +205,9 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ### Web API
 
-Use the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) to bind a Range Selector to a Web API created with an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a Range Selector to a Web API created using an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
@@ -226,12 +223,13 @@ Use the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ![Blazor Range Navigator with Web API](images/working-data/blazor-range-remote-data.png)
 
-### Sending Additional Parameters to the Server
+### Sending additional parameters to the server
 
-To send custom parameters in a data request, add them to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Query) object and assign it to the Range Selector's `Query` property.
+To create a data request with a custom parameter, add additional parameters to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Query) object and assign it to the Range Selector's `Query` property.
+
+The following sample code shows how to send parameters using the `Query` property in the series.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
@@ -250,14 +248,14 @@ To send custom parameters in a data request, add them to the [Query](https://hel
     {
         RNQuery = new Query().Take(10).Where("Freight", "GreaterThan", 300, false);
     }
-}
 
+}
 ```
 ![Blazor Range Navigator with Query](images/working-data/blazor-range-remote-data.png)
 
-## Observable Collection
+## Observable collection
 
-The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) provides notifications when items are added, removed, or moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) notifies when dynamic changes occur in the collection.
+The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
 
 ```cshtml
 
@@ -301,9 +299,8 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
         this.ChartPoints = RangeData.GetData();
     }
 }
-
 ```
 
 ![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.png)
 
-N> Refer to the [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for feature highlights, and explore the [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to see various types and time-dependent data representations.
+N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.

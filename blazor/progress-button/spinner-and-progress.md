@@ -10,7 +10,7 @@ documentation: ug
 <!-- markdownlint-disable MD002 MD022 -->
 # Spinner and Progress in Blazor ProgressButton Component
 
-This section describes how to customize the spinner and configure progress behavior in the ProgressButton, including positioning and sizing the spinner, using a custom spinner template, animating content, changing step increments, updating progress dynamically, pausing/resuming, and completing progress programmatically.
+This section explains the Spinner and Progress of Progress Button.
 
 ## Spinner
 
@@ -24,7 +24,7 @@ Spinner size can be changed by modifying the [Width](https://help.syncfusion.com
 
 ### Spinner template
 
-Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_SpinTemplate) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#properties) with custom styles.
+You can use custom spinner by specifying the [SpinTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_SpinTemplate) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#properties) with custom styles.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

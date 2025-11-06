@@ -15,22 +15,23 @@ documentation: ug
 
 * **InvalidOperationException: Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Inputs.SfTextBox'**
 
-  Encounter the following runtime exception when running the application:
+    You may see the below runtime exception while running the application for the first time.
 
-  E> InvalidOperationException: Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Inputs.SfTextBox'. There is no registered service of type 'Syncfusion.Blazor.SyncfusionBlazorService'.
+    E> **InvalidOperationException:** Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Inputs.SfTextBox'. There is no registered service of type 'Syncfusion.Blazor.SyncfusionBlazorService'.
 
-**Cause:**
-  This exception occurs when the Syncfusion Blazor service is not registered in Program.cs.
+    **Cause:**
 
-**Solution:**
+    This exception thrown because you missed registering the `SyncfusionBlazorService` in `Program.cs`.
 
-  Register the Syncfusion Blazor service in the Program.cs file to resolve the exception.
+    **Solution:**
 
-  ```c#
-  using Syncfusion.Blazor;
-  ....
-  builder.Services.AddSyncfusionBlazor();
-  ```
+    You can register the `SyncfusionBlazorService` in `Program.cs` file to resolve the exception.
+
+    ```c#
+    using Syncfusion.Blazor;
+    ....
+    builder.Services.AddSyncfusionBlazor();
+    ```
 
 ## See also
 

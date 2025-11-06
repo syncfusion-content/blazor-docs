@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populate Data in Blazor Maps Component | Syncfusion
-description: Learn how to provide shape data, bind statistical data and fetch JSON data to populate the Syncfusion Blazor Maps component, with examples.
+description: Checkout and learn here all about populate data in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Populate Data in Blazor Maps Component
 
-This section explains how to supply data inputs and provide them to the Maps component.
+This section explains how to populate data inputs and provide it to the Maps component.
 
 ## Geometry types
 
-GeoJSON data contains geometry objects with properties such as geometry types and coordinates. Geometry types specify the shape to render, and coordinates define the shape's boundary. The supported geometry types are:
+GeoJSON data contains geometry objects with properties such as geometry types and coordinates. The geometry types are the values present in the geometry objects of the GeoJSON data that specify the type of shape to be rendered, as well as the coordinates that help to draw the shape's boundary line. The supportive geometry types are:
 
 | **Shapes** | **Supported** |
 | --- | --- |
@@ -27,16 +27,15 @@ GeoJSON data contains geometry objects with properties such as geometry types an
 
 ## Shape data
 
-The shape data collection describes geographic shape information in GeoJSON format. Map shapes are rendered from this data. Custom shapes, such as seat selections in a bus or a cricket stadium, can also be added as [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
+The shape data collection describes geographical shape information that is available in GeoJSON format. The Map shapes are rendered with this data. The custom shapes such as seat selection in bus, seat selection in a cricket stadium and more useful information can be also added as [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
 ## Data source
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property represents statistical data for the Maps component and accepts a collection of values. For example, a list of objects can be provided. This data source is used to color shapes, display data labels, show tooltips, and more.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, a list of objects as input can be provided to the data source. This data source will be used to color the map, display data labels, and display tooltip, among other things.
 
-The data source is populated with a list of objects related to the shape data. In the following example, **PopulationDetails** is used as the data source for Maps.
+The data source is populated with list of objects relative to shape data. In the following example, **PopulationDetails** can be used as data source in Maps.
 
 ```cshtml
-
 @code{
     public class PopulationDetail
     {
@@ -70,22 +69,20 @@ The data source is populated with a list of objects related to the shape data. I
         }
     };
 }
-
 ```
 
 ## Data binding
 
-The following properties in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) are used to bind data in the Maps component. These properties work together.
+The following properties in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) are used for binding data in the Maps component. Both the properties are related to each other.
 
 * ShapePropertyPath
 * ShapeDataPath
 
 ### ShapePropertyPath
 
-The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property refers to the field name in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) of shape layers used to identify a shape. When the values of [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property from the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) and [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property from the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) match, the associated object from the data source is bound to the corresponding shape.
+The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property is used to refer the field name in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property of shape layers to identify the shape. When the values of [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property from the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property and [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property from the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property match, then the associated object from the data source is bound to the corresponding shape.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -95,13 +92,11 @@ The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 ```
 
-N> The `world-map.json` file contains the following data, and the **name** field value is used to map the corresponding shape with the provided data source.
+N>`world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
 
 ```json
-
 [
     {
         "type": "Feature",
@@ -114,15 +109,13 @@ N> The `world-map.json` file contains the following data, and the **name** field
     },
 ...
 ]
-
 ```
 
 ### ShapeDataPath
 
-The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property is similar to [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath), but it refers to the field name in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource). In the following population data, the fields are **Name**, **Population**, and **Density**. The **Name** field is set to [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property to map the corresponding value of the field name in shape data.
+The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property is similar to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property, but it refers to the field name in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property. For example, following population data contains field **Name**, **Population** and **Density**. Here the **Name** field is set to the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) to map the corresponding value of field name in shape data.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -141,7 +134,6 @@ The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
         public double Population { get; set; }
         public double Density { get; set; }
     };
-
     private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Name= "Afghanistan",
@@ -151,13 +143,11 @@ The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
         ...
     };
 }
-
 ```
 
-In the above example, both **name** fields contain the value **Afghanistan**. This value is matched in both shape data and the data source, so the details associated with **Afghanistan** are mapped to the corresponding shape and used to color the shape, display data labels, and display tooltips.
+In the above example, both **name** fields contain the same value as **Afghanistan**, this value is matched in both shape data and data source, so that the details associated with **Afghanistan** will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -172,7 +162,7 @@ In the above example, both **name** fields contain the value **Afghanistan**. Th
     </MapsLayers>
 </SfMaps>
 
-@code {
+@code{
     public class PopulationDetail
     {
         public string Code { get; set; }
@@ -181,7 +171,6 @@ In the above example, both **name** fields contain the value **Afghanistan**. Th
         public double Population { get; set; }
         public double Density { get; set; }
     };
-
     private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Code = "AF",
@@ -206,21 +195,19 @@ In the above example, both **name** fields contain the value **Afghanistan**. Th
         }
     };
 }
-
 ```
 
 ![Blazor Maps with Data Binding](./images/populatedata/blazor-map-data-binding.png)
 
 ## Fetching data from JSON file
 
-To retrieve data from a JSON file, create a Blazor WebAssembly app or a Blazor Server app. Read the data from the JSON file, convert it to a C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
+To retrieve data from a JSON file, you can create a Blazor WebAssembly App or a Blazor Server App. The data from the JSON file is then read, convert it to a C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
 ### Fetching data from JSON file using Blazor WebAssembly App
 
-The **Http.GetFromJsonAsync** method is used in the **OnInitializedAsync** lifecycle method to load JSON data. Because this executes asynchronously, check whether **PopulationDensity** is available; then render the Maps component or display a loading message.
+The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 ```cshtml
-
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
 @inject NavigationManager NavigationManager
@@ -242,10 +229,8 @@ else
         </MapsLayers>
     </SfMaps>
 }
-
-@code {
+@code{
     PopulationData[] PopulationDensity;
-
     protected override async Task OnInitializedAsync()
     {
         PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>(NavigationManager.Uri + "sample-data/PopulationDensity.json");
@@ -260,13 +245,11 @@ else
         public float Density { get; set; }
     }
 }
-
 ```
 
-Here, the `PopulationDensity.json` file contains the following data.
+Here, the `PopulationDensity.json` file contains following data.
 
 ```json
-
 [
     {
         "code": "AF",
@@ -290,24 +273,23 @@ Here, the `PopulationDensity.json` file contains the following data.
         "density": 15
     }
 ]
-
 ```
 
 ![Blazor Maps with JSON Data Source using WASM App](./images/populatedata/blazor-map-data-binding.png)
 
 ### Fetching data from JSON file using  Blazor Server App
 
-The **Http.GetAsync** method is used in the **OnInitializedAsync** lifecycle method to get the JSON file as a response and read it as a string. Then, the JSON data is deserialized to a list of objects and assigned to the **DataSource** property of the Maps component. Because this executes asynchronously, check whether **PopulationDensity** is available; then render the Maps component or display a loading message.
+The **Http.GetAsync** is used in the **OnInitializedAsync** lifecycle method to get the JSON file data and read the JSON file as a string. Then, the GeoJSON data in the string can be converted as a deserialized object list and set in the **DataSource** property of the Maps component. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 
 ```cshtml
-
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
 @using System.Net.Http.Json
 @using System.Text.Json;
 @using Newtonsoft.Json;
 @inject NavigationManager NavigationManager
+
 
 @if (PopulationDensity == null)
 {
@@ -326,8 +308,7 @@ else
         </MapsLayers>
     </SfMaps>
 }
-
-@code {
+@code{
     public List<PopulationData> PopulationDensity;
     public string result;
 
@@ -349,7 +330,6 @@ else
         public float Density { get; set; }
     }
 }
-
 ```
 
 ![Blazor Maps with JSON Data Source using Blazor Server App](./images/populatedata/blazor-map-data-binding.png)

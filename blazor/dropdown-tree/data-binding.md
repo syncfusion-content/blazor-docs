@@ -9,19 +9,19 @@ documentation: ug
 
 # Data Binding in Blazor Dropdown Tree Component
 
-The Blazor Dropdown Tree component offers flexible options for loading data from various sources, including local data collections and remote data services. Data binding is configured primarily through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, which is part of the [`DropDownTreeField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) tag. The `DataSource` supports lists of objects and [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), enabling connectivity to diverse data services like OData, OData V4, Web API, URL, and JSON through `DataManager` adaptors.
+The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property that is a member of the [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
-## Binding Local Data
+## Binding local data 
 
-To bind local data, assign a list of objects to the `DataSource` property. The Blazor Dropdown Tree component requires specific fields for rendering: [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ID), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Text), and typically [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID) or [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Child) for hierarchical structures. If mapper fields are not explicitly specified, the component uses default values for mapping. Local data can be structured in two primary ways:
+To bind local data to the Blazor Dropdown Tree, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. The Blazor Dropdown Tree component requires three fields ([`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ID), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Text), and [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID)) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
 
-* Hierarchical Data
+* Hierarchical data
 
-* Self-Referential Data
+* Self-referential data
 
-### Hierarchical Data
+### Hierarchical data
 
-The Blazor Dropdown Tree can be populated using a hierarchical data source, which contains a nested list of objects. This type of data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. Map the object's members to the corresponding fields within the [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) properties.
+Blazor Dropdown Tree can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ID), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Text), and [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Child) fields, respectively.
 
@@ -101,13 +101,12 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLojaLHUqxyGYsX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/hierarchical-data.png)" %}
 
-### Self-Referential Data
+### Self-referential data
 
 Blazor Dropdown Tree can be populated from self-referential data structure that contains list of objects with [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID) mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
-To correctly render the root-level nodes, ensure their `ParentID` is either `null` or not specified in the `DataSource`. In the following example, the **Id**, **ParentId**, **HasSubFolders**, and **FolderName** columns are mapped to [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ID), [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID), [`HasChildren`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_HasChildren), and [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Text) fields, respectively.
+To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ID), [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID), [`HasChildren`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_HasChildren), and [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Text) fields, respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -141,11 +140,10 @@ To correctly render the root-level nodes, ensure their `ParentID` is either `nul
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBojYrnUUbOEdzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/hierarchical-data.png)" %}
 
-### ExpandoObject Binding
+### ExpandoObject binding 
 
-The Blazor Dropdown Tree is a generic component typically strongly bound to a specific model type. However, when the model structure is unknown at compile time, the Dropdown Tree can be bound to a list of `ExpandoObjects` instances using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. This allows the Dropdown Tree to perform all supported data operations.
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. This allows the Dropdown Tree to perform all supported data operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -202,11 +200,10 @@ The Blazor Dropdown Tree is a generic component typically strongly bound to a sp
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhIjkVxKTtLGsfj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/expand-object.png)" %}
 
-### DynamicObject Binding
+### DynamicObject binding
 
-Similar to `ExpandoObject`, when the model type is not known at compile time, data can be bound to the Dropdown Tree as a list of `DynamicObject` instances. The Dropdown Tree supports all data operations on `DynamicObject` when they are assigned to the `DataSource` property.
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the data can be bound to the Dropdown Tree as a list of DynamicObjects. The Dropdown Tree can also perform all supported data operations on DynamicObjects when they are assigned to the DataSource property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -280,33 +277,32 @@ Similar to `ExpandoObject`, when the model type is not known at compile time, da
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZByZuLdqTizPGFQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/expand-object.png)" %}
 
-## Binding Remote Data
+## Binding Remote data
 
-The Blazor Dropdown Tree can also be populated from a remote data service using the [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component and [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Query) property. It supports various data services such as OData, OData V4, Web API, URL, and JSON through `DataManager` adaptors. To interact with a remote data source, assign a `DataManager` instance to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. To interact with remote data source, provide the endpoint `url`.
+Blazor Dropdown Tree can also be populated from a remote data service with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component and [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_Query) property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. To interact with remote data source, provide the endpoint `url`.
 
-The `DataManager` acts as an interface between the service endpoint and the Dropdown Tree, requiring the following information for proper interaction:
+The `DataManager` that acts as an interface between the service endpoint and the Dropdown Tree requires the following information to interact with service endpoint properly.
 
 * `DataManager->url`: Defines the service endpoint to fetch data.
 
 * `DataManager->adaptor`: Defines the adaptor option. By default, ODataAdaptor is used for remote binding.
 
-Adaptors are responsible for processing requests to and responses from the service endpoint. `Syncfusion.Blazor.Data` provides several predefined adaptors:
+Adaptor is responsible for processing response and request from/to the service endpoint. The `Syncfusion.Blazor.Data` provides some predefined adaptors designed to interact with service endpoints. They are,
 
-* `UrlAdaptor`: Used for interacting with general remote services. This is the base adaptor for all remote-based adaptors.
+* `UrlAdaptor`: Used to interact with remote services. This is the base adaptor for all remote based adaptors.
 
-* `ODataAdaptor`: Specifically designed for interacting with OData endpoints.
+* `ODataAdaptor`: Used to interact with OData endpoints.
 
-* `ODataV4Adaptor`: Specifically designed for interacting with OData V4 endpoints.
+* `ODataV4Adaptor`: Used to interact with OData V4 endpoints.
 
-* `WebApiAdaptor`: Used for interacting with Web APIs that adhere to OData standards.
+* `WebApiAdaptor`: Used to interact with Web API created under OData standards.
 
-* `WebMethodAdaptor`: Used for interacting with web methods.
+* `WebMethodAdaptor`: Used to interact with web methods.
 
-### Binding with OData Services
+### Binding with OData services
 
-In the following example, `ODataAdaptor` is used to fetch data from a remote OData service. The entire data set will be returned in the initial request.
+In the following example, `ODataAdaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -331,11 +327,10 @@ In the following example, `ODataAdaptor` is used to fetch data from a remote ODa
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZByjarHgTBChoLg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/odata-service.png)" %}
 
-### Binding with OData V4 Services
+### Binding with OData V4 services
 
-In the following example, `ODataV4Adaptor` is used to fetch data from a remote OData V4 service. The entire data set will be returned in the initial request.
+In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -360,7 +355,6 @@ In the following example, `ODataV4Adaptor` is used to fetch data from a remote O
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLINaBdgzAiVpSe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/odata-service.png)" %}
 
 ### Web API Adaptor
 
@@ -428,9 +422,9 @@ namespace DropDownTreeSample.Controllers
 }
 ```
 
-## Observable Collection
+## Observable collection
 
-The Blazor Dropdown Tree component supports `ObservableCollection` for dynamic updates. An `ObservableCollection` provides notifications of changes to the collection, such as when items are added, removed, or updated. It implements `INotifyCollectionChanged` to notify dynamic changes to the collection and `INotifyPropertyChanged` to notify property value changes on the client side.
+The Blazor Dropdown Tree component's ObservableCollection provides notifications of changes made to the collection, such as when items are added, removed, or updated. It implements INotifyCollectionChanged to notify of dynamic changes to the collection, and INotifyPropertyChanged to notify of changes to property values on the client side.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -706,9 +700,9 @@ namespace DropDownTreeSample.Data
 
 Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the Dropdown Tree component.
 
-#### Create DBContext Class
+#### Create DBContext class
 
-First, create a `AppDBContext` class to establish a connection to a Microsoft SQL Server database.
+The first step is to create a DBContext class called `AppDBContext` to connect to a Microsoft SQL Server database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -756,9 +750,9 @@ namespace DBTree.Data
 }
 ```
 
-#### Create Data Access Layer to Perform Data Operation
+#### Create data access layer to perform data operation
 
-Next, create an `EmployeeDataAccessLayer` class to act as a data access layer for retrieving records from the database.
+Now, create a class named `EmployeeDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -785,9 +779,9 @@ namespace DBTree.Data
 }
 ```
 
-#### Create Web API Controller
+#### Creating web API controller
 
-Create a Web API Controller that allows the Dropdown Tree to directly consume data from Entity Framework. In the initial request, the entire data set will be returned.
+ A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework. In the initial request, entire data will be returned.
 
 ```csharp
 using DBTree.Data;
@@ -812,9 +806,9 @@ namespace DBTree.Controller
 }
 ```
 
-#### Configure Blazor Dropdown Tree component using Web API Adaptor
+#### Configure Blazor Dropdown Tree component using Web API adaptor
 
-Finally, configure the Blazor Dropdown Tree component using `SfDataManager` to interact with the created Web API and consume the data appropriately. Use `WebApiAdaptor` for this purpose.
+Now, the Blazor Dropdown Tree can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web API adaptor.
 
 ```csharp
 
@@ -842,11 +836,11 @@ Finally, configure the Blazor Dropdown Tree component using `SfDataManager` to i
 
 ```
 
-## Adding New Items
+## Adding new items
 
-Dropdown Tree items can be added or removed dynamically by modifying the **DataSource** collection.
+Dropdown Tree items can be added or removed dynamically by modify the **DataSource**.
 
-In the following demo, initially, five tree items are rendered. Clicking the `Add Data` button adds a new item to the **DataSource**, which the Dropdown Tree then reflects.
+In the following demo, initially there are five tree items rendered. On clicking the `Add Data` button, a new item is added to the **DataSource**.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -882,11 +876,11 @@ In the following demo, initially, five tree items are rendered. Clicking the `Ad
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoXYhdUfdfPZGN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/add-newitem.png)" %}
+
 
 ## Load On Demand
 
-The Blazor Dropdown Tree features `load on demand` (lazy loading) capability, which significantly reduces bandwidth usage when dealing with large datasets. It initially loads only the first-level nodes. Child nodes are then loaded dynamically only when their parent node is expanded, based on the `ParentID`/`Child` member. By default, `LoadOnDemand` is set to `false`.
+Blazor Dropdown Tree has `load on demand` (Lazy load). It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded, loads the child nodes based on the `ParentID/Child` member. By default, the `LoadOnDemand` is set to false.
 
 In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_LoadOnDemand) property is enabled.
 
@@ -923,13 +917,12 @@ In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blaz
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBetOBxqzwmeBTp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/loadon-demand.png)" %}
 
-## Retrieving Tree View Data
+## Gets the data of TreeView
 
 The [GetTreeViewData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_GetTreeViewData_System_String_) method can be used to retrieve the complete node details of the tree rendered in the Dropdown Tree popup or to retrieve specific node details by passing its corresponding ID.
 
-In the example below, clicking the `Get Tree Data` button retrieves the `Name` and `Job` details associated with the `Id` '11' and displays them.
+By clicking the `GetTree Data` button, you can retrieve the Name and Job details associated with Id '11' in the following example
 
 ```cshtml
 
@@ -981,4 +974,3 @@ In the example below, clicking the `Get Tree Data` button retrieves the `Name` a
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBotEVRKzkXAApr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/retrieve-data.png)" %}

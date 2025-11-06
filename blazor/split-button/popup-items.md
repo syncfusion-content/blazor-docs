@@ -11,9 +11,9 @@ documentation: ug
 
 ## Icons
 
-A popup action item can display an icon or image to provide a clear visual cue for the action. To add an icon to a popup item, set the [DropDownMenuItem.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_IconCss) property to include `e-icons` and the required icon CSS class. By default, the icon is positioned on the left side of the popup action item. Ensure that the corresponding icon font or stylesheet is referenced in the application.
+The Popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
 
-In the following sample, the icons for Cut, Copy, and Paste menu items are added using the IconCss property.
+In the following sample, the icons for Cut, Copy, Paste menu items are added using the IconCss property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -42,7 +42,6 @@ In the following sample, the icons for Cut, Copy, and Paste menu items are added
 </style>
 
 ```
-The following image shows Split Button popup items with icons.
 
 ![Blazor SplitButton Items with Icon](./images/blazor-splitbutton-item-with-icon.png)
 

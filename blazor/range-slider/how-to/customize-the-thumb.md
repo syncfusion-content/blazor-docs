@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the thumb in Blazor Range Slider Component
 
-The slider’s appearance can be customized with CSS. By overriding the slider CSS classes, the thumb can be restyled. The slider thumb uses the `e-handle` class by default. Override this class to create different shapes or apply custom images. In the following example, the slider thumb is customized as square, circle, and oval shapes, and a background image is also applied.
+Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the thumb. By default, slider has unique class `e-handle` for slider thumb. You can override the following class as per your requirement. Here, in the sample, the slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs;
@@ -115,4 +115,4 @@ The slider’s appearance can be customized with CSS. By overriding the slider C
 </style>
 ```
 
-![Blazor Range Slider with custom thumb](./../images/blazor-rangeslider-custom-thumb.gif)
+![Blazor Range Slider with Custom Thumb](./../images/blazor-rangeslider-custom-thumb.gif)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Ribbon component
 
-The Ribbon component is designed to follow accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) roles.
+The Ribbon component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Ribbon component is outlined below.
 
@@ -39,77 +39,80 @@ The accessibility compliance for the Ribbon component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Ribbon component uses [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) patterns to enhance accessibility. The following ARIA attributes are used in the component:
+The Ribbon component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) patterns to meet the accessibility. The following ARIA attributes are used in the Ribbon component:
 
-| Attribute | Purpose |
+| Attributes | Purpose |
 | --- | --- |
-| `role=tablist` | Identifies the container element for a set of tabs. |
-| `role=tab` | Identifies an interactive element inside a `tablist` that controls the visibility of an associated `tabpanel`. |
-| `role=tabpanel` | Identifies the container for the content associated with a `tab`. |
-| `role=button` | Identifies a clickable element that triggers a response when activated. |
-| `role=menu` | Identifies a container for a set of `menuitem` elements. |
-| `role=menuitem` | Identifies a selectable option within a `menu`. |
-| `role=combobox` | Identifies an input element that controls a separate popup element, such as a listbox or grid. |
-| `role=option` | Identifies a selectable item within a listbox or combobox. |
-| `role=gridcell` | Identifies a cell within a `grid` or `treegrid`. |
-| `aria-orientation` | Indicates the orientation of an element, such as a `tablist` or `toolbar`. |
-| `aria-selected` | Indicates the current selection state of an element within a set, such as a `tab` or `option`. |
-| `aria-labelledby` | Associates an element with the element that provides its label. |
-| `aria-controls` | Identifies the element whose content is controlled by the current element. |
-| `aria-haspopup` | Indicates that the element can trigger a popup and specifies the type of popup. |
-| `aria-disabled` | Indicates that the element is visible but not interactive. |
-| `aria-expanded` | Indicates whether a collapsible element is currently expanded or collapsed. |
-| `aria-label` | Provides an accessible name for an interactive element. |
-| `aria-checked` | Indicates the state of a checkable element like a checkbox or menuitemcheckbox. |
-| `aria-owns` | Establishes a relationship between elements when the DOM hierarchy cannot represent it. |
-| `aria-readonly` | Indicates that an element is not editable but is otherwise interactive. |
-| `aria-activedescendant` | Identifies the currently focused descendant of a composite widget. |
-| `aria-autocomplete` | Indicates how predictions are presented for a combobox, searchbox, or textbox. |
+| `role=tablist` | Used to identify the element that serves as the container for a set of tabs. |
+| `role=tab` | Indicates an interactive element within a tablist that, when activated, displays its associated tab panel.|
+| `role=tabpanel` | Specifies the role for the content associated with an active tab, describing its role in presenting the active content.|
+| `role=button` | Represents a clickable element that trigger a response when activated by the user.|
+| `role=menu` | Represents an item that have sub menu.|
+| `role=menuitem` | Indicates an option in a set of choices within a menu. |
+| `role=combobox` | Identifies an element as an input that controls another element, commonly used for dropdowns. |
+| `role=option` | Used for selectable items in a combobox. |
+| `role=gridcell` | Specified as gridcell for the tiles in the color palette. |
+| `aria-orientation` | Indicates the element's orientation as horizontal, vertical, or unknown/ambiguous. |
+| `aria-selected` | Indicates the current `selected` state of various widgets. |
+| `aria-labelledby` | Sets to the Tab content element to indicates the associated Tab header for the content. |
+| `aria-controls` | Indicates the associated tabpanel for the header by setting the attribute on Tab items. |
+| `aria-haspopup` | Indicates availability and type of interactive popup triggered by the element it's set on. |
+| `aria-disabled` | Indicates that the element is perceivable but disabled, making it not editable or operable. |
+| `aria-expanded` | Indicates whether a component is expanded or collapsed, set on the respective element. |
+| `aria-label` | Defines a string value that labels an interactive element for accessibility. |
+| `aria-checked` |  Indicates the current `checked` state of checkboxes, radio buttons, and other widgets. |
+| `aria-owns` | Identifies an element or elements, establishing a relationship when DOM hierarchy can't represent it. |
+| `aria-readonly` |  Indicates that the element is not editable but is otherwise operable. |
+| `aria-activedescendent` | Identifies the currently active element when focus is on a combobox, textbox, group, or application. |
+| `aria-autocomplete` |  Indicates whether inputting text could trigger display of predictions and specifies how predictions will be presented for a combobox, searchbox, or textbox. |
 
 ## Keyboard interaction
 
-The Ribbon component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction) to support users who rely on assistive technologies (AT) or keyboard navigation. The following keyboard shortcuts are available:
+The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Ribbon component.
 
-| Windows | Mac | Action |
+| Windows | Mac | Actions |
 | --- | --- | --- |
-| **Ribbon Tab** | | |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the first Ribbon tab. If a tab is already focused, it moves focus out of the tab list. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next tab. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous tab. |
-| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Selects the currently focused tab. |
-| **Ribbon Items** | | |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates between items within a Ribbon group. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next item. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous item. |
-| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Activates the focused item. |
-| **Ribbon Dropdown/Split Button** | | |
-| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Opens the dropdown or activates the selected item. |
-| <kbd>↓</kbd> / <kbd>↑</kbd> | <kbd>↓</kbd> / <kbd>↑</kbd> | Moves focus between items in the dropdown list. |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the dropdown. |
-| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the dropdown. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the dropdown. |
-| **Ribbon File Menu** | | |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the file menu or activates the selected item. |
-| <kbd>↓</kbd> / <kbd>↑</kbd> | <kbd>↓</kbd> / <kbd>↑</kbd> | Moves focus between items in the file menu. |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the file menu. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the file menu. |
-| **Ribbon ComboBox** | | |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Selects the first item if none is selected, otherwise selects the next item. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Selects the previous item. |
-| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls to the next page of items. |
-| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls to the previous page of items. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and closes the suggestion list. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next element on the page. If the suggestion list is open, it closes it first. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous element on the page. If the suggestion list is open, it closes it first. |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the suggestion list. |
-| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the suggestion list. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the suggestion list, retaining the current selection. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor to the beginning of the input text. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor to the end of the input text. |
+| <b>Ribbon Tab</b> | | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon tabs. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next Tab.  |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous Tab. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon tab. |
+| <b>Ribbon Items</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon Items. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous item. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon item. |
+| <b>Ribbon Dropdown Items/ Ribbon Split button</b>||
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the next item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the previous item. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup.|
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
+| <b>Ribbon File menu</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon file menu. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous action item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next action item. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
+| <b>Ribbon Combobox</b> | | |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Selects the item previous to the currently selected one. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and popup list closes when it is in open state. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Open the popup list |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Close the popup list |
+| <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Cursor moves to before of first character in input |
+| <kbd>End</kbd> | <kbd>End</kbd> | Cursor moves to next of last character in input |
 
 ## Ensuring accessibility
 
-The Ribbon component's accessibility is ensured through automated testing using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools. These tools help maintain a high level of compliance by automatically detecting potential issues.
+The Ribbon component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

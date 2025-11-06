@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor DateTimePicker Component | Syncfusion
+title: Accessibility in Blazor Datetime Picker Component | Syncfusion
 description: Checkout and learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
-control: DateTimePicker
+control: Datetime Picker 
 documentation: ug
 ---
 
-# Accessibility in Blazor DateTimePicker Component
+# Accessibility in Blazor Datetime Picker Component
 
-Web accessibility ensures that web content and applications are usable by people with disabilities, especially where dynamic content and advanced UI components are involved.
+The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) practices commonly used to evaluate accessibility.
+The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor DateTimePicker component is outlined below.
 
@@ -40,19 +40,21 @@ The accessibility compliance for the Blazor DateTimePicker component is outlined
 
 ## WAI-ARIA attributes
 
-The DateTimePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications to convey role, state, and property information to assistive technologies.
-
-Common roles and attributes include:
-- Roles: combobox/textbox (for the input), dialog or popup container, grid for the calendar, and gridcell for individual dates.
-- `aria-expanded`: Indicates whether the popup (calendar/time list) is open or closed on the input/combobox element.
-- `aria-disabled`: Conveys the disabled state of the DateTimePicker.
-- `aria-activedescendant`: Identifies the currently focused date cell within the calendar grid or the focused item in the time list.
+Blazor DateTimePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
 To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section.
 
+It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
+
+* **aria-expanded**: Attribute indicates the state of a collapsible element.
+
+* **aria-disabled**: Attribute indicates the disabled state of this DateTimePicker component.
+
+* **aria-activedescendent**: Attribute helps in managing the current active child of the DateTimePicker component.
+
 ## Keyboard interaction
 
-Use the following keys to interact with the Blazor DateTimePicker. This component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+You can use the following keys to interact with the Blazor DateTimePicker. This component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 Blazor DateTimePicker supports the below list of shortcut keys:
 
@@ -62,8 +64,8 @@ Before opening the popup, use the following keys to control the popup element.
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
-| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
+| <kbd>Alt +  Down Arrow</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the select popup |
+| <kbd>Alt +  Down Arrow + Alt +  Down Arrow </kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> + <kbd>⌥</kbd> + <kbd>↓</kbd> | Toggles between two popups |
 
 ### Calendar navigation
 
@@ -71,38 +73,38 @@ Use the following keys to interact with the Calendar after the DatePicker popup 
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the same day of the previous week. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the same day of the next week. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous day. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next day. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first day of the month. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last day of the month. |
-| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date of the previous month. |
-| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date of the next month. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous week date. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next week date. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous date. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next date. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first date in the month. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last date in the month. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date in the previous month. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date in the next month. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
-| <kbd>Shift</kbd> + <kbd>Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date in the previous year. |
-| <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date in the next year. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves up one view (month → year, year → decade). |
-| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves down one view (decade → year, year → month). |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the first date of the current year. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the last date of the current year. |
+| <kbd>Shift + Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date in the previous year. |
+| <kbd>Shift + Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date in the previous year. |
+| <kbd>Ctrl + </kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves into the inner level of view like month-year, year-decade |
+| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves out from the depth level view like decade-year, year-month |
+| <kbd>Control +Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the starting date in the current year. |
+| <kbd>Control +End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the ending date in the current year. |
 
-Use the following shortcut keys to interact with the TimePicker after the TimePicker popup has opened:
+Use the following shortcut keys to interact with the TimePicker after the TimePicker Popup has opened:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates and selects the previous item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates and selects the next item. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor toward the arrow direction. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor toward the arrow direction. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor towards arrow key pressed direction. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor towards arrow key pressed direction. |
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Navigates and selects the first item. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Navigates and selects the last item. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and closes the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
-N> The “t” key behavior in the following example is custom to the sample and not a built-in shortcut. For additional information about native events, see the [Native events](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) topic.
+N> To focus out the DateTimePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -120,12 +122,11 @@ N> The “t” key behavior in the following example is custom to the sample and
     }
 }
 ```
-
 ## Ensuring accessibility
 
-The Blazor DateTimePicker component’s accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
+The Blazor DateTimePicker component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datetimepicker) in a new window to evaluate the DateTimePicker component with accessibility tools.
+The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datetimepicker) in a new window to evaluate the accessibility of the DateTimePicker component with accessibility tools.
 
 ## See also
 

@@ -9,21 +9,21 @@ documentation: ug
 
 # Steps in Blazor Stepper Component
 
-The Blazor Stepper allows adding steps using the [`StepperStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive. Each step can be configured with properties such as `IconCss`, `Text`, `Label`, `CssClass`, and more.
+The Blazor Stepper allows you to add steps using the [StepperStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive. Each step can be configured with options such as `IconCss`, `Text`, `Label`, `CssClass` and more.
 
-## Adding Steps
+## Adding steps
 
-Define the icon (`IconCss`), primary text (`Text`), and supplementary label (`Label`) content for each step using the respective properties.
+You can define the icon and text content for each step using the `IconCss`, `Text` and `Label` properties.
 
-### Defining Icon CSS
+### Defining icon CSS
 
-Define the CSS class to display an icon for each step using the `IconCss` property.
+You can define the CSS class to show the icon for each step using the `IconCss` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
-<SfStepper Orientation="StepperOrientation.Horizontal">
+<SfStepper>
     <StepperSteps>
         <StepperStep IconCss="sf-icon-cart"></StepperStep>        
         <StepperStep IconCss="sf-icon-transport"></StepperStep>
@@ -61,13 +61,11 @@ Define the CSS class to display an icon for each step using the `IconCss` proper
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIMtjkUFuGRpet?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with Icon](./images/Blazor-horizontal.png)
 
-### Defining Text Content
+### Defining text content
 
-Define text for a step using the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property. Display additional label content for a step using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property.
+You can define text instead of an icon by setting the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property and display label content for a step using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property.
 
 > When both label and text are defined, the label takes priority for display based on the `StepType`.
 
@@ -99,13 +97,11 @@ Define text for a step using the [`Text`](https://help.syncfusion.com/cr/blazor/
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhosjjEgYjbXHIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with text content](./images/Blazor-text-content.png)
 
-## Optional Steps
+## Optional steps
 
-Indicate whether a step is optional or not by using the [`Optional`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property. By default, the `Optional` property is `false`.
+You can show whether the step is optional or not by using [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property. By default, the `Optional` property is false.
 
 ```cshtml
 
@@ -148,14 +144,11 @@ Indicate whether a step is optional or not by using the [`Optional`](https://hel
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBIiXNOqaiqGIPc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with Optional](./images/Blazor-optional.png)
 
-## Disabling Steps
+## Disabling steps
 
-Disable a step and prevent user interaction by setting the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property to `true`. By default, the value is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property to disable a step, preventing user interaction when set to `true`. By default, the value is `false`.
 
 ```cshtml
 
@@ -198,14 +191,11 @@ Disable a step and prevent user interaction by setting the [`Disabled`](https://
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIsZtkAaslImDG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with Disabled](./images/Blazor-disabled.png)
 
-## Setting ReadOnly
+## Setting readonly
 
-Disable user interactions across the entire Stepper component by setting the [`ReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to `true`.
+You can use [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to disable the user interactions in the stepper.
 
 ```cshtml
 
@@ -248,13 +238,11 @@ Disable user interactions across the entire Stepper component by setting the [`R
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVSMXjYqYVfMlnN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with ReadOnly](./images/Blazor-Readonly.png)
 
-## Setting Active Step
+## Setting active step
 
-Set the active step by specifying its zero-based index using the [`ActiveStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) property. The default value is `0` (the first step).
+You can set the active step by specifying its index using the [ActiveStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) property. The default value is `0`.
 
 ```cshtml
 
@@ -297,12 +285,9 @@ Set the active step by specifying its zero-based index using the [`ActiveStep`](
 </style>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthyiXXaUEBvHies?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with ActiveStep](./images/Blazor-activeStep.png)
 
-## Step Status
+## Step status
 
 Each step's progress state can be specified using the [Status](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Status) property. The possible values are `NotStarted`, `InProgress` and `Completed`. By default, the value is `NotStarted`.
 
@@ -414,14 +399,11 @@ Each step's progress state can be specified using the [Status](https://help.sync
 
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htreiZNaUEUAPnaJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with step status](./images/Blazor-step-status.png)
 
-## Step Styling
+## Step styling
 
-Customize the appearance of individual steps using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of each step.
 
 ```cshtml
 
@@ -478,12 +460,10 @@ Customize the appearance of individual steps using the [`CssClass`](https://help
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLoitjYgOTjGexy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Stepper Component with CssClass](./images/Blazor-cssclass.png)
 
-## Step Validation
+## Step validation
 
-Set the validation state for each step to display a success or error icon by using the [`IsValid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
+You can set the validation state for each step to displaying a success or error icon by using [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
 
 > To know more about Stepper validation, please refer to the [Validation](./steps-validation#validating-steps) section.

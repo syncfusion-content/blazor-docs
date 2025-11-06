@@ -9,13 +9,13 @@ documentation: ug
 
 # Customize the appearance of a Blazor Toggle Switch Button Component
 
-The appearance of the Toggle Switch Button can be customized using CSS. Define the required CSS rules and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property to apply them to the component.
+The appearance of the Toggle Switch Button component can be customized using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property.
 
 ## Customize Toggle Switch Button bar and handle
 
-Toggle Switch Button bar and handle can be customized using CSS rules by applying a custom class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following example, the border-radius of the `e-switch-inner` and `e-switch-handle` elements is changed from circular to square.
+Toggle Switch Button bar and handle can be customized as per requirement using CSS rules. Toggle Switch Button bar and handle customized using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following sample, the `border-radius` CSS property for `e-switch-inner` and `e-switch-handle` elements was changed border radius circle to square shape.
 
-N> For this customization, reference the theme stylesheet used by the application. The example below assumes the Fabric theme and references `fabric.css` from the CDN. If using a different theme (for example, Material, Bootstrap 5, or Fluent), reference the corresponding theme stylesheet instead. This file can be found at the following [CDN](https://cdn.syncfusion.com/ej2/fabric.css) link.
+N> For this customization, refer the `fabric.css` file. This could be found from our [CDN](https://cdn.syncfusion.com/ej2/fabric.css) link.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -132,9 +132,9 @@ N> For this customization, reference the theme stylesheet used by the applicatio
 
 ## Color the Toggle Switch Button
 
-Toggle Switch Button colors can be customized using CSS rules by adding a custom class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following example, the background and border colors of the `e-switch-inner` and `e-switch-off` elements are changed from their default values.
+Toggle Switch Button colors can be customized as per the requirement using CSS rules. Toggle Switch Button bar and handle colors customized using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following sample, the `e-switch-inner` and `e-switch-off` elements background and border colors were changed from default colors.
 
-N> For this customization, reference the theme stylesheet that matches the application. The example below references `bootstrap.css` from the CDN. If using Bootstrap 5, Material, or Fluent themes, include the appropriate theme stylesheet to ensure selectors and variables match. The file can be found at the following [CDN](https://cdn.syncfusion.com/ej2/bootstrap.css) link. When choosing colors, ensure sufficient contrast for accessibility and verify appearance in dark mode and RTL layouts as needed.
+N> For this customization you need to refer the `bootstrap.css` file. This could be found from our [CDN](https://cdn.syncfusion.com/ej2/bootstrap.css) link.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

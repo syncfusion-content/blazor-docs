@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Show Half-Yearly View in Blazor Scheduler Component | Syncfusion
+title: Show half-yearly view in Blazor Scheduler Component | Syncfusion
 description: Learn how to show half-yearly view in Syncfusion Blazor Scheduler component and limit number of months and customization in year view.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Configure Half-Yearly View in Blazor Scheduler Component
+# Show half-yearly view in Blazor Scheduler Component
 
-The year view of the Scheduler displays all 365 days and their associated appointments for a given year. This view can be customized to show a specific range of months, such as a half-yearly view, using the following properties:
+The year view of the scheduler displays all the 365 days and their related appointments of a particular year. The year view can be customized by using the following properties.
 
 * [FirstMonthOfYear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear)
 * [MonthsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MonthsCount)
 * [MonthHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_MonthHeaderTemplate)
 
-In the following code example, a half-yearly view is configured to render only the last six months of a year. To begin the view from June, `FirstMonthOfYear` is set to `6`, and `MonthsCount` is set to `6` to display a total of six months (June to November). The `MonthHeaderTemplate` is used to format the month and year in a localized string.
+In the following code example, you can see how to render only the last six months of a year in the scheduler. To start with the month of  June, `FirstMonthYear` is set to 6 and `MonthsCount` is set to 6 to render only 6 months.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -121,6 +121,3 @@ In the following code example, a half-yearly view is configured to render only t
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLIijjAfUyByqac?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scheduler Half-yearly View](../images/half-year.png)

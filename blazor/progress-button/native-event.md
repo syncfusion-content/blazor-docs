@@ -9,9 +9,9 @@ documentation: ug
 
 # Native Events in Blazor ProgressButton Component
 
-Define native DOM events on the component by using Blazor’s @on{event} attributes. The attribute value is an event handler method, and event-specific data is provided through strongly typed event argument objects.
+You can define the native event using an `event` attribute in the component. The value of attribute is treated as an event handler. The event specific data will be available in the event arguments.
 
-The different event argument types for each event are:
+The different event argument types for each event are,
 
 * Focus Events - UIFocusEventArgs
 * Mouse Events - UIMouseEventArgs

@@ -9,16 +9,16 @@ documentation: ug
 
 # Data Binding in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) uses `SfDataManager` to bind the data source and supports both RESTful JSON data services and `IEnumerable` collections. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property accepts either an instance of `SfDataManager` or a list of objects. It supports the following data binding methods:
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) uses `SfDataManager` to bind the dataSource which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property can be assigned either with the instance of `SfDataManager` or list of objects. It supports the following kinds of data binding method:
 
 * List Binding
 * Remote data
 
-N> When using `DataSource` as `IEnumerable<T>`, the component type (`TValue`) is inferred from the data. When using `SfDataManager`, set `TValue` explicitly on the Query Builder component.
+N> When using DataSource as `IEnumerable<T>` component type, (TValue) will be inferred from its value. While using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
 
 ## List Binding
 
-To bind list data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property to a list of objects. Define columns to control field display names, types, and formatting.
+To bind list data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), you can assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property with a list of data.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -65,13 +65,13 @@ To bind list data to the [Blazor Query Builder](https://www.syncfusion.com/blazo
 
 ## Remote Data
 
-To bind remote data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), use `SfDataManager` with the appropriate adaptor and set the service endpoint `Url`. Define columns to control field labels, types, and formatting when binding to remote data. Ensure the endpoint is accessible from the client (CORS/HTTPS as applicable).
+To bind remote data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component, assign service data as an instance of `SfDataManager` to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint `Url`.
 
-Refer to the following code examples for remote data binding with OData, OData v4, and Web API services.
+Refer to the following code example for remote Data binding using `OData` service.
 
 ### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. Use `ODataAdaptor` with `SfDataManager` to retrieve data from OData services.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the SfDataManager. Refer to the following code example for remote Data binding using OData service.
 
 ```cshtml
 
@@ -103,7 +103,7 @@ Refer to the following code examples for remote data binding with OData, OData v
 
 ### Binding with OData v4 services
 
-OData v4 is an improved version of the OData protocol. Use `ODataV4Adaptor` with `SfDataManager` to consume OData v4 services. For more details, see the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
+The ODataV4 is an improved version of OData protocols, and the `SfDataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
 
 ```cshtml
 
@@ -135,7 +135,7 @@ OData v4 is an improved version of the OData protocol. Use `ODataV4Adaptor` with
 
 ### Web API
 
-Use `WebApiAdaptor` to bind the Query Builder to RESTful Web API endpoints that return JSON data.
+The WebApiAdaptor can be used to bind query builder with Web API created using OData endpoint.
 
 ```cshtml
 
@@ -167,7 +167,7 @@ Use `WebApiAdaptor` to bind the Query Builder to RESTful Web API endpoints that 
 
 ## Complex Data Binding
 
-Complex data binding allows you to work with nested objects and subfields. Bind complex data using nested columns or by specifying a complex data source with a `Separator` that defines the path delimiter used in field names.
+Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and Separator must be given in query builder.
 
 ```cshtml
 
@@ -251,4 +251,4 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
 
 ![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.png)
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the Query Builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

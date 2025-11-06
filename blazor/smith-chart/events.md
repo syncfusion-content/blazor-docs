@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Smith Chart Component | Syncfusion
-description: Check out and learn here all about events in Syncfusion Blazor Smith Chart component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor Smith Chart Component
 
-This section describes the events triggered by the Smith Chart component when specific actions occur. Events are provided to the Smith Chart through the **SmithChartEvents** component.
+This section describes about the Smith Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Smith Chart through the **SmithChartEvents** component.
 
-The Smith Chart component supports the following events:
+The Smith Chart component supports the following events.
 
 * [Loaded](#loaded)
 * [OnPrintComplete](#onprintcomplete)
@@ -29,7 +29,6 @@ The Smith Chart component supports the following events:
 The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_Loaded) event triggers after the Smith Chart is rendered.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -47,22 +46,19 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Smit
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void SmithChartLoaded(SmithChartLoadedEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## OnPrintComplete
@@ -70,7 +66,6 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Smit
 The `OnPrintComplete` event triggers after the Smith Chart is printed.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <button id="print" @onclick="Print">Print</button>
@@ -85,33 +80,28 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 
 @code {
     public SfSmithChart SmithChart;
-
     public class SmithChartData
     {
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     private async Task Print()
     {
         await SmithChart.PrintAsync();
     }
-
     public void PrintCompleted()
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## OnExportComplete
@@ -119,7 +109,6 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_OnExportComplete) event triggers after the Smith Chart is exported.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <button id="export" @onclick="Export">Export</button>
@@ -137,45 +126,39 @@ The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 @code {
     public SfSmithChart SmithChart;
-
     public class SmithChartData
     {
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> TransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     private async Task Export()
     {
         await SmithChart.ExportAsync(ExportType.PNG, "SmithChart");
     }
-
     public void ExportCompleted(SmithChartExportEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## AxisLabelRendering
 
-Before rendering each axis label, the [AxisLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_AxisLabelRendering) event is triggered. Arguments include:
+Before rendering each axis label, the [AxisLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_AxisLabelRendering) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current axis label text.
 * `X` - Specifies the current axis label X position.
 * `Y` - Specifies the current axis label Y position.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -193,34 +176,30 @@ Before rendering each axis label, the [AxisLabelRendering](https://help.syncfusi
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void AxisLabelCustomization(SmithChartAxisLabelRenderEventArgs args)
     {
         // Here you can customize your code
     }
 }
-
 ```
 
 ## LegendRendering
 
-Before rendering each legend, the [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. Arguments include:
+Before rendering each legend, the [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current legend text.
 * `Shape` - Customize the shape of the legend.
 * `Fill` - Specifies the legend shape color.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -239,34 +218,30 @@ Before rendering each legend, the [LegendRendering](https://help.syncfusion.com/
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void LegendCustomization(SmithChartLegendRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## SeriesRender
 
-Before rendering each series, the [SeriesRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SeriesRender) event is triggered. Arguments include:
+Before rendering each series, the [SeriesRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SeriesRender) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current series text.
 * `Index` - Specifies the current series index.
 * `Fill` - Specifies the current series color.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -284,34 +259,30 @@ Before rendering each series, the [SeriesRender](https://help.syncfusion.com/cr/
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void SeriesCustomization(SmithChartSeriesRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## TitleRendering
 
-The [TitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TitleRendering) event triggers before the title is rendered. Arguments include:
+The [TitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TitleRendering) event triggers before the title is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current title text.
 * `X` - Specifies the current title X position.
 * `Y` - Specifies the current title Y position.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -331,34 +302,30 @@ The [TitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void TitleCustomization(TitleRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## SubtitleRendering
 
-The [SubtitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SubtitleRendering) event triggers before the subtitle is rendered. Arguments include:
+The [SubtitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SubtitleRendering) event triggers before the subtitle is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current subtitle text.
 * `X` - Specifies the current subtitle X position.
 * `Y` - Specifies the current subtitle Y position.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -379,35 +346,32 @@ The [SubtitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void SubtitleCustomization(SubTitleRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## TextRendering
 
-The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the data label text is rendered. Arguments include:
+The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the datalabel text is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current text of the label.
-* `X` - Specifies the current data label X position.
-* `Y` - Specifies the current data label Y position.
-* `PointIndex` - Specifies the current point index of the data label.
-* `SeriesIndex` - Specifies the current series index of the data label.
-* `Border` - Specifies the current data label border.
-* `Color` - Specifies the current data label color.
+* `X` - Specifies the current datalabel X position.
+* `Y` - Specifies the current datalabel Y position.
+* `PointIndex` - Specifies the current point index of the datalabel.
+* `SeriesIndex` - Specifies the current series index of the datalabel.
+* `Border` - Specifies the current datalabel border.
+* `Color` - Specifies the current datalabel color.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -430,33 +394,29 @@ The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void DataLabelCustomization(SmithChartTextRenderEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```
 
 ## SizeChanged
 
-The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SizeChanged) event triggers when the browser window is resized. Arguments include:
+The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SizeChanged) event triggers when the browser window is resized. The following arguments are present in this event:
 
 * `CurrentSize` - Specifies the current size of the Chart.
 * `PreviousSize` - Specifies the previous size of the Chart.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -474,20 +434,17 @@ The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
-
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
-        new SmithChartData { Resistance = 10, Reactance = 25 },
-        new SmithChartData { Resistance = 6, Reactance = 4.5 },
-        new SmithChartData { Resistance = 3.5, Reactance = 1.6 },
-        new SmithChartData { Resistance = 2, Reactance = 1.2 },
-        new SmithChartData { Resistance = 1, Reactance = 0.8 },
-        new SmithChartData { Resistance = 0, Reactance = 0.2 }
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-
     public void Resized(SmithChartResizeEventArgs args)
     {
         // Here you can customize your code.
     }
 }
-
 ```

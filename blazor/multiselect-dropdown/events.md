@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor MultiSelect Component
 
-This section lists the events available in the Blazor MultiSelect Dropdown component and when they are triggered during user interactions.
+This section explains the list of events of the MultiSelect component which will be triggered for appropriate MultiSelect actions.
 
 ## Blur
 
-The `Blur` event is triggered when the input loses focus. Typical uses include validation and committing changes.
+`Blur` event triggers when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -46,7 +46,7 @@ The `Blur` event is triggered when the input loses focus. Typical uses include v
 
 ## ValueChange
 
-The `ValueChange` event is triggered when the MultiSelect value changes due to selection or removal actions.
+`ValueChange` event triggers when the MultiSelect value is changed.
 
 ```cshtml
 
@@ -81,7 +81,7 @@ The `ValueChange` event is triggered when the MultiSelect value changes due to s
 
 ## Closed
 
-The `Closed` event is triggered after the popup is closed and is useful for post-close logic.
+`Closed` event triggers after the popup has been closed.
 
 ```cshtml
 
@@ -89,7 +89,7 @@ The `Closed` event is triggered after the popup is closed and is useful for post
 
 ## Created
 
-The `Created` event is triggered after the component has been initialized. Use it for one-time setup.
+`Created` event triggers when the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -122,7 +122,7 @@ The `Created` event is triggered after the component has been initialized. Use i
 
 ## Destroyed
 
-The `Destroyed` event is triggered when the component is disposed. Use it for cleanup logic.
+`Destroyed` event triggers when the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -155,7 +155,7 @@ The `Destroyed` event is triggered when the component is disposed. Use it for cl
 
 ## Focus
 
-The `Focus` event is triggered when the input gains focus. Use it to customize focus behavior.
+`Focus` event triggers when the input gets focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -188,7 +188,7 @@ The `Focus` event is triggered when the input gains focus. Use it to customize f
 
 ## OnOpen
 
-The `OnOpen` event is triggered before the popup opens. This event is cancelable; cancel it to keep the popup closed.
+`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 ```cshtml
 
@@ -196,7 +196,7 @@ The `OnOpen` event is triggered before the popup opens. This event is cancelable
 
 ## OnClose
 
-The `OnClose` event is triggered before the popup closes. This event is cancelable; cancel it to keep the popup open.
+`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 ```cshtml
 
@@ -205,7 +205,7 @@ The `OnClose` event is triggered before the popup closes. This event is cancelab
 
 ## DataBound
 
-The `DataBound` event is triggered when the data source has been populated in the popup list.
+`DataBound` event triggers when the data source is populated in the popup list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -238,7 +238,7 @@ The `DataBound` event is triggered when the data source has been populated in th
 
 ## Filtering
 
-The `Filtering` event is triggered while typing in the filter bar when `AllowFiltering` is enabled. Use it to customize filtering logic.
+`Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
 ```cshtml
 
@@ -273,7 +273,7 @@ The `Filtering` event is triggered while typing in the filter bar when `AllowFil
 
 ## OnActionBegin
 
-The `OnActionBegin` event is triggered before a remote data request is sent. Use it to modify queries or parameters.
+`OnActionBegin` event triggers before fetching data from the remote server.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -311,7 +311,7 @@ The `OnActionBegin` event is triggered before a remote data request is sent. Use
 
 ## OnActionFailure
 
-The `OnActionFailure` event is triggered when a remote data request fails. Use it for error handling and logging.
+`OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -349,7 +349,7 @@ The `OnActionFailure` event is triggered when a remote data request fails. Use i
 
 ## OnValueSelect
 
-The `OnValueSelect` event is triggered when a user selects an item in the popup using the mouse or keyboard.
+`OnValueSelect` event triggers when a user selects an item in the popup using the mouse or keyboard navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -382,7 +382,7 @@ The `OnValueSelect` event is triggered when a user selects an item in the popup 
 
 ## Opened
 
-The `Opened` event is triggered after the popup has opened. Use it to run logic that requires rendered popup content.
+`Opened` event triggers when the popup opens.
 
 ```cshtml
 
@@ -390,7 +390,7 @@ The `Opened` event is triggered after the popup has opened. Use it to run logic 
 
 ## ChipSelected
 
-The `ChipSelected` event is triggered when a value chip is selected in the input area (chip mode).
+`ChipSelected` event triggers when the chip is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -424,7 +424,7 @@ The `ChipSelected` event is triggered when a value chip is selected in the input
 
 ## Cleared
 
-The `Cleared` event is triggered after clearing all selected items using the clear icon.
+`Cleared` event triggers after clearing all items using the clear icon.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -457,7 +457,7 @@ The `Cleared` event is triggered after clearing all selected items using the cle
 
 ## OnChipTag
 
-The `OnChipTag` event is triggered before the selected item is displayed as a chip in the input area. Use it to customize tagging behavior.
+`OnChipTag` event triggers before setting the selected item as chip in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -490,7 +490,7 @@ The `OnChipTag` event is triggered before the selected item is displayed as a ch
 
 ## OnValueRemove
 
-The `OnValueRemove` event is triggered before a selected item is removed from the component. Use it to intercept and optionally prevent removal.
+`OnValueRemove` event triggers before the selected item is removed from the widget.
 
 ```cshtml
 
@@ -524,7 +524,7 @@ The `OnValueRemove` event is triggered before a selected item is removed from th
 
 ## ValueRemoved
 
-The `ValueRemoved` event is triggered after a selected item is removed from the component.
+`ValueRemoved` event triggers after the selected item is removed from the widget.
 
 ```cshtml
 
@@ -558,7 +558,7 @@ The `ValueRemoved` event is triggered after a selected item is removed from the 
 
 ## CustomValueSpecifier
 
-The `CustomValueSpecifier` event is triggered when a custom value is selected while `AllowCustomValue` is enabled. Use it to provide custom item data.
+`CustomValueSpecifier` event triggers when the CustomValue is selected.
 
 ```cshtml
 
@@ -592,7 +592,7 @@ The `CustomValueSpecifier` event is triggered when a custom value is selected wh
 
 ## SelectedAll
 
-The `SelectedAll` event is triggered after the select-all operation completes (CheckBox mode with ShowSelectAll).
+`SelectedAll` event triggers after the select all process is completed.
 
 ```cshtml
 
@@ -624,4 +624,4 @@ The `SelectedAll` event is triggered after the select-all operation completes (C
 }
 ```
 
-N> The MultiSelect currently provides the events listed above. Additional events may be added in future releases based on user requests. If a required event is missing, submit a request using the Syncfusion Blazor feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).
+N> MultiSelect is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

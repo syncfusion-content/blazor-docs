@@ -9,7 +9,7 @@ documentation: ug
 
 # Multiple File Selection in Blazor File Manager Component
 
-The File Manager allows the selection of multiple files by enabling the [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property (enabled by default). Multiple selection can be done by pressing the `Ctrl` or `Shift` key while selecting files. Checkboxes can also be used for multiple selection. `Ctrl + A` can be used to select all files in the current directory. The [`FileSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelected) event is triggered when items in the File Manager control are selected or unselected.
+The File Manager allows you to select multiple files by enabling the [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property (enabled by default). The multiple selection can be done by pressing the `Ctrl` key or `Shift` key and selecting the files. The check box can also be used to do multiple selection. `Ctrl + A` can be used to select all files in the current directory. The [`FileSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelected) event will be triggered when the items of File Manager control is selected or unselected.
 
 ```cshtml
 
@@ -27,17 +27,17 @@ The File Manager allows the selection of multiple files by enabling the [`AllowM
 
 ## Output
 
-After successful compilation, the application can be run by pressing `F5`.
+After successful compilation of your application, simply press `F5` to run the application.
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBeWXZKALyVNmrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
 
 ## Getting Selected Files
 
-In the Blazor File Manager component, the details of selected files or folders can be retrieved using the [GetSelectedFiles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GetSelectedFiles) method.
+In the Blazor File Manager component, you can retrieve the details of the selected files or folders using the [GetSelectedFiles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GetSelectedFiles) method. 
 
-Additionally, these details can be obtained through the [FileDetails](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileSelectionEventArgs-1.html#Syncfusion_Blazor_FileManager_FileSelectionEventArgs_1_FileDetails) argument of the [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelection) event.
+Additionally, you can obtain these details through the [FileDetails](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileSelectionEventArgs-1.html#Syncfusion_Blazor_FileManager_FileSelectionEventArgs_1_FileDetails) argument of the [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelection) event.
 
 ```cshtml
 
@@ -71,7 +71,7 @@ Additionally, these details can be obtained through the [FileDetails](https://he
 
 ## Prevent Selection for Specific Files/Folders
 
-In the Blazor File Manager component, selection of specific files or folders can be prevented by setting the [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelection) event's [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileSelectionEventArgs-1.html#Syncfusion_Blazor_FileManager_FileSelectionEventArgs_1_Cancel) argument value to `true`.
+In the Blazor File Manager component, you are able to prevent selection of specific files or folders by setting the [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelection) event's [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileSelectionEventArgs-1.html#Syncfusion_Blazor_FileManager_FileSelectionEventArgs_1_Cancel) argument value to **true**. 
 
 For example, in the following example, selection is prevented for the **Music** folder.
 
@@ -103,11 +103,11 @@ For example, in the following example, selection is prevented for the **Music** 
 
 ## Range Selection
 
-The File Manager supports selecting files and folders in specific ranges through mouse drag, similar to File Explorer. This is useful in scenarios where there is a need to select a large group of files quickly without manually clicking each one.
+The File Manager supports for selecting files and folders in specific ranges through mouse drag as like File Explorer. This is particularly useful in scenarios where users need to select a large group of files quickly without manually clicking each one. 
 
 ### Enabling Range Selection
 
-To enable range selection, set the [EnableRangeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_EnableRangeSelection) property to `true` and ensure that multi-selection is allowed using the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property.
+To enable range selection, you need to set the [EnableRangeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_EnableRangeSelection) property to `true` and ensure that multi-selection is allowed using the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property.
 
 ````cshtml
 @using Syncfusion.Blazor.FileManager;
@@ -126,9 +126,9 @@ To enable range selection, set the [EnableRangeSelection](https://help.syncfusio
 
 ## Events
 
-The Blazor File Manager component includes `FileSelection` and `FileSelected` events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+The Blazor File Manager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
-N> All events should be provided in a single **FileManagerEvents** component.
+N> All the events should be provided in a single **FileManagerEvents** component.
 
 ### FileSelection
 

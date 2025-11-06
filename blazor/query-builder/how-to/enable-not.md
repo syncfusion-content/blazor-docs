@@ -9,9 +9,9 @@ documentation: ug
 
 # Show Not Operator in Blazor QueryBuilder Component
 
-Query Builder supports the logical NOT operator alongside AND and OR to negate a group’s combined condition. Enable the NOT operator by setting the [EnableNotCondition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_EnableNotCondition) property to `true`.
+The QueryBuilder provides `Not` operator along with AND, OR operators to filter records based on more than one condition. You can enable this feature by setting the [EnableNotCondition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_EnableNotCondition) property to `true`.
 
-N> The `EnableNotCondition` property is false by default.
+N> By default `EnableNotCondition` set as false.
 
 ```cshtml
 

@@ -3,15 +3,13 @@ layout: post
 title: Column Validation in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about column validation in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Column validation in Blazor TreeGrid Component
 
-Column validation validates edited or added row data and displays errors for invalid fields before saving. TreeGrid uses the **Form Validator** component for column validation. Define validation rules using the [TreeGridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html) property.
-
-N> Prerequisites: To enable CRUD operations in TreeGrid, configure the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) with AllowEditing, AllowAdding, and AllowDeleting as needed. Also, define a column with IsPrimaryKey set to true.
+Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
 
 ```cshtml
 @using TreeGridComponent.Data; 
@@ -87,14 +85,15 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
 }
 ```
 
-The following image shows column validation errors displayed for the Progress field.
 ![Column Validation in Blazor TreeGrid](../images/blazor-treegrid-column-validation.png)
 
 ## Custom validation
 
-Custom validation enables implementing validations based on application-specific rules.
+Custom validation allows the users to customize the validations manually according to the user's criteria.
 
-Create a validation attribute by inheriting from ValidationAttribute and overriding the IsValid method. Apply the attribute to the corresponding model property in the TreeGrid data source class. The example below applies custom validations to the `Duration` and `Priority` fields.
+Custom validation can be used by overriding the IsValid method inside the class that inherits the Validation Attribute. All the validations are done inside the IsValid method. The same class should be set as a attribute to the specific field property of the tree grid's datasource model class.
+
+The following sample code demonstrates custom validations implemented in the fields `Duration` and `Priority` .
 
 ```cshtml
 @using TreeGridComponent. Data; 
@@ -207,15 +206,16 @@ namespace TreeGridComponent. Data
 
 ## Custom validator component
 
-In addition to built-in validation and custom attributes, a custom validator component can validate the TreeGrid edit form. Use the `Validator` property of the `TreeGridEditSettings` component to inject a validator component into the edit form. Within the `Validator`, access form state and show messages using the implicit `context` parameter of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
 For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
-In the following example:
-- A custom form validator component named `MyCustomValidator` accepts a [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) parameter.
-- The `MyCustomValidator` component is used inside the `Validator` property.
-- The validator checks whether the Duration value is between 0 and 30.
-- Validation errors are displayed using the `ValidationMessage` component.
+In the below code example, the following things have been done.
+
+* Created a form validator component named `MyCustomValidator` which accepts [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
+* Used the `MyCustomValidator` component inside the `Validator` property.
+* This validator component will check whether Duration value is in between 0 to 30.
+* Displayed the validation error messages using `ValidationMessage` component.
 
 {% tabs %}
 
@@ -381,14 +381,15 @@ namespace TreeGridComponent. Data
 
 {% endtabs %}
 
-The following image shows a TreeGrid using a custom validator component in a dialog edit form.
+The output will be as follows.
+
 ![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-custom-validator.png)
 
 ## Display validation message using in-built tooltip
 
-When using inline or batch editing, placing `ValidationMessage` elements in the template may not be ideal. In such cases, use the built-in validation tooltip by calling the `ValidatorTemplateContext.ShowValidationMessage(fieldName, IsValid, Message)` method.
+In the above code example, you can see that `ValidationMessage` component is used, this might be not suitable when using Inline editing or batch editing. In such cases, you can use the in-built validation tooltip to show those error messages by using `ValidatorTemplateContext.ShowValidationMessage(fieldName, IsValid, Message)` method.
 
-The following snippet shows the updated `HandleValidation` method of the `MyCustomValidator` component to display tooltip messages.
+Now, HandleValidation method of the MyCustomValidator component would be changed like below.
 
 {% tabs %}
 
@@ -425,12 +426,13 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 {% endtabs %}
 
-The following image shows tooltip-based validation messages for a TreeGrid field.
+The output will be as follows.
+
 ![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-with-custom-validator.png)
 
 ## Disable in-built validator component
 
-The `Validator` property can also disable the built-in validator component used by the TreeGrid. By default, the TreeGrid uses two validator components—`DataAnnotationValidator` and the internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property—to handle edit form validation. If only the `DataAnnotationValidator` is required, configure it by using the `Validator` component within [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
+`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
 
 {% tabs %}
 
@@ -509,13 +511,13 @@ namespace TreeGridComponent. Data
 
 ## Display validation message in dialog template
 
-Use form validation to display a validation message for a column that is not defined in the TreeGrid column set.
+Use the form validation to display a validation message for a column that is not defined in the TreeGrid column.
 
-The `Validator` property can apply validation rules to fields included in the dialog template even if those fields are not displayed as TreeGrid columns.
+You can use the **Validator** property to apply validation rules to fields included in the dialog template, even if those fields are not displayed in the TreeGrid columns.
 
-In the following example, the `TaskName` field is not defined in the TreeGrid columns, and the validation message for `TaskName` is displayed within the dialog template.
+In the below example, the **TaskName** field is not defined in the TreeGrid column and the validation message for the **TaskName** is displayed in the dialog template. 
 
-N> For fields not defined as TreeGrid columns, validation messages appear in the validation summary (at the top of the dialog edit form).
+N> The validation message for fields that are not defined in the TreeGrid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -628,7 +630,4 @@ N> For fields not defined as TreeGrid columns, validation messages appear in the
 
 ```
 
-The following image shows how validation messages can be displayed from a dialog template for fields not defined as columns.
-
 ![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.png)
-

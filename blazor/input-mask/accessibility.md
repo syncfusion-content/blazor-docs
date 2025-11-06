@@ -15,14 +15,14 @@ The accessibility compliance for the Blazor MaskedTextBox component is outlined 
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -30,27 +30,26 @@ The accessibility compliance for the Blazor MaskedTextBox component is outlined 
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Fully supported"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partially supported"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="Not supported"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
-The Blazor MaskedTextBox includes comprehensive WAI-ARIA support to ensure compatibility with screen readers and other assistive technologies. This component is designed with reference to the WAI-ARIA Authoring Practices.
+The Blazor MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access using on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/).
 
-The MaskedTextBox uses the textbox role and the following ARIA properties, based on state and configuration:
+The MaskedTextBox uses the `textbox` role and following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
-| aria-label / aria-labelledby | Provides an accessible name for the MaskedTextBox. |
-| aria-describedby | Associates helper or error text with the MaskedTextBox for screen reader announcement. |
-| aria-invalid | Indicates that the current value fails validation. |
-| aria-required | Indicates that input is required. |
-| aria-disabled | Indicates that the MaskedTextBox is disabled. |
-| aria-readonly | Indicates that the value cannot be changed by the user. |
-| aria-multiline | Indicates whether the textbox supports multiple lines (typically false for MaskedTextBox). |
+| aria-live | Indicates the priority of updates to a live region. |
+| aria-disabled | Indicates the disabled state of the MaskedTextBox. |
+| aria-valuenow | Specifies the current value of the MaskedTextBox. |
+| aria-invalid | Indicates that the user input is incorrect or not within the acceptable ranges. |
+| aria-placeholder | It is a short hint to help the users with data entry when the MaskedTextBox has no value. |
+| aria-labelledby | Indicates the floating label element of the MaskedTextBox. |
 
 ## Ensuring accessibility
 

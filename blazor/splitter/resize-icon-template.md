@@ -9,7 +9,7 @@ documentation: ug
 
 # Resize Icon Template
 
-The Splitter supports customizing the resize icon in the separator using a template. Any markup, such as bars, images, or icons, can be rendered as the resize handle.
+The Splitter allows to customize the resize icon of the separator using the template, where any image or other templates can be rendered as resize icon.
 
 ```cshtml
 
@@ -42,7 +42,5 @@ The Splitter supports customizing the resize icon in the separator using a templ
 </SfSplitter>
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhIWttvfkXWBDnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Splitter with Resize Icon Template](./images/blazor-splitter-resize-icon-template.png)

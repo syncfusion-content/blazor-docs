@@ -107,7 +107,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both Program.cs files (Server and Client).
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -124,7 +124,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="1 4" %}
 
 using Syncfusion.Blazor;
 
@@ -139,7 +139,7 @@ await builder.Build().RunAsync();
 If the **Interactive Render Mode** is set to `Server`, the project contains a single **~/Program.cs** file. In this case, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service only in that file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="1 9" %}
 
 using Syncfusion.Blazor;
 

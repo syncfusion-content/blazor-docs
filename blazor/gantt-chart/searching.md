@@ -431,8 +431,3 @@ To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</s
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVIstNSeXFfGxal?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-
-
-

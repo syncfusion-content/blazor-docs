@@ -9,9 +9,9 @@ documentation: ug
 
 # Set disabled state in Blazor Toggle Switch Button Component
 
-Toggle Switch Button can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property to `true`.
+Toggle Switch Button can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property to true.
 
-The following example illustrates how to disable the Toggle Switch Button component.
+The following example illustrates how to disable support in Toggle Switch Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -24,4 +24,4 @@ The following example illustrates how to disable the Toggle Switch Button compon
 
 ```
 
-![Blazor Toggle Switch Button in disabled state](./../images/blazor-toggle-switch-button-disable-state.png)
+![Blazor Toggle Switch Button in Disable State](./../images/blazor-toggle-switch-button-disable-state.png)

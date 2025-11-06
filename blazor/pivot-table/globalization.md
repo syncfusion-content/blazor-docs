@@ -15,7 +15,7 @@ documentation: ug
 
 ## Right-to-left (RTL)
 
-Right-to-left (RTL) support makes the Pivot Table more accessible and user-friendly for people who read and write in right-to-left languages such as Arabic, Farsi, and Urdu. This feature adjusts the text direction and layout of the entire Pivot Table from a left-to-right to a right-to-left orientation. To enable RTL in the Pivot Table, set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableRtl) property to **true**.
+Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following code sample, the `EnableRtl` property is used to enable RTL in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

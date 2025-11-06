@@ -9,7 +9,7 @@ documentation: ug
 
 # Labels in Blazor Rating Component
 
-Use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property to display a label that shows the current rating value. By default, `ShowLabel` is `false`. When set to `true`, the label is rendered.
+You can use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property to display a label that shows the current value of the rating. When the `ShowLabel` property is set to `true`, a label will be displayed.
 
 ```cshtml
 
@@ -19,18 +19,18 @@ Use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 ```
 
-![Blazor Rating component with Label](./images/blazor-rating-label.png)
+![Blazor Rating Component with Label](./images/blazor-rating-label.png)
 
 ## Label position
 
-Control where the label appears using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. The default position is `Right`. In right-to-left layouts, left and right positions follow RTL direction.
+The Rating component allows you to place the label on the top, bottom, left, or right side of the rating using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. 
 
 The following label positions are supported:
 
-* Top: The label appears above the rating.
-* Bottom: The label appears below the rating.
-* Left: The label appears on the left side of the rating.
-* Right: The label appears on the right side of the rating.
+* Top: The label is placed on the top of the rating.
+* Bottom: The label is placed on the bottom of the rating.
+* Left: The label is placed on the left side of the rating.
+* Right: The label is placed on the right side of the rating.
 
 ```cshtml
 
@@ -50,12 +50,12 @@ The following label positions are supported:
 
 ```
 
-![Blazor Rating component with different label positions](./images/blazor-rating-label-positions.png)
+![Blazor Rating Component with different label positions](./images/blazor-rating-label-positions.png)
 
 
 ## Label template
 
-Use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive to provide custom content for the label. The current rating value (passed as the `context`, a double) is available when building the label content. When a template is provided and `ShowLabel` is `true`, the template replaces the default label.
+You can use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive to specify a custom template for the `Label` of the rating. The current value of the rating will be passed as the `context` when building the content of the label. This allows you to include dynamic information about the rating in the template.
 
 ```cshtml
 
@@ -67,4 +67,4 @@ Use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Rating component with Label template](./images/blazor-rating-label-template.png)
+![Blazor Rating Component with Label template](./images/blazor-rating-label-template.png)

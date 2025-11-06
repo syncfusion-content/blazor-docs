@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor AutoComplete Component | Syncfusion
-description: Learn about events in the Syncfusion Blazor AutoComplete component, including ValueChange, OnOpen, OnClose, DataBound, Filtering, selection events, and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor AutoComplete component and much more details.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor AutoComplete Component
 
-This section lists and describes the events raised by the AutoComplete component for common user interactions and lifecycle actions.
+This section explains the list of events of the AutoComplete component which will be triggered for appropriate AutoComplete actions.
 
 ## Blur
 
-The `Blur` event is triggered when the input loses focus.
+`Blur` event triggers when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -47,7 +47,7 @@ The `Blur` event is triggered when the input loses focus.
 
 ## ValueChange
 
-The `ValueChange` event is triggered when the AutoComplete value changes.
+`ValueChange` event triggers when the AutoComplete value is changed.
 
 ```cshtml
 
@@ -83,7 +83,7 @@ The `ValueChange` event is triggered when the AutoComplete value changes.
 
 ## Closed
 
-The `Closed` event is triggered after the popup has been closed.
+`Closed` event triggers after the popup has been closed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -117,7 +117,7 @@ The `Closed` event is triggered after the popup has been closed.
 
 ## Created
 
-The `Created` event is triggered when the component is created.
+`Created` event triggers when the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -151,7 +151,7 @@ The `Created` event is triggered when the component is created.
 
 ## Destroyed
 
-The `Destroyed` event is triggered when the component is destroyed.
+`Destroyed` event triggers when the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -185,7 +185,7 @@ The `Destroyed` event is triggered when the component is destroyed.
 
 ## Focus
 
-The `Focus` event is triggered when the input gains focus.
+`Focus` event triggers when the input gets focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -219,7 +219,7 @@ The `Focus` event is triggered when the input gains focus.
 
 ## OnOpen
 
-The `OnOpen` event is triggered when the popup is opened. If this event is canceled, the popup remains closed.
+`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -253,7 +253,7 @@ The `OnOpen` event is triggered when the popup is opened. If this event is cance
 
 ## OnClose
 
-The `OnClose` event is triggered before the popup is closed. If this event is canceled, the popup remains open.
+`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 ```cshtml
 
@@ -288,7 +288,7 @@ The `OnClose` event is triggered before the popup is closed. If this event is ca
 
 ## DataBound
 
-The `DataBound` event is triggered after the data source is populated in the popup list.
+`DataBound` event triggers when the data source is populated in the popup list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -322,7 +322,7 @@ The `DataBound` event is triggered after the data source is populated in the pop
 
 ## Filtering
 
-The `Filtering` event is triggered while typing in the input when `AllowFiltering` is enabled.
+`Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
 ```cshtml
 
@@ -359,7 +359,7 @@ The `Filtering` event is triggered while typing in the input when `AllowFilterin
 
 ## OnActionBegin
 
-The `OnActionBegin` event is triggered before fetching data from the remote server.
+`OnActionBegin` event triggers before fetching data from the remote server.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -398,7 +398,7 @@ The `OnActionBegin` event is triggered before fetching data from the remote serv
 
 ## OnActionFailure
 
-The `OnActionFailure` event is triggered when the data fetch request from the remote server fails.
+`OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -437,7 +437,7 @@ The `OnActionFailure` event is triggered when the data fetch request from the re
 
 ## OnValueSelect
 
-The `OnValueSelect` event is triggered when a user selects an item in the popup using mouse/tap or keyboard navigation.
+`OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -471,7 +471,7 @@ The `OnValueSelect` event is triggered when a user selects an item in the popup 
 
 ## Opened
 
-The `Opened` event is triggered when the popup opens.
+`Opened` event triggers when the popup opens.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -504,4 +504,4 @@ The `Opened` event is triggered when the popup opens.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqsBCTAcAbJVPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> The AutoComplete currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+N> AutoComplete is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

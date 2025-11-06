@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Maps Component | Syncfusion
-description: Check out and learn how to enable and use state persistence in the Syncfusion Blazor Maps component.
+description: Checkout and learn here all about state persistence in Syncfusion Blazor Maps component and much more.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -11,10 +11,9 @@ documentation: ug
 
 ## State Persistence
 
-State persistence retains selected Maps model values in browser storage for state maintenance. This behavior is controlled by the `EnablePersistence` property, which is set to **false** by default. When set to **true**, selected Maps component model values are retained after refreshing the page.
+State persistence allows the Maps to retain the current model value in the browser cookies for state maintenance. This action is handled through the `enablePersistence` property which is set to **false** by default. When it is set to **true**, some of the Maps component model values will be retained even after refreshing the page.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Maps
 
 <SfMaps EnablePersistence ="true">
@@ -24,5 +23,4 @@ State persistence retains selected Maps model values in browser storage for stat
     </MapsLayers>
     <MapsZoomSettings Enable='true'></MapsZoomSettings>
 </SfMaps>
-
 ```
