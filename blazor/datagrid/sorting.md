@@ -501,7 +501,7 @@ This screenshot illustrates touch-based sorting in the Grid:
 
 ![Sorting in Blazor DataGrid](./images/blazor-datagrid-touch-sorting.jpg)
 
-## Sort foreign key column based on text
+## Sort foreign key column
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting foreign key columns based on display text. To enable this, configure a [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) with the following properties:
 
@@ -509,9 +509,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports so
 - [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) - Defines the key field used for mapping.
 - [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) - Specifies the display text field used for sorting and rendering.
 
-**Sort foreign key column based on text for local data**
-
-For local data, sorting is performed based on the value of the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property. Assign this property to the display text field from the foreign data source to sort the column by that text.
+N> 
+* **For local data** → Sorting is performed based on the value of the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property (`display text`).
+* **For remote data** → Sorting is performed based on the [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) (`foreign key`) unless the remote service supports sorting on the display text field.
 
 In this configuration, the **ContactName** field is used as the display text for the **CustomerID** foreign key column:
 
@@ -611,110 +611,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrosDBrMaWuSWBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-**Sort foreign key column based on text for remote data**
-
-For remote data, sorting is supported when the foreign key column is bound to a remote service using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The sorting behavior depends on the capabilities of the remote service:
-
-- If the remote service (e.g., OData) supports sorting on the display text field (such as FirstName), the grid will sort based on that text when the column header is clicked.
-- Ensure that the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property is correctly mapped to the display text field.
-- Sorting works best with single-column sorting and may require server-side support for complex sorting scenarios.
-
-In this configuration, the **FirstName** field is used as the display text for the **EmployeeID** foreign key column, so sorting will occur based on **FirstName**:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-
-<SfGrid DataSource="@Orders" Height="315" AllowSorting="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-
-        <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID)
-                           HeaderText="Employee Name"
-                           ForeignKeyField="EmployeeID"
-                           ForeignKeyValue="FirstName"
-                           Width="150"
-                           TValue="EmployeeData">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees"
-                           CrossDomain="true"
-                           Adaptor="Adaptors.ODataV4Adaptor">
-            </SfDataManager>
-        </GridForeignColumn>
-
-        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<OrderDetails>? Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = OrderDetails.GetAllRecords();
-    }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-
-public class EmployeeData
-{
-    public static List<EmployeeData> Employees = new List<EmployeeData>();
-
-    public int EmployeeID { get; set; }
-    public string FirstName { get; set; }
-}
-
-public class OrderDetails
-{
-   
-    public static List<OrderDetails> order = new List<OrderDetails>();
-
-    public OrderDetails(int orderID, string shipCity, int employeeId, double freight)
-    {
-        OrderID = orderID;
-        ShipCity = shipCity;
-        EmployeeID = employeeId;
-        Freight = freight;
-    }
-        
-    public static List<OrderDetails> GetAllRecords()
-    {
-        if (order.Count == 0)
-        {
-            order.Add(new OrderDetails(10248, "Reims", 5, 32.38));
-            order.Add(new OrderDetails(10249, "Münster", 6, 11.61));
-            order.Add(new OrderDetails(10250, "Rio de Janeiro", 4, 65.83));
-            order.Add(new OrderDetails(10251, "Lyon", 3, 41.34));
-            order.Add(new OrderDetails(10252, "Charleroi", 4, 51.3));
-            order.Add(new OrderDetails(10253, "Rio de Janeiro", 3, 58.17));
-            order.Add(new OrderDetails(10254, "Bern", 5, 22.98));
-            order.Add(new OrderDetails(10255, "Genève", 9, 48.33));
-            order.Add(new OrderDetails(10256, "Resende", 3, 13.97));
-            order.Add(new OrderDetails(10257, "San Cristóbal", 4, 81.91));
-            order.Add(new OrderDetails(10258, "Graz", 1, 40.51));
-            order.Add(new OrderDetails(10259, "México D.F.", 4, 3.25));
-            order.Add(new OrderDetails(10260, "Köln", 4, 55.09));
-            order.Add(new OrderDetails(10261, "Rio de Janeiro", 4, 3.05));
-            order.Add(new OrderDetails(10262, "Albuquerque", 8, 48.29));
-        }
-        return order;
-    }
-
-    public int OrderID { get; set; }
-    public string ShipCity { get; set; }
-    public int EmployeeID { get; set; }
-    public double Freight { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBIMitywxjrWrQR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to customize sort icon
 
