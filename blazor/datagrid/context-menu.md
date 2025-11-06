@@ -765,7 +765,7 @@ To access row data on context menu click:
 
 1. Define a custom context menu item using the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
 2. Handle the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event of the grid.
-3. Use the **RowInfo.RowData** property from the event arguments to access the full details of the selected row.
+3. Use the **args.RowInfo.RowData** property from the event arguments to access the full details of the selected row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
