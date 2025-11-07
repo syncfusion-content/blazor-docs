@@ -277,7 +277,7 @@ The following example shows how to set up these features in your Blazor applicat
         </p>
     </Description>
     <div class="pivot-toast">
-    <SfToast ID="toast_default" @ref="ToastObj" Title="Server Busy" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
+    <SfToast ID="toast_default" @ref="ToastObj" Title="Server is busy right now, Please try again" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
     <ToastPosition X="@ToastPosition"></ToastPosition>
     </SfToast>
     </div>  
@@ -794,9 +794,13 @@ namespace SyncfusionAISamples.Components.Pages.PivotTable
 
 In this example, we added a custom button called **AI Assistant** to the Pivot Table toolbar. Here's how to use the AI-driven features:
 
+![AI Assistant Button](../../ai/images/ai-assistant-button.png)
+
 #### Step 1: Click the AI Assistant button
 
 A dialog box opens with three options to choose from: **Predictive Modeling**, **Intelligent Report Aggregation**, and **Adaptive Filtering**.
+
+![AI Assistant Dialog](../../ai/images/ai-assistant-dialog.png)
 
 #### Step 2: Select a feature
 
@@ -806,19 +810,33 @@ Pick one of the AI features below and follow the detailed steps for each feature
 
 Choose a future year to predict values for that time period. After you click Submit, the Pivot Table shows predicted data along with your existing data. The predicted values are highlighted in yellow so you can easily see them.
 
-![Predictive Modeling](../../ai/images/predictive-modeling.gif)
+![Predictive Modeling Dropdown](../../ai/images/predictive-modeling-dropdown.png)
+
+![Clicking the submit button](../../ai/images/Cliking-Submit-Button.png)
+
+![Predictive Modeling](../../ai/images/predictive-modeling.png)
 
 ##### Intelligent Report Aggregation
 
 Choose one or more fields from your data and pick an aggregation type (such as Sum or Count). After you click Submit, the AI arranges your data using only the fields you selected and applies the aggregation type you chose. The original data does not change.
 
-![Intelligent Report Aggregation](../../ai/images/smart-aggregation.gif)
+![Intelligent Report Dropdown](../../ai/images/intelligent-report-dropdown.png)
+
+![Intelligent Report Aggregation Dropdown](../../ai/images/intelligent-report-aggregation-dropdown.png)
+
+![Clicking the submit button](../../ai/images/intelligent-report-cliking-submit-button.png)
+
+![Intelligent Report Aggregation](../../ai/images/smart-aggregation.png)
 
 ##### Adaptive Filtering
 
 Type a product field member name (such as "Road Bikes" or "Mountain Bikes") in the input box. After you click Submit, the AI filters the products field to show only the items that match what you entered. The original data remains unchanged.
 
-![Adaptive Filter Suggestions](../../ai/images/adaptive-filtering.gif)
+![Adaptive Filter Suggestions](../../ai/images/adaptive-filtering-text-box.png)
+
+![Clicking the submit button](../../ai/images/adaptive-filtering-cliking-submit-button.png)
+
+![Adaptive Filtering](../../ai/images/adaptive-filtering.png)
 
 #### Step 3: Wait for processing
 
@@ -844,3 +862,9 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 ## Sample Code
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+
+## Live Demo
+
+Explore the AI-powered Smart Pivot Table in action by visiting the live demo:
+
+👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/pivot-table/ai-smart-pivot?theme=fluent2)
