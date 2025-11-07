@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DataGrid | Syncfusion
-description: Learn comprehensive details about selection features in Syncfusion Blazor DataGrid, including row selection, cell selection, multi-selection, drag selection, toggle selection, and programmatic control.
+description: Learn how to use row, cell, multi, drag, toggle, and programmatic selection features in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
