@@ -1,19 +1,25 @@
 ---
 layout: post
-title: Paging customization in Blazor DataGrid | Syncfusion
-description: Learn here all about paging in Syncfusion Blazor DataGrid and more.
+title: Pager styling and customization in Blazor DataGrid | Syncfusion
+description: Learn how to style the Syncfusion Blazor DataGrid pager using CSS—customize container, buttons, numeric items, and page indicator.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Paging in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Paging customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
+The appearance of paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
 
-## Customizing the Blazor DataGrid pager root element
+- **Root container:** The outermost wrapper that holds all pager content.
+- **Pager container:** The inner layout that positions the controls.
+- **Navigation buttons:** Commands for first, previous, next, and last page navigation.
+- **Numeric page indicators:** Indicators that jump directly to specific pages.
+- **Current page indicator:** The highlight that marks the active numeric page button.
 
-To customize the appearance of the Grid pager root element, you can use the following CSS code:
+## Customize the pager root element
+
+The **.e-gridpager** class styles the pager root element in the Blazor DataGrid. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-gridpager {
@@ -21,13 +27,14 @@ To customize the appearance of the Grid pager root element, you can use the foll
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-gridpager** class targets the pager root element. You can modify the `font-family` to change the font family and `background-color` property to change the background color of the pager.
 
-![Grid pager root element](../images/style-and-appearance/grid-pager-root-element.png)
+Properties like **font-family**, **background-color**, and spacing-related styles can be changed to fit the grid layout design.
 
-## Customizing the Blazor DataGrid pager container element
+![Pager root element](../images/style-and-appearance/grid-pager-root-element.png)
 
-To customize the appearance of the Grid pager container element, you can use the following CSS code:
+## Customize the pager container element
+
+The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. Apply CSS to modify its look:
 
 ```css
 .e-grid .e-pagercontainer {
@@ -36,13 +43,13 @@ To customize the appearance of the Grid pager container element, you can use the
 }
 ```
 
-In this example, the **.e-pagercontainer** class targets the pager container element. You can modify the `border` property and `font-family` property to change the border color and font family of the pager container.
+Properties such as **font-family**, **background-color**, and spacing-related styles can be adjusted to align with the grid design.
 
-![Grid pager container element](../images/style-and-appearance/grid-pager-container-element.png)
+![Pager container element](../images/style-and-appearance/grid-pager-container-element.png)
 
-## Customizing the Blazor DataGrid pager navigation elements
+## Customize the pager navigation elements
 
-To customize the appearance of the Grid pager navigation elements, you can use the following CSS code:
+The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisabled**, **.e-lastpagedisabled**, **.e-lastpage**, **.e-firstpage**, and **.e-firstpagedisabled** classes define the appearance of the pager navigation buttons in the Blazor DataGrid. Apply CSS to customize their styling:
 
 ```css
 .e-grid .e-gridpager .e-prevpagedisabled,
@@ -57,34 +64,34 @@ To customize the appearance of the Grid pager navigation elements, you can use t
 }
 ```
 
-In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e-nextpagedisabled, .e-lastpagedisabled, .e-lastpage, .e-firstpage,** and **.e-firstpagedisabled** target the various pager navigation elements. You can modify the `background-color` property to change the background color of these elements.
+Adjust properties like **background-color** to match the design, while keeping clear focus styles for accessibility.
 
-![Grid pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.png)
+![Pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.png)
 
-## Customizing the Blazor DataGrid pager page numeric link elements
+## Customize the pager numeric button elements
 
-To customize the appearance of the Grid pager current page numeric link elements, you can use the following CSS code:
+The **.e-numericitem** class styles the numeric page buttons in the Blazor DataGrid. Apply CSS to change their appearance:
 
 ```css
 .e-grid .e-gridpager .e-numericitem {
     background-color: #5290cb;
     color: #ffffff;
     cursor: pointer;
-    }
-    
+}
+
 .e-grid .e-gridpager .e-numericitem:hover {
     background-color: white;
-    color:  #007bff;
+    color: #007bff;
 }
 ```
 
-In this example, the **.e-numericitem** class targets the page numeric link elements. You can modify the `background-color`, `color` properties to change the background color and text color of these elements.
+Modify properties such as **background-color**, **color**, and **hover** effects to improve clarity and interaction.
 
-![Grid pager page numeric link elements](../images/style-and-appearance/pager-page-numeric-link-elements.png)
+![Pager numeric button elements](../images/style-and-appearance/pager-page-numeric-link-elements.png)
 
-## Customizing the Blazor DataGrid pager current page numeric element
+## Customize the current page numeric element
 
-To customize the appearance of the Grid pager current page numeric element, you can use the following CSS code:
+The **.e-currentitem** class styles the current page indicator in the Blazor DataGrid pager. Use CSS to adjust it:
 
 ```css
 .e-grid .e-gridpager .e-currentitem {
@@ -93,9 +100,9 @@ To customize the appearance of the Grid pager current page numeric element, you 
 }
 ```
 
-In this example, the **.e-currentitem** class targets the current page numeric item. You can modify the `background-color` property to change the background color of this element and `color` property to change the text color.
+Change properties like **background-color** and **color** to highlight the active page.
 
-![Grid pager current page numeric element](../images/style-and-appearance/grid-pager-current-page-numeric-element.png)
+![Current page numeric element](../images/style-and-appearance/grid-pager-current-page-numeric-element.png)
 
 
 {% tabs %}
@@ -106,10 +113,10 @@ In this example, the **.e-currentitem** class targets the current page numeric i
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -122,11 +129,10 @@ In this example, the **.e-currentitem** class targets the current page numeric i
         background-color: #5290cb;
         color: #ffffff;
         cursor: pointer;
-        }
-        
+    }
     .e-grid .e-gridpager .e-numericitem:hover {
         background-color: white;
-        color:  #007bff;
+        color: #007bff;
     }
     .e-grid .e-gridpager .e-prevpagedisabled,
     .e-grid .e-gridpager .e-prevpage,
@@ -150,7 +156,7 @@ In this example, the **.e-currentitem** class targets the current page numeric i
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -162,35 +168,35 @@ In this example, the **.e-currentitem** class targets the current page numeric i
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -202,4 +208,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVejyDhUQlhxJtR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBeitMeWnMUTNeW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
