@@ -44,7 +44,7 @@ cd publish
 dotnet SfBlazorApp.dll --urls "http://0.0.0.0:5000"
 ```
 
-![Publish Blazor Web App](../images/publish-blazor-app.png)
+![Publish Blazor Web App](../images/publish-blazor-app.jpg)
 
 ## Configure NGINX to Proxy Requests
 
