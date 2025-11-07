@@ -381,7 +381,7 @@ public class Order
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows multiple row selection by clicking on rows individually, without using the CTRL or SHIFT keys. When a row is clicked, it is added to the selection. Clicking another row adds it to the selection without deselecting previously selected rows. To deselect a row, click on it again.
 
-To enable simple multiple row selection, set the [GridSelectionSettings.EnableSimpleMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableSimpleMultiRowSelection)property to **true**.
+To enable simple multiple row selection, set the [GridSelectionSettings.EnableSimpleMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableSimpleMultiRowSelection) property to **true**.
 
 The following example demonstrates how to enable multiple row selection with a single click on the grid row using the `EnableSimpleMultiRowSelection `property:
 
