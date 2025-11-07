@@ -138,6 +138,4 @@ In the following example, the specified accordion item will toggle between showi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBqMBMAATlJlwpr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBqMBMAATlJlwpr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)" %}
