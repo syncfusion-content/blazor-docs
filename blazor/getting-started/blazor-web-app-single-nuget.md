@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion.Blazor Single NuGet in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Blazor Web App and much more.
+description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Web App and and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Web App using Syncfusion.Blazor NuGet
 
-This section briefly explains how to include a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section explains how to include a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in a Blazor Web App by using the consolidated Syncfusion.Blazor “Single NuGet” package in [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -17,18 +17,17 @@ This section briefly explains how to include a Syncfusion<sup style="font-size:7
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web App.
-
+Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) during project creation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Single NuGet in the App
 
-Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor).
+To add the **Blazor Calendar** component to the app, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, use the following Package Manager command:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -38,11 +37,11 @@ Install-Package Syncfusion.Blazor -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available packages and component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, except PDF Viewer and Document Editor.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
 
 ```cshtml
 
@@ -51,9 +50,9 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor Web App.
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **interactive render mode** is `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of the Blazor Web App.
 
 ```cshtml
 
@@ -67,7 +66,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script are provided via NuGet [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~/Components/App.razor** file as shown:
 
 ```html
 <head>
@@ -81,12 +80,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> If you are using Syncfusion.Blazor single NuGet, you don’t have to refer Syncfusion.Blazor.Themes NuGet. Since style sheets already inside the assets of Syncfusion.Blazor NuGet.
+N> When using the Syncfusion.Blazor Single NuGet, a separate Syncfusion.Blazor.Themes package is not required because the stylesheets are included in the Syncfusion.Blazor assets.
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-* Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/.razor**  file.If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
+* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/.razor** file. If the interactivity location is `Per page/component`, define a render mode at the top of the `~Pages/.razor` component as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -105,6 +104,6 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component is rendered in the default browser.
 
-![Blazor Calendar Component](images/core-hosted/browser-output.png)
+![Blazor Web App rendering the Syncfusion Blazor Calendar component](images/core-hosted/browser-output.png)
