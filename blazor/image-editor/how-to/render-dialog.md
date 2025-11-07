@@ -18,47 +18,50 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 @using Syncfusion.Blazor.Inputs
 
 <div style="padding-bottom: 15px">
-    @if (this.ShowButton)
-    {
-        <SfButton OnClick="OpenDialogAsync">Open Image</SfButton>
-    }
+    <SfButton OnClick="OpenDialog">Edit Image</SfButton>
 </div>
- <SfDialog Height="75%" Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility">
-    <DialogTemplates>
-        <Content>
-            <div class="dialogContent">
-                <SfImageEditor @ref="ImageEditor" Height="400px">
-                </SfImageEditor>
-            </div>
-        </Content>
-    </DialogTemplates>
-    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents>
 
-</SfDialog>
+<div class="control-section" id="target" style="height: 500px">
+    <SfDialog Width="600px" Height="500px" Target="#target" ShowCloseIcon="true" @bind-Visible="IsDialogVisible">
+        <DialogEvents Opened="OnDialogOpened" Closed="OnDialogClosed"></DialogEvents>
+        <DialogTemplates>
+            <Content>
+                <div class="dialog-content">
+                    @if (IsImageEditorVisible)
+                    {
+                        <SfImageEditor @ref="ImageEditor" Height="400px">
+                            <ImageEditorEvents Created="OnImageEditorCreated"></ImageEditorEvents>
+                        </SfImageEditor>
+                    }
+                </div>
+            </Content>
+        </DialogTemplates>
+    </SfDialog>
+</div>
 
 @code {
-    private bool Visibility { get; set; } = false;
-    private bool ShowButton { get; set; } = true;
-    SfImageEditor ImageEditor; 
+    private bool IsDialogVisible { get; set; } = false;
+    private bool IsImageEditorVisible { get; set; } = false;
+    private SfImageEditor ImageEditor;
 
-    private async void OpenDialogAsync() 
-    { 
-        this.Visibility = true;
-    }
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"); 
-    }
-
-    private void BeforeDialogOpen(BeforeOpenEventArgs args)
+    private void OpenDialog()
     {
-        this.ShowButton = false;
+        IsDialogVisible = true;
     }
 
-    private void DialogClosed(CloseEventArgs args)
+    private void OnDialogOpened()
     {
-        this.ShowButton = true;
+        IsImageEditorVisible = true;
+    }
+
+    private void OnDialogClosed()
+    {
+        IsImageEditorVisible = false;
+    }
+
+    private async void OnImageEditorCreated()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
