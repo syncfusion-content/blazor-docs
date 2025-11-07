@@ -806,13 +806,13 @@ Pick one of the AI features below and follow the detailed steps for each feature
 
 Choose a future year to predict values for that time period. After you click Submit, the Pivot Table shows predicted data along with your existing data. The predicted values are highlighted in yellow so you can easily see them.
 
-![Predictive Analytics & Modeling](../../ai/images/predictive-modeling.gif)
+![Predictive Modeling](../../ai/images/predictive-modeling.gif)
 
 ##### Intelligent Report Aggregation
 
 Choose one or more fields from your data and pick an aggregation type (such as Sum or Count). After you click Submit, the AI arranges your data using only the fields you selected and applies the aggregation type you chose. The original data does not change.
 
-![Predictive Analytics & Modeling](../../ai/images/smart-aggregation.gif)
+![Intelligent Report Aggregation](../../ai/images/smart-aggregation.gif)
 
 ##### Adaptive Filtering
 
