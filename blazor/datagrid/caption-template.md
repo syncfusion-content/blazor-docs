@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Caption template in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Caption Template in Syncfusion Blazor DataGrid and much more details.
+description: Learn how to customize group caption rows in Syncfusion Blazor DataGrid using CaptionTemplate and CaptionTemplateContext.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,11 +9,15 @@ documentation: ug
 
 # Caption template in Blazor DataGrid
 
-The caption template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize and enhance the appearance of group caption row. It provides a flexible way to display additional information about grouped data, such as counts or grouped value, and enables you to incorporate custom content like images, icons, or other HTML elements. This feature empowers you to create visually appealing and informative group captions in the Grid.
+The caption template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid customizes the content of group caption rows. It can display additional information about grouped data (such as the grouped value and record count) and render custom content including images, icons, or other Razor components. This enables clear, informative, and visually rich group captions in the DataGrid.
 
-To achieve this customization, you can utilize the  [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property. You can type cast the context as [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html#properties) to get the data, which represents the currently displayed group, you can incorporate its properties such as `Field` (column's Field name), `HeaderText` (column's Header text), `Key`(grouped value) and `Count` (Count of the grouped records) into the Caption template.
+Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to define the template. Cast the context to [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) to access properties for the current group:
+- **Field**: grouped column field name
+- **HeaderText**: grouped column header text
+- **Key**: grouped value
+- **Count**: number of records in the group
 
-The following example demonstrates how to customize the group header caption in the Grid by utilizing  the `CaptionTemplate` property. It displays the **HeaderText**, **Key** and **Count** of the grouped columns:
+The following example demonstrates customizing the group caption using `CaptionTemplate`. It displays the `HeaderText`, `Key`, and `Count` of the grouped column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -98,9 +102,9 @@ public class OrderData
 
 ## Adding custom text in group caption
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to enhance the group captions by adding custom text, providing a more meaningful and informative representation of the grouped data. By utilizing the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property, you can add specific text or information to the group caption, offering flexibility in customization.
+The DataGrid supports adding custom text to group captions for clearer context. Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to output any text or markup, combined with values from [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) such as `Key`, `Count`, and `HeaderText`.
 
-The following example demonstrates how to add a custom text to the group caption using the `CaptionTemplate` property. You can type cast the context as [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html#properties) to get the data used to display the key, count and headerText of the grouped columns along with the custom text.
+The following example adds a custom string along with the group key, record count, and header text:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -184,9 +188,9 @@ public class OrderData
 
 ## Customize group caption text using locale
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the group caption text based on the locale. This feature enables you to display localized text or translated content in the group captions according to different language or region settings.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the DataGrid to adapt to different languages and regional formats.
 
-The following example demonstrates, how to customize group caption text based on **ar** locale:
+The following example demonstrates customizing group caption text for the **ar** locale:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -355,11 +359,11 @@ namespace LocalizationSample.Client
 
 ## Render custom component in group caption
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers the flexibility to render a custom component in the group caption, providing advanced or interactive functionality within the group caption row. This feature allows you to display custom UI elements, like buttons, icons, or dropdowns, and handle user interactions directly within the group caption.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flexibility to render custom components within the group caption row, enabling advanced or interactive functionality. This feature supports the display of custom UI elements such as buttons, icons, or dropdowns, and allows user interactions to be handled directly within the group caption.
 
-To render custom component in the group caption, you can utilize the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property. This feature enables you to replace plain text with a custom component in the group caption, enhancing customization and interactivity.
+Define the custom UI in the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) and use `CaptionTemplateContext` to access the current group’s details. This feature enables the replacement of plain text with a custom component in the group caption, enhancing both customization and interactivity.
 
-The following example demonstrates how to add a custom component to the group caption using the `CaptionTemplate` property. In the template, the [Chips](https://ej2.syncfusion.com/angular/documentation/chips/getting-started) is utilized, with the text content set as the group key.
+The following example shows rendering a chip with the group key using the Syncfusion Blazor [Chips](https://blazor.syncfusion.com/documentation/chips/getting-started) component:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
