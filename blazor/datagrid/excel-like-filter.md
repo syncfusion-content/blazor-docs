@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Like Filter in Blazor DataGrid | Syncfusion
-description: Check out and learn here all about Excel like filter in Syncfusion Blazor DataGrid and much more details.
+description: Implement Excel-like filtering in Syncfusion Blazor DataGrid for efficient data management in Blazor applications.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Excel-like filter in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the Grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an Excel-like filter feature that delivers a familiar and intuitive interface for filtering data. This feature simplifies complex filtering operations on individual columns, enabling efficient data exploration and manipulation similar to Microsoft Excel. Excel-like filtering is particularly effective when working with large datasets and advanced filtering requirements.
 
-Here is an example that showcases how to render the Excel like filter within the Grid:
+The following example demonstrates how to render the Excel-like filter in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -92,14 +92,14 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVfZVDQLqvKxcHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The Excel-like filter feature supports various filter conditions, including text-based filters that allow searching for exact or partial matches, number-based filters with operators like equals, greater than, or between ranges, date-based filters for specific date ranges or conditions such as today, this week, or custom ranges, and boolean-based filters for true/false values.
+> * The Excel-like filter feature supports various filter conditions, including text-based, number-based, date-based, and boolean-based filters.
 > * The filter dialog provides additional options, such as searching for specific values, and clearing applied filters.
 
 ## Checkbox filtering
 
-The checkbox filtering feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
+The checkbox filtering feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables filtering data based on checkbox selections within a column. This filtering option simplifies the process of narrowing down data and is particularly effective for columns containing categorical values.
 
-Here is an example that showcases how to render the check box filter within the Grid:
+The following example demonstrates how to render the checkbox filter in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -182,13 +182,13 @@ public class OrderData
 
 ## Customize the filter choice count
 
-By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
+By default, the filter dialog displays a maximum of **1000** distinct values as a checkbox list for each column. This default value ensures efficient filtering performance, especially when working with large datasets. The filter dialog retrieves distinct values from the first **1000** records bound to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. Additional values are retrieved dynamically through the search option within the dialog.
 
-The Grid allows you to customize the number of distinct data displayed in the checkbox list of the Excel/Checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
+The number of distinct values shown in the checkbox list of the Excel or checkbox filter dialog can be customized. This configuration is useful when adjusting the default filter choice count to suit specific dataset sizes or performance requirements.
 
-However, you have the flexibility to increase or decrease the filter choice count based on your specific requirements. This can be achieved by adjusting the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_FilterChoiceCount) value.
+To modify the filter choice count, set the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_FilterChoiceCount) property in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event.
 
-The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event, you can set the `FilterChoiceCount` property to the desired value:
+The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -300,15 +300,20 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVfXVjhBrOeigOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The specified filter choice count value determines the display of unique items as a checkbox list in the Excel/Checkbox type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value.
+N> 
+* Setting a high filter choice count can significantly degrade performance when opening the Excel-style or checkbox-type filter dialog. A large number of unique values requires more processing and rendering time, which can lead to noticeable delays in the UI.
+To ensure smooth and responsive filtering behavior:
+
+- Avoid setting excessively high filter choice count values.
+- Restrict the count to a reasonable limit to prevent slow rendering and improve user experience.
 
 ## Show customized text in checkbox list data
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides flexibility to customize the text displayed in the Excel or checkbox filtering options. This feature enables modification of the default text to present more meaningful and context-specific labels in the filter dialog.
 
-To customize the text in the Excel/Checkbox filter, you can define a `FilterItemTemplate`  and bind it to the desired column. The `FilterItemTemplate`  property allows you to create custom templates for filter items. You can use any logic and HTML elements within this template to display the desired text or content.
+To customize the text in the Excel or checkbox filter, define a [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) and bind it to the desired column. The `FilterItemTemplate` property allows creation of custom templates for filter items. Any logic and HTML elements can be used within this template to display the required content.
 
-In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `FilterItemTemplate`  within the element for that specific column. Inside the template, you can use FilterItemTemplateContext to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is **false**:
+The following example demonstrates how to customize the text displayed in the filter checkbox list for the **Delivered** column. The `FilterItemTemplate` is defined within the column element, using [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to conditionally display **Delivered** when the value is **true** and Not delivered when the value is **false**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -405,9 +410,9 @@ public class OrderData
 
 ## Show template in checkbox list data
 
-The `FilterItemTemplate` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the appearance of filter items in the Grid’s filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
+The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the appearance of filter items in the checkbox list for a specific column. This property is useful for displaying custom UI elements or additional information—such as icons, formatted text, or HTML content—alongside the default filter items.
 
-In this example, you can see how to use the `FilterItemTemplate` to render icons along with the category names in the filter checkbox list for the **CategoryName** column:
+The following example demonstrates how to use the `FilterItemTemplate` to render icons along with category names in the filter checkbox list for the **CategoryName** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -524,11 +529,11 @@ public class OrderData
 
 ## Customize the Excel filter dialog using CSS
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you have the flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the Excel filter dialog appearance using CSS. This enables alignment with specific application aesthetics and user interface requirements.
 
 **1.Removing context menu option**
 
-The Excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the Grid.
+The Excel filter dialog includes features such as the **context menu**, **search box**, and **checkbox list**. In scenarios where the context menu is not required, it can be hidden using the className attribute in the Grid.
 
 ```cshtml
 <style>
@@ -538,7 +543,7 @@ The Excel filter dialog includes several features such as **context menu**, **se
 </style>
 ```
 
-The following example demonstrates how to remove the context menu option in the Excel filter dialog using above mentioned CSS:
+The following example demonstrates how to remove the context menu option in the Excel filter dialog using the above CSS.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -625,9 +630,9 @@ public class OrderData
 
 **2.Customize the height and width of filter popup**
 
-You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the Grid.
+The height and width of each column’s filter dialog can be customized using CSS within the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event. This event is triggered before the filter dialog opens, allowing conditional styling based on column configuration.
 
-Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, based on the boolean value, we have set the height and width of the **CustomerID** and **OrderDate** columns using the CSS style in the following sample.
+The following example demonstrates how to set custom height and width for the **CustomerID** and **OrderDate** columns using CSS styles.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -642,7 +647,7 @@ Before opening a filter dialog for each column, the `FilterDialogOpening` event 
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
 
     </GridColumns>
 </SfGrid>
@@ -750,7 +755,7 @@ public class OrderData
 
 **3.Customize filter icon for filtered columns**
 
-After filtering the column, the Grid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
+After applying a filter, the DataGrid displays a built-in filtered icon with default styles. This icon can be customized using the **.e-grid .e-filtered::before** CSS class.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -835,13 +840,14 @@ public class OrderData
 
 ## Add current selection to filter
 
-By default, the CheckBox/Excel filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the "Add current selection to filter" option. This checkbox is displayed when data is searched in the search bar of the CheckBox or Excel filter type.
+By default, the CheckBox and Excel filter types apply filtering only to the currently selected items. When filtering is performed multiple times on the same column, previously selected values are cleared.
 
+To retain previously filtered values, enable the Add current selection to filter option. This checkbox appears when data is searched using the search bar in the CheckBox or Excel filter dialog.
 
-The following image describes the above mentioned behavior.
+The following image illustrates this behavior:
 
-![Add current selection to filter in Blazor DataGrid.](./images/blazor-datagrid-add-current-selection-to-filter.png)
+![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
