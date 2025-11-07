@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion.Blazor Single NuGet in Visual Studio
-description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Visual Studio and much more.
+description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Web App and and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Component using Syncfusion.Blazor NuGet
 
-This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly Standalone App using Visual Studio.
+This section explains how to add a Blazor component by using the consolidated Syncfusion.Blazor (Single NuGet) package in a Blazor Server App and a Blazor WebAssembly Standalone App in Visual Studio.
 
 ## Prerequisites
 
@@ -17,11 +17,11 @@ This section briefly explains how to include a Blazor component with the Syncfus
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone**using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone** using Visual Studio via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Single NuGet in the App
 
-To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). Alternatively, you can utilize the following package manager command to achieve the same.
+To add the **Blazor Calendar** component to the app, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). Alternatively, use the following Package Manager command.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -31,11 +31,11 @@ Install-Package Syncfusion.Blazor -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open **~/Components/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
 
 ```cshtml
 
