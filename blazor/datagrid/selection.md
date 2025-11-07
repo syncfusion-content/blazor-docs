@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DataGrid | Syncfusion
-description: Learn all about the different types of selection supported in the Syncfusion Blazor DataGrid component.
+description: Learn comprehensive details about selection features in Syncfusion Blazor DataGrid, including row selection, cell selection, multi-selection, drag selection, toggle selection, and programmatic control.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,18 +9,15 @@ documentation: ug
 
 # Selection in Blazor DataGrid
 
-Selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to interactively select specific cells, rows, or columns within the Grid. This selection can be done through mouse clicks or arrow keys (up, down, left, and right) or touch. This feature is useful when you want to highlight, manipulate, or perform actions on specific  cells, rows, or columns within the Grid.
+Selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables interactive selection of specific cells, rows, or columns. Selection can be performed using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature is useful for highlighting, manipulating, or executing actions on targeted Grid elements.
+To disable selection, set the  [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to **false**.
+The Grid supports two types of selection, configurable via the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property:
 
-To disable selection in the Grid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) to **false**.
+* **Single** - Allows selection of a single row, cell, or column (default).
+* **Multiple** - Allows selection of multiple rows, cells, or columns.
 
-The Grid supports two types of selection that can be set by using the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type). They are:
-
-* **Single** - The **Single** value is set by default. Allows you to select only a single row or cell or column.
-* **Multiple** - Allows you to select multiple rows or cells or columns.
-
-To perform the multi-selection, press and hold CTRL key and click the desired rows or cells or columns.
-
-To select range of rows or cells or columns, press and hold the SHIFT key and click the rows or cells or columns.
+To perform multi-selection, hold the **CTRL** key and click the desired rows, cells, or columns.
+To select a range, hold the **SHIFT** key and click the start and end points of the desired selection.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -117,17 +114,14 @@ public class OrderDetails
 
 ## Selection mode
 
-The selection mode feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to choose between different modes for selecting rows, cells, or both within the Grid based on your specific requirements. This feature is particularly useful when you want to highlight and manipulate specific rows or cells in the Grid.
+The selection mode feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables configuration of how rows, cells, or both are selected within the Grid. This functionality is useful for highlighting and manipulating specific Grid elements based on application requirements.
+To configure selection mode, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property. The Grid supports the following selection modes:
 
-To enable selection mode, you can set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property. The Grid supports three types of selection modes:
+* **Row** - Enables selection of rows only. (Default)
+* **Row** - Enables selection of cells only.
+* **Row** - Enables simultaneous selection of rows and cells.
 
-* **Row** - The row value is set by default. Allows you to select rows only.
-
-* **Cell** - Allows you to select cells only.
-
-* **Both** - Allows you to select rows and cells at the same time.
-
-The following example, demonstrates how to dynamically enable and change the `GridSelectionSettings.Mode` using the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app):
+The following example demonstrates how to dynamically configure the `GridSelectionSettings.Mode` using the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -252,11 +246,11 @@ The following screenshot represents a Grid touch selection in the device.
 
 ## Toggle selection
 
-The toggle selection feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to easily select and unselect specific rows, cells, or columns. With toggle selection enabled, you can easily switch the selection state of an item by clicking on it. This means that if you click on a selected row, cell, or column, it will become unselected, and vice versa.
+The toggle selection feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables to switch the selection state of rows, cells, or columns by simply clicking on them. When this feature is enabled, clicking a selected item will unselect it, and clicking an unselected item will select it.
 
-To enable the toggle selection feature, you need to set the [GridSelectionSettings.EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property to **true**.
+To activate toggle selection, set the [GridSelectionSettings.EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property to **true**.
 
-The following example demonstrates how to enable the toggle selection for both cells and rows in a Grid using the `GridSelectionSettings.EnableToggle` property.
+The following example demonstrates how to enable toggle selection for both cells and rows using the `GridSelectionSettings.EnableToggle` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -363,18 +357,18 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
-> * Toggle selection is a feature that can be applied to all types of selections. When the `CheckboxOnly` property is set to **true**, it restricts the ability to select or deselect rows or cells by clicking on them.
+> * If multi-selection is enabled, clicking a selected row without pressing the **Ctrl** key will first clear the multi-selection. A second click on the same row will unselect it.
+> * Toggle selection applies to all selection types. When the `CheckboxOnly` property is set to **true**, selection and deselection by clicking are disabled, restricting interaction to checkbox clicks only.
 
 ### Toggle row selection programmatically
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can toggle row selection programmatically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. By passing **true** as the second argument (**isToggle**), the method will toggle the selection state of the specified row:
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, row selection can be toggled programmatically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. By passing **true** as the second argument (**isToggle**), the method toggles the selection state of the specified row.
 
 If the row is already selected, it will be deselected; otherwise, it will be selected.
 
-This feature is especially useful when controlling row selection through custom logic or external UI elements.
+This capability is useful when managing row selection through custom logic or external UI elements.
 
-The following example demonstrates how to programmatically toggle selection for the row at index 2.
+The following example demonstrates how to programmatically toggle the selection for the row at index **2**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -462,16 +456,17 @@ public class OrderDetails
 
 ## Drag selection
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for drag selection, allowing you to select a range of cells or rows by mouse or touch dragging. This feature enhances usability in scenarios where bulk selection is needed without using keyboard shortcuts.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports drag selection, allowing to select a range of cells or rows by dragging with a mouse or touch input. This feature improves usability in scenarios requiring bulk selection without relying on keyboard shortcuts.
 
-To enable this feature, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) to **true**.
+To enable drag selection, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) to **true**.
 
-* The Grid supports drag selection across all selection modes. You can configure the selection mode using the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property.  
-* Drag selection is available in both **Flow** and **Box** options for [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) when cell selection is enabled.  
-* To enable multiple row or cell selection via mouse or touch dragging, set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple**.  
+
+* Drag selection is supported across all selection modes. Configure the selection mode using the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property.
+* When cell selection is enabled, drag selection works with both **Flow** and **Box** options of [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode).
+* To allow multiple row or cell selection via dragging, set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple**.
 * Drag selection also supports checkbox selection.
 
-The following example demonstrates how to enable the drag selection Grid using the `GridSelectionSettings.AllowDragSelection` property.
+The following example demonstrates how to enable drag selection in the Grid using the `GridSelectionSettings.AllowDragSelection` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -549,15 +544,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSNSZoplknSuoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Drag selection is not compatible with the [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
+> Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
 ## Clear all selection programmatically
 
-The clear selection programmatically feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is particularly useful when you need to remove the selected rows, cells, or columns from the Grid.
-
-To clear the selection in the Grid programmatically, you can use the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSelectionAsync) method. 
-
-In the following example, it demonstrates how to clear all selection by calling the `ClearSelectionAsync` method in the button click event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a method to programmatically clear selected rows, cells, or columns. This feature is useful when resetting selection states based on user actions or custom logic.
+To clear selection in the Grid, use the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSelectionAsync) method.
+The following example demonstrates how to clear all selections by calling the `ClearSelectionAsync` method within a button click event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -640,20 +633,23 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrSjeUtTtrXrowm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> In **Both** mode, if you call `ClearCellSelectionAsync` first, it will clear cell selections, and then if you call `ClearRowSelectionAsync`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
-> To remove a specific selection in a row, cell, or column, utilize the following methods: [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) for clearing row selections, [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) for clearing cell selections.
+> * In **Both** mode, calling `ClearCellSelectionAsync` first will clear cell selections, followed by `ClearRowSelectionAsync` to clear row selections. The order of method calls determines which selection type is cleared first.
+> * To remove a specific selection type, use the following methods:
 
-## Persist selection 
+   - [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) to clear row selections.
+   - [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) to clear cell selections.
 
-Persist selection feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to retain the selected items even after data manipulation or refreshing the Grid. This feature is useful when you want to keep track of the selected items across different Grid operations.
+## Persist selection
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports persist selection, allowing selected rows or columns to remain selected even after data operations or Grid refreshes. This feature is useful for maintaining selection state across various interactions.
 
 To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**.
 
-> * While using persist selection feature, at least one column in your Grid should be enabled as a primary key. This ensures that the Grid can identify and persist the selected items correctly.
-> * The `PersistSelection` feature is not supported for cell selections in the Grid.
-> * The `PersistSelection` feature is only supported for Grid `Multiple` type selections.
+> * When using persist selection, ensure that at least one column in the Grid is configured as a primary key. This allows the Grid to correctly identify and retain selected items.
+> * The `PersistSelection` feature is not supported for cell selections.
+> * `PersistSelection` is only applicable when the selection Type is set to `Multiple`.
 
-In the following example, it demonstrates how to enable the persist selection feature for both rows and columns using the `GridSelectionSettings.PersistSelection` property:
+The following example demonstrates how to enable the persist selection feature for both rows and columns using the `GridSelectionSettings.PersistSelection` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Checkbox selection in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Checkbox selection in Syncfusion Blazor DataGrid and much more details.
+description: Learn how to use checkbox selection in Syncfusion Blazor DataGrid for bulk actions, multiple selection, persist options, and programmatic control.
 platform: Blazor
 control: DataGrid 
 documentation: ug
@@ -9,11 +9,10 @@ documentation: ug
 
 # Checkbox selection in Blazor DataGrid
 
-Checkbox selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to select multiple records using a checkbox in each row. This feature is particularly useful for performing bulk actions or operations on selected records within the Grid.
+Checkbox selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables to select multiple records using checkboxes rendered in each row. This feature is especially useful for performing bulk actions or operations on selected records.
+To display a checkbox in each Grid row, configure a column with its [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property set to [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox).
 
-To render a checkbox in each Grid row, you need to use a checkbox column with the type set to **CheckBox** using the column's [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property.
-
-Here's an example of how to enable checkbox selection using the `Type` property in the Grid:
+The following example demonstrates how to enable checkbox selection using the `Type` property in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -87,17 +86,17 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBoNTicUWFQPhGN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * By default, selection is allowed by clicking a Grid row or the checkbox in that row. To allow selection only through the checkbox, you can set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
-> * Selection can be persisted across all operations using the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. To persist selection on the Grid, one of the columns must be defined as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+> * By default, selection is allowed by clicking either a Grid row or the checkbox in that row. To restrict selection to checkbox clicks only, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
+> * To persist selection across Grid operations, enable the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. Ensure that one of the columns is defined as a primary key using the GridColumn.IsPrimaryKey property.
 
 ## Checkbox selection mode
 
-The checkbox selection mode in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to select rows either by clicking on checkboxes or by clicking on the rows themselves. This feature provides two types of checkbox selection modes that can be set using the [GridSelectionSettings.CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxMode) property. The available modes are:
+The checkbox selection mode in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows to select rows either by clicking on checkboxes or directly on the rows. This feature supports two selection modes, configurable via the [GridSelectionSettings.CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxMode) property:
 
-* **Default**: This is the default value of the `CheckboxMode`. In this mode, you can select multiple rows by clicking on rows one by one. When you click on a row, the checkbox associated with that row also switches to the 'checked' state.
-* **ResetOnRowClick**: In `ResetOnRowClick` mode, clicking on a row will reset the previously selected row. You can also perform multiple selections in this mode by pressing and holding the CTRL key while clicking the desired rows. To select a range of rows, press and hold the SHIFT key and click the rows.
+* **Default**: This is the default value of `CheckboxMode`. In this mode, multiple rows can be selected by clicking on them individually. When a row is clicked, its corresponding checkbox is automatically checked.
+* **ResetOnRowClick**: In this mode, clicking on a row resets the previously selected row. To perform multiple selections, hold the **Ctrl** key while clicking the desired rows. To select a range of rows, hold the **Shift** key and click the target rows.
 
-In the following example, it demonstrates how to dynamically enable and change the `CheckboxMode` using the `DropDownList`:
+The following example demonstrates how to dynamically enable and change the `CheckboxMode` using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -198,9 +197,11 @@ public class OrderDetails
 
 ## Persist selection
 
-The Persist Selection feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid ensures that selected rows remain selected even after performing actions such as paging, sorting, and filtering etc., This feature is applicable to both local and remote data sources. To enable this feature, set the  [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**. Additionally, ensure that at least one column in Grid is set as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property. 
+The Persist Selection feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid ensures that selected rows remain selected even after performing actions such as paging, sorting, filtering, and other data operations. This feature works with both local and remote data sources.
 
-The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and `ODataV4Adaptor`:
+To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**. Additionally, ensure that at least one column in the Grid is defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+
+The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and **ODataV4Adaptor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -238,11 +239,11 @@ The following example demonstrates how to persist checkbox selections when the G
 
 ## Hide selectall checkbox in column header 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to hide the selectall checkbox in the column header of the Grid. This is a useful feature in various scenarios where you want to customize the appearance and behavior of the checkboxes within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the checkbox column, including the ability to hide the SelectAll checkbox in the column header. This is useful in scenarios where bulk selection is not required or when customizing the Grid's appearance.
 
-By default, when you set the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) as **CheckBox**, it renders a column with checkboxes for selection purposes. However, if you want to hide the header checkbox, you can achieve this by defining an empty [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) property in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+By default, setting the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) to **CheckBox** renders a checkbox column with a SelectAll checkbox in the header. To hide the header checkbox, define an empty [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate)  in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-Here's an example of how to hide selectall checkbox in column header using empty `HeaderTemplate` property in the Grid:
+The following example demonstrates how to hide the SelectAll checkbox in the column header using an empty `HeaderTemplate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -322,9 +323,9 @@ public class OrderDetails
 
 ## Allow selection only through checkbox click
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection so that it can only be performed by clicking the checkboxes, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection so that it can only be performed through checkbox clicks, set the  [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
 
-Here's an example of how to enable selection only through checkbox clicks using the `CheckboxOnly` property:
+The following example demonstrates how to enable selection exclusively through checkbox clicks using the `CheckboxOnly` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
