@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Excel Like Filter in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Excel like filter in Syncfusion Blazor DataGrid and much more details.
+description: Check out and learn here all about Excel like filter in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel like filter in Blazor DataGrid
+# Excel-like filter in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the Grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
 
-Here is an example that showcasing how to render the Excel like filter within the Grid:
+Here is an example that showcases how to render the Excel like filter within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -92,14 +92,14 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVfZVDQLqvKxcHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The Excel-like filter feature supports various filter conditions, including text-based, number-based, date-based, and boolean-based filters.
+> * The Excel-like filter feature supports various filter conditions, including text-based filters that allow searching for exact or partial matches, number-based filters with operators like equals, greater than, or between ranges, date-based filters for specific date ranges or conditions such as today, this week, or custom ranges, and boolean-based filters for true/false values.
 > * The filter dialog provides additional options, such as searching for specific values, and clearing applied filters.
 
 ## Checkbox filtering
 
 The checkbox filtering feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
 
-Here is an example that showcasing how to render the check box filter within the Grid:
+Here is an example that showcases how to render the check box filter within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

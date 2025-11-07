@@ -9,9 +9,9 @@ documentation: ug
 
 # Filtering in Blazor DataGrid
 
-Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
+Filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selective viewing of data based on criteria, narrowing datasets to focus on needed information for better data analysis and decision-making.
 
-To enable filtering in the Grid, you need to set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the Grid to true. Once filtering is enabled, you can configure various filtering options through the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). This property allows you to define the behavior and appearance of the filter.
+To enable filtering in the Grid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the Grid to true. This configures various filtering options through the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
 
 Here is an example that demonstrates the default filtering feature of the Grid:
 
@@ -89,12 +89,12 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfZCsImdiJgcDd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * You can apply and clear filtering by using **FilterByColumnAsync** and **ClearFilteringAsync** methods.
+> * Apply and clear filtering using **FilterByColumnAsync** and **ClearFilteringAsync** methods.
 > * To disable filtering for a particular column, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as **false**.
 
 ## Initial filter
 
-To apply an initial filter, you need to specify the filter criteria using the [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The `Predicate` object represents the filtering condition and contains properties such as field, operator, and value.
+Apply an initial filter by specifying filter criteria using the [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The `Predicate` object represents the filtering condition and contains properties such as field, operator, and value.
 
 Here is an example of how to configure the initial filter using the `Predicate` object:
 
@@ -154,7 +154,7 @@ public class OrderData
             int OrderID = 10248;
             for (int i = 1; i < 3; i++)
             {
-                Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(OrderID+1, "VINET", "Reims", "Vins et alcools Chevalier"));
                 Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
                 Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
                 Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
@@ -181,11 +181,9 @@ public class OrderData
 
 ### Initial filter with multiple values for same column
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the Grid right after the Grid is initially loaded.
+Set an initial filter with multiple values for a single column by using the [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). This applies multiple conditions at Grid load.
 
-To apply the filter with multiple values for same column at initial rendering, set the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
-
-The following example demonstrates, how to perform an initial filter with multiple values for same **CustomerID** column using `Columns` property of `GridFilterSettings` and `Predicate`.
+The following example demonstrates how to perform an initial filter with multiple values for the **CustomerID** column using `Columns` property of `GridFilterSettings` and `Predicate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -306,9 +304,7 @@ The following example demonstrates, how to perform an initial filter with multip
 
 ### Initial filter with multiple values for different columns
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can establish an initial filter containing multiple values for a different column, which helps you to preset filter conditions for a different column using multiple values. This functionality allows you to display a filtered records in the Grid right after the Grid is initially loaded.
-
-To apply the filter with multiple values for different column at initial rendering, set the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+Apply an initial filter with multiple values across different columns by using the [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). This presets conditions for multiple columns at Grid load.
 
 The following example demonstrates how to perform an initial filter with multiple values for different **Order ID** and **Customer ID** columns using `Columns` property of `GridFilterSettings` and `Predicate`:
 
@@ -449,9 +445,9 @@ The following example demonstrates how to perform an initial filter with multipl
 
 ## Filter operators
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides various filter operators that can be used to define filter conditions for columns. The filter operator for a column can be defined using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Operator) in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of `GridFilterSettings`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides various filter operators to define filter conditions for columns. Define the filter operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Operator) in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of `GridFilterSettings`.
 
-The available operators and its supported data types are,
+The available operators and their supported data types are,
 
 Operator |Description |Supported Types
 -----|-----|-----
@@ -477,13 +473,13 @@ Between |Filter the values based on the range between the start and end specifie
 
 ## WildCard and Like operator filter
 
-**WildCard** and **Like** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+**WildCard** and **Like** filter operators filter value based on given string patterns, applied to string-type columns, with differences in pattern usage.
 
 ### WildCard filtering
 
-The **WildCard** filter can process one or more search patterns using the “*” symbol, retrieving values matching the specified patterns.
+**WildCard** filtering uses the **“*”** symbol to process one or more search patterns, retrieving matching values across types in the Grid.
 
-* The **WildCard** filter option is supported for the Grid that has all search options.
+* **WildCard** supports all search options.
 
 Operator |Description
 -----|-----
@@ -491,36 +487,30 @@ a*b | Everything that starts with “a” and ends with “b”.
 a* | Everything that starts with “a”.
 *b | Everything that ends with “b”.
 a | Everything that has an “a” in it.
-ab* | Everything that has an “a” in it, followed by anything, followed by a “b”, followed by anything.
+ab* | Everything that has an “a” in it, followed by “b”, followed by anything.
 
-The following GIF represent a WildCard operator filtering.
-
-![Blazor DataGrid with WildCard operator filtering.](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
 
 ### Like filtering
 
-The Like filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid features support Like filtering on string-type columns:
+Like filtering uses the **“%”** symbol to process single search patterns, retrieving matching values on string-type columns for Grid features supporting it.
 
-* Filter Menu
-* Filter Bar using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
-* Custom Filter of Excel filter type.
+* Like filtering supports Filter Menu, Filter Bar with [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator), and custom Excel filter.
 
-**For example**
+**Examples:**
 | Operator | Description |
 | ----- | ----- |
-| %ab% | Returns all the value that are contains “ab” character. |
-| ab% | Returns all the value that are ends with “ab” character. |
-| %ab | Returns all the value that are starts with “ab” character. |
+| %ab% | Returns values containing “ab”. |
+| ab% | Returns values ending with “ab”. |
+| %ab | Returns values starting with “ab”. |
 
-The following GIF represent a Like operator filtering.
-
-![Blazor DataGrid with like operator filtering.](./images/blazor-datagrid-like-operator-filtering.gif)
+![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
 
 ## Filtering with case sensitivity
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the flexibility to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_EnableCaseSensitivity) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports case sensitivity in filtering using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_EnableCaseSensitivity) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
-Below is an example code demonstrating how to enable or disable case sensitivity while filtering:
+The following example demonstrates enabling or disabling case sensitivity in filtering:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -621,11 +611,9 @@ public class OrderData
 
 ## Enable different filter for a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers the flexibility to customize filtering behavior for different columns by enabling various types of filters such as **Menu**, **Excel**, **Checkbox**. This feature allows you to tailor the filtering experience to suit the specific needs of each column in your Grid. For example, you might prefer a menu-based filter for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column.
+Enable various filter types such as **Menu**, **Excel**, or **Checkbox** for different columns by adjusting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
-It can be achieved by adjusting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration based on your requirements.
-
-Here’s an example where the menu filter is enabled by default for all columns, but you can dynamically modify the filter types through a `DropDownList`:
+The following example demonstrates enabling different filter types dynamically through a dropdown:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -645,7 +633,7 @@ Here’s an example where the menu filter is enabled by default for all columns,
 </SfDropDownList>
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
-    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" FilterSettings="OrderIDFilterSettings" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" FilterSettings="customerIDFilterSettings" Width="120"></GridColumn>
@@ -780,9 +768,9 @@ public class OrderData
 
 ## Change default filter operator for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the flexibility to change the default filter operator for a particular column. By default, the filter operator for string-type columns is **StartsWith**, for numerical-type columns is **Equal**, and for boolean-type columns is also **Equal**. However, you may need to customize the filter operator to better match the nature of the data in a specific column. This can be achieved using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
+Change the default filter operator for a column using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
-Here’s an example that demonstrates how to change the default filter operator column:
+The following example demonstrates changing the default operator dynamically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -943,11 +931,9 @@ public class OrderData
 
 ## Filter Blazor DataGrid programmatically with single and multiple values using method
 
-Programmatic filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid with single and multiple values allows you to apply filters to specific columns in the Grid without relying on interactions through the interface.
+Filter the Grid programmatically with single or multiple values using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
 
-This can be achieved by utilizing the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
-
-The following example demostrates, how to programmatically filter the Grid using single and multiple values for the **OrderID** and **CustomerID** columns. This is accomplished by calling the `FilterByColumnAsync` method within an external button click function:
+The following example demonstrates how to filter the Grid programmatically using single and multiple values for the **OrderID** and **CustomerID** columns, called within button click functions:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -956,7 +942,7 @@ The following example demostrates, how to programmatically filter the Grid using
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="onSingleValueFilter">Filter with single value</SfButton>
-<SfButton style="margin-left:5px" OnClick="onMultipleValueFilter"> Filter with multiple values</SfButton>
+<SfButton style="margin-left:5px" OnClick="onMultipleValueFilter">Filter with multiple values</SfButton>
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
@@ -1043,15 +1029,15 @@ public class OrderData
 
 ## How to get filtered records
 
-Retrieving filtered records in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is essential when you want to work with data that matches the currently applied filters. You can achieve this using available methods and properties in the Grid.
+Obtaining filtered records in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful for working with data matching current filters.
 
-**1.Using the GetFilteredRecordsAsync() method**
+### Using the GetFilteredRecordsAsync() method
 
-The [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method is used to obtain an array of records that match the currently applied filters on the Grid.
+The [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method retrieves an array of records matching applied filters.
 
-This method retrieves an array of records that match the currently applied filters on the Grid.
+This method retrieves an array of records matching applied filters.
 
-Here’s an example of how to get the filtering data in a Grid using the `GetFilteredRecordsAsync` method:
+The following example demonstrates getting the filtering data using the `GetFilteredRecordsAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1203,9 +1189,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpZCiFKFFRoZzt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**2.Using the GetFilteredRecordsAsync() method for remote data**
+### Using the GetFilteredRecordsAsync() method for remote data
 
-Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method to retrieve the details of the filtered records from the Grid. The `GetFilteredRecordsAsync` method returns the filtered records in the form of objects when using a remote data source. So, you need to deserialize the object to retrieve the filtered records.
+For remote data sources, the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method returns records as objects. Deserialize the object to retrieve filtered records.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -1307,31 +1293,25 @@ Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTXiUChxbmPDxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTXiUChxbmPDxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**3.Using the properties in the  FilteredEventArgs object**
+### Using the properties in the  FilteredEventArgs object
 
-Alternatively, you can use the properties available in the  FilteredEventArgs object to obtain the filter record details.
-
-* [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_ColumnName): This property returns the column name that is currently filtered.
-
-* [FilterPredicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_FilterPredicates): This property returns the object containing filter predicate model details that is currently filtered.
-
-To access these properties, you can use the [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event handler as shown below:
+Alternatively, use properties in the FilteredEventArgs object to obtain filter details. Use the [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event handler as follows:
 
 ```cshtml
-  public async Task FilteredHandler(FilteredEventArgs args)
-    {
-        var columnname = args.ColumnName;
-        var FilterPredicates = args.FilterPredicates;
-    }
+public async Task FilteredHandler(FilteredEventArgs args)
+{
+    var columnname = args.ColumnName;
+    var FilterPredicates = args.FilterPredicates;
+}
 ```
 
 ## Clear filtering using methods
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a method called [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) to clear the filtering applied to the Grid. This method is used to remove the filter conditions and reset the Grid to its original state.
+Use the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) method to clear applied filters and reset the Grid to its original state.
 
-Here’s an example of how to clear the filtering in a Grid using the `ClearFilteringAsync` method:
+The following example demonstrates clearing filtering using the `ClearFilteringAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1418,11 +1398,9 @@ public class OrderData
 
 ## Filtering events
 
-Filtering events allow you to customize the behavior of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid when filtering is applied. You can prevent filtering for specific columns, show messages to users, or perform other actions to suit your application’s needs.
+Filtering events allow customization of DataGrid behavior during filtering. Use available events such as [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) and [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) to intervene in the filtering process.
 
-To implement filtering events in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can utilize the available events such as [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) and [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered). These events allow you to intervene in the filtering process and customize it as needed.
-
-In the given example, the filtering is prevented for ShipCity column during `Filtering` event:
+In the example, filtering is prevented for the ShipCity column during the `Filtering` event:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1533,9 +1511,9 @@ public class OrderData
 
 ## Filter enum column
 
-Filter the enum type data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid column using the Filter Template feature of the Grid.
+Filter enum-type column data using the Filter Template feature of the Grid.
 
-In the following sample, the `SfDropDownList` is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the Type column. The enumerated list data can be bound to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
+In the example, the `SfDropDownList` renders in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the Type column. Enum lists bind to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, filter the Type column dynamically using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1651,5 +1629,8 @@ public enum FileType : short
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTDiriFpkNhDml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTDiriFpkNhDml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## See also
+
+* [How to Perform Multiple Value Filtering for Same Column in Grid](https://support.syncfusion.com/kb/article/10996/how-to-perform-multiple-value-filtering-for-same-column-in-grid?isInternalRefresh=False)
