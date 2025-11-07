@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row selection in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Row selection in Syncfusion Blazor DataGrid and much more details.
+description: Learn how to use row selection in Syncfusion Blazor DataGrid including single/multiple selection, paging, initial selection, and programmatic control.
 platform: Blazor
 control: DataGrid
 documentation: ug
