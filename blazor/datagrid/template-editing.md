@@ -11,8 +11,6 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. Templates can be used to define the structure and content of editable cells within the grid.
 
-> Review the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section before implementing template editing to understand template configuration in the grid.
-
 ## Inline template editing
 
 The inline template editing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the default inline editing behavior by enabling custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is useful for including additional fields not present in the column model or rendering highly customized editors.
