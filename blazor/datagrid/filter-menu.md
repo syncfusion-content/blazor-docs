@@ -1463,6 +1463,6 @@ When using the filter menu in the Syncfusion<sup style="font-size:70%">&reg;</su
 
 ```
 
-**Handle null or empty values:** Ensure that null or empty values in the data source are handled appropriately. Preprocess the data if necessary to maintain consistency.
+**Handle null or empty values:** Ensure that null or empty values in the data source are handled appropriately, either within the data itself or by applying preprocessing steps to maintain consistency.
 
 **Verify data type alignment:** Confirm that the data types defined in the column configuration match the actual data types in the data source. Mismatches can lead to unexpected filter behavior.
