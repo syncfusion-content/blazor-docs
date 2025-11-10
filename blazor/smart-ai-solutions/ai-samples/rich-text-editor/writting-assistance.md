@@ -234,7 +234,7 @@ This section implements the Syncfusion Blazor Rich Text Editor with AI-powered c
 
 (`Home.razor`)
 
-```razor
+```csharp
 @inject AzureAIService semanticKernelAI
 @inject IJSRuntime JSRuntime
 @using AISamples.Components.Service

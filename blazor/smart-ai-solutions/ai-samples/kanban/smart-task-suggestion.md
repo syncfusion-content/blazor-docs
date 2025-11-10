@@ -234,7 +234,7 @@ This section demonstrates how to implement the Syncfusion Blazor Kanban componen
 
 (`Home.razor`)
 
-```razor
+```csharp
 
 @rendermode InteractiveServer
 @inject AzureAIService OpenAIService
