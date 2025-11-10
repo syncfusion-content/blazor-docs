@@ -696,6 +696,19 @@ Marker clustering can be enabled for each marker group in the map by using the [
 
 N> When the `MapsMarkerClusterSettings` tag is enabled for a specific marker group, the `MapsMarkerClusterSettings` tag within the layers becomes ineffective.
 
+**Detailed Use Case scenario:**
+
+* **Context**: In the below example, have three marker groups—France, India, and the USA. Each country contains many locations spread across different states. Displaying every location marker at the world level makes the map cluttered and hard to read.
+
+* **What clustering does**:
+At a world zoom level, all nearby markers within each country’s group are clustered into a single symbol per group (e.g., one cluster for France, one for India, one for the USA). The cluster icon can display the count of locations it represents.
+As the user zooms in on a country, the single country‑level cluster splits into smaller clusters (or individual markers) based on proximity. For example, France’s cluster breaks into clusters around Paris and Normandy, and further zooming reveals the Eiffel Tower, Louvre, and Notre‑Dame markers individually.
+The same behavior applies to India (e.g., clusters for Rajasthan, Uttar Pradesh, etc.) and the USA (e.g., clusters for Arizona, Nevada, Tennessee, and so on).
+* **Manual expansion**:
+If [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) property is set to **true**, a user can click a cluster to expand it immediately and view its child markers without additional zooming. This is useful on touch devices or when you want quick access to the underlying points.
+* **Per‑group customization**:
+Each marker group (France/India/USA) can have its own `MapsMarkerClusterSettings`—different cluster icons, colors, sizes, and label styles—so clusters are visually distinct by group.
+
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
