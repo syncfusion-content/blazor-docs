@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clear an Image with Blazor Image Editor Component | Syncfusion
-description: Learn here all about Clear an Image in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Render Image Editor in a Dialog Component | Syncfusion
+description: Render the Blazor Image Editor in a modal dialog for a focused, space-saving editing experience in Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Render Image Editor in Dialog Component
 
-Rendering the Image Editor in a dialog involves displaying the image editor component within a modal dialog window, allowing users to edit images in a pop-up interface. This can be useful for maintaining a clean layout and providing a focused editing experience without navigating away from the current page.
+Rendering the Image Editor in a dialog displays the component within a modal window, enabling image editing in a pop-up interface. This approach helps maintain a clean layout and provides a focused editing experience without navigating away from the current page.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -66,4 +66,4 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 }
 ```
 
-![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-dialog.jpg)
+![Blazor Image Editor rendered in a dialog](../images/blazor-image-editor-dialog.jpg)
