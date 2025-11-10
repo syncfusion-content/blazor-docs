@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Highlight search in Blazor AutoComplete component | Syncfusion
-description: Check out how to highlight search text in the Syncfusion Blazor AutoComplete component, including template-based highlighting and CSS customization.
+title: Highlight searching  in Blazor AutoComplete Component | Syncfusion
+description: Checkout and learn here all about highlight searching in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Highlight Search Blazor AutoComplete Component
 
-Highlight the search text in the suggested list items of the AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
+You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
 
 {% highlight Razor %}
 
@@ -19,16 +19,16 @@ Highlight the search text in the suggested list items of the AutoComplete compon
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![AutoComplete highlighting matched search text using the Highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
 
 ## Highlight with template
 
-Use the `HighLightSearch` method within an item template to highlight matched text in custom-rendered list items. It accepts the following arguments and highlights characters that match the search query based on the specified options.
+You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filterType` and `highLightText`. When called, it will highlight the characters that match the search query in the list items."
 
-* `textValue` - The display text from the current list item to evaluate and render with highlights.
-* `ignoreCase` - When `true`, performs case-insensitive matching.
-* `filterType` - Specifies how matches are determined (for example, starts with, contains, or ends with).
-* `highlightText` - Optional. The text to highlight. If not provided, the method uses the current filter value.
+* `textValue` - The text to be highlighted in the list item.
+* `ignoreCase` - A boolean value which when set to true performs the search text based on casing.
+* `filterType` - Determines on which filter type the highlight text is updated on the text.
+* `highlightText` - The text to be highlighted. This is an optional argument. If not provided, it will use the filter value as the highlight text."
 
 {% highlight Razor %}
 
@@ -36,13 +36,13 @@ Use the `HighLightSearch` method within an item template to highlight matched te
 
 {% endhighlight %} 
 
-![Blazor AutoComplete highlighting using the HighLightSearch method in a template](./images/filtering/blazor_autocomplete_highLightSearch-method.png)
+![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change the highlight style
 
-Customize the appearance of the highlighted text using the `.e-highlight` class. In the following example, the background color for matched text is styled to improve visibility.
+You can customize the appearance of highlighted text using the `.e-highlight` class. In the example below, we have styled the background color for the highlighted text.
 
 {% highlight Razor %}
 
@@ -50,4 +50,4 @@ Customize the appearance of the highlighted text using the `.e-highlight` class.
 
 {% endhighlight %} 
 
-![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.png)
+![Blazor AutoComplete with HighLightSearch method](./images/highlight-search/blazor_autocomplete_highlight-style.png)

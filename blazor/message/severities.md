@@ -9,11 +9,11 @@ documentation: ug
 
 # Severities in Blazor Message
 
-Severity indicates the importance and context of a message. The component supports multiple severity levels configured via the [Severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Severity) property on the message (using the MessageSeverity enum). Severity affects the visual style (colors and icon). The default severity is Normal. To hide the severity icon while retaining the style, use the [ShowIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ShowIcon) property.
+The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the [Severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Severity) property to display the messages with different severity levels.
 
-The available severity types are Normal, Success, Info, Warning, and Error.
+The available severity types are **Normal**, **Success**, **Info**, **Warning** and **Error**. The default severity type for messages is **Normal**.
 
-The following example demonstrates messages rendered with each severity level.
+The following example demonstrates the severity of the messages.
 
 {% tabs %}
 {% highlight razor %}
@@ -44,4 +44,4 @@ The following example demonstrates messages rendered with each severity level.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Message severity examples with icons for Normal, Info, Success, Warning, and Error](./images/message-severity-icon.png)
+![Message Severity with Icons](./images/message-severity-icon.png)

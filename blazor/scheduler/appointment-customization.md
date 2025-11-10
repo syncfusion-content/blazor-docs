@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appointment Customization in Blazor Scheduler Component | Syncfusion
+title: Appointment customization in Blazor Scheduler Component | Syncfusion
 description: Checkout and learn here all about appointment customization in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Appointment Customization in Blazor Scheduler Component
+# Appointment customization
 
 The look and feel of the Scheduler events can be customized using any one of the following ways.
 
@@ -15,11 +15,11 @@ The look and feel of the Scheduler events can be customized using any one of the
 * [Using EventRendered event](#using-eventrendered-event)
 * [Using CssClass property](#using-cssclass)
 
-## Using Template
+## Using template
 
-An event template provides full control over the rendering of each appointment's content. Text, images, links, and even other Blazor components can be dynamically added to customize the look of events. This is achieved using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Template) option available within the `ScheduleEventSettings` property.
+Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Template) option available within the `ScheduleEventSettings` tag helper. 
 
-To get started quickly customizing events using a template, refer to this video:
+To get start quickly on customizing events using template, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=8kBXcBjL12A"%}
@@ -68,15 +68,11 @@ The following code example customizes the appointment.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLICjtdhIoxxqEi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Template in Blazor Scheduler](./images/template.png)
-
 N> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
-## Using EventRendered Event
+## Using EventRendered event
 
-The [EventRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event triggers just before each appointment is rendered on the Scheduler. This event is highly versatile and can be used to dynamically customize the visual appearance of events based on specific criteria or conditions.
+The [EventRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event triggers before the appointment renders on the Scheduler. Therefore, this event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
 
 In the following code example, the custom class has been added to events using [CssClasses](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_CssClasses) to apply color to the events.
 
@@ -126,11 +122,8 @@ In the following code example, the custom class has been added to events using [
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrosjDHBybiXDhd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler](./images/eventrendered.png)
-
-Events can also be customized by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
+Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -173,11 +166,8 @@ Events can also be customized by adding or modifying its element attribute using
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSWtNxVnDNNdNI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler](./images/backgroundcolor.png)
-
-## Using CssClass 
+## Using CssClass
 
 The customization of events can also be achieved using the built-in field [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
 
@@ -230,9 +220,6 @@ The customization of events can also be achieved using the built-in field [CssCl
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLoWXtxBdWIIoLL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scheduler](./images/eventrendered.png)
 
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
@@ -280,9 +267,5 @@ Also, the customization of events can be achieved using [CssClass](https://help.
     }
 </style>
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSWNDnVdhFnoie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scheduler](./images/eventrendered.png)
 
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.

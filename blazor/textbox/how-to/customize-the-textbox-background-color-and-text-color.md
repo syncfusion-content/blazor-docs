@@ -7,9 +7,9 @@ control: TextBox
 documentation: ug
 ---
 
-# Customize background and text color in Blazor TextBox component
+# Customize Background and Text Color in Blazor TextBox Component
 
-Customize the TextBox appearance (background color, text color, and borders) by overriding its default CSS classes. The following example uses the `e-input-group` container to apply a custom background and text color. It also toggles the focus state class to reflect focus styling.
+The text box styles can be customized such as background-color, text-color and border-color by overriding its default styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

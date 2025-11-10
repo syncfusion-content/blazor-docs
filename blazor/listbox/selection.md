@@ -9,14 +9,14 @@ documentation: ug
 
 # Selection in Blazor ListBox Component
 
-The ListBox supports selecting a single item or multiple items using mouse or keyboard. There are two selection modes available in the ListBox:
+The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in ListBox,
 
-* Single - Select a single item in the ListBox.
-* Multiple - Select multiple items in the ListBox.
+* Single -  To select single item in the ListBox.
+* Multiple -  To select multiple items in the ListBox.
 
 ## Single selection
 
-To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Single` in the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
+To enable single selection in the ListBox, [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Single` in [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -50,9 +50,9 @@ To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor
 
 ## Multiple selection
 
-To enable multiple selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Multiple` in the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property. Use the Shift, Ctrl, and arrow keys to select multiple items with the keyboard.
+To enable multiple selection in the ListBox, [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Multiple` in [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property. To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
 
-N> By default, the selection mode is `Multiple`.
+N> By default, the selection mode is set as `Multiple`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -86,11 +86,11 @@ N> By default, the selection mode is `Multiple`.
 
 ## CheckBox Selection
 
-The ListBox supports checkbox selection for choosing multiple items. To enable checkbox selection, set the [ShowCheckbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowCheckbox) property to `true`.
+ListBox supports checkbox selection which is used to select multiple items. To enable the checkbox selection, set the [ShowCheckbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowCheckbox) property to `true`.
 
 ### Select All
 
-To select all items in the ListBox, enable the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property.
+To select all the items in the ListBox, enable the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property to `true`.
 
 ```cshtml
 

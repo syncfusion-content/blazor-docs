@@ -9,11 +9,12 @@ documentation: ug
 
 # Event handlers in DataForm component
 
-This section describes the available DataForm events and when to use them. The form-level submit events mirror the Blazor EditForm pipeline, and a field-level update event helps react to per-field edits.
+This segment briefly explains about the event handlers in DataForm component.
 
 ## On submit event
 
-The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnSubmit) event is raised whenever the form is submitted, regardless of validation success or failure. Use this event to run logic that must occur on every submit (for example, logging or generic pre-processing). The callback receives the current EditContext in its event args. Handlers can be synchronous or async.
+The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnSubmit) event is activated whenever the form is submitted, regardless of whether the submission is valid or invalid.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
@@ -30,7 +31,7 @@ The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 
 ## On valid submit event
 
-The [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnValidSubmit) event is triggered when the form is submitted and all validation rules are satisfied. Use this event to persist data, call APIs, or navigate on success. The callback provides the current EditContext so the validated model can be accessed. Async handlers are supported.
+he [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnValidSubmit) event is triggered when the form is submitted and all the form validation rules are satisfied.
 
 `OnValidSubmit` is typically used to handle the form submission logic, such as saving the form data to a database, when the form data is valid.
 
@@ -49,7 +50,7 @@ The [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ## On invalid submit event
 
-The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnInvalidSubmit) event is triggered when the form is submitted and one or more validation rules fail. Use this event to show a message, focus the first invalid field, or log validation issues. The handler receives the current EditContext, which contains validation messages.
+The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnInvalidSubmit) event is triggered when the form is submitted but the form validation rules are not satisfied. It's typically used to handle scenarios when the form data is invalid.
 
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
@@ -66,7 +67,7 @@ The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 
 ## On update event
 
-The [OnUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnUpdate) event is invoked when a field value changes in the DataForm. The event provides the changed field name and the updated model through [FormUpdateEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormUpdateEventArgs.html), enabling scenarios such as dependent field updates or incremental validation.
+The [OnUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnUpdate) event will be invoked upon editing a field in the DataForm component. The changed field name and newly updated model are available through the [FormUpdateEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormUpdateEventArgs.html) event context. 
 
 {% tabs %}
 {% highlight razor tabtitle="Model" %}

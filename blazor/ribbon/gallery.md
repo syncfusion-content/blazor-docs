@@ -7,17 +7,17 @@ control: Ribbon
 documentation: ug
 ---
 
-# Gallery Items in the Blazor Ribbon Component
+# Gallery Items in Blazor Ribbon component
 
-The Blazor Ribbon component includes a gallery feature that allows users to interact with a collection of related items, such as icons, text, or images. To create a gallery, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a `RibbonItem` to `RibbonItemType.Gallery` and configure its behavior using the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) component.
+The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) tag directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
 
 ## Groups
 
-Render groups of items within the gallery by defining a collection of [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html) objects and assigning it to the [Groups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Groups) property of the `RibbonGallerySettings`. Each `GalleryGroup` can be configured with properties like [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header), [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Items), and [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_CssClass).
+You can render groups inside the gallery using the [Groups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Groups) property of the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) tag directive. Groups can be customized using [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html) tag directive with properties like [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Items), [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_CssClass), [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header), etc.
 
-### Adding Items
+### Adding items
 
-Add items to a group by defining a list of [GalleryItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html) objects. The example below demonstrates how to configure a basic gallery with a group of [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Items) and set properties such as [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_Content), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_IconCss), and [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_Disabled).
+Gallery items can be added using [GalleryItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html) tag directive within the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Items) property of a group. Below example demonstrates how to configure properties such as [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_Content), [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_IconCss), [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_Disabled) to the gallery item.
 
 {% tabs %}
 {% highlight razor %}
@@ -102,7 +102,7 @@ Add items to a group by defining a list of [GalleryItem](https://help.syncfusion
 
 #### CSS class
 
-Apply custom styling to a gallery item by setting its [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItem.html#Syncfusion_Blazor_Ribbon_GalleryItem_CssClass) property.
+You can use the `CssClass` property to customize the gallery item.
 
 {% tabs %}
 {% highlight razor %}
@@ -180,14 +180,29 @@ Apply custom styling to a gallery item by setting its [CssClass](https://help.sy
     };
 }
 
+<style>
+
+    .e-ribbon-gallery-item.bad {
+        background: #ffb6b6;
+    }
+
+    .e-ribbon-gallery-item.good {
+        background: #c7ebc9;
+    }
+
+    .e-ribbon-gallery-item.neutral {
+        background: #eedd9d;
+    }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
 ![Ribbon Gallery Item Customization](./images/gallery/gallery_cssClass.png)
 
-### Custom Header
+### Custom header
 
-Define a header for a group of items in the gallery popup using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header) property.
+You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header) property to set header for the groups in the Ribbon gallery popup.
 
 {% tabs %}
 {% highlight razor %}
@@ -271,9 +286,9 @@ Define a header for a group of items in the gallery popup using the [Header](htt
 
 ![Ribbon Gallery Custom Header](./images/gallery/gallery_header.png)
 
-### Item Dimensions
+### Setting item dimensions
 
-Control the dimensions of gallery items within the popup by setting the [ItemWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_ItemWidth) and [ItemHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_ItemHeight) properties of a [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html). These properties ensure consistent sizing for all items in that group.
+You can specify the width and height of gallery items using the [ItemWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_ItemWidth) and [ItemHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_ItemHeight) properties within a [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html). If the `ItemHeight` of the gallery item is smaller, then the remaining gallery items are aligned based on the `ItemCount` specified.
 
 {% tabs %}
 {% highlight razor %}
@@ -361,9 +376,9 @@ Control the dimensions of gallery items within the popup by setting the [ItemWid
 
 ![Ribbon Gallery Item Dimensions](./images/gallery/gallery_itemDimensions.png)
 
-### Group Styling
+### Group styling
 
-Apply custom styling to an entire group of gallery items by setting the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_CssClass) property of the [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html).
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_CssClass) property within the [GalleryGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html) to customize the appearance of gallery groups.
 
 {% tabs %}
 {% highlight razor %}
@@ -453,9 +468,9 @@ Apply custom styling to an entire group of gallery items by setting the [CssClas
 
 ![Ribbon Gallery Group Styling](./images/gallery/gallery_group_styling.png)
 
-## Item Count in Ribbon
+## Setting item count
 
-Set the number of gallery items displayed directly in the ribbon layout using the [ItemCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemCount) property. The default value is `3`.
+You can customize the number of items to be displayed in Ribbon gallery by using the [ItemCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemCount) property. By default, the `ItemCount` is set to `3`. The following example showcases the utilization of the `ItemCount` property, displaying a ribbon gallery with 4 items.
 
 {% tabs %}
 {% highlight razor %}
@@ -539,9 +554,9 @@ Set the number of gallery items displayed directly in the ribbon layout using th
 
 ![Ribbon Gallery Item Count](./images/gallery/gallery_itemCount.png)
 
-## Selected Item
+## Setting selected item
 
-Programmatically set the selected item in the gallery using the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_SelectedItemIndex) property, which supports two-way binding.
+You can use the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_SelectedItemIndex) property to define the currently selected item in the Ribbon gallery items.
 
 {% tabs %}
 {% highlight razor %}
@@ -629,9 +644,9 @@ Programmatically set the selected item in the gallery using the [SelectedItemInd
 
 ![Ribbon Gallery Selected Item](./images/gallery/gallery_selectedItem.png)
 
-## Popup Dimensions
+## Setting popup dimensions
 
-Specify the width and height of the gallery's popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupHeight) properties within the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html).
+You can specify the width and height of the gallery popup by using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupHeight) properties within the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html).
 
 {% tabs %}
 {% highlight razor %}
@@ -718,13 +733,11 @@ Specify the width and height of the gallery's popup using the [PopupWidth](https
 
 ![Ribbon Gallery Popup Dimensions](./images/gallery/gallery_popupDimensions.png)
 
-## Template Customization
+## Template customization
 
-Customize the content and appearance of gallery items using templates.
-*   [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Template): Modifies the appearance of the gallery item displayed *within the ribbon layout*.
-*   [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupTemplate): Modifies the appearance of the gallery item *within the expanded popup*.
+You can customize the default appearance and content of Ribbon gallery items by using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Template) property. Similarly, you can also customize the appearance of Ribbon gallery popup by using the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupTemplate) property.
 
-Both templates receive a [GalleryItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItemContext.html) object, which can be used to render custom content. The example below shows how to use both templates to create a custom table gallery.
+[GalleryItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItemContext.html) will be passed as context to both the templates. You can utilize it to create more customized gallery items. The below minimal example demonstrates the usages of both the `Template` and `PopupTemplate` properties:
 
 {% tabs %}
 {% highlight razor %}
@@ -854,18 +867,16 @@ Both templates receive a [GalleryItemContext](https://help.syncfusion.com/cr/bla
 
 ## Events
 
-The Ribbon gallery provides a set of events to respond to user actions.
+The following events are available in the Ribbon Gallery.
 
-| Name | Argument Type | Description |
+|Name|Args|Description|
 |---|---|---|
-| [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupOpening) | `GalleryPopupOpenEventArgs` | Triggers before the gallery popup opens. |
-| [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupClosing) | `GalleryPopupCloseEventArgs` | Triggers before the gallery popup closes. |
-| [ItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemHover) | `GalleryItemHoverEventArgs` | Triggers when the mouse hovers over a gallery item. |
-| [ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemRendering) | `GalleryItemRenderEventArgs` | Triggers when a gallery item is being rendered. |
-| [Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Selecting) | `GallerySelectEventArgs` | Triggers before a gallery item is selected. |
-| [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Selected) | `GallerySelectedEventArgs` | Triggers after a gallery item has been selected. |
-
-The example below demonstrates how to handle these events.
+|[PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupOpening)|GalleryPopupOpenEventArgs|Triggers before the gallery popup opens|
+|[PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupClosing)|GalleryPopupCloseEventArgs|Triggers before the gallery popup closes|
+|[ItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemHover)|GalleryItemHoverEventArgs|Triggers when hovering over a gallery item|
+|[ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemRendering)|GalleryItemRenderEventArgs|Triggers during the rendering of a gallery item|
+|[Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Selecting)|GallerySelectEventArgs|Triggers before selecting a gallery item|
+|[Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Selected)|GallerySelectedEventArgs|Triggers after a gallery item has been selected|
 
 {% tabs %}
 {% highlight razor %}

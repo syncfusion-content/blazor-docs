@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn about configuring chart appearance in the Syncfusion Blazor Stock Chart component to refine visual presentation.
+description: Checkout and learn here all about appearance in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Stock Chart Title
 
-Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide context for the plotted data.
+Stock Chart can be given a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information about the data plotted.
 
 ```cshtml
 
@@ -28,10 +28,11 @@ Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
 </SfStockChart>
 
 @code {
+
     public class ChartData
     {
-        public DateTime XValue { get; set; }
-        public double YValue { get; set; }
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>
@@ -42,9 +43,10 @@ Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
         new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
         new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 }
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
     };
 }
+
 
 ```
 
@@ -54,7 +56,7 @@ Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Title Customizations
 
-The `TextStyle` property of the chart title provides options to customize `Size`, `Color`, `FontFamily`, `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment`, and `TextOverflow`.
+The `TextStyle` property of chart title provides options to customize the `Size`, `Color`, `FontFamily`, `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment` and `TextOverflow`.
 
 ```cshtml
 
@@ -72,10 +74,11 @@ The `TextStyle` property of the chart title provides options to customize `Size`
 </SfStockChart>
 
 @code {
+
     public class ChartData
     {
-        public DateTime XValue { get; set; }
-        public double YValue { get; set; }
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>
@@ -86,7 +89,7 @@ The `TextStyle` property of the chart title provides options to customize `Size`
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
         new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
         new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 }
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
     };
 }
 
@@ -96,9 +99,9 @@ The `TextStyle` property of the chart title provides options to customize `Size`
 
 ## Stock Chart Theme
 
-Changing the theme affects background color, gridlines, tooltip appearance, and overall styling.
+Changing theme will affect background color, gridlines, tooltip colors and appearance.
 
-Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Bootstrap`, `HighContrastLight`, `MaterialDark`, `FabricDark`, `HighContrast`, and `BootstrapDark`.
+Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
 
 ```cshtml
 
@@ -115,10 +118,11 @@ Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Boot
 </SfStockChart>
 
 @code {
+
     public class ChartData
     {
-        public DateTime XValue { get; set; }
-        public double YValue { get; set; }
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>
@@ -129,7 +133,7 @@ Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Boot
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
         new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
         new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 }
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
     };
 }
 

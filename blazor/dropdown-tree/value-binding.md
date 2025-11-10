@@ -11,9 +11,9 @@ documentation: ug
 
 Value binding is the process of passing values between a component and its parent.
 
-## Initial Selection and Two-Way Binding
+## Preselected value through API  
 
-The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also users can dynamically assign the node IDs using a button click.
+The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
 
 In the following example, the two nodes are preselected using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
 
@@ -58,12 +58,8 @@ In the following example, the two nodes are preselected using [Value](https://he
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhoXkVHfKwVPngV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Dropdown Tree with ItemTemplate.](./images/initial-selection.png)
-
-
-## Get Selected Value
+## Get selected value
 
 In this example, the selected value is obtained through two-way binding using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
 
@@ -119,15 +115,12 @@ In this example, the selected value is obtained through two-way binding using th
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhyXEBHJglFGOWi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Get selected value in Blazor DropDownTree](./images/selection/blazor-dropdowntree-get-selected-value.png)
 
 ## Clear Selection
 
-Remove all current selections in the Dropdown Tree by calling the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ClearAsync) method on the component instance.
-
-In this example, initially, a node is selected. Clicking the "Clear node" button then invokes `ClearAsync()` to remove this selection.
+In this example, you have the option to eliminate the selection by utilizing the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ClearAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -169,7 +162,6 @@ In this example, initially, a node is selected. Clicking the "Clear node" button
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhINEVnfUkIOvKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Two-way binding
 
@@ -206,4 +198,3 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLINuBnpJNVQTwW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

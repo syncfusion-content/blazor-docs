@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor SplitButton Component
 
-The Blazor SplitButton component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor SplitButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor SplitButton component is outlined below.
 
@@ -38,33 +38,33 @@ The accessibility compliance for the Blazor SplitButton component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor SplitButton component applies WAI-ARIA patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor SplitButton component:
+The Blazor SplitButton component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor SplitButton component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the SplitButton as a `button`, the SplitButton popup as a `menu`, and popup action items as `menuitem`. |
-| `aria-haspopup` | Indicates that the button opens an interactive SplitButton popup (menu). |
-| `aria-expanded` | Reflects whether the SplitButton popup is currently expanded or collapsed. |
-| `aria-owns` | Associates elements to define a parent/child relationship when it cannot be represented in the DOM hierarchy. |
-| `aria-disabled` | Indicates that the element is perceivable but disabled and not operable. |
+| `role` | Indicates the SplitButton component as `button`, SplitButton popup as `menu`, and the SplitButton popup action items as `menuitem`. |
+| `aria-haspopup` | Indicates the availability and type of interactive SplitButton popup element. |
+| `aria-expanded` | Indicates whether the SplitButton popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
+| `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
+| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The Blazor SplitButton component follows keyboard interaction guidelines, making it usable for people who rely on assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported:
+The Blazor SplitButton component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor SplitButton component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened popup. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | Opens the popup. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up to the previous action item. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down to the next action item. |
+| <kbd>Space</</kbd> | <kbd>Space</kbd> | Opens the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous action item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next action item. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 
 ## Ensuring accessibility
 
-The Blazor SplitButton component’s accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor SplitButton component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor SplitButton component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/split-button) in a new window to evaluate the accessibility of the Blazor SplitButton component with accessibility tools.
 

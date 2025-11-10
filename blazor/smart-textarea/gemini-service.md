@@ -26,7 +26,9 @@ Create a service class to manage interactions with the Gemini API, including aut
 2. Add a new file named `GeminiService.cs` in the `Services` folder.
 3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GeminiService.cs" %}
+
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -107,7 +109,9 @@ public class GeminiService
         };
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Store the Gemini API key in `appsettings.json` (e.g., `{ "Gemini": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security. The `SafetySettings` filter harmful content; adjust thresholds based on your application’s needs.
 
@@ -118,7 +122,9 @@ Define C# classes to match the Gemini API’s JSON request and response format.
 1. Create a new file named `GeminiModels.cs` in the `Services` folder.
 2. Add the following model classes:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GeminiModels.cs" %}
+
 public class Part
 {
     public string Text { get; set; }
@@ -172,7 +178,9 @@ public class GeminiChatParameters
     public GenerationConfig GenerationConfig { get; init; } = new();
     public List<SafetySetting> SafetySettings { get; init; } = new();
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a Custom AI Service
 
@@ -181,7 +189,9 @@ Implement the `IChatInferenceService` interface to connect the Smart TextArea to
 1. Create a new file named `GeminiInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="GeminiInferenceService.cs" %}
+
 using Syncfusion.Blazor.AI;
 using System.Threading.Tasks;
 
@@ -199,7 +209,9 @@ public class GeminiInferenceService : IChatInferenceService
         return await _geminiService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure the Blazor App
 
@@ -207,7 +219,9 @@ Register the Gemini service and `IChatInferenceService` implementation in the de
 
 Update the **~/Program.cs** file as follows:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10 11" %}
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
@@ -224,13 +238,17 @@ builder.Services.AddSingleton<IChatInferenceService, GeminiInferenceService>();
 
 var app = builder.Build();
 // ...
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Use Gemini AI with Smart TextArea
 
 Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use Gemini AI for autocompletion:
 
-```cshtml
+{% tabs %}
+{% highlight c# tabtitle="~/Pages/Home.razor" %}
+
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
@@ -247,7 +265,9 @@ Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to
         "We are investigating your issue."
     ];
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Test the Integration
 

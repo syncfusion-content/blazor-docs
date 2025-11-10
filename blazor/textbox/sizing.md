@@ -9,12 +9,12 @@ documentation: ug
 
 # Sizing in Blazor TextBox Component
 
-The TextBox supports two visual sizes for different layout needs. Use the default size for standard forms and the small size to fit dense layouts while maintaining readability and accessibility.
+The TextBox can be rendered in two different sizes:
 
 Property   | Description
 ------------ | -------------
-Normal | The default rendering of the TextBox with standard height and padding.
-Small | Apply the e-small CSS class to the component using the CssClass property or to the input container (including the floating label wrapper) to reduce height and padding.
+  Normal     | By default, the TextBox is rendered with normal size.
+  Small      | Add `e-small` class to the input element, or else add to the input container.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -32,4 +32,4 @@ Small | Apply the e-small CSS class to the component using the CssClass property
 <SfTextBox Placeholder="Focus the input" CssClass="e-small" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![Changing Blazor TextBox size](./images/blazor-textbox-change-size.png)
+![Changin Blazor TextBox Size](./images/blazor-textbox-change-size.png)

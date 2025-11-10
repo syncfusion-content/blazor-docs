@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize
 
-Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
+You can dynamically adjust the size of the popup in the ComboBox component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowResize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
 
 {% highlight Razor %}
 
@@ -25,7 +25,7 @@ Dynamically adjust the size of the popup by using the [AllowResize](https://help
 
 Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the ComboBox component.
 
-In the following sample, `PopupWidth` is set to `300px`.
+In the following sample, the `PopupWidth` is set as `300px`.
 
 {% highlight cshtml %}
 
@@ -39,7 +39,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property. The default value of the `PopupHeight` is `300px`.
 
-In the following sample, `PopupHeight` is set to `500px`.
+In the following sample, the `PopupHeight` is set as `500px`.
 
 {% highlight cshtml %}
 
@@ -51,13 +51,13 @@ In the following sample, `PopupHeight` is set to `500px`.
 
 ## Change the popup z-index
 
-Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component’s popup element to control stacking order.
+Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
 
-Defaults to `1000`.
+Defaults to `1000`
 
 ## Show popup on initial loading
 
-Show the popup when the component is initialized by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) event.
+You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) Event.
 
 {% highlight Razor %}
 
@@ -69,7 +69,7 @@ Show the popup when the component is initialized by calling [ShowPopupAsync()](h
 
 ## Preventing opening and closing
 
-Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) or [PopupEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) to `true` in the corresponding [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnClose) events.
+Prevent the popup open and close in the event argument like [BeforeOpenEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) and [PopupEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) as `true`. It is achieved by the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnClose) events. 
 
 {% highlight Razor %}
 
@@ -77,13 +77,13 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor ComboBox with preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.png)
+![Blazor ComboBox with Preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.png)
 
-The following events are used when opening and closing the popup.
+The following events are used to trigger when opening and closing popup.
 
 ### OnOpen event
 
-The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnOpen) event triggers before the popup opens. If this event is canceled, the popup remains closed.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 {% highlight Razor %}
 
@@ -97,7 +97,7 @@ The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.D
 
 ### OnClose event
 
-The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnClose) event triggers before the popup closes. If this event is canceled, the popup remains open.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 {% highlight Razor %}
 
@@ -117,7 +117,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.C
 
 ## Popup height based on available space
 
-Adjust the popup height based on the available viewport space by handling the window `resize` event and updating the popup element’s height at runtime.
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
 
 {% highlight Razor %}
 

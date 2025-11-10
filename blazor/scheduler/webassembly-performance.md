@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Performance in Blazor Scheduler Component | Syncfusion
-description: This topic helps to improve the performance of Web Assembly applications when using Syncfusion Blazor Scheduler components with some tips.
+description: This topic helps you to improve the performance of Web Assembly Application when using Syncfusion Blazor Scheduler components with some tips.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -11,13 +11,13 @@ documentation: ug
 
 This section provides performance guidelines for using Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
-N> Refer to the Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Scheduler](./how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
+N> You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Scheduler](./how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
 
-## Avoid Unnecessary Component Renders
+## Avoid unnecessary component renders
 
 During Blazor Diffing Algorithm, every views of the Scheduler component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or Scheduler will check every child component, once event callback is completed.
 
-Fine-grained control over Scheduler component rendering is achievable. The [`PreventRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_PreventRender) method helps to avoid unnecessary re-rendering of the Scheduler component. Internally, this method overrides the `ShouldRender` method of the Scheduler to prevent rendering.
+You can have fine-grained control over Scheduler component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the Scheduler component. This method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 
 In the following example:
 
@@ -67,11 +67,11 @@ In the following example:
 N> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 <br/> * **PreventRender** method can be used only after Scheduler component completed initial rendering. Calling this method during initial rendering will not have any effect.
 
-## Avoid Unnecessary Component Renders after Scheduler Events
+## Avoid unnecessary component renders after Scheduler events
 
 When a callback method is assigned to the Scheduler events, then the **StateHasChanged** will be called in parent component of the Scheduler automatically once the event is completed.
 
-This re-rendering of the Scheduler component can be prevented by calling the `PreventRender` method.
+You can prevent this re-rendering of the Scheduler component by calling the **PreventRender** method.
 
 In the following example:
 
@@ -131,4 +131,4 @@ In the following example:
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 <br/> * It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.
-<br/> *  For events without arguments, such as `DataBound`, the `PreventRender` method of the Scheduler can be used to disable rendering.
+<br/> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the Scheduler to disable rendering.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Date Range Slider in Blazor Range Slider Component
 
-This example demonstrates how to display dates in the Blazor Range Slider by formatting tick labels and tooltips. The date formatting is implemented using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events, as shown in the following sample.
+The date formatting can be achieved using [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events. The process of date formatting is explained in the below sample.
 
 ```cshtml
 @using System.Globalization;
@@ -45,4 +45,4 @@ This example demonstrates how to display dates in the Blazor Range Slider by for
 }
 ```
 
-![Blazor Range Slider with date-formatted ticks](../images/blazor-rangeslider-with-daterange.gif)
+![Blazor Range Slider with DateRange](../images/blazor-rangeslider-with-daterange.gif)

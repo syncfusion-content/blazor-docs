@@ -13,12 +13,12 @@ To change the animation of the DropDownButton, [`AnimationSettings`](https://hel
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
-| None | Opens the dropdown menu with no animation. |
-| SlideDown | Opens the dropdown menu with a slide-down effect. |
-| ZoomIn | Opens the dropdown menu with a zoom-in effect. |
-| FadeIn | Opens the dropdown menu with a fade-in effect. |
+| None | Specifies the Dropdown popup transform with no animation effect. |
+| SlideDown | Specifies the Dropdown popup transform with slide down effect. |
+| ZoomIn | Specifies the Dropdown popup transform with zoom in effect. |
+| FadeIn | Specifies the Dropdown popup transform with fade in effect. |
 
-In this sample, three different SfDropDownButton instances are rendered, each showcasing a unique animation effect for the dropdown menu.
+In this sample, three different DropDownButtons are rendered, each showcasing a unique animation effect for the dropdown menu:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -60,4 +60,4 @@ In this sample, three different SfDropDownButton instances are rendered, each sh
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTWhizMQTMfCYP?appbar=false&editor=false&result=true&errorlist=true&theme=bootstrap5 %}
 
-![Changing Blazor dropdown menu animation](./images/blazor-dropdownmenu-animation.gif)
+![Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.gif)

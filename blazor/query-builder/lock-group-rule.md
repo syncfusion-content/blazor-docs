@@ -9,9 +9,9 @@ documentation: ug
 
 # Lock Group/ Rule in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports locking individual rules or entire groups. When a rule is locked, its field, operator, and value editors are disabled and cannot be changed. Locking a group disables all editors and actions within that group. Locked items still participate in evaluation; only editing is restricted. The visibility of lock buttons in the UI can be configured through the [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) configuration.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) provides the functionality to lock individual rules or entire groups. When a rule is locked, it prevents users from modifying its field, operator, and value, effectively disabling these components. Similarly, locking a group disables all elements contained within it. This feature offers users greater control over their query configurations, ensuring that specific rules or groups remain unchanged. Additionally, users can manage the visibility of locking buttons through the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) function, allowing for seamless control over the locking mechanism.
 
-Locking can be done through the user interface or programmatically.
+You can `lock` groups and rules by interacting through the user interface and methods.
 
 * Use the [LockGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockGroup_System_String_System_Boolean_) method to lock group.
 * Use [LockRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockRule_System_String_System_Boolean_) method to lock rule.
@@ -94,6 +94,6 @@ Locking can be done through the user interface or programmatically.
 
 ```
 
-![Lock Group/Rule in Blazor Query Builder](./images/lock-group-rule.png)
+![Lock Group/Rule in Blazor QueryBuilder](./images/lock-group-rule.png)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

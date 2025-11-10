@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Calendar Component
 
-This section explains how to bind a value to the Calendar component in the following ways:
+This section briefly explains how to bind the value to the Calendar component in the below different ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -17,7 +17,7 @@ This section explains how to bind a value to the Calendar component in the follo
 
 ## One-Way Binding
 
-In one-way binding, Bind the value to the Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
+You can bind the value to the Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -39,7 +39,7 @@ In one-way binding, Bind the value to the Calendar component directly for `Value
 
 ## Two-Way data binding
 
-Use `@bind-Value` to keep the Calendar and your data source in sync. The bound field should be `DateTime` or `DateTime?`. When the component value changes, the bound variable updates automatically, and when the variable changes, the component reflects the new value.
+Two-way binding can be achieved by using `bind-Value` attribute and it supports string, int, Enum, DateTime, bool types. If the component value has been changed, it will affect all the places where the variable is bound for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -56,10 +56,9 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 
 ## Dynamic value binding
 
-Change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor Calendar component** only. This method notifies the component that its state has changed and queues a re-render.
+You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor Calendar component** only. This method notifies the component that its state has changed and queues a re-render.
 
-
-There is no need to call this method for native events since it is called after any lifecycle method has been called. It can also be invoked manually to trigger a re-render. Refer to the following example.
+There is no need to call this method for native events since it’s called after any lifecycle method has been called. It can also be invoked manually to trigger a re-render. Refer the below mentioned code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

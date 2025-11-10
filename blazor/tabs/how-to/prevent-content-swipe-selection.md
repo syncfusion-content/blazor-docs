@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent Content Swipe Selection in Blazor Tabs Component | Syncfusion
+title: Prevent content swipe selection in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about how to prevent content swipe selection in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
@@ -8,14 +8,13 @@ documentation: ug
 ---
 
 
-# Prevent Content Swipe Selection in Blazor Tabs Component
+# Prevent content swipe selection in Blazor Tabs Component
 
-The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode) property in the Tabs component enables navigation between tabs using swipe gestures, enhancing the overall user experience for both touch and mouse inputs.
+The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode)  property in the Tab component allows users to navigate between tabs using swipe gestures, improving the overall navigation experience. It supports both touch and mouse inputs, enabling intuitive tab switching.
 
-However, in scenarios where a tab contains critical elements, such as a data entry form, accidental swipes can disrupt the user's workflow. An unexpected tab change might lead to unsaved data or interruptions.
+However, in certain cases, such as when a tab contains critical elements like a form, accidental swipes can disrupt the user's workflow. For example, if a user is filling out a form and mistakenly swipes, the tab might change unexpectedly, potentially leading to unsaved data or interruptions.
 
-To address this, customize the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode) property based on the application's requirements. This allows balancing intuitive navigation with protecting the user experience and preventing unintended tab switches.
-
+To address this, you can customize the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode) property based on the needs of the application. By adjusting this setting, you can balance smooth, intuitive navigation with protecting the user experience and safeguarding against accidental tab switches.
 
 The following are the available [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode) options for the Tab component:
 
@@ -63,4 +62,4 @@ The following are the available [`SwipeMode`](https://help.syncfusion.com/cr/bla
 </SfTab>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByCNtaJnuYijPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLzsrsrTlqFIhjX?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}

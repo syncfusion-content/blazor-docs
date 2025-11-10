@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Checkbox Functionality in Blazor Dropdown Tree Component | Syncfusion
+title: Checkbox in Blazor Dropdown Tree Component | Syncfusion
 description: Checkout and learn here all about Checkbox in Syncfusion Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Checkbox Functionality in Blazor Dropdown Tree Component
+# Checkbox in Blazor Dropdown Tree Component
 
-The Dropdown Tree component allows users to select multiple items from the tree structure using checkboxes. This functionality is enabled via the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowCheckBox) property. When `ShowCheckBox` is set to `true`, a checkbox appears before each item's text within the popup.
+The Dropdown Tree component allows you to check more than one item from the tree without affecting the UI’s appearance by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowCheckBox) property. When this property is enabled, checkbox appears before each item text in the popup.
 
 ## Auto Check 
 
-By default, the checkbox state of parent and child items in the Dropdown Tree `TreeView` is independent. To establish a dependent relationship, enable the [`AutoUpdateCheckState`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AutoUpdateCheckState) property.
+By default, the checkbox state of the parent and child items in the Dropdown Tree will not be dependent over each other. If you need dependent checked state, then enable the [AutoUpdateCheckState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AutoUpdateCheckState) property.
 
-When `AutoUpdateCheckState` is enabled:
+* If one or more child items are not in the checked state, then the parent item will be in the intermediate state.
 
-*   If one or more child items are unchecked, the parent item will display an intermediate (partially checked) state.
-*   If all child items are checked, the parent item will also transition to the checked state.
-*   Checking a parent item will automatically check all its child items.
+* If all the child items are checked, then the parent item will also be in the checked state.
+
+* If a parent item is checked, then all the child items will also be changed to the checked state.
 
 In the following example, the [AutoUpdateCheckState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AutoUpdateCheckState) property is enabled.
 
@@ -56,18 +56,16 @@ In the following example, the [AutoUpdateCheckState](https://help.syncfusion.com
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLIXahnAAXFBirf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/auto-check.png)" %}
 
 ## Select/Unselect All
 
-The Dropdown Tree component offers built-in support to select or unselect all tree items using a single checkbox in the header.
+The Dropdown Tree component has built-in support to select all the tree items using the checkbox in the header.
 
-Setting the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property to `true` displays a "Select All" checkbox in the popup header. This checkbox allows users to toggle the checked state of all visible tree items.
+When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property is set to true, a checkbox will be displayed in the popup header that allows you to select or unselect all the tree items in the popup.
 
-Additionally, programmatic control over the "Select All" functionality is available:
+Also we can select all the tree items programmatically using the [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method.
 
-*   Use the [`SelectAllAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method without parameters (or with `true`) to programmatically check all tree items.
-*   Use the `SelectAllAsync(false)` method to programmatically uncheck all tree items.
+We can unselect all the tree items programmatically using the [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method by passing the parameter as false.
 
 In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property is enabled and [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method is used.
 
@@ -123,5 +121,5 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVojOhdgKqrVnUA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![MultiSelection in Blazor Dropdown Tree.](./images/blazor-dropdowntree-component-selectall.PNG)

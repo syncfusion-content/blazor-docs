@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the limits in Blazor Range Slider Component
 
-The slider’s limits bar can be customized with CSS. By overriding the slider CSS classes, the limits region can be styled to match application design requirements. In this example, the limits bar is given a custom background color. By default, the limits bar uses the `e-limits` class. Override that class with your preferred color values as shown below.
+Slider appearance can be customized via CSS. By overriding the slider CSS classes, the slider limit bar can be customized. Here, the limit bar is customized with different background color. By default, the slider has class `e-limits` for limits bar. You can override the class with our own color values as given in the following code snippet.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-limits {
@@ -17,7 +17,7 @@ The slider’s limits bar can be customized with CSS. By overriding the slider C
 }
 ```
 
-Apply the above CSS to the following sliders to visualize the customized limits bar.
+And on implementing the above code snippet in the below slider control's Blazor code, the overview would be like the one found below.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs;
@@ -89,4 +89,4 @@ Apply the above CSS to the following sliders to visualize the customized limits 
 </style>
 ```
 
-![Customizing the limits bar in the Blazor Range Slider](./../images/blazor-rangeslider-custom-limits.gif)
+![Customizing Limits in Blazor RangeSlider](./../images/blazor-rangeslider-custom-limits.gif)

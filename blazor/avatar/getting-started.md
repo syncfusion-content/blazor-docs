@@ -11,9 +11,9 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component
 
-This section provides a brief explanation on how to include the Syncfusion [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
-To get started quickly with the Avatar component using Blazor, you can check out this video tutorial:
+To get start quickly with Avatar component using Blazor, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=IYZEZUQd6JE"%}
@@ -32,8 +32,7 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes NuGet in the App
 
-To add **Blazor Avatar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). 
-Alternatively, you can utilize the following package manager command in the Package Manager Console:
+To add **Blazor Avatar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -43,7 +42,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details. Remember to replace `{{ site.releaseversion }}` with your specific Syncfusion Blazor version (e.g., `24.1.41`).
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -57,7 +56,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, a WebAssembly application can be created by executing the following command in the terminal: (<kbd>Ctrl</kbd>+<kbd>`</kbd>)
+Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
@@ -87,7 +86,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details. Remember to replace `{{ site.releaseversion }}` with your specific Syncfusion Blazor version (e.g., `24.1.41`).
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -107,8 +106,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Avatar component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component to your **~/Pages/Index.razor** file. Its appearance can be customized using properties such as `Size`, and content can be provided through `ChildContent` or `ContentTemplate`.
-
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -137,6 +135,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This action will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar components in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}

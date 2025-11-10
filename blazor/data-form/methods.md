@@ -7,13 +7,14 @@ control: DataForm
 documentation: ug
 ---
 
-# Built-in methods in DataForm component
+# Inbuilt methods in DataForm component
 
-The following methods can be invoked on the DataForm instance to manage validation and rendering behavior.
+The classification of methods that can be invoked by using the DataForm instance are outlined below 
 
 ## Validate method
 
-The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_IsValid) method evaluates the form data against the configured validation rules and returns the validation result. When validation fails, associated error messages are displayed next to the corresponding fields.
+ The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_IsValid) method evaluates the form data against defined validation rules to determine its validity.
+
 
 {% tabs %}
 {% highlight razor tabtitle="IsValid" %}
@@ -25,7 +26,7 @@ The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.S
 
 ## Refresh method
 
-[Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Refresh) method updates the form to reflect any changes in the data model or configuration.It also resets the validation state, clearing any existing validation error messages. 
+ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Refresh) method updates the form to reflect any changes in the data model or configuration.It also resets the validation state, clearing any existing validation error messages. 
 
 {% tabs %}
 {% highlight razor tabtitle="Refresh" %}

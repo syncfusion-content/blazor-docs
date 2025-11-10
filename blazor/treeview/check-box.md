@@ -9,17 +9,16 @@ documentation: ug
 
 # CheckBox in Blazor TreeView Component
 
-The Blazor TreeView component enables multiple node selection through checkboxes by activating the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, a checkbox appears before the text of each TreeView node.
+The Blazor TreeView component allows to check more than one node in TreeView by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
 
 ## AutoCheck in Blazor TreeView Component
 
-By default, the checked states of parent and child nodes are dependent. This means:
-*   If not all child nodes are checked, the parent node will display as partially checked (in an intermediate state).
-*   If all child nodes are checked, the parent node will display as fully checked.
-*   When a parent node is checked, its child nodes will also become checked.
+By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
 
-For independent checked states, allowing child nodes to be checked or unchecked without affecting their parents (and vice-versa), use the [`AutoCheck`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property. Set `AutoCheck` to `false` to achieve independent states.
+* If not all child nodes are checked, the parent node will display as partially checked (intermediate state).
+* If all child nodes are checked, the parent node will display as fully checked.
+* When a parent node is checked, its child nodes will also display as checked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -100,14 +99,12 @@ For independent checked states, allowing child nodes to be checked or unchecked 
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSitCBUvmzMcKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
 
-## Check Nodes through Data Binding
+## Check nodes through data binding
 
-A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_IsChecked) field to `true` for the corresponding node in the data source. This field specifies the checked state of the TreeView node.
+You can check a specific node by setting the [**IsChecked**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IsChecked) field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -188,11 +185,10 @@ A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZreMtWrAblXlpWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Check nodes using CheckedNodes property
+## Check nodes through API
 
-The Blazor TreeView component enables checking specific nodes upon initial rendering or dynamically via the two-way bound [`CheckedNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. This property accepts an array of node IDs (as strings) to control checkbox selection.
+The Blazor TreeView component enables the ability to check specific nodes upon initial rendering or dynamically through the two-way binding provided by the [CheckedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. This property allows for the checkbox selection of nodes by passing in an array collection of node IDs as strings.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -277,13 +273,10 @@ The Blazor TreeView component enables checking specific nodes upon initial rende
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMZsVqvvPrMXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor TreeView](./images/checkednodes.png)
+## Check and Uncheck all nodes
 
-## Check and Uncheck All Nodes
-
-The Blazor TreeView component offers the ability to check all unchecked nodes within the component by utilizing the [CheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckAllAsync_System_String___) method. Additionally, specific nodes are selected by passing an array of their IDs to this method. The [`UncheckAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method performs the opposite action, unchecking all previously checked nodes, or specific nodes if an array of checked node IDs is passed.
+The Blazor TreeView component offers the ability to check all unchecked nodes within the component by utilizing the [CheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckAllAsync_System_String___) method. Additionally, specific nodes can be selected by passing in an array of unchecked nodes. The [UncheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method also exists to uncheck all previously checked nodes within the component, and specific nodes can be deselected by passing in an array of checked nodes. 
 
 The example demonstrates the usage of these methods within the context of a button click event.
 
@@ -384,13 +377,9 @@ The example demonstrates the usage of these methods within the context of a butt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrICXiVgusUIOKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+## Get checked nodes
 
-![Blazor TreeView](./images/check-uncheck.png)
-
-## Get Checked Nodes
-
-The Blazor TreeView component provides the capability to pre-select specific nodes during initialization through the [`CheckedNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. Additionally, the component offers the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, which allows for retrieval of the updated data source. By passing the IDs of specific TreeView nodes (obtained from `CheckedNodes`) as arguments to this method, the updated data source of only those nodes will be returned. If no arguments are passed, the entire updated data source of the TreeView will be returned.
+The Blazor TreeView component provides the capability to pre-select specific nodes during initialization through the use of the [CheckedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. Additionally, the component offers the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, which allows for retrieval of the updated data source and subsequent refreshing of the TreeView. By passing the CheckedNodes of specific TreeView nodes as arguments to this method, the updated data source of only those nodes will be returned. If no arguments are passed, the entire updated data source of the TreeView will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -541,13 +530,11 @@ The Blazor TreeView component provides the capability to pre-select specific nod
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyCtMrKkBdTNdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Get checked nodes](./images/blazor-treeview-get-checked-nodes.png)
 
-## Single Selection with CheckBox
+## Single selection with CheckBox
 
-The Blazor TreeView component facilitates single selection of nodes with checkboxes by utilizing the [`UncheckAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method within the [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This approach programmatically unchecks all previously selected nodes when a new node is checked.
+The Blazor TreeView component allows for single selection of nodes with checkboxes by utilizing the [UncheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method during the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event to uncheck previously checked nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -641,11 +628,10 @@ The Blazor TreeView component facilitates single selection of nodes with checkbo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIiNCBAEUoTLhN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Hide CheckBox for Parent Nodes
+## Hide CheckBox for parent nodes
 
-The Blazor TreeView component can render checkboxes before each node when [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) is enabled. To display checkboxes only for child nodes, the checkboxes for parent nodes can be removed by applying custom CSS.
+The Blazor TreeView component allows for the rendering of checkboxes before each node by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. However, if the application requires checkboxes to only be rendered for child nodes, the checkbox for the parent node can be removed by customizing the CSS.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -748,11 +734,10 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosZWBgaTqlQtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.png)
 
-## Cancel the Check Action
+## Cancel the check action
 
 The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the TreeView component.
 

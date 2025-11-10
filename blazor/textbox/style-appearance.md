@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Blazor TextBox Component
 
-The following guidance outlines CSS selectors and examples that can be used to modify the control’s appearance according to user preferences and design requirements.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
 ## Customizing the appearance of TextBox container element
 
-Use the following CSS to customize the appearance of the TextBox container element, including input height and font size. These selectors target the input/textarea elements within the floating label and input group wrappers, which may be required to override theme defaults.
+Use the following CSS to customize the appearance of TextBox container element.
 
 ```css
 /* To specify height and font size */
@@ -25,7 +25,7 @@ Use the following CSS to customize the appearance of the TextBox container eleme
 
 ## Customizing the TextBox placeholder
 
-Use the following CSS to customize the TextBox placeholder.
+Use the following CSS to customize the TextBox placeholder
 
 ```css
 /* To specify font size and color */
@@ -37,7 +37,7 @@ Use the following CSS to customize the TextBox placeholder.
 
 ## Align text in TextBox
 
-Text alignment can be changed by applying the text-align CSS property to the input. Use a selector such as .e-textbox for global alignment, or apply a custom class for a specific instance.
+You can change alignment of text in textbox by setting `text-align` attribute using `.e-textbox`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -54,7 +54,7 @@ text-align: right;
 
 ![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.png)
 
-To align text in a specific TextBox only, set text-align via a custom class using the CssClass property.
+You can change alignment of text in particular textbox by setting `text-align` attribute directly using `CssClass` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -68,7 +68,7 @@ text-align: right;
 </style>
 ```
 
-![Blazor TextBox text alignment](./images/blazor-textbox-align-individual.png)
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-individual.png)
 
 ## See also
 

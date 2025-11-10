@@ -9,9 +9,9 @@ documentation: ug
 
 # Cell Customizations in Blazor Scheduler Component
 
-The cells within the Scheduler component can be extensively customized using the cell template.
+The cells of the Scheduler can be easily customized using the cell template.
 
-## Setting Cell Dimensions in Vertical Views
+## Setting cell dimensions in Vertical Views
 
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property, which overrides the default CSS applied on cells of vertical views.
 
@@ -64,11 +64,10 @@ The height and width of the Scheduler cells can be customized either to increase
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNXdqxtemNNH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.png)
 
-## Setting Cell Dimensions in Timeline Views
+## Setting cell dimensions in Timeline Views
 
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property, which overrides the default CSS applied on cells of timeline views.
 
@@ -109,13 +108,12 @@ The height and width of the Scheduler cells can be customized either to increase
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBIiZNnKxstgmZQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.png)
 
-## Customizing Cells Using CellTemplate
+## Customizing cells using CellTemplate
 
-The [`CellTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellTemplate) allows for powerful customization of the background of individual cells. This can include displaying specific images, custom text, or conditional styling based on the date value of the cell.
+The [`CellTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellTemplate) is used to customize the cell background with specific images or appropriate text on the given date values.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -200,13 +198,12 @@ The [`CellTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sch
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDreiXNdUHsJvbhb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.png)
 
-## Customizing Cell Header in Month View
+## Customizing cell header in month view
 
-The month header of each date cell in the month view can be customized using the [CellHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellHeaderTemplate).
+The month header of each date cell in the month view can be customized using the [CellHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellHeaderTemplate)
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -242,13 +239,12 @@ The month header of each date cell in the month view can be customized using the
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLoWNZdUnCPmdts?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.png)
 
-## Customizing Cells Using OnRenderCell Event
+## Customizing cells using OnRenderCell event
 
-Cells can also be customized programmatically by using the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event. In this event, the provided [`RenderCellEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#properties) expose properties such as [`ElementType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_ElementType) (e.g., `WorkCells`, `AllDayCells`), `Date`, and `CssClasses` to enable conditional styling.
+The cells can also be customized by using [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event. In the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell), the argument [`RenderCellEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#properties) returns the [`ElementType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_ElementType) as `WorkCells` and `AllDayCells` when the cell is rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -300,13 +296,10 @@ Cells can also be customized programmatically by using the [`OnRenderCell`](http
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVyMDtRqxStKKHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the Minimum and Maximum Date Values
+## Customizing the minimum and maximum date values
 
-To define the minimum and maximum date range selectable and navigable within the Scheduler, the [`MinDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MinDate) and [`MaxDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MaxDate) properties are used. Dates outside this specified range will appear in a disabled state, and date navigation will be blocked beyond these limits.
-
-N> By default, the `MinDate` property is set to `new DateTime(1900, 1, 1)` and `MaxDate` to `new DateTime(2099, 12, 31)`. These default values can be customized as needed.
+Providing the [`MinDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MinDate) and [`MaxDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MaxDate) property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -332,13 +325,10 @@ N> By default, the `MinDate` property is set to `new DateTime(1900, 1, 1)` and `
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSCjXRURSECfLj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing the Min and Max Date in Blazor Scheduler](images/min-maxdate.png)
+## Customizing the weekend cells background color
 
-## Customizing Weekend Cell Background Color
-
-The background color of weekend cells can be customized using the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event. This event allows adding [`CssClasses`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_CssClasses) to cells based on their `Date` and [`ElementType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_ElementType).
+You can customize the background color of weekend cells by utilizing the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event by adding the [`CssClasses`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_CssClasses) and checking the [`ElementType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RenderCellEventArgs.html#Syncfusion_Blazor_Schedule_RenderCellEventArgs_ElementType) option within the event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -396,9 +386,6 @@ The background color of weekend cells can be customized using the [`OnRenderCell
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoCDXdURmnmCBA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scheduler](images/weekend-color.png)
 
 And, the background color for weekend cells in the Month view through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property, which overrides the default CSS applied on cells.
 
@@ -410,6 +397,8 @@ And, the background color for weekend cells in the Month view through the [`CssC
 
 ```
 
-## How to Disable Multiple Cell and Row Selection in Schedule
+## How to disable multiple cell and row selection in Schedule
 
-By default, the [`AllowMultiCellSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [`AllowMultiRowSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Scheduler are set to `true`, allowing users to select multiple cells and rows. To disable this behavior, set both properties to `false`.
+By default, the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Schedule are set to true that allows user to select multiple cells and rows. If you want disable the multiple cell/row selection, you can disable the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties.
+
+N> By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.

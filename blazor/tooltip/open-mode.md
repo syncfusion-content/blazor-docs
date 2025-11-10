@@ -9,22 +9,23 @@ documentation: ug
 
 # Open Mode in Blazor Tooltip Component
 
-Control when the Tooltip opens by configuring the [`OpensOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpensOn) property. Tooltips can open on hover, focus, or click of the target element.
+The mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements can be decided.
 
 N> On mobile devices, Tooltips appear when you tap and hold the element, even if the [`OpensOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpensOn) option is assigned with `Hover`.
- Tooltips remain visible while the element is pressed and held, then disappear about 1.5 seconds after release. If another action occurs before that time, the tooltip closes immediately.
+<br/> Tooltips are also displayed as long as the element is continued to tap and hold. On lift, it disappears in the next 1.5 seconds.
+<br/> If there is another action before that time ends, then the Tooltip disappears.
 
 The [`OpensOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpensOn) property can take either a single or a combination of multiple values, separated by space from the following options. The table below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `OpensOn` property. By default, it takes `Auto` value.
 
 | Values | Desktop | Mobile |
 | ------------- | ------------- | ------------- |
-| `Auto` | Tooltip appears when you hover over the target or when the target element receives focus. | Tooltip opens on tap and hold of the target element. |
+| `Auto` | Tooltip appears when you hover over the target or when the target element receives the focus. | Tooltip opens on tap and hold of the target element. |
 | `Hover` | Tooltip appears when you hover over the target. | Tooltip opens on tap and hold of the target element. |
 | `Click` | Tooltip appears when you click a target element. | Tooltip appears when you single tap the target element. |
-| `Focus` | Tooltip appears when you focus on a target element (for example, via the Tab key). | Tooltip appears with a single tap on the target element. |
-| `Custom` | Tooltip is not triggered by any default action. Bind your own events and invoke the tooltip’s open/close methods programmatically. | Same as Desktop. |
+| `Focus` | Tooltip appears when you focus (say through tab key) on a target element. | Tooltip appears with a single tap on the target element. |
+| `Custom` | Tooltip is not triggered by any default action. So, you have to bind your own events and use either `open` or `close` public methods. | Same as Desktop. |
 
-To open the tooltip for multiple actions, such as both hover and click on the target element, assign `OpensOn` with multiple values separated by a space, for example: `Hover Click`.
+To open the Tooltip for multiple actions, say while hovering over or clicking on a target element, the `OpensOn` property can be assigned with multiple values, separated by space as `Hover Click`.
 
 N> `Auto` value cannot be used with any combination for multiple values.
 
@@ -93,7 +94,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 
 ## Sticky mode
 
-When `IsSticky` is set to `true`, the tooltip stays visible until the close icon is selected. In this mode, a close icon appears in the top-right corner of the tooltip. Enable or disable this behavior with the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property.
+With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -125,7 +126,7 @@ When `IsSticky` is set to `true`, the tooltip stays visible until the close icon
 
 ## Open or Close Tooltip with delay
 
-Open or close the tooltip after a specified delay using the [`OpenDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpenDelay) and [`CloseDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CloseDelay) properties. Use delays judiciously to avoid hindering user interactions.
+The Tooltips can be opened or closed after some delay by using the [`OpenDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpenDelay) and [`CloseDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CloseDelay) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups

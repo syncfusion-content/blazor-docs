@@ -9,7 +9,7 @@ documentation: ug
 
 # Column layout in DataForm component
 
-This section explains how to arrange DataForm editors in a column-based layout. The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property allows us to specify the number of columns into which the DataForm should be divided. 
+This segment provides guidance on dividing the form field editors inside the DataForm component into a column-based layout. The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property allows us to specify the number of columns into which the DataForm should be divided. 
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -19,7 +19,7 @@ This section explains how to arrange DataForm editors in a column-based layout. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm column layout](images/blazor_dataform_change_form_width.png)
+![Blazor DataForm Column Layout](images/blazor_dataform_change_form_width.png)
 
 ## Configure the column span 
 
@@ -33,9 +33,9 @@ Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazo
 {% endhighlight %}
 {% endtabs %}
 
-In the following example, the DataForm is divided into six equal columns. Each editor consumes space based on its configured column span, resulting in rows where items align cleanly and wrap to the next row when the remaining columns are insufficient.
+In the provided example, the layout of the DataForm is segmented into six equal columns, with the editor fields distributed accordingly, depending on the column span allocated to each one.
 
-![Blazor DataForm demonstrating ColumnSpan across a six-column grid](images/blazor_dataform_column_span.png)
+![Blazor DataForm Column Layout](images/blazor_dataform_column_span.png)
 
 
 ## See Also

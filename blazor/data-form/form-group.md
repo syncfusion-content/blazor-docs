@@ -9,11 +9,11 @@ documentation: ug
 
 # Form group in DataForm component
 
-In the DataForm, the [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature organizes `FormItem` and `FormAutoGenerateItems` under a descriptive group label with an optional identifier, and supports a column-based layout within each group.
+In DataForm , [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature provides a way to organize the `FormItem` and `FormAutoGenerateItems` with descriptive label text and a layout organized into columns.
 
 ## Configure the group name and ID 
 
-The following example shows how to configure a `FormGroup` within the DataForm using the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_LabelText) and [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ID) properties. The group name labels the group section, and the ID uniquely identifies the group in the form.
+The below example showcases how to configure `FormGroup` within  DataForm component with [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_LabelText) and [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ID) properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Form group" %}
@@ -23,11 +23,11 @@ The following example shows how to configure a `FormGroup` within the DataForm u
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing a single form group with label and items](images/blazor_dataform_single_formgroup.png)
+![Blazor DataForm Form Group](images/blazor_dataform_single_formgroup.png)
 
 ## Column layout for the group
 
-The DataForm can arrange multiple form groups across columns using the form-level [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property. Set this value to split the overall layout into the specified number of columns and place groups accordingly.
+The DataForm component provides the functionality to organize various form groups within a layout based on columns. You can define the number of columns to split the DataForm into by setting the [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor" %}
@@ -46,7 +46,7 @@ The DataForm can arrange multiple form groups across columns using the form-leve
 
 ## Configure the column spacing 
 
-This section explains how to divide the collection of [FormGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) and organize subdivisions within a `FormGroup` using [ColumnsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ColumnCount) and [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ColumnSpacing). Use a suitable column count within each group and adjust spacing to achieve a clear, balanced layout.
+This section explains how to configure the DataForm component on dividing the collection of [FormGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) and organizing the subdivisions within the `FormGroup` with thw help of [ColumnsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ColumnCount) and [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_ColumnSpacing).
 
 {% tabs %}
 {% highlight razor tabtitle="Razor" %}
@@ -61,13 +61,13 @@ This section explains how to divide the collection of [FormGroups](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-In the example, the DataForm contains two groups. The first group uses six internal columns and distributes its fields by their column spans. The second group uses two internal columns and arranges its fields accordingly.
+In the provided example, the DataForm is divided into two sections, with each section populating its respective `FormGroup`. The first group is further segmented into six subsections, with the elements within it distributed according to their assigned column span. In a similar manner, the second group is split into two columns, with its elements being divided accordingly.
 
-![Blazor DataForm form group column layout with per-group column counts and spacing](images/blazor_dataform_formgroup_column_layout.png)
+![Blazor DataForm Form Group Column Layout](images/blazor_dataform_formgroup_column_layout.png)
 
 ## Change the appearance of the form group
 
-Customize the appearance of a form group using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_CssClass) property of the `FormGroup`. The following example demonstrates changing the background color and adding padding to the form group wrapper.
+You can customize the appearance of the form group by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html#Syncfusion_Blazor_DataForm_FormGroup_CssClass) property `FormGroup` component. The following example demonstrates how to change the background color and set padding of the form group wrapper .
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -83,4 +83,5 @@ Customize the appearance of a form group using the [CssClass](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form group customized with background color and padding](images/blazor_dataform_formgroup_customization.png)
+![Blazor DataForm Form Group Customization](images/blazor_dataform_formgroup_customization.png)
+

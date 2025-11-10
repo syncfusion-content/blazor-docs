@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Set State Persistence in Blazor Tabs Component | Syncfusion
+title: Set state persistence in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about how to set state persistence in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Set State Persistence in Blazor Tabs Component
+# Set state persistence in Blazor Tabs Component
 
-State persistence allows the Tabs component to retain the value of its [`SelectedItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property in the browser's local storage. This functionality is controlled by the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property, which is `false` by default. When set to `true`, the [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value of the Tabs component will be retained even after refreshing the page or restarting the browser.
+State persistence allows the Tab to retain the current [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default. When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value of the Tab component will be retained even after refreshing the page.
 
-N> The `ID` property of the `SfTab` component is essential for state persistence.
+N> Tab **ID** is essential to set state persistence.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

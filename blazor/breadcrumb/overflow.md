@@ -9,9 +9,9 @@ documentation: ug
 
 # Overflow Mode in Blazor Breadcrumb Component
 
-The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component provides extensive control over how its items are displayed when the available space is limited. This is achieved through the [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) property and various [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) options. These properties enable you to efficiently manage the number of visible Breadcrumb items and how hidden items are presented.
+In the [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component, [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) and [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) properties were used to limit the number of Breadcrumb items to be displayed.
 
-In the following examples, [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) is set to `3`, and the [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) as [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbOverflowMode.html#Syncfusion_Blazor_Navigations_BreadcrumbOverflowMode_Default). To prevent Breadcrumb item navigation, the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property is set as `false`.
+In the following example, the [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) is set as 3 with [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) as [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbOverflowMode.html#Syncfusion_Blazor_Navigations_BreadcrumbOverflowMode_Default). To prevent Breadcrumb item navigation, the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property is set as `false`.
 
 The following overflow modes are available in the Breadcrumb component.
 
@@ -24,7 +24,7 @@ The following overflow modes are available in the Breadcrumb component.
 
 ## Collapsed
 
-The `Collapsed` mode displays the first and last Breadcrumb items, while consolidating the intermediate items behind a collapsed icon (represented by `...`). When this icon is clicked, all hidden items become visible and navigable. This mode is ideal for saving horizontal space when many items are present, prioritizing only the start and end of the path.
+Collapsed mode shows the first and last Breadcrumb items and hides the remaining items with a collapsed icon. When the collapsed icon is clicked, all items become visible and navigable.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -46,11 +46,11 @@ The `Collapsed` mode displays the first and last Breadcrumb items, while consoli
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgiLsTTKpNEpBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Collapsed Mode](./images/breadcrumb-collapsed.png)
+![Blazor Breadcrumb Component](./images/breadcrumb-collapsed.png)
 
 ## Menu
 
-The `Menu` mode displays the maximum number of Breadcrumb items that can fit within the container's width. Any remaining items are placed into a submenu, accessible via an overflow indicator (e.g., a "more" button or ellipsis). This mode is suitable when intermediate items are less critical but should still be easily accessible through a secondary interaction.
+Menu mode shows the number of Breadcrumb items that can be accommodated within the container space and creates a submenu with the remaining items.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -72,11 +72,11 @@ The `Menu` mode displays the maximum number of Breadcrumb items that can fit wit
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqMhszzUTTXZrh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Menu Mode](./images/breadcrumb-menu.png)
+![Blazor Breadcrumb Component](./images/breadcrumb-menu.png)
 
 ## Wrap
 
-The `Wrap` mode allows Breadcrumb items to flow onto multiple lines if the component's total width exceeds the available container space. This mode ensures all items remain visible without truncation or hiding, making it suitable for designs that can accommodate variable height.
+Wrap mode wraps the items to multiple lines when the Breadcrumb’s width exceeds the container space.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -98,11 +98,11 @@ The `Wrap` mode allows Breadcrumb items to flow onto multiple lines if the compo
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAsLCzJKeBQENj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Wrap Mode](./images/breadcrumb-wrap.png)
+![Blazor Breadcrumb Component](./images/breadcrumb-wrap.png)
 
 ## Scroll
 
-The `Scroll` mode introduces an HTML scrollbar when the Breadcrumb's content overflows its container. This allows users to horizontally scroll through all items. This mode is best used when maintaining a single line of breadcrumbs is critical, even if it requires horizontal scrolling.
+Scroll mode shows an HTML scroll bar when the Breadcrumb’s width exceeds the container space.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -126,11 +126,11 @@ The `Scroll` mode introduces an HTML scrollbar when the Breadcrumb's content ove
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqihCTJgoRdALp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Scroll Mode](./images/breadcrumb-scroll.png)
+![Blazor Breadcrumb Component](./images/breadcrumb-scroll.png)
 
 ## Hidden
 
-The `Hidden` mode displays the maximum possible number of items within the container's space and simply hides any excess items without providing an explicit overflow indicator. Clicking on a visible previous item will reveal sequentially hidden items. This mode is suitable for minimalistic designs where screen space savings are prioritized and users are expected to navigate backwards to find hidden items.
+Hidden mode shows the maximum number of items possible in the container space and hides the remaining items. Clicking on a previous item will make the hidden item visible.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -152,8 +152,8 @@ The `Hidden` mode displays the maximum possible number of items within the conta
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqChCzJqeEiZQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Hidden Mode](./images/overflow-hidden.png)
+![Blazor Breadcrumb Component](./images/bread-overflow-hidden.png)
 
 ## None
 
-The `None` mode ensures that all Breadcrumb items are rendered on a single line.
+None mode shows all the items on a single line.

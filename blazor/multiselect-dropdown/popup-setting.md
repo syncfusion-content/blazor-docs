@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize
 
-Dynamically adjust the size of the popup in the MultiSelect component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowResize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+You can dynamically adjust the size of the popup in the MultiSelect component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowResize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
 
 {% highlight Razor %}
 
@@ -31,11 +31,11 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
+![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
 
 ## Change the PopupWidth
 
-To customize only the popup width, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the MultiSelect component.
+To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the MultiSelect component.
 
 {% highlight Razor %}
 
@@ -43,15 +43,17 @@ To customize only the popup width, use the [PopupWidth](https://help.syncfusion.
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
+![Blazor MultiSelect DropDown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
 
 ## Change the popup z-index
 
-Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the popup element to control its stacking order. The default value is 1000.
+Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
+
+Defaults to `1000`.
 
 ## Show popup on initial loading
 
-Show the popup on initial load by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Created) event.
+You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Created) Event.
 
 {% highlight Razor %}
 
@@ -61,7 +63,7 @@ Show the popup on initial load by calling [ShowPopupAsync()](https://help.syncfu
 
 ## Preventing opening and closing
 
-Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) or [PopupEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) to true within the corresponding [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnClose) events.
+Prevent the popup open and close in the event argument like [BeforeOpenEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) and [PopupEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) as `true`. It is achieved by the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnClose) events. 
 
 {% highlight Razor %}
 
@@ -69,13 +71,13 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor MultiSelect with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.png)
+![Blazor MultiSelect with Preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.png)
 
-The following events are raised when opening and closing the popup.
+The following events are used to trigger when opening and closing popup.
 
 ### OnOpen event
 
-The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnOpen) event triggers before the popup opens. If canceled, the popup remains closed.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 {% highlight Razor %}
 
@@ -85,7 +87,7 @@ The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 
 ### Opened event
 
-The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Opened) event triggers after the popup has opened.
+The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Opened) event triggers when the popup opens.
 
 {% highlight Razor %}
 
@@ -95,7 +97,7 @@ The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 
 ### OnClose event
 
-The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnClose) event triggers before the popup closes. If canceled, the popup remains open.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 {% highlight Razor %}
 
@@ -105,7 +107,7 @@ The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 
 ### Closed event
 
-The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Closed) event triggers after the popup has closed.
+The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Closed) event triggers after the popup has been closed.
 
 {% highlight Razor %}
 
@@ -115,7 +117,7 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 
 ## Popup height based on available space
 
-Adjust the popup height based on the available viewport space by handling the window resize event and updating the popup’s height accordingly.
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
 
 {% highlight Razor %}
 
@@ -143,11 +145,11 @@ Adjust the popup height based on the available viewport space by handling the wi
 {% endhighlight %}
 {% endtabs %}
 
-![Popup height based on available space in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_popup_resize.gif)
+![Popup height based on available space in Blazor Multiselect](./images/popup-setting/blazor_multiselect_popup_resize.gif)
 
 ## Programmatically opening and closing popup
 
-Open and close the popup programmatically by calling `ShowPopupAsync()` and `HidePopupAsync()` on the component instance. For example, bind button click events to these methods to toggle the popup.
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the multiselect. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 {% highlight Razor %}
 
@@ -155,4 +157,4 @@ Open and close the popup programmatically by calling `ShowPopupAsync()` and `Hid
 
 {% endhighlight %} 
 
-![Show or hide popup in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)
+![Show or Hide Popup in Blazor Multiselect](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)

@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Resizing in Blazor Scheduler Component | Syncfusion
-description: Learn how to resize events easily in the Syncfusion Blazor Scheduler component with step-by-step instructions and practical examples.
+description: Checkout and learn here all about resizing events in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Resizing Appointments
+# Resizing
 
-Appointments can be rescheduled by changing their duration through resizing via interactive handlers.To enable resizing functionality, ensure the [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property is set to `true` on the `SfSchedule` component.
+Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality make sure that [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property is set to **true**.
 
-To get started quickly with the resize options available in the Scheduler, refer to this video:
+To get start quickly about resize options available in our Scheduler, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
-## Disable the Resize Action
+## Disable the resize action
 
-By default, resizing of appointments is allowed in all applicable Scheduler views. To disable this event resizing action, set the [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property to `false`.
+By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -55,11 +55,10 @@ By default, resizing of appointments is allowed in all applicable Scheduler view
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLyCNNxqBwmnoJp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Disable Scrolling on Resize Action
+## Disable scrolling on resize action
 
-By default, when resizing an appointment, if its handler reaches the extreme edges of the Scheduler, an automatic scrolling action occurs. To prevent this scrolling behavior, set the `args.Scroll.Enable` property to `false` within the [`OnResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event arguments.
+By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `Scroll` value within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -101,11 +100,10 @@ By default, when resizing an appointment, if its handler reaches the extreme edg
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhoiNZxqhOVrtTC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Controlling Scroll Speed While Resizing An Event
+## Controlling scroll speed while resizing an event
 
-The speed of the automatic scrolling action that occurs when resizing an appointment near the Scheduler edges can be controlled. This is done within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event by setting the desired value to the [ScrollBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScrollOptions.html#Syncfusion_Blazor_Schedule_ScrollOptions_ScrollBy) option.
+The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event by setting the desired value to the [ScrollBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScrollOptions.html#Syncfusion_Blazor_Schedule_ScrollOptions_ScrollBy) option.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -148,11 +146,9 @@ The speed of the automatic scrolling action that occurs when resizing an appoint
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoWDZnghaGYtRM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+## Setting resize time interval
 
-## Setting Resize Time Interval
-
-By default, when resizing an appointment, its duration extends or shrinks in 30-minute intervals. To change this default resize interval, pass the desired minute value to the `args.Interval` option within the [`OnResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event arguments.
+By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -194,4 +190,3 @@ By default, when resizing an appointment, its duration extends or shrinks in 30-
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVSCNNxAUtFwMDC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
