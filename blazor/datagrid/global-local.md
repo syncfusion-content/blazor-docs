@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports gl
 
 ## Localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like `Arabic`, `Deutsch`, `French`, and others.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
 
 - Apply localization to replace default UI text with culture-specific translations.
 - Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
@@ -165,7 +165,7 @@ Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization
 
 **Step 1: Create a Blazor Web App**
  
-Create a **Blazor Web App** named `LocalizationSample` using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
+Create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
 
 **Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid NuGet Packages**
  
@@ -219,7 +219,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ```
  
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for theme inclusion methods (Static Web Assets, CDN, or CRG). 
-> * Set the render mode to `InteractiveServer` or `InteractiveAuto` in the Blazor Web App configuration.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
 
 **Step 5: Create and Register Localization Service**
 
@@ -398,7 +398,7 @@ In the **Counter.razor** file (or another page, e.g., Index.razor), add code to 
 
 **Step 10: Create a Model Class**
 
-Create a `Data` folder and add an **OrderData.cs** file to define the model class for the DataGrid:
+Create a **Data** folder and add an **OrderData.cs** file to define the model class for the DataGrid:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -451,21 +451,21 @@ namespace LocalizationSample.Client.Data
 
 **Step 11: Run the Application**
  
-Run the application to display the DataGrid with localized content and formats based on the selected culture (e.g., en-US or fr-FR). The culture switcher buttons update the UI, such as `pager text` or `currency` formats (e.g., `$` for en-US, `€` for fr-FR).
+Run the application to display the DataGrid with localized content and formats based on the selected culture (e.g., en-US or fr-FR). The culture switcher buttons update the UI, such as **pager text** or **currency** formats (e.g., `$` for en-US, `€` for fr-FR).
 
 ![Switch to a different localization](images/globalization/switch.png)
 
 ## Right-to-Left (RTL) in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
-- The Right-to-Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like `Arabic`, `Farsi`, and `Urdu`. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
+- The Right-to-Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like **Arabic**, **Farsi**, and **Urdu**. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
 
-- To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property to `true` in the `SfGrid` component.
+- To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property to **true** in the DataGrid component.
 
 - Follow these steps to configure RTL with a specific culture:
 
 **Step 1: Complete Initial Localization Setup**
 
-Complete `steps 1` through `5` from the [Switching Localization](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization) guide to set up the Blazor Web App, install NuGet packages, register services, and include theme resources.
+Complete **steps 1** through **5** from the [Switching Localization](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization) guide to set up the Blazor Web App, install NuGet packages, register services, and include theme resources.
 
 **Step 2: Configure ~/Program.cs**
 
@@ -485,9 +485,9 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 3: Set Culture in Blazor Start Option**
 
-* Add the `autostart="false"` attribute to the Blazor `<script>` tag to prevent Blazor from starting automatically.
+* Add the **autostart="false"** attribute to the Blazor `<script>` tag to prevent Blazor from starting automatically.
 * Add the script block below Blazor’s `<script>` tag and before the closing `</body>` tag to start Blazor with a specific culture.
-* Use the `Blazor.start` method and set `applicationCulture` to the desired culture code.
+* Use the **Blazor.start** method and set **applicationCulture** to the desired culture code.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Components/App.razor" %}
@@ -573,7 +573,7 @@ Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-
 
 **Step 5: Create a Model Class**
 
-Create a `Data` folder and add an **OrderData.cs** file to define the model class for the DataGrid:
+Create a **Data** folder and add an **OrderData.cs** file to define the model class for the DataGrid:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
