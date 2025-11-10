@@ -44,9 +44,7 @@ The numeric axis can be used to represent the numeric values of data in 3D chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhJjRsUMqZPMXVt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Numeric Axis](images/numeric-axis/blazor-column-chart-numeric-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhJjRsUMqZPMXVt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Numeric Axis](images/numeric-axis/blazor-column-chart-numeric-axis.png)" %}
 
 ## Range
 
@@ -84,9 +82,7 @@ The range of an axis will be calculated automatically based on the provided data
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJZHCACUsVDOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Column 3D Chart Axis based on Range](images/numeric-axis/blazor-column-chart-axis-range.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJZHCACUsVDOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Column 3D Chart Axis based on Range](images/numeric-axis/blazor-column-chart-axis-range.png)" %}
 
 ## Range padding
 
@@ -135,9 +131,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of an ax
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLpDnMqCKVVDIJp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart without RangePadding](images/numeric-axis/blazor-column-chart-range-without-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLpDnMqCKVVDIJp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart without RangePadding](images/numeric-axis/blazor-column-chart-range-without-padding.png)" %}
 
 **Numeric - Round**
 
@@ -175,9 +169,7 @@ When the `RangePadding` is set to **Round**, the minimum and maximum will be r
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthTtHiUMKhdGTjA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Round RangePadding](images/numeric-axis/blazor-column-chart-round-range-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthTtHiUMKhdGTjA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Round RangePadding](images/numeric-axis/blazor-column-chart-round-range-padding.png)" %}
 
 **Numeric - Additional**
 
@@ -215,9 +207,7 @@ When the `RangePadding` is set to **Additional**, interval of an axis will be
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpZxMAiUKXQVEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Additional RangePadding](images/numeric-axis/blazor-column-chart-additional-range-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpZxMAiUKXQVEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Additional RangePadding](images/numeric-axis/blazor-column-chart-additional-range-padding.png)" %}
 
 **Numeric - Normal**
 
@@ -255,9 +245,7 @@ When the `RangePadding` is set to **Normal**, padding is applied to the axis 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBTjdsUigqzLKgV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Normal RangePadding](images/numeric-axis/blazor-column-chart-normal-range-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBTjdsUigqzLKgV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Normal RangePadding](images/numeric-axis/blazor-column-chart-normal-range-padding.png)" %}
 
 **Numeric - Auto**
 
@@ -296,9 +284,7 @@ When the `RangePadding` is set to **Auto**, horizontal numeric axis takes **N
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBJNHWUiAgPWmCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Auto RangePadding](images/numeric-axis/blazor-column-chart-auto-rangepadding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBJNHWUiAgPWmCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Auto RangePadding](images/numeric-axis/blazor-column-chart-auto-rangepadding.png)" %}
 
 ## Label format
 
@@ -343,9 +329,7 @@ Numeric labels can be formatted by using the `LabelFormat` property. Also, it s
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVzDRCUsATCTBYJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Label Formatting in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-label-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVzDRCUsATCTBYJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Label Formatting in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-label-format.png)" %}
 
 The table below shows the results of applying various commonly used label formats to numeric data.
 
@@ -446,9 +430,7 @@ To separate groups of thousands for numerical values, use the `UseGroupingSepara
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLfZHiUMgzGZgqO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Grouping Separator in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-grouping-separator.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLfZHiUMgzGZgqO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping Separator in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-grouping-separator.png)" %}
 
 ## Custom label format
 
@@ -490,6 +472,4 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBztRiqiUoUFbWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Custom Label Format](images/numeric-axis/blazor-column-chart-custom-label-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBztRiqiUoUFbWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Label Format](images/numeric-axis/blazor-column-chart-custom-label-format.png)" %}
