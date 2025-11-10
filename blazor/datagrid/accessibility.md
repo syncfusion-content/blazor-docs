@@ -44,7 +44,7 @@ Supported guidelines include:
 
 ## WAI-ARIA attributes
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including `JAWS` and `NVDA`. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
 
 | Attribute | Purpose |
 |-----------|---------|
