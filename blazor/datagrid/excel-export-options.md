@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid component and much more.
+description: Learn about Excel export options in Syncfusion Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1805,7 +1805,7 @@ public class OrderData
 
 ### Merging Two Excel Memory Streams
 
-To merge two Excel memory streams and export the combined file as a single Excel workbook, use the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to copy worksheets between workbooks.
+To merge two Excel memory streams and export the combined file as a single Excel workbook, use the [Syncfusion.Blazor.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to copy worksheets between workbooks.
 
 In this configuration, two memory streams are used:
 
