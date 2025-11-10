@@ -168,6 +168,6 @@ The points that have been grouped together will appear as a single slice with th
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
-* [Data Label](./data-labels)
+* [Data Label](./data-label)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)
