@@ -13,9 +13,7 @@ documentation: ug
 
 The **Print** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid generates a print-ready view of DataGrid content for offline access and documentation. Initiate printing through the  built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the DataGrid’s current state, including visible columns, sorting, and filtering, and opens the browser’s print dialog.
 
-To enable printing from the toolbar, add the `"Print"` item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
-
-**Example: Enabling Print Functionality**
+To enable printing from the toolbar, add the **"Print"** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -84,20 +82,18 @@ internal sealed class OrderData
 
 ## Page Setup for Printing
 
-Print layout options such as `paper size`, `margins`, `headers` and `footers`, and `scaling` are controlled by the browser’s print dialog. These settings cannot be configured through **application code**. Refer to browser-specific setup guides:
+Print layout options such as **paper size**, **margins**, **headers** and **footers**, and **scaling** are controlled by the browser’s print dialog. These settings cannot be configured through **application code**. Refer to browser-specific setup guides:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
 * [Internet Explorer](https://www.helpteaching.com/blog/) (legacy)
 
-## Printing with an External Button
+## Print via programmatically
 
 Printing can be triggered from external UI elements by calling the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method programmatically. This opens the browser’s print dialog and reflects the current state of the DataGrid, including visible columns, sorting, and filtering.
 
 This approach provides flexibility to integrate printing into custom workflows or toolbar actions beyond the built-in options.
-
-#### Example: Programmatic Printing with External Button
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -172,16 +168,14 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyCZsJTDndUnwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Print Only the Visible Page
+## Print only the visible page
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid prints all pages in the dataset by default. To print only the currently visible page, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PrintMode.html) property to `CurrentPage`.This configuration applies when printing is triggered using the built-in toolbar or programmatically through the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid prints all pages in the dataset by default. To print only the currently visible page, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PrintMode.html) property to **CurrentPage**.This configuration applies when printing is triggered using the built-in toolbar or programmatically through the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
-#### Available Print Modes
+**Available print modes**
 
 - **PrintMode.AllPages**: Prints the entire dataset across all pages. This is the default behavior.
 - **PrintMode.CurrentPage**: Prints only the data displayed on the current page.
-
-#### Example: Printing the Current Page
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -360,13 +354,13 @@ This is demonstrated in the below sample code,
 The following image represents Hierarchial Grid with print toolbar item,
 ![Print Hierarchial Grid Content](./images/grid-hierarchial-print.png) -->
 
-## Printing a Large Number of Columns
+## Printing large number of Columns
 
 When printing a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that contains a large number of columns, the default page size used by the browser (such as A4) may not have enough space to display all columns. As a result, some columns may be hidden in the print preview or printed output.
 To include more columns in the printable area:
 
-- Switch to `landscape orientation` in the browser’s print dialog.
-- Adjust the `scale setting` to reduce content size, fitting more columns on the page.
+- Switch to **landscape orientation** in the browser’s print dialog.
+- Adjust the **scale setting** to reduce content size, fitting more columns on the page.
 
 These adjustments ensure visibility of all columns for wide grids.
 
@@ -438,11 +432,11 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 }
 ``` -->
 
-## Limitations of Printing Large Data
+## Limitations of printing large data
 
 Printing a large volume of data in a single page may cause performance issues in the browser. Rendering many rows and columns at once can slow down the page or make it unresponsive.
 
-The DataGrid uses `virtualization` to improve performance during on-screen rendering. However, virtualization for rows and columns is `not feasible` during printing. All data is rendered at once, which increases the load on the browser.
+The DataGrid uses `virtualization` to improve performance during on-screen rendering. However, virtualization for rows and columns is not feasible during printing. All data is rendered at once, which increases the load on the browser.
 
 To avoid performance issues when printing large datasets, consider exporting the data to a supported format:
 
