@@ -52,9 +52,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLKiLrRzNeaIzwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Range Area Chart](../images/chart-types-images/blazor-range-area-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLKiLrRzNeaIzwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Range Area Chart](../images/chart-types-images/blazor-range-area-chart.png)" %}
 
 N> Refer to our [Blazor Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Range Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap5) to know how to show variations in the data values for a given time.
 

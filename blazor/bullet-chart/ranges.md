@@ -34,9 +34,7 @@ Ranges represent the quality of a specific range such as **Good**, **Bad** and *
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUiLLiTfIkQhfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUiLLiTfIkQhfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.png)" %}
 
 ## Color customization
 
@@ -70,6 +68,4 @@ Enhance the readability of ranges with color and opacity. It can be applied usin
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUWBrWJJHrSIXJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUWBrWJJHrSIXJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.png)" %}

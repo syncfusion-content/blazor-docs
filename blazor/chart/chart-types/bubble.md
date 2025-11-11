@@ -56,9 +56,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVfZlVZAFsaTHgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Bubble Chart](../images/chart-types-images/blazor-bubble-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVfZlVZAFsaTHgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bubble Chart](../images/chart-types-images/blazor-bubble-chart.png)" %}
 
 N> Refer to our [Blazor Bubble Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Bubble Chart Example](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap5) to know how to render and configure the bubble type charts.
 
