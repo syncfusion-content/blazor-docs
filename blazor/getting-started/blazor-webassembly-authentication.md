@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WASM App with Authentication Library
 
-This article provides a step-by-step instructions for building and securing Blazor WebAssembly Standalone App with Blazor WebAssembly Authentication library using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides step-by-step instructions for building and securing a Blazor WebAssembly Standalone App with the Blazor WebAssembly Authentication library using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -19,11 +19,11 @@ This article provides a step-by-step instructions for building and securing Blaz
 
 You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) by setting the `Authentication type` to `Individual Accounts`. This selection adds authentication support and doesn't result in storing users in a database.
 
-## Configure the application with Google Auth 2.0 OIDC
+## Configure the application with Google OAuth 2.0 (OIDC)
 
-* Set up `Google OAuth 2.0` authentication. For more information, refer [here](https://support.google.com/cloud/answer/6158849?hl=en)
+* Set up Google OAuth 2.0 authentication. For more information, see the [Google Cloud documentation](https://support.google.com/cloud/answer/6158849?hl=en).
 
-* Now, replace the `appsettings.json` with the following code which contains code to configure the application with `Google OAuth 2.0`.
+* Replace the `appsettings.json` file with the following content to configure the application with `Google OAuth 2.0`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="appsettings.json" %}
@@ -45,11 +45,11 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
 
 ![OAuth 2.0 client ID](images/oauth-client-id.png)
 
-* The `RedirectUri` (https://<example.com>/authentication/login-callback) should be registered in the Google APIs console as mentioned below.
+* The `RedirectUri` (https://<example.com>/authentication/login-callback) must be registered in the Google APIs console as shown below.
 
 ![OAuth RedirectUri](images/oauth-rediredt-uri.png)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -62,11 +62,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
 
 ```cshtml
 
@@ -75,7 +75,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly Standalone App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor WebAssembly Standalone App.
 
 ```cshtml
 
@@ -89,7 +89,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` as follows:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` section and the script at the end of the `<body>` of the main page as follows:
 
 * For **.NET 9 and .NET 8** Blazor WebAssembly Standalone app, include it in the **~/Components/App.razor** file.
 
@@ -109,7 +109,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Home.razor** file under `AuthorizeView`.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Home.razor** file under an `AuthorizeView`.
 
 {% tabs %}
 {% highlight razor %}
@@ -127,7 +127,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the default web browser.
 
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)

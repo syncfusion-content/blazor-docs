@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenAI Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, and practical examples.
+description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, practical examples. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -9,12 +9,12 @@ documentation: ug
 
 # OpenAI Integration with Syncfusion® Blazor AI
 
-The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to add AI-driven features to Blazor applications. These features include anomaly detection (identifying irregular data patterns), data analysis (processing and summarizing data), and content generation (creating text based on user input). 
+The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library integrates with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to add AI-driven features to Blazor applications. These features include anomaly detection (identifying irregular data patterns), data analysis (processing and summarizing data), and content generation (creating text based on user input).
 
 ## Prerequisites
 
-To integrate OpenAI with a Blazor WebApp Server, ensure the following:
-- The following NuGet packages are installed:
+To integrate OpenAI with a Blazor Web App (Server), ensure the following:
+- Install these NuGet packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
@@ -25,15 +25,15 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- An [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) is obtained from the OpenAI platform.
-- The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
-- The API key is stored securely using environment variables or user secrets (see [Microsoft’s guide on user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
+- Obtain an [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) from the OpenAI platform.
+- Ensure the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
+- Store the API key securely using environment variables or user secrets (see the [Microsoft guide on user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
 
 ## Configuration Steps
 
 ### Register AI Services in Program.cs
 
-To configure OpenAI in a Blazor WebApp Server, update the `Program.cs` file as follows:
+To configure OpenAI in a Blazor Web App (Server), update the `Program.cs` file as follows:
 
 ```csharp
 // Add required namespaces
@@ -54,7 +54,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ## Anomaly Detection with OpenAI and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid
 
-This example demonstrates using the Syncfusion Blazor AI library with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid. The grid displays machine data (MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with inconsistent production rates based on operational factors, updating the grid with anomaly descriptions and visual styling.
+This example uses the Syncfusion Blazor AI library with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid. The grid displays machine data (MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate). OpenAI analyzes operational factors to identify rows with inconsistent production rates and updates the grid with anomaly descriptions and visual styling.
 
 ### Setup Prerequisites
 - Install the following NuGet packages:
@@ -354,23 +354,23 @@ namespace OpenAIExample.Components.Pages
 
 ## How It Works
 
-This example illustrates how the Syncfusion Blazor AI library integrates with OpenAI to analyze data in a Blazor Grid:
+This example shows how the Syncfusion Blazor AI library integrates with OpenAI to analyze data in a Blazor Grid:
 
-1. **Setup**: Configure the OpenAI service in `Program.cs` using a secure API key and a specified model (e.g., `gpt-4`).
-2. **Component Integration**: Inject `IChatInferenceService` to process data from the Syncfusion Blazor Grid.
-3. **Prompt Engineering**: Craft precise prompts to instruct OpenAI to identify anomalies based on data patterns (e.g., inconsistent ProductionRate relative to Temperature or MotorSpeed).
-4. **Response Processing**: Parse OpenAI’s JSON response to update the Grid with anomaly descriptions and apply visual styling.
+1. **Setup**: Configure the OpenAI service in `Program.cs` using a secure API key and a specified model (for example, `gpt-4`).
+2. **Component integration**: Inject `IChatInferenceService` to process data from the Syncfusion Blazor Grid.
+3. **Prompt engineering**: Craft precise prompts to instruct OpenAI to identify anomalies based on data patterns (for example, inconsistent `ProductionRate` relative to `Temperature` or `MotorSpeed`).
+4. **Response processing**: Parse OpenAI’s JSON response to update the grid with anomaly descriptions and apply visual styling.
 
 ### Key Components
 - **IChatInferenceService**: Injected service for interacting with OpenAI models.
 - **ChatParameters**: Configures the AI request with prompts and user messages.
 - **GenerateResponseAsync**: Sends asynchronous requests to OpenAI and retrieves responses.
-- **UI Components**: Syncfusion Grid and Button components integrate with the AI service for dynamic updates.
+- **UI components**: Syncfusion Grid and Button components integrate with the AI service for dynamic updates.
 
 ## Error Handling
-- **Invalid API Key**: Ensure the API key is valid and correctly configured in environment variables or user secrets.
-- **Rate Limits**: OpenAI API usage may be limited based on your plan.
-- **Network Issues**: Handle connectivity errors by implementing retry logic or displaying user-friendly messages.
+- **Invalid API key**: Ensure the API key is valid and correctly configured in environment variables or user secrets.
+- **Rate limits**: OpenAI API usage may be limited based on the plan.
+- **Network issues**: Handle connectivity errors by implementing retry logic or displaying user-friendly messages.
 
 ## See Also
 - [Syncfusion Blazor Grid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
