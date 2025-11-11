@@ -152,7 +152,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBJWLjxrwmYsHAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Reorder via programmatically
+## Reorder columns via programmatically
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
 
@@ -354,9 +354,6 @@ The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 |-------------------|-----------------|--------------------------------------------------------------------------|
 | fromFieldNames  | List&lt;string&gt;  | Field names of the columns to be moved.                                  |
 | toFieldName     | string        | Field name of the column before which the group should be placed.        |
-
-
-In this configuration, the single-column method moves **ShipCity** before **OrderID**, and the multi-column method moves **ShipCity**, **ShipRegion**, and **ShipName** before **OrderID**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
