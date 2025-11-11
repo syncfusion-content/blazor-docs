@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clear an Image with Blazor Image Editor Component | Syncfusion
-description: Learn here all about Clear an Image in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Render Image Editor in a Dialog Component | Syncfusion
+description: Render the Blazor Image Editor in a modal dialog for a focused, space-saving editing experience in Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Render Image Editor in Dialog Component
 
-Rendering the Image Editor in a dialog involves displaying the image editor component within a modal dialog window, allowing users to edit images in a pop-up interface. This can be useful for maintaining a clean layout and providing a focused editing experience without navigating away from the current page.
+Rendering the Image Editor in a dialog displays the component within a modal window, enabling image editing in a pop-up interface. This approach helps maintain a clean layout and provides a focused editing experience without navigating away from the current page.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -18,49 +18,52 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 @using Syncfusion.Blazor.Inputs
 
 <div style="padding-bottom: 15px">
-    @if (this.ShowButton)
-    {
-        <SfButton OnClick="OpenDialogAsync">Open Image</SfButton>
-    }
+    <SfButton OnClick="OpenDialog">Edit Image</SfButton>
 </div>
- <SfDialog Height="75%" Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility">
-    <DialogTemplates>
-        <Content>
-            <div class="dialogContent">
-                <SfImageEditor @ref="ImageEditor" Height="400px">
-                </SfImageEditor>
-            </div>
-        </Content>
-    </DialogTemplates>
-    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents>
 
-</SfDialog>
+<div class="control-section" id="target" style="height: 500px">
+    <SfDialog Width="600px" Height="500px" Target="#target" ShowCloseIcon="true" @bind-Visible="IsDialogVisible">
+        <DialogEvents Opened="OnDialogOpened" Closed="OnDialogClosed"></DialogEvents>
+        <DialogTemplates>
+            <Content>
+                <div class="dialog-content">
+                    @if (IsImageEditorOpened)
+                    {
+                        <SfImageEditor @ref="ImageEditor" Height="400px">
+                            <ImageEditorEvents Created="OnImageEditorCreated"></ImageEditorEvents>
+                        </SfImageEditor>
+                    }
+                </div>
+            </Content>
+        </DialogTemplates>
+    </SfDialog>
+</div>
 
 @code {
-    private bool Visibility { get; set; } = false;
-    private bool ShowButton { get; set; } = true;
-    SfImageEditor ImageEditor; 
+    private bool IsDialogVisible { get; set; } = false;
+    private bool IsImageEditorOpened { get; set; } = false;
+    private SfImageEditor ImageEditor;
 
-    private async void OpenDialogAsync() 
-    { 
-        this.Visibility = true;
-    }
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"); 
-    }
-
-    private void BeforeDialogOpen(BeforeOpenEventArgs args)
+    private void OpenDialog()
     {
-        this.ShowButton = false;
+        IsDialogVisible = true;
     }
 
-    private void DialogClosed(CloseEventArgs args)
+    private void OnDialogOpened()
     {
-        this.ShowButton = true;
+        IsImageEditorOpened = true;
+    }
+
+    private void OnDialogClosed()
+    {
+        IsImageEditorOpened = false;
+    }
+
+    private async void OnImageEditorCreated()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
 
-![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-dialog.jpg)
+![Blazor Image Editor rendered in a dialog](../images/blazor-image-editor-dialog.jpg)
