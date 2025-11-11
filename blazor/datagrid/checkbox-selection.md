@@ -235,7 +235,7 @@ The following example demonstrates how to persist checkbox selections when the G
 
 ## Hide selectall checkbox in column header 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the checkbox column, including the ability to hide the SelectAll checkbox in the column header. This is useful in scenarios where bulk selection is not required or when customizing the Grid's appearance.
+The Syncfusion Blazor DataGrid allows customization of the checkbox column, including the ability to hide the SelectAll checkbox in the column header. This is useful in scenarios where bulk selection is not required or when customizing the Grid's appearance.
 
 By default, setting the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) to **CheckBox** renders a checkbox column with a SelectAll checkbox in the header. To hide the header checkbox, define an empty [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate)  in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
