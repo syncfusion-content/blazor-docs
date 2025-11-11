@@ -9,15 +9,15 @@ documentation: ug
 
 # Validation in Blazor DataGrid
 
-Validation is a critical aspect of maintaining data integrity in applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for efficient and reliable data validation. This feature ensures that entered or modified data adheres to predefined rules, helping prevent errors and maintain the accuracy of displayed information.
+Validation is essential for maintaining data integrity in applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for reliable data validation. This feature ensures that entered or modified data adheres to predefined rules, helping prevent errors and maintain the accuracy of displayed information.
 
 ## Column validation
 
-Column validation ensures that edited or newly added row data meets specific criteria before being saved. This feature is useful for enforcing rules or constraints on individual columns to maintain data integrity. Validation rules can be defined using the [GridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property, which specifies the conditions for validating column values. The validation mechanism utilizes the **Form Validator** library.
+Column validation ensures that edited or newly added row data meets specific criteria before being saved. This feature helps enforce rules or constraints on individual columns to maintain data integrity.
+
+Validation rules are defined using the [GridColum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property, which specifies the conditions for validating column values. The validation mechanism uses the **Form Validator** library.
 
 > Validation in the DataGrid is based on the Microsoft Blazor EditForm behavior. Once a validation message is displayed, the field is revalidated only during form submission or when focus is moved away from the field. Refer to the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) documentation for additional details.
-
-The following example demonstrates how to define a validation rule for a Grid column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -94,15 +94,15 @@ Data annotation validation attributes are used to validate fields in the Syncfus
 |---------------|--------------|
 | 1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10. DataType.Custom<br>11. DataType.Date<br>12. DataType.DateTime<br>13. DataType.EmailAddress<br>14. DataType.ImageUrl<br>15. DataType.Url | These data annotation attributes are used as `validation rules` in DataGrid CRUD operations. |
 
-For more information on data annotation, refer to this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation) section.
+> For more details, refer to the [Data Annotation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation) documentation.
 
 ## Custom validation
 
 Custom validation enables the definition of validation logic tailored to specific application requirements.
 
-To implement custom validation, create a class that inherits from the `ValidationAttribute` class and override the `IsValid` method. All custom validation logic should be placed within the `IsValid` method.
+To implement custom validation, define a class that inherits from the `ValidationAttribute` class and override the **IsValid** method. All validation logic should be placed within the **IsValid** method.
 
-The following example demonstrates how to implement custom validation for the **EmployeeID** and **Freight** fields:
+In this configuration, custom validation is applied to the **EmployeeID** and **Freight** fields.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -225,7 +225,7 @@ public class CustomValidationFreight : ValidationAttribute
 
 Complex data binding columns can be validated using the [ValidateComplexType](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute from data annotations.
 
-In the following example, the `ValidateComplexType` attribute is applied to the **EmployeeName** class to enable validation of its properties. A custom validation message is displayed in the **First Name** column using the `RequiredAttribute` with a custom error message.
+In this configuration, the `ValidateComplexType` attribute is applied to the **EmployeeName** class to enable validation of its properties. A custom validation message is displayed in the **First Name** column using the `RequiredAttribute` with a custom error message.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -296,7 +296,7 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
-> Ensure the package **Microsoft.AspNetCore.Components.DataAnnotations.Validation** is included to enable complex type validation. Use the following reference:
+> Ensure the package **Microsoft.AspNetCore.Components.DataAnnotations.Validation** is referenced to enable complex type validation. Use the following declaration:
 
 ```csharp
 <PackageReference Include="Microsoft.AspNetCore.Components.DataAnnotations.Validation" Version="3.2.0-rc1.20223.4" />
@@ -307,17 +307,18 @@ public class EmployeeInfo
 
 ## Custom validator component
 
-In scenarios where built-in or attribute-based validation is insufficient, a custom validator component can be implemented to validate the Grid edit form. This is achieved using the [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component, which accepts a validation component and injects it into the EditForm of the DataGrid.
+In scenarios where built-in or attribute-based validation is insufficient, a custom validator component can be used to validate the Grid edit form. This is configured using the [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) , which accepts a validation component and injects it into the EditForm of the DataGrid.
 
-Within the custom validator component, data can be accessed using the implicit context parameter, which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+Within the custom validator component, data can be accessed using the implicit context parameter of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For guidance on creating a form validator component, refer to the [official documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#validator-components).
-In the following example:
+In this configuration:
 
-* A form validator component named **MyCustomValidator** is created, accepting a `ValidatorTemplateContext` value as a parameter.
-* The **MyCustomValidator** component is assigned to the `Validator` property.
-* The component validates whether the **Freight** value is between **0** and **100**.
-* Validation error messages are displayed using the **ValidationMessage** component.
+- A form validator component named **MyCustomValidator** is created, accepting a `ValidatorTemplateContext` value as a parameter.
+- The **MyCustomValidator** component is assigned to the `Validator` property.
+- The component validates whether the **Freight** value is between **0** and **100**.
+- Validation error messages are displayed using the **ValidationMessage** component.
+
+> For guidance on creating a form validator component, refer to the official [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#validator-components).
 
 ```csharp
 [MyCustomValidator.cs]
@@ -405,9 +406,9 @@ public class MyCustomValidator : ComponentBase
 
 ## Display validation message using in-built tooltip
 
-When using **Inline** or **Batch** editing modes in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the **ValidationMessage** component may not be suitable for displaying error messages. In such cases, the built-in validation tooltip can be used to show validation messages by invoking the [ValidatorTemplateContext.ShowValidationMessage(fieldName, isValid, message)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html#Syncfusion_Blazor_Grids_ValidatorTemplateContext_ShowValidationMessage) method.
+When using [Inline](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing) or [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing modes in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the **ValidationMessage** component may not be suitable for displaying error messages. In such cases, the built-in validation tooltip can be used by invoking the [ShowValidationMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html#Syncfusion_Blazor_Grids_ValidatorTemplateContext_ShowValidationMessage) method.
 
-The `HandleValidation` method of the **MyCustomValidator** component can be updated as shown below:
+The **HandleValidation** method of the **MyCustomValidator** component can be updated to display validation messages using tooltips, as shown below:
 
 ```c#
 protected void HandleValidation(FieldIdentifier identifier)
@@ -438,10 +439,12 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 ## Disable in-built validator component
 
-The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component can be used to disable the built-in validator component in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. By default, the Grid uses two validator components:
+The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component can be used to disable the built-in `Validator` component in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
-* DataAnnotationsValidator
-* An internal validator that processes the `ValidationRules` property
+By default, the Grid uses two validator components:
+
+- DataAnnotationsValidator
+- An internal validator that processes the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property
 
 To use only the **DataAnnotationsValidator** component and disable the internal validator, configure the Validator property as shown below:
 
@@ -473,10 +476,9 @@ To use only the **DataAnnotationsValidator** component and disable the internal 
 
 ## Display validation message in dialog template
 
-Use form validation to show a validation message for a field that is not defined as a column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
-The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property can be used to display a validation message for a field within the dialog template, even if the field is not included in the Grid columns. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports form validation for fields that are not defined as columns. The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property can be used to display a validation message for such fields within the [dialog template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing).
 
-In the following example, the validation message for **ShipAddress** is shown in the dialog template, although the **ShipAddress** field is not defined as a Grid column.
+In this configuration, the validation message for **ShipAddress** is displayed in the dialog template, although the **ShipAddress** field is not defined as a Grid column.
 
 > Validation messages for fields not defined in the Grid columns will appear as a validation summary at the top of the dialog edit form.
 
