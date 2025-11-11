@@ -505,7 +505,7 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 | Event Argument | Description                                                                 |
 |----------------|------------------------------------------------------------------------------|
 | Column       | Represents the column that was resized.                                     |
-| Cancel       | Indicates whether the resize operation was cancelled. If **true**, the column was not resized. |
+| Cancel       | Indicates whether the resize operation was canceled. If **true**, the column was not resized. |
 
 
 {% tabs %}
