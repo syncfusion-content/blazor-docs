@@ -22,8 +22,6 @@ To enable single cell selection:
 - Set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Cell**.
 - Set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Single**.
 
-The following example demonstrates how to enable single cell selection using these properties.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -109,8 +107,6 @@ To enable multiple cell selection:
 
 - Set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Cell**.
 - Set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple**.
-
-The following example demonstrates how to enable multiple cell selection using these properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -198,7 +194,6 @@ The Grid supports three types of cell selection modes, configurable via the [Gri
 1. **Flow:** This is the default mode. It allows selection of a continuous range of cells between the start and end indexes, including all cells across rows in that range.
 2. **Box:** Enables selection of a rectangular range of cells between specified start and end column indexes, including all rows within the defined range. Useful for column-specific selections.
 3. **BoxWithBorder:** Similar to Box, but adds a visual border around the selected cell range for easier identification.
-
 
 Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be **Multiple**.
 
@@ -301,15 +296,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDSKXKGvShjyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Select cells externally
+## Select cells via programmatically
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using built-in methods. These APIs allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
 
 ### Single cell selection
 
 To select a single cell programmatically, use the [SelectCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_Boolean__) method. This method selects a cell based on the specified row and column indexes.
-
-The following example demonstrates how to select a single cell by retrieving the row and cell indexes from a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) and passing them to the `SelectCellAsync` method. When the **Select cell** button is clicked, the specified cell is selected in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -407,8 +400,6 @@ public class OrderDetails
 Multiple cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
-
-The following example demonstrates how to select multiple cells by calling the `SelectCellsAsync` method within a button click event and passing a collection of row and column indexes as arguments.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -511,8 +502,6 @@ public class OrderDetails
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
 
 To retrieve the selected indexes, use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexesAsync) method.
-
-The following example demonstrates how to obtain the selected row and cell indexes using the `GetSelectedRowCellIndexesAsync` method and display them in a dialog when a button is clicked.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -617,13 +606,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNryZyZyzmehMywJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Clear cell selection programmatically
+## Clear selection via programmatically
 
 Clearing cell selection programmatically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when you need to remove existing cell selections based on user actions or application logic. This can be achieved using the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
 
 The `ClearCellSelectionAsync` method is applicable when the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property is set to **Multiple** or **Single**.
-
-The following example demonstrates how to clear cell selection by invoking the `ClearCellSelectionAsync` method within a button click event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -717,8 +704,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides mu
 * [CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting): Triggered before a selected cell is deselected. Use this event to apply validation or logic to determine whether the deselection should proceed.
 
 * [CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected): Triggered after a selected cell is deselected. This event can be used to perform actions or cleanup tasks when a cell is no longer selected.
-
-In the example below, cell selection is canceled when the **ShipCountry** value is **France** using the `CellSelecting` event. Similarly, cell deselection is canceled when the **OrderID** value is **even** using the `CellDeselecting` event. A notification message is displayed to indicate which event was triggered during cell interaction.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
