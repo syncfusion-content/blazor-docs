@@ -1,19 +1,19 @@
 ---
 layout: post
-title: SyncfusionBlazorAssistant MCP Server | Syncfusion
-description: Learn how to configure and use SyncfusionBlazorAssistant MCP server for intelligent code generation, documentation, and troubleshooting in Blazor apps.
+title: SyncfusionBlazorAssistant MCP server | Syncfusion
+description: Learn how to configure and use SyncfusionBlazorAssistant MCP server for intelligent code generation, documentation, and troubleshooting in Blazor applications.
 control: Getting started with SyncfusionBlazorAssistant MCP Server
 platform: Blazor
 documentation: ug
 ---
 
-# SyncfusionBlazorAssistant MCP Server
+# SyncfusionBlazorAssistant MCP server
 
 ## Overview
 
-The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion Blazor component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-### Key Benefits
+### Key benefits
 
 * Intelligent code generation for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 * Detailed component documentation and usage examples.
@@ -23,15 +23,15 @@ The [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor
 
 Before using [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant), ensure you have:
 
-* Required [node](https://nodejs.org/en/) version >= 18
-* A [compatible MCP client](https://modelcontextprotocol.io/clients) (Visual Studio Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
+* Required [Node.js](https://nodejs.org/en/) version >= 18
+* A [compatible MCP client](https://modelcontextprotocol.io/clients) (Visual Studio Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio](https://www.syncfusion.com/code-studio/), etc.)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
-* An active [API KEY](https://syncfusion.com/account/api-key)
+* An active [API key](https://www.syncfusion.com/account/api-key)
 
-## Unlimited Access
+## Unlimited access
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to this MCP server. There are no restrictions on:
 
@@ -46,7 +46,7 @@ This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;
 
 Before you can invoke the `SyncfusionBlazorAssistant` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
 
-### Generic MCP Server Settings
+### Generic MCP server settings
 
 - **npm package name**: `@syncfusion/blazor-assistant`
 - **Type**: stdio (standard input/output transport)
@@ -54,7 +54,7 @@ Before you can invoke the `SyncfusionBlazorAssistant` MCP server, you need to co
 - **Arguments**: -y
 - **Server name**: syncfusionBlazorAssistant
 
-You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key) as an env parameter in the configuration file:
+You need to add your [Syncfusion API key](https://www.syncfusion.com/account/api-key) as an env parameter in the configuration file:
 
 ```json
 "env": {
@@ -93,7 +93,7 @@ Below are setup instructions for popular MCP clients:
 }
 ```
 
-* After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) server directly from the settings interface without additional commands.
+* After updating the configuration in mcp.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the [SyncfusionBlazorAssistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) server directly from the settings interface without additional commands.
 
 * Confirm the server is active by checking for a message like: `SyncfusionBlazorAssistant is running...` in the output.
 
@@ -176,7 +176,7 @@ For more details, refer to the [Cursor documentation](https://cursor.com/docs/co
  
 For further assistance, see the [JetBrains documentation](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server).
 
-> For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
+> For more detailed information about configuring MCP servers in various clients, refer to the official documentation, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 
 ## Usage
 
@@ -199,7 +199,7 @@ To activate the SyncfusionBlazorAssistant MCP server:
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Servers provide full access to all AI interaction modes — Ask/Chat, Edit, and Agent — across supported MCP clients.
 
-### Best Practices for Effective Usage
+### Best practices for effective usage
 
 1. `Be specific`: Mention both platform and component (e.g., "How do I create a Syncfusion Blazor Grid with paging and filtering?").
 2. `Provide context`: Include details about your use case for more targeted solutions.
@@ -225,7 +225,7 @@ If you encounter issues:
 
 ## Support
 
-Product support is available through the following mediums.
+Product support is available through the following channels.
 
 * [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
 * [Community forum](https://www.syncfusion.com/forums/blazor-components)
@@ -234,4 +234,4 @@ Product support is available through the following mediums.
 
 ## See also
 
-* [Syncfusion Blazor Documentation](https://blazor.syncfusion.com/documentation)
+* [Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation)
