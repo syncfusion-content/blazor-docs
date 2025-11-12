@@ -228,9 +228,17 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component 
+## AI-powered Rich Text Editor in Blazor
 
-This section implements the Syncfusion Blazor Rich Text Editor with AI-powered content assistance features such as rephrase, correct grammar, summarize, elaborate, and translate.
+The Syncfusion Blazor Rich Text Editor can integrate AI features to help users create better content. It supports grammar correction, rephrasing for clarity, summarizing long text, elaborating short text, and translating content into different languages. These features work by sending selected text to an AI service and updating the editor with improved content.
+
+### How AI Works in Rich Text Editor
+
+When a user selects text and chooses an AI option, the editor captures the text and opens a dialog. The dialog shows the original text and a placeholder for AI-generated content. The selected text and chosen action are sent to the AI service, which processes the request and returns the result. Users can then regenerate, copy, or replace the content in the editor.
+
+### UI Implementation in Razor (`Home.razor`)
+
+The Razor file sets up the Rich Text Editor with custom toolbar items for AI actions. It includes an AI Assistant dropdown for options like Rephrase, Summarize, and Translate, and a dialog to display AI suggestions. Additional UI elements like chips for tone and dropdowns for language selection make the experience interactive.
 
 (`Home.razor`)
 
@@ -387,6 +395,10 @@ This section implements the Syncfusion Blazor Rich Text Editor with AI-powered c
 </SfToast>
 
 ```
+
+### Backend Logic in C# (`Home.razor.cs`)
+
+The C# file manages dialog visibility, button states, and AI calls. When an option is selected, `DialogueOpen()` captures the selected text and opens the dialog. `UpdateAISuggestionsData()` sends the query to the AI service and updates the UI with the result. Users can regenerate or replace content easily.
 
 `Home.razor.cs`
 
@@ -687,6 +699,10 @@ namespace AISamples.Components.Pages
 
 ```
 
+## Workflow Summary
+
+Select text → Choose AI action → Dialog opens → AI processes → Updated content displayed → User copies or replaces content.
+
 ## Error Handling and Troubleshooting
 
 If the AI service fails to return a valid response, the Rich Text Editor will display an error message ("Oops! Please try again!"). Common issues include:
@@ -695,10 +711,6 @@ If the AI service fails to return a valid response, the Rich Text Editor will di
 - **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
-
-## Performance Considerations
-
-When handling large text content, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For long-form content or batch operations, consider splitting the input into smaller segments to avoid performance bottlenecks. Test the application with your specific use case to determine optimal performance.
 
 ## Sample Code
 

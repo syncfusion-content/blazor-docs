@@ -520,10 +520,6 @@ If the AI service fails to return a valid response, the Kanban will display an e
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
 
-## Performance Considerations
-
-When handling large text content, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For long-form content or batch operations, consider splitting the input into smaller segments to avoid performance bottlenecks. Test the application with your specific use case to determine optimal performance.
-
 ## Sample Code
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
