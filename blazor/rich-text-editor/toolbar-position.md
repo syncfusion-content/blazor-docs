@@ -30,4 +30,4 @@ To move the toolbar to the bottom, set the [RichTextEditorToolbarSettings.Positi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor multirow toolbar](../images/blazor-richtexteditor-bottom-toolbar.png)
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-bottom-toolbar.png)

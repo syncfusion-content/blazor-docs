@@ -30,7 +30,7 @@ The [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEdi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor expand toolbar](../images/blazor-richtexteditor-expand-toolbar.png)
+![Blazor RichTextEditor expand toolbar](./images/blazor-richtexteditor-expand-toolbar.png)
 
 ## Multi-row toolbar
 
@@ -44,7 +44,7 @@ The [MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextE
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor multirow toolbar](../images/blazor-richtexteditor-multirow-toolbar.png)
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
 ## Scrollable toolbar
 
@@ -58,7 +58,7 @@ The [Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTex
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor multirow toolbar](../images/blazor-richtexteditor-scrollable-toolbar.png)
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-scrollable-toolbar.png)
 
 ## Configuring a popup toolbar
 
@@ -72,7 +72,7 @@ The [Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEdit
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor multirow toolbar](../images/blazor-richtexteditor-popup-toolbar.png)
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-popup-toolbar.png)
 
 ## Floating toolbar
 
@@ -93,7 +93,7 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor floating toolbar](../images/blazor-richtexteditor-floating.toolbar.png)
+![Blazor RichTextEditor floating toolbar](./images/blazor-richtexteditor-floating.toolbar.png)
 
 ## See also
 

@@ -35,7 +35,7 @@ In the following example, the `MinLength` is set to 3, so the suggestion list wi
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention minimum length](../images/blazor-richtexteditor-mention-min-length.png)
+![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-min-length.png)
 
 ### Customizing suggestion list count
 
@@ -51,7 +51,7 @@ In the example below, the `SuggestionCount` is set to 5, so only 5 items will be
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention minimum length](../images/blazor-richtexteditor-mention-suggestion-count.png)
+![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-suggestion-count.png)
 
 ### Customizing suggestion list using templates
 
@@ -92,7 +92,7 @@ In the following sample, we configured the following properties:
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention integration](../images/blazor-richtexteditor-mention-integration.png)
+![Blazor RichTextEditor mention integration](./images/blazor-richtexteditor-mention-integration.png)
 
 > [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=bootstrap5)
 

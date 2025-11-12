@@ -30,4 +30,4 @@ Custom toolbar items are added using the `RichTextEditorCustomToolbarItems` tag 
 
 {% endhighlight %}
 
-![Blazor RichTextEditor Mail Merge](../images/blazor-richtexteditor-mail-merge.png)
+![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.png)
