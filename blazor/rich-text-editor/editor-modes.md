@@ -39,7 +39,7 @@ To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![Blazor RichTextEditor with HTML Editor](../images/blazor-richtexteditor-with-html-editor.png)
+![Blazor RichTextEditor with HTML Editor](./images/blazor-richtexteditor-with-html-editor.png)
 
 ## IFrame editor
 

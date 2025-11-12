@@ -25,7 +25,7 @@ This flexibility allows you to tailor the toolbar to include only the tools rele
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor enabling inline mode](../images/blazor-richtexteditor-enable-inline.gif)
+![Blazor Rich Text Editor enabling inline mode](./images/blazor-richtexteditor-enable-inline.gif)
 
 ## Edit on select
 
@@ -39,7 +39,7 @@ The inline toolbar will appear only for the selected text by enabling the [RichT
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor enabling selection](../images/blazor-richtexteditor-enable-selection.gif)
+![Blazor Rich Text Editor enabling selection](./images/blazor-richtexteditor-enable-selection.gif)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
 

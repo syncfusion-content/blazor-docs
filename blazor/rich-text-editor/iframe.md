@@ -32,7 +32,7 @@ Here's an example of how to enable the iframe editor:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with iframe](../images/blazor-richtexteditor-iframe.png)
+![Blazor Rich Text Editor with iframe](./images/blazor-richtexteditor-iframe.png)
 
 ## Customizing IFrame attributes
 
@@ -46,7 +46,7 @@ Add additional attributes to the body element of the iframe document using the[R
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with iframe attribute](../images/blazor-richtexteditor-iframe-attribute.png)
+![Blazor Rich Text Editor with iframe attribute](./images/blazor-richtexteditor-iframe-attribute.png)
 
 ## Integrating external CSS and Script
 
@@ -78,6 +78,6 @@ Similarly, add external script files to the iframe document using the same `Rich
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with external CSS and script](../images/blazor-richtexteditor-iframe-external-CSS-script.png)
+![Blazor Rich Text Editor with external CSS and script](./images/blazor-richtexteditor-iframe-external-CSS-script.png)
 
 N> Visit the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour for an overview of its capabilities. Explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
