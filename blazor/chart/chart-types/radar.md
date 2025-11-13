@@ -54,9 +54,7 @@ To render a radar chart, set the series [Type](https://help.syncfusion.com/cr/bl
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.png)" %}
 
 N> Refer to our [Blazor Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Radar type chart.
 

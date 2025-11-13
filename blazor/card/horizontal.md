@@ -37,9 +37,7 @@ A horizontally aligned card can push a specific column to align vertically using
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUMVVVrHJeVdaS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Card Component with Horizontal Orientation](images/blazor-card-with-horizontal-orientation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUMVVVrHJeVdaS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component with Horizontal Orientation](images/blazor-card-with-horizontal-orientation.png)" %}
 
 ## See also
 

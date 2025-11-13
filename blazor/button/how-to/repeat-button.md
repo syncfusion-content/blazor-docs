@@ -57,6 +57,4 @@ The following example explains about how to achieve Repeat Button in mouse and t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrUCVhhiGkNFPZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Repeat Button in Blazor Button Component](./../images/blazor-button-with-repeat-button.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrUCVhhiGkNFPZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Repeat Button in Blazor Button Component](./../images/blazor-button-with-repeat-button.png)" %}

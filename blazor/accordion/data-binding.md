@@ -74,6 +74,4 @@ The following example demonstrates how to initialize accordion items using `temp
 ```
 
 
-![Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUMrigKgalNSWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUMrigKgalNSWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)" %}
