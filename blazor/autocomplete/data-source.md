@@ -72,8 +72,7 @@ In the following example, the `Name` column from complex data is mapped to the `
 }
 ```
 
-![Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgirWJLUUcXLNL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgirWJLUUcXLNL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)" %}
 
 ### Array of complex object
 
@@ -121,9 +120,7 @@ In the following example, the `Country.CountryID` column from complex data is ma
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMhCzLUzZpqxv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMhCzLUzZpqxv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)" %}
 
 ## Bind to remote data
 
@@ -164,9 +161,7 @@ The following sample displays the first 6 contacts from the Customers table of t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLAsripLqTYeFHm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLAsripLqTYeFHm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)" %}
 
 ### Web API Adaptor
 
@@ -199,9 +194,8 @@ Use the `WebApiAdaptor` to bind AutoComplete with a Web API that supports OData-
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUWLMJhAQvJLJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUWLMJhAQvJLJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)" %}
 
-![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
 
 ### Custom adaptor
 
@@ -305,9 +299,7 @@ Refer to the following example for remote data binding with offline mode enabled
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUMBWphJDItkcZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUMBWphJDItkcZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)" %}
 
 ### ValueTuple data binding
 
@@ -323,9 +315,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 </SfAutoComplete>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqCVCzLJNucIfr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqCVCzLJNucIfr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)" %}
 
 ## Binding ExpandoObject
 
@@ -448,9 +438,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthgsVWzBToAePUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthgsVWzBToAePUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)" %}
 
 ## Entity Framework
 

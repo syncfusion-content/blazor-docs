@@ -89,6 +89,4 @@ Customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazo
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAMBLBLyofGefV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Calendar with special dates](./images/blazor_calendar_special_dates.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAMBLBLyofGefV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar with special dates](./images/blazor_calendar_special_dates.png)" %}

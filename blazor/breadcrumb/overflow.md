@@ -44,9 +44,7 @@ Collapsed mode shows the first and last Breadcrumb items and hides the remaining
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgiLsTTKpNEpBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/breadcrumb-collapsed.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgiLsTTKpNEpBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-collapsed.png)" %}
 
 ## Menu
 
@@ -70,9 +68,7 @@ Menu mode shows the number of Breadcrumb items that can be accommodated within t
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqMhszzUTTXZrh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/breadcrumb-menu.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqMhszzUTTXZrh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-menu.png)" %}
 
 ## Wrap
 
@@ -96,9 +92,7 @@ Wrap mode wraps the items to multiple lines when the Breadcrumb’s width exceed
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAsLCzJKeBQENj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/breadcrumb-wrap.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAsLCzJKeBQENj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-wrap.png)" %}
 
 ## Scroll
 
@@ -124,9 +118,7 @@ Scroll mode shows an HTML scroll bar when the Breadcrumb’s width exceeds the c
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqihCTJgoRdALp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/breadcrumb-scroll.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqihCTJgoRdALp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-scroll.png)" %}
 
 ## Hidden
 
@@ -150,9 +142,7 @@ Hidden mode shows the maximum number of items possible in the container space an
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqChCzJqeEiZQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/bread-overflow-hidden.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqChCzJqeEiZQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/bread-overflow-hidden.png)" %}
 
 ## None
 

@@ -85,7 +85,4 @@ In the following example, the Accordion initially contains three accordion items
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLUWBMqqTnOpwoL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLUWBMqqTnOpwoL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)" %}

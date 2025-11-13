@@ -23,9 +23,7 @@ In the following sample, each list item is split into two columns to display rel
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLCzKpNiSVjy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete using ItemTemplate with two-column items](./images/blazor-autocomplete-item-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLCzKpNiSVjy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with ItemTemplate](./images/blazor-autocomplete-item-template.png)" %}
 
 ## Group template
 
@@ -39,9 +37,7 @@ In the following sample, employees are grouped according to their country.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqiVMzUfBbOtpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete using GroupTemplate grouped by country](./images/blazor-autocomplete-group-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqiVMzUfBbOtpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.png)" %}
 
 ## Header template
 
@@ -55,9 +51,7 @@ In the following sample, the list items and their headers are designed and displ
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVKChCfATUBVrhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete showing HeaderTemplate with two-column layout](./images/blazor-autocomplete-header-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVKChCfATUBVrhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)" %}
 
 ## Footer template
 
@@ -71,9 +65,7 @@ In the following sample, the footer displays the total number of list items pres
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKChWpApASinEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete using FooterTemplate to show item count](./images/blazor-autocomplete-footer-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKChWpApASinEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)" %}
 
 ## No records template
 
@@ -87,9 +79,7 @@ In the following sample, the suggestion list displays a notification when no dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUWLCpKTJNdtaV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete displaying a no-records message](./images/blazor-autocomplete-without-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUWLCpKTJNdtaV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.png)" %}
 
 ## Action failure template
 

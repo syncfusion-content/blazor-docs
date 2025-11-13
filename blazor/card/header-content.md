@@ -94,6 +94,4 @@ Card content is designed to display an image tag within it. You can wrap an imag
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUWBrBVxCfudwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUWBrBVxCfudwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)" %}

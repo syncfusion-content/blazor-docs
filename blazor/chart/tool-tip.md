@@ -335,8 +335,7 @@ By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)" %}
 
 ## Displaying tooltip for nearest data point
 
@@ -391,8 +390,7 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 
 ```
 
-![Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

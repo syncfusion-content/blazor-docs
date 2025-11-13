@@ -90,6 +90,4 @@ The [BulletChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 N> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBACrrWzKabABVG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBACrrWzKabABVG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.png)" %}
