@@ -9,7 +9,7 @@ documentation: ug
 
 # Drill Through in Blazor Pivot Table Component
 
-It allows to view the underlying raw data of a summarized cell in the pivot table. It can be enabled by setting the [AllowDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDrillThrough) property to **true**. By double-clicking on any value cell, user can view the detailed raw data in a data grid inside a new window. In the new window, row header, column header and measure name of the clicked cell will be shown at the top. Also, the user can include or exclude fields available in the data grid using column chooser option.
+The drill-through feature in the Pivot Table component allows users to view the raw, unaggregated data behind any aggregated cell in the pivot table. To enable this feature, set the [AllowDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDrillThrough) property to **true**. By double-clicking an aggregated cell, users can view its detailed raw data in a data grid displayed in a new window. The new window shows the row header, column header, and measure name of the selected cell at the top. Additionally, users can include or exclude fields available in the data grid using the column chooser option.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -48,7 +48,7 @@ It allows to view the underlying raw data of a summarized cell in the pivot tabl
 <br/>
 ![After Drill Through in Blazor PivotTable](images/blazor-pivottable-after-drillthrough.png)
 
-Users can also view the underlying raw data though the pivot chart. By clicking on any data point, user can view the detailed raw data in a data grid inside a new window.
+Users can also access drill-through data through the pivot chart. By clicking on any data point in the pivot chart, they can view the raw data in a data grid displayed in a new window.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -85,7 +85,6 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
-
 ```
 
 ![Before Drill Through in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.png)
@@ -95,12 +94,11 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
 
 ## Maximum rows to retrieve
 
-N> This property is applicable only for OLAP data sources.
+N> This property is applicable only for the OLAP data source.
 
-The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_MaxRowsInDrillThrough) property allows to specify the maximum number of raw data to be returned during the drill through process. By default, this property is set to **"10000"** meaning that if you do not specify this property, you will get 10,000 or less raw data.
+The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_MaxRowsInDrillThrough) property specifies the maximum number of rows to be returned during a drill-through operation. By default, this property is set to **"10000"**, meaning that if it is not explicitly defined, up to 10,000 rows will be returned.
 
 ```cshtml
-
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView Width="800" TValue="ProductDetails" Height="350" AllowDrillThrough="true" MaxRowsInDrillThrough="10">
@@ -135,7 +133,6 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         public string Quarter { get; set; }
     }
 }
-
 ```
 
 ![Blazor PivotTable with Maximum Rows](images/blazor-pivottable-maximum-rows.png)

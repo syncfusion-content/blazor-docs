@@ -9,14 +9,14 @@ documentation: ug
 
 # Customize number and date format in Blazor Pivot Table Component
 
-User can format the number, date, and time values for each field using [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) option under [PivotViewDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). It can be configured through code behind, during initial rendering.
+You can format the number, date, and time values for each field using the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) option under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). This configuration is applied during component initialization to ensure consistent data presentation across the pivot table.
 
 ## Number formatting
 
-For numbers, the formatting settings required to apply through code behind are:
+For numeric fields, the formatting settings include the following properties:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): It allows to set the field name.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): It allows to set the format of the respective field.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): Specifies the field name to which the formatting should be applied.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): Defines the number format pattern for the respective field (e.g., 'N2' for two decimal places, 'C' for currency).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -53,17 +53,17 @@ For numbers, the formatting settings required to apply through code behind are:
 
 ```
 
-![Number Formatting in Blazor PivotTable](images/blazor-pivottable-number-formatting.png)
+![Number Formatting in Blazor Pivot Table](images/blazor-pivottable-number-formatting.png)
 
-## Date and time formatting
+## Date and Time formatting
 
 N> This property is applicable only for relational data source.
 
-For date and time, the formatting settings required to apply through code behind are:
+For date and time fields, the formatting settings include these properties:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): It allows to set the field name.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): It allows to set the format of the respective field.
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Type): It allows to set the type of format to be used for the respective field.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): Specifies the field name to which the formatting should be applied.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): Defines the date/time format pattern for the respective field (e.g., 'dd/MM/yyyy', 'MMM yyyy').
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Type): Specifies the format type to be used for the respective field (Date, Time, or DateTime).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -94,10 +94,10 @@ For date and time, the formatting settings required to apply through code behind
 
 ```
 
-![Date Formatting in Blazor PivotTable](images/blazor-pivottable-date-formatting.png)
+![Date Formatting in Blazor Pivot Table](images/blazor-pivottable-date-formatting.png)
 
 ## Limitations of date formatting
 
-As per Firefox and Edge browsers standards, most of the date and time formats used in data source aren’t supported. For example: Apr-2000, Apr-01-2000, 01-03-2000, 2000-Apr-01 etc. are not supported. Meanwhile [ISO formats](https://262.ecma-international.org/5.1/#sec-15.9.1.15) will be supported across all browsers.
+According to Firefox and Edge browser standards, most date and time formats used in data sources are not supported. For example: Apr-2000, Apr-01-2000, 01-03-2000, 2000-Apr-01, and similar formats are not recognized. However, [ISO formats](https://262.ecma-international.org/5.1/#sec-15.9.1.15) are supported across all browsers for consistent date handling.
 
 N> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
