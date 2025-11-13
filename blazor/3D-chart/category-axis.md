@@ -46,9 +46,7 @@ The category axis is the horizontal axis of a 3D chart that shows text values ra
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTZdMLTMTKyfTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTZdMLTMTKyfTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)" %}
 
 ## Labels placement
 
@@ -89,9 +87,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJjHsLTWRHhqRc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJjHsLTWRHhqRc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)" %}
 
 ## Range
 
@@ -132,9 +128,7 @@ The range of the category axis can be customized using `Minimum`, `Maximum`, and
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNxMLficgvSbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column 3D Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNxMLficgvSbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)" %}
 
 ## Indexed category axis
 
@@ -182,6 +176,4 @@ The category axis can also be rendered based on the index values of the data sou
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBTjniVJWQPizAl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBTjniVJWQPizAl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)" %}

@@ -49,9 +49,7 @@ Error bars are graphical representations of the variability of data that are use
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrJXvLtoGKlZQco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrJXvLtoGKlZQco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.png)" %}
 
 ## Error bar type
 

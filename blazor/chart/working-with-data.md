@@ -54,9 +54,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKCrrVgRsckQvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKCrrVgRsckQvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)" %}
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -174,9 +172,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 </SfChart>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAihBrgvFhnbIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAihBrgvFhnbIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)" %}
 
 ### Binding with OData services
 
@@ -205,9 +201,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
     </ChartSeriesCollection>
 </SfChart>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVKsrVVKFPmAhzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVKsrVVKFPmAhzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)" %}
 
 ### Sending additional parameters to the server
 
@@ -509,9 +503,7 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUiLBLAkpRpchN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Web API Binding](images/working-data/observable-collection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUiLBLAkpRpchN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/observable-collection.png)" %}
 
 ## Empty points
 
@@ -610,9 +602,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgMVhLAaIiyPBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgMVhLAaIiyPBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)" %}
 
 ## Handling No Data
 
@@ -674,8 +664,7 @@ When no data is available to render in the chart, the [NoDataTemplate](https://h
 
 ```
 
-![No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.gif)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSZEZbBiUMPlvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSZEZbBiUMPlvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.gif)" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
