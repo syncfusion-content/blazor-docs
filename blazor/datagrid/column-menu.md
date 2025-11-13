@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Menu in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about column menu in the Syncfusion Blazor DataGrid component and much more details.
+description: Learn how to use and customize the column menu in Syncfusion Blazor DataGrid, including events, actions, and advanced options for better control.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,20 +9,22 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to true in the Grid configuration.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
 
-The default menu items are displayed in the following table:
+To enable the column menu, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnMenu) property to **true** in the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) configuration.
+
+The default column menu items are listed in the table:
 
 | Item | Description |
 |-----|-----|
 | **SortAscending** | Sort the current column in ascending order. |
 | **SortDescending** | Sort the current column in descending order. |
-| **Group** | Group the current column. |
-| **Ungroup** | Ungroup the current column. |
-| **AutoFit** | Auto fit the current column. |
-| **AutoFitAll** | Auto fit all columns. |
-| **ColumnChooser** | Choose the column visibility. |
-| **Filter** | Show the filter option as given in filterSettings [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property |
+| **Group** | Groups the current column. |
+| **Ungroup** | Ungroups the current column. |
+| **AutoFit** | Adjusts the width of the current column to fit its content. |
+| **AutoFitAll** | Adjusts the width of all columns to fit their content. |
+| **ColumnChooser** | Opens the column chooser to manage column visibility. |
+| **Filter** | Displays the filter option as defined in the [FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -89,16 +91,16 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzMLWLKTPWHQcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> *  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
-> * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) with the required items.
+> * To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
+> * To customize the menu items, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property with the required options.
 
-## Prevent column menu for particular column
+## Disable column menu for specific column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent the appearance of the column menu for specific columns. This feature is useful when you want to restrict certain columns from being customizable through the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent the column menu from appearing for specific columns. This is useful when certain columns should not be customizable through the column menu.
 
-To prevent the column menu for a particular column, you can set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to **false** for that specific column configuration. This will disable the column menu options specifically for the designated column, while other columns will have the column menu enabled.
+To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `ShowColumnMenu` property to **false**:
+The column menu is disabled for the **OrderID** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -167,9 +169,11 @@ public class OrderData
 
 ## Add custom column menu item
 
-The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. These custom menu items can be defined using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property, which accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class.You can define the actions for these custom items in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding custom items to the column menu using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects.
 
-Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting and grouping of the Grid using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__)  and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method in the `ColumnMenuItemClicked` event:
+Custom actions for these items can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
+
+In this configuration, two custom column menu items are added to clear sorting and grouping using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) methods:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -260,17 +264,19 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVJMrMgCLBDWpXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize menu items for particular columns
+## Customize menu items for specific columns
 
-Sometimes, you have a scenario that to hide an item from column menu for particular columns. In that case, you need to define the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property as **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
 
-The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column:
+To hide a menu item for a specific column, set the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property to **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
+
+The **Filter** item is hidden when the column menu is opened for the **OrderID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
     <GridEvents OnColumnMenuOpen="OnColumnMenuOpenHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
@@ -353,11 +359,9 @@ public class OrderData
 
 ## Render nested column menu
 
-The nested column menu feature provides an extended menu option in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid column headers, allows you to access additional actions and options related to the columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a nested column menu that provides extended options within the column header menu. This feature allows organizing related actions under submenus for better usability.
 
-To enable the nested column menu feature, you need to define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
-
-Here is an example of how to configure the `ColumnMenuItems` property to include a nested menu:
+To enable a nested column menu, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects, where each item can include a submenu by specifying its [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html#Syncfusion_Blazor_Grids_ColumnMenuItemModel_Items) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -365,7 +369,7 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
 @using Syncfusion.Blazor.Navigations
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true" AllowFiltering="true" ColumnMenuItems=@menuItem>
-    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="OrderData"></GridEvents>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
@@ -453,22 +457,23 @@ public class OrderData
 
 ## Customize the icon of column menu
 
-To customize the column menu icon, you need to override the default Grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the column menu icon by overriding the default CSS class **.e-icons.e-columnmenu**. This is achieved by applying a custom CSS rule with the **content** property to display a different icon or Unicode character.
 
-1. Add the necessary CSS code to override the default Grid class:
+**Steps to customize the icon:**
+
+1. Override the default CSS class:
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
    content: "\e99a";
 }
 ```
-2. Import the required icon stylesheets. You can use either the material or bootstrap5 style, depending on your preference. Add the following code to import the stylesheets:
+2. Import the icon stylesheet based on the selected theme preference:
 
 ```css
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
 ```
-Here is an example that demonstrates how to customize the column menu icon in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -539,11 +544,44 @@ public class OrderData
 
 ## Column menu events
 
-The column menu in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a set of events that allow customization of behavior and performing actions when the column menu is opened or clicked. The below events are helpful for adding additional functionality or implementing specific actions based on user interactions with the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides events that are triggered during column menu interactions. These events allow execution of custom logic before the menu opens and after an item is clicked, enabling customization and UI updates.
 
-1. The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before the column menu opens.
+1. [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen): Triggered before the column menu opens.
+2. [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked): Triggered when a column menu item is clicked.
 
-2. The [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event triggers when the user clicks the column menu of the Grid.
+### OnColumnMenuOpen
+
+The `OnColumnMenuOpen` event is triggered before the column menu opens. This event can be used to inspect or modify the menu or cancel its opening based on custom logic.
+
+**Event Arguments**
+
+The event uses the [ColumnMenuOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuOpenEventArgs.html) class, which includes:
+
+| Property          | Type                                | Description                                                                                     |
+|-------------------|-------------------------------------|-------------------------------------------------------------------------------------------------|
+| Cancel          | bool                             | Indicates whether to prevent the column menu from opening. Set to **true** to cancel opening. |
+| Column          | GridColumn                       | Represents the grid column where the column menu is currently open.                           |
+| ColumnMenuIndex | int                              | Indicates the level of the menu item within the menu hierarchy. Starts from 0 for top-level. |
+| Items           | List&lt;MenuItem&gt;                   | The list of menu items displayed in the column menu.                                          |
+| Left            | double                           | The left position of the column menu relative to the document or container.                  |
+| ParentItem`      | MenuItem                         | The parent menu item of the currently clicked sub-menu item. Null if no parent exists.       |
+| Top             | double                           | The top position of the column menu relative to the document or container.                   |
+
+### ColumnMenuItemClicked
+
+The `ColumnMenuItemClicked` event is triggered when a column menu item is clicked. This event can be used to perform actions based on the selected menu item.
+
+**Event Arguments**
+
+The event uses the [ColumnMenuClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuClickEventArgs.html) class, which includes:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| Column   | GridColumn | The grid column associated with the column menu popup. |
+| Element  | ElementReference | The DOM element that triggered the event. |
+| Event    | System.EventArgs | Provides event details for the column menu interaction. |
+| Item     | Navigations.MenuItemModel | The menu item that was clicked in the column menu. |
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
