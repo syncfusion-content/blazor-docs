@@ -16,9 +16,7 @@ You can enable `WeekNumber` in the Calendar by using the [WeekNumber](https://he
 
 <SfCalendar TValue="DateTime?" WeekNumber=true></SfCalendar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLAWBrVhoxzJZmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Calendar displays Week Numbers](../images/blazor-calendar-week-number.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLAWBrVhoxzJZmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar displays Week Numbers](../images/blazor-calendar-week-number.png)" %}
 
 ## Week rule
 

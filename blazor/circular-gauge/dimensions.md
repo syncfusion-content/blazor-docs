@@ -30,9 +30,7 @@ You can set the size of the Circular Gauge in pixel as demonstrated below.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthItOWmVBPpLJbl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Circular Gauge Size in Pixel](./images/blazor-circulargauge-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthItOWmVBPpLJbl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Circular Gauge Size in Pixel](./images/blazor-circulargauge-size.png)" %}
 
 ### In percentage
 
@@ -54,8 +52,6 @@ By setting value in percentage, gauge gets its dimension with respect to its con
 </div>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVetOicVLudqTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVetOicVLudqTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)" %}
 
 N> When you do not specify the size, it takes `450` pixels as the height and window size as its width.

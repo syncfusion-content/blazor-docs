@@ -170,7 +170,7 @@ In iOS, code is statically compiled ahead of time. Configure Syncfusion<sup styl
 
 Possible errors if the `MtouchExtraArgs` tag is not configured:
 1. The app does not load on a real device with the error “An unhandled error has occurred” after compiling in Release mode with Visual Studio and deploying to a real device.
-2. AOT-related failures such as [`Attempting to JIT compile method while running in aot-only mode`](https://github.com/xamarin/xamarin-macios/issues/12416)
+2. AOT-related failures such as [`Attempting to JIT compile method while running in aot-only mode`](https://github.com/dotnet/macios/issues/12416)
 
  ```
 <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
