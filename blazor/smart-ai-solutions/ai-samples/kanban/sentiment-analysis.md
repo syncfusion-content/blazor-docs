@@ -228,9 +228,21 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component
+## AI-powered Sentiment Analysis in Kanban
 
-This section demonstrates how to implement sentiment analysis in the Syncfusion Blazor Kanban component using AI. The AI Assistant evaluates the emotional tone of each task description and displays a corresponding emoji (😊, 😐, 😞) to help teams quickly assess the mood or urgency of tasks. This can be especially useful in agile workflows where emotional context can influence task priority and team communication.
+The AI-powered sentiment analysis feature in Syncfusion Blazor Kanban evaluates customer feedback for delivered tasks and displays emojis (😊, 😐, 😞) to indicate positive, neutral, or negative sentiment. This helps teams quickly assess satisfaction levels and prioritize follow-up actions, improving customer experience in service workflows.
+
+### UI Structure and User Interaction (`Home.razor`)
+
+The Razor page includes a Kanban board for managing pizza orders across columns like Menu, Order, Ready to Serve, and Delivered. A progress button triggers sentiment analysis, while custom card templates display task details such as title, description, and delivery date. After analysis, an emoji appears on delivered tasks to represent sentiment. A dialog template supports editing fields like category, size, and feedback, with conditional rendering based on task type.
+
+### AI Sentiment Analysis Logic (`Home.razor.cs`)
+
+The `GetScore` method serializes Kanban data to JSON and sends it to the AI service with a prompt requesting a `SentimentScore` (1–5) based on feedback. The AI response is cleaned and deserialized into the data model, updating each task’s score and assigning emojis: 😢 for 1–2, 😐 for 3, and 😀 for 4–5. State flags like `ShowScore` control rendering, while progress events (`Begin`, `End`) update button text during processing.
+
+### Data Binding and Error Handling
+
+The `SfKanban` binds to the `Pizza` list using `Category` as the `KeyField`, with dynamic columns from `columnData`. Card templates conditionally render sentiment emojis for delivered tasks. If AI analysis fails, the spinner state prevents premature interactions, and `StateHasChanged()` refreshes the UI after completion.
 
 (`Home.razor`)
 

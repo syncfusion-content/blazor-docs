@@ -228,9 +228,27 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component 
+## AI-powered Kanban Smart Card Generation
 
-This section demonstrates how to implement the Syncfusion Blazor Kanban component with AI-powered task generation. The AI Assistant analyzes the provided project description and automatically suggests relevant tasks, which are then displayed in the Kanban board.
+The AI-powered Kanban feature integrates Syncfusion Blazor Kanban with an AI service to automatically create structured task cards from user input. It combines a simple UI for project details with backend logic that generates tasks and updates the Kanban board dynamically.
+
+### UI Structure and User Interaction (`Home.razor`)
+
+The Razor page includes an input form for project details and a Kanban board for visualizing tasks. Users enter a project description and task count, then click Generate Tasks to start AI processing. A modal dialog ensures clean input for new projects, while conditional rendering switches between input and Kanban views. Cards display essential details like title, description, and story points with drag-and-drop support.
+
+### AI Task Generation Logic (`Home.razor.cs`)
+
+The `GenerateProjectTasks` method builds a prompt for the AI service, requesting tasks in strict JSON format with fields like Id, Title, Status, and Due Date. The response is cleaned and deserialized into `SmartSuggestionDataModel` objects, which are added to the Kanban data source. Progress button events provide feedback during generation, and default values like `Status="Open"` and `Color="#000000"` are applied to new tasks.
+
+### Data Binding and Kanban Configuration
+
+The `SfKanban` component binds to the `smartSuggestion` list, using `Status` as the `KeyField` to organize cards into columns (To Do, In Progress, Review, Done).  
+Card templates are customized via `KanbanCardSettings` to show essential task details with visual clarity.  
+A fallback `SfGrid` view allows tabular task management with inline editing, while a toggle button switches between Grid and Kanban layouts.
+
+### Error Handling and User Feedback
+
+If AI generation fails, a toast notification displays an error message without disrupting the workflow. Input validation ensures both project details and task count are provided before submission. State flags manage UI transitions and prevent issues during asynchronous operations.
 
 (`Home.razor`)
 
