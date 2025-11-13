@@ -41,6 +41,4 @@ The Dashboard Layout component is also provided with the panel floating function
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUCVrcTKrdWwSb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Floating Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUCVrcTKrdWwSb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Floating Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)" %}
