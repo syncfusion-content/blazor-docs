@@ -45,8 +45,7 @@ documentation: ug
 
 ```
 
-![Blazor Funnel Chart](../images/funnel/blazor-funnel-chart.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhgCrCUpgfyPyNU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhgCrCUpgfyPyNU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Funnel Chart](../images/funnel/blazor-funnel-chart.png)" %}
 
 ## Funnel Size
 
@@ -86,8 +85,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
 
 ```
 
-![Customizing Funnel Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-size-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLAWVCgfAlkvtpq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLAWVCgfAlkvtpq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Funnel Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-size-customization.png)" %}
 
 N> The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) example can be explored to learn to render and configure the funnel chart.
 
@@ -129,8 +127,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ```
 
-![Customizing Funnel Neck Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-neck-size.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKshsATguqmNHu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKshsATguqmNHu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Funnel Neck Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-neck-size.png)" %}
 
 ## Gap between funnel segments
 
@@ -170,8 +167,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ```
 
-![Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgshWqpAulylIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgshWqpAulylIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.png)" %}
 
 ## Funnel explode
 
@@ -211,8 +207,7 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 
 ```
 
-![Explode in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-explode.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLKMLsqzpZBowwH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLKMLsqzpZBowwH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Explode in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-explode.png)" %}
 
 ## Smart Data Label
 
@@ -264,8 +259,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 }
 ```
 
-![Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKWrCqppsLzynA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKWrCqppsLzynA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)" %}
 
 ## Border radius
 
@@ -305,8 +299,7 @@ The corners of the first data point and last data point in the funnel chart seri
     }
 }
 ```
-![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheDHBnqcxEcNgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheDHBnqcxEcNgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
