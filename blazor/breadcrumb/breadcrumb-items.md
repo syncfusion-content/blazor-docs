@@ -31,9 +31,7 @@ The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-brea
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqCLsJJBaogECl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqCLsJJBaogECl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)" %}
 
 ## Items based on current URL
 
@@ -44,9 +42,7 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 
 <SfBreadcrumb></SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUWVWJzVObSwiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUWVWJzVObSwiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)" %}
 
 N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location) sample.
 
@@ -60,9 +56,7 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 <SfBreadcrumb Url="https://blazor.syncfusion.com/demos/breadcrumb/navigation">
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAMBWpzqZWfPfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAMBWpzqZWfPfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)" %}
 
 ## Add or remove the Breadcrumb items
 

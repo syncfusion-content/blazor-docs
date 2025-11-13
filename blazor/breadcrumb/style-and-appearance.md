@@ -53,6 +53,4 @@ Use the following CSS to customize the background and text color of Breadcrumb.
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoZsCXAGIEezKH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
-
-![Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoZsCXAGIEezKH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.png)" %}

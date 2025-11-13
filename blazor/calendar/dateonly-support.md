@@ -19,6 +19,4 @@ The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKsVBrLeKgEwxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Calendar with DateOnly](./images/CalendarDateOnly.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKsVBrLeKgEwxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar with DateOnly](./images/CalendarDateOnly.gif)" %}

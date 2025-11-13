@@ -52,9 +52,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsVLxzRMlYUSx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Stacked Area Chart](../images/chart-types-images/blazor-stacked-area-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsVLxzRMlYUSx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Area Chart](../images/chart-types-images/blazor-stacked-area-chart.png)" %}
 
 N> Refer to our [Blazor Stacked Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Area Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-area?theme=bootstrap5) to know how to render and configure the Stacked Area type chart.
 
