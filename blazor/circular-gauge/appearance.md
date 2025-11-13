@@ -27,9 +27,7 @@ You can add a title to the Circular Gauge using the [Title](https://help.syncfus
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLytkMmVzxeMrwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLytkMmVzxeMrwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)" %}
 
 ## Circular gauge position
 
@@ -48,9 +46,7 @@ You can set the mid point of the Circular Gauge in pixel as shown below.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKWVrmgfzCKvPj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Circular Gauge Position based on Pixel Value](./images/blazor-circulargauge-custom-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKWVrmgfzCKvPj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Circular Gauge Position based on Pixel Value](./images/blazor-circulargauge-custom-position.png)" %}
 
 ### In percentage
 
@@ -65,9 +61,7 @@ By setting the value in percentage, Circular Gauge gets its mid point with respe
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKiVBGgzfHHcXo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![changing Blazor Circular Gauge Position based on Percent Value](./images/blazor-circulargauge-position-based-on-percentage.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKiVBGgzfHHcXo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[changing Blazor Circular Gauge Position based on Percent Value](./images/blazor-circulargauge-position-based-on-percentage.png)" %}
 
 ## Background customization
 
@@ -101,9 +95,7 @@ Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBqiLLwApIVWPGg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Background and Border of Blazor Circular Gauge](./images/blazor-circulargauge-background-border-color.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBqiLLwApIVWPGg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Background and Border of Blazor Circular Gauge](./images/blazor-circulargauge-background-border-color.png)" %}
 
 ## Radius calculation based on angles
 
@@ -121,6 +113,4 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqiVBmKJoTIDfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqiVBmKJoTIDfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)" %}

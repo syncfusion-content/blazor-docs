@@ -47,8 +47,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 ```
 
-![Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqCViTsGXMlSaD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqCViTsGXMlSaD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title.png)" %}
 
 ## Title customization
 
@@ -90,8 +89,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 ```
 
-![Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUMVCpMmDIcLry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUMVCpMmDIcLry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.png)" %}
 
 ### Title position
 
@@ -133,8 +131,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 }
 
 ```
-![Position customization of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSZJNzBeDlhwIW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSZJNzBeDlhwIW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position.png)" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_Y) properties in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -172,8 +169,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 }
 
 ```
-![Custom position of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoNJNQqAoFwbVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoNJNQqAoFwbVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)" %}
 
 
 ## Subtitle
@@ -213,8 +209,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-with-subtitle.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgMrCpiGjaRMic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgMrCpiGjaRMic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-with-subtitle.png)" %}
 
 ## Subtitle customization
 
@@ -255,8 +250,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Customizing Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUihWfiGMgtYfB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUihWfiGMgtYfB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-customization.png)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

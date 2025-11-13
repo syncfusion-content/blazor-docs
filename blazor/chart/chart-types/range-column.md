@@ -64,9 +64,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgCLrnzdoaeqgs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgCLrnzdoaeqgs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.png)" %}
 
 N> Refer to our [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap5) to know how to show variations in the data values for a given time.
 
@@ -520,8 +518,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     };
 }
 ```
-![Blazor Range Column Chart with corner radius](../images/chart-types-images/blazor-range-column-corner-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSDTtTAfxgaRes?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSDTtTAfxgaRes?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart with corner radius](../images/chart-types-images/blazor-range-column-corner-radius.png)" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -585,8 +582,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 
 ```
-![Blazor Range Column Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-range-column-corner-radius-onPointRender.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLejTXzqothXDiL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLejTXzqothXDiL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-range-column-corner-radius-onPointRender.png)" %}
 
 ## Empty points
 
