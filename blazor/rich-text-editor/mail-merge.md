@@ -7,15 +7,9 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Mail Merge in Syncfusion Blazor RichTextEditor
+# Mail Merge in Blazor Rich Text Editor
 
-The Mail Merge feature in Syncfusion Blazor RichTextEditor enables developers to create dynamic, personalized documents by inserting placeholders (merge fields) into the editor content. These placeholders are later replaced with actual data at runtime, making it ideal for generating letters, invoices, and bulk communication templates.
-
-## Key Outcomes:
-
-- Render custom toolbar items for mail merge actions.
-- Insert merge fields dynamically using dropdown or Mention control.
-- Replace placeholders with real data using a single click.
+The Mail Merge feature in Blazor Rich Text Editor enables developers to create dynamic, personalized documents by inserting placeholders (merge fields) into the editor content. These placeholders are later replaced with actual data at runtime, making it ideal for generating letters, invoices, and bulk communication templates.
 
 ## Rendering Custom Toolbar Items
 
@@ -30,14 +24,20 @@ Custom toolbar items are added using the [RichTextEditorCustomToolbarItems](http
 <RichTextEditorCustomToolbarItems>
     <RichTextEditorCustomToolbarItem Name="MergeData">
         <Template>
-            <SfButton OnClick="MergeData">Merge Data</SfButton>
+            <SfButton CssClass="@_buttonClass" OnClick="OnClickHandler" id="merge_data" tabindex="-1" aria-label="Merge User-specific Data" Disabled="@_sourceCodeEnabled">
+                <div class="e-tbar-btn-text">Merge Data</div>
+            </SfButton>
         </Template>
     </RichTextEditorCustomToolbarItem>
     <RichTextEditorCustomToolbarItem Name="InsertField">
         <Template>
-            <SfDropDownButton Items="@items">
-                <ChildContent>Insert Field</ChildContent>
-                <DropDownButtonEvents ItemSelected="InsertField" />
+            <SfDropDownButton CssClass="@_dropDownButtonClass" id="insertField" Items="@_items" aria-label="Insert Merge Field" Disabled="@_sourceCodeEnabled">
+                <ChildContent>
+                    <span style="display:inline-flex;">
+                        <span class="e-rte-dropdown-btn-text">Insert Field</span>
+                    </span>
+                    <DropDownButtonEvents ItemSelected="OnItemSelect" OnOpen="OnDropDownOpen" Closed="OnDropDownClose"></DropDownButtonEvents>
+                </ChildContent>
             </SfDropDownButton>
         </Template>
     </RichTextEditorCustomToolbarItem>
@@ -46,42 +46,48 @@ Custom toolbar items are added using the [RichTextEditorCustomToolbarItems](http
 {% endhighlight %}
 {% endtabs %}
 
-## Executing Merge Data Action
-
-When the `Merge Data` button is clicked:
-
-1. The editor’s current content (rte.Value) is retrieved.
-2. A regex-based function scans for placeholders in the format {{FieldName}}.
-3. Each placeholder is replaced with its corresponding value from a dictionary.
-
-```csharp
-
-    public void OnClickHandler()
-    {
-        if (this._mailMergeEditor != null)
-        {
-            var editorContent = this._mailMergeEditor.Value;
-            var mergedContent = ReplacePlaceholders(editorContent, this._placeholderData);
-            _rteValue = mergedContent;
-        }
-    }
-     public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
-    {
-        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
-        {
-            string key = match.Groups[1].Value.Trim();
-            return data.TryGetValue(key, out var value) ? value : match.Value;
-        });
-    }
-
-```
-This ensures all placeholders are dynamically replaced without manual editing.
-
 ## Populating and Using Insert Field Dropdown
 
-The `Insert Field` dropdown is populated from a predefined list of merge fields (items). When a user selects an item:
+The `Insert Field` dropdown in the Rich Text Editor is designed to let users quickly insert predefined merge fields into the editor content. This dropdown is powered by the `SfDropDownButton` control, which uses its [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Items) property to bind a collection of menu items.
 
-- The `InsertField()` method retrieves the corresponding field value.
+### How the Items Property Works
+
+- The `Items` property accepts a list of [DropDownMenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html) objects.
+- Each item in this list represents a merge field and contains a [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Text) property, which is displayed in the dropdown.
+- These text values correspond to the merge fields available for insertion.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfDropDownButton Items="@items">
+    <ChildContent>Insert Field</ChildContent>
+    <DropDownButtonEvents ItemSelected="OnItemSelect" />
+</SfDropDownButton>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here, `@items` refers to a list of `DropDownMenuItem` objects defined in the `@code` block.
+
+```csharp
+ private List<DropDownMenuItem> items = new List<DropDownMenuItem>
+    {
+        new DropDownMenuItem { Text = "First Name" },
+        new DropDownMenuItem { Text = "Last Name" },
+        new DropDownMenuItem { Text = "Support Email" },
+        new DropDownMenuItem { Text = "Company Name" },
+        new DropDownMenuItem { Text = "Promo Code" },
+        new DropDownMenuItem { Text = "Support Phone Number" },
+        new DropDownMenuItem { Text = "Customer ID" },
+        new DropDownMenuItem { Text = "Expiration Date" },
+        new DropDownMenuItem { Text = "Subscription Plan" }
+    };
+
+```
+
+When the user selects an item from the dropdown:
+
+- The `OnItemSelect()` method retrieves the corresponding field value.
 - It constructs an HTML snippet with a non-editable span containing the placeholder.
 - The snippet is inserted at the current cursor position using [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_System_String_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_).
 
@@ -98,6 +104,7 @@ The `Insert Field` dropdown is populated from a predefined list of merge fields 
         }
     }
 ```
+
 ## Role of Mention Control in Mail Merge
 
 Mention control enhances usability by enabling inline field suggestions:
@@ -149,7 +156,6 @@ When the `Insert Field` dropdown opens, the editor loses its current selection b
     }
 ```
 
-
 ## Handling Editor Mode Changes with OnActionComplete
 
 The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnActionComplete) event fires after specific actions in the RichTextEditor, such as switching between Source Code and Preview modes.
@@ -176,6 +182,37 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 ```
 
 **Why is this important?** This prevents users from triggering merge operations or inserting fields while editing raw HTML, which could cause unexpected behavior.
+
+## Executing Merge Data Action
+
+When the `Merge Data` button is clicked:
+
+- The editor’s current content is retrieved by using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property.
+- A regex-based function scans for placeholders in the format {{FieldName}}.
+- Each placeholder is replaced with its corresponding value from a dictionary.
+
+```csharp
+
+    public void OnClickHandler()
+    {
+        if (this._mailMergeEditor != null)
+        {
+            var editorContent = this._mailMergeEditor.Value;
+            var mergedContent = ReplacePlaceholders(editorContent, this._placeholderData);
+            _rteValue = mergedContent;
+        }
+    }
+     public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
+    {
+        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
+        {
+            string key = match.Groups[1].Value.Trim();
+            return data.TryGetValue(key, out var value) ? value : match.Value;
+        });
+    }
+
+```
+This ensures all placeholders are dynamically replaced without manual editing.
 
 {% highlight cshtml %}
 
