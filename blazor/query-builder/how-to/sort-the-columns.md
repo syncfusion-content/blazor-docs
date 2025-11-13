@@ -9,8 +9,7 @@ documentation: ug
 
 # Sort the Columns in Blazor QueryBuilder Component
 
-The QueryBuilder has options to sort the column fields by `ascending` or `descending` order. To sort the columns, you need to set [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property.
-
+Sort the field list shown in the Query Builder’s field (column) dropdown to improve in large schemas. Set the [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property to `SortDirection.Ascending` or `SortDirection.Descending` to control the order. Sorting is applied per component instance and is based on the displayed field labels.
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
@@ -56,4 +55,4 @@ The QueryBuilder has options to sort the column fields by `ascending` or `descen
 
 ```
 
-![Sorting in Blazor QueryBuilder](./../images/blazor-querybuilder-sorting.png)
+![Sorting in Blazor Query Builder](./../images/blazor-querybuilder-sorting.png)

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder
 
-Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Placeholder) property to show a brief description of the expected input value. In the example below, assign `Select a game` to the `Placeholder` property, which will update the `Placeholder` attribute of the input element in the DOM accordingly.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Placeholder) property to display a short hint about the expected value when no selection has been made. In the following example, setting `Select a game` guides the user until an item is chosen.
 
 {% highlight cshtml %}
 
@@ -21,7 +21,7 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVTNaLAqYKlJFoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
+![Blazor MultiColumn ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
 
 <!-- ## Color of the placeholder text
 
@@ -35,7 +35,9 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 ## Add mandatory indicator using placeholder
 
-The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
+A visual mandatory indicator (*) can be appended to the floating placeholder label by targeting the `.e-float-text::after` CSS selector and setting the `content` style.
+
+For accessibility, pair this visual cue with semantic validation (for example, apply `[Required]` to the bound model property or set `aria-required="true"`) so assistive technologies convey the required state.
 
 {% highlight cshtml %}
 
@@ -45,21 +47,21 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
+![Blazor MultiColumn ComboBox with mandatory indicator in placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
 ## Floating label
 
-Use the [FloatLabelType]() property to define how the floating label behaves in the DropDownList, allowing the `Placeholder` text to float above the TextBox. This functionality is relevant only when a `Placeholder` is present. The `FloatLabelType` depends on the `Placeholder` setting, with its default value being `Never`.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html) property to control how the placeholder text floats as a label above the input. Floating labels work when a `Placeholder` is provided. The default is `Never`.
 
-The floating label supports the types of actions as follow.
+The floating label supports the following options.
 
 Type     | Description
 ------------ | -------------
-  [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto)       | The floating label will float above the input after focusing, or entering a value in the input.
-  [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | The floating label will always float above the input.
-  [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | By default, never float the label in the input when the placeholder is available.
+  [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto)       | Floats the label on focus or after a value is entered.
+  [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | Always keeps the label floated above the input.
+  [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | Never floats the label when a placeholder is available (default).
 
-The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
+The `FloatLabelType` set to `Auto` is demonstrated in the following example.
 
 {% highlight cshtml %}
 
@@ -69,7 +71,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrzXarAUYxRzqxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
+![Blazor MultiColumn ComboBox with floating label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
 
 <!-- ## Customizing the float label element’s focusing color
 

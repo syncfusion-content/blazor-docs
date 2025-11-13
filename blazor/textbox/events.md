@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor TextBox Component
 
-This section explains the list of events of the TextBox component which will be triggered for appropriate TextBox actions.
+This section lists the TextBox events and when they are triggered during user interactions.
 
 ## Blur
 
-`Blur` event triggers when the TextBox has focus-out.
+The `Blur` event triggers when the TextBox loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,7 +30,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## Created
 
-`Created` event triggers when the TextBox component is created.
+The `Created` event triggers after the TextBox component is initialized and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -47,7 +47,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## Destroyed
 
-`Destroyed` event triggers when the TextBox component is destroyed.
+The `Destroyed` event triggers when the TextBox component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -64,7 +64,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## Focus
 
-`Focus` event triggers when the TextBox gets focus.
+The `Focus` event triggers when the TextBox receives focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -81,7 +81,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## Input
 
-`Input` event triggers each time when the value of TextBox has changed.
+The `Input` event triggers every time the TextBox value changes (on each keystroke or input).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -98,7 +98,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## ValueChange
 
-`ValueChange` event triggers when the content of TextBox has changed and gets focus-out.
+The `ValueChange` event triggers when the TextBox value is committed (typically on focus out) and has changed since it received focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -115,7 +115,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## ValueChanged
 
-`ValueChanged` event specifies the callback to trigger when the value changes.
+The `ValueChanged` event is the parameter callback that fires when the `Value` parameter changes. It is commonly used with `@bind-Value` for two-way binding or to react to value updates programmatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -130,4 +130,4 @@ This section explains the list of events of the TextBox component which will be 
 }
 ```
 
-N> TexTBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> TextBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

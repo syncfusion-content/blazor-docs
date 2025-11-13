@@ -13,7 +13,7 @@ This section describes the rating events that will be triggered when appropriate
 
 ## Created
 
-The rating component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event when the rendering of the rating component is completed.
+The rating component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event after the component rendering is completed. Use this event for initialization logic that depends on the rendered UI.
 
 ```cshtml
 
@@ -32,7 +32,7 @@ The rating component triggers the [Created](https://help.syncfusion.com/cr/blazo
 
 ## ValueChanged
 
-The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed. The changed value is passed as the event argument.
+The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the rating value changes. The new value is passed as the event argument.
 
 ```cshtml
 
@@ -51,7 +51,7 @@ The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/
 
 ## OnItemHover
 
-The rating component triggers the [OnItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_OnItemHover) event when the rating item is hovered. The [RatingHoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingHoverEventArgs.html) passed as an event argument provides the details of the hovered item.
+The rating component triggers the [OnItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_OnItemHover) event when a rating item is hovered. The [RatingHoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingHoverEventArgs.html) in the event provides details such as the hovered item’s index and value.
 
 ```cshtml
 

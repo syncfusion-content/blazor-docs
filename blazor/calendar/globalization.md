@@ -13,7 +13,7 @@ documentation: ug
 
 ## Right-To-Left
 
-The Calendar supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_EnableRtl) property to set the RTL direction.
+The Calendar supports right-to-left (RTL) layout for languages like Arabic and Hebrew. RTL is not implied by Locale; explicitly set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_EnableRtl) property to true to render the component in RTL.
 
 The following code example initializes the Calendar component in `Arabic` culture.
 
@@ -34,4 +34,4 @@ The following code example initializes the Calendar component in `Arabic` cultur
 ```
 
 
-![Right to Left in Blazor Calendar](./images/blazor-calendar-right-to-left.png)
+![Right to left in Blazor Calendar](./images/blazor-calendar-right-to-left.png)

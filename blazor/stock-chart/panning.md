@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Panning in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about panning functionality in Syncfusion Blazor Stock Chart component and more.
+description: Check out and learn here all about panning functionality in the Syncfusion Blazor Stock Chart component.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -9,9 +9,10 @@ documentation: ug
 
 # Panning in Blazor Stock Chart Component 
 
-By default, panning is enabled in the Stock Chart, ensuring that users can immediately start interacting with the chart upon rendering. This default behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property, which is set to **true** by default in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html).
+Panning is enabled by default in the Stock Chart. This behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property of [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), which defaults to **true**.
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 @inject NavigationManager NavigationManager
@@ -32,7 +33,7 @@ else
             <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>
-        <StockChartZoomSettings EnablePan=true></StockChartZoomSettings>
+        <StockChartZoomSettings EnablePan="true"></StockChartZoomSettings>
         <StockChartSeriesCollection>
             <StockChartSeries DataSource="@dataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
@@ -40,8 +41,8 @@ else
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
         </StockChartChartArea>
     </SfStockChart>
-
 }
+
 @code {
     private ChartData[] dataSource;
 
@@ -65,4 +66,4 @@ else
 
 ![Blazor Stock Chart with Panning](images/panning.gif)
 
-N> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature representations and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to see various stock chart types and time-dependent data rendered at equal intervals.

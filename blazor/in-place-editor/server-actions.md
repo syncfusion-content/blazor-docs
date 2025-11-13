@@ -3,24 +3,24 @@ layout: post
 title: Server Actions in Blazor In-place Editor Component | Syncfusion
 description: Checkout and learn here all about Server Actions in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
-control: In Place Editor 
+control: In-place Editor 
 documentation: ug
 ---
 
 # Server Actions in Blazor In-place Editor Component
 
-When sending the In-place Editor component value to a remote server, the `PrimaryKey` property value is required. Otherwise, the action will not be performed.
+When posting the In-place Editor value to a remote server, the `PrimaryKey` property is required to identify the record on the server. Without a `PrimaryKey`, the save action is not performed.
 
-If the `SaveURL` property value is empty, data changes will be handled locally. The `OnActionSuccess` event will trigger with `null` as the argument value.
+If the `SaveUrl` property is not set, data changes are handled locally by the component. In this case, the `OnActionSuccess` event still fires, but the event argument value is `null` because no server response is available.
 
-N> The following arguments are passed to the server when the submit actions are performed.
+N> The following arguments are sent to the server when a submit action is performed.
 
-| Arguments  | Explanations                                              |
+| Arguments  | Explanation                                              |
 |------------|-----------------------------------------------------------|
-| Value      | For processing edited value, like DB value updating.      |
-| PrimaryKey | For value mapping to the server, like selecting DB.       |
+| Value      | The edited value used for updating the data store.       |
+| PrimaryKey | The unique identifier used to map the edited value to a record. |
 
-Find the following sample server codes for defining models and controller functions to configure processing data.
+Find the following sample server code for defining models and controller functions to configure processing data.
 
 ```csharp
 public class SubmitModel
@@ -41,11 +41,10 @@ public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value)
 
 ```
 
-* Server actions successfully done, the `OnActionSuccess` event will be fired with returned server data.
+- When the server action completes successfully, the `OnActionSuccess` event is triggered with the returned server data.
+- If the server request fails (for example, network error or non-success status code), the `OnActionFailure` event is triggered. In this case, the value in the editor is not updated.
 
-* If the server is not responding, the `OnActionFailure` event will be fired with data, but value not updated in the Editor.
-
-In the following sample, the `OnActionSuccess` event will trigger once the value submitted successfully into the server.
+In the following sample, the `OnActionSuccess` event is triggered after the value is successfully submitted to the server.
 
 ```csharp
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Separator in Blazor OTP Input component
 
-The separator in OTP Input specifies the character or symbol used to separate each input field in the OTP Input component. This separator is displayed between each input field to visually distinguish between each inputs. You can set the separator character by using the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Separator) property.
+The separator in the OTP input component is the character or string rendered between adjacent input fields to visually distinguish them. Configure the separator using the [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Separator) property.
 
 ```cshtml
 

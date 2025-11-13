@@ -9,14 +9,14 @@ documentation: ug
 
 # Styles and Appearances in Blazor QueryBuilder Component
 
-To modify the QueryBuilder appearance, you need to override the default CSS of QueryBuilder component. Find the list of CSS classes and its corresponding section in QueryBuilder component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+Customize the appearance of the Query Builder by overriding the component’s default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-| .e-query-builder .e-btn-group input + label.e-btn | To customize the condition button in querybuilder. | 
-| .e-query-builder .e-btn-group input:checked + label.e-btn | To customize the selected condition button in querybuilder. |
-| .e-query-builder .e-group-body .e-rule-container | To customize the querybuilder rule container. |
-| .e-query-builder .e-group-action .e-btn | To customize the querybuilder add group/condition button. |
-| .e-query-builder .e-removerule.e-btn.e-round | To customize the querybuilder Delete button. |
-| .e-query-builder .e-rule-list > ::after,.e-query-builder .e-rule-list > ::before | To customize the querybuilder group joining line. |
-| .e-query-builder .e-rule-container.e-joined-rule | To customize the querybuilder condition joining line. |
+| .e-query-builder .e-btn-group input + label.e-btn | Customize the condition button in the Query Builder. | 
+| .e-query-builder .e-btn-group input:checked + label.e-btn | Customize the selected condition button in the Query Builder. |
+| .e-query-builder .e-group-body .e-rule-container | Customize the Query Builder rule container. |
+| .e-query-builder .e-group-action .e-btn | Customize the Query Builder Add Group/Add Condition buttons. |
+| .e-query-builder .e-removerule.e-btn.e-round | Customize the Query Builder delete button. |
+| .e-query-builder .e-rule-list > ::after, .e-query-builder .e-rule-list > ::before | Customize the Query Builder group joining line. |
+| .e-query-builder .e-rule-container.e-joined-rule | Customize the Query Builder condition joining line. |

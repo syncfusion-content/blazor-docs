@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Virtualization in Blazor DropDown List Component | Syncfusion
+title: Virtualization in Blazor DropDownList component | Syncfusion
 description: Checkout and learn here all about Virtualization in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
-control: DropDown List
+control: DropDownList
 documentation: ug
 ---
 
 # Virtualization in DropDown List
 
-To get started quickly with Virtualization in the Blazor DropDown List component, you can check the video below.
+To get started quickly with virtualization in the Blazor DropDownList component, watch the video below.
 
 {% youtube "https://www.youtube.com/watch?v=ysctYSeGZYE" %}
 
@@ -24,14 +24,13 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-![Blazor DropDownList with virtualization of local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
+![Blazor DropDownList with virtualization and local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
 
+## Grouping with virtualization
 
-## Grouping with Virtualization
+The DropDownList supports grouping together with virtualization. Use [DropDownListFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) to categorize items by a field in the data source. After grouping is applied, virtualization behaves similarly to local data binding: group headers and items are rendered on demand as the user scrolls. When using a remote data source, an initial request may retrieve the necessary data to perform grouping; thereafter, the grouped content is virtualized during display.
 
-The DropDownList component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [DropDownListFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding on virtualization. 
-
-The following sample shows the example for Grouping with Virtualization. 
+The following sample demonstrates grouping with virtualization.
 
 {% highlight cshtml %}
 
@@ -41,13 +40,13 @@ The following sample shows the example for Grouping with Virtualization.
 
 ## Keyboard interaction
 
-Users can navigate through the scrollable content using keyboard actions. This feature loads the next or next set of items based on the key inputs in the popup.
+Users can navigate virtualized content using keyboard actions. The following keys load items or pages on demand as needed:
 
 | Key | Action |
 |-----|-----|
-| `ArrowDown` | Loads the next virtual list item if the selection is present in last item of the current page. |
-| `ArrowUp` | Loads the previous virtual list item if the selection is present in first item of the current page. |
-| `PageDown` | Loads the next page and selects the last item in it. |
-| `PageUp` | Loads the previous page and selects the first item in it. |
-| `Home` | Loads the initial set of items and selects first item in it. |
-| `End` | Loads the last set of items and selects last item in it. |
+| `ArrowDown` | Loads the next virtual item when the selection reaches the last item of the current page. |
+| `ArrowUp` | Loads the previous virtual item when the selection reaches the first item of the current page. |
+| `PageDown` | Loads the next page and selects the last item. |
+| `PageUp` | Loads the previous page and selects the first item. |
+| `Home` | Loads the initial page and selects the first item. |
+| `End` | Loads the last page and selects the last item. |

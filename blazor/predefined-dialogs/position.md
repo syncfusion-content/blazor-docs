@@ -9,13 +9,12 @@ documentation: ug
 
 # Positioning in Predefined Dialogs in Blazor
 
-Customize the dialog position by using the [DialogOptions.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Position) property. The position can be represented with specific `X` and `Y` values.
+Customize the dialog position using the [DialogOptions.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Position) property. The position is defined by `X` and `Y` values on the [PositionDataModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.PositionDataModel.html) type and is relative to the target container.
 
-* The `PositionDataModel.X` can be configured with a left, center, right, or offset value. By default, the value is set as `center`.
-* The `PositionDataModel.Y` can be configured with a top, center, bottom, or offset value. By default, the value is set as `center`.
+* `PositionDataModel.X` can be set to `left`, `center`, `right`, or an offset value. The default is `center`.
+* `PositionDataModel.Y` can be set to `top`, `center`, `bottom`, or an offset value. The default is `center`.
 
-Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the position. Here, customized the dialog position as X= "top" and Y= "center".
-
+Use the following code snippets for **alert.razor**, **confirm.razor**, and **prompt.razor** to customize the position. In this example, the dialog position is set to X = `center` and Y = `top`.
 {% tabs %}
 
 {% highlight razor tabtitle="alert.razor" %}
@@ -36,12 +35,12 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 **Alert**
 
-![Alert position Dialog](./images/blazor-alert-position.png)
+![Alert dialog positioned at top center](./images/blazor-alert-position.png)
 
 **Confirm**
 
-![Confirm position Dialog](./images/blazor-confirm-position.png)
+![Confirm dialog positioned at top center](./images/blazor-confirm-position.png)
 
 **Prompt**
 
-![Prompt position Dialog](./images/blazor-prompt-position.png)
+![Prompt dialog positioned at top center](./images/blazor-prompt-position.png)

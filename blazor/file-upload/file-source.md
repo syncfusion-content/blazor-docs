@@ -11,7 +11,7 @@ documentation: ug
 
 ## Directory upload
 
-The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component allows you to upload all files in the folders to server by using the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
+The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component can upload all files within a selected folder (including subfolders) to the server by enabling the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When enabled, the Uploader iterates through files and subdirectories in the chosen folder and queues them for upload. The folder picker is shown instead of a file picker, allowing selection of folders only.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -23,7 +23,7 @@ The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-fil
 
 ### Save action configuration in server-side blazor
 
-The uploader save action configuration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middle ware during initialization.
+The uploader save action configuration in a server-side Blazor application using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside the **Startup.cs** file. This is necessary so MVC can determine whether to rely on authorization and CORS middleware during initialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -63,6 +63,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 ```
 
 ### Server-side configuration for save the files of folders
+
+The following example demonstrates receiving uploaded files from selected folders and creating corresponding directories before saving files. In production, validate and sanitize path segments to prevent path traversal, and write to a dedicated uploads directory with appropriate permissions.
 
 ```csharp
 private IHostingEnvironment hostingEnv;
@@ -141,11 +143,11 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 ## Drag and drop
 
-The uploader component allows you to drag and drop the files to upload. You can drag the files from file explorer and drop into the drop area. By default, the uploader component act as drop area element. The drop area gets highlighted when you drag the files over drop area.
+The Uploader component supports drag-and-drop to add files to the upload queue. Drag files from the file explorer and drop them onto the drop area. By default, the Uploader acts as its own drop area and highlights the drop zone when files are dragged over it. Keyboard users can still browse using the built-in button.
 
 ### Custom drop area
 
-The uploader component allows you to set external target element as drop area using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The element can be represented as HTML element or element’s ID.
+The Uploader can target an external element as the drop zone using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The target can be specified as an HTML element or by element ID. This replaces the default drop zone and visually confines drop interactions to the specified area.
 
 `SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
@@ -187,7 +189,6 @@ body .e-upload-drag-hover {
 </style>
 ```
 
-
 ![Customizing Drop Area in Blazor FileUpload](./images/blazor-fileupload-drop-area-customization.png)
 
-N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files which you want to upload to the server.
+N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files that need to be uploaded to the server.

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to preview the uploaded image
 
-The below code snippet demonstrates a Blazor file upload example with image preview functionality using the Syncfusion<sup style="font-size:70%">&reg;</sup> Uploader component. It includes a custom template to display the uploaded image, file name, and size. The OnChange event handler converts the selected image to a base64-encoded string.
+The following example shows how to preview a selected image in the Syncfusion Uploader component by using a custom template to display the image, file name, and size. The ValueChange (OnChange handler) converts the selected image to a base64-encoded string and updates the preview. This approach works client-side and does not require a server endpoint for preview.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

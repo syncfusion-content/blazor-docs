@@ -9,7 +9,7 @@ documentation: ug
 
 # Set the disabled state in Blazor RadioButton Component
 
-Radio Button component can be enabled/disabled by giving [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Disabled) property. To disable Radio Button component, the `Disabled` property can be set as `true`.
+The RadioButton component can be enabled/disabled by setting [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Disabled) property. To disable Radio Button component, the `Disabled` property can be set as `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -24,4 +24,4 @@ Radio Button component can be enabled/disabled by giving [Disabled](https://help
 
 ```
 
-![Blazor RadioButton in Disable State](./../images/blazor-radiobutton-disable-state.png)
+![Blazor RadioButton in disabled state](./../images/blazor-radiobutton-disable-state.png)

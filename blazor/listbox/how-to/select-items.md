@@ -9,7 +9,7 @@ documentation: ug
 
 # Select Items in Blazor ListBox Component
 
-In the following example, `Bugatti Chiron` is selected using [SelectItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItemsAsync__1___0_System_Boolean_) method.
+This example shows how to programmatically select items using the [SelectItemsAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItemsAsync__1___0_System_Boolean_). The first parameter accepts the value or values to select, and the second parameter specifies the selection mode: set it to true to select by the mapped Value field (Text in this example), or false to select by index. Selection is triggered in the Created event to ensure the component is initialized. The `TValue` is `string[]`, which enables multiple selection. Values that do not match any items are ignored.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -45,4 +45,4 @@ In the following example, `Bugatti Chiron` is selected using [SelectItemsAsync](
 
 ```
 
-![Selecting Items in Blazor ListBox](./../images/blazor-listbox-item-selection.png)
+![Selecting items in the Blazor ListBox](./../images/blazor-listbox-item-selection.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Color Picker Component
 
-The Blazor Color Picker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Color Picker component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Color Picker component is outlined below.
 
@@ -39,21 +39,21 @@ The accessibility compliance for the Blazor Color Picker component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Color Picker component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ColorPicker component:
+The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the Color Picker component as `color`and the tiles as `gridcell` in the color palette. |
-| `aria-label` | Indicates the accessible name for the tiles. |
-| `aria-selected` | Indicates the current selected state of the tile. |
-| `aria-haspopup` | Indicates the availability of the popup element. |
-| `aria-expanded` | Indicates whether the popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
-| `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
-| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
+| `role` | Identifies interactive elements (for example, `grid` for the palette and `gridcell` for tiles) to convey structure to assistive technologies. |
+| `aria-label` | Provides accessible names for interactive elements such as tiles and buttons. |
+| `aria-selected` | Indicates the current selection state of a tile in the palette. |
+| `aria-haspopup` | Indicates the availability of the popup element when applicable. |
+| `aria-expanded` | Indicates whether the popup is currently expanded or collapsed. |
+| `aria-owns` | Establishes relationships between popup and trigger elements when DOM hierarchy alone is insufficient. |
+| `aria-disabled` | Conveys that the element is disabled and not operable. |
 
 ## Keyboard interaction
 
-The Blazor Color Picker component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ColorPicker component.
+The Blazor Color Picker component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ColorPicker component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -61,14 +61,14 @@ The Blazor Color Picker component followed the [keyboard interaction](https://ww
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the handler/tile down from the current position. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the handler/tile left from the current position. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the handler/tile right from the current position. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Apply the selected color value. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the next focusable element in the ColorPicker popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Applies the selected color value. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element in the Color Picker popup. |
 
 ## Ensuring accessibility
 
-The Blazor Color Picker component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests.
 
-The accessibility compliance of the Blazor Color Picker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the accessibility of the Color Picker Blazor component with accessibility tools.
+The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/color-picker.html" %}
 

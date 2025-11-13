@@ -9,11 +9,11 @@ documentation: ug
 
 # Label and Size in Blazor RadioButton Component
 
-This section explains the different sizes and labels.
+This section explains how to configure labels and sizes for the RadioButton component.
 
 ## Label
 
-Radio Button caption can be defined by using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_Label) property. This reduces the manual addition of label for Radio Button. You can customize the label position before or after the Radio Button through the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_LabelPosition) property.
+Define the RadioButton caption using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_Label) property to automatically render an associated label element, improving accessibility and click/tap targets. Control where the label appears with the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_LabelPosition) property (before or after the radio button). When multiple radio buttons share the same Name value, they form a group that allows only one selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -27,11 +27,11 @@ Radio Button caption can be defined by using the [Label](https://help.syncfusion
 
 ```
 
-![Blazor RadioButton with Label](./images/blazor-radiobutton-label.png)
+![Blazor RadioButton with label](./images/blazor-radiobutton-label.png)
 
 ## Size
 
-The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property to `e-small`.
+RadioButton supports two sizes: default and small. To render the small size, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property to`e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -45,7 +45,7 @@ The different Radio Button sizes available are default and small. To reduce the 
 
 ```
 
-![Blazor RadioButton with Different Size](./images/blazor-radiobutton-different-size.png)
+![Blazor RadioButton with different size](./images/blazor-radiobutton-different-size.png)
 
 ## See Also
 

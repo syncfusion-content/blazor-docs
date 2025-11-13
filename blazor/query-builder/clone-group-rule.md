@@ -9,12 +9,13 @@ documentation: ug
 
 # Clone Group/ Rule in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) functionality extends to cloning both individual rules and entire groups. Utilizing the Clone options will generate an exact duplicate of a rule or group adjacent to the original one. This feature enables users to replicate complex query structures effortlessly. The [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) function offers users the ability to toggle the visibility of these cloning buttons, providing convenient control over the cloning process within the Query Builder interface.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports cloning both individual rules and entire groups. Cloning creates an exact duplicate of the selected rule or group adjacent to the original, making it quick to replicate complex query structures. The [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) configuration controls the visibility of cloning buttons in the user interface for convenient, on-demand access.
 
-You can `clone` groups and rules by interacting through the user interface and methods.
+Cloning is available via the user interface and programmatically:
 
-* Use the [CloneGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneGroup_System_String_System_Int32_) method to clone group.
-* Use [CloneRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneRule_System_String_System_Int32_) method to clone rule.
+* Use the [`CloneGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneGroup_System_String_System_Int32_) method to clone a group. The first parameter is the existing group’s ID, and the second is the insert index within its parent.
+* Use the [`CloneRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneRule_System_String_System_Int32_) method to clone a rule.
+
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -98,6 +99,6 @@ You can `clone` groups and rules by interacting through the user interface and m
 
 ```
 
-![Clone Group/Rule in Blazor QueryBuilder](./images/clone-group-rule.png)
+![Cloning a group and rule in Blazor Query Builder](./images/clone-group-rule.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> Ensure that the IDs passed to `CloneGroup` and `CloneRule` refer to existing items in the current model. The cloning buttons can be shown or hidden via `QueryBuilderShowButtons`. You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to learn how to render and configure the Query Builder.

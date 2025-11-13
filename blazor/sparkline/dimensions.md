@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about dimensions in Syncfusion Blazor Sparkline component and much more.
+description: Check out and learn how to set and customize dimensions in the Syncfusion Blazor Sparkline component.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -9,11 +9,12 @@ documentation: ug
 
 # Dimensions in Blazor Sparkline Component
 
-## Size for the container
+## Size for the Container
 
-The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-components/blazor-sparkline) is determined by the container size, and it can be changed inline or via CSS as following.
+The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-components/blazor-sparkline) is determined by its container. You can set the size inline or via CSS.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
@@ -40,19 +41,21 @@ The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-compo
         new  PopulationReport { Year= 2014, Population= 22507620 }
     };
 }
+
 ```
 
 ![Blazor Sparkline Chart with Container Size](./images/SparklineDimension/blazor-sparkline-chart-container-size.png)
 
 ## Size for Sparkline
 
-The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties can be used to set the size of the Sparkline Chart.
+Set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties to define the Sparkline Chart's size.
 
-### In Pixel
+### In Pixels
 
-The Sparkline Chart can be sized in pixels.
+Specify the Sparkline Chart size in pixels.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline XName="Year"
@@ -62,17 +65,19 @@ The Sparkline Chart can be sized in pixels.
               Width="350px"
               Height="150px">
 </SfSparkline>
+
 ```
 
-N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
+N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
 
 ![Changing Blazor Sparkline Chart Size in Pixel](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.png)
 
 ### In Percentage
 
-By setting values in percentage, the Sparkline Chart gets their dimension with respect to their containers. For example, when the height is set to "50%", the Sparkline Chart is rendered to half of its container width.
+Set values in percentage to size the Sparkline Chart relative to its container. For example, setting height to "50%" renders the chart at half the container's height.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
@@ -84,8 +89,9 @@ By setting values in percentage, the Sparkline Chart gets their dimension with r
                   Height="80%">
     </SfSparkline>
 </div>
+
 ```
 
-N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
+N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
 
 ![Changing Blazor Sparkline Chart Size in Percentage](./images/SparklineDimension/blazor-sparkline-chart-size-in-percentage.png)

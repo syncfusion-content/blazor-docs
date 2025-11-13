@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Highlight searching  in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about highlight searching in Syncfusion Blazor AutoComplete component and much more.
+title: Highlight search in Blazor AutoComplete component | Syncfusion
+description: Check out how to highlight search text in the Syncfusion Blazor AutoComplete component, including template-based highlighting and CSS customization.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Highlight Search Blazor AutoComplete Component
 
-You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
+Highlight the search text in the suggested list items of the AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
 
 {% highlight Razor %}
 
@@ -21,12 +21,12 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 ## Highlight with template
 
-You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filterType` and `highLightText`. When called, it will highlight the characters that match the search query in the list items."
+Use the `HighLightSearch` method within an item template to highlight matched text in custom-rendered list items. It accepts the following arguments and highlights characters that match the search query based on the specified options.
 
-* `textValue` - The text to be highlighted in the list item.
-* `ignoreCase` - A boolean value which when set to true performs the search text based on casing.
-* `filterType` - Determines on which filter type the highlight text is updated on the text.
-* `highlightText` - The text to be highlighted. This is an optional argument. If not provided, it will use the filter value as the highlight text."
+* `textValue` - The display text from the current list item to evaluate and render with highlights.
+* `ignoreCase` - When `true`, performs case-insensitive matching.
+* `filterType` - Specifies how matches are determined (for example, starts with, contains, or ends with).
+* `highlightText` - Optional. The text to highlight. If not provided, the method uses the current filter value.
 
 {% highlight Razor %}
 
@@ -38,7 +38,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 ## Change the highlight style
 
-You can customize the appearance of highlighted text using the `.e-highlight` class. In the example below, we have styled the background color for the highlighted text.
+Customize the appearance of the highlighted text using the `.e-highlight` class. In the following example, the background color for matched text is styled to improve visibility.
 
 {% highlight Razor %}
 
@@ -46,4 +46,4 @@ You can customize the appearance of highlighted text using the `.e-highlight` cl
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with HighLightSearch method](./images/highlight-search/blazor_autocomplete_highlight-style.png)
+![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.png)

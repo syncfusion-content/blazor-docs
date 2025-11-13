@@ -9,7 +9,7 @@ documentation: ug
 
 # Change the Color of the Text Based on its Value in Blazor TextBox
 
-The color of the TextBox can be changed by validating its value using regular expression in the `Input` event for predicting the numeric values as demonstrated in the following code sample.
+Change the TextBox’s visual state by validating its value on every `Input` event and toggling the component’s `CssClass`. The example below uses a regular expression to check for numeric input: when the value contains only digits, the `e-success` class is applied; otherwise, the `e-error` class is applied. These utility classes are theme-dependent and typically style the input’s border/outline; add custom CSS if you also want to change text color.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

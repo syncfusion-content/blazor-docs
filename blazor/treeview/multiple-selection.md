@@ -9,9 +9,9 @@ documentation: ug
 
 # MultiSelection in Blazor TreeView Component
 
-Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction. The TreeView also supports selection of multiple nodes by setting [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowMultiSelection) to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
+The TreeView component offers interactive selection capabilities, visually highlighting the currently selected node(s). Selection is performed via mouse interaction or keyboard navigation. The TreeView also supports selecting multiple nodes by setting the [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowMultiSelection) property to `true`. Users can perform multi-selection by pressing and holding the <kbd>Ctrl</kbd> key while clicking desired nodes, or by pressing and holding the <kbd>Shift</kbd> key and clicking to select a range of nodes.
 
-In the following example, the `AllowMultiSelection` property is enabled.
+The following example demonstrates multi-selection with the `AllowMultiSelection` property enabled.
 
 N> Multi selection is not applicable through touch interactions.
 
@@ -109,5 +109,6 @@ N> Multi selection is not applicable through touch interactions.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthICXWgCerHXKMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![MultiSelection in Blazor TreeView](./images/blazor-treeview-multi-selection.png)
+![MultiSelection in Blazor TreeView](./images/multiselect.png)

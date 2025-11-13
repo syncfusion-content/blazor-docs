@@ -9,12 +9,18 @@ documentation: ug
 
 # Form items in DataForm component
 
-The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html)  can be utilized to set up various configuration for the editor component, including the unique identifier (id), the type of editor component used, any additional CSS classes to be applied to the editor, and whether the field is to be active (enabled) or inactive (disabled) upon being rendered.The below example showcases the different property usages.
-
+The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html) configures the editor for a specific model field. It supports setting a unique identifier (ID), selecting the editor type, applying CSS classes, specifying placeholder and label text, and enabling or disabling the field. The following sections demonstrate common property usage:
+- Field: map the model property to an editor
+- ID: assign a unique identifier
+- Placeholder: set hint text inside the editor
+- EditorType: choose the editor control
+- IsEnabled: enable or disable the form item
+- Label/LabelText: set the editor’s label text
+- CssClass: apply custom styles to the editor wrapper
 
 ## Configuring the model field and ID
 
-The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_Field) property is used to map the model field to the corresponding editor component. The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_ID) property is used to set the unique identifier for the editor component.
+The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_Field) property maps the model field to the corresponding editor. The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_ID) property sets a unique identifier for the editor component.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -30,11 +36,12 @@ The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_configure_model_ID.png)
+![Blazor DataForm form item showing mapped field and custom ID](images/blazor_dataform_configure_model_ID.png)
 
 ## Set the placeholder
 
-The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_Placeholder) property is used to set the placeholder text for the editor component. 
+The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_Placeholder) property sets the placeholder text for the editor.
+
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
@@ -49,19 +56,19 @@ The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFo
 {% endhighlight %}
 {% endtabs %}
 
-![DataForm Placeholder](./images/blazor_dataform_placeholder.png)
+![Blazor DataForm form item with placeholder text in the editor](./images/blazor_dataform_placeholder.png)
 
 ## Change the editor type
 
-The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_EditorType) property is used to set the editor type for the corresponding field.We can assign the editor type using the [FormEditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html) enumeration.
+The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_EditorType) property selects the editor used for the field. Set the value from the [FormEditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html) enumeration to override the default editor inferred from the field type.
 
-| Field Type | Supported Editor types |
+| Field Type | Supported editor types |
 | ------------ | ----------------------- |
-| `string` | [TextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TextBox),[TextArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TextArea),[Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_Password)|
-| `int` , `float`, `decimal`,`double`,`long` | [NumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_NumericTextBox) |
-| `bool` | [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_CheckBox),[Switch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_Switch) |
-| `DateTime` | [DatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DatePicker),[DateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DateTimePicker),[TimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TimePicker) |
-| `enum` | [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DropDownList),[ComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_ComboBox),[AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_AutoComplete) |
+| `string` | [TextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TextBox), [TextArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TextArea), [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_Password) |
+| `int`, `float`, `decimal`, `double`, `long` | [NumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_NumericTextBox) |
+| `bool` | [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_CheckBox), [Switch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_Switch) |
+| `DateTime` | [DatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DatePicker), [DateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DateTimePicker), [TimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TimePicker) |
+| `enum` | [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DropDownList), [ComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_ComboBox), [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_AutoComplete) |
 | `DateOnly` | [DatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_DatePicker) |
 | `TimeOnly` | [TimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormEditorType.html#Syncfusion_Blazor_DataForm_FormEditorType_TimePicker) |
 
@@ -79,12 +86,11 @@ The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_formitem.png)
+![Blazor DataForm form items rendered with different editor types](images/blazor_dataform_formitem.png)
 
+## Disable a form item
 
-## Disable the editor
-
-The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_IsEnabled) property is used to disable the specific form item.
+The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_IsEnabled) property disables a specific form item.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -100,11 +106,11 @@ The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_formitem_disabled.png)
+![Blazor DataForm form item in a disabled state](images/blazor_dataform_formitem_disabled.png)
 
-## Change the label name 
+## Change the label text 
 
-The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_Label) property is used to set the label text for the editor component , At default `Name` property of the `Display` attribute will be used as label text.
+Set the label using the [LabelText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_LabelText) property. When not set, the label is derived from data annotations on the bound model property, giving priority to DisplayAttribute.ShortName and then DisplayAttribute.Name.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -122,12 +128,12 @@ The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% endhighlight %}
 {% endtabs %}
 
-![DataForm Placeholder](./images/blazor_dataform_label_text.png)
+![Blazor DataForm form item with customized label text](./images/blazor_dataform_label_text.png)
 
 
 ## Change the appearance of the field editor
 
-The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_CssClass) property is used to change the appearance of the form item.The added css class will get added to the editor's wrapper component , using that we can customize the appearance of the editor.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_CssClass) property to apply a custom CSS class to the editor wrapper and customize the appearance.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
@@ -142,8 +148,8 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_formitem_cssclass.png)
+![Blazor DataForm form item styled using a custom CSS class](images/blazor_dataform_formitem_cssclass.png)
 
 ## See also
 
-[Customization of specific field editor](https://blazor.syncfusion.com/documentation/data-form/templates#customization-of-specific-field-editor)
+- [Customization of specific field editor](https://blazor.syncfusion.com/documentation/data-form/templates#customization-of-specific-field-editor)

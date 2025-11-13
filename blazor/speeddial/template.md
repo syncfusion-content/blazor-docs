@@ -9,11 +9,11 @@ documentation: ug
 
 # Template in Blazor SpeedDial Component
 
-This section explains available templates in Speed Dial Component and its usage.
+This section describes the available templates in the SpeedDial component and their usage for customizing item content and the popup container.
 
 ## Item template
 
-You can use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) to set a template content for the `SpeedDialItem`. The template content is defined as a child content of `ItemTemplate` tag directive.
+Use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) to define custom content for each `SpeedDialItem`. Define the template as child content of the `ItemTemplate` tag directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -56,7 +56,7 @@ You can use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Popup template
 
-You can use the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) to set a template content for popup of  SpeedDial component. The template content is defined as a child content of `PopupTemplate` tag directive.
+Use the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) to define custom content for the popup of the SpeedDial component. Define the template as child content of the `PopupTemplate` tag directive to render any custom layout or UI inside the popup.
 
 {% tabs %}  
 {% highlight razor %}

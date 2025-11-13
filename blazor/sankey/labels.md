@@ -11,11 +11,11 @@ documentation: ug
 
 ## Overview
 
-Labels in a Sankey Diagram are crucial for providing textual information for nodes, thereby enhancing the readability and comprehension of data flows. In the Blazor Sankey Diagram, labels can be configured and customized to meet various design and informational needs, making your diagrams more effective in conveying underlying data structures.
+Labels provide textual context for nodes in a Sankey Diagram, improving readability and understanding of data flows. The Blazor Sankey Diagram supports flexible label configuration and styling to meet design and information needs.
 
 ## Basic Label Configuration
 
-Labels are included within the node configuration and can be tailored using `SankeyLabelSettings`. Below is an example of how to set up labels in the Sankey Diagram:
+Labels are defined within node settings and further customized using `SankeyLabelSettings`.
 
 {% tabs %}
 {% highlight razor %}
@@ -91,21 +91,21 @@ Labels are included within the node configuration and can be tailored using `San
 {% endhighlight %}
 {% endtabs %}
 
-In this example, labels are defined for each node with specific `SankeyLabelSettings` to determine their visual style. The settings include font color, weight, size, and style, ensuring labels contribute to both functional clarity and aesthetic quality.
+This configuration defines labels for each node and applies `SankeyLabelSettings` for color, weight, size, and style.
 
 ![Blazor Sankey Labels](images/labels/sankey-labels.png)
 
 ## Customizing Label Appearance
 
-Customizing the appearance of labels in the Blazor Sankey Diagram provides an opportunity to enhance the visual clarity and impact of your data visualization. By utilizing various properties within the SankeyLabelSettings, you can tailor labels to align with your application's design aesthetics and functional requirements. These customizations contribute to a more refined and informative diagram, making it easier for users to interpret complex data relationships.
+Customize labels using `SankeyLabelSettings` to improve clarity and alignment with application design.
 
-- **Visible**: Controls whether labels are shown; set to `false` to hide them if diagram space is limited.
-- **FontSize**: Adjusts the font size, accommodating different display sizes or emphasis levels.
-- **Color**: Sets the text color, important for visibility and theme coherence.
-- **FontFamily**: Defines the text font family, which can match the application's overall typography for design consistency.
-- **FontWeight**: Specifies the thickness of the text, like "400" for normal or "700" for bold, enhancing emphasis where needed.
-- **Padding**: Determines space around the text, allowing for better alignment and placement within nodes.
-- **FontStyle**: Enables styles such as "italic" for creative or hierarchical text presentation.
+- **Visible**: Shows or hides labels.
+- **FontSize**: Controls label size.
+- **Color**: Sets text color for contrast and theme consistency.
+- **FontFamily**: Applies a specific font family to match typography.
+- **FontWeight**: Sets text weight (for example, 400 for normal, 700 for bold).
+- **Padding**: Adds space around text for better placement.
+- **FontStyle**: Enables styles such as italic.
 
 {% tabs %}
 {% highlight razor %}
@@ -124,13 +124,13 @@ Customizing the appearance of labels in the Blazor Sankey Diagram provides an op
 
 ## Key Considerations
 
-- Use concise yet descriptive label text to ensure clarity without cluttering the diagram.
-- Employ various font sizes and weights to create a visual hierarchy that highlights significant data points.
-- Ensure label color contrasts sufficiently with the node color to maintain readability.
-- Adjust padding to perfect label placement within nodes, preventing overlap or misalignment.
-- Use the `Visible` property strategically to manage label density based on diagram complexity.
+- Keep label text concise and descriptive to avoid clutter.
+- Vary font sizes and weights to establish visual hierarchy.
+- Ensure sufficient color contrast between text and node background.
+- Adjust padding to prevent overlap and ensure precise placement.
+- Use the Visible property to manage label density in complex diagrams.
 
-By skillfully configuring and customizing labels within the Blazor Sankey Diagram, developers can generate informative and user-friendly flow diagrams. Effective label usage underscores the significance of nodes and enhances users' ability to interpret data visualizations easily.
+Effective label configuration enhances clarity and supports rapid interpretation of complex flows in Sankey diagrams.
 
 ## See also
 

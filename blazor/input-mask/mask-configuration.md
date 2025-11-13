@@ -9,32 +9,32 @@ documentation: ug
 
 # Mask Configuration in Blazor Input Mask Component
 
-The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskedTextBoxModel.html#Syncfusion_Blazor_Inputs_MaskedTextBoxModel_Mask) is a combination of standard and custom mask elements that validates the user input based on its behavior.
+The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) is a set of standard and custom elements that validate user input based on defined rules.
 
-N> When the mask value is empty, the MaskedTextBox behaves as an input element with text type.
+N> When the Mask property is not set or is empty, the MaskedTextBox behaves as a text input element.
 
 ## Standard mask elements
 
-The following table shows the list of mask elements and its behavior based on [MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-9.0&viewFallbackFrom=net-8.0) standard.
+The following table lists the mask elements and their behavior based on the[MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-9.0&viewFallbackFrom=net-8.0) standard.
 
 The mask can be formed by combining any one or more of these mask elements.
 
 | Mask Element | Description |
 | ------------- | ------------- |
-| 0 | Digit required. This element will accept any single digit from **0** to **9**. |
+| 0 | Digit required. This element accepts any single digit from **0** to **9**. |
 | 9 | Digit or space, optional. |
-| # | Digit or space, optional, Plus(**+**) and minus(**-**) signs are allowed. |
-| L | Letter required. It will accept letters **a-z** and **A-Z**. |
+| # | Digit or space, optional. Plus (**+**) and minus (**-**) signs are allowed. |
+| L | Letter required. Accepts letters **a-z** and **A-Z**. |
 | ? | Letter or space, optional. |
 | & | Requires a character. |
 | C | Character or space, optional. |
-| A | Alphanumeric **(A-Za-z0-9)** required.|
+| A | Alphanumeric **(A-Za-z0-9)** required. |
 | a | Alphanumeric **(A-Za-z0-9)** or space, optional. |
-| < | Shift down. Converts all characters to lower case. |
-| > | Shift up. Converts all characters to upper case. |
-| &#124; | Disable a previous shift up or shift down. |
+| < | Shift down. Converts all characters to lowercase. |
+| > | Shift up. Converts all characters to uppercase. |
+| &#124; | Disables a previous shift up or shift down. |
 | \\\\ | Escapes a mask character, turning it into a literal. |
-| All other characters | Literals. All non-mask elements (literals) will appear as themselves within MaskedTextBox. |
+| All other characters | Literals. All non-mask elements (literals) appear as themselves within the MaskedTextBox. |
 
 The following example demonstrates the usage of standard mask elements.
 
@@ -48,19 +48,17 @@ The following example demonstrates the usage of standard mask elements.
 <SfMaskedTextBox Mask="\\A999" Placeholder="Mask \\A999 (ex: A321)" FloatLabelType="@FloatLabelType.Always"></SfMaskedTextBox>
 ```
 
-
-
 ![Blazor MaskedTextBox with Standard Mask Elements](./images/blazor-maskedtextbox-with-standard-mask.png)
 
 ## Custom mask elements
 
-Other than the above standard mask elements, the mask can be configured with the custom characters or regular expression to define a custom behavior.
+Beyond the standard mask elements, the mask can be configured with custom characters or regular expressions to define specific behavior.
 
 ### Custom characters
 
-You can define any of the non-mask element as the mask element and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CustomCharacters) property.
+Define any non-mask character as a mask element and specify its behavior by using the [CustomCharacters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CustomCharacters) property.
 
-In the following example, non-mask element `P` accepts the values `P, A, p, a`, and `M` accepts the values `M, m`  as mentioned in the custom characters collection.
+In the following example, the non-mask element `P` accepts `P, A, p, a`, and `M` accepts `M, m`, as defined in the custom characters collection.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -76,14 +74,13 @@ In the following example, non-mask element `P` accepts the values `P, A, p, a`, 
 }
 ```
 
-
 ![Blazor MaskedTextBox with Custom Mask Elements](./images/blazor-maskedtextbox-with-custom-mask.png)
 
 ### Regular expression
 
-Instead of the mask element, you can define your own regular expression to validate the input of a particular input place. The regular expressions should be wrapped by the square brackets (e.g., [`Regex`]).
+Instead of predefined mask elements, use a regular expression to validate the input at a particular position. Enclose each position’s regular expression in square brackets (for example, [`Regex`]).
 
-In the following example, regular expression has been set for each input places.
+In the following example, a regular expression is set for each input position.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -91,14 +88,13 @@ In the following example, regular expression has been set for each input places.
 <SfMaskedTextBox Placeholder="Enter value" Mask="[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9]" FloatLabelType="@FloatLabelType.Auto"></SfMaskedTextBox>
 ```
 
-
 ![Blazor MaskedTextBox with Regular Expression](./images/blazor-maskedtextbox-regular-expression.png)
 
 ## Prompt character
 
-The Prompt character is a prompting symbol in the MaskedTextBox for the mask elements. The symbol is used to show the input positions in the MaskedTextBox. You can customize the prompt character of MaskedTextBox by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
+The prompt character is the symbol used to indicate input positions defined by the mask. Customize the prompt character by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
 
-The following example demonstrates the MaskedTextBox with customized prompt character as `#`.
+The following example demonstrates the MaskedTextBox with a customized prompt character `#`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -110,13 +106,11 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 }
 ```
 
-
-
 ![Blazor MaskedTextBox with Prompt Character](./images/blazor-maskedtextbox-with-prompt-char.png)
 
 ## Include literals in the value
 
-By default, you will get the raw value as [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) of the component. Now, you can get the component Value with mask literals by enabling the [EnableLiterals](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
+By default, the component’s [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) returns the raw value (without literals). To include mask literals in the returned value, enable the [EnableLiterals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_EnableLiterals) property.
 
 The following example demonstrates how to obtain the value with mask literals.
 

@@ -9,17 +9,17 @@ documentation: ug
 
 # Sorting in Blazor ComboBox Component
 
-The Sorting enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the DropDownList, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value. 
+Sorting enables displaying items in ascending or descending order. To enable sorting in the ComboBox, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value.
 
-The available type of sort orders are:
+The available sort orders are:
 
 SortOrder     | Description
 ------------ | -------------
-  [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_None)       | The data source is not sorting.
-  [Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Ascending)     | The data source is sorting with ascending order.
-  [Descending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Descending)      | The data source is sorting with descending order.
+  [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_None)       | The data source is not sorted.
+  [Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Ascending)     | The data source is sorted in ascending order.
+  [Descending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Descending)      | The data source is sorted in descending order.
 
-In the following demonstration sample, the items in the datasource are shuffled in random order but decide whether the items to be listed in ascending or descending order alphanumerically in the popup.
+In the following sample, items in the data source are initially in random order. Use SortOrder to display them alphanumerically in ascending or descending order in the popup.
 
 {% highlight cshtml %}
 
@@ -27,4 +27,4 @@ In the following demonstration sample, the items in the datasource are shuffled 
 
 {% endhighlight %}
 
-![Blazor ComboBox with sortOrder descending](./images/sorting/blazor_combobox_sorting.png)
+![Blazor ComboBox with SortOrder descending](./images/sorting/blazor_combobox_sorting.png)

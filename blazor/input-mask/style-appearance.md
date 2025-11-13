@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Blazor Input Mask Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the CSS selector patterns you can target to modify the control's appearance based on user preferences. The MaskedTextBox renders a wrapper element and an input element; styles can be applied to either. For scoped customization, assign a custom CssClass to the component and define styles for that class, or use CSS isolation (.razor.css). Refer to the SfMaskedTextBox CssClass API and the Themes and Appearance documentation for additional guidance.
 
 ## Customizing the appearance of Input Mask container element
 
-Use the following CSS to customize the appearance of Input Mask container element.
+Use the following CSS to customize the appearance of the Input Mask container (wrapper) and its input element.
 
 ```css
 /* To specify height, font size, and border */
@@ -27,7 +27,7 @@ Use the following CSS to customize the appearance of Input Mask container elemen
 
 ## Customizing the Input Mask element on hovering
 
-Use the following CSS to customize the Input Mask element on hovering
+Use the following CSS to customize the Input Mask element on hovering.
 
 ```css
 /* To specify border */

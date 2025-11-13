@@ -9,7 +9,7 @@ documentation: ug
 
 # Group items in popup in Blazor SplitButton Component
 
-Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView, check [ListView Grouping](../../listview/grouping#grouping) documentation. To template ListView in popup, render the ListView Component in Split button popup using `PopupContent` property.
+Items in the popup can be grouped in the SplitButton by rendering a ListView inside the popup using the `PopupContent` property, which replaces the default SplitButton menu. For configuring grouping in the ListView, refer to the [ListView grouping](../../listview/grouping#grouping) documentation. In this approach, the ListView groups items by a specified field (for example, `Category`) using `ListViewFieldSettings`.
 
 ```cshtml
 
@@ -50,4 +50,4 @@ Items in popup can be grouped in Split Button by templating entire popup with Li
 
 ```
 
-![Grouping in Blazor SplitButton](./../images/blazor-splitbutton-grouping.png)
+![Grouped items in the Blazor SplitButton popup using ListView](./../images/blazor-splitbutton-grouping.png)

@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor ComboBox Component
 
-This section explains the list of events of the ComboBox component which will be triggered for appropriate ComboBox actions.
+This section lists the events available in the ComboBox component and when they are triggered during typical interactions.
 
 ## Blur
 
-`Blur` event triggers when the input loses focus.
+The `Blur` event triggers when the input loses focus. Use it to validate, format, or commit values when users leave the control.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -46,8 +46,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## ValueChange
 
-`ValueChange` event triggers when the ComboBox value is changed.
-
+The `ValueChange` event triggers when the ComboBox value is changed and committed.
 ```cshtml
 
 @using Syncfusion.Blazor.DropDowns
@@ -81,7 +80,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Closed
 
-`Closed` event triggers after the popup has been closed.
+The `Closed` event triggers after the popup has been closed and the UI has updated. Use it to perform actions that depend on the popup being fully hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -114,7 +113,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Created
 
-`Created` event triggers when the component is created.
+The `Created` event triggers when the component is created and its initial rendering is complete. Use it for one-time initialization logic.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -147,7 +146,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The `Destroyed` event triggers when the component is disposed. Use it to release resources and unsubscribe from external services.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -180,7 +179,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The `Focus` event triggers when the input gains focus. Use it to show context hints or to adjust UI state when the control is focused.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -213,7 +212,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
+The `OnOpen` event triggers before the popup opens. This event is cancelable; prevent opening by setting the event argument’s cancel option when available. Use it to customize popup content or apply conditions before showing the list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -246,7 +245,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnClose
 
-`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
+The `OnClose` event triggers before the popup closes. This event is cancelable; prevent closing by setting the event argument’s cancel option when available. Use it to validate the current value or maintain popup state.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -279,7 +278,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## DataBound
 
-`DataBound` event triggers when the data source is populated in the popup list.
+The `DataBound` event triggers when the data source is bound and the popup list is populated. Use it to perform post-binding tasks such as selecting a default item or measuring list size.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -312,7 +311,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Filtering
 
-`Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
+The `Filtering` event triggers while typing in the input when `AllowFiltering` is enabled. Use it to customize the filtering logic, modify the query, or provide remote filtering based on the typed text.
 
 ```cshtml
 
@@ -348,7 +347,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnActionBegin
 
-`OnActionBegin` event triggers before fetching data from the remote server.
+The `OnActionBegin` event triggers before fetching data from a remote server when using `SfDataManager`. Use it to modify the query or show a loading indicator.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -386,7 +385,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnActionComplete
 
-`OnActionComplete` event triggers after data is fetched successfully from the remote server.
+The `OnActionComplete` event triggers after data is fetched successfully from a remote server.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -424,7 +423,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnActionFailure
 
-`OnActionFailure` event triggers when the data fetch request from the remote server fails.
+The `OnActionFailure` event triggers when a remote data fetch fails.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -462,7 +461,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## OnValueSelect
 
-`OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
+The `OnValueSelect` event triggers when a user selects an item from the popup using the mouse, touch, or keyboard navigation. 
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -495,7 +494,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ## Opened
 
-`Opened` event triggers when the popup opens.
+The `Opened` event triggers when the popup opens and is visible. 
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -531,4 +530,3 @@ This section explains the list of events of the ComboBox component which will be
 * [How to pass an extra parameter to Blazor ComboBox ValueChange handler?](https://www.syncfusion.com/kb/13138/how-to-pass-an-extra-parameter-to-blazor-combobox-valuechange-handler)
 
 N> ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
-
