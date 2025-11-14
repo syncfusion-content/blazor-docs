@@ -27,7 +27,7 @@ The following example demonstrates how to add the Format Painter tool to the Ric
 {% endhighlight %}
 {% endtabs %}
 
-## How to customize format painter copy and paste behavior
+### Customizing copy and paste format
 
 Users can customize the behavior of the Format Painter tool using the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) property.
 
@@ -53,7 +53,7 @@ Below is an example illustrating how to define the `AllowedFormats` and `DeniedF
 {% endhighlight %}
 {% endtabs %}
 
-## Format Painter keyboard shortcut keys for copying and pasting formatting.
+### Shortcut keys for copy and paste format
 
 For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 

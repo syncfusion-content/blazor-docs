@@ -7,9 +7,15 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Inline Editor in Blazor Rich Text Editor
+# Inline Editor in Blazor Rich Text Editor Component
 
-The Rich Text Editor provides an option to display a toolbar on demand by enabling the property of [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable). When the editable text is focused or selected the inline floating toolbar appears. The commands displayed in inline toolbar can be customized by setting [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+The Blazor Rich Text Editor provides an option to display a floating toolbar on demand by enabling the [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable) property.
+When the editable content is focused or selected, the inline toolbar appears automatically. This floating toolbar allows users to access formatting commands directly where they are working.
+
+## Customizing Inline Toolbar Items
+
+You can customize the commands displayed in the inline toolbar by setting the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+This flexibility allows you to tailor the toolbar to include only the tools relevant to your application's needs.
 
 {% tabs %}
 {% highlight razor %}
@@ -39,6 +45,6 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [How to Configuring the toolbar position](./toolbar#configuring-the-toolbar-position)
-* [How to insert link editing option in the toolbar items](./tools/link-manipulation#insert-link)
-* [How to insert image editing option in the toolbar items](./tools/insert-image#uploading-and-inserting-images)
+* [How to Configuring the toolbar position](../toolbar/toolbar-position#configuring-the-toolbar-position)
+* [How to insert link editing option in the toolbar items](../tools/link-manipulation#insert-link)
+* [How to insert image editing option in the toolbar items](../tools/insert-image#uploading-and-inserting-images)

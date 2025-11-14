@@ -21,8 +21,6 @@ N> The SlashMenu feature is currently not supported in iframe mode of the Rich T
 
 The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) property allows customization of the `Items` displayed in the slash menu. By setting the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property with a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel), you can define which commands are available when a user types a slash (/) in the Rich Text Editor.
 
-
-
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the slash menu items:
 
 {% tabs %}
@@ -50,7 +48,6 @@ Below is a code snippet showing how to customize both the width and height of th
 ## Adding custom slash menu items
 
 Custom items can be added by defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property within the [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html). This property should be a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) objects, which represent custom menu items. Each [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) can be configured to include details such as text labels, icons, descriptions, and grouping information, allowing users to access tailored commands quickly using the slash (/) functionality in the Rich Text Editor.
-
 
 Each custom slash menu item can include the following properties:
 

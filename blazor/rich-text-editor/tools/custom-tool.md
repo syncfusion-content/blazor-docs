@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# How to Add a Custom Toolbar Tool in Blazor Rich Text Editor
+# Custom Toolbar Items in Blazor Rich Text Editor Component
 
 The Rich Text Editor allows you to configure your own tools to its toolbar using the [RichTextEditorCustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) tag directive within a [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html). The tools can be plain text, icon, or HTML template. Also, define the order and group where the tool should be included.
 
@@ -58,3 +58,9 @@ Refer to the following code sample to configure a custom toolbar item with toolt
 {% endtabs %}
 
 ![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.png)
+
+## Enabling and disabling toolbar items
+
+You can use the `EnableToolbarItem` and `disableToolbarItem` methods to control the state of toolbar items. This methods takes a single item or an array of [Items](./built-in-tools#available-toolbar-items) as parameter.
+
+> You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.

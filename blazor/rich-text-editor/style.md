@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling and Appearance
 
-## Set placeholder
+## Styling the placeholder text
 
 The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property is used to create a placeholder for the Rich Text Editor's content when the editor body is empty. 
 
@@ -41,25 +41,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 
 ![Blazor RichTextEditor with placeholder](./images/blazor-richtexteditor-placeholder.png)
 
-## Source code view 
-
-The Rich Text Editor allows users to directly edit HTML code using the `Source View` mode. Changes made in Source View are instantly reflected in the editor's content, providing enhanced flexibility and control over content formatting.
-
-The source code is presented with enhanced formatting and consistent indentation for both block-level and inline HTML elements, resulting in a cleaner, more readable, and user-friendly editing experience.
-
->While the visual alignment of the source code is improved, the editor's underlying value remains unchanged.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/code-view.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
-
-## Customizing editor content
+## Styling the editor content area
 
 Apply the following CSS to customize the default content styling of the Rich Text Editor like font-family, font-size and color.
 
@@ -81,7 +63,7 @@ Apply the following CSS to customize the default content styling of the Rich Tex
 
 ![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.png)
 
-## Customize toolbar appearance
+##  Customizing the toolbar appearance
 
 Apply the following CSS to modify the default color of toolbar icons in the Rich Text Editor.
 
@@ -112,6 +94,53 @@ Apply the following CSS to modify the default color of toolbar icons in the Rich
 }
 ```
 ![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.png)
+
+## Styling the character count display
+
+Use the following CSS to customize the default color in the Rich Text Editor's character count.
+
+```css
+/* To change font color, font family, font size and opacity  */
+.e-richtexteditor .e-rte-character-count {
+    color: red;
+    font-family: segoe ui;
+    font-size: 18px;
+    opacity: 00.54;
+    padding-bottom: 2px;
+    padding-right: 14px;
+}
+```
+
+## Modifying the editor container border
+
+Use the following CSS to customize the border color in the Rich Text Editor's container.
+
+```CSS
+
+.e-richtexteditor .e-rte-container{
+    border: 2px solid #454bc1;
+    border-radius: 4px;
+}
+
+```
+
+## Source code view 
+
+The Rich Text Editor allows users to directly edit HTML code using the `Source View` mode. Changes made in Source View are instantly reflected in the editor's content, providing enhanced flexibility and control over content formatting.
+
+The source code is presented with enhanced formatting and consistent indentation for both block-level and inline HTML elements, resulting in a cleaner, more readable, and user-friendly editing experience.
+
+>While the visual alignment of the source code is improved, the editor's underlying value remains unchanged.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/code-view.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
 
 ### Refreshing the editor UI
 
