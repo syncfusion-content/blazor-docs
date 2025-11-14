@@ -13,7 +13,6 @@ The following table shows the supported .NET and .NET Core versions for Syncfusi
 
 | Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
 | ------------- | ------------- |
-
 | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.1.36 and above |
