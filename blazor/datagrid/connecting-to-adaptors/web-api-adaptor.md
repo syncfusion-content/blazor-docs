@@ -277,7 +277,7 @@ When you run the application, the Blazor Grid  will display data fetched from th
  
 ![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
 
-## Perform data operations in a WebApiAdaptor
+## Perform data operations in WebApiAdaptor
 
 When the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor) is used with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), data operations such as **filtering**, **sorting**, **paging**, and **searching** are executed on the server. These operations are sent as query string parameters in the **HTTP** request and can be accessed in the API controller through `Request.Query`.
 
