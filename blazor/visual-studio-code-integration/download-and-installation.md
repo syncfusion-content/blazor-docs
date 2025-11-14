@@ -17,7 +17,7 @@ Install the following prerequisites to install the Syncfusion<sup style="font-si
 
 - [Visual Studio Code 1.29.0 or later](https://code.visualstudio.com/download)
 - [Visual Studio 2022 ](https://visualstudio.microsoft.com/vs/) or later
-- [.NET SDK 8.0 or 9.0](https://dotnet.microsoft.com/en-us/download)
+- [.NET SDK 10.0](https://dotnet.microsoft.com/en-us/download)
 - [C# extension]((https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)).
 
 ## Install through the Visual Studio Code Extensions
@@ -68,5 +68,6 @@ The steps below describe how to install the Syncfusion Blazor extension manually
       ![Extensions view More Actions menu with Install from VSIX option](images/InstallVsix.png)
 
 4. Browse to the downloaded SyncfusionInc.Blazor-VSCode-Extensions.vsix file and complete the installation.
+
 
       ![File selection dialog for SyncfusionInc.Blazor-VSCode-Extensions.vsix](images/DownloadVsix.png)
