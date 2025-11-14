@@ -228,341 +228,214 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component 
+## AI-powered Kanban Smart Card Generation
 
-This section demonstrates how to implement the Syncfusion Blazor Kanban component with AI-powered task generation. The AI Assistant analyzes the provided project description and automatically suggests relevant tasks, which are then displayed in the Kanban board.
+The AI-powered Kanban feature integrates Blazor Kanban with an AI service to automatically generate structured task cards based on user input. This functionality simplifies project planning by allowing users to enter basic project details and the desired number of tasks. The backend logic then uses AI to create well-defined tasks, including fields like **Title**, **Description**, **Status**, and **Story Points**, and dynamically updates the Kanban board. This approach ensures faster task creation, consistent formatting, and an interactive experience for managing projects.
 
-(`Home.razor`)
+### UI Structure
 
-```csharp
+The Kanban AI interface starts with a simple form where users provide **Project Details** and the **Number of Tasks** to generate. Below these inputs, a Progress Button labeled “Generate Tasks” triggers the AI process. This button shows a loading state during task generation for better user feedback.
 
-@rendermode InteractiveServer
-@inject AzureAIService OpenAIService
-@using Syncfusion.Blazor.Kanban
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SplitButtons
-@using Syncfusion.Blazor.Popups
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Notifications
-@using BlazorApp4.Components.Models
-@using BlazorApp4.Components.Service
-@using Syncfusion.Blazor.Grids
+- **Project Details:** A multiline text box for describing the project.
+- **Number of Tasks:** A numeric input for specifying how many tasks to generate.
+- **Generate Button:** A progress-enabled button that calls `GenerateTasks()` to start AI-based task creation.
 
-@if (isHomapage)
-{
-    <div class="col-lg-12 control-section">
-        <div class="content-wrapper">
-            <div class="row" id="customcontainer">
-                <div class="col-12 text-center my-3">
-                    <h3>AI Smart Task Suggestion</h3>
-                </div>
-                <div class="col-12 text-center my-3">
-                    <div style="display:flex; justify-content:center;">
-                        <div class="col-12 col-md-6 d-flex cuscol-1 justify-content-center">
-                            <div style="width:100%; max-width: 500px; margin: auto;">
-                                <div class="e-rte-label1" >
-                                    <label>Project Details</label>
-                                </div>
-                                <div class="e-rte-field" style="margin: 10px">
-                                    <SfTextBox @bind-Value="@TextBoxValue" Multiline=true />
-                                </div>
-                                <div class="e-rte-label2">
-                                    <label>Number of tasks</label>
-                                </div>
-                                <div class="e-rte-field" style="margin: 10px">
-                                    <SfTextBox @bind-Value="@TasksValue" min="1" Type="InputType.Number" />
-                                </div>
-                                <div class="d-flex justify-content-center" style="margin: 10px;">
-                                    <SfProgressButton Content="@ContentGenerateTask" OnClick="@GenerateTasks" EnableProgress="false">
-                                        <ProgressButtonEvents OnBegin="BeginGenerateTasks" OnEnd="EndGenerateTasks"></ProgressButtonEvents>
-                                    </SfProgressButton>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-else
-{
-    <div class="col-lg-12 control-section">
-        <div class="content-wrapper">
-            <div class="row" id="toast-kanban-observable">
-                @if (showBacklogs)
-                {
-                    <div class="col-12 text-center my-3">
-                        <h3>Kanban Board</h3>
-                        <div style="float: right;">
-                            <SfButton OnClick="OpenProjectDetailsDialog">Add New Projects</SfButton>
-                        </div>
-                        <div style="float: left;">
-                            <SfButton OnClick="GoToBacklogBoardView" Content="@BacklogButtonViewContent"></SfButton>
-                        </div>
-                    </div>
-                    if (!showBacklogBoard)
-                    {
-                        <div class="grid-container">
-                            <SfGrid DataSource="@smartSuggestion" AllowPaging="true" Toolbar="@(new List<string>() { "Add" })">
-                                <GridEvents OnActionBegin="TaskEditingHandler" RowCreated="RowCreatedHandler" TValue="SmartSuggestionDataModel"></GridEvents>
-                                <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Dialog" Dialog="DialogParams">
-                                    <Template>
-                                        @{
-                                            var AISuggestion = (context as SmartSuggestionDataModel);
-                                        }
-                                        <div style="margin: 10px;">
-                                            <div class="form-group" style="margin: 10px;">
-                                                <SfTextBox ID="OrderID" @bind-Value="@(AISuggestion.Id)" Enabled="@enableTaskEditing" FloatLabelType="FloatLabelType.Always" Placeholder="Task ID" Width="100%"></SfTextBox>
-                                            </div>
-                                            <div class="form-group" style="margin: 10px;">
-                                                <SfTextBox ID="Title" @bind-Value="@(AISuggestion.Title)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Title" Width="100%"></SfTextBox>
-                                            </div>
-                                            <div class="form-group" style="margin: 10px;">
-                                                <SfTextBox ID="Description" @bind-Value="@(AISuggestion.Description)" FloatLabelType="FloatLabelType.Always" Multiline="true" Placeholder="Description" Width="100%"></SfTextBox>
-                                            </div>
-                                            <div class="form-group" style="margin: 10px;">
-                                                <SfNumericTextBox ID="Title" @bind-Value="@(AISuggestion.StoryPoints)" TValue="int" FloatLabelType="FloatLabelType.Always" Placeholder="StoryPoints" Width="100%"></SfNumericTextBox>
-                                            </div>
-                                            <div class="form-group" style="margin: 10px;">
-                                                <SfTextBox ID="Status" @bind-Value="@(AISuggestion.Status)" Enabled="@enableTaskEditing" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Status" Width="100%"></SfTextBox>
-                                            </div>
-                                        </div>
-                                    </Template>
-                                </GridEditSettings>
-                                <GridColumns>
-                                    <GridColumn Field=@nameof(SmartSuggestionDataModel.Id) HeaderText="Task ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-                                    <GridColumn Field=@nameof(SmartSuggestionDataModel.Title) HeaderText="Title" ValidationRules="@(new ValidationRules{ Required=true})" Format="C2"></GridColumn>
-                                    <GridColumn Field=@nameof(SmartSuggestionDataModel.Description) HeaderText="Description" EditType=EditType.DefaultEdit></GridColumn>
-                                    <GridColumn Field=@nameof(SmartSuggestionDataModel.StoryPoints) HeaderText="StoryPoints" ValidationRules="@(new ValidationRules{ Required=true})" EditType=EditType.DefaultEdit></GridColumn>
-                                    <GridColumn Field=@nameof(SmartSuggestionDataModel.Status) HeaderText="Status" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-                                </GridColumns>
-                            </SfGrid>
-                        </div>
-                    }
-                    else if (showBacklogBoard)
-                    {
-                        <div>
-                            <SfKanban TValue="SmartSuggestionDataModel" KeyField="Status" DataSource="@smartSuggestion">
-                                <KanbanColumns>
-                                    <KanbanColumn HeaderText="To Do" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
-                                    <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
-                                    <KanbanColumn HeaderText="Review" KeyField="@(new List<string>() {"Review"})"></KanbanColumn>
-                                    <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
-                                </KanbanColumns>
-                                <KanbanCardSettings HeaderField="Title" ContentField="Description" GrabberField="Color">
-                                    <Template>
-                                        @{
-                                            SmartSuggestionDataModel card = (SmartSuggestionDataModel)context;
-                                            <div class="card-template">
-                                                <div class="e-card-header">
-                                                    <div class="e-card-header-caption">
-                                                        <div class="e-card-header-title e-tooltip-text">@card.Title</div>
-                                                    </div>
-                                                </div>
-                                                <div class="e-card-content">
-                                                    <div class="e-text e-tooltip-text">@card.Description</div>
-                                                </div>
-                                                <div class="e-card-footer">
-                                                    @{
-                                                        <div class="e-card-tag e-tooltip-text">@card.StoryPoints</div>
-                                                    }
-                                                </div>
-                                            </div>
-                                        }
-                                    </Template>
-                                </KanbanCardSettings>
-                            </SfKanban>
-                        </div>
-                    }
-                }
-            </div>
-        </div>
-    </div>
-}
-<SfToast @ref="ToastObj" ID="toast_type" Target="@ToastTarget" ShowCloseButton="true">
-    <ToastPosition X="Right" Y="Top" />
-</SfToast>
-<SfDialog ShowCloseIcon="true" IsModal="true" Width="400px" @bind-Visible="@enableProjectDetailsDialog" CssClass="custom-dialog">
-    <DialogTemplates>
-        <Header>AI Smart Task Suggestion</Header>
-        <Content>
-            <div class="custom-row-1">
-                <div class="col-12 col-md-6 d-flex cuscol-1 justify-content-start e-left">
-                    <div class="w-100">
-                        <div class="e-rte-label1" style="margin: 10px">
-                            <label>Project Details</label>
-                        </div>
-                        <div class="e-rte-field" style="margin: 10px">
-                            <SfTextBox @bind-Value="@TextBoxValue" Multiline=true />
-                        </div>
-                        <div class="e-rte-label2" style="margin: 10px; padding-top: 20px;">
-                            <label>Number of tasks</label>
-                        </div>
-                        <div class="e-rte-field" style="margin: 10px">
-                            <SfTextBox @bind-Value="@TasksValue" min="1" Type="InputType.Number" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Content>
-        <FooterTemplate>
-            <div class="custom-row-2">
-                <div class="col-12 d-flex cuscol-0">
-                    <div class="w-100">
-                        <SfProgressButton Content="@ContentGenerateTask" OnClick="@GenerateTasks" EnableProgress="false">
-                            <ProgressButtonEvents OnBegin="BeginGenerateTasks" OnEnd="EndGenerateTasks"></ProgressButtonEvents>
-                        </SfProgressButton>
-                    </div>
-                </div>
-            </div>
-        </FooterTemplate>
-    </DialogTemplates>
-    <DialogEvents OnClose="CloseDialog"></DialogEvents>
-</SfDialog>
+{% tabs %}
+{% highlight %}
 
-```
+<div class="e-rte-label1" >
+    <label>Project Details</label>
+</div>
+<div class="e-rte-field" style="margin: 10px">
+    <SfTextBox @bind-Value="@TextBoxValue" Multiline=true />
+</div>
+<div class="e-rte-label2">
+    <label>Number of tasks</label>
+</div>
+<div class="e-rte-field" style="margin: 10px">
+    <SfTextBox @bind-Value="@TasksValue" min="1" Type="InputType.Number" />
+</div>
+<div class="d-flex justify-content-center" style="margin: 10px;">
+    <SfProgressButton Content="@ContentGenerateTask" OnClick="@GenerateTasks" EnableProgress="false">
+        <ProgressButtonEvents OnBegin="BeginGenerateTasks" OnEnd="EndGenerateTasks"></ProgressButtonEvents>
+    </SfProgressButton>
+</div>
 
-`Home.razor.cs`
+{% endhighlight %}
+{% endtabs %}
+
+### Generating Tasks with AI
+
+After the user enters project details and the number of tasks, clicking Generate Tasks calls `GenerateTasks()`, which triggers `GenerateProjectTasks()` to build a detailed prompt for the AI service. This prompt includes the project description, task count, and strict instructions to return data in JSON format with fields like Id, Title, Description, Status, StoryPoints, and Color. 
+
+The prompt is then sent to the AI using `GetCompletionAsync()`, which processes the request and returns a JSON response containing the generated tasks. The response is cleaned to remove unnecessary formatting and deserialized into a list of `SmartSuggestionDataModel` objects. These tasks are stored in `smartSuggestion` and displayed in the Kanban board or backlog view.
 
 ```csharp
-using System.Text.Json;
-using AISamples.Components.Models;
-using Microsoft.AspNetCore.Components;
-using Syncfusion.Blazor.Grids;
-using Syncfusion.Blazor.Kanban;
-using Syncfusion.Blazor.Notifications;
 
-namespace AISamples.Components.Pages
+private async Task GenerateProjectTasks()
 {
-    public partial class Home
+    try
     {
-        SfToast ToastObj;
-        public string[] SelectedAssignees { get; set; } = new string[] { };
-        private string ToastTarget { get; set; } = "#toast-kanban-observable";
-        SfKanban<SmartSuggestionDataModel> kanbanObj;
-        public string ContentGenerateTask = "Generate Tasks";
-        public string BacklogButtonViewContent = "View as Backlog";
-        private string TextBoxValue = string.Empty;
-        private string TasksValue = string.Empty;
-        private bool enableProjectDetailsDialog = false;
-        private bool isGeneratedProjectTasks = false;
-        private bool enableTaskEditing = false;
-        private bool isHomapage = true;
-        private bool showSprintBoard = false;
-        private bool showBacklogs = false;
-        private bool showBacklogBoard = true;
-        private List<SmartSuggestionDataModel> smartSuggestion = new List<SmartSuggestionDataModel>();
-        private DialogSettings DialogParams = new DialogSettings { MinHeight = "400px", Width = "450px" };
-        private string waringText = "Click \"Generate Tasks\" to preview";
-        private void GoToBacklogBoardView()
+        if (!string.IsNullOrEmpty(TextBoxValue) && !string.IsNullOrEmpty(TasksValue))
         {
-            if (BacklogButtonViewContent == "View as Board")
+            string result = "";
+            var description = $"Generate {TasksValue} task recommendations for {TextBoxValue}. Each task should include the following fields: Id (like example: ID should be in project name simple 4char word - 1), Title, Status, Description, Assignee, StoryPoints, Color and Due Date, formatted according to the dataset. Assign each task to the Assignee: empty string, set the Status to 'Open', and use black for the Color. Use the dataset provided below to create your recommendations. IMPORTANT: Return the data strictly in JSON format with all the required fields. Only the JSON data is needed, no additional text.Return only the JSON array format without any explanations.";
+            result = await OpenAIService.GetCompletionAsync(description);
+            if (result != null)
             {
-                BacklogButtonViewContent = "View as Backlog";
-                showBacklogBoard = true;
+                string data = result.Replace("```json", "").Replace("```", "").Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+                List<SmartSuggestionDataModel> modifiedData;
+                modifiedData = JsonSerializer.Deserialize<List<SmartSuggestionDataModel>>(data);
+                smartSuggestion = modifiedData != null ? smartSuggestion.Concat(modifiedData).ToList() : smartSuggestion;
+                this.isGeneratedProjectTasks = true;
             }
-            else
-            {
-                showBacklogBoard = false;
-                BacklogButtonViewContent = "View as Board";
-            }
-            showSprintBoard = false;
+            ContentGenerateTask = "Generate Tasks";
         }
-        private RenderFragment GetTemplate() => builder =>
+        else
         {
-            builder.OpenElement(0, "div");
-            builder.AddContent(1, "An error occurred during the AI process, Please try again.");
-            builder.CloseElement();
-        };
-        public void BeginGenerateTasks(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
-        {
-            ContentGenerateTask = "Generating...";
+            waringText = string.IsNullOrEmpty(TextBoxValue) && string.IsNullOrEmpty(TasksValue) ? "Enter the required task creation details" : !string.IsNullOrEmpty(TasksValue) ? "Enter the Project Details" : "Enter the number of tasks";
         }
-        public async Task EndGenerateTasks(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
-        {
-            while (!isGeneratedProjectTasks)
-            {
-                await Task.Delay(1000);
-            }
-            this.isHomapage = false;
-            this.CloseDialog();
-            showBacklogs = true;
-        }
-        private async Task GenerateProjectTasks()
-        {
-            try
-            {
-                if (!string.IsNullOrEmpty(TextBoxValue) && !string.IsNullOrEmpty(TasksValue))
-                {
-                    string result = "";
-                    var description = $"Generate {TasksValue} task recommendations for {TextBoxValue}. Each task should include the following fields: Id (like example: ID should be in project name simple 4char word - 1), Title, Status, Description, Assignee, StoryPoints, Color and Due Date, formatted according to the dataset. Assign each task to the Assignee: empty string, set the Status to 'Open', and use black for the Color. Use the dataset provided below to create your recommendations. IMPORTANT: Return the data strictly in JSON format with all the required fields. Only the JSON data is needed, no additional text.Return only the JSON array format without any explanations.";
-                    result = await OpenAIService.GetCompletionAsync(description);
-                    if (result != null)
-                    {
-                        string data = result.Replace("```json", "").Replace("```", "").Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
-                        List<SmartSuggestionDataModel> modifiedData;
-                        modifiedData = JsonSerializer.Deserialize<List<SmartSuggestionDataModel>>(data);
-                        smartSuggestion = modifiedData != null ? smartSuggestion.Concat(modifiedData).ToList() : smartSuggestion;
-                        this.isGeneratedProjectTasks = true;
-                    }
-                    ContentGenerateTask = "Generate Tasks";
-                }
-                else
-                {
-                    waringText = string.IsNullOrEmpty(TextBoxValue) && string.IsNullOrEmpty(TasksValue) ? "Enter the required task creation details" : !string.IsNullOrEmpty(TasksValue) ? "Enter the Project Details" : "Enter the number of tasks";
-                }
-            }
-            catch
-            {
-                await this.ToastObj.ShowAsync(new ToastModel { ContentTemplate = @GetTemplate(), ShowCloseButton = true, Timeout = 0 });
-            }
-        }
-        private void OpenProjectDetailsDialog()
-        {
-            this.enableProjectDetailsDialog = true;
-        }
-        private async Task GenerateTasks()
-        {
-            this.isGeneratedProjectTasks = false;
-            await this.GenerateProjectTasks();
-        }
-        private void SaveTask()
-        {
-            this.enableProjectDetailsDialog = false;
-            this.TasksValue = string.Empty;
-            this.TextBoxValue = string.Empty;
-            this.isGeneratedProjectTasks = false;
-            StateHasChanged();
-        }
-        private void CloseDialog()
-        {
-            this.enableProjectDetailsDialog = false;
-            this.TasksValue = string.Empty;
-            this.TextBoxValue = string.Empty;
-            this.isGeneratedProjectTasks = false;
-            StateHasChanged();
-        }
-        public void TaskEditingHandler(Syncfusion.Blazor.Grids.ActionEventArgs<SmartSuggestionDataModel> args)
-        {
-            if (args.RequestType.ToString() == "Add")
-            {
-                enableTaskEditing = true;
-            }
-            else
-            {
-                enableTaskEditing = false;
-            }
-        }
-        public void RowCreatedHandler(RowCreatedEventArgs<SmartSuggestionDataModel> args)
-        {
-            args.Data.Status = "Open";
-            args.Data.Color = "#000000";
-        }
+    }
+    catch
+    {
+        await this.ToastObj.ShowAsync(new ToastModel { ContentTemplate = @GetTemplate(), ShowCloseButton = true, Timeout = 0 });
     }
 }
 
 ```
+
+### Displaying AI-Generated Tasks in Kanban Cards
+
+Once the AI-generated tasks are processed and stored in `smartSuggestion`, they are displayed in two ways: 
+
+1. Kanban Board View
+2. Backlog Grid View
+
+#### Kanban Board View
+
+The Kanban board uses `SfKanban` to organize tasks into columns like **To Do**, **In Progress**, **Review**, and **Done**, based on the Status field. Each card shows the task title, description, and story points using a custom template for better readability.
+
+- **Kanban Columns:** Defined by KeyField values such as Open, InProgress, Review, and Close.
+- **Card Template:** Displays Title, Description, and StoryPoints in a structured layout.
+- **Dynamic Binding:** The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property binds to `smartSuggestion`, ensuring that newly generated tasks appear instantly.
+
+{% tabs %}
+{% highlight %}
+
+<SfKanban TValue="SmartSuggestionDataModel" KeyField="Status" DataSource="@smartSuggestion">
+    <KanbanColumns>
+        <KanbanColumn HeaderText="To Do" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Review" KeyField="@(new List<string>() {"Review"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Title" ContentField="Description" GrabberField="Color">
+        <Template>
+            @{
+                SmartSuggestionDataModel card = (SmartSuggestionDataModel)context;
+                <div class="card-template">
+                    <div class="e-card-header">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title e-tooltip-text">@card.Title</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div class="e-text e-tooltip-text">@card.Description</div>
+                    </div>
+                    <div class="e-card-footer">
+                        @{
+                            <div class="e-card-tag e-tooltip-text">@card.StoryPoints</div>
+                        }
+                    </div>
+                </div>
+            }
+        </Template>
+    </KanbanCardSettings>
+</SfKanban>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Backlog Grid View
+
+When users switch to **Backlog View**, tasks are displayed in a grid using `SfGrid`. This view allows adding, deleting, and editing tasks through a **dialog popup** for structured input.
+
+- **Dialog Editing:** Uses [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditSettings) with [Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Dialog) mode for structured editing.
+- **Validation:** Ensures required fields like Task ID, Title, and Status are filled.
+- **Data Binding:** The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property binds to `smartSuggestion`, just like Kanban.
+
+{% tabs %}
+{% highlight %}
+
+<SfGrid DataSource="@smartSuggestion" AllowPaging="true" Toolbar="@(new List<string>() { "Add" })">
+    <GridEvents OnActionBegin="TaskEditingHandler" RowCreated="RowCreatedHandler" TValue="SmartSuggestionDataModel"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Dialog" Dialog="DialogParams">
+        <Template>
+            @{
+                var AISuggestion = (context as SmartSuggestionDataModel);
+            }
+            <div style="margin: 10px;">
+                <div class="form-group" style="margin: 10px;">
+                    <SfTextBox ID="OrderID" @bind-Value="@(AISuggestion.Id)" Enabled="@enableTaskEditing" FloatLabelType="FloatLabelType.Always" Placeholder="Task ID" Width="100%"></SfTextBox>
+                </div>
+                <div class="form-group" style="margin: 10px;">
+                    <SfTextBox ID="Title" @bind-Value="@(AISuggestion.Title)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Title" Width="100%"></SfTextBox>
+                </div>
+                <div class="form-group" style="margin: 10px;">
+                    <SfTextBox ID="Description" @bind-Value="@(AISuggestion.Description)" FloatLabelType="FloatLabelType.Always" Multiline="true" Placeholder="Description" Width="100%"></SfTextBox>
+                </div>
+                <div class="form-group" style="margin: 10px;">
+                    <SfNumericTextBox ID="Title" @bind-Value="@(AISuggestion.StoryPoints)" TValue="int" FloatLabelType="FloatLabelType.Always" Placeholder="StoryPoints" Width="100%"></SfNumericTextBox>
+                </div>
+                <div class="form-group" style="margin: 10px;">
+                    <SfTextBox ID="Status" @bind-Value="@(AISuggestion.Status)" Enabled="@enableTaskEditing" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Status" Width="100%"></SfTextBox>
+                </div>
+            </div>
+        </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(SmartSuggestionDataModel.Id) HeaderText="Task ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
+        <GridColumn Field=@nameof(SmartSuggestionDataModel.Title) HeaderText="Title" ValidationRules="@(new ValidationRules{ Required=true})" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(SmartSuggestionDataModel.Description) HeaderText="Description" EditType=EditType.DefaultEdit></GridColumn>
+        <GridColumn Field=@nameof(SmartSuggestionDataModel.StoryPoints) HeaderText="StoryPoints" ValidationRules="@(new ValidationRules{ Required=true})" EditType=EditType.DefaultEdit></GridColumn>
+        <GridColumn Field=@nameof(SmartSuggestionDataModel.Status) HeaderText="Status" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
+    </GridColumns>
+    </SfGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+**View Toggle:** Users can switch between **Kanban** and **Grid** using the button below:
+
+{% tabs %}
+{% highlight %}
+
+<SfButton OnClick="GoToBacklogBoardView" Content="@BacklogButtonViewContent"></SfButton>
+
+{% endhighlight %}
+{% endtabs %}
+
+```csharp
+private void GoToBacklogBoardView()
+{
+    if (BacklogButtonViewContent == "View as Board")
+    {
+        BacklogButtonViewContent = "View as Backlog";
+        showBacklogBoard = true;
+    }
+    else
+    {
+        showBacklogBoard = false;
+        BacklogButtonViewContent = "View as Board";
+    }
+}
+```
+
+## Sample Code
+
+A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+
+![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.png)
 
 ## Error Handling and Troubleshooting
 
@@ -573,12 +446,3 @@ If the AI service fails to return a valid response, the Kanban will display an e
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
 
-## Performance Considerations
-
-When handling large text content, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For long-form content or batch operations, consider splitting the input into smaller segments to avoid performance bottlenecks. Test the application with your specific use case to determine optimal performance.
-
-## Sample Code
-
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
-
-![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.png)
