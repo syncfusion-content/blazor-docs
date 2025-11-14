@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Studio for Blazor | Syncfusion
-description: Learn here about how to create a Blazor application using Syncfusion Blazor components with the Template Studio in Visual Studio 2022. Explore to more details.
+description: Learn here about how to create a Blazor application using Syncfusion Blazor components with the Template Studio in Visual Studio 2026. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,13 +11,13 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Blazor Template Studio, which creates a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application preconfigured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages, namespaces, styles, and component render mode. The Template Studio offers an intuitive project wizard to guide creation of an application with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
+The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2026**:
 
-> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2019 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 20.3.0.56 and earlier.
+> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2026 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 20.3.0.56 and earlier.
 
 N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If it is not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 
 2. To create a Syncfusion® Blazor application, use either one of the following options:
 
@@ -47,8 +47,8 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
 
     | .NET SDK version | Supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application type |
     | ---------------- | -------------------------------------------- |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
 
 
     In the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App** application type, you can configure the following options:
@@ -98,7 +98,7 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
 
 6. Click **Next** or select the **Features** tab to review and choose features for the selected controls.
 
-7. Click **Next** or select the **Configuration** tab. Configure the target .NET version (.NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly Application types.
+7. Click **Next** or select the **Configuration** tab. Configure the target .NET version (.NET 10.0, .NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly Application types.
 
      Depending on your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type, refer to the table below for supported authentication types.
 
@@ -402,3 +402,4 @@ Open a command prompt in your project directory and execute the following comman
 2. Accept permission request of your application.
 
     ![Accept permission](images/microsoftauthentication.png)
+
