@@ -13,7 +13,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Blazor Template St
 
 The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
 
-> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2019 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 20.3.0.56 and earlier.
+> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2022 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 20.3.0.56 and earlier.
 
 N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If it is not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
 
