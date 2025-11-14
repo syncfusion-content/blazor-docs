@@ -230,7 +230,7 @@ await builder.Build().RunAsync();
 
 ## AI-powered Rich Text Editor in Blazor
 
-This guide explains how to integrate a full-featured AI writing assistant into the Blazor Rich Text Editor using Azure OpenAI (via Semantic Kernel). The implementation supports **Rephrase**, **Correct Grammar**, **Summarize**, **Elaborate**, and **Translate** with live preview, dynamic tone/language controls, skeleton loading, and safe, undoable content replacement.
+This guide explains how to integrate a full-featured AI writing assistant into the Blazor Rich Text Editor using Azure OpenAI (via Semantic Kernel). The implementation supports **Rephrase**, **Correct Grammar**, **Summarize**, **Elaborate**, and **Translate** with live preview, dynamic tone and language controls, skeleton loading, and safe content replacement with undo support.
 
 ### How the Custom Toolbar is Rendered
 
@@ -633,6 +633,12 @@ private async Task CopyContent()
 
 Select text → Choose AI action → Dialog opens → AI processes → Updated content displayed → User copies or replaces content.
 
+## Sample Code
+
+A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+
+![Rich Text Editor AI Assistant - Output](../../ai/images/richtexteditor-ai-assistant.png)
+
 ## Error Handling and Troubleshooting
 
 If the AI service fails to return a valid response, the Rich Text Editor will display an error message ("Oops! Please try again!"). Common issues include:
@@ -641,9 +647,3 @@ If the AI service fails to return a valid response, the Rich Text Editor will di
 - **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
-
-## Sample Code
-
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
-
-![Rich Text Editor AI Assistant - Output](../../ai/images/richtexteditor-ai-assistant.png)
