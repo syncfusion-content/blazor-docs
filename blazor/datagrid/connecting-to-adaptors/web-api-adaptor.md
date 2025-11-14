@@ -8,26 +8,31 @@ control: DataGrid
 documentation: ug
 ---
 
-# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# WebApiAdaptor in Syncfusion Blazor DataGrid
 
-The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
+The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) extends Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) to enable seamless interaction between the Blazor DataGrid component and Web API endpoints that understand OData-formatted queries. The adaptor manages data transfer, filtering, sorting, and other server-side operations by generating the appropriate OData query strings. A correctly configured API endpoint interprets these queries and returns the requested data in a format compatible with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
-To enable the OData query option for a Web API, please refer to the corresponding [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options), which provides detailed instructions on configuring the endpoint to understand OData-formatted queries.
+**Key benefits**:
 
-This section describes a step-by-step process for retrieving data using the `WebApiAdaptor` and binding it to the Blazor Grid to facilitate data and CRUD operations.
+- Utilizes existing OData conventions for query generation.
+- Simplifies server-side CRUD implementation for Blazor DataGrid.
+- Supports high-performance data operations by delegating processing to the server.
 
 ## Creating an API service
  
-To configure a server with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
+To configure a Web API for integration with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **WebApiAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+1. Open Visual Studio 2022.  
+2. Choose **Blazor Web App** and name the project **WebApiAdaptor**.
+3. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension to create the project.
+4. Select the preferred [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 
 **2. Create a model class**
  
-Create a new folder named **Models**. Then, add a model class named **OrdersDetails.cs** in the **Models** folder to represent the order data.
- 
+Add a **Models** folder and create a class named **OrdersDetails.cs** to represent order data.
+
 ```csharp
 namespace WebApiAdaptor.Models
 {
@@ -86,9 +91,8 @@ namespace WebApiAdaptor.Models
 ```
 **3. Create an API controller**
 
-Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor DataGrid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
+Add a **Controllers** folder and create **GridController.cs** to handle data operations:
 
-The sample response object should look like this:
 
 ```
 {
@@ -130,11 +134,9 @@ namespace WebApiAdaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-> When using the WebAPI Adaptor, the data source is returned as a pair of **Items** and **Count**. However, if the `Offline` property of `SfDataManager` is enabled, the entire data source is returned from the server as a collection of objects. In this case, the `$inlinecount` will not be included. Additionally, only a single request is made to fetch all the data from the server, and no further requests are sent.
+> When using `WebApiAdaptor`, the response must include **Items** and **Count** properties. If the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is enabled, the entire collection is returned without **$inlinecount**, and only one request is made to fetch all data.
 
 **4. Register controllers in `Program.cs`**
- 
-Add the following lines in the `Program.cs` file to register controllers:
  
 ```csharp
 // Register controllers in the service container.
@@ -146,40 +148,44 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
+Run the application in Visual Studio. Build and run the application in Visual Studio. The API will be available at a URL similar to **https://localhost:xxxx/api/Grid**, where **xxxx** represents the port number. Confirm that the API returns the expected order data in JSON format.
  
 ![WebApiAdaptor Data](../images/web-api-adaptor-data.png)
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an API service
+## Connecting Syncfusion Blazor DataGrid to an API service
  
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To bind the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a remote API using the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor), configure the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component with the API endpoint and adaptor type. The following steps outline the integration process:
+
+**1. Install Required NuGet Packages**
  
-**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
- 
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
- 
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
- 
-Alternatively, use the following Package Manager commands:
+* To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to the application, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install:
+
+    * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+
+    * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+> * For **Blazor Web Apps** using **WebAssembly** or **Auto** render modes, install these packages in the client project.
+
+* Alternatively, use the following Package Manager commands:
  
 ```powershell
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
  
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org]( https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages]( https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
 **2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
  
-- Open the **~/_Imports.razor** file and import the required namespaces.
- 
+- Add the required namespaces in **~/_Imports.razor**:
+
 ```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 ```
  
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs**:
  
 ```csharp
 using Syncfusion.Blazor;
@@ -187,11 +193,11 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 ```
  
-For apps using `WebAssembly` or `Auto (Server and WebAssembly)` render modes, register the service in both **~/Program.cs** files.
+> For apps using `WebAssembly` or `Auto (Server and WebAssembly)` render modes, register the service in both **~/Program.cs** files.
  
-**3. Add stylesheet and script resources**
+**3. Add stylesheet and script references**
  
-Include the theme stylesheet and script references in the **~/Components/App.razor** file.
+Include the theme and script references in **App.razor**:
  
 ```html
 <head>
@@ -205,12 +211,12 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 </body>
 ```
  
-> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for available methods to include themes, such as Static Web Assets, CDN, or CRG.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
 
-**4. Add Blazor DataGrid and configure with server**
+**4. Configure DataGrid with WebApiAdaptor**
  
-To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **Items** and **Count** format. Update the **Index.razor** file as follows.
+Use the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to connect the DataGrid to the API endpoint. Set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor).
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -271,27 +277,23 @@ When you run the application, the Blazor Grid  will display data fetched from th
  
 ![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
 
-**Perform data operations in a WebAPI service**
+## Perform data operations in a WebApiAdaptor
 
-When using the `WebApiAdaptor` with the `SfDataManager`, data operations such as filtering, sorting, paging, and searching are executed on the server side. These operations are sent from the client to the server as **QueryString** parameters, which can be accessed in your API controller using `Request.Query`.
+When the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor) is used with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), data operations such as **filtering**, **sorting**, **paging**, and **searching** are executed on the server. These operations are sent as query string parameters in the **HTTP** request and can be accessed in the API controller through `Request.Query`.
 
-**Query parameters for data operations**
+The following query parameters are automatically included when the `WebApiAdaptor` is configured:
 
-The following table lists the query parameters used by the Blazor DataGrid for various data operations:
+* **$skip, $top** - Applies paging details from [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to skip a defined number of records and retrieve a specified number of records.
 
-| Key           | Description                                                                 |
-|---------------|-----------------------------------------------------------------------------|
-| `$skip`, `$top` | Specifies the query parameters for performing paging operations on the server side.   |
-| `$filter`      | Specifies the query parameter for performing filtering and searching operations on the server side. |
-| `$orderby`     | Specifies the query parameter for performing sorting operations on the server side.   |
+* **$filter** - Applies filter conditions and search criteria from `DataManagerRequest` to the data source.
 
-> These parameters are automatically sent when the `WebApiAdaptor` is used. You can access and process them in your Web API Controller to perform the corresponding operations.
+* **$orderby** - Applies sort descriptors from `DataManagerRequest` to the data source for ascending or descending order.
+
+> These parameters allow the API controller to process and apply the corresponding operations on the server-side data source.
 
 ## Handling search operations
 
-When a search operation is triggered, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the query conditions that are applied to the data to perform the search.
-
-The following example demonstrates how to extract the `$filter` parameter and apply search logic across multiple fields:
+When a search is performed in the Blazor DataGrid, the `WebApiAdaptor` sends the **$filter** query parameter to the API. This parameter contains conditions that define the search criteria. The API controller can parse this parameter and apply the search logic to the data source.
 
 ![WebApiAdaptor - Searching](../images/web-api-adaptor-searching.png)
 
@@ -375,13 +377,11 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
-> This example demonstrates a custom way of handling the `$filter` query sent by the Grid. You can also handle it using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach..
+> This example demonstrates a custom approach for handling the **$filter** query sent by the DataGrid. Alternative implementations can use custom logic based on the query string format or leverage dynamic expression evaluation libraries for a more generic solution.
 
 ## Handling filtering operation
 
-When filtering is applied, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the conditions for filtering the data based on the provided criteria.
-
-The following example demonstrates how to extract the `$filter` parameter and apply filtering logic based on custom conditions:
+When filtering is applied in the Blazor DataGrid, the `WebApiAdaptor` sends the **$filter** query parameter to the server. This parameter specifies the conditions used to filter the data.
 
 ![WebApiAdaptor - Filtering](../images/web-api-adaptor-filtering.png)
 
@@ -490,13 +490,11 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
-> The `$filter` parameter can include various conditions, such as **substringof**, **eq** (equals), **gt** (greater than), and more. You can customize the filtering logic based on your specific data structure and requirements.
+> The **$filter** parameter can include conditions such as **substringof**, **eq** (equals), **gt** (greater than), and others. Filtering logic can be customized based on the data structure and application requirements.
 
 ## Handling sorting operation
 
-When sorting is triggered, the `$orderby` parameter is sent to the server. The `$orderby` parameter specifies the fields to sort by, along with the sort direction (ascending or descending).
-
-The following example demonstrates how to extract the `$orderby` parameter and apply sorting logic:
+When sorting is applied in the Blazor DataGrid, the `WebApiAdaptor` sends the **$orderby** query parameter to the server. This parameter specifies the fields to sort by and the sort direction (ascending or descending).
 
 ***Ascending Sorting***
 
@@ -586,13 +584,14 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
-> You can parse the `$orderby` parameter to dynamically apply sorting on one or more fields in either ascending or descending order.
+> Parse the **$orderby** query parameter to dynamically apply sorting on one or more fields in **ascending** or **descending** order.
 
 ## Handling paging operation
 
-When paging is applied, the `$skip` and `$top` parameters are sent to the server. The `$skip` parameter specifies the number of records to skip, while the `$top` parameter specifies how many records to retrieve for the current page.
+When paging is applied in the Blazor DataGrid, the `WebApiAdaptor` sends the **$skip** and **$top** query parameters to the server.
 
-The following example demonstrates how to apply paging logic:
+- **$skip** - Specifies the number of records to skip.
+- **$top** - Specifies the number of records to retrieve for the current page.
 
 ![WebApiAdaptor - Paging](../images/web-api-adaptor-paging.png)
 
@@ -649,15 +648,24 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
->  Always calculate the total record count before applying paging. This ensures that the Grid can display the correct total number of records for pagination.
+> Always calculate the total record count before applying paging. This ensures that the DataGrid displays the correct total number of records for pagination.
 
-N> If you want to handle filtering, sorting, and paging operations using Dynamic LINQ Expressions, you can refer to this [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service) for an example of how to implement it dynamically.
+N> To handle filtering, sorting, and paging operations dynamically using LINQ expressions, refer to this [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service) for an example implementation.
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
+The `WebApiAdaptor` enables Create, Read, Update, and Delete (CRUD) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid through standard Web API endpoints. These operations are performed using **HTTP methods** in the API controller.
 
-To enable CRUD operations in the Grid, follow the steps below:
+To support full CRUD functionality, define the following methods in the GridController class:
+
+* **GET** – Retrieves data from the service
+* **POST** – Inserts new records
+* **PATCH** – Updates existing records
+* **DELETE** – Removes records
+
+To enable [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) in the DataGrid, configure the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) properties to allow adding, editing, and deleting records.
+
+Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column that uniquely identifies each record.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -680,11 +688,11 @@ To enable CRUD operations in the Grid, follow the steps below:
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal or Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the DataGrid. To enable CRUD operations, ensure the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a unique column.
 
 **Insert operation:**
 
-To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
+To insert a new record, implement the **HttpPost** method in the **GridController** class. This method receives the new record from the client and adds it to the data source.
 
 ![Insert Record](../images/web-api-adaptor-insert.png)
 
@@ -707,7 +715,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 **Update operation:**
 
-Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
+To update an existing record, implement the **HttpPatch** method. This method performs a partial update based on the provided key and non-null fields.
 
 ![Update Record](../images/web-api-adaptor-update.png)
 
@@ -739,7 +747,7 @@ public void Put([FromBody] OrdersDetails updatedRecord)
 
 **Delete operation:**
 
-To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
+To delete a record, implement the **HttpDelete** method. This method removes the record identified by the key from the data source.
 
 ![Delete Record](../images/web-api-adaptor-delete.png)
 
@@ -767,4 +775,4 @@ public void Delete(int id)
 
 ![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
 
-N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support **Batch** mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
+N> **Batch** mode CRUD operations are not supported in ASP.NET Core Web API because batch handling is unavailable in ASP.NET Core v3+. This feature will remain unsupported until ASP.NET Core provides native batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
