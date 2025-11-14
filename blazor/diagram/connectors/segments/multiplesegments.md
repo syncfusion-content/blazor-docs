@@ -58,11 +58,9 @@ Connectors can include a sequence of segment objects. To create a connector with
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDnKoKLrXqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/MultipleSegments)
 
-![Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDnKoKLrXqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)" %}
 
 * Similarly, you can create multiple segments for all the connector type.
 

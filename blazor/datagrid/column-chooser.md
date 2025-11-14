@@ -615,9 +615,7 @@ namespace Model
 > * You can build reusable custom component based on your customization need as like above code example.
 > * In the above example, [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) is used as custom component in the content template to show/hide columns.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Column chooser content template in Blazor DataGrid.](images/blazor-datagrid-column-chooser-content-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Column chooser content template in Blazor DataGrid.](images/blazor-datagrid-column-chooser-content-template.png)" %}
 
 ### Customize the footer of column chooser
 

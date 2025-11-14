@@ -101,11 +101,9 @@ The following code example illustrates how to create an organizational chart.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout1)
 
-![Blazor Organization Chart example](../images/blazor-organization-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.png)" %}
 
 Organizational chart layout starts parsing from the root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides information about a node’s children and the way to arrange them (direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained below.
 
@@ -225,11 +223,9 @@ The following code example illustrates how to set the vertical right arrangement
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
-![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)" %}
 
 ### How to Update Layout Spacing
 

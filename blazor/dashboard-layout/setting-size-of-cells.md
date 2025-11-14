@@ -50,13 +50,11 @@ The size of individual grid cells can be modified to suit your design requiremen
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUMrBmpWKQAbtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 In the sample above, the width of the parent element is divided into five equal cells based on the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) property value. The `CellAspectRatio` is set to `2`, meaning for every 100px of cell width, the height will be 50px (width / height = 2).
 
 The following output demonstrates the effect of setting [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) and [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) properties in the Dashboard Layout:
 
-![Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUMrBmpWKQAbtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)" %}
 
 ## Setting Cell Spacing
 
@@ -92,11 +90,9 @@ The spacing between individual panels in both rows and columns can be defined us
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLKMBhQpMKkevti?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 The following output demonstrates the clear representation of data achieved by setting the `CellSpacing` property in the Dashboard Layout component:
 
-![Blazor Dashboard Layout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLKMBhQpMKkevti?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)" %}
 
 ## Graphical Representation of Grid Layout
 
@@ -132,8 +128,6 @@ The underlying grid structure of the Dashboard Layout is initially hidden. This 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKMhBQzsTMyoHg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 The following output illustrates the visible gridlines, indicating the cell division of the layout, with data containers (panels) placed over these cells:
 
-![Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKMhBQzsTMyoHg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.png)" %}

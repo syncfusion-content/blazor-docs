@@ -64,11 +64,9 @@ Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoiDXGrosCrFqt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortOffset)
 
-![Port positioned using Offset values in Blazor Diagram](../images/blazor-diagram-port-offset.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoiDXGrosCrFqt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port positioned using Offset values in Blazor Diagram](../images/blazor-diagram-port-offset.png)" %}
 
 The following table shows the relationship between the shape port position and path port offset (fraction values).
 
@@ -208,11 +206,9 @@ The following code shows how to align ports.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXryMDDQBerYgNVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortHorizontalVerticalAlignment)
 
-![Changing port alignment relative to offset in Blazor Diagram](../images/blazor-diagram-port-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXryMDDQBerYgNVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing port alignment relative to offset in Blazor Diagram](../images/blazor-diagram-port-position.png)" %}
 
 
 N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Center`. Alignment is positioned based on the offset value.
@@ -267,11 +263,9 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhIWtXQhIAzipUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortMargin)
 
-![Blazor Diagram Port with Margin](../images/blazor-diagram-port-margin.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhIWtXQhIAzipUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Port with Margin](../images/blazor-diagram-port-margin.png)" %}
 
 ## See also
 

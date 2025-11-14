@@ -30,9 +30,7 @@ The following code demonstrates how to add a ruler to the diagram.
 </SfDiagramComponent>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoiXXlTWQuPiRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Ruler](images/Ruler.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoiXXlTWQuPiRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Ruler](images/Ruler.png)" %}
 
 ## How to Customize the Ruler
 

@@ -74,11 +74,9 @@ The following code example explains how to create participants in sequence diagr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateParticipant).
 
-![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)" %}
 
 #### UmlSequenceParticipant Properties
 
@@ -225,11 +223,9 @@ The following code example explains how to create messages in sequence diagram.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub]().
 
-![Message Example](./images/UmlSequenceDiagram/MessageExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlSequenceDiagram/MessageExample.png)" %}
 
 #### UmlSequenceMessage Properties
 
@@ -320,11 +316,9 @@ The following code example explains how to create activation boxes in sequence d
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub]().
 
-![Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)" %}
 
 #### UmlSequenceActivationBox Properties
 
@@ -453,11 +447,9 @@ Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateFragments).
 
-![Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)" %}
 
 #### UmlSequenceFragment Properties
 

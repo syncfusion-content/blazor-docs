@@ -44,13 +44,12 @@ N> By default, the entire panel acts as the draggable handle, meaning a dragging
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The sample above demonstrates both dragging and the automatic pushing of panels. For instance, when panel 0 is dragged over panel 1, they collide, and panel 1 is pushed to a feasible direction, allowing panel 0 to occupy its new position.
 
 The following output illustrates the dragging functionality of the dashboard component:
 
-![Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeMsigAIcgTaPQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.gif)" %}
 
 ## Customizing the Drag Handle
 
@@ -89,8 +88,7 @@ The draggable handle for panels can be customized using the [`DraggableHandle`](
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVyjoVZzbiwbNQP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following output demonstrates customizing the dragging handle, where panels can only be dragged by interacting with their header section.
 
-![Customizing Dragging Handler of Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-handler-of-panels.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLyiMsUAeyvtIeu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 backgroundimage "[Customizing Dragging Handler of Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-handler-of-panels.gif)" %}

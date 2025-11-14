@@ -150,11 +150,9 @@ The following sample code demonstrates how to use data annotations in the Grid:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
 
-![Data Annotation in Grid](./images/blazor-datagrid-data-annotation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.png)" %}
 
 > The **Verified** column displays the `Enum` member using the `Display` attribute name, enhancing user experience by rendering a human-readable label instead of the raw enum value.
 
