@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing customization in DataGrid | Syncfusion
-description: Learn here all about editing customization in Syncfusion Blazor DataGrid component and more details.
+title: Customize editing in Blazor DataGrid | Syncfusion
+description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,25 +9,31 @@ documentation: ug
 
 # Editing customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of editing-related elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize various editing-related elements.
+The appearance of editing elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
 
-## Customizing the edited and added row element
+- **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
+- **Edit form input fields:** Displays text boxes used to enter or update values during editing.
+- **Edit dialog header:** Shows the title or context of the current editing operation.
+- **Command column buttons:** Displays action buttons such as Edit, Delete, Update, and Cancel.
 
-To customize the appearance of edited and added row table elements in the Grid, you can use the following CSS code:
+## Customize edited and added row elements
+
+The **.e-editedrow** and **.e-addedrow** classes style edited and newly added rows. Apply CSS to make these rows stand out:
 
 ```css
 .e-grid .e-editedrow table, .e-grid .e-addedrow table {
 	    background-color: #62b2eb;
 }
 ```
-In this example, the .**e-editedrow** class represents the edited row element, and the **.e-addedrow** class represents the added row element. You can modify the `background-color` property to change the color of these row table elements.
 
-![Customizing the added row element](../images/style-and-appearance/edited-added-row-element.png)
-![Customizing the edited row element](../images/style-and-appearance/edited-added-row-element-2.png)
+Adjust properties such as **background-color** or **border** styles to highlight rows that are in edit mode.
 
-## Customizing the edited row input element
+![Edited and added rows](../images/style-and-appearance/edited-added-row-element.png) 
+![Edited row styling](../images/style-and-appearance/edited-added-row-element-2.png)
 
-To customize the appearance of edited row input elements in the Grid, you can use the following CSS code:
+## Customize edited row input elements
+
+The **.e-gridform** and **.e-input** classes style inputs inside the inline edit form in the Blazor DataGrid. Use CSS to adjust their appearance:
 
 ```css
 
@@ -37,40 +43,37 @@ To customize the appearance of edited row input elements in the Grid, you can us
 }
 
 ```
-In this example, the **.e-gridform** class represents the editing form, and the **.e-input** class represents the input elements within the form. You can modify the `font-family` property to change the font and `color` property  to change text color of the input elements.
 
-![Customizing the edited and added row element](../images/style-and-appearance/edited-row-input-element.png)
+Modify properties such as **font-family**, **color**, or **padding** to improve readability.
+
+![Edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="ToolbarItems">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-.e-grid .e-editedrow table, .e-grid .e-addedrow table {
-	background-color: #62b2eb;
-}
-.e-grid .e-gridform .e-rowcell .e-input-group .e-input {
-    font-family: cursive;
-    color:rgb(214, 33, 123)
-}
+    .e-grid .e-editedrow table,
+    .e-grid .e-addedrow table { background-color: #62b2eb; }
+    .e-grid .e-gridform .e-rowcell .e-input-group .e-input { font-family: cursive; color: rgb(214,33,123); }
+    .e-grid .e-gridform .e-rowcell:focus-visible { outline: 2px solid #005a9e; outline-offset: -2px; }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
+    private List<OrderData> Orders { get; set; }
+    private readonly List<string> ToolbarItems = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -81,56 +84,59 @@ In this example, the **.e-gridform** class represents the editing form, and the 
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    public OrderData(int orderID, string customerID, string shipCity, string shipName, double freight, string shipCountry)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
+        Freight = freight;
+        ShipCountry = shipCountry;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier", 32.38, "France"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", 11.61, "Germany"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", 65.83, "Brazil"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", 41.34, "France"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", 51.30, "Belgium"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", 58.17, "Brazil"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese", 22.98, "Switzerland"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt", 148.33, "Switzerland"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export", 13.97, "Brazil"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos", 81.91, "Venezuela"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel", 140.51, "Austria"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial", 3.25, "Mexico"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen", 55.09, "Germany"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia", 3.05, "Brazil"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery", 48.29, "USA"));
         }
-
-        return Orders;
+        return Data;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
+    public int OrderID { get; }
+    public string CustomerID { get; }
+    public string ShipCity { get; }
+    public string ShipName { get; }
+    public double Freight { get; }
+    public string ShipCountry { get; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLINOLffsrjCvCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBIWNCxTcuUSDfi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the edit dialog header element
+## Customize the edit dialog header
 
-To customize the appearance of the edit dialog header element in the Grid, you can use the following CSS code:
+The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog header when dialog editing is enabled. Apply CSS to differentiate the header:
 
 ```css
 
@@ -139,35 +145,34 @@ To customize the appearance of the edit dialog header element in the Grid, you c
 }
 
 ```
-In this example, the **.e-edit-dialog** class represents the edit dialog, and the **.e-dlg-header-content** class targets the header content within the dialog. You can modify the `background-color` property to change the color of the header element.
 
-![Customizing the edit dialog header element](../images/style-and-appearance/edit-dialog-header-element.png)
+Change properties such as **background-color** to visually separate the header from the rest of the dialog content.
+
+![Edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="ToolbarItems">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog"></GridEditSettings>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    .e-edit-dialog .e-dlg-header-content {
-        background-color: #deecf9;
-    }
+    .e-edit-dialog .e-dlg-header-content { background-color: #deecf9; color: #0b345d; }
+    .e-edit-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus-visible { outline: 2px solid #005a9e; outline-offset: 2px; }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
+    private readonly List<string> ToolbarItems = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
 
     protected override void OnInitialized()
     {
@@ -179,56 +184,59 @@ In this example, the **.e-edit-dialog** class represents the edit dialog, and th
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    public OrderData(int orderID, string customerID, string shipCity, string shipName, double freight, string shipCountry)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
+        Freight = freight;
+        ShipCountry = shipCountry;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier", 32.38, "France"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", 11.61, "Germany"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", 65.83, "Brazil"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", 41.34, "France"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", 51.30, "Belgium"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", 58.17, "Brazil"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese", 22.98, "Switzerland"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt", 148.33, "Switzerland"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export", 13.97, "Brazil"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos", 81.91, "Venezuela"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel", 140.51, "Austria"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial", 3.25, "Mexico"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen", 55.09, "Germany"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia", 3.05, "Brazil"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery", 48.29, "USA"));
         }
-
-        return Orders;
+        return Data;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
+    public int OrderID { get; }
+    public string CustomerID { get; }
+    public string ShipCity { get; }
+    public string ShipName { get; }
+    public double Freight { get; }
+    public string ShipCountry { get; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBetEhJzsqPbguh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSMjiRTFXgRbNm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the command column buttons
+## Customize command column buttons
 
-To customize the appearance of command column buttons such as edit, delete, update, and cancel, you can use the following CSS code:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor DataGrid. Use CSS to adjust their appearance:
 
 ```css
 
@@ -240,35 +248,35 @@ To customize the appearance of command column buttons such as edit, delete, upda
 }
 
 ```
-In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** classes represent the respective command column buttons. You can modify the `color` property to change the color of these buttons.
 
-![Customize command column button](../images/style-and-appearance/commandbutton-1.png)
-![Customize command column button](../images/style-and-appearance/commandbutton-2.png)
+Style properties like **color**, **font-size**, and **font-weight** can be adjusted to differentiate action icons and enhance visibility during interaction.
+
+![Command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.png)
+![Command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="100"></GridColumn>
-        <GridColumn HeaderText="Manage Records" Width="150">
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="130"></GridColumn>
+        <GridColumn HeaderText="Manage Records" Width="160">
             <GridCommandColumns>
-                <GridCommandColumn Type="CommandButtonType.Edit" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-edit", CssClass = "e-flat" })"></GridCommandColumn>
-                <GridCommandColumn Type="CommandButtonType.Delete" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-delete", CssClass = "e-flat" })"></GridCommandColumn>
-                <GridCommandColumn Type="CommandButtonType.Save" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-update", CssClass = "e-flat" })"></GridCommandColumn>
-                <GridCommandColumn Type="CommandButtonType.Cancel" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-cancel-icon", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Edit" ButtonOption="@(new CommandButtonOptions { IconCss = "e-icons e-edit", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Delete" ButtonOption="@(new CommandButtonOptions { IconCss = "e-icons e-delete", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Save" ButtonOption="@(new CommandButtonOptions { IconCss = "e-icons e-update", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Cancel" ButtonOption="@(new CommandButtonOptions { IconCss = "e-icons e-cancel-icon", CssClass = "e-flat" })"></GridCommandColumn>
             </GridCommandColumns>
-         </GridColumn>
+        </GridColumn>
     </GridColumns>
 </SfGrid>
-
 <style>
     .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
         color: #f51717;
@@ -277,11 +285,8 @@ In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** class
         color: #077005;
     }
 </style>
-
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
+    private List<OrderData> Orders { get; set; }
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -292,49 +297,52 @@ In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** class
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
-    public OrderData(int orderID, string customerID, double freight, string shipCountry)
+    public OrderData(int orderID, string customerID, string shipCity, string shipName, double freight, string shipCountry)
     {
         OrderID = orderID;
         CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
         Freight = freight;
         ShipCountry = shipCountry;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, "France"));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Germany"));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Brazil"));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, "France"));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Belgium"));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Brazil"));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Switzerland"));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Switzerland"));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Brazil"));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, "Venezuela"));
-            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Austria"));
-            Orders.Add(new OrderData(10259, "CENTC", 3.25, "Mexico"));
-            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Germany"));
-            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Brazil"));
-            Orders.Add(new OrderData(10262, "RATTC", 48.29, "USA"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier", 32.38, "France"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", 11.61, "Germany"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", 65.83, "Brazil"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", 41.34, "France"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", 51.30, "Belgium"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", 58.17, "Brazil"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese", 22.98, "Switzerland"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt", 148.33, "Switzerland"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export", 13.97, "Brazil"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos", 81.91, "Venezuela"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel", 140.51, "Austria"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial", 3.25, "Mexico"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen", 55.09, "Germany"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia", 3.05, "Brazil"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery", 48.29, "USA"));
         }
-
-        return Orders;
+        return Data;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string ShipCountry { get; set; }
+    public int OrderID { get; }
+    public string CustomerID { get; }
+    public string ShipCity { get; }
+    public string ShipName { get; }
+    public double Freight { get; }
+    public string ShipCountry { get; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrIjYBTfCdNCmvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVSMNiHTPsZJUUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

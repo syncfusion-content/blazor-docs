@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redact with Blazor Image Editor Component | Syncfusion
-description: Checkout the Redact available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Explore the Redact support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,49 +9,49 @@ documentation: ug
 
 # Redact in the Blazor Image Editor component
 
-The redact feature in an Image Editor is a valuable tool that empowers users to conceal sensitive information by applying blur or pixel effects to specific areas of an image. This feature is particularly valuable for protecting privacy and complying with data protection regulations, making it easier to securely share images without compromising sensitive information.
+The redact feature conceals sensitive content by applying blur or pixel effects to selected regions of an image. It supports privacy protection and regulatory compliance, enabling secure image sharing without exposing confidential information.
 
 ## Apply redact to the image
 
-The Image Editor control includes a [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_Syncfusion_Blazor_ImageEditor_RedactType_System_Double_System_Double_System_Double_System_Double_System_Int32_) method, which allows you to draw redaction on an image. This method takes six parameters that define how the redact should be carried out:
+The Image Editor control provides the [DrawRedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_Syncfusion_Blazor_ImageEditor_RedactType_System_Double_System_Double_System_Double_System_Double_System_Int32_) method to draw a redaction on an image. This method accepts six parameters that define how the redaction is applied:
 
-* redactType: Specifies the type of redaction to be drawn on the image such as blur or pixelate. If not specified, the redaction drawing is initiated with the default blur value.
+* redactType: Defines the redaction type to draw on the image, such as blur or pixelate. If not specified, redaction uses the default blur type.
 
-* startX: Specifies x-coordinate of redaction. If not specified, the redaction drawing is initiated with the first parameter.
+* startX: Defines the x-coordinate of the redaction. If not specified, redaction starts from the image center.
 
-* startY: Specifies y-coordinate of redaction. If not specified it draws redaction from the center point of the image.
+* startY: Defines the y-coordinate of the redaction. If not specified, redaction starts from the image center.
 
-* width: Specifies the width of redaction. The default value is 100.
+* width: Defines the redaction width. The default value is 100.
 
-* height: Specifies the height of redaction. The default value is 50.
+* height: Defines the redaction height. The default value is 50.
 
-* value: Specifies the blur value for blur-type redaction or the pixel size for pixelate-type redaction. Defaults to 20 since the default redaction is blur.
+* value: Defines the blur intensity for blur-type redaction or the pixel size for pixelate-type redaction. The default is 20 because the default redaction type is blur.
 
 ## Selecting a redact
 
-The Image Editor control includes a [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_String_) method, which allows you to select a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+The Image Editor control provides the [SelectRedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_String_) method to select a redaction by its identifier. Use the [GetRedactsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to obtain the redaction identifier and pass it to perform selection. This method accepts one parameter:
 
-* id: Specifies the redact id to select a redact on an image.
+* id: Defines the redaction identifier to select a redaction on an image.
 
 ## Deleting a redact
 
-The Image Editor control includes a [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_String_) method, which allows you to delete a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+The Image Editor control provides the [DeleteRedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_String_) method to delete a redaction by its identifier. Use the [GetRedactsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to obtain the redaction identifier and pass it to delete the corresponding redaction. This method accepts one parameter:
 
-* id: Specifies the redact id to delete a redact on an image.
+* id: Defines the redaction identifier to delete a redaction on an image.
 
 ## Updating a redact
 
-The Image Editor control includes a [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_Syncfusion_Blazor_ImageEditor_RedactSettings_System_Boolean_) method, which allows you to update the existing redacts by changing its height, width, blur, and pixel size in the component. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redacts which is then passed to change the options of a redacts. This method takes two parameters that define how the redact should be carried out:
+The Image Editor control provides the [UpdateRedactAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_Syncfusion_Blazor_ImageEditor_RedactSettings_System_Boolean_) method to update existing redactions by modifying height, width, blur intensity, or pixel size. Use the [GetRedactsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to obtain the redactions and pass them to update the desired options. This method accepts two parameters:
 
-* setting: Specifies the redact settings to be updated for the shape on an image.
+* setting: Defines the redact settings to update for the redaction on an image.
 
-* isSelected: Specifies to show the redacts in the selected state.
+* isSelected: Defines whether to show the redactions in the selected state.
 
 ## Getting redacts
 
-The Image Editor control includes a [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method, which allows you to get all the redact details which is drawn on an image editor.
+The Image Editor control provides the [GetRedactsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to retrieve all redaction details drawn in the Image Editor.
 
-Here's an example demonstrating how to draw, select, delete, update, and get redacts on an image using the [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__), [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_String_), [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_String_), [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_Syncfusion_Blazor_ImageEditor_RedactSettings_System_Boolean_) and [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) methods.
+The following example demonstrates how to draw, select, delete, update, and get redactions using the `DrawRedactAsync`, `SelectRedactAsync`, `DeleteRedactAsync`, `UpdateRedactAsync` and `GetRedactsAsync` methods.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -77,7 +77,7 @@ Here's an example demonstrating how to draw, select, delete, update, and get red
     private async void addRedact()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawRedactAsync(RedactType.Blur, Dimension.X.Value + 100, Dimension.Y.Value + 100, 200, 300);
+        await ImageEditor.DrawRedactAsync(RedactType.Blur, Dimension.X.Value + 10, Dimension.Y.Value + 10, 200, 300);
     }
     private async void updateRedact()
     {
@@ -104,4 +104,4 @@ Here's an example demonstrating how to draw, select, delete, update, and get red
 }
 ```
 
-![Blazor Image Editor with Redaction](./images/blazor-image-editor-redact.png)
+![Blazor Image Editor with Redaction](./images/blazor-image-editor-redact.jpg)

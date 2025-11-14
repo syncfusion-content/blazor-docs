@@ -1,110 +1,126 @@
 ---
 layout: post
-title: Filtering customization in Blazor DataGrid | Syncfusion
-description: Learn here all about filtering in Syncfusion Blazor DataGrid and more.
+title: Customize filtering in Blazor DataGrid | Syncfusion
+description: Learn how to style and customize the Syncfusion Blazor DataGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filtering in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Filtering customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
+The appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the filtering interface:
 
-## Customizing the filter bar cell element
+- **Filter bar cell and input elements:** Used to enter filter values directly in the header row.
+- **Input focus styles:** Visual highlight applied when the filter input field is focused.
+- **Clear and filter icons:** Icons for clearing filter values and indicating active filters in column headers.
+- **Filter dialog content and footer:** Sections of the filter popup used for entering filter criteria and confirming actions.
+- **Input fields and buttons within the filter dialog:** Controls used to specify filter values and apply or cancel filtering.
+- **Excel-style number filter visuals:** Menu-style interface for selecting numeric filter conditions in Excel-like filtering mode.
 
-To customize the appearance of the filter bar cell element in the Grid header, you can use the following CSS code:
+## Customize the filter bar cell element
+
+The **.e-filterbarcell** class styles the filter bar cells in the header row. Use CSS to adjust its appearance:
 
 ```css
-
 .e-grid .e-filterbarcell {
     background-color: #045fb4;
 }
-
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element in the Grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
 
-![Filter bar cell element](../images/style-and-appearance/filter-bar-cell-element.png)
+Properties like **background-color**, **padding**, and **border** can be changed to visually distinguish the filter row from header cells.
 
-## Customizing the filter bar input element
+![Filter bar cell with custom background](../images/style-and-appearance/filter-bar-cell-element.png)
 
-To customize the appearance of the filter bar input element in the Grid header, you can use the following CSS code:
+## Customize the filter bar input element
 
+The **.e-input** class inside **.e-filterbarcell** styles the input field in the filter bar. Apply CSS to modify its look:
 ```css
-
-.e-grid .e-filterbarcell .e-input-group input.e-input{
+.e-grid .e-filterbarcell .e-input-group input.e-input {
     font-family: cursive;
 }
-
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element, and the **.e-input** class targets the input element within the cell. You can modify the `font-family` property to change the font of the filter bar input element.
 
-![Filter bar input element](../images/style-and-appearance/filter-bar-input-element.png)
+Adjust properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the grid design.
 
-## Customizing the filter bar input focus
+![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.png)
 
-To customize the appearance of the filter bar input element's focus highlight, you can use the following CSS code:
+## Customize the input focus
+
+The **.e-input-focus** class styles the filter bar input group when focused. Apply CSS to change its appearance:
 
 ```css
-
-.e-grid .e-filterbarcell .e-input-group.e-input-focus{
+.e-grid .e-filterbarcell .e-input-group.e-input-focus {
     background-color: #deecf9;
 }
-
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element, and the **.e-input-group.e-input-focus** class targets the focused input element. You can modify the `background-color` property to change the color of the focus highlight.
+
+Change properties like **background-color** and **border** to enhance focus visibility and support keyboard navigation.
 
 ![Filter bar input focus](../images/style-and-appearance/filter-bar-input-element-focus.png)
 
-## Customizing the filter bar input clear icon
+## Customize the filter bar input clear icon
 
-To customize the appearance of the filter bar input element's clear icon, you can use the following CSS code:
+The **.e-clear-icon::before** class defines the clear icon in the filter bar input. Apply CSS to change its appearance:
 
 ```css
-
 .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
     content: '\e72c';
 }
-
 ```
-In this example, the **.e-clear-icon** class targets the clear icon element within the input group. You can modify the `content` property to change the icon displayed.
 
-![Filter bar input clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.png)
+The `content` property can be updated to use a different glyph from the icon set.
+
+![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowPaging="true">
+<SfGrid DataSource="@Orders"
+        Height="315"
+        AllowFiltering="true"
+        AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    .e-grid .e-filterbarcell .e-input-group.e-input-focus{
-        background-color: #deecf9;
-    }
-    .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
-        content: '\e72c';
-    }
-    .e-grid .e-filterbarcell .e-input-group input.e-input{
-        font-family: cursive;
-    }
     .e-grid .e-filterbarcell {
         background-color: #045fb4;
+        color: #ffffff;
+    }
+
+    .e-grid .e-filterbarcell .e-input-group input.e-input {
+        font-family: cursive;
+    }
+
+    .e-grid .e-filterbarcell .e-input-group.e-input-focus {
+        background-color: #deecf9;
+    }
+
+    .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
+        font-family: 'e-icons' !important;
+        font-weight: normal;
+        content: '\e72c';
+    }
+
+    /* Optional: highlight the focused filter cell for keyboard users */
+    .e-grid .e-filterbarcell:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
     }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
+    
+    private List<OrderData> Orders { get; set; }
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -115,35 +131,35 @@ In this example, the **.e-clear-icon** class targets the clear icon element with
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -155,138 +171,139 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDryXIXVUYyWnGdg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDryMjMRrYykDUIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the Blazor DataGrid filtering icon
+## Customize the filtering icon in the header
 
-To customize the appearance of the Grid's filtering icon in the Grid header, you can use the following CSS code:
+The **.e-icon-filter::before** class styles the filter icon in column headers. Apply CSS to modify its look:
 
 ```css
-
-.e-grid .e-icon-filter::before{
+.e-grid .e-icon-filter::before {
     content: '\e81e';
 }
-
 ```
-In this example, the **.e-icon-filter** class targets the filtering icon element. You can modify the `content` property to change the icon displayed.
 
-![Grid filtering icon](../images/style-and-appearance/grid-filtering-icon.png)
+Update the `content` value to match the desired icon glyph.
 
-## Customizing the filter dialog content
+![Header filter icon](../images/style-and-appearance/grid-filtering-icon.png)
 
-To customize the appearance of the filter dialog's content element, you can use the following CSS code:
+## Customize the filter dialog content
+
+The **.e-filter-popup .e-dlg-content** class styles the content area of the filter dialog. Apply CSS to change its appearance:
 
 ```css
-
 .e-grid .e-filter-popup .e-dlg-content {
     background-color: #deecf9;
 }
-
 ```
-In this example, the **.e-filter-popup .e-dlg-content** classes target the content element within the filter dialog. You can modify the `background-color` property to change the color of the dialog's content.
+
+Modify properties such as **background-color**, **padding**, and **border** to match the application theme.
 
 ![Filter dialog content](../images/style-and-appearance/filter-dialog-content.png)
 
-## Customizing the filter dialog footer
+## Customize the filter dialog footer
 
-To customize the appearance of the filter dialog's footer element, you can use the following CSS code:
+The **.e-filter-popup .e-footer-content** class styles the footer section of the filter dialog. Apply CSS to adjust its appearance:
 
 ```css
-
 .e-grid .e-filter-popup .e-footer-content {
     background-color: #deecf9;
 }
-
 ```
-In this example, the **.e-filter-popup .e-footer-content** classes target the footer element within the filter dialog. You can modify the `background-color` property to change the color of the dialog's footer.
+
+Properties like **background-color**, **text-align**, and **border** can be changed to align with the layout design.
 
 ![Filter dialog footer](../images/style-and-appearance/filter-dialog-footer.png)
 
-## Customizing the filter dialog input element
+## Customize the filter dialog input field
 
-To customize the appearance of the filter dialog's input elements, you can use the following CSS code:
+The **.e-input** class inside **.e-filter-popup** targets input fields in the filter dialog. Use CSS to adjust its appearance:
 
 ```css
-
-.e-grid .e-filter-popup .e-input-group input.e-input{
+.e-grid .e-filter-popup .e-input-group input.e-input {
     font-family: cursive;
 }
-
 ```
-In this example, the **.e-filter-popup** class targets the filter dialog, and the **.e-input** class targets the input elements within the dialog. You can modify the `font-family` property to change the font of the input elements.
 
-![Filter dialog input element](../images/style-and-appearance/filter-dialog-input-element.png)
+Adjust properties such as **font-family**, **color**, and **border** to improve clarity and consistency.
 
-## Customizing the filter dialog button element
+![Filter dialog input](../images/style-and-appearance/filter-dialog-input-element.png)
 
-To customize the appearance of the filter dialog's button elements, you can use the following CSS code:
+## Customize the filter dialog button element
+
+The **.e-filter-popup .e-btn** class styles buttons inside the filter dialog. Apply CSS to modify their appearance:
 
 ```css
-
-.e-grid .e-filter-popup .e-btn{
+.e-grid .e-filter-popup .e-btn {
     font-family: cursive;
 }
-
 ```
-In this example, the **.e-filter-popup** class targets the filter dialog, and the **.e-btn** class targets the button elements within the dialog. You can modify the `font-family` property to change the font of the button elements.
 
-![Filter dialog button element](../images/style-and-appearance/filter-dialog-button-element.png)
+Change properties like **font-family**, **background-color**, and **border** to match the design.
 
-## Customizing the excel filter dialog number filters element
+![Filter dialog buttons](../images/style-and-appearance/filter-dialog-button-element.png)
 
-To customize the appearance of the excel filter dialog's number filters, you can use the following CSS code:
+## Customize the Excel-style number filter menu
+
+The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the number filter list in the Excel-style filter dialog. Apply CSS to change its appearance:
 
 ```css
-
-.e-grid .e-filter-popup .e-contextmenu-container ul{
+.e-grid .e-filter-popup .e-contextmenu-container ul {
     background-color: #deecf9;
 }
-
 ```
-In this example, the **.e-filter-popup .e-contextmenu-container** ul classes target the number filter elements within the excel filter dialog. You can modify the `background-color` property to change the color of these elements.
 
-![Excel filter dialog number filters element](../images/style-and-appearance/excel-filter-dialog-number-filters-element.png)
+Properties such as **background-color**, **color**, and **text-align** can be adjusted to match the required design.
+
+![Excel-style filter menu](../images/style-and-appearance/excel-filter-dialog-number-filters-element.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowPaging="true">
+<SfGrid DataSource="@Orders"
+        Height="315"
+        AllowFiltering="true"
+        AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    .e-grid .e-icon-filter::before{
+    .e-grid .e-icon-filter::before {
+        font-family: 'e-icons' !important;
+        font-weight: normal;
         content: '\e81e';
     }
-    .e-grid .e-filter-popup .e-contextmenu-container ul{
+
+    .e-grid .e-filter-popup .e-dlg-content,
+    .e-grid .e-filter-popup .e-footer-content,
+    .e-grid .e-filter-popup .e-contextmenu-container ul {
         background-color: #deecf9;
     }
-    .e-grid .e-filter-popup .e-btn{
+
+    .e-grid .e-filter-popup .e-input-group input.e-input,
+    .e-grid .e-filter-popup .e-btn {
         font-family: cursive;
     }
-    .e-grid .e-filter-popup .e-input-group input.e-input{
-        font-family: cursive;
-    }
-    .e-grid .e-filter-popup .e-footer-content {
-        background-color: #deecf9;
-    }
-    .e-grid .e-filter-popup .e-dlg-content {
-        background-color: #deecf9;
+
+    /* Optional: focus outline inside the filter dialog for keyboard users */
+    .e-grid .e-filter-popup .e-input-group input.e-input:focus-visible,
+    .e-grid .e-filter-popup .e-btn:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: 2px;
     }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -298,35 +315,35 @@ In this example, the **.e-filter-popup .e-contextmenu-container** ul classes tar
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -338,4 +355,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSjyjhAkUzNonV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsNixVEFSwNFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

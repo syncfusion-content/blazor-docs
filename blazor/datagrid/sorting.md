@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor DataGrid | Syncfusion
-description: Learn all about sorting data-bound columns, single and multiple, in Syncfusion Blazor DataGrid component.
+description: Explore sorting in Syncfusion Blazor DataGrid including single/multi-column sort, initial sort, custom icons, foreign key sorting, and sorting events.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,97 +9,107 @@ documentation: ug
 
 # Sorting in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the Grid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes a built-in sorting feature that helps organize information within columns. This makes it easier to locate and analyze data efficiently. To turn on sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
 
-To know about how to **Sorting** in Grid, you can check this video.
+Sorting can be applied in two ways:
+- **Ascending Order**: Arranges values from smallest to largest (e.g., A to Z or 1 to 100). An upward arrow (↑) appears next to the header.
+- **Descending Order**: Arranges values from largest to smallest (e.g., Z to A or 100 to 1). A downward arrow (↓) appears next to the header.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=P3VO_vd0Ev0" %}
 
-To sort a particular column in the Grid, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
+## Sort via UI
+
+Interact with column headers to sort data directly. Clicking a column header toggles the sort order between **Ascending** and **Descending**. By default, the first click sorts ascending.
+
+
+|Action                        | Result                                           |
+|------------------------------|--------------------------------------------------|
+| Click header once            | Sorts in ascending order (↑ icon appears)        |
+| Click header again           | Sorts in descending order (↓ icon appears)       |
+| Click header a third time    | Clears sorting for that column(no icon)          |
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }  
+    }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKsMZhrntSJwyp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhoMjBsUXCtbeqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Grid columns are sorted in the **Ascending** order. If you click the already sorted column, then toggles the sort direction.
-> * You can apply and clear sorting by using the [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) and [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) methods.
-> * To disable sorting for a particular column, set the `AllowSorting` property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
+<!-- > * Columns are sorted in **ascending** order by default.
+> * Use [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) to sort programmatically.
+> * Use [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) to remove sorting.
+> * To disable sorting for a specific column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of GridColumn to `false`. -->
 
 ## Initial sorting
 
-By default, the Grid does not apply any sorting to its records at initial rendering. However, you can apply initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) property of the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html). This feature is helpful when you want to display your data in a specific order when the Grid is first loaded.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid renders without any sorting applied. To arrange records in a desired order right from the initial load, configure initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) (the column's data field name) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) properties (either **SortDirection.Ascending** for smallest to largest or **SortDirection.Descending** for largest to smallest) in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) collection of [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 
-The following example demonstrates how to set the **GridSortSettings** of the  `Columns` for **OrderID** and **ShipCity** columns with a specified `Direction`.
+In this configuration, initial sorting is applied to the **OrderID** and **ShipCity** columns using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
@@ -110,84 +120,78 @@ The following example demonstrates how to set the **GridSortSettings** of the  `
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }  
+    }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
-    public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAiCDLKrKWrRVA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The initial sorting defined in the `GridSortSettings` of the  `Columns` will override any sorting applied through user interaction.
+> Initial sorting defined in the `GridSortSettings` of the Columns is applied on first render and overrides any sorting applied through interaction.
 
 ## Multi-column sorting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows to sort more than one column at a time using multi-column sorting. To enable multi-column sorting in the Grid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**, and set the [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) property to **true** which enable the user to sort multiple columns by holding the **CTRL** key and click on the column headers. This feature is useful when you want to sort your data based on multiple criteria to analyze it in various ways.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting multiple columns simultaneously. To enable this feature, set both [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) and [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) to **true**.
 
-To clear multi-column sorting for a particular column, press the "Shift + mouse left click".
+**How Multi-Column Sorting Works**
 
-> * The `AllowSorting` must be **true** while enabling multi-column sort.
-> * Set `AllowMultiSorting` property as **false** to disable multi-column sorting.
+When multi-sorting is enabled:
+- Click a column header to apply sorting to that column.
+- Hold <kbd>Ctrl</kbd> (or <kbd>Command</kbd> on macOS) and click additional column headers to include them in the sort sequence.
+- Press <kbd>Shift</kbd> and click a column header to remove it from the multi-column sort configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -195,158 +199,140 @@ To clear multi-column sorting for a particular column, press the "Shift + mouse 
 
 <SfGrid DataSource="@GridData" AllowSorting="true" AllowMultiSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }  
+    }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
 
-    public class OrderData
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAWCDhqqMpzrfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Prevent sorting for particular column
+## Disabling sorting for specific column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent sorting for a particular column. This can be useful when you have certain columns that you do not want to be included in the sorting process.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the option to disable sorting for individual columns. This is useful for fields where sorting is not meaningful or should be restricted.
 
-It can be achieved by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property of the particular column to **false**.
+To disable sorting for a specific column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-The following example demonstrates, how to disable sorting for **CustomerID** column.
+In this configuration, sorting is disabled for the **CustomerID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@GridData" AllowSorting="true"  Height="315">
+<SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" AllowSorting="false" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" AllowSorting="false" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    } 
-} 
+    }
+}
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
-    public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVgWMDhqzLxBsoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing sorting functionality with the AllowUnsort property
+## Controlling Unsort behavior in Blazor DataGrid
 
-When the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property is set to **false** in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html), the Grid cannot be placed in an unsorted state by clicking on a sorted column header. This setting restricts the action of reverting the Grid to its original unsorted layout through column header clicks.
-
-In the following example, this is demonstrated by preventing the Grid from entering an unsorted state by setting `AllowUnsort` to **false** in **GridSortSettings**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides control over whether a column can return to an unsorted state after sorting. This behavior is managed using the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
+When [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) is set to **false**, clicking a sorted column header does not revert the Grid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -355,84 +341,68 @@ In the following example, this is demonstrated by preventing the Grid from enter
 <SfGrid DataSource="@GridData" AllowSorting="true" Height="267px">
     <GridSortSettings AllowUnsort="false"></GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVUMsiJfaBVSChx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Sort order
-
-By default, the sorting order will be as **Ascending -> Descending -> None**.
-
-When you click on a column header for the first time, it sorts the column in ascending order. Clicking the same column header again will sort the column in descending order. A repetitive third click on the same column header will clear the sorting.
-
 ## Custom sorting 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a way to customize the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn. The SortComparer data type was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the default sort logic for a column by setting the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of a column. This property accepts an IComparer<object> implementation, which can be created by defining a comparer class that implements the .NET [IComparer<T>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
-
-The following example demonstrates how to define custom sort comparer function for the **CustomerID** column.
+In this configuration, a custom comparer is assigned to the **CustomerID** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -441,118 +411,109 @@ The following example demonstrates how to define custom sort comparer function f
 
 <SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" SortComparer="new CustomComparer()" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" SortComparer="new CustomComparer()" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.Freight)" HeaderText="Freight" Format="C2" Width="80"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public class CustomComparer : IComparer<Object>
+    public class CustomComparer : IComparer<object>
     {
-        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
+        public int Compare(object? XRowDataToCompare, object? YRowDataToCompare)
         {
-            OrderData XRowData = XRowDataToCompare as OrderData;
-            OrderData YRowData = YRowDataToCompare as OrderData;
-            int XRowDataOrderID = (int)XRowData.OrderID;
-            int YRowDataOrderID = (int)YRowData.OrderID;
-            if (XRowDataOrderID < YRowDataOrderID)
-            {
-                return -1;
-            }
-            else if (XRowDataOrderID > YRowDataOrderID)
-            {
-                return 1;
-            }
-            else
+            if (XRowDataToCompare is not OrderData XOrder || YRowDataToCompare is not OrderData YOrder)
             {
                 return 0;
             }
+
+            return Nullable.Compare(XOrder.OrderID, YOrder.OrderID);
         }
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-   public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, double? freight, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.Freight = Freight;
-            this.ShipName = ShipName;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", 3.25, "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", 22.98, "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", 140.51, "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", 65.83, "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", 58.17, "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", 81.91, "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", 3.05, "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", 55.09, "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", 48.29, "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public double? Freight { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 3.25, "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", 22.98, "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 140.51, "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 65.83, "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 58.17, "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 81.91, "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 3.05, "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 55.09, "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 48.29, "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIWXBiJFYfNCrP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrUWMtqggCjRVvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-> * The SortComparer function takes two parameters: a and b. The a and b parameters are the values to be compared. The function returns -1, 0, or 1, depending on the comparison result.
-> * The SortComparer property will work only for local data.
-> * When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to work with the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property.
+> * The **SortComparer** function receives two parameters: `a` and `b`, which represent the values to be compared. The function must return:
+    - **-1** if `a` should appear before `b`
+    - **0** if `a` and `b` are equal
+    - **1** if `a` should appear after `b`
+> * The **SortComparer** property is supported only when using `local data`.
+> * When using a `column template`, ensure the [GridColumn.Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is defined so that SortComparer can access the corresponding field value.
 
 ## Touch interaction
 
-When you tap the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid header on touchscreen devices, the selected column header is sorted. A popup ![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.jpg), and then tap the desired Grid headers.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting through touch gestures. On touch-enabled devices, tapping a column header sorts that column. A popup icon
+![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.jpg) appears to enable multi-column sorting.
+To sort multiple columns, tap the popup
+![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.jpg), and then tap the desired column headers.
 
-> The [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) should be **true** then only the popup will be shown.
+> Both [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be true for the popup to appear.
 
-The following screenshot represents a Grid touch sorting in the device.
+This screenshot illustrates touch-based sorting in the Grid:
 
-![Sorting in Blazor DataGrid using touch interaction.](./images/blazor-datagrid-touch-sorting.jpg)
+![Sorting in Blazor DataGrid](./images/blazor-datagrid-touch-sorting.jpg)
 
-## Sort foreign key column based on text
+## Sort foreign key column
 
-To perform sorting based on foreign key column, the `GridForeignColumn` column can be enabled by using [ForeignDataSource ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource), [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*vgn3lm*_ga*MTcyMDA4OTE2OS4xNjg3OTQzMDQ5*_ga_WC4JKKPHH0*MTY4OTc2NTA2MS44NC4xLjE2ODk3NjUyNDAuNjAuMC4w&_ga=2.195629932.1791817302.1689564530-1720089169.1687943049#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) and [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*vgn3lm*_ga*MTcyMDA4OTE2OS4xNjg3OTQzMDQ5*_ga_WC4JKKPHH0*MTY4OTc2NTA2MS44NC4xLjE2ODk3NjUyNDAuNjAuMC4w&_ga=2.195629932.1791817302.1689564530-1720089169.1687943049#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) properties.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting foreign key columns based on display text. To enable this, configure a [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) with the following properties:
 
-**Sort foreign key column based on text for local data**
+- [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) - Specifies the data source that contains foreign key values and display text.
+- [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) - Defines the key field used for mapping.
+- [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) - Specifies the display text field used for sorting and rendering.
 
-In the case of local data in the Grid, the sorting operation will be performed based on the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*vgn3lm*_ga*MTcyMDA4OTE2OS4xNjg3OTQzMDQ5*_ga_WC4JKKPHH0*MTY4OTc2NTA2MS44NC4xLjE2ODk3NjUyNDAuNjAuMC4w&_ga=2.195629932.1791817302.1689564530-1720089169.1687943049#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property of the column. The `ForeignKeyValue` property should be defined in the column definition with the corresponding foreign key value for each row. The Grid will sort the foreign key column based on the text representation of the `ForeignKeyValue` property.
+N> 
+* **For local data** → Sorting is performed based on the value of the `ForeignKeyValue` property (**display text**).
+* **For remote data** → Sorting is performed based on the `ForeignKeyField` unless the remote service supports sorting on the display text field.
 
-The following example demonstrates how to perform sorting by enabling a foreign key column, where the **CustomerID** column acts as a foreign column displaying the **ContactName** column from foreign data.
+In this configuration, the **ContactName** field is used as the display text for the **CustomerID** foreign key column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -560,111 +521,100 @@ The following example demonstrates how to perform sorting by enabling a foreign 
 
 <SfGrid DataSource="@GridData" Height="315" AllowSorting="true">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridForeignColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" ForeignKeyValue="ContactName" ForeignKeyField="CustomerID" ForeignDataSource="@customerData" Width="100"></GridForeignColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridForeignColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" ForeignKeyValue="ContactName" ForeignKeyField="CustomerID" ForeignDataSource="@CustomerData" Width="100"></GridForeignColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
-    public List<EmployeeData> customerData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
+    public List<EmployeeData> CustomerData { get; set; } = new List<EmployeeData>();
+
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-        customerData = EmployeeData.GetAllRecords();
+        CustomerData = EmployeeData.GetAllRecords();
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 public class EmployeeData
+{
+    private static readonly List<EmployeeData> EmployeeRecords = new List<EmployeeData>();
+
+    public EmployeeData(int? customerId, string contactName)
     {
-        public static List<EmployeeData> customerData = new List<EmployeeData>();
-        public EmployeeData()
-        {
-
-        }
-        public EmployeeData(int? customerID, string contactName)
-        {
-            CustomerID = customerID;
-            ContactName = contactName;
-        }
-        public static List<EmployeeData> GetAllRecords()
-        {
-            if (customerData.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    customerData.Add(new EmployeeData(1, "Paul Henriot"));
-                    customerData.Add(new EmployeeData(2, "Karin Josephs"));
-                    customerData.Add(new EmployeeData(3, "Mario Pontes"));
-                    customerData.Add(new EmployeeData(4, "Mary Saveley"));
-                    customerData.Add(new EmployeeData(5, "Pascale Cartrain"));
-                    customerData.Add(new EmployeeData(6, "Mario Pontes"));
-                    customerData.Add(new EmployeeData(7, "Yang Wang"));
-                    customerData.Add(new EmployeeData(8, "Michael Holz"));
-                    customerData.Add(new EmployeeData(9, "Paula Parente"));
-                    code += 5;
-                }
-            }
-            return customerData;
-        }
-        public int? CustomerID { get; set; }
-        public string ContactName { get; set; }
+        CustomerID = customerId;
+        ContactName = contactName;
     }
-    public class OrderData
+
+    public static List<EmployeeData> GetAllRecords()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
+        if (EmployeeRecords.Count == 0)
         {
-
-        }
-        public OrderData(int? OrderID,int? CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, 1, "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, 2, "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, 3, "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, 4, "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, 5, "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, 6, "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, 7, "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, 8, "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, 9, "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
+            EmployeeRecords.Add(new EmployeeData(1, "Paul Henriot"));
+            EmployeeRecords.Add(new EmployeeData(2, "Karin Josephs"));
+            EmployeeRecords.Add(new EmployeeData(3, "Mario Pontes"));
+            EmployeeRecords.Add(new EmployeeData(4, "Mary Saveley"));
+            EmployeeRecords.Add(new EmployeeData(5, "Pascale Cartrain"));
+            EmployeeRecords.Add(new EmployeeData(6, "Mario Pontes"));
+            EmployeeRecords.Add(new EmployeeData(7, "Yang Wang"));
+            EmployeeRecords.Add(new EmployeeData(8, "Michael Holz"));
+            EmployeeRecords.Add(new EmployeeData(9, "Paula Parente"));
         }
 
-        public int? OrderID { get; set; }
-        public int? CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        return EmployeeRecords;
     }
+
+    public int? CustomerID { get; set; }
+    public string ContactName { get; set; }
+}
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, int? customerId, string shipCity, string shipName)
+    {
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, 1, "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, 2, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, 3, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, 4, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, 5, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, 6, "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, 7, "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, 8, "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, 9, "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public int? CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKiWtqgIEXHWyp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrosDBrMaWuSWBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to customize sort icon
 
-To customize the sort icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can override the default Grid classes **.e-icon-ascending** and **.e-icon-descending** with custom content using CSS. Simply specify the desired icons or symbols using the **content** property as mentioned below
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the default sort icons by overriding the **.e-icon-ascending** and **.e-icon-descending** CSS classes. Use the **content** property to define custom icons:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -675,8 +625,6 @@ To customize the sort icon in the Syncfusion<sup style="font-size:70%">&reg;</su
   content: '\e70d';
 }
 ```
-
-In the below sample, Grid is rendered with a customized sort icon.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -690,25 +638,25 @@ In the below sample, Grid is rendered with a customized sort icon.
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
     .e-grid .e-icon-ascending::before {
-        content: '\e87a'; /* Unicode character representing the ascending icon */
+        content: '\e87a';
     }
 
     .e-grid .e-icon-descending::before {
-        content: '\e70d '; /* Unicode character representing the descending icon */
+        content: '\e70d';
     }
 </style>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
@@ -717,64 +665,63 @@ In the below sample, Grid is rendered with a customized sort icon.
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-   public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
- {% endhighlight %}
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+{% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXryiZBieWXbgwvN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhKCWZqBWwrwhml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+## Sort via programmatically
 
-## Sort columns externally
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the sorting of columns and provides flexibility in sorting based on external interactions. You can sort columns and clear sorting using an external button click.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting operations through built-in methods. These methods allow sorting to be added, removed, or cleared programmatically without relying on the grid’s UI. Sorting actions can be triggered externally—such as via dropdown menus, buttons, or other UI elements—allowing for flexible and dynamic control over data presentation.
 
 ### Add sort columns
 
-To sort a column externally, you can utilize the [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method with parameters **ColumnName**, **Direction** and **IsMultiSort** provided by the Grid. This method allows you to programmatically sort a specific column based on your requirements.
+The DataGrid provides method overloads for programmatic sorting, offering flexibility based on different use cases. These overloads support sorting a single column, multiple columns, or multiple columns while resetting any previous sort settings.
 
-The following example demonstrates how to add sort columns to a Grid. It utilizes the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to select the column and sort direction. When an external button is clicked, the `SortColumnAsync` method is called with the specified **ColumnName**, **Direction**, and **IsMultiSort** parameters. 
+**Sorting a Single Column**
+
+Use [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method to sort a single column by specifying its name and sort direction. This method also supports multi-column sorting when enabled in the grid, allowing it to add the new sort condition alongside existing ones.
+
+| Parameter      | Type              | Description                                                                 |
+|----------------|-------------------|-----------------------------------------------------------------------------|
+| fieldName      | string            | Specifies the column name to be sorted. If the column name is invalid or misspelled, the sort will fail silently without throwing error.                                    |
+| direction      | SortDirection     | Defines the sort direction. Possible values: **Ascending, Descending**.        |
+| isMultiSort    | bool? (optional)  | Enables multi-column sorting when true; replaces existing sort when false. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -783,31 +730,27 @@ The following example demonstrates how to add sort columns to a Grid. It utilize
 @using Syncfusion.Blazor.DropDowns
 
 <div style="display:flex;">
-    <label style="padding: 10px 20px 0 0"> Column name :</label>
-    <SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+    <label style="padding: 10px 20px 0 0">Column name :</label>
+    <SfDropDownList TValue="string" TItem="ColumnItem" Width="300px" Placeholder="Select a Column" DataSource="@ColumnList" @bind-Value="@dropDownValue">
         <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
     </SfDropDownList>
 </div>
 <br />
 
 <div style="display:flex;">
-    <label style="padding: 10px 17px 0 0"> Sorting direction :</label>
-    <SfDropDownList TValue="Syncfusion.Blazor.Grids.SortDirection" TItem="string" DataSource="@EnumValues" @bind-Value="@DropDownDirection" Width="300px">
+    <label style="padding: 10px 17px 0 0">Sorting direction :</label>
+    <SfDropDownList TValue="SortDirection" TItem="string" DataSource="@enumValues" @bind-Value="@dropDownDirection" Width="300px">
     </SfDropDownList>
 </div>
 <br />
+
 <div style="display:flex;">
-    <Syncfusion.Blazor.Buttons.SfButton OnClick="AddsortColumn">ADD SORT COLUMN</Syncfusion.Blazor.Buttons.SfButton>
+    <SfButton OnClick="AddSortColumn">ADD SORT COLUMN</SfButton>
 </div>
 
-<SfGrid DataSource="@GridData" @ref="Grid" AllowSorting="true" Height="315">
-    <GridSortSettings>
-        <GridSortColumns>
-            <GridSortColumn Field="ShipName" Direction="SortDirection.Ascending"></GridSortColumn>
-        </GridSortColumns>
-    </GridSortSettings>
+<SfGrid DataSource="@gridData" @ref="grid" AllowSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="80"></GridColumn>
@@ -815,127 +758,292 @@ The following example demonstrates how to add sort columns to a Grid. It utilize
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    private List<OrderData> gridData { get; set; }
+    private SfGrid<OrderData>? grid { get; set; }
+    private string dropDownValue { get; set; } = "OrderID";
+    private string[] enumValues = Enum.GetNames(typeof(Syncfusion.Blazor.Grids.SortDirection));
+    private SortDirection dropDownDirection { get; set; } = SortDirection.Ascending;
 
-    public SfGrid<OrderData>? Grid { get; set; }
+    protected override void OnInitialized()
+    {
+        gridData = OrderData.GetAllRecords();
+    }
 
-    public string DropDownValue { get; set; } = "OrderID";
+    private List<ColumnItem> ColumnList = new List<ColumnItem>
+    {
+        new ColumnItem { ID = "OrderID", Value = "OrderID" },
+        new ColumnItem { ID = "CustomerID", Value = "CustomerID" },
+        new ColumnItem { ID = "Freight", Value = "Freight" }
+    };
 
-    public string[] EnumValues = Enum.GetNames(typeof(Syncfusion.Blazor.Grids.SortDirection));
+    private async Task AddSortColumn()
+    {
+        await grid.SortColumnAsync(dropDownValue, dropDownDirection);
+    }
 
-    public Syncfusion.Blazor.Grids.SortDirection DropDownDirection { get; set; } = SortDirection.Ascending;
+    private class ColumnItem
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderID, string customerID, double? freight, string shipName)
+    {
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 3.25, "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", 22.98, "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 140.51, "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 65.83, "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 58.17, "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 81.91, "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 3.05, "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 55.09, "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 48.29, "Wellington Import"));
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIijrBrMZftWiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+**Sort Multiple Columns**
+
+The [SortColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnsAsync_System_Collections_Generic_List_Syncfusion_Blazor_Grids_SortColumn__) method is used to sort multiple columns simultaneously. It accepts a list of [SortColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortColumn.html#Syncfusion_Blazor_Grids_SortColumn_Field) objects, each specifying the column name and sort direction.
+
+| Parameter        | Type                    | Description                                                  |
+|------------------|-------------------------|--------------------------------------------------------------|
+| columns          | List<SortColumn>        | A collection of sorting instructions. Each `SortColumn` in the list defines a specific column to sort and the direction of sorting (**Ascending** or **Descending**). This allows multiple columns to be sorted at the same time, based on the order they appear in the list.       |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="ApplyMultiColumnSort">Add Sort Column</SfButton>
+
+<SfGrid @ref="grid" DataSource="@GridData" AllowSorting="true" Height="267px">
+    <GridColumns>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
+    private SfGrid<OrderData>? grid { get; set; }
+    private List<SortColumn> sortColumns { get; set; } = new List<SortColumn>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    List<Columns> LocalData = new List<Columns>
+    private async Task ApplyMultiColumnSort()
     {
-        new Columns() { ID= "OrderID", Value= "OrderID" },
-        new Columns() { ID= "CustomerID", Value= "CustomerID" },
-        new Columns() { ID= "Freight", Value= "Freight" },
-    };
+        sortColumns.Add(new() { Field = nameof(OrderData.ShipCity), Direction = SortDirection.Descending });
+        sortColumns.Add(new() { Field = nameof(OrderData.ShipName), Direction = SortDirection.Ascending });
+        await grid!.SortColumnsAsync(sortColumns);
+    }
+}
 
-    List<Direction> LocalData1 = new List<Direction>
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        new Direction() { ID= "Ascending", Value= "Ascending" },
-        new Direction() { ID= "Descending", Value= "Descending" },
-
-    };
-
-    public class Columns
-    {
-        public string ID { get; set; }
-        public string Value { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public class Direction
+    public static List<OrderData> GetAllRecords()
     {
-        public string ID { get; set; }
-        public string Value { get; set; }
+         if (Orders.Count == 0)
+         {
+             Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+             Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+             Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+             Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+             Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+             Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+             Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+             Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+             Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+         }
+
+         return Orders;
     }
 
-    public async Task AddsortColumn()
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVIWWNyHeMxowAh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> When sorting is applied again using `SortColumnsAsync`, the new sort settings are added to the existing ones. This means previously sorted columns will remain sorted unless explicitly removed or overridden.
+
+**Sort Multiple Columns and Clear Previous Sort**
+
+The [SortColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnsAsync_System_Collections_Generic_List_Syncfusion_Blazor_Grids_SortColumn__) method also provides an overload that allows clearing existing sort settings before applying new ones. This is useful when replacing current sort configurations with a new set of sorted columns.
+
+| Parameter           | Type                    | Description                                                                 |
+|---------------------|-------------------------|-----------------------------------------------------------------------------|
+| columns             | List<SortColumn>        | A collection of sorting instructions. Each `SortColumn` in the list defines a specific column to sort and the direction of sorting (**Ascending** or **Descending**). This allows multiple columns to be sorted at the same time, based on the order they appear in the list.         |
+| clearPreviousSort   | bool                    | To apply a new sort and remove any existing sort settings, enable the option to clear previous sorting. When this option is set to true, all current sort conditions will be removed before applying the new ones. This ensures that only the specified columns are sorted, rather than combining with any existing sort configuration.               |
+
+In this example, the grid is initially configured to sort the **OrderID** column. By setting the `clearPreviousSort` parameter to true in the `SortColumnsAsync` method, the existing sort on the **OrderID** column is removed before applying the new sort. This ensures that only the newly specified columns are sorted, replacing any previous sort settings.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="ApplyNewSort">Apply New Sort</SfButton>
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowSorting="true" Height="267px">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending"></GridSortColumn>            
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
+    private SfGrid<OrderData>? Grid { get; set; }
+    public List<Syncfusion.Blazor.Grids.SortColumn> sortColumns { get; set; } = new List<Syncfusion.Blazor.Grids.SortColumn>();
+
+    protected override void OnInitialized()
     {
-       await Grid.SortColumnAsync(DropDownValue, DropDownDirection, true);
+        GridData = OrderData.GetAllRecords();
+    }
+
+    private async Task ApplyNewSort()
+    {
+        sortColumns.Add(new() { Field = nameof(OrderData.ShipCity), Direction = Syncfusion.Blazor.Grids.SortDirection.Descending });
+        sortColumns.Add(new() { Field = nameof(OrderData.ShipName), Direction = Syncfusion.Blazor.Grids.SortDirection.Ascending });
+        await Grid!.SortColumnsAsync(sortColumns, true);
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID, double? Freight, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.Freight = Freight;
-            this.ShipName = ShipName;             
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", 3.25, "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", 22.98, "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", 140.51, "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", 65.83, "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", 58.17, "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", 81.91, "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", 3.05, "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", 55.09, "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", 48.29, "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public double? Freight { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+         if (Orders.Count == 0)
+         {
+             Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+             Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+             Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+             Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+             Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+             Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+             Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+             Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+             Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+         }
+
+         return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgsWDKBXuYpcUi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBeCWtoRymxjAYV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Remove sort columns
+### Clear sorting
+The Blazor DataGrid component provides flexible options to remove sorting from columns. Sorting can be cleared either for specific column or for all columns at once, depending on the requirement.
 
-To remove a sort column externally, you can use the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method provided by the Grid. This method allows you to remove the sorting applied to a specific column.
+**Clear sorting for specific Column**
 
-The following example demonstrates how to remove sort columns. It utilizes the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to select the column. When an external button is clicked, the `ClearSortingAsync` method is called to remove the selected sort column.
+The [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method removes sorting from specific columns. It accepts a list of column field names and clears their sort settings.
+
+| Parameter     | Type              | Description                                                  |
+|---------------|-------------------|--------------------------------------------------------------|
+| columnNames   | List<string>      | A list of column field names whose sorting should be removed. |
+
+In the following example, the grid is initially sorted by **CustomerID** and **ShipName**. A dropdown allows selecting a column name, and clicking the **Remove Sort Column** button removes sorting from the selected column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.DropDowns
 
 <div style="display:flex;">
-    <label style="padding: 10px 20px 0 0"> Column name :</label>
-    <SfDropDownList TValue="string" TItem="Columns" Width="125px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
-        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+    <label style="padding: 10px 20px 0 0">Column name:</label>
+    <SfDropDownList TValue="string" TItem="ColumnMetaData" Width="125px" Placeholder="Select a Column" DataSource="@columns" @bind-Value="@dropDownValue">
+        <DropDownListFieldSettings Value="Id" Text="Value"></DropDownListFieldSettings>
     </SfDropDownList>
 </div>
 <br />
 
 <div style="display:flex;">
-    <Syncfusion.Blazor.Buttons.SfButton OnClick="RemoveSortColumn">REMOVE SORT COLUMN</Syncfusion.Blazor.Buttons.SfButton>
+    <SfButton OnClick="RemoveSortColumn">Remove Sort Column</SfButton>
 </div>
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowSorting="true" Height="315">
+<SfGrid @ref="grid" DataSource="@GridData" AllowSorting="true" Height="315">
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="CustomerID" Direction="SortDirection.Ascending"></GridSortColumn>
@@ -943,110 +1051,95 @@ The following example demonstrates how to remove sort columns. It utilizes the [
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
+    private List<OrderData> GridData { get; set; } = new();
+    private SfGrid<OrderData>? grid { get; set; }
+    private string dropDownValue { get; set; } = "OrderID";
 
-    public SfGrid<OrderData>? Grid { get; set; }
-
-    public string DropDownValue { get; set; } = "OrderID";
-
+    private List<ColumnMetaData> columns { get; set; } = new()
+    {
+        new ColumnMetaData { Id = "OrderID", Value = "Order ID" },
+        new ColumnMetaData { Id = "CustomerID", Value = "Customer ID" },
+        new ColumnMetaData { Id = "ShipCity", Value = "Ship City" },
+        new ColumnMetaData { Id = "ShipName", Value = "Ship Name" },
+    };
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    List<Columns> LocalData = new List<Columns>
+    private async Task RemoveSortColumn()
     {
-        new Columns() { ID= "OrderID", Value= "OrderID" },
-        new Columns() { ID= "CustomerID", Value= "CustomerID" },
-        new Columns() { ID= "ShipCity", Value= "ShipCity" },
-        new Columns() { ID= "ShipName", Value= "ShipName" },
-    };
-
-    public class Columns
-    {
-        public string ID { get; set; }
-        public string Value { get; set; }
+        if (grid != null)
+        {
+            var ColumnNames = new List<string> { dropDownValue };
+            await grid.ClearSortingAsync(ColumnNames);
+        }
     }
 
-    public class Direction
+    private class ColumnMetaData
     {
-        public string ID { get; set; }
-        public string Value { get; set; }
+        public string Id { get; set; } = string.Empty;
+        public string Value { get; set; } = string.Empty;
     }
-    List<string> listItems = new List<string>();
-    public async Task RemoveSortColumn()
-    {
-        listItems.Add(DropDownValue);
-        await Grid.ClearSortingAsync(listItems);
-         listItems.Clear();
-
-    } 
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-  public class OrderData
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhJXWtlsYHkfUrY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSWsNSxHIlXqJW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+**Clear sorting for all columns**
 
-### Clear sorting 
+The [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method removes sorting from all columns in the grid. This is useful when resetting the grid to its default unsorted state.
 
-To clear the sorting on an external button click, you can use the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method provided by the Grid. This method clears the sorting applied to all columns in the Grid. 
-
-The following example demonstrates how to clear the sorting using `ClearSortingAsync` method in the external button click.
+In this example, the grid is initially sorted by **CustomerID** and **ShipName**. Clicking the **Clear Sorting** button removes sorting from all columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1054,10 +1147,10 @@ The following example demonstrates how to clear the sorting using `ClearSortingA
 @using Syncfusion.Blazor.Buttons
 
 <div>
-    <SfButton OnClick="onExternalSort">Clear Sorting</SfButton>
+    <SfButton OnClick="ClearAllSorting">Clear Sorting</SfButton>
 </div>
 
-<SfGrid DataSource="@GridData" @ref="Grid" AllowSorting="true"  Height="315">
+<SfGrid @ref="grid" DataSource="@gridData" AllowSorting="true" Height="315">
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="CustomerID" Direction="SortDirection.Ascending"></GridSortColumn>
@@ -1065,186 +1158,273 @@ The following example demonstrates how to clear the sorting using `ClearSortingA
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID"  Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
-
-    public SfGrid<OrderData>? Grid { get; set; }
+    private List<OrderData> gridData { get; set; } = new();
+    private SfGrid<OrderData>? grid { get; set; }
 
     protected override void OnInitialized()
     {
-        GridData = OrderData.GetAllRecords();
-    }  
+        gridData = OrderData.GetAllRecords();
+    }
 
-    private async Task onExternalSort()
+    private async Task ClearAllSorting()
     {
-        await Grid.ClearSortingAsync();
+        if (grid != null)
+        {
+            await grid.ClearSortingAsync();
+        }
     }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;            
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBUWWjKiFKHdJVl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLesWjoncQhUnwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sorting events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides two events that are triggered during the sorting action such as  [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) and [Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted). These events can be used to perform any custom actions before and after the sorting action is completed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides events that are triggered during sorting operations, such as [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) and [Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted). These events enable the execution of custom actions before and after a column is sorted, allowing for validation, customization, and response handling.
 
-1. **Sorting**: `Sorting` event is triggered before the sorting action begins. It provides a way to perform any necessary operations before the sorting action takes place. This event provides a parameter that contains the current sorting column name, direction, and action.
+1. `Sorting`: Triggered before a column is sorted.
 
-2. **Sorted**: `Sorted` event is triggered after the sorting action is completed. It provides a way to perform any necessary operations after the sorting action has taken place. This event provides a parameter that contains the current sorting column name, direction, and action.
+2. `Sorted`: Triggered after a column has been sorted.
 
-The following example demonstrates how the `Sorting` and `Sorted` events work when Sorting is performed. The `Sorting` event event is used to cancel the sorting of the OrderID column. The `Sorted` event is used to display a message.
+### Sorting
+
+The `Sorting` event is triggered before a column is sorted. This event provides an opportunity to inspect, modify, or cancel the sorting process based on custom logic or validation requirements.
+
+**Event Arguments**
+
+The event uses the [SortingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortingEventArgs.html) class, which includes the following properties:
+
+| Event Argument | Description |
+|---------------|-------------|
+| ColumnName    | Represents the name of the column being sorted. |
+| Direction     | Indicates the sorting direction (**Ascending** or **Descending**). |
+| Cancel        | Determines whether the sorting operation should be aborted. Setting this property to true prevents the sorting from being applied. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-@if (show == true)
-{
-    <div style="text-align : center; color: red">
-        <span> Sort action completed for @columnName column</span>
-    </div>
-    <br />
-}
-
-<SfGrid DataSource="@GridData"  AllowSorting="true"  Height="315px">
-    <GridEvents Sorting="SortingHandler" Sorted="SortedHandler" TValue="OrderData"></GridEvents>
+<SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
+    <GridEvents Sorting="Sorting" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
-
-    public string columnName { get; set; }
-    public bool show { get; set; } = false;
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }  
+    }
 
-    public async Task SortingHandler(SortingEventArgs args)
+    private Task Sorting(SortingEventArgs args)
     {
+        // Prevent sorting on OrderID column
         if (args.ColumnName == "OrderID")
         {
             args.Cancel = true;
         }
-    }
 
-    public async Task SortedHandler(SortedEventArgs args)
-    {
-        columnName = args.ColumnName;
-        show = true;
+        // Change sort direction dynamically
+        if (args.ColumnName == "CustomerID" && args.Direction == SortDirection.Ascending)
+        {
+            args.Direction = SortDirection.Descending;
+        }
+
+        return Task.CompletedTask;
     }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
-    public class OrderData
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCCXSmsecZFpA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzNWNzLolkmHqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+### Sorted
 
+The `Sorted` event is triggered after a column has been successfully sorted. It provides details about the sorted column and direction, enabling actions such as updating UI, logging, or showing notifications.
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+**Event Arguments**
+
+The event uses the [SortedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortedEventArgs.html) class, which includes the following properties:
+
+| Event Argument | Description |
+|---------------|-------------|
+| ColumnName    | Represents the name of the column that was sorted. |
+| Direction     | Indicates the sorting direction (**Ascending** or **Descending**). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+@if (showNotification)
+{
+    <div style="text-align:center; color:red">
+        <span>Sorting completed for @lastSortedColumn column</span>
+    </div>
+    <br />
+}
+
+<SfGrid DataSource="@gridData" AllowSorting="true" Height="315">
+    <GridEvents Sorted="Sorted" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<OrderData> gridData { get; set; } = new List<OrderData>();
+    private string lastSortedColumn { get; set; } = string.Empty;
+    private bool showNotification { get; set; }
+
+    protected override void OnInitialized()
+    {
+        gridData = OrderData.GetAllRecords();
+    }
+
+    private Task Sorted(SortedEventArgs args)
+    {
+        lastSortedColumn = args.ColumnName;
+        showNotification = true;
+        return Task.CompletedTask;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, string shipCity, string shipName)
+    {
+        OrderID = orderId;
+        CustomerID = customerId;
+        ShipCity = shipCity;
+        ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSsiZewifHMFkS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.

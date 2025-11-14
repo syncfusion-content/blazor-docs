@@ -1,50 +1,56 @@
 ---
 layout: post
-title: Grouping customization in Blazor DataGrid | Syncfusion
-description: Learn here all about grouping in Syncfusion Blazor DataGrid and more.
+title: Customize grouping in Blazor DataGrid | Syncfusion
+description: Learn how to style and customize the grouping UI in Syncfusion Blazor DataGrid—group headers, icons, caption rows, and indent cells with CSS tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Grouping in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Grouping customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the grouping interface:
 
-## Customizing the group header
+- **Group header container and text:** Displays grouped column names and allows drag-and-drop grouping actions.
+- **Expand and collapse icons:** Controls used to toggle visibility of grouped rows.
+- **Group caption row:** Shows summary information for each group, such as group key and item count.
+- **Grouping indent cell:** Adds visual indentation to grouped rows to indicate hierarchy.
 
-To customize the appearance of the group header element, you can use the following CSS code:
+## Customize the group header
+
+The **.e-groupdroparea** class styles the group header area in the Blazor DataGrid. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-groupdroparea {
     background-color: #132f49;
 }
-
 ```
-In this example, the **.e-groupdroparea** class targets the group header element. You can modify the `background-color` property to change the color of the group header.
+
+Properties like **background-color**, **padding**, **border**, and **font** can be changed to fit the grid layout design.
 
 ![Group header](../images/style-and-appearance/group-header.png)
 
-## Customizing the group expand or collapse icons
+## Customize the expand and collapse icons
 
-To customize the appearance of the group expand/collapse icons in the Grid, you can use the following CSS code:
+The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand and collapse icons in grouped rows. Apply CSS to modify their look:
 
 ```css
-.e-grid .e-icon-gdownarrow::before{
-    content:'\e7c9'
-    }
-.e-grid .e-icon-grightarrow::before{
-    content:'\e80f'
+.e-grid .e-icon-gdownarrow::before {
+    content: '\e7c9';
+}
+
+.e-grid .e-icon-grightarrow::before {
+    content: '\e80f';
 }
 ```
 
-In this example, the **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes target the expand and collapse icons, respectively. You can modify the `content` property to change the icon displayed. You can use the available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on your theme.
+Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
-![Group expand or collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.png)
+![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.png)
 
-## Customizing the group caption row
+## Customize the group caption row
 
-To customize the appearance of the group caption row and the icons indicating record expansion or collapse, you can use the following CSS code:
+The **.e-groupcaption** class styles the caption row, and **.e-recordplusexpand** and **.e-recordpluscollapse** classes style the record-level expand and collapse indicators:
 
 ```css
 .e-grid .e-groupcaption {
@@ -57,13 +63,13 @@ To customize the appearance of the group caption row and the icons indicating re
 }
 ```
 
-In this example, the **.e-groupcaption** class targets the group caption row element, and the **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the icons indicating record expansion or collapse. You can modify the `background-color` property to change the color of these elements.
+Adjust properties such as **background-color**, **padding**, **border**, and **font** to maintain consistency with the rest of the grid.
 
 ![Group caption row](../images/style-and-appearance/group-caption-row.png)
 
-## Customizing the grouping indent cell
+## Customize the grouping indent cell
 
-To customize the appearance of the grouping indent cell element, you can use the following CSS code:
+The **.e-indentcell** class styles the indent cell used in grouped rows. Apply CSS to change its appearance:
 
 ```css
 .e-grid .e-indentcell {
@@ -71,20 +77,23 @@ To customize the appearance of the grouping indent cell element, you can use the
 }
 ```
 
-In this example, the **.e-indentcell** class targets the grouping indent cell element. You can modify the `background-color` property to change the color of the indent cell.
+Modify properties such as **background-color**, **padding**, and **border** to match the overall layout and maintain consistency.
 
-![Grouping indent cell](../images/style-and-appearance/indent-cell.png)
+![Indent cell](../images/style-and-appearance/indent-cell.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowGrouping="true" AllowPaging="true">
+<SfGrid DataSource="@Orders"
+        Height="315"
+        AllowGrouping="true"
+        AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridGroupSettings Columns="@Initial"></GridGroupSettings>
+    <GridGroupSettings Columns="@InitialColumns"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
@@ -92,31 +101,48 @@ In this example, the **.e-indentcell** class targets the grouping indent cell el
 </SfGrid>
 
 <style>
-   .e-grid .e-groupdroparea {
+    .e-grid .e-groupdroparea {
         background-color: #132f49;
+        color: #ffffff;
     }
-    .e-grid .e-icon-gdownarrow::before{
-        content:'\e7c9'
+
+    .e-grid .e-icon-gdownarrow::before,
+    .e-grid .e-icon-grightarrow::before {
+        font-family: 'e-icons' !important;
+        font-weight: normal;
     }
-    .e-grid .e-icon-grightarrow::before{
-        content:'\e80f'
+
+    .e-grid .e-icon-gdownarrow::before {
+        content: '\e7c9';
     }
+
+    .e-grid .e-icon-grightarrow::before {
+        content: '\e80f';
+    }
+
     .e-grid .e-groupcaption {
         background-color: #deecf9;
     }
+
     .e-grid .e-recordplusexpand,
     .e-grid .e-recordpluscollapse {
         background-color: #deecf9;
     }
+
     .e-grid .e-indentcell {
         background-color: #deecf9;
+    }
+
+    /* Optional: maintain visible focus on group caption rows */
+    .e-grid .e-groupcaption:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
     }
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-    public string[] Initial = (new string[] { "CustomerID" });
+    private List<OrderData> Orders { get; set; }
+    private readonly string[] InitialColumns = { "CustomerID" };
 
     protected override void OnInitialized()
     {
@@ -128,40 +154,40 @@ In this example, the **.e-indentcell** class targets the grouping indent cell el
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -173,4 +199,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBeXyjLAcEEhVUs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSCDinhwfxPloP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

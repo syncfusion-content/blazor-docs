@@ -1,55 +1,57 @@
 ---
 layout: post
-title: Toolbar in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor DataGrid and more.
+title: Toolbar styling in Blazor DataGrid using CSS | Syncfusion
+description: Learn how to customize the Syncfusion Blazor DataGrid toolbar using CSS, including styling the toolbar container and buttons with CSS isolation tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Toolbar customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
+The appearance of toolbar elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
-## Customizing the toolbar root element
+- **Toolbar root container:** The outer wrapper that contains all toolbar items.
+- **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
 
-To customize the appearance of toolbar root element, you can use the following CSS code:
+## Customize the toolbar root element
+
+The **.e-toolbar-items** class styles the toolbar root container in the Blazor DataGrid. This container holds all toolbar items and can be styled using CSS:
 
 ```css
 .e-grid .e-toolbar-items {
     background-color: #deecf9;
 }
 ```
-
-In this example, the **.e-toolbar-items** class targets the background color of the toolbar root element. You can modify the `background-color` property to change the background color of the toolbar.
+Properties such as **background-color**, **padding**, **border**, and **box-shadow** can be modified to suit the layout design.
 
 ![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
 
-## Customizing the toolbar button element
+## Customize the toolbar button elements
 
-To customize the appearance of toolbar buttons, you can use the following CSS code:
-
+The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize their styling:
 ```css
 .e-grid .e-toolbar .e-btn {
     background-color: #deecf9;
 }
 ```
-
-In this example, the **.e-toolbar .e-btn** selector targets the background color of the toolbar button elements. You can modify the `background-color` property to change the background color of the toolbar buttons.
+Properties such as **background-color**, **color**, **border**, **font-size**, and **padding** can be adjusted to align with the design. Ensure that customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation.
 
 ![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.png)
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" AllowPaging="true">
+<SfGrid DataSource="@Orders"
+        Height="315"
+        AllowPaging="true"
+        Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"><GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
@@ -66,8 +68,7 @@ In this example, the **.e-toolbar .e-btn** selector targets the background color
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -79,40 +80,40 @@ In this example, the **.e-toolbar .e-btn** selector targets the background color
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipCity = shipCity;
+        ShipName = shipName;
     }
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Data.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Data.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Data.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Data.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Data.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Data.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Data.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Data.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Import Export"));
+            Data.Add(new OrderData(10257, "HILAA", "San Cristóbal", "Hila Alimentos"));
+            Data.Add(new OrderData(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Data.Add(new OrderData(10259, "CENTC", "México D.F.", "Centro comercial"));
+            Data.Add(new OrderData(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Data.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", "Que delícia"));
+            Data.Add(new OrderData(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -124,4 +125,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIZeXhqQdjJsjY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBysDMtSWwHRQAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
