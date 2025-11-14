@@ -3,13 +3,13 @@ layout: post
 title: Getting Started with Syncfusion Blazor Dashboard Layout in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Dashboard Layout Component in Blazor Web App.
 platform: Blazor
-component: Dashboard Layout
+control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard Layout Component in Web App
+# Getting Started with Dashboard Layout Component in a Blazor Web App
 
-This section briefly explains about how to include [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section describes how to include the Syncfusion  [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
 
 {% tabcontents %}
 
@@ -19,19 +19,19 @@ This section briefly explains about how to include [Blazor Dashboard Layout](htt
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App in Visual Studio
+## Create a New Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) during the creation of your Blazor Web Application.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Layouts and Themes NuGet in the Blazor Web App
 
 To add **Blazor Dashboard Layout** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Layouts](https://www.nuget.org/packages/Syncfusion.Blazor.Layouts/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If the Blazor Web App uses the `WebAssembly or Auto` render modes, ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages are installed in the client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, the Package Manager Console can be used to install the required NuGet package
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -52,11 +52,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App in Visual Studio Code
+## Create a New Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+Configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) during the creation of your Blazor Web Application.
 
 For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
@@ -74,7 +74,7 @@ N> For more information on creating a **Blazor Web App** with various interactiv
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Layouts and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If the Blazor Web App uses the `WebAssembly or Auto` render modes, ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages are installed in the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -118,7 +118,7 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Layouts` namespace.
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, Need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files (Server and Client projects).
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -152,7 +152,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, project will contain a single **~/Program.cs** file. So, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -173,9 +173,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+Reference the theme stylesheet within the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file. These resources are accessed from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 ```html
 <head>
@@ -191,9 +191,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout component in `.razor` file inside the `Pages` folder. If the interactivity location for your web app is set to `Per page/component`, define a render mode at the top of your component, as shown below:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -202,7 +202,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+N> If the **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto`, `WebAssembly`, or `Server`, the render mode will be configured in the `App.razor` file by default and does not need to be added to individual components.
 
 {% tabs %}
 {% highlight razor %}
@@ -232,17 +232,15 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVpXihOLKRGIhFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.png)" %}
 
-## Defining panels
+## Defining Panels
 
-A Dashboard Layout can be rendered with multiple panels to design a template with its basic properties.
+The Dashboard Layout component can be rendered with multiple panels, each designed with basic properties. Each panel typically consists of a header and a content section. These sections are defined using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) properties, respectively.
 
-A Dashboard Layout panel consists of two sections, which are Header and Content section. [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) is used to render the Header section and [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) is used to render the content section.
+Panels are interactive, supporting functionalities such as dragging, floating, and resizing.
 
-Also, it is easy to interact with the panels by dragging, floating, and resizing functionality of panels.
+### Panels with Simple Data
 
-### Panels with simple data
-
-A Dashboard Layout panel is rendered with simple data. The header of a panel is defined by [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and content of a panel is defined by [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate).
+A basic Dashboard Layout panel can display simple data. The panel's header is defined by [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and its content by the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate).
 
 {% tabs %}
 {% highlight razor %}
@@ -276,11 +274,11 @@ The Dashboard Layout with simple content will be rendered in the web browser as 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXChErUwBJvMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
 
-### Panels with components
+### Panels with Components
 
-A Dashboard Layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of Dashboard Layout panel.
+A Dashboard Layout can also host complex UI components such as charts, grids, maps, or gauges within its panels.
 
-These complex data (components) are placed as the panel content by assigning the corresponding component element as the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) of the panel.
+These components are placed as panel content by assigning the corresponding Blazor component element as the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) of the panel.
 
 {% tabs %}
 {% highlight razor %}
@@ -444,20 +442,19 @@ These complex data (components) are placed as the panel content by assigning the
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSDIVjTEDbFVUJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)" %}
 
-N> While using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
+N> When using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
-By default, the Dashboard Layout component is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) according to the parent dimensions.
+By default, the Dashboard Layout component is rendered with auto-adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) panels according to the parent dimensions.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
-## See also
+## See Also
 
 1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
