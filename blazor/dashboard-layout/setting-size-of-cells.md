@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configuring the Grid Layout in Blazor Dashboard Layout | Syncfusion
+title: Configure Grid Layout in Blazor Dashboard | Syncfusion
 description: Learn here all about Configuring the Grid Layout in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
@@ -9,16 +9,16 @@ documentation: ug
 
 # Configuring the Grid Layout in Blazor Dashboard Layout Component
 
-The **Dashboard Layout** is a grid structured component, which can be split into subsections of equal size known as cells.
+The **Dashboard Layout** component is built upon a grid structure, which is divided into equally sized subsections known as cells.
 
 | **Properties** | **Description** |
 | --- | --- |
 | <kbd>Columns</kbd> | Specifies the total number of cells in each row. |
 | <kbd>CellAspectRatio</kbd> | Specifies the height of cells to any desired size. |
 
-## Modifying cell size
+## Modifying Cell Size
 
-The size of grid cells can be modified to the required size using the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) and [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) properties.
+The size of individual grid cells can be modified to suit your design requirements using the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) and [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) properties.
 
 ```cshtml
 
@@ -50,17 +50,15 @@ The size of grid cells can be modified to the required size using the [`Columns`
 
 ```
 
-In the above sample, width of the parent element is divided into five equal cells based on the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) property value resulting the width of each cell as 100px.
+In the sample above, the width of the parent element is divided into five equal cells based on the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) property value. The `CellAspectRatio` is set to `2`, meaning for every 100px of cell width, the height will be 50px (width / height = 2).
 
-The height of these cells will be 50px based on the CellAspectRatio value 100/50 (that is for every 100px of width, 50px will be the height of the cell).
-
-The following output demonstrates the setting of [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) and [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) properties in the dashboard component.
+The following output demonstrates the effect of setting [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) and [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) properties in the Dashboard Layout:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUMrBmpWKQAbtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)" %}
 
-## Setting cell spacing
+## Setting Cell Spacing
 
-The spacing between each panel in a row and column can be defined using the [`CellSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellSpacing) property. Adding space between the panels will make the layout effective and provides a clear data representation.
+The spacing between individual panels in both rows and columns can be defined using the [`CellSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellSpacing) property. Adding spacing between panels significantly enhances layout clarity and provides a cleaner representation of your data.
 
 ```cshtml
 
@@ -92,13 +90,13 @@ The spacing between each panel in a row and column can be defined using the [`Ce
 
 ```
 
-The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in dashboard component.
+The following output demonstrates the clear representation of data achieved by setting the `CellSpacing` property in the Dashboard Layout component:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLKMBhQpMKkevti?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)" %}
 
-## Graphical representation of grid layout
+## Graphical Representation of Grid Layout
 
-These cells combinedly form a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the [`ShowGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ShowGridLines) property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
+The underlying grid structure of the Dashboard Layout is initially hidden. This grid can be made visible by enabling the [`ShowGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ShowGridLines) property. Visualizing these grid lines is particularly helpful during the initial design phase for accurately sizing and positioning panels within the layout.
 
 ```cshtml
 
@@ -130,6 +128,6 @@ These cells combinedly form a grid-structured layout, which will be hidden initi
 
 ```
 
-The following output demonstrates the gridlines indicating the cells split-up of the layout and the data containers placed over these cells are known as panels.
+The following output illustrates the visible gridlines, indicating the cell division of the layout, with data containers (panels) placed over these cells:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKMhBQzsTMyoHg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.png)" %}
