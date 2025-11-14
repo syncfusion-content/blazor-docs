@@ -232,7 +232,7 @@ await builder.Build().RunAsync();
 
 This guide explains how to integrate a full-featured AI writing assistant into the Blazor Rich Text Editor using Azure OpenAI (via Semantic Kernel). The implementation supports **Rephrase**, **Correct Grammar**, **Summarize**, **Elaborate**, and **Translate** with live preview, dynamic tone/language controls, skeleton loading, and safe, undoable content replacement.
 
-## How the Custom Toolbar is Rendered
+### How the Custom Toolbar is Rendered
 
 The toolbar uses [RichTextEditorCustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) to inject a custom item named AI.
 
@@ -278,11 +278,11 @@ An additional `SfButton` for **Rephrase** is provided for quick access.
 {% endhighlight %}
 {% endtabs %}
 
-##  AI Assistant Dialog – Layout and Dynamic Controls
+###  AI Assistant Dialog – Layout and Dynamic Controls
 
 The AI Assistant dialog provides a responsive, user-friendly interface for interacting with AI-generated content. It is designed as a modal dialog that overlays the editor and ensures proper z-index stacking for seamless integration.
 
-### Dialog Structure
+#### Dialog Structure
 
 The dialog is divided into two main rows:
 
@@ -436,7 +436,7 @@ The dialog is divided into two main rows:
 {% endhighlight %}
 {% endtabs %}
 
-## Opening the AI Dialog and Preserving Selection
+### Opening the AI Dialog and Preserving Selection
 
 The `DialogueOpen()` method opens the AI dialog when an action is selected and prepares the editor for processing. It first uses `GetSelectedHtmlAsync()` to capture the highlighted content with its formatting. If no text is selected, a toast message alerts the user to select content before proceeding. 
 
@@ -489,7 +489,7 @@ private async Task DialogueOpen(string selectedQuery)
 
 ```
 
-## Building and Sending the AI 
+### Building and Sending the AI 
 
 The AI prompt is built in two parts: **user intent** and **system instruction**. 
 
@@ -564,7 +564,7 @@ private async Task UpdateAISuggestionsData()
 
 ```
 
-## Replacing AI Result Back into the Editor (with Undo Support)
+### Replacing AI Result Back into the Editor (with Undo Support)
 
 Once the AI-generated content is ready, it needs to be inserted exactly where the user originally selected text, without disturbing the rest of the document. This is achieved using the [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_System_String_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_) method with the `InsertHTML` command. The `Undo` option is enabled to allow users to revert changes if needed.
 
