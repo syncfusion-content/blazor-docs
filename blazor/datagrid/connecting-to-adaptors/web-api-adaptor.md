@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with WebApiAdaptor in Syncfusion Blazor DataGrid
+title: Perform CRUD Operations with WebApiAdaptor in Syncfusion Blazor DataGrid
 description: Learn about bind data and performing CRUD operations using WebApiAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
@@ -102,7 +102,7 @@ Add a **Controllers** folder and create **GridController.cs** to handle data ope
 ```
 
 {% tabs %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
@@ -219,7 +219,7 @@ Include the theme and script references in **App.razor**:
 Use the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to connect the DataGrid to the API endpoint. Set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor).
  
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -237,7 +237,7 @@ Use the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
