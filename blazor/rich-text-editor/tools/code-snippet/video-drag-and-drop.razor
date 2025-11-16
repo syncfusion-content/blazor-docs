@@ -1,0 +1,27 @@
+@using Syncfusion.Blazor.RichTextEditor;
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Items" />
+        <RichTextEditorVideoSettings SaveUrl="@saveUrl" Path="@path"></RichTextEditorVideoSettings>
+        <p>
+            The Rich Text Editor supports seamless video insertion through drag-and-drop functionality. Users can quickly insert video files into their content with a simple drag-and-drop action.
+        </p>
+        <p><b>Key features:</b></p>
+        <ul>
+            <li>Supports local upload: Drag video files from your local system (e.g., File Explorer, Finder) and drop them
+                directly into the editor.</li>
+            <li>Supports server upload: Configure the <code>SaveUrl</code> property to upload video files to your server
+                before inserting them into the editor.</li>
+            <li>Supports common video formats such as MP4, WMV, AVI and MOV</li>
+            <li>Fully customizable upload settings, including size limits and validation.</li>
+        </ul>
+</SfRichTextEditor>
+@code {
+    private string saveUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/SaveFile";
+    private string path = "https://blazor.syncfusion.com/services/production/RichTextEditor/";
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
+    };
+}
+
