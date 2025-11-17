@@ -98,7 +98,7 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
 
 6. Click **Next** or select the **Features** tab to review and choose features for the selected controls.
 
-7. Click **Next** or select the **Configuration** tab. Configure the target .NET version (.NET 10.0, .NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly Application types.
+7. Click **Next** or select the **Configuration** tab. Configure the target .NET version (.NET10.0, .NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly Application types.
 
      Depending on your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type, refer to the table below for supported authentication types.
 

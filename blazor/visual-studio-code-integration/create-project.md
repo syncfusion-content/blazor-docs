@@ -151,3 +151,4 @@ The Syncfusion Blazor Calendar, Button, and DataGrid component render code is ad
 | `~/Pages/Counter.razor` | ![Counter page updated with Syncfusion components](images/CounterPageChange.png) |
 | `~/Pages/FetchData.razor`  | ![FetchData page updated with Syncfusion DataGrid](images/FetchDataPageChange.png) |
 
+
