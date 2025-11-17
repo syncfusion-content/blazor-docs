@@ -91,7 +91,4 @@ The following example demonstrates various animation types that can be applied t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqWBsqAJzMiZJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqWBsqAJzMiZJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)" %}

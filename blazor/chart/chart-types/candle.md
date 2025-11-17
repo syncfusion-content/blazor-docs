@@ -59,9 +59,7 @@ To render a [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpZFLtJkIBDGOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Candle Chart](../images/financial-types/blazor-candle-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpZFLtJkIBDGOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Candle Chart](../images/financial-types/blazor-candle-chart.png)" %}
 
 ## Binding data with series
 

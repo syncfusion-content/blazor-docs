@@ -52,9 +52,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzNbVjepXCmPUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzNbVjepXCmPUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.png)" %}
 
 N> Explore our [Blazor Waterfall Chart Example](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap5) to know how to render and configure the Waterfall type chart.
 
@@ -191,8 +189,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBINztpgOESJjZh?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBINztpgOESJjZh?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -245,8 +242,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 ```
 
-![Blazor Waterfall Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSZfDfpXVcpRWL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSZfDfpXVcpRWL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.png)" %}
 
 ## Empty points
 

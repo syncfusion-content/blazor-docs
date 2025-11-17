@@ -117,6 +117,4 @@ The following code example demonstrates how to prevent expand and collapse actio
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAChWqgyaWwIZu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAChWqgyaWwIZu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)" %}

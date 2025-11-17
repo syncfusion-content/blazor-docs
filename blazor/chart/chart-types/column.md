@@ -56,9 +56,7 @@ To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDasqTXEkwQxd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor column Chart.](../images/chart-types-images/blazor-column-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDasqTXEkwQxd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor column Chart.](../images/chart-types-images/blazor-column-chart.png)" %}
 
 N> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap5) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
@@ -372,8 +370,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -423,8 +420,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 ```
 
-![Blazor column chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLetfjzLvFuJDKv?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLetfjzLvFuJDKv?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor column chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.png)" %}
 
 ## Column space and width
 
@@ -556,8 +552,7 @@ The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     };
 }
 ```
-![Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)" %}
 
 ## Grouped column
 
