@@ -50,9 +50,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhfXaCAqYANeOoh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Spline Area Chart](../images/chart-types-images/blazor-spline-area-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhfXaCAqYANeOoh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spline Area Chart](../images/chart-types-images/blazor-spline-area-chart.png)" %}
 
 N> Refer to our [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap5) to know how to connect the data points with smooth curves.
 

@@ -58,9 +58,7 @@ documentation: ug
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhJZlsOgSpJondZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Range Step Area Chart](../images/chart-types-images/blazor-range-step-area.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhJZlsOgSpJondZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Range Step Area Chart](../images/chart-types-images/blazor-range-step-area.png)" %}
 
 ## Binding data with series
 
