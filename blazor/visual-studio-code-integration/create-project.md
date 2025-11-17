@@ -29,8 +29,8 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     | .NET SDK version | Supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type |
     | ---------------- | -------------------------------------------- |
-    | | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
-    | | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
     
     In the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App** application type, the following options are available:
 
@@ -150,4 +150,5 @@ The Syncfusion Blazor Calendar, Button, and DataGrid component render code is ad
 | `~/Pages/Home.razor or Index.razor`  | ![Index page updated with Syncfusion components](images/IndexFileChange.png) |
 | `~/Pages/Counter.razor` | ![Counter page updated with Syncfusion components](images/CounterPageChange.png) |
 | `~/Pages/FetchData.razor`  | ![FetchData page updated with Syncfusion DataGrid](images/FetchDataPageChange.png) |
+
 
