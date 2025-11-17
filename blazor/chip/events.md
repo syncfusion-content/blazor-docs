@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Chip component and much more details.
+description: Checkout and learn here all about Events in Syncfusion Blazor Chip component.
 platform: Blazor
 control: Chip
 documentation: ug
