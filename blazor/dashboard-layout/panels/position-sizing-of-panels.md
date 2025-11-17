@@ -7,13 +7,13 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Size and Position in Blazor Dashboard Layout Component
+# Size and Position of Panels in Blazor Dashboard Layout Component
 
-Panels are the basic building blocks of the Dashboard Layout component. They act as a container for the data to be visualized or presented.
+Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
 
-The following table represents all the available panel properties and the corresponding functionalities:
+Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
 
-| **PanelObject** | **Default Value** | **Description** |
+| **Panel Property** | **Default Value** | **Description** |
 | --- | --- | --- |
 | <kbd>Id</kbd> | null | Specifies the ID value of the panel. |
 | <kbd>Row</kbd> | 0 | Specifies the row value in which the panel to be placed. |
@@ -28,9 +28,9 @@ The following table represents all the available panel properties and the corres
 | <kbd>ContentTemplate</kbd> | null | Specifies the content template of the panel. |
 | <kbd>CssClass</kbd> | null | Specifies the CSS class name that can be appended with each panel element.|
 
-## Positioning of panels
+## Positioning of Panels
 
-The panels within the layout can be easily positioned or ordered using the [`Row`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row) and [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Column) properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
+Panels within the layout can be precisely positioned and ordered using the [`Row`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row) and [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Column) properties of each `DashboardLayoutPanel`. This capability is essential for arranging data in any desired layout or order.
 
 ```cshtml
 
@@ -70,18 +70,18 @@ The panels within the layout can be easily positioned or ordered using the [`Row
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgMhrwzVWhKSrw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following screenshot shows the positioning of panels within the Dashboard Layout using the row and column properties of the panels.
+The following screenshot illustrates panel positioning within the Dashboard Layout, utilizing the `Row` and `Column` properties:
 
 ![Changing Panels Position in Blazor DashBoard Layout](../images/blazor-dashboard-layout-panel-position.png)
 
-## Sizing of panels
+## Sizing of Panels
 
-A panel's size can be varied easily by defining the [`SizeX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeX) and [`SizeY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeY) properties.
+A panel's size can be easily adjusted by defining its [`SizeX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeX) and [`SizeY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeY) properties.
 
-* `SizeX` property defines the width of a panel in cells count.
-* `SizeY` property defines the height of a panel in cells count.
+* `SizeX`: Defines the width of a panel in cells count.
+* `SizeY`: Defines the height of a panel in cells count.
 
-These properties are helpful in designing a dashboard, where the content of each panel may vary in size.
+These properties are invaluable when designing dashboards where the content and layout of each panel may vary significantly in size, allowing for flexible and responsive designs.
 
 ```cshtml
 
@@ -121,6 +121,6 @@ These properties are helpful in designing a dashboard, where the content of each
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLKMLhcprCIqVxL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following screenshot shows the sizing of panels within the Dashboard Layout using the SizeX and SizeY properties of the panels.
+The following screenshot demonstrates the sizing of panels within the Dashboard Layout, using the `SizeX` and `SizeY` properties:
 
 ![Changing Panel Size in Blazor Dashboard Layout](../images/blazor-admin-template-layout-panel-size.png)
