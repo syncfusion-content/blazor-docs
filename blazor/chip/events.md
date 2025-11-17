@@ -13,8 +13,7 @@ This section explains the list of events of the Chip component which will be tri
 
 ## Created
 
-`Created` event triggers when the Chip component rendering is completed.
-
+The `Created` event triggers when the Chip component rendering is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -37,10 +36,9 @@ This section explains the list of events of the Chip component which will be tri
 ```
 ## Deleted
 
-`Deleted`event triggers when a chip item is deleted.
+The `Deleted` event triggers when a chip item is deleted.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple" EnableDelete="true">
@@ -62,12 +60,10 @@ This section explains the list of events of the Chip component which will be tri
 ```
 ## Destroyed
 
-`Destroyed` event triggers when the Chip component is disposed.
+The `Destroyed` event triggers when the Chip component is disposed.
 
 ```cshtml
-
-
-using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple" Destroyed="@OnDestroyed">
     <ChipItems>
@@ -87,16 +83,14 @@ using Syncfusion.Blazor.Buttons
 ```
 ## OnBeforeClick
 
-`OnBeforeClick` event triggers before a chip is clicked.
+The `OnBeforeClick` event triggers before a chip is clicked.
 
 ```cshtml
-
-
 @using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple">
     <ChipItems>
-       ChipItem Text="Small"></ChipItem>
+      <ChipItem Text="Small"></ChipItem>
         <ChipItem Text="Medium"></ChipItem>
         <ChipItem Text="Large"></ChipItem>
         <ChipItem Text="Extra Large"></ChipItem>
@@ -114,10 +108,9 @@ using Syncfusion.Blazor.Buttons
 
 ## OnClick
 
-`OnClick` event triggers when a chip is clicked.
+The `OnClick` event triggers when a chip is clicked.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple">
@@ -139,10 +132,9 @@ using Syncfusion.Blazor.Buttons
 ```
 ## OnDelete
 
-`OnDelete` event triggers before removing the chip.
+The `OnDelete` event triggers before removing the chip.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple" EnableDelete="true">
@@ -161,14 +153,12 @@ using Syncfusion.Blazor.Buttons
         // Write your code here
     }
 }
-
 ```
 ## SelectionChanged
 
-`SelectionChanged` event triggers when the selected chips are changed.
+The `SelectionChanged` event triggers when the selected chips are changed.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 
 <SfChip Selection="SelectionType.Multiple">
@@ -181,13 +171,12 @@ using Syncfusion.Blazor.Buttons
     <ChipEvents SelectionChanged="@OnSelectionChanged"></ChipEvents>
 </SfChip>
 
-@ {
+@code {
     private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         // Write your code here
     }
 }
-
 ```
 
 
