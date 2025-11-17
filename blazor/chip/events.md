@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Chip Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Chip component.
+description: Explore events in Syncfusion Blazor Chip component including Created, Deleted, Destroyed, OnBeforeClick, OnClick, OnDelete, and SelectionChanged events.
 platform: Blazor
 control: Chip
 documentation: ug
