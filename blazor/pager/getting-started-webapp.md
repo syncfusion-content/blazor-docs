@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Pager Component in Blazor Web App
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide details the integration of the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor Web App** using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**. The instructions follow .**NET 8 or later** standards and include configuration for **interactive render modes**, **interactivity settings**, and **service registration** for **Server** and **WebAssembly** hosting models.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide details the integration of the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor Web App** using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**. 
 
 {% tabcontents %}
 
@@ -21,12 +21,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enab
 
 ## Create a Blazor Web App in Visual Studio 2022
 
+A **Blazor Web App** can be created using **Visual Studio** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
 1. Open **Visual Studio 2022** (version 17.8 or later).
 2. Select **Create a new project**.
-3. From [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0), choose **Blazor Web App** and click **Next**.
-4. Specify the **project name**, **location**, and **solution name**, then click **Next**.
-5. In **Additional information**, select the required [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
-6. Review the remaining options and click **Create**.
+3. Choose **Blazor Web App** from the list of templates and click **Next**.
+4. Specify the **project name**, **location**, and **solution settings**, then click **Next**.
+5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version available on the system).
+6. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes)(Server, WebAssembly, or Auto) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
+7. Review the remaining options and click **Create** to generate the project.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet Packages
 
@@ -68,7 +71,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 1. Install the latest **.NET SDK** that supports **.NET 8 or later**.
 2. Open **Visual Studio Code** and launch the integrated terminal (**Ctrl + `**).
-3. Execute  the following command to create a **Blazor Web App** with **Auto** [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes):
+3. Execute  the following command to create a **Blazor Web App** with **Auto** [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes):
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -116,9 +119,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 After installing the NuGet packages, configure the required namespaces and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service.
 
-1. **Import Namespaces**
-
-- In the **~/ _Imports.razor** file, include:
+Import the required namespaces in the **_Imports.razor** file:
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -132,11 +133,9 @@ After installing the NuGet packages, configure the required namespaces and regis
 - For **WebAssembly** or **Auto** interactive render modes, update this file in the **Client** project.
 - For **Server** interactive render mode, update this file in the **Components** folder.
 
-2. **Register Services in Program.cs**
+Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file:
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs**:
-
-* **Server Render Mode**
+**Server Render Mode**
 
 For Server mode, register the service in the **Program.cs** file:
 
@@ -160,7 +159,7 @@ var app = builder.Build();
 {% endtabs %}
 
 
-* **Auto or WebAssembly Render Mode**
+**Auto or WebAssembly Render Mode**
 
 Register the service in both **Server** and **Client** projects:
 
@@ -227,11 +226,11 @@ N>
 
 ## Add Blazor Pager component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides navigation for large collections by dividing content into multiple pages. It can be integrated with other components such as [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) to enable page-wise navigation in a **Blazor Web App**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component can be integrated with other components to enable page navigation for large data collections. This configuration shows how to use the **Pager** with the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component.
 
 **1. Define Render Mode**
 
-To enable the Pager component in a **Blazor Web App**, define the **render mode** in a **.razor** file.
+To use the **Pager** component in a **Blazor Web App**, set the **render mode** at the top of the **.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -249,26 +248,14 @@ To enable the Pager component in a **Blazor Web App**, define the **render mode*
 | **InteractiveWebAssembly**| `@rendermode InteractiveWebAssembly`  | Executes component logic on the client using WebAssembly.    |
 | **InteractiveServer**     | `@rendermode InteractiveServer`       | Executes component logic on the server using SignalR.        |
 
-> When interactivity location is **Global**, render mode is configured in **App.razor** by default.
+**Interactivity Location**
 
-**2. Add Pager Component**
+* **Global**: Render mode is configured in **App.razor** and applies to the entire application by default.
+* **Per page/component**: Render mode is set at the top of the specific **Razor** file (for example, **Pages/Index.razor**).
 
-To enable the Pager component in a **Blazor Web App**, add the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) control in a **.razor** file.
+**2. Add ListView Component**
 
-{% tabs %}
-{% highlight razor %}
-
-@rendermode InteractiveAuto
-@using Syncfusion.Blazor.Navigations
-
-<SfPager PageSize="5" NumericItemsCount="4" TotalItemsCount="25"></SfPager>
-
-{% endhighlight %}
-{% endtabs %}
-
-**3. Add ListView Component**
-
-Create a [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) and bind it to a collection of data:
+Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the **Pages/Index.razor** file and bind it to a collection:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -318,9 +305,32 @@ Create a [ListView](https://blazor.syncfusion.com/documentation/listview/getting
 }
 ```
 
+**3. Add Pager component**
+
+Add the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
+
+* [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – defines the number of items displayed per page.
+* [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – specifies the count of numeric pager buttons.
+* [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) – indicates the total number of records in the data source.
+
+{% tabs %}
+{% highlight razor %}
+
+@rendermode InteractiveAuto
+@using Syncfusion.Blazor.Navigations
+
+<SfPager PageSize="5" NumericItemsCount="4" TotalItemsCount="25"></SfPager>
+
+{% endhighlight %}
+{% endtabs %}
+
+> For additional properties of SfPager, refer to the API Reference.
+
 **4. Integrate ListView with Pager**
 
-Place the **Pager** below the **ListView** and handle the [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event to update the displayed data:
+To enable paging functionality, bind the **ListView** data for the current page by applying **Skip** and **Take** operations on the collection. These operations are based on the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the Pager component.
+
+The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event is triggered when a pager item is clicked. This event updates the **Skip** and **Take** values dynamically according to the selected page, ensuring that the correct subset of data is displayed in the ListView.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -389,7 +399,7 @@ Place the **Pager** below the **ListView** and handle the [ItemClick](https://he
 
 **5. Run the Application**
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Pager component will render and enable navigation through the collection.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The **Pager** component will render and enable navigation through the collection.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrpjCqNBJBSbqWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)" %}
 
