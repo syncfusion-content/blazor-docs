@@ -307,7 +307,7 @@ The dialog is divided into two main rows:
 - **Replace:** Inserts the AI-generated content back into the original editor with undo support.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <SfDialog @bind-Visible="@dialogVisible" AllowPrerender="true" CssClass="e-rte-elements custom-dialog" ZIndex="1000" ShowCloseIcon="true" IsModal="true" Width="80%" Height="100%" Target="#rteSection">
     <DialogTemplates>
@@ -571,7 +571,7 @@ Once the AI-generated content is ready, it needs to be inserted exactly where th
 Additionally, users can copy the AI-generated content to the clipboard for use elsewhere. This is handled via a `JavaScript interop` function that copies plain text extracted from the AI result.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <FooterTemplate>
     <SfButton Disabled="@enabelContentButton" @onclick="CopyContent">Copy</SfButton>
