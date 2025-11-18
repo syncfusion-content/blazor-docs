@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Behavior Settings in Blazor Pager Component | Syncfusion
-description: Learn how to configure core behavior settings—page size, numeric item count, total item count, and more—in the Syncfusion Blazor Pager component.
+description: Learn how to configure core behavior settings page size, numeric item count, total item count, and more in the Syncfusion Blazor Pager component.
 platform: Blazor
 control: Pager
 documentation: ug
 ---
 
-# Behaviour Settings in Pager Component
+# Behavior Settings in Pager Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component includes properties that control its rendering behavior, such as numeric items and navigation buttons. The total number of pages is determined by the values of the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) properties.
 
