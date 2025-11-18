@@ -241,7 +241,7 @@ The Kanban AI interface starts with a simple form where users provide **Project 
 - **Generate Button:** A progress-enabled button that calls `GenerateTasks()` to start AI-based task creation.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <div class="e-rte-label1" >
     <label>Project Details</label>
@@ -320,7 +320,7 @@ The Kanban board uses `SfKanban` to organize tasks into columns like **To Do**, 
 - **Dynamic Binding:** The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property binds to `smartSuggestion`, ensuring that newly generated tasks appear instantly.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <SfKanban TValue="SmartSuggestionDataModel" KeyField="Status" DataSource="@smartSuggestion">
     <KanbanColumns>
@@ -365,7 +365,7 @@ When users switch to **Backlog View**, tasks are displayed in a grid using `SfGr
 - **Data Binding:** The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property binds to `smartSuggestion`, just like Kanban.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <SfGrid DataSource="@smartSuggestion" AllowPaging="true" Toolbar="@(new List<string>() { "Add" })">
     <GridEvents OnActionBegin="TaskEditingHandler" RowCreated="RowCreatedHandler" TValue="SmartSuggestionDataModel"></GridEvents>
@@ -408,7 +408,7 @@ When users switch to **Backlog View**, tasks are displayed in a grid using `SfGr
 **View Toggle:** Users can switch between **Kanban** and **Grid** using the button below:
 
 {% tabs %}
-{% highlight %}
+{% highlight razor %}
 
 <SfButton OnClick="GoToBacklogBoardView" Content="@BacklogButtonViewContent"></SfButton>
 
