@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pager with Dropdown in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about how to render the Syncfusion Blazor Pager component with dropdown and much more.
+title:  Configure a Page-Size Dropdown in the Blazor Pager Component | Syncfusion
+description: Learn how to enable page-size selection with a dropdown in the Syncfusion Blazor Pager component.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -10,11 +10,15 @@ documentation: ug
 
 # Pager Component with Dropdown
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides navigation for paginated data and supports dynamic page size selection through a dropdown list. This feature allows adjusting the number of items displayed per page without reloading the entire view, improving flexibility and enhancing the experience in applications with large datasets.
+
 ## Page size list
 
-The Pager component provides an option to change the number of items dynamically using a dropdown list. This can be achieved by using the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSizes) property of the Pager. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports dynamic page size selection through a dropdown list. This is configured using the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSizes) property. When a value is selected from the dropdown, it updates the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property, and the Pager refreshes to display the specified number of items per page.
 
-In the following sample, the selected value in a dropdown will be set to the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property, and the Pager will refresh based on this new page size.
+The [ShowAllInPageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowAllInPageSizes) property adds an **All** option to the dropdown list. When `ShowAllInPageSizes` is set to **true**, selecting this option displays all items in a single page, bypassing pagination.
+
+Values for the `PageSizes` property must be provided as a collection of integers representing the available page size options.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
