@@ -87,7 +87,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component can 
 
  <style>
     .listview-container {
-         margin: 0 auto 2em;
+        margin: 0 auto 2em;
         max-width: 460px;
     }
     .pager-container {
