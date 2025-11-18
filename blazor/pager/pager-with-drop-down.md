@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Configure a Page-Size Dropdown in the Blazor Pager Component | Syncfusion
-description: Learn how to enable page-size selection with a dropdown in the Syncfusion Blazor Pager component.
+title: Configure Page-Size Dropdown in Blazor Pager Component | Syncfusion
+description: Learn how to configure a page-size dropdown in the Syncfusion Blazor Pager component for flexible pagination and improved navigation.
 platform: Blazor
 control: Pager
 documentation: ug
