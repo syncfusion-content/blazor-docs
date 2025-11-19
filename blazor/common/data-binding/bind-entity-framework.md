@@ -508,7 +508,7 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 
 In this demo application, the latest theme will be used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 and .NET 8.
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 10, .NET 9 and .NET 8.
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
   * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
