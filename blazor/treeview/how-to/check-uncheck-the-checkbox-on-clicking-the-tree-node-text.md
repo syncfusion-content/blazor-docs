@@ -190,6 +190,4 @@ Checkboxes in the TreeView can be checked and unchecked by clicking the tree nod
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLesXsrAwEkrazW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Checking or Unchecking CheckBox in Blazor TreeView](../images/blazor-treeview-checkbox.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLesXsrAwEkrazW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Checking or Unchecking CheckBox in Blazor TreeView](../images/blazor-treeview-checkbox.png)" %}

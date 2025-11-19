@@ -61,5 +61,4 @@ The following code demonstrates how to configure a dialog with state persistence
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrytlWbCFhMvNqK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog State Persistence](./images/blazor-dialog-state-persistent.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrytlWbCFhMvNqK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog State Persistence](./images/blazor-dialog-state-persistent.gif)" %}
