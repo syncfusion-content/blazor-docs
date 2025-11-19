@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion.Blazor Single NuGet in Visual Studio
-description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Web App and and explore here to more details.
+description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Application and and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
