@@ -163,9 +163,7 @@ In the following sample, employee information such as employee photo, name, and 
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Template](./images/blazor-treeview-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Template](./images/blazor-treeview-template.png)" %}
 
 ## Apply Template to Header
 
@@ -326,6 +324,4 @@ The Blazor TreeView component provides the ability to customize the appearance o
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)" %}

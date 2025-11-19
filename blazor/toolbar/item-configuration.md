@@ -52,9 +52,7 @@ This property specifies the alignment of Toolbar items within the Toolbar. Each 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLyCNCXftRpJLCM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Aligning Blazor Toolbar Item](./images/blazor-toolbar-align-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLyCNCXftRpJLCM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Aligning Blazor Toolbar Item](./images/blazor-toolbar-align-item.png)" %}
 
 To optimize the alignment of Toolbar items without using [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property, utilize the [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) in toolbar. Refer [here](./align-items.md) to integrate spacer in Toolbar.
 
@@ -89,9 +87,7 @@ This property specifies a unique ID to be used for the button or input element o
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhIMDstpjPGdSjE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Id](./images/blazor-toolbar-align-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhIMDstpjPGdSjE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Id](./images/blazor-toolbar-align-item.png)" %}
 
 ## Overflow
 
@@ -137,9 +133,7 @@ It defines the priority of items to display it in popup always. It allows to mai
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoMXWtJZEVZkAZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Displaying Blazor Toolbar Item in Popup](./images/blazor-toolbar-item-in-popup.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoMXWtJZEVZkAZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Toolbar Item in Popup](./images/blazor-toolbar-item-in-popup.png)" %}
 
 ## ShowTextOn
 
@@ -190,9 +184,7 @@ This property defines single or multiple classes, separated by space, used to sp
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVoMZsjpDEcZVJO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVoMZsjpDEcZVJO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)" %}
 
 N> Refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate Syncfusion icons in the Toolbar component.
 
@@ -231,9 +223,7 @@ It is used to specify the text to be displayed on hovering the Toolbar button.
 </SfToolbar>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSMDWXzWXgSuJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Tooltip](./images/blazor-toolbar-item-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSMDWXzWXgSuJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Tooltip](./images/blazor-toolbar-item-tooltip.png)" %}
 
 ## Type
 
@@ -284,9 +274,7 @@ The `Separator` type adds a vertical line that visually separates Toolbar's item
 
 N> If `Separator` is added as the first or the last item, it will not be visible.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyWXstpsZPnxkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Separator](./images/blazor-toolbar-item-separator.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyWXstpsZPnxkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Separator](./images/blazor-toolbar-item-separator.png)" %}
 
 ### Input
 
@@ -389,9 +377,7 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLeCNitzsCzoltu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Other Components](./images/blazor-toolbar-item-with-other-components.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLeCNitzsCzoltu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Other Components](./images/blazor-toolbar-item-with-other-components.png)" %}
 
 ### Spacer
 
@@ -419,9 +405,7 @@ It specifies whether an item should be hidden or not.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSWDCDJWCPTNhF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hiding Blazor Toolbar Item](./images/blazor-toolbar-hidden-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSWDCDJWCPTNhF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding Blazor Toolbar Item](./images/blazor-toolbar-hidden-item.png)" %}
 
 ## Width
 
@@ -445,6 +429,4 @@ It specifies the width of the Toolbar button Items.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSMZWXzWVqDebF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Custom Width](./images/blazor-toolbar-item-custom-width.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSMZWXzWVqDebF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Custom Width](./images/blazor-toolbar-item-custom-width.png)" %}

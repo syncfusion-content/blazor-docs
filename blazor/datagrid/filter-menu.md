@@ -187,7 +187,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Default filter input for OrderID column**
 
@@ -195,7 +195,7 @@ public class OrderData
 
 **Custom dropdown filter for OrderID column**
 
-![Custom dropdown filter for OrderID column.](images/blazor-custom-dropdown-filter-datagrid.gif)
+backgroundimage "[Custom dropdown filter for OrderID column.](images/blazor-custom-dropdown-filter-datagrid.gif)
 
 ## Show 24 hours time format in filter dialog
 
