@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DataManager Component in Web App
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component acts as a data gateway for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls that support data binding. It enables interaction with **local** or **remote** data sources using **queries** and **adaptors**. This guide provides step-by-step instructions to configure the component in a **Blazor Web App** created with [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component acts as a data gateway for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls that support data binding. It enables interaction with **local** or **remote** data sources using **queries** and **adaptors**. This guide provides step-by-step instructions to configure the component in a **Blazor Web App** created with [Visual Studio](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -27,7 +27,7 @@ A **Blazor Web App** can be created using **Visual Studio** with the built-in [M
 2. Select **Create a new project**.
 3. Choose **Blazor Web App** from the template list and click **Next**.
 4. Specify the **project name**, **location**, and **solution settings**, then click **Next**.
-5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version).
+5. Select the **target framework** as **.NET 9.0 or later** (choose the latest installed version).
 6. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes)(Server, WebAssembly, or Auto) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs).
 7. Review the remaining options and click **Create** to generate the project.
 
@@ -71,7 +71,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 A **Blazor Web App** can be created using **Visual Studio Code** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-1. Install the latest **.NET SDK** that supports **.NET 8 or later**.
+1. Install the latest **.NET SDK** that supports **.NET 9 or later**.
 2. Open **Visual Studio Code** and launch the integrated terminal (**Ctrl + `**).
 3. Execute  the following command to create a **Blazor Web App** with **Auto** [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes):
 
@@ -313,7 +313,7 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
 
 ## Component binding
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be used with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that support data binding. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be integrated with any Syncfusion<sup style="font-size:70%">&reg;</sup> data-bound component to manage local or remote data operations.
 
 This configuration demonstrates how the `DataManager` is bound to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to enable consistent interaction with local or remote data sources.
 
@@ -324,34 +324,34 @@ Local data can be bound to components such as `SfDropDownList` by assigning a co
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList Placeholder="e.g. Australia" TItem="Countries" TValue="string">
-    <SfDataManager Json=@Country></SfDataManager>
+<SfDropDownList Placeholder="e.g. Australia" TItem="Country" TValue="string">
+    <SfDataManager Json="@Countries"></SfDataManager>
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code{
-    public class Countries
+@code {
+    public class Country
     {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
+        public string? Name { get; set; }
+        public string? Code { get; set; }
     }
 
-    public Countries[] Country = new Countries[]
+    public List<Country> Countries = new()
     {
-        new Countries { Name = "Australia", Code = "AU" },
-        new Countries { Name = "Bermuda", Code = "BM" },
-        new Countries { Name = "Canada", Code = "CA" },
-        new Countries { Name = "Cameroon", Code = "CM" }
+        new Country { Name = "Australia", Code = "AU" },
+        new Country { Name = "Bermuda", Code = "BM" },
+        new Country { Name = "Canada", Code = "CA" },
+        new Country { Name = "Cameroon", Code = "CM" }
     };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLztCVEBpQxSKZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCWWaPtlNQoPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
 
 ### Remote data binding
 
