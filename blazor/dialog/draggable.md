@@ -64,8 +64,7 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBItlsFWwtJqMVI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog component with draggable functionality enabled](./images/blazor-dialog-draggable.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBItlsFWwtJqMVI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog component with draggable functionality enabled](./images/blazor-dialog-draggable.gif)" %}
 
 >**Note:** Draggable functionality is supported in both standard dialog and modal dialog configurations. The drag operation is limited to the dialog header area only.
 
@@ -160,8 +159,7 @@ The [`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popup
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXByDlCvMmWVRpYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog component demonstrating drag events with real-time status updates](./images/blazor-draggable-events.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXByDlCvMmWVRpYO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog component demonstrating drag events with real-time status updates](./images/blazor-draggable-events.gif)" %}
 
 ## Important Considerations
 

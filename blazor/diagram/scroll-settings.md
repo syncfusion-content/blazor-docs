@@ -308,11 +308,9 @@ The following example illustrates how to sets scroll padding.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollPadding)
 
-![Scroll Padding support for node](images/ScrollPadding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.png)" %}
 
 ## How to Restrict Scrollable Area
 Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited.” The following code example illustrates how to customize the scrollable area.

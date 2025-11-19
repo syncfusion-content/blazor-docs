@@ -169,6 +169,4 @@ The `Template` context receives the following information:
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIitWNVdDBCoBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Timeline Component with Template](./images/Blazor-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIitWNVdDBCoBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Template](./images/Blazor-template.png)" %}

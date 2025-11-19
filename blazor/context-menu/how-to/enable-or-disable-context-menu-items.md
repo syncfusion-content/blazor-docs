@@ -63,8 +63,6 @@ In the following example, the **Display Settings** in parent items is disabled d
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUiVVGAalMSCbE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUiVVGAalMSCbE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.png)" %}
 
 N> To disable sub menu items, use the `OnOpen` event.
