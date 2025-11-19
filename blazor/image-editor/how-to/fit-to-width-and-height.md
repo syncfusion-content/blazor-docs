@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fit to Width and Height with Blazor Image Editor Component | Syncfusion
+title: Fit to Width and Height with Blazor Image Editor | Syncfusion
 description: Learn how to fit to width and height in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
