@@ -120,9 +120,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMtsVUEylUdFX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMtsVUEylUdFX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.png)" %}
 
 N> In the Blazor TreeView component, observable collection support is provided only for the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, not for the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property. The [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property supports only the `List<T>` data type.
 
@@ -219,9 +217,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroWNWBAucDwMeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroWNWBAucDwMeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.png)" %}
 
 ### ExpandoObject Binding 
 
@@ -441,9 +437,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table are 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.png)" %}
 
 ### Web API Adaptor
 

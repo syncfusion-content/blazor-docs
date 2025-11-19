@@ -1344,9 +1344,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBytoiqfIIReUci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Using external form](./images/blazor-datagrid-editing-form.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBytoiqfIIReUci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Using external form](./images/blazor-datagrid-editing-form.gif)" %}
 
 ## Troubleshoot editing works only for first row
 

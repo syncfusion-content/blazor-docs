@@ -206,11 +206,9 @@ Different flowchart symbols have different meanings that are used to represent v
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeWjNHTJDuhNZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 >**Note:** When rendering a flowchart layout using a data source, connector labels must be applied manually in the [DataLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DataLoaded) event.
 
-![Blazor flowchart layout rendered from data source](../images/Flowchart_Layout.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeWjNHTJDuhNZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout rendered from data source](../images/Flowchart_Layout.png)" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayout).
 
@@ -420,11 +418,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/CustomYesOrNoBranch).
 
-![Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)" %}
 
 ## How to Update Spacing Between Nodes 
 
