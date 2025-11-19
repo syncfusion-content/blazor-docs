@@ -765,9 +765,9 @@ The [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids
 
 To customize the default Grid EditForm input component, you can define an `EditTemplate` inside the GridColumn for the complex field. You can edit complex objects using `EditTemplate` by defining two-way (**@bind-Value**) binding inside the GridColumn to reflect changes in the DataGrid.
 
-For focus management and validation to work properly, you must set the `ID` attribute of the input elements inside the `EditTemplate` to match the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value of the corresponding GridColumn. When dealing with complex fields, use a Triple underscore `(___)` in place of the dot `(.)` operator. For example, if the field is **Name.FirstName**, set the `ID` as **Name___FirstName**.
+For focus management and validation to work properly, you must set the `ID` attribute of the input elements inside the `EditTemplate` to match the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value of the corresponding GridColumn. When dealing with complex fields, use a triple underscore `(___)` in place of the dot `(.)` operator. For example, if the field is **Name.FirstName**, set the `ID` as **Name___FirstName**.
 
-> Ensure that both `ID` and `Name` attributes inside the `EditTemplate` follow this Triple underscore (___) format to avoid issues with validation and focus handling.
+> Ensure that both `ID` and `Name` attributes inside the `EditTemplate` follow this triple underscore (___) format to avoid issues with validation and focus handling.
 
 In the following example, the input element is rendered in the edit template of the FirstName and LastName columns. The edited changes can be saved using the `Name` property of the input element. Since the complex data is bound to the FirstName and LastName columns, the `Name` property should be defined as **Name___FirstName** and **Name___LastName**, respectively, instead of using the dot notation (**Name.FirstName** and **Name.LastName**).
 
