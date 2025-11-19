@@ -23,9 +23,7 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)" %}
 
 ## Index value binding
 
@@ -149,9 +147,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)" %}
 
 ### Web API adaptor
 

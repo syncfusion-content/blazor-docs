@@ -49,8 +49,7 @@ The resizable dialog can be created by setting the [EnableResize](https://help.s
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoXFMaTKTKIhlV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Enabled Resize property](./images/blazor-dialog-enable-resize.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoXFMaTKTKIhlV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Enabled Resize property](./images/blazor-dialog-enable-resize.gif)" %}
 
 ## ResizeHandles Property
 
@@ -101,8 +100,7 @@ The ResizeDirection enum provides the following options:
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVytbsYpKFHCFdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with resizehandle in all direction ](./images/blazor-dialog-resizing-handles.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVytbsYpKFHCFdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with resizehandle in all direction ](./images/blazor-dialog-resizing-handles.gif)" %}
 
 ## Related Events
 
@@ -174,5 +172,4 @@ The [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popup
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVotPCOJffuhZmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Resize Events](./images/blazor-dialog-resize-events.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVotPCOJffuhZmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Resize Events](./images/blazor-dialog-resize-events.gif)" %}
