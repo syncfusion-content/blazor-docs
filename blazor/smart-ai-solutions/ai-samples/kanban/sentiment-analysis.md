@@ -240,7 +240,7 @@ The Kanban sentiment analysis interface starts with a Progress Button labeled **
 - **Kanban Board:** Displays pizza orders grouped by Category (Menu, Order, Ready to Serve, Delivered). Each card shows pizza details and later displays sentiment emoji for delivered items.
 
 {% tabs %}
-{% highlight razor%}
+{% highlight razor %}
 
 <SfProgressButton Content="@Content" OnClick="@GetScore" EnableProgress="false">
     <ProgressButtonEvents OnBegin="Begin" OnEnd="End"></ProgressButtonEvents>
@@ -424,7 +424,7 @@ Once the AI response is processed and `ShowScore` is set to `true`, the Kanban b
 This is handled in the Kanban card template using conditional rendering:
 
 {% tabs %}
-{% highlight razor%}
+{% highlight razor %}
 
 if (card.Category == "Delivered" || card.Category == "Served")
 {
