@@ -32,7 +32,7 @@ Enabling the `Offline` property modifies the behavior of the `DataManager` compo
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
     <SfDataManager
-        Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" 
+        Url="https://services.odata.org/Northwind/Northwind.svc/Orders" 
         Adaptor="Adaptors.ODataAdaptor" 
         Offline="true">
         </SfDataManager>
