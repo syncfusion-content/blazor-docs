@@ -214,6 +214,4 @@ An accordion is a UI pattern where a list of items allows one item to be expande
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoMjCBqcFBIQiH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor TreeView as Accordion](../images/blazor-treeview-with-custom-accordion.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoMjCBqcFBIQiH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor TreeView as Accordion](../images/blazor-treeview-with-custom-accordion.png)" %}
