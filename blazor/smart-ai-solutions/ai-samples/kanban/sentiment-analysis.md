@@ -30,7 +30,7 @@ Ensure the following NuGet packages are installed based on your chosen AI servic
 - **OllamaSharp**
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -77,7 +77,7 @@ Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired mode
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
@@ -88,7 +88,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -115,7 +115,7 @@ Deploy an Azure OpenAI Service resource and model as described in [Microsoft's d
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
@@ -127,7 +127,7 @@ Install-Package Azure.AI.OpenAI
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -163,7 +163,7 @@ To use Ollama for self-hosted AI models:
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package OllamaSharp
@@ -174,7 +174,7 @@ Install-Package OllamaSharp
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -202,7 +202,7 @@ Add the Syncfusion Blazor service to your **~/Program.cs** file. The configurati
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
 
 {% tabs %}
-{% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
+{% highlight csharp tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
 
 using Syncfusion.Blazor;
 
@@ -216,7 +216,7 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-{% highlight C# tabtitle="Client (~/_Program.cs)" hl_lines="2 5" %}
+{% highlight csharp tabtitle="Client (~/_Program.cs)" hl_lines="2 5" %}
 
 using Syncfusion.Blazor;
 
@@ -240,7 +240,7 @@ The Kanban sentiment analysis interface starts with a Progress Button labeled **
 - **Kanban Board:** Displays pizza orders grouped by Category (Menu, Order, Ready to Serve, Delivered). Each card shows pizza details and later displays sentiment emoji for delivered items.
 
 {% tabs %}
-{% highlight %}
+{% highlight razor%}
 
 <SfProgressButton Content="@Content" OnClick="@GetScore" EnableProgress="false">
     <ProgressButtonEvents OnBegin="Begin" OnEnd="End"></ProgressButtonEvents>
@@ -424,7 +424,7 @@ Once the AI response is processed and `ShowScore` is set to `true`, the Kanban b
 This is handled in the Kanban card template using conditional rendering:
 
 {% tabs %}
-{% highlight %}
+{% highlight razor%}
 
 if (card.Category == "Delivered" || card.Category == "Served")
 {

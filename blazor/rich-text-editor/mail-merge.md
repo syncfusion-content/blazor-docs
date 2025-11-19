@@ -97,7 +97,7 @@ When the user selects an item from the dropdown:
         if (args.Item.Text != null)
         {
             var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
-            string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span> ";
+            string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{\"{{' + value + '}}\"}}</span></span> ";
             var undoOption = new ExecuteCommandOption { Undo = true };
             this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
             await this._mailMergeEditor.SaveSelectionAsync();
@@ -118,7 +118,7 @@ Mention control enhances usability by enabling inline field suggestions:
 
 <SfMention DataSource="_mergeData" TItem="MergeData" Target="#_mailMergeEditor" MentionChar="_mentionChar" AllowSpaces="true" PopupWidth='250px' PopupHeight='200px' @ref="mentionObj">
     <DisplayTemplate>
-        <span>{{@((context as MergeData).Value)}}</span>
+        <span>{{ "{% raw %}{{@((context as MergeData).Value)}}{% endraw %}" }}</span>
     </DisplayTemplate>
     <ChildContent>
         <MentionFieldSettings Text="Text"></MentionFieldSettings>
@@ -202,9 +202,10 @@ When the `Merge Data` button is clicked:
             _rteValue = mergedContent;
         }
     }
-     public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
+
+    public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
     {
-        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
+        return Regex.Replace(template, @"{{{{\s*(\w+)\s*}}}}", match =>
         {
             string key = match.Groups[1].Value.Trim();
             return data.TryGetValue(key, out var value) ? value : match.Value;
