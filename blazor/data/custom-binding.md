@@ -95,7 +95,7 @@ The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 >   * **Aggregate** (optional) – Aggregate values when aggregation is applied.
 
 > * When `RequiresCounts` is **false**, return only the processed collection.
-> * If the `Read` or `ReadAsync` method is not overridden in a custom adaptor, the default read handler processes the reques
+> * If the `Read` or `ReadAsync` method is not overridden in a custom adaptor, the default read handler processes the request.
 
 ## Perform CRUD Operations
 

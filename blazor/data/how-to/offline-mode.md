@@ -20,7 +20,7 @@ To enable offline mode, set the [Offline](https://help.syncfusion.com/cr/blazor/
 Enabling the `Offline` property modifies the behavior of the `DataManager` component in the following ways:
 
 - **Single data load** – Retrieves the complete collection during initialization without additional server requests.
-- **Client-side processing** – Executes **filtering**, **sorting**, **paging**, and gro**uping operations in the browser.
+- **Client-side processing** – Executes **filtering**, **sorting**, **paging**, and **grouping** operations in the browser.
 - **Improved performance** – Minimizes **network traffic** and enhances responsiveness.
 - **Offline functionality** – Maintains query operations even when network connectivity is unavailable.
 - **Adaptor compatibility** – Supports **OData**, **Web API**, and **URL adaptors** without requiring extra configuration.
