@@ -17,7 +17,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications (Blazor Ser
 
 Blazor applications can be developed using the following IDEs. Development is also supported using the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) without an IDE.
 
-* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/#visual-studio-professional-2026)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2022-and-other-products)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [JetBrains Rider](https://www.jetbrains.com/rider/)
 
@@ -27,6 +28,7 @@ One of the following .NET SDKs is required to develop and run Blazor application
 
 | .NET SDK | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
 | ------------- | ------------- |
+| [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.2.4 and above |
 | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 to 28.2.12 |
@@ -38,7 +40,7 @@ N> Not sure which SDK to download? See [recommended downloads for the latest ver
 
 If using Visual Studio to develop Blazor applications:
 
+* .NET 10.0 requires Visual Studio 2026 18.0.0 or later.
 * .NET 9.0 requires Visual Studio 2022 17.12.0 or later.
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
 
-N> The [WASM workload](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#net-webassembly-build-tools) is required only for the [WASM PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application#prerequisites) component.

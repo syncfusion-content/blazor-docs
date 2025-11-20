@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Dashboard Layout Component
 
-The [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, by applying the prompt `WAI-ARIA` roles, states, and properties. This component is characterized by ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT).
+The [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component is designed with a strong focus on accessibility, adhering to the [WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications. It applies appropriate WAI-ARIA roles, states, and properties to ensure intuitive navigation and interaction for users relying on assistive technologies (AT).
 
-The Blazor Dashboard Layout component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The component follows established accessibility guidelines and standards, including the [ADA (Americans with Disabilities Act)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2 (Web Content Accessibility Guidelines)](https://www.w3.org/TR/WCAG22/) standards. It also incorporates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility features.
 
 The accessibility compliance for the Blazor Dashboard Layout component is outlined below.
 
@@ -39,25 +39,26 @@ The accessibility compliance for the Blazor Dashboard Layout component is outlin
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
-The Blazor Dashboard Layout component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Dashboard Layout component:
+The Blazor Dashboard Layout component integrates [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to enhance accessibility. The following ARIA attributes are used within the Dashboard Layout component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
 | role=presentation | Indicates the role as a presentation for the table when the `showGridLines` property is enabled. |
 | aria-grabbed | Indicates whether the attribute is set to `true`. It has been selected for dragging. If this attribute is set to `false`, the element can be grabbed for a drag-and-drop operation, but will not be currently grabbed.|
 
-## Keyboard interaction
+## Keyboard Interaction
 
 Keyboard support is not applicable for the Dashboard Layout.
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Blazor Dashboard Layout component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The accessibility levels of the Blazor Dashboard Layout component are verified through automated testing using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool.
 
-The accessibility compliance of the Dashboard Layout component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dashboardlayout) in a new window to evaluate the accessibility of the Dashboard Layout component with accessibility tools.
 
-## See also
+A sample demonstrating the accessibility compliance of the Dashboard Layout component is available. Open the [sample](https://blazor.syncfusion.com/accessibility/dashboardlayout) in a new window to evaluate its accessibility using various tools.
+
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

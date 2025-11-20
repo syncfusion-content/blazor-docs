@@ -155,9 +155,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Breadcrumb compo
 
 * Press F5 to run the application. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Breadcrumb component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb Component](./images/blazor-breadcrumb-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-component.png)" %}
 
 N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
 

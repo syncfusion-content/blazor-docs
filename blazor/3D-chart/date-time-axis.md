@@ -48,9 +48,7 @@ documentation: ug
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhTZHirphUnPCqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-datetime-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhTZHirphUnPCqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-datetime-axis.png)" %}
 
 ## DateTime category axis
 
@@ -87,9 +85,7 @@ The `DateTimeCategory` axis is used to display the date time values with non-lin
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLpjHiVJrKOIbbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-with-datetime-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLpjHiVJrKOIbbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-with-datetime-axis.png)" %}
 
 ### Range
 
@@ -129,9 +125,7 @@ Range of an axis will be calculated automatically based on the provided data. Yo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXdCLzhJLRmjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column 3D Chart DateTime Axis based on Range](images/datetime/blazor-column-chart-axis-based-on-range.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXdCLzhJLRmjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart DateTime Axis based on Range](images/datetime/blazor-column-chart-axis-based-on-range.png)" %}
 
 ### Interval customization
 
@@ -177,9 +171,7 @@ Date time intervals can be customized by using the `Interval` and `IntervalType`
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBpDdirTBfmVqNO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column 3D Chart DateTime Axis based on Interval](images/datetime/blazor-column-chart-axis-based-on-interval.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBpDdirTBfmVqNO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart DateTime Axis based on Interval](images/datetime/blazor-column-chart-axis-based-on-interval.png)" %}
 
 **Applying padding to the Range**
 
@@ -226,9 +218,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of the a
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrptHMhfBIrZRdV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart without RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-none.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrptHMhfBIrZRdV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart without RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-none.png)" %}
 
 **DateTime - Round**
 
@@ -268,9 +258,7 @@ When the `RangePadding` is set to `Round`, minimum and maximum will be rounded t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpZRWBJVSnflQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Round RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-round.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpZRWBJVSnflQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Round RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-round.png)" %}
 
 **DateTime - Additional**
 
@@ -309,9 +297,7 @@ When the `RangePadding` property is set to **Additional**, the interval of an ax
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBTjdsrfrxMZeIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Additional RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-Additional.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBTjdsrfrxMZeIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Additional RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-Additional.png)" %}
 
 ## Label format
 
@@ -354,9 +340,7 @@ The date can be formatted and parsed to all globalize format using the `LabelFo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLftHshTUyFcIMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Axis Label Formatting in Blazor Column 3D Chart](images/datetime/blazor-column-chart-axis-label-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLftHshTUyFcIMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Axis Label Formatting in Blazor Column 3D Chart](images/datetime/blazor-column-chart-axis-label-format.png)" %}
 
 The table below shows the results of applying various popular date and time formats to the `LabelFormat` property.
 
