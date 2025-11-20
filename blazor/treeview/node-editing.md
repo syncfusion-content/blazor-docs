@@ -124,9 +124,7 @@ When editing is completed by focusing out or by pressing the <kbd>Enter</kbd> ke
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByiDWqMuupOrPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByiDWqMuupOrPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.png)" %}
 
 ## CRUD Operations
 
@@ -377,9 +375,7 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyMtMKLDjzDfze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyMtMKLDjzDfze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.png)" %}
 
 ### Add or Remove Node Programmatically
 
@@ -583,8 +579,7 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeWtCULXCrLgvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Add or Remove node in Blazor TreeView](./images/add-remove-node.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeWtCULXCrLgvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Add or Remove node in Blazor TreeView](./images/add-remove-node.png)" %}
 
 ### Add or Remove Node Programmatically with Template
 
@@ -798,8 +793,7 @@ The Blazor TreeView component with template support also allows for the dynamic 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyWXCUrtVeSfmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor TreeView](./images/template-add-remove-node.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyWXCUrtVeSfmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/template-add-remove-node.png)" %}
 
 ### Add Node through Popup
 
@@ -1189,8 +1183,7 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoCtCgrNyGxtWK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Edit node in Blazor TreeView](./images/edit-node.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoCtCgrNyGxtWK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Edit node in Blazor TreeView](./images/edit-node.png)" %}
 
 ### Edit a Node with Template
 
