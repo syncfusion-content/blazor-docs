@@ -49,6 +49,4 @@ Single or multiple CSS classes can be applied to Toolbar items using the `Toolba
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLeWXiDguQHpcdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar with Custom Items](../images/blazor-toolbar-custom-command.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLeWXiDguQHpcdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with Custom Items](../images/blazor-toolbar-custom-command.png)" %}

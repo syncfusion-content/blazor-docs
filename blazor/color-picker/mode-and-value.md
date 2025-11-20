@@ -22,9 +22,7 @@ In the following sample, it will render the `Palette` at initial load.
 <SfColorPicker Mode="ColorPickerMode.Palette"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)" %}
 
 ## Color value
 
@@ -39,8 +37,6 @@ In the following sample, the color value is set as `four` digit hex code, the la
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)" %}
 
 N> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

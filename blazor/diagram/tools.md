@@ -71,11 +71,9 @@ To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSWXtlTaXxLYBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
 
-![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSWXtlTaXxLYBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)" %}
 
 ## How to Draw a Connector Using the Drawing Tool
 
@@ -136,11 +134,9 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIstXvJusulLEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
 
-![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIstXvJusulLEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)" %}
 
 ## How to Draw a Text Node Using the Drawing Tool
 
@@ -201,11 +197,9 @@ Create a text Node by click on the diagram page. The following code illustrates 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSWZDPJEVRtROs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
 
-![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSWZDPJEVRtROs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)" %}
 
 ## How to Draw a Polygon Using the Drawing Tool
 
@@ -454,11 +448,9 @@ The following code illustrates how to draw a freehand drawing.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeitNFTOofPXrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
 
-![Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeitNFTOofPXrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)" %}
 
 ## See also
 

@@ -109,6 +109,4 @@ N> Multi selection is not applicable through touch interactions.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthICXWgCerHXKMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![MultiSelection in Blazor TreeView](./images/multiselect.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthICXWgCerHXKMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[MultiSelection in Blazor TreeView](./images/multiselect.png)" %}

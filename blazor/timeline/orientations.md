@@ -55,9 +55,7 @@ Display items vertically by setting the [`Orientation`](https://help.syncfusion.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrICNiXVyQMOUAm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Timeline Component with Vertical Orientation](./images/Blazor-orientation-vertical.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrICNiXVyQMOUAm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Vertical Orientation](./images/Blazor-orientation-vertical.png)" %}
 
 ## Horizontal
 
@@ -101,6 +99,4 @@ In horizontal orientation, items are displayed side-by-side by setting the [`Ori
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyMjsZheQuYAQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Timeline Component with Horizontal Orientation](./images/Blazor-orientation-horizontal.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyMjsZheQuYAQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Horizontal Orientation](./images/Blazor-orientation-horizontal.png)" %}
