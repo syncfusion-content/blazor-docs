@@ -7,11 +7,11 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Mail Merge in Blazor Rich Text Editor
+# Mail merge in Blazor Rich Text Editor Control
 
-The Mail Merge feature in Blazor Rich Text Editor enables developers to create dynamic, personalized documents by inserting placeholders (merge fields) into the editor content. These placeholders are later replaced with actual data at runtime, making it ideal for generating letters, invoices, and bulk communication templates.
+The Mail merge feature in Blazor Rich Text Editor enables developers to create dynamic, personalized documents by inserting placeholders (merge fields) into the editor content. These placeholders are later replaced with actual data at runtime, making it ideal for generating letters, invoices, and bulk communication templates.
 
-## Rendering Custom Toolbar Items
+## Rendering custom toolbar items
 
 Custom toolbar items are added using the [RichTextEditorCustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) tag. Each item is defined with:
 
@@ -46,11 +46,11 @@ Custom toolbar items are added using the [RichTextEditorCustomToolbarItems](http
 {% endhighlight %}
 {% endtabs %}
 
-## Populating and Using Insert Field Dropdown
+## Populating and using insert field dropdown
 
 The `Insert Field` dropdown in the Rich Text Editor is designed to let users quickly insert predefined merge fields into the editor content. This dropdown is powered by the `SfDropDownButton` control, which uses its [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Items) property to bind a collection of menu items.
 
-### How the Items Property Works
+### How the items property works
 
 - The `Items` property accepts a list of [DropDownMenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html) objects.
 - Each item in this list represents a merge field and contains a [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Text) property, which is displayed in the dropdown.
@@ -97,7 +97,7 @@ When the user selects an item from the dropdown:
         if (args.Item.Text != null)
         {
             var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
-            string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span> ";
+            string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{\"{{' + value + '}}\"}}</span></span> ";
             var undoOption = new ExecuteCommandOption { Undo = true };
             this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
             await this._mailMergeEditor.SaveSelectionAsync();
@@ -105,7 +105,7 @@ When the user selects an item from the dropdown:
     }
 ```
 
-## Role of Mention Control in Mail Merge
+## Role of Mention control in mail merge
 
 Mention control enhances usability by enabling inline field suggestions:
 
@@ -118,7 +118,9 @@ Mention control enhances usability by enabling inline field suggestions:
 
 <SfMention DataSource="_mergeData" TItem="MergeData" Target="#_mailMergeEditor" MentionChar="_mentionChar" AllowSpaces="true" PopupWidth='250px' PopupHeight='200px' @ref="mentionObj">
     <DisplayTemplate>
-        <span>{{@((context as MergeData).Value)}}</span>
+        {% raw %}
+        <span>@((context as MergeData).Value)</span>
+        {% endraw %}
     </DisplayTemplate>
     <ChildContent>
         <MentionFieldSettings Text="Text"></MentionFieldSettings>
@@ -130,7 +132,7 @@ Mention control enhances usability by enabling inline field suggestions:
 
 This feature is ideal for users who prefer keyboard-driven workflows.
 
-## Maintaining Cursor Position During Dropdown Operations
+## Maintaining cursor position during dropdown operations
 
 When the `Insert Field` dropdown opens, the editor loses its current selection because focus shifts to the popup. To ensure the placeholder is inserted at the correct position:
 
@@ -156,7 +158,7 @@ When the `Insert Field` dropdown opens, the editor loses its current selection b
     }
 ```
 
-## Handling Editor Mode Changes with OnActionComplete
+## Handling editor mode changes with OnActionComplete
 
 The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnActionComplete) event fires after specific actions in the RichTextEditor, such as switching between Source Code and Preview modes.
 
@@ -183,7 +185,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 **Why is this important?** This prevents users from triggering merge operations or inserting fields while editing raw HTML, which could cause unexpected behavior.
 
-## Executing Merge Data Action
+## Executing merge data action
 
 When the `Merge Data` button is clicked:
 
@@ -202,9 +204,10 @@ When the `Merge Data` button is clicked:
             _rteValue = mergedContent;
         }
     }
-     public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
+
+    public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
     {
-        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
+        return Regex.Replace(template, @"{{{{\s*(\w+)\s*}}}}", match =>
         {
             string key = match.Groups[1].Value.Trim();
             return data.TryGetValue(key, out var value) ? value : match.Value;
@@ -222,6 +225,6 @@ This ensures all placeholders are dynamically replaced without manual editing.
 
 ![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.png)
 
-## Related Resources
+## Related resources
 
 [Mention Control Guide](https://blazor.syncfusion.com/documentation/mention/getting-started-webapp)
