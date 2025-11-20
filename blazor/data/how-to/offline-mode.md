@@ -31,11 +31,7 @@ Enabling the `Offline` property modifies the behavior of the `DataManager` compo
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager
-        Url="https://services.odata.org/Northwind/Northwind.svc/Orders" 
-        Adaptor="Adaptors.ODataAdaptor" 
-        Offline="true">
-        </SfDataManager>
+    <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" Offline="true"></SfDataManager>
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeData.OrderID)" HeaderText="Order ID" Width="120" TextAlign="TextAlign.Center" />
         <GridColumn Field="@nameof(EmployeeData.CustomerID)" HeaderText="Customer Name" Width="130" TextAlign="TextAlign.Center" />
