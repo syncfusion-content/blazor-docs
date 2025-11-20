@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Upgrade a project to the latest version | Syncfusion
-description: Learn here about how to upgrade the project to the latest version using the Syncfusion Blazor extension for Visual Studio Code. Explore to more details
+description: Learn here about how to upgrade a project to the latest version using the Syncfusion Blazor extension for Visual Studio Code. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Upgrading Syncfusion® Blazor application
+# Upgrading Syncfusion® Blazor application to new version
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio Code enables upgrading an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
 

@@ -242,8 +242,7 @@ The zoom toolbar in the chart can be repositioned using the [ChartZoomToolbarPos
     };
 }
 ```
-![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)" %}
 
 ## Enable pan
 
@@ -417,8 +416,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     };
 }
 ```
-![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)" %}
 
 ### Customization
 
@@ -478,8 +476,7 @@ Scrollbar appearance and behavior are customizable using [ChartAxisScrollbarSett
     };
 }
 ```
-![Blazor Area Chart with scrollbar customization](images/zoom/blazor-area-chart-scroll-bar-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSXaDvCHkxWpZV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSXaDvCHkxWpZV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Area Chart with scrollbar customization](images/zoom/blazor-area-chart-scroll-bar-customization.png)" %}
 
 ## Auto interval on zooming
 

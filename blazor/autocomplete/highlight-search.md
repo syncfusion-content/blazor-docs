@@ -17,9 +17,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)" %}
 
 ## Highlight with template
 
@@ -36,9 +34,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.png)" %}
 
 ## Change the highlight style
 
