@@ -19,7 +19,7 @@ To enable the OData query option for Web API, Refer to this [documentation](http
 
 The following software are required:
 * Visual Studio 2022
-* .NET 7.0 or .NET 8.0 or .NET 9.0
+* .NET 7.0 or .NET 8.0 or .NET 9.0 or .NET 10
 
 ## Create the database
 
@@ -218,7 +218,7 @@ namespace WebAPICRUDServerApp
 * Now, open **Program.cs** file and add **AddControllers & MapControllers** method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" %}
 
 ......
 builder.Services.AddControllers();
@@ -472,7 +472,7 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 
 In this demo application, the latest theme is used.
 
-* For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 and .NET 8.
+* For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 10, .NET 9 and .NET 8.
 * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
     * **~/Pages/_Host.cshtml** file for .NET 7.
