@@ -456,7 +456,7 @@ If you have set the interactivity location to `Per page/component` in the web ap
 
 ## Binding SQL data to the Blazor DataGrid Component
 
-Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#custom-adaptor-as-component). Refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#custom-adaptor-as-component) documentation for more details on the Custom adaptor.
+Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). Refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#data-binding) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) documentation for more details on the Custom adaptor.
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
 
