@@ -59,7 +59,7 @@ Install-Package OllamaSharp  # For Ollama
 Include the theme stylesheet and script via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of your main page:
 
 - For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9** Blazor Server apps, add to **~/Components/App.razor**.
+- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
 
 ```html
 <head>

@@ -43,7 +43,7 @@ Define the Media Query component along with layout `Body` property within the `C
 {% endhighlight %}
 {% endtabs %}
 
-If you are using .NET 9 or .NET 8, configure the `@rendermode` in the `<body>` section of the **~/Components/App.razor** file, as shown below:
+If you are using .NET 10, .NET 9 or .NET 8, configure the `@rendermode` in the `<body>` section of the **~/Components/App.razor** file, as shown below:
 
 ```html
 <body>
