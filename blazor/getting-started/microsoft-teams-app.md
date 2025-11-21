@@ -117,7 +117,7 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For **.NET 8 and .NET 9** Microsoft Teams tab app, include it in the **~/Components/Pages/App.razor** file.
+* For **.NET 8, .NET 9 and .NET 10** Microsoft Teams tab app, include it in the **~/Components/Pages/App.razor** file.
 
 ```html
 <head>

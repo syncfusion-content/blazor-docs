@@ -41,9 +41,7 @@ To associate a pre-selected value with the MultiColumn ComboBox component, use t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrTDYVKgaYDmQmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrTDYVKgaYDmQmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)" %}
 
 ## Programmatically change the selected value
 
@@ -55,9 +53,7 @@ You can change the component's value either programmatically or externally via t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVfDkhKgOkmNULd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with pre-select value before](./images/selection/blazor_combobox_changing-selected-value.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVfDkhKgOkmNULd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with pre-select value before](./images/selection/blazor_combobox_changing-selected-value.gif)" %}
 
 ### ValueChange event
 
@@ -95,9 +91,7 @@ The following sample shows how to bind the index on the initial rendering.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhpZkBApjCrhVtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhpZkBApjCrhVtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)" %}
 
 <!-- ## Autofill the selected value
 

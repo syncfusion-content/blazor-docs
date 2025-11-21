@@ -48,7 +48,7 @@ Install-Package OllamaSharp  # For Ollama
 Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of your main page:
 
 - For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9** Blazor Server apps, add to **~/Components/App.razor**.
+- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
 
 ```html
 <head>
@@ -228,288 +228,226 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Razor Component
+## AI-powered Sentiment Analysis in Kanban
 
-This section demonstrates how to implement sentiment analysis in the Syncfusion Blazor Kanban component using AI. The AI Assistant evaluates the emotional tone of each task description and displays a corresponding emoji (😊, 😐, 😞) to help teams quickly assess the mood or urgency of tasks. This can be especially useful in agile workflows where emotional context can influence task priority and team communication.
+The AI-powered sentiment analysis feature in Blazor Kanban evaluates customer feedback for delivered tasks and displays emojis (😊, 😐, 😞) to indicate positive, neutral, or negative sentiment. This helps teams quickly assess satisfaction levels and prioritize follow-up actions, improving customer experience in service workflows.
 
-(`Home.razor`)
+### UI Structure
 
-```csharp
-@using Syncfusion.Blazor.Kanban
-@using Syncfusion.Blazor.SplitButtons
-@using Syncfusion.Blazor.Calendars
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.DropDowns
-@using AISamples.Components.Models
-@using AISamples.Components.Service
-@inject AzureAIService OpenAIService
+The Kanban sentiment analysis interface starts with a Progress Button labeled **Check Customer Sentiments**. When clicked, it triggers the AI process to analyze customer feedback. The button shows a loading state during analysis for better user feedback.
 
-<div id="ai-button" style="margin: 10px">
-    <SfProgressButton Content="@Content" OnClick="@GetScore" EnableProgress="false">
-        <ProgressButtonEvents OnBegin="Begin" OnEnd="End"></ProgressButtonEvents>
-    </SfProgressButton>
-</div>
-<div class="col-lg-12 control-section">
-    <div class="kanban">
-        <SfKanban KeyField="Category" DataSource="@Pizza">
-            <KanbanColumns>
-                @foreach (ColumnModel item in columnData)
-                {
-                    <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" />
-                }
-            </KanbanColumns>
-            <KanbanCardSettings HeaderField="Id" ContentField="Description">
-                <Template>
-                    @{
-                        PizzaDataModel card = (PizzaDataModel)context;
-                        <div class="card-template">
-                            <div class="card-template-wrap">
-                                <table class="card-template-wrap table-fixed-layout">
-                                    <colgroup>
-                                        <col style="width:35px">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td class="e-image">
-                                                <img src=@card.ImageURL alt="logo" />
-                                            </td>
-                                            <td class="e-title">
-                                                <div class="e-card-stacked">
-                                                    <div class="e-card-header">
-                                                        <div class="e-card-header-caption">
-                                                            <div class="e-card-header-title e-tooltip-text">@card.Title</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="e-card-content" style="line-height:2.75em">
-                                                        <table class="card-template-wrap">
-                                                            <tbody>
-                                                                <tr class="e-tooltip-text">
-                                                                    @if (card.Category == "Menu" || card.Category == "Order" || card.Category == "Ready to Serve")
-                                                                    {
-                                                                        <td colspan="2">
-                                                                            <div class="e-description">@(card.Category == "Menu" ? card.Description : card.OrderID)</div>
-                                                                        </td>
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        <td colspan="2">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td colspan="2"><div class="e-description">@card.OrderID</div></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <label class="e-date">Deliver:</label>
-                                                                                        <span class="e-display">@card.Date?.ToString("MM/dd/yyyy")</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    }
+- **Sentiment Analysis Button:** A progress-enabled button that calls `GetScore()` to start AI-based sentiment analysis.
+- **Kanban Board:** Displays pizza orders grouped by Category (Menu, Order, Ready to Serve, Delivered). Each card shows pizza details and later displays sentiment emoji for delivered items.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfProgressButton Content="@Content" OnClick="@GetScore" EnableProgress="false">
+    <ProgressButtonEvents OnBegin="Begin" OnEnd="End"></ProgressButtonEvents>
+</SfProgressButton>
+
+<SfKanban KeyField="Category" DataSource="@Pizza" Width="75%">
+    <KanbanColumns>
+        @foreach (ColumnModel item in columnData)
+        {
+            <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" />
+        }
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Id" ContentField="Description">
+        <Template>
+            @{
+                PizzaDataModel card = (PizzaDataModel)context;
+                <div class="card-template">
+                    <div class="card-template-wrap">
+                        <table class="card-template-wrap table-fixed-layout">
+                            <colgroup>
+                                <col style="width:35px">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td class="e-image">
+                                    <img src=@card.ImageURL alt="logo" />
+                                </td>
+                                <td class="e-title">
+                                    <div class="e-card-stacked">
+                                        <div class="e-card-header">
+                                            <div class="e-card-header-caption">
+                                                <div class="e-card-header-title e-tooltip-text">@card.Title</div>
+                                            </div>
+                                        </div>
+                                        <div class="e-card-content" style="line-height:2.75em">
+                                            <table class="card-template-wrap">
+                                                <tbody>
+                                                <tr class="e-tooltip-text">
+                                                    @if (card.Category == "Menu" || card.Category == "Order" || card.Category == "Ready to Serve")
+                                                    {
+                                                        <td colspan="2">
+                                                            <div class="e-description">@(card.Category == "Menu" ? card.Description : card.OrderID)</div>
+                                                        </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td colspan="2">
+                                                            <table>
+                                                                <tr>
+                                                                    <td colspan="2"><div class="e-description">@card.OrderID</div></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    @if (card.Category != "Menu")
-                                                                    {
-                                                                        if (card.Category == "Order")
-                                                                        {
-                                                                            <td><div class="e-preparingText e-tooltip-text">Preparing</div></td>
-                                                                            <td class="e-prepare">
-                                                                                <div class="e-time e-tooltip-text">
-                                                                                    <div class="e-icons e-clock"></div>
-                                                                                    <div class="e-mins">15 mins</div>
-                                                                                </div>
-                                                                            </td>
-                                                                        }
-                                                                        if (card.Category == "Ready to Serve")
-                                                                        {
-                                                                            <td><div class="e-readyText e-tooltip-text">Ready to Serve</div></td>
-                                                                            <td class="e-prepare">
-                                                                                <div class="e-time e-tooltip-text">
-                                                                                    <div class="e-icons e-clock"></div>
-                                                                                    <div class="e-mins">5 mins</div>
-                                                                                </div>
-                                                                            </td>
-                                                                        }
-                                                                        if (card.Category == "Delivered" || card.Category == "Served")
-                                                                        {
-                                                                            <td><div class="e-deliveredText e-tooltip-text">Delivered</div></td>
-                                                                            if (ShowScore)
-                                                                            {
-                                                                                <td class="e-prepare">
-                                                                                    <div class="e-time e-tooltip-text">
-                                                                                        <div class="e-icons e-clock"></div>
-                                                                                        <div class="e-rating">@card.Emoji</div>
-                                                                                    </div>
-                                                                                </td>
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        <td><div class="e-size e-tooltip-text">@card.Size</div></td>
-                                                                        <td><div class="e-price e-tooltip-text">@card.Price</div></td>
-                                                                    }
+                                                                    <td>
+                                                                        <label class="e-date">Deliver:</label>
+                                                                        <span class="e-display">@card.Date?.ToString("MM/dd/yyyy")</span>
+                                                                    </td>
                                                                 </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    }
-                </Template>
-            </KanbanCardSettings>
-            <KanbanDialogSettings>
-                <Template>
-                    @{
-                        PizzaDataModel data = (PizzaDataModel)context;
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="e-label">ID</td>
-                                    <td>
-                                        <SfTextBox CssClass="e-field" Value="@data.Id" Enabled="false"></SfTextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="e-label">Category</td>
-                                    <td>
-                                        <SfDropDownList @ref="CategoryRef" TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@CategoryData" @bind-Value="@data.Category">
-                                            <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
-                                        </SfDropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="e-label">Title</td>
-                                    <td>
-                                        <SfTextBox CssClass="e-field" @bind-Value="@data.Title"></SfTextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="e-label">Size</td>
-                                    <td>
-                                        <SfTextBox CssClass="e-field" @bind-Value="@data.Size"></SfTextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="e-label">Description</td>
-                                    <td>
-                                        <SfTextBox @ref="DescriptionRef" CssClass="e-field" Multiline="true" @bind-Value="@data.Description"></SfTextBox>
-                                    </td>
-                                </tr>
-                                <tr id="DateRow">
-                                    <td class="e-label">Deliver</td>
-                                    <td>
-                                        <SfDatePicker TValue="DateTime?" @bind-Value='@data.Date' Format="MM/dd/yyyy" ID="Date"></SfDatePicker>
-                                    </td>
-                                </tr>
-                                @if (data.Category == "Delivered")
-                                {
-                                    <tr>
-                                        <td class="e-label">Feedback</td>
-                                        <td>
-                                            <SfTextBox CssClass="e-field" @bind-Value="@data.Feedback" Multiline="true"></SfTextBox>
-                                        </td>
-                                    </tr>
-                                }
+                                                            </table>
+                                                        </td>
+                                                    }
+                                                </tr>
+                                                <tr>
+                                                    @if (card.Category != "Menu")
+                                                    {
+                                                        if (card.Category == "Order")
+                                                        {
+                                                            <td><div class="e-preparingText e-tooltip-text">Preparing</div></td>
+                                                            <td class="e-prepare">
+                                                                <div class="e-time e-tooltip-text">
+                                                                    <div class="e-icons e-clock"></div>
+                                                                    <div class="e-mins">15 mins</div>
+                                                                </div>
+                                                            </td>
+                                                        }
+                                                        if (card.Category == "Ready to Serve")
+                                                        {
+                                                            <td><div class="e-readyText e-tooltip-text">Ready to Serve</div></td>
+                                                            <td class="e-prepare">
+                                                                <div class="e-time e-tooltip-text">
+                                                                    <div class="e-icons e-clock"></div>
+                                                                    <div class="e-mins">5 mins</div>
+                                                                </div>
+                                                            </td>
+                                                        }
+                                                        if (card.Category == "Delivered" || card.Category == "Served")
+                                                        {
+                                                            <td><div class="e-deliveredText e-tooltip-text">Delivered</div></td>
+                                                            if (ShowScore)
+                                                            {
+                                                                <td class="e-prepare">
+                                                                    <div class="e-time e-tooltip-text">
+                                                                        <div class="e-icons e-clock"></div>
+                                                                        <div class="e-rating">@card.Emoji</div>
+                                                                    </div>
+                                                                </td>
+                                                            }
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><div class="e-size e-tooltip-text">@card.Size</div></td>
+                                                        <td><div class="e-price e-tooltip-text">@card.Price</div></td>
+                                                    }
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
-                    }
-                </Template>
-            </KanbanDialogSettings>
-        </SfKanban>
-    </div>
-</div>
+                    </div>
+                </div>
+            }
+        </Template>
+    </KanbanCardSettings>
+</SfKanban>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-`Home.razor.cs`
+### Analyzing Sentiments with AI
+
+After the user clicks **Check Customer Sentiments** button, the `GetScore()` method runs. It serializes the Kanban data into JSON and builds a prompt for the AI service using the `GetCompletionAsync` method. The prompt instructs the AI to:
+
+- Provide a `SentimentScore` out of 5 based on the feedback.
+- Skip scoring if feedback is null.
+- Return the updated data strictly in JSON format with all fields included.
+
+The AI response is cleaned to remove extra formatting and deserialized into a list of PizzaDataModel objects. Each item’s `SentimentScore` is mapped to an emoji:
+
+- Score > 3 → 😊 smiling face
+- Score = 3 → 😐 neutral face
+- Score ≤ 2 → 😞 disappointed face
+
+Finally, `ShowScore` is set to `true`, and the Kanban board updates to display emojis for delivered items.
 
 ```csharp
-
-using System.Text.Json;
-using AISamples.Components.Models;
-using Syncfusion.Blazor.DropDowns;
-using Syncfusion.Blazor.Inputs;
-using Syncfusion.Blazor.Kanban;
-
-namespace AISamples.Components.Pages
+private async Task GetScore()
 {
-    public partial class Home
+    this.IsSpinner = true;
+    string result = "";
+    string json = JsonSerializer.Serialize(Pizza, new JsonSerializerOptions { WriteIndented = true });
+    var description = "Provide a SentimentScore out of 5 (whole numbers only) based on the Feedback. If the feedback is null, do not give a SentimentScore. Use the dataset provided below to make recommendations. NOTE: Return the data in JSON format with all fields included, and return only JSON data, no explanatory text." + json;
+    result = await OpenAIService.GetCompletionAsync(description);
+    string data = result.Replace("```json", "").Replace("```", "").Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+    this.Pizza = JsonSerializer.Deserialize<List<PizzaDataModel>>(data);
+    this.IsSpinner = false;
+    foreach(var item in Pizza)
     {
-        SfDropDownList<string, DropDownModel> CategoryRef;
-        SfTextBox DescriptionRef;
-        private string SelectedAPI = "Open AI";
-        private bool ShowScore = false;
-        private bool IsSpinner = false;
-        private List<PizzaDataModel> Pizza = new PizzaDataModel().GetPizzaData();
-        public string Content = "Check Customer Sentiments";
-        private async Task GetScore()
+        if(item.SentimentScore > 0 && item.SentimentScore <= 2)
         {
-            this.IsSpinner = true;
-            string result = "";
-            string json = JsonSerializer.Serialize(Pizza, new JsonSerializerOptions { WriteIndented = true });
-            var description = "Provide a SentimentScore out of 5 (whole numbers only) based on the Feedback. If the feedback is null, do not give a SentimentScore. Use the dataset provided below to make recommendations. NOTE: Return the data in JSON format with all fields included, and return only JSON data, no explanatory text." + json;
-            result = await OpenAIService.GetCompletionAsync(description);
-            string data = result.Replace("```json", "").Replace("```", "").Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
-            this.Pizza = JsonSerializer.Deserialize<List<PizzaDataModel>>(data);
-            this.IsSpinner = false;
-            foreach(var item in Pizza)
-            {
-                if(item.SentimentScore > 0 && item.SentimentScore <= 2)
-                {
-                    item.Emoji = "😢";
-                }
-                else if (item.SentimentScore > 3 && item.SentimentScore <= 5)
-                {
-                    item.Emoji = "😀";
-                }
-                else if (item.SentimentScore == 3)
-                {
-                    item.Emoji = "😐";
-                }
-            }
-            this.ShowScore = true;
-            StateHasChanged();
+            item.Emoji = "😢";
         }
-        private List<DropDownModel> CategoryData = new List<DropDownModel>()
+        else if (item.SentimentScore > 3 && item.SentimentScore <= 5)
         {
-            new DropDownModel { Id = 0, Value = "Menu" },
-            new DropDownModel { Id = 1, Value = "Order" },
-            new DropDownModel { Id = 2, Value = "Ready to Serve" },
-            new DropDownModel { Id = 3, Value = "Delivered"},
-            new DropDownModel { Id = 3, Value = "Served"},
-        };
-        private class DropDownModel
-        {
-            public int Id { get; set; }
-            public string Value { get; set; }
+            item.Emoji = "😀";
         }
-        private List<ColumnModel> columnData = new List<ColumnModel>() {
-            new ColumnModel(){ HeaderText= "Menu", KeyField= new List<string>() { "Menu" } },
-            new ColumnModel(){ HeaderText= "Order", KeyField= new List<string>() { "Order" } },
-            new ColumnModel(){ HeaderText= "Ready to Serve", KeyField= new List<string>() { "Ready to Serve"} },
-            new ColumnModel(){ HeaderText= "Delivered", KeyField=new List<string>() {  "Delivered", "Served" } }
-        };
-        public void Begin(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
+        else if (item.SentimentScore == 3)
         {
-            Content = "Analyzing...";
-        }
-        public async Task End(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
-        {
-            while (this.IsSpinner)
-            {
-                await Task.Delay(1000);
-            }
-            Content = "Check Cusotomer Sentiments";
+            item.Emoji = "😐";
         }
     }
+    this.ShowScore = true;
+    StateHasChanged();
 }
+
 ```
+
+### Displaying Sentiment Results on Kanban Cards
+
+Once the AI response is processed and `ShowScore` is set to `true`, the Kanban board updates dynamically. For cards in the Delivered or Served categories:
+
+- The Emoji field is shown alongside delivery details.
+- Emojis represent the sentiment score:
+    - 😊 Smiling face for positive feedback (score > 3)
+    - 😐 Neutral face for average feedback (score = 3)
+    - 😞 Disappointed face for negative feedback (score ≤ 2)
+
+This is handled in the Kanban card template using conditional rendering:
+
+{% tabs %}
+{% highlight razor %}
+
+if (card.Category == "Delivered" || card.Category == "Served")
+{
+    <td><div class="e-deliveredText e-tooltip-text">Delivered</div></td>
+    if (ShowScore)
+    {
+        <td class="e-prepare">
+            <div class="e-time e-tooltip-text">
+                <div class="e-icons e-clock"></div>
+                <div class="e-rating">@card.Emoji</div>
+            </div>
+        </td>
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Sample Code
+
+A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+
+![Kanban AI Assistant - Output](../../ai/images/sentiment-analysis.png)
 
 ## Error Handling and Troubleshooting
 
@@ -520,12 +458,3 @@ If the AI service fails to return a valid response, the Kanban will display an e
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
 
-## Performance Considerations
-
-When handling large text content, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For long-form content or batch operations, consider splitting the input into smaller segments to avoid performance bottlenecks. Test the application with your specific use case to determine optimal performance.
-
-## Sample Code
-
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
-
-![Kanban AI Assistant - Output](../../ai/images/sentiment-analysis.png)

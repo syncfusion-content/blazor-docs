@@ -100,10 +100,9 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeWZjlTtUfyBOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
-![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeWZjlTtUfyBOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)" %}
 
 The following code illustrates how to ungroup at runtime.
 
@@ -259,11 +258,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CloneNodeGroup)
-![Grouping in Blazor Diagram](images/CloneGroup.gif)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.gif)" %}
 
 ### How to Add Padding to a Node Group
 
@@ -324,11 +321,9 @@ The following code illustrates how to add padding to a node group.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryCDZlzjyxnaIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
 
-![Padding in Blazor Diagram](images/GroupPadding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryCDZlzjyxnaIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Padding in Blazor Diagram](images/GroupPadding.png)" %}
 
 ## How to Add a Node Group at Runtime
 
