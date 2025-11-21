@@ -298,7 +298,7 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.png)
 
-# Format Painter in Blazor Rich Text Editor
+## Format Painter in Blazor Rich Text Editor
 
 The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the Rich Text Editor[FormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
