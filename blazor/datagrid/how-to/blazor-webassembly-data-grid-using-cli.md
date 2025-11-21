@@ -13,7 +13,7 @@ This article provides step-by-step instructions to build a Blazor WebAssembly Ap
 
 ## Using playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+[Blazor Playground](https://blazorplayground.syncfusion.com) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 

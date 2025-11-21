@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid and much more.
+description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid and much more.           
 platform: Blazor
 control: DataGrid
 documentation: ug
