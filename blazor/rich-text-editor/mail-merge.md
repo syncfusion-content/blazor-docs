@@ -92,17 +92,19 @@ When the user selects an item from the dropdown:
 - The snippet is inserted at the current cursor position using [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_System_String_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_).
 
 ```csharp
+ {% raw %}
     public async Task OnItemSelect(MenuEventArgs args)
     {
         if (args.Item.Text != null)
         {
             var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
-            string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{\"{{' + value + '}}\"}}</span></span> ";
+           string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span> 
             var undoOption = new ExecuteCommandOption { Undo = true };
             this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
             await this._mailMergeEditor.SaveSelectionAsync();
         }
     }
+ {% endraw %}
 ```
 
 ## Role of Mention control in mail merge
@@ -194,7 +196,7 @@ When the `Merge Data` button is clicked:
 - Each placeholder is replaced with its corresponding value from a dictionary.
 
 ```csharp
-
+{% raw %}
     public void OnClickHandler()
     {
         if (this._mailMergeEditor != null)
@@ -207,13 +209,13 @@ When the `Merge Data` button is clicked:
 
     public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
     {
-        return Regex.Replace(template, @"{{{{\s*(\w+)\s*}}}}", match =>
+        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
         {
             string key = match.Groups[1].Value.Trim();
             return data.TryGetValue(key, out var value) ? value : match.Value;
         });
     }
-
+{% endraw %}
 ```
 This ensures all placeholders are dynamically replaced without manual editing.
 
