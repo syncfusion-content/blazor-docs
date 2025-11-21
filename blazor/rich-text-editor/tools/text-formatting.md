@@ -369,3 +369,21 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 {% endtabs %}
 
 ![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.gif)
+
+### Markdown Auto Format
+
+The Rich Text Editor enables users to automatically format Markdown syntax into HTML content using the `EnableMarkdownAutoFormat` property. This feature helps streamline content creation by converting Markdown elements into their corresponding HTML tags, enhancing efficiency and consistency.
+
+Markdown auto-formatting is enabled by default. When using the editor, Markdown syntax will automatically convert into HTML elements as you type, creating a smooth and efficient editing experience.
+
+Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/markdown-auto-format.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor Markdown Auto Format behaviour](../images/blazor-richtexteditor-using-markdown-auto-format.gif)
