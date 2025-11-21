@@ -522,6 +522,98 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJjVtQgjHtuqOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Customize checkbox list data using FilterDialogOpening event
+
+The Syncfusion Blazor DataGrid allows users to customize the checkbox list displayed in the filter dialog during Checkbox or Excel filtering. This can be achieved using the FilterDialogOpening event by reassigning the CheckboxListData property within the event handler. This approach enables developers to tailor the filter options to match specific business requirements or user preferences.
+
+In the example below, custom values are assigned to the CheckboxListData during the FilterDialogOpening event. This ensures that the filter dialog displays only the desired checkbox items, offering full control over the filtering experience.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+    <GridEvents TValue="OrderData" FilterDialogOpening="OnFilterDialogOpening"></GridEvents>
+    <GridPageSettings PageSize="6"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.CategoryName) HeaderText="Category Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Discontinued) HeaderText="Discontinued" Width="100" ></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) HeaderText="ProductID" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData> Grid;
+    public List<string> CustomCategory { get; set; }
+
+    private void OnFilterDialogOpening(FilterDialogOpeningEventArgs args)
+    {
+        if (args.ColumnName == "CategoryName")
+        {
+            List<OrderData> newList = GridData.DistinctBy(x => x.CategoryName).ToList<OrderData>();
+            args.CheckboxListData = newList.Take(2);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+    public OrderData(string CategoryName, bool Discontinued, int? ProductID)
+    {
+        this.CategoryName = CategoryName;
+        this.Discontinued = Discontinued;
+        this.ProductID = ProductID;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int ProductID = 0;
+            for (int i = 1; i < 7; i++)
+            {
+                Orders.Add(new OrderData("Beverages", true, ProductID + 1));
+                Orders.Add(new OrderData("Condiments", false, ProductID + 2));
+                Orders.Add(new OrderData("Confections", false, ProductID + 3));
+                Orders.Add(new OrderData("DairyProducts", true, ProductID + 4));
+                Orders.Add(new OrderData("Grains", true, ProductID + 5));
+                Orders.Add(new OrderData("Meat", false, ProductID + 6));
+                Orders.Add(new OrderData("Produce", true, ProductID + 7));
+                Orders.Add(new OrderData("Seafood", true, ProductID + 8));
+                Orders.Add(new OrderData("Confections", false, ProductID + 9));
+                ProductID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public string CategoryName { get; set; }
+    public bool Discontinued { get; set; }
+    public int? ProductID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLeMXKWzUUYwoyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 ## Customize the Excel filter dialog using CSS
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you have the flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
