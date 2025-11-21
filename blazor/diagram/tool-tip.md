@@ -54,11 +54,9 @@ The following code example illustrates how to customize the tooltip for nodes.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeMXXFTQypyUzV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificNode)
 
-![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)  
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeMXXFTQypyUzV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)" %}
 
 The following code example illustrates how to customize the tooltip for connectors.
 
@@ -85,11 +83,9 @@ The following code example illustrates how to customize the tooltip for connecto
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIsNXlpcxcfGTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
 
-![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIsNXlpcxcfGTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-connectortooltip.png)" %}
 
 ## How to Set Tooltip Position for Nodes and Connectors
 
@@ -822,11 +818,9 @@ The following code example demonstrates how to set `IsSticky` property to **true
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSijNbTvfeFFpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
 
-|![ToolTip During hover the node with Stikcy Mode](images/StickyNode.png) | 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSijNbTvfeFFpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyNode.png)" %}
 
 The following code example demonstrates how to set `IsSticky` property to **true** for a connector:
 
@@ -857,11 +851,9 @@ The following code example demonstrates how to set `IsSticky` property to **true
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjByCDDFpvysxzPr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
 
-|![ToolTip During hover the node with Stikcy Mode](images/StickyConnector.png) | 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjByCDDFpvysxzPr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyConnector.png)" %}
 
 For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
 
@@ -916,11 +908,9 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLosDtlTlSozUTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleTooltip)
 
-![Tooltip for UserHandle](images/UserHandleTooltip.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLosDtlTlSozUTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.gif)" %}
 
 ### How to Set Sticky Tooltip for User Handles
 
@@ -977,11 +967,9 @@ The following code example demonstrates how to set `IsSticky` property to **true
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhesXNlflyEQBvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleIsSticky/)
 
-![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhesXNlflyEQBvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)" %}
 
 ## How to Set Tooltip for Fixed User Handle
 
@@ -1025,10 +1013,9 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZheCjNFJbPKBivq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
-![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZheCjNFJbPKBivq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)" %}
 
 ### How to Set Sticky Tooltip for Fixed User Handles
 
@@ -1074,10 +1061,9 @@ The following code example demonstrates how to set `IsSticky` property to true f
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyiXjbzvEDcPUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleIsSticky)
-![ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyiXjbzvEDcPUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)" %}
 
 ## How to Set Tooltip for Ports
 
@@ -1152,11 +1138,9 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthysNZbfPaIKgsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
 
-![ToolTip During hover the port](./images/PortTooltip.gif )
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthysNZbfPaIKgsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.gif)" %}
 
 ### How to Set Sticky Tooltip for Ports
 
@@ -1213,12 +1197,10 @@ The following code example demonstrates how to set `IsSticky` property to **true
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMttPJlkudJEW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
 
-![ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMttPJlkudJEW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.png)" %}
 
 ## See also
 

@@ -139,9 +139,7 @@ The following example demonstrates how to customize the expand and collapse icon
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhSsjMrKbjcuFLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Expand and Collapse Icon in Blazor TreeView](../images/blazor-treeview-customize-expand-collapse-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhSsjMrKbjcuFLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Expand and Collapse Icon in Blazor TreeView](../images/blazor-treeview-customize-expand-collapse-icon.png)" %}
 
 ## Customize Expand/Collapse Icon Position and Color
 
@@ -340,9 +338,7 @@ The position and color of the expand or collapse icons are customized using CSS.
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMDMrKbiQKRCm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Icon Position and Color in Blazor TreeView](../images/blazor-treeview-custom-icons-position-and-color.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMDMrKbiQKRCm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Icon Position and Color in Blazor TreeView](../images/blazor-treeview-custom-icons-position-and-color.png)" %}
 
 ## Increase Padding Between Text, Expand/Collapse Icons, and Custom Icons
 

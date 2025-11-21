@@ -17,7 +17,7 @@ Enable right-to-left (RTL) globally for all Syncfusion<sup style="font-size:70%"
 
 ### Blazor Web App
 
-For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property to `true` using the `AddSyncfusionBlazor` service method in the `~/Program.cs` file.
+For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property to `true` using the `AddSyncfusionBlazor` service method in the `~/Program.cs` file.
 
 {% tabs %}
 
@@ -38,7 +38,7 @@ For Blazor WebAssembly Standalone apps, set the [EnableRtl](https://help.syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" %}
 
 using Syncfusion.Blazor;
 
