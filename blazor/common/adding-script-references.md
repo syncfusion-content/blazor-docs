@@ -17,7 +17,7 @@ N> JavaScript interop files are required for features that cannot be implemented
 
 You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts using the CDN resources.
 
-* For **.NET 8 and .NET 9** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
 * For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.

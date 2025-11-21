@@ -339,7 +339,7 @@ N> **Note:** Above culture combo box will be enabled in sample output if localiz
 
 #### Blazor Web App
 
-##### Applying Database Migrations and User Registration in the .NET 8.0 and .NET 9.0 Blazor Web App
+##### Applying Database Migrations and User Registration in the .NET 8.0, .NET 9.0 and .NET 10 Blazor Web App
 
 ##### Applying Database Migrations:
 
