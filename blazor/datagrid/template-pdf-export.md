@@ -533,7 +533,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLSWWizfuSJpYel?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
 
@@ -815,6 +815,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiMszfOvlznUh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)

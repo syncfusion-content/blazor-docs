@@ -106,7 +106,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrStJXuTcIPierd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNheWMspgvlrKBNL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show spinner while exporting 
 
@@ -208,7 +208,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLetTiMCmRvgSSs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeiCszqbybTsoa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding custom data source while exporting
 
@@ -305,7 +305,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhotfhJUHIXUNlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLSsMWpUaLvLkZm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with custom aggregate
 
@@ -521,7 +521,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDfWXVMQonozp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVeMCMfqkSkOAsO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Passing additional parameters to the server when exporting
 
@@ -640,4 +640,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryZJitJZwsZqkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBSMispAYwrkGev?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

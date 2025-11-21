@@ -150,7 +150,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIjJjlfrgDinOe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVosCMpqpPulHhu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Custom context menu items
@@ -247,7 +247,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyDfNYsPWaHXLo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrIsMsJUIoWyJWp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Built-in and Custom context menu items
 
@@ -340,7 +340,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBSNftEhBsXumEv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeiCWJqeZypnTw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sub context menu items in DataGrid
 
@@ -458,7 +458,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVyjfjkrhfaJLAr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBSCMCTAIwzoxlZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable the context menu for specific columns in DataGrid
 
@@ -567,7 +567,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeNTjaVhQWEiHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZryssMfAyFAoJEI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable or disable context menu items
 
@@ -672,7 +672,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryDfXEqqyMSDPD?appbar=false&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjresWspAHXmvnzM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show or hide context menu 
 
@@ -777,7 +777,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIZfXYKSwAiUpU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWCiTAnKDAxPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Access specific row details on context menu click
 
@@ -886,6 +886,6 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLetwrTrwitHdvW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrSsWifqHbIWIVV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
