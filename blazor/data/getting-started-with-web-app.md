@@ -85,7 +85,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-N> For other interactive render modes and interactivity locations, refer to Render Modes [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
+N> For other interactive render modes and interactivity locations, refer to Render Modes [documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Data and Themes NuGet in the App
 
